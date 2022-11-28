@@ -15,16 +15,11 @@ Two types of validation are performed when you select to validate settings inclu
 Enabling validation is recommended because it can prevent a possible failure by validating your entries in the wizard before you run the configuration. The LDAP settings including the **Repository ID**, **Host name**, **Port**, **Bind DN**, **Bind password**, **Base DN**, **Administrator group DN**, **Administrator DN**, and **Administrator password** are all validated before the wizard creates your instructions to run the configuration. Review the following worksheet section to see which fields are required based on your selections in the wizard.
 
 
-**Related information**  
-
-
-[Setting up a stand-alone server](../config/config_standalone.md)
-
-[Accessing the Configuration Wizard](../config/cw_run.md)
-
-[Updating DB2 self-tuning memory manager \(STMM\) settings](../migrate/mig_t_post_db2_stmm.md)
-
-[Establishing single sign-on \(SSO\) between the portal installation and HCL Connections in SmartCloud for Social Business](../dev-portlet/est_sso_portal_sc4sb.md)
+???+ info "Related information"
+    - [Setting up a stand-alone server](../../../../config_standalone.md)
+    - [Accessing the Configuration Wizard](../../../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    - [Updating DB2 self-tuning memory manager (STMM) settings](../../../../migrate/next_steps/post_mig_activities/db_task/mig_t_post_db2_stmm.md)
+    - [Establishing single sign-on (SSO) between the portal installation and HCL Connections in SmartCloud for Social Business](../../../../../../extend_dx/integration/connections/configuration/cfg_portal_to_work_with_cnx_in_sc/establishing_sso/index.md)
 
 # Worksheet
 
@@ -34,7 +29,8 @@ When you set up the federated security, you answer questions about your wanted c
 
 The following table lists the fields that are unique to the LDAP configuration. You might be prompted for additional information about system or user IDs and passwords that you defined during the portal installation process.
 
-**Attention:** The Enable Federated Security option modifies the wimconfig.xml file. Make a backup copy of this file before you run any of the configuration tasks.
+!!!important
+    The Enable Federated Security option modifies the wimconfig.xml file. Make a backup copy of this file before you run any of the configuration tasks.
 
 ```
 [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/CellName/wim/config/wimconfig.xml
@@ -45,20 +41,12 @@ The following table lists the fields that are unique to the LDAP configuration. 
 |**LDAP Repository ID**|federated.ldap.id| |
 |**LDAP host name**|federated.ldap.host| |
 |**LDAP port**|federated.ldap.port| |
-|**Bind DN****Restriction:** The following parameters must be unique to your environment:
-
--   PortalAdminId: this parameter is the user ID that you enter in the **Administrator user ID** field during the installation
--   Bind DN
--   Administrator DN from LDAP
-
-|federated.ldap.bindDN| |
+|**Bind DN****Restriction:** The following parameters must be unique to your environment:<br> - PortalAdminId: this parameter is the user ID that you enter in the **Administrator user ID** field during the installation<br> - Bind DN<br> - Administrator DN from LDAP|federated.ldap.bindDN| |
 |**Bind password**|federated.ldap.bindPassword| |
 
 |Field Label|Property|Your Value|
 |-----------|--------|----------|
-|**Base DN****Note:** This field is optional. However, it is recommended that you enter a Base DN that matches your LDAP settings. If you are using a Domino LDAP, and you do not have a Base DN defined, then you can leave this field blank.
-
-|federated.ldap.baseDN| |
+|**Base DN****Note:** This field is optional. However, it is recommended that you enter a Base DN that matches your LDAP settings. If you are using a Domino LDAP, and you do not have a Base DN defined, then you can leave this field blank.|federated.ldap.baseDN| |
 
 ## Use an administrator from your LDAP
 
@@ -67,13 +55,7 @@ If you select to use an administrator from your LDAP server, then you must provi
 |Field Label|Property|Your Value|
 |-----------|--------|----------|
 |**Administrator group DN from LDAP**|newAdminGroupId| |
-|**Administrator DN from LDAP****Restriction:** The following parameters must be unique to your environment:
-
--   PortalAdminId: this parameter is the user ID that you enter in the **Administrator user ID** field during the installation
--   Bind DN
--   Administrator DN from LDAP
-
-|newAdminId| |
+|**Administrator DN from LDAP****Restriction:** The following parameters must be unique to your environment:<br> - PortalAdminId: this parameter is the user ID that you enter in the **Administrator user ID** field during the installation<br> - Bind DN<br> - Administrator DN from LDAP|newAdminId| |
 |**Administrator password from LDAP**|newAdminPw| |
 |**Default parent for group**|groupParent| |
 |**Default parent for PersonAccount**|personAccountParent| |
@@ -124,13 +106,15 @@ If you click **View Step Command**, you can see the task and properties that are
 
         None
 
-    **Note:** The following steps are required for environments that leverage Java 1.8, such as HCL Portal Version 9.0 environments. The following steps assume a clustered environment with a Deployment Manager, however, also perform in a stand-alone environment.
+    !!!note
+        The following steps are required for environments that leverage Java 1.8, such as HCL Portal Version 9.0 environments. The following steps assume a clustered environment with a Deployment Manager, however, also perform in a stand-alone environment.
 
     1.  On the Deployment Manager, go to the /AppServer/java/8.0/bin directory.
 
-    2.  2.  Create a backup of the HCL Portal profile before modifying cell security.
+    2.  Create a backup of the HCL Portal profile before modifying cell security.
 
-    **Note:** The backup is created in /opt/IBM/WebSphere/AppServer/profiles/cw\_profile/.
+    !!!note
+        The backup is created in /opt/IBM/WebSphere/AppServer/profiles/cw\_profile/.
 
     -   **Condition**
 

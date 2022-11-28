@@ -27,12 +27,14 @@ The scope is set on the federated.ldap.gc.scope property and is one of three pos
 
     Direct means that the value returned holds only the list of static groups of which the user is a direct member. It does not attempt to account for group nesting or dynamic group memberships. The response here is functionally equivalent, for example, to a query of the form `(&(objectClass=groupOfNames)(member=<dn of the user>))`. In this case, there is little if any reason to prefer the group membership attribute over the traditional query.
 
-    **Note:** When the group membership attribute scope is direct or when you use the traditional query method, VMM must do extra work if it needs to resolve nested groups or dynamic groups.
+    !!!note
+        When the group membership attribute scope is direct or when you use the traditional query method, VMM must do extra work if it needs to resolve nested groups or dynamic groups.
 
     -   VMM tries to resolve dynamic groups if the dynamic group configuration information is set up within the VMM configuration files.
     -   VMM tries to resolve nested groups if the client application, which is HCL Portal, requests it to. By default, HCL Portal requests that nested groups are used. If your access control models do not use group nesting to inherit permissions, turn off the nested group function within portal. Read the documentation for the enableNestedGroups custom property within the **WP AccessControlDataManagementService** Resource Environment Provider.
 
-        **Note:** To avoid conflicts between how HCL Portal and WebSphere® Application Server handle nested groups, globally turn off nested groups. Change the com.ibm.ws.wim.registry.grouplevel value to 1. Go to [Disabling nested group searches](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.wim.doc/disablingnestedgroupsearches.html) for instructions.
+        !!!note
+            To avoid conflicts between how HCL Portal and WebSphere® Application Server handle nested groups, globally turn off nested groups. Change the com.ibm.ws.wim.registry.grouplevel value to 1. Go to [Disabling nested group searches](https://help.hcltechsw.com/sametime/10.0/tune/tun_ldap_perform_disable_nest_groups.html) for instructions.
 
 -   **nested**
 
@@ -51,10 +53,5 @@ Set the federated.ldap.gc.name and federated.ldap.gc.scope properties before you
 
 -   wp-create-ldap
 -   wp-create-ldap-groupconfig
-
--   **[Updating the group membership configuration](../security/groupconfig.md)**  
-The initial federated repositories setup might not include the advanced set up for the group membership attribute. You can configure the group membership attribute after the initial setup. Specify the properties in the wkplc.properties file and then run the wp-create-ldap-groupconfig task manually.
--   **[Configuring HCL Portal to use dynamic groups](../install/ldap_dyngrp.md)**  
-By default, HCL Digital Experience is enabled for static groups. However, the Virtual Member Manager \(VMM\) allows users to be members of either static or dynamic groups. Static groups have a persistent binding between a group and its members. Dynamic groups have a search query that is defined to retrieve the members of a group.
 
 

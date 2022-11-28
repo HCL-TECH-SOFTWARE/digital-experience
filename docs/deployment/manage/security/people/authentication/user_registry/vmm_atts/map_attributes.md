@@ -2,13 +2,14 @@
 
 Map the attributes between HCL Digital Experience and your LDAP user registries.
 
-1.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Enter values for the following set of parameters to identify your LDAP server:
 
     The following parameters are found in the VMM Federated repository properties heading:
 
-    **Note:** Go to the properties file for specific information about the parameters.
+    !!!note
+        Go to the properties file for specific information about the parameters.
 
     -   federated.ldap.id
     -   federated.ldap.host
@@ -17,7 +18,9 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
     -   federated.ldap.bindDN
     -   federated.ldap.bindPassword
     -   federated.ldap.baseDN
-    **Note:** Make sure you use the same values that you used to configure your LDAP server.
+
+    !!!note
+        Make sure you use the same values that you used to configure your LDAP server.
 
 3.  Run the following task to check that all defined attributes that are available in the configured LDAP user registry:
 
@@ -25,7 +28,8 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
     -   IBM® i: ConfigEngine.sh wp-validate-federated-ldap-attribute-config -DWasPassword=password
     -   Windows™: ConfigEngine.bat wp-validate-federated-ldap-attribute-config -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh wp-validate-federated-ldap-attribute-config -DWasPassword=password
-4.  Open the ConfigTrace.log file, in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\log directory. Review the following output for the PersonAccount and Group entity type:
+
+4.  Open the ConfigTrace.log file, in the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\log directory. Review the following output for the PersonAccount and Group entity type:
 
     -   **The following attributes are defined in HCL Portal but not in the LDAP server**
 
@@ -50,6 +54,7 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
     -   federated.ldap.attributes.mapping.ldapName
     -   federated.ldap.attributes.mapping.portalName
     -   federated.ldap.attributes.mapping.entityTypes
+    
     The following values flag certificate and members as unsupported attributes and maps ibm-primaryEmail to mail and ibm-jobTitle to title for the PersonAccount entityTypes:
 
     ```
@@ -78,13 +83,15 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
     -   IBM i: ConfigEngine.sh wp-update-federated-ldap-attribute-config -DWasPassword=password
     -   Windows: ConfigEngine.bat wp-update-federated-ldap-attribute-config -DWasPassword=password
     -   z/OS: ./ConfigEngine.sh wp-update-federated-ldap-attribute-config -DWasPassword=password
-9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+
+9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
 
 10. Complete the following steps to flag an attribute as either unsupported or required for the entire HCL Portal environment instead of just for the specified LDAP:
 
     1.  Enter a value for the following required parameters in the wkplc.properties file:
 
-        **Note:** Go to the properties file for specific information about the parameters.
+        !!!note
+            Go to the properties file for specific information about the parameters.
 
         -   user.attributes.required
         -   user.attributes.nonsupported
@@ -96,11 +103,8 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
         -   IBM i: ConfigEngine.sh wp-update-attribute-config -DWasPassword=password
         -   Windows: ConfigEngine.bat wp-update-attribute-config -DWasPassword=password
         -   z/OS: ./ConfigEngine.sh wp-update-attribute-config -DWasPassword=password
+
     4.  Stop and restart all necessary servers to propagate your changes.
 
 
-
-**Previous topic:**[Adding attributes](../install/add_attributes.md)
-
-**Next topic:**[Removing attributes](../install/remove_attr_def.md)
 
