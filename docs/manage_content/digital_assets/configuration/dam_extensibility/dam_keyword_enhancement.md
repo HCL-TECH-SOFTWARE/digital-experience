@@ -51,7 +51,7 @@ In an ideal keyword management scenario, if a keyword is deleted by the user man
 
 ## Remove All Keywords tagged in a media asset
 
-If the user likes to remove all the keywords, user can select cross icon (Clear). User will be prompted with a modal window to confirm, delete all keywords (both user defined and plugin generated).
+If the user wants to remove all the keywords, user can select cross icon (Clear). User will be prompted with a modal window to confirm, delete all keywords (both user defined and plugin generated).
 
 ![DAM Remove All Keywords](../../../../images/Keywords_remove_all.png)
 
