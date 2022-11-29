@@ -25,9 +25,9 @@ If you use the Web Services Security option, the WSRP Producer accepts only auth
 
 You can choose to not set up security for the WSRP Producer and Consumer portals. In this case, the WSRP Producer does not process the WSRP requests from the Consumer under a specific user identity. Instead, the Producer processes the WSRP requests anonymously. In this case, the Consumer must not be configured for Web Service Security.
 
--   **[Securing the WSRP Producer by HTTP-cookie-based single sign-on](../admin-system/wsrpt_prod_sec_ws_http_cb_sso.md)**  
+-   **[Securing the WSRP Producer by HTTP-cookie-based single sign-on](wsrpt_prod_sec_ws_http_cb_sso.md)**  
 You can provide security for your WSRP Producer by using HTTP-cookie-based single sign-on \(SSO\). For using this security option, the WSRP Producer requires no configuration. The WSRP Consumer must be configured to send or forward LTPA V2 single sign-on cookies as part of the WSRP request message to the WSRP Producer.
--   **[Securing the WSRP Producer by WS-Security](../admin-system/wsrpt_prod_sec_ws_wss.md)**  
+-   **[Securing the WSRP Producer by WS-Security](wsrpt_prod_sec_ws_wss.md)**  
 You can configure Web Services Security according to the WS-Security standard for your WSRP Producer and the provided web services.
 
 

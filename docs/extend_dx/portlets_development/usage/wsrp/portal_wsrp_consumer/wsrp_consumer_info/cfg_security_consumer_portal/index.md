@@ -24,7 +24,7 @@ Example: A Producer might configure message authentication Web Service Security 
 For both setup options, the WSRP Producer and the WSRP Consumer must be configured for Single Sign-On (SSO). The requirements for SSO depend on the authentication method that is used. For example, if you use LTPA V2, the WSRP Consumer and the WSRP Producer must use the same user registry or use the same realm. In addition, the WSRP Producer and the WSRP Consumer must exchange shared keys that they use to sign the security credentials.
 
 ???+ info "Related information"
-    -   [Access permissions](../../../../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md)
-    -   [Enabling remote rendering with WSRP and the Web Content Viewer](../../../../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/index.md)
+    -   [Access permissions](../../../../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md)
+    -   [Enabling remote rendering with WSRP and the Web Content Viewer](../../../../../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/enable_remote_render_wsrp/index.md)
     -   [Updating a WSRP Consumer](../../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_consumer.md)
 

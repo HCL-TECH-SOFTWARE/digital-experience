@@ -72,7 +72,7 @@ To use the WSRP policy sets and provider policy set bindings for service configu
 
 ???+ info "Related information"
     -   [WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
-    -   [The XML configuration interface](../admin-system/admxmlai.md)
-    -   [Working with the XML configuration interface](../admin-system/adxmltsk.md)
-    -   [Configuring WSRP web service clients](../admin-system/wsrpt_cons_cfg_wsrvc_clnt.md)
+    -   [The XML configuration interface](../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
+    -   [Working with the XML configuration interface](../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    -   [Configuring WSRP web service clients](../../../portal_wsrp_consumer/wsrp_consumer_info/cfg_security_consumer_portal/cfg_wsrp_webservice_clients/index.md)
 
