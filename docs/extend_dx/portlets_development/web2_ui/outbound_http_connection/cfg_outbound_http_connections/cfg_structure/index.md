@@ -2,7 +2,7 @@
 
 The Outbound Connection Service Configuration model has the following structure.
 
-![Configuration structure of the HTTP Outbound connection service](../images/HTTP_OutBound_graphic_2.jpg)
+![Configuration structure of the HTTP Outbound connection service](../../../../../../images/HTTP_OutBound_graphic_2.jpg)
 
 For more detailed information about the configuration structure of the outbound connection service, read the following topics. Examples follow in later topics.
 
