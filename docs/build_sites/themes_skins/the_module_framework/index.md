@@ -43,7 +43,7 @@ To add or remove a module, update the profile that is used to render a page for 
 You can extend the theme module framework with a new ConfigEngine task.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Module framework for IBM MobileFirst](../../../extend_dx/integration/ibm_mobilefirst/module_framework_mobilefirst/index.md)
     - [Creating a federated documents selection rule](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/feddocs/wcm_dev_feddocs_createrule.md)
     - [Creating content with the Articles template page](../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/getting_started/creating_contentsamples/wcm_delivery_ctsamples_article.md)
