@@ -2,7 +2,8 @@
 
 HCL Digital Experience externalizes roles and uses access control to control role membership. From the perspective of the external security manager, these externalized roles contain only one permission: membership in the role. HCL Portal always determines the permissions associated with each role.
 
-**Note:** It is not possible to combine the usage of externalizes roles and externalized role mappings with portal managed pages feature. Portal pages cannot be externalized when being edited within a project and externalized resources cannot be added to projects.
+!!!note
+    It is not possible to combine the usage of externalized roles and externalized role mappings with portal managed pages feature. Portal pages cannot be externalized when being edited within a project and externalized resources cannot be added to projects.
 
 For example, if you externalize the Editor@Market News Page role, you must use the external security manager to edit the access control for that role. HCL Portal still determines the permissions that are associated with the Editor role type. Roles are always associated with a specific resource, so the role Editor@Market News Page contains specific permissions on the Market News Page only. Use the Resource Permissions portlet or the XML configuration interface to move resources back and forth from internal to external access control.
 
@@ -20,7 +21,8 @@ Complete the following steps to manage access control with external security man
 
 3.  Modify the **WP AccessControlDataManagementService** Resource Environment Provider; change the accessControlDataManagement.reorderRoleNames parameter to true.
 
-    **Note:** Add the accessControlDataManagement.reorderRoleNames parameter if it does not exist.
+    !!!note
+        Add the accessControlDataManagement.reorderRoleNames parameter if it does not exist.
 
 4.  Save your changes and restart the WebSphere\_Portal server.
 
@@ -50,8 +52,7 @@ WEB_MODULE/Tracing.war/1_0_3K@User
 ```
 
 
-**Related information**  
+???+ info "Related information" 
+    - [Starting and stopping servers, deployment managers, and node agents](../../../../stopstart.md)
 
-
-[Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart)
 

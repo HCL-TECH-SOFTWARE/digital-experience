@@ -6,13 +6,15 @@ The following list shows all the properties that apply to the appropriate portal
 
 To access these properties, log in to WebSphere® Integrated Solutions Console and then go to **Resources** \> **Resource Environment Providers** \> **WP RememberMeConfigService** \> **Custom properties**.
 
-**Note:** All property changes require that you restarted the HCL Portal server in order for the changes to take effect.
+!!!note
+    All property changes require that you restarted the HCL Portal server in order for the changes to take effect.
 
 -   **rememberMeCookie.enable**
 
     Use this property to enable and disable the **Remember me cookie** function.
 
-    **Note:** Use the provided configuration tasks because they automatically set certain values.
+    !!!note
+        Use the provided configuration tasks because they automatically set certain values.
 
     Default: false
 
@@ -22,7 +24,8 @@ To access these properties, log in to WebSphere® Integrated Solutions Console a
 
     Use this property to specify whether a user who presents a valid **Remember me cookie** should be logged in to the protected portal area. If this option is enabled, the user is not asked to provide any other proof of identity to enter the protected portal area. If the requested resource has a higher authentication level requirement, then extra proof of identity is required.
 
-    **Note:** To prevent an insecure portal setup, this option is disregarded if step-up authentication is disabled. As a result, logging in to a protected portal area with a **Remember me cookie** is only allowed with an active step-up authentication engine, which forces a higher authentication level.
+    !!!note
+        To prevent an insecure portal setup, this option is disregarded if step-up authentication is disabled. As a result, logging in to a protected portal area with a **Remember me cookie** is only allowed with an active step-up authentication engine, which forces a higher authentication level.
 
     Default: false
 
@@ -50,7 +53,7 @@ To access these properties, log in to WebSphere® Integrated Solutions Console a
 
     The default value is 0. Setting the value to -1 means that the **Remember me cookie** persists until the web browser session ends.
 
-    Default: 86400 \(one day\)
+    Default: 86400 (one day)
 
     Type: java.lang.Integer
 
@@ -82,7 +85,8 @@ To access these properties, log in to WebSphere® Integrated Solutions Console a
 
     Use this property to specify the encryption algorithm that should be used to encrypt and decrypt the **Remember me cookie**.
 
-    **Note:** This property is specific to the default **Remember me cookie** handler.
+    !!!note
+        This property is specific to the default **Remember me cookie** handler.
 
     Default: AES
 
@@ -92,7 +96,8 @@ To access these properties, log in to WebSphere® Integrated Solutions Console a
 
     Use this property to specify the length of the key that should be used to encrypt and decrypt the **Remember me cookie**. The assigned value is interpreted in bytes.
 
-    **Note:** This property is specific to the default **Remember me cookie** handler.
+    !!!note
+        This property is specific to the default **Remember me cookie** handler.
 
     Default: 128
 
@@ -102,7 +107,8 @@ To access these properties, log in to WebSphere® Integrated Solutions Console a
 
     Use this property to specify the length of the random salt that is part of the encrypted **Remember me cookie** content. The assigned value is interpreted in bytes.
 
-    **Note:** This property is specific to the default **Remember me cookie** handler.
+    !!!note
+        This property is specific to the default **Remember me cookie** handler.
 
     Default: 20
 
@@ -112,9 +118,10 @@ To access these properties, log in to WebSphere® Integrated Solutions Console a
 
     Use this property to specify the lifetime of the **Remember me cookie** that is part of the encrypted **Remember me cookie** content. Unlike the property expiration, this property is used by the default **Remember me cookie** handler to check the validity of a **Remember me cookie** that is received by portal. Thus, it is transparent to the client. The assigned value is interpreted in seconds.
 
-    **Note:** This property is specific to the default **Remember me cookie** handler.
+    !!!note
+        This property is specific to the default **Remember me cookie** handler.
 
-    Default: 86400 \(one day\)
+    Default: 86400 (one day)
 
     Type: java.lang.Integer
 
@@ -122,7 +129,8 @@ To access these properties, log in to WebSphere® Integrated Solutions Console a
 
     Use this property to specify the J2C authentication data alias that holds the passphrase that is used to encrypt and decrypt the **Remember me cookie**.
 
-    **Note:** This property is specific to the default **Remember me cookie** handler.
+    !!!note
+        This property is specific to the default **Remember me cookie** handler.
 
     Default: SUAServerSecret
 

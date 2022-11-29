@@ -23,7 +23,8 @@ The following information contains all properties that apply to the appropriate 
 
 Log on to WebSphere® Integrated Solutions Console and then go to **Resources** \> **Resource Environment** \> **Resource Environment Providers** \> **WP StepUpConfigService** \> **Custom properties** to access the properties.
 
-**Note:** All property changes require that you restart the HCL Portal server in order for the changes to take effect.
+!!!note
+    All property changes require that you restart the HCL Portal server in order for the changes to take effect.
 
 -   **com.ibm.portal.SUA\_WPReqURL.set.httponly**
 
@@ -45,10 +46,10 @@ Log on to WebSphere® Integrated Solutions Console and then go to **Resources** 
 
     Use this property to provide a comma-separated list of authentication level names.
 
-    **Notes:**
+    !!!note "Notes"
+        -   If step-up authentication is enabled, the authentication level name must be specified.
+        -   If you want to use the **Remember me** cookie, make sure that it is enabled and add the authentication level name for this property.
 
-    -   If step-up authentication is enabled, the authentication level name must be specified.
-    -   If you want to use the **Remember me** cookie, make sure that it is enabled and add the authentication level name for this property.
     Default: authenticated
 
     Type: java.lang.String
@@ -57,7 +58,8 @@ Log on to WebSphere® Integrated Solutions Console and then go to **Resources** 
 
     Use this property to specify the authentication level strength of the authentication level with the name auth\_level\_name. The value is a non-negative integer that expresses the implied strength of a particular authentication method. The step-up authentication framework considers one authentication method to be stronger than another if it has a higher value.
 
-    **Note:** The value 0 is reserved by the step-up authentication engine, and therefore it is not allowed to assign values less than one. It is possible to leave gaps in the sequence of authentication level strengths. It is not possible to assign the same authentication level to multiple authentication level names.
+    !!!note
+        The value 0 is reserved by the step-up authentication engine, and therefore it is not allowed to assign values less than one. It is possible to leave gaps in the sequence of authentication level strengths. It is not possible to assign the same authentication level to multiple authentication level names.
 
     Default: sua.authLevel.identified.strength =5 sua.authLevel.authenticated.strength =10
 
@@ -67,7 +69,8 @@ Log on to WebSphere® Integrated Solutions Console and then go to **Resources** 
 
     Use this property to specify whether the authentication level with the name auth\_level\_name is optional or required. When a user accesses a resource with an optional authentication level, this resource might be accessed if the first required authentication level is verified. When an authentication level is flagged as required, it can be verified successfully only if all required authentication levels can be verified successfully.
 
-    **Note:** This property must not be set for the authentication level that is identified or authenticated. If one authentication level is set as optional, all previous levels must also be optional.
+    !!!note
+        This property must not be set for the authentication level that is identified or authenticated. If one authentication level is set as optional, all previous levels must also be optional.
 
     Default: true
 
@@ -77,7 +80,8 @@ Log on to WebSphere® Integrated Solutions Console and then go to **Resources** 
 
     Use this property to specify the fully qualified name of the class that implements the **com.ibm.portal.auth.stepup.AuthLevelVerifier** SPI. It also verifies whether the authentication level of auth\_level\_name is valid for a request.
 
-    **Note:** This property must not be set for the authentication level that is identified or authenticated.
+    !!!note
+        This property must not be set for the authentication level that is identified or authenticated.
 
     Default: -
 
@@ -87,7 +91,8 @@ Log on to WebSphere® Integrated Solutions Console and then go to **Resources** 
 
     Use this property to specify the fully qualified name of the class that implements the **com.ibm.portal.auth.stepup.StepUpAuthHandler** SPI. It also establishes the authentication level of auth\_level\_name.
 
-    **Note:** This property must not be set for the authentication level that is identified or authenticated.
+    !!!note
+        This property must not be set for the authentication level that is identified or authenticated.
 
     Default: -
 
@@ -97,7 +102,8 @@ Log on to WebSphere® Integrated Solutions Console and then go to **Resources** 
 
     The step-up authentication handler redirects a user with a certain authentication level to another page. For example, it redirects to a page with a login form. The step-up authentication framework redirects the user to the resource requested before the authentication level enforcement. This property specifies whether the redirection to the originally requested resource point to the public or the protected portal area. The implementation of the authentication level might move the user from an unauthenticated to an authenticated state.
 
-    **Note:** This property must not be set for the authentication level that is identified or authenticated.
+    !!!note
+        This property must not be set for the authentication level that is identified or authenticated.
 
     Default: false
 

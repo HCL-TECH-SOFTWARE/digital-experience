@@ -10,10 +10,12 @@ Complete the following steps to replace the HCL Digital Experience administrator
 
 2.  Run the following task to replace the old HCL Digital Experience administrative user with the new user:
 
-    -   **AIX® HP-UX Linux™ Solaris:** ./ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
-    -   **IBM® i:** ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
-    -   **Windows™:** ConfigEngine.bat wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
-    -   **z/OS®:** ./ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
+    -   **AIX® HP-UX Linux™ Solaris:** ./ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
+    -   **IBM® i:** ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
+    -   **Windows™:** ConfigEngine.bat wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
+    -   **z/OS®:** ./ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
+
+
     **Additional parameter for stopped servers:** This task verifies the user against a running server instance. If the server is stopped, add the -Dskip.ldap.validation=true parameter to the task to skip the validation.
 
 3.  Verify that the task completed successfully. Stop and restart all required servers.
@@ -53,21 +55,19 @@ Complete the following steps to replace the HCL Digital Experience administrator
     3.  Update the user ID and password for the RunAs role mapping for the StartupCheck application.
 
 
-**Notes:**
-
--   If you use an external security manager such as Security Access Manager, you must manually remove the old administrator user ID from the external security manager.
--   If you set the default portal administrator user ID to be used as the crawler user ID for Portal Search, you need to adapt that crawler user ID accordingly. For more information, read [Managing the content sources of a search collection](/digital-experience/build_sites/search/manage_search/search_collection/mng_cntnt_source).
--   If you have HCL Digital Experience Version 8.5 with CF08 or an earlier version and you have the Script Portlet V 1.3 PAA from the catalog installed, make sure that the security constraints of the Script Portlet reflect the new portal administrator group. If they do not match, update them manually to match the new portal administration group. For information about how to do so, read the section about the *Security overview for Script Portlet V 1.3* in the Script Portlet V 1.3 documentation.
-
-
-**Related information**  
+!!!note "Notes"
+    -   If you use an external security manager such as Security Access Manager, you must manually remove the old administrator user ID from the external security manager.
+    -   If you set the default portal administrator user ID to be used as the crawler user ID for Portal Search, you need to adapt that crawler user ID accordingly. For more information, read [Managing the content sources of a search collection](../../../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md).
+    -   If you have HCL Digital Experience Version 8.5 with CF08 or an earlier version and you have the Script Portlet V 1.3 PAA from the catalog installed, make sure that the security constraints of the Script Portlet reflect the new portal administrator group. If they do not match, update them manually to match the new portal administration group. For information about how to do so, read the section about the *Security overview for Script Portlet V 1.3* in the Script Portlet V 1.3 documentation.
 
 
-[Managing the content sources of a search collection](/digital-experience/build_sites/search/manage_search/search_collection/mng_cntnt_source).
+???+ info "Related information"
+    - [Managing the content sources of a search collection](../../../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md)
+    - [Applying fix packs to your portal](../../../../manage_portal_using_iim/apply_fixpacks.md)
+    - [Script Application security overview](../../../../../../extend_dx/script_application/script_application_security/index.md)
+    - [Target environment considerations](../../../../migrate/settingup_target_env/mig_plan_targetenvironment.md)
 
-[Applying fix packs to your portal](/digital-experience/deployment/manage/manage_portal_using_iim/apply_fixpacks)
 
-[Script Application security overview](/digital-experience/extend_dx/script_application/script_application_security)
 
-[Target environment considerations](/digital-experience/deployment/manage/migrate/settingup_target_env/mig_plan_targetenvironment)
+
 
