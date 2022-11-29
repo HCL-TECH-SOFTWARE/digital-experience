@@ -97,6 +97,52 @@ The **Dashboard** view allows users to perform content authoring actions.
 
     ![Authoring actions on HCL Content Composer Dashboard](../../../../../assets/Authoring_actions_single_select_via_HCL_CC_Dashboard.png)
 
+## Create new content and add/remove keywords
+
+Follow the steps to create a new content and add keywords from the Dashboard view:
+
+1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template, hover to the icon to display checkbox then click it.
+
+    ![](../../../../../assets/HCL_Content_Composer_Sample_Template.png)
+
+2.  Click **Create Content** in the actions bar.
+
+    ![](../../../../../assets/HCL_Content_Composer_Sample_Template_Create_Content.png)
+
+3.  Click the **Properties** icon, which is on the right side as shown below.
+
+    ![](../../../../../assets/HCL_Content_Composer_Properties_Tab.png)
+
+4.  Add a keyword by inputting in the Keywords Field shown below. You can also add multiple keywords by adding a delimeter (,) in between the keywords.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_Add_Keywords.png)
+
+5. If you want to remove a keyword, just click the 'x' button of the keyword you want to delete as shown below.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_Remove_Keyword.png)
+
+6.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
+7.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and keywords and will redirect you to the new content's location in the Content Composer dashboard.
+
+
+## Create new content with default keywords
+
+Follow the steps to create a new content with auto-populated keywords from the Dashboard view:
+
+1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template with Default Content Keywords, hover to the icon to display checkbox then click it.
+   
+    ![](../../../../../assets/HCL_Content_Composer_DefaultKeyword_Checkbox.png)
+
+2.  Click **Create Content** in the actions bar.
+
+    ![](../../../../../assets/HCL_Content_Composer_DefaultKeyword_ActionBar.png)
+
+3.  The Content Template and Keywords in Properties will be auto populated as shown below.
+
+    ![](../../../../../assets/HCL_Content_Composer_DefaultKeyword.png)
+
+4.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
+5.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and will redirect you to the new content's location in the Content Composer dashboard.
 
 <!--
 
