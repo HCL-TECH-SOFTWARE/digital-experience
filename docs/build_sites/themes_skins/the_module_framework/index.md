@@ -46,7 +46,7 @@ You can extend the theme module framework with a new ConfigEngine task.
 ???+ info "Related information:"
     - [Module framework for IBM MobileFirst](../../../extend_dx/integration/ibm_mobilefirst/module_framework_mobilefirst/index.md)
     - [Creating a federated documents selection rule](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/feddocs/wcm_dev_feddocs_createrule.md)
-    - [Creating content with the Articles template page](../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/getting_started/creating_contentsamples/wcm_delivery_ctsamples_article.md)
-    - [OpenAjax security and remote web content rendering with WSRP and the Web Content Viewer](../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_open_ajax.md)
+    - [Creating content with the Articles template page](../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/getting_started/creating_contentsamples/wcm_delivery_ctsamples_article.md)
+    - [OpenAjax security and remote web content rendering with WSRP and the Web Content Viewer](../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_open_ajax.md)
     - [Using the business card](../../social_rendering/customizing_view_definitions/customizing_visualdesign/soc_rendr_use_biz_card.md)
     - [Understanding the Portal 8.5 modularized theme](../../create_sites/website_building_blocks/themes_profiles_skins/themeopt_defaultparts.md)

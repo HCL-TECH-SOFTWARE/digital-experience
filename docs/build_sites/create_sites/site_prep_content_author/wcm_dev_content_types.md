@@ -76,7 +76,7 @@ These items are created when you generate a new author-ready content template:
 
         -   Documentation resource: [An overview of authoring templates](../../../build_sites/create_sites/create_reusable_assets/wcm_dev_auth-temp_overview.md) 
 
-        -   Documentation resource: [Creating authoring templates](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/creating_authoring_templates/index.md)
+        -   Documentation resource: [Creating authoring templates](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/authoring_templates/index.md)
 
 -   **Update the CSS**
 

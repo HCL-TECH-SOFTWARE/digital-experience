@@ -31,5 +31,5 @@ After you publish the site, click **New Page** to add content or click **Edit** 
 
 
 ???+ info "Related information"
-    -   [Web Content Viewer best practices and limitations](../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/wcm_config_delivery_portlet_bestpractice.md)
+    -   [Web Content Viewer best practices and limitations](../../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/wcm_config_delivery_portlet_bestpractice.md)
 
