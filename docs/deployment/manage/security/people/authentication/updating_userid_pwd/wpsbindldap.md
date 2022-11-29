@@ -53,5 +53,5 @@ Perform the following steps to change the WebSphere® Application Server adminis
 **Related information**  
 
 
-[Applying fix packs to your portal](../security/apply_fixpacks.md)
+[Applying fix packs to your portal](/digital-experience/deployment/manage/manage_portal_using_iim/apply_fixpacks)
 

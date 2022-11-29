@@ -6,7 +6,7 @@ Install Computer Associates eTrust SiteMinder Trust Association Interceptor \(TA
 
 Complete the following steps to configure eTrust SiteMinder for authentication and authorization:
 
-1.  Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/properties directory.
+1.  Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/properties directory.
 
     **Clustered environments:** Complete this step on all nodes.
 
@@ -18,10 +18,10 @@ Complete the following steps to configure eTrust SiteMinder for authentication a
 
 3.  Use a text editor to open the wkplc\_comp.properties file in the following directory:
 
-    -   AIX® HP-UX Linux™Solaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   IBM® i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   Windows™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
-    -   z/OS®: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+    -   AIX® HP-UX Linux™Solaris: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+    -   IBM® i: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+    -   Windows™: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties
+    -   z/OS®: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
 4.  Update the Namespace management parameters in the wkplc\_comp.properties file
 
     1.  For wp.ac.impl.EACserverName, type the Namespace context information to further distinguish externalized portal role names from other role names in the namespace.
@@ -66,13 +66,13 @@ Complete the following steps to configure eTrust SiteMinder for authentication a
 
 7.  Run the following task to configure eTrust SiteMinder for authentication and authorization:
 
-    -   AIX HP-UXLinux Solaris: ./ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
-    -   IBM i: ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
-    -   Windows: ConfigEngine.bat enable-sm-all from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
-    -   z/OS:./ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    -   AIX HP-UXLinux Solaris: ./ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory
+    -   IBM i: ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory
+    -   Windows: ConfigEngine.bat enable-sm-all from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory
+    -   z/OS:./ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory
     **Clustered environments:** Complete this step on all nodes.
 
-8.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+8.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 
 Depending on your configuration, the XML configuration interface might not be able to access HCL Portal through eTrust SiteMinder. To allow the XML configuration interface access, use eTrust SiteMinder to define the configuration URL \(/wps/config\) as unprotected. Refer to the eTrust SiteMinder documentation for specific instructions.

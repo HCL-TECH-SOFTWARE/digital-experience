@@ -51,11 +51,11 @@ Perform the following steps to change the administrator password:
     6. Mkde sure to click Update and then Save. 
 
 
-Additionally, you should also change the password in the wkplc.properties file, located in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+Additionally, you should also change the password in the wkplc.properties file, located in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 
 **Related information**  
 
 
-[Applying fix packs to your portal](../security/apply_fixpacks.md)
+[Applying fix packs to your portal](/digital-experience/deployment/manage/manage_portal_using_iim/apply_fixpacks)
 

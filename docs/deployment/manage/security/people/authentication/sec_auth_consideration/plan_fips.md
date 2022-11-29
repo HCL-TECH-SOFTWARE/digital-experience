@@ -26,7 +26,7 @@ There are some restrictions in the level of support that HCL Digital Experience 
 **Related information**  
 
 
-[Enabling FIPS and \(NIST\) SP800-131a](../config/cfg_fips.md)
+[Enabling FIPS and \(NIST\) SP800-131a](/digital-experience/deployment/manage/security/information/confidentiality/cfg_fips)
 
 [IBM Tivoli Directory Server Administration Guide](http://publib.boulder.ibm.com/tividd/td/IBMDS/IDSadmin52/en_US/HTML/admin_gd.htm#Header_185)
 

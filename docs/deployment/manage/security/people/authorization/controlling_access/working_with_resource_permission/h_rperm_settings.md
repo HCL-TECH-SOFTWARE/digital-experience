@@ -1,8 +1,4 @@
----
-id: h_rperm_settings
-title: Configuring the Resource Permissions portlet
----
-
+# Configuring the Resource Permissions portlet
 
 
 

@@ -12,8 +12,7 @@ You can use this subset of the LDAP search filter syntax:
 -   Equality comparison represented by an equal sign \(`=`\) for name and value expressions.
 -   Wildcards represented by an asterisk \(`*`\) at the beginning or end of values in name and value expressions.
 
-!!!important
-    Attributes must not start with one of the operator symbols `AND`, `OR`, or `NOT` \(`&`, `|`, or `!`\), and they must not contain a comparison equal sign \(`=`\), or parentheses.
+**Note:** Attributes must not start with one of the operator symbols `AND`, `OR`, or `NOT` \(`&`, `|`, or `!`\), and they must not contain a comparison equal sign \(`=`\), or parentheses.
 
 For example:
 
@@ -56,6 +55,8 @@ When you define or modify a rule base user group, the rule-based user groups ada
 
 
 
-???+ info "Related information"
-    - [RFC2254 - The String Representation of LDAP Search Filters - http://www.faqs.org/rfcs/rfc2254.html](http://www.faqs.org/rfcs/rfc2254.html)
+**Related information**  
+
+
+[RFC2254 - The String Representation of LDAP Search Filters - http://www.faqs.org/rfcs/rfc2254.html](http://www.faqs.org/rfcs/rfc2254.html)
 

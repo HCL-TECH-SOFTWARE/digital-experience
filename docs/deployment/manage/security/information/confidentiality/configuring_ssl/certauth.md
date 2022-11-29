@@ -97,7 +97,7 @@ Complete the following steps to configure HCL Digital Experience for SSL client 
         4.  Click **Full Resynchronize**.
 4.  Update the themes and settings.
 
-    1.  Modify the URLs for login and logout in the themes that are used in your scenario. In the default theme, these are located in the banner\_toolbar.jspf and mainMenu.jsp files in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/installer/wp.ear/installableApps/wps.ear/wps.war/themes/ directory.The files that contain the login and logout links can be different, depending on the theme. In more recent themes, these links might be located in Default.jsp. In older themes, these links might be located in either banner.jspf or mainMenu.jsp.
+    1.  Modify the URLs for login and logout in the themes that are used in your scenario. In the default theme, these are located in the banner\_toolbar.jspf and mainMenu.jsp files in the [PortalServer\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/installer/wp.ear/installableApps/wps.ear/wps.war/themes/ directory.The files that contain the login and logout links can be different, depending on the theme. In more recent themes, these links might be located in Default.jsp. In older themes, these links might be located in either banner.jspf or mainMenu.jsp.
 
         **Finding theme resources:** See the *Location of theme resources* link in the Related section.
 
@@ -130,7 +130,7 @@ Complete the following steps to configure HCL Digital Experience for SSL client 
         5.  Click **command.login** and change the value from LoginUserAuth to LoginUserBlocked.
         6.  Click **Save** to save the changes to the master configuration.
         7.  Log out of the WebSphere Integrated Solutions Console.
-5.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+5.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 6.  Verify your setup.
 
@@ -146,9 +146,9 @@ Complete the following steps to configure HCL Digital Experience for SSL client 
 
 
 
-**Previous topic:**[Configuring SSL only for the login process](../security/config_ssl_login.md)
+**Previous topic:**[Configuring SSL only for the login process](/digital-experience/deployment/manage/security/information/confidentiality/configuring_ssl/config_ssl_login)
 
-**Next topic:**[Cryptographic hardware for SSL acceleration](../security/sec_pw_crypt.md)
+**Next topic:**[Cryptographic hardware for SSL acceleration](/digital-experience/deployment/manage/security/information/confidentiality/configuring_ssl/sec_pw_crypt)
 
 **Related information**  
 
@@ -157,5 +157,5 @@ Complete the following steps to configure HCL Digital Experience for SSL client 
 
 [WebSphere Application Server Network Deployment Version 8.5: Quality of protection \(QoP\) settings](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=configuration-quality-protection-qop-settings)
 
-[Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md)
+[Understanding the Portal 8.5 modularized theme](/digital-experience/build_sites/themes_skins/portal85_modularized_theme)
 

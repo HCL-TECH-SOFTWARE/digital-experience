@@ -42,7 +42,7 @@ Complete the following steps to change the login and logout pages:
     -   In eTrust SiteMinder, the Web Agent configuration object contains a property named LogoffUri where you can supply a URL to terminate the eTrust SiteMinder login session
     Complete the following steps to enable HCL Portal to execute the external security manager logoff URL after completing its logoff command:
 
-    1.  Specify the following values in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/ConfigService.properties file:
+    1.  Specify the following values in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/PortalServer/config/ConfigService.properties file:
 
         -   redirect.logout=true
         -   redirect.logout.ssl=false or true, depending on your environment
@@ -53,10 +53,10 @@ Complete the following steps to change the login and logout pages:
 
         |Operating system|Task|
         |----------------|----|
-        |Windows™:|ConfigEngine.bat update-properties -DWasPassword=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory|
-        |AIX®SolarisLinux™:|./ConfigEngine.sh update-properties -DWasPassword=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
+        |Windows™:|ConfigEngine.bat update-properties -DWasPassword=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory|
+        |AIX®SolarisLinux™:|./ConfigEngine.sh update-properties -DWasPassword=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory|
         |z/OS®:|Perform the following steps:        1.  Open a UNIX System Services \(z/OS UNIX System Services\) command prompt.
-        2.  Run the ./ConfigEngine.sh update-properties -DWasPassword=password task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+        2.  Run the ./ConfigEngine.sh update-properties -DWasPassword=password task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 |
 
     3.  Restart the WebSphere\_Portal server on the standalone server or on each cluster member.
@@ -66,7 +66,7 @@ Complete the following steps to change the login and logout pages:
 **Related information**  
 
 
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+[Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart)
 
-[Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md)
+[Understanding the Portal 8.5 modularized theme](/digital-experience/build_sites/create_sites/website_building_blocks/themes_profiles_skins/themeopt_defaultparts)
 

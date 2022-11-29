@@ -2,7 +2,7 @@
 
 You can disable the step-up authentication feature or the Remember me cookie to remove them from your server.
 
-1.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Go to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Open the wkplc.properties file with a text editor.
 
@@ -17,7 +17,7 @@ You can disable the step-up authentication feature or the Remember me cookie to 
 
 5.  Open a command prompt.
 
-6.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+6.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 7.  Choose one of the following tasks to modify your environment:
 
@@ -33,7 +33,7 @@ You can disable the step-up authentication feature or the Remember me cookie to 
 
 8.  Check the output for any error messages before you run any additional tasks. If any of the configuration tasks fail, verify the values in the wkplc.properties file.
 
-9.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+9.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 
 

@@ -21,6 +21,6 @@ HCL DX 9.5 CF192 and higher releases now include a new OOB pre-processing filter
 -   Intercepts the HTTP response and injects the necessary style and script changes into the markup
 -   Sets the Content-Security-Policy header in the response
 
-![Content Security Policy Implementation flow](../images/csp-implementation-flow-2.png)
+![Content Security Policy Implementation flow](/digital-experience/images/csp-implementation-flow-2.png)
 
 

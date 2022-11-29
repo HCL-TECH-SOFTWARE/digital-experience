@@ -13,7 +13,7 @@ Complete the following steps to enable user provisioning within Security Access 
 
 1.  **Clustered environments:** Complete this step on all nodes.
 
-    Run the following task in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Digital Experience and the Security Access Manager server works:
+    Run the following task in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Digital Experience and the Security Access Manager server works:
 
     **Tip:** Run the validate-pdadmin-connection task on the HCL Digital Experience node or on each node in a clustered environment. In a clustered environment, WasPassword is the Deployment Manager administrator password. The wp.ac.impl.PDAdminPwd is the Security Access Manager administrative user password.
 
@@ -70,17 +70,17 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
 
     |Operating system|Task|
     |----------------|----|
-    |AIX HP-UX Linux Solaris|./ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
-    |IBM i|ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
-    |Windows|ConfigEngine.bat enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory|
-    |z/OS|./ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
+    |AIX HP-UX Linux Solaris|./ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory|
+    |IBM i|ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory|
+    |Windows|ConfigEngine.bat enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory|
+    |z/OS|./ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory|
 
-4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 
 
 **Related information**  
 
 
-[Creating the PdPerm.properties file](../security/run_svrssl_config.md)
+[Creating the PdPerm.properties file](/digital-experience/deployment/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/un_svrssl_config)
 

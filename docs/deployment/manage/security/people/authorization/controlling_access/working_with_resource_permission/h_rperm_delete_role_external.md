@@ -1,8 +1,4 @@
----
-id: h_rperm_delete_role_external
-title: Deleting roles for externalized resources
----
-
+# Deleting roles for externalized resources
 
 
 

@@ -1,9 +1,4 @@
----
-id: h_ug_perms_settings
-title: Configuring the User and Group Permissions portlet
----
-
-
+# Configuring the User and Group Permissions portlet
 
 
 You can modify the search results of this portlet by changing the maximum number of items that a search retrieves and by changing the number of items that display on a page.

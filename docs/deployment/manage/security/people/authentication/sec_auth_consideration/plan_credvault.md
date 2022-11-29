@@ -25,6 +25,7 @@ HCL Portal also supports the storage and retrieval of credentials from other vau
 -   Windows™
 -   z/OS®
 
+<!--
 
 **Related information**  
 
@@ -33,3 +34,4 @@ HCL Portal also supports the storage and retrieval of credentials from other vau
 
 [Providing user credentials for authenticated connections](../dev-portlet/outbhttp_auth_prv_ucreds.md)
 
+-->

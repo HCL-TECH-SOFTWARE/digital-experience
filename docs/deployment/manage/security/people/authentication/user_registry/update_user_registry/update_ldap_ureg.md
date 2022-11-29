@@ -4,8 +4,7 @@ After you create and use the LDAP user registry in the default federated reposit
 
 In a stand-alone server environment, you can complete the following task when the servers are either stopped or started. In a clustered environment, start the deployment manager and node agent. Then, verify that they are able to synchronize.
 
-!!!note
-    The update federated LDAP user registry task does not modify the following attributes:
+**Note:** The update federated LDAP user registry task does not modify the following attributes:
 
 -   Administrative users
 -   Entity types
@@ -16,14 +15,13 @@ In a stand-alone server environment, you can complete the following task when th
 
 There are separate tasks to update these attributes.
 
-1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Go to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Open the wkplc.properties file with a text editor.
 
 3.  Enter the following parameters in the wkplc.properties file under Federated LDAP repository heading:
 
-    !!!note
-        Go to the properties file for specific information about the parameters.
+    **Note:** Go to the properties file for specific information about the parameters.
 
     -   federated.ldap.id
     -   federated.ldap.host
@@ -32,12 +30,11 @@ There are separate tasks to update these attributes.
     -   federated.ldap.port
     -   federated.ldap.bindDN
     -   federated.ldap.bindPassword
-
 4.  Save your changes to the wkplc.properties file.
 
 5.  Open a command prompt.
 
-6.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+6.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 7.  Run the following task to validate your LDAP server settings:
 
@@ -45,9 +42,7 @@ There are separate tasks to update these attributes.
     -   IBM® i: ConfigEngine.sh validate-federated-ldap -DWasPassword=password
     -   Windows™: ConfigEngine.bat validate-federated-ldap -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh validate-federated-ldap -DWasPassword=password
-
-    !!!note
-        In an environment that is configured with an LDAP with SSL, you are prompted to add a signer to the truststore. The prompt is Add signer to the truststore now?. If you do, press **y** and then **Enter**.
+    **Note:** In an environment that is configured with an LDAP with SSL, you are prompted to add a signer to the truststore. The prompt is Add signer to the truststore now?. If you do, press **y** and then **Enter**.
 
 8.  Run the following task to update the LDAP user registry in the default federated repository:
 
@@ -55,11 +50,9 @@ There are separate tasks to update these attributes.
     -   IBM i: ConfigEngine.sh wp-update-federated-ldap -DWasPassword=password
     -   Windows: ConfigEngine.bat wp-update-federated-ldap -DWasPassword=password
     -   z/OS: ./ConfigEngine.sh wp-update-federated-ldap -DWasPassword=password
-    
-    !!!note
-        You cannot change the host name of an existing LDAP repository definition when you run this task. If you want to change the host name for an existing LDAP repository, you must delete the existing repository and run the wp-create-ldap task to create a new repository.
+    **Note:** You cannot change the host name of an existing LDAP repository definition when you run this task. If you want to change the host name for an existing LDAP repository, you must delete the existing repository and run the wp-create-ldap task to create a new repository.
 
-9.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
+9.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart.md).
 
 
 

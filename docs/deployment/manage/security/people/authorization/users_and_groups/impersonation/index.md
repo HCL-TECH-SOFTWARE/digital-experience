@@ -12,16 +12,17 @@ You can use the default Impersonation portlet to impersonate specific users. Alt
 
 **Restriction:** A user cannot impersonate himself or herself.
 
--   **[Enabling and disabling impersonation](../admin-system/impers_enable_disable.md)**  
+-   **[Enabling and disabling impersonation](../impersonation/impers_enable_disable.md)**  
 By default, user impersonation is enabled, but you can manually disable or enable the impersonation feature as needed.
--   **[Developing a custom portlet](../admin-system/impers_dev_custom_portlet.md)**  
+-   **[Developing a custom portlet](../impersonation/impers_dev_custom_portlet.md)**  
 You can use the default Impersonation portlet to impersonate specific users. Alternatively, you can create a resource environment provider to enable impersonation and develop a custom portlet for impersonating users.
--   **[Assigning the Can Run As User role](../admin-system/impers_user_canrunas.md)**  
+-   **[Assigning the Can Run As User role](../impersonation/impers_user_canrunas.md)**  
 Users with administrator access in HCL Portal can assign the Can Run As User role to designated users. Use Portal Access Control to assign the role. You can use the Virtual Resources option to grant permission for all users or groups in the system.
--   **[Impersonating an unauthenticated user](../admin-system/impers_user_unauth.md)**  
+-   **[Impersonating an unauthenticated user](../impersonation/impers_user_unauth.md)**  
 Users with administrator access in HCL Portal can impersonate an unauthenticated user.
 
 
+<!--
 **Related information**  
 
 
@@ -36,4 +37,4 @@ Users with administrator access in HCL Portal can impersonate an unauthenticated
 [Auditing](../admin-system/sec_audit.md)
 
 [User and group management](../dev/wpspuma.md)
-
+-->

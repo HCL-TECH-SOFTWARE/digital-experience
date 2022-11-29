@@ -14,7 +14,9 @@ Before you continue with the next configuration step, run the **Test connection*
 
 [Configuring a data source using the administrative console](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=mrifrc-configuring-property-extension-repository-in-federated-repository-configuration)
 
-[Configuring the VMM rule-based groups repository](../admin-system/rbug_cfg_vmm_repos.md)
+[Configuring the VMM rule-based groups repository](/digital-experience/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/cfg_rule_based_user_groups/cfg_vmm_rule_based_groups_repo/)
 
-[Configuring the VMM repository and realm](../admin-system/rbug_cfg_vmm_rps_rlm.md)
+[Configuring the VMM repository and realm](/digital-experience/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/cfg_rule_based_user_groups/cfg_vmm_rule_based_groups_repo/rbug_cfg_vmm_rps_rlm)
+
+
 

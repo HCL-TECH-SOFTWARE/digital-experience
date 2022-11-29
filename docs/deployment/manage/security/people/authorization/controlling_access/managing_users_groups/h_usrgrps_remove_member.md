@@ -1,9 +1,4 @@
----
-id: h_usrgrps_remove_member
-title: Removing members from a group
----
-
-
+# Removing members from a group
 
 
 Learn how to remove a member \(a user or user group\), from a user group.

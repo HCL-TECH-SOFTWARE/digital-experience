@@ -107,11 +107,11 @@ To be able to create Segment Groups, the user must have read access to the Appli
 
 -   Set as `Editor` of the library that contains the segment groups.
 
-`Editor` role is required on the web content library to be able to create and edit segment groups. Log in to HCL Portal. Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**. Click the **Set permissions** icon on the **Web Content** library to set the `Editor` role. For information about the roles, go to [Web content management roles](../wcm/wcm_cms_roles.md).
+`Editor` role is required on the web content library to be able to create and edit segment groups. Log in to HCL Portal. Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**. Click the **Set permissions** icon on the **Web Content** library to set the `Editor` role. For information about the roles, go to [Web content management roles](/digital-experience/deployment/manage/security/people/authorization/controlling_access/wcm_security/wcm_cms_access/wcm_cms_roles).
 
 
 |
-|Use Segments from Segment Groups to target content|Set as `User` on the segment groups to be accessible.Set this access at the library level or Segments folder level to give access to all segment groups within the library. Use the **Web Content Libraries** portlet to set access. Alternatively, set this access at the item level to give access to individual segment groups. For information about the roles, go to [Web content management roles](../wcm/wcm_cms_roles.md).
+|Use Segments from Segment Groups to target content|Set as `User` on the segment groups to be accessible.Set this access at the library level or Segments folder level to give access to all segment groups within the library. Use the **Web Content Libraries** portlet to set access. Alternatively, set this access at the item level to give access to individual segment groups. For information about the roles, go to [Web content management roles](/digital-experience/deployment/manage/security/people/authorization/controlling_access/wcm_security/wcm_cms_access/wcm_cms_roles).
 
 To target content on a **Web Content Viewer** portlet on a page, a user must have the following roles:
 
@@ -600,19 +600,19 @@ When you use identity propagation, the user who is authenticated on the client p
 **Related information**  
 
 
-[Securing a WSRP Producer portal](../admin-system/wsrpt_prod_prep_sec.md)
+[Securing a WSRP Producer portal](/digital-experience/extend-dx/portlets_development/usage/wsrp/configuration/portal_wsrp_producer/securing_wsrp_prod/wsrpt_prod_prep_sec)
 
-[Configuring security on the Consumer portal](../admin-system/wsrpt_cons_prep_sec.md)
+[Configuring security on the Consumer portal](/digital-experience/extend-dx/portlets_development/usage/wsrp/configuration/portal_wsrp_consumer/cfg_secuity_consumer/wsrpt_cons_prep_sec)
 
-[Configuring Portal Access Control for a WSRP Producer portal](../admin-system/wsrpt_prod_sec_pac.md)
+[Configuring Portal Access Control for a WSRP Producer portal](/digital-experience/extend-dx/portlets_development/usage/wsrp/configuration/portal_wsrp_producer/securing_wsrp_prod_portal/wsrpt_prod_sec_pac)
 
-[Adapting the list of required runtime configuration changes for your theme](../dev-theme/themeopt_move_repack_runtime.md)
+[Adapting the list of required runtime configuration changes for your theme](/digital-experience/build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging/themeopt_move_repack_runtime)
 
-[Viewing and creating vanity URLs](../wcm/van_url_create.md)
+[Viewing and creating vanity URLs]((/digital-experience/manage_content/wcm/wcm_content_delivery/vanity_url/van_url_create)
 
-[Human readable URL mappings for virtual portals](../admin-system/advppln_shpux_urlmap.md)
+[Human readable URL mappings for virtual portals](/digital-experience/build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap)
 
-[Managing community associations](../admin-system/commpages_create_mapping.md)
+[Managing community associations](/digital-experience/extend-dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping)
 
-[Security for tagging and rating](../admin-system/tag_rate_secy.md)
+[Security for tagging and rating](/digital-experience/build_sites/tagging_rating/tag_rate_secy)
 

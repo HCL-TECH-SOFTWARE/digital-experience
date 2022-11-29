@@ -1,9 +1,4 @@
----
-id: h_rperm_change_authlevel
-title: Changing the authentication level
----
-
-
+# Changing the authentication level
 
 
 The authentication level only applies to page and portlet resource types. By default, the authentication level is set to standard but you may want all identified users to view information without having to log in or you may want users to log in and authenticate before viewing certain pages and portlets.

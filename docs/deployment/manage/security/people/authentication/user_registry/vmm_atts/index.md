@@ -11,17 +11,14 @@ LDAP servers can handle only attributes that are explicitly defined in their sch
 
 Use the following tasks to adapt the attribute configuration to match the configured LDAP servers and your business needs:
 
-1.  [Querying the defined attributes](man_attributes.md)  
+1.  [Querying the defined attributes](../vmm_atts/man_attributes.md)  
 After you install HCL Digital Experience and configure your LDAP user registries, query the defined attributes. The task defines a list of attributes that are flagged as unsupported or mapped to a different LDAP attribute.
-2.  [Adding attributes](add_attributes.md)  
+2.  [Adding attributes](../vmm_atts/add_attributes.md)  
 The VMM is configured with a default attribute schema that might not be compatible with your LDAP server. Add attributes to extend the VMM attribute schema and then map them between HCL Digital Experience and your user registry.
-3.  [Mapping attributes](map_attributes.md)  
+3.  [Mapping attributes](../vmm_atts/map_attributes.md)  
 Map the attributes between HCL Digital Experience and your LDAP user registries.
-4.  [Removing attributes](remove_attr_def.md)  
-The Virtual Member Manager (VMM) has a limitation. There is no task to update an attribute.
+4.  [Removing attributes](../vmm_atts/remove_attr_def.md)  
+The Virtual Member Manager \(VMM\) has a limitation. There is no task to update an attribute.
 
 
-???+ info "Related information"
-    - [Mapping VMM attributes to LDAP user attributes](https://help.hcltechsw.com/digital-experience/9.5/collab/i_domi_t_sv_domldap_mapvmm.html)
-    - [People Finder](https://help.hcltechsw.com/digital-experience/9.5/collab/i_coll_r_porcc_pfnd.html)
 
