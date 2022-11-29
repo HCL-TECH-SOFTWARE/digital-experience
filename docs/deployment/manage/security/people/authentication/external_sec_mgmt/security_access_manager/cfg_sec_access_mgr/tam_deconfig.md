@@ -38,43 +38,48 @@ Complete the following steps to remove Security Access Manager from the HCL Digi
 
     12. Find the value com.ibm.wps.services.ac.ExternalAccessControlService and change it to com.ibm.wps.ac.impl.ExternalAccessControlDefaultImpl.
 
-    13. Restart the Portal server\(s\).
+    13. Restart the Portal server(s).
 
 3.  Complete the following steps to remove the credential vault adapter and its associated segments if you configured it for Security Access Manager:
 
     1.  Use the **Credential Vault portlet** to remove any segments that are added since installation.
 
-        **Note:** Do not remove DefaultAdminSegment.
+        !!!note
+            Do not remove DefaultAdminSegment.
 
     2.  Remove the Vault.AccessManager Credential Vault adapter implementation properties; including class, config, manager, and read-only; from the portal Credential Vault Service configuration.
 
-        **Note:** The systemcred.dn property cannot be removed.
+        !!!note
+            The systemcred.dn property cannot be removed.
 
-    3.  Remove the accessmanagervault.properties file from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config directory.
+    3.  Remove the accessmanagervault.properties file from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/PortalServer/config/config directory.
 
-        **Note:** Complete step 3.c. on all nodes.
+        !!!note
+            Complete step 3.c. on all nodes.
 
-4.  If you enabled user provisioning, go to [Disabling user provisioning](usr_prov_dis.md).
+4.  If you enabled user provisioning, go to [Disabling user provisioning](../usr_prov_dis.md).
 
 5.  Restore the backup copy of the theme so that the login and logout pages restore to the default before Security Access Manager was enabled.
 
-6.  Remove all junction points, access control lists \(ACLs\), protected objectspace entries \(POS entries\), custom actions, and custom action groups.
+6.  Remove all junction points, access control lists (ACLs), protected objectspace entries (POS entries), custom actions, and custom action groups.
 
 7.  Run the following task to remove the connection to Security Access Manager:
 
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
-    -   IBM i: ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
-    -   Windows™: ConfigEngine.bat run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
-    -   z/OS®: ./ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    -   IBM i: ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    -   Windows™: ConfigEngine.bat run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
+    -   z/OS®: ./ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    
     **Clustered environments:**
-
     -   Complete this step on all nodes.
     -   WasPassword is the Deployment Manager administrative password.
-    **Tip:** If the connection still shows up after you run this task, go to [Invalid or Stale Server Definitions](https://support.hcltechsw.com/csm) for more information.
+
+    !!!tip
+        If the connection still shows up after you run this task, go to [Invalid or Stale Server Definitions](https://support.hcltechsw.com/csm) for more information.
 
 8.  If necessary, uninstall any Security Access Manager components.
 
-9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../../../../stopstart.md).
 
 
 
