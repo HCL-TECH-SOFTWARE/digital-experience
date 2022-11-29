@@ -1,7 +1,4 @@
----
-id: h_usrgrps_add_members
-title: Adding members to a user group
----
+# Adding members to a user group
 
 
 

@@ -1,7 +1,4 @@
----
-id: h_usrgrps_dup_group
-title: Duplicating group assignments
----
+# Duplicating group assignments
 
 
 

@@ -1,9 +1,4 @@
----
-id: h_rperm_resource_type
-title: Resource types
----
-
-
+# Resource types
 
 
 Resource types are broad categories that contain resource instances. Resource instances are specific resources, such as a single portlet or page. Each resource instance belongs to only one resource type. For example, the resource instance Market News Page would belong to the Page resource type.

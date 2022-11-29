@@ -1,8 +1,4 @@
----
-id: h_rperm_fields
-title: Field descriptions for the Resource Permissions portlet
----
-
+# Field descriptions for the Resource Permissions portlet
 
 
 

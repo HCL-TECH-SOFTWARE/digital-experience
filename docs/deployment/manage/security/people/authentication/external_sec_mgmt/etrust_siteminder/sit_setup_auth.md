@@ -8,7 +8,7 @@ Install Computer Associates eTrust SiteMinder Trust Association Interceptor \(TA
 
 Perform the following steps to enable the eTrust SiteMinder TAI and create a new interceptor:
 
-1.  Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/properties directory:
+1.  Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/properties directory:
 
     **Clustered environments:** Complete this step on all nodes.
 
@@ -20,18 +20,19 @@ Perform the following steps to enable the eTrust SiteMinder TAI and create a new
 
 3.  Run the following task to enable eTrust SiteMinder TAI:
 
-    -   Windows™: ConfigEngine.bat enable-sm-tai -DWasPassword=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
-    -   AIX®SolarisLinux™: ./ConfigEngine.sh enable-sm-tai -DWasPassword=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
-4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+    -   Windows™: ConfigEngine.bat enable-sm-tai -DWasPassword=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory
+    -   AIX®SolarisLinux™: ./ConfigEngine.sh enable-sm-tai -DWasPassword=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory
+4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
-5.  Go to the [Verifying Trust Association Interceptors for authentication](verify_tai.md) file to verify that the TAI is working properly.
+5.  Go to the [Verifying Trust Association Interceptors for authentication](/digital-experience/deployment/manage/security/people/authentication/external_sec_mgmt/verify_tai) file to verify that the TAI is working properly.
 
 
 Depending on your configuration, the XML configuration interface might not be able to access HCL Digital Experience through eTrust SiteMinder. To allow the XML configuration interface access, use eTrust SiteMinder to define the configuration URL \(/wps/config\) as unprotected. Refer to the eTrust SiteMinder documentation for specific instructions.
 
-
+<!--
 **Related information**  
 
 
 [Customizing Collaborative Services user credentials for eTrust SiteMinder](../collab/i_domi_t_csenvir_user_credential.md)
 
+-->

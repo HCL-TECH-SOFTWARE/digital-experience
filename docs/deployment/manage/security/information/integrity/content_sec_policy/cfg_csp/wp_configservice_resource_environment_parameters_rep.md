@@ -21,13 +21,13 @@ The following WebSphere Application Server \(WAS\) resource environment paramete
 
 These parameters are included under the `WP_ConfigService` resource environment provider custom properties.
 
-![WP_ConfigService Resource Environment Parameters (REP)](../images/csp-was.png)
+![WP_ConfigService Resource Environment Parameters (REP)](/digital-experience/images/csp-was.png)
 
 ## `csp-replace-string parameter`
 
 In addition, the `csp-replace-string` plus a number \(i.e. `csp-replace-string.1`\) configures find and replace strings used in the CSP filter. This parameter was designed to allow users to implement filtering to correct their site specific CSP issues.
 
-![sp-replace-string parameter](../images/csp-reps.png)
+![sp-replace-string parameter](/digital-experience/images/csp-reps.png)
 
 ## Separators '@' and '=’
 

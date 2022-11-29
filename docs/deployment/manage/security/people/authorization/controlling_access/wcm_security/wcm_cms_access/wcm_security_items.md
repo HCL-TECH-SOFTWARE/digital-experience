@@ -139,7 +139,7 @@ You will also need read access to the project, and access to at least one draft 
 |Draft Creator access on the current stage required to create a draft, and editor access or higher on the first stage of the workflow required to add the draft to project.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Apply authoring template**\(authoring portlet\)
 
-|N.A.|Manager access or higher to the authoring template library resource.**Note:** This default behavior can be changed to allow all users to apply authoring templates to items they have edit access to. See [Web content authoring options](wcm_config_prop_authoring.md) for further information.
+|N.A.|Manager access or higher to the authoring template library resource.**Note:** This default behavior can be changed to allow all users to apply authoring templates to items they have edit access to. See [Web content authoring options](/digital-experience/manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_prop_authoring) for further information.
 
 |Manager access or higher.|N.A.|
 |**Apply authoring template**\(content form\)
@@ -211,7 +211,7 @@ Using profiling to personalize a site is different from using security to limit 
 **Related information**  
 
 
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+[Setting service configuration properties](/digital-experience/deployment/manage/config_portal_behavior/service_config_properties)
 
-[Searching on secured portal sites and pages and content management items](../admin-system/srtsrchscrprtlstepgs.md)
+[Searching on secured portal sites and pages and content management items](/digital-experience/build_sites/search/planning_portal_search/security_considerations/srtsrchscrprtlstepgs)
 

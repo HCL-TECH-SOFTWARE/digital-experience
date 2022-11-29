@@ -148,5 +148,5 @@ You can also assign specific access to individual groups or users on each item.
 **Related information**  
 
 
-[Setting up access](../site/site_acl.md)
+[Setting up access](/digital-experience/build_sites/create_sites/building_website/site_acl)
 

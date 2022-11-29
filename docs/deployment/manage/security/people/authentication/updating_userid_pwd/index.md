@@ -10,19 +10,19 @@ If the password for any ID is changed \(either through HCL Portal or through any
 
 Use the following topics to change passwords to better secure your environment.
 
--   **[Changing the HCL Digital Experience administrator password](../security/wpsadmin.md)**  
+-   **[Changing the HCL Digital Experience administrator password](../updating_userid_pwd/wpsadmin.md)**  
 HCL Digital Experience treats wpsadmin \(the administrator\) as any other user, just with more permissions granted. With a normal configuration, it is possible to change the wpsadmin or equivalent password through the user interface, just like any other user can manage their own password through the user interface. However, if the wpsadmin account is also used for more than just the administrator, then additional changes, outlined in other steps in this section, must be made to accommodate the change.
--   **[Changing the WebSphere Application Server administrator password in the file registry](../security/was_filereg.md)**  
+-   **[Changing the WebSphere Application Server administrator password in the file registry](../updating_userid_pwd/was_filereg.md)**  
 If you are using the file registry in the federation repository to store passwords, you need to change the passwords in the file registry.
--   **[Changing the WebSphere Application Server administrator password in the LDAP server using the LDAP administration interface](../security/wpsbindldap.md)**  
+-   **[Changing the WebSphere Application Server administrator password in the LDAP server using the LDAP administration interface](../updating_userid_pwd/wpsbindldap.md)**  
 If you are using the IBM Directory Server or IBM SecureWay Security Server for z/OS and OS/390 LDAP server, you can change the IBM WebSphere Application Server administrator password in the LDAP server using the LDAP administration interface. If you are using any other LDAP server, refer to the product documentation for information about changing passwords.
--   **[Replacing the WebSphere Application Server administrator user ID](../security/rep_was_id.md)**  
+-   **[Replacing the WebSphere Application Server administrator user ID](../updating_userid_pwd/rep_was_id.md)**  
 If you change your security configuration, you might need to replace your old IBM WebSphere Application Server administrator user ID with a new WebSphere Application Server administrator user ID.
--   **[Replacing the HCL Digital Experience administrator user ID](../security/portalid.md)**  
+-   **[Replacing the HCL Digital Experience administrator user ID](../updating_userid_pwd/portalid.md)**  
 If you change your security configuration, you might need to replace your old HCL Digital Experience administrator user ID with a new HCL Digital Experience administrator user ID.
--   **[Changing the LDAP bind password](../security/bind.md)**  
+-   **[Changing the LDAP bind password](../updating_userid_pwd/bind.md)**  
 If you use an LDAP user registry, you must adapt the LDAP bind user ID.
--   **[Changing database passwords that are used by HCL Portal](../config/db_passwords.md)**  
+-   **[Changing database passwords that are used by HCL Portal](../updating_userid_pwd/db_passwords.md)**  
 If database passwords are modified or expired, you must specify the new passwords on the IBM WebSphere Application Server and on the IBM DB2 Universal Database Enterprise Server Edition server so that HCL Portal can access them.
 
 

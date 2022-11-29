@@ -1,10 +1,4 @@
----
-id: h_cred_add_slot
-title: Adding a vault slot
----
-
-
-
+# Adding a vault slot
 
 You can create a vault slot that is associated with a resource in the Credential Vault and a vault segment. You can also create a shared vault slot on a resource.
 

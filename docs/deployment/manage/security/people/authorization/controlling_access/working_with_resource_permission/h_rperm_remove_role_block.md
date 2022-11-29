@@ -1,8 +1,4 @@
----
-id: h_rperm_remove_role_block
-title: Removing a role block
----
-
+# Removing a role block
 
 
 

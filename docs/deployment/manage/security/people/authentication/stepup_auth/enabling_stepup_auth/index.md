@@ -6,17 +6,17 @@ You can enable step-up authentication only. You can enable the **Remember me** c
 
 **Note:** Authenticated and remembered users must have cookies enabled on their browser. Users can access portal sites without cookies enabled if they are anonymous users. If you turn on session tracking for anonymous users, then anonymous users also require cookies.
 
-**Remember me cookies:** After you enable the **Remember me** cookie, you might need to adjust the settings to fit your business needs. You can use the WebSphere® Integrated Solutions Console to create new properties, if necessary, or to update existing properties. The RememberMeConfigService.properties file, including a short description, is in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\PortalServer\\config directory. Log in to the WebSphere Integrated Solutions Console. Go to **Resources** \> **Resource Environment Providers** \> **WP RememberMeConfigService** \> **Custom properties** to edit the properties file. All property changes require that you restart the HCL Digital Experience server for the changes to take effect.
+**Remember me cookies:** After you enable the **Remember me** cookie, you might need to adjust the settings to fit your business needs. You can use the WebSphere® Integrated Solutions Console to create new properties, if necessary, or to update existing properties. The RememberMeConfigService.properties file, including a short description, is in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\PortalServer\\config directory. Log in to the WebSphere Integrated Solutions Console. Go to **Resources** \> **Resource Environment Providers** \> **WP RememberMeConfigService** \> **Custom properties** to edit the properties file. All property changes require that you restart the HCL Digital Experience server for the changes to take effect.
 
--   **[Enabling step-up authentication, the Remember me cookie, or both](../security/step_auth_task.md)**  
+-   **[Enabling step-up authentication, the Remember me cookie, or both](../enabling_stepup_auth/step_auth_task.md)**  
 You can choose to enable either step-up authentication or the Remember me cookie individually or you can choose to enable these features together.
--   **[Configuring Remember me for Java Platform, Enterprise Edition authentication](../security/configure_remme_j2eeauth.md)**  
+-   **[Configuring Remember me for Java Platform, Enterprise Edition authentication](../enabling_stepup_auth/configure_remme_j2eeauth.md)**  
 You can configure a Remember me cookie for Java Platform, Enterprise Edition authentication that works with step-up authentication. When this feature is enabled, users are logged in automatically when they access a protected portal area by presenting a valid Remember me cookie.
--   **[Disabling step-up authentication and the Remember me cookie](../security/step_auth_disable.md)**  
+-   **[Disabling step-up authentication and the Remember me cookie](../enabling_stepup_auth/step_auth_disable.md)**  
 You can disable the step-up authentication feature or the Remember me cookie to remove them from your server.
--   **[Step-up authentication properties](../security/stepup_auth_prop.md)**  
+-   **[Step-up authentication properties](../enabling_stepup_auth/stepup_auth_prop.md)**  
 After you enable step-up authentication, you might want to adjust the settings to fit your business needs. You can use the WebSphere Integrated Solutions Console to create new properties, if necessary, or update existing properties.
--   **[Remember me properties](../security/remme_prop.md)**  
+-   **[Remember me properties](../enabling_stepup_auth/remme_prop.md)**  
 After you enable the Remember me cookie, you might need to adjust the settings to fit your business needs. You can use the WebSphere Integrated Solutions Console to create new properties, if necessary, or update existing properties.
 
 

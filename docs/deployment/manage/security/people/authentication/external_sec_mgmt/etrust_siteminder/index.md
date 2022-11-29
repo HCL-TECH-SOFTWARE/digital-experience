@@ -12,7 +12,7 @@ Before you configure eTrust SiteMinder for authentication or authorization, you 
 
 4.  Install the eTrust SiteMinder Application Server Agent. Configure the eTrust SiteMinder Trust Association Interceptor \(TAI\). Follow the instructions in the eTrust SiteMinder documentation
 
-    **Note:** Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory. By default, the Application Server Agent installation enables agents other than the one used for authentication. These agents are not tested with HCL Digital Experience and should be disabled. Modify the following files in the eTrust SiteMinder installation directory to set EnableWebAgent=no:
+    **Note:** Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory. By default, the Application Server Agent installation enables agents other than the one used for authentication. These agents are not tested with HCL Digital Experience and should be disabled. Modify the following files in the eTrust SiteMinder installation directory to set EnableWebAgent=no:
 
     By default, the Application Server Agent installation enables agents other than the one used for authentication. These agents are not tested with HCL Digital Experience and must be disabled. Modify the following files in the eTrust SiteMinder installation directory to set EnableWebAgent=no:
 
@@ -37,13 +37,13 @@ Before you configure eTrust SiteMinder for authentication or authorization, you 
 
 Choose the appropriate task to configure eTrust SiteMinder:
 
--   **[Configuring eTrust SiteMinder for authentication and authorization](../security/conf_sit.md)**  
+-   **[Configuring eTrust SiteMinder for authentication and authorization](../etrust_siteminder/conf_sit.md)**  
 You can configure Computer Associates eTrust SiteMinder to perform both authentication and authorization for HCL Digital Experience. Using eTrust SiteMinder to perform only authorization is not supported at this time.
--   **[Configuring eTrust SiteMinder to perform authentication](../security/sit_setup_auth.md)**  
+-   **[Configuring eTrust SiteMinder to perform authentication](../etrust_siteminder/sit_setup_auth.md)**  
 HCL Digital Experience includes a configuration task called enable-sm-tai. This task interacts with IBM WebSphere Application Server security configuration to enable the eTrust SiteMinder TAI and to create it as one of the interceptors. You can configure eTrust SiteMinder to provide authentication independently from configuring it to provide authorization. Using it to perform authorization only is not supported at this time.
--   **[Configuring eTrust SiteMinder to perform authorization](../security/sit_setup_esm.md)**  
+-   **[Configuring eTrust SiteMinder to perform authorization](../etrust_siteminder/sit_setup_esm.md)**  
 You can configure Computer Associates eTrust SiteMinder to perform authorization independently from configuring it to perform authentication. However, if you use eTrust SiteMinder to perform authorization for HCL Digital Experience, you should also use it to perform authentication. Using eTrust SiteMinder to perform only authorization is not supported at this time.
--   **[Removing eTrust SiteMinder](../security/sit_deconfig.md)**  
+-   **[Removing eTrust SiteMinder](../etrust_siteminder/sit_deconfig.md)**  
 After you have installed and used Computer Associates eTrust SiteMinder, you may find that you no longer require its use. You can then remove it from the HCL Digital Experience environment and restore authentication capabilities to IBM WebSphere Application Server and authorization capabilities to HCL Digital Experience.
 
 

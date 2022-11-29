@@ -28,10 +28,10 @@ Complete the following steps to configure eTrust SiteMinder for authorization:
     -   Users can create entries with the self-registration screen
 3.  Use a text editor to open the wkplc\_comp.properties file in the following directory:
 
-    -   AIX® HP-UX Linux™Solaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   IBM® i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   Windows™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
-    -   z/OS®: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+    -   AIX® HP-UX Linux™Solaris: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+    -   IBM® i: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+    -   Windows™: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties
+    -   z/OS®: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
 4.  Update the Namespace management parameters in the wkplc\_comp.properties file
 
     1.  For wp.ac.impl.EACserverName, type the Namespace context information to further distinguish externalized portal role names from other role names in the namespace.
@@ -89,11 +89,11 @@ Complete the following steps to configure eTrust SiteMinder for authorization:
 
 8.  Run the following task to configure eTrust SiteMinder for authorization:
 
-    -   Windows: ConfigEngine.bat enable-sm-authorization -DWasPassword=password -Dwp.ac.impl.SmAgentPw=password -Dwp.ac.impl.SmAdminPw=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
-    -   AIXSolarisLinux: ./ConfigEngine.sh enable-sm-authorization -DWasPassword=password -Dwp.ac.impl.SmAgentPw=password -Dwp.ac.impl.SmAdminPw=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    -   Windows: ConfigEngine.bat enable-sm-authorization -DWasPassword=password -Dwp.ac.impl.SmAgentPw=password -Dwp.ac.impl.SmAdminPw=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory
+    -   AIXSolarisLinux: ./ConfigEngine.sh enable-sm-authorization -DWasPassword=password -Dwp.ac.impl.SmAgentPw=password -Dwp.ac.impl.SmAdminPw=password from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory
     **Clustered environments:** Complete this step on all nodes.
 
-9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 10. If users other than the administrator are allowed to externalize resources, add those users to the eTrust SiteMinder realm representing the Administrator of EXTERNAL\_ACCESS\_CONTROL.
 

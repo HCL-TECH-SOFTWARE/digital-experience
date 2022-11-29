@@ -4,7 +4,7 @@ Roles provide task permissions for users on resources. For example, Editor is a 
 
 Roles are organized in a hierarchy. Roles are organized in a hierarchy. Roles that are higher in the hierarchy generally inherit the permissions of child roles. For example, to install web modules the Editor role on the virtual resource `Web Modules`, `Editor@Web Modules`, is the minimum role assignment for this operation. The Manager role is higher in the hierarchy than the Editor role. For this reason, the Manager role includes the permissions of the Editor role. The `Manager@Web Modules` role also allows users to install web modules.
 
-![Illustration of role hierarchy. Refer to the topic text for information about this graphic.](../images/rolehierarchy.jpg)
+![Illustration of role hierarchy. Refer to the topic text for information about this graphic.](/digital-experience/images/rolehierarchy.jpg)
 
 The following table describes the different allowed actions for roles:
 
@@ -38,7 +38,7 @@ For example, suppose that a user, Mary, is a member of the Sales group. You can 
 
 Inheritance through the resource hierarchy can be blocked at any level to provide more granular access control.
 
-![Illustration of role inheritance](../images/inheritance.jpg)
+![Illustration of role inheritance](/digital-experience/images/inheritance.jpg)
 
 ## Role Assignments
 
@@ -72,7 +72,7 @@ Users with role assignments on the resources `Page` or `URL Mapping` get the imp
 **Related information**  
 
 
-[Automatically grant page access to community members](../admin-system/commpages_delegate_access.md)
+[Automatically grant page access to community members](/digital-experience/extend-dx/integration/connections/configuration/cfg_community_pages/commpages_delegate_access)
 
-[Delegated Access Control Administration](admin-system/d_acc_cntl_admin.dita)
+[Delegated Access Control Administration](/digital-experience/deployment/manage/security/people/authorization/controlling_access/d_acc_cntl_admin)
 

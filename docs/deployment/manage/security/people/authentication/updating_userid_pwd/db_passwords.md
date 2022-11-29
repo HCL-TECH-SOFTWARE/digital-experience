@@ -66,5 +66,5 @@ WebSphere Application Server and HCL Digital Experience were updated to use your
 
 [Changing the password for a repository under a federated repositories configuration](https://www.ibm.com/docs/en/was-nd/8.5.5)
 
-[Applying fix packs to your portal](../security/apply_fixpacks.md)
+[Applying fix packs to your portal](/digital-experience/deployment/manage/manage_portal_using_iim/apply_fixpacks)
 

@@ -53,5 +53,5 @@ WEB_MODULE/Tracing.war/1_0_3K@User
 **Related information**  
 
 
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+[Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart)
 

@@ -1,8 +1,4 @@
----
-id: h_rperm_resources
-title: What are the different ways to access the Resource Permissions portlet?
----
-
+# What are the different ways to access the Resource Permissions portlet?
 
 
 

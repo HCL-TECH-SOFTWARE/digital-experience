@@ -1,8 +1,4 @@
----
-id: h_cred_manage_vault
-title: Managing a vault segment
----
-
+# Managing a vault segment
 
 
 
