@@ -38,9 +38,9 @@ Perform the following steps to verify that Security Access Manager is working pr
 
 4.  Add users to the ACLs that are attached to the role types on that resource by using either the Security Access Manager GUI or the pdadmin command line.
 
-    **Remember:** If you log on as an administrator to externalize resources to Security Access Manager,
-
-    -   You must be a member of the `wpsadmins` group.
-    -   The `wpsadmins` group must appear in the `VIRTUAL/EXTERNAL_ACCESS_CONTROL_1` ACL.
+    !!!important
+        If you log on as an administrator to externalize resources to Security Access Manager,
+            -   You must be a member of the `wpsadmins` group.
+            -   The `wpsadmins` group must appear in the `VIRTUAL/EXTERNAL_ACCESS_CONTROL_1` ACL.
 
 
