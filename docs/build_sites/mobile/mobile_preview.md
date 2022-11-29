@@ -42,7 +42,7 @@ Option 1: Add an icon to a content or page template to launch the Mobile Preview
 
 An icon can be used in a DX Content or Page template to launch the Mobile Preview simulator:
 
-1.  **Create a new Content Item** \(reference the [Create Content Items](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/creating_content_items/index.md) topic for additional information\) for use with the designated Authoring Template or Page Template, that renders the following HTML:
+1.  **Create a new Content Item** \(reference the [Create Content Items](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/content_items/index.md) topic for additional information\) for use with the designated Authoring Template or Page Template, that renders the following HTML:
 
     ```
     [IfEditMode]

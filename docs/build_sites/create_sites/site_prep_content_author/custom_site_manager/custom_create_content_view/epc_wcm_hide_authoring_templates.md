@@ -4,7 +4,7 @@ By default, all authoring templates can be selected when creating new web conten
 
 -   To hide an authoring template from the **Create Content** dialog, you need to add a keyword to the profile of an authoring template.
 
--   Before doing so, you must enable profiling for authoring templates: See [Running the profile enablement tool](../../../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md) and [Web content authoring options](../../../../../manage_content/wcm_delivery/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) for details.
+-   Before doing so, you must enable profiling for authoring templates: See [Running the profile enablement tool](../../../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md) and [Web content authoring options](../../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) for details.
 
 -   After you have enabled profiling for authoring templates, you are ready to hide authoring templates from the **Create Content** dialog.
 

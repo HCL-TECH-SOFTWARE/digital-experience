@@ -9,7 +9,7 @@ Before content authors can create content you must prepare your site to be ready
 When adding content to a site in edit mode, a content author has the choice of using either the Site Toolbar or Site Manager. Site developers need to consider which option is best for their content authors.
 -   **[Generate author-ready templates](wcm_dev_content_types.md)**  
 You can generate author-ready templates in Web Content Manager to provide content authors a set of predefined content templates that can be selected from the toolbar and used to add content to a page.
--   **[Page components](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/page_components/index.md)**  
+-   **[Page components](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/page_components/index.md)**  
 Create page components by using Web Content Manager to provide content authors a set of predefined page components that can be selected from the toolbar and added to a page.
 -   **[Enabling and disabling segments in the Add Segments view](contarget_enable_disable_segments.md)**  
 You can customize the Add Segments view so that you see only segments, only managed segments, or both segments and managed segments.

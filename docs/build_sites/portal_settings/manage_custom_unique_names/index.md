@@ -16,5 +16,5 @@ These custom unique names are easier to handle than the object IDs assigned by t
 
 ???+ info "Related information"
     - [Searching](../manage_custom_unique_names/h_search_admin_portlets.md)
-    - [Friendly URL for web content example](../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/index.md)
+    - [Friendly URL for web content example](../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/index.md)
 

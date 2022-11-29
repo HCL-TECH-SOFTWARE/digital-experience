@@ -34,6 +34,6 @@ The HTML – Analytics component is a sample HTML component that you can use to 
 Web Content Viewers provide support for Active Site Analytics microformats by default. You can use this support to inject microformats into your content design or presentation templates. -->
 
 
-???+ info "Related information:"
-    - [Setting up site analysis for the Web Content Viewer](../../../manage_content/wcm_delivery/cfg_webcontent_delivery_env/wcmviewer_site_analytics_setup/index.md)
+???+ info "Related information"
+    - [Setting up site analysis for the Web Content Viewer](../../../manage_content/wcm_configuration/cfg_webcontent_delivery_env/wcmviewer_site_analytics_setup/index.md)
 
