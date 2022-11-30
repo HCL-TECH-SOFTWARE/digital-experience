@@ -24,6 +24,6 @@ Here is an example XML script for exporting all customized WSRP portlet instance
 
 
 ???+ info  "Related information"  
-    -   [Working with the XML configuration interface](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
-    -   [The XML configuration interface](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+    -   [Working with the XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    -   [The XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
 
