@@ -10,38 +10,15 @@ The following table describes the provided WSRP application policy sets and the 
 
 | |WSRP application policy sets|WSRP provider policy set bindings|
 |--|----------------------------|---------------------------------|
-|-   **LTPA based**
-
-|-   **LTPA-based message authentication policy set**
-
-This policy set defines LTPA token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.
-
-
-|-   **LTPA-based message authentication provider binding**
-
-You must use this provider policy set binding with the LTPA-based message authentication policy set. It defines the corresponding provider binding, including caller identification.
-
-
-|
-|-   **Username based**
-
-|-   **Username-based message authentication policy set**
-
-This policy set defines Username token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.
-
-
-|-   **Username-based message authentication provider binding**
-
-You must use this provider policy set binding with the Username-based message authentication policy set. It defines the corresponding provider binding, including caller identification.
-
-
-|
+|-   **LTPA based**|-   **LTPA-based message authentication policy set** <br>This policy set defines LTPA token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.|-   **LTPA-based message authentication provider binding**<br>You must use this provider policy set binding with the LTPA-based message authentication policy set. It defines the corresponding provider binding, including caller identification.|
+|-   **Username based**|-   **Username-based message authentication policy set**<br>This policy set defines Username token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.|-   **Username-based message authentication provider binding**<br>You must use this provider policy set binding with the Username-based message authentication policy set. It defines the corresponding provider binding, including caller identification.|
 
 The WSRP application policy sets and client policy set bindings are contained in compressed format in the directory PortalServer/doc/policy-sets-samples of the portal installation. For instructions about how to import and attach policy sets and provider policy set bindings, read the WebSphere Application Server documentation.
 
 To use the WSRP policy sets and provider policy set bindings for service configuration, use the procedure given later in this topic.
 
-**Note:** You are not limited to using the default policy sets and provider policy set bindings. Instead, you can also create and use a policy set and provider policy set binding of your choice. The WSRP Producer supports all service configurations that WebSphere Application ServerWebSphere Application Server supports. Therefore, you can use all security tokens that WebSphere Application Server supports. Some token types might require a specific setup. For more detailed information about web service configuration, read the WebSphere Application Server product documentation. Note that it is necessary to define a compatible web service configuration on the WSRP Consumer portals.
+!!! note
+    You are not limited to using the default policy sets and provider policy set bindings. Instead, you can also create and use a policy set and provider policy set binding of your choice. The WSRP Producer supports all service configurations that WebSphere Application ServerWebSphere Application Server supports. Therefore, you can use all security tokens that WebSphere Application Server supports. Some token types might require a specific setup. For more detailed information about web service configuration, read the WebSphere Application Server product documentation. Note that it is necessary to define a compatible web service configuration on the WSRP Consumer portals.
 
 1.  Import the WSRP policy sets and provider policy set bindings.
 
@@ -85,14 +62,9 @@ To use the WSRP policy sets and provider policy set bindings for service configu
 
 
 
-**Related information**  
-
-
-[WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
-
-[The XML configuration interface](../admin-system/admxmlai.md)
-
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
-
-[Configuring WSRP web service clients](../admin-system/wsrpt_cons_cfg_wsrvc_clnt.md)
+???+ info "Related information"
+    - [WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
+    - [The XML configuration interface](../../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
+    - [Working with the XML configuration interface](../../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    - [Configuring WSRP web service clients](../../../../portal_wsrp_consumer/wsrp_consumer_info/cfg_security_consumer_portal/cfg_wsrp_webservice_clients/index.md)
 
