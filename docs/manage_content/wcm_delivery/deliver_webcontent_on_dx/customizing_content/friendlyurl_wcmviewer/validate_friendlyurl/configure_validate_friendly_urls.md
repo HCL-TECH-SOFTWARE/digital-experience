@@ -58,7 +58,7 @@ You can specify the following parameters for the overall portal as properties an
 
 
 ???+ info "Related information:"
-    - [Advanced options](../../../../../wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/wcm_config_wcmviewer_hadv.md)
+    - [Advanced options](../../../../../deliver_webcontent_on_dx/editing_wcm_viewer_setting/wcm_config_wcmviewer_hadv.md)
     - [Editing pages, labels, and URLs](../../../../../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/managing_page_properties/h_mp_edit_pages.md)
     - [Creating a Text Provider class](../../../../../../wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_text_provider.md)
 

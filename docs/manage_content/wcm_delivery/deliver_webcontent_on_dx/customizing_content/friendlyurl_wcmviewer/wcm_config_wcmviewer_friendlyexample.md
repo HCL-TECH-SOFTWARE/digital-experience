@@ -127,7 +127,7 @@ Sometimes, the friendly URL entered by a user or requested by a search crawler c
 
 ???+ info" Related information:"
     - [Defining friendly URLs without state information for pages in your site](../../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
-    - [Advanced options](../../../../wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/wcm_config_wcmviewer_hadv.md)
+    - [Advanced options](../../../../deliver_webcontent_on_dx/editing_wcm_viewer_setting/wcm_config_wcmviewer_hadv.md)
     - [Managing custom unique names](../../../../../../../build_sites/portal_settings/manage_custom_unique_names/index.md)
     - [Hiding and displaying pages in the navigation](../../../../../../../build_sites/create_sites/building_website/site_navigation/show_hidden_page.md)
 

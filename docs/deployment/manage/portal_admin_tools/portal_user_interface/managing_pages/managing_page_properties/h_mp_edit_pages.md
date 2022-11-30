@@ -37,5 +37,5 @@ To edit a page, label, or URL, do the following steps:
 
 
 ???+ info "Related information"  
-    -   [Configuring the validation of friendly URLs for web content](../../../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
+    -   [Configuring the validation of friendly URLs for web content](../../../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
 

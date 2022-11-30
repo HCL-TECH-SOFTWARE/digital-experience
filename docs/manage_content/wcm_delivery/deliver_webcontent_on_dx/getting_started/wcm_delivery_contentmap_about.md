@@ -47,7 +47,7 @@ Set page parameters on your web content page templates by using **Page Propertie
 
 
 ???+ info "Related information:"
-    - [Content settings](../../../wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/wcm_config_wcmviewer_hcontent.md)
+    - [Content settings](../../../deliver_webcontent_on_dx/editing_wcm_viewer_setting/wcm_config_wcmviewer_hcontent.md)
     - [XML configuration interface and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_xml.md)
     - [Portal Scripting Interface and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_pscript.md)
     - [REST API and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)

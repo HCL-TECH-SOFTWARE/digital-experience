@@ -139,7 +139,7 @@ Your service configuration properties updates are now in effect.
     -   [Enabling site analysis logging](../../monitoring/analyze_portal_usage/serverside_site_data/adsaconf_tsk_nbl.md)
     -   [Auditing](../../monitoring/sec_audit.md)
     -   [Cache expire parameters](../../../../manage_content/wcm_configuration/custom_caching/wcm_dev_caching_expire-parameters.md)
-    -   [CORS and remote web content rendering with WSRP and the Web Content Viewer](../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_cors.md)
+    -   [CORS and remote web content rendering with WSRP and the Web Content Viewer](../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_dx/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_cors.md)
     -   [Setting policy variables](../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/cfg_structure/outbhttp_cfg_strctr_policy_variable.md)
     -   [Digital Data Connector caches](../../../../extend_dx/ddc/ddc_cache_tuning/plrf_caches.md)
     -   [Working with the XML configuration interface](../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)

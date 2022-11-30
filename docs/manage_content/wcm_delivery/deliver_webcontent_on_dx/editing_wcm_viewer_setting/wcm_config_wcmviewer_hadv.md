@@ -95,6 +95,6 @@ With the **Scope tag cloud results** settings, you can limit the results that ar
 You can lock settings in the **Configure** mode of the viewer. When a setting is locked, a lock icon is displayed in the **Edit Shared Settings** mode of the viewer, and no **Edit** link is available.
 
 ???+ info "Related information:"
-    - [Configuring the validation of friendly URLs for web content](../../../delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
-    - [Friendly URL for web content example](../../../delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_friendlyexample.md)
+    - [Configuring the validation of friendly URLs for web content](../../../delivering_web_content/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
+    - [Friendly URL for web content example](../../../delivering_web_content/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_friendlyexample.md)
 

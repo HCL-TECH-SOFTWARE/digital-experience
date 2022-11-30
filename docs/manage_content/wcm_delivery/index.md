@@ -27,7 +27,7 @@ The type of delivery method you use to deliver web content to your viewers depen
 
 
 
--   **[Delivering web content via HCL DX](../delivering_web_content/deliver_webcontent_on_portal/index.md)**  
+-   **[Delivering web content via HCL DX](../delivering_web_content/deliver_webcontent_on_dx/index.md)**  
 Using tools like Web Content Viewer Portlets, content associations, and web content page templates, you can build portal pages and display web content. You can also combine web content with other portlet-based content. Content associations tie viewers and portal pages to the site structure of your web content libraries.
 -   **[Access web content by using a servlet](wcm_config_delivery_servlet.md)**  
 Users can access content that is displayed by using the Web Content Manager servlet by connecting to a URL. A servlet delivered website is used when you don't need to use any HCL Portal based features such as authoring tools.

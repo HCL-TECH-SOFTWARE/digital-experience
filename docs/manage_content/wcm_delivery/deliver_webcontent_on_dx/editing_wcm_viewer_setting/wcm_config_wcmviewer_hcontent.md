@@ -105,4 +105,4 @@ If a viewer is configured to use content paths, a path icon \(![Path icon](../..
 
 ???+ info "Related information:"
     - [Configure your content spot](../../../../../../build_sites/create_sites/content_spot/index.md)
-    - [Web content associations](../../../delivering_web_content/deliver_webcontent_on_portal/getting_started/wcm_delivery_contentmap_about.md)
+    - [Web content associations](../../../delivering_web_content/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md)

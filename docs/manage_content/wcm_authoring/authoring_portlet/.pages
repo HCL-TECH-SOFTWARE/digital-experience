@@ -7,3 +7,4 @@ nav:
     - content_management_artifacts
     - change_management
     - accessibility.md
+    - auth_portlet_settings/index.md
