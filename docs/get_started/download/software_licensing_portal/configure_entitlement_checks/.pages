@@ -1,5 +1,6 @@
 title: Configure entitlement checks
 nav:
     - index.md
-    - entitlement_checks_scenarios.md
-    - local_license_server_manager.md
+    -   configuring_local_flexnet_entitlement_server.md
+    -   entitlement_checks_scenarios.md
+    -   local_license_server_manager.md
