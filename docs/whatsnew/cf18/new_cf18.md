@@ -22,7 +22,7 @@ The Enhanced Web Content Manager Content Template API adds the ability to retrie
 
 ## Rich Text Editor Textbox I/O Updates
 
-Updates are provided for the Textbox I/O Rich Text Editor, requiring use of Java 8. See [Rich text editor toolbar configuration options](../../manage_content/wcm_delivery/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for details.
+Updates are provided for the Textbox I/O Rich Text Editor, requiring use of Java 8. See [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for details.
 
 ## Sample Guidance to set Storage Class and Volume to deploy HCL Digital Experience 9.5 Containers to Amazon Elastic Kubernetes Service (EKS) and Red Hat OpenShift
 
@@ -30,7 +30,7 @@ Additional "Sample Storage Class and Volume" guidance is available to HCL Digita
 
 ## HCL Content Composer – Tech Preview for HCL Digital Experience 9.5 CF173 or later
 
-Content Composer delivers simplified processes for creating and managing Digital Experience site content.  Users can access a Tech Preview of the Content Composer features in HCL Digital Experience 9.5 Container Update CF173 and higher releases. See [HCL Digital Experience 9.5 Content Composer – Tech Preview](../../manage_content/content_composer/index.md) for details.
+Content Composer delivers simplified processes for creating and managing Digital Experience site content.  Users can access a Tech Preview of the Content Composer features in HCL Digital Experience 9.5 Container Update CF173 and higher releases. See [HCL Digital Experience 9.5 Content Composer – Tech Preview](../../manage_content/wcm_authoring/content_composer/index.md) for details.
 
 ## Digital Asset Management – Tech Preview for HCL Digital Experience 9.5 CF173 or later
 

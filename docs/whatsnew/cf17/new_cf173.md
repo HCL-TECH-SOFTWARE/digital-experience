@@ -30,7 +30,7 @@ Two new samples are provided for use with the HCL Digital Experience 9.5 Experie
 
 ## New HCL Content Composer – Tech Preview in HCL Digital Experience 9.5 CF173
 
-Content Composer delivers simplified processes for creating and managing Digital Experience site content.  Users can access a Tech Preview of the Content Composer features in HCL Digital Experience 9.5 Container Update CF173 and higher releases. See [HCL Digital Experience 9.5 CF173 Content Composer – Tech Preview](../../manage_content/content_composer/index.md) for details.
+Content Composer delivers simplified processes for creating and managing Digital Experience site content.  Users can access a Tech Preview of the Content Composer features in HCL Digital Experience 9.5 Container Update CF173 and higher releases. See [HCL Digital Experience 9.5 CF173 Content Composer – Tech Preview](../../manage_content/wcm_authoring/content_composer/index.md) for details.
 
 ## New Digital Asset Management – Tech Preview in HCL Digital Experience 9.5 CF173
 
