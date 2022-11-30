@@ -46,6 +46,7 @@ If you want to consume remote portlets from a Producer, create a new Producer de
     -   Whether this port supports HTTPS.
     -   Which transport protocol is selected.
     -   Which service reference is selected.
+
     You can edit the configuration for the ports by proceeding as follows:
 
     1.  Click the **Edit** icon for the port that you want to modify.
@@ -59,6 +60,7 @@ If you want to consume remote portlets from a Producer, create a new Producer de
         -   HTTP
         -   HTTPS
         -   Dynamic. This option is only available for the Markup port, and only if the Producer configured this port for both HTTP and HTTPS.
+
     4.  From the drop-down list, select a service reference as required.
 
     5.  Click **OK** to save your data or **Cancel** to return without saving.
@@ -75,7 +77,9 @@ If you want to consume remote portlets from a Producer, create a new Producer de
         1.  Select the option **Enter a registration handle**. The portal displays the panel for entering the registration handle.
         2.  Type the registration handle into the input field.
         3.  Click **Next** to save your data and proceed creating the Producer, or click **Cancel** to return to the panel for selecting the type of registration without saving.
+
     -   If the Producer supports registration properties, you can add them for online registration. These properties are passed on to the Producer during the registration. To add them, proceed as follows:
+    
         1.  Select the option **Enter registration properties**. The portal displays the panel for setting registration properties.
         2.  Type a new property and its value in the entry fields **New parameter** and **New value**.
         3.  To add the new property, click **Add**.

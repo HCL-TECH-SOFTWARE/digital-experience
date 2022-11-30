@@ -21,6 +21,7 @@ You can also select the following extra options:
     -   If you select a token type, the WSRP Consumer uses the default WSRP service reference for this port. Additionally, it generates tokens of the specified type.
     -   If a custom service reference is available and you select it, the WSRP Consumer uses this service reference. It does not generate tokens for Web Services Security.
     -   If you do not select anything from this list, the WSRP Consumer uses the default WSRP service reference. It does not generate extra tokens for Web Services Security.
+    
 -   **I want to set titles and descriptions for other languages**. Use this option to set language-specific titles and descriptions for a Producer.
 -   **I want to enter registration properties for this Producer**. This option is available only if the Producer supports registration properties. Use this option to set registration properties for the Producer.
 
