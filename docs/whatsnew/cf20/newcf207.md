@@ -42,7 +42,7 @@ The following features and updates are available to customers installing HCL Dig
 
 === "Containers"
 
-    We have added ability to add keywords to content items. See the [Content Composer Author Content Items](../../manage_content/content_composer/usage/author_and_manage_content_items/author_content_items.md#create-new-content-and-addremove-keywords) Help Center topic for more information 
+    We have added ability to add keywords to content items. See the [Content Composer Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md) Help Center topic for more information. 
 
 ## New Script Application Tutorials and Sample Applications are available on the HCL Software Github repository
 
@@ -96,11 +96,11 @@ Beginning with HCL Digital Experience 9.5 Container Update CF207, you must speci
 
 === "Containers"
      
-    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) Help Center topic.
+    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native  Help Center topic.
 
 === "On-Premises"
 
-    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) Help Center topic.
+    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) Help Center topic.
 
 ## The new HCL Digital Experience Help Center
 

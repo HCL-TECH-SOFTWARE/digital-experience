@@ -48,7 +48,7 @@ For more information abou the latest HCL Web Experience Factory updates, refer t
 
 5. Run the script to replace `Variables` in `link` and `ini` files with Path strings.
 
-    -   For Windows platforms: From the command prompt, run the `run.bat` command.\
+    -   For Windows platforms: From the command prompt, run the `run.bat` command.
 
     -   For Linux Platforms: From the terminal run the `sh run.sh` command. 
     
@@ -182,7 +182,7 @@ There are three options to deploy a portlet into a target HCL DX server.
     Would you like to publish your project now? 
     ```
     
-    Click Yes to continue.
+    Click **Yes** to continue.
 
 ### Export and import through the DX Administration interface
 

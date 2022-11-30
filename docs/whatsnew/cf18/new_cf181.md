@@ -10,7 +10,7 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Content Composer
 
-Content Composer delivers simplified processes for creating and managing Digital Experience site content.  Users can work with Content Composer features in HCL Digital Experience 9.5 Container Update CF181 and higher releases. See  [HCL Digital Experience 9.5 Content Composer](../../manage_content/content_composer/index.md) for details.
+Content Composer delivers simplified processes for creating and managing Digital Experience site content.  Users can work with Content Composer features in HCL Digital Experience 9.5 Container Update CF181 and higher releases. See  [HCL Digital Experience 9.5 Content Composer](../../manage_content/wcm_authoring/content_composer/index.md) for details.
 
 ## Digital Asset Management
 

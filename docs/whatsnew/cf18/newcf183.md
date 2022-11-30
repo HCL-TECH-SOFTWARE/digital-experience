@@ -30,12 +30,12 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 
 -   [Remote Search Service](../../build_sites/search/remotesearch/index.md)
 -   [Transfer HCL Digital Experience 9.5 Container default database to IBM DB2](https://help.hcltechsw.com/digital-experience/9.5/containerization/cw_containerdbtransfer_ibm_db2.html){:target="_blank"}<!-- (../containerization/cw_containerdbtransfer_ibm_db2.md) -->
--   [Create a web content library](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/web_content_library/oob_content_createlib.md)
+-   [Create a content library](../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/oob_content_createlib.md)
 -   [Virtual portals](../../build_sites/virtual_portal/index.md)
 -   [Backup and restore](../../deployment/manage/backup_restore/index.md)
 -   [Configuration Wizard](../../deployment/manage/portal_admin_tools/cfg_wizard/index.md)
 -   [Combined Cumulative Fix Install](../../deployment/install/traditional/cf_install/index.md)
--   [Rich text editor toolbar configuration options](../../manage_content/wcm_delivery/cfg_webcontent_auth_env/wcm_config_ephox_custom.md)
+-   [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md)
 -   [Data collection and symptom analysis](../../deployment/manage/troubleshooting/tools_for_troubleshooting_and_diagnostics/tbl_apdt_over.md)
 
 

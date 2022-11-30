@@ -30,7 +30,7 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../..
 
 New Content Composer features are added with HCL Digital Experience Container Update CF192, including a new Version Comparison interface and capabilities to View and Filter Workflow comments, and more.
 
-See the [HCL Content Composer](../../manage_content/content_composer/index.md) topic for additional information.
+See the [HCL Content Composer](../../manage_content/wcm_authoring/content_composer/index.md) topic for additional information.
 
 ## New Digital Asset Management Features
 
