@@ -1,12 +1,12 @@
 # Web content associations
 
-Web content associations are used to combine portal pages and associated web content items that are managed by HCL Web Content Manager so they can be managed and rendered consistently. Web content associations map portal pages to the site structure in the HCL Web Content Manager system.
+Web content associations are used to combine DX pages and associated web content items that are managed by HCL Web Content Manager so they can be managed and rendered consistently. Web content associations map DX pages to the site structure in the HCL Web Content Manager system.
 
-You can define a default content association and multiple other associations, which are used for dynamic page resolution. For each page, a system content association maps the page to its corresponding portal page site area in the Portal Site library. You also have the option of using page template instantiation to trigger the copying of web content into the Portal Site library or another library. This option is set by a page template parameter.
+You can define a default content association and multiple other associations, which are used for dynamic page resolution. For each page, a system content association maps the page to its corresponding DX page site area in the Portal Site library. You also have the option of using page template instantiation to trigger the copying of web content into the Portal Site library or another library. This option is set by a page template parameter.
 
-Each web content association consists of a reference to a portal page and a reference to a site area in a web content library. When a page contains a web content association, web content viewers added to the page can automatically render the content that is provided by the associated site area. In addition, a web content page template that contains an association can create copies of associated content when you create a page by using the template.
+Each web content association consists of a reference to a DX page and a reference to a site area in a web content library. When a page contains a web content association, web content viewers added to the page can automatically render the content that is provided by the associated site area. In addition, a web content page template that contains an association can create copies of associated content when you create a page by using the template.
 
-When multiple associations are defined for the same web content page, one of those associations is identified as the default content association. When you create a page and Managed Pages are enabled on the system, a system content association is automatically created to the corresponding portal page site area in the Portal Site library. This system content association is designated as the default association, but you can change that setting later as needed.
+When multiple associations are defined for the same web content page, one of those associations is identified as the default content association. When you create a page and Managed Pages are enabled on the system, a system content association is automatically created to the corresponding DX page site area in the Portal Site library. This system content association is designated as the default association, but you can change that setting later as needed.
 
 The default content association has several uses:
 
@@ -53,7 +53,7 @@ Set page parameters on your web content page templates by using **Page Propertie
     - [REST API and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)
     - [Enabling page-based access control for web content pages](../customizing_content/mp_wcm_pageaccess.md)
     - [Java API for Content Mapping Service](https://support.hcltechsw.com/csm)
-    - [Using the view definitions provided with social rendering on your portal pages](../../../../../../build_sites/social_rendering/working_with_social_objects/soc_rendr_use_oob_socl_list.md)
+    - [Using the view definitions provided with social rendering on your DX pages](../../../../../../build_sites/social_rendering/working_with_social_objects/soc_rendr_use_oob_socl_list.md)
     - [Configuring a multilingual system Multilingual Solution](../../../mls/mls_install/wcm_mls_configure.md)
     - [Portlet Render-time navigation extensions](../../../mls/mls_extension/wcm_mls_ext_portlet.md)
 

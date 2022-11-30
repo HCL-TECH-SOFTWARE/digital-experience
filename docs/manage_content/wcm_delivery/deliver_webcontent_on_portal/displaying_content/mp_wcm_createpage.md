@@ -1,6 +1,6 @@
 # Creating a web content page
 
-A web content page is a page that is associated to one or more site areas in HCL Web Content Manager. You can create a web content page from a web content template page, or you can convert an existing portal page into a web content page.
+A web content page is a page that is associated to one or more site areas in HCL Web Content Manager. You can create a web content page from a web content template page, or you can convert an existing DX page into a web content page.
 
 A web content page always restricts the sharing scope for public rendering parameters to the page itself. The corresponding page parameters are automatically added to the page when a page is associated to a site area.
 
@@ -19,7 +19,7 @@ A web content page always restricts the sharing scope for public rendering param
 
             If the page template has a default content association, the new page is automatically associated with a new copy of the referenced site area. Any other content associations that are not designated as the default association are copied without changes.
 
-    -   Follow these steps to convert a portal page to a web content page:
+    -   Follow these steps to convert a DX page to a web content page:
         1.  Go to the page where you want to add the new page, and edit the page.
         2.  Open the site toolbar and select **Page** \> **General** \> **Details** \> **Default site area**
         3.  In the Page Associations window, click **Add web content**.

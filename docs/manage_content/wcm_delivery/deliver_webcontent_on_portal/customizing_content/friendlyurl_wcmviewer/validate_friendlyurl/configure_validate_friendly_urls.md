@@ -36,7 +36,7 @@ You can specify the following parameters for the overall portal as properties an
 
     -   **nm:oid:unique\_page\_name**
 
-        This navigation model URI redirects the request to a specific portal page based on the unique name of the target page.
+        This navigation model URI redirects the request to a specific DX page based on the unique name of the target page.
 
     -   **custom:resolutionserviceuri**
 

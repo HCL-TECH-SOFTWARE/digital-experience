@@ -2,11 +2,11 @@
 
 Learn about the validation and customization of friendly URLs for web content, including use cases and customization options.
 
-Friendly URLs for web content provide human-readable URLs that are easy for users to remember. A friendly URL points to a specific content item that is displayed on a specific portal page. By default, HCL Portal does not check whether a friendly URL addresses an existing content item or not. However, the following scenarios would benefit from validation and customized handling of invalid friendly URLs:
+Friendly URLs for web content provide human-readable URLs that are easy for users to remember. A friendly URL points to a specific content item that is displayed on a specific DX page. By default, HCL Portal does not check whether a friendly URL addresses an existing content item or not. However, the following scenarios would benefit from validation and customized handling of invalid friendly URLs:
 
 -   A user mistypes a friendly URL.
--   A user clicks a saved bookmark that points to a portal page or a content item that no longer exists.
--   A search engine browses portal pages to update a search index.
+-   A user clicks a saved bookmark that points to a DX page or a content item that no longer exists.
+-   A search engine browses DX pages to update a search index.
 
 If you use friendly URLs for web content, you can configure HCL Portal to validate the friendly URL associated with a request. If you enable friendly URL validation, portal assembles a content path by appending the path information to the path of the default content mapping that is defined for the resolved page. Afterward, portal checks whether that content path identifies a content item that is available in the current user context. The friendly URL for web content is valid if the portal finds a content item. Otherwise, portal sends an error response. Using the HCL Portal Configuration Service and individual page parameters, you can customize error responses in the following ways:
 

@@ -1,6 +1,6 @@
-# Delivering web content on a portal page
+# Delivering web content on a DX page
 
-Using tools like Web Content Viewer Portlets, content associations, and web content page templates, you can build portal pages and display web content. You can also combine web content with other portlet-based content. Content associations tie viewers and portal pages to the site structure of your web content libraries.
+Using tools like Web Content Viewer Portlets, content associations, and web content page templates, you can build DX pages and display web content. You can also combine web content with other portlet-based content. Content associations tie viewers and DX pages to the site structure of your web content libraries.
 
 You can customize your portal delivery as well. Examples include:
 
@@ -8,7 +8,7 @@ You can customize your portal delivery as well. Examples include:
 -   Deploying pre-configured Web Content Viewers
 -   Providing convenience features like customized error messages and friendly URLs
 
--   **[Getting started with delivering web content on a portal page](../deliver_webcontent_on_portal/getting_started/index.md)**  
+-   **[Getting started with delivering web content on a DX page](../deliver_webcontent_on_portal/getting_started/index.md)**  
 The building blocks for delivering web content in a portal are web content viewers, web content page templates, and content mappings. These pieces provide a flexible framework that you can use to quickly assemble pages.
 -   **[Displaying content with Web Content Viewers](../deliver_webcontent_on_portal/displaying_content/index.md)**  
 Display content from your web content system by adding a Web Content Viewer to the server where you want the content to show.

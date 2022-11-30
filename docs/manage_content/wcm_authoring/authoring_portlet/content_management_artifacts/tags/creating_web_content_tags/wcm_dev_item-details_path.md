@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_item-details_path
-title: Creating a path component tag
+title: Path component tag
 ---
 
 

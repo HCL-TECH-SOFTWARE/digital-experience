@@ -1,7 +1,8 @@
-title: Web Content Manager service configuration
+title: Web Content Manager configuration
 nav:
     - index.md
     - srvcfgwcmref_config.md
     - srvcfgwcmref_messaging.md
     - srvcfgwcmref_prerender.md
     - srvcfgwcmref_search.md
+    - ...

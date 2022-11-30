@@ -11,7 +11,7 @@ To make it easier for users to find web content, the site toolbar provides palet
 -   **[Customizing error messages for Web Content Viewers](wcm_config_wcmviewer_customerror.md)**  
 If an error occurs during rendering, the Web Content Viewer shows an error screen. You can customize the default error screen, and you can create your own custom JSP file that is used to display error messages.
 -   **[Friendly URLs and Web Content Viewers](../customizing_content/friendlyurl_wcmviewer/index.md)**  
-Friendly URLs provide a way for you to define a custom address for a portal page that is easy to remember and share. The Web Content Viewer expands on friendly URL support so you can specify extra path information in the friendly URL.
+Friendly URLs provide a way for you to define a custom address for a DX page that is easy to remember and share. The Web Content Viewer expands on friendly URL support so you can specify extra path information in the friendly URL.
 -   **[Setting up a web content fallback page](mp_wcm_fallback.md)**  
 Set up a web content fallback page to be used when a web content viewer cannot determine which page to use to display a content item. The fallback page can also be used when users do not have sufficient privileges to view the page originally associated with the content item.
 -   **[Enabling page-based access control for web content pages](mp_wcm_pageaccess.md)**  
@@ -21,6 +21,6 @@ When working with content in the authoring portlet, you can preview content item
 -   **[Adding HTML meta tags for Search Engine Optimization](wcm_config_wcmviewer_seo.md)**  
 Search engine optimization \(SEO\) focuses on improving the visibility of a page or website in search engine results. A basic technique of SEO is adding HTML title and meta tags to your page source. These meta tags are used to define description information and other metadata that search web engines and crawlers can use when they create search indexes and collections. When you include content in a page with a web content viewer, you can improve the search engine optimization of the page by adding title and meta tags with values derived from the web content itself.
 -   **[Improving page loading performance with asynchronous web content rendering](../customizing_content/improving_asynch_render/index.md)**  
-You can increase page loading performance by separating portal page content delivery from web content rendering. To do so, you use the asynchronous web content rendering feature. If you enable asynchronous web content rendering, the portal serves the page immediately, but only with placeholder content. The Web Content Viewer then dynamically inserts the configured content into the portal page after the content has been completely rendered.
+You can increase page loading performance by separating DX page content delivery from web content rendering. To do so, you use the asynchronous web content rendering feature. If you enable asynchronous web content rendering, the portal serves the page immediately, but only with placeholder content. The Web Content Viewer then dynamically inserts the configured content into the DX page after the content has been completely rendered.
 
 

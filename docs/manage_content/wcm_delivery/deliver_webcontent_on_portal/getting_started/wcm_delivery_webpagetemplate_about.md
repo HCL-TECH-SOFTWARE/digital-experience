@@ -1,6 +1,6 @@
 # Web content pages and templates
 
-Web content pages are portal pages that are associated with content that is managed in HCL Web Content Manager. Similar to web content pages, web content templates are page templates that are associated with content in Web Content Manager.
+Web content pages are DX pages that are associated with content that is managed in HCL Web Content Manager. Similar to web content pages, web content templates are page templates that are associated with content in Web Content Manager.
 
 Pages and page templates are tied to web content by content associations. These associations are defined in the page properties and can be specified with the Associations window when you edit page properties. You can associate a page with one or more site areas in one or more web content libraries.
 
@@ -24,7 +24,7 @@ With web content pages, you can take advantage of the following benefits when yo
 You can create a web content page in two ways:
 
 -   Create the page from a web content page template.
--   Add a content association to an existing portal page.
+-   Add a content association to an existing DX page.
 
 ## Web content page templates
 
@@ -33,7 +33,7 @@ To create a web content page template, create a page under the **Page Templates*
 -   **Portal User Interface** \> **Page Templates**
 -   **Portal User Interface** \> **Manage Pages** \> **Content Root** \> **Hidden Pages**
 
-When you create a web content page template, you define the layout, style, and contents of any web content page that is created from the template. Web content page templates have all the same flexibility and customization features as a standard portal page or portal page template. You can do common tasks like adding content with portlets, changing the style of the page, or changing the layout of objects on the page. By using viewers with other portlets in a web content page template, you can create pages that support a wide range of user goals. Likewise, you can rely on only viewers and create a website that is primarily composed of information in your web content system.
+When you create a web content page template, you define the layout, style, and contents of any web content page that is created from the template. Web content page templates have all the same flexibility and customization features as a standard DX page or DX page template. You can do common tasks like adding content with portlets, changing the style of the page, or changing the layout of objects on the page. By using viewers with other portlets in a web content page template, you can create pages that support a wide range of user goals. Likewise, you can rely on only viewers and create a website that is primarily composed of information in your web content system.
 
 As with standard page templates, you can create web content pages from a web content page template:
 
@@ -54,8 +54,8 @@ When you create a page from a template, page titles in any language are not copi
 In addition, the following changes take place automatically, depending on the individual web content associations that exist on the page.
 
 -   If the page template is a managed page, with a system content association that references the Portal site library, the following changes apply:
-    -   A portal page site area is created in the Portal Site library, with the title of the site area that is derived from the title of the new page. The hierarchy structure of the portal page site area is automatically synchronized with the page hierarchy in the portal.
-    -   All authoring template mappings and all nested content are copied over into the new portal page site area. However, any nested portal page site areas are not copied.
+    -   A DX page site area is created in the Portal Site library, with the title of the site area that is derived from the title of the new page. The hierarchy structure of the DX page site area is automatically synchronized with the page hierarchy in the portal.
+    -   All authoring template mappings and all nested content are copied over into the new DX page site area. However, any nested DX page site areas are not copied.
 -   If a default content association references a library other than the Portal Site library, the following changes apply. These changes apply regardless of whether the page template is a managed page.
     -   A site area is created, with the title of the site area that is derived from the following elements:
         -   The title of the new page.

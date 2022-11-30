@@ -4,7 +4,7 @@ With friendly URLs for web content, you can construct URLs to content items that
 
 You can construct friendly URLs that reference web content items, but HCL Web Content Manager itself does not generate friendly URLs by default. However, you can cause the web content viewer to generate friendly URLs. For more information, read *Changing the site URL after an installation*. For more detailed information, read *Defining friendly URLs without state information for pages in your site*
 
-These URLs are easier for users to remember and share and are a convenient way for users to create bookmarks to content items. External applications can also use friendly URLs to provide links directly to content items in the portal. To create effective friendly URLs for web content, you must understand how friendly URLs for portal pages are constructed and how friendly URLs for web content extend those URLs.
+These URLs are easier for users to remember and share and are a convenient way for users to create bookmarks to content items. External applications can also use friendly URLs to provide links directly to content items in the portal. To create effective friendly URLs for web content, you must understand how friendly URLs for DX pages are constructed and how friendly URLs for web content extend those URLs.
 
 ## How friendly URLs for pages are constructed
 
@@ -18,7 +18,7 @@ http://host\_name:port\_number/context\_root/portal/page\_id/[!ut/p/encoded\_suf
 
 The page\_id portion of the friendly URL is made up of the friendly URL names of each page in the page structure. The page structure begins at the content root and ends with the currently selected page.
 
-For example, you might have a portal page called `Products` with a friendly URL name of `products`. Under the `Products` page is another page called `Appliances` with a friendly URL name of `appliances`. When referenced as a complete friendly URL, you would enter the following URL to access the `Appliances` page:
+For example, you might have a DX page called `Products` with a friendly URL name of `products`. Under the `Products` page is another page called `Appliances` with a friendly URL name of `appliances`. When referenced as a complete friendly URL, you would enter the following URL to access the `Appliances` page:
 
 ```
 http://www.example.com:10039/wps/portal/products/appliances
@@ -35,9 +35,9 @@ http://www.example.com:10039/wps/portal/appliances
 
 ## How friendly URLs for web content are constructed
 
-Friendly URLs for web content are constructed just as friendly URLs for pages but include additional information that identifies the path to a content item. When the portal decodes a friendly URL, it decodes the URL from beginning to end. Each path segment of the URL is matched with the friendly URL names of portal pages until no more matches can be located. The remainder of the URL is then considered to be path information to a content item.
+Friendly URLs for web content are constructed just as friendly URLs for pages but include additional information that identifies the path to a content item. When the portal decodes a friendly URL, it decodes the URL from beginning to end. Each path segment of the URL is matched with the friendly URL names of DX pages until no more matches can be located. The remainder of the URL is then considered to be path information to a content item.
 
-This path information is mapped to a shared public render parameter that is scoped to the portal page identified by the URL. The fully qualified name of this path-info parameter is `http://www.ibm.com/xmlns/prod/websphere/portal/publicparams:path-info`. The path-info parameter can contain multiple values, with the individual values representing segments of a content path. The segments are concatenated using a forward slash \(`/`\) as a path separator.
+This path information is mapped to a shared public render parameter that is scoped to the DX page identified by the URL. The fully qualified name of this path-info parameter is `http://www.ibm.com/xmlns/prod/websphere/portal/publicparams:path-info`. The path-info parameter can contain multiple values, with the individual values representing segments of a content path. The segments are concatenated using a forward slash \(`/`\) as a path separator.
 
 Friendly URLs for web content take the following general form:
 
@@ -45,7 +45,7 @@ Friendly URLs for web content take the following general form:
 http://host\_name:port\_number/context\_root/portal/page\_id/path\_to\_content/[!ut/p/encoded\_suffix]
 ```
 
-When you add a web content viewer to a portal page, the web content viewer reads the path-info parameter. The viewer assembles the path to the content to be rendered by appending the path information to the path of the default content mapping defined for the current page. For example, you might have the following friendly URL for web content:
+When you add a web content viewer to a DX page, the web content viewer reads the path-info parameter. The viewer assembles the path to the content to be rendered by appending the path information to the path of the default content mapping defined for the current page. For example, you might have the following friendly URL for web content:
 
 ```
 http://www.example.com:10039/wps/portal/products/appliances/welcome
@@ -53,13 +53,13 @@ http://www.example.com:10039/wps/portal/products/appliances/welcome
 
 Several conditions contribute to this URL:
 
--   The portal page `Products` has a friendly URL name of `products`, and underneath the `Products` page is another page called `Appliances` with a friendly URL name of `appliances`.
+-   The DX page `Products` has a friendly URL name of `products`, and underneath the `Products` page is another page called `Appliances` with a friendly URL name of `appliances`.
 -   A web content library contains a site area called `Appliances`, which contains a content item called `welcome`. For this example, the web content library is called `Web Content`.
--   The portal page `Appliances` has a default content mapping to the `Web Content/Appliances` site area.
+-   The DX page `Appliances` has a default content mapping to the `Web Content/Appliances` site area.
 
 When a web content viewer is added to the `Appliances` page, the web content viewer interprets the path-info information from the friendly URL. The viewer identifies `welcome` as path information that represents content in a web content library. By examining the default content mapping on the page, the web content viewer locates the `Web Content/Appliances` site area and then displays the `welcome` content item.
 
-The `page\_id` portion of the friendly URL is always evaluated first. Because of this priority, ensure that your naming schemes do not overlap when setting up your portal page hierarchy and your web content hierarchy. In particular, the `path\_to\_content` information cannot begin with segments that could be part of the `page_id` portion of the friendly URL. If the first segment of the `path\_to\_content` information matches the friendly URL name of a portal page at that point in the page hierarchy, the friendly URL could reference the wrong page.
+The `page\_id` portion of the friendly URL is always evaluated first. Because of this priority, ensure that your naming schemes do not overlap when setting up your DX page hierarchy and your web content hierarchy. In particular, the `path\_to\_content` information cannot begin with segments that could be part of the `page_id` portion of the friendly URL. If the first segment of the `path\_to\_content` information matches the friendly URL name of a DX page at that point in the page hierarchy, the friendly URL could reference the wrong page.
 
 **Considerations for the path-info parameter:**
 
@@ -101,10 +101,10 @@ http://host\_name:port\_number/context\_root/portal/page\_id/path\_to\_content/[
     -   The friendly URL for web content references a content item that cannot be located.
     -   The user does not have sufficient access rights to view the referenced content item.
 
--   The portal page specified in the friendly URL for web content must have a default content mapping to an existing web content site area. If there is no default content mapping on the page, any web content viewers on the page display a warning message about the missing page context.
+-   The DX page specified in the friendly URL for web content must have a default content mapping to an existing web content site area. If there is no default content mapping on the page, any web content viewers on the page display a warning message about the missing page context.
 -   If the target page does not contain a web content viewer that is configured to receive links, the content item specified in the friendly URL for web content is not displayed.
 -   If a web content viewer is not configured to broadcast links, links rendered by the viewer do not affect the friendly URL for web content.
--   The default portal page selection does not show the path of the default content item in the friendly URL. The `path\_to\_content` portion of the URL includes the content path information only after users browse web content using links displayed by the viewer.
+-   The default DX page selection does not show the path of the default content item in the friendly URL. The `path\_to\_content` portion of the URL includes the content path information only after users browse web content using links displayed by the viewer.
 -   Friendly URLs for web content are URL-encoded. When using friendly URLs for web content, special characters that show in any segment of the URL must be URL-encoded. For example, a space character in the URL would be replaced by its URL-encoded equivalent: `%20`. Some web browsers perform automatic decoding of the URL. In this case, you might see unencoded characters in the URL, but the portal always works with an encoded version of the URL.
 -   The segments of a friendly URL for web content are not localized for multiple languages. The `path\_to\_content` portion of a friendly URL for web content is composed of the unlocalized names of web content folders, site areas, and content items. For example, if you name these items with English terms, the friendly URL for web content is constructed of these English terms, even if the portal language is not English.
 

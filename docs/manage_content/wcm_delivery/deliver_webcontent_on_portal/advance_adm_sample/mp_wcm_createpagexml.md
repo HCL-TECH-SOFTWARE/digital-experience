@@ -1,8 +1,8 @@
 # Creating a web content page with the XML configuration interface
 
-As with other portal pages, you can create a web content page with the XML configuration interface (xmlaccess command). Page definition is similar to a standard portal page. However, there is an additional page parameter that specifies the site area that is associated with the web content page.
+As with other DX pages, you can create a web content page with the XML configuration interface (xmlaccess command). Page definition is similar to a standard DX page. However, there is an additional page parameter that specifies the site area that is associated with the web content page.
 
-1.  When creating your xmlaccess command, specify your page parameters as you would for a standard portal page.
+1.  When creating your xmlaccess command, specify your page parameters as you would for a standard DX page.
 
     The following block of code is an example of specified page parameters:
 

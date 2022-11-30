@@ -147,5 +147,5 @@ The following examples show how you can set render parameters when the form is s
 
 
 ???+ info "Related information:"
-    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../../extend_dx/ddc/index.md)
+    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../extend_dx/ddc/index.md)
 

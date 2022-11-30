@@ -1,4 +1,4 @@
-# Web content tags
+# Web Content Tags
 
 You use tags to reference elements within presentation templates and element designs.
 

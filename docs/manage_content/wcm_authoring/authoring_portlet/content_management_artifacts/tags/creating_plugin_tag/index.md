@@ -1,4 +1,4 @@
-# Creating a plug-in tag
+# Plug-in tag
 
 Rendering plug-ins are referenced by using the plug-in tag. Select from preinstalled rendering plug-ins, or select your own custom plug-ins.
 

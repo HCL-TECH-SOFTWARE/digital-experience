@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_short-text_creating
-title: Creating a short text component
+title:  short text component
 ---
 
 # Creating a short text component

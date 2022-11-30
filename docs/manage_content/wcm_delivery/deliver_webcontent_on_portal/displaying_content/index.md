@@ -12,6 +12,6 @@ Depending on how you decide to deploy the servers in your environment, there are
 -   **[Adding a Web Content Viewer Portlet](wcm_config_wcmviewer_adding.md)**  
 Add a Web Content Viewer Portlet to a page with the site toolbar.
 -   **[Creating a web content page](mp_wcm_createpage.md)**  
-A web content page is a page that is associated to one or more site areas in HCL Web Content Manager. You can create a web content page from a web content template page, or you can convert an existing portal page into a web content page.
+A web content page is a page that is associated to one or more site areas in HCL Web Content Manager. You can create a web content page from a web content template page, or you can convert an existing DX page into a web content page.
 
 

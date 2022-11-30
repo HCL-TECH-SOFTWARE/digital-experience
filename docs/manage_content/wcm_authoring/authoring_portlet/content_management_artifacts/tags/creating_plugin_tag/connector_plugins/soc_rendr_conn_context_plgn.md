@@ -1,4 +1,4 @@
-# The HCL Connections context rendering plug-in
+# HCL Connections context rendering plug-in
 
 You can use the ConnectionsContext rendering plug-in to access information that is related to the current HCL Connections integration context.
 
@@ -116,5 +116,5 @@ Examples:
 
 
 ???+ info "Related information:"
-    - [Extending social lists by using the digital data connector](../../../../../../../../build_sites/social_rendering/extending_social_lists_using_ddc/index.md)
+    - [Extending social lists by using the digital data connector](../../../../../../../build_sites/social_rendering/extending_social_lists_using_ddc/index.md)
 

@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_referencing_components_alternate-design
-title: Creating an alternate design tag
+title: Alternate design tag
 ---
 
 

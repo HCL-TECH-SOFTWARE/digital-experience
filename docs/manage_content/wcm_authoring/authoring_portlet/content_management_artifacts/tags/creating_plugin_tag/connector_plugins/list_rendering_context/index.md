@@ -1,4 +1,4 @@
-# The list-rendering context
+# List-rendering context
 
 Learn how to create a list-rendering context.
 

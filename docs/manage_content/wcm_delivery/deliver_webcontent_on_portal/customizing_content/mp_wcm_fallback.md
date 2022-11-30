@@ -5,7 +5,7 @@ Set up a web content fallback page to be used when a web content viewer cannot d
 !!! note
     Although a fallback page is one way of handling failed page resolution, you can also use a content page resolution filter to perform more advanced resolution. With these filters, you can tailor how the viewer behaves if no page can be found for a content item. For more information, see *Creating a content page resolution filter class.*
 
-1.  Create the portal page to be used as the web content fallback page.
+1.  Create the DX page to be used as the web content fallback page.
 
     -   Specify a unique name for the page so that you can reference the page later.
     -   Assign any access rights required for users. For example, if the fallback page is available in the public part of the portal, ensure that anonymous users have view access to the page.
@@ -25,7 +25,7 @@ Set up a web content fallback page to be used when a web content viewer cannot d
 
     4.  Under **Additional Properties**, click **Custom Properties**.
 
-    5.  Click **New**, and enter the property name `wcm.fallback.page`. Set the string value to the unique name or object ID of the portal page that you created as the fallback page.
+    5.  Click **New**, and enter the property name `wcm.fallback.page`. Set the string value to the unique name or object ID of the DX page that you created as the fallback page.
 
     6.  Save the changes to the master configuration.
 

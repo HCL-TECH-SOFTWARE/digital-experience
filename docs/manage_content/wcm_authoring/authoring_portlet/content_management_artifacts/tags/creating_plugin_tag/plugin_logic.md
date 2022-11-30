@@ -1,5 +1,4 @@
 ---
-id: plugin_logic
 title: Logic plug-ins
 ---
 

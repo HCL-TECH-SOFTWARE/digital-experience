@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_image_creating
-title: Creating an image component
+title: image component
 ---
 
 # Creating an image component

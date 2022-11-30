@@ -17,13 +17,13 @@ There are two ways to preview content items in a portal:
 
     2.  In the **Previewing Options** section, indicate the previewing method that you want to use.
 
-        -   To use dynamic page selection, select **Allow authors to preview content dynamically in a Web Content portal page**.
-        -   To preview content items on specific pages, select the pages to use for previewing from the list with the following heading: **Allow authors to preview content in the local portal pages**.
+        -   To use dynamic page selection, select **Allow authors to preview content dynamically in a Web Content DX page**.
+        -   To preview content items on specific pages, select the pages to use for previewing from the list with the following heading: **Allow authors to preview content in the local DX pages**.
 2.  Preview the content as a web content page.
 
     1.  Select a content item in the authoring portlet.
 
-    2.  Click **Preview**, and then select **Preview as a Web Content portal page**.
+    2.  Click **Preview**, and then select **Preview as a Web Content DX page**.
 
         A separate browser window opens to show the content item on its associated web content page.
 

@@ -12,7 +12,7 @@ Page-based access control affects only the access control enforcement that is tr
 
     You can manage content associations using the site toolbar or the Page Properties portlet.
 
-2.  For each content association for which you want to enable page-based access control, select **Use Portal Page Security** for the association.
+2.  For each content association for which you want to enable page-based access control, select **Use DX page Security** for the association.
 
     !!! note
         If the user creating the page does not have sufficient permissions to enable page-based access control, the check box is disabled. The following access rights must be defined:

@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_referencing_components_style-sheet
-title: Creating a style element tag
+title: Style element tag
 ---
 
 

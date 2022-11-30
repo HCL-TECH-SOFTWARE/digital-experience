@@ -1,8 +1,33 @@
 # Delivering web content
 
+HCL DX has a highly configurable system for delivering web content. This includes both headless content delivery to other clients like mobile apps and direct rendering of websites via HCL DX. More information about how to use HCL DX to build websites is given in the [Build Sites](../../build_sites/index.md) section.
+
+## What is it For?
+
+The type of delivery method you use to deliver web content to your viewers depend on the type of content that is being delivered, and the type of viewers your website is intended for. This section describes the options for that.
+
+## Who Should Use It?
+
+This information is primarily aimed at system administrators and application developers who would must configure web content delivery.
+
+## More Information
+
 The type of delivery method you use to deliver web content to your viewers depend on the type of content that is being delivered, and the type of viewers your website is intended for.
 
--   **[Delivering web content on a portal page](../delivering_web_content/deliver_webcontent_on_portal/index.md)**  
+    - ...
+    - Web Content User Assistance: wcm_user_assistance
+    - Web Content Inline Editing: wcm_inline_editing
+    - Vanity URLs: vanity_url
+    - Syndication: syndication
+    - Multilingual Solution: mls
+    - WebDAV: webdav
+    - Content as a Service Pages: content_as_a_service
+    - Previewing as Another User: preview_another_user
+    - Social Media Publisher: socialmedia_publisher
+
+
+
+-   **[Delivering web content via HCL DX](../delivering_web_content/deliver_webcontent_on_portal/index.md)**  
 Using tools like Web Content Viewer Portlets, content associations, and web content page templates, you can build portal pages and display web content. You can also combine web content with other portlet-based content. Content associations tie viewers and portal pages to the site structure of your web content libraries.
 -   **[Access web content by using a servlet](wcm_config_delivery_servlet.md)**  
 Users can access content that is displayed by using the Web Content Manager servlet by connecting to a URL. A servlet delivered website is used when you don't need to use any HCL Portal based features such as authoring tools.

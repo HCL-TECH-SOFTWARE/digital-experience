@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_link_creating
-title: Creating a link component
+title:  link component
 ---
 
 # Creating a link component

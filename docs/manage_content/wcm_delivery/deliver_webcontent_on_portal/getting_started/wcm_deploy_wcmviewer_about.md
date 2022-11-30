@@ -1,6 +1,6 @@
 # Web Content Viewers
 
-Web Content Viewers are portlets that render content from a web content library as part of a portal page. If your presentation is simple, a single viewer can be sufficient. To provide a richer experience for your users, use multiple viewers to aggregate content from different libraries.
+Web Content Viewers are portlets that render content from a web content library as part of a DX page. If your presentation is simple, a single viewer can be sufficient. To provide a richer experience for your users, use multiple viewers to aggregate content from different libraries.
 
 ## How viewers locate content
 
@@ -73,7 +73,7 @@ Copied content is stored in the site area that is identified by the default cont
 
 ## Link Web Content Viewers
 
-Many Web Content Viewers can be added to a single portal page or a series of pages. Sometimes it is necessary for different Web Content Viewers to interact with each other. For example, a menu component might be placed in one viewer and a content item in another viewer. If you want the content item to change when a different link is clicked in the menu, you must link the two viewers.
+Many Web Content Viewers can be added to a single DX page or a series of pages. Sometimes it is necessary for different Web Content Viewers to interact with each other. For example, a menu component might be placed in one viewer and a content item in another viewer. If you want the content item to change when a different link is clicked in the menu, you must link the two viewers.
 
 Web Content Viewers can broadcast or receive links:
 

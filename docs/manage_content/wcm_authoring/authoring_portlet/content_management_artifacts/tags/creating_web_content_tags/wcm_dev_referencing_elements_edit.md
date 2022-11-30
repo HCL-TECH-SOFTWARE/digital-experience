@@ -1,4 +1,4 @@
-# Creating an editable element tag
+# Editable element tag
 
 The editable element tag is used to make elements from content items and site areas editable when rendered by using a web content viewer portlet when the page is in edit mode.
 

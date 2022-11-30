@@ -1,4 +1,4 @@
-# Creating a page information tag
+# Page information tag
 
 You use the page information tag to display page navigation details in the design of a page navigation element.
 

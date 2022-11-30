@@ -4,7 +4,7 @@ View some best practices and limitations for using Web Content Viewers.
 
 ## User authentication
 
-User authentication to Web Content Viewers is managed by HCL Digital Experience and IBM® WebSphere® Application Server.
+User authentication to Web Content Viewers is managed by HCL Digital Experience.
 
 ## Security and WSRP
 
@@ -21,9 +21,9 @@ Users are able to view only content and components that can be accessed by eithe
 
 ## Content and component limitations
 
-Not all content or components that are built in a Web Content Manager solution are suitable for inclusion in a portal page:
+Not all content or components that are built in a Web Content Manager solution are suitable for inclusion in a DX page:
 
--   Content or components to be shown within a portal page must be self-contained and not rely on other content or components.
+-   Content or components to be shown within a DX page must be self-contained and not rely on other content or components.
 -   When you create presentation templates or page styles to use when you display content within a portlet, reference only the content you want to show. Add components like menus and navigators in separate portlets, and link the components to other content portlets as required.
 -   JavaScript URLs are not supported.
 

@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_comp-reference_creating
-title: Creating a Reference Component
+title:  Reference Component
 ---
 
 # Creating a Reference Component

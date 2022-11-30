@@ -15,11 +15,12 @@ Web developers can also use the features of HCL DX to extend content and asset m
 ## More Information
 
 This section describes several key features in more depth:
-* [Author Web Content](wcm_authoring/index.md) describes how to use HCL DX to create web content
-* [Deliver Web Content](wcm_delivery/index.md) describes how to use HCL DX to deliver web content
-* [Configure Web Content Manager](wcm_configuration/index.md) describes how to configure HCL DX content management services
-* [Extend Web Content Manager](wcm_development/index.md) describes how to use HCL DX to create web content
-* [Digital Asset Management](digital_assets/index.md) provides a comprehensive description of the digital asset system.
+
+* [Author Web Content](wcm_authoring/index.md) describes how to use HCL DX to create web content.
+* [Deliver Web Content](wcm_delivery/index.md) describes how to use HCL DX to deliver web content.
+* [Configure Web Content Manager](wcm_configuration/index.md) describes how to configure HCL DX content management services,
+* [Extend Web Content Manager](wcm_development/index.md) describes how to extend content management capabilities, for example by developing templates and plugins
+* [Digital Asset Management](digital_assets/index.md) provides a comprehensive description of the digital asset management capabilities.
 * [Personalization](pzn/index.md) provides a comprehensive description of the built-in personalization system.
 
 <!--
