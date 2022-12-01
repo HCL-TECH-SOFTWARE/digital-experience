@@ -80,7 +80,7 @@ defaultValue="/usr/dummy.offr.1" />
 </iudd:iudd>
 ```
 
-See [The component level sdd.xml file](si_component_sdd.md) for information about editing the sdd.xml file.
+See [The component level sdd.xml file](../../../developing_adv_paa_app/si_component_sdd.md) for information about editing the sdd.xml file.
 
 ## Syntax information for component names
 
@@ -88,13 +88,14 @@ The syntax for naming the component is important. There are dependencies within 
 
 When you register the names in the sdd.xml files, you must adhere to the following syntax: components/componentName. This syntax is necessary for the Solution Installer to resolve the component name. It must contain the full path from the directory that contains the assembly level sdd.xml file, usually the root directory, to the component level sdd.xml file.
 
-Looking at the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/paa-samples/sample1.paa file, it contains one component in the components directory called 'Sample1'. Therefore, The component name would appear in the sdd.xml file as follows: components/Sample1. It is the full path relative to the directory that contains the assembly level sdd.xml file.
+Looking at the [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)/doc/paa-samples/sample1.paa file, it contains one component in the components directory called 'Sample1'. Therefore, The component name would appear in the sdd.xml file as follows: components/Sample1. It is the full path relative to the directory that contains the assembly level sdd.xml file.
 
 The Solution Installer follows the feature pack approach that is provided by the ConfigEngine to install the individual components. The advantage of this approach is that the ConfigEngine manages the installation order of the individual components. Using the feature pack approach ensures a distinction between portal core extension points and those points that are used to install the PAA content. This approach reduces the risk of a user accidentally removing portal core components when you run a remove extension point.
 
 The ConfigEngine runs the installation of the set of components by extension point and controls the order in which they are run. For example, all EAR files are installed together; all portlet deployments are done at the same time. If there is a need to have an artifact of a component that is installed before another, then you need to create a dependency in the sdd.xml file. The dependency works on an extension point basis in that you can specify that artifacts covered by that extension point can have an order. For example, you can specify that the EAR file in component1 is installed before the EAR file in component2.
 
-**Note:** The value of the FunctionalArea parameter is set to featurepackSI. This value is important so the Solution Installer can determine that the components are to be installed with the Solution Installer specific feature pack. See the sdd.xml file example at the beginning of this file for how to implement the feature pack approach.
+!!! note 
+	The value of the FunctionalArea parameter is set to featurepackSI. This value is important so the Solution Installer can determine that the components are to be installed with the Solution Installer specific feature pack. See the sdd.xml file example at the beginning of this file for how to implement the feature pack approach.
 
 In the sample sdd.xml file, there are two `SCU` elements. The first one shows how to register the extension point to deploy a portlet and the second one demonstrates how to remove the portlets.
 
@@ -125,6 +126,6 @@ In the sample sdd.xml file, there are two `SCU` elements. The first one shows ho
 
 The `SCU` element example notifies the Solution Installer about the task you want to run. The extension point in this case is called deploy-portlets-applySIFeaturePack. It deviates from the core extension points for portal by adding applySIFeaturePack’ to the end of the extension point. With an uninstall task, ‘removeSIFeaturePack’ is appended instead. It allows the Solution Installer to distinguish between installation and uninstall tasks. Append these strings to the extension point names to create a definite distinction between core extension points and those points included for the Solution Installer to handle a PAA distribution. The Solution Installer expects and runs only extension points that conform to this format.
 
-To provide an implementation task for an extension point, read [Installation tasks](si_paa_spec_inst.md) for information.
+To provide an implementation task for an extension point, read [Installation tasks](../si_paa_spec_inst.md) for information.
 
 

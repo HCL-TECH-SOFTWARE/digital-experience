@@ -2,7 +2,7 @@
 
 You can change elements of the Click for Person Card option and the appearance of the Person card such as text color, font, background color, and so on, by modifying Cascading Style Sheet \(CSS\) definitions specified in the styles\_people.jspf file located in the theme directory.
 
-1.  Go to [AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/<cell\_name\>/wps.ear/wps.war/themes/html/<theme\_name\>.
+1.  Go to [AppServer\_root](../../../guide_me/wpsdirstr.md)/installedApps/<cell\_name\>/wps.ear/wps.war/themes/html/<theme\_name\>.
 
 2.  Open the styles\_people.jspf file.
 
