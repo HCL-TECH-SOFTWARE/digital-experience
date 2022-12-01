@@ -134,8 +134,8 @@ The following gives an example of a custom filter plugged into the filter chain 
 The new filter for the explicit login is now available. Users who are defined in the properties will be redirected to the specified URL after they log in through the login portlet or login URL.
 
 ???+ info "Related information" 
-      -  [Authentication Service](../admin-system/srvcfgref_secy_auth.md)
-      -  [Configuring Integrator for SAP](../admin-system/sap_int_cfg.md)
-      -  [Configuring Basic Authentication for SSO for the SAP navigation integration](../admin-system/sap_int_cfg_basauth_sso_4nav.md)
-      -  [Page properties for configuring the SAP navigation integration](../admin-system/sap_int_cfg_parms_4nav.md)
+      -  [Authentication Service](../service_config_properties/portal_svc_cfg/security_svc/srvcfgref_secy_auth.md)
+      -  [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)
+      -  [Configuring Basic Authentication for SSO for the SAP navigation integration](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_basauth_sso_4nav.html)
+      -  [Page properties for configuring the SAP navigation integration](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_parms_4nav.html)
 

@@ -71,5 +71,5 @@ If you are performing an in-place update of a cluster, the deployment manager sh
 
 
 ???+ info "Related information"  
-    -   [Configuration Wizard](../../../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
+    -   [Configuration Wizard](../../../../../../deployment/manage/portal_admin_tools/cfg_wizard/index.md)
 

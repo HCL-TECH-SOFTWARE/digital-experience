@@ -23,9 +23,7 @@ The following table lists the fields that are unique to the Migrate a cluster st
 |**WebSphere Application Server administrator**|wpsadmin| |
 |**WebSphere Application Server administrator password**| | |
 |**Target deployment manager host name**| | |
-|**Target deployment manager soap port****Note:** Enter the same port number used for the source environment.
-
-|10033| |
+|**Target deployment manager soap port**<br>**Note:** Enter the same port number used for the source environment.|10033| |
 |**What is the new host name**| | |
 |**Where is the target portal installed**|/opt/IBM/WebSphere/PortalServer| |
 
@@ -175,6 +173,6 @@ To complete migration, you must perform several post-migration tasks that depend
 
 ???+ info "Related information"  
     -   [Troubleshooting: Migrate node profiles for a cluster environment](../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_migrate_cluster2.md)
-    -   [Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
+    -   [Configuration Wizard](../../portal_admin_tools/cfg_wizard/index.md)
     -   [Roadmap: Migrating a clustered environment](../../../../deployment/manage/migrate/planning_migration/rm_migration/rm_mig_cluster.md)
-    -   [Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    -   [Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)

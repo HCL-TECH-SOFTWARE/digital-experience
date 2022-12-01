@@ -7,7 +7,8 @@ In the virtual portal XML scripts, look for references to deprecated portlets su
 -   `<portlet action="locate" name="Manage Seed List" objectid="3_CGAH47L008DE402BK8543I1G63"></portlet>`
 -   `<p><portletinstance action="update" domain="rel" objectid="5_CGAH47L008DE402BK8543I18D4" portletref="3_CGAH47L008DE402BK8543I1G63" shareref="5_CGAH47L008DE402BK8543I18D4"></portletinstance></p>`
 
-**Note:** Keep in mind that `objectid`, `portletref`, `shareref`, might vary in your installation.
+!!!note
+    Keep in mind that `objectid`, `portletref`, and `shareref` might vary in your installation.
 
 You might also find references to installer/wp.config/config/work which is no longer valid and must be replaced to installer/wp.config/config/templates.
 
