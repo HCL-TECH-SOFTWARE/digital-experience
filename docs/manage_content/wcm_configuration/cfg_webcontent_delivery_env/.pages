@@ -4,5 +4,5 @@ nav:
     - Setting up site analysis for the Web Content Viewer: wcmviewer_site_analytics_setup
     - wcm_config_wcmviewer_xmlaccess.md
     - Caching options: caching_options
-    - wcm_config_delivery_pre-rendered_enable.md\
+    - wcm_config_delivery_pre-rendered_enable.md
     - ...
