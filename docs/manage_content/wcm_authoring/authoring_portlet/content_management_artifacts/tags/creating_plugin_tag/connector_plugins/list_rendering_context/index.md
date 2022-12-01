@@ -100,5 +100,5 @@ The following table shows which actions the parameters support and whether they 
 For examples about how to set the list-rendering context, read the following topics.
 
 ???+ info "Related information:"
-    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../../../extend_dx/ddc/index.md)
+    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../../extend_dx/ddc/index.md)
 

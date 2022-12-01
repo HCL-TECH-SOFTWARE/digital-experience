@@ -78,6 +78,6 @@ For example:
     The context settings of portalContext and portalMapping cannot be used with the editable element tag. This restriction applies both to the editable element tag itself, and any other tags that are referenced between the `[EditableElement]` and `[/EditableElement]` tags.
 
 ???+ info "Related information:"
-    - [Inline editing](../../../wcm_content_delivery/wcm_inline_editing/index.md)
-    - [Enabling inline editing for content items](../../../wcm_content_delivery/wcm_inline_editing/inline_editing/wcm_dev_inline_tags.md)
+    - [Inline editing](../../../../inline_editing/index.md)
+    - [Enabling inline editing for content items](../../../../inline_editing/wcm_dev_inline_tags.md)
 

@@ -158,5 +158,5 @@ Text to render if current device is DEVICE1 but not DEVICE2.
 ```
 
 ???+ info "Related information:"
-    - [Localized rendering](../../../../../multi_lingual/using_mls/wcm_mls_rendering.md)
+    - [Localized rendering](../../../../multi_lingual/using_mls/wcm_mls_rendering.md)
 

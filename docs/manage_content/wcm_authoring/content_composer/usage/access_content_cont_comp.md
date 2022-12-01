@@ -14,11 +14,11 @@ Follow the instructions below to access content with the HCL Digital Experience 
 
 1.  Log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio navigator.
 
-    ![](../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
+    ![](../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
 
 2.  Select **Content Composer** from the **Web Content** menu to access the HCL Digital Experience 9.5 Content Composer user interface (Dashboard).
 
-    ![](../../../images/HCL%20Content%20Composer%20dashboard.png "HCL Content Composer Dashboard")
+    ![](../../../../images/HCL%20Content%20Composer%20dashboard.png "HCL Content Composer Dashboard")
 
 
 See the [Access control levels for Content Composer authors and editors](../configuration/access_control_levels_author_editor.md) topic for more information about user role-based abilities to manage specific content create, edit, update, and delete tasks in HCL Content Composer.

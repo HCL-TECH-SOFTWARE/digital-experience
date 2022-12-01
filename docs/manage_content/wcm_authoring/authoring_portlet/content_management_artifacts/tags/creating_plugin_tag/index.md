@@ -85,4 +85,4 @@ To create a plug-in tag:
 These topics contain information about the different plug-ins.
 
 ???+ info "Related information:"
-    - [Using remote action plug-ins](../../../../../../wcm_development/wcm_custom_plugin/wcm_dev_remoteactions.md)
+    - [Using remote action plug-ins](../../../../../wcm_development/wcm_custom_plugin/wcm_dev_remoteactions.md)

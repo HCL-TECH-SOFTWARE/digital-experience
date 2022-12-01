@@ -180,7 +180,7 @@ http://hostname/context\_root/portal_page_url_mapping/?current=true&urile=wcm%3A
 
 ## Adding cache parameters to a URL
 
-You can add web content [Cache parameters](../../wcm_management/custom_caching/wcm_dev_caching_cache-parameters.md) and [Cache expire parameters](../../wcm_management/custom_caching/wcm_dev_caching_expire-parameters.md) to a URL to custom caching strategies to individual items. For example:
+You can add web content [Cache parameters](../../../../wcm_configuration/custom_caching/wcm_dev_caching_cache-parameters.md) and [Cache expire parameters](../../../../wcm_configuration/custom_caching/wcm_dev_caching_expire-parameters.md) to a URL to custom caching strategies to individual items. For example:
 
 ```
 `http://hostname/context\_root/library/site\_area\_path/content?cache=site&contentcache=session`
