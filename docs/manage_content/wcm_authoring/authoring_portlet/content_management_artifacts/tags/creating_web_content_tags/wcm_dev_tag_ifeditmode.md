@@ -1,4 +1,4 @@
-# Creating an If Edit Mode tag
+# If Edit Mode tag
 
 The IfEditMode tag is used to render content in a web content viewer portlet only when a page is in edit mode. This tag can be used to display text, fields, and elements in edit mode that are not required to be displayed when the page is in view mode.
 

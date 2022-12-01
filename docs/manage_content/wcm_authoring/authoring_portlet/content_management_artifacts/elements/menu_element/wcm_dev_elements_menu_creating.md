@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_menu_creating
-title: Creating a menu component
+title:  menu component
 ---
 
 # Creating a menu component

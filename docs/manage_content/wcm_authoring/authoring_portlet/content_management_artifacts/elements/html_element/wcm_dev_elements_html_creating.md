@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_html_creating
-title: Creating an HTML component
+title: HTML component
 ---
 
 # Creating an HTML component

@@ -12,3 +12,19 @@ When you delete items that are referenced by other items, you need to resolve an
     -   Other items might not be able to be deleted at all.
     -   References to authoring templates can be changed only by using the **Apply Template** feature on the item itself.
 
+## Viewing references
+
+
+You can view and manage all of the links between items by viewing references.
+
+1.  Click the **Application menu** icon. Then, click **Content > Web Content Authoring.**
+
+2.  Select the library that contains the item whose references you want to view.
+
+3.  Select a view type.
+
+4.  View the references.
+
+    -   If you want to open the item, click the item, then click **More > View References**.
+    -   If you want to remain in the index, click the check box for the item, then click **More > View References**.
+

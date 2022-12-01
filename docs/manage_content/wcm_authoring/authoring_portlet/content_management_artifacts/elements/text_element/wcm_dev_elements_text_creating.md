@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_text_creating
-title: Creating a text component
+title:  text component
 ---
 
-title: Creating a text component
+title:  text component
 # 
 
 

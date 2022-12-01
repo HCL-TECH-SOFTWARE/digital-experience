@@ -39,6 +39,6 @@ You can define the secure locations of layout templates by using this setting. I
 
 ???+ info "Related information"
     - [Access permissions](../../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md)
-    - [CSS styles used by the sample web content template items](../../../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/getting_started/creating_contentsamples/wcm_delivery_ctsamples_css.md)
+    - [CSS styles used by the sample web content template items](../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_css.md)
     - [Modify the dynamic resource references for your theme](../../../customizing_theme/copying_theme/manual_copy_theme/creating_webdav_theme_copy/themeopt_cust_copy_modifystatres.md)
 

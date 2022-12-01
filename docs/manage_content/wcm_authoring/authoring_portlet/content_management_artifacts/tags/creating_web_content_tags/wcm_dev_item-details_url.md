@@ -1,4 +1,4 @@
-# Creating a URL tag
+# URL tag
 
 The URLCmpnt tag is used to generate a URL to a site area or content item.
 

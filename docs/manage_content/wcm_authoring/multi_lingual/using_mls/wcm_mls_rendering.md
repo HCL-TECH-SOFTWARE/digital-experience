@@ -48,6 +48,6 @@ If implementing a multilingual site, it is worth considering what font to use. T
 
 
 ???+ info "Related information:"
-    - [User plug-ins](../../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/plugin_user.md)
+    - [User plug-ins](../../authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/plugin_user.md)
     - [Adding a new language to render localized content](../../../../deployment/manage/portal_admin_tools/language_support/supporting_new_language/add_newlanguage.md)
 

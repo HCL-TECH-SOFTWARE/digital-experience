@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_rich-text_creating
-title: Creating a rich text component
+title:  rich text component
 ---
 
 # Creating a rich text component

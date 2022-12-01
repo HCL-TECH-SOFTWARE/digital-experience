@@ -1,6 +1,5 @@
 ---
-id: wcm_dev_tag_ifdefined
-title: Creating an If Defined tag
+title: If Defined tag
 ---
 
 

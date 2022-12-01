@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_referencing_components
-title: Creating a component tag
+title: Component tag
 ---
 
 

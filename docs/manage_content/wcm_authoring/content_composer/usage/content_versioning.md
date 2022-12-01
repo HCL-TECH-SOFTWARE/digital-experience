@@ -22,7 +22,7 @@ Content authors can view and compare current to previous versions of a selected 
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content** from the Practitioner Studio navigator.
 
-    ![](../../../../..//assets/HCL_DX_95_Practitioner_Studio_interface.png)
+    ![](../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png)
 
 2.  Select the web content or content item, and then select Edit from the **Web Content** menu options.
 

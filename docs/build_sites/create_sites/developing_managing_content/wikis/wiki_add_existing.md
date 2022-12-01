@@ -49,5 +49,5 @@ Refer to the following steps only when you are adding a web content viewer portl
 
 
 ???+ info "Related information"
-    -   [Web Content Viewer best practices and limitations](../../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/wcm_config_delivery_portlet_bestpractice.md)
+    -   [Web Content Viewer best practices and limitations](../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/wcm_config_delivery_portlet_bestpractice.md)
 

@@ -10,4 +10,5 @@ nav:
     - wcm_config_time-outs.md
     - wcm_config_ecm_whitelist.md
     - Setting up support for federated documents: fed_docs_setup
+    - ...
 

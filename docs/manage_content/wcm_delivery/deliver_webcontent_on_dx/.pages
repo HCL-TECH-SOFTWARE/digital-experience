@@ -1,0 +1,9 @@
+title: Delivering web content on a DX page
+nav:
+    - index.md
+    - Getting started with delivering web content on a DX page: getting_started
+    - Displaying content with Web Content Viewers: displaying_content
+    - Customizing web content delivery: customizing_content
+    - Enabling remote rendering with WSRP and the Web Content Viewer: enable_remote_render_wsrp
+    - Advanced administrative examples: advance_adm_sample
+    - wcm_config_delivery_portlet_bestpractice.md

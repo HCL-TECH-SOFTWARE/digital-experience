@@ -9,7 +9,6 @@ nav:
     - deleting.md
     - item_locks.md
     - references.md
-    - viewing_references.md
     - versions.md
     - versions_restore.md
     - ...

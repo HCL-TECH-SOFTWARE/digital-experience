@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_item-details_property
-title: Creating a property tag
+title: Property tag
 ---
 
 

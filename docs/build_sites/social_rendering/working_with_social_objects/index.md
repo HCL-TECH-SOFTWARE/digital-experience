@@ -18,5 +18,5 @@ To get the most benefit from social rendering together with tagging, you can put
 ???+ info "Related information"
     - [Roadmap: How to work with social rendering](../soc_rendr_roadmap.md)
     - [Integrating with HCL Connections](../../../extend_dx/integration/connections/installation/index.md)
-    - [Enabling remote rendering with WSRP and the Web Content Viewer](../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/enable_remote_render_wsrp/index.md)
+    - [Enabling remote rendering with WSRP and the Web Content Viewer](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/enable_remote_render_wsrp/index.md)
 

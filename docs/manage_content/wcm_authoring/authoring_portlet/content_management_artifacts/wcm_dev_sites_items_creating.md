@@ -1,4 +1,4 @@
-# Creating site areas
+# Site areas
 
 To create a site framework, you need to create site areas.
 

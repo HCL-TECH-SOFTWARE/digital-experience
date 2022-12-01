@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_search_using
-title: Creating a search component
+title:  search component
 ---
 
 # Creating a search component
