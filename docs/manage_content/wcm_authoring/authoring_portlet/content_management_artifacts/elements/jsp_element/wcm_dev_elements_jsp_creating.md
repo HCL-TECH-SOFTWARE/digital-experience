@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_jsp_creating
-title: Creating a JSP component
+title:  JSP component
 ---
 
 # Creating a JSP component

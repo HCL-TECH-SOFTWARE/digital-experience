@@ -128,5 +128,5 @@ After you install the multilingual extensions, you then must configure your syst
 
 
 ???+ info "Related information:"
-    - [Web content associations](../../../wcm_delivery/deliver_webcontent_on_portal/getting_started/wcm_delivery_contentmap_about.md)
+    - [Web content associations](../../../wcm_delivery/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md)
 

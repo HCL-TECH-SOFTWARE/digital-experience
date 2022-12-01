@@ -1,4 +1,4 @@
-# Creating an editable property tag
+# Editable property tag
 
 An editable property tag is used to make fields and metadata from content items and site areas editable when rendered by using a web content viewer portlet when the page is in edit mode.
 

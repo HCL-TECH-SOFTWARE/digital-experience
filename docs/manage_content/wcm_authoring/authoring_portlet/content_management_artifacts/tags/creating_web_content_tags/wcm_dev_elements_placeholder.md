@@ -1,6 +1,5 @@
 ---
-id: wcm_dev_elements_placeholder
-title: Creating a placeholder tag
+title: Placeholder tag
 ---
 
 

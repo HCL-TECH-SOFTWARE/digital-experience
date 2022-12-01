@@ -1,4 +1,4 @@
-# Creating an In Context tag
+# In Context tag
 
 The InContext tag renders a tag body within a specified rendering context. The new rendering context can be specified as a predefined context by using a UUID, or by path.
 

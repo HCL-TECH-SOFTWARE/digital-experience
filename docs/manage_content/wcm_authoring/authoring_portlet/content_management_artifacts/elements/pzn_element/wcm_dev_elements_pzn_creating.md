@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_pzn_creating
-title: Creating a Personalization component
+title:  Personalization component
 ---
 
 You can use a Personalization element only by creating a Personalization component. You cannot add a Personalization element to authoring templates, site areas, or content items.

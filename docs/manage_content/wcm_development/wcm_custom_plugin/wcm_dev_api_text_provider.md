@@ -362,5 +362,5 @@ When sorting is applied to a set of items, the item title is used to sort the it
 
 
 Related information:
-   - [Configuring the validation of friendly URLs for web content](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
+   - [Configuring the validation of friendly URLs for web content](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
 

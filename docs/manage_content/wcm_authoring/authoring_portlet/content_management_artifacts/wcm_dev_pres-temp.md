@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_pres-temp
-title: Creating a presentation template
+title: Presentation templates
 ---
 
 # Creating a presentation template

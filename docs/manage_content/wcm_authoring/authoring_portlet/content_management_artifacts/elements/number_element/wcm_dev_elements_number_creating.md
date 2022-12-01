@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_number_creating
-title: Creating a number component
+title:  number component
 ---
 
 # Creating a number component

@@ -41,4 +41,4 @@ How to optimize your system for best performance of the multilingual solution.
 
 3.  Periodically run the clear history tool to improve page load and save performance. See [Clearing item history](../../../wcm_configuration/wcm_adm_tools/wcm_admin_clear_history.md) and [Clearing version history](../../../wcm_configuration/wcm_adm_tools/wcm_admin_clear_versions.md) for further information.
 
-4.  Disable workflow actions on subscribers to reduce load and reduce the number of versions that are created for each item. See [Disabling Workflow Actions](../../../wcm_configuration/further_cfg_options/wcm_config_disable_actions.md) for further information.
+4.  Disable workflow actions on subscribers to reduce load and reduce the number of versions that are created for each item. See [Disabling Workflow Actions](../../../wcm_configuration/wcm_svc_cfg//wcm_config_disable_actions.md) for further information.
