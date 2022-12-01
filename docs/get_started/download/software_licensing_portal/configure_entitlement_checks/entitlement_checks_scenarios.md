@@ -86,3 +86,7 @@ The Usage report will show:
 
 !!!note
     The Flexnet dashboard **Usage** data may show a data percentage amount in parenthesis. This overage percentage amount is not applicable for HCL Digital Experience Cloud Native 9.5 Tier 1 - 7 entitlement checking and informational user session consumption reporting, and may be disregarded. 
+
+???+ info "Additional references"
+    -   [HCL Digital Experience Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad)
+    -   [Simplified Pricing, More Value: HCL Digital Experience v9.5 User Session bundle](https://blog.hcltechsw.com/digital-experience/simplified-pricing-more-value-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/)
