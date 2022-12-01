@@ -83,6 +83,7 @@ The Solution Installer uses the following rules to determine whether a PAA file 
 -   The Solution Installer assumes the PAA dependency requirement is satisfied in the following situations:
     -   If the `<removePaaDependency>` tag is not found in the assembly level sdd.xml file
     -   If the `<removePaaDependency>` tag exists but has no attributes that are defined
+    
 -   All the PAA dependencies satisfy the requirement. The requirement is, for each of the PAA dependencies that are specified in a `<removePaaDependency>` tag, the PAA dependency is not deployed, or not any of the following is true:
     -   The PAA dependency is deployed. The lowerVersion attribute is set and the value is less than the current version of PAA dependency.
     -   The PAA dependency is deployed. The higherVersion attribute is set and the value is greater than the current version of PAA dependency.
