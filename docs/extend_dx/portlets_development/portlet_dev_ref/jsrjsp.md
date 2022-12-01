@@ -128,5 +128,5 @@ You can also use JSTL tags as described in *Generating output*.
 ???+ info "Related information"
     - [Standard portlet API](../standard_portlet_api/index.md)
     - [Advanced URL generation for data exchange](../portlet_communication/pltcom_datxchg_xptltlnks.md)
-    - [Generating output](../dev-portlet/wpsbsoutput.md)
+    - [Generating output](../wpsbsoutput.md)
 
