@@ -22,7 +22,7 @@ The theme metadata is located in the folder for your theme in themelist.
 |com.ibm.portal.theme.template.ref|dav/:fs-type1/themes/YourThemeName/|Change this value to say in which folder your custom theme's templates are located. Be sure to replace Portal8.5 with the name of your custom theme folder.Change this value in the Theme Manager by clicking **Manage Theme Properties** \> **Advanced** \> **Static content root**.|
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [EJPNO1002E error](../../the_module_framework/themeopt_analyzer/validation_reports/themeopt_an_EJPNO1002E_v85.md)
     - [EJPNO1012W error](../../the_module_framework/themeopt_analyzer/validation_reports/themeopt_an_EJPNO1012W_v85.md)
 

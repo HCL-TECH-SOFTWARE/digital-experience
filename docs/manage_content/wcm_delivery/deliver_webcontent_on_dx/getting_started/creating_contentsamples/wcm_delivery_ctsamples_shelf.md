@@ -53,6 +53,6 @@ To help you better understand what these components are doing, here is a more de
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating a web content page](../../displaying_content/mp_wcm_createpage.md)
 

@@ -43,6 +43,6 @@ The multilingual solution consists of a set of extensions to Web Content Manager
 
 
 
-???+ info 'Related information:"
+???+ info 'Related information"
     - [Multilingual deployment, installation, and configuration Multilingual Solution](../mls_install/index.md)
 

@@ -30,7 +30,7 @@ Test the new custom EAR file on your test server to verify that it deploys succe
 You must export content from the filestore to create your custom theme. There are different options available to export files from the portal file store.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Manually creating a copy of your theme](../../../customizing_theme/copying_theme/manual_copy_theme/index.md)
     - [Development and operations overview](../../dev_op_overview/index.md)
 

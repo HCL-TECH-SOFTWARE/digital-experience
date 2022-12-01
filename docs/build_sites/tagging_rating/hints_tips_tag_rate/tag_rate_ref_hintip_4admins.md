@@ -106,7 +106,7 @@ Learn about some hints and tips for administrators who work with tagging and rat
     Angled brackets \(`<` and `>`\) are not allowed within tag names. Therefore, no matter how you customize the regular expression, angled brackets are not accepted.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [CP Configuration Service for tagging and rating](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
     - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Deleting orphaned data](../../../deployment/manage/config_portal_behavior/adelorph.md)

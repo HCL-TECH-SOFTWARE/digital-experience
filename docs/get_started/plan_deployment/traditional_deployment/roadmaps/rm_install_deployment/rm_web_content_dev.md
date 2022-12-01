@@ -3,18 +3,19 @@
 In this roadmap, the web server, database, and user registry software are distributed to different physical servers.
 
 
-# Who should use this roadmap
+## Who should use this roadmap
 
 Use this roadmap if you are an organization with the following requirements:
 
 -   An organization that needs an environment to create and test your web content before they publish to other staging or production servers
--   An organization that needs to create presentation templates \(Authoring or Presentation\) for content authors and content rendering
+-   An organization that needs to create presentation templates (Authoring or Presentation) for content authors and content rendering
 -   An organization that needs to create the site structure and entitlements
 -   An organization that needs to develop content with HTML, CSS, JavaScript, JSP, or Java.
 -   An organization needs a staging server to perform final quality tests before publishing.
 -   An organization needs a server to publish content to end users.
 
-**Important:** Developing or publishing web content requires a supported database other than Apache Server. An Apache Server database is available after installation. Therefore, you must transfer to a supported database; for example DB2® or Oracle.
+!!!important
+    Developing or publishing web content requires a supported database other than Apache Server. An Apache Server database is available after installation. Therefore, you must transfer to a supported database; for example DB2® or Oracle.
 
 ## Topology diagram
 
@@ -22,7 +23,7 @@ The topology for a web content server includes a remote database and LDAP server
 
 ![HCL Web Content Manager server with a remote database and LDAP server](../../../../../images/WebContentDevelopment.jpg)
 
-# Preparing for the installation process
+## Preparing for the installation process
 
 Gather information and software before you install HCL Digital Experience.
 
@@ -33,7 +34,7 @@ Gather information and software before you install HCL Digital Experience.
 2.  Get the software. New and existing users need to [sign up or register at HCL Software](https://www.hcltechsw.com/wps/portal/about/welcome) and download their preferred HCL Digital Experience package.
 
 
-# Installing prerequisites
+## Installing prerequisites
 
 Before you install HCL Digital Experience, install any prerequisites that are necessary for your environment. You can use existing prerequisite software installations. Verify that your existing version is supported. If it does not, upgrade to the appropriate version.
 
@@ -42,17 +43,17 @@ Before you install HCL Digital Experience, install any prerequisites that are ne
 2.  Prepare a user registry.
 
 
-# Installing the HCL Digital Experience
+## Installing the HCL Digital Experience
 
 Installing HCL Portal involves preparing your operating system, installing or upgrading the installation manager, and running the installation program.
 
 -   Documentation resource: [Installing the HCL Digital Experience software](../../../../../deployment/install/traditional/installing_dx/index.md)
 
-# Applying the latest cumulative fix
+## Applying the latest cumulative fix
 
-Portal maintenance is delivered through individual fixes \(Fixes\) and Combined Cumulative Fixes \(CFs\), which is recommended to your environment.
+Portal maintenance is delivered through individual fixes (Fixes) and Combined Cumulative Fixes (CFs), which is recommended to your environment.
 
-# Transferring your database
+## Transferring your database
 
 After you install your web experience, Apache Server is your available database. Depending on your requirements, you might need to transfer to a different database. The **Database Transfer** configuration option in the Configuration Wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database. See [Database Transfer in Configuration Wizard](../../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/index.md) for more information about this topic.
 
@@ -70,17 +71,18 @@ for your environment.
     !!! note 
         Skip this step, if you have the most recent fix pack applied.
 
-2.  Access the Configuration Wizard. Go to http://your\_server:10200/hcl/wizard.
+2.  Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
 
     !!! note 
-        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
 
-    **Restriction:** There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
+    !!!restriction
+        There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
-3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
+3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
     !!! note 
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../deployment/manage/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
 
 4.  Select **Set Up a Stand-alone Server** \> **Database Transfer**.
 
@@ -98,7 +100,7 @@ for your environment.
 9.  Log in to HCL Portal to verify that you have a working portal server.
 
 
-# Enabling federated security
+## Enabling federated security
 
 After you install your web experience, a default file-based repository is your available user registry. Depending on your requirements, you might need to enable a federated LDAP user registry.
 
@@ -110,17 +112,18 @@ After you install your web experience, a default file-based repository is your a
     !!! note 
         Skip this step, if you have the most recent fix pack applied.
 
-2.  Access the Configuration Wizard. Go to http://your\_server:10200/hcl/wizard.
+2.  Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
 
     !!! note 
-        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
 
-    **Restriction:** There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
+    !!!restriction
+        There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
-3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
+3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
-    !!! note 
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
+    !!!note 
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../deployment/manage/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
 
 4.  Select **Set Up a Stand-alone Server** \> **Enable Federated Security**.
 
@@ -139,14 +142,14 @@ After you install your web experience, a default file-based repository is your a
 8.  Log in to HCL Portal to verify that you have a working portal server.
 
 
-# Tuning the servers in your environment
+## Tuning the servers in your environment
 
 Tuning the servers is important to the performance of your portal environment. HCL Portal is not tuned for a production environment after installation and deployment. Your database needs tuning for improved performance. You can organize your database now or soon after you finish your configuration. You need to tune and maintain your database on a regular basis.
 
 -   Run the performance tuning tool to complete an initial tuning of your servers.
 
 
-# Configuring the Authoring portlet
+## Configuring the Authoring portlet
 
 Configure your Authoring portlet on your HCL Portal server.
 
@@ -165,7 +168,7 @@ Configure your Authoring portlet on your HCL Portal server.
 7.  Set up support for federated documents.
 
 
-# Syndication
+## Syndication
 
 Use syndication to synchronize content between authoring, staging, and publishing environments.
 
@@ -185,7 +188,7 @@ Use syndication to synchronize content between authoring, staging, and publishin
 
     -   Documentation resource: [Creating a syndication relationship by using the Administration Portlet](../../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/wcm_syndication_settingup.md)
 
-# Deploying the delivery environment
+## Deploying the delivery environment
 
 The delivery environment is used to deliver your website to your website viewers. The delivery environment is deployed based on the requirements that are defined in the project design document.
 
@@ -216,7 +219,7 @@ The delivery environment is used to deliver your website to your website viewers
 
 The delivery environment is now ready to use.
 
-# Going live with your website
+## Going live with your website
 
 When your environments are installed, the authoring system is completed, your default content is created, and fully tested the system, you are ready to go live.
 

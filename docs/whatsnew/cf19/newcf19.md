@@ -69,7 +69,7 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [Configure the OpenLDAP container image to the HCL DX 9.5 Container Deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/configure_openldap_image.html){:target="_blank"}<!-- (../../9.5/containerization/configure_openldap_image.md) -->
 -   [How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_syndication.html){:target="_blank"}<!-- (../../9.5/panel_help/wcm_syndication.md) -->
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Deploy HCL Digital Experience 9.5 Container to Google Kubernetes Engine \(GKE\)](../../9.5/containerization/google_gke.md)
     - [Hybrid Deployment](../../9.5/containerization/hybrid_deployment.md)
     - [Progressive Web Application](../../9.5/install/progressive_web_applications.md)

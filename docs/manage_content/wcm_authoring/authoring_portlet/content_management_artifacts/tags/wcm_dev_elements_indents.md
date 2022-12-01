@@ -37,6 +37,6 @@ For example:
 ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating web content tags](../tags/creating_web_content_tags/index.md)
 

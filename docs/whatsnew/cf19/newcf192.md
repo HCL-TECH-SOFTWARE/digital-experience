@@ -69,7 +69,7 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Using the dxctl tool to deploy Digital Experience 9.5 on Red Hat OpenShift](https://opensource.hcltechsw.com/digital-experience/cf202/platform/kubernetes/operator-based/dxtools_dxctl/)
 -   [Create a WAR-based theme copy on HCL Digital Experience 9.5](../../build_sites/themes_skins/customizing_theme/copying_theme/manual_copy_theme/creating_war_theme_copy/index.md)
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [HCL Digital Experience 9.5 Docker and Container Initialization Performance Help Center](../containerization/container_init_performance.md)
     - [Logging and tracing for Containers and new services Help Center](../trouble/logging_tracing_containers_and_new_services.md)
     - [DXClient and DXConnect tooling supporting CICD release processes](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)

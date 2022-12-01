@@ -103,6 +103,6 @@ If you configure the viewer with the XML configuration interface \(xmlaccess\), 
 
 If a viewer is configured to use content paths, a path icon \(![Path icon](../../../../../../images/wcmviewer_path.jpg)\) is displayed after the title path. If you change the configuration to reference different content, the location of the new content item continues to be stored as a content path. If you want to store the location as a unique ID instead, you must click **Clear** before you select the new content. The path icon is also removed to indicate that the content path is no longer being used.
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configure your content spot](../../../../../../build_sites/create_sites/content_spot/index.md)
     - [Web content associations](../../../delivering_web_content/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md)

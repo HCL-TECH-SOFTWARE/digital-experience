@@ -58,7 +58,7 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Deep dive: Progressive Web Applications with HCL DX 9.5](../../build_sites/mobile/progressive_web_applications.md)
 -   [Content Security Policy with HCL DX 9.5](../../deployment/manage/security/information/integrity/content_sec_policy/index.md)
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [How to export and import WCM library content using DXClient](../wcm/wcm_mls_export_import.md)
     - [Configuring user access permissions to Digital Asset Management assets](../digital_asset_mgmt/manage_collections.md)
     - [Deep dive: Progressive Web Applications with HCL DX 9.5](../install/progressive_web_applications.md)

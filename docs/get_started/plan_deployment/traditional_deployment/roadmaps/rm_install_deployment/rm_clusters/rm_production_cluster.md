@@ -6,10 +6,11 @@ The Configuration Wizard prompts you to select the cluster type, static, or dyna
 
 Before HCL Digital Experience 8.5, you were required to install and configure WebSphere Virtual Enterprise to set up a dynamic cluster. Now, the virtual enterprise component is integrated with the application server. Therefore, you do not need to install and configure WebSphere Virtual Enterprise before you set up a dynamic cluster.
 
-**Remember:** Ensure that you configure the web server plug-in after you transfer your database.
+!!!remember
+    Ensure that you configure the web server plug-in after you transfer your database.
 
 
-# Who should use this roadmap
+## Who should use this roadmap
 
 Use this roadmap if you are an organization with the following requirements:
 
@@ -18,13 +19,13 @@ Use this roadmap if you are an organization with the following requirements:
 -   An organization whose website can benefit from other features such as prioritization, health monitoring, and dynamic operations
 -   An organization that needs to manage deployments and synchronize various cluster nodes with a single administrative interface, the deployment manager
 
-# Topology diagram
+## Topology diagram
 
 A cluster topology is versatile. You can use it to set up a production environment, a test environment, and more. The clustered topology diagram includes two horizontal nodes that are managed in the same cell. The nodes in the cluster use a common LDAP and database server. A remote search server is depicted too. In a cluster environment, you must use a remote search server.
 
 ![Single cluster cell with two nodes. The managed cell connects to a remote database and LDAP server](../../../../../../images/Cluster.jpg)
 
-# Preparing for the installation process
+## Preparing for the installation process
 
 Gather information and software before you install HCL Digital Experience.
 
@@ -33,7 +34,7 @@ Gather information and software before you install HCL Digital Experience.
 2.  Log in to [HCL Software Support](https://www.hcltechsw.com/wps/portal/about/welcome.html) and get the software.
 
 
-# Installing prerequisites
+## Installing prerequisites
 
 You can use existing prerequisite software installations. Verify that your existing version is supported. If it is not, upgrade to the appropriate version. Otherwise, install a web server, database server, and user registry server. Typically the database and user registry servers are already installed and configured. However, there might be specific configuration steps that are required to integrate them with the portal server. Visit *Installing and preparing the prerequisite software* for more topic information.
 
@@ -44,15 +45,15 @@ You can use existing prerequisite software installations. Verify that your exist
 3.  Prepare a user registry.
 
 
-# Installing the HCL Digital Experience
+## Installing the HCL Digital Experience
 
 Installing HCL Digital Experience involves preparing your operating system, installing or upgrading the installation manager, and running the installation program. Visit *Installing the HCL Digital Experience software* for more topic information.
 
-# Applying the latest cumulative fix
+## Applying the latest cumulative fix
 
-Portal maintenance is delivered through individual fixes \(Fixes\) and Combined Cumulative Fixes \(CFs\), which is recommended to your environment.
+Portal maintenance is delivered through individual fixes (Fixes) and Combined Cumulative Fixes (CFs), which is recommended to your environment.
 
-# Setting up a cluster environment
+## Setting up a cluster environment
 
 Start the configuration wizard to set up your clustered environment. First, transfer your database. Then, create the deployment manager and create a cluster node. Then, enable your federated LDAP user registry. Finally, create your additional horizontal cluster nodes using the Configuration Wizard. These instructions are for a horizontal cluster only. For information on setting up a vertical cluster, see Setting up a Cluster in the Configuring section of the documentation.
 
@@ -70,17 +71,18 @@ for your environment.
     !!! note
         Skip this step, if you have the most recent fix pack applied.
 
-2.  Access the Configuration Wizard. Go to http://your\_server:10200/hcl/wizard.
+2.  Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
 
     !!! note
-        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
 
-    **Restriction:** There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
+    !!!restriction
+        There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
-3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
+3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
     !!! note 
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md).
 
 4.  Complete the following steps to transfer your database:
 5.  Select **Set Up a Cluster** \> **Database Transfer**.
@@ -149,7 +151,8 @@ for your environment.
 29. Complete the following steps to create extra cluster nodes:
 30. Install HCL Digital Portal on the additional node.
 
-    **Tip:** For additional nodes, you only need to install the HCL Portal product binary files. Therefore, on the Features screen of the IBM Installation Manager, ensure that **Portal Server Profile** is not selected.
+    !!!tip
+        For additional nodes, you only need to install the HCL Portal product binary files. Therefore, on the Features screen of the IBM Installation Manager, ensure that **Portal Server Profile** is not selected.
 
 31. **Set Up a Cluster** \> **Create an Additional Cluster Node**.
 
@@ -168,12 +171,12 @@ for your environment.
 35. Log in to HCL Portal to verify that you have a working portal server.
 
 
-# Configuring the web server
+## Configuring the web server
 
 -   Move the web server plug-in from the WebSphere Application Server to the web server.
 
 
-# Tuning the servers in your environment
+## Tuning the servers in your environment
 
 Tuning the servers is important to the performance of your portal environment. HCL Digital Experience is not tuned for a production environment after installation and deployment. Your database needs tuning for improved performance. You can organize your database now or soon after you finish your configuration. You need to tune and maintain your database on a regular basis.
 
@@ -182,7 +185,7 @@ Tuning the servers is important to the performance of your portal environment. H
 2.  Check the tuning guide for more instructions. Use the tuning guide for the previous product version when the tuning guide for the current release is unavailable.
 
 
-# Configuring a remote search service
+## Configuring a remote search service
 
 Configure the remote search service to offload and balance system load.
 
@@ -199,7 +202,7 @@ Configure the remote search service to offload and balance system load.
 6.  Configure the seedlist servlet.
 
 
-# Next steps
+## Next steps
 
 Depending on the choices that you made during the installation and set up, there are additional tasks to configure your environment.
 
@@ -209,7 +212,7 @@ The following options are available to continue configuring your environment:
 
     Configure portal behavior.
 
--   **Change the default portal Uniform Resource Identifier \(URI\)**
+-   **Change the default portal Uniform Resource Identifier (URI)**
 
     Complete the context root change on the Configuration for HCL Portal: Profile configuration details: Advanced panel during installation.
 

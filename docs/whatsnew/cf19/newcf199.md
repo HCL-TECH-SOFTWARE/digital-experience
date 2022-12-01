@@ -56,7 +56,7 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   Video: [Deploy HCL DX 9.5 Container Update using Helm](../../deployment/install/container/helm_deployment/overview.md)
 -   Video: [Experience API V2 Web Content Manager REST APIs](../../extend_dx/apis/hcl_experience_api/index.md)
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [HCL Experience API](../open_api/openapi_overview.md)
     - [Configure Remote Search using REST APIs](../containerization/REST_APIs_remote_search.md)
 

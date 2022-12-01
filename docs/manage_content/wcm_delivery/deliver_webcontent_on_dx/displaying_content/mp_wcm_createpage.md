@@ -38,7 +38,7 @@ A web content page always restricts the sharing scope for public rendering param
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Web content pages and templates](../getting_started/wcm_delivery_webpagetemplate_about.md)
     - [Adding sample content with the site toolbar](../getting_started/creating_contentsamples/wcm_delivery_ctsamples_shelf.md)
     - [Enabling page-based access control for web content pages](../customizing_content/mp_wcm_pageaccess.md)

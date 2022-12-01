@@ -57,7 +57,7 @@ You can specify the following parameters for the overall portal as properties an
 |410|The page with the unique name missing.content displays.|Web content is rendered according to the private Web Content Manager context of the Web Content Viewer portlet or /Web Content/Home/Missing Content.|410|N/A|`nm:oid:missing.content`|/Web Content/Home/Missing Content|
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Advanced options](../../../../../deliver_webcontent_on_dx/editing_wcm_viewer_setting/wcm_config_wcmviewer_hadv.md)
     - [Editing pages, labels, and URLs](../../../../../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/managing_page_properties/h_mp_edit_pages.md)
     - [Creating a Text Provider class](../../../../../../wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_text_provider.md)

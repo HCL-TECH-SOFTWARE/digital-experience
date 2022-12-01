@@ -34,6 +34,6 @@ In Combined Cumulative Fix 10 and later, an automatic cache entry clearing featu
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Using the DistributedMap and DistributedObjectCache interfaces for the dynamic cache](https://www.ibm.com/docs/en/was/8.5.5?topic=service-using-distributedmap-distributedobjectcache-interfaces-dynamic-cache)
 

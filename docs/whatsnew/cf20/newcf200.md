@@ -66,7 +66,7 @@ Take advantage of step-by-step guidance for HCL Digital Experience practitioners
 
 The following list of HCL Digital Experience deprecated features will reach end of support beginning with HCL Digital Experience Container update and CF 200. Reference the Help Center topic [Deprecated features and themes for HCL Digital Experience 9.5](../deprecated_features.md).
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [DAM staging](../containerization/dam_subscription_staging.md)
     - [Deploying HCL Digital Experience 9.5 with HCL Solution Factory \(SoFy\)](../containerization/hybrid_deployment_HCL_SoFy.md)
     - [Design Studio \(Beta\)](../design_studio/design_studio_overview.md)

@@ -65,7 +65,7 @@ You can disable this request attribute by setting the property `enable.default.s
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuration Service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cfg_svc/index.md)
     - [Concept of the lists of social objects provided with the social rendering feature](../working_with_social_objects/concept_list_social_objects/index.md)
     - [Social object resolution](../working_with_social_objects/concept_list_social_objects/soc_rendr_soc_obj_resltn.md)

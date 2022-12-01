@@ -16,6 +16,6 @@ To use the extension:
         -   Write some Web Content Manager API code to manually copy the **Portal Site** library by traversing the page hierarchy and creating site areas in the destination library with the same name as the page, then copying the content items by using the Web Content Manager API `Workspace.copy` method.
 
 <!---
-???+ info "Related information:"
+???+ info "Related information"
     - [Rolling out a second locale](../ctc/ctc_deploy_locale_second.md) -->
 

@@ -31,7 +31,7 @@ If you do not have an existing Installation Manager, then complete the following
     setup64.exe Right-click on the HCL Digital Experience Setup file setup64.exe. Then, select **Run as administrator** to start.
 
     !!! note
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](https://help.hcltechsw.com/digital-experience/8.5/reference/supportedlanguages.html?hl=supported%2Clanguages%2Chcl%2Cdigital%2Cexperience) in the HCL Digital Experience 8.5 documentation.
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../deployment/manage/portal_admin_tools/language_support/index.md) in the HCL Digital Experience 8.5 documentation.
 
 
 

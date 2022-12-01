@@ -20,7 +20,7 @@ To create, update, and delete a vanity URL for a specific page, the user must ha
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Access permissions](../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md)
     - [Setting user and group permissions](../../../../deployment/manage/security/controlling_access/sec_ugpp.md)
 

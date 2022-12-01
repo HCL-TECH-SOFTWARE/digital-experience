@@ -750,6 +750,6 @@ For example:
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [The generic XML Digital Data Connector data sink](../../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
 

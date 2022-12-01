@@ -297,5 +297,5 @@ If your remote repository requires access credentials, it is necessary to config
 
 Please refer to [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md) topic for instructions on how to configure this.
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Hybrid](hybrid_deployment_helm.md) -->

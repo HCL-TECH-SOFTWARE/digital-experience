@@ -60,7 +60,7 @@ View the latest Kubernetes and OpenShift platforms tested and supported for spec
 
 See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) topic for more information.
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Design Studio \(Beta\)](../design_studio/design_studio_overview.md)
     - [CF release versioning and update path](../install/rm_cf.md#cf_release_versioning_update)
     [Digital Asset Management Help Center](../design/digital_asset_mgmt/digital_asset_mgmt_overview.md)

@@ -94,6 +94,6 @@ But the syndicator will not be in the list for User2.
 <!--
 **Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md) -->
 
-<!-- ???+ info "Related information:"
+<!-- ???+ info "Related information"
     - [Syndication](../index.md) -->
 

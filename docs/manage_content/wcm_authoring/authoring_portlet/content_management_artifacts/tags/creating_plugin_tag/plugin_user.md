@@ -157,6 +157,6 @@ Text to render if current device is DEVICE1 but not DEVICE2.
 [/Plugin:ifDevice]
 ```
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Localized rendering](../../../../multi_lingual/using_mls/wcm_mls_rendering.md)
 

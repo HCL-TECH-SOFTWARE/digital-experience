@@ -41,6 +41,6 @@ The syntax for these configuration tasks is as follows:
     `ConfigEngine.bat disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
 
 
-???+ info "Related information:"
+???+ info "Related information"
      - [Providing short vanity URLs](../adm_vanity_url/van_url_short.md)
 

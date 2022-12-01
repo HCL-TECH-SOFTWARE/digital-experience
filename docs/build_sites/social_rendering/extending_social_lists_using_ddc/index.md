@@ -19,8 +19,8 @@ To dynamically construct HCL Connections query URLs, you can use the \[Plugin:Co
 For the different query URLs that you want to use, you can create multiple dynamic or static HCL Connections query URL components. For convenient use of these query URL components, you can create a generic authoring template for all list definitions that you want to build from those queries.
 --->
 
-???+ info "Related information:"
-    - [Digital Data Connector \(DDC\) for HCL Portal](../../../extend_dx/ddc/index.md)
-    - [The HCL Connections context rendering plug-in](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/soc_rendr_conn_context_plgn.md)
-    - [Using the list-rendering cache](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/plrf_tune_markup_chache.md)
+???+ info "Related information"
+    - [Digital Data Connector (DDC) for HCL Portal](../../../extend_dx/ddc/index.md)
+    - [The HCL Connections context rendering plug-in](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/connector_plugins/soc_rendr_conn_context_plgn.md)
+    - [List-rendering cache](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/connector_plugins/plrf_tune_markup_chache.md)
 

@@ -38,7 +38,7 @@ The web content fallback page is displayed when a viewer is configured with a li
 -   The web content viewer identifies the page associated with the content item, but the user does not have sufficient privileges to view that page.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Dynamic web content page selection](../advance_adm_sample/mp_wcm_dynamicpage.md)
     - [Creating a content page resolution filter class](../../../../wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_page_resolution.md)
 

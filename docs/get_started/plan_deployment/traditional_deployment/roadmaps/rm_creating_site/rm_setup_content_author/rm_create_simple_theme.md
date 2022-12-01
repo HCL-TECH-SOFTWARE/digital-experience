@@ -35,7 +35,7 @@ Ensure that you created a custom theme for Greenwheels that uses the Simple Them
 
 1.  Create the directory ThemeLogo.
 
-2.  Use a [WebDAV client](../../../../../../extend_dx/development_tools/webdav/webdav.md) to download the Greenwheels theme.
+2.  Use a [WebDAV client](../../../../../../manage_content/wcm_delivery/webdav/administer_webdav/index.md) to download the Greenwheels theme.
 
 3.  Open the directory ThemeLogo.
 
@@ -45,15 +45,19 @@ Ensure that you created a custom theme for Greenwheels that uses the Simple Them
 
 6.  Locate the following code string:
 
-    `<svg class="stLogo" role="img" aria-label="HCL Digital Experience"> <title>IBM Digital Experience</title> <use xlink:href="#stBee"></use> </svg>`.
+    ```
+    <svg class="stLogo" role="img" aria-label="HCL Digital Experience"> <title>IBM Digital Experience</title> <use xlink:href="#stBee"></use> </svg>
+    ```
 
 7.  Replace the code string in the step above with the following code string:
 
-    `<img alt="Logo" src="css/images/logo.png">`.
+    ```
+    <img alt="Logo" src="css/images/logo.png">
+    ```
 
 8.  Save the file.
 
-9.  Use a [WebDAV client](../../../../../../extend_dx/development_tools/webdav/webdav.md) to upload the changes files of your theme.
+9.  Use a [WebDAV client](../../../../../../manage_content/wcm_delivery/webdav/administer_webdav/index.md) to upload the changes files of your theme.
 
 
 The default theme logo is replaced by the Greenwheels logo.

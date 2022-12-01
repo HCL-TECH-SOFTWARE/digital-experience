@@ -73,12 +73,12 @@ The tag support profile provides access to a list of tags that is associated wit
 The OpenSearch support profile provides access to information that is defined in the OpenSearch specification. The OpenSearch specification is commonly used in the Atom feed format.
 --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Social rendering](../../../../../social_rendering/index.md)
     - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)
     - [Configuring globally how social object links are resolved](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_reslv_links.md)
     - [Configuring file type icon mappings](../../../../cfg_global_settings_social_rendering/cfg_filetype_icon_mappings/index.md)
-    - [Web content tags](../../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_tags.md)
+    - [Web content tags](../../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/index.md)
     - [Setting parameters to format dates](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_reference-dates.html)
     - [Implementing interactions with social objects](../../../implementing_interactions_social_object/index.md)
     - [The social rendering Digital Data Connector plug-in](../../../../extending_social_lists_using_ddc/soc_rendr_bean_lst_prvdr.md)

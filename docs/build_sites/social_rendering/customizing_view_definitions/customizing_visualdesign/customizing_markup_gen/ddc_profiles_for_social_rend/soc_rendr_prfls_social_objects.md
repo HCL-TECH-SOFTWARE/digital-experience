@@ -270,7 +270,7 @@ It declares the following attribute names:
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting parameters to format dates](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_reference-dates.html)
     - [Configuring file type icon mappings](../../../../cfg_global_settings_social_rendering/cfg_filetype_icon_mappings/index.md)
     - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)

@@ -26,6 +26,6 @@ Use the validation portlet to verify that your theme contains no errors. The val
 If you need help with a theme issue, you can export your system data. Support personnel can then import and view your data as a simulated system to troubleshoot problems.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Troubleshooting modular themes](../troubleshooting_modular_themes/index.md)
 

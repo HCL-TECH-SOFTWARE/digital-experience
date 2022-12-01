@@ -74,7 +74,7 @@ You can use the modularized framework for dynamic content spots to override spot
 Dynamic Content Spots add dynamic markup into static themes or skins. Sometimes, it is difficult to discern which parts of the page were contributed from which dynamic content spots.
 -->
 
-???+ info Related information:"
+???+ info Related information"
    - [Creating a dynamic content spot with resource environment providers](../working_with_dcs/creating_dcs/themeopt_cust_createdyncont.md)
    - [Mobile navigation](../../../responsive_web_design/rwd_add_navphone.md)
 

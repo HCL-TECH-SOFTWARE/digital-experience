@@ -67,7 +67,7 @@ Depending on the functionality that you want to make available, more content is 
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Content of a virtual portal](../../vp_planning/advppln_content.md)
     - [Administering virtual portals](../../adm_vp_task/index.md)
     - [Using the Virtual Portal Manager administration portlet](../../vp_mgr_portlet/advp_vpmgr_use.md)

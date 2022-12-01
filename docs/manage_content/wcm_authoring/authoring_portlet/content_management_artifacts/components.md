@@ -11,5 +11,5 @@ You create components to store a single element that is reused in multiple locat
 
 The following sections are common to all component types:
 
-???+ info "Related information:"
+???+ info "Related information"
     - [How to work with elements](./elements/index.md)

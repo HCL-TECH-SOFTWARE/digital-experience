@@ -46,7 +46,7 @@ For example:
 [Plugin:Localize provider="[Element key='Text Provider Name' format='id']" key="keyname2"]
 ```
 
-See [Content plug-ins](../tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/index.md) for further information about the localized plug-in within the text provider plug-in tag section.
+See [Content plug-ins](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/content_plugins/index.md) for further information about the localized plug-in within the text provider plug-in tag section.
 
 ## Setting a default localized item in a web content tag
 

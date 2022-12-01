@@ -33,6 +33,6 @@ http://host\_name:port\_number/wps/wcm/connect/library\_name/site\_area\_name/co
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Pre-rendering options](../../cfg_webcontent_delivery_env/wcm_config_delivery_pre-rendered_enable.md)

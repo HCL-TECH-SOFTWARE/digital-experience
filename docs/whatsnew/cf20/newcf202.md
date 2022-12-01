@@ -88,7 +88,7 @@ See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLea
 [Update HCL DX 9.5 Container to a later DX version using Helm](https://www.youtube.com/watch?v=TwZuNOeWdT4)
 
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Digital Asset Management Help Center](../design/digital_asset_mgmt/digital_asset_mgmt_overview.md)
     - [Digital Experience REST API Explorers](../design/api/api_explorers.md)
     - [Digital Experience Remote Model REST API Explorer](../design/api/remote_model_rest_api.md)

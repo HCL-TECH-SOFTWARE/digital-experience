@@ -53,6 +53,6 @@ If you create a new plug-in application with the same names and IDs as an existi
 -   The file path of any files within the application.
 
 <!--
-???+ info "Related information:"
+???+ info "Related information"
 [Plug-ins for Content Template](../ctc/ctc_arch_plugins_auth_branch_copy.md) -->
 

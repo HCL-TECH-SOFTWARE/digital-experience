@@ -39,7 +39,7 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [Data collection and symptom analysis](../../deployment/manage/troubleshooting/tools_for_troubleshooting_and_diagnostics/tbl_apdt_over.md)
 
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Deployment](../containerization/deployment.md)
     - [Deploy HCL Digital Experience 9.5 Container to Microsoft Azure Kubernetes Service \(AKS\)](../containerization/azure_aks.md)
     - [**Web Content Manager Lock/Unlock AP**I](../wcm/wcm_REST_web_content_manager_lock_unlock_api.md)

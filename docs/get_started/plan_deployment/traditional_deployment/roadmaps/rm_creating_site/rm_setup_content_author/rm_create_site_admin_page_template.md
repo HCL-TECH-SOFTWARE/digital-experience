@@ -22,19 +22,19 @@ The existing Landing Page template creates two pages, a landing page and a hidde
 
 5.  Type Implement HTML prototype as your project name and click **Create**.
 
-6.  Open the portal administration menu and click **Portal User Interface** \> **Page Templates**.
+6.  Open the portal administration menu and click **Portal User Interface > Page Templates**.
 
     Individual page templates are organized by a hidden label.
 
     After you click **Page Templates**, view a list of the current page templates. Click **Page Templates** again from the interface that opens.
 
-7.  Click on any page template in Site Manager and click the context menu icon ![Screen capture of the context menu](../images/toolbar_context_menu.jpg) by a page template. Click **Create Sibling Page**.
+7.  Click on any page template in Site Manager and click the context menu icon by a page template. Click **Create Sibling Page**.
 
 8.  From the Create Page dialog, specify a Page title and Friendly URL.
 
     In this example, you can enter Greenwheels Landing Page in the **Page title** field. The page name that you enter is added to the **Friendly URL name** field.
 
-9.  Select the Landing Page \(2 pages\) template for your new page template.
+9.  Select the Landing Page (2 pages) template for your new page template.
 
 10. Click **Create Page**.
 
@@ -43,8 +43,7 @@ The existing Landing Page template creates two pages, a landing page and a hidde
     !!! tip 
         You can set a workflow only on items that are in a draft state. Because of this behavior, you must create the template as a draft in the context of a project. By working in a project, you can also verify the workflow to make sure that the stages behave as expected.
 
-12. Click on your Greenwheel Landing Page template in Site Manager and click the context menu icon.
- ![Screen capture of the context menu](../../../../../../images/toolbar_context_menu.jpg). Click **Open Page Settings**.
+12. Click on your Greenwheel Landing Page template in Site Manager and click the context menu icon. Click **Open Page Settings**.
 
 13. Click **Edit Page Properties**.
 

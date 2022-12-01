@@ -254,6 +254,6 @@ This is some text to add to the component.
 ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [REST content formats for components and elements](../../wcm_rest/wcm_rest_content_formats.md)
 

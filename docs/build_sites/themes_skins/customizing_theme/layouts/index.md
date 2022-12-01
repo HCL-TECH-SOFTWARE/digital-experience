@@ -10,6 +10,6 @@ You can add your own custom layout to the theme that can be selected on the site
 The Simple Theme and the HCL Portal 8.5 theme ship with predefined layouts that can be used as a basis for creating custom layouts.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Themes](../../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_themes.md)
 
