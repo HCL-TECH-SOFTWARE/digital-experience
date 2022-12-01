@@ -6,7 +6,7 @@ A theme consists of three types of resources:
 
 -   **Static resources**
 
-    Static theme resources include the theme.html file, layout templates, skins, JavaScript, CSS, and image files. The resources are stored by default within WebDAV, which is accessible with any WebDAV client. Learn more about [WebDAV client](../../../manage_content/wcm/wcm_content_delivery/webdav/administer_webdav/index.md) here.
+    Static theme resources include the theme.html file, layout templates, skins, JavaScript, CSS, and image files. The resources are stored by default within WebDAV, which is accessible with any WebDAV client. Learn more about [WebDAV client](../../../manage_content/wcm_delivery/webdav/administer_webdav/index.md) here.
 
 -   **Dynamic resources**
 

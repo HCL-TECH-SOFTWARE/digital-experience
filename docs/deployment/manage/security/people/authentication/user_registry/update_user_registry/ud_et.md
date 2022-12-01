@@ -8,7 +8,7 @@ In a stand-alone server environment, you can complete the following task when th
 
     **Note:** If you are instructed to open a properties file, they are ASCII files. Open them with the appropriate tool.
 
-2.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+2.  Go to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 3.  Open the wkplc.properties file with a text editor.
 
@@ -23,7 +23,7 @@ In a stand-alone server environment, you can complete the following task when th
 
 6.  Open a command prompt.
 
-7.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+7.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 8.  Run the following task to delete the old entity types before you add the RDN attribute as the only entry in the RDN list:
 
@@ -37,7 +37,7 @@ In a stand-alone server environment, you can complete the following task when th
     -   IBM i: ConfigEngine.sh wp-update-entitytype -DWasPassword=password
     -   Windows: ConfigEngine.bat wp-update-entitytype -DWasPassword=password
     -   z/OS: ./ConfigEngine.sh wp-update-entitytype -DWasPassword=password
-10. Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+10. Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 
 

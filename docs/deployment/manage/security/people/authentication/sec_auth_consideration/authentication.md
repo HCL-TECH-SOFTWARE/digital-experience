@@ -2,7 +2,8 @@
 
 Authentication requires users to identify themselves to gain access to a system or resources. The combination of a user ID and a password is the most common method of authentication. Users can identify themselves immediately upon entry to the system or the system can prompt users to identify themselves before accessing protected resources. After users successfully authenticate, the system identifies which resources-specific users have sufficient authorization to access.
 
-**Note:** You can have simultaneous, multiple log ins with the same user ID and password. However, this method can result in a non-reliable behavior depending on the client or authentication method. For this reason, HCL Digital Experience does not support simultaneous, multiple log ins.
+!!!note
+    You can have simultaneous, multiple log ins with the same user ID and password. However, this method can result in a non-reliable behavior depending on the client or authentication method. For this reason, HCL Digital Experience does not support simultaneous, multiple log ins.
 
 HCL Portal supports the following methods for login and authentication:
 
@@ -22,7 +23,8 @@ HCL Portal supports the following methods for login and authentication:
 
     You can use the following URL which includes the user ID and password to log on: `http://server:port/wps/portal/cxml/04_SD9ePMtCP1I800I_KydQvyHFUBADPmuQy?userid=userid&password=password`, where you replace the variables for server,port, userid, and password with the values set for your environment. For example, this method is suitable for automatic logon by a utility program for administrative purposes.
 
-    **Restriction:** This URL is intended only for a single-user login. It is not intended for multiple consecutive user log ins. It is also not intended to replace the Login portlet.
+    !!!note "Restriction"
+        This URL is intended only for a single-user login. It is not intended for multiple consecutive user log ins. It is also not intended to replace the Login portlet.
 
 
 

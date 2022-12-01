@@ -1,8 +1,4 @@
----
-id: h_rperm_assign_roles
-title: Viewing and assigning explicit roles
----
-
+# Viewing and assigning explicit roles
 
 
 

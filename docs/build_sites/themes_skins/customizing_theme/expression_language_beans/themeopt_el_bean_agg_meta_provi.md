@@ -20,6 +20,6 @@ Attributes:
 
         String or Identifiable object to look up the content node; it must not be null.
 
-    Returns: [Metadata](themeopt_el_bean_meta.md); It can be null if not found.
+    Returns: [Metadata](../expression_language_beans/common_beans/themeopt_el_bean_meta.md); It can be null if not found.
 
 

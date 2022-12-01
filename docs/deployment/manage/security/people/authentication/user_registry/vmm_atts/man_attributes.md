@@ -4,7 +4,7 @@ After you install HCL Digital Experience and configure your LDAP user registries
 
 1.  Open a command prompt.
 
-2.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+2.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 3.  Run the following task:
 
@@ -15,10 +15,7 @@ After you install HCL Digital Experience and configure your LDAP user registries
 
 
 
-**Next topic:**[Adding attributes](../install/add_attributes.md)
-
-**Related information**  
+**Next topic:**[Adding attributes](../add_attributes)
 
 
-[Adding attributes](../install/add_attributes.md)
 

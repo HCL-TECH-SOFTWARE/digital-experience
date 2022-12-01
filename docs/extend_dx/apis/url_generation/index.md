@@ -70,6 +70,6 @@ URLs encode navigational state information about HCL Portal (for example, the us
 
 
 ???+ info "Related information"
-    - [Vanity URLs](../../../manage_content/wcm/wcm_content_delivery/vanity_url/index.md)
+    - [Vanity URLs](../../../manage_content/wcm_delivery/vanity_url/index.md)
 
 <!--  - [URLs](../site/site_urls.md)-->

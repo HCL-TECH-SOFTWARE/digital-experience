@@ -10,7 +10,7 @@ In a stand-alone server environment, you can complete the following task when th
 
 2.  Open a command prompt.
 
-3.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+3.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 4.  Run the following task to list the names and types of configured repositories:
 
@@ -18,7 +18,7 @@ In a stand-alone server environment, you can complete the following task when th
     -   IBM® i: ConfigEngine.sh wp-query-repository -DWasPassword=password
     -   Windows™: ConfigEngine.bat wp-query-repository -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh wp-query-repository -DWasPassword=password
-5.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+5.  Go to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 6.  Open the wkplc.properties file with a text editor.
 
@@ -40,7 +40,7 @@ In a stand-alone server environment, you can complete the following task when th
     -   IBM i: ConfigEngine.sh wp-update-realm -DWasPassword=password
     -   Windows: ConfigEngine.bat wp-update-realm -DWasPassword=password
     -   z/OS: ./ConfigEngine.sh wp-update-realm -DWasPassword=password
-10. Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+10. Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart.md).
 
 11. Open the wkplc.properties file.
 

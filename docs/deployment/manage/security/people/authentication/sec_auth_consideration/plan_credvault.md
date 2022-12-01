@@ -26,10 +26,6 @@ HCL Portal also supports the storage and retrieval of credentials from other vau
 -   z/OS®
 
 
-**Related information**  
-
-
-[Configuring Basic Authentication for SSO for the SAP navigation integration](../admin-system/sap_int_cfg_basauth_sso_4nav.md)
-
-[Providing user credentials for authenticated connections](../dev-portlet/outbhttp_auth_prv_ucreds.md)
-
+???+ info "Related information"
+    - [Configuring Basic Authentication for SSO for the SAP navigation integration](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_basauth_sso_4nav.html)
+    - [Providing user credentials for authenticated connections](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/outbhttp_auth_prv_ucreds.md)

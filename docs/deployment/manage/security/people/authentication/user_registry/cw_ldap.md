@@ -15,17 +15,6 @@ Two types of validation are performed when you select to validate settings inclu
 Enabling validation is recommended because it can prevent a possible failure by validating your entries in the wizard before you run the configuration. The LDAP settings including the **Repository ID**, **Host name**, **Port**, **Bind DN**, **Bind password**, **Base DN**, **Administrator group DN**, **Administrator DN**, and **Administrator password** are all validated before the wizard creates your instructions to run the configuration. Review the following worksheet section to see which fields are required based on your selections in the wizard.
 
 
-**Related information**  
-
-
-[Setting up a stand-alone server](../config/config_standalone.md)
-
-[Accessing the Configuration Wizard](../config/cw_run.md)
-
-[Updating DB2 self-tuning memory manager \(STMM\) settings](../migrate/mig_t_post_db2_stmm.md)
-
-[Establishing single sign-on \(SSO\) between the portal installation and HCL Connections in SmartCloud for Social Business](../dev-portlet/est_sso_portal_sc4sb.md)
-
 # Worksheet
 
 When you set up the federated security, you answer questions about your wanted configuration. Some fields apply to all federated security configurations. Some fields are required based on your environment. The remaining fields are advanced and do not apply to most configurations.
@@ -37,7 +26,7 @@ The following table lists the fields that are unique to the LDAP configuration. 
 **Attention:** The Enable Federated Security option modifies the wimconfig.xml file. Make a backup copy of this file before you run any of the configuration tasks.
 
 ```
-[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/CellName/wim/config/wimconfig.xml
+[wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/config/cells/CellName/wim/config/wimconfig.xml
 ```
 
 |Field Label|Property|Your Value|
@@ -285,3 +274,15 @@ If you click **View Step Command**, you can see the task and properties that are
         None
 
 
+
+**Related information**  
+
+
+[Setting up a stand-alone server](/digital-experience/deployment/manage/config_standalone.md)
+
+[Accessing the Configuration Wizard](/digital-experience/deployment/manage/portal_admin_tools/cfg_wizard/configuration/config_standalone.md)
+
+[Updating DB2 self-tuning memory manager \(STMM\) settings](/digital-experience/deployment/manage/migrate/next_steps/post_mig_activities/db_task/mig_t_post_db2_stmm.md)
+
+<!--
+[Establishing single sign-on \(SSO\) between the portal installation and HCL Connections in SmartCloud for Social Business](../dev-portlet/est_sso_portal_sc4sb.md) -->

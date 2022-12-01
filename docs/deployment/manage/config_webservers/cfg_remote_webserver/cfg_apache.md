@@ -25,7 +25,7 @@ Configure the communication between HCL Portal and your Apache web server.
     
 5.  Start the web server.
 
-6.  If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, read [Providing short vanity URLs](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_short).
+6.  If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, read [Providing short vanity URLs](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short).
 
 
 

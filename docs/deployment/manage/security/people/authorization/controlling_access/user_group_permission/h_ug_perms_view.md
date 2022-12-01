@@ -1,7 +1,4 @@
----
-id: h_ug_perms_view
-title: Viewing role assignments
----
+# Viewing role assignments
 
 
 

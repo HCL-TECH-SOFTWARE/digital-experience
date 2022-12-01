@@ -1,8 +1,4 @@
----
-id: h_cred_add_vault
-title: Adding a vault segment
----
-
+# Adding a vault segment
 
 
 

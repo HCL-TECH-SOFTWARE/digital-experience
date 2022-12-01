@@ -4,9 +4,9 @@ title: Entitlement check scenarios
 
 # HCL Digital Experience Cloud Native 9.5 entitlement check scenarios
 
-Review the following [HCL Digital Experience Cloud Native 9.5](../../../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) entitlement validation check scenarios to be used to formulate responses when entitlement validations encounter failures.
+Review the following [HCL Digital Experience Cloud Native 9.5](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) entitlement validation check scenarios to be used to formulate responses when entitlement validations encounter failures.
 
-The approach that HCL takes is to perform automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios which involve HCL Software License Portal entitlement checks within [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies the customer's purchased product (DX Cloud Native 9.5 Tier 1- 7 part number that is mapped in their Flexnet Server instance(s)) subscription period is valid, or is past due, and requires renewal with HCL. For example, if a customer purchases **Digital Experience Cloud Native 9.5 Tier 2** part in May 30, 2022, their entitlement period is valid through May 30, 2023.
+The approach that HCL takes is to perform automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios which involve HCL Software License Portal entitlement checks within [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies the customer's purchased product (DX Cloud Native 9.5 Tier 1- 7 part number that is mapped in their Flexnet Server instance(s)) subscription period is valid, or is past due, and requires renewal with HCL. For example, if a customer purchases **Digital Experience Cloud Native 9.5 Tier 2** part in May 30, 2022, their entitlement period is valid through May 30, 2023.
 
 ## Entitlement check scenarios
 Depending upon your entitlement check result, the **HCL DX Cloud Native 9.5** server starts or issues warning messages when an error is encountered, or an entitlement requires renewal.
@@ -29,12 +29,39 @@ Depending upon your entitlement check result, the **HCL DX Cloud Native 9.5** se
 ## How to monitor User Session consumption for HCL DX Cloud Native v9.5 production deployments
 In addition to performing entitlement verification of the contract period for purchased subscription software, the HCL Software License and Delivery Portal can present usage information for HCL Software offerings that have been developed to report use metrics. This includes HCL Digital Experience Cloud Native v9.5 Tier 1 – 7 offerings, for production deployments. 
 
-HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 offerings are purchased according to the number of user sessions that will be consumed annually.  A **user session** is defined as the number of web sessions or other online interactions by anonymous or authenticated users to the Program when deployed for production use. User sessions also include API calls which deliver production use web site content or application data to external resources, excluding to a content delivery network. Reference the HCL article [Introducing New HCL Digital Experience Cloud-Native 9.5 Bundle with User Session Pricing](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/) and the [HCL Digital Experience Cloud Native 9.5 License document](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) for more information. 
+HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 offerings are purchased according to the number of user sessions that will be consumed annually.  A **user session** is defined as the number of web sessions or other online interactions by anonymous or authenticated users to the Program when deployed for production use. User sessions also include API calls which deliver production use web site content or application data to external resources, excluding to a content delivery network.
 
-User session consumption for the Digital Experience Cloud Native 9.5 entitlements you have mapped to your HCL Software License portal instances for entitlement checking, and that have been configured for Production use in your deployment Helm charts can be viewed using Usage reports in the HCL Software Licensing Portal. Refer to the guidance outlined in the HCL Support knowledge article [What is the HCL Software License and Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8). Run **Reports for Metered products** section to understand how to access your specific Flexnet entitlement dashboard. Users with authorized access to this service can run Usage reports. The Digital Experience Cloud Native 9.5 entitlements are configured to report user session consumption for deployments configured for production use.
+**A User Session begins** when a user (authenticated or anonymous) visits a DX deployment operating in **production use** and interacts with Program web site pages and is identified through appropriate tags using the appropriate scripts for each site page view request. User Session interactions can include one or more Production Use web site page views.
 
-!!!note
-    HCL Digital Experience Cloud Native 9.5 applies the following approach when reporting totals for user session consumption in deployments configured for Production to individual customer Flexnet dashboards: <br><br> When a user interacts with an HCL DX Cloud Native 9.5 Tier 1 - 7 Production deployment site, for every request a key is computed based on the requesting IP of the user combined with the user agent, as well as a forwarding header (X-Forwarded-For) for proxy (if a customer uses a proxy in their deployment setup) usage. Subsequent interactions within the same user session period leverage that key to identify the same user. If the customer uses a proxy in their setup, it is the responsibility of the customer to ensure this data arrives properly at the DX deployment layer for accurate tracking.
+**A User Session ends** when the user interaction with the Production Use Program is idle for 30 minutes or until the user ends the interaction explicitly closing their authentication or web page views session with the site.
+
+The maximum duration for an individual User Session with continuous interactions is 4 hours.
+
+User session consumption for the Digital Experience Cloud Native 9.5 entitlements you have mapped to your HCL Software License portal instances for entitlement checking, and that have been configured for Production use in your deployment Helm charts can be viewed using Usage reports in the HCL Software Licensing Portal. Refer to the guidance outlined in the HCL Support knowledge article [What is the HCL Software License and Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8). 
+
+Run **Reports for Metered products** section to understand how to access your specific Flexnet entitlement dashboard. Users with authorized access to this service can run Usage reports. The Digital Experience Cloud Native 9.5 entitlements are configured to report user session consumption for deployments configured for production use.
+
+## How User Sessions in Production deployments are calculated to Report totals 
+
+HCL Digital Experience Cloud Native 9.5 applies the following approach when reporting totals for user session consumption in deployments configured for Production to individual customer Flexnet dashboards: 
+
+When a user interacts with an HCL DX Cloud Native 9.5 Production deployment site, the License Manager pod, in conjunction with the HAProxy Pod coordinates a combination of IP address and User Agent to determine a unique User session. For every request a key is computed based on the requesting IP of the user combined with the user agent, as well as a forwarding header (`X-Forwarded-For`) for proxy (if a customer uses a proxy in their deployment setup) usage. Subsequent interactions within the same user session period leverage that key to identify the same user. 
+
+This information is stored in memory only for up to 4 hours. It is discarded afterwards. This information is only accessible by a Kubernetes administrator with permissions to access the log files. HCL does not have access to this information at any time.
+
+Some customers may choose to use a proxy, e.g. a load balancer, DMZ endpoint or other service that resides between the end user and the HCL DX Cloud Native v9.5 deployment. In that case the customer should ensure the relevant information to facilitate user session tracking arrives properly at the DX deployment for accurate tracking.
+
+The License Manager pod manages entitlement checking and user session consumption reporting for production deployments. 
+
+The License Manager transmits the total number of completed user sessions to the customer [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) instance (Flexnet) dashboard. The user session keys are not transmitted, and nor is any other information about users or sessions.
+
+The License Manager uses a Flexnet API to transmit the data total amount and each API request contains in its entirety the following data, and nothing more:
+
+-   Timestamp of data transmission (implicit in the call, not explicitly provided)
+
+-   Flexnet account identification information
+
+-   Total number of completed user sessions calculated by the License Manager since the last transmission.
 
 1. Access the Reports section of the HCL Software License and Download Portal (Flexnet) server.
 

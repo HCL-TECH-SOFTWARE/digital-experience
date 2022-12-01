@@ -87,13 +87,13 @@ Log in to the machine from where you will access your HCL Portal Container.
         cp /drive/* /tmp/
         ```
 
-    2.  OpenShift:
+    -   OpenShift:
 
         ```
         oc cp /tmp/* dx-deployment-nnnnn:/tmp/
         ```
 
-        Non OpenShift:
+    -     Non OpenShift:
 
         ```
         kubectl cp /tmp/* dx-deployment-nnnnn:/tmp/
@@ -101,7 +101,7 @@ Log in to the machine from where you will access your HCL Portal Container.
 
 7.  Create a directory under /opt/HCL/wp_profile to house any custom code or shared libraries.
 
-    1.  ```
+      ```
       mkdir –p /opt/HCL/wp_profile/customApps
       ```
 
@@ -113,7 +113,7 @@ Log in to the machine from where you will access your HCL Portal Container.
         mv /tmp/custom.ear /opt/HCL/wp_profile/customApps/
         ```
 
-    2.  ```
+      ```
         mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
         ```
 
@@ -125,19 +125,19 @@ Log in to the machine from where you will access your HCL Portal Container.
 
 12. Import the source server base content into the HCL Portal server in the container.
 
-    1.  OpenShift:
+    -   OpenShift:
 
         ```
         oc exec –it dx-deployment-nnnnn /bin/bash
         ```
 
-        Non OpenShift:
+    -     Non OpenShift:
 
         ```
         kubectl exec –it dx-deployment-nnnnn /bin/bash
         ```
 
-    2.  
+      
       ```
       /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportReleaseResults.xml -out /tmp/ExportReleaseResults_ImportResult.xml
       ```
@@ -198,6 +198,7 @@ Follow these steps to syndicate the source and target environments.
     Navigate to **Administration > Security > Credential Vault > Add a Vault Slot**.
 
 4.  On the **Credential Vault** page, select **New** and provide the following:
+
     1.  **Name** - enter the name for the vault slot.
     2.  **Vault resource associated with vault slot** - select **new** and enter the vault resource name.
     3.  **Vault slot is shared** check box - tick this check box and provide the credentials for a user that has appropriate access on the source/syndication system: **Shared userid**, **Shared password**, and **Confirm password**.
@@ -206,6 +207,7 @@ Follow these steps to syndicate the source and target environments.
 5.  Navigate to **Portal Content > Subscribers**. Click **Subscribe Now**.
 
 6.  In the **Subscribe to a syndicator** pop-up, provide the following:
+
     1.  **Syndicator URL**
     2.  **Syndicator Name**
     3.  **Subscriber Name**

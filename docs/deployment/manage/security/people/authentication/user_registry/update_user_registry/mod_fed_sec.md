@@ -6,9 +6,9 @@ In a stand-alone server environment, you can complete the following task when th
 
 **Remember:** Starting with HCL Portal Version 8.5, the stand-alone LDAP repository is deprecated. Change to the federated LDAP user repository.
 
-Use the wp\_security\_federated.properties helper file that is in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/helpers directory. It ensures that the correct properties are entered. In the following instructions, where the step refers to the wkplc.properties file, use your wp\_security\_federated.properties helper file.
+Use the wp\_security\_federated.properties helper file that is in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/config/helpers directory. It ensures that the correct properties are entered. In the following instructions, where the step refers to the wkplc.properties file, use your wp\_security\_federated.properties helper file.
 
-1.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Go to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Open the wkplc.properties file with a text editor.
 
@@ -22,14 +22,14 @@ Use the wp\_security\_federated.properties helper file that is in the [wp\_profi
     -   federated.serverPassword
 4.  Open a command prompt.
 
-5.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+5.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 6.  Run the following task to change the configuration to use a federated repository:
 
     -   AIX® HP-UX Linux™ Solaris z/OS®: ./ConfigEngine.sh wp-modify-federated-security -DWasPassword=password -Dskip.ldap.validation=true
     -   IBM® i: ConfigEngine.sh wp-modify-federated-security -DWasPassword=password -Dskip.ldap.validation=true
     -   Windows™: ConfigEngine.bat wp-modify-federated-security -DWasPassword=password -Dskip.ldap.validation=true
-7.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+7.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart.md).
 
 8.  Log in to HCL Portal as an administrator.
 

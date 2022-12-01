@@ -42,19 +42,19 @@ When HCL Digital Experience, using the virtual hostname-defined virtual portals,
 
 Choose the appropriate tasks to configure IBM Security Access Manager below.
 
--   **[Security Access Manager prerequisites](../security/tam_prereq.md)**  
+-   **[Security Access Manager prerequisites](../cfg_sec_access_mgr/tam_prereq.md)**  
 Complete the prerequisite tasks before you configure IBM Security Access Manager.
--   **[Creating the PdPerm.properties file](../security/run_svrssl_config.md)**  
+-   **[Creating the PdPerm.properties file](../cfg_sec_access_mgr/run_svrssl_config.md)**  
 The PdPerm.properties file configures the Access Manager Java Run Time Environment \(AMJRTE\). You must create the PdPerm.properties file before you configure IBM Security Access Manager for authentication, authorization, Credential Vault, or user provisioning. Run the run-svrssl-config task to create the files. This task also creates the keystore file that is used to encrypt communication with Security Access Manager.
--   **[Configuring Security Access Manager for authentication only](../security/cfg_tam_auth.md)**  
+-   **[Configuring Security Access Manager for authentication only](../cfg_sec_access_mgr/cfg_tam_auth.md)**  
 HCL Digital Experience and IBM WebSphere Application Server support the Trust Association Interceptors \(TAI\) that IBM Security Access Manager provides. If you use Security Access Manager for authorization, you must also use Security Access Manager for authentication. Using Security Access Manager only for authorization is not supported.
--   **[Configuring Security Access Manager for authorization](../security/tam_setup_esm.md)**  
+-   **[Configuring Security Access Manager for authorization](../cfg_sec_access_mgr/tam_setup_esm.md)**  
 You can configure IBM Security Access Manager for both authentication and authorization for HCL Digital Experience. If you configure these functions at different times as independent tasks, configure Security Access Manager for authentication first. Using Security Access Manager only for authorization is not supported.
--   **[Configuring the Credential Vault adapter for Security Access Manager](../security/tam_vault.md)**  
+-   **[Configuring the Credential Vault adapter for Security Access Manager](../cfg_sec_access_mgr/tam_vault.md)**  
 You can use IBM Security Access Manager in the HCL Digital Experience Credential Vault service. HCL Portal includes a vault adapter to access the Security Access Manager Global Sign-on \(GSO\) lockbox. Any existing Tivoli resource or resource credentials can be used in your portlets that access the credential vault service without any additional configuration. In addition, the credential vault service and credential vault management portlet can create or update an existing GSO lockbox entry.
--   **[Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../security/tam_prov_usrs.md)**  
+-   **[Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../cfg_sec_access_mgr/tam_prov_usrs.md)**  
 You can configure Security Access Manager for authentication, authorization, and the vault adapter with one task.
--   **[Removing Security Access Manager](../security/tam_deconfig.md)**  
+-   **[Removing Security Access Manager](../cfg_sec_access_mgr/tam_deconfig.md)**  
 After you install and use IBM Security Access Manager, you might find that you no longer require its use. You can then remove it from the HCL Digital Experience environment and restore authentication capabilities to IBM WebSphere Application Server and authorization capabilities to HCL Digital Experience.
 
 

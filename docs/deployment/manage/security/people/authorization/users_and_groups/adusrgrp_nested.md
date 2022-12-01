@@ -10,5 +10,5 @@ For example, one group, GlobalMarketing, might contain another group, USMarketin
 **Related information**  
 
 
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+[Setting service configuration properties](/digital-experience/deployment/manage/config_portal_behavior/service_config_properties)
 

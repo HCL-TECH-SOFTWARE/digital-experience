@@ -13,15 +13,17 @@ These properties are passed on to the Producer during the registration. For exam
     -   Two input fields **New parameter** and **New value**. Type the name and value for the new registration property.
     -   An **Add** button to create the property.
     -   A table that lists the registration properties of your web service configuration. The list has the following columns for each registration property:
+    
         -   The name of the property.
         -   The value of the property.
         -   An **Edit** icon. You can use this icon to modify the value of the property.
         -   A **Delete** icon. You can use this icon to delete the property.
+
 2.  Click **OK** to save the new property you created, or click **Cancel** if you do not want to save the new property and return to the previous panel.
 
 
 -   **[Creating a registration property](h_wserv_create_props.md)**  
 On the Consumer portal, you can create registration properties for a web service Producer.
--   **[Deleting a registration property](h_wserv_delete_props.md)**  
+-   **[Deleting a registration property](../../../../../mng_portlets_apps_widgets/portlet_management/cfg_portal_for_webservices/creating_producer_definition/reg_prop/h_wserv_delete_props.md)**  
 You can delete a registration property.
 

@@ -52,7 +52,7 @@ Updates to the portal solution can include creating, modifying, or deleting vari
 To avoid the drawbacks, a differential release can be defined, holding only the changes and not the complete release. A differential release is created by comparing two release exports. Then, you figure out the changes that are required to convert one system into the other one. Release Builder is the tool that helps with this task.
 
 !!!important "Warning"
-    If you redeploy your site daily, your JCR size increases because of page versions. Periodically clean up your versions to reduce the JCR size. Go to [Clearing version history](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_admin_clear_versions.md) for information.
+    If you redeploy your site daily, your JCR size increases because of page versions. Periodically clean up your versions to reduce the JCR size. Go to [Clearing version history](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_clear_versions.md) for information.
 
 Use the ReleaseBuilder to manage release configurations independent of user configurations. Release configuration data can be exported into an XMLAccess configuration file. During staging of follow-on releases, it is possible to stage differences between two releases. Use the XML configuration interface for these differences. Difference means differences between release configurations, including configuration entities that were removed, added, or changed in comparison to the previous release. Go to [Updates using ReleaseBuilder](../../../../extend_dx/development_tools/portal_admin_tools/releasebuilder/index.md) for information.
 
@@ -63,6 +63,6 @@ Go to [Updates with syndication](../../staging_to_production/updates_with_syndic
 If your staging server has a different LDAP than the production, go to *Member fixer with syndication* and *Maintaining web content* for information.
 
 **Related information**  
-[Web content administration tools](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/index.md)<br>
-[Member fixer with syndication](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer_synd.md)
+[Web content administration tools](../../../../manage_content/wcm_configuration/wcm_adm_tools/index.md)<br>
+[Member fixer with syndication](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer_synd.md)
 

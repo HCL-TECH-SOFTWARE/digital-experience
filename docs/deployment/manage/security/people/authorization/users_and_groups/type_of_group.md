@@ -41,9 +41,9 @@ The following list provides a summary of available options for using groups in H
 **Related information**  
 
 
-[User registry considerations](../plan/plan_ureg.md)
+[User registry considerations](/digital-experience/get_started/plan_deployment/traditional_deployment/user_registry_consideration/)
 
-[Rule-based user groups](../admin-system/rbug.md)
+[Rule-based user groups](/digital-experience/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups)
 
 [Configuring dynamic member attributes in a federated repository configuration](https://www.ibm.com/docs/en/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/twim_dynamic_member_attrs.html)
 

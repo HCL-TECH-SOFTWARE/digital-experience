@@ -66,7 +66,7 @@ When you use Design Studio (Beta), replacing an image sometimes does not reflect
 
     ![Select or drag to replace image](../usage/_img/Select%20or%20drag%20to%20replace%20image.png)
 
-    Replace the current image as you would in [HCL Content Composer](../../content_composer/usage/author_and_manage_content_items/manage_content_items.md#edit-content-item).
+    Replace the current image as you would in [HCL Content Composer](../../wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md#edit-content-item).
 
 7.  Once done, click **Save** to save the image file as the new image element content, then go back the page editor by clicking on the arrow (**←**) on the top left.
 

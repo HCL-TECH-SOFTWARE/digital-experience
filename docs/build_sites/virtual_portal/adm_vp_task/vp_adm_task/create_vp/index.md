@@ -46,12 +46,12 @@ You can preconfigure the content and the sub-administrators for virtual portals.
 If you add virtual portals to your portal installation after you install CF09 or a later cumulative fix and you use Site Builder or the Script Application, you need to add the appropriate library or libraries to each new virtual portal.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Shaping the user experience](../../../vp_planning/shape_vp_ux/index.md)
     - [Using the Virtual Portal Manager administration portlet](../../../vp_mgr_portlet/advp_vpmgr_use.md)
     - [Portal configuration tasks for administering virtual portals](../../../vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)
     - [Planning for virtual portals](../../../vp_planning/index.md)
-    - [Selecting and changing the language](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/adsuplang.md)
+    - [Selecting and changing the language](../../../../../deployment/manage/portal_admin_tools/language_support/adsuplang.md)
     - [Preconfiguring virtual portals](../../../vp_mgr_portlet/preconfig_vp/index.md)
     - [Task: create-virtual-portal](../../../vp_reference/vp_command_ref/portal_cfg_adm_vp/advp_cfgtsk_create.md)
     - [Known limitations for virtual portals](../../../vp_reference/vp_limitations/advpref_limits.md)

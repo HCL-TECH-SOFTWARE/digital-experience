@@ -1,8 +1,4 @@
----
-id: h_ug_perms_fields
-title: Field descriptions for the User and Group Permissions portlet
----
-
+# Field descriptions for the User and Group Permissions portlet
 
 
 

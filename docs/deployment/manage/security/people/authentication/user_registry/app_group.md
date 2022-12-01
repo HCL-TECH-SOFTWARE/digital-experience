@@ -4,7 +4,7 @@ You can define user groups within the database user registry with members \(user
 
 Before you enable application groups, from the Configuration Wizard run the Enable Federated Security configuration option to add all required federated LDAP user registries. Then, add all required database user registries.Before you enable application groups, add all required federated database user registries and federated LDAP user registries. You must also set the Group entity type to the database user registry and the Person entity type to the LDAP user registry.
 
-Before you complete this task, you might want to view and print the appropriate worksheet. See [HCL Portal Enable for zOS worksheets](../config/cw_db_ws_db2z.md).
+Before you complete this task, you might want to view and print the appropriate worksheet. See [HCL Portal Enable for zOS worksheets](/digital-experience/deployment/manage/db_mgmt_sys/dbtransfer_zOS/cw_db_ws_db2z.md).
 
 You can use application groups in the following scenarios:
 
@@ -26,11 +26,11 @@ Perform the following steps to enable application groups:
 
     |Operating system|Task|
     |----------------|----|
-    |AIX®|./ConfigEngine.sh wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
-    |IBM® i|ConfigEngine.sh wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
-    |Linux™|./ConfigEngine.sh wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
-    |Solaris|./ConfigEngine.sh wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
-    |Windows™|ConfigEngine.bat wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory|
+    |AIX®|./ConfigEngine.sh wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory|
+    |IBM® i|ConfigEngine.sh wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory|
+    |Linux™|./ConfigEngine.sh wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory|
+    |Solaris|./ConfigEngine.sh wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory|
+    |Windows™|ConfigEngine.bat wp-update-group-repository-relationship -DWasPassword=password -Drepository.id=ldapid -Drepository.forgroups=dbid from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory|
     |z/OS®|Complete the following steps:    1.  Start the HCL Portal Customization dialog.
     2.  In the Portal configuration panel, select **Advanced configuration tasks**.
     3.  Select **Security configuration tasks**.

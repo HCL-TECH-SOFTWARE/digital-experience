@@ -2,7 +2,7 @@
 
 Attaches marketing information to Portal resources such as portal pages, portlets, or web content items. Reads the analytics tags that are associated with an identifiable portal resource.
 
-For more information, see [Analytics tags and site promotions](../admin-system/sa_asa_anal_tags_site_prom.md#)
+For more information, see [Analytics tags and site promotions](../../../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/analytics_tags_site_promo/index.md)
 
 Attributes:
 

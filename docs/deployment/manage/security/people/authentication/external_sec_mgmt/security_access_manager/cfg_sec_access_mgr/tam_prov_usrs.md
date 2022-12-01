@@ -74,7 +74,7 @@ You can configure Security Access Manager for authentication, authorization, and
 
 5.  **Clustered environments:** Complete this step on all nodes.
 
-    Run the following task in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
+    Run the following task in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
 
     **Tip:** Run the validate-pdadmin-connection task on the HCL Portal node or on each node in a clustered environment. In a clustered environment, WasPassword is the Deployment Manager administrator password. The wp.ac.impl.PDAdminPwd is the Security Access Manager administrative user password.
 
@@ -127,9 +127,9 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
 
 6.  Use a text editor to open the wkplc\_comp.properties file in the following directory:
 
-    -   AIX HP-UX Linux Solaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   IBM i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   Windows: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
+    -   AIX HP-UX Linux Solaris: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+    -   IBM i: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+    -   Windows: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties
     **Clustered environments:** Complete this step on all nodes.
 
 7.  Updating properties in the wkplc\_comp.properties.
@@ -179,7 +179,7 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
         4.  For wp.ac.impl.readOnly, type true to allow credential vault or any custom portlets to modify the secrets that are stored in Security Access Manager. Or type false to allow only the Security Access Manager administrator to modify the secrets from the command line or graphical user interface.
 8.  Save your changes to the properties file.
 
-9.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+9.  Open a command prompt and change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 10. Run the following task to enable Security Access Manager authentication, authorization, and the credential vault:
 
@@ -209,7 +209,7 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
 
     5.  Edit the systemcred.dn property. Set the value to an existing Security Access Manager user.
 
-12. Go to [Enabling user provisioning](usr_prov.md) to enable user provisioning.
+12. Go to [Enabling user provisioning](/digital-experience/deployment/manage/security/people/authentication/external_sec_mgmt/security_access_manager/usr_prov) to enable user provisioning.
 
 13. If you are using Security Access Manager integrated with HCL Digital Experience in a stand-alone environment that does not include a web server between WebSEAL and Portal, complete the following steps:
 
@@ -229,7 +229,7 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
 
     8.  Log out of the WebSphere Integrated Solutions Console.
 
-14. Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+14. Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 15. Go to the WebSEAL node and edit the webseald-instance.conf file for the appropriate WebSEAL instance. An example is webseald-default.conf. This file sets the `basicauth-dummy-passwd` value to the password for the ID that WebSEAL uses to identify itself to WebSphere Application Server. This password is the trusted user ID and password that were created in an earlier step. Stop and start the WebSEAL server before you continue.
 
@@ -242,9 +242,9 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
 **Related information**  
 
 
-[Creating the PdPerm.properties file](../security/run_svrssl_config.md)
+[Creating the PdPerm.properties file](/digital-experience/deployment/manage/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/un_svrssl_config)
 
-[Setting up SSL](../security/ssl.md)
+[Setting up SSL](/digital-experience/deployment/manage/security/information/confidentiality/configuring_ssl)
 
 [Extended Tivoli Access Manager Trust Association Interceptor Plus \(ETAI\)](https://support.hcltechsw.com/csm)
 
@@ -252,5 +252,4 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
 
 [ETAI Download](https://www.ibm.com/support/pages/node/574293)
 
-[Migrating Security Access Manager](../migrate/mig_tam_consid.md)
-
+[Migrating Security Access Manager](/digital-experience/deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/mig_tam_consid)

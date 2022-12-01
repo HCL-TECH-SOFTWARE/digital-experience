@@ -5,7 +5,7 @@ Site Builder is an application that you can use to create site templates or sect
 ## Prerequisites for using Site Builder
 
 -   Site Builder is installed out of the box with HCL Portal 8.5 CF08 or higher.
--   Managed Pages must be enabled. See [Enabling managed pages](../../manage_content//wcm/wcm_artifacts/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md).
+-   Managed Pages must be enabled. See [Enabling managed pages](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md).
 
 
 !!! note

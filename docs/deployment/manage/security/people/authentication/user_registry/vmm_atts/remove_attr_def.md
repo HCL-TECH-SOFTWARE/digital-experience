@@ -98,10 +98,9 @@ Use caution when you do these steps.
 
 
 
-**Previous topic:**[Mapping attributes](../install/map_attributes.md)
+**Previous topic:**[Mapping attributes](../map_attributes)
 
 **Related information**  
 
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+[Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart.md)
 

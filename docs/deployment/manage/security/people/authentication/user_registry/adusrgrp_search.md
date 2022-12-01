@@ -11,10 +11,10 @@ Set the maxSearchResults and searchTimeOut parameters in the following file:
 
 |Operating system|Directory path|
 |----------------|--------------|
-|Windows™:|[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\config\\cells\\cell\_name\\wim\\config\\wimconfig.xml|
-|UNIX™Linux™:|[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/cell\_name/wim/config/wimconfig.xml|
-|IBM® i:|[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/profiles/config/cells/cell\_name/wim/config/wimconfig.xml|
-|z/OS®:|[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/cell\_name/wim/config/wimconfig.xml|
+|Windows™:|[wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\config\\cells\\cell\_name\\wim\\config\\wimconfig.xml|
+|UNIX™Linux™:|[wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/config/cells/cell\_name/wim/config/wimconfig.xml|
+|IBM® i:|[wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/profiles/config/cells/cell\_name/wim/config/wimconfig.xml|
+|z/OS®:|[wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/config/cells/cell\_name/wim/config/wimconfig.xml|
 
 The maxSearchResults parameter specifies the number of search results. The searchTimeOut parameter specifies the time out in milliseconds.
 

@@ -33,5 +33,5 @@ After you publish the site with a blog, click **Create Post** to add content. Cl
 
 
 ???+ info "Related information"
-    -   [Web Content Viewer best practices and limitations](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/wcm_config_delivery_portlet_bestpractice.md)
+    -   [Web Content Viewer best practices and limitations](../../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/wcm_config_delivery_portlet_bestpractice.md)
 

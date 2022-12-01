@@ -57,7 +57,7 @@ Follow these steps to configure single sign-on.
 
 8.  To configure the IBM® HTTP Server with single sign-on, delete and read the web server on the WebSphere® Application Server Integrated Solutions Console. This configuration remaps all applications, including Portal, and imports the Portal certificate into IBM HTTP Server.
 
-9.  Configure Security Access Manager on the Portal server, following the directions in the [Configuring Security Access Manager](../../../../../../../deployment/manage/security/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/index.md) article that corresponds to your Portal server:
+9.  Configure Security Access Manager on the Portal server, following the directions in the [Configuring Security Access Manager](../../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/index.md) article that corresponds to your Portal server:
 
     !!!note
         For the connections integration with the portlets, it is important that WebSEAL session cookies are sent to the junction server. This action can be defined by adding the -k option to the commands that create a junction.

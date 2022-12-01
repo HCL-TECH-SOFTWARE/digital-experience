@@ -8,7 +8,7 @@ In a stand-alone server environment, you can complete this task when the servers
 
 1.  Use the WebSphere Application Server backupConfig task to create and store a backup of the HCL Portal configuration. Read [backupConfig command](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/rxml_backupconfig.html) for information.
 
-2.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+2.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 3.  Enter a value for the following parameters in the VMM realm configuration section:
 
@@ -20,7 +20,7 @@ In a stand-alone server environment, you can complete this task when the servers
     -   addBaseEntry
 4.  Save your changes.
 
-5.  Open a command line and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+5.  Open a command line and change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 6.  Run the following task to add a realm to the Virtual Member Manager configuration:
 
@@ -29,7 +29,7 @@ In a stand-alone server environment, you can complete this task when the servers
     -   AIX® HP-UX Linux™ Solaris z/OS®:./ConfigEngine.sh wp-create-realm -DWasPassword=password
     -   IBM i: ConfigEngine.sh wp-create-realm -DWasPassword=password
     -   Windows™: ConfigEngine.bat wp-create-realm -DWasPassword=password
-7.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+7.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart.md).
 
 8.  Enter a value for the following parameters in the wkplc.properties file in the VMM realm configuration section:
 
@@ -141,7 +141,7 @@ In a stand-alone server environment, you can complete this task when the servers
 **Related information**  
 
 
-[Managing the user population for virtual portals](../admin-system/advppln_mgupop.md)
+[Managing the user population for virtual portals](/digital-experience/build_sites/virtual_portal/vp_planning/advppln_mgupop)
 
-[Migration: Virtual portals](../migrate/mig_plan_expect_vp.md)
+[Migration: Virtual portals](/digital-experience/deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_vp)
 

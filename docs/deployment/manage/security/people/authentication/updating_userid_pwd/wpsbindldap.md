@@ -4,9 +4,11 @@ If you are using the IBM Directory Server or IBM SecureWay Security Server for z
 
 Perform the following steps to change the WebSphere® Application Server administrator password in the LDAP server using the LDAP administration interface:
 
-**Attention:** The following directions assume an LDAP tree layout where the users are all in the cn=users,o=wps subtree in the directory server. You should adjust these directions based on your own LDAP server layout.
+!!!attention
+    The following directions assume an LDAP tree layout where the users are all in the cn=users,o=wps subtree in the directory server. You should adjust these directions based on your own LDAP server layout.
 
-**Tip:** When you change the WebSphere Application Server administrator password, you should also change it in LDAP server.
+!!!tip
+    When you change the WebSphere Application Server administrator password, you should also change it in LDAP server.
 
 1.  Log in to the LDAP server Web Administration Tool.
 
@@ -18,7 +20,8 @@ Perform the following steps to change the WebSphere® Application Server adminis
 
 5.  Select the WebSphere Application Server administrator user and click **Edit Attributes**.
 
-    **Note:** If this is your first time navigating to this screen, you may need to click **Next** before you can click the **Optional attributes** link.
+    !!!note
+        If this is your first time navigating to this screen, you may need to click **Next** before you can click the **Optional attributes** link.
 
 6.  Click **Optional attributes**.
 
@@ -42,7 +45,7 @@ Perform the following steps to change the WebSphere® Application Server adminis
 
     5.  Select **RuleEventRunAsRole** and then click **Remove**.
 
-    6.  Enter the fully distinguished name \(DN\) of the WebSphere Application Server Administrator in the **username** field and the new password in the **password** field.
+    6.  Enter the fully distinguished name (DN) of the WebSphere Application Server Administrator in the **username** field and the new password in the **password** field.
 
     7.  Select **RuleEventRunAsRole** and then click **Apply** to apply your changes.
 
@@ -50,8 +53,6 @@ Perform the following steps to change the WebSphere® Application Server adminis
 
 
 
-**Related information**  
-
-
-[Applying fix packs to your portal](../security/apply_fixpacks.md)
+???+ info "Related information"
+    - [Applying fix packs to your portal](../../../../manage_portal_using_iim/apply_fixpacks.md)
 

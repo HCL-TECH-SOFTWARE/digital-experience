@@ -77,5 +77,5 @@ When you create a new page, you must give it a title. All other settings are opt
 16. Click **OK** to save these settings for the new page and add new content. Click **Cancel** if you want to return to Manage Pages without creating the new page.
 
 ???+ info "Related information"  
-    -   [Custom authoring interfaces](../../../../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/authoringtools_element/authoring_portlet/wcm_cms_authoring_custom.md)
+    -   [Custom authoring interfaces](../../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/authoringtools_element/authoring_portlet/wcm_cms_authoring_custom.md)
 

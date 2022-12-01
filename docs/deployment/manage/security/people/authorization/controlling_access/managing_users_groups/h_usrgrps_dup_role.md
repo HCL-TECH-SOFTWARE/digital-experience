@@ -1,9 +1,4 @@
----
-id: h_usrgrps_dup_role
-title: Duplicating role assignments
----
-
-
+# Duplicating role assignments  
 
 
 Use this feature to assign one member to the same role assignments as a group without the member joining the group.

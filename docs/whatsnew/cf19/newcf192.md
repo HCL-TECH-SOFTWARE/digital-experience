@@ -30,7 +30,7 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../..
 
 New Content Composer features are added with HCL Digital Experience Container Update CF192, including a new Version Comparison interface and capabilities to View and Filter Workflow comments, and more.
 
-See the [HCL Content Composer](../../manage_content/content_composer/index.md) topic for additional information.
+See the [HCL Content Composer](../../manage_content/wcm_authoring/content_composer/index.md) topic for additional information.
 
 ## New Digital Asset Management Features
 
@@ -54,12 +54,12 @@ See the [Content Security Policy Help Center](../../deployment/manage/security/i
 
 New HCL DX APIs are introduced with the HCL DX CF192 Container Update release:
 
--   [Using the WCM Add Comment API](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_workflow.md#using-the-wcm-add-comment-api)
--   [Web Content Manager Find Rendering and Script Portlet References](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_REST_web_content_manager_find_rendering_script_portlet_references.md)
--   [Web Content Manager Access Control Filter REST API](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/index.md){:target="_blank"}<!-- (../wcm/wcm_REST_web_content_manager_access_control_filter.md) -->
+-   [Using the WCM Add Comment API](../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_workflow.md#using-the-wcm-add-comment-api)
+-   [Web Content Manager Find Rendering and Script Portlet References](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_rendering_script_portlet_references.md)
+-   [Web Content Manager Access Control Filter REST API](../../manage_content/wcm_development/wcm_rest/index.md){:target="_blank"}<!-- (../wcm/wcm_REST_web_content_manager_access_control_filter.md) -->
 -   [Clear Theme Cache API](../../build_sites/themes_skins/the_module_framework/themeopt_analyzer/utilities/clear_themes_caches.md)
--   [Work with Deleted Web Content Items](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_deleted_content/index.md)
--   [Web Content Manager Multilingual Solution APIs](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/wcm_mls_api.md)
+-   [Work with Deleted Web Content Items](../../manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/index.md)
+-   [Web Content Manager Multilingual Solution APIs](../../manage_content/wcm_development/wcm_dev_api/wcm_mls_api.md)
 
 ## New HCL Digital Experience ‘How To’ Videos
 

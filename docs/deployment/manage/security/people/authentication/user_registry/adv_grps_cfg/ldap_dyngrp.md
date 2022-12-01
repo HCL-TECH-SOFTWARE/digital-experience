@@ -31,7 +31,7 @@ Otherwise, complete the following steps to manually configure HCL Portal to use 
     -   **Object class:** groupofurls
 8.  Click **OK** and save the changes to the master configuration.
 
-9.  Stop and restart the appropriate servers to propagate the changes. For instructions, read [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+9.  Stop and restart the appropriate servers to propagate the changes. For instructions, read [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart.md).
 
 
 

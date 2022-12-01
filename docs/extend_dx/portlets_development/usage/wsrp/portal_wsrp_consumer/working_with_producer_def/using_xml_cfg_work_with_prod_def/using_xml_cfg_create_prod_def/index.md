@@ -33,18 +33,8 @@ Use the following attributes to specify the Producer ports.
 
 |Attribute|Possible values|Description|
 |---------|---------------|-----------|
-|type|Specify one of the following values:-   service-description
--   markup
--   portlet-management
--   registration
-
-|Defines the port to which the tag applies.|
-|defaultbinding|Specify one of the following values:-   secure
--   unsecure
--   onrequest
--   undefined
-
-|Defines whether to use the secure or unsecure URL. The value onrequest applies to the Markup port only.|
+|type|Specify one of the following values:<br> -   service-description<br>-   markup<br>-   portlet-management<br>-   registration|Defines the port to which the tag applies.|
+|defaultbinding|Specify one of the following values:<br>-   secure<br>-   unsecure<br>-   onrequest<br>-   undefined|Defines whether to use the secure or unsecure URL. The value onrequest applies to the Markup port only.|
 
 The following attributes are listed for the sake of completeness only. Do not change them.
 
@@ -54,7 +44,7 @@ The following attributes are listed for the sake of completeness only. Do not ch
 |cookiepolicy|One of: none per\_user per\_group undefined|The Producer's cookie policy. The policy and possible values are defined in the WSRP specification.|
 |wsrpversion|V1 \| V2|This attribute indicates the WSRP protocol version that is used for communication between consumer and producer.|
 
--   **[XML samples for creating Producer definitions](../admin-system/wsrpr_cons_crtprd_samp1.md)**  
+-   **[XML samples for creating Producer definitions](wsrpr_cons_crtprd_samp1.md)**  
 You can modify use these XML samples and use them to create Producer definitions,
 
 

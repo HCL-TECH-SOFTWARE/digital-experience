@@ -35,5 +35,5 @@ When you add the sample content, the following artifacts are created:
 
 ???+ info "Related information"  
     -   [Migration: Blogs and wikis](../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/mig_blogs_wiki.md)
-    -   [Creating content with sample web content template items](../../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/getting_started/creating_contentsamples/index.md)
+    -   [Creating content with sample web content template items](../../../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/getting_started/creating_contentsamples/index.md)
 

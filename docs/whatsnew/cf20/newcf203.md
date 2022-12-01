@@ -47,7 +47,7 @@ See the [Design Studio (Beta)](../../manage_content/design_studio/index.md) Help
 
 ## Configure Content Composer to Virtual Portals 
 
-Instructions to configure Content Composer to Virtual Portals is available.  See [Content Composer - Configure to Virtual Portals](../../manage_content/content_composer/installation/configure_cc_virtual_portals.md) for more information. 
+Instructions to configure Content Composer to Virtual Portals is available.  See [Enable or Disable Content Composer in Virtual Portals](../../manage_content/wcm_authoring/content_composer/installation/configure_cc_virtual_portals.md) for more information. 
 
 ## Personalization REST APIs
 

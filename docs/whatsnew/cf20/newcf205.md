@@ -21,7 +21,7 @@ For the HCL DX 9.5 Container Update CF205 image list, see the [Container Image l
 The following features and updates are available to customers installing HCL Digital Experience Container Update CF205 on [supported container platforms](../../get_started/system_requirements/index.md):
 
 ## Deploy HCL DX 9.5 Container Update to container platforms using Helm 
-Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Beginning with Container Update CF203, the Ambassador shipped as part of the DX Helm deployment is deprecated and a required process to migrate from the Amabassador to HAProxy Service is provided.  Beginning in CF204, the HAProxy should be used in your DX deployments on Kubernetes. 
+Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Beginning with Container Update CF203, the Ambassador shipped as part of the DX Helm deployment is deprecated and a required process to migrate from the Ambassador to HAProxy Service is provided.  Beginning in CF204, the HAProxy should be used in your DX deployments on Kubernetes. 
 
 In Container Update CF205, configurable logging support for HAProxy is enhanced. For more information, see [Configure and Access logs](../../deployment/manage/container_configuration/troubleshooting/configure_access_helm_logs.md#default-log-output).
 
@@ -58,7 +58,7 @@ Document Conversion Services components in the HCL Digital Experience software w
 
 For more information, refer to the following documents:
 
-- [Creating a back up](../../manage_content/dcs/dcs_backup.md)
+- [Creating a back up](../../manage_content/wcm_authoring/dcs/dcs_backup.md)
 
 - [Disabling Stellent for DCS](https://help.hcltechsw.com/digital-experience/9.5/admin-system/disable_3rdparty_dcs.html){:target="_blank"}
 

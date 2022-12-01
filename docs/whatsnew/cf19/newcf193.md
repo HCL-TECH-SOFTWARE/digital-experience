@@ -48,7 +48,7 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../..
 
 New and updated HCL DX APIs are introduced with the HCL DX CF193 Container Update release:
 
--   [Web Content Manager Multilingual Solution APIs](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/wcm_mls_api.md)
+-   [Web Content Manager Multilingual Solution APIs](../../manage_content/wcm_development/wcm_dev_api/wcm_mls_api.md)
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 

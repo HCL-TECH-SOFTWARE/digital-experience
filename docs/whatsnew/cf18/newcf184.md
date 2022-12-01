@@ -10,7 +10,7 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Web Content Manager Syndication REST APIs
 
-The Web Content Manager Syndication REST APIs let you control syndication processes. See the [Web Content Manager Syndication REST APIs](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_REST_web_content_manager_control_syndication.md) topic for more information.
+The Web Content Manager Syndication REST APIs let you control syndication processes. See the [Web Content Manager Syndication REST APIs](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_control_syndication.md) topic for more information.
 
 ## Access the HCL Experience API in HCL DX GitHub
 

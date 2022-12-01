@@ -39,6 +39,6 @@ The following XML sample shows how you use the XML configuration interface to in
 ```
 
 ???+ info "Related information"  
-   -  [Sample XML configuration files](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
-   -  [The XML configuration interface](../../../../portal_admin_tools/xml_config_interface/index.md)
-   -  [Working with the XML configuration interface](../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+   -  [Sample XML configuration files](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
+   -  [The XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
+   -  [Working with the XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)

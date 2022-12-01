@@ -26,7 +26,7 @@ The resource tag includes attributes that are specific for the property: propert
 
     1.  Open a command line.
 
-    2.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    2.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
     3.  Run the following task:
 
@@ -45,9 +45,9 @@ The resource tag includes attributes that are specific for the property: propert
 
 |
 
-3.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+3.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
-4.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+4.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 5.  Find the *VMM Property Extension Properties* heading. You can either add a single attribute or multiple attributes.
 
@@ -151,14 +151,11 @@ The resource tag includes attributes that are specific for the property: propert
 
 
 
-**Previous topic:**[Querying the defined attributes](../install/man_attributes.md)
+**Previous topic:**[Querying the defined attributes](../man_attributes)
 
-**Next topic:**[Mapping attributes](../install/map_attributes.md)
+**Next topic:**[Mapping attributes](../map_attributes)
 
 **Related information**  
 
-
-[Querying the defined attributes](../install/man_attributes.md)
-
-[Configuring the rule attribute for the Group](../admin-system/rbug_cfg_vmm_attrb.md)
+[Configuring the rule attribute for the Group](/digital-experience/security/people/authorization/users_and_groups/rule_based_user_groups/cfg_rule_based_user_groups/cfg_vmm_rule_based_groups_repo/rbug_cfg_vmm_attrb.md)
 

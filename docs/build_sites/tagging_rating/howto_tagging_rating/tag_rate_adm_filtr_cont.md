@@ -89,6 +89,6 @@ This sample snippet deletes all terms from the blacklist.
 ???+ info "Related information"
     - [CP Configuration Service for tagging and rating](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
     - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-    - [Working with the XML configuration interface](../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    - [Working with the XML configuration interface](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
     - [Hints and tips for developers and portal administrators](../hints_tips_tag_rate/tag_rate_ref_hintip_4admins.md)
 

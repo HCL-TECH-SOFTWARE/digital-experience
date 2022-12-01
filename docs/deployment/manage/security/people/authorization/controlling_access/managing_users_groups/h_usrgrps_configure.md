@@ -1,7 +1,5 @@
----
-id: h_usrgrps_configure
-title: Configuring the Users and Groups portlet
----
+# Configuring the Users and Groups portlet
+
 
 
 

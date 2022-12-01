@@ -61,8 +61,8 @@ db2 "CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192"
 
     1.  Go the following directory:
 
-        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
-        -   Windows: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties directory.
+        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
+        -   Windows: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties directory.
     2.  Locate and open wkplc\_dbtype.properties with any text editor.
 
     3.  Enter a value for the following parameters in the appropriate database type properties heading:
@@ -74,8 +74,8 @@ db2 "CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192"
 
 4.  Use a text editor to open the wkplc.properties file, located in the
 
-    -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
-    -   Windows: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties directory.
+    -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
+    -   Windows: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties directory.
 5.  Enter a value for the following required parameters in the wkplc.properties file under the VMM Federated Database Properties heading:
 
     **Note:** See the properties file for specific information about the required and advanced parameters.
@@ -92,8 +92,8 @@ db2 "CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192"
 
     1.  Go to the following directory:
 
-        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/properties directory.
-        -   Windows: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\properties directory.
+        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/properties directory.
+        -   Windows: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\properties directory.
     2.  Locate and open soap.client.props with any text editor.
 
     3.  Locate the com.ibm.SOAP.requestTimeout parameter and ensure the value is greater than 1000.
@@ -104,9 +104,9 @@ db2 "CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192"
 
     1.  Create the local Deployment Manager WebSphere variable that is used to access the database jar files.
 
-        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-        -   IBM i: Run the `ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
-        -   Windows: Run the `ConfigEngine.bat wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
+        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+        -   IBM i: Run the `ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory
+        -   Windows: Run the `ConfigEngine.bat wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
         **Note:** The `db_type` in `db_type.DmgrDbLibrary` should be set to the type of database you are using, for example
 
         -   AIX, Linux, Solaris Windows: `db2`
@@ -133,9 +133,9 @@ db2 "CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192"
 -   IBM i: Set the property value for federated.db.DbType if you use a database user registry or if the cell is migrated from previous version and set the property value for la.DbType if you use a property extension database in the `wkplc.properties` file.
         2.  Create the variable that is used to access the VMM database jar files.
 
-            -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory on each node.
-            -   IBM i: Run the `ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory on each node.
-            -   Windows: Run the `ConfigEngine.bat wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory on each node.
+            -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory on each node.
+            -   IBM i: Run the `ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory on each node.
+            -   Windows: Run the `ConfigEngine.bat wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory on each node.
             **Note:** VmmNodeName is a list of one or more HCL Portal nodes names in the cell which share database driver paths. The `db_type` in `db_type.NodeDbLibrary` should be set to the type of database you are using, for example
 
             -   AIX, Linux, Solaris, Windows: `db2`.
@@ -147,9 +147,9 @@ db2 "CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192"
 
 8.  Add a database user registry to the default federated repository.
 
-    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-    -   IBM i: Run the `ConfigEngine.sh wp-create-db -DWassPassword=password` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-    -   Windows: Run the `ConfigEngine.bat wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
+    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+    -   IBM i: Run the `ConfigEngine.sh wp-create-db -DWassPassword=password` task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+    -   Windows: Run the `ConfigEngine.bat wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
     **Note:** Users who are not in an LDAP do not have awareness and cannot see if the other users are online. This can happen if you install HCL Portal and then enable a Federated LDAP or Federated database user repository that does not contain that user. Also, users who sign up using the Self Care portlet do not have awareness.
 
 9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see *Starting and stopping servers, deployment managers, and node agents.*
@@ -174,15 +174,15 @@ db2 "CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192"
     3.  Save your changes to the wkplc.properties file.
     4.  Delete the old attributes before you add the new attributes.
 
-        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-        -   IBM i: Run the `ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-        -   Windows: Run the `ConfigEngine.bat wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
+        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+        -   IBM i: Run the `ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+        -   Windows: Run the `ConfigEngine.bat wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
     5.  Stop and restart all necessary servers to propagate your changes.
 11. List the names and types of configured repositories.
 
-    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-    -   IBM i: Run the `ConfigEngine.sh wp-query-repository -DWasPassword=password` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-    -   Windows: Run the `ConfigEngine.bat wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
+    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+    -   IBM i: Run the `ConfigEngine.sh wp-query-repository -DWasPassword=password` task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+    -   Windows: Run the `ConfigEngine.bat wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
 
 If you created your clustered environment, including the additional nodes, and then completed the steps in this task, you must now run the `update-jcr-admin` task on the secondary node. See the related links section for instructions.
 
@@ -190,7 +190,7 @@ If you created your clustered environment, including the additional nodes, and t
 **Related information**  
 
 
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+[Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart.md)
 
 [backupConfig command](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=clt-backupconfig-command)
 

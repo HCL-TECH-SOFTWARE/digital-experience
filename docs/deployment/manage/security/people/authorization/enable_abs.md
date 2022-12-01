@@ -2,7 +2,7 @@
 
 Attribute based security for HCL Web Content Manager content is an access filter in the product filter chain. You can extend the access control permission checks for HCL Web Content Manager content beyond the user or group-based decisions. You can define your own criteria. The criteria might involve categories, keywords, textComponents, htmlComponents, or shortTextComponents for an item.
 
-1.  See the topic [Extending HCL Portal class path](../dev/ext_wp_classpath.md) for where to place your compiled custom code on the Portal filesystem.
+1.  See the topic [Extending HCL Portal class path](/digital-experience/extend_dx/development_tools/ext_wp_classpath/ext_wp_classpath) for where to place your compiled custom code on the Portal filesystem.
 
 2.  Restart the HCL Portal server.
 

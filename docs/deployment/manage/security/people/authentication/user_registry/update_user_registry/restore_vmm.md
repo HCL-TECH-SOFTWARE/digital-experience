@@ -4,7 +4,7 @@ If your business changes or your user registry configuration is inoperable, run 
 
 1.  Before you configure security, use the IBM® WebSphere® Application Server backupConfig task to create and store a backup of the HCL Portal configuration. Read [backupConfig command](http://publib.boulder.ibm.com/infocenter/wasinfo/v8r0/topic/com.ibm.websphere.nd.multiplatform.doc/info/ae/ae/rxml_backupconfig.html) for information.
 
-2.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+2.  Go to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 3.  Open the wkplc.properties file with a text editor.
 
@@ -18,7 +18,7 @@ If your business changes or your user registry configuration is inoperable, run 
     -   federated.serverPassword
 5.  Open a command prompt.
 
-6.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+6.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 7.  Run the following task to restore the default repository:
 
@@ -26,7 +26,7 @@ If your business changes or your user registry configuration is inoperable, run 
     -   IBM i: ConfigEngine.sh wp-restore-default-repository-configuration -DWasPassword=password
     -   Windows™: ConfigEngine.bat wp-restore-default-repository-configuration -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh wp-restore-default-repository-configuration -DWasPassword=password
-8.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+8.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 9.  Run the following task to restore the default repository group member:
 

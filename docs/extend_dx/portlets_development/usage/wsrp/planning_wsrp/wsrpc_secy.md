@@ -44,16 +44,10 @@ For a WSRP Producer, security configuration is optional. A WSRP Consumer must us
 For more detailed information about Portal Access Control, read the sections about *Configuring Portal Access Control for a WSRP Producer portal* and *Managing Access Control*.
 
 
-**Related information**  
-
-
-[Configuring Portal Access Control for a WSRP Producer portal](../admin-system/wsrpt_prod_sec_pac.md)
-
-[Managing Access Control](../admin-system/sec_ac_adm.md)
-
-[WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
-
-[Updating a WSRP Producer](../migrate/mig_post_wsrp_producer.md)
-
-[Updating a WSRP Consumer](../migrate/mig_post_wsrp_consumer.md)
+???+ info "Related information"
+    - [Configuring Portal Access Control for a WSRP Producer portal](../portal_wsrp_producer/securing_wsrp_prod_portal/wsrpt_prod_sec_pac.md)
+    - [Managing Access Control](../../../../../deployment/manage/security/people/authorization/controlling_access/sec_ac_adm.md)
+    - [WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
+    - [Updating a WSRP Producer](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_producer.md)
+    - [Updating a WSRP Consumer](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_consumer.md)
 

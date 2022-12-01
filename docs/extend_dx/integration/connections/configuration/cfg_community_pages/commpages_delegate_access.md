@@ -35,7 +35,7 @@ The **Restrict view access to this page to community members** check box is avai
 
 
 ???+ info "Related information"
-    - [Roles](../../../../../deployment/manage/security/controlling_access/resources_roles/sec_roles.md)
+    - [Roles](../../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_roles.md)
     - [Human readable URL mappings for virtual portals](../../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
     - [Managing community associations](../managing_community_pages/commpages_create_mapping.md)
 

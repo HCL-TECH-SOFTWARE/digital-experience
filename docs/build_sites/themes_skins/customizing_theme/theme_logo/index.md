@@ -42,5 +42,5 @@ You can also create your own custom style to use with your custom theme defined 
 
 
 ???+ info "Related information:"
-     - [Vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/index.md)
+     - [Vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/index.md)
 

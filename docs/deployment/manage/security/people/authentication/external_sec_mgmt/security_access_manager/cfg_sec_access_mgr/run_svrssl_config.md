@@ -6,10 +6,10 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
 
 **Additional notes:**
 
--   Prerequisites must be followed prior to executing the following steps. Refer to the Help Center topic [Security Access Manager prerequisites](tam_prereq.md) for more information.
+-   Prerequisites must be followed prior to executing the following steps. Refer to the Help Center topic [Security Access Manager prerequisites](../tam_prereq) for more information.
 -   The updated PD.jar file must also be in place prior to executing the following steps.
 
-1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Enter the following parameters in the wkplc\_comp.properties file; go to the AMJRTE connection parameters heading:
 
@@ -39,7 +39,7 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
 
 3.  Save your changes to the properties file.
 
-4.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+4.  Open a command prompt and change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 5.  Run the following task to create the PdPerm.properties file:
 
@@ -63,13 +63,13 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
 **Related information**  
 
 
-[Configuring Security Access Manager for authentication only](../security/cfg_tam_auth.md)
+[Configuring Security Access Manager for authentication only](/digital-experience/deployment/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access/cfg_tam_auth)
 
-[Configuring Security Access Manager for authorization](../security/tam_setup_esm.md)
+[Configuring Security Access Manager for authorization](../tam_setup_esm)
 
-[Configuring the Credential Vault adapter for Security Access Manager](../security/tam_vault.md)
+[Configuring the Credential Vault adapter for Security Access Manager](../tam_vault)
 
-[Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../security/tam_prov_usrs.md)
+[Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../tam_prov_usrs)
 
-[Enabling user provisioning](../security/usr_prov.md)
+[Enabling user provisioning](/digital-experience/deployment/security/people/authentication/external_sec_mgmt/security_access_manager/usr_prov)
 

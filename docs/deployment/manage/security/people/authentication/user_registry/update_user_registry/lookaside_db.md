@@ -14,7 +14,7 @@ A property extension database stores attributes that the LDAP directory does not
 
     1.  Open a command prompt.
 
-    2.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    2.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
     3.  Run the following task:
 
@@ -33,7 +33,7 @@ A property extension database stores attributes that the LDAP directory does not
 
 |
 
-3.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, read [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+3.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, read [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 4.  Set up a new database. Create a user with the appropriate database privileges for accessing the database. The database user needs to have permissions to create tables in the database schema and permission to access the data in the database tables.
 
@@ -100,7 +100,7 @@ db2 "UPDATE DB CFG FOR dbname using AUTO_MAINT off"
 
 6.  Complete the following steps to define the DbDriver and DbLibrary parameter values:
 
-    1.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+    1.  Go to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
     2.  Open the wkplc\_dbtype.properties file with a text editor.
 
@@ -112,7 +112,7 @@ db2 "UPDATE DB CFG FOR dbname using AUTO_MAINT off"
 
 7.  Specify values for the data source parameters in the wp\_add\_LA.properties file:
 
-    1.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/helpers directory.
+    1.  Go to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/config/helpers directory.
 
     2.  Open the wp\_add\_LA.properties file with a text editor.
 
@@ -140,7 +140,7 @@ db2 "UPDATE DB CFG FOR dbname using AUTO_MAINT off"
 
 8.  Change the value for the com.ibm.SOAP.requestTimeout parameter:
 
-    1.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\properties directory.
+    1.  Go to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\properties directory.
 
     2.  Open the soap.client.props with a text editor.
 
@@ -160,7 +160,7 @@ db2 "UPDATE DB CFG FOR dbname using AUTO_MAINT off"
 
     4.  Open a command prompt.
 
-    5.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    5.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
     6.  Run the following task to create the local Deployment Manager WebSphere variable that is used to access the database JAR files:
 
@@ -190,13 +190,13 @@ db2 "UPDATE DB CFG FOR dbname using AUTO_MAINT off"
 
     If you are not on a remote deployment manager, continue to the next step.
 
-    1.  Copy the following two files from the Portal server to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/work/was/wim/lookaside/ directory location on the remote deployment manager server:
+    1.  Copy the following two files from the Portal server to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/config/work/was/wim/lookaside/ directory location on the remote deployment manager server:
 
         **Note:** If the directory does not exist on the remote server, create it now.
 
         -   /etc/wim/setup/lookaside/bootstrap.sql
         -   /etc/wim/setup/lookaside/keys.sql
-    2.  Copy the following database files from the Portal server to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/work/was/wim/lookaside/database/ directory on the remote deployment manager server:
+    2.  Copy the following database files from the Portal server to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/config/work/was/wim/lookaside/database/ directory on the remote deployment manager server:
 
         **Note:** If the directory does not exist on the remote server, create it now.
 

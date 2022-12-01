@@ -2,7 +2,7 @@
 
 Map the attributes between HCL Digital Experience and your LDAP user registries.
 
-1.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Enter values for the following set of parameters to identify your LDAP server:
 
@@ -25,7 +25,7 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
     -   IBM® i: ConfigEngine.sh wp-validate-federated-ldap-attribute-config -DWasPassword=password
     -   Windows™: ConfigEngine.bat wp-validate-federated-ldap-attribute-config -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh wp-validate-federated-ldap-attribute-config -DWasPassword=password
-4.  Open the ConfigTrace.log file, in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\log directory. Review the following output for the PersonAccount and Group entity type:
+4.  Open the ConfigTrace.log file, in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\log directory. Review the following output for the PersonAccount and Group entity type:
 
     -   **The following attributes are defined in HCL Portal but not in the LDAP server**
 
@@ -78,7 +78,7 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
     -   IBM i: ConfigEngine.sh wp-update-federated-ldap-attribute-config -DWasPassword=password
     -   Windows: ConfigEngine.bat wp-update-federated-ldap-attribute-config -DWasPassword=password
     -   z/OS: ./ConfigEngine.sh wp-update-federated-ldap-attribute-config -DWasPassword=password
-9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, go to [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
 
 10. Complete the following steps to flag an attribute as either unsupported or required for the entire HCL Portal environment instead of just for the specified LDAP:
 
@@ -100,7 +100,7 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
 
 
 
-**Previous topic:**[Adding attributes](../install/add_attributes.md)
+**Previous topic:**[Adding attributes](../add_attributes)
 
-**Next topic:**[Removing attributes](../install/remove_attr_def.md)
+**Next topic:**[Removing attributes](../remove_attr_def)
 

@@ -95,14 +95,14 @@ For example, you can set up the following configurations:
         -   You can also assign virtual portal administrators access to libraries they did not create by editing the access settings of individual libraries.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Usage scenarios for virtual portals](../vp_overview/advpuscn_usage.md)
     - [Securing](../../../deployment/manage/security/index.md)
     - [Configuring](../../search/manage_search/search_collection/creating_content_source/configuring.md)
     - [Realm support](../../../get_started/plan_deployment/traditional_deployment/user_registry_consideration/plan_realm.md)
-    - [Controlling access](../../../deployment/manage/security/controlling_access/index.md)
+    - [Controlling access](../../../deployment/manage/security/people/authorization/controlling_access/index.md)
     - [Virtual Member Manager integration](../../../get_started/plan_deployment/traditional_deployment/user_registry_consideration/plan_vmm_int.md)
-    - [Adding realm support](../../../deployment/manage/security/user_registry/cfg_realm.md)
+    - [Adding realm support](../../../deployment/manage/security/people/authentication/user_registry/cfg_realm.md)
     - [Managing the users of virtual portals](../adm_vp_task/vp_adm_task/managing_users_vp/index.md)
     - [Portal Access Control with virtual portals](../vp_planning/vp_roles/advppln_roles_pac4vp.md)
 

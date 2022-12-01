@@ -1,8 +1,4 @@
----
-id: h_cred_fields
-title: Field descriptions for the Credential Vault portlet
----
-
+# Field descriptions for the Credential Vault portlet
 
 
 

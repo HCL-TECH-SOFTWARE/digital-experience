@@ -16,7 +16,7 @@ HCL Portal accesses all user repositories through VMM. HCL Portal uses the Porta
 -   *Repository SPI \(System programming interfaces for virtual member manager adapters\)*
 -   *Sample custom adapters for federated repositories examples*
 
--   **[Creating and updating federated repositories](../security/setup_mgmt_cur_fed.md)**  
+-   **[Creating and updating federated repositories](../customer_user_repo/create_update_fed_repo)**  
 You can define additional repositories as required for the out-of-box federated repositories user registry. For example, you can define one or more databases and/or LDAP directories for the user registry. Federated repositories also let you implement multiple realms. Realms define subsets of users and are spread across multiple repositories. For example, you can define one realm in a file-based repository and another realm in an LDAP directory. Because WebSphere Application Server provides an implementation of the UserRegistry interface for federated repositories out-of-box, you do not need to create a custom implementation of this interface.
 
 

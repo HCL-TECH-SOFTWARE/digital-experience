@@ -8,7 +8,7 @@ You can add static content, such as HTML markup and images, directly to theme.ht
 
 ## Adding content from WebDAV
 
-You can add content that is in WebDAV relative to theme.html with a relative URL reference. For example, your CSS and JavaScript files are usually external to the theme.html file. You can implement them as contributions to a module by referencing the external files in a JSON file in the contributions directory, or you can implement them as simple modules. Go to [Modules and profiles](themeopt_themedev_modules_profiles.md#) to learn more about modules.
+You can add content that is in WebDAV relative to theme.html with a relative URL reference. For example, your CSS and JavaScript files are usually external to the theme.html file. You can implement them as contributions to a module by referencing the external files in a JSON file in the contributions directory, or you can implement them as simple modules. Go to [Modules and profiles](../themeopt_themedev_modules_profiles.md) to learn more about modules.
 
 ## Adding content by relative URLs
 

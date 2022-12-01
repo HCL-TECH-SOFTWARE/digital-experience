@@ -20,7 +20,7 @@ Resources might be in different domains depending on the type of resource. JCR n
 
 Next are illustrations of the available resources tree, first for the release domain, and second for the JCR domain.
 
-![This graphic is an available resource tree for the release domain.](../images/resource_hierarchy.jpg)
+![This graphic is an available resource tree for the release domain.](/digital-experience/images/resource_hierarchy.jpg)
 
 The following illustration shows the hierarchy of resources in the JCR domain. These resources are related to Personalization, Web Content Manager, and Resources Policies.
 
@@ -28,7 +28,7 @@ The following illustration shows the hierarchy of resources in the JCR domain. T
 
 Resource Permission inheritance applies to this hierarchy and to the release domain. Permission granted on the JCR Content Root node are propagated to all children in the hierarchy. Use Policies, Web Content Manager Libraries, Inheritance, and Propagation role blocks to reduce this propagation of permissions to children in the hierarchy.
 
-![This graphic shows that permissions granted on the JCR Content Root node are propagated to the children in the hierarchy](../images/resource_hierarchy_jcr.jpg)
+![This graphic shows that permissions granted on the JCR Content Root node are propagated to the children in the hierarchy](/digital-experience/images/resource_hierarchy_jcr.jpg)
 
 A different user interface is provided to administer access control for each type of resource in the JCR domain. The following list shows the path to take within HCL Portal to reach the access control portlet for each resource stored in the JCR domain:
 
@@ -152,7 +152,7 @@ The following information describes virtual resources. The resources listed migh
     Users can update and modify the portal theme.
 
 
--   **[Role blocks for resources](../admin-system/sec_blockroles.md)**  
+-   **[Role blocks for resources](../resources/sec_blockroles.md)**  
 Role blocks prevent inheritance and propagation through the resource hierarchy. This topic describes role blocks and provides examples of how role blocks affect resources.
 
 

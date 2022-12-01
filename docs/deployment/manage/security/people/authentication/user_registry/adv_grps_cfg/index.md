@@ -52,9 +52,9 @@ Set the federated.ldap.gc.name and federated.ldap.gc.scope properties before you
 -   wp-create-ldap
 -   wp-create-ldap-groupconfig
 
--   **[Updating the group membership configuration](../security/groupconfig.md)**  
+-   **[Updating the group membership configuration](../adv_grps_cfg/groupconfig.md)**  
 The initial federated repositories setup might not include the advanced set up for the group membership attribute. You can configure the group membership attribute after the initial setup. Specify the properties in the wkplc.properties file and then run the wp-create-ldap-groupconfig task manually.
--   **[Configuring HCL Portal to use dynamic groups](../install/ldap_dyngrp.md)**  
+-   **[Configuring HCL Portal to use dynamic groups](../adv_grps_cfg/ldap_dyngrp.md)**  
 By default, HCL Digital Experience is enabled for static groups. However, the Virtual Member Manager \(VMM\) allows users to be members of either static or dynamic groups. Static groups have a persistent binding between a group and its members. Dynamic groups have a search query that is defined to retrieve the members of a group.
 
 
