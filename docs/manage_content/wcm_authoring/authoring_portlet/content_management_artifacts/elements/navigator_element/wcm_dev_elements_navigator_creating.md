@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_navigator_creating
-title: Creating a navigator component
+title:  navigator component
 ---
 
 # Creating a navigator component

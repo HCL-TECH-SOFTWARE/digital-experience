@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_search_props
-title: Creating a search results design
+title:  search results design
 ---
 
 # Creating a search results design

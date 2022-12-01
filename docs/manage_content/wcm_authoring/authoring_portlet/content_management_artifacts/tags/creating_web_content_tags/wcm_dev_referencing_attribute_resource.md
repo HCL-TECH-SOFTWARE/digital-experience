@@ -1,6 +1,5 @@
 ---
-id: wcm_dev_referencing_attribute_resource
-title: Creating an attribute resource tag
+title: Attribute resource tag
 ---
 
 

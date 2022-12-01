@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_profiling_categories_creating
-title: Creating a category
+title: Categories
 ---
 
 # Creating a category

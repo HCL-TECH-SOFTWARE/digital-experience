@@ -434,6 +434,6 @@ public class LocaleDependantSelectionFilter implements ContentPageResolutionFilt
 
 
 Related information:
-   - [Setting up a web content fallback page](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/mp_wcm_fallback.md)
-   - [Dynamic web content page selection](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/mp_wcm_dynamicpage.md)
+   - [Setting up a web content fallback page](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_dx/customizing_content/mp_wcm_fallback.md)
+   - [Dynamic web content page selection](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_dx/advance_adm_sample/mp_wcm_dynamicpage.md)
 

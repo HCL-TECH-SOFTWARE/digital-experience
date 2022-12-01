@@ -30,7 +30,7 @@ The following table lists the configuration services:
 |[Portlet Container Service](../service_config_properties/portal_svc_cfg/srvcfgref_ptlt_container.md).|WP PortletContainerService|PortletContainerService.properties|
 |[Project Identification Service](../service_config_properties/portal_svc_cfg/srvcfg_projectid.md)|WP ProjectIdentificationService|ProjectIdentificationService.properties|
 |[Registry Service](../service_config_properties/portal_svc_cfg/srvcfgref_registry.md)|WP RegistryService|RegistryService.properties|
-|[State Manager Service](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/index.md) See also [URL normalization for search of portal pages by external search engines](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/srvcfgref_url_normlz.md)|WP StateManagerService|StateManagerService.properties|
+|[State Manager Service](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/index.md)<br> See also [URL normalization for search of portal pages by external search engines](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/srvcfgref_url_normlz.md)|WP StateManagerService|StateManagerService.properties|
 |[Virtual Portal Configuration Service](../service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)|WP VirtualPortalConfigService|VirtualPortalConfigService.properties|
 
 |HCL Portal security service|Service name in the WebSphere Integrated Solutions Console|HCL Portal properties file|

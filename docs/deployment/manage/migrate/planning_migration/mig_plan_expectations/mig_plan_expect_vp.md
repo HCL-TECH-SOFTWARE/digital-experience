@@ -27,5 +27,5 @@ Add the portal administrator to a virtual portal realm:
     -   [Virtual portals](../../../../../build_sites/virtual_portal/index.md)
     -   [Preconfiguring the default content for virtual portals](../../../../../build_sites/virtual_portal/vp_mgr_portlet/preconfig_vp/advp_precfg_content.md)
     -   [Tasks for administering virtual portals](../../../../../build_sites/virtual_portal/adm_vp_task/vp_adm_task/index.md)
-    -   [Adding realm support](../../../../../deployment/manage/security/user_registry/cfg_realm.md)
+    -   [Adding realm support](../../../../../deployment/manage/security/people/authentication/user_registry/cfg_realm.md)
 

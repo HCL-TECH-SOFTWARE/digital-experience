@@ -2,7 +2,8 @@
 
 There might be cases where you upgrade not just to a newer version of HCL Digital Experience but also to a different operating system version. In that case, there might be a different set of system requirements and considerations to keep in mind.
 
-**Important:** Migrating between platforms \(for example, migrating from Windows™ to Linux™\) is not supported.
+!!!important
+    Migrating between platforms (for example, migrating from Windows™ to Linux™) is not supported.
 
 Use the following list as a starting point.
 

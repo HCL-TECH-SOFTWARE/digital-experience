@@ -1,4 +1,4 @@
-# Configuring a web content authoring environment
+# Configure web content authoring environment
 
 Set up the authoring environment by installing the authoring portlet and enabling other features that are required to support the authoring environment.
 

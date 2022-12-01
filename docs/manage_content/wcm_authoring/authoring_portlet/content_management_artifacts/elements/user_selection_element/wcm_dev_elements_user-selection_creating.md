@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_user-selection_creating
-title: Creating a user selection component
+title:  user selection component
 ---
 
 # Creating a user selection component

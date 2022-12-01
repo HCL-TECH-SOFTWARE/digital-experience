@@ -32,4 +32,4 @@ The deployed portlets must be activated before they can be used. Activation cann
 5.  Uninstall portlets in a clustered environment the same way as in a stand-alone environment. Uninstalling the portlet removes the portlet configuration from the databases and all cluster members share database. Therefore, the uninstalled portlet is unavailable to all other members automatically.
 
 ???+ info "Related information"  
-    -   [How to install the authoring portlet](../../../../../manage_content/wcm_delivery/cfg_webcontent_auth_env/wcm_install_configtasks_authoringportlet.md)
+    -   [How to install the authoring portlet](../../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_install_configtasks_authoringportlet.md)

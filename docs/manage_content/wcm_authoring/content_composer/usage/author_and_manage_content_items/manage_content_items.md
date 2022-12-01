@@ -95,7 +95,7 @@ Content authors will be able to view and filter comments in HCL Content Composer
 
 3.  Once the action is completed, the **Comments** icon will now be available on the right-side navigation. Click **Comments** to see the workflow comments.
 
-    ![View selected Content's comments](../../../../../images/View%20selected%20Content's%20comments.png")
+    ![View selected Content's comments](../../../../../images/View%20selected%20Content's%20comments.png)
 
 4.  Click the dropdown button to filter the workflow comments according to time period as shown below. In this example, selecting **Today** will display all comments made on the current date.
 

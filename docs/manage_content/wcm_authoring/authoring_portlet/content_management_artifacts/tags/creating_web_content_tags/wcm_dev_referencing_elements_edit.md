@@ -1,4 +1,4 @@
-# Creating an editable element tag
+# Editable element tag
 
 The editable element tag is used to make elements from content items and site areas editable when rendered by using a web content viewer portlet when the page is in edit mode.
 
@@ -78,6 +78,6 @@ For example:
     The context settings of portalContext and portalMapping cannot be used with the editable element tag. This restriction applies both to the editable element tag itself, and any other tags that are referenced between the `[EditableElement]` and `[/EditableElement]` tags.
 
 ???+ info "Related information:"
-    - [Inline editing](../../../wcm_content_delivery/wcm_inline_editing/index.md)
-    - [Enabling inline editing for content items](../../../wcm_content_delivery/wcm_inline_editing/inline_editing/wcm_dev_inline_tags.md)
+    - [Inline editing](../../../../inline_editing/index.md)
+    - [Enabling inline editing for content items](../../../../inline_editing/wcm_dev_inline_tags.md)
 

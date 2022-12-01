@@ -14,7 +14,7 @@ To provide or withdraw a portlet for WSRP services, you can use either of the fo
 
 
 ???+ info "Related information"  
-    -   [Enabling remote rendering with WSRP and the Web Content Viewer](../../../../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/index.md)
+    -   [Enabling remote rendering with WSRP and the Web Content Viewer](../../../../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_dx/enable_remote_render_wsrp/index.md)
     -   [Working with the XML configuration interface](../../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
     -   [The XML configuration interface](../../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
 
