@@ -54,7 +54,7 @@ sessionvalidation.filterchain = colon or semicolon-separated list of fully quali
 ```
 
 !!!note
-   Use the properties to specify only the custom filter elements, as the default filter implementation is added implicitly by the Portal infrastructure. Thus, by default no value is set for the properties.
+      Use the properties to specify only the custom filter elements, as the default filter implementation is added implicitly by the Portal infrastructure. Thus, by default no value is set for the properties.
 
 In addition, you can set properties in the portal WP Authentication Service according to the following pattern:
 
@@ -134,8 +134,8 @@ The following gives an example of a custom filter plugged into the filter chain 
 The new filter for the explicit login is now available. Users who are defined in the properties will be redirected to the specified URL after they log in through the login portlet or login URL.
 
 ???+ info "Related information" 
-   -  [Authentication Service](../admin-system/srvcfgref_secy_auth.md)
-   -  [Configuring Integrator for SAP](../admin-system/sap_int_cfg.md)
-   -  [Configuring Basic Authentication for SSO for the SAP navigation integration](../admin-system/sap_int_cfg_basauth_sso_4nav.md)
-   -  [Page properties for configuring the SAP navigation integration](../admin-system/sap_int_cfg_parms_4nav.md)
+      -  [Authentication Service](../admin-system/srvcfgref_secy_auth.md)
+      -  [Configuring Integrator for SAP](../admin-system/sap_int_cfg.md)
+      -  [Configuring Basic Authentication for SSO for the SAP navigation integration](../admin-system/sap_int_cfg_basauth_sso_4nav.md)
+      -  [Page properties for configuring the SAP navigation integration](../admin-system/sap_int_cfg_parms_4nav.md)
 

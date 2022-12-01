@@ -4,7 +4,7 @@ Enhanced Cross Origin Resource Sharing Configuration adds new options for HCL Di
 
 ## Introduction
 
-CORS stands for "[Cross Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)" and describes a pattern on how to share data between different source origins for JavaScript. There is high demand within the Web Community to mashup services and combine them in a common UI. Up until this option, Web browsers did not allow requests to systems to be send across Origin borders. CORS changes this paradigm and now pushes the responsibility for such verifications to the Web server. To support this, the server side needs to differentiate if the incoming request is trusted and should be processed, or if it should be blocked.
+CORS stands for [Cross Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) and describes a pattern on how to share data between different source origins for JavaScript. There is high demand within the Web Community to mashup services and combine them in a common UI. Up until this option, Web browsers did not allow requests to systems to be send across Origin borders. CORS changes this paradigm and now pushes the responsibility for such verifications to the Web server. To support this, the server side needs to differentiate if the incoming request is trusted and should be processed, or if it should be blocked.
 
 ## How to work with CORS in HCL DX
 
