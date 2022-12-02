@@ -13,7 +13,7 @@ Before you start the more detailed planning, here are some additional migration 
 -   Deprecated functionality.
 -   Vendor software unique to your environment and how it might interact with the new version of HCL Digital Experience.
 
--   **[Roadmaps for migration](rm_migration/index.md)**
+-   **[Roadmaps for migration](rm_migration/index.md)**<br>
 Choose the appropriate migration roadmap for your environment.
 -   **[Supported migration paths](mig_plan_supported_paths.md)**  
 Migration is supported between equivalent HCL Digital Experience offerings.
