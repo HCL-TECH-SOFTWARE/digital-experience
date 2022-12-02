@@ -70,7 +70,7 @@ For details about setting portal configuration properties see the topic about Se
 
 The following gives an example of a custom filter plugged into the filter chain for the explicit Portal login. The custom filter holds properties that define particular redirect URLs for particular user IDs and triggers the corresponding redirect if one of those users who are logged in successfully. To implement such an example, proceed by the following steps:
 
-1.  Implement the **com.ibm.portal.auth.ExplicitLoginFilter** interface and make your class available to the portal class path. See the topic [Extending HCL Portal class path](../dev/ext_wp_classpath.md) for where to place your compiled custom code on the Portal filesystem. Refer to the following sample code as an example to implement the methods of the interface:
+1.  Implement the **com.ibm.portal.auth.ExplicitLoginFilter** interface and make your class available to the portal class path. See the topic [Extending DX class path](../../../../extend_dx/development_tools/ext_wp_classpath/ext_wp_classpath.md) for where to place your compiled custom code on the Portal filesystem. Refer to the following sample code as an example to implement the methods of the interface:
 
     ```
     package com.ibm.portal.example;
