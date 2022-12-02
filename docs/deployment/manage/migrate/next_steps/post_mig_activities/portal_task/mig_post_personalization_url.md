@@ -8,7 +8,8 @@ If you migrated from Portal Version 7.0 to HCL Digital Experience 8.5 with a CF0
 
 3.  Delete the URL Mapping for **Personalization**.
 
-    **Note:** Do not delete the **PZN** entry for PZN mapping on the list.
+    !!!note
+        Do not delete the **PZN** entry for PZN mapping on the list.
 
 
 
