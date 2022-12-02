@@ -325,8 +325,8 @@ If you are setting up a cluster environment, you can use the Create a Deployment
 
 
 ???+ info "Related information"  
-    -   [Configuration Wizard: Setting up a stand-alone server](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/usage/cw_standalone.md)
-    -   [Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    -   [Configuration Wizard: Setting up a stand-alone server](../../portal_admin_tools/cfg_wizard/usage/cw_standalone.md)
+    -   [Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
     -   [Updating DB2 self-tuning memory manager (STMM) settings](../../../../deployment/manage/migrate/next_steps/post_mig_activities/db_task/mig_t_post_db2_stmm.md)
     -   [Manual Steps: Database Transfer option in the Configuration Wizard](../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/index.md)
 
