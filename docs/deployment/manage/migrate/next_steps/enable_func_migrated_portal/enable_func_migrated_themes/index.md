@@ -14,7 +14,7 @@ When migrating themes that were developed in an earlier version, you must be awa
 You can use the new device classes and equation support to modify your themes from previous versions so they are more efficient.
 -   **[Removing the Portal 8.0 site toolbar from a Portal 8.0 theme](themeopt_cust_toolbar_remove.md)**  
 To use the new site toolbar of HCL Digital Experience 8.5 within a Portal 8.0 theme, you must first remove the existing toolbar that comes with your Portal 8.0 theme.
--   **[Add the HCL Portal 8.5 site toolbar to a Portal 8.0 theme](themeopt_cust_toolbar_theme.md)**  
+-   **[Add the HCL Portal 8.5 site toolbar to a Portal 8.0 theme](add_85_toolbar/index.md)**  
 You can easily add the modularized site toolbar of HCL Digital Experience 8.5 to a HCL Portal 8.0 theme. Or, you can add a toolbar to a custom theme that is derived from the HCL Portal 8.0 theme. The theme must be a modularized theme, which supports theme profiles and theme modules.
 -   **[Updating your theme to use simple context menus](mig_t_enable_simplemenus.md)**  
 The theme context menu framework that is provided with the module wp\_theme\_menus in Portal 8.0 and earlier versions is relabeled and improved in HCL Digital Experience 8.5. The new Simple Menu Framework is compatible with all previous versions of the wp\_theme\_menus.
