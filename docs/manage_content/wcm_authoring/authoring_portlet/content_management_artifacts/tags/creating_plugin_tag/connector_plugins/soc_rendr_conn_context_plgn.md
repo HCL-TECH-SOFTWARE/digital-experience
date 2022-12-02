@@ -115,6 +115,6 @@ Examples:
     ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Extending social lists by using the digital data connector](../../../../../../../build_sites/social_rendering/extending_social_lists_using_ddc/index.md)
 

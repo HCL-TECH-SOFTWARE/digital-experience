@@ -85,6 +85,6 @@ Use a pattern to determine an issue within your custom modules. This pattern min
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Logging and tracing](../../../../deployment/manage/troubleshooting/logging_and_tracing/index.md)
 

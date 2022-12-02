@@ -21,7 +21,7 @@ The following list shows some of the deprecated parameters and the new parameter
 -   `-targetServerProfileName` replaced by `-targetDxProfileName`
 
 
-<!--- ???Info "Related information:"
+<!--- ???Info "Related information"
 
 [How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
 

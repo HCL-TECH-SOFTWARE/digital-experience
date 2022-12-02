@@ -108,6 +108,6 @@ The following list shows the set of list-rendering profile entry keys that are a
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating list-rendering profiles](../../working_with_list_rendering_profiles/plrf_crt_lr_profiles.md)
 

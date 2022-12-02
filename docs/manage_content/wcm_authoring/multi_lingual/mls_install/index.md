@@ -16,6 +16,6 @@ It is important to consider the additional load that is placed on the authoring 
 The default context root for the multilingual solution application is /wps. With Version 8.5 CF3, you can change this setting to match the HCL Portal context root to better suit the requirements of your organization.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Installing the multilingual extensions](../mls_extension/wcm_mls_install.md)
 

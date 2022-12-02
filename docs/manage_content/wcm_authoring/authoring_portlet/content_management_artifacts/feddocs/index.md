@@ -14,7 +14,7 @@ Create a selection rule that selects metadata of documents that are contained in
 To access the information from a federated documents rule in your web content system, create a personalization component, associate it with the rule, and specify the design for displaying document information that is retrieved by the rule.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configure federated documents feature for files](../../../../../extend_dx/integration/connections/configuration/cfg_connections_features/integrating_cnx_files/i_coll_t_enable_lcfiles_feddocs.md)
     - [New Web Content Manager features](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/wcm_migration_post_functions.md)
 

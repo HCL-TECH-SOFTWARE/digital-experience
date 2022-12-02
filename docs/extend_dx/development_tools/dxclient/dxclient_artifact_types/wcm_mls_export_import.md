@@ -141,7 +141,7 @@ MLS Import
 ![DXClient MLS import pipeline sample](../../../../images/wcm_mls_exim_import_pipeline.png)
 
 
-<!-- ???Info "Related information:"
+<!-- ???Info "Related information"
 
 
 [Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)

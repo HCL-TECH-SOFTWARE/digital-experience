@@ -33,6 +33,6 @@ When an item reaches the **Localize** or **Regionalize** workflow stage:
 
 
 <!--
-???+ info "Related information:"
+???+ info "Related information"
     - [Rolling out a second locale](../ctc/ctc_deploy_locale_second.md) -->
 

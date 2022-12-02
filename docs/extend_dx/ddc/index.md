@@ -40,7 +40,7 @@ To improve performance, you can tune the caches for the Digital Data Connector \
 Learn about things that are useful to know when you work with the social rendering integration with Digital Data Connector \(DDC\) for HCL Portal.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Social rendering](../../build_sites/social_rendering/index.md)
     - [Concept of the lists of social objects provided with the social rendering feature](../../build_sites/social_rendering/working_with_social_objects/concept_list_social_objects/index.md)
     - [Extending social lists by using the digital data connector](../../build_sites/social_rendering/extending_social_lists_using_ddc/index.md)

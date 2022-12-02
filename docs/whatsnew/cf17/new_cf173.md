@@ -41,7 +41,7 @@ Digital Asset Management delivers a central platform to store and include rich m
 The [HCL Digital Experience 9.5 detailed system support statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514){:target="_blank"} are updated and published on the HCL Digital Experience Support site. You can go to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"} to access and download product software. For more information, see the [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){:target="_blank"}.
 
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Manually syndicating items](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_syndication_manual.md)
     - [How to use REST with Versions](https://help.hcltechsw.com/digital-experience/8.5/wcm/wcm_rest_crud_versions.md)
     - [How to set default content values for content templates by using REST](https://help.hcltechsw.com/digital-experience/8.5/wcm/wcm_rest_crud_cont_temp_default.md)

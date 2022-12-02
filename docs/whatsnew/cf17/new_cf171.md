@@ -29,7 +29,7 @@ Added support for auto-scaling based on available CPU and memory utilization and
 You can go to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"} to access and download product software. See the [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){:target="_blank"} for more information.
 
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Docker deployment](../containerization/docker.md#ul_ljm_44t_bkb)
     - [OpenShift deployment](../containerization/openshift.md)
     - [Deploy HCL Digital Experience 9.5 Container to Amazon EKS](../containerization/kubernetes_eks.md)

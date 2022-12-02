@@ -62,6 +62,6 @@ The Theme Optimization Analyzer portlet which is part of the Portal administrati
 The Theme Optimization Analyzer portlet which is part of the Portal administration gives users the ability to clear theme related caches.
 
 
-???+ info Related information:"
+???+ info Related information"
     - [Resource Aggregator overview](../../themeopt_reso_agg.md)
 

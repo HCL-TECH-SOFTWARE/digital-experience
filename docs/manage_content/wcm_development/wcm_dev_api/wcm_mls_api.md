@@ -263,6 +263,6 @@ The following MLS APIs are available (as of HCL Digital Experience 9.5 Container
 
 
 
-    Related information:
+    Related information
     - [HCL Web Content Manager Multilingual Solution](../../../wcm_content_delivery/mls/index.md)
 

@@ -17,6 +17,5 @@ These options are added to the ones that are described in *Configuring the Tag C
 
 
 ???+ info "Related information"
-    - [Using the portal Tag Cloud with lists of social objects](../using_portal_tagcloud_with_social_objects/index.md)
-    - [Configuring the tag cloud](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/tag_center/tag_cloud/tag_cloud_cfg.md)
+    - [Configuring the tag cloud](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tagrate_managing/tag_center/tag_cloud/tag_cloud_cfg.md)
 

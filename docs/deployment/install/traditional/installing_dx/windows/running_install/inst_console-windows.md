@@ -146,10 +146,10 @@ The installation program verifies the operating system and its prerequisites, av
     !!! restriction 
         There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
-24. Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
+24. Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
     !!! note
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](https://help.hcltechsw.com/digital-experience/8.5/reference/supportedlanguages.html?hl=supported%2Clanguages%2Chcl%2Cdigital%2Cexperience) in the HCL Digital Experience Version 8.5 documentation.
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
 
 
 Before you access WebSphere Application Server, configure the software license agreement to set the usage limit from the Proof of Entitlement (POE) or invoice. Go to [Configuring software license information](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.installation.nd.iseries.doc/ae/tins_is_cfglic.html?cp=SSAW57_8.5.5%2F2-5-0-7-1) for information.

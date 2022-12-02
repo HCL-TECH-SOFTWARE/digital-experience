@@ -41,7 +41,7 @@ When a web page is rendered by Web Content Manager, some tags might be rewritten
 -   Tagged web content that is displayed in the Web Content Viewer is only available when there is a single instance of the portlet on the page. When you click a tag result, the Tag Center broadcasts the information about what content to display by using a public render parameter. If you are displaying multiple instances of content in the viewer, the instances show the content that you tagged rather than their original content.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Adding a wiki to a page](../../../../../build_sites/create_sites/developing_managing_content/wikis/wiki_add.md)
     - [Adding existing wikis to a page](../../../../../build_sites/create_sites/developing_managing_content/wikis/wiki_add_existing.md)
     - [Adding existing blogs or blog libraries to a page](../../../../../build_sites/create_sites/developing_managing_content/blogs/blog_add_existing.md)

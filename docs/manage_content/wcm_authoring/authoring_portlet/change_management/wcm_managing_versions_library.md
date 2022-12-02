@@ -28,6 +28,6 @@ You can restore a set of items within a library that either have the same label 
 **Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)-->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [How to manage versions of items](./versions.md)
 

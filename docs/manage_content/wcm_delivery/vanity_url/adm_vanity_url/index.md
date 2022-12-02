@@ -19,6 +19,6 @@ Vanity URLs are stored as part of the page in the JCR database in the portal pag
 You can configure how the portal behaves if a user tries to access an undefined vanity URL.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Syndication and staging](../../../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)
 

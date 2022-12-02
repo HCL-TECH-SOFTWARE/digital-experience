@@ -41,7 +41,7 @@ This sample shows how to pull DXClient docker image from the given artifactory, 
 ![Sample pipeline for the DXClient Docker image file](../../../images/dxclient-sample-pipeline-using-docker-zip-file2.png)
 ![Sample pipeline for the DXClient Docker image file](../../../images/dxclient-sample-pipeline-using-docker-zip-file3.png)
 
-<!-- ???Info "Related information:" 
+<!-- ???Info "Related information" 
 
 [How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
 

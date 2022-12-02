@@ -519,7 +519,7 @@ When you use REST with components or elements, use these content formats. These 
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
    - [How to use REST with components](../wcm_rest/wcm_rest_mng_content/wcm_rest_crud_component.md)
    - [How to use REST with elements before version 8.5 CF03](../wcm_rest/wcm_rest_mng_content/wcm_rest_crud_element.md)
 

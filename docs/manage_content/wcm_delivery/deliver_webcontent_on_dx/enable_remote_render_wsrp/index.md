@@ -43,7 +43,7 @@ Cross-origin resource sharing \(CORS\) describes a mechanism for supporting requ
 The Enabler from the Mashups 3.0.0.1 component that is included in HCL Digital Experience as a theme module implements some features that are specified by the OpenAjax Alliance. One of them is a generic override for Dojo XMLHttpRequests.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Web Content Viewers](../getting_started/wcm_deploy_wcmviewer_about.md)
     - [WSRP services](../../../../../../extend_dx/development_tools/wsrp/index.md)
     - [Providing WSRP services as a Producer](../../../../../../extend_dx/development_tools/wsrp/portal_wsrp_producer/providing_wsrp_services_as_producer/index.md)

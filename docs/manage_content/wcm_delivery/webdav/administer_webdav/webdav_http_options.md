@@ -44,6 +44,6 @@ To enable this WAR file, adapt the application.xml files of the deployed Enterpr
 
 
 <!---
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuring HCL Sametime Proxy](../collab/cfg_st_single_ldap.md)--->
 

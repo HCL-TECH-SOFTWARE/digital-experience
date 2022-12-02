@@ -22,7 +22,7 @@ Page-based access control affects only the access control enforcement that is tr
         -   Editor @ wcm\_page, where wcm\_page represents the web content page for which you want to enable page-based access.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Web content associations](../getting_started/wcm_delivery_contentmap_about.md)
     - [Creating a web content page](../displaying_content/mp_wcm_createpage.md)
 

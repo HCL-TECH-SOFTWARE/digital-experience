@@ -21,6 +21,6 @@ Updates occurring on the remote content management system might not immediately 
 The user-specific document list cache is explicitly invalidated each time the user logs in, so that the most current list of available document identifiers is available upon login.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

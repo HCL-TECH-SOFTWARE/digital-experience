@@ -105,7 +105,7 @@ This plug-in uses the following attributes:
     ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../extend_dx/ddc/index.md)
     - [Sending data to the Web Content Viewer portlet](../../../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/index.md)
     - [Receiving the result of an HTML form submission](../../../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/plrf_sendata2wcv_receivhtmlform.md)

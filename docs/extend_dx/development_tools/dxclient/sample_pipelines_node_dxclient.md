@@ -40,7 +40,7 @@ This topic describes how to install the DXClient tool in a pipeline, by providin
 ![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file2.png)
 ![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file3.png)
 
-<!-- ???Info "Related information:"
+<!-- ???Info "Related information"
 
 [How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
 

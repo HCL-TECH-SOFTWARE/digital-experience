@@ -53,6 +53,6 @@ To enable this extension:
         -   Set "**Broadcast links to**" to "**This Page**".
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Web content associations](../../../wcm_delivery/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md)
 

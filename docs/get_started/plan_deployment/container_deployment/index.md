@@ -79,5 +79,5 @@ This topic provides information to apply container scaling capabilities, and how
 This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.
 
 
-<!--- ??? info "Related information:"
+<!--- ??? info "Related information"
     - [HCL DX dxctl process](../operator-based/dxtools_dxctl.md) --->

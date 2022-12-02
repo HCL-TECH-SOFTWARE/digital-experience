@@ -29,6 +29,6 @@ Before you decide on a portal installation with multiple virtual portals, you ne
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Separating and sharing resources between virtual portals](../vp_planning/advppln_scope.md)
 

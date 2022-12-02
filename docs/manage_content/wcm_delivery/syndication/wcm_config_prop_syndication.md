@@ -52,6 +52,6 @@ For example, to enable SSL for syndication where the server is configured to pro
 If self-signed certificates are used, extra steps may be necessary to ensure the certificates that are exchanged are trusted on both servers. See the "SSL Configurations" topic in the WebSphere Application Server documentation.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

@@ -116,7 +116,7 @@ The following sections describe how the administrators can create and manage bac
 
         HCL Digital Experience has successfully tested the volume snapshot and CSI volume cloning methods with HCL Digital Experience 9.5 container deployments. It is recommended that customers perform the additional testing if they are using options Step 2 and Step 3 to manage the wp_profile backup.
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
    - [Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md)
    - [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md)
    - [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html) -->
