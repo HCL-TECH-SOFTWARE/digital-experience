@@ -342,7 +342,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         
         -   Retrieve feature added to the [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md).
         
-        -   [Accessing ConfigWizard in container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html)
+        -   [Accessing ConfigWizard in container environment](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
         
         -   Note that a few parameters are deprecated and replaced with new parameters in the DX Core configuration reports. For information, see [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report).
     
