@@ -27,6 +27,9 @@ Click **Back** and **Next** to move back or forward in the Configuration Wizard.
     !!!note
         The wizard user interface might not be available in all languages. If the language is not currently supported, you might see the English version. For details on the supported languages for all of the HCL Digital Experience user interfaces, see [Language support](../../../portal_admin_tools/language_support/index.md).
 
+## Accessing the ConfigWizard admin console in a container environment
+
+Access the ConfigWizard admin console in a container environment from your local system. The ConfigWizard admin console opens to the TCP port number 10203, navigate to the following URL to open the ConfigWizard admin console: https://localhost:10203/ibm/console.
 
 
 ???+ info "Related information"  
@@ -40,7 +43,7 @@ Click **Back** and **Next** to move back or forward in the Configuration Wizard.
     -   [Completing the context root change started during installation](../../../../../deployment/manage/siteurl_cfg/cfg_intr_inst.md)
     -   [Changing the portal URI after an installation](../../../../../deployment/manage/siteurl_cfg/changing_portal_uri_after_install/index.md)
     -   [DB2: Database transfer](../../../../../deployment/manage/db_mgmt_sys/dbtransfer_db2/index.md)
-    -   [Enable federated security](../../../../../deployment/manage/security/user_registry/cw_ldap.md)
+    -   [Enable federated security](../../../../../deployment/manage/security/people/authentication/user_registry/cw_ldap.md)
     -   [Starting and stopping servers, deployment managers, and node agents](../../../../../deployment/manage/stopstart.md)
     -   [Migrate a stand-alone server](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_stand_alone.md)
     -   [Cluster Step 1: Migrate the deployment manager profile](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_cluster_1.md)
