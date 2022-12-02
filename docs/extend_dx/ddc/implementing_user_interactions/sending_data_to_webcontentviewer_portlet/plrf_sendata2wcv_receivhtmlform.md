@@ -12,7 +12,7 @@ The URL generated for the action parameter of the HTTP form controls whether the
 You can then access the session attribute and the render parameter in your web content by using the session attribute rendering plug-in and the render parameter rendering plug-in, respectively. For example, if the data source of a data sink returns JSON data, you can process the data further by using JavaScript that is contained in your web content.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [The action URL plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/portlet_plugins/plrf_rendr_plugin_actionurl.md)
     - [The session attribute plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_session_attrbt.md)
     - [The render parameter plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_parm.md)

@@ -45,6 +45,6 @@ To use a custom workflow with a published page, you must create a page template 
 After you complete this task, you can select the new page template when you create a page in a project, and the custom workflow is automatically used.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Scope of edits](../projects/wcm_mngpages_editscope.md)
 

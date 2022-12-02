@@ -6,6 +6,7 @@ You can configure the Person card to display the business card fields for a sele
 
     -   In a stand-alone environment, use the local WebSphere® Integrated Solutions Console.
     -   If running in a cluster, use the console of the Deployment Manager.
+    
 2.  Start the WebSphere Integrated Solutions Console by entering the URL in the location field of a web browser:
 
     http://example.com:admin\_port/ibm/console

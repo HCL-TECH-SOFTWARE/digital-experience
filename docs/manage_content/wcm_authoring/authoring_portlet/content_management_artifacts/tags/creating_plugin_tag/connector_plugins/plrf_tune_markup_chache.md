@@ -52,7 +52,7 @@ When you use the list rendering cache, you can still have context dependent data
 [Plugin:ListRenderingCache action="render" type="static" elementName=""]
 ```
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Extending social lists by using the digital data connector](../../../../../../../build_sites/social_rendering/extending_social_lists_using_ddc/index.md)
     - [Implementing user interactions](../../../../../../../extend_dx/ddc/implementing_user_interactions/index.md)
     - [Creating the HTML form](../../../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/plrf_sendata2wcv_createhtmlform.md)

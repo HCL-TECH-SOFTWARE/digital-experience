@@ -58,6 +58,6 @@ You can also specify the target site area that you want to be used when the port
 When you add the web content viewer that specifies this `WCM_COPY_CONTENT_RELATIVE_PATH` preference to a page, the portal first creates the specified site area under the default content association of the page. Afterward, the portal copies the web content that is associated with the web content viewer to the specified site area rather than to the default content association.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Customizing the Page Component palette](../../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/index.md)
 

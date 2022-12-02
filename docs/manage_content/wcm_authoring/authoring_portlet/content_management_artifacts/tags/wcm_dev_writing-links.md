@@ -269,7 +269,7 @@ The urlModeOverride parameter is used to override the default URL context when l
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Content as a Service pages](../../../../wcm_delivery/content_as_a_service/cntnt_serv_pgs.md)
     - [Select data format based on MIME type](../../../../wcm_delivery/content_as_a_service/slct_dta_frmt_mime_type.md)
     - [Access Content as a Service](../../../../wcm_delivery/content_as_a_service/index.md)

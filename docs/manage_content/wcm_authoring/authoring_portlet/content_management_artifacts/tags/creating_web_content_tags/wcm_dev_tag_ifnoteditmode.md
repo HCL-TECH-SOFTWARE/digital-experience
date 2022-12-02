@@ -31,6 +31,6 @@ This content is only rendered when in view mode.
 ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Enabling inline editing for content items](../../../../inline_editing/wcm_dev_inline_tags.md)
 

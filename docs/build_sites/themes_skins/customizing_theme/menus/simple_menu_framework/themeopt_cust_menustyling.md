@@ -114,7 +114,7 @@ loadingTemplate: "wpthemeTemplateLoading"
 <!--
 **Parent topic:**[Simple menu framework](../dev-theme/themeopt_cust_menu.md) -->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Client-side framework for simple menus](../simple_menu_framework/themeopt_cust_clientframe.md)
     - [Styles](../../styles/index.md)
 

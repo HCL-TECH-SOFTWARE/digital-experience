@@ -62,6 +62,6 @@ To enable users to use DAM as the source while editing the content, use one of t
 
     ![Image field properties](../../../images/access_DAM_from_WCM_portlet.png)
 
-<!-- ???Info "Related information:"
+<!-- ???Info "Related information"
     - [Configuring a web content authoring environment](../../wcm/wcm_install_cfgauthoring.md)
     - [Digital Asset Management persistence architecture](../../containerization/dam_persistence_architecture.md) -->

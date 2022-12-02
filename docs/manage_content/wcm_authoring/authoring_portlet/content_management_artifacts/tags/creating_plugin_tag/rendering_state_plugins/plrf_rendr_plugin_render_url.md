@@ -146,6 +146,6 @@ The following examples show how you can set render parameters when the form is s
     To read the parameter value, use the following tag in the page to which the form is submitted: `[Plugin:RenderParam key="CUSTOM_CONTEXT"]`
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../extend_dx/ddc/index.md)
 

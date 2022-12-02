@@ -169,7 +169,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 
 ![Pipeline DXClient deploy script application sample](../../../images/pipeline_deploy_theme_sample.png)
 
-<!-- ???Info "Related information:"
+<!-- ???Info "Related information"
 
 
 [How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)

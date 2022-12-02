@@ -27,6 +27,6 @@ Enablement of Java 2 security on the portal server can affect the operation of p
 
 
 ???+ info "Related information"
-    - [Java 2 security](../../deployment/manage/security/sec_java2.md)
+    - [Java 2 security](../../deployment/manage/security/information/integrity/sec_java2.md)
     - [Standard portlet API](../portlets_development/standard_portlet_api/index.md)
 

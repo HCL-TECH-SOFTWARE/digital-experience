@@ -68,7 +68,7 @@ To be able to use such short vanity URLs, you must use a web server. For details
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Getting started with the Web Application Bridge](../../../../../extend_dx/integration/wab/wab/h_wab_first.md)
     - [Integrating with web applications](../../../../../extend_dx/integration/wab/index.md)
     - [Vanity URLs](../../vanity_url/index.md)

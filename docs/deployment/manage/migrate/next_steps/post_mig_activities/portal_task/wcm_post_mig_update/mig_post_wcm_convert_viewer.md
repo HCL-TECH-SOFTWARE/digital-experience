@@ -24,7 +24,8 @@ The Web Content Viewer portlet that is based on the Portlet API was removed from
 
 3.  To convert the instances of the Portlet API Web Content Viewer portlet to the JSR 286 Web Content Viewer portlet, follow the steps that are given at [Converting a Portal API Web Content Viewer to the JSR 286 API](migrt_ptlt_api_wcm.md).
 
-    **Important:** If you use clones of the Portlet API Web Content Viewer portlet, you must also convert their instances.
+    !!!important
+        If you use clones of the Portlet API Web Content Viewer portlet, you must also convert their instances.
 
 4.  After you replace all instances of the Portlet API Web Content Viewer portlet and of its portlet clones, uninstall the ilwwcm-localrendering-portlet.war web module.
 

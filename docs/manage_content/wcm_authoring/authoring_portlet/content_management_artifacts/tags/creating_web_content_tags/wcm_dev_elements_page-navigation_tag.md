@@ -35,6 +35,6 @@ Once you add the tag to your design, you can also add the following parameters t
 |`knowntext=" "` <br> `unknowntext=" "`|These parameters are used when value="unknownPages". For example: <br> <pre>``` [PageInfo value="unknownPages"   knowntext="of" unknowntext="of at least" ] ``` <br> This can be used with other PageInfo tags to render the following: <br> -   When the total number of pages are known: "Page 2 of 5." <br> -   When the total number of pages are unknown: "Page 2 of at least 5."|
 |`start=" "`<br> `end=" "` |The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating a page navigation component](../../elements/page_nav_element/wcm_dev_elements_page-navigation_creating.md)
     - [Page navigation design example](../../elements/page_nav_element/wcm_dev_elements_page-navigation_example.md)

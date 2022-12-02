@@ -46,7 +46,7 @@ If the parent page of the new page has both a system content association with th
 Set page parameters on your web content page templates by using **Page Properties** \> **Advanced** in the Manage Pages portlet or by using **Page** \> **General** \> **Edit Page Properties** \> **Advanced** in the site toolbar.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Content settings](../../../deliver_webcontent_on_dx/editing_wcm_viewer_setting/wcm_config_wcmviewer_hcontent.md)
     - [XML configuration interface and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_xml.md)
     - [Portal Scripting Interface and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_pscript.md)

@@ -10,6 +10,6 @@ This HCL Digital Experience roadmap is ideal for running a portlet and theme dev
 A stand-alone server topology is ideal for a test or small production environment. In this roadmap, the web server, database, and user registry software are distributed to different physical servers.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting up a stand-alone server](../../../../../../deployment/manage/config_standalone.md)
 

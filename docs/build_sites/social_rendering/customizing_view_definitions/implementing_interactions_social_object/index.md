@@ -16,7 +16,7 @@ When you run a createReply action, the forums data sink uses a number of extra f
 When you run a deleteReply action, the forums data sink uses a number of extra form fields.
 --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [The social rendering Digital Data Connector plug-in](../../../social_rendering/extending_social_lists_using_ddc/soc_rendr_bean_lst_prvdr.md)
     - [Sending data to the Web Content Viewer portlet](../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/index.md)
     - [The generic XML Digital Data Connector data sink](../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)

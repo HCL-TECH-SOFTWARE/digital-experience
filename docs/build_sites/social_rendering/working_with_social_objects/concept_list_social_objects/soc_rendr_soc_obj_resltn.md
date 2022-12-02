@@ -43,7 +43,7 @@ If the connections resolver does not find the default page, the final fallback i
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Managing community associations](../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping.md)
     - [Configuring globally how social object links are resolved](../../cfg_global_settings_social_rendering/soc_rendr_cfg_reslv_links.md)
     - [Customizing social list definitions by using inline editing](../../customizing_view_definitions/soc_rendr_cust_socl_list.md)

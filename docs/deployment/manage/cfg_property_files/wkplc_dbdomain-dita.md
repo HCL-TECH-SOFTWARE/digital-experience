@@ -2373,7 +2373,7 @@ The following properties are required to configure the JCR.
 
     -   **Description**
 
-        Database management software to use for the Likeminds domain.
+        Database management software to use for the LikeMinds domain.
 
     -   **Valid values**
 
@@ -2709,7 +2709,7 @@ The following properties are required to configure the JCR.
 
     -   **Description**
 
-        Required for Microsoft SQL Server 2005 and 2008 only. The host name of the Likeminds database.
+        Required for Microsoft SQL Server 2005 and 2008 only. The host name of the LikeMinds database.
 
     -   **Default value**
 

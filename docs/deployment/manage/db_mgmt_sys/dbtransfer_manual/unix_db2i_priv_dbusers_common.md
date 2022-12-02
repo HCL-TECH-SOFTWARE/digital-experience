@@ -20,7 +20,7 @@ Refer to the following locations of the SQL script templates to learn more about
 |Customization|`[PortalServer_root/base/wp.db.impl/config/templates/setupdb/db2_iseries/customization/createConfigRoleForSameSchema.sql`|
 |JCR|`[PortalServer_root/base/wp.db.impl/config/templates/setupdb/db2_iseries/jcr/createConfigRoleForSameSchema.sql`|
 |Feedback|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/feedback/createConfigRoleForSameSchema.sql`|
-|Likeminds|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/likeminds/createConfigRoleForSameSchema.sql`|
+|LikeMinds|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/likeminds/createConfigRoleForSameSchema.sql`|
 
 Refer to the following locations of the SQL script templates for non-schema-owning configuration database user:
 
@@ -31,7 +31,7 @@ Refer to the following locations of the SQL script templates for non-schema-owni
 |Customization|`[PortalServer_root/base/wp.db.impl/config/templates/setupdb/db2_iseries/customization/createConfigRoleForDifferentSchema.sql`|
 |JCR|`[PortalServer_root/base/wp.db.impl/config/templates/setupdb/db2_iseries/jcr/createConfigRoleForDifferentSchema.sql`|
 |Feedback|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/feedback/createConfigRoleForDifferentSchema.sql`|
-|Likeminds|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/likeminds/createConfigRoleForDifferentSchema.sql`|
+|LikeMinds|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/likeminds/createConfigRoleForDifferentSchema.sql`|
 
 ## Required privileges for the runtime database user
 
@@ -53,7 +53,7 @@ Refer to the following locations of the SQL script templates to learn more about
 
 |
 |Feedback|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/feedback/createRuntimeRoleForSameSchema.sql`|
-|Likeminds|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/likeminds/createRuntimeRoleForSameSchema.sql`|
+|LikeMinds|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/likeminds/createRuntimeRoleForSameSchema.sql`|
 
 Refer to the following locations of the SQL script templates to learn more about the specific permissions granted to the non-schema-owning runtime database user:
 
@@ -66,7 +66,7 @@ Refer to the following locations of the SQL script templates to learn more about
 
 |
 |Feedback|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/feedback/createRuntimeRoleForDifferentSchema.sql`|
-|Likeminds|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/likeminds/createRuntimeRoleForDifferentSchema.sql`|
+|LikeMinds|`[PortalServer_root/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/likeminds/createRuntimeRoleForDifferentSchema.sql`|
 
 
 ???+ info "Related information"

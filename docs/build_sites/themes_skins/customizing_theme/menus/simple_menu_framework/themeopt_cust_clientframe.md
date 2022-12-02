@@ -209,6 +209,6 @@ The following is an example of `badgeData`.
 ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Menu styles](../simple_menu_framework/themeopt_cust_menustyling.md)
 

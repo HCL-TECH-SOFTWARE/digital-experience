@@ -16,6 +16,6 @@ You can create a realm that combines users from your various user registries; fo
 -   The user must exist in a user registry and not within the property extension configuration; otherwise, the user cannot be a member of the realm.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Managing the user population for virtual portals](../../../../build_sites/virtual_portal/vp_planning/advppln_mgupop.md)
 

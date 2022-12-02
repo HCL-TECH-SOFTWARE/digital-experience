@@ -192,6 +192,6 @@ In the case where a security proxy is in place in front of the subscriber cluste
 <!--
 **Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md) -->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Syndication](../index.md)
 

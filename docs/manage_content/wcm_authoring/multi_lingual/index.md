@@ -18,7 +18,7 @@ Before you use the multilingual solution, you must deploy, install and configure
 The multilingual solution uses a set of extensions that can be used with existing features to author, manage, and publish your multilingual websites.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Content libraries](../../../build_sites/create_sites/building_website/content_libraries/index.md)
     - [How to translate WCM library content using export and import WCM with DXClient](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
     - [Web Content Manager Multilingual Solution API](../../wcm_development/wcm_dev_api/wcm_mls_api.md)

@@ -45,7 +45,7 @@ If vanity URL support is not enabled and a user tries to access a vanity URL, th
 **Remember:** After you run the enable-vanityurl-support or disable-vanityurl-support task, restart the server. Go to [Starting and stopping servers, deployment managers, and node agents](../../../../../deployment/manage/stopstart.md) for specific instructions.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Troubleshooting pages](../../../../../build_sites/create_sites/website_building_blocks/pages/wcm_mngpages_trouble.md)
     - [How vanity URLs work](../van_url_work.md)
     - [Enabling managed pages](../../../wcm_artifacts/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md)

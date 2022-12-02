@@ -1,4 +1,4 @@
-# Accumulator \| LikeMinds utilities
+# Accumulator | LikeMinds utilities
 
 Use the accumulator utility if you are using the Item Affinity Engine. This utility accumulates the number of times every possible item-to-item combination occurs.
 

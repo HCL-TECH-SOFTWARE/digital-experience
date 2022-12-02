@@ -1,7 +1,5 @@
 # Preparing for content authors
 
-
-
 Before content authors can create content you must prepare your site to be ready for content creation, including preparing the site toolbar, enabling inline editing, and creating templates.
 
 
@@ -21,6 +19,6 @@ You can assign a custom image to an item type in the Page Components palette and
 You can configure site manager by setting portlet preferences for the site manager portlet in Manage Portlets.
 -   **[Creating project templates](site_project_temps.md)**  
 Projects help content authors group and manage changes across the website. As a site administrator, you can create templates for your authors to use.
--   **[Customizing the Web Content Authoring portlet](../../../manage_content/wcm_delivery/wcm_user_assistance/editing_webcontent_portlet/auth_portlet_settings/wcm_cms_authoring_portlet_custom.md)**  
+-   **[Customizing the Web Content Authoring portlet](../../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_cms_authoring_portlet_custom.md)**  
 To customize each Web Content Authoring portlet for the people who use that portlet, you can edit the shared settings of each Web Content Authoring portlet on your authoring system.
 

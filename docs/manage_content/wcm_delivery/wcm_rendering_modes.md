@@ -89,6 +89,6 @@ authoringTemplate.getItemProperties().removeRenderMode("YAML");
 ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Interface AbstractTemplateItemProperties](https://support.hcltechsw.com/csm)
 

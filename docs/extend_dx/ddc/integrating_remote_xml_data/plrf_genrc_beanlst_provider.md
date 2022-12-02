@@ -76,6 +76,6 @@ A list-rendering profile describes the transformation between a specific XML doc
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Outbound HTTP connection](../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/index.md)
 

@@ -12,6 +12,7 @@ The Solution Installer uses the following two methods to check for dependencies:
     -   lowerVersion: This attribute is optional. Only one HCL Portal version value is acceptable for this attribute.
     -   higherVersion: This attribute is optional. Only one HCL Portal version value is acceptable for this attribute.
     -   versions: This attribute is optional. You can add multiple HCL Portal version values for this attribute as a comma-separated list.
+    
     For example, you might add the following information to your sdd.xml file:
 
     ```
@@ -25,6 +26,7 @@ The Solution Installer uses the following two methods to check for dependencies:
     -   fixlevel: This attribute is optional. This attribute is compared against the current installation fix level to determine any dependencies. If the attribute is not set, then it is ignored.
     -   lower: This attribute is optional. Set this value to true if the fixlevel is the lowest version for the current server.
     -   higher: This attribute is optional. Set this value to true if the fixlevel is the highest version for the current server.
+
     For example, you might add the following information to your sdd.xml file:
 
     ```
@@ -40,14 +42,19 @@ The Solution Installer uses the following two methods to check for dependencies:
     -   The Solution Installer assumes that the file is compatible in the following situations:
         -   If the `<serverVersionDependency>` tag is not found in the assembly level sdd.xml file
         -   If the `<serverVersionDependency>` tag exists but has no attributes that are defined
+
     -   The Solution Installer installs the PAA file if the following information is true:
+
         -   The lowerVersion attribute is set and the value is equal to or greater than the current version of HCL Portal.
         -   The higherVersion attribute is set and the current version of HCL Portal is less than or equal to its value.
+
     -   If the versions attribute is set, the Solution Installer installs the PAA file if the current HCL Portal matches one of the values.
     -   If a `<server>` element is included, the PAA file is installed if the following information is true:
+
         -   If version and fixlevel are equal to the current server information
         -   If lower is true, any fix pack level that is greater than fixlevel
         -   If higher is true, any fix pack level that is less than or equal to fixlevel
+
 -   **Black list to block deploying PAA files that must not be deployed**
 
     The Solution Installer checks the blacklist.txt file in the /WebSphere/PortalServer/solutioninstaller/wp.si directory. The blacklist.txt file contains a list of PAA files that HCL Portal cannot deploy. The format for the blacklist.txt file is assemblyname: version\_number. Multiple versions are allowed as a semicolon-separated list; for example: assemblyname: version\_number1;version\_number2.

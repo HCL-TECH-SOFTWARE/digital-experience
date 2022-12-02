@@ -10,14 +10,9 @@ These attributes are a reflection of similar attributes present on the WsAdmin t
 |---------|-----------|--------|-----|
 |wasuser|Contains the user ID to authenticate with the server.|Yes|Global|
 |waspassword|Contains the password that is associated with the wasuser user ID to authenticate with the server.|Yes|Global|
-|conntype|Specifies the type of server connection. The following values are allowed:-   SOAP: Establishes a SOAP connection. This value is the default.
--   NONE: No server connection is used. Instead, a direct connection to the local WebSphere® Application Server configuration repository is used.
-
-|No|Global|
+|conntype|Specifies the type of server connection. The following values are allowed:-   SOAP: Establishes a SOAP connection. This value is the default. <br>-   NONE: No server connection is used. Instead, a direct connection to the local WebSphere® Application Server configuration repository is used.|No|Global|
 |properties|Java properties file containing attributes to set in the JVM System properties. The default is ${EngineInstallLocation}/config/work/was/jacl.properties.|No|Global|
-|script|Provides the location of the deployment script file. This file contains a set of commands to be passed to the WsAdmin script processor. Set the lang attribute to determine the script processor.If not specified, each deployment task assigns a default script location. It is built from the home directory of the configuration engine and a name specific to the task. For example, wplc_deployEar. Refer to the individual task for this name. Set the lang attribute to determine the file extension.
-
-|No|Global|
+|script|Provides the location of the deployment script file. This file contains a set of commands to be passed to the WsAdmin script processor. Set the lang attribute to determine the script processor.If not specified, each deployment task assigns a default script location. It is built from the home directory of the configuration engine and a name specific to the task. For example, wplc_deployEar. Refer to the individual task for this name. Set the lang attribute to determine the file extension.|No|Global|
 |lang|Contains the language to be used to interpret scripts. The supported values are as follows:-   jacl: Use the Jacl interpreter. This value is the default. <br>-   jpython: Use the Java Python interpreter.|No|Global|
 
 ## Framework-specific Attributes
@@ -51,6 +46,7 @@ The following markup tags are supported.
     Use the password markup tag to indicate a portion of text that is to remain hidden (or obscured) whenever the text value is logged. Use `<p>`, `<pw>`, or `<password>` to indicate the beginning of password text. This tag has no attributes. The default is to substitute the string, PASSWORD_REMOVED, for the text value during logging. You can override this value with the log attribute.
 
     -   log: The value that is substituted for the real password during logging of the task. Defaults to PASSWORD\_REMOVED. This attribute is not required.
+
 -   **Upper markup tag**
 
     Use the upper markup tag to force text to uppercase. Use `<u>` or `<upper>` to delimit uppercase text. This tag has no attributes.
@@ -199,18 +195,21 @@ The following markup tags are supported.
 
     -   appName: The name of the application with required library reference. The scope is instance.
     -   libraryName: The name of the library reference. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
 
     -   mode: The mode of the class loader. The scope is instance.
     -   sharedClassloader: Boolean - specifies whether to use a shared class loader. The scope is instance.
+
 -   **Parameters that are specified as nested elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ApplicationLibraryRefCreateImpl class implements this task.
@@ -233,12 +232,14 @@ The following markup tags are supported.
     The following parameter is optional:
 
     -   mode: The mode of the class loader. The scope is instance.
+
 -   **Parameters that are specified as nested elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ApplicationLibraryRefRemoveImpl class implements this task.
@@ -255,6 +256,7 @@ The following markup tags are supported.
     The following parameters are required:
 
     -   mode: The mode to operate the application server class loader in. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -262,12 +264,14 @@ The following markup tags are supported.
     -   cell: Cell scope of resource action. The scope is global.
     -   node: The node scope of resource action. The scope is global.
     -   server: Server scope of resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
 
     A generic attribute parameter for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ApplicationServerClassloaderCreateImpl class implements this task.
@@ -291,12 +295,14 @@ The following markup tags are supported.
     -   cell: Cell scope of resource action. The scope is global.
     -   node: The node scope of resource action. The scope is global.
     -   server: Server scope of resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
 
     A generic attribute parameter for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ApplicationServerClassloaderCreateImpl class implements this task.
@@ -323,12 +329,14 @@ The following markup tags are supported.
     -   node: Node scope of resource action. The scope is global.
     -   required: Boolean - specifies whether the property is required or not. The scope is instance.
     -   server: Server scope of resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ApplicationServerCustomPropertyCreateImpl class implements this task.
@@ -345,6 +353,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   name: The name of the property to remove. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -352,12 +361,14 @@ The following markup tags are supported.
     -   cell: Cell scope of resource action. The scope is global.
     -   node: The node scope of resource action. The scope is global.
     -   server: Server scope of resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
 
     A generic attribute parameter for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ApplicationServerCustomPropertyRemoveImpl class implements this task.
@@ -375,6 +386,7 @@ The following markup tags are supported.
 
     -   libraryName: Tells what library reference to add. The scope is instance.
     -   mode: The mode of the class loader. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -382,12 +394,14 @@ The following markup tags are supported.
     -   cell: Cell scope of resource action. The scope is global.
     -   node: Node scope of resource action. The scope is global.
     -   server: Server scope of resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ApplicationServerLibraryRefCreateImpl class implements this task.
@@ -405,6 +419,7 @@ The following markup tags are supported.
 
     -   libraryName: Tells what library reference to remove. The scope is instance.
     -   mode: The mode of the class loader. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -412,12 +427,14 @@ The following markup tags are supported.
     -   cell: Cell scope of resource action. The scope is global.
     -   node: Node scope of resource action. The scope is global.
     -   server: Server scope of resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ApplicationServerLibraryRefRemoveImpl class implements this task.
@@ -437,6 +454,7 @@ The following markup tags are supported.
     -   datasourcename: Name of the data source. The scope is instance.
     -   j2cresourceadaptorname: The J2C Resource adapter name. The scope is instance.
     -   jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -449,24 +467,29 @@ The following markup tags are supported.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
     -   usecontainer: Use the container. The value must be set to true or false. The scope is instance.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
     customproperty - used to create a custom property under this data source.
 
     -   name: The name of the custom property.
     -   value: The value of the custom property.
+
     connectionpool - used to set the connection pool properties for this data source.
 
     -   name: The name of the connection pool.
     -   value: The value of the connection pool.
+
     relationalresourceadapter - used to set the Relational Resource adapter properties for this data source.
 
     -   name: The name of the relational resource adapter.
     -   value: The value of the relational resource adapter.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.CMPConnectionFactoryCreateImpl class implements this task.
@@ -486,6 +509,7 @@ The following markup tags are supported.
     -   datasourcename: Name of the data source. The scope is instance.
     -   j2cresourceadaptorname: The J2C Resource adapter name. The scope is instance.
     -   jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -498,24 +522,30 @@ The following markup tags are supported.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
     -   usecontainer: Use the container. The value must be set to true or false. The scope is instance.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
     customproperty - used to create a custom property under this data source.
 
     -   name: The name of the custom property.
+
     -   value: The value of the custom property.
+
     connectionpool - used to set the connection pool properties for this data source.
 
     -   name: The name of the connection pool.
     -   value: The value of the connection pool.
+
     relationalresourceadapter - used to set the Relational Resource adapter properties for this data source.
 
     -   name: The name of the relational resource adapter.
     -   value: The value of the relational resource adapter.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.CMPConnectionFactoryRemoveImpl class implements this task.
@@ -533,6 +563,7 @@ The following markup tags are supported.
 
     -   datasourcename: Name of the data source. The scope is instance.
     -   jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -552,24 +583,29 @@ The following markup tags are supported.
     -   templatename: Name of the WebSphere template to follow when you create the data source. The scope is instance.
     -   usecontainer: Use the container. The value must be set to true or false. The scope is instance.
     -   useXA: Specify whether this data source uses XA connections or not. The value must be set to true or false. The scope is instance.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
     customproperty - used to create a custom property under this data source.
 
     -   name: The name of the custom property.
     -   value: The value of the custom property.
+
     connectionpool - used to set the connection pool properties for this data source.
 
     -   name: The name of the connection pool.
     -   value: The value of the connection pool.
+
     relationalresourceadapter - used to set the Relational Resource adapter properties for this data source.
 
     -   name: The name of the relational resource adapter.
     -   value: The value of the relational resource adapter.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.DataSourceCreateImpl class implements this task.
@@ -587,6 +623,7 @@ The following markup tags are supported.
 
     -   datasourcename: Name of the data source. The scope is instance.
     -   jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -599,24 +636,29 @@ The following markup tags are supported.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
     -   usecontainer: Use the container. The value must be set to true or false. The scope is instance.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
     customproperty - used to create a custom property under this data source.
 
     -   name: The name of the custom property.
     -   value: The value of the custom property.
+
     connectionpool - used to set the connection pool properties for this data source.
 
     -   name: The name of the connection pool.
     -   value: The value of the connection pool.
+
     relationalresourceadapter - used to set the Relational Resource adapter properties for this data source.
 
     -   name: The name of the relational resource adapter.
     -   value: The value of the relational resource adapter.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.DataSourceModifyImpl class implements this task.
@@ -634,6 +676,7 @@ The following markup tags are supported.
 
     -   datasourcename: Name of the data source. The scope is instance.
     -   jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -643,6 +686,7 @@ The following markup tags are supported.
     -   node: Node of the resource action. The scope is global.
     -   portalDomain: Required only for HCL Portal domain-based data sources. This setting tells the name of the domain of the data source. The scope is instance.
     -   server: Server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.DataSourceRemoveImpl class implements this task.
@@ -661,17 +705,20 @@ The following markup tags are supported.
     -   host: The host name for the host alias. The scope is instance.
     -   port: The port number for this host alias. The scope is instance.
     -   virtualHostName: The virtual host name to use for this host alias. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameter is optional:
 
     -   cell: The cell scope of resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.HostAliasCreateImpl class implements this task.
@@ -690,17 +737,20 @@ The following markup tags are supported.
     -   host: The host name for the host alias. The scope is instance.
     -   port: The port number for this host alias. The scope is instance.
     -   virtualHostName: The virtual host name to use for this host alias. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameter is optional:
 
     -   cell: The cell scope of resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.HostAliasRemoveImpl class implements this task.
@@ -719,12 +769,14 @@ The following markup tags are supported.
     -   alias: The alias that is used to identify this authentication data. The scope is instance.
     -   password: The password that is associated with this user ID.
     -   user: The user name that is used to create a connection with this authentication data.
+
 -   **Optional parameters**
 
     The following parameters are optional:
 
     -   cell: The name of the cell where this J2C authentication data is created, removed, or modified. The scope is global.
     -   description: A description of what this authentication data is used for and what it connects to. The scope is instance.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.J2CAuthCreateImpl class implements this task.
@@ -743,12 +795,14 @@ The following markup tags are supported.
     -   alias: The alias that is used to identify this authentication data. The scope is instance.
     -   password: The password that is associated with this user ID.
     -   user: The user name that is used to create a connection with this authentication data.
+
 -   **Optional parameters**
 
     The following parameters are optional:
 
     -   cell: The name of the cell where this J2C authentication data is created, removed, or modified. The scope is global.
     -   description: A description of what this authentication data is used for and what it connects to. The scope is instance.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.J2CAuthModifyImpl class implements this task.
@@ -765,11 +819,13 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   alias: The alias that is used to identify this authentication data. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameter is optional:
 
     -   cell: The name of the cell where this J2C authentication data is created, removed, or modified. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.J2CAuthRemoveImpl class implements this task.
@@ -787,6 +843,7 @@ The following markup tags are supported.
 
     -   name: The name of the JVM custom property. The scope is instance.
     -   value: The value of the property to create.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -797,6 +854,7 @@ The following markup tags are supported.
     -   required: The Boolean value that is used to tell WebSphere if this property is required or not.
     -   server: The server scope of the resource action.
     -   zosProcessDefType: Used to tell which region this property is created for: Servant, Control, or Abjunct. The value defaults to Servant.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.JVMCustomPropertyCreateImpl class implements this task.
@@ -814,6 +872,7 @@ The following markup tags are supported.
 
     -   name: The name of the JVM custom property. The scope is instance.
     -   value: The value of the property to create.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -822,6 +881,7 @@ The following markup tags are supported.
     -   node: The node scope of the resource action.
     -   server: The server scope of the resource action.
     -   zosProcessDefType: Used to tell which region this property is removed from: Servant, Control, or Abjunct. The value defaults to Servant.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.JVMCustomPropertyRemoveImpl class implements this task.
@@ -838,6 +898,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   jdbcprovidername: The name of the JDBC provider that identities this resource. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -852,12 +913,14 @@ The following markup tags are supported.
     -   server: The server of the resource action. The scope is global.
     -   templatename: Name of the template to follow when you create the JDBC Provider. The scope is instance.
     -   useXA: Specify whether this JDBC Provider uses XA connections or not. Set to true or false. The scope is instance.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.JDBCProviderCreateImpl class implements this task.
@@ -874,6 +937,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   jdbcprovidername: The name of the JDBC provider that identities this resource. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -882,12 +946,15 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
+
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.JDBCProviderModifyImpl class implements this task.
@@ -903,7 +970,8 @@ The following markup tags are supported.
 
     The following parameter is required:
 
-    -   jdbcprovidername: The name of the JDBC provider that identities this resource. The scope is instance.
+    -   jdbcprovidername: The name of the JDBC provider that identities this resource. The scope is instance.   
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -912,6 +980,7 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.JDBCProviderRemoveImpl class implements this task.
@@ -928,6 +997,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   name: The name of the library. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -936,12 +1006,14 @@ The following markup tags are supported.
     -   classpath: Tells what class path entries to add. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+    
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.LibraryCreateImpl class implements this task.
@@ -958,6 +1030,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   name: The name of the library. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -965,12 +1038,14 @@ The following markup tags are supported.
     -   cell: The cell of the resource action. The scope is global.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.LibraryRemoveImpl class implements this task.
@@ -988,7 +1063,9 @@ The following markup tags are supported.
 
     -   name: The name of the resource to create, update, or modify. The scope is instance.
     -   providerName: The name of the resource environment provider. The scope is instance.
+
     -   value: The value of the custom property. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -999,6 +1076,7 @@ The following markup tags are supported.
     -   node: The node of the resource action. The scope is global.
     -   required: The Boolean value to specify whether this property is required or not. The scope is instance.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderCustomPropertyCreateImpl class implements this task.
@@ -1017,6 +1095,7 @@ The following markup tags are supported.
     -   name: The name of the resource to create, update, or modify. The scope is instance.
     -   propToSet: The property that is set in the Ant project with the value retrieved from this property. The scope is instance.
     -   providerName: The name of the resource environment provider. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1025,6 +1104,7 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderCustomPropertyRetreiveImpl class implements this task.
@@ -1042,6 +1122,7 @@ The following markup tags are supported.
 
     -   name: The name of the resource to create, update, or modify. The scope is instance.
     -   providerName: The name of the resource environment provider. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1050,6 +1131,7 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderCustomPropertyRemoveImpl class implements this task.
@@ -1074,6 +1156,7 @@ The following markup tags are supported.
     -   providerName: The name of the resource environment provider. The scope is instance.
     -   referenceable.Class: The class of the resource environment provider. The scope is instance.
     -   referenceable.FactoryClass: The factory class of the resource environment provider. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1084,6 +1167,7 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceEnvEntryCreateImpl class implements this task.
@@ -1101,6 +1185,7 @@ The following markup tags are supported.
 
     -   name: The name of the resource to create, update, or modify. The scope is instance.
     -   providerName: The name of the resource environment provider. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1109,6 +1194,7 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceEnvEntryRemoveImpl class implements this task.
@@ -1128,6 +1214,7 @@ The following markup tags are supported.
     -   name: The name of the resource to create, update, or modify. The scope is instance.
     -   providerName: The name of the resource environment provider. The scope is instance.
     -   value: The value of the custom property. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1138,6 +1225,7 @@ The following markup tags are supported.
     -   node: The node of the resource action. The scope is global.
     -   required: The Boolean value to specify whether this property is required or not. The scope is instance.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceEnvEntryCustomPropertyCreateImpl class implements this task.
@@ -1156,6 +1244,7 @@ The following markup tags are supported.
     -   entryName: The name of the resource entry to update. The scope is instance.
     -   name: The name of the resource to create, update, or modify. The scope is instance.
     -   providerName: The name of the resource environment provider. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1164,6 +1253,7 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceEnvEntryCustomPropertyRemoveImpl class implements this task.
@@ -1180,6 +1270,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   name: The name of the resource to create, update, or modify. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1189,6 +1280,7 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderCreateImpl class implements this task.
@@ -1213,6 +1305,7 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceEnvProviderRemoveImpl class implements this task.
@@ -1233,6 +1326,7 @@ The following markup tags are supported.
     -   providerName: The name of the resource environment provider. The scope is instance.
     -   referenceable.Class: The reference class of the resource environment provider. The scope is instance.
     -   referenceable.FactoryClass: The reference factory class of the resource environment provider. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1241,6 +1335,7 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to cluster, if exists. The scope is instance.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceReferenceableCreateImpl class implements this task.
@@ -1259,6 +1354,7 @@ The following markup tags are supported.
     -   providerName: The name of the resource environment provider. The scope is instance.
     -   referenceable.Class: The reference class of the resource environment provider. The scope is instance.
     -   referenceable.FactoryClass: The reference factory class of the resource environment provider. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1267,6 +1363,8 @@ The following markup tags are supported.
     -   forceScope: Set to true if do not want to scope to an existing cluster. The scope is instance.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
+
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ResourceReferenceableRemoveImpl class implements this task.
@@ -1284,6 +1382,7 @@ The following markup tags are supported.
 
     -   name: The name of the variable. The scope is instance.
     -   value: The value that is assigned to the variable. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1292,6 +1391,7 @@ The following markup tags are supported.
     -   description: The description of the variable.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.VariableCreateImpl class implements this task.
@@ -1308,6 +1408,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   name: The name of the variable. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1315,6 +1416,7 @@ The following markup tags are supported.
     -   cell: The cell of the resource action. The scope is global.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.VariableRemoveImpl class implements this task.
@@ -1331,6 +1433,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   name: The name of the variable. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1338,6 +1441,7 @@ The following markup tags are supported.
     -   cell: The cell of the resource action. The scope is global.
     -   node: The node of the resource action. The scope is global.
     -   server: The server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.VariableRetrieveImpl class implements this task.
@@ -1354,6 +1458,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   rpPropertyDirectoryName: The property directory name. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1363,6 +1468,7 @@ The following markup tags are supported.
     -   node: Node of the resource action. The scope is global.
     -   rpPrefix: The name of the prefix. The scope is instance.
     -   server: Server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.REProviderCreateByDirectoryImpl class implements this task.
@@ -1381,6 +1487,7 @@ The following markup tags are supported.
     -   cell: Cell of the resource action. The scope is global.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ClusterSyncAllNodesImpl class implements this task.
@@ -1397,6 +1504,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   syncNode: The name of the node to sync. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1404,6 +1512,7 @@ The following markup tags are supported.
     -   cell: Cell of the resource action. The scope is global.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ClusterSyncSingleNodeImpl class implements this task.
@@ -1421,6 +1530,7 @@ The following markup tags are supported.
 
     -   appName: The application name for the ear file. The scope is instance.
     -   earFile: The local directory and file where the ear file is exported to. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1428,6 +1538,7 @@ The following markup tags are supported.
     -   cell: Cell of the resource action. The scope is global.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ExtractEarLocalOrRemoteImpl class implements this task.
@@ -1447,6 +1558,7 @@ The following markup tags are supported.
     -   filter: The filter that is used for the application query; for example: PA\_.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ApplicationsQueryImpl class implements this task.
@@ -1464,6 +1576,7 @@ The following markup tags are supported.
 
     -   datasourcename: Name of the data source. The scope is instance.
     -   jdbcprovidername: Name of the JDBC provider that identifies this resource. The scope is instance.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1474,6 +1587,7 @@ The following markup tags are supported.
     -   propertyName: The name of the custom property to retrieve the value from. The scope is instance.
     -   propToSet: The property that is set in the Ant project with the value retrieved from WebSphere® Application Server. The scope is instance.
     -   server: Server of the resource action. The scope is global.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.DataSourceRetrieveCustomPropertyValue class implements this task.
@@ -1495,6 +1609,7 @@ The following markup tags are supported.
     -   node: Node of the resource action. The scope is global.
     -   server: Server of the resource action. The scope is global.
     -   waitTime: The time to wait between checks for the application to deploy.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.ClusterWaitForSyncToCompleteImpl class implements this task.
@@ -1512,6 +1627,7 @@ The following markup tags are supported.
 
     -   appname: The name of the application for the EAR file.
     -   earfile: The location of the EAR file to deploy.
+
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1524,6 +1640,7 @@ The following markup tags are supported.
     -   server: The name of the application server for HCL Portal.
     -   node: The name of the WebSphere® Application Server node.
     -   cell: The name of the WebSphere® Application Server cell.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task. This parameter is used to pass any attribute that is associated with the resource action.
@@ -1544,15 +1661,7 @@ The following markup tags are supported.
     |--------------|--------------------------------|---------------------|
     |Keyword only|`-nodeployejb`|`<option key="nodeployejb"/>`|
     |Keyword with simple value|`-custom value`|`<option key="custom" value="value"/>`|
-    |Keyword with list of values|`-MapresrefToEJB {{value1} {value2} {value3}}`|    ```
-<option key="MapResRefToEJB"/>
-	<value>value1</value>
-	<value>value2</value>
-	<value>value3</value>
-</option>
-    ```
-
-|
+    |Keyword with list of values|`-MapresrefToEJB {{value1} {value2} {value3}}`|  `<option key="MapResRefToEJB"/>` <br>`	<value>value1</value> `<br>`	<value>value2</value>` <br>`	<value>value3</value> `<br>`</option>`|
 
 -   **Implementation bean**
 
@@ -1570,6 +1679,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   appname: The name of the application for the EAR file.
+
 -   **Parameters that are specified as nested Elements**
 
     option - Not all available EAR deployment options are supported by the wplc-create-ear syntax as attributes. The option element passes more information to the underlying framework inside the WsAdmin profile. This feature is similar to how other parameters are passed into the WsAdmin script file. However, in this situation, the full set of options are assembled into a string corresponding to the syntax of the scripting language.
@@ -1586,15 +1696,7 @@ The following markup tags are supported.
     |--------------|--------------------------------|---------------------|
     |Keyword only|`-nodeployejb`|`<option key="nodeployejb"/>`|
     |Keyword with simple value|`-custom value`|`<option key="custom" value="value"/>`|
-    |Keyword with list of values|`-MapresrefToEJB {{value1} {value2} {value3}}`|    ```
-<option key="MapResRefToEJB"/>
-	<value>value1</value>
-	<value>value2</value>
-	<value>value3</value>
-</option>
-    ```
-
-|
+    |Keyword with list of values|`-MapresrefToEJB {{value1} {value2} {value3}}`|`<option key="MapResRefToEJB"/>` <br>`	<value>value1</value>` <br>`	<value>value2</value>` <br>`	<value>value3</value>`<br> `</option>`|
 
 -   **Implementation bean**
 
@@ -1613,6 +1715,7 @@ The following markup tags are supported.
 
     -   appname: The name of the application for the EAR file.
     -   earfile: The location of the EAR file to deploy.
+    
 -   **Optional parameters**
 
     The following parameters are optional:
@@ -1621,6 +1724,7 @@ The following markup tags are supported.
         -   PARENT\_FIRST: Delegates the loading of classes to its parent before you load the class from its local class path. This value is the default for the class-loader policy and for standard JVM class loaders.
         -   PARENT\_LAST: Causes the class loader to attempt to load classes from its local class path before you delegate the class loading to its parent. Using this policy, an application class loader can override and provide its own version of a class that exists in the parent class loader.
     -   startingweight: Sets the starting weight for the application. The starting weight specifies the order in which applications are started when the server starts. The application with the lowest starting weight is started first.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task. This parameter is used to pass any attribute that is associated with the resource action.
@@ -1641,15 +1745,7 @@ The following markup tags are supported.
     |--------------|--------------------------------|---------------------|
     |Keyword only|`-nodeployejb`|`<option key="nodeployejb"/>`|
     |Keyword with simple value|`-custom value`|`<option key="custom" value="value"/>`|
-    |Keyword with list of values|`-MapresrefToEJB {{value1} {value2} {value3}}`|    ```
-<option key="MapResRefToEJB"/>
-	<value>value1</value>
-	<value>value2</value>
-	<value>value3</value>
-</option>
-    ```
-
-|
+    |Keyword with list of values|`-MapresrefToEJB {{value1} {value2} {value3}}`|    `<option key="MapResRefToEJB"/>`<br>`	<value>value1</value>`<br>`	<value>value2</value>`<br>`	<value>value3</value>`<br>`</option>    `|
 
 -   **Implementation bean**
 
@@ -1678,12 +1774,14 @@ The following markup tags are supported.
     -   server: The name of the HCL Portal server.
     -   node: The name of the WebSphere® Application Server node.
     -   cell: The name of the WebSphere® Application Server cell.
+
 -   **Parameters that are specified as nested Elements**
 
     attribute - a generic attribute for this resource. Users can use this attribute to specify any additional name-value pairs that are not already covered by the wplc task.
 
     -   name: The name of the attribute.
     -   value: The value of the attribute.
+
     option - Not all available EAR deployment options are supported by the wplc-create-ear syntax as attributes. The option element passes more information to the underlying framework inside the WsAdmin profile. This feature is similar to how other parameters are passed into the WsAdmin script file. However, in this situation, the full set of options are assembled into a string corresponding to the syntax of the scripting language.
 
     Do not code parameters that are included as attributes on the task as options. Use the corresponding attribute to avoid redundancy and to prevent runtime exception during the task parsing.
@@ -1698,15 +1796,7 @@ The following markup tags are supported.
     |--------------|--------------------------------|---------------------|
     |Keyword only|`-nodeployejb`|`<option key="nodeployejb"/>`|
     |Keyword with simple value|`-custom value`|`<option key="custom" value="value"/>`|
-    |Keyword with list of values|`-MapresrefToEJB {{value1} {value2} {value3}}`|    ```
-<option key="MapResRefToEJB"/>
-	<value>value1</value>
-	<value>value2</value>
-	<value>value3</value>
-</option>
-    ```
-
-|
+    |Keyword with list of values|`-MapresrefToEJB {{value1} {value2} {value3}}`|  ` <option key="MapResRefToEJB"/> `<br>`	<value>value1</value>`<br>`	<value>value2</value>`<br>`	<value>value3</value>`<br>`</option>    `|
 
 -   **Implementation bean**
 
@@ -1728,6 +1818,7 @@ The following markup tags are supported.
         -   PARENT\_FIRST: Delegates the loading of classes to its parent before you load the class from its local class path. This value is the default for the class-loader policy and for standard JVM class loaders.
         -   PARENT\_LAST: Causes the class loader to attempt to load classes from its local class path before you delegate the class loading to its parent. Using this policy, an application class loader can override and provide its own version of a class that exists in the parent class loader.
         -   startingweight: Sets the starting weight for the application. The starting weight specifies the order in which applications are started when the server starts. The application with the lowest starting weight is started first.
+
 -   **Parameters that are specified as nested Elements**
 
     option - Not all available EAR deployment options are supported by the wplc-create-ear syntax as attributes. The option element passes more information to the underlying framework inside the WsAdmin profile. This feature is similar to how other parameters are passed into the WsAdmin script file. However, in this situation, the full set of options are assembled into a string corresponding to the syntax of the scripting language.
@@ -1744,6 +1835,7 @@ The following markup tags are supported.
 
     -   An option element with a key of contents points to the location on disk of the file to update option key="contents" value="locationOfFileOnDisk"/\>.
     -   An option element with a key of contenturi points to the location inside of an .ear file of the file to update option key="contenturi" value="locationOfFileInEar"/\>
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.EarCreate class implements this task.
@@ -1760,6 +1852,7 @@ The following markup tags are supported.
     The following parameter is required:
 
     -   appname: The name of the application for the EAR file.
+
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.EarRemove class implements this task.

@@ -23,6 +23,6 @@ To use WebDAV for HCL Portal, you must first set up your WebDAV clients.
 Use this configuration task to manage theme artifacts and to deploy iWidgets. This task uploads archive or compressed files to portal WebDAV folders.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Updating custom theme Dojo references](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/development_task/mig_post_dojo.md)
 

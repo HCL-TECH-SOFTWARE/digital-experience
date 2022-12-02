@@ -59,7 +59,7 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Create a WebDAV Theme copy using HCL Digital Experience 9.5](../../build_sites/themes_skins/customizing_theme/copying_theme/manual_copy_theme/creating_webdav_theme_copy/index.md)
 -   [Create and apply A/B personalized scenarios with HCL Digital Experience](../../get_started/product_overview/personalization.md)
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [How to export and import WCM library content using DXClient](../wcm/wcm_mls_export_import.md)
     - [Web Content Manager Cache Parameters](../wcm/wcm_dev_caching_cache-parameters.md)
     - [Customizing the Digital Experience URL when deployed to Container platforms](../containerization/t_customize_dx_url.md)

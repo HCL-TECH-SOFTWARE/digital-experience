@@ -18,7 +18,7 @@ When you model your derived profile from an existing profile, you reference the 
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [The action URL plug-in](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/portlet_plugins/plrf_rendr_plugin_actionurl.md)
     - [XPath list-rendering profile keys](../integrating_remote_xml_data/syntax_xpath_based_list_rendering_profiles/plrf_lr_profl_keys.md)
     - [BasicJSONSelection list-rendering profile keys](../integrating_remote_json_data/syntax_basicjsonselection_based_list_rendering_profiles/plrf_lr_profl_keys_json.md)

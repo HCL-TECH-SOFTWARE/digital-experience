@@ -14,8 +14,6 @@ The Manage Web Modules portlet lists the Web modules that are available in your 
 
 To view a list of portlet applications for a Web module, click on the appropriate link in the **Name** column. To see the portlets in that application, click on the corresponding portlet application in the table under the **Title** column.
 
-**Related information**  
-
-
-[Searching](../panel_help/h_search_admin_portlets.md)
+???+ info "Related information"
+    - [Searching](../../../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/h_search_admin_portlets.md)
 

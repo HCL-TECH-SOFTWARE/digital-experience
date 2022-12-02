@@ -2,9 +2,10 @@
 
 If you migrate to HCL Digital Experience 8.5 and upgrade to fix pack level CF01-CF03, impersonation might not be enabled. If you plan to use the impersonation feature, which allows a selected user to preview and test new pages or portlets to help identify any potential issues, then you might need to enable this feature.
 
-**Note:** If you applied CF04 or a later fix pack, then you do not need to complete the steps to enable impersonation.
+!!!note
+    If you applied CF04 or a later fix pack, then you do not need to complete the steps to enable impersonation.
 
-Portal Access Control \(PAC\) controls the ability to impersonate another user. To impersonate another user, the **Can Run As User** role on the virtual resource users must be assigned. You must first enable the impersonation feature within HCL Digital Experience. If you are unsure whether the impersonation feature is enabled, you can use the following instructions to verify that you have the correct settings.
+Portal Access Control (PAC) controls the ability to impersonate another user. To impersonate another user, the **Can Run As User** role on the virtual resource users must be assigned. You must first enable the impersonation feature within HCL Digital Experience. If you are unsure whether the impersonation feature is enabled, you can use the following instructions to verify that you have the correct settings.
 
 Perform the following steps to enable the impersonation feature:
 

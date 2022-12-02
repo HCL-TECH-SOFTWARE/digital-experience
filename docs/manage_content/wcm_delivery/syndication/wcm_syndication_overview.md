@@ -168,6 +168,6 @@ Although syndication can be used to keep data current between libraries on diffe
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Syndication and staging](../../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)
 

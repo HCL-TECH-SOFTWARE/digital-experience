@@ -30,6 +30,6 @@ Figure 3. Standard Skin.
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Themes, profiles, and skins](../../../create_sites/website_building_blocks/themes_profiles_skins/index.md)
 

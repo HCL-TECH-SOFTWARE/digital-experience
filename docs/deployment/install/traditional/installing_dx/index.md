@@ -21,6 +21,6 @@ Installing includes preparing your operating system, installing HCL Portal and H
 
 
 
-???+ info "Related information:"  
+???+ info "Related information"  
     -   [Installing the HCL Digital Experience software](../../../../deployment/install/traditional/installing_dx/index.md)
 

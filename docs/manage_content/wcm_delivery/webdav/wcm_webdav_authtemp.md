@@ -32,6 +32,6 @@ All authoring templates for a library are listed under the `authoringTemplates` 
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
       - [Metadata and access control for web content items in WebDAV](../webdav/wcm_webdav_metadata.md)
 

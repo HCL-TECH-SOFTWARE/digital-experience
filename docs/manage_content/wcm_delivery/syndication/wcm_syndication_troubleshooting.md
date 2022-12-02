@@ -35,7 +35,7 @@ From time to time items fail to syndicate. You use the failed items view to revi
 4.  After you identified and fixed the issues, you can click **Retry** to initiate syndication for individual items, or use the **Retry All** in the Important Items tab to try to syndicate all failed items. You can also choose to update or rebuild a syndication relationship.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Resetting the web content event log](../../wcm_management/wcm_adm_tools/wcm_config_reset_event_log.md)
 

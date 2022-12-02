@@ -40,7 +40,7 @@ This plug-in uses the following attributes:
 
 This plug-in tag fragment generates a URL that triggers a portlet action named `post`. The Web Content Viewer rendering portlet that handles the action also receives the URI action parameter `action.uri` that points to `sr:forums`. Additionally, the portlet receives the `resultSessionAttribute` action parameter with the value `replyResult`.
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../extend_dx/ddc/index.md)
     - [Receiving the result of an HTML form submission](../../../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/plrf_sendata2wcv_receivhtmlform.md)
     - [Creating list-rendering profiles](../../../../../../../extend_dx/ddc/working_with_list_rendering_profiles/plrf_crt_lr_profiles.md)

@@ -89,6 +89,6 @@ The HEAD folder contains files that are served as head contribution through the 
 The CONFIG folder contains files that are served as config contribution through the resource aggregator framework. Those resources are usually before the closing body tag.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Modules that are provided with the modularized theme](../../oob_modules/index.md)
 

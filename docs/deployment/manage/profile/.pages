@@ -1,3 +1,6 @@
 Title: HCL Portal profile
 nav:
+    - iim_modify.md
+    - cw_create_profile.md
+    - cw_remove_profile.md
     - ...
