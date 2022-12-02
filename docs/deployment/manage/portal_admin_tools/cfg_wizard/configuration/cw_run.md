@@ -31,7 +31,6 @@ Click **Back** and **Next** to move back or forward in the Configuration Wizard.
 
 Access the ConfigWizard admin console in a container environment from your local system. The ConfigWizard admin console opens to the TCP port number 10203, navigate to the following URL to open the ConfigWizard admin console: https://localhost:10203/ibm/console.
 
-
 ???+ info "Related information"  
     -   [Setting up a stand-alone server](../../../../../deployment/manage/config_standalone.md)
     -   [Setting up a cluster](../../../../../deployment/manage/config_cluster/index.md)
