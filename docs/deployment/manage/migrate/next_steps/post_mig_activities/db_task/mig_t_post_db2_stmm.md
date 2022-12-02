@@ -24,6 +24,7 @@ With the Version 8.5 release, a number of the settings have been changed to be m
     -   Required only for the database that contains the JCR Domain: UPDATE DB CFG FOR dbname USING logprimary 20;
     -   Required only for the database that contains the JCR Domain: UPDATE DB CFG FOR dbname USING logsecond 50;
     -   Required only for the database that contains the JCR Domain: UPDATE DB CFG FOR dbname USING logbufsz 500;
+    
 3.  Connect to your database.
 
     db2 connect to dbdomain.DbName user dbdomain.DBA.DbUser using dbdomain.DBA.DbPassword
@@ -47,5 +48,5 @@ With the Version 8.5 release, a number of the settings have been changed to be m
     -   [Create a deployment manager](../../../../../../deployment/manage/config_cluster/cw_dmgr_profile.md)
     -   [Create a cluster](../../../../../../deployment/manage/config_cluster/create_cluster/index.md)
     -   [Create an additional cluster node](../../../../../../deployment/manage/config_cluster/cw_add_node.md)
-    -   [Enable federated security](../../../../../../deployment/manage/security/user_registry/cw_ldap.md)
+    -   [Enable federated security](../../../../../../deployment/manage/security/people/authentication/user_registry/cw_ldap.md)
 

@@ -33,5 +33,5 @@ You might find errors that are captured in the systemOut.log file if the migrate
 
 
 ???+ info "Related information" 
--   [Virtual Portal tasks](../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/vp_post_mig_task/index.md)
+    -   [Virtual Portal tasks](../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/vp_post_mig_task/index.md)
 

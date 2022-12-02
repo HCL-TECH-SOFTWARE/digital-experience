@@ -79,6 +79,6 @@ The HCL Digital Experience migration process cannot change the junction definiti
 
 
 ???+ info "Related information"
-    -   [Configuring Security Access Manager for authentication only](../../../../../../deployment/manage/security/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/cfg_tam_auth.md)
-    -   [Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../../../../../../deployment/manage/security/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/tam_prov_usrs.md)
+    -   [Configuring Security Access Manager for authentication only](../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/cfg_tam_auth.md)
+    -   [Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/tam_prov_usrs.md)
 
