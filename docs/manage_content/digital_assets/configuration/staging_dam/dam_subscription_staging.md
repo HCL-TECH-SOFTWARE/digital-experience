@@ -19,7 +19,7 @@ The DAM staging framework allows you to stage your DAM content from an authoring
 It is recommended that both environments used for DAM staging share the same LDAP. This is to address the current limitation of the dxclient DAM Staging.
 It should still work with the environment with a different LDAP. However, every value should be the same between the LDAPs (for example, DNs, username, passwords). Make sure that both LDAPs have matching values.
 
-**Credentials used during staging registration and file transfer**
+**Credentials used during staging registration and file transfer:** <br>
 Currently, the user transfers files between the primary server and the subscriber in the DX deployment. The secret needs to be the primary portal admin user used for deployment of the DX environment. The user in the secret on the transferring server and the subscriber must be the same.
 The credentials used in the registration are only used for authentication and authorization during the DXClient registration steps. They are not used for transferring files during staging.
 
