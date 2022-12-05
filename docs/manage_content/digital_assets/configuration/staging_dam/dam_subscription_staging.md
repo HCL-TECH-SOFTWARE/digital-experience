@@ -75,7 +75,7 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
     -dxUsername <value> 
     ```
 
-    Use this attribute to specify the password that is required for authenticating with the DX Core of the publisher <br/>
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/>
     (default: "")
 
     ```
@@ -190,7 +190,7 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
     -dxUsername <value> 
     ```
 
-    Use this attribute to specify the password that is required for authenticating with the DX Core of the publisher <br/> (default: "")
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: "")
 
     ```
     -dxPassword <value>
@@ -313,7 +313,7 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
     -dxUsername <value> 
     ```
 
-    Use this attribute to specify the password that is required for authenticating with the DX Core of the publisher <br/>
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/>
     (default: "")
 
     ```
