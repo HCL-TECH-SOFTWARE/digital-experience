@@ -51,23 +51,27 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
     The following table outlines the default minimum capacity of container resources requested by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the number of Pods required of each component.
 
-    |Component|Resource name|Pod Minimum CPU|Pod Minimum Memory|No. of Pods Minimum|
-    |---------|-------------|---------------|------------------|-------------------|
-    |Core|core|0.8|3072MB|1|
-    |Ring API|ringApi|0.1|128MB|1|
-    |Content Composer|contentComposer|0.1|128MB|1|
-    |Design Studio|designStudio|0.1|128MB|1|
-    |Digital Asset Management|digitalAssetManagement|0.25|1024MB|1|
-    |DAM Persistence Connection Pool|persistenceConnectionPool|0.5|512MB|1|
-    |DAM Persistence Node|persistenceNode|1|1024MB|1|
-    |DAM Persistence Metrics Exporter|persistenceMetricsExporter|0.1|128MB|0|
-    |Image processor|imageProcessor|0.1|1280MB|1|
-    |Open LDAP|openLdap|0.2|512MB|1|
-    |Remote search|remoteSearch|0.25|768MB|1 \(Max 1 Pod\)|
-    |Runtime Controller|runtimeController|0.1|256MB|1|
-    |HAProxy|haproxy|1|1024MB|1|
-    |Logging Sidecar|loggingSidecar|0.1|64MB|0|
-    |Prereqs Checker|prereqsChecker|0.1|64MB|0|
+    |Component|Pod Minimum CPU|Pod Maximum CPU|Pod Minimum Memory|Pod Maximum Memory|No. of Pods Minimum|
+    |---------|-------------|---------------|------------------|-------------------|-------------------|
+    |Core|2|5|6GB|8GB|1|
+    |Ring API|0.5|1|1GB|2GB|1
+    |Content Composer|0.5|1|1GB|2GB|1|
+    |Design Studio|0.5|1|1GB|2GB|1|
+    |Digital Asset Management|0.5|2|1GB|2GB|1|
+    |Digital Asset Manager GoogleVision Plugin|1|2|2GB|2GB||
+    |Digital Asset Manager Kaltura Plugin|1|2|2GB|2GB||
+    |Digital Asset Management Persistence|1|2|1GB|3GB|1|
+    |DAM Persistence Connection Pool|0.5|2|512MB|4GB||
+    |DAM Persistence Node|1|2|1GB|4GB||
+    |DAM Persistence Metrics Exporter|0.1|0.1|128MB|128MB||
+    |Image processor|1|2|2GB|2GB|1|
+    |License Manager|1|2|1GB|4GB||
+    |Open LDAP|0.5|2|512MB|2GB||
+    |Remote search|1|3|2GB|4GB|1|
+    |Runtime Controller|0.1|0.5|256MB|500MB||
+    |HAProxy|1|2|1GB|4GB||
+    |Logging Sidecar|0.1|0.1|64MB|64MB||
+    |Prereqs Checker|0.1|0.1|64MB|64MB||
 
 <!--
 ???+ info "Related information"
