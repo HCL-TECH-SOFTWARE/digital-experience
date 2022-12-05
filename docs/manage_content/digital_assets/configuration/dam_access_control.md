@@ -19,14 +19,15 @@ DAM collection is accessible by the currently logged in user based on his role a
 
 !!! note
     Currently, only Administrator, Editor, and User roles are exposed in DAM UI, each user who can create a collection will inherit the Administrator role by default whether it is root level or child-level collection. 
+    
+    So in other words, even if the user is having User/Editor Role from the DAM perspective, while creating the collection, he inherits the Administrator role for that collection.
 
 ### DAM Access Control in detail
 
 From the DAM perspective, each individual root level collection is a resource instance. 
 
-- User role: The user can view the collection
-- Editor role: The user can view, create and edit the collection 
-- Administrator role: The user can view, create, edit, and delete the collection and he can even assign/remove permission for other users as well.
+- User/Editor Role : The user can create, set permissions and upload to collections that the user creates.
+- Administrator role: The user can view, create, edit, and delete all the collections and he can even assign/remove permission for other users as well on all the collections.
 
 !!! note 
     The Manager Role is not exposed in DAM UI currently.
