@@ -45,7 +45,9 @@ The portal administrator collects information about the content provider and its
             -   Restart the WebSphere_Portal server.
 
         3.  Enter the virtual host alias to configure the DNS server to make sure that the VHA is reachable from the user's workstation. The VHA must be accessible from all the workstations from where the portal server is accessed. If portal is accessed with the https scheme, make sure that valid SSL certificates for host myhost1.servername.domain.ibm.com and myhost2.servername.domain.ibm.com are installed. To install the SSL certificates, log in to the WebSphere Integrated Solutions Console. Then, go to **SSL certificate and key management > Key stores and certificates > NodeDefaultKeyStore > Personal certificates**. For information, read [Personal certificates collection](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/usec_sslperscerts.html). If the certificates are not available for these hosts, then you must accept the security exception in the browser. Open the web dock iFrame URL in a separate browser window. Then, refresh the portal page to make it work and render the integrated application. Otherwise, the application might not work.
+
     -   If portal context root is not removed, complete the following steps:
+
         1.  Set the context root for the **wp.vwat.servlet.ear** application:
             1.  Log on to the WebSphere Integrated Solutions Console.
             2.  Go to **Applications > Application Types > WebSphere enterprise applications**.
@@ -55,6 +57,7 @@ The portal administrator collects information about the content provider and its
             6.  Click **OK**.
             7.  Click **Save** to save your changes to the master configuration.
             8.  Stop and restart the **wp.vwat.servlet.ear** application.
+
         2.  Complete the following steps if you configured a web server:
             1.  Log in to the WebSphere Integrated Solutions Console.
             2.  Go to **Applications > Application Types > WebSphere enterprise applications > wp.vwat.servlet.ear > Manage Modules**.
@@ -62,6 +65,7 @@ The portal administrator collects information about the content provider and its
                 1.  Check the **Select** check box for the **Virtual Web Application Servlet** application.
                 2.  Select the web server in the **Clusters and servers** box.
                 3.  Click **Apply**.
+
             4.  Choose one of the following options to update the plug-in configuration:
                 1.  Complete the following steps to update the plug-in configuration for all applications in WebSphere Application Server:
                     -   Go to **Servers > Server Types > Web servers > webserver1 > Plug-in properties**.
@@ -69,6 +73,7 @@ The portal administrator collects information about the content provider and its
                         -   **Automatically generate the plug-in configuration file**
                         -   **Automatically propagate plug-in configuration file**
                     -   Click **Apply** to save your changes.
+
                 2.  Complete the following steps to update the plug-in configuration just for the **wp.vwat.servlet.ear** application:
                     -   Go to wp_profile_root/config/cells/cell_name /nodes/node_name/servers/web_server_name directory in the deployment manager profile.
                     -   Make a backup copy of the plugin-cfg.xml file.
@@ -80,7 +85,9 @@ The portal administrator collects information about the content provider and its
                         ```
 
                     -   Copy the updated plugin-cfg.xml file to the web server in the web server home directory.
+
         3.  Restart all the servers.
+
 2.  The system administrator logs in to HCL Digital Experience.
 
 3.  The system administrator clicks the **Administration menu** icon from the toolbar. Then, clicks **Portlet Management > Virtual Web Application Manager**.
@@ -112,6 +119,7 @@ The portal administrator collects information about the content provider and its
     -   **Client Side IPC for Web Dock**
     -   **Server Side IPC for Web Dock**
     -   **Plugins**
+
 11. The content author logs in to HCL Portal.
 
 12. The content author accesses the site toolbar and takes one of the following actions:
@@ -131,6 +139,7 @@ The portal administrator collects information about the content provider and its
     5.  Edit the .json file and add the **wp_webdock** module ID.
     6.  Copy the profile that you created to the /profiles directory.
     7.  Invalidate the resource aggregator cache to integrate your changes. Click the **Administration menu** icon in the toolbar. Then, click **Theme Analyzer > Utilities > Control Center > Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../../../build_sites/themes_skins/the_module_framework/themeopt_analyzer/utilities/index.md).
+    
 13. If a content author experiences issues with viewing the web dock applications, complete the following steps to update the user role:
 
     1.  Log on to HCL Portal as the administrator.

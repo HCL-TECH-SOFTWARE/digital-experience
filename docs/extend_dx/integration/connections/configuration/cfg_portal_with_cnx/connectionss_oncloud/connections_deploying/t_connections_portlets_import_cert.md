@@ -13,7 +13,8 @@ In order for HCL Portal to communicate with HCL Connections over Secure Sockets 
 
     For example, in a stand-alone deployment you go to **NodeDefaultTrustStore** \> **Signer certificates** for adding certificates. If NodeDefaultSSL Settings points to **'CellDefaultTrustStore'**, you add a certificate to **'CellDefaultTrustStore'**.
 
-    **Note:** In a clustered deployment, add certificates for all Portal nodes to the Connections nodes, and add certificates for the Connections nodes to the Portal nodes.
+    !!! note 
+        In a clustered deployment, add certificates for all Portal nodes to the Connections nodes, and add certificates for the Connections nodes to the Portal nodes.
 
 5.  Click **Retrieve from port**.
 

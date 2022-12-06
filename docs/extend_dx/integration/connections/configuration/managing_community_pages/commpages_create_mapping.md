@@ -9,7 +9,8 @@ You can create, view, modify, or delete community associations on a page with th
         1.  In the site toolbar, click the **Page** \> **General** \> **Associated community**. If an association exists, it is displayed.
         2.  Select **Associated community** to display the Manage Associated Communities window.
 
-            **Note:** The **Community** section is displayed only if an HCL Connections server is configured for the portal.
+            !!! note 
+                The **Community** section is displayed only if an HCL Connections server is configured for the portal.
 
     -   Open the Associations window from the page properties portlet.
         1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
@@ -31,6 +32,7 @@ You can create, view, modify, or delete community associations on a page with th
             You can filter the list of communities by entering text in the **Find community** field. The list of communities is narrowed to only those communities that contain the search text in the community title.
 
         -   To associate the page with the same community that is associated with the parent page, click **Use default community from parent page**.
+        
     2.  To automatically grant page access to members of the associated community, click **Limit access to this page to only community members**.
 
         Activating this feature results in the following changes:

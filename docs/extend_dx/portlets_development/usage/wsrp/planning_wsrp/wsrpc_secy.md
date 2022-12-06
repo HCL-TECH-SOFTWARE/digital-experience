@@ -14,6 +14,7 @@ HCL Portal supports the following security mechanisms:
 
     -   It does not require configuration of the WSRP web services.
     -   It makes it possible for the WSRP Producer to accept and process both unauthenticated and authenticated requests. The Producer processes unauthenticated requests that do not contain an LTPA V2 cookie without establishing an individual security context. This way, it can serve requests from anonymous users.
+    
 -   **Web Services Security \(WSS\)**
 
     You can configure the WSRP Consumer and WSRP Producer for Web Services Security according to the WS-Security standard. With a WS Security configuration, the WSRP Consumer sends a header that complies with the WS-Security standard as part of the WSRP request messages. The header contains credentials that identify and authenticate the user. For this option, both the WSRP Consumer and the WSRP Producer must be configured for Web Services Security.

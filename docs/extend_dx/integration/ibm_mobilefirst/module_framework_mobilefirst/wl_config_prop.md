@@ -2,7 +2,7 @@
 
 Configure the MobileFirst properties to add your preferences to the portal page.
 
-The wp\_worklight module requires a wl\_config module that is defined in [PortalServer\_root](../../../../guide_me/wpsdirstr.md#portalserver_root)\\theme\\wp.theme.worklight.ext\\installedApps\\wp.theme.worklight.ext.ear\\wp.theme.worklight.ext.war\\WEB-INF\\plugin.xml file.
+The wp\_worklight module requires a wl\_config module that is defined in [PortalServer\_root](../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.worklight.ext\\installedApps\\wp.theme.worklight.ext.ear\\wp.theme.worklight.ext.war\\WEB-INF\\plugin.xml file.
 
 1.  Use the `wl_config` module to load the MobileFirst® configuration properties.
 

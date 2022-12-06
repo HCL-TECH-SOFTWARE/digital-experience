@@ -70,7 +70,8 @@ The following list shows the set of list-rendering profile entry keys that are a
 
     This key declares an attribute that is available in all items in the list. You can then access the attribute values in your Web Content Manager design components in the same way as item attributes. They attribute values also appear in the same places as item attributes in the Web Content Manager authoring user interface. The difference between the two types of attribute types is as follows: The values for computed item attributes are not extracted from JSON objects but computed based on the item attribute values and other context information. The DDC plug-in that is associated to the list-rendering profile through the `BeanListProviderID` key computes the attribute values. To serve such data, the DDC plug-in must implement the optional `com.ibm.portal.wcm.plr.ComputedAttributeValueProvider` Java interface. This interface is defined by the public Digital Data Connector \(DDC\) for HCL Portal APIs. The computation is typically done based on the non-computed attribute values in combination with configuration data or other extra context information.
 
-    **Note:** The generic JSON DDC plug-in supports no computed item attributes.
+    !!! note 
+        The generic JSON DDC plug-in supports no computed item attributes.
 
     To define a computed item attribute, you must declare on which data the attribute value computation depends:
 
@@ -98,10 +99,11 @@ The following list shows the set of list-rendering profile entry keys that are a
 
     This key declares a list property of the list. You can then access the attribute values in your Web Content Manager design components in the same way as list properties. The difference between list properties and computed list properties as follows: The values for computed list properties are not extracted from JSON documents, but computed based on the item attribute values and other context information. The DDC plug-in that is associated to the list-rendering profile through `theBeanListProviderID` key computes the property values. To serve such data, the DDC plug-in must implement the optional `com.ibm.portal.wcm.plr.ComputedAttributeValueProvider` Java interface. This interface is defined by the public APIs of Digital Data Connector  APIs. The computation is usually done based on the non-computed list property values in combination with configuration data or other extra context information.
 
-    **Note:** The generic JSON DDC plug-in does not support computed list properties. To define a computed list property, you must declare on which of the following two types of data the property value computation depends:
-
-    -   The computed item attribute value depends only on the other list property values. In this case, you must set it to value `{$lazy}`.
-    -   The computed list property value depends on other list property values and on the current rendering context, that is the current portlet request and response objects. These objects are not cached in the bean list cache, but they are recomputed for each rendering request. If the computed list property value depends on the current request context, you must set the value of such a computed list property value to the value `{$default}`.
+    !!! note 
+        The generic JSON DDC plug-in does not support computed list properties. To define a computed list property, you must declare on which of the following two types of data the property value computation depends:
+        -   The computed item attribute value depends only on the other list property values. In this case, you must set it to value `{$lazy}`.
+        -   The computed list property value depends on other list property values and on the current rendering context, that is the current portlet request and response objects. These objects are not cached in the bean list cache, but they are recomputed for each rendering request. If the computed list property value depends on the current request context, you must set the value of such a computed list property value to the value `{$default}`.
+        
 -   **Extends**
 
     Use this key to define a derived profile. A derived profile includes the item attribute and the list property declarations of other list-rendering profiles by referencing these profiles. For more information, read *Creating list-rendering profiles*.

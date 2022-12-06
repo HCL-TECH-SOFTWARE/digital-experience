@@ -2,7 +2,8 @@
 
 You can configure security for the WSRP Producer portal and the provided portlets. If you enable security, the WSRP Producer processes the WSRP requests from the WSRP Consumer under the user identity that is associated with the WSRP request that the Consumer sent. This user identity is represented by a security credential that is included in the WSRP request message. The security credential is provided by the WSRP Consumer. Normally, it represents the identity of the user who is logged in to the Consumer Portal.
 
-**Note:** For the WSRP Producer, security for WSRP services is optional. You can configure it if required, but you do not have to provide security. If you provide security for your WSRP services, the WSRP Consumer must be configured to use the same security mechanism as the WSRP Producer from which the Consumer consumes portlets.
+!!! note
+    For the WSRP Producer, security for WSRP services is optional. You can configure it if required, but you do not have to provide security. If you provide security for your WSRP services, the WSRP Consumer must be configured to use the same security mechanism as the WSRP Producer from which the Consumer consumes portlets.
 
 You can configure security for the WSRP Producer by using either of the following two authentication mechanisms:
 

@@ -27,9 +27,11 @@ To allow SSO between HCL Connections and HCL Portal, complete the following step
 
         -   Password – Type a secure password that you can remember. You must provide this password later, when you export the key file
 
-            **Note:** Confirm the password.
+            !!! note
+                Confirm the password.
 
         -   Fully qualified key file name – Specify a valid path and a name for the file that stores the exported keys
+        
     3.  Click **Export keys**.
 
 3.  On the node where HCL Portal is installed, complete the following steps:
@@ -40,9 +42,11 @@ To allow SSO between HCL Connections and HCL Portal, complete the following step
 
         -   Password – Type the password that you used for the HCL Connections key file that you exported
 
-            **Note:** Confirm the password.
+            !!! note 
+                Confirm the password.
 
         -   Fully qualified key file name – Specify the name of the HCL Connections key file that you exported
+
     3.  Click **Import keys**
 
 4.  Restart all the nodes.

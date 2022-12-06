@@ -8,7 +8,7 @@ You can reference elements within presentation templates and element designs by 
 
 ## Portlet Preferences
 
-You can also add render parameter tags and portlet preferences to your application. For more information, read [The portlet plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/portlet_plugins/plugin_portlet_portlet.md). For more information about render parameter tags, read [Render parameter tags](./render_param_tags.md).
+You can also add render parameter tags and portlet preferences to your application. For more information, read [The portlet plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/portlet_plugins/plugin_portlet_portlet.md). For more information about render parameter tags, read [Render parameter tags](./render_param_tags.md).
 
 -   **[Render parameter tags](./render_param_tags.md)**  
 To retrieve the value of a shared render parameter, use the \[Plugin:RenderParam\] tag.
