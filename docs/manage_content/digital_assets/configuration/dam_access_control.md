@@ -31,7 +31,7 @@ From the DAM perspective, each individual root level collection is a resource in
 
 A user that creates a root collection gets the Administrator role on the collection and so can do anything with that collection as indicated above.
 
-See the out of the box collections to understand how the default access works!
+See the [Out of the box access](#Out-of-the-box-access) section, to understand how the default access works for a collection.
 
 !!! note 
     The Manager Role is not exposed in DAM UI currently.
