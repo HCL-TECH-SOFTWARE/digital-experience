@@ -33,7 +33,7 @@ From the DAM perspective, each individual root level collection is a resource in
     
 To be able to create new root collections the Editor role or higher of the virtual resource DIGITAL ASSET MANAGEMENT is required.
 
-Also, note that if user has given a User/Editor role to any collection which is not created by him, that user can not modify access permissions of that collection.
+Also, note that if the user has given a User/Editor role to any collection which is not created by him, that user can not modify the access permissions of that collection.
 
 ![DAM Access Control Roles](../../../images/access_roles_dam.png)
 
