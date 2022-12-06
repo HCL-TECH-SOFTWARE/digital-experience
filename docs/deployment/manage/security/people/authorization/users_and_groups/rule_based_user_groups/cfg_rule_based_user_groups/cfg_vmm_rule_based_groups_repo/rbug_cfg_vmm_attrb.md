@@ -29,8 +29,6 @@ In addition to the repository configuration, you must define the rule attribute 
 
 
 
-**Related information**  
-
-
-[Adding attributes](/digital-experience/deployment/manage/security/people/authentication/user_registry/vmm_atts/add_attributes)
+???+ info "Related information"
+    - [Adding attributes](../../../../../authentication/user_registry/vmm_atts/add_attributes.md)
 

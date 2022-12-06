@@ -10,7 +10,5 @@ Run the wp-create-cur, wp-create-cur-custom-property, and wp-update-group-reposi
 In addition to the repository configuration, you must define the rule attribute as a new attribute for the entity type Group.
 
 
-**Related information**  
-
-
-[Database source configuration](/digital-experience/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/cfg_rule_based_user_groups/rbug_dsrc_cfg)
+???+ info "Related information"
+    - [Database source configuration](../rbug_dsrc_cfg.md)
