@@ -8,54 +8,90 @@ Instead of concatenating values into the query parameter with specific query syn
 
 A field constraint allows only results that match specific field values.
 
-**Syntax**: constraint=type: field, id: field\_id, values: \[fieldValue1,fieldValue2\]
+**Syntax**: constraint=**type**: field, **id**: *field_id*, **values**: *[fieldValue1,fieldValue2]*
 
 **Parameters:**
 
 |Context Path|Authentication|
 |------------|--------------|
-|type|Always equals field for this type of constraint.|
-|id|The identifier of the indexed field.|
-|values|An array of field values. Each search result must match at least one of the values.|
+|**type**|Always equals *field* for this type of constraint.|
+|**id**|The identifier of the indexed field.|
+|**values**|An array of field values. Each search result must match at least one of the values.|
 
-Example: constraint=type:field, id:title, values:\[test\]
+!!!example
+    &constraint={ "type":"field", "id":"title", "values":["Welcome"]}
+ 
 
 ## Category Constraint
 
 A category constraint refers to a constraint on a specific category in a *Facet*. A category constraint is similar to a field constraint in its syntax. However, since categories are indexed differently than regular fields, it is declared as a special type of constraint to allow better handling of the request. Category constraints are always an exact match.
 
-**Syntax**: constraint=type: category, values: \[root/a/x, root/a/y\]
+**Syntax**: constraint=**type**: *category*, **values**: *[root/a/x, root/a/y]*
 
 **Parameters:**
 
 |Context Path|Authentication|
 |------------|--------------|
-|type|Always equals category for this type of constraint|
-|values|An array of category IDs. Each search result must match at least one of the categories.|
+|**type**|Always equals category for this type of constraint|
+|**values**|An array of category IDs. Each search result must match at least one of the categories.|
 
-Examples:
+!!!example "Examples"
+    -   Constraint=type: category, values:[Tag/tag1]
+    -   Constraint=type: category, values:[Tag/tag1,Tag/tag2]
+    -   Constraint=type: category, values:[Source/forums,Source/profiles,Source/wikis,Source/status_updates]
+    -   Constraint=type: category, values:[Tag/tag1]}
+    -   Constraint=type: category, values:[Tag/tag2]
 
--   Constraint=type: category, values:\[Tag/tag1\]
--   Constraint=type: category, values:\[Tag/tag1,Tag/tag2\]
--   Constraint=type: category, values:\[Source/forums,Source/profiles,Source/wikis,Source/status\_updates\]
--   Constraint=type: category, values:\[Tag/tag1\]\}
--   Constraint=type: category, values:\[Tag/tag2\]
+### Setting search service properties
+
+For a category constraint to work, set the values for **facetedFields** and **fieldTypes** first.
+
+!!!important
+    When you add or update any of the two search service properties, you must restart the Portal server and the remote search service, if available. Failing to do so will result to facets not being handled during indexing. In addition, no facet information will be returned through the Search REST service call, resulting to facets not appearing in the sample portlet.
+
+#### Setting the facetedFields value
+
+1. Go to **Administration > Manage Search > Search Services > Default Search Service**.
+
+2. Edit its properties.
+
+3. In the **facetedFields** field, enter **["tag", "category"]**.
+
+    These two fields will be indexed as facets and could be searchable as facets within Explorative Navigation Portlet.
+
+#### Setting the fieldTypes value
+
+If you have fields in the seedlist that are not strings and you want to sort by them, field type configuration is needed. 
+
+1. Go to **Administration > Manage Search > Search Services > Default Search Service**. 
+
+2. Edit its properties.
+
+3. In the **fieldTypes** field, enter **{"popularity":"integer"}**.
+
+!!!important
+    For the search constraint to work, a search administrator must disable post-filtering. Go to **Administration > Manage Search > Search Services > Default Portal Search Service**. In Properties, change SEARCH_SECURITY_MODE parameter to SECURITY_MODE_PRE_FILTER.
+
+For more information, see [Faceted Search - Leverage Search Experience based on Search REST API](https://support.hcltechsw.com/csm?id=kb_article&sys_id=f2cfbcefdbc2dc5055f38d6d13961935).
 
 ## Range Constraint
 
 A range constraint allows only results in a specific range of field values. Values can be strings or numbers.
 
-**Numeric Syntax**: constraint=type: range, id: field\_id, values: \[\{ge: 0.1, le: 0.5\}, \{g: 3.6\}, \{l: -5\}\]
+**Numeric Syntax**: constraint=**type**: *range*, **id**: *field\_id*, **values**: *[{ge: 0.1, le: 0.5}, {g: 3.6}, {l: -5}]*
 
-**String Syntax**: constraint=type: range, id: field\_id, values: \[\{ge: cat, le: dog\}, \{g: horse\}, \{l: animal\}\]
+**String Syntax**: constraint=**type**: *range*, **id**: *field\_id*, **values**: *[{ge: cat, le: dog}, {g: horse}, {l: animal}]*
 
 **Parameters:**
 
-|Context Path|Authentication|
-|------------|--------------|
-|type|Always equals range for this type of constraint.|
-|id|The identifier of the indexed field.|
-|values|An array of range values. Each value consists of lower and upper boundaries. Each boundary can be inclusive or exclusive. One or more boundaries can be specified for each value. The allowed attributes are: <br/> -   ge for lower inclusive boundary. <br/> -   g for lower exclusive boundary. <br/> -   le for upper inclusive boundary. <br/> -   l for upper exclusive boundary.|
+    |Context Path|Authentication|
+    |------------|--------------|
+    |**type**|Always equals *range* for this type of constraint.|
+    |**id**|The identifier of the indexed field.|
+    |**values**|An array of range values. Each value consists of lower and upper boundaries. Each boundary can be inclusive or exclusive. One or more boundaries can be specified for each value. The allowed attributes are: <br/> -   *ge* for lower inclusive boundary. <br/> -   *g* for lower exclusive boundary. <br/> -   *le* for upper inclusive boundary. <br/> -   *l* for upper exclusive boundary.|
+
+!!!example
+    &constraint={"type":"range","id":"effectivedate","values":[{"ge":"1322199864000","le": "5371735633728"}]}
 
 
 ???+ info "Related information"
