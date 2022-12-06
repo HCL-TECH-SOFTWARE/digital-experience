@@ -14,6 +14,7 @@ The JSON object makes the following data available:
 
     -   Operations that are not available, for example because the item to operate on was not found
     -   Operations that are not permitted, because the user does not have sufficient privileges on the remote service.
+    
 -   **message**
 
     This member returns the error message in case of an error.

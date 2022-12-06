@@ -4,7 +4,7 @@ Configure HCL Connections portlets to use single sign-on with Computer Associate
 
 1.  Enable eTrust SiteMinder and SPNEGO for HCL Connections, following the steps in [Enabling single-sign on for SiteMinder with SPNEGO](https://help.hcltechsw.com/connections/v65/admin/secure/t_secure_with_siteminder_SPNEGO.html).
 
-2.  Enable and configure single sign-on for HTTP requests with SPNEGO following the steps in this [Enabling and configuring single sign-on for HTTP requests using SPNEGO](../../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/enable_spnego/cfg_spntaiweb.md).
+2.  Enable and configure single sign-on for HTTP requests with SPNEGO following the steps in this [Enabling and configuring single sign-on for HTTP requests using SPNEGO](../../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/enable_spnego/index.md).
 
 3.  Configure eTrust SiteMinder following the steps in the article [Configuring eTrust SiteMinder](../../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/etrust_siteminder/index.md).
 
@@ -17,6 +17,7 @@ Configure HCL Connections portlets to use single sign-on with Computer Associate
     -   krb5.keytab on the deployment manager
     -   krb5NodeA.keytabon Node A
     -   krb5NodeB.keytab on Node B
+
     Run the ktab command with the following switch:
 
     -m source\_keytab\_name\> destination\_keytab\_name.

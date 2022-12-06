@@ -18,7 +18,7 @@ Follow the steps to map the community pages to a community based on what HCL Dig
 
     4.  Click **Edit Role** in the Privileged User and User columns and make sure that no users or groups are added that you do not want to access the page.
 
-    5.  Click the **Edit Role** button in the Privileged User or User column, depending on what level of access you want to grant to community members. See the [Roles](../../../../../../../deployment/manage/security/controlling_access/resources_roles/sec_roles.md) topic for a description of roles in HCL Portal.
+    5.  Click the **Edit Role** button in the Privileged User or User column, depending on what level of access you want to grant to community members. See the [Roles](../../../../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_roles.md) topic for a description of roles in HCL Portal.
 
     6.  Click **Add**.
 

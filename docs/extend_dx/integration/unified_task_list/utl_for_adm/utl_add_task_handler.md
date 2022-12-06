@@ -35,10 +35,7 @@ You can configure task handlers to do one of the following actions:
 7.  Select **Save**.
 
 
-**Related information**  
-
-
-[Configuring an IBM Business Process Manager](../integrate/utl_configuring_business_process_manager.md)
-
-[Configuring the Unified Task List portlet with Forms Experience Builder](../integrate/utl_configuring_unified_task_list_with_forms_experience_builder.md)
+???+ info "Related information"
+    - [Configuring an IBM Business Process Manager](../cfg_utl_portlet_with_process_server/utl_configuring_business_process_manager.md)
+    - [Configuring the Unified Task List portlet with Forms Experience Builder](../utl_configuring_unified_task_list_with_forms_experience_builder.md)
 

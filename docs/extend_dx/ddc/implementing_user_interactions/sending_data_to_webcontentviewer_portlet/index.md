@@ -16,6 +16,6 @@ The Digital Data Connector \(DDC\) for HCL Portal framework contains a generic d
 
 ???+ info "Related information"
     - [Implementing interactions with social objects](../../../../build_sites/social_rendering/customizing_view_definitions/implementing_interactions_social_object/index.md)
-    - [The session attribute plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_session_attrbt.md)
-    - [The render parameter plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_parm.md)
+    - [The session attribute plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_session_attrbt.md)
+    - [The render parameter plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_parm.md)
 

@@ -2,9 +2,9 @@
 
 You can troubleshoot WSRP by using different methods such as logging and tracing, debugging, and monitoring.
 
--   [Setting traces and using the portal run time log file for WSRP diagnosis](wsrpr_trbl.md#setrac)
--   [Debugging and monitoring the WSRP protocol flow](wsrpr_trbl.md#debug)
--   [Monitoring WSRP messages between the Consumer and Producer by using TCPMon](wsrpr_trbl.md#monmsg)
+-   [Setting traces and using the portal run time log file for WSRP diagnosis](wsrpr_trbl.md#setting-traces-and-using-the-portal-run-time-log-file-for-wsrp-diagnosis)
+-   [Debugging and monitoring the WSRP protocol flow](wsrpr_trbl.md#debugging-and-monitoring-the-wsrp-protocol-flow)
+-   [Monitoring WSRP messages between the Consumer and Producer by using TCPMon](wsrpr_trbl.md#monitoring-wsrp-messages-between-the-consumer-and-producer-by-using-tcpmon)
 
 ## Setting traces and using the portal run time log file for WSRP diagnosis
 
