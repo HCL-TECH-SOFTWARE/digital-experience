@@ -4,7 +4,7 @@ The initial federated repositories setup might not include the advanced set up f
 
 In a stand-alone server environment, you can complete the following task when the servers are either stopped or started. In a clustered environment, start the deployment manager and node agent. Then, verify that they are able to synchronize.
 
-1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
+1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Open the wkplc.properties file with a text editor.
 
@@ -20,7 +20,7 @@ In a stand-alone server environment, you can complete the following task when th
 
 4.  Open a command prompt.
 
-5.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+5.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 6.  Run the following task to update the group membership for the LDAP user registry:
 
