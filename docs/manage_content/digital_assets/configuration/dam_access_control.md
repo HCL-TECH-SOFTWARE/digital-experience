@@ -25,8 +25,13 @@ DAM collection is accessible by the currently logged in user based on his role a
 
 From the DAM perspective, each individual root level collection is a resource instance that can be administered. Child collections cannot be administered separately and always have the same permissions as the root collection.
 
-- User/Editor role: The user can view items in the collection and the collection itself as well as child collections. Plus the user can edit collection details as well as upload items. User can even assign permission to other users only if the collection is created by them.
+- User role: The user can view items in the collection and the collection itself as well as child collections.
+- Editor role: All permissions of the User role plus the user can edit collection details as well as upload items.
 - Administrator role: All permissions of the User and Editor role plus the user can view, create, edit, and delete a collection, delete items in a collection and he can assign/remove permission for other users as well on the collections.
+
+A user that creates a root collection gets the Administrator role on the collection and so can do anything with that collection as indicated above.
+
+See the [Out of the box access](#Out-of-the-box-access) section, to understand how the default access works for a collection.
 
 !!! note 
     The Manager Role is not exposed in DAM UI currently.
