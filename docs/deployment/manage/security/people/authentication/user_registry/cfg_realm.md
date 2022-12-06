@@ -6,9 +6,9 @@ Before you configure realm support, add all LDAP user registries and database us
 
 In a stand-alone server environment, you can complete this task when the servers are either stopped or started. In a clustered environment, start the deployment manager and node agent and verify that they are able to synchronize.
 
-1.  Use the WebSphere Application Server backupConfig task to create and store a backup of the HCL Portal configuration. Read [backupConfig command](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/rxml_backupconfig.html) for information.
+1.  Use the WebSphere Application Server backupConfig task to create and store a backup of the HCL Portal configuration. Read [backupConfig command](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=clt-backupconfig-command) for information.
 
-2.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
+2.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 3.  Enter a value for the following parameters in the VMM realm configuration section:
 
@@ -22,7 +22,7 @@ In a stand-alone server environment, you can complete this task when the servers
 
 4.  Save your changes.
 
-5.  Open a command line and change to the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+5.  Open a command line and change to the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 6.  Run the following task to add a realm to the Virtual Member Manager configuration:
 

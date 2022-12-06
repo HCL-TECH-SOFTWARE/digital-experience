@@ -102,8 +102,8 @@ Add a database user registry to the default federated repository in a stand-alon
 
 4.  Use a text editor to open the wkplc.properties file, located in the
 
-    -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
-    -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties directory.
+    -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+    -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties directory.
 
 5.  Enter a value for the following required parameters in the wkplc.properties file under the VMM Federated Database Properties heading:
 
@@ -123,8 +123,8 @@ Add a database user registry to the default federated repository in a stand-alon
 
     1.  Go to the following directory:
 
-        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/properties directory.
-        -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\properties directory.
+        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/properties directory.
+        -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\properties directory.
 
     2.  Locate and open soap.client.props with any text editor.
 
@@ -134,9 +134,9 @@ Add a database user registry to the default federated repository in a stand-alon
 
 7.  Add a database user registry to the default federated repository.
 
-    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-    -   IBM i: Run the `ConfigEngine.sh wp-create-db -DWassPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-    -   Windows: Run the `ConfigEngine.bat wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
+    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   IBM i: Run the `ConfigEngine.sh wp-create-db -DWassPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   Windows: Run the `ConfigEngine.bat wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
     !!!note
         Users who are not in an LDAP do not have awareness and cannot see if the other users are online. This can happen if you install HCL Portal and then enable a Federated LDAP or Federated database user repository that does not contain that user. Also, users who sign up using the Self Care portlet do not have awareness.
@@ -169,17 +169,17 @@ Add a database user registry to the default federated repository in a stand-alon
 
     4.  Delete the old attributes before you add the new attributes.
 
-        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-        -   IBM i: Run the `ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-        -   Windows: Run the `ConfigEngine.bat wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
+        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+        -   IBM i: Run the `ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+        -   Windows: Run the `ConfigEngine.bat wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
     5.  Stop and restart all necessary servers to propagate your changes.
 
 10. List the names and types of configured repositories.
 
-    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-    -   IBM i: Run the `ConfigEngine.sh wp-query-repository -DWasPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-    -   Windows: Run the `ConfigEngine.bat wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
+    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   IBM i: Run the `ConfigEngine.sh wp-query-repository -DWasPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   Windows: Run the `ConfigEngine.bat wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
 
 ???+ info "Related information"

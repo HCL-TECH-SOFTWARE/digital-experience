@@ -89,8 +89,8 @@ Add a database user registry to the default federated repository in a clustered 
 
     1.  Go the following directory:
 
-        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
-        -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties directory.
+        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+        -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties directory.
 
     2.  Locate and open wkplc\_dbtype.properties with any text editor.
 
@@ -103,8 +103,8 @@ Add a database user registry to the default federated repository in a clustered 
 
 4.  Use a text editor to open the wkplc.properties file, located in the
 
-    -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
-    -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties directory.
+    -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+    -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties directory.
 
 5.  Enter a value for the following required parameters in the wkplc.properties file under the VMM Federated Database Properties heading:
 
@@ -124,8 +124,8 @@ Add a database user registry to the default federated repository in a clustered 
 
     1.  Go to the following directory:
 
-        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/properties directory.
-        -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\properties directory.
+        -   AIX, Linux, Solaris, IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/properties directory.
+        -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\properties directory.
 
     2.  Locate and open soap.client.props with any text editor.
 
@@ -137,9 +137,9 @@ Add a database user registry to the default federated repository in a clustered 
 
     1.  Create the local Deployment Manager WebSphere variable that is used to access the database jar files.
 
-        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-        -   IBM i: Run the `ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory
-        -   Windows: Run the `ConfigEngine.bat wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
+        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+        -   IBM i: Run the `ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+        -   Windows: Run the `ConfigEngine.bat wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=federated.db -Ddb_type.DmgrDbLibrary=local path of the databse jars on the Deployment Manager -DDmgrNodeName=dmgr\_node\_name` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
         !!!note
             The `db_type` in `db_type.DmgrDbLibrary` should be set to the type of database you are using, for example:<br>
@@ -171,24 +171,26 @@ Add a database user registry to the default federated repository in a clustered 
 
         2.  Create the variable that is used to access the VMM database jar files.
 
-            -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory on each node.
+            -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory on each node.
             -   IBM i: Run the `ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory on each node.
-            -   Windows: Run the `ConfigEngine.bat wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine directory on each node.
+            -   Windows: Run the `ConfigEngine.bat wp-node-prep-vmm-db-secured-environment -DWassPassword=password -DDbDomain=federated.db -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the databse jars` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory on each node.
 
             !!!note
                 VmmNodeName is a list of one or more HCL Portal nodes names in the cell which share database driver paths. The `db_type` in `db_type.NodeDbLibrary` should be set to the type of database you are using, for example:<br>
-                    -   AIX, Linux, Solaris, Windows: `db2`.<br>
-                    -   IBM i:<br>
-                        -   IBM DB2 for i Type 2 driver: `/QIBM/ProdData/Java400/ext/db2_classes.jar`<br>
-                        -   IBM DB2 for i Type 4 driver: `/QIBM/ProdData/HTTP/Public/jt400/lib/jt400.jar`<br>
+                <br>
+                For AIX, Linux, Solaris, Windows: `db2`.<br>
+                <br>
+                For IBM i:<br>
+                    - IBM DB2 for i Type 2 driver: `/QIBM/ProdData/Java400/ext/db2_classes.jar`<br>
+                    - IBM DB2 for i Type 4 driver: `/QIBM/ProdData/HTTP/Public/jt400/lib/jt400.jar`
 
     3.  Stop and restart all necessary servers to propagate your changes.
 
 8.  Add a database user registry to the default federated repository.
 
-    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-    -   IBM i: Run the `ConfigEngine.sh wp-create-db -DWassPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-    -   Windows: Run the `ConfigEngine.bat wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
+    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   IBM i: Run the `ConfigEngine.sh wp-create-db -DWassPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   Windows: Run the `ConfigEngine.bat wp-create-db -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
     !!!note
         Users who are not in an LDAP do not have awareness and cannot see if the other users are online. This can happen if you install HCL Portal and then enable a Federated LDAP or Federated database user repository that does not contain that user. Also, users who sign up using the Self Care portlet do not have awareness.
@@ -221,17 +223,17 @@ Add a database user registry to the default federated repository in a clustered 
 
     4.  Delete the old attributes before you add the new attributes.
 
-        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-        -   IBM i: Run the `ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-        -   Windows: Run the `ConfigEngine.bat wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
+        -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+        -   IBM i: Run the `ConfigEngine.sh wp-set-entitytypes -DWasPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+        -   Windows: Run the `ConfigEngine.bat wp-set-entitytypes -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
     5.  Stop and restart all necessary servers to propagate your changes.
 
 11. List the names and types of configured repositories.
 
-    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-    -   IBM i: Run the `ConfigEngine.sh wp-query-repository -DWasPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-    -   Windows: Run the `ConfigEngine.bat wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
+    -   AIX, Linux, Solaris: Run the `./ConfigEngine.sh wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   IBM i: Run the `ConfigEngine.sh wp-query-repository -DWasPassword=password` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   Windows: Run the `ConfigEngine.bat wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
 If you created your clustered environment, including the additional nodes, and then completed the steps in this task, you must now run the `update-jcr-admin` task on the secondary node. See the related links section for instructions.
 
