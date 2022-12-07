@@ -57,5 +57,5 @@ You can access the ConfigWizard admin console in a container environment from yo
 
 
 ???+ info "Related information"
-    - [DXClient](dxclient.md)
+    - [DXClient](../dxclient/index.md)
 
