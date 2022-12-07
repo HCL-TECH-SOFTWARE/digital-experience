@@ -1409,7 +1409,7 @@ JSON:
 
 This API allows a developer to apply a content template to a set of specific content items or all content items of a certain template. It is equivalent to the functionality in the user interface:
 
-![](../../../../../../../../images/apply_content_template_ui.png "Apply Content Template User Interface")
+![](../../../../../../images/apply_content_template_ui.png "Apply Content Template User Interface")
 
 Using the **Apply Content Template API**
 

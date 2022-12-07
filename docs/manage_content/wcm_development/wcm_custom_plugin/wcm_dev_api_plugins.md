@@ -8,7 +8,7 @@ A rendering plug-in is a reusable class that you create to run a task at render 
     -   `public String getName()`.
 
         !!! note
-            This name is used as the "name" parameter of the plug-in tag. See [Creating a plug-in tag](../../tags/creating_web_content_tags/creating_plugin_tag/index.md) for further information.
+            This name is used as the "name" parameter of the plug-in tag. See [Creating a plug-in tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/index.md) for further information.
 
     -   `public Boolean render(RenderingPluginModel p_model)` throws `RenderingPluginException`.
 2.  Implement `render()method`. This method contains the code that is run when the plug-in is started during rendering of a layout that contains a "plug-in" tag that references the custom plug-in. Returning true renders the body markup that is defined in the plug-in tag. If false is returned, the body of the plug-in tag is skipped. If the plug-in tag has no body markup, then the return value is ignored.
@@ -26,7 +26,7 @@ A rendering plug-in is a reusable class that you create to run a task at render 
 
         This method returns a description of the rendering plug-in.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 4.  The rendering plug-in can optionally implement `RenderingPluginDefinition` instead of `RenderingPlugin` to define its type and parameters. This is recommended, because it allows the rendering plug-ins to be used more easily.
 

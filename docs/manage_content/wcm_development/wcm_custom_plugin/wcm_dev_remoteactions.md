@@ -450,5 +450,5 @@ To edit a content item and create a draft on the edit and set the history log co
 -   Url: `http://<host>/wps/myportal/wcmAuthoring?wcmAuthoringAction=edit&docid=com.ibm.workplace.wcm.api.WCM_Content/ID1&createDraft=true&comment=comment`
 
 ???+ info "Related information"
-    - [Creating a plug-in tag](../../tags/creating_web_content_tags/creating_plugin_tag/index.md)
+    - [Creating a plug-in tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/index.md)
 

@@ -8,7 +8,7 @@ HCL Digital Experience 9.5 Container Update CF181 and higher releases add the We
 
 Pre-requisite:
 
-Configure the Digital Asset Manager service plug-in. Go to [Configuring the HCL Digital Experience Web Content Manager plug-in](../integrate/cfg_dch_dam.md) for more information.
+Configure the Digital Asset Manager service plug-in. Go to [Configuring the HCL Digital Experience Web Content Manager plug-in](../../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/content_plugins/index.md) for more information.
 
 Export DAM References API
 
@@ -195,7 +195,7 @@ This API lets developers find and retrieve all references to a Digital Asset Man
 
 It is equivalent to the functionality in the user interface (for finding Web Content Manager items):
 
-![](../../../../../../images/web_content_mgr_ref_ui.png "WCM Reference API UI")
+![](../../../../images/web_content_mgr_ref_ui.png "WCM Reference API UI")
 
 !!! note
     Currently, the Web Content Manager Reference API only supports the GET operation for retrieving items. To update items, the document outlines how to use existing APIs to make updates.
@@ -751,5 +751,5 @@ For example:
 
 
 ???+ info "Related information"
-    - [The generic XML Digital Data Connector data sink](../../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
+    - [The generic XML Digital Data Connector data sink](../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
 

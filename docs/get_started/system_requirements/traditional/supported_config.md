@@ -4,7 +4,7 @@ A “Supported Configuration” is a combination of HCL Software and other Depen
 
 HCL provides full support for configurations within this category. Support is provided under the terms of the product license, to ensure that the product operates within its specifications.  
 
-For more details, make sure to review this document: [HCL DX support statement](/digital-experience/get_started/software_support/).  
+For more details, make sure to review this document: [HCL DX support statement](../../../get_started/software_support.md).  
 
 ## Operating Systems
 
