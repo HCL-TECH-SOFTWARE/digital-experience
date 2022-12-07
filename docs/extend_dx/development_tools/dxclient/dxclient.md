@@ -607,28 +607,17 @@ dxclient help [command]
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html).
 
 
-<!-- ???Info "Related information"
-[How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
-
-[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-[Troubleshooting DXClient](../containerization/troubleshooting_dxclient.md)
-
-[DXConnect](../containerization/dxconnect.md)
-
-[Sample Pipelines for use with HCL DXClient and Automation servers](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
-
-[Using DAM staging](../containerization/dam_subscription_staging.md)
-
-[Create or update credential vault slot](../containerization/credentialvaultslot.md)
-
-[Personalization rules](../containerization/personalization.md)
-
-[Portlets](../containerization/portlets.md)
-
-[Themes](../containerization/themes.md)
-
-[Script applications](../containerization/scriptapplications.md)
-
-[Resource environment provider](../containerization/resourceenvironments.md) -->
+???+ info "Related information"
+    - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
+    - [DXClient Artifact Types](../dxclient/dxclient_artifact_types/index.md)
+    - [Troubleshooting DXClient](troubleshooting_dxclient.md)
+    - [DXConnect](dxconnect.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+    - [Using DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
+    - [Create or update credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
+    - [Personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
+    - [Portlets](../dxclient/dxclient_artifact_types/portlets.md)
+    - [Themes](../dxclient/dxclient_artifact_types/themes.md)
+    - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
+    - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
 
