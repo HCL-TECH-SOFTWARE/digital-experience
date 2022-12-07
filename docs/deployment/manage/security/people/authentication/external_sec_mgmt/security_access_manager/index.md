@@ -4,9 +4,9 @@ HCL Digital Experience supports the use of IBM Security Access Manager. Existing
 
 You can use the following services:
 
--   WebSEAL Single Sign On \(SSO\) for authentication
+-   WebSEAL Single Sign On (SSO) for authentication
 -   Protected Object Space and Access Control List Management for authorization
--   Global Sign-on \(GSO\) lockbox credential vault integration
+-   Global Sign-on (GSO) lockbox credential vault integration
 -   Automatic user provisioning from HCL Digital Experience self-registration to Security Access Manager
 
 Perform the following tasks to configure Security Access Manager:
@@ -23,8 +23,6 @@ If you no longer require the use of the credential vault adapter that you create
 After you enable and use the user provisioning feature within IBM Security Access Manager, you can disable the feature.
 
 
-**Related information**  
-
-
-[Using Social Rendering with Tivoli Access Manager and WebSEAL](/digital-experience/build_sites/social_rendering/administering_social_list/soc_rendr_adm_sr_tam_webseal.md)
+???+ info "Related information" 
+    - [Using Social Rendering with Tivoli Access Manager and WebSEAL](../../../../../../../build_sites/social_rendering/administering_social_list/soc_rendr_adm_sr_tam_webseal.md)
 
