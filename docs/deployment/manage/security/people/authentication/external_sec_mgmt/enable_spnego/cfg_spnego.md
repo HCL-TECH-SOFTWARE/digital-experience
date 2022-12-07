@@ -1,6 +1,6 @@
 # Re-enabling the SPNEGO TAI
 
-The HCL Digital Experience installation removes the Simple and Protected GSS-API Negotiation Mechanism trust association interceptor \(SPNEGO TAI\) from the list of available trust association interceptors. For this reason, you need to re-enable the SPNEGO TAI. You do not need to complete this task if you plan to use SPNEGO Web authentication.
+The HCL Digital Experience installation removes the Simple and Protected GSS-API Negotiation Mechanism trust association interceptor (SPNEGO TAI) from the list of available trust association interceptors. For this reason, you need to re-enable the SPNEGO TAI. You do not need to complete this task if you plan to use SPNEGO Web authentication.
 
 1.  Log on to the WebSphere® Integrated Solutions Console.
 
