@@ -3,6 +3,5 @@ nav:
     - index.md
     - scope-spec.md
     - index-spec.md
-    - constraints-spec.md
     - facets-spec.md
     - serach_API_Explore.md
