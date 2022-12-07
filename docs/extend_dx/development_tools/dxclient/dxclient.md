@@ -63,7 +63,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 5.  Run docker load < dxclient.tar.gz.
 
-6.  Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
+6.  Optional (It is advisable to not set this incase you run multiple DXClient versions in your system) : Open terminal, Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
 
     ```
     export PATH=<working-directory>/bin:$PATH
@@ -71,7 +71,13 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
     For Microsoft Windows platforms:
 
-    use `dxclient.bat` script in the bin directory to the PATH variable to be able to call DXClient from any directory.
+    Open command prompt, Add `dxclient.bat` script in the bin directory to the PATH variable in to be able to call DXClient from any directory.
+
+    ```
+    set PATH=<working-directory>\bin;%PATH%
+    ```
+
+    Note: You will loose these changes by closing the terminal / command prompt. If you set in system path permanently, kindly take the necessary steps to remove it. 
 
 7.  Set appropriate permission.
 
