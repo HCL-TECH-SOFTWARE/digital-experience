@@ -334,7 +334,6 @@ HCL Digital Experience and IBM WebSphere Application Server support the Trust As
 13. Some functions of HCL Digital Experience require the use of the PUT, and DELETE HTTP method. By default, WebSEAL does not allow these requests. You must either allow this method at the applicable WebSEAL ACL and web server, or change the HTTP methods in the x-method-override configuration in the WebSEAL config file webseald-instance.conf.
 
 
-
 ???+ info "Related information" 
     - [Creating the PdPerm.properties file](../cfg_sec_access_mgr/run_svrssl_config.md)
     - [Setting up SSL](../../../../../information/confidentiality/configuring_ssl/index.md)
