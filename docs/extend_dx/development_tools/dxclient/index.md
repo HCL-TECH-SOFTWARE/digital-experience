@@ -9,7 +9,7 @@ DXClient is a tool that helps developers and administrators manage tasks, such a
     DXClient is enabled in supported Kubernetes platforms from HCL Digital Experience 9.5 CF192 and later releases:
 
     * DXClient is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#dxclient-installation) for more details.
-    * DXClient also exists as [Node.js](https://nodejs.org/en/)-based CLI tool and requires Node.js to be installed as a prerequisite. However, this is deprecated in the HCL Digital Experience Container CF196 release.
+    * DXClient also exists as [Node.js](https://nodejs.org/en/)-based CLI tool and requires Node.js to be installed as a prerequisite. 
 
 
 DXclient is a CLI-based tool wrapped in a container image. This tool will be capable of executing artifacts connecting remotely to DX servers in standalone, cluster, or in Kubernetes environment. The container version of this tool is available from CF196 onwards.
@@ -219,7 +219,7 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ```
 
-## Installing using the node package file (deprecated in CF196)
+## Installing using the node package file 
 
 **Prerequisites:** Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
 
@@ -335,9 +335,13 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
 !!! note 
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
-    -   HCL DX 9.5 CF201 release:
-
+    -   HCL DX 9..5 CF207 release:
+        -   Support to set different Container Runtimes.
+    -   HCL DX 9.5 CF202 release:
+        -   Deprecated parameter `dxConnectHostname`. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+        -   [DAM Assets Export & import](https://opensource.hcltechsw.com/digital-experience/CF207/manage_content/digital_assets/usage/managing_dam/dam_exim/)
         
+    -   HCL DX 9.5 CF201 release:
         -   An optional parameter `requestId` added to [Deploy theme](../dxclient/dxclient_artifact_types/themes.md), [Deploy application](../dxclient/dxclient_artifact_types/scriptapplications.md#deploy-script-applications), [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-server), and [Manage virtual portals](../dxclient/dxclient_artifact_types/virtualportals.md).
         
         -   Retrieve feature added to the [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md).
@@ -349,6 +353,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
     -   HCL DX 9.5 CF200 release:
         -   [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
         -   [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report)
+    
     -   HCL DX 9.5 CF199 release:
         -   [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
         -   [Create credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
@@ -366,12 +371,13 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         -   [Undeploy portlets](../dxclient/dxclient_artifact_types/portlets.md)
         -   [Deploy and undeploy themes](../dxclient/dxclient_artifact_types/themes.md)
         -   [Deploy application](../dxclient/dxclient_artifact_types/deployapplication.md)
-
         -   [manage get-syndication report](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
         -   [Restart Core](../dxclient/dxclient_artifact_types/dxcoreserver.md)
         -   [Delete DAM schema](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md)
+    
     -   HCL DX 9.5 CF196 release:
         -   [Shared library](../dxclient/dxclient_artifact_types/sharedlibrary.md)
+    
     -   HCL DX 9.5 CF195 release:
         -   [Undeploy theme](../dxclient/dxclient_artifact_types/themes.md)
         -   [MLS export and import of WCM library](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
@@ -380,7 +386,6 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         -   [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md)
         -   [Deploy Application](../dxclient/dxclient_artifact_types/deployapplication.md)
         -   [Managing syndicators](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
-
         -   [Managing subscribers](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
 
     -   HCL DX 9.5 CF192 release:
