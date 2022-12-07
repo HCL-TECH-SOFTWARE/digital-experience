@@ -218,13 +218,13 @@ The following list contains all portal components that are not handled by the in
 [Staging-server topology for Web Content Manager](../../../../manage_content/wcm_delivery/syndication/staging_wcm/index.md)<br>
 [Web content testing environments](../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_cms_server_uat.md)<br>
 [Publishing personalization rules](../../../../manage_content/pzn/publishing_pzn_rules/index.md)<br>
-[Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)<br>
-[XML configuration reference](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)<br>
+[Working with the XML configuration interface](../../../manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)<br>
+[XML configuration reference](../../../manage/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)<br>
 [Exporting and importing a web content library](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
-[Deleting a web content library](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/web_content_library/manage_web_content_lib/wcm_config_wcmlibrary_delete.md)<br>
+[Deleting a web content library](../../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/wcm_config_wcmlibrary_delete.md)<br>
 [Using the XML configuration interface to work with virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/advp_xml.md)<br>
 [How to configure a web content staging environment](../../../../manage_content/wcm_delivery/syndication/staging_wcm/wcm_config_prop_staging.md)<br>
-[Administering managed pages](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/managed_pages/advadmin_managedpages/index.md)<br>
+[Administering managed pages](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/index.md)<br>
 [Exporting content from the filestore](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md)<br>
 [Staging Personalization rules to production](../../../..//manage_content/pzn/pzn_stage_prod.md<br>
 [Exporting and importing web content libraries](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/index.md)

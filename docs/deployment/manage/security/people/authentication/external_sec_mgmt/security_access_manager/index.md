@@ -26,5 +26,4 @@ After you enable and use the user provisioning feature within IBM Security Acces
 **Related information**  
 
 
-[Using Social Rendering with Tivoli Access Manager and WebSEAL](/digital-experience/build_sites/social_rendering/administering_social_list/soc_rendr_adm_sr_tam_webseal.md)
-
+[Using Social Rendering with Tivoli Access Manager and WebSEAL](../../../../../build_sites/social_rendering/administering_social_list/soc_rendr_adm_sr_tam_webseal)

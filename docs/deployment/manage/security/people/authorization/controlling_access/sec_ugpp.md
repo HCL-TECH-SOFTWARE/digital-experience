@@ -44,9 +44,9 @@ To access the User and Group Permissions portlet and find instructions for manag
 **Related information**  
 
 
-[Viewing and creating vanity URLs](/digital-experience/manage_content/wcm/wcm_content_delivery/vanity_url/van_url_create)
+[Viewing and creating vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/van_url_create)
 
-[The master administrator](/digital-experience/build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_mastr_adm)
+[The master administrator](../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_mastr_adm)
 
-[Sub-administrators of a virtual portal and their access roles and permissions](/digital-experience/build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_subadm)
+[Sub-administrators of a virtual portal and their access roles and permissions](../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_subadm)
 

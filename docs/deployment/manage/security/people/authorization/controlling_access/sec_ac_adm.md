@@ -29,5 +29,5 @@ The `Administrator@Portal` and `Security Administrator@Portal` roles contain a s
 **Related information**  
 
 
-[Security for WSRP services](/digital-experience/extend_dx/portlets_development/usage/wsrp/planning_wsrp/admin-system/wsrpc_secy)
+[Security for WSRP services](../../../../extend_dx/portlets_development/usage/wsrp/planning_wsrp/admin-system/wsrpc_secy)
 

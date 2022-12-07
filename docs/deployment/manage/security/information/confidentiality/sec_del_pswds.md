@@ -13,13 +13,13 @@ Complete the following steps to delete passwords and other security-sensitive in
     |Operating system|Steps|
     |----------------|-----|
     |Windows™|Complete the following steps to access the configuration directory:    1.  Open a command prompt.
-    2.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
+    2.  Change to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
 |
     |AIX®SolarisLinux™|Complete the following steps to access the configuration directory:    1.  Open a terminal session.
-    2.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+    2.  Change to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 |
     |IBM® i|Complete the following steps to access the configuration directory:    1.  Type STRQSH on an OS/400 command line to start the Qshell Interpreter.
-    2.  Change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+    2.  Change to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 |
 
 2.  Remove the work directory that was created during the installation:
@@ -41,5 +41,5 @@ Complete the following steps to delete passwords and other security-sensitive in
 **Related information**  
 
 
-[Reference: Configuration properties](/digital-experience/deployment/manage/cfg_property_files/)
+[Reference: Configuration properties](../../../manage/cfg_property_files/)
 

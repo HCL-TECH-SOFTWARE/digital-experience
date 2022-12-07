@@ -107,11 +107,11 @@ To be able to create Segment Groups, the user must have read access to the Appli
 
 -   Set as `Editor` of the library that contains the segment groups.
 
-`Editor` role is required on the web content library to be able to create and edit segment groups. Log in to HCL Portal. Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**. Click the **Set permissions** icon on the **Web Content** library to set the `Editor` role. For information about the roles, go to [Web content management roles](/digital-experience/deployment/manage/security/people/authorization/controlling_access/wcm_security/wcm_cms_access/wcm_cms_roles).
+`Editor` role is required on the web content library to be able to create and edit segment groups. Log in to HCL Portal. Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**. Click the **Set permissions** icon on the **Web Content** library to set the `Editor` role. For information about the roles, go to [Web content management roles](../../../manage/security/people/authorization/controlling_access/wcm_security/wcm_cms_access/wcm_cms_roles).
 
 
 |
-|Use Segments from Segment Groups to target content|Set as `User` on the segment groups to be accessible.Set this access at the library level or Segments folder level to give access to all segment groups within the library. Use the **Web Content Libraries** portlet to set access. Alternatively, set this access at the item level to give access to individual segment groups. For information about the roles, go to [Web content management roles](/digital-experience/deployment/manage/security/people/authorization/controlling_access/wcm_security/wcm_cms_access/wcm_cms_roles).
+|Use Segments from Segment Groups to target content|Set as `User` on the segment groups to be accessible.Set this access at the library level or Segments folder level to give access to all segment groups within the library. Use the **Web Content Libraries** portlet to set access. Alternatively, set this access at the item level to give access to individual segment groups. For information about the roles, go to [Web content management roles](../../../manage/security/people/authorization/controlling_access/wcm_security/wcm_cms_access/wcm_cms_roles).
 
 To target content on a **Web Content Viewer** portlet on a page, a user must have the following roles:
 
@@ -600,19 +600,19 @@ When you use identity propagation, the user who is authenticated on the client p
 **Related information**  
 
 
-[Securing a WSRP Producer portal](/digital-experience/extend-dx/portlets_development/usage/wsrp/configuration/portal_wsrp_producer/securing_wsrp_prod/wsrpt_prod_prep_sec)
+[Securing a WSRP Producer portal](../../../extend-dx/portlets_development/usage/wsrp/configuration/portal_wsrp_producer/securing_wsrp_prod/wsrpt_prod_prep_sec)
 
-[Configuring security on the Consumer portal](/digital-experience/extend-dx/portlets_development/usage/wsrp/configuration/portal_wsrp_consumer/cfg_secuity_consumer/wsrpt_cons_prep_sec)
+[Configuring security on the Consumer portal](../../../extend-dx/portlets_development/usage/wsrp/configuration/portal_wsrp_consumer/cfg_secuity_consumer/wsrpt_cons_prep_sec)
 
-[Configuring Portal Access Control for a WSRP Producer portal](/digital-experience/extend-dx/portlets_development/usage/wsrp/configuration/portal_wsrp_producer/securing_wsrp_prod_portal/wsrpt_prod_sec_pac)
+[Configuring Portal Access Control for a WSRP Producer portal](../../../extend-dx/portlets_development/usage/wsrp/configuration/portal_wsrp_producer/securing_wsrp_prod_portal/wsrpt_prod_sec_pac)
 
-[Adapting the list of required runtime configuration changes for your theme](/digital-experience/build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging/themeopt_move_repack_runtime)
+[Adapting the list of required runtime configuration changes for your theme](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging/themeopt_move_repack_runtime)
 
-[Viewing and creating vanity URLs]((/digital-experience/manage_content/wcm/wcm_content_delivery/vanity_url/van_url_create)
+[Viewing and creating vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/van_url_create)
 
-[Human readable URL mappings for virtual portals](/digital-experience/build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap)
+[Human readable URL mappings for virtual portals](../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap)
 
-[Managing community associations](/digital-experience/extend-dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping)
+[Managing community associations](../../../extend-dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping)
 
-[Security for tagging and rating](/digital-experience/build_sites/tagging_rating/tag_rate_secy)
+[Security for tagging and rating](../../../../build_sites/tagging_rating/tag_rate_secy)
 

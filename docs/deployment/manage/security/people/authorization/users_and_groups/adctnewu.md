@@ -45,5 +45,5 @@ The portlets that are used in this task are Users and Groups
 **Related information**  
 
 
-[User IDs and passwords](/digital-experience/get_started/plan_deployment/traditional_deployment/sec_chars)
+[User IDs and passwords](../../../../get_started/plan_deployment/traditional_deployment/sec_chars)
 

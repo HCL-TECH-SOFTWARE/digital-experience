@@ -4,7 +4,7 @@ After creating users and groups, you can assign them different levels of access 
 
 Review the following information and perform the following tasks to control access within HCL Digital Experience:
 
-**Note:** If a page or label is not accessible for a user, the user is taken to any page or label higher up in the navigation that is accessible to them. For more information about setting page permissions, see [Manage pages portlets](/digital-experience/deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets).
+**Note:** If a page or label is not accessible for a user, the user is taken to any page or label higher up in the navigation that is accessible to them. For more information about setting page permissions, see [Manage pages portlets](../../../manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets).
 
 
 -   **[Managing users and groups](../controlling_access/managing_user_groups)**  
@@ -36,13 +36,13 @@ Access Control internally uses several caches to improve the access control deci
 **Related information**  
 
 
-[Administering user impersonation](/digital-experience/deployment/manage/security/people/authorization/users_and_groups/impersonation)
+[Administering user impersonation](../../../manage/security/people/authorization/users_and_groups/impersonation)
 
-[Managing the user population for virtual portals](/digital-experience/build_sites/virtual_portal/vp_planning/advppln_mgupop)
+[Managing the user population for virtual portals](../../../../build_sites/virtual_portal/vp_planning/advppln_mgupop)
 
-[Planning for virtual portals](/digital-experience/build_sites/virtual_portal/vp_planning/advppln_mgupop)
+[Planning for virtual portals](../../../../build_sites/virtual_portal/vp_planning/advppln_mgupop)
 
-[The master administrator](/digital-experience/build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_mastr_adm)
+[The master administrator](../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_mastr_adm)
 
-[Sub-administrators of a virtual portal and their access roles and permissions](/digital-experience/build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_subadm)
+[Sub-administrators of a virtual portal and their access roles and permissions](../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_subadm)
 

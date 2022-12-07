@@ -30,5 +30,5 @@ Depending on circumstances, you might want to remove users or groups from your H
 
 [Work with the Portal Scripting Interface](../admin-system/adpsitsk.md)
 
-[Administering user impersonation](/digital-experience/deployment/manage/security/people/authorization/users_and_groups/impersonation)
+[Administering user impersonation](../../../manage/security/people/authorization/users_and_groups/impersonation)
 -->

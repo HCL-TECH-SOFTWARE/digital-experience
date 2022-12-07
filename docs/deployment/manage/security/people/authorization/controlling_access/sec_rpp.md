@@ -18,7 +18,7 @@ Access the Resource Permissions portlet from the administration menu. Click the 
 **Related information**  
 
 
-[The master administrator](/digital-experience/build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_mastr_adm)
+[The master administrator](../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_mastr_adm)
 
-[Sub-administrators of a virtual portal and their access roles and permissions](/digital-experience/build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_subadm)
+[Sub-administrators of a virtual portal and their access roles and permissions](../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_subadm)
 

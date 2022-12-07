@@ -22,5 +22,5 @@ The tasks involved in enabling FIPS are specific to Web servers and WebSphere® 
 **Related information**  
 
 
-[Federal Information Processing Standards and \(NIST\) SP800-131a](/digital-experience/deployment/manage/security/people/authentication/sec_auth_consideration/plan_fips)
+[Federal Information Processing Standards and \(NIST\) SP800-131a](../../../manage/security/people/authentication/sec_auth_consideration/plan_fips)
 

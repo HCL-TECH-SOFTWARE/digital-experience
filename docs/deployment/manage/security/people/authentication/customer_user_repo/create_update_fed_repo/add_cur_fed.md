@@ -8,9 +8,9 @@ You must create a custom user registry adapter before you create your repository
 
     1.  Open wkplc.properties with any text editor from the following directory:
 
-        -   Windows™: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties
-        -   AIX®SolarisLinux™: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
-        -   IBM® i: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+        -   Windows™: [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties
+        -   AIX®SolarisLinux™: [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+        -   IBM® i: [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
     2.  Specify values for the following parameters under the **VMM Federated CUR Properties** heading:
 
         -   federated.cur.id
@@ -23,7 +23,7 @@ You must create a custom user registry adapter before you create your repository
         -   federated.cur.supportTransactions
     3.  Save and close wkplc.properties.
 
-    4.  Run the following task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory:
+    4.  Run the following task from the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory:
 
         -   Windows: ConfigEngine.bat wp-create-cur -DWasPassword=password
         -   AIXSolarisLinux: ./ConfigEngine.sh wp-create-cur -DWasPassword=password
@@ -34,9 +34,9 @@ You must create a custom user registry adapter before you create your repository
 
     1.  Open wkplc.properties with any text editor from the following directory:
 
-        -   Windows: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties
-        -   AIXSolarisLinux: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
-        -   IBM i: [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+        -   Windows: [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)\\ConfigEngine\\properties
+        -   AIXSolarisLinux: [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
+        -   IBM i: [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties
     2.  Specify values for the following parameters under the **VMM Federated CUR Properties** heading in wkplc.properties:
 
         -   cur.id
@@ -44,7 +44,7 @@ You must create a custom user registry adapter before you create your repository
         -   cur.value
     3.  Save and close wkplc.properties.
 
-    4.  Run the following task from the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory:
+    4.  Run the following task from the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory:
 
         -   Windows: ConfigEngine.bat wp-create-cur-custom-property -DWasPassword=password
         -   AIXSolarisLinux: ./ConfigEngine.sh wp-create-cur-custom-property -DWasPassword=password
@@ -56,7 +56,7 @@ You must create a custom user registry adapter before you create your repository
 **Related information**  
 
 
-[Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart)
+[Starting and stopping servers, deployment managers, and node agents](../../../manage/stopstart)
 
 [Websphere Application Server Information center: Sample custom adapters for federated repositories examples](https://www.ibm.com/docs/en/was/8.5.5?topic=repositories-sample-custom-adapters-federated-examples)
 

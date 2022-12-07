@@ -30,7 +30,7 @@ CSP has the following limitations:
 
 For more information on how to configure custom styles for Advanced Text Editor see the following resources:
 
--   Documentation resource: [Rich Text Editor Toolbar configuration options](/digital-experience/manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_ephox_custom)
+-   Documentation resource: [Rich Text Editor Toolbar configuration options](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_ephox_custom)
 -   Documentation resource: [Using your own document styles in customizing the Rich Text Editor](https://docs.ephox.com/display/tbio/Using+Your+Own+Document+Styles)
 
 -   **[Content-Security-Policy header](../content_sec_policy/content_security_policy_header.md)**  

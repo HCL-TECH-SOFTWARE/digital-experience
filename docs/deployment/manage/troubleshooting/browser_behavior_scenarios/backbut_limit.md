@@ -4,7 +4,7 @@ The following restrictions apply to backward navigability of portal pages.
 
 ## The administration portlets do not officially support the browser 'Back' or 'Refresh' functions.
 
-For a listing and description of the administration portlets, refer to [Portal administration portlets](adpltadm.md).
+For a listing and description of the administration portlets, refer to [Portal administration portlets](../../../manage/portal_admin_tools/portal_admin_portlets/index.md).
 
 ## The Back and Forward buttons have no undo or redo function
 
@@ -36,5 +36,5 @@ Server side bookmarks of the HCL Portal Favorites portlet are migrated automatic
 **Related information**  
 
 
-[Portal administration portlets](../admin-system/adpltadm.md)
+[Portal administration portlets](../../../portal_admin_tools/portal_admin_portlets/index.md
 

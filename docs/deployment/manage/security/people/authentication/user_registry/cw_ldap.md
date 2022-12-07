@@ -27,7 +27,7 @@ The following table lists the fields that are unique to the LDAP configuration. 
     The Enable Federated Security option modifies the wimconfig.xml file. Make a backup copy of this file before you run any of the configuration tasks.
 
 ```
-[wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/config/cells/CellName/wim/config/wimconfig.xml
+[wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/config/cells/CellName/wim/config/wimconfig.xml
 ```
 
 |Field Label|Property|Your Value|

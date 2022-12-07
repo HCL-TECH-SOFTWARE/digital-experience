@@ -84,7 +84,7 @@ HCL Digital Experience and IBM WebSphere Application Server support the Trust As
 
 5.  **Clustered environments:** Complete this step on all nodes.
 
-    Run the following task in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
+    Run the following task in the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
 
     **Tip:** Run the validate-pdadmin-connection task on the HCL Digital Experience node or on each node in a clustered environment. In a clustered environment, WasPassword is the Deployment Manager administrator password. The wp.ac.impl.PDAdminPwd is the Security Access Manager administrative user password.
 
@@ -137,7 +137,7 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
 
 6.  If you are using junctions that require a Trust Association Interceptor in WebSphere Application Server, you must install and configure the TAI if it was not already set up. To configure the Security Access Manager Trust Association Interceptor \(TAI++\), complete the following steps:
 
-    1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory. Enter the following parameters under the WebSphere Application Server WebSEAL TAI parameters heading:
+    1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory. Enter the following parameters under the WebSphere Application Server WebSEAL TAI parameters heading:
 
     2.  Add the TAMTAIName parameter to the WebSphere Application Server WebSEAL TAI section.
 
@@ -232,7 +232,7 @@ ConfigEngine.bat enable-tam-tai -DWasPassword=password
 
     8.  Log out of the WebSphere Integrated Solutions Console.
 
-9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart).
+9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../manage/stopstart).
 
 10. Go to the WebSEAL node and edit the webseald-instance.conf file for the appropriate WebSEAL instance. An example is webseald-default.conf. This file sets the `basicauth-dummy-passwd` value to the password for the ID that WebSEAL uses to identify itself to WebSphere Application Server. This password is the trusted user ID and password that were created in an earlier step. Stop and start the WebSEAL server before you continue.
 
@@ -254,9 +254,9 @@ ConfigEngine.bat enable-tam-tai -DWasPassword=password
 **Related information**  
 
 
-[Creating the PdPerm.properties file](/digital-experience/deployment/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/un_svrssl_config)
+[Creating the PdPerm.properties file](../../security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/un_svrssl_config)
 
-[Setting up SSL](/digital-experience/deployment/security/information/confidentiality/configuring_ssl)
+[Setting up SSL](../../security/information/confidentiality/configuring_ssl)
 
 [Extended Tivoli Access Manager Trust Association Interceptor Plus \(ETAI\)](https://support.hcltechsw.com/csm)
 
@@ -264,5 +264,5 @@ ConfigEngine.bat enable-tam-tai -DWasPassword=password
 
 [ETAI Download](https://www.ibm.com/support/pages/node/574293)
 
-[Migrating Security Access Manager](/digital-experience/deployment/migrate/next_steps/post_mig_activities/addon_integration_task/mig_tam_consid)
+[Migrating Security Access Manager](../../../manage/migrate/next_steps/post_mig_activities/addon_integration_task/mig_tam_consid)
 

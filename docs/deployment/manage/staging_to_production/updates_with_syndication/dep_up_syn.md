@@ -31,5 +31,5 @@ The ExportManagedPagesRelease.xml file or a Portal Application Archive (PAA) fil
 [Syndication relationships](../../../../manage_content/wcm_delivery/syndication/wcm_syndication_overview.md)<br>
 [Staging artifacts that are not transferred by syndication](../../staging_to_production/updates_with_syndication/dep_up_syn_staging.md)<br>
 [Creating the differential release](../../staging_to_production/creating_deploying_diff_release/dep_diff.md)<br>
-[The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+[The XML configuration interface](../../../manage/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)
 
