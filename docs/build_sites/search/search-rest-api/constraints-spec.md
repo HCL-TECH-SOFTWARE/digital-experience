@@ -18,9 +18,10 @@ A field constraint allows only results that match specific field values.
 |**id**|The identifier of the indexed field.|
 |**values**|An array of field values. Each search result must match at least one of the values.|
 
-!!!example
-    &constraint={ "type":"field", "id":"title", "values":["Welcome"]}
+**Example**: &constraint={ "type":"field", "id":"title", "values":["STRING_VALUE"]}
  
+!!!example "Sample command"
+    http://hostname:port/wps/mycontenthandler/searchfeed/search?queryLang=en&locale=en&resultLang=en&query=development&scope=com.ibm.lotus.search.ALL_SOURCES&constraint={ "type":"field", "id":"title", "values":["Welcome"]}
 
 ## Category Constraint
 
@@ -35,19 +36,29 @@ A category constraint refers to a constraint on a specific category in a *Facet*
 |**type**|Always equals category for this type of constraint|
 |**values**|An array of category IDs. Each search result must match at least one of the categories.|
 
-!!!example "Examples"
-    -   Constraint=type: category, values:[Tag/tag1]
-    -   Constraint=type: category, values:[Tag/tag1,Tag/tag2]
-    -   Constraint=type: category, values:[Source/forums,Source/profiles,Source/wikis,Source/status_updates]
-    -   Constraint=type: category, values:[Tag/tag1]}
-    -   Constraint=type: category, values:[Tag/tag2]
+**Examples**:
+
+-   Constraint=**type**: *category*, **values**:*[Tag/tag1]*
+-   Constraint=**type**: *category*, **values**:*[Tag/tag1,Tag/tag2]*
+-   Constraint=**type**: *category*, **values**:*[Source/forums,Source/profiles,Source/wikis,Source/status_updates]*
+-   Constraint=**type**: *category*, **values**:*[Tag/tag1]}*
+-   Constraint=**type**: *category*, **values**:*[Tag/tag2]*
+
+!!!example "Sample search"
+    Set the facetedFields value to **["category"]**.
+
+    From a regular search for content with the text **article1**, it has the category of **compact**.
+    (Categories in content: //cars/compact)
+
+    Sample search with a constraint of compact:<br>
+    http://hostname:port/wps/mycontenthandler/searchfeed/search?queryLang=en&locale=en&resultLang=en&query=article1&scope=com.ibm.lotus.search.ALL_SOURCES&constraint={ "type":"category", "id":"category", "values”:[“compact”]}
+
+    The constraint needs the **field id** to check. In addition, it needs to be a facet field:<br>
+    &lt;wplc:field id="category"&gt;compact&lt;/wplc:field&gt;
 
 ### Setting search service properties
 
 For a category constraint to work, set the values for **facetedFields** and **fieldTypes** first.
-
-!!!important
-    When you add or update any of the two search service properties, you must restart the Portal server and the remote search service, if available. Failing to do so will result to facets not being handled during indexing. In addition, no facet information will be returned through the Search REST service call, resulting to facets not appearing in the sample portlet.
 
 #### Setting the facetedFields value
 
@@ -57,7 +68,7 @@ For a category constraint to work, set the values for **facetedFields** and **fi
 
 3. In the **facetedFields** field, enter **["tag", "category"]**.
 
-    These two fields will be indexed as facets and could be searchable as facets within Explorative Navigation Portlet.
+    These two fields will be indexed as facets and could be searchable as facets.
 
 #### Setting the fieldTypes value
 
@@ -70,7 +81,7 @@ If you have fields in the seedlist that are not strings and you want to sort by 
 3. In the **fieldTypes** field, enter **{"popularity":"integer"}**.
 
 !!!important
-    For the search constraint to work, a search administrator must disable post-filtering. Go to **Administration > Manage Search > Search Services > Default Portal Search Service**. In Properties, change SEARCH_SECURITY_MODE parameter to SECURITY_MODE_PRE_FILTER.
+    When you add or update any of the two search service properties, you must restart the Portal server and the remote search service, if available. Failing to do so will result to facets not being handled during indexing. In addition, no facet information will be returned through the Search REST service call, resulting to facets not appearing in the sample portlet.
 
 For more information, see [Faceted Search - Leverage Search Experience based on Search REST API](https://support.hcltechsw.com/csm?id=kb_article&sys_id=f2cfbcefdbc2dc5055f38d6d13961935).
 
@@ -90,8 +101,10 @@ A range constraint allows only results in a specific range of field values. Valu
     |**id**|The identifier of the indexed field.|
     |**values**|An array of range values. Each value consists of lower and upper boundaries. Each boundary can be inclusive or exclusive. One or more boundaries can be specified for each value. The allowed attributes are: <br/> -   *ge* for lower inclusive boundary. <br/> -   *g* for lower exclusive boundary. <br/> -   *le* for upper inclusive boundary. <br/> -   *l* for upper exclusive boundary.|
 
-!!!example
-    &constraint={"type":"range","id":"effectivedate","values":[{"ge":"1322199864000","le": "5371735633728"}]}
+**Example**: &constraint={"type":"range","id":"effectivedate","values":[{"ge":"1322199864000","le": "5371735633728"}]}
+
+!!!example "Sample command"
+    http://hostname:port/wps/mycontenthandler/searchfeed/search?queryLang=en&locale=en&resultLang=en&query=development&scope=com.ibm.lotus.search.ALL_SOURCES&constraint={"type":"range","id":"effectivedate","values":[{"ge":"1322199864000","le": "5371735633728"}]}
 
 
 ???+ info "Related information"
