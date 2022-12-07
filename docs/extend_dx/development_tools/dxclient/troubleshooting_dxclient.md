@@ -14,7 +14,7 @@ Logs can be enabled and disabled as desired by DX developers and administrators 
 
 # Troubleshooting DXConnect
 
-To enable log tracing in DXConnect you will need to access ConfigWizard admin console. Once logged in follow the below steps :
+To enable log tracing in DXConnect you will need to access ConfigWizard admin console. Once logged in follow the below steps:
     1. In the left navigation, expand 'Troubleshooting'.
     2. Under Troubleshooting, Click on 'Logs and trace'.
     3. Navigate to Logging and tracing > server1 > Diagnostic trace service.
