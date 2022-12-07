@@ -22,7 +22,7 @@ Custom filters can perform various actions:
 To use a content page resolution filter, you must create a content page resolution filter class and then register the filter by deploying it on the server.
 
    !!! note
-      The resolve method can be called for every WCM POC `"?urile=wcm:path:contentPath"` request before the portal state and render parameters are set. It can then be used to change the `contentPath` and set the specific portal page to show the content one. Refer to the following Help Center documentation for additional information: [Writing links to web content](../../tags/wcm_dev_writing-links.md)
+      The resolve method can be called for every WCM POC `"?urile=wcm:path:contentPath"` request before the portal state and render parameters are set. It can then be used to change the `contentPath` and set the specific portal page to show the content one. Refer to the following Help Center documentation for additional information: [Writing links to web content](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/wcm_dev_writing-links.md)
 
 1.  Create a java class that implements the interface com.ibm.workplace.wcm.api.extensions.resolution.ContentPageResolutionFilter. This class must implement the following methods:
 
@@ -34,7 +34,7 @@ To use a content page resolution filter, you must create a content page resoluti
 
         This method is started during `ContentPageResolution` processing. The `response` parameter is used to modify the content item that is displayed, the portal page where the content is displayed, and the presentation template that is used to render the content item. The request extends the resolver interface with an extra method that gets the content item that is addressed. The filter chain contains the subsequent filters that can be started if needed.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  A plugin.xml file is needed whether the deployment is done by using a WAR or EAR, or by using a loose jar. If deploying with an application in a WAR or EAR, include the plugin.xml file in the application's "WEB-INF" folder. When using a jar, include the plugin.xml in the root of the jar.
 
@@ -433,7 +433,7 @@ public class LocaleDependantSelectionFilter implements ContentPageResolutionFilt
 
 
 
-Related information
-   - [Setting up a web content fallback page](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_dx/customizing_content/mp_wcm_fallback.md)
-   - [Dynamic web content page selection](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_dx/advance_adm_sample/mp_wcm_dynamicpage.md)
+???+ info "Related information"
+   - [Setting up a web content fallback page](../../wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_fallback.md)
+   - [Dynamic web content page selection](../../wcm_delivery/deliver_webcontent_on_dx/advance_adm_sample/mp_wcm_dynamicpage.md)
 

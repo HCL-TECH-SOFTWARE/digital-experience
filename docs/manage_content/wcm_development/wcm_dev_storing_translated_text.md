@@ -6,7 +6,7 @@ Translated text can be stored in a content item or site area. The translated tex
 
 -   Create a content item or site area.
 -   Add `ibm.wcm.TextProvider` as a keyword in the content item or site area's profile settings.
--   Create a set of text elements for each language that is used by your site. Each text element must be named entering a language code for the language in the name field. See [Supported languages](../reference/supportedlanguages.md) for a list of codes. At render time, if the requested language does not exist in the list of elements, the first element is used as the default language.
+-   Create a set of text elements for each language that is used by your site. Each text element must be named entering a language code for the language in the name field. See [Supported languages](../..//deployment/manage/portal_admin_tools/language_support/index.md) for a list of codes. At render time, if the requested language does not exist in the list of elements, the first element is used as the default language.
 -   Type the translated text in each field by using this format: `keyname=translated-text`. You can add as many key names as you need into each text element. For example:
 
     ```

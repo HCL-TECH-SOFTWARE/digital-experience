@@ -8,7 +8,7 @@ You can use the Web Content Manager REST service to create, read, update, query 
 You can use the HCL Web Content Manager REST service to create, read, update, and delete content items.
 -   **[How to use REST with components](wcm_rest_crud_component.md)**  
 You can use the Web Content Manager REST service to create, read, update, and delete some types of components.
--   **[How to use REST with elements before version 8.5 CF03](wcm_rest_crud_element.md)**  
+-   **[How to use REST with elements before version 8.5 CF03](wcm_rest_crud_element_cf03.md)**  
 You can use the Web Content Manager REST service to create, read, update, and delete some types of elements that are stored in site areas and content items. All element types are supported.
 -   **[How to use REST with elements with version 8.5 CF03 or higher](wcm_rest_crud_element_cf03.md)**  
 You can use the Web Content Manager REST service to create, read, update, and delete elements.

@@ -4,7 +4,7 @@ Many configurations of HCL Products and other software exist that are not explic
 
 Configurations that fall into this category typically substitute a Dependent Product listed in the “Supported Configuration” for similar software. This may be a newer fix level of the Dependent Product or another software product that adheres to a supported specification. For example, this could be a newer WebSphere® Application Server (WAS) fix pack, an LDAP server that adheres to that standard or an external security manager that integrates via public APIs.
 
-Please make sure to review [HCL DX support statement for "Other Configurations"](/digital-experience/get_started/software_support/) before making a decision to use the Dependent Products listed below.
+Please make sure to review [HCL DX support statement for "Other Configurations"](../../../get_started/software_support.md) before making a decision to use the Dependent Products listed below.
 
 
 ## Operating Systems

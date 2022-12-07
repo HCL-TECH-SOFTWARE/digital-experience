@@ -29,6 +29,6 @@ Reference material for REST response codes, links, media types, and attachments.
 
 
 ???+ info "Related information"
-    - [The generic XML Digital Data Connector data sink](../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
+    - [The generic XML Digital Data Connector data sink](../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
     - [HCL Digital Experience Version 2 REST APIs](https://help.hcltechsw.com/digital-experience/8.5/wcm/dx_v2_rest_api.html)
 

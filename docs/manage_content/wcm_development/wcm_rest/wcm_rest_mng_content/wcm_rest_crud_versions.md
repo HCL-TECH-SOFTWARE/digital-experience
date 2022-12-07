@@ -109,7 +109,7 @@ HTTP/1.0 200 OK
 
     It is equivalent to the functionality and versions in the Web Content Manager user interface (example below):
 
-    ![Restore_version_API_HCL_DX](../../../../../../assets/Restore_Version_API_HCL_DX.png)
+    ![Restore_version_API_HCL_DX](../../../../assets/Restore_Version_API_HCL_DX.png)
 
 
 ## Using the Restore Version API

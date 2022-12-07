@@ -164,9 +164,9 @@ next-stage" enctype="multipart/form-data" method="POST">
 
 The Process Now and Remove Workflow from an item functionality are equivalent to their functionality in user interfaces:
 
-![](../../../../../../assets/Process_Now_API.png "Process Now")
+![](../../../../assets/Process_Now_API.png "Process Now")
 
-![](../../../../../../assets/Remove_Workflow_API.png "Remove Workflow")
+![](../../../../assets/Remove_Workflow_API.png "Remove Workflow")
 
 ## Using the Process Now API
 

@@ -78,7 +78,7 @@ This tag sets the path to your Web Content Manager server. This tag is not requi
 |wcmWebAppPath|The URL up to the web application. For example, `http://localhost:10039/wps/wcm`|
 |wcmServletPath|The servlet path to the Web Content Manager servlet. For example, `/connect`|
 |path|The path to the content and site areas. For example, `/Site Area A/ Site Area B/Content C`|
-|requestParameters|You specify java Map request parameters to set in the context. These parameters can be used by menu components that are rendered through the JSP that use a query string.See [Writing links to web content](../../tags/wcm_dev_writing-links.md) for details of request parameters that can be used when you reference web content items.|
+|requestParameters|You specify java Map request parameters to set in the context. These parameters can be used by menu components that are rendered through the JSP that use a query string.See [Writing links to web content](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/wcm_dev_writing-links.md) for details of request parameters that can be used when you reference web content items.|
 |project|The name of the project to set in the context. If the corresponding project cannot be found, it is ignored and an error is logged. An empty string is used to clear any project that is previously set in the context.|
 
 !!! note
@@ -181,6 +181,6 @@ Rendering plug-ins can be referenced within JSP code by using a plug-in tag:
 </wcm:plugin>
 ```
 
-For more information, see [Creating a plug-in tag](../../tags/creating_web_content_tags/creating_plugin_tag/index.md).
+For more information, see [Creating a plug-in tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/index.md).
 
 
