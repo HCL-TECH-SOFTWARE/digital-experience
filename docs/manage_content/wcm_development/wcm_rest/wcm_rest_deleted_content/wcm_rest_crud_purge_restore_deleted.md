@@ -4,7 +4,7 @@ This new API allows you to restore a previous version of a content item. It can 
 
 It is equivalent to the functionality in the user interface:
 
-![](../../../../../../images/WCM_REST_Restore_Deleted.png)
+![](../../../../images/WCM_REST_Restore_Deleted.png)
 
 !!! note
     The APIs to Restore Deleted Content items is available for HCL Digital Experience 9.5 CF192 and higher releases.

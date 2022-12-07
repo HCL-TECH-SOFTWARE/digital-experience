@@ -4,7 +4,7 @@ This set of APIs allow you to retrieve information about the configured Multilin
 
 In the user interface of the WCM Authoring Portlet, one can see the linked translated content and this API gives a similar aggregated view:
 
-![Diagram depicting ML translations within the Web Content Manager Authoring Portlet.](../../../../../images/mls_library_links.png)
+![Diagram depicting ML translations within the Web Content Manager Authoring Portlet.](../../../images/mls_library_links.png)
 
 The following MLS APIs are available (as of HCL Digital Experience 9.5 Container Update CF192 and later):
 
@@ -263,6 +263,6 @@ The following MLS APIs are available (as of HCL Digital Experience 9.5 Container
 
 
 
-    Related information
-    - [HCL Web Content Manager Multilingual Solution](../../../wcm_content_delivery/mls/index.md)
+??+ info "Related information"
+    - [HCL Web Content Manager Multilingual Solution](../../wcm_authoring/multi_lingual/index.md)
 

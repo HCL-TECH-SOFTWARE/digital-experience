@@ -8,7 +8,7 @@ You are an information architect that receives a design HTML prototype for a new
 
 Some of these pieces of the design are controlled by the theme. Other pieces of the design, such as page components, are developed in your web content library and are developed for content authors to add to the page with Site Manager.
 
-![HTML prototype of a home page design. The image highlights the following aspects of the design: The header with company logo and navigation, banner with hero image and text, two promotional text components, two featured content items, two teasers, a sign up application, and a footer. The design requires a page layout with one column and one row.](../images/LandingPage_update.jpg)
+![HTML prototype of a home page design. The image highlights the following aspects of the design: The header with company logo and navigation, banner with hero image and text, two promotional text components, two featured content items, two teasers, a sign up application, and a footer. The design requires a page layout with one column and one row.](../../../../../../images/LandingPage_update.jpg)
 
 1.   **Header with company logo and navigation**
 

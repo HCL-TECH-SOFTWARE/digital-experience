@@ -14,6 +14,7 @@ Complete the following task before you configure Security Access Manager:
 
 6.  Ensure that the path of your operating system shell includes %JAVA\_HOME%\\bin directory.
 
+
 **Tip:** IBM® WebSphere® Application Server ships a PD.jar file that HCL Digital Experience uses to configure Security Access Manager. The file is in the [AppServer\_root](../../../manage/wpsdirstr#appserver_root)/tivoli/tam directory. However, the Security Access Manager typically contains a newer version of the PD.jar file.
 
 To enable HCL Digital Experience tasks, copy the PD.jar to <AppServer\>/<javaversion\>/jre/lib/ext/ \(ideally the updated PD.jar' minimally, the [AppServer\_root](../../../manage/wpsdirstr#appserver_root)/tivoli/tam/PD.jar.

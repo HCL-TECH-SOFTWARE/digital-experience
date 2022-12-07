@@ -6,8 +6,8 @@ The REST service for Image Element Renditions supports access to and interaction
 
 HCL Digital Experience content and Digital Asset Management components support an image component and element, with the capability to have different versions optimize display to desktop, tablet, and smart phone channels. For more information on content images and rendition properties please see:
 
--   [Setting rendition properties on images](../../../../../manage_content/renditions/rend_images.md)
--   [Generate renditions and versioning](../../../../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_generate_renditions_and_versions.md)
+-   [Setting rendition properties on images](../../wcm_authoring/renditions/index.md)
+-   [Generate renditions and versioning](../../digital_assets/usage/managing_dam/modify_dam/dam_generate_renditions_and_versions.md)
 
 The **Image Element Rendition Interactions REST API** allows developers to access and interact with image renditions using REST requests, as outlined in the descriptions and examples below.
 

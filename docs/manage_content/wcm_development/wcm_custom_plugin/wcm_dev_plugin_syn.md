@@ -13,7 +13,7 @@ To create a syndicator plug-in, you must create a syndicator class and then regi
         -   The extensions are run only when there are changes on the syndicator.
         -   The extension is not run every time automatic syndication queues the syndicator.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  Implement the `onSyndicatorStarted` method.
 

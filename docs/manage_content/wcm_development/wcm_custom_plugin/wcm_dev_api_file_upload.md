@@ -14,7 +14,7 @@ To create a file upload validation plug-in, you must create a file upload valida
 
         This method throws the FileUploadValidationException.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  Implement `validate()method`. This method contains the code that will be run when the plug-in is invoked when uploading a file. If validated, the file continues to upload. If not validated then the file upload is stopped. You can display a message in the user interface by including the following code in validate method:
 

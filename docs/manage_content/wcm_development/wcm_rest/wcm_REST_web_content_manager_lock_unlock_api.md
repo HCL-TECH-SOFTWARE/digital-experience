@@ -6,7 +6,7 @@ It also extends the [WCM Query API](../wcm_rest/wcm_rest_query/index.md) to pass
 
 It is equivalent to the functionality in the user interface (for WCM items):
 
-![Enable WCM Lock/Unlock API](../../../../../assets/HCL_Web_Content_Manager_Lock_Unlock_API.png)
+![Enable WCM Lock/Unlock API](../../../assets/HCL_Web_Content_Manager_Lock_Unlock_API.png)
 
 ## Using the Web Content Manager Lock/Unlock API
 
@@ -176,7 +176,7 @@ When using search when specifying the options=details query parameter the catego
 
 It is equivalent to the functionality in the user interface (for finding Web Content Manager items).
 
-![WCM Reference API UI](../../../../../assets/HCL_Web_Content_Manager_Reference_API_UI.png)
+![WCM Reference API UI](../../../assets/HCL_Web_Content_Manager_Reference_API_UI.png)
 
 !!! note
     Currently, the Web Content Manager Reference API only supports the GET operation for retrieving items. To update items, the document outlines how to use existing APIs to make updates.

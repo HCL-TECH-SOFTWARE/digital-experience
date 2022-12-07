@@ -4,7 +4,7 @@ A “Supported Configuration” is a combination of HCL Software and other Depen
 
 HCL provides full support for configurations within this category. Support is provided under the terms of the product license, to ensure that the product operates within its specifications.  
 
-For more details, make sure to review this document: [HCL DX support statement](/digital-experience/get_started/software_support/).  
+For more details, make sure to review this document: [HCL DX support statement](../../../get_started/software_support.md).  
 
 ## Operating Systems
 
@@ -13,7 +13,7 @@ The operating systems section specifies the operating systems that HCL Digital E
 ### AIX family
 |Operating system (OS)|OS Supported Versions|Hardware|Bitness|Product minimum|
 |-------|-------|-------|-------|-------|
-|AIX 7.1|Base and later maintenance releases|POWER System - Big Endian|64-Exploit, 64-Tolerate|9.0|
+|AIX 7.1|Base and later maintenance releases|POWER System - Big Endian|64-Exploit, 64-Tolerate|8.5|
 |AIX 7.2|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.0|
 |AIX 7.3|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.5|
 
@@ -36,12 +36,6 @@ The operating systems section specifies the operating systems that HCL Digital E
 |Ubuntu 18.04 LTS	|Base and later maintenance	releases|x86-64	|64-Exploit, 64-Tolerate	|8.5	|
 |Ubuntu 20.04 LTS	|Base and later maintenance	releases|Power System – Little Endian	|64-Exploit, 64-Tolerate	|8.5	|
 |Ubuntu 20.04 LTS	|Base and later maintenance	releases|x86-64|	64-Exploit, 64-Tolerate|	8.5	|
-
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **Red Hat Enterprise Linux (RHEL) 9** : released last May 17, 2022.  
-	reference: https://access.redhat.com/articles/3078  
-	- **Ubuntu 22.04 LTS** : released last April 21, 2022.  
-	reference: https://wiki.ubuntu.com/Releases?_ga=2.256829320.222084314.1633525606-1432009797.1633525606
 
 
 ### Windows family
@@ -76,9 +70,6 @@ The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.
 
 	Portal Express offering does not support AIX.  
 
-!!! danger "Question - to be removed after"
-	I cannot find any details on the above Hypervisors listed under AIX. Is this still supported?
-	
 
 ### Linux Summary
 |Hypervisor|Product Minimum|Deployment Units|Supported Guest Operating System|
@@ -89,18 +80,6 @@ The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.
 |VMware ESXi 6.5 and later|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 |VMware ESXi 7.0|9.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **KVM in SUSE Linux Enterprise Server (SLES) 12 SP5** : FCS date 09 Dec 2019.  
-	reference: https://documentation.suse.com/sles/12-SP4/html/SLES-all/book-virt.html  
-	- **KVM in SUSE Linux Enterprise Server (SLES) 15 SP4** : FCS date 21 Jun 2022.  
-	reference: https://documentation.suse.com/sles/15-SP4/html/SLES-all/book-virtualization.html  
-	- **VMware ESXi 8.0** : Released this Oct 11, 2022.  
-	reference: https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vmware-vsphere-80-release-notes/index.html.  
-	- **z/VM 7.2** : GA date 09/18/2020.  
-	reference: https://www.vm.ibm.com/techinfo/lpmigr/vmleos.html  
-	- **z/VM 7.3** : GA date 09/16/2022.  
-	reference: https://www.vm.ibm.com/techinfo/lpmigr/vmleos.html  
-
 
 
 ### Windows Summary
@@ -110,18 +89,6 @@ The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.
 |Red Hat KVM as delivered with Red Hat Enterprise Linux (RHEL) and it’s RHEV equivalent 7.0|8.5|Server|All supported operating systems<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64|
 |VMware ESXi 6.5|8.5|Server|All supported operating systems:<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Standard Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64|
 |VMware ESXi 7.0|9.5|Server|All supported operating systems:<br>- Windows Server 2012 Datacenter Edition x86-64<br>- Windows Server 2012 Standard Edition x86-64<br>- Windows 8.1 Enterprise x86-64<br>- Windows 8.1 Professional x86-64<br>- Windows 8.1 Standard x86-64<br>- Windows Server 2012 R2 Datacenter Edition x86-64<br>- Windows Server 2012 R2 Standard Edition x86-64<br>- Windows 10 Pro x86-64<br>- Windows 10 Enterprise x86-64<br>- Windows Server 2016 Datacenter Edition x86-64<br>- Windows Server 2016 Standard Edition x86-64<br>- Windows Server 2016 Essentials Edition x86-64<br>- Windows Server 2019 Datacenter Edition x86-64<br>- Windows Server 2019 Standard Edition x86-64|
-
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **KVM in SUSE Linux Enterprise Server (SLES) 12 SP5** : FCS date 09 Dec 2019.  
-	reference: https://documentation.suse.com/sles/12-SP4/html/SLES-all/book-virt.html  
-	- **KVM in SUSE Linux Enterprise Server (SLES) 15 SP4** : FCS date 21 Jun 2022.  
-	reference: https://documentation.suse.com/sles/15-SP4/html/SLES-all/book-virtualization.html  
-	- **VMware ESXi 8.0** : Released this Oct 11, 2022.  
-	reference: https://docs.vmware.com/en/VMware-vSphere/8.0/rn/vmware-vsphere-80-release-notes/index.html.  
-	- **z/VM 7.2** : GA date 09/18/2020.  
-	reference: https://www.vm.ibm.com/techinfo/lpmigr/vmleos.html  
-	- **z/VM 7.3** : GA date 09/16/2022.  
-	reference: https://www.vm.ibm.com/techinfo/lpmigr/vmleos.html  
 
 
 ## Prerequisites
@@ -145,9 +112,7 @@ The Prerequisites section specifies the capabilities that HCL Digital Experience
 |----------|----------|----------|
 |IBM Installation Manager|1.8.5 and later maintenance|8.5|  
 
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **IBM Istallation Manager 1.9** :  
-	reference: https://www.ibm.com/support/pages/system-requirements-ibm-installation-manager-and-packaging-utility   
+  
 
 ### Java SDK
 HCL Digital Experience 9.5 requires JDK 7.0 or later for installation. 
@@ -156,15 +121,12 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |----------|----------|----------|
 |IBM Runtime Environment, Java Technology Edition|8.0 and later maintenance releases|8.5|  
 
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **IBM Runtime Environment, Java Technology Edition 11.0** :  New release - is this applicable to us?  
-	reference: https://www.ibm.com/support/pages/java-sdk-downloads  
 
 ## Databases
 
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
-|Apache Derby|10.11*<br/>Newer levels are not currently supported|8.5|
+|Apache Derby|10.11*<br/>|8.5|
 |DB2 Standard and Advanced Edition|11.5** and later maintenance releases|8.5|
 |Microsoft SQL Server Enterprise and Standard Edition|2017, 2019 and later maintenance releases|8.5|
 |Oracle Database 19c|19c and later maintenance releases|8.5|
@@ -173,20 +135,12 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 \* Apache Derby is not supported in a product environment.  
 \* DB2: Includes support for DB2 pureScale component.  
 
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **Latest Apache Derby releases** : 10.12, 10.13, 10.14, 10.15, 10.16.  
-	reference: https://db.apache.org/derby/derby_downloads.html   
-	- **Microsoft SQL Server 2022** : Released last November 16, 2022.  
-	reference: https://learn.microsoft.com/en-us/sql/sql-server/sql-server-2022-release-notes?view=sql-server-ver16#build-number  
-	- **Oracle Database 21c** : GA date Aug 2021.  
-	reference: https://www.oracle.com/us/assets/lifetime-support-technology-069183.pdf  
-
 
 ## Collaboration 
 |Prerequisite|Supported software versions|Product Minimum|
 |-----------|------------------|-----|
 |HCL Connections|8.0 and later maintenance|9.5|
-|HCL Leap|9.2 and later maintenance|8.5|
+|HCL Leap|9.2 and later maintenance|9.5|
 
 ## Development Tools 
 |Supported Software|Supported software minimum|Product minimum|
@@ -195,6 +149,8 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |Rational Application Developer for WebSphere|9.7 and later maintenance releases|8.5|
 
 ## JDBC Drivers
+JDBC Drivers support forward compatibility for all maintenance levels and also new version levels for the types listed below, unless explicitly stated otherwise.
+
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |IBM Application Connectivity for DB2 for z/OS Feature|All versions and later maintenance releases|8.5|
@@ -207,10 +163,6 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 *JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.  
 **Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.  
 ***Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.  
-
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **List of new DB2 JDBC drivers** : https://www.ibm.com/support/pages/db2-jdbc-driver-versions-and-downloads  
-	- **List of latest jdbc drivers for SQL** : https://learn.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix?view=sql-server-ver15  
 		 
 
 ## LDAP Servers 
@@ -226,29 +178,23 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 |Dojo Toolkit|1.9 and later maintenance releases|8.5|
 |IBM License Metric Tool|9.2 and later maintenance releases|8.5|  
 
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **Dojo toolkit 1.10** : https://dojotoolkit.org/reference-guide/1.9/releasenotes/1.10.html#  
-
 
 ## Security Management
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |CA Siteminder*|12.0, and later maintenance releases|8.5|   
 
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **IBM Security Verify Access v10.0** : ibm.com/support/pages/ibm-security-access-manager-isam-v90-end-support  
-
 
 ## Web Browsers 
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
-|Android default browser|Newer levels are tested|8.5|
-|Apple Safari|Newer levels are tested|8.5|
-|Google Chrome|Newer levels are tested|8.5|
-|Microsoft Edge|Newer levels are tested|8.5|
-|Microsoft Edge Chromium-Based|Newer levels are tested|8.5|
-|Mozilla Firefox|Newer levels are tested|8.5|
-|Mozilla Firefox ESR|Newer levels are tested|8.5|
+|Android default browser|Newer levels are supported|8.5|
+|Apple Safari|Newer levels are supported|8.5|
+|Google Chrome|Newer levels are supported|8.5|
+|Microsoft Edge|Newer levels are supported|8.5|
+|Microsoft Edge Chromium-Based|Newer levels are supported|8.5|
+|Mozilla Firefox|Newer levels are supported|8.5|
+|Mozilla Firefox ESR|Newer levels are supported|8.5|
 
 ## Web Servers (Non-Container Platforms)
 |Supported Software|Supported software minimum, and later|Product minimum|
@@ -261,9 +207,6 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 |Microsoft Internet Information Services|10.0 and later maintenance releases|8.5|
 
 *IBM HTTP Server 8.5.5 is only supported with HCL Digital Experience Server V8.5.5.x.  
-
-!!! danger "Question on new releases (what to do?) - to be removed"
-	- **HCL Domino 10.0, 11.0, 12.0** : https://www.hcltechsw.com/resources/product-release/product-lifecycle-table?searchTerm=domino  
 
 
 ## Hardware requirements
