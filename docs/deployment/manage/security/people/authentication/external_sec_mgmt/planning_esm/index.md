@@ -1,8 +1,9 @@
 # Planning for external security managers
 
-By default, IBM WebSphere Application Server controls authentication to HCL Digital Experience and HCL Digital Experience controls authorization \(access control\) to resources.
+By default, IBM WebSphere Application Server controls authentication to HCL Digital Experience and HCL Digital Experience controls authorization (access control) to resources.
 
-**Note:** When setting up security to use an external security manager in a cluster environment and across mixed nodes, there are additional considerations. For example, you should configure your external security manager after completing all other setup tasks, including ensuring that the cluster is functional.
+!!!note
+    When setting up security to use an external security manager in a cluster environment and across mixed nodes, there are additional considerations. For example, you should configure your external security manager after completing all other setup tasks, including ensuring that the cluster is functional.
 
 -   **[WebSphere Trust Association Interceptors](../planning_esm/sec_ws_tai.md)**  
 Security Access Manager and Computer Associates eTrust SiteMinder provide Trust Association Interceptors \(TAIs\) that are used only as an authentication service.

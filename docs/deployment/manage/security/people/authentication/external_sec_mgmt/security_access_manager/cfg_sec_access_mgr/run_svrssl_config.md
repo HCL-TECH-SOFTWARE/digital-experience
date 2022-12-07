@@ -1,15 +1,16 @@
 # Creating the PdPerm.properties file
 
-The PdPerm.properties file configures the Access Manager Java Run Time Environment \(AMJRTE\). You must create the PdPerm.properties file before you configure IBM Security Access Manager for authentication, authorization, Credential Vault, or user provisioning. Run the run-svrssl-config task to create the files. This task also creates the keystore file that is used to encrypt communication with Security Access Manager.
+The PdPerm.properties file configures the Access Manager Java Run Time Environment (AMJRTE). You must create the PdPerm.properties file before you configure IBM Security Access Manager for authentication, authorization, Credential Vault, or user provisioning. Run the run-svrssl-config task to create the files. This task also creates the keystore file that is used to encrypt communication with Security Access Manager.
 
 **Cluster note:** Complete these steps on every node in the cluster.
 
-**Additional notes:**
+!!!note "Notes"
+    -   Prerequisites must be followed prior to executing the following steps. Refer to the Help Center topic [Security Access Manager prerequisites](tam_prereq.md) for more information.
+    -   The updated PD.jar file must also be in place prior to executing the following steps.
 
--   Prerequisites must be followed prior to executing the following steps. Refer to the Help Center topic [Security Access Manager prerequisites](../tam_prereq) for more information.
--   The updated PD.jar file must also be in place prior to executing the following steps.
+[]()
 
-1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
+1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Enter the following parameters in the wkplc\_comp.properties file; go to the AMJRTE connection parameters heading:
 
@@ -39,37 +40,33 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
 
 3.  Save your changes to the properties file.
 
-4.  Open a command prompt and change to the [wp\_profile\_root](/digital-experience/deployment/manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+4.  Open a command prompt and change to the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 5.  Run the following task to create the PdPerm.properties file:
 
     -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh run-svrssl-config -Dwp.ac.impl.PDAdminPwd=password -DWasPassword=password
     -   IBM® i: ConfigEngine.sh run-svrssl-config -Dwp.ac.impl.PDAdminPwd=password -DWasPassword=password
     -   Windows™: ConfigEngine.bat run-svrssl-config -Dwp.ac.impl.PDAdminPwd=password -DWasPassword=password
-    **Note:** If the configuration task fails, validate the values in the wkplc\_comp.properties file.
+    
+    !!!note
+        If the configuration task fails, validate the values in the wkplc\_comp.properties file.
 
     The following files are created:
 
     -   PdPerm.properties
 
-        **Note:** This file is in the directory path you specified for the wp.ac.impl.PDPermPath parameter.
+        This file is in the directory path you specified for the wp.ac.impl.PDPermPath parameter.
 
     -   pdperm.ks
 
-        **Note:** This file is in the directory path you specified for the wp.ac.impl.PDKeyPath parameter.
+        This file is in the directory path you specified for the wp.ac.impl.PDKeyPath parameter.
 
 
 
-**Related information**  
-
-
-[Configuring Security Access Manager for authentication only](/digital-experience/deployment/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access/cfg_tam_auth)
-
-[Configuring Security Access Manager for authorization](../tam_setup_esm)
-
-[Configuring the Credential Vault adapter for Security Access Manager](../tam_vault)
-
-[Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../tam_prov_usrs)
-
-[Enabling user provisioning](/digital-experience/deployment/security/people/authentication/external_sec_mgmt/security_access_manager/usr_prov)
+???+ info "Related information"
+    - [Configuring Security Access Manager for authentication only](cfg_tam_auth.md)
+    - [Configuring Security Access Manager for authorization](tam_setup_esm.md)
+    - [Configuring the Credential Vault adapter for Security Access Manager](tam_vault.md)
+    - [Configuring Security Access Manager for authentication, authorization, and the Credential Vault](tam_prov_usrs.md)
+    - [Enabling user provisioning](../usr_prov.md)
 
