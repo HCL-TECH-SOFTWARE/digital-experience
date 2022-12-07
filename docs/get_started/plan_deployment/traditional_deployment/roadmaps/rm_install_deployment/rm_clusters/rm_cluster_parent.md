@@ -9,6 +9,6 @@ Video: [Creating an HCL Digital Experience 9.5 CF196 Cluster](https://www.youtub
 -   **[HCL Digital Experience roadmap: Production and delivery environment](rm_production_cluster.md)**  
 The production environment are the servers that incoming web traffic accesses to experience your HCL Digital Experience. This roadmap is based on a cluster topology.
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting up a cluster](../../../../../../deployment/manage/config_cluster/index.md)
 

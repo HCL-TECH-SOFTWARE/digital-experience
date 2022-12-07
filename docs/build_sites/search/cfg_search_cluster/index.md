@@ -14,6 +14,6 @@ To enable search in a cluster for content that is stored in the JCR database, yo
 
 **Next topic:**[Configuring search in a portal farm](../install/config_search_farm.md)-->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Installing the Farm Master and setting up the support server](../../../deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_with_sharedconfig/set_portal_farm_master.md)
 

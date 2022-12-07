@@ -26,6 +26,7 @@ To set language-specific titles and descriptions for a web service Producer defi
     -   Current description
     -   New title
     -   New description.
+    
     Both the **Current** fields are blocked. Both the **New** fields are input fields. Initially both the current and the new fields show the existing information.
 
 4.  Type over the information in the input fields for the **New** title and description as required.

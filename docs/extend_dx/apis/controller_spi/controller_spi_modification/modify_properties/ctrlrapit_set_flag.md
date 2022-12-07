@@ -13,7 +13,7 @@ You set flags for resources either on modifiable instances of those resources or
 |`DeletableFlag`|`LayoutNode`|`LayoutModelController`|
 |`ModifiableFlag`|`LayoutNode`|`LayoutModelController`|
 
-!!!note "**Notes:**"
+!!!note
     1.  `ContentNode` is the super class of `ContentPage, ContentLabel, ContentURL`, and `InternalContentURL`.
     2.  `LayoutNode` is the super class of `LayoutContainer` and `LayoutControl`.
 

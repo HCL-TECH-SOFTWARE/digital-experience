@@ -19,6 +19,6 @@ You can configure transitions in multiple ways, for example
 For more information and example code samples of these transitions, see *Transitions reference* section.
 
 ???+ info "Related information" 
-    -   [Developing user interface artifacts](../screenflow/dev_ui_artifcts.md)
-    -   [Referencing dialogs](../screenflow/ref_dlgs.md)
+    -   [Developing user interface artifacts](../../dev_ui_artifcts.md)
+    -   [Referencing dialogs](../transition_endpoints/ref_dlgs.md)
 

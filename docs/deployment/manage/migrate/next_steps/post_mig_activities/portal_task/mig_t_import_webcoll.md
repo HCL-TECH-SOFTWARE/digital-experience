@@ -2,7 +2,7 @@
 
 As a part of preparing your source environment, you exported web collections. After you export a search web collection from a source portal, you can import the data into a new, empty collection on the target portal. Importing a web collection retains most of the configuration data such as content sources, schedulers, filters, and language settings. If you configured such settings when creating the new collection, they are overwritten by the imported settings.
 
-When you import a web collection, a background process fetches, crawls, and indexes all documents that are listed by URL in the previously exported file. Therefore, be aware of the memory and time that is required for crawls. For more information, see *Hints and tips for using Portal search*.
+When you import a web collection, a background process fetches, crawls, and indexes all documents that are listed by URL in the previously exported file. Therefore, be aware of the memory and time that is required for crawls. For more information, see [Hints and tips for using Portal search](../../../../../../build_sites/search/portal_search/hint_tips/index.md).
 
 Complete the following steps on the target portal, using the Manage Search portlet:
 
@@ -26,7 +26,8 @@ Complete the following steps on the target portal, using the Manage Search portl
 
     6.  Click **Add Parameter**.
 
-    **Note:** If you do not import the security information when you import a search collection, you must manually add the user name and password to each content source after you import the search collection into the target portal.
+    !!!note
+        If you do not import the security information when you import a search collection, you must manually add the user name and password to each content source after you import the search collection into the target portal.
 
 5.  Click the **Import or Export Collection** icon for the collection that you created.
 

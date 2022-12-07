@@ -11,12 +11,14 @@ The settings include the following navigational state information:
     -   Normal
     -   Minimized
     -   Maximized
+
 -   Portlet modes:
     -   `config`
     -   `edit_defaults`
     -   `edit`
     -   `view`
     -   `help`
+    
 -   Page selection:
     -   The last page that was active before the user logged out.
 

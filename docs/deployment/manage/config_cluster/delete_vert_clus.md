@@ -32,6 +32,7 @@ Before you delete any cluster members, ensure that the member is stopped. Also, 
         4.  Select the **Allow more than one instance to start on the same node** check box under **Vertical stacking of instances on node**.
         5.  Enter a value of 1 in the **Number of instances** text box.
         6.  Click **Apply** and then click **Save** to save the changes to the master configuration.
+        
     2.  Go to **Servers > Clusters > Dynamic Clusters > clustername > Cluster Members view** to view the list of cluster members.
 
     3.  Select the cluster member that you want to delete and then click **Delete**.

@@ -29,7 +29,7 @@ Choose one of the following methods to move rules:
     -   If the rules are referenced in pages or portlets, move the page and portlet definitions with XML Access or Release Builder. This is related to attribute based administration.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating the initial release](../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_cir.md)
     - [Staging to production list](../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
 

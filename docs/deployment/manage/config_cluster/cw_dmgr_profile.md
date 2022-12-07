@@ -81,6 +81,7 @@ If you changed the context root during the installation or configuration of HCL 
 3.  Edit the urlBlackList and urlWhitelist parameters with the new context path; for example:
     -   urlBlacklist: /wpsmodified/myportal*
     -   urlWhiteList: /wpsmodified/mycontenthandler*
+    
 4.  Click **Apply**, and save all changes.
 5.  Log out of the Deployment Manager WebSphere Integrated Solutions Console.
 

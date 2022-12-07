@@ -39,8 +39,8 @@ Connect tags are advanced Web Content Manager tags that can be used to retrieve 
 
 
 ???+ info "Related information"
-    - [Inserting an image in an element](../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
-    - [Inserting a link in an element](../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
-    - [Inserting element tags](../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
-    - [Creating web content tags](../../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/index.md)
+    - [Inserting an image in an element](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
+    - [Inserting a link in an element](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
+    - [Inserting element tags](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
+    - [Creating web content tags](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/index.md)
 

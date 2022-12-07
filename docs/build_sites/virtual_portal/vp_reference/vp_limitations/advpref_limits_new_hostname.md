@@ -9,7 +9,7 @@ If you want to use a new host name for an existing virtual portal, you must dele
 5.  Import the contents to the new virtual portal by using the XML configuration interface.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Using the Virtual Portal Manager administration portlet](../../vp_mgr_portlet/advp_vpmgr_use.md)
-    - [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    - [Working with the XML configuration interface](../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
 

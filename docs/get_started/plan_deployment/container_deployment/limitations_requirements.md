@@ -2,7 +2,8 @@
 
 This section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations.
 
-**Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](../../../deployment/install/container/overview.md) and will provide support only for [Helm-based deployments](../../../deployment/install/container/helm_deployment/overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
+!!!attention
+    Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX\) [Operator-based deployments](../../../deployment/install/container/overview.md) and will provide support only for [Helm-based deployments](../../../deployment/install/container/helm_deployment/overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
 
 Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) on the HCL DX Support pages for the latest updates on supported platforms, components, and release levels.
 
@@ -10,16 +11,16 @@ Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hclt
 
 This section describes the requirements for supported file systems.
 
--   DX requires two \(2\) `ReadWriteMany` volumes:
+-   DX requires two (2) `ReadWriteMany` volumes:
     -   One volume for Core.
     -   One volume for Digital Asset Management.
 -   All the other pods require `ReadWriteOnce` volumes.
--   DX is input-output \(I/O\) intensive and requires a high-performance file system for optimization.
+-   DX is input-output (I/O) intensive and requires a high-performance file system for optimization.
 -   A `persistence-node` relies on PostgreSQL which requires the use of hard links. Storage systems \(like Azure Files\) that do not support the use of hard links cannot be used. For more information, see the [Microsoft documentation for features not supported by the Azure File service](https://docs.microsoft.com/en-us/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
 -   All DX applications require the use of symbolic links and soft links. Storage systems must support the use of symbolic links and soft links. If you are using Azure Files, you must enable `mountOptions` of the StorageClass using `mfsymlinks`. For more information, see the [Microsoft documentation on troubleshooting Azure Files on Linux \(SMB\)](https://docs.microsoft.com/en-us/azure/storage/files/storage-troubleshoot-linux-file-connection-problems#cannot-create-symbolic-links---ln-failed-to-create-symbolic-link-t-operation-not-supported).
 -   You can configure volume sizes individually per volume and these are dependent of the respective usage. For more information, see the following Help Center topics:
     -   [Configuring PVCs in a Helm deployment](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.md)
-    -   [Customizing the container for Operator-based deployments](customizing_container_deployment.md#section_a2l_xhv_4nb)
+    -   [Customizing the container for Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/customizing_container_deployment.html)
 
 ## Requirements and limitations for Helm-based deployments
 
@@ -64,12 +65,12 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     |Open LDAP|openLdap|0.2|512MB|1|
     |Remote search|remoteSearch|0.25|768MB|1 \(Max 1 Pod\)|
     |Runtime Controller|runtimeController|0.1|256MB|1|
-    |Ambassador Ingress|ambassadorIngress|0.2|300MB|1|
-    |Ambassador Redis|ambassadorRedis|0.1|256MB|0|
+    |HAProxy|haproxy|1|1024MB|1|
     |Logging Sidecar|loggingSidecar|0.1|64MB|0|
+    |Prereqs Checker|prereqsChecker|0.1|64MB|0|
 
 <!--
-???+ info "Related information:"
+???+ info "Related information"
     - [HCL Digital Experience 9.5 Roadmap: Container deployment](../container_deployment/rm_container/rm_container_deployment.md)
     - [DX Kubernetes support matrix](../../system_requirements/kubernetes/kubernetes-runtime.md)
     - [Deploy DX 9.5 Container to Red Hat OpenShift](../containerization/openshift.md)

@@ -1,2 +1,0 @@
-# Included Software
-Co-packaged software is identified in HCL Digital Experience 9.5 Download documents available in your entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).

@@ -17,20 +17,18 @@ Some operations of the interface make use of HTTP PUT and DELETE operations, but
 
 The implementation must make sure that it is possible to enable or disable this tunneling of request methods as needed. For each operation, you can specify the input and output format. You can do this by using either the request parameter mime-type or by using the accept request header as defined in the HTTP specification RFC 2616. If you set the request parameter, the information from the accept header is ignored.
 
--   **[Interface operations](../dev/uprof_rest_ifops.md)**  
+-   **[Interface operations](uprof_rest_ifops.md)**  
 View all operations of the remote REST service for PUMA including the necessary attributes and a description.
--   **[Payload description](../dev/uprof_rest_pyld.md)**  
+-   **[Payload description](uprof_rest_pyld.md)**  
 The actual data that is processed by the remote REST service for PUMA that is the attributes and their values, user or group profiles, and membership lists, is described by an XML schema document. This schema is normative for all kinds of input and output formats. Therefore, for representations that are not based on XML, such as JSON, you need to apply an appropriate transformation.
--   **[PUMA REST service XML schema document](../dev/uprof_rest_xmlschm.md)**  
+-   **[PUMA REST service XML schema document](uprof_rest_xmlschm.md)**  
 The data processed by the remote REST service for PUMA is described by an XML schema document. View the XML schema for the PUMA REST service XML schema document.
--   **[Error codes](../dev/uprof_rest_errcod.md)**  
+-   **[Error codes](uprof_rest_errcod.md)**  
 If the operations described previously fail for some reason, the remote REST service for PUMA returns a subset of the HTTP error codes. They include a message with a detailed description of the error.
--   **[Data types for attributes](../dev/uprof_rest_datyps.md)**  
+-   **[Data types for attributes](uprof_rest_datyps.md)**  
 Data types for attributes belong to a subset of the XML Schema data type specification.
 
 
-**Related information**  
-
-
-[Accept request-header field](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1)
+???+ info "Related information"
+    - [Accept request-header field](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1)
 

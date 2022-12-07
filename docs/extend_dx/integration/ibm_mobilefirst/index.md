@@ -17,19 +17,19 @@ There are three types of applications you can create for your cross-platform env
     Hybrid applications combine the characteristics of pure and native applications. You can build an application with the simplicity of developing with HTML/CSS/JavaScript. But you can augment that with a wide range of native services and produce an application for application stores. With technology like Apache Cordova, which MobileFirst® includes, you can call native features with JavaScript from your web markup. For example, you can call the camera with a simple JavaScript line, such as: `navigator.camera.getPicture`. MobileFirst® provides tools for creating these hybrid applications. Hybrid applications are native applications that wrap the HCL Portal web application. The two are tightly integrated to use each other's capabilities to make the development experience as quick and easy as possible.
 
 
-As a HCL Portal customer, you can use the MobileFirst tools for free and create two free applications. But the applications must be hybrid applications that use HCL Portal.
+As an HCL Portal customer, you can use the MobileFirst tools for free and create two free applications. But the applications must be hybrid applications that use HCL Portal.
 
--   **[Planning to install IBM MobileFirst](../integrate/wl_pln_inst.md)**  
+-   **[Planning to install IBM MobileFirst](wl_pln_inst.md)**  
 Determine the services and function of your hybrid application before you install MobileFirst. You must install a MobileFirst server in some instances.
--   **[Default component overview](../integrate/wl_comp_ovr.md)**  
+-   **[Default component overview](wl_comp_ovr.md)**  
 When you integrate MobileFirst and HCL Portal, you can create a MobileFirst hybrid application that includes an HCL Portal web application. This hybrid application can run in a mobile browser and as a native mobile application.
--   **[Creating a MobileFirst hybrid application for your portal](../integrate/wl_hybrid_app_portal.md)**  
+-   **[Creating a MobileFirst hybrid application for your portal](wl_hybrid_app_portal.md)**  
 You can create a hybrid application to add native device capabilities to your portal with IBM MobileFirst.
--   **[Module framework for IBM MobileFirst](../integrate/wl_module_fw.md)**  
+-   **[Module framework for IBM MobileFirst](module_framework_mobilefirst/index.md)**  
 The module framework allows extensions to contribute to different areas of a page to provide flexibility, enhance the user experience, and maximize performance.
--   **[Target MobileFirst resources](../integrate/wl_device_classes.md)**  
+-   **[Target MobileFirst resources](wl_device_classes.md)**  
 You can change the way that a web page looks for any device with responsive web design. Device classes are generic groupings of form factors so client devices can view web pages for every form factor without designing the page for each device.
--   **[Upgrading MobileFirst](../integrate/wl_ugrade.md)**  
+-   **[Upgrading MobileFirst](wl_ugrade.md)**  
 You can create an EAR file, and copy MobileFirst resources into that EAR to keep up to date with the newest MobileFirst release.
 
 

@@ -1,6 +1,6 @@
-# Configuring single sign-on \(SSO\) for browser-based access to HCL Connections in SmartCloud for Social Business
+# Configuring single sign-on (SSO) for browser-based access to HCL Connections in SmartCloud for Social Business
 
-Single sign-on \(SSO\) for browser-based access to HCL Connections in SmartCloud for Social Business is enabled by using Service Provider Initiated Authentication Flow. You can enable SSO for all links, including external URLs, custom markup, search results, and social portlets.
+Single sign-on (SSO) for browser-based access to HCL Connections in SmartCloud for Social Business is enabled by using Service Provider Initiated Authentication Flow. You can enable SSO for all links, including external URLs, custom markup, search results, and social portlets.
 
 By default, if an unauthenticated user is working within an HCL Connections Integration Asset, such as a social rendering list, and clicks a URL that points to the web user interface for HCL Connections in SmartCloud for Social Business, the user is redirected to the HCL Connections login screen. This redirect to the HCL Connections login screen occurs if the user is not authenticated or if their authentication expired. Enabling Service Provider Initiated Authentication Flow prevents this redirect to the HCL Connections login screen. Instead, the user is authenticated by using the Tivoli Federated Identity Manager server.
 

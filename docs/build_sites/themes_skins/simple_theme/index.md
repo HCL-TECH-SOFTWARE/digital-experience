@@ -2,7 +2,7 @@
 
 With the Simple Theme, you can create, copy, and customize themes in minutes with just a few clicks and far fewer files than the Portal 8.5 theme.
 
-When you create a new theme from the Simple Theme template, you can modify the theme through [WebDAV](../../../manage_content/wcm/wcm_content_delivery/webdav/index.md). These modifications can be made to HTML, JavaScript, or JSON. Because the Simple Theme uses HTML5 and CSS3, only modern browsers are supported. If you are using Microsoft Internet Explorer, you must use version 10 or higher.
+When you create a new theme from the Simple Theme template, you can modify the theme through [WebDAV](../../../manage_content/wcm_delivery/webdav/index.md). These modifications can be made to HTML, JavaScript, or JSON. Because the Simple Theme uses HTML5 and CSS3, only modern browsers are supported. If you are using Microsoft Internet Explorer, you must use version 10 or higher.
 
 The Simple Theme includes the following features:
 

@@ -111,7 +111,7 @@ For more information, see *Modules and dynamic content spots*.
 
 
 <!--
-???+ info "Related information:"
+???+ info "Related information"
     - [Create a module profile](../dev-theme/themeopt_update_modprof.md)
     - [Changing the theme profile](../dev-theme/themeopt_cust_changepro.md)
 

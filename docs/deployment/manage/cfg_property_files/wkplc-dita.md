@@ -294,6 +294,7 @@ Provide basic information about HCL Portal, such as installation directory, port
         -   Exclamation point {!}, Hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~} Open parenthesis {(}, and
         -   close parenthesis {)}
         -   Open bracket {[} and close bracket {]}
+
     -   **Default value**
 
         wpsadmin
@@ -3808,6 +3809,7 @@ The following properties are used by the `wp-change-was-admin-user` and `wp-chan
         -   Open bracket {[} and close bracket {]}
         -   Underscore {_}
         -   Must be less than 200 characters
+        
     -   **Default value**
 
         No default value

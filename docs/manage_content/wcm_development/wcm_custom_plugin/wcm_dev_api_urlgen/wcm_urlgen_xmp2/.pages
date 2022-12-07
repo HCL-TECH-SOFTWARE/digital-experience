@@ -1,0 +1,6 @@
+title: Example 2 - Generate a friendly URL for web content
+nav:
+    - index.md
+    - wcm_dev_api_urlgen_xmp2_filtfact.md
+    - wcm_dev_api_urlgen_xmp2_filter.md
+    - wcm_dev_api_urlgen_xmp2_plugin.md

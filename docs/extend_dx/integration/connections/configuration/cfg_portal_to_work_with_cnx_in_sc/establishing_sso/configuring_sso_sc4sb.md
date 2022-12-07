@@ -14,7 +14,7 @@ If you have the default log level in the WebSphere® Integrated Solutions Consol
 
 1.  Set up a trust association between your portal server and the HCL Connections server by using the SSL certificate. For detailed steps on how to do this, see *Import SSL certificate to set up trust association* in the related links.
 
-2.  Create a policy file that defines the URL and metadata that specifies the location of the Tivoli Federated Identity Manager server and which mapping to use. For complete instructions on how to complete this step, see *Configuration settings for Tivoli Federated Identity Manager (TFIM)* in the related links section.
+2.  Create a policy file that defines the URL and metadata that specifies the location of the Tivoli Federated Identity Manager server and which mapping to use. For complete instructions on how to complete this step, see [Configuration settings for Tivoli Federated Identity Manager (TFIM)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_tfim/index.md).
 
     For example:
 

@@ -49,7 +49,7 @@ You can override any dynamic content spot that was defined through resource envi
 To override the default dynamic content spot for search `wp_search_dynspot`, you must create a module that defines a `prereq` on `wp_searchbar`. This module renders this particular dynamic content spot ID.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating custom dynamic content spots](../themeopt_themedev_create_dynamic_content_spots.md)
     - [Writing modules](../../../the_module_framework/writing_module/index.md)
 

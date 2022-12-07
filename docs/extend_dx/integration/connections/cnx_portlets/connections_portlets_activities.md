@@ -27,7 +27,7 @@ Click an activity name to open it. From the activity, you can:
 
 ## Editing the shared settings for the Activities portlet
 
-You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal wiki. Settings you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose**Edit Shared Settings** from the portlet menu and choose which view to display in the portlet:
+You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal wiki. Settings you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose **Edit Shared Settings** from the portlet menu and choose which view to display in the portlet:
 
 ## Configuring the Activities portlet
 

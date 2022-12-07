@@ -47,16 +47,17 @@ See the [Design Studio (Beta)](../../manage_content/design_studio/index.md) Help
 
 ## Configure Content Composer to Virtual Portals 
 
-Instructions to configure Content Composer to Virtual Portals is available.  See [Content Composer - Configure to Virtual Portals](../../manage_content/content_composer/installation/configure_cc_virtual_portals.md) for more information. 
+Instructions to configure Content Composer to Virtual Portals is available.  See [Enable or Disable Content Composer in Virtual Portals](../../manage_content/wcm_authoring/content_composer/installation/configure_cc_virtual_portals.md) for more information. 
 
 ## Personalization REST APIs
 
 Personalization Visibility Rules REST APIs adds an anonymous use case sample and updates, and ability to apply Dynamic Properties. New Profile Create Rule APIs and update based on UUIDs are also added.
 
-See [Personalization Rules APIs](../../manage_content/pzn/pzn_apis/pzn_rest_API_explorer/pzn_rules_api/index.md)for more information.
+See [Personalization Rules APIs](../../manage_content/pzn/pzn_apis/pzn_rest_API_explorer/pzn_rules_api/index.md) for more information.
 
 ## Customize the Site Manager Interface 
 Guidance and examples are added to customize the Site Manager interface to support specific site and content management requirements.  See the following Help Center topics for more information:
+
 - HCL DX 9.5: [Customizing the Site Manager User Interface](../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/Customize_Site_Manager_User_Interface.md)
 
 - HCL DX 8.5 and 9.0: [Customizing the Site Manager User Interface](https://help.hcltechsw.com/digital-experience/8.5/admin-system/epc_custom_sm.html)

@@ -8,6 +8,6 @@ After you create a new theme, you can customize it by creating your own dynamic 
 You can add dynamic content to your custom theme by using either client-side or server-side logic.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Contribution types](../../the_module_framework/themeopt_contrib_types.md)
 

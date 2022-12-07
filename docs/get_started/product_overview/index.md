@@ -1,5 +1,5 @@
 # HCL Digital Experience overview
-
+<!--
 [HCL Digital Experience](https://www.hcltechsw.com/dx) provides a single access point to web content and applications, while it delivers differentiated, personalized experiences for each user across multiple touchpoints, such as web, mobile, hybrid mobile/web applications, and more.
 
 The Web Content Manager and Web Portal Server combines to provide a platform for building a rich, complex online sites with responsive content, targeted offers, seamlessly integrated applications, and consistent branding across channels.
@@ -26,7 +26,7 @@ HCL Digital Experience Cloud Native is a powerful digital experience platform op
 -   HCL Digital Experience Cloud Native 9.5 is available with cloud-friendly subscription pricing according to the user session consumption required to support production DX deployments. This approach supports graduated tier pricing, providing lower costs at each tier as quantities increase. To learn more about monitoring User Session consumption in Digital Experience deployments, see the [Integrate Google Analytics with HCL Digital Experience](../../build_sites/site_analytics/google_analytics/index.md) topic.
 -   For more information about HCL Digital Experience Cloud Native 9.5 offering terms, see the [HCL Software License Agreements](https://www.hcltechsw.com/resources/license-agreements) web site, under the HCL Digital Experience product categories.
 
-For additional information about HCL Digital Experience solutions, visit: [HCL Digital Experience](https://www.hcltechsw.com/dx) website.
+For additional information about HCL Digital Experience solutions, visit: [HCL Digital Experience](https://www.hcltechsw.com/dx) website. -->
 
 ## What does HCL DX do?
 

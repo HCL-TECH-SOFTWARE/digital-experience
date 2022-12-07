@@ -131,7 +131,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 5.  Run docker load < dxclient.tar.gz.
 
-6.  Optional (It is advisable to not set this incase you run multiple DXClient versions in your system) : Open terminal, Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
+6.  Optional (It is advisable to not set this incase you run multiple DXClient versions in your system). Open terminal, add the execution shell script to the bin directory to the PATH variable, to call dxclient from any directory.
 
     ```
     export PATH=<working-directory>/bin:$PATH
@@ -139,13 +139,14 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
     For Microsoft Windows platforms:
 
-    Open command prompt, Add `dxclient.bat` script in the bin directory to the PATH variable in to be able to call DXClient from any directory.
+    Open command prompt, add `dxclient.bat` script in the bin directory to the PATH variable, to call DXClient from any directory.
 
     ```
     set PATH=<working-directory>\bin;%PATH%
     ```
 
-    Note: You will loose these changes by closing the terminal / command prompt. If you set in system path permanently, kindly take the necessary steps to remove it. 
+    !!! note
+        You will loose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
 
 7.  Set appropriate permission.
 
@@ -341,22 +342,22 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         -   [DAM Assets Export & import](https://opensource.hcltechsw.com/digital-experience/CF207/manage_content/digital_assets/usage/managing_dam/dam_exim/)
         -   
     -   HCL DX 9.5 CF201 release:
+
         
         -   An optional parameter `requestId` added to [Deploy theme](../dxclient/dxclient_artifact_types/themes.md), [Deploy application](../dxclient/dxclient_artifact_types/scriptapplications.md#deploy-script-applications), [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-server), and [Manage virtual portals](../dxclient/dxclient_artifact_types/virtualportals.md).
         
         -   Retrieve feature added to the [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md).
         
-        -   [Accessing ConfigWizard in container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html)
+        -   [Accessing ConfigWizard in container environment](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
         
         -   Note that a few parameters are deprecated and replaced with new parameters in the DX Core configuration reports. For information, see [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report).
     
     -   HCL DX 9.5 CF200 release:
-        -   [Exporting and Importing WCM libraries](https://help.hcltechsw.com/digital-experience/9.5/containerization/wcmlibraries.html)
+        -   [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
         -   [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report)
-
     -   HCL DX 9.5 CF199 release:
-        -   [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/index.md)
-        -   [Create credential vault slot](https://help.hcltechsw.com/digital-experience/9.5/containerization/credentialvaultslot.html)
+        -   [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
+        -   [Create credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
         -   [Create syndication relation](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
         -   [Export and import multiple resource environment providers](../dxclient/dxclient_artifact_types/resourceenvironments.md)
         -   [Specify the context root for exporting and importing personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
@@ -371,21 +372,21 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         -   [Undeploy portlets](../dxclient/dxclient_artifact_types/portlets.md)
         -   [Deploy and undeploy themes](../dxclient/dxclient_artifact_types/themes.md)
         -   [Deploy application](../dxclient/dxclient_artifact_types/deployapplication.md)
-        -   [Manage get-syndication report](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
+
+        -   [manage get-syndication report](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
         -   [Restart Core](../dxclient/dxclient_artifact_types/dxcoreserver.md)
         -   [Delete DAM schema](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md)
-
     -   HCL DX 9.5 CF196 release:
         -   [Shared library](../dxclient/dxclient_artifact_types/sharedlibrary.md)
-        
     -   HCL DX 9.5 CF195 release:
         -   [Undeploy theme](../dxclient/dxclient_artifact_types/themes.md)
-        -   [MLS export and import of WCM library](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_mls_export_import.html)
+        -   [MLS export and import of WCM library](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
 
     -   HCL DX 9.5 CF193 release:
         -   [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md)
         -   [Deploy Application](../dxclient/dxclient_artifact_types/deployapplication.md)
         -   [Managing syndicators](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
+
         -   [Managing subscribers](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
 
     -   HCL DX 9.5 CF192 release:
@@ -614,30 +615,18 @@ dxclient help [command]
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html).
 
 
-<!-- ???Info "Related information:"
 
-
-[How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
-
-[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-[Troubleshooting DXClient](../containerization/troubleshooting_dxclient.md)
-
-[DXConnect](../containerization/dxconnect.md)
-
-[Sample Pipelines for use with HCL DXClient and Automation servers](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
-
-[Using DAM staging](../containerization/dam_subscription_staging.md)
-
-[Create or update credential vault slot](../containerization/credentialvaultslot.md)
-
-[Personalization rules](../containerization/personalization.md)
-
-[Portlets](../containerization/portlets.md)
-
-[Themes](../containerization/themes.md)
-
-[Script applications](../containerization/scriptapplications.md)
-
-[Resource environment provider](../containerization/resourceenvironments.md) -->
+???+ info "Related information"
+    - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
+    - [DXClient Artifact Types](../dxclient/dxclient_artifact_types/index.md)
+    - [Troubleshooting DXClient](troubleshooting_dxclient.md)
+    - [DXConnect](dxconnect.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+    - [Using DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
+    - [Create or update credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
+    - [Personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
+    - [Portlets](../dxclient/dxclient_artifact_types/portlets.md)
+    - [Themes](../dxclient/dxclient_artifact_types/themes.md)
+    - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
+    - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
 

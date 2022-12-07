@@ -64,7 +64,8 @@ You can map your web application bridge to allow anonymous users to log on and a
 
 7.  Complete the following steps to give the web dock application anonymous user access:
 
-    **Note:** Configure anonymous user access for each web dock application that you create.
+    !!!note
+        Configure anonymous user access for each web dock application that you create.
 
     1.  Click the **Administration menu** icon. Then, click **Access** \> **Resource Permissions**.
 
@@ -84,7 +85,8 @@ You can map your web application bridge to allow anonymous users to log on and a
 
 8.  Add the web dock application to the page.
 
-    **Tip:** To get the web dock application to render on a page, the page must either have the **Web Dock** profile or a profile that includes the wp\_webdock module. Edit the page properties and change the profile or add the wp\_webdock module to the profile applied to the page:
+    !!!tip
+        To get the web dock application to render on a page, the page must either have the **Web Dock** profile or a profile that includes the wp\_webdock module. Edit the page properties and change the profile or add the wp\_webdock module to the profile applied to the page:
 
     Starting with CF03, the Web Dock profile no longer exists. If you are using the Resource Aggregator for Portlets, no additional steps are necessary. If you are not using the Resource Aggregator for Portlets, add the **wp\_webdock** module to an existing profile on your page.
 
@@ -94,6 +96,6 @@ You can map your web application bridge to allow anonymous users to log on and a
     4.  Make a copy of the profile file and give it a unique name.
     5.  Edit the .json file and add the **wp\_webdock** module ID.
     6.  Copy the profile that you created to the /profiles directory.
-    7.  Invalidate the resource aggregator cache to integrate your changes. Click the **Administration menu** icon in the toolbar. Then, click **Theme Analyzer** \> **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../dev-theme/themeopt_an_util.md#).
+    7.  Invalidate the resource aggregator cache to integrate your changes. Click the **Administration menu** icon in the toolbar. Then, click **Theme Analyzer** \> **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../../build_sites/themes_skins/the_module_framework/themeopt_analyzer/utilities/index.md).
 
 

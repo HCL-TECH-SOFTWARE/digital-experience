@@ -1,8 +1,0 @@
-title: Web Content Manager
-nav:
-    - index.md
-    - Manage content with the Authoring portlet: mng_content_with_auth_portlet
-    - Web Content Manager Artifacts: wcm_artifacts
-    - Deliver Content with Web Content Manager: wcm_content_delivery
-    - Administer Web Content Manager: wcm_management
-

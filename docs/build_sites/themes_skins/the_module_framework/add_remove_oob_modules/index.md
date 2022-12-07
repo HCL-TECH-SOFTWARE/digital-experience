@@ -20,8 +20,8 @@ Read the topics on profiles and modules *Working with profiles* and *Writing mod
 To add or remove a capability from a portlet, update the portlet.xml for the portlet, or update the portlet preferences sections for the portlet definition or portlet entity with XML access.---->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Standard portal pages and mobile devices](../../responsive_web_design/rwd_legacypages.md)
-    - [Resource bundles to support a Portal based custom theme](../../../../extend_dx/development_tools/portal_admin_tools/language_support/supporting_new_language/adding_resource_bundles_for_new_lang/adsuplang_add_rsrc_bndl_cstm.md)
+    - [Resource bundles to support a Portal based custom theme](../../../../deployment/manage/portal_admin_tools/language_support/supporting_new_language/adding_resource_bundles_for_new_lang/adsuplang_add_rsrc_bndl_cstm.md)
     - [Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/enable_func_migrated_themes/add_85_toolbar/themeopt_cust_toolbar_dynamic_embedding.md)
 

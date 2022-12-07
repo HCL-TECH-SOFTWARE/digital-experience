@@ -135,10 +135,9 @@ If you use an iWidget definition URL that points to a server different from your
 wp.proxy.config.urlreplacement.default_policy.someID=http://some.server.com:10039/*
 ```
 
-**Notes:**
-
-1.  The updated policy will not be effective until you restart either the portal server or the AJAX proxy Configuration enterprise application running on the portal server.
-2.  If you use a URL prefix, do not omit the trailing asterisk ( **\*** ).
+!!! note
+    1.  The updated policy will not be effective until you restart either the portal server or the AJAX proxy Configuration enterprise application running on the portal server.
+    2.  If you use a URL prefix, do not omit the trailing asterisk ( **\*** ).
 
 ## Registering light weight iWidgets stored in the WebDAV file store
 
@@ -167,6 +166,6 @@ This extracts your light weight iWidget package represented by the file /tmp/Som
 
 
 ???+ info "Related information"  
-    -   [Types of portal resources](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_resrc_types.md)
+    -   [Types of portal resources](../../../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_resrc_types.md)
     -   [Managing iWidgets in your portal](../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
 

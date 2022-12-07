@@ -40,15 +40,15 @@ To improve performance, you can tune the caches for the Digital Data Connector \
 Learn about things that are useful to know when you work with the social rendering integration with Digital Data Connector \(DDC\) for HCL Portal.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Social rendering](../../build_sites/social_rendering/index.md)
     - [Concept of the lists of social objects provided with the social rendering feature](../../build_sites/social_rendering/working_with_social_objects/concept_list_social_objects/index.md)
     - [Extending social lists by using the digital data connector](../../build_sites/social_rendering/extending_social_lists_using_ddc/index.md)
-    - [The list-rendering context](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/list_rendering_context/index.md)
-    - [The action URL plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/portlet_plugins/plrf_rendr_plugin_actionurl.md)
-    - [The render parameter plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_parm.md)
-    - [The render URL plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_url.md)
-    - [The request attribute plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_request_attrbt.md)
-    - [The session attribute plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_session_attrbt.md)
-    - [The resource URL plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_resrc_url.md)
+    - [The list-rendering context](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/connector_plugins/list_rendering_context/index.md)
+    - [The action URL plug-in](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/portlet_plugins/plrf_rendr_plugin_actionurl.md)
+    - [The render parameter plug-in](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_parm.md)
+    - [The render URL plug-in](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_url.md)
+    - [The request attribute plug-in](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_request_attrbt.md)
+    - [The session attribute plug-in](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_session_attrbt.md)
+    - [The resource URL plug-in](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_resrc_url.md)
 

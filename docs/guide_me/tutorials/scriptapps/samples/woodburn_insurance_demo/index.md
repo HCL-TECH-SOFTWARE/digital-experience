@@ -1,7 +1,7 @@
 # Woodburn Insurance sample site
 
 !!!note "Download Sample"
-     The WoodBurn Insurance sample site is available for download via this [link](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/showcase-sites/WoodBurnInsurance)
+     The WoodBurn Insurance sample site is available for download via this [link](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/showcase-sites/WoodBurnInsurance).
 
 To try out and load the site into your DX instance and share/collaborate updates amongst teams, you may follow this guide:
   
@@ -23,6 +23,7 @@ The useful integration techniques used to build the showcase site are detailed i
     Shared and component-specific styling are used in the sample site and bundled for optimal loading.
 
 Multiple ReactJS applications bundled as DX Script Apps are included in this sample site. They are organized and configured to share dependencies bundled separately as a DX Module.
+
   - Login Script Application: A Script Application for user authentication.
 
   - Enrollment Wizard Script Application: Enables users to enroll an insurance.

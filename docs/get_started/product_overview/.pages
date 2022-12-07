@@ -1,6 +1,7 @@
 title: Product Overview
 nav:
     - index.md
+    - offerings.md
     - site_building.md
     - application_integration.md
     - content_management.md

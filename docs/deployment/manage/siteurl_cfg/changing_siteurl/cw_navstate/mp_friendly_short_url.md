@@ -2,7 +2,7 @@
 
 The Configuration Wizard option for Modifying Site URLs for Search Engine Optimization makes it possible to remove navigational state information from your site URLs site wide. To enable friendly URLs without state information at the page level, you must complete extra steps after you use this option.
 
-Remove the URL generation filter if you previously installed it. For information, read [Example 2: Generate a friendly URL for web content](../../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_urlgen/wcm_urlgen_xmp2/index.md).
+Remove the URL generation filter if you previously installed it. For information, read [Example 2: Generate a friendly URL for web content](../../../../../manage_content/wcm_development/wcm_custom_plugin/wcm_dev_api_urlgen/wcm_urlgen_xmp2/index.md).
 
 1.  Configure your site URLs with the option for Modifying Site URLs for Search Engine Optimization in the Configuration Wizard.
 
@@ -49,8 +49,8 @@ Remove the URL generation filter if you previously installed it. For information
 You can configure themes to display only short URLs without state information. You can configure pages that use that theme to display friendly URLs.
 
 **Related information**  
-[About friendly URLs for web content](../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_workfriendly.md)<br>
-[Friendly URL for web content example](../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_friendlyexample.md)<br>
-[Example 2: Generate a friendly URL for web content](../../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_urlgen/wcm_urlgen_xmp2/index.md)<br>
+[About friendly URLs for web content](../../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_workfriendly.md)<br>
+[Friendly URL for web content example](../../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_friendlyexample.md)<br>
+[Example 2: Generate a friendly URL for web content](../../../../../manage_content/wcm_development/wcm_custom_plugin/wcm_dev_api_urlgen/wcm_urlgen_xmp2/index.md)<br>
 [Using friendly URLs](../../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
 

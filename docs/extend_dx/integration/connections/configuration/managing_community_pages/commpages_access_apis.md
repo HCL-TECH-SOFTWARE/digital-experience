@@ -7,17 +7,13 @@ For example, a portlet on a specific page might need to communicate with a commu
 -   Java API
 -   REST API
 -   Portal Scripting Interface
--   XML configuration interface \(xmlaccess command\)
+-   XML configuration interface (xmlaccess command)
 
 The content mapping service provides general access to associations of portal resources with other types of resources. Associations to resources of different types are grouped together and separated from one another by scopes. Community associations are managed in the `ibm.connections` scope.
 
 
-**Related information**  
-
-
-[Java API for Content Mapping Service](https://support.hcltechsw.com/csm)
-
-[Portal Scripting Interface and content associations](../admin-system/mp_wcm_contentmap_pscript.md)
-
-[XML configuration interface and content associations](../admin-system/mp_wcm_contentmap_xml.md)
+???+ info "Related information" 
+    - [Java API for Content Mapping Service](https://support.hcltechsw.com/csm)
+    - [Portal Scripting Interface and content associations](https://help.hcltechsw.com/digital-experience/9.5/admin-system/mp_wcm_contentmap_pscript.html)
+    - [XML configuration interface and content associations](https://help.hcltechsw.com/digital-experience/9.5/admin-system/mp_wcm_contentmap_xml.html)
 

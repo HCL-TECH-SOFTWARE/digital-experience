@@ -13,17 +13,19 @@ Before you start the more detailed planning, here are some additional migration 
 -   Deprecated functionality.
 -   Vendor software unique to your environment and how it might interact with the new version of HCL Digital Experience.
 
+-   **[Roadmaps for migration](rm_migration/index.md)**<br>
+Choose the appropriate migration roadmap for your environment.
 -   **[Supported migration paths](mig_plan_supported_paths.md)**  
 Migration is supported between equivalent HCL Digital Experience offerings.
 -   **[Hardware considerations](mig_plan_hardware.md)**  
  There might be cases where you are completing a remote migration to a new hardware configuration. This new server might have different requirements from the current environment you are migrating from. Generally, here are some key points to consider.
 -   **[Operating systems considerations](mig_plan_operating_systems.md)**  
  There might be cases where you upgrade not just to a newer version of HCL Digital Experience but also to a different operating system version. In that case, there might be a different set of system requirements and considerations to keep in mind.
--   **[Migration considerations](mig_plan_high_availability.md)**  
+-   **[Migration considerations](migration_consideration/index.md)**  
 There are a number of ways in which you can migrate HCL Digital Experience to a newer version. Some migration scenarios might offer a higher availability percentage over another. There are some scenarios where the migration can be done in parallel while your source environment remains in production. Other scenarios might require the production system to be disconnected just before you go live with the newly migrated system. Depending on your needs on high availability systems, you might choose one approach or another.
--   **[Development considerations](../planning_migration/dev_consideration/index.md)**  
+-   **[Development considerations](dev_consideration/index.md)**  
 The goal of the migration process is to ensure that the target environment works similarly to the source environment. However, there are deprecated and unsupported features and changes in supported technical specifications that can prevent this transition from being seamless. Review the following topics for guidance on the development work that is required to maintain the functionality of the source environment and also begin preparation for enabling new features and functionality.
--   **[What to expect after you complete migration](../planning_migration/mig_plan_expectations/index.md)**  
+-   **[What to expect after you complete migration](mig_plan_expectations/index.md)**  
 During the migration process, your portal applications, portlets, and databases are updated to the HCL Digital Experience 8.5 versions. However, not all of the new HCL Digital Experience 8.5 functionality and features are enabled by default. The following sections provide information on how various components are handled during migration, and what you can expect after the migration is complete.
 
 

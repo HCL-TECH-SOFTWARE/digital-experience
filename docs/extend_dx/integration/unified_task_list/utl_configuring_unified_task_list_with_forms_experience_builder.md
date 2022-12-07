@@ -4,24 +4,20 @@ This task provider retrieves tasks from Forms Experience Builder and surfaces th
 
 1.  Open the page with the Unified Task List portlet on it.
 
-2.  Configure a Forms Experience Builder task provider instance. For more information, see *Configuring the Forms Experience Builder task provider instance* in the related links.
+2.  Configure a Forms Experience Builder task provider instance. For more information, see [Configuring a Forms Experience Builder task provider instance](../unified_task_list/utl_for_adm/creating_task_provider_instance/cfg_feb_task_provider_instance/index.md).
 
-3.  Configure a Forms Experience Builder task handler. For more information, see *Adding and removing task handlers* in the related links.
+3.  Configure a Forms Experience Builder task handler. For more information, see [Adding a task handler](../unified_task_list/utl_for_adm/utl_add_task_handler.md).
 
 4.  Add theForms Experience Builder portlet to the Unified Task List page.
 
 5.  Configure theForms Experience Builder portlet.
 
-6.  Add a wire to link the Forms Experience Builder portlet and the Unified Task List portlet. For more information on adding wires, see *Adding a wire* in the related links.
+6.  Add a wire to link the Forms Experience Builder portlet and the Unified Task List portlet. For more information on adding wires, see [Adding a wire](../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/portlet_wires/portlet_wires_using_page_layout/h_wires_add.md).
 
 
 
-**Related information**  
-
-
-[Configuring a Forms Experience Builder task provider instance](../panel_help/utl_configuring_form_experience_builder_task_provider.md)
-
-[Adding a task handler](../panel_help/utl_add_task_handler.md)
-
-[Adding a wire](../panel_help/h_wires_add.md)
+???+ info "Related information"
+    - [Configuring a Forms Experience Builder task provider instance](../unified_task_list/utl_for_adm/creating_task_provider_instance/cfg_feb_task_provider_instance/index.md)
+    - [Adding a task handler](../unified_task_list/utl_for_adm/utl_add_task_handler.md)
+    - [Adding a wire](../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/portlet_wires/portlet_wires_using_page_layout/h_wires_add.md)
 

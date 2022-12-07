@@ -31,5 +31,5 @@ From Details, you can learn the following information about your content item:
 -   Location information that includes the path to the content item in the web content library and any associated project name.
 
 ???+ info "Related information" 
-    -   [Content settings](../../../manage_content/wcm/wcm_content_delivery/wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/wcm_config_wcmviewer_hcontent.md)
+    -   [Content settings](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/editing_wcm_viewer_setting/wcm_config_wcmviewer_hcontent.md)
 

@@ -23,6 +23,7 @@ The following list shows the header fields of the HTTP 1.1 \(RFC 2616\) specific
     -   Server \(Section 14.38\)
     -   Vary \(Section 14.44\)
     -   WWW-Authenticate \(Section 14.47\)
+
 -   **7.1 Entity Header Fields:**
 
     Entity-header fields define meta information about the entity-body or, if no body is present, about the resource identified by the request. Some of this meta information is **optional**; some might be **required** by portions of this specification.
@@ -37,6 +38,7 @@ The following list shows the header fields of the HTTP 1.1 \(RFC 2616\) specific
     -   Content-Type \(Section 14.17\)
     -   Expires \(Section 14.21\)
     -   Last-Modified \(Section 14.29\)
+    
 -   **4.2 Message Headers:**
 
     HTTP header fields, which include general-header \(section 4.5\), request-header \(section 5.3\), response-header \(section 6.2\), and entity-header \(section 7.1\) fields, follow the same generic format as that given in Section 3.1 of RFC 822 \[9\]. Each header field consists of a name followed by a colon \( **:** \) and the field value. Field names are **case-insensitive**.

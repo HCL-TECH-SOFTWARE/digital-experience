@@ -36,8 +36,6 @@ Example: Putting a portlet on a page:
 ```
 
 
-**Related information**  
-
-
-[Managing iWidgets in your portal](../admin-system/add_widget.md)
+???+ info "Related information"
+    - [Managing iWidgets in your portal](../../../../../portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
 

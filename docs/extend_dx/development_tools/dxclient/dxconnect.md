@@ -56,7 +56,6 @@ To re-install DXConnect use the command below:
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html).
 
 
-<!-- ???Info "Related information:"  
-
-[DXClient](../containerization/dxclient.md) -->
+???+ info "Related information"
+    - [DXClient](dxclient.md)
 

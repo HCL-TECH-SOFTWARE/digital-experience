@@ -25,5 +25,5 @@ Remove the UX Screen Flow Manager (UXFM) dialog definitions before uninstalling 
 
 
 ???+ info "Related information"  
-    -   [Syntax elements for the XML configuration interface command line](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/cmdline_syntax/basic_xml_cmdln_syntax/adxmltsk_cmdln_sntx_elements.md)
+    -   [Syntax elements for the XML configuration interface command line](../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/cmdline_syntax/basic_xml_cmdln_syntax/adxmltsk_cmdln_sntx_elements.md)
 

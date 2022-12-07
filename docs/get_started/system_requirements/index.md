@@ -9,19 +9,10 @@ Detailed system requirements are the complete lists of hardware requirements, su
     - [Databases](kubernetes/databases.md)
 
 - Traditional Deployments
-    - [Operating systems](traditional/operatingsystems.md)
-    - [Hypervisors](traditional/hypervisors.md)
-    - [Prerequisites](traditional/prerequisites.md)
-    - [Databases](traditional/databases.md)
-    - [Other Software](othersoftware.md)
-    - [Hardware](traditional/hardware.md)
+    - [Supported Configuration](traditional/supported_config.md)  
+    - [Unsupported Configuration](traditional/unsupported_config.md)  
+    - [Other Configuration](traditional/other_config.md)
 
 - Docker
     - [Docker](docker/index.md)
     
-- All Platforms
-    - [Security](security.md)
-    - [Other Software](othersoftware.md)
-    - [Included Software](includedsoftware.md)
-    - [Glossary](glossary.md)
-    - [Disclaimer](disclaimer.md)

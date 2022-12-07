@@ -6,11 +6,11 @@ You do so by setting the following properties:
 
 -   **persistent.session.option**
 
-    This property determines whether the login portlet displays a check box that enables the user to decide whether to resume the session or not. For details, go to [Setting service configuration properties](adsetcfg.md).
+    This property determines whether the login portlet displays a check box that enables the user to decide whether to resume the session or not. For details, go to [Setting service configuration properties](../../../config_portal_behavior/service_config_properties/index.md).
 
 -   **persistent.session.level**
 
-    Use this property to determine which navigational state information you want to be restored when users resume their session. You can choose from three predefined levels. For details, go to [Setting service configuration properties](adsetcfg.md).
+    Use this property to determine which navigational state information you want to be restored when users resume their session. You can choose from three predefined levels. For details, go to [Setting service configuration properties](../../../config_portal_behavior/service_config_properties/index.md).
 
 -   **timeout.resume.session = (false)**
 
