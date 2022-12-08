@@ -102,7 +102,7 @@ When an item is updated, either directly or as a result of syndication, no cache
 
 
 ???+ info "Related information" 
-    -   [Strategies for expiring content](../../../../manage_content/wcm_delivery/cfg_webcontent_delivery_env/caching_options/wcm_config_delivery_caching_expiring.md)
-    -   [Controlling access to hosts specified in a URL](../../../../manage_content/wcm_configuration/further_cfg_options/wcm_config_accesshost.md)
-    -   [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    -   [Strategies for expiring content](../../wcm_configuration/cfg_webcontent_delivery_env/caching_options/wcm_config_delivery_caching_expiring.md)
+    -   [Controlling access to hosts specified in a URL](../../wcm_configuration/wcm_svc_cfg/wcm_config_accesshost.md)
+    -   [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

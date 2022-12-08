@@ -24,6 +24,7 @@ Before you begin, create an empty shared directory to hold the exported web cont
     -   Library and item level access controls remain unchanged when a library is exported and imported. You need to run the member fixer tool on the imported library to fix references to missing users and groups.
     -   You cannot import an item if an item on the target server has the same ID but a different parent than the item that is being imported.
     -   Projects are not exported.
+
 -   **Disabling JCR text search.**
 
     Disable JCR text search indexing on your HCL Portal server before you export or import large libraries to reduce the load on the database during export and import.
@@ -46,10 +47,12 @@ Before you begin, create an empty shared directory to hold the exported web cont
         1.  Log in to the WebSphere® Integrated Solutions Console.
         2.  Click **Resources** \> **Resource Environment** \> **Resource Environment Providers** \> **JCR ConfigService PortalContent** \> **Custom properties**.
         3.  Make sure the location that is specified under **jcr.binaryValueFileDir** has sufficient disk space to accommodate the import.
+
     -   When you export or import large libraries, you might need to adjust the following settings:
         1.  Log in to the WebSphere® Integrated Solutions Console.
         2.  Click **Servers** \> **Server Types** \> **WebSphere application servers** \> **portal\_server** \> **Container Services** \> **Transaction Service**.
         3.  Change the **total transaction lifetime timeout** and the **maximum transaction timeout** settings to 360 seconds.
+        
 -   **Personalization components.**
 
     Personalization rules that are created within a Personalization component are exported and imported along with your web content library.

@@ -36,6 +36,6 @@ By default, you can specify any host name in a URL used to retrieve content. How
 
 
 ???+ info "Related information"
-    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Cache expire parameters](../custom_caching/wcm_dev_caching_expire-parameters.md)
 

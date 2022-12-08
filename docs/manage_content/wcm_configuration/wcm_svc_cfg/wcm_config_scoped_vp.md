@@ -53,5 +53,5 @@ For example, if you use the default setting `deployment.subscriberOnly=true`, yo
 
 
 ???+ info "Related information"
-    - [Configuring Web Content Manager search options](../../../../build_sites/search/wcm_config_search.md)
+    - [Configuring Web Content Manager search options](../../../build_sites/search/wcm_config_search.md)
 

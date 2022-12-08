@@ -36,6 +36,7 @@ You use the clear history tool to clear the history of an item.
         -   WorkflowStage
         -   WorkflowAction
         -   Cmpnt for components
+        
     -   **library**
 
         Enter a library name. If the "library" parameter is omitted, the default library that is configured in the `WCM WCMConfigService` service is used.
