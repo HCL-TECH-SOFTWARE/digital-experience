@@ -16,10 +16,10 @@ The following features and updates are available to customers installing HCL Dig
 ## Development sample integrating HCL Unica Campaign segments in DX Personalization Rules
 
 === "Containers"
-    Developers can access a new sample to integrate [HCL Unica Campaign Segments](https://help.hcltechsw.com/unica/Campaign/en/12.1.0/Campaign/Sessions/About_strategic_segments.html) in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions. See [Sample for leveraging Unica segments in PZN rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md).
+    Developers can access a new sample to integrate [HCL Unica Campaign Segments](https://help.hcltechsw.com/unica/Campaign/en/12.1.0/Campaign/Sessions/About_strategic_segments.html) in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions. See [Sample for leveraging Unica segments in PZN rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md).
 
 === "On-Premises" 
-    Developers can access a new sample to integrate HCL Unica Campaign Segments in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions. See [Sample for leveraging Unica segments in PZN rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md).
+    Developers can access a new sample to integrate HCL Unica Campaign Segments in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions. See [Sample for leveraging Unica segments in PZN rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md).
 
 
 ## Extension to Personalization Java APIs supporting page metadata operations with custom application objects
