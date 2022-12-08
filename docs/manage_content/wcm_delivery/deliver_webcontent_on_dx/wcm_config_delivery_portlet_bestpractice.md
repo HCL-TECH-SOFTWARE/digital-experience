@@ -42,8 +42,8 @@ When a web page is rendered by Web Content Manager, some tags might be rewritten
 
 
 ???+ info "Related information"
-    - [Adding a wiki to a page](../../../../../build_sites/create_sites/developing_managing_content/wikis/wiki_add.md)
-    - [Adding existing wikis to a page](../../../../../build_sites/create_sites/developing_managing_content/wikis/wiki_add_existing.md)
-    - [Adding existing blogs or blog libraries to a page](../../../../../build_sites/create_sites/developing_managing_content/blogs/blog_add_existing.md)
-    - [Adding a blog or blog library to a page](../../../../../build_sites/create_sites/developing_managing_content/blogs/blog_add.md)
+    - [Adding a wiki to a page](../../../build_sites/create_sites/developing_managing_content/wikis/wiki_add.md)
+    - [Adding existing wikis to a page](../../../build_sites/create_sites/developing_managing_content/wikis/wiki_add_existing.md)
+    - [Adding existing blogs or blog libraries to a page](../../../build_sites/create_sites/developing_managing_content/blogs/blog_add_existing.md)
+    - [Adding a blog or blog library to a page](../../../build_sites/create_sites/developing_managing_content/blogs/blog_add.md)
 

@@ -59,10 +59,10 @@ HCL Digital Experience provides some configuration tasks. You can use these task
 
 
 ???+ info "Related information"
-    - [URL mapping](../../../../deployment/manage/config_portal_behavior/adurlmap.md)
-    - [Configuring managed pages](../../wcm_artifacts/managed_pages/cfg_managed_pages/index.md)
+    - [URL mapping](../../../deployment/manage/config_portal_behavior/adurlmap.md)
+    - [Configuring managed pages](../../wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/index.md)
     - [Providing short vanity URLs](../vanity_url/adm_vanity_url/van_url_short.md)
-    - [URL generation in HCL Portal](../../../../extend_dx/apis/url_generation/index.md)
-    - [Changing the theme logo](../../.././../build_sites/themes_skins/customizing_theme/theme_logo/index.md)
-    - [Administering managed pages](../../wcm_artifacts/managed_pages/advadmin_managedpages/index.md)
+    - [URL generation in HCL Portal](../../../extend_dx/apis/url_generation/index.md)
+    - [Changing the theme logo](../../.././build_sites/themes_skins/customizing_theme/theme_logo/index.md)
+    - [Administering managed pages](../../wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/index.md)
 

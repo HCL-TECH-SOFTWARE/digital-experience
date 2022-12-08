@@ -188,5 +188,5 @@ For the second content association, the association scope is removed by specifyi
 
 ???+ info "Related information"
     - [Web content associations](../../getting_started/wcm_delivery_contentmap_about.md)
-    - [Community associations and APIs](../../../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_access_apis.md)
+    - [Community associations and APIs](../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_access_apis.md)
 

@@ -20,5 +20,5 @@ The templating sample content that is provided with HCL Digital Experience is de
 
 
 ???+ info "Related information"
-    - [Deploying and updating sample web content template items](../../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/mig_t_templatesample.md)
+    - [Deploying and updating sample web content template items](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/mig_t_templatesample.md)
 

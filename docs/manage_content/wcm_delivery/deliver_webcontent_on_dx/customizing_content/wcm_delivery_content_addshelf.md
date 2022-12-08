@@ -59,5 +59,5 @@ When you add the web content viewer that specifies this `WCM_COPY_CONTENT_RELATI
 
 
 ???+ info "Related information"
-    - [Customizing the Page Component palette](../../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/index.md)
+    - [Customizing the Page Component palette](../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/index.md)
 

@@ -57,7 +57,7 @@ When using WebDAV with web content, be aware of the following considerations.
 
 
 -   Documentation resource: [Using WebDAV with HCL Portal](../webdav/administer_webdav/index.md)
--   Documentation resource: [Model WebDAV service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_modelwebdav.md)
+-   Documentation resource: [Model WebDAV service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_modelwebdav.md)
 -   Documentation resource: [Creating components with WebDAV](../webdav/wcm_webdav_createcomp.md)
 -   Documentation resource: [Using WebDAV file store](../webdav/administer_webdav/mash_webdav_store.md)
 

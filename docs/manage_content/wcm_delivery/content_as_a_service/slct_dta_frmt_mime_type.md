@@ -15,7 +15,7 @@ For example, specifying the parameter mime-type=application/json specifies the c
 
 ## How to use presentation templates with the `pagedesign` query parameter
 
-As an alternative to managing the well-defined elements in your content, you can also use specified presentation templates based on the requested MIME type. If the portal does not find a content element for the requested MIME type, it renders the content using the presentation template specified by the `pagedesign` parameter from the web content link. \(See [Writing links to web content](../../wcm_artifacts/tags/wcm_dev_writing-links.md)\). If the request does not include that parameter, the default presentation template of your content is used to produce the output.
+As an alternative to managing the well-defined elements in your content, you can also use specified presentation templates based on the requested MIME type. If the portal does not find a content element for the requested MIME type, it renders the content using the presentation template specified by the `pagedesign` parameter from the web content link. \(See [Writing links to web content](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/wcm_dev_writing-links.md)\). If the request does not include that parameter, the default presentation template of your content is used to produce the output.
 
 The `pagedesign` parameter is another way of managing your presentation components for different MIME types to render your content. Furthermore, it also allows you to produce output for MIME types other than the ones supported by the well-defined content elements. For example, you can create a presentation template that produces a "text/csv" \(comma-separated values\) representation of your content. You would then request your content with that MIME type with a URL like this:
 
@@ -26,7 +26,7 @@ The `pagedesign` parameter is another way of managing your presentation componen
 
 ## How to use presentation templates with a custom context processor
 
-Instead of using the `pagedesign` query parameter, you can also implement a custom context processor that sets the presentation template dynamically based on the requested MIME type. This solution provides you with the full MIME type flexibility as the second option and does not require the `pagedesign` parameter in web content links. Your context processor can change the presentation template for a request based on the requested MIME type from the `mime-type`parameter. For more information on custom context processors, go to the topic [Creating a context processor class](../../wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_context_processor.md).
+Instead of using the `pagedesign` query parameter, you can also implement a custom context processor that sets the presentation template dynamically based on the requested MIME type. This solution provides you with the full MIME type flexibility as the second option and does not require the `pagedesign` parameter in web content links. Your context processor can change the presentation template for a request based on the requested MIME type from the `mime-type`parameter. For more information on custom context processors, go to the topic [Creating a context processor class](../../wcm_development/wcm_custom_plugin/wcm_dev_api_context_processor.md).
 
 For example, you might use a naming convention to select the proper presentation template for a request: `authoring_template_name.mime_type`. Given this simple naming convention, requesting the JSON representation of the content item `Web Content/Articles/Sample Article` that is based on the authoring template `Web Content/Article` would mean that your context processor sets the alternative presentation for the request to `Web Content/Article.json`.
 
@@ -42,5 +42,5 @@ For example, you might use a naming convention to select the proper presentation
 
 
 ???+ info "Related information"
-    - [Writing links to web content](../../wcm_artifacts/tags/wcm_dev_writing-links.md)
+    - [Writing links to web content](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/wcm_dev_writing-links.md)
 

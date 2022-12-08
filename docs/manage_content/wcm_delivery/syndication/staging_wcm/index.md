@@ -45,5 +45,5 @@ On the delivery server, the following activities occur:
 -   Manual one-way syndication from the staging environment to the delivery environment.
 
 ???+ info "Related information"
-    - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+    - [Staging to production list](../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
 

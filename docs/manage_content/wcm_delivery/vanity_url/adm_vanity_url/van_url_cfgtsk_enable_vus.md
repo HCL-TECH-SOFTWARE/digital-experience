@@ -42,12 +42,12 @@ If vanity URL support is not enabled and a user tries to access a vanity URL, th
         Disable: `ConfigEngine.bat disable-vanityurl-support -DPortalAdminPwd=password -DWasPassword=password`
 
 
-**Remember:** After you run the enable-vanityurl-support or disable-vanityurl-support task, restart the server. Go to [Starting and stopping servers, deployment managers, and node agents](../../../../../deployment/manage/stopstart.md) for specific instructions.
+**Remember:** After you run the enable-vanityurl-support or disable-vanityurl-support task, restart the server. Go to [Starting and stopping servers, deployment managers, and node agents](../../../../deployment/manage/stopstart.md) for specific instructions.
 
 
 ???+ info "Related information"
-    - [Troubleshooting pages](../../../../../build_sites/create_sites/website_building_blocks/pages/wcm_mngpages_trouble.md)
+    - [Troubleshooting pages](../../../../build_sites/create_sites/website_building_blocks/pages/wcm_mngpages_trouble.md)
     - [How vanity URLs work](../van_url_work.md)
-    - [Enabling managed pages](../../../wcm_artifacts/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md)
-    - [Migration: Enabling managed pages](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_t_enable_mngpages.md)
+    - [Enabling managed pages](../../../wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md)
+    - [Migration: Enabling managed pages](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_t_enable_mngpages.md)
 

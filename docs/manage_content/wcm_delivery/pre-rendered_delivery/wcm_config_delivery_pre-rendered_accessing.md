@@ -93,5 +93,5 @@ If your web server is used for both a HCL Portal server and accessing the pre-re
 
 
 ???+ info "Related information"
-    - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

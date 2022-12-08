@@ -53,7 +53,7 @@ What can and cannot be syndicated:
 
 2.  On your subscriber server, log in to HCL Digital Experience.
 
-3.  If using HCL Digital Experience 9.5, go to the [Practitioner Studio](../../../../../build_sites/practitioner_studio/index.md) interface.
+3.  If using HCL Digital Experience 9.5, go to the [Practitioner Studio](../../../../build_sites/practitioner_studio/index.md) interface.
 
 4.  Go to **Administration** \> **Security** \> **Manage Users and Groups** and create a shared credential vault slot.
 
