@@ -198,5 +198,5 @@ This topic contains the commands that the administrators can use to export and i
 
 
 ???+ Info "Related information"
-    - [DXClient](../dxclient.md)
+    - [DXClient](../index.md)
 

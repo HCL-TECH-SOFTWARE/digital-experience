@@ -254,5 +254,5 @@ dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort
 
 
 ???+ info "Related information"
-    - [DXClient](../dxclient.md)
+    - [DXClient](../index.md)
 

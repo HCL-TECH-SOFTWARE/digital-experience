@@ -365,5 +365,5 @@ Users can restore the theme by using the backup files.
 
 
 ???+ Info "Related information"
-    - [DXClient](../dxclient.md)
+    - [DXClient](../index.md)
 

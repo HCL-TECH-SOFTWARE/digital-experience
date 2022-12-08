@@ -438,7 +438,7 @@ dxclient restore-scriptapplication -wcmContentID <wcm-content-id> -versionName <
 
 
 ???+ info "Related information"
-    - [DXClient](../dxclient.md)
+    - [DXClient](../index.md)
 
 
 <!--- ???Info "**Parent topic:"
