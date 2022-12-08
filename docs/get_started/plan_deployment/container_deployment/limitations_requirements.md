@@ -49,29 +49,37 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 -   **Container platform capacity resource requirements**:
 
-    The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the minimum of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly.
+    The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the minimum of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly. Please consider that every Kubernetes node requires some headroom for Kubernetes specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. Please be aware that the overall requested amount of resources may vary based on disabled/enabled applications.
 
-    |Component|Pod Minimum CPU|Pod Maximum CPU|Pod Minimum Memory|Pod Maximum Memory|No. of Pods Minimum|
-    |---------|-------------|---------------|------------------|-------------------|-------------------|
-    |Core|2|5|6GB|8GB|1|
-    |Ring API|0.5|1|1GB|2GB|1
-    |Content Composer|0.5|1|1GB|2GB|1|
-    |Design Studio|0.5|1|1GB|2GB|1|
-    |Digital Asset Management|0.5|2|1GB|2GB|1|
-    |Digital Asset Manager GoogleVision Plugin|1|2|2GB|2GB||
-    |Digital Asset Manager Kaltura Plugin|1|2|2GB|2GB||
-    |Digital Asset Management Persistence|1|2|1GB|3GB|1|
-    |DAM Persistence Connection Pool|0.5|2|512MB|4GB||
-    |DAM Persistence Node|1|2|1GB|4GB||
-    |DAM Persistence Metrics Exporter|0.1|0.1|128MB|128MB||
-    |Image processor|1|2|2GB|2GB|1|
-    |License Manager|1|2|1GB|4GB||
-    |Open LDAP|0.5|2|512MB|2GB||
-    |Remote search|1|3|2GB|4GB|1|
-    |Runtime Controller|0.1|0.5|256MB|500MB||
-    |HAProxy|1|2|1GB|4GB||
-    |Logging Sidecar|0.1|0.1|64MB|64MB||
-    |Prereqs Checker|0.1|0.1|64MB|64MB||
+| **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request** | **Container Memory request** |
+|---|---|---|---|---|---|
+| core | 1 | core | core | 800m | 3072Mi |
+|  |  | system-out-log | logging-sidecar | 100m | 64Mi |
+|  |  | system-err-log | logging-sidecar | 100m | 64Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| content-composer | 1 | content-composer | content-composer | 100m | 128Mi |
+| dam-plugin-google-vision | 1 | dam-plugin-google-vision | dam-plugin-google-vision | 100m | 128Mi |
+| dam-plugin-kaltura | 1 | dam-plugin-kaltura | dam-plugin-kaltura | 100m | 128Mi |
+| design-studio | 1 | design-studio | design-studio | 100m | 128Mi |
+| digital-asset-management | 1 | digital-asset-management | digital-asset-manager | 250m | 1024Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| haproxy | 1 | haproxy | haproxy | 200m | 300Mi |
+| image-processor | 1 | image-processor | image-processor | 100m | 1280Mi |
+| license-manager | 1 | license-manager | license-manager | 100m | 300Mi |
+| open-ldap | 1 | ldap | openldap | 200m | 512Mi |
+| persistence-connection-pool | 1 | persistence-connection-pool | persistence-connection-pool | 500m | 512Mi |
+| persistence-node | 1 | persistence-node | persistence-node | 1000m | 1024Mi |
+|  |  | persistence-metrics-exporter | persistence-metrics-exporter | 100m | 128Mi |
+|  |  | persistence-repmgr-log | logging-sidecar | 100m | 64Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| remote-search | 1 | remote-search | remote-search | 250m | 768Mi |
+|  |  | system-out-log | logging-sidecar | 100m | 64Mi |
+|  |  | system-err-log | logging-sidecar | 100m | 64Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| ring-api | 1 | ring-api | ringapi | 100m | 128Mi |
+| runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
+|  |  |  |  |  |  |
+| **Overall** |  |  |  | **5000m** | **10392Mi** |
 
 <!--
 ???+ info "Related information"
