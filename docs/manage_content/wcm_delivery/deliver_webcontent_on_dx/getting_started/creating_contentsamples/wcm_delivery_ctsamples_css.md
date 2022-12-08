@@ -10,5 +10,5 @@ The `wp_oob_sample_styles` theme module includes a single CSS file that is named
 
 
 ???+ info "Related information"
-    - [Adapting the list of required runtime configuration changes for your theme](../../../../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_repack_runtime.md)
+    - [Adapting the list of required runtime configuration changes for your theme](../../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_repack_runtime.md)
 

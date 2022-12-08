@@ -8,11 +8,11 @@ The relationship between a syndicator and a subscriber can be either a one-way o
 
 Application 1 syndicates one or more libraries to Application 2, and Application 2 subscribes from Application 1.
 
-![Application 1 syndicates one or more libraries to Application 2, and Application 2 subscribes from Application 1.](../../../../images/syndication_one.jpg)
+![Application 1 syndicates one or more libraries to Application 2, and Application 2 subscribes from Application 1.](../../../images/syndication_one.jpg)
 
 ## Two-way syndication
 
-![Both applications syndicate to each other, and both applications subscribe from each other.](../../../../images/syndication_two.jpg)
+![Both applications syndicate to each other, and both applications subscribe from each other.](../../../images/syndication_two.jpg)
 
 !!! note
     -   When two-way syndication is enabled, you must first establish the syndication relationship from Application 1 to Application 2. After the libraries are replicated to Application 2, you can set up the syndication relationship between Application 2 and Application 1.
@@ -23,7 +23,7 @@ Application 1 syndicates one or more libraries to Application 2, and Application
 
 Syndicators can syndicate libraries to multiple subscribers, and subscribers can subscribe to libraries from multiple syndicators.
 
-![Application 1 and Application 2 both syndicate to Application 3, and Application 3 subscribes from both Application 1 and Application 2.](../../../../images/syndication_multi.jpg)
+![Application 1 and Application 2 both syndicate to Application 3, and Application 3 subscribes from both Application 1 and Application 2.](../../../images/syndication_multi.jpg)
 
 ## Syndication methods
 
@@ -125,7 +125,7 @@ Cross-version syndication is supported between the following releases.
 
 Syndicating from a newer software level to an older software level is only supported between different fix-pack levels of the same release. When syndicating between releases, only older to newer is supported.
 
-See [Cross version syndication](../../../../deployment/manage/migrate/planning_migration/migration_consideration/migrating_wcm_70_80/mig_content_options_cross-version.md) for further information.
+See [Cross version syndication](../../../deployment/manage/migrate/planning_migration/migration_consideration/migrating_wcm_70_80/mig_content_options_cross-version.md) for further information.
 
 ## Web content libraries and syndication relationships
 
@@ -135,7 +135,7 @@ Because syndication is run on a library by library basis, it is important to con
 
 For easier management, you might divide your content further into three libraries, where one library contains data common to both the intranet and Internet sites and the other two libraries contain site-specific content. The following example demonstrates this configuration, with the addition of two other authoring portlets so that the content of each library is maintained by a different authoring portlet.
 
-![Example diagram showing syndication of multiple libraries](../../../../images/JCRLibHRMktA.jpg)
+![Example diagram showing syndication of multiple libraries](../../../images/JCRLibHRMktA.jpg)
 
 In this case you might set up several syndication relationships between the authoring server and the delivery servers:
 
@@ -169,5 +169,5 @@ Although syndication can be used to keep data current between libraries on diffe
 
 
 ???+ info "Related information"
-    - [Syndication and staging](../../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)
+    - [Syndication and staging](../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)
 

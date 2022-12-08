@@ -36,6 +36,6 @@ From time to time items fail to syndicate. You use the failed items view to revi
 
 
 ???+ info "Related information"
-    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-    - [Resetting the web content event log](../../wcm_management/wcm_adm_tools/wcm_config_reset_event_log.md)
+    - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Resetting the web content event log](../../wcm_configuration/wcm_adm_tools/wcm_config_reset_event_log.md)
 

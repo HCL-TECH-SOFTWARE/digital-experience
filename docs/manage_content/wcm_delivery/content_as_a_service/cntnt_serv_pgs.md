@@ -18,5 +18,5 @@ To access your Content as a Service pages, you can write links to your content t
 
 
 ???+ info "Related information"
-    - [Writing links to web content](../../wcm_artifacts/tags/wcm_dev_writing-links.md)
+    - [Writing links to web content](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/wcm_dev_writing-links.md)
 

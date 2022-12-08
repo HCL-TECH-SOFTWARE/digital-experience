@@ -20,5 +20,5 @@ You can configure how the portal behaves if a user tries to access an undefined 
 
 
 ???+ info "Related information"
-    - [Syndication and staging](../../../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)
+    - [Syndication and staging](../../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)
 

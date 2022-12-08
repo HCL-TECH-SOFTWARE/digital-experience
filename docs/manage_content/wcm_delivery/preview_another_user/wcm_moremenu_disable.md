@@ -29,6 +29,6 @@ You disable the More menu in the virtual portal configuration service.
 
                 Set the value for this property to `false`. Replace `virtual_portal_hostname` with the host name of the target virtual portal. Example: `hostname.vp.example.com.property.wp_toolbar_moremenu.enabled = false`.
 
-        4.  Restart the Portal server to apply your changes. If you defined the property `global.wp_toolbar_moremenu.enabled` listed earlier, it acts as a fallback setting for virtual portals that do not have the More menu property set. For more information about prefixes, placeholders, and the order in which properties are evaluated, read [Virtual Portal Configuration Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md).
+        4.  Restart the Portal server to apply your changes. If you defined the property `global.wp_toolbar_moremenu.enabled` listed earlier, it acts as a fallback setting for virtual portals that do not have the More menu property set. For more information about prefixes, placeholders, and the order in which properties are evaluated, read [Virtual Portal Configuration Service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md).
 
 

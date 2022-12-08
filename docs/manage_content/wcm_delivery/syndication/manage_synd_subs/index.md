@@ -19,5 +19,5 @@ After you set up a syndication relationship, you can allow users with Editor acc
 
 
 ???+ info "Related information"
-    - [Installing the Farm Master and setting up the support server](../../../../../deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_with_sharedconfig/set_portal_farm_master.md)
+    - [Installing the Farm Master and setting up the support server](../../../../deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_with_sharedconfig/set_portal_farm_master.md)
 

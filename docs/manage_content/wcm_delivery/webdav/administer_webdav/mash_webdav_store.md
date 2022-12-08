@@ -299,7 +299,7 @@ WebDAV file store supports the following HTTP methods:
 
 
 ???+ info "Related information"
-    - [Enabling HTTP Basic Authentication for simple clients](../../../../../deployment/manage/security/basic_auth/index.md)
-    - [Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/enable_func_migrated_themes/add_85_toolbar/themeopt_cust_toolbar_dynamic_embedding.md)
+    - [Enabling HTTP Basic Authentication for simple clients](../../../../deployment/manage/security/people/authentication/basic_auth/index.md)
+    - [Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/enable_func_migrated_themes/add_85_toolbar/themeopt_cust_toolbar_dynamic_embedding.md)
 
 

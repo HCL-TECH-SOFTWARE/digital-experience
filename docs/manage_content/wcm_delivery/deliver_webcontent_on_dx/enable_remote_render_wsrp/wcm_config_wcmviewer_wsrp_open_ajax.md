@@ -22,6 +22,6 @@ If you experience issues when you configure the consumed Web Content Viewer port
 
 
 ???+ info "Related information"
-    - [The module framework](../../../../../../build_sites/themes_skins/the_module_framework/index.md)
-    - [Customizing the WSRP resource proxy HTTP header forwarding behavior](../../../../../../extend_dx/development_tools/wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/customizing_wsrp_resource_proxy/wsrpt_cons_cust_resproxy_frwrd.md)
+    - [The module framework](../../../../build_sites/themes_skins/the_module_framework/index.md)
+    - [Customizing the WSRP resource proxy HTTP header forwarding behavior](../../../../extend_dx/development_tools/wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/customizing_wsrp_resource_proxy/wsrpt_cons_cust_resproxy_frwrd.md)
 

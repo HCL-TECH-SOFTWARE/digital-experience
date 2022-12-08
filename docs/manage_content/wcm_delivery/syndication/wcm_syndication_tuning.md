@@ -23,7 +23,7 @@ The publish date for each content item specifies the date and time when the cont
 
 The expire date specifies the date and time when the content item is removed from a website. As with the publish date, you can use the expire date to cause the syndication activity that is associated with removing the content to occur at a time when other syndication activity is less intensive.
 
-For more information on the publish and expire dates in the workflow process, refer to [Item status](../../wcm_artifacts/workflow/wcm_managing_workflow_status.md).
+For more information on the publish and expire dates in the workflow process, refer to [Item status](../../wcm_authoring/authoring_portlet/change_management/workflow/wcm_managing_workflow_status.md).
 
 ## Syndicating large libraries
 

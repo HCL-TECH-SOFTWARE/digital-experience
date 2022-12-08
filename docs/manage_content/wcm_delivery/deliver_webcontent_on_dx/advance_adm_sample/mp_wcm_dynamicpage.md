@@ -28,5 +28,5 @@ The default filter plug-ins perform the following tests to determine a web conte
 
 ???+ info "Related information"
     - [Setting up a web content fallback page](../customizing_content/mp_wcm_fallback.md)
-    - [Creating a content page resolution filter class](../../../../wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_page_resolution.md)
+    - [Creating a content page resolution filter class](../../../wcm_development/wcm_custom_plugin/wcm_dev_api_page_resolution.md)
 

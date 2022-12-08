@@ -41,5 +41,5 @@ When you create a page that is based on the Articles template, several things ha
 
 
 ???+ info "Related information"
-    - [The module framework](../../../../../../../build_sites/themes_skins/the_module_framework/index.md)
+    - [The module framework](../../../../../build_sites/themes_skins/the_module_framework/index.md)
 

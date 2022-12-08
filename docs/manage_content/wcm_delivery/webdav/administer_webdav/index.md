@@ -24,5 +24,5 @@ Use this configuration task to manage theme artifacts and to deploy iWidgets. Th
 
 
 ???+ info "Related information"
-    - [Updating custom theme Dojo references](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/development_task/mig_post_dojo.md)
+    - [Updating custom theme Dojo references](../../../../deployment/manage/migrate/next_steps/post_mig_activities/development_task/mig_post_dojo.md)
 

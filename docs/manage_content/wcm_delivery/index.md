@@ -27,11 +27,11 @@ The type of delivery method you use to deliver web content to your viewers depen
 
 
 
--   **[Delivering web content via HCL DX](../delivering_web_content/deliver_webcontent_on_dx/index.md)**  
+-   **[Delivering web content via HCL DX](../wcm_delivery/deliver_webcontent_on_dx/index.md)**  
 Using tools like Web Content Viewer Portlets, content associations, and web content page templates, you can build portal pages and display web content. You can also combine web content with other portlet-based content. Content associations tie viewers and portal pages to the site structure of your web content libraries.
 -   **[Access web content by using a servlet](wcm_config_delivery_servlet.md)**  
 Users can access content that is displayed by using the Web Content Manager servlet by connecting to a URL. A servlet delivered website is used when you don't need to use any HCL Portal based features such as authoring tools.
--   **[Pre-rendered delivery](../delivering_web_content/pre-rendered_delivery/index.md)**  
+-   **[Pre-rendered delivery](../wcm_delivery/pre-rendered_delivery/index.md)**  
 You can pre-render a complete HCL Web Content Manager site into HTML and save it to disk. The pre-rendered site can then be used as your live site and displayed to users that use either Web Content Manager or a web server. You deploy a pre-rendered site when you are not using any HCL Portal features and your content is static and is only updated periodically.
 -   **[Rendering modes for web content](wcm_rendering_modes.md)**  
 Different presentation templates are created to render web content in different modes to display content in different contexts, such as a web content viewer portlet, or mobile devices.

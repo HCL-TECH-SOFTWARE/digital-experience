@@ -72,7 +72,7 @@ As with other DX pages, you can create a web content page with the XML configura
 
 
 ???+ info "Related information"
-  - [Public render parameters](../../../../../../extend_dx/portlets_development/portlet_communication/pltcom_pubrndrprm.md)
+  - [Public render parameters](../../../../extend_dx/portlets_development/portlet_communication/pltcom_pubrndrprm.md)
   - [REST API and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)
   - [Package com.ibm.portal.services.contentmapping](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/services/contentmapping/package-summary.html)
 

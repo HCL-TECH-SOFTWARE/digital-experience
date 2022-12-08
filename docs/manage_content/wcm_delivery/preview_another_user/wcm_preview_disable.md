@@ -36,4 +36,4 @@ You disable the preview option in the virtual portal configuration service.
 
 
 ???+ info "Related information"
-    - [Virtual Portal Configuration Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)
+    - [Virtual Portal Configuration Service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)

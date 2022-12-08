@@ -110,6 +110,6 @@ http://host\_name:port\_number/context\_root/portal/page\_id/path\_to\_content/[
 
 
 ???+ info "Related information"
-    - [Defining friendly URLs without state information for pages in your site](../../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
-    - [Changing the site URL after an installation](../../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/index.md)
+    - [Defining friendly URLs without state information for pages in your site](../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
+    - [Changing the site URL after an installation](../../../../../deployment/manage/siteurl_cfg/changing_siteurl/index.md)
 

@@ -28,6 +28,6 @@ If you experience issues when you use the **Edit shared settings** or **Configur
 
 
 ???+ info "Related information"
-    - [Customizing the WSRP resource proxy HTTP header forwarding behavior](../../../../../../extend_dx/development_tools/wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/customizing_wsrp_resource_proxy/wsrpt_cons_cust_resproxy_frwrd.md)
-    - [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/)
+    - [Customizing the WSRP resource proxy HTTP header forwarding behavior](../../../../extend_dx/development_tools/wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/customizing_wsrp_resource_proxy/wsrpt_cons_cust_resproxy_frwrd.md)
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/)
 

@@ -53,6 +53,6 @@ The following example updates a web content page to delete any defined content a
 
 ???+ info "Related information"
     - [Web content associations](../../getting_started/wcm_delivery_contentmap_about.md)
-    - [Community associations and APIs](../../../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_access_apis.md)
-    - [Human readable URL mappings for virtual portals](../../../../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
-    - [Managing community associations](../../../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping.md)
+    - [Community associations and APIs](../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_access_apis.md)
+    - [Human readable URL mappings for virtual portals](../../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
+    - [Managing community associations](../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping.md)

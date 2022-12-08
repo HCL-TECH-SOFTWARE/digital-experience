@@ -47,13 +47,13 @@ Set page parameters on your web content page templates by using **Page Propertie
 
 
 ???+ info "Related information"
-    - [Content settings](../../../deliver_webcontent_on_dx/editing_wcm_viewer_setting/wcm_config_wcmviewer_hcontent.md)
+    - [Content settings](../../deliver_webcontent_on_dx/editing_wcm_viewer_setting/wcm_config_wcmviewer_hcontent.md)
     - [XML configuration interface and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_xml.md)
     - [Portal Scripting Interface and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_pscript.md)
     - [REST API and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)
     - [Enabling page-based access control for web content pages](../customizing_content/mp_wcm_pageaccess.md)
     - [Java API for Content Mapping Service](https://support.hcltechsw.com/csm)
-    - [Using the view definitions provided with social rendering on your DX pages](../../../../../../build_sites/social_rendering/working_with_social_objects/soc_rendr_use_oob_socl_list.md)
-    - [Configuring a multilingual system Multilingual Solution](../../../mls/mls_install/wcm_mls_configure.md)
-    - [Portlet Render-time navigation extensions](../../../mls/mls_extension/wcm_mls_ext_portlet.md)
+    - [Using the view definitions provided with social rendering on your DX pages](../../../../build_sites/social_rendering/working_with_social_objects/soc_rendr_use_oob_socl_list.md)
+    - [Configuring a multilingual system Multilingual Solution](../../../wcm_authoring/multi_lingual/mls_install/wcm_mls_configure.md)
+    - [Portlet Render-time navigation extensions](../../../wcm_authoring/multi_lingual/mls_extension/wcm_mls_ext_portlet.md)
 

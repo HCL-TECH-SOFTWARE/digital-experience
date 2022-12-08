@@ -45,8 +45,8 @@ The Enabler from the Mashups 3.0.0.1 component that is included in HCL Digital E
 
 ???+ info "Related information"
     - [Web Content Viewers](../getting_started/wcm_deploy_wcmviewer_about.md)
-    - [WSRP services](../../../../../../extend_dx/development_tools/wsrp/index.md)
-    - [Providing WSRP services as a Producer](../../../../../../extend_dx/development_tools/wsrp/portal_wsrp_producer/providing_wsrp_services_as_producer/index.md)
-    - [Configuring security on the Consumer portal](../../../../../../extend_dx/portlets_development/usage/wsrp/configuration/portal_wsrp_consumer/cfg_security_consumer_portal/wsrpt_cons_prep_sec.md)
-    - [Working with lists of social objects](../../../../../../build_sites/social_rendering/working_with_social_objects/index.md)
+    - [WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)
+    - [Providing WSRP services as a Producer](../../../../extend_dx/development_tools/wsrp/portal_wsrp_producer/providing_wsrp_services_as_producer/index.md)
+    - [Configuring security on the Consumer portal](../../../../extend_dx/portlets_development/usage/wsrp/configuration/portal_wsrp_consumer/cfg_security_consumer_portal/wsrpt_cons_prep_sec.md)
+    - [Working with lists of social objects](../../../../build_sites/social_rendering/working_with_social_objects/index.md)
 
