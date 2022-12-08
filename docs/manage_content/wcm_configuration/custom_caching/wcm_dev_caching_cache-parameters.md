@@ -70,7 +70,7 @@ When an item is updated, either directly or as a result of syndication, no cache
 
 In HCL DX 9.5 Container Update CF195, CF20, and later releases, new options are available to flush the Web Content Manager advanced cache as a result of syndication operations.
 
-See the [Web content cache types](wcm_config_delivery_caching_types.md) Help Center topic for details on Web Content Manager cache types.
+See the [Web content cache types](../cfg_webcontent_delivery_env/caching_options/wcm_config_delivery_caching_types.md) Help Center topic for details on Web Content Manager cache types.
 
 The Web Content Manager Advanced Cache supports the capability to store the HTML required to render that piece of content in an *Advanced Cache* so that WCM doesn't have to reconstruct or process it again. In the next render request, if the content exists in the Advanced Cache, then WCM renders the HTML from the *Advanced Cache* and doesn't reconstruct all the details of that content item, which could include one or more calls to the JCR database. The savings in render time \(and CPU time\) can be significant.
 
@@ -80,7 +80,8 @@ In DX Container Update CF195 and CF20, two new Web Content Manager Advanced Cach
 
 1.  **Flush WCMAdvanced Cache on Item Update**: This option enables the removal of content items existing in the *Advanced Cache* if that item is updated through syndication or through WCM authoring interfaces.
 
-    **Note:** Some items in the Web Content Manager *Advanced Cache* can refer to higher level artifacts, such as a DX site area or a menu. If content contained in this higher-level artifact is changed, it doesn't invalidate the higher-level artifact. This pattern is common in artifacts such as Presentation Templates that might refer to all of the content inside a site area, or it might refer to a menu that would iterate over a site area and select content matching a filter in the menu.
+    !!! note
+        Some items in the Web Content Manager *Advanced Cache* can refer to higher level artifacts, such as a DX site area or a menu. If content contained in this higher-level artifact is changed, it doesn't invalidate the higher-level artifact. This pattern is common in artifacts such as Presentation Templates that might refer to all of the content inside a site area, or it might refer to a menu that would iterate over a site area and select content matching a filter in the menu.
 
 2.  **Flush WCM Advanced Cache on Subscription Event**: This option enables flushing the entire Web Content Manager *Advanced Cache* upon any non-empty subscription event. This option must be used with care, because clearing the entire Web Content Manager *Advanced Cache* will cause delays in performance of any access to WCM items not in the cache. When an item is NOT in the *Advanced Cache*, WCM must process the reference to that item and generate any HTML needed to access it. Once the item is processed the first time, the resulting HTML is put into the *Advanced Cache*. This means that as long as the HTML for the item resides in the *Advanced Cache*, WCM doesn't need to retrieve the item from the JCR, process it, and generate the HTML to render it.
 
@@ -89,7 +90,7 @@ In DX Container Update CF195 and CF20, two new Web Content Manager Advanced Cach
 
 How to enable these options:
 
-1.  To enable the **Flush WCMAdvanced Cache on Item Update** function, a new [Resource Environment Provider](../admin-system/adsetcfg.md) entry must exist in the **WCM WCMConfigService** Resource Entry Provider. It is defined as follows:
+1.  To enable the **Flush WCMAdvanced Cache on Item Update** function, a new [Resource Environment Provider](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/resourceenvironments.md) entry must exist in the **WCM WCMConfigService** Resource Entry Provider. It is defined as follows:
 
     Name: `wcm.cache.flush.advanced.cache.on.item.update`
 

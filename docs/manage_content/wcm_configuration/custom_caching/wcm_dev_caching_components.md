@@ -4,7 +4,7 @@ You can apply caching to elements by using "connect" tags to reference elements 
 
 **Important:**
 
--   See [Enabling connect tags](wcm_config_connect.md) for information on enabling connect tags.
+-   See [Enabling connect tags](../wcm_svc_cfg/wcm_config_connect.md) for information on enabling connect tags.
 -   **Process Connect Tags** must be selected in a presentation template form for connect tags to be processed.
 
 ## Example: Applying custom caching
