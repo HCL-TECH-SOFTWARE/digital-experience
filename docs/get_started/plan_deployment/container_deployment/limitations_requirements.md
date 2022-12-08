@@ -49,7 +49,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 -   **Container platform capacity resource requirements**:
 
-    The following table outlines the default minimum capacity of container resources requested by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the number of Pods required of each component.
+    The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the minimum of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly.
 
     |Component|Pod Minimum CPU|Pod Maximum CPU|Pod Minimum Memory|Pod Maximum Memory|No. of Pods Minimum|
     |---------|-------------|---------------|------------------|-------------------|-------------------|
