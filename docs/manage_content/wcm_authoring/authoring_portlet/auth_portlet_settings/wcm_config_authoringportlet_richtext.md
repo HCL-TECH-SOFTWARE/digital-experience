@@ -12,7 +12,7 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
     Select this option to use the Textbox.io editor. Browser pop-up windows must be enabled to use this editor.
 
-    **Enhanced Editor**
+-   **Enhanced Editor**
 
     Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled to use this editor.
 
