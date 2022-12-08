@@ -49,25 +49,37 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 -   **Container platform capacity resource requirements**:
 
-    The following table outlines the default minimum capacity of container resources requested by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the number of Pods required of each component.
+    The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the minimum of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly. Please consider that every Kubernetes node requires some headroom for Kubernetes specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. Please be aware that the overall requested amount of resources may vary based on disabled/enabled applications.
 
-    |Component|Resource name|Pod Minimum CPU|Pod Minimum Memory|No. of Pods Minimum|
-    |---------|-------------|---------------|------------------|-------------------|
-    |Core|core|0.8|3072MB|1|
-    |Ring API|ringApi|0.1|128MB|1|
-    |Content Composer|contentComposer|0.1|128MB|1|
-    |Design Studio|designStudio|0.1|128MB|1|
-    |Digital Asset Management|digitalAssetManagement|0.25|1024MB|1|
-    |DAM Persistence Connection Pool|persistenceConnectionPool|0.5|512MB|1|
-    |DAM Persistence Node|persistenceNode|1|1024MB|1|
-    |DAM Persistence Metrics Exporter|persistenceMetricsExporter|0.1|128MB|0|
-    |Image processor|imageProcessor|0.1|1280MB|1|
-    |Open LDAP|openLdap|0.2|512MB|1|
-    |Remote search|remoteSearch|0.25|768MB|1 \(Max 1 Pod\)|
-    |Runtime Controller|runtimeController|0.1|256MB|1|
-    |HAProxy|haproxy|1|1024MB|1|
-    |Logging Sidecar|loggingSidecar|0.1|64MB|0|
-    |Prereqs Checker|prereqsChecker|0.1|64MB|0|
+| **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request** | **Container Memory request** |
+|---|---|---|---|---|---|
+| core | 1 | core | core | 800m | 3072Mi |
+|  |  | system-out-log | logging-sidecar | 100m | 64Mi |
+|  |  | system-err-log | logging-sidecar | 100m | 64Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| content-composer | 1 | content-composer | content-composer | 100m | 128Mi |
+| dam-plugin-google-vision | 1 | dam-plugin-google-vision | dam-plugin-google-vision | 100m | 128Mi |
+| dam-plugin-kaltura | 1 | dam-plugin-kaltura | dam-plugin-kaltura | 100m | 128Mi |
+| design-studio | 1 | design-studio | design-studio | 100m | 128Mi |
+| digital-asset-management | 1 | digital-asset-management | digital-asset-manager | 250m | 1024Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| haproxy | 1 | haproxy | haproxy | 200m | 300Mi |
+| image-processor | 1 | image-processor | image-processor | 100m | 1280Mi |
+| license-manager | 1 | license-manager | license-manager | 100m | 300Mi |
+| open-ldap | 1 | ldap | openldap | 200m | 512Mi |
+| persistence-connection-pool | 1 | persistence-connection-pool | persistence-connection-pool | 500m | 512Mi |
+| persistence-node | 1 | persistence-node | persistence-node | 1000m | 1024Mi |
+|  |  | persistence-metrics-exporter | persistence-metrics-exporter | 100m | 128Mi |
+|  |  | persistence-repmgr-log | logging-sidecar | 100m | 64Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| remote-search | 1 | remote-search | remote-search | 250m | 768Mi |
+|  |  | system-out-log | logging-sidecar | 100m | 64Mi |
+|  |  | system-err-log | logging-sidecar | 100m | 64Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| ring-api | 1 | ring-api | ringapi | 100m | 128Mi |
+| runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
+|  |  |  |  |  |  |
+| **Overall** |  |  |  | **5000m** | **10392Mi** |
 
 <!--
 ???+ info "Related information"
