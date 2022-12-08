@@ -105,5 +105,5 @@ This topic describes the commands that are used to create or update credential v
 
 
  ???+ Info "Related information" 
-    - [DXClient](../dxclient.md)
+    - [DXClient](../index.md)
 

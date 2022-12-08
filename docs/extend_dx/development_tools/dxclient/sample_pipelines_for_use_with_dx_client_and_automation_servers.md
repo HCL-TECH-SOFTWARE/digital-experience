@@ -171,7 +171,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 
 ???+ info "Related information"
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
-    - [DXClient](dxclient.md)
+    - [DXClient](../dxclient/index.md)
     - [DXClient Artifact Types](../dxclient/dxclient_artifact_types/index.md)
     - [Sample Pipelines for the DXClient Docker image file](sample_pipelines_docker_dxclient.md)
     - [Sample Pipelines for the DXClient node package file](sample_pipelines_node_dxclient.md)

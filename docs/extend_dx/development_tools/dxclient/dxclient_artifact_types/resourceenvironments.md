@@ -264,5 +264,5 @@ This topic describes the commands that are used to create, update, delete, and r
 
 
 ???+ info "Related information"
-    - [DXClient](../dxclient.md)
+    - [DXClient](../index.md)
 
