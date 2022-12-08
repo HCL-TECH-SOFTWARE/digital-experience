@@ -12,5 +12,5 @@ To change the order of common names modify the following three configuration pro
 **Related information**  
 
 
-[Setting service configuration properties](/digital-experience/deployment/manage/config_portal_behavior/service_config_properties)
+[Setting service configuration properties](../../../manage/config_portal_behavior/service_config_properties)
 

@@ -13,4 +13,4 @@ The security architecture describes what groups are required for your site and w
 **Related information**  
 
 
-[Setting up access](/digital-experience/build_sites/create_sites/building_website/site_acl)
+[Setting up access](../../../../build_sites/create_sites/building_website/site_acl)

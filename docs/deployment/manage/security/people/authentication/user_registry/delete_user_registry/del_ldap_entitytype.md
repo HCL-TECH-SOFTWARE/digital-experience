@@ -4,7 +4,8 @@ If you changed your LDAP user registry and no longer require an entity type, you
 
 In a stand-alone server environment, you can complete the following task when the servers are either stopped or started. In a clustered environment, start the deployment manager and node agent. Then, verify that they are able to synchronize.
 
-1.  Go to the [wp\_profile\_root](../../../../../../../guide_me//wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+
+1.  Go to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Open the wkplc.properties file with a text editor.
 
@@ -24,7 +25,8 @@ In a stand-alone server environment, you can complete the following task when th
 
 5.  Open a command prompt.
 
-6.  Change to the [wp\_profile\_root](../../../../../../../guide_me//wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+
+6.  Change to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
 
 7.  Run the following task to delete an LDAP entity type:
 
@@ -33,7 +35,7 @@ In a stand-alone server environment, you can complete the following task when th
     -   Windows™: ConfigEngine.bat wp-delete-ldap-entitytype -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh wp-delete-ldap-entitytype -DWasPassword=password
 
-8.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
+8.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../../manage/stopstart.md).
 
 
 

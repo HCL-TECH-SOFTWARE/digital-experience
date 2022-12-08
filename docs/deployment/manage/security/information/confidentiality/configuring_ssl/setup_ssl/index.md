@@ -192,14 +192,14 @@ If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, c
 This section shows how to use wsadmin commands to update web.xml and web\_merged.xml for wps.ear.
 
 
-**Next topic:**[Configuring SSL only for the login process](/digital-experience/deployment/manage/security/information/confidentiality/configuring_ssl/config_ssl_login)
+**Next topic:**[Configuring SSL only for the login process](../../../manage/security/information/confidentiality/configuring_ssl/config_ssl_login)
 
 **Related information**  
 
 
-[Configuring Security Access Manager for authentication only](/digital-experience/deployment/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access/cfg_tam_auth)
+[Configuring Security Access Manager for authentication only](../../security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access/cfg_tam_auth)
 
-[Configuring Security Access Manager for authentication, authorization, and the Credential Vault](/digital-experience/deployment/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access/tam_prov_usrs)
+[Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../../security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access/tam_prov_usrs)
 
-[About the XML configuration interface](/digital-experience/deployment/portal_admin_tools/xml_config_interface/adxmlabt)
+[About the XML configuration interface](../../..manage/portal_admin_tools/xml_config_interface/adxmlabt)
 

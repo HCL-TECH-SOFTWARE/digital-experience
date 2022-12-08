@@ -40,6 +40,6 @@ After you delete these entries by using the modified XML script, all customizati
 **Related information**  
 
 
-[Sample XML configuration files](/digital-experience/deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp)
+[Sample XML configuration files](../../../manage/portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp)
 
 

@@ -2,7 +2,8 @@
 
 You can configure IBM Security Access Manager for both authentication and authorization for HCL Digital Experience. If you configure these functions at different times as independent tasks, configure Security Access Manager for authentication first. Using Security Access Manager only for authorization is not supported.
 
-Complete the steps in [Configuring Security Access Manager for authentication only](cfg_tam_auth.md) before you configure Security Access Manager for authorization.
+
+Complete the steps in [Configuring Security Access Manager for authentication only](../../../manage/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/cfg_tam_auth)  before you configure Security Access Manager for authorization.
 
 You can configure HCL Portal to delegate the decisions about what users or groups are granted access to Portal resources, to IBM® Security Access Manager. This action is also called externalizing the access control for Portal resources. Normally these decisions are made by consulting the principal-to-role mappings that are stored in the Portal database. The following task configures the Portal code that is used to obtain access control decisions for Portal resources from Security Access Manager instead of from the Portal database. It includes configuration of properties that determine how the Portal resources are represented in the Security Access Manager protected object namespace. It also configures how permissions are represented in the Security Access Manager access control lists. After this task is run, you can use the Resource Permissions portlet or XMLAccess to place portal resources such as pages and portlets under Security Access Manager control.
 
@@ -38,7 +39,9 @@ The Security Access Manager object space entries might be different from the def
 
 1.  **Clustered environments:** Complete this step on all nodes.
 
-    Run the following task in the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
+
+    Run the following task in the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
+
 
     !!!tip
         Run the validate-pdadmin-connection task on the HCL Portal node or on each node in a clustered environment. In a clustered environment, WasPassword is the Deployment Manager administrator password. The wp.ac.impl.PDAdminPwd is the Security Access Manager administrative user password.
@@ -181,12 +184,14 @@ The Security Access Manager object space entries might be different from the def
 
     **If the task does not run successfully:** Ensure the values in the wkplc\_comp.properties file are valid.
 
-6.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../../../../stopstart.md).
+6.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../manage/stopstart).
 
 
 After you complete the authorization procedure, you can then use the HCL Portal administration tools (the Resource Permission portlet or XMLAccess scripting) to externalize the access control decisions for Portal resources. For any resources placed under IBM Security Manager access control, the Security Access Manager protected object space contains entries for roles in the following format
 
-[PortalServer\_root](../../../../../../../../guide_me/wpsdirstr.md#portalserver_root)/role\_name/application\_name/server\_name/cell\_name
+
+[PortalServer\_root](../../../manage/wpsdirstr#wp_profile_root)/role\_name/application\_name/server\_name/cell\_name
+
 
 For example: If the wp.ac.impl.PDRoot value was Portal\_Instance\_1 and wp.ac.impl.EACcellName was Cell\_A, Wp.ac.impl.EACserverName was Server\_B, and wp.ac.impl.EACappName was Application\_C, then an object space entry corresponding to a Portal role name approximately looks like
 
@@ -198,6 +203,4 @@ Where the Portal role name Administrator@VIRTUAL\_EXTERNAL\_ACCESS\_CONTROL is s
     The `EACappname`, `EACserverName`, and `EACcellName` must all be specified, or none of them appears in the Security Access Manager object space entries.
 
 
-???+ info "Related information"
-    - [Creating the PdPerm.properties file](run_svrssl_config.md)
-
+[Creating the PdPerm.properties file](../../../manage/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/un_svrssl_config)

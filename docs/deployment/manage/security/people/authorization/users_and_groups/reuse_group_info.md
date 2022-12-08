@@ -55,5 +55,5 @@ Complete the following steps to reuse group information:
 **Related information**  
 
 
-[Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart)
+[Starting and stopping servers, deployment managers, and node agents](../../../manage/stopstart)
 

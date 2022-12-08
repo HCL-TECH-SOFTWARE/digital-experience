@@ -167,5 +167,4 @@ If you completed a binary installation, this is your first step.
 
 **Related information**  
 [Create an HCL Portal profile](../../profile/cw_create_profile.md)<br>
-[Accessing the Configuration Wizard](./../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
-
+[Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)

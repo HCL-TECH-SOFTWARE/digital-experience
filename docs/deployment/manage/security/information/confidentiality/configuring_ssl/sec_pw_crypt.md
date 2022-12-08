@@ -31,10 +31,10 @@ If your stand-alone environment meets both of the preceding conditions, complete
 6.  Restart the WebSphere\_Portal server.
 
 
-**Previous topic:**[Setting up Client Certificate Authentication](/digital-experience/deployment/manage/security/information/confidentiality/configuring_ssl/certauth)
+**Previous topic:**[Setting up Client Certificate Authentication](../../../manage/security/information/confidentiality/configuring_ssl/certauth)
 
 **Related information**  
 
 
-[Starting and stopping servers, deployment managers, and node agents](/digital-experience/deployment/manage/stopstart)
+[Starting and stopping servers, deployment managers, and node agents](../../../manage/stopstart)
 

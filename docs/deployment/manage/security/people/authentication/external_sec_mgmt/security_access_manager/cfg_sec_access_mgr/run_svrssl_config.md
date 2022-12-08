@@ -10,7 +10,10 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
 
 []()
 
-1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+
+1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine/properties directory.
+
+
 
 2.  Enter the following parameters in the wkplc\_comp.properties file; go to the AMJRTE connection parameters heading:
 
@@ -40,7 +43,9 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
 
 3.  Save your changes to the properties file.
 
-4.  Open a command prompt and change to the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+
+4.  Open a command prompt and change to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+
 
 5.  Run the following task to create the PdPerm.properties file:
 
@@ -63,10 +68,18 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
 
 
 
-???+ info "Related information"
-    - [Configuring Security Access Manager for authentication only](cfg_tam_auth.md)
-    - [Configuring Security Access Manager for authorization](tam_setup_esm.md)
-    - [Configuring the Credential Vault adapter for Security Access Manager](tam_vault.md)
-    - [Configuring Security Access Manager for authentication, authorization, and the Credential Vault](tam_prov_usrs.md)
-    - [Enabling user provisioning](../usr_prov.md)
+
+**Related information**  
+
+
+[Configuring Security Access Manager for authentication only](../../security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access/cfg_tam_auth)
+
+[Configuring Security Access Manager for authorization](../tam_setup_esm)
+
+[Configuring the Credential Vault adapter for Security Access Manager](../tam_vault)
+
+[Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../tam_prov_usrs)
+
+[Enabling user provisioning](../../security/people/authentication/external_sec_mgmt/security_access_manager/usr_prov)
+
 

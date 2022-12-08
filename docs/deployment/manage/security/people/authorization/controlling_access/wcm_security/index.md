@@ -27,5 +27,5 @@ You need to create a different group for each type of user and then assign those
 
 **Related Information**
 
-[Script Application security overview](/digital-experience/extend_dx/script_application/script_application_security)
+[Script Application security overview](../../../../extend_dx/script_application/script_application_security)
 

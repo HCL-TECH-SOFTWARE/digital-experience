@@ -16,6 +16,6 @@ Syndication can be set up between main or virtual portals on different systems o
 
 **Related information**  
 [Publishing and deleting personalization rules using a script](../../../../manage_content/pzn/publishing_pzn_rules/pzn_publish_script.md)<br>
-[Importing pages or page hierarchies by using the XML Import portlet](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_imp.md)<br>
-[The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+[Importing pages or page hierarchies by using the XML Import portlet](../../../manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_imp.md)<br>
+[The XML configuration interface](../../../manage/portal_admin_tools/xml_config_interface/index.md)
 

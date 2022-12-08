@@ -4,7 +4,7 @@ These scenarios provide helpful illustrations on how access control can be set u
 
 This section describes basic tasks for administering access control. The following examples use a hypothetical portal user called Mary and a hypothetical group called the Sales group. The following graphic helps illustrate the examples described in this topic.
 
-![Illustration of role inheritance. The Market News page and USA Market News page are editable. Europe Market News has an editing block.](/digital-experience/images/inheritance.jpg)
+![Illustration of role inheritance. The Market News page and USA Market News page are editable. Europe Market News has an editing block.](../../../../../../images/inheritance.jpg)
 
 **Note:** The tasks described here can be performed using either the administrative portlets or the XML configuration interface. For instructions about using the portlets mentioned here, refer to the portlet helps. For instructions about using the XML configuration interface, see the XML configuration interface section of the Help Center.
 

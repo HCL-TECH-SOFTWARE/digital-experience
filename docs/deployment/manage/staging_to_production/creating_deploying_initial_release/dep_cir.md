@@ -60,11 +60,11 @@ The initial and differential release PAA file contains all the pertinent items t
         **Restriction:** Do not use this parameter in place of syndicating the libraries from the target environment.
 
 ???+ info "Related information"  
-    -   [XML configuration reference](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)<br>
-    -   [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)<br>
+    -   [XML configuration reference](../../../manage/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)<br>
+    -   [Working with the XML configuration interface](../../../manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)<br>
     -   [Synchronizing the vanity URL database](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_sync_db.md)<br>
     -   [Using the XML configuration interface to work with virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/advp_xml.md)<br>
     -   [Exporting and importing a web content library](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
-    -   [Transferring portal configuration data by using the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/transfer_portal_cfg_using_xml_config_int/index.md)<br>
+    -   [Transferring portal configuration data by using the XML configuration interface](../../../manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/transfer_portal_cfg_using_xml_config_int/index.md)<br>
     -   [Staging Personalization rules to production](../../../../manage_content/pzn/pzn_stage_prod.md)
 
