@@ -73,7 +73,7 @@ This topic contains the commands that the administrators can use to export and i
     -dxContextRoot <value>
     ```
 
-     !!! note
+    !!! note
         Log files from command execution can be found in the logs directory of the DXClient installation.
 
 !!! example
