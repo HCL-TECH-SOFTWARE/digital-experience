@@ -64,15 +64,16 @@ This topic contains the commands that the administrators can use to export and i
     -targetWorkspace <value>
     ```
 
-    !!! note
-        The `targetPath` and `targetWorkspace` parameters are optional. If the user does not pass the respective parameters, then the default values are taken.
+   
+     The `targetPath` and `targetWorkspace` parameters are optional. If the user does not pass the respective parameters, then the default values are taken.
 
-         Use this attribute to specify the path to the context root on the DX server (for example, /wps):
+    Use this attribute to specify the path to the context root on the DX server (for example, /wps):
 
-        ```
-        -dxContextRoot <value>
-        ```
+    ```
+    -dxContextRoot <value>
+    ```
 
+     !!! note
         Log files from command execution can be found in the logs directory of the DXClient installation.
 
 !!! example
