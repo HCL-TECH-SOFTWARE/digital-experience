@@ -335,10 +335,15 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
 !!! note 
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
+    -   HCL DX 9..5 CF208 release:
+        -   [Get all subscribers details for DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging)
+
     -   HCL DX 9..5 CF207 release:
         -   Support to set different Container Runtimes.
+
     -   HCL DX 9.5 CF202 release:
         -   Deprecated parameter `dxConnectHostname`. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+
         -   [DAM Assets Export & import](https://opensource.hcltechsw.com/digital-experience/CF207/manage_content/digital_assets/usage/managing_dam/dam_exim/)
         
     -   HCL DX 9.5 CF201 release:
