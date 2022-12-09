@@ -21,7 +21,7 @@ The following features and updates are available to customers installing HCL Dig
 ## DX Client Updates support ability to execute in multiple container environments
 
 === "Containers"
-    By default, the Docker container runtime is supported, updates enable use of any container runtime that implements the OCI Runtime Specification.  See the [DX Client](../../extend_dx/development_tools/dxclient/dxclient.md) topic in the Help Center for more information. 
+    By default, the Docker container runtime is supported, updates enable use of any container runtime that implements the OCI Runtime Specification.  See the [DX Client](../../extend_dx/development_tools/dxclient/index.md) topic in the Help Center for more information. 
 
 ## Digital Asset Management Plugin extensibility Helm configuration updates
 
