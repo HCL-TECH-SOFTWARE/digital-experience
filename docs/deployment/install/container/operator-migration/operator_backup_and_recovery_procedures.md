@@ -112,14 +112,14 @@ The following sections describe how the administrators can create and manage bac
     2.  [Volume SnapShots: \(1.17 \[beta\] and later\)](https://kubernetes.io/docs/concepts/storage/volume-snapshots/){:target="_blank"}
     3.  [CSI Volume Cloning](https://kubernetes.io/docs/concepts/storage/volume-pvc-datasource/){:target="_blank"}
     !!!note
-        If either of the methods described in [Step 2] as Volume Snapshots or [Step 3] as CSI Volume Cloning is used, it is important to understand fuzzy backups with the wp_profile.  A fuzzy backup is a copy of data files or directories that were operating in one state when the backup started, but in a different state by the time the backup completed. In case a volume snapshot or Container Storage Interface (CSI) volume cloning approach is used with the `wp_profile`, it is important that the snapshot is taken with the Digital Experience instance in shutdown state to ensure that recovery is performed.
+        If either of the methods described in **Step 2** as Volume Snapshots or **Step 3** as CSI Volume Cloning is used, it is important to understand fuzzy backups with the wp_profile.  A fuzzy backup is a copy of data files or directories that were operating in one state when the backup started, but in a different state by the time the backup completed. In case a volume snapshot or Container Storage Interface (CSI) volume cloning approach is used with the `wp_profile`, it is important that the snapshot is taken with the Digital Experience instance in shutdown state to ensure that recovery is performed.
 
         HCL Digital Experience has successfully tested the volume snapshot and CSI volume cloning methods with HCL Digital Experience 9.5 container deployments. It is recommended that customers perform the additional testing if they are using options Step 2 and Step 3 to manage the wp_profile backup.
 
-<!-- ???info "Related information"
-   - [Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md)
-   - [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md)
-   - [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html) -->
+ ???+ info "Related information"
+    - [Install the HCL Digital Experience 9.5 components](../../../../manage_content/wcm_authoring/content_composer/installation/install_config_cc_dam.md)
+    - [Backup and Restore](../../../manage/backup_restore/index.md)
+    - [Backup and restore DAM image](../../../../manage_content/digital_assets/configuration/operator_dam_backup_restore_image.md)
  
 
 <!-- -   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_operator.md)**  
