@@ -35,15 +35,27 @@ security:
     ldapUser: "REDACTED"
     # Admin password for Open LDAP
     ldapPassword: "REDACTED"
+  # Security configuration for Remote Search
+  remoteSearch:
+    # Credentials used for IBM WebSphere Application Server administrative access.
+    # The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.
+    # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
+    # - If a LDAP is used, the the WebSphere Application Server admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
+    wasUser: "wpsadmin"
+    wasPassword: "wpsadmin"
 ```
 
 ### Core security credentials
 
 The security credentials defined in the `security` section of the helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience.
 
+### Remote Search security credentials
+
+Same as Core, when Remote Search is enable, WAS admin credentials can be configurable from the helm chart. The properties for credentials found under `security` section of the value file. For Remote Search also, the behavior slightly differs depending on the user registry that is configured for HCL Digital Experience (read further for more details).
+
 #### 1. File-based user registry
 
-If no LDAP is configured in the helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for core that are specified in the `custom-values.yaml` are applied to the file-based registry. This means that any changes to the values are automatically reflected to the administrator user accounts for Websphere and DX.
+If no LDAP is configured in the helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for Core and Remote Search that are specified in the `custom-values.yaml` are applied to the file-based registry. This means that any changes to the values are automatically reflected to the administrator user accounts for Websphere and DX.
 
 | Value | Effect |
 | --- | --- |
