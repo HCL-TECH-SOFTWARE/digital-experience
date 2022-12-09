@@ -22,9 +22,6 @@ If you no longer require the use of the credential vault adapter that you create
 -   **[Disabling user provisioning](../security_access_manager/usr_prov_dis.md)**  
 After you enable and use the user provisioning feature within IBM Security Access Manager, you can disable the feature.
 
-
-**Related information**  
-
-
-[Using Social Rendering with Tivoli Access Manager and WebSEAL](../../../../../build_sites/social_rendering/administering_social_list/soc_rendr_adm_sr_tam_webseal)
+???+ info "Related information" 
+     - [Using Social Rendering with Tivoli Access Manager and WebSEAL](../../../../../../../build_sites/social_rendering/administering_social_list/soc_rendr_adm_sr_tam_webseal.md)
 

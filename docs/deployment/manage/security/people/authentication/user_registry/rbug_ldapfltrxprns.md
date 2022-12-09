@@ -55,7 +55,6 @@ When you define or modify a rule base user group, the rule-based user groups ada
     If an invalid attribute name is contained in a rule, the group membership determination for rule-based user groups does not work and logs an error. Existing rules might break if your attribute configuration in the system changes, for example, when an attribute is removed or renamed.
 
 
-
 ???+ info "Related information"
     - [RFC2254 - The String Representation of LDAP Search Filters](http://www.faqs.org/rfcs/rfc2254.html)
 
