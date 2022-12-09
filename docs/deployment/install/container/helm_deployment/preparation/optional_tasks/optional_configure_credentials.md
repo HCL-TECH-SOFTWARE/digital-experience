@@ -67,4 +67,4 @@ If no LDAP is configured in the helm values, HCL Digital Experience is configure
 
 If a [LDAP is configured](./optional_configure_apps.md#supported-ldap-configuration) in the helm values under `configuration.core.ldap`, the core security credentials need to be manually set to the credentials of the administrator user(s) from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
 
-Please refer to the [Updating user ID and passwords](../../../../../manage/security/updating_userid_pwd/index.md) topic for additional information on how to manually change credentials.
+Please refer to the [Updating user ID and passwords](../../../../../manage/security/people/authentication/updating_userid_pwd/index.md) topic for additional information on how to manually change credentials.
