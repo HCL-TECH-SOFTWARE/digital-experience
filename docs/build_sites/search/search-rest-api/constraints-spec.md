@@ -45,7 +45,7 @@ A category constraint refers to a constraint on a specific category in a *Facet*
 -   Constraint=**type**: *category*, **values**:*[Tag/tag2]*
 
 !!!example "Sample search"
-    Set the facetedFields value to **["category"]**.
+    Set the **facetedFields** value to **["category"]**.
 
     From a regular search for content with the text **article1**, it has the category of **compact**.
     (Categories in content: //cars/compact)
@@ -66,10 +66,14 @@ For a category constraint to work, set the values for **facetedFields** and **fi
 
 2. Edit its properties.
 
-3. In the **facetedFields** field, enter **["tag", "category"]**.
+3. Edit the **facetedFields** parameter key. 
+
+4. Enter **["tag", "category"]** as parameter value.
 
     These two fields will be indexed as facets and could be searchable as facets.
 
+5. Click **Ok**.
+    
 #### Setting the fieldTypes value
 
 If you have fields in the seedlist that are not strings and you want to sort by them, field type configuration is needed. 
@@ -78,7 +82,11 @@ If you have fields in the seedlist that are not strings and you want to sort by 
 
 2. Edit its properties.
 
-3. In the **fieldTypes** field, enter **{"popularity":"integer"}**.
+3. Edit the **fieldTypes** parameter key.
+
+4. Enter **{"popularity":"integer"}** as parameter value.
+
+5. Click **Ok**.
 
 !!!important
     When you add or update any of the two search service properties, you must restart the Portal server and the remote search service, if available. Failing to do so will result to facets not being handled during indexing. In addition, no facet information will be returned through the Search REST service call, resulting to facets not appearing in the sample portlet.
