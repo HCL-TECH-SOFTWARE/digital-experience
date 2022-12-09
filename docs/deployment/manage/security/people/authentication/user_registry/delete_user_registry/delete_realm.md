@@ -6,9 +6,7 @@ In a stand-alone server environment, you can complete the following task when th
 
 1.  Open a command prompt.
 
-
-2.  Change to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-
+2.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 3.  Run the following task to list the names and types of configured repositories:
 
@@ -17,7 +15,7 @@ In a stand-alone server environment, you can complete the following task when th
     -   Windows™: ConfigEngine.bat wp-delete-realm -DdeleteRealmName=name\_of\_realm -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh wp-delete-realm -DdeleteRealmName=name\_of\_realm -DWasPassword=password
 
-4.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../../manage/stopstart.md).
+4.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
 
 
 
