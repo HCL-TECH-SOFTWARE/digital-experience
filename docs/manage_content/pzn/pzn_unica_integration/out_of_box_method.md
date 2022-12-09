@@ -1,5 +1,5 @@
 # Out-of-box application object for shipping Unica with PZN
-In this document we outline out-of-box application object for Unica with steps to integrate Unica segments into PZN rules.
+In this document, we outline out-of-box application objects for Unica with steps to integrate Unica segments into PZN rules.
 
 ## Unica segments
 Unica offers various REST APIs to manage and retrieve campaigns, segments, ...
@@ -36,7 +36,7 @@ The Out-of-box method provides automation to create the PZN Application object i
                   -DUnicaAuthUser=<unica-user-id>
                   -DUnicaAuthPassword=<unica-user-password>
 ```
-- In the task listed for the setup
+- In the task list for the setup
   - **WasPassword** is the Deployment Manager administrator password
   - **PortalAdminPwd** is the Portal administrator password
   - **UnicaHost** is the Unica host used by the customer
@@ -49,7 +49,8 @@ The Out-of-box method provides automation to create the PZN Application object i
 - We can use the pattern ***unicaSegments-partitionName-audienceName-audienceIdField*** to customise the property for the application object. For e.g: ***unicaSegments-partition1-Customer-CUSTOMERID***.
 <img alt="image" src={useBaseUrl('assets/pzn-ss/unica-oob-manage-properties.png')} />
 
-**Note**: Refer the section [here](#unica-segments) for the sample code that gives more flexibility in defining what is sent to Unica and how the result is being interpreted. The **partitionName**, **audienceName** and example for **audienceIdField** here as ***CUSTOMERID*** can be used in the properties later. The value ***"1"*** is an example of the value for audienceId, which will be configured in the user cookie with the **UnicaCookieName**. The out of the box application object assumes that you create a cookie with that name to hold the ID of the user to be sent to Unica for segmentation - values could be ranging from an actual numeral to a string or some combination.
+!!! note
+    Refer to the section [here](#unica-segments) for the sample code that gives more flexibility in defining what is sent to Unica and how the result is being interpreted. The **partitionName**, **audienceName** and example for **audienceIdField** here as ***CUSTOMERID*** can be used in the properties later. The value ***"1"*** is an example of the value for audienceId, which will be configured in the user cookie with the **UnicaCookieName**. The out of the box application object assumes that you create a cookie with that name to hold the ID of the user to be sent to Unica for segmentation - values could be ranging from an actual numeral to a string or some combination.
 
 - Alternatively, to remove the Unica setup and Application Object, run the following task in the `wp_profile_root/ConfigEngine` directory
 ```bash
@@ -61,7 +62,7 @@ The Out-of-box method provides automation to create the PZN Application object i
 ### Leveraging the Application Object in a rule
 - Create a Rule and add the attribute of the Application Object created in the previous step. It shows the variable added in the loaded Application Object
 ![use-oob-application-object-in-rules](../../../images/use-oob-application-object-in-rules.png)
-- Add the values to segments which you'd like to compare it as per rule creation
+- Add the values to segments that you like to compare it as per rule creation
 ![oob-create-rule](../../../images/oob-create-rule.png)
 - Preview the result in the Preview Tab of the navigator for the rule created
 ![check-rule-result](../../../images/check-rule-result.png)
