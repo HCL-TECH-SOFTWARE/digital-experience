@@ -145,7 +145,7 @@ The installation program verifies the operating system and its prerequisites, av
 24. Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
     !!!note
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../manage/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
 
 
 Before you access WebSphere Application Server, configure the software license agreement to set the usage limit from the Proof of Entitlement (POE) or invoice. Go to [Configuring software license information](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.installation.nd.iseries.doc/ae/tins_is_cfglic.html?cp=SSAW57_8.5.5%2F2-5-0-7-1) for information.
