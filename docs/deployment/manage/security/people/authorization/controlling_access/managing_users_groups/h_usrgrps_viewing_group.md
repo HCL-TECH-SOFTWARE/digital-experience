@@ -11,6 +11,7 @@ Perform the following steps to view a user or group's assignments:
     -   Search for the user or group.
     -   Click the **All Portal User Groups** link for a list of all groups.
     -   Click the **All Authenticated Portal Users** for a list of all users.
+    
 2.  Click the **View membership** icon for the user or user group.
 
 

@@ -17,10 +17,7 @@ The following table provides a brief description of resource types:
 |Pages|The content that determines the portal navigation hierarchy.|
 |User Groups|Groups of portal users.|
 |URL Mapping Contexts|User-defined definitions of URL spaces that map to portal content.|
-|Virtual Resources|Virtual resources have two functions: -   Protecting sensitive operations that affect the entire portal. For example, the XmlAccess virtual resource protects the ability to execute XmlAccess scripts.
--   Grouping resources of the same resource type. For example, the Web Modules virtual resource is the root node of all Web Modules within the portal. Role assignments on the Web Modules virtual resource permit access to all Web Modules in the portal.
-
-|
+|Virtual Resources|Virtual resources have two functions:<br> - Protecting sensitive operations that affect the entire portal. For example, the XmlAccess virtual resource protects the ability to execute XmlAccess scripts.<br> - Grouping resources of the same resource type. For example, the Web Modules virtual resource is the root node of all Web Modules within the portal. Role assignments on the Web Modules virtual resource permit access to all Web Modules in the portal.|
 |WSRP Producers|Remote Producer instances that a Consumer portal uses to consume remote portlets.|
 |PSE Sources|Represents the root node of all Portal Search Collections. For additional information refer to the Portal Search section.|
 |Policies|Use policies to specify and apply common and specialized settings that determine how portal resources function for different classes of users. For additional information about policies collections refer to the Managing portal resources with policies section.|

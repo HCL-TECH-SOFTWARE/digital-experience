@@ -2,7 +2,8 @@
 
 Users with administrator access in HCL Portal can assign the Can Run As User role to designated users. Use Portal Access Control to assign the role. You can use the Virtual Resources option to grant permission for all users or groups in the system.
 
-**Important:** If you use virtual resources to assign the **Can Run As User** role, the user can also impersonate the administrator.
+!!!important
+    If you use virtual resources to assign the **Can Run As User** role, the user can also impersonate the administrator.
 
 1.  Log on to HCL Portal as an administrator.
 
@@ -19,6 +20,7 @@ Users with administrator access in HCL Portal can assign the Can Run As User rol
         6.  Go to the page that contains the **USERS** option and click **Assign Access**.
         7.  Select the **Explicitly Assign** check box for the **Can Run As User** role.
         8.  Click **OK**.
+        
     -   Complete the following steps to assign **Can Run As User** access for a user group:
         1.  Click **Access** \> **Resource Permissions**.
         2.  Click **User Groups**.
@@ -29,6 +31,7 @@ Users with administrator access in HCL Portal can assign the Can Run As User rol
         7.  Click in the breadcrumb to return to the user group page.
         8.  Click **Apply** and accept the changes.
         9.  Click **OK**.
+
 4.  Verify that the user now has **User** and **Can Run As User** access.
 
 

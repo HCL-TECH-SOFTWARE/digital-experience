@@ -2,8 +2,6 @@
 
 
 
-
-
 You can configure the settings for the **Manage Users and Groups** portlet
 
 The following configurations are possible depending on how the views are programmed and what access permissions a user has:
@@ -16,7 +14,8 @@ The following configurations are possible depending on how the views are program
 
 1.  Select the appropriate configuration mode; refer to the previous table for possible modes.
 
-    **Note:** Changes made in the Edit Shared Settings mode override changes made in the Configure mode. For information about customizing the search refer to the Portal Search section.
+    !!!note
+        Changes made in the Edit Shared Settings mode override changes made in the Configure mode. For information about customizing the search refer to the Portal Search section.
 
 2.  Enter the maximum number of items the search will return in the **Never show more than this number of items:** field.
 

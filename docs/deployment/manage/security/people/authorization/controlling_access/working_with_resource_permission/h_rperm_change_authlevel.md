@@ -14,6 +14,7 @@ Perform the following steps to change the authentication level:
     -   **Standard**: Default and context-related authentication level
     -   **Identified**: User authentication using a persistent HTTP cookie
     -   **Authenticated**: User authentication using user name and password
+    
 4.  Click **OK** to save your changes.
 
 

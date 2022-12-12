@@ -1,8 +1,6 @@
 # Duplicating group assignments
 
 
-
-
 You can use this feature to assign one member to the same groups as an existing member.
 
 Suppose you have just created a new user, Mary. You need to assign Mary to the same groups to which Hans, an existing portal user, already belongs. Instead of manually adding Mary to all of the groups in which Hans is a member, use the duplicate group assignments feature.
@@ -21,6 +19,7 @@ Perform these steps to duplicate group assignments:
     -   Search for the user or group.
     -   Click the **All Portal User Groups** link for a list of all groups.
     -   Click the **All Authenticated Portal Users** for a list of all users.
+
 2.  Click the **Duplicate group assignments** icon for the user or user group that will inherit the group assignments.
 
 3.  Click the **Select** radio button for the user or group that will serve as the model for the role assignment.

@@ -29,59 +29,13 @@ Roles provide permissions for user to perform specific operations on resources. 
 
 |Sensitive operation and description|Required role assignment|
 |-----------------------------------|------------------------|
-|Viewing the access control configuration of a resource R|If R is under internal PORTAL protection: `Security Administrator@R` or `Security Administrator@PORTAL`. If R is under external protection: `Security Administrator@R` or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`
-
-**Notes:**
-
--   PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.
--   The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the IBM® Security Access Manager `pdadmin>` command lineor the Computer Associates eTrust SiteMinder administrative console.
-
-|
-|Creating a role RT on resource R|If R is under PORTAL protection: `Security Administrator@R` + RT@R or `Security Administrator@PORTAL`If R is under external protection: `Security Administrator@R` + `RT@R` or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`
-
-**Notes:**
-
--   PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.
--   The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command lineor the eTrust SiteMinder administrative console.
-
-|
-|Deleting a role that is created from role RT on resource R. All corresponding role mappings are also deleted.|If R is under internal PORTAL protection: `Security Administrator@R` + RT@`R` + Delegator role on all assigned principals or Security Administrator@PORTALIf R is under external protection: `Security Administrator@R` + `RT@R` + Delegator role on all assigned principals or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`
-
-**Notes:**
-
--   PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.
--   The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command lineor the eTrust SiteMinder administrative console.
-
-|
-|Creating or deleting a role assignment for user or group U created from role RT on resource R|If R is under internal PORTAL protection: `Security Administrator@R` + `RT@R` + `Delegator@U` or `Security Administrator@PORTAL`If R is under external protection: `Security Administrator@R` + `RT@R` + `Delegator@U` or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`
-
-**Notes:**
-
--   PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.
--   The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command lineor the eTrust SiteMinder administrative console.
-
-|
-|Creating or deleting a role block for all roles that are created from role RT on resource R|If R is under internal PORTAL protection: `Security Administrator@R` + `RT@R` or `Security Administrator@PORTAL`If R is under external protection: `Security Administrator@R` + `RT@R` or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`
-
-**Note:** A Security Administrator on this resource is always implicitly a Delegator on this resource. For all other roles, the `Security Administrator@R` plus the previous assignments are required.
-
-**Notes:**
-
--   PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.
--   The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command lineor the eTrust SiteMinder administrative console.
-
-|
-|Externalizing or internalizing resources:
-
-Moving a resource R back and forth from internal to external control. All non-private child resources of R move with it. Private resources cannot be externalized.|`Security Administrator@R` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` or `Security Administrator@Portal` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`**Notes:**
-
--   Portal and EXTERNAL\_ACCESS\_CONTROL are virtual resources.
--   The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command lineor the eTrust SiteMinder administrative console.
-
-|
-|Modifying the owner of a resource:
-
-Setting a user or group U1 as new owner of the non-private resource R, where the old owner was U2|`Delegator@U1`, `Delegator@U2`, `Manager@R`, and `Security_Administrator@R`|
+|Viewing the access control configuration of a resource R|If R is under internal PORTAL protection: `Security Administrator@R` or `Security Administrator@PORTAL`. If R is under external protection: `Security Administrator@R` or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`<br> **Notes:**<br> - PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.<br> - The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the IBM® Security Access Manager `pdadmin>` command line or the Computer Associates eTrust SiteMinder administrative console.|
+|Creating a role RT on resource R|If R is under PORTAL protection: `Security Administrator@R` + RT@R or `Security Administrator@PORTAL`If R is under external protection: `Security Administrator@R` + `RT@R` or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`<br> **Notes:**<br> - PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.<br> - The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command line or the eTrust SiteMinder administrative console.
+|Deleting a role that is created from role RT on resource R. All corresponding role mappings are also deleted.|If R is under internal PORTAL protection: `Security Administrator@R` + RT@`R` + Delegator role on all assigned principals or Security Administrator@PORTALIf R is under external protection: `Security Administrator@R` + `RT@R` + Delegator role on all assigned principals or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`<br> **Notes:**<br> - PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.<br> - The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command line or the eTrust SiteMinder administrative console.|
+|Creating or deleting a role assignment for user or group U created from role RT on resource R|If R is under internal PORTAL protection: `Security Administrator@R` + `RT@R` + `Delegator@U` or `Security Administrator@PORTAL`If R is under external protection: `Security Administrator@R` + `RT@R` + `Delegator@U` or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`<br> **Notes:**<br> - PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.<br> - The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command lineor the eTrust SiteMinder administrative console.|
+|Creating or deleting a role block for all roles that are created from role RT on resource R|If R is under internal PORTAL protection: `Security Administrator@R` + `RT@R` or `Security Administrator@PORTAL`If R is under external protection: `Security Administrator@R` + `RT@R` or `Security Administrator@PORTAL` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`<br> **Note:** A Security Administrator on this resource is always implicitly a Delegator on this resource. For all other roles, the `Security Administrator@R` plus the previous assignments are required.<br> **Notes:**<br> - PORTAL and EXTERNAL\_ACCESS\_CONTROL are virtual resources.<br> - The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command lineor the eTrust SiteMinder administrative console.|
+|Externalizing or internalizing resources:<br> Moving a resource R back and forth from internal to external control. All non-private child resources of R move with it. Private resources cannot be externalized.|`Security Administrator@R` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` or `Security Administrator@Portal` + `Security Administrator@EXTERNAL\_ACCESS\_CONTROL`<br>**Notes:**<br> - Portal and EXTERNAL\_ACCESS\_CONTROL are virtual resources.<br> - The `Security Administrator@EXTERNAL\_ACCESS\_CONTROL` role is created and managed in the External Security Manager. It must be modified with the external security management tools. For example, use the Security Access Manager `pdadmin>` command lineor the eTrust SiteMinder administrative console.|
+|Modifying the owner of a resource:<br>Setting a user or group U1 as new owner of the non-private resource R, where the old owner was U2|`Delegator@U1`, `Delegator@U2`, `Manager@R`, and `Security_Administrator@R`|
 
 |Sensitive operation and description|Required role assignment|
 |-----------------------------------|------------------------|

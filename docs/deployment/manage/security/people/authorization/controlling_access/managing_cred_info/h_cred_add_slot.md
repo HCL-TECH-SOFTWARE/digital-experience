@@ -16,10 +16,12 @@ You can create a vault slot that is associated with a resource in the Credential
     -   **Shared userid**
     -   **Shared password**
     -   **Confirm password**
+
 5.  Select one of the following options to associate a vault slot with a resource:
 
     -   Select **existing** and then, select a vault resource from the menu.
     -   Select **new** and type a vault resource name. The name must be fewer than 64 characters and cannot include the pipe character (|).
+    
 6.  Type a vault slot **Description**. This description must be fewer than 64 characters.
 
     !!!note

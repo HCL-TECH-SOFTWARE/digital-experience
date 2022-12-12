@@ -17,15 +17,7 @@ The following table describes the different allowed actions for roles:
 |Manager|Creating new resources and configuring and deleting existing resources that are used by multiple users.|
 |Editor|Creating new resources and configuring existing resources that are used by multiple users.|
 |Markup Editor|Changing the HTML source for static portal pages.|
-|Contributor|Viewing portal content and creating new resources. The Contributor role does not include the permission to edit resources. You can create only new resources. For example, a user is granted the Contributor role on the Template Category Teamspace. The user cannot modify the category itself but can create new templates in this category.**Note:** This role is only available for the following resources:
-
--   Application Templates
--   Application Template Categories
--   Application Template Root
--   Policies
--   All HCL Web Content Manager related documents
-
-|
+|Contributor|Viewing portal content and creating new resources. The Contributor role does not include the permission to edit resources. You can create only new resources. For example, a user is granted the Contributor role on the Template Category Teamspace. The user cannot modify the category itself but can create new templates in this category.<br> **Note:** This role is only available for the following resources:<br> - Application Templates<br> - Application Template Categories<br> - Application Template Root<br> - Policies<br> - All HCL Web Content Manager related documents|
 |Privileged user|Viewing portal content, customizing portlets and pages, and creating new private pages.|
 |User|Viewing portal content. For example, viewing a specific page.|
 |No role that is assigned|Cannot interact with resource.|
@@ -69,10 +61,7 @@ A private page can be accessed only by its owner. Privileged Users \(users assig
 Users with role assignments on the resources `Page` or `URL Mapping` get the implicit permission to go to those resources. These users can go through all parent resources of those resources. Users see only the title of those resources. The corresponding resource content remains inaccessible unless those users have further role assignments that grant them normal access to those resources.
 
 
-**Related information**  
-
-
-[Automatically grant page access to community members](../../../extend-dx/integration/connections/configuration/cfg_community_pages/commpages_delegate_access)
-
-[Delegated Access Control Administration](../../../manage/security/people/authorization/controlling_access/d_acc_cntl_admin)
+???+ info "Related information"
+    - [Automatically grant page access to community members](../../../../../../../extend_dx/integration/connections/configuration/cfg_community_pages/commpages_delegate_access.md)
+    - [Delegated Access Control Administration](../d_acc_cntl_admin.md)
 

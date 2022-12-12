@@ -4,12 +4,13 @@ After creating users and groups, you can assign them different levels of access 
 
 Review the following information and perform the following tasks to control access within HCL Digital Experience:
 
-**Note:** If a page or label is not accessible for a user, the user is taken to any page or label higher up in the navigation that is accessible to them. For more information about setting page permissions, see [Manage pages portlets](../../../manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets).
+!!!note
+    If a page or label is not accessible for a user, the user is taken to any page or label higher up in the navigation that is accessible to them. For more information about setting page permissions, see [Manage pages portlets](../../../../portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/index.md).
 
 
--   **[Managing users and groups](../controlling_access/managing_user_groups)**  
+-   **[Managing users and groups](managing_users_groups/index.md)**  
 View, create, and delete users and user groups. You can also change group memberships. Before you can modify user and group information, you must have the appropriate level of authorization.
--   **[Working with resource permissions](../controlling_access/working_with_resource_permission)**  
+-   **[Working with resource permissions](working_with_resource_permission/index.md)**  
 You can control whether a resource propagates or inherits its role assignments, assign roles explicitly to specific users and groups, place resources under the control of an external security manager or bring externalized resources back under the control of portal, create or delete roles on externalized resources, view inherited role assignments for specific users and groups, and modify resource owners.
 -   **[Managing permissions for users and groups](../controlling_access/user_group_permission)**  
 View and modify the access rights that users and user groups have for resources. Access rights are determined by role assignments.
@@ -33,16 +34,10 @@ HCL Digital Experience supports delegated access control administration.
 Access Control internally uses several caches to improve the access control decision times. You can improve access control performance for special scenarios by setting the lifetime and size properties of these caches in the Cache Manager Service. In most cases, HCL Digital Experience will run smoothly with the default cache settings. However, if you have a large number of resources or a large number of customized resources, you may want to adjust cache settings and conduct some tests to find the best performance trade-offs.
 
 
-**Related information**  
-
-
-[Administering user impersonation](../../../manage/security/people/authorization/users_and_groups/impersonation)
-
-[Managing the user population for virtual portals](../../../../build_sites/virtual_portal/vp_planning/advppln_mgupop)
-
-[Planning for virtual portals](../../../../build_sites/virtual_portal/vp_planning/advppln_mgupop)
-
-[The master administrator](../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_mastr_adm)
-
-[Sub-administrators of a virtual portal and their access roles and permissions](../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_subadm)
+???+ info "Related information" 
+    - [Administering user impersonation](../users_and_groups/impersonation/index.md)
+    - [Managing the user population for virtual portals](../../../../../../build_sites/virtual_portal/vp_planning/advppln_mgupop.md)
+    - [Planning for virtual portals](../../../../../../build_sites/virtual_portal/vp_planning/index.md)
+    - [The master administrator](../../../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_mastr_adm.md)
+    - [Sub-administrators of a virtual portal and their access roles and permissions](../../../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_subadm.md)
 
