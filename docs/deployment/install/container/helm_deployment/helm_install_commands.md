@@ -117,13 +117,13 @@ helm upgrade -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
 ## (Optional) Override Content Composer and DAM URL
 To override the static user interface URL being set in React Integration Portlet, do it in the DX WebSphere Application Server user interface. In the WAS Server, go to **Resources** and select **Resources Environment Providers**. In **Resources Environment Providers**, select **WP_ConfigService** and go to **Custom properties** to add new variables as provided below:
 
-- For Content Composer
+- For Content Composer:
 
 ```
 override.cc.url
 ```
 
-- For DAM
+- For DAM:
 
 ```
 override.dam.url
