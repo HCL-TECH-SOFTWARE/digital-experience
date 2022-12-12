@@ -45,9 +45,9 @@ The Out-of-box method provides automation to create the PZN Application object i
   - **UnicaAuthPassword** is the Unica user password
 
 - Once the task is executed, it creates **UnicaDefaultApplicationObject** in the Personalization Navigator for using it in rules.
-<img alt="image" src={useBaseUrl('assets/pzn-ss/unica-default-application-object.png')} />
+![unica-default-application-object](../../../images/unica-default-application-object.png)
 - We can use the pattern ***unicaSegments-partitionName-audienceName-audienceIdField*** to customise the property for the application object. For e.g: ***unicaSegments-partition1-Customer-CUSTOMERID***.
-<img alt="image" src={useBaseUrl('assets/pzn-ss/unica-oob-manage-properties.png')} />
+![unica-oob-manage-properties](../../../images/unica-oob-manage-properties.png)
 
 !!! note
     Refer to the section [here](#unica-segments) for the sample code that gives more flexibility in defining what is sent to Unica and how the result is being interpreted. The **partitionName**, **audienceName** and example for **audienceIdField** here as ***CUSTOMERID*** can be used in the properties later. The value ***"1"*** is an example of the value for audienceId, which will be configured in the user cookie with the **UnicaCookieName**. The out of the box application object assumes that you create a cookie with that name to hold the ID of the user to be sent to Unica for segmentation - values could be ranging from an actual numeral to a string or some combination.
