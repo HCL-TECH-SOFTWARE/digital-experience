@@ -3,20 +3,31 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update CF208 on supported platforms:
 
+- Kubernetes deployment Pre-requisites checking 
+- Kubernetes deployment HA Proxy option to configure Ingress 
+- Web Content Manager Author options now include Tiny MCE
+- Web Content Manager and Digital Asset Management
+- Digital Asset Management Staging Obtain Subscribers List 
+- Config Option to set absolute value Content Composer and DAM syndication
+- Content Composer Move content items UI and error handling updates 
+- WCM column sorting enhancement  
+- Experience API update
+- Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+
 
 ## Kubernetes deployment Pre-requisites checking  
 
 === "Containers"                                  
-    DX 9.5 Container Update CF208 adds deployment pre-requisites checking for Helm deployments to supported Kubernetes platforms. See the Help center topic: Configure Prereqs Checker For DX Deployment for more information
+    DX 9.5 Container Update CF208 adds deployment pre-requisites checking for Helm deployments to supported Kubernetes platforms. See the topic [Configure Prereqs Checker For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md) for more information
 
 ## Kubernetes deployment HA Proxy option to configure Ingress 
 
 === "Containers"                                                                                                    
-    DX 9.5 Container Update CF208 adds an option to configure an ingress in front of HA Proxy.  See the Help Center topic: Configure Ingress For DX Deployment for more information.
+    DX 9.5 Container Update CF208 adds an option to configure an ingress in front of HA Proxy.  See the [Configure Ingress For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) for more information.
 
 ## Web Content Manager Author options now include Tiny MCE
 
-Content Authors can now choose to use TinyMCE as the default editor for creating and editing WCM content. See the Enhanced Editor option from the Web Content Authoring options Help Center topic for more information. 
+Content Authors can now choose to use TinyMCE as the default editor for creating and editing WCM content. See the topic [Enhanced Editor option from the Web Content Authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) topic for more information. 
 
 ## Web Content Manager and Digital Asset Management 
 
@@ -37,31 +48,32 @@ Content Authors can now choose to use TinyMCE as the default editor for creating
 ## Digital Asset Management Staging Obtain Subscribers List 
 
 === "Containers"                                                      
-    A new command is available to display the details of all the registered DAM Staging subscribers. See the Help Center topic: Staging DAM to rendering environments for more information.
+    A new command is available to display the details of all the registered DAM Staging subscribers. See the topic [Staging DAM to rendering environments](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) for more information.
 
 ## Config Option to set absolute value Content Composer and DAM syndication
 
-A new option can be configured to control syndication of staging documents in production operations. See the Help Center topics: [] for more information. (Obtain the Help Center link (s) from Hariharan or Thomas).
+A new option can be configured to control syndication of staging documents in production operations. See the Help Center topics: [] for more information.
 
 ## Content Composer Move content items UI and error handling updates 
 
 === "Containers"
-    See the Help Center topics Content Composer Move content items and Content authoring actions in dashboard view for more information.
+    See the topics Content Composer Move content items and [Content authoring actions in dashboard view](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/index.md) for more information.
 
 ## WCM column sorting enhancement  
 
 A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
 
-•	New Configuration task for integration of Unica Campaign segments with DX Personalization Rules. See the Help Center topic:  Sample for leveraging Unica segments in PZN Rules for more information. 
+•	New Configuration task for integration of Unica Campaign segments with DX Personalization Rules. See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md) for more information. 
 
-## Experience API update             
-The Content Controller PUT /webcontent/contents/{content_id} endpoint has been updated to accept new optional parameters; "parent" and "library". This enables moving content items from one location to another. See the HCL Experience API on HCL Software Github 
+## Experience API update  
+
+The Content Controller PUT /webcontent/contents/{content_id} endpoint has been updated to accept new optional parameters; "parent" and "library". This enables moving content items from one location to another. See the [HCL Experience API on HCL Software Github](https://github.com/HCL-TECH-SOFTWARE/experience-api-documentation) for more information. 
 
 ## New option to configure a local HCL Flexnet Entitlement server 
 
 === "Containers"    
-    Customers with HCL Digital Experience Cloud Native 9.5 entitlements deploying to supported Kubernetes environments can optionally install a local Flexnet Entitlement server. See the Help Center topic Configuring a local HCL Flexnet entitlement server 
+    Customers with HCL Digital Experience Cloud Native 9.5 entitlements deploying to supported Kubernetes environments can optionally install a local Flexnet Entitlement server. See the topic [Configuring a local HCL Flexnet entitlement server](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_local_flexnet_entitlement_server.md) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
-The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the HCL Digital Experience section of the HCL Software Academy and What’s New for Digital Experience section for more information.
+The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://academy.hcltechsw.com/#HCLDXLearningJourneys) section of the HCL Software Academy and [What’s New for Digital Experience](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
