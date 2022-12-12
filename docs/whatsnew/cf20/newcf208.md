@@ -11,6 +11,7 @@ The following features and updates are available to customers installing HCL Dig
 - Config Option to set absolute value Content Composer and DAM syndication
 - Content Composer Move content items UI and error handling updates 
 - WCM column sorting enhancement  
+- New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
 - Experience API update
 - Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
@@ -82,9 +83,23 @@ A new option can be configured to control syndication of staging documents in pr
 
 ## WCM column sorting enhancement  
 
-A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
+== "Containers"
+    A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
 
-•	New Configuration task for integration of Unica Campaign segments with DX Personalization Rules. See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md) for more information. 
+
+==  "On-Premises"
+    A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
+
+
+##  New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
+
+== "Containers"
+
+    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md) for more information.     
+
+==  "On-Premises"
+
+    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md) for more information. 
 
 ## Experience API update  
 
