@@ -11,19 +11,19 @@ security:
   # Security configuration for Core
   core:
     # Credentials used for IBM WebSphere Application Server administrative access.
-    # The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.
+    # The credentials defined in these values define the WebSphere Application Server's primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
-    # - If a LDAP is used, the the WebSphere Application Server admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
+    # - If a LDAP is used, the WebSphere Application Server admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
     wasUser: "wpsadmin"
     wasPassword: "wpsadmin"
     # Credentials used for HCL Digital Experience Core administrative access.
     # The credentials defined in these values define the HCL Digital Experience Core administrative user. The user gets created if necessary and/or the password is set to the current value.
-    # - If a LDAP is used, the the HCL Digital Experience Core admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wpsUser and wpsPassword need to be manually updated accordingly.
+    # - If a LDAP is used, the HCL Digital Experience Core admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wpsUser and wpsPassword need to be manually updated accordingly.
     wpsUser: "wpsadmin"
     wpsPassword: "wpsadmin"
   # Security configuration for Digital Asset Management
   digitalAssetManagement:
-    # Credentials used by the Digital Asset Management to access the persistence database.
+    # Credentials used by Digital Asset Management to access the persistence database.
     dbUser: "REDACTED"
     dbPassword: "REDACTED"
     # Credentials used by the persistence database to perform replication between database nodes.
@@ -38,24 +38,24 @@ security:
   # Security configuration for Remote Search
   remoteSearch:
     # Credentials used for IBM WebSphere Application Server administrative access.
-    # The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.
+    # The credentials defined in these values define the WebSphere Application Server's primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
-    # - If a LDAP is used, the the WebSphere Application Server admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
+    # - If a LDAP is used, the WebSphere Application Server admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
     wasUser: "wpsadmin"
     wasPassword: "wpsadmin"
 ```
 
 ### Core security credentials
 
-The security credentials defined in the `security` section of the helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience.
+The security credentials defined in the `security` section of the helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behaviour slightly differs depending on the user registry that is configured for HCL Digital Experience.
 
 ### Remote Search security credentials
 
-Same as Core, when Remote Search is enable, WAS admin credentials can be configurable from the helm chart. The properties for credentials found under `security` section of the value file. For Remote Search also, the behavior slightly differs depending on the user registry that is configured for HCL Digital Experience (read further for more details).
+Same as Core, when Remote Search is enabled, WAS admin credentials can be configurable from the helm chart. The properties for credentials are found under the `security` section of the value file. For Remote Search also, the behaviour slightly differs depending on the user registry that is configured for HCL Digital Experience (read further for more details).
 
 #### 1. File-based user registry
 
-If no LDAP is configured in the helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for Core and Remote Search that are specified in the `custom-values.yaml` are applied to the file-based registry. This means that any changes to the values are automatically reflected to the administrator user accounts for Websphere and DX.
+If no LDAP is configured in the helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for Core and Remote Search that are specified in the `custom-values.yaml` are applied to the file-based registry. This means that any changes to the values are automatically reflected in the administrator user accounts for Websphere and DX.
 
 | Value | Effect |
 | --- | --- |
@@ -73,7 +73,7 @@ If no LDAP is configured in the helm values, HCL Digital Experience is configure
 
 
 !!! note
-    Currently the Configuration Wizard and DXConnect always use the `wpsadmin` user. Changes to the `wasUser` do therefore not affect the Configuration Wizard and DXClient (which connects to DXConnect). If the `wasUser` is kept as the default `wpsadmin` but its password is changed, the new password will also apply for the Configuration Wizard and DXConnect.
+    Currently, the Configuration Wizard and DXConnect always use the `wpsadmin` user. Changes to the `wasUser` do therefore not affect the Configuration Wizard and DXClient (which connects to DXConnect). If the `wasUser` is kept as the default `wpsadmin` but its password is changed, the new password will also apply to the Configuration Wizard and DXConnect.
 
 #### 2. LDAP
 
