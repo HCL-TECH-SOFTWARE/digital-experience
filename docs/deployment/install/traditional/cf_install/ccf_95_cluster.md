@@ -297,6 +297,7 @@ Note that the web server plug-in will check periodically for configuration updat
 3.  Open a command window and switch to the `eclipse/tools` sub-directory of Installation Manager. By default, this is:
     -   Linux: /opt/IBM/InstallationManager/eclipse/tools
     -   Windows: C:\Program Files\IBM\Installation Manager\eclipse\tools
+
 4.  If you are installing the cumulative fix on HCL Portal Express, skip to Step 5. Otherwise, run the following command to launch the installation program of Installation Manager.
 
     For Linux:
@@ -1163,10 +1164,12 @@ Use the following commands to roll back all profiles. These steps must be repeat
 5.  For rollback to CF03 or earlier level only: If the Brightcove integration was enabled perform the following steps:
     -   Uninstall the old Brightcove plugins.
     -   Install the new Brightcove plugins by following the install steps in the *Configuring* topic section to use Brightcove.
+    
 6.  For rollback to CF03 or earlier level only: If using Rich Media Edition, perform the following steps:
     -   Uninstall the Rich Media Edition plugins.
     -   Restart Portal Server.
     -   Reinstall the Rich Media Edition plugins.
+
 7.  If you brought down the entire cluster to perform the rollback \(not maintaining 24 x 7 on a single cluster\), and the automatic plug-in generation and propagation are disabled on your web server Plug-in properties, you will need to manually generate and/or propagate the `plugin-cfg.xml` file to the web servers.
 8.  Clear the browser cache.
 

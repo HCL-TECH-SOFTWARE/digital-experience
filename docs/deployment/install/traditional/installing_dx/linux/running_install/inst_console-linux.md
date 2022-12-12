@@ -139,7 +139,7 @@ The installation program verifies the operating system and its prerequisites, av
 24. Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
     !!!note
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../manage/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
 
 After you upgrade to CF08 or higher, you can upgrade your SDK to version 7.1. Go to *Upgrading the SDK* for information.
 

@@ -23,7 +23,7 @@ Then, start the Configuration Wizard and select the option that is defined in yo
 
 If you select to run the configuration in real time, you still have the opportunity to download scripts for selected steps. For example, if only the database administrator can databases, then you can download the database creation script and give it to your database administrator to run. Read more about Configuration Wizard in the HCL Digital Experience Version 8.5 documentation below.
 
--   Documentation resource: [Configuration Wizard](../../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
+-   Documentation resource: [Configuration Wizard](../../../../manage/portal_admin_tools/cfg_wizard/index.md)
 
 ## Default URLs
 

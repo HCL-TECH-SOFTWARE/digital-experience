@@ -371,7 +371,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 -   Solution: If you do not have a web server, you must resynchronize the nodes and restart the cluster before you can change the JSP components in the Web Resources library.
 
 -   Problem: There may be a performance issue seen (in EditLive) when using Java 1.8 Update 60 / Internet Explorer.
--   Solution: Oracle and Ephox have acknowledged this issue and are documenting the following link on their support site: [https://docs.ephox.com/IBMWCMTB/](https://docs.ephox.com/IBMWCMTB/.
+-   Solution: Oracle and Ephox have acknowledged this issue and are documenting the following link on their support site: [https://docs.ephox.com/IBMWCMTB/](https://docs.ephox.com/IBMWCMTB/).
 
     !!!note
         The Ephox (EditLive) Java based Rich Text Editor has been deprecated as of HCL Portal 8.5 CF11 and replaced by Textbox.IO. HCL Portal 9.5 requires a minimum of CF17 to offer Textbox.io. The Ephox (EditLive\) feature is only available in HCL Portal 9.5 if you explicitly enable it.
