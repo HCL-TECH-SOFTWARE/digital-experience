@@ -9,7 +9,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
 
 -   **Back up your database**
 
-    1.  Verify that persistence \(read-write\) and DAM pods are up and running:
+    1.  Verify that persistence (read-write) and DAM pods are up and running:
 
         ```
         kubectl -n <namespace> get all
@@ -21,7 +21,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             kubectl -n dxns get all
             ```
 
-    2.  If there are more than 1 persistence-node pod, reduce it to 1 in `values.yaml` to ensure that there is only one Primary pod:
+    2.  If there is more than 1 persistence-node pod, reduce it to 1 in `values.yaml` to ensure that there is only one Primary pod:
 
         ```
         scaling:
