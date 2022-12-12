@@ -2,9 +2,8 @@
 In this document, we outline out-of-box application objects for Unica with steps to integrate Unica segments into PZN rules.
 
 ## Unica segments
-Unica offers various REST APIs to manage and retrieve campaigns, segments, ...
-The API `/Campaign/api/campaign/rest/v3/segments/partitions/{partitionName}/{audienceName}`
-With a payload similar to the following:
+Unica offers various REST APIs to manage and retrieve campaigns, segments, and real time personalization.
+For example, the API `/Campaign/api/campaign/rest/v3/segments/partitions/{partitionName}/{audienceName}` with a payload similar to the following:
 ```
 [
   {
