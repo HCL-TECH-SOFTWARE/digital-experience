@@ -1,6 +1,6 @@
 # Back up and restore a DAM
 
-This topic shows how to backup and restore for Digital Asset Management \(DAM\) persistence and binaries.
+This topic shows how to backup and restore for Digital Asset Management (DAM) persistence and binaries.
 
 This procedure is not meant for moving DAM data to another deployment. The backup data is valid only on the deployment where the backup is performed. This recommended approach for back up and restore is [EXIM](../usage/managing_dam/dam_exim.md).
 
@@ -309,7 +309,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             ```
 
         !!! Note
-            `values.yaml` shouldn't be modified directly. Its recommded to create a custom values yaml file to overwrite the necessary values and pass those as the parameter during `helm install` or `helm upgrade`. Please refer to this [link](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) for more information on usage of custom values yaml
+            `values.yaml` shouldn't be modified directly. It iss recommded to create a custom values yaml file to overwrite the necessary values and pass those as the parameter during `helm install` or `helm upgrade`. Please refer to this [link](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) for more information on usage of custom values yaml.
 
 
 
