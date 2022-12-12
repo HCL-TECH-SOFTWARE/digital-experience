@@ -21,7 +21,18 @@ Content Authors can now choose to use TinyMCE as the default editor for creating
 ## Web Content Manager and Digital Asset Management 
 
 === "Containers"
-    configuration updates set SVG to disabled by default. are See the Help Center topic: Web content authoring options and DAM Limitations statements for more information. 
+    Configuration updates set SVG to disabled by default. 
+
+    Since SVG files can pose a security concern with CF208, the uploading of SVG image files to WCM has been disabled out of the box unless it was already customized.
+
+    !!!note
+        If you still want to allow the uploading of SVG files to WCM, configure the following in WCM WCMConfigService service by using the WebSphere® Integrated Solutions Console:
+
+        imageresourcecmpnt.allowedmimetypes = image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/svg+xml,image/tiff,image/tif,image/webp
+    
+        Note that you might have already added custom types. If that is the case, SVG image files are not disabled by default and no adjustment is necessary.
+
+    See the Help Center topics [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) and DAM Limitations statements for more information. 
 
 ## Digital Asset Management Staging Obtain Subscribers List 
 
