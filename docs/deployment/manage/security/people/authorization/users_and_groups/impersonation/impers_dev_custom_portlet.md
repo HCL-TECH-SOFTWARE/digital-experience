@@ -49,6 +49,7 @@ stringuserDN);
 
 You can enter the information for the user you want to impersonate in the `stringuserDN`. Alternatively, you can use the PUMA SPI User object.
 
-**Note:** The impersonation feature becomes active with the next request.
+!!!note
+    The impersonation feature becomes active with the next request.
 
 

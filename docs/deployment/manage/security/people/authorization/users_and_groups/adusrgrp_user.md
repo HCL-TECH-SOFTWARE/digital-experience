@@ -1,6 +1,6 @@
 # Virtual users and user groups
 
-There are two predefined virtual user groups \(All Authenticated Portal Users and All Portal User Groups\) and one virtual user \(Anonymous Portal User\). These predefined virtual groups and user allow for access control configuration that applies to abstract sets of users. They are not stored in the user registry. They only exist within the access control context. You cannot change group membership or other attributes of these virtual usergroups and user.
+There are two predefined virtual user groups (All Authenticated Portal Users and All Portal User Groups) and one virtual user (Anonymous Portal User). These predefined virtual groups and user allow for access control configuration that applies to abstract sets of users. They are not stored in the user registry. They only exist within the access control context. You cannot change group membership or other attributes of these virtual usergroups and user.
 
 This section describes the following virtual user and user groups:
 

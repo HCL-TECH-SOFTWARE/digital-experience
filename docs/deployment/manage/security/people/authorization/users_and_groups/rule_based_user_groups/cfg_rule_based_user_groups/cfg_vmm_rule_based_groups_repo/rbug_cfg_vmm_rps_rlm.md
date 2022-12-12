@@ -2,7 +2,7 @@
 
 Run the wp-create-cur, wp-create-cur-custom-property, and wp-update-group-repository-relationship commands to configure the VMM repository and realm.
 
-1.  Open a command prompt and change to the [wp\_profile\_root](../../../../../../../../../guide_me/wpsdirstr#wp_profile_root)/ConfigEngine directory.
+1.  Open a command prompt and change to the [wp\_profile\_root](../../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 2.  Run the following task to add the repository configuration to VMM. For information, read the related links section.
 

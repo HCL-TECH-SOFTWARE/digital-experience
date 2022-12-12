@@ -16,7 +16,8 @@ Resources might be in different domains depending on the type of resource. JCR n
 -   Resources in the community domain can be managed only through collaboration application-specific administrative portlets. Resources in this domain are not shown in the access control administration portlets
 -   The customization domain holds private resources for users only. No role assignments are possible in this domain, so resources in this domain are also not shown in the access control administration portlets
 
-**Note:** Role inheritance never crosses domain boundaries, thus limiting the inheritance scope. A role assignment for a user on the Content Nodes virtual resource in the release domain grants access only to Content Nodes resources \(pages\) in the release domain.
+!!!note
+    Role inheritance never crosses domain boundaries, thus limiting the inheritance scope. A role assignment for a user on the Content Nodes virtual resource in the release domain grants access only to Content Nodes resources \(pages\) in the release domain.
 
 Next are illustrations of the available resources tree, first for the release domain, and second for the JCR domain.
 
@@ -24,7 +25,8 @@ Next are illustrations of the available resources tree, first for the release do
 
 The following illustration shows the hierarchy of resources in the JCR domain. These resources are related to Personalization, Web Content Manager, and Resources Policies.
 
-**Note:** This image represents an access control-specific view of resources in the JCR domain. It is not intended to show how the resources are stored and organized in the JCR domain.
+!!!note
+    This image represents an access control-specific view of resources in the JCR domain. It is not intended to show how the resources are stored and organized in the JCR domain.
 
 Resource Permission inheritance applies to this hierarchy and to the release domain. Permission granted on the JCR Content Root node are propagated to all children in the hierarchy. Use Policies, Web Content Manager Libraries, Inheritance, and Propagation role blocks to reduce this propagation of permissions to children in the hierarchy.
 
