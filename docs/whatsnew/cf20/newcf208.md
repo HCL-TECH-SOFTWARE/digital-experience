@@ -88,25 +88,23 @@ A new option can be configured to control syndication of staging documents in pr
 
 ## WCM column sorting enhancement  
 
-== "Containers"<br>
+=== "Containers"
     A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
 
 
-==  "On-Premises"<br>
+===  "On-Premises"
     A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
 
 
 ##  New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
 
-== "Containers"
+=== "Containers"
     See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information.     
 
-<<<<<<< Updated upstream
-==  "On-Premises"
+
+===  "On-Premises"
     See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information. 
-=======
-•	New Configuration task for integration of Unica Campaign segments with DX Personalization Rules. See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information. 
->>>>>>> Stashed changes
+
 
 ## Experience API update  
 
