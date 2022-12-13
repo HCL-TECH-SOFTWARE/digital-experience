@@ -1,13 +1,17 @@
-# Image tagging by Google Vision AI
+# Configure DAM extension to Google Vision API
 
-DAM Extensibility allows DAM to support user-defined custom renditions and configure transformations for assets. Additional operations such as keywords generation for images can be implemented by configuring plugins such as Google Vision.
+Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom  Digital Asset Management extension that provides integration with the [Google Vision API](https://cloud.google.com/vision/docs/detect-labels-image-api), DX practitioners can leverage the integration to automate additional asset tagging to the DAM media item details. This feature can be used alongside traditional DAM asset tagging methods and can help content authors and marketing professionals to fine-tune the relevance of their DAM assets in search results for target audiences.  
 
 ## Overview
-
-Image tagging simply requires setting keywords for the elements that are contained in a visual. It allows the effective and direct search on the basis of preassigned keywords.
+DAM Extensibility allows DAM to support user-defined custom renditions and configure transformations for assets. Additional operations such as keywords generation for images can be implemented by configuring plugins such as Google Vision. Image tagging simply requires setting keywords for the elements that are contained in a visual. It allows the effective and direct search on the basis of preassigned keywords.
 
 
 ![Architecture diagram for Google vision Plugin](../../../../images/Image_tagging_DAM-Plugin-google-vision.png)
+
+## Pre-requisites
+
+1. An entitlement to [Google Vision API](https://cloud.google.com/vision/docs/detect-labels-image-api). 
+2. Configuration of the Digital Asset Management extension capability to integrate with the Google Vision API image tagging is described in the following sections.
 
 ## Google vision plugin configuration
 
