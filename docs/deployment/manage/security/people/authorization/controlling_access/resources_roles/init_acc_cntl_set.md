@@ -84,7 +84,8 @@ The installation creates a dedicated administrative user and corresponding admin
 
     -   Content Root
 
-        **Note:** Propagation is blocked.
+        !!!note
+            Propagation is blocked.
 
     -   Home
     -   Add to Sametime List
@@ -139,11 +140,13 @@ The installation creates a dedicated administrative user and corresponding admin
 
     -   Portal Site library
 
-        **Note:** Propagation is blocked.
+        !!!note
+            Propagation is blocked.
 
     Editor@ the following document library.
 
     -   Portal Site library: Content resource type
+
 -   **Anonymous Portal User**
 
     User@ the following portlet applications:
@@ -169,7 +172,8 @@ The installation creates a dedicated administrative user and corresponding admin
 
     -   Portal Site library
 
-        **Note:** Propagation is blocked.
+        !!!note
+            Propagation is blocked.
 
     -   Portal Site library: Content resource type
 
