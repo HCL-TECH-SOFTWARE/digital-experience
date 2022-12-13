@@ -11,7 +11,7 @@ Beginning with Digital Experience 95 CF205 release, Oracle DCS service for Digit
 
 If you want to continue using Oracle Stellent DCS with Digital Experience CF205 or later upgrade, ensure that `disableStellentDCS=false` is configured in `wkplc.properties` before running the `applyCF.sh|bat` command or pass `-DdisableStellentDCS=false` on the command line when running the `applyCF.sh|bat` command.
 
-If you are upgrading to a Kubernetes deployment, see [Replacing Document Conversion Services with Apache Tika](https://opensource.hcltechsw.com/digital-experience/CF207/deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps/#replacing-document-conversion-services-with-apache-tika).
+If you are upgrading to a Kubernetes deployment, see [Replacing Document Conversion Services with Apache Tika](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#replacing-document-conversion-services-with-apache-tika).
 
 ## Enabling DCS manually
 
