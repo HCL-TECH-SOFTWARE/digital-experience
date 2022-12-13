@@ -101,8 +101,12 @@ A new option can be configured to control syndication of staging documents in pr
 == "Containers"
     See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information.     
 
+<<<<<<< Updated upstream
 ==  "On-Premises"
     See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information. 
+=======
+•	New Configuration task for integration of Unica Campaign segments with DX Personalization Rules. See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information. 
+>>>>>>> Stashed changes
 
 ## Experience API update  
 
