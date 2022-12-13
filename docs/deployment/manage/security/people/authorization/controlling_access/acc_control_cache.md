@@ -25,17 +25,20 @@ As in the external case, you can enforce a permissions refresh by performing a l
 
 -   All user and user group specific cache data can be explicitly invalidated upon user login authentication through the following two configuration settings through the WebSphere® Integrated Solutions Console:
 
-    **Note:** These two settings will cause high Dynamic Replication Service load in the application server in a cluster environment and therefore can affect performance.
+    !!!note
+        These two settings will cause high Dynamic Replication Service load in the application server in a cluster environment and therefore can affect performance.
 
     -   Navigate to **Resource environment providers** \> **WP PACGroupManagementService** \> **Custom properties**. Either add or update **accessControlGroupManagement.invalidateGroupCacheOnLoginLogout** with a value of true.
     -   Navigate to **Resource environment providers** \> **WP AccessControlDataManagementService** \> **Custom properties**. Either add or update **accessControlDataManagement.invalidateResourceCacheOnLoginLogout** with a value of true.
 
-**Note:** After modifying the CacheManagerService.properties file, run the following task, from the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory, to make the changes effective:
+!!!note
+    After modifying the CacheManagerService.properties file, run the following task, from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory, to make the changes effective:
 
 -   UNIX™Linux™: ./ConfigEngine.sh update-properties -DWasPassword=password
 -   IBM® i: ConfigEngine.sh update-properties -DWasPassword=password
 -   Windows™: ConfigEngine.bat update-properties -DWasPassword=password
 
-**Note:** Under z/OS®, modify the CacheManagerService.properties file. Then open a UNIX System Services \(USS\) command prompt or a Telnet client, and run the ./ConfigEngine.sh update-properties -DWasPassword=password task, from the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory, to make the changes effective.
+!!!note
+    Under z/OS®, modify the CacheManagerService.properties file. Then open a UNIX System Services (USS) command prompt or a Telnet client, and run the ./ConfigEngine.sh update-properties -DWasPassword=password task, from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory, to make the changes effective.
 
 

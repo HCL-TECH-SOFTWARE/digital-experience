@@ -6,40 +6,36 @@ The configuration tasks might require you to write security-sensitive informatio
 
 Complete the following steps to delete passwords and other security-sensitive information from the properties files:
 
-**Note:** After completing the tasks to clean up the work directory and delete the passwords, you might find that in order to successfully perform additional configuration tasks, you need these passwords. Some tasks require you to add the passwords back to the wkplc.properties, wkplc\_comp.properties, wkplc\_dbdomain.properties, and wkplc\_sourceDb.properties files while other tasks allow you to specify the passwords on the command line using the –D flag. Refer to the configuration task documentation to determine which method is required.
+!!!note
+    After completing the tasks to clean up the work directory and delete the passwords, you might find that in order to successfully perform additional configuration tasks, you need these passwords. Some tasks require you to add the passwords back to the wkplc.properties, wkplc\_comp.properties, wkplc\_dbdomain.properties, and wkplc\_sourceDb.properties files while other tasks allow you to specify the passwords on the command line using the –D flag. Refer to the configuration task documentation to determine which method is required.
 
 1.  Complete the following steps to access the HCL Portal configuration directory:
 
     |Operating system|Steps|
     |----------------|-----|
-    |Windows™|Complete the following steps to access the configuration directory:    1.  Open a command prompt.
-    2.  Change to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)\\ConfigEngine directory.
-|
-    |AIX®SolarisLinux™|Complete the following steps to access the configuration directory:    1.  Open a terminal session.
-    2.  Change to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-|
-    |IBM® i|Complete the following steps to access the configuration directory:    1.  Type STRQSH on an OS/400 command line to start the Qshell Interpreter.
-    2.  Change to the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/ConfigEngine directory.
-|
+    |Windows™|Complete the following steps to access the configuration directory:<br> 1.  Open a command prompt.<br> 2. Change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.|
+    |AIX®SolarisLinux™|Complete the following steps to access the configuration directory:<br> 1.  Open a terminal session.<br> 2. Change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.|
+    |IBM® i|Complete the following steps to access the configuration directory:<br> 1.  Type STRQSH on an OS/400 command line to start the Qshell Interpreter.<br> 2. Change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.|
 
 2.  Remove the work directory that was created during the installation:
 
     -   Windows: ConfigEngine.bat cleanup-work-dir -DWasPassword=password
     -   AIXSolarisLinux: ./ConfigEngine.sh cleanup-work-dir -DWasPassword=password
     -   IBM i: ConfigEngine.sh cleanup-work-dir -DWasPassword=password
-    **Note:** Before running additional tasks, check the output for any error messages and, if instructed, correct any items before rerunning the task.
+
+    !!!note
+        Before running additional tasks, check the output for any error messages and, if instructed, correct any items before rerunning the task.
 
 3.  Enter the following commands from the configuration directory to remove all passwords from the wkplc.properties, wkplc\_comp.properties, wkplc\_sourceDb.properties, and wkplc\_dbdomain.properties files:
 
     -   Windows: ConfigEngine.bat delete-passwords -DWasPassword=password
     -   AIXSolarisLinux: ./ConfigEngine.sh delete-passwords -DWasPassword=password
     -   IBM i: ConfigEngine.sh delete-passwords -DWasPassword=password
-    **Note:** Before running additional tasks, check the output for any error messages and, if instructed, correct any items before rerunning the task.
+
+    !!!note
+        Before running additional tasks, check the output for any error messages and, if instructed, correct any items before rerunning the task.
 
 
-
-**Related information**  
-
-
-[Reference: Configuration properties](../../../manage/cfg_property_files/)
+???+ info "Related information"
+    - [Configuration Properties](../../../cfg_property_files/index.md)
 

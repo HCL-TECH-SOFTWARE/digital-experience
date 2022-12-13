@@ -2,11 +2,13 @@
 
 Get an overview of the tasks that are required to configure SSL for HCL Digital Experience. Some of these tasks are completed on the IBM® WebSphere® Application Server and the web server. The steps that refer to the WebSphere Application Server and the web server are summarized here; refer to the WebSphere Application Server and the web server documentation for detailed information. Steps that are unique to HCL Portal are described in detail here.
 
-**Note:** This procedure might be slightly different if a front-end security proxy server such as IBM Security Access Manager WebSEAL is used. In that case, the front-end security server handles the client SSL connections. The web server receives connections from the front-end security proxy server. Mutually authenticated SSL can be configured between the web server and the front-end security proxy server if needed. It is highly dependent on the security requirements of each deployment.
+!!!note
+    This procedure might be slightly different if a front-end security proxy server such as IBM Security Access Manager WebSEAL is used. In that case, the front-end security server handles the client SSL connections. The web server receives connections from the front-end security proxy server. Mutually authenticated SSL can be configured between the web server and the front-end security proxy server if needed. It is highly dependent on the security requirements of each deployment.
 
 If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, complete only steps 1-3 of this procedure.
 
-**Important:** If only the login process is secure over SSL, complete the first three steps and then go to Configuring SSL only for the login process.
+!!!important
+    If only the login process is secure over SSL, complete the first three steps and then go to Configuring SSL only for the login process.
 
 1.  Configure the web server to support HTTPS. This configuration involves setting up the web server to accept inbound connections from client browsers over SSL.
 
@@ -18,6 +20,7 @@ If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, c
 
     -   Go to Securing with SSL communications in the related links section for information about how to enable SSL on an IBM HTTP Server.
     -   Refer to the book *z/OS® HTTP Server Planning, Installing, and Using* in the related links section. It provides information about setting up a secure server.
+
 4.  In a production environment, you must obtain a certificate from a certificate authority. For testing purposes, you can use iKeyman to generate a self-signed certificate. For Internet Information Server, use the web server's resource toolkit to create SSL keys. Refer to the related links section for information about iKeyman and creating Secure Sockets Layer digital certificates.
 
 5.  Configure the WebSphere Application Server plug-in for the web server to forward HCL Portal traffic that is received over SSL to WebSphere Application Server \(which then forwards the traffic to HCL Portal\). Refer to the related links section for information about how to configure the plug-in.
@@ -26,11 +29,12 @@ If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, c
 
     -   For information about configuring SSL between the web server and the application server, use the IBM Redbooks called WebSphere Application Server V8.5 Security Guide, found in the related links section. Use the section that is called *Application server configuration: Web container configuration of the IBM WebSphere Application Server*.
     -   For information about this step, use the IBM Redbooks link in the related links section. Search for Security Handbook.
-    **Note:** Always create a new SSL keystore and truststore for the external web server and change the WebSphere\_Portal server's secure transport channel to use the new SSL repository.
+    
+    !!!note
+        Always create a new SSL keystore and truststore for the external web server and change the WebSphere\_Portal server's secure transport channel to use the new SSL repository.
 
-    CAUTION:
-
-    Do not modify the default SSL key and truststore.
+    !!!important
+        Do not modify the default SSL key and truststore.
 
 7.  Complete the following steps to create or modify the following two properties in the configuration services:
 
@@ -53,16 +57,19 @@ If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, c
             -   **Name**: redirect.login.ssl
             -   **Value**: true
             -   **Type**: java.lang.String
+
     6.  Locate the host.port.https property and complete one of the following options:
 
         -   If the property exists, click the property to modify it and change the value to alias\_port.
 
-            **Note:** The alias\_port is the port number that is used for the virtual host alias that is specified in a previous step \(usually 443\).
+            !!!note
+                The alias\_port is the port number that is used for the virtual host alias that is specified in a previous step \(usually 443\).
 
         -   If the property does not exist, click **New** to create the property and enter the following information:
             -   **Name**: host.port.https
             -   **Value**: 443
             -   **Type**: java.lang.String
+
     7.  Click **Save** to save the changes to the master configuration.
 
     8.  Log out of the WebSphere Integrated Solutions Console.
@@ -119,6 +126,7 @@ If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, c
         2.  Select **System Administration** \> **Nodes**.
         3.  Select the nodes to synchronize from the list.
         4.  Click **Full Resynchronize**.
+
 9.  Complete the following steps when you use a remote web server if you must allow direct access to the WebSphere\_Portal node on the internal port.
 
     For example, http://hostname.example.com:10039/wps/portal, where hostname.example.com is the fully qualified host name of the server where Portal is running and 10039 is the default transport port that is created by WebSphere® Application Server. The port number might be different for your environment.:
@@ -185,21 +193,13 @@ If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, c
 
     6.  Verify that you are requested to log in and that the login page and the portal page are protected through SSL.
 
-        **Note:** If the security-constraint was not modified to **CONFIDENTIAL**, SSL does not protect the login page and the portal pages.
+        !!!note
+            If the security-constraint was not modified to **CONFIDENTIAL**, SSL does not protect the login page and the portal pages.
 
 
--   **[Updating files in wps.ear](../setup_ssl/ssl_update_web.md)**  
-This section shows how to use wsadmin commands to update web.xml and web\_merged.xml for wps.ear.
 
-
-**Next topic:**[Configuring SSL only for the login process](../../../manage/security/information/confidentiality/configuring_ssl/config_ssl_login)
-
-**Related information**  
-
-
-[Configuring Security Access Manager for authentication only](../../security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access/cfg_tam_auth)
-
-[Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../../security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access/tam_prov_usrs)
-
-[About the XML configuration interface](../../..manage/portal_admin_tools/xml_config_interface/adxmlabt)
+???+ info "Related information"
+    - [Configuring Security Access Manager for authentication only](../../../../people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/cfg_tam_auth.md) 
+    - [Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../../../../people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/tam_prov_usrs.md)
+    - [About the XML configuration interface](../../../../../portal_admin_tools/xml_config_interface/adxmlabt.md)
 
