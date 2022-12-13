@@ -12,7 +12,7 @@ Run these configuration tasks to change the configuration of the rich text edito
 1.  The Textbox.io editor uses a custom configuration file that is named tbio_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\textboxio.
 
     !!!note
-        Sample configurations can be found in PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\textboxio
+        Sample configurations can be found in PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\textboxio.
 
 2.  Open a command prompt.
 3.  Run the following command from the wp_profile_root/ConfigEngine directory:
@@ -30,7 +30,7 @@ Run these configuration tasks to change the configuration of the rich text edito
         ```
 
     !!!note
-        An administrator user name and password is not required if you already specified the portal administrator user name and password with the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
+        An administrator username and password are not required if you already specified the portal administrator username and password with the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
 4.  Restart the server.
 
@@ -78,6 +78,54 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
     ```
     ConfigEngine(sh/bat) action-remove-tiny-editors
+    ```
+
+    ```
+    ConfigEngine(sh/bat) configure-wcm-editor
+    ```
+
+    ```
+    ConfigEngine(sh/bat) remove-wcm-ephox-editor-custom-configuration (if a custom configuration is used)
+    ```
+
+2.  Restart the WebSphere_Portal server.
+
+## Using a custom TinyMCE editor toolbar
+
+1.  The TinyMCE editor uses a custom configuration file that is named tiny_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\tinymce.
+
+    !!!note
+        Sample configurations can be found in PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce.
+
+2.  Open a command prompt.
+3.  Run the following command from the wp_profile_root/ConfigEngine directory:
+
+    -   **Windows™**
+
+        ```
+        `ConfigEngine.bat configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password`
+        ```
+
+    -   **UNIX™ and Linux™**
+
+        ```
+        `./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password`
+        ```
+
+    !!!note
+        An administrator username and password are not required if you already specified the portal administrator username and password with the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
+
+4.  Restart the server.
+
+    !!!note
+        To revert to the default editor toolbar, run the task that is named remove-wcm-ephox-editor-custom-configuration on the primary node only.
+
+## Disabling TinyMCE editor to use the OOB editor
+
+1.  To disable TinyMCE editor and to revert to an earlier version of the Rich Text editor, run the following process:
+
+    ```
+    ConfigEngine(sh/bat) action-remove-tinymce-editor
     ```
 
     ```
