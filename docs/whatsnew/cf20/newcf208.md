@@ -70,7 +70,7 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Configuration updates set SVG to disabled by default. 
 
-    See the Help Center topics [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) and DAM Limitations statements for more information. 
+    See the Help Center topics [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) and [DAM Limitations statements](../../manage_content/digital_assets/limitations/index.md) for more information. 
 
 ## Digital Asset Management Staging Obtain Subscribers List 
 
@@ -79,7 +79,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Config Option to set absolute value Content Composer and DAM syndication
 
-A new option can be configured to control syndication of staging documents in production operations. See the Help Center topics: [Install Commands to Deploy](../../deployment/install/container/helm_deployment/helm_install_commands.md) for more information.
+A new option can be configured to control syndication of staging documents in production operations. See the Help Center topics [Install Commands to Deploy](../../deployment/install/container/helm_deployment/helm_install_commands.md) for more information.
 
 ## Content Composer Move content items UI and error handling updates 
 
@@ -89,11 +89,11 @@ A new option can be configured to control syndication of staging documents in pr
 ## WCM column sorting enhancement  
 
 === "Containers"
-    A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
+    A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order.
 
 
 ===  "On-Premises"
-    A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
+    A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order. 
 
 
 ##  New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
