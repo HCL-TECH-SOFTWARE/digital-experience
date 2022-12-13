@@ -28,7 +28,12 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Web Content Manager Author options now include Tiny MCE
 
-Content Authors can now choose to use TinyMCE as the default editor for creating and editing WCM content. See the topic [Enhanced Editor option from the Web Content Authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) topic for more information. 
+=== "Containers"
+    Content Authors can now choose to use TinyMCE as the default editor for creating and editing WCM content. See the topic [Web Content Author Editor options](../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md), and [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-the-editor-used-for-in-place-editing) for more information. 
+
+
+=== "On-Premises"
+    Content Authors can now choose to use TinyMCE as the default editor for creating and editing WCM content. See the topic [Web Content Author Editor options](../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md), and [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-the-editor-used-for-in-place-editing) for more information.
 
 ## Web Content Manager
 
@@ -74,7 +79,7 @@ Content Authors can now choose to use TinyMCE as the default editor for creating
 
 ## Config Option to set absolute value Content Composer and DAM syndication
 
-A new option can be configured to control syndication of staging documents in production operations. See the Help Center topics: [] for more information.
+A new option can be configured to control syndication of staging documents in production operations. See the Help Center topics: [Install Commands to Deploy](../../deployment/install/container/helm_deployment/helm_install_commands.md) for more information.
 
 ## Content Composer Move content items UI and error handling updates 
 
@@ -83,23 +88,25 @@ A new option can be configured to control syndication of staging documents in pr
 
 ## WCM column sorting enhancement  
 
-== "Containers"
+== "Containers"<br>
     A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
 
 
-==  "On-Premises"
+==  "On-Premises"<br>
     A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order 
 
 
 ##  New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
 
 == "Containers"
+    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information.     
 
-    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md) for more information.     
-
+<<<<<<< Updated upstream
 ==  "On-Premises"
-
-    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md) for more information. 
+    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information. 
+=======
+•	New Configuration task for integration of Unica Campaign segments with DX Personalization Rules. See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information. 
+>>>>>>> Stashed changes
 
 ## Experience API update  
 
