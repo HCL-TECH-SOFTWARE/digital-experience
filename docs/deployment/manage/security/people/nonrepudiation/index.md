@@ -4,5 +4,5 @@ Security is strong when the means of authentication cannot later be refuted. Mea
 
 Please refer to the following topic to know more about HCL Digital Experience Auditing.
 
--   **[Auditing](../../../manage/monitoring/sec_audit/)**  
+-   **[Auditing](../../../monitoring/sec_audit.md)**  
 HCL Digital Experience includes an auditing function that allows users to log certain events and their originators in to a separate log file. This file can then be used to track administrative activities.

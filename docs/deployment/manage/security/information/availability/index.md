@@ -4,5 +4,5 @@ Availability ensures that information is available when needed specially in a se
 
 Know more about HCL Digital Experience clustering that improves availability, failover, and disaster recovery.
 
--   **[Cluster considerations](../../../../get_started/plan_deployment/traditional_deployment/cluster_consideration/)**  
+-   **[Cluster considerations](../../../../../get_started/plan_deployment/traditional_deployment/cluster_consideration/index.md)**  
 Multiple portal servers can be clustered with IBM WebSphere Application Server Network Deployment.

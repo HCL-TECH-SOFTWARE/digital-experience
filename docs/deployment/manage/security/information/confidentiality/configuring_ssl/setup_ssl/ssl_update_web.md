@@ -4,7 +4,8 @@ This section shows how to use wsadmin commands to update web.xml and web\_merged
 
 Whenever changes are made to the SSL configuration, you must update the web.xml and web\_merged.xml files in wps.ear. The steps in this section can be used to update these files within wps.ear and propagate them correctly throughout the environment.
 
-**Note:** For a clustered environment, perform these steps on the Deployment Manager.
+!!!note
+    For a clustered environment, perform these steps on the Deployment Manager.
 
 1.  Ensure the Portal server is started. \(Dmgr, if clustered\).
 

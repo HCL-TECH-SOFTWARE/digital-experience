@@ -6,30 +6,24 @@ Policy files assign individual permissions to individual code sources. The synta
 
 |Default location and policy file|Protection scope|
 |--------------------------------|----------------|
-|[AppServer\_root](../../../manage/wpsdirstr#appserver_root)//java/jre/lib/security/java.policy
-
-z/OS® only path: [AppServer\_root](../../../manage/wpsdirstr#appserver_root)//java/lib/security/java.policy
-
-|This is the root policy file that contains permissions for all the processes launched by WebSphere Application Server.|
-|[wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/properties/server.policy|This policy file grants default permissions to all product servers.|
-|[wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/properties/client.policy|This policy file grants default permissions for all of the product client containers and applets on a node.|
-|[wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/config/cells/cell\_name/nodes/node\_name/spi.policy|This template is for the Service Provider Interface \(SPI\) or the third party resources that are embedded in the product. The default permission is `java.security.AllPermissions`.|
-|[wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/config/cells/cell\_name/nodes/node\_name/library.policy|This policy grants default permissions \(empty\) to code contained in the shared library \(Java library classes\) to use in multiple product applications.|
-|[wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/config/cells/cell\_name/nodes/node\_name/app.policy|This policy grants default permissions to all enterprise applications running on this node in this cell.|
-|[wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/config/cells/cell\_name/applications/ear\_file\_name/deployments/application\_name/META-INF/was.policy|This policy assigns permissions to a specific enterprise application, imbedded within EAR:/META-INF/was.policy.|
+|[AppServer\_root](../../../../../guide_me/wpsdirstr.md#appserver_root)//java/jre/lib/security/java.policy<br> z/OS® only path: [AppServer\_root](../../../../../guide_me/wpsdirstr.md#appserver_root)//java/lib/security/java.policy|This is the root policy file that contains permissions for all the processes launched by WebSphere Application Server.|
+|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/properties/server.policy|This policy file grants default permissions to all product servers.|
+|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/properties/client.policy|This policy file grants default permissions for all of the product client containers and applets on a node.|
+|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/config/cells/cell\_name/nodes/node\_name/spi.policy|This template is for the Service Provider Interface \(SPI\) or the third party resources that are embedded in the product. The default permission is `java.security.AllPermissions`.|
+|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/config/cells/cell\_name/nodes/node\_name/library.policy|This policy grants default permissions \(empty\) to code contained in the shared library \(Java library classes\) to use in multiple product applications.|
+|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/config/cells/cell\_name/nodes/node\_name/app.policy|This policy grants default permissions to all enterprise applications running on this node in this cell.|
+|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/config/cells/cell\_name/applications/ear\_file\_name/deployments/application\_name/META-INF/was.policy|This policy assigns permissions to a specific enterprise application, imbedded within EAR:/META-INF/was.policy.|
 |rar\_filename/META-INF/was.policy.RAR|This file can have a permission specification that is defined in the ra.xml file. The ra.xml file is embedded in the RAR file.|
 
 All code artifacts, installed with the HCL Digital Experience product, run with java.security.AllPermission specified either in the server.policy file for the portal shared libraries or in the individual was.policy files for the individual portlets.
 
 Portlets that are installed on HCL Digital Experience after installation can bring along their own was.policy files defining the allowed interactions of the portlet code with the system resources; see Portlet concepts for additional information.
 
-**Note:** The application server searches for was.policy files in the enterprise application archive rather than the Web application archive comprising a portlet. Therefore, the portal server copies was.policy from the appname.war/META-INF directory to the generated appname.ear/META-INF directory during deployment of a portlet WAR file.
+!!!note
+    The application server searches for was.policy files in the enterprise application archive rather than the Web application archive comprising a portlet. Therefore, the portal server copies was.policy from the appname.war/META-INF directory to the generated appname.ear/META-INF directory during deployment of a portlet WAR file.
 
 
-**Related information**  
-
-
-[Portlet concepts](../../../../extend_dx/portlets_development/wpsbpcwpsbpc)
-
-[Java 2 security](https://www.ibm.com/docs/en/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/csec_rsecmgr2.html)
+???+ info "Related information"
+    - [Portlet concepts](../../../../../extend_dx/portlets_development/wpsbpc.md)
+    - [Java 2 security](https://www.ibm.com/docs/en/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/csec_rsecmgr2.html)
 

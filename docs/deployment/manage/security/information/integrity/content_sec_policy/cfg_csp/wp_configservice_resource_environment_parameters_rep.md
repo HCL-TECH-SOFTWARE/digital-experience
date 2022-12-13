@@ -1,6 +1,6 @@
-# WP\_ConfigService Resource Environment Parameters \(REP\) for Content Security Policy configuration
+# WP_ConfigService Resource Environment Parameters (REP) for Content Security Policy configuration
 
-The following WebSphere Application Server \(WAS\) resource environment parameters will be introduced to configure CSP.
+The following WebSphere Application Server (WAS) resource environment parameters will be introduced to configure CSP.
 
 -   **csp-enabled**
 
@@ -57,7 +57,8 @@ There are two separators which can be used with the `csp-replace-string` paramet
 
 2.  **Style replacements**
 
-**Note:** The search and replace described below can only be used for style replacements.
+    !!!note
+        The search and replace described below can only be used for style replacements.
 
     The separator `'='` searches the markup for the regex value preceding the `'='` and replaces it on the element with the CSS class following the `'='`.
 
