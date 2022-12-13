@@ -273,12 +273,12 @@ configuration:
 
 ## Configure metadata
 
-Similar to rendition and thumbnail actions such as crop and resize, the Image processor plugin also supports metadata extraction so that DAM invokes the Image processor plugin by default. In case of custom plugin, corresponding API can be configured in the Plugins configuration as follows.
+Similar to rendition and thumbnail actions such as crop and resize, the Image processor plugin also supports metadata extraction so that DAM invokes the Image processor plugin by default. In the case of a custom plugin, the corresponding API can be configured in the Plugins configuration as follows.
 
 Add metadata to the new stack configuration `SupplementalStack` in rendition configuration.
 
 !!! note 
-    The operation name needs to be `metadata` and cannot contain any custom names. The plugin that is used should also contain the metadata as one of the action (In this case the plugin is the image processor. Refer the plugin configuration above).
+    The operation name needs to be `metadata` and cannot contain any custom names. The plugin that is used should also contain the metadata as one of the actions (In this case the plugin is the image processor. Refer the plugin configuration above).
 
 
     !!! example
