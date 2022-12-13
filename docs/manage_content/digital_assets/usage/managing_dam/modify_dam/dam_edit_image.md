@@ -26,6 +26,10 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
     -   **Add to Favorites** \(the star located next to the image title and from the edit digital media asset selection\) - This can be used to sort and filter digital media assets from the HCL Digital Asset Management repository \(See [Manage media asset collections](../manage_collections.md)\).
     -   **Crop** - Extracts a region of the specified dimensions from the original image. You can crop the image using the resize handles \(freeform\) or by selecting a preset aspect ratio.
     -   **Rotate left**, **Rotate right** - You can rotate the image 90° counter-clockwise \(left\) or 90° clockwise \(right\).
+    
+        !!! note
+            When editing assets in DAM, there is some expected variation in image size.
+    
     -   **Replace** - Replace the digital media asset file with a new image media file.
 
         !!! note
