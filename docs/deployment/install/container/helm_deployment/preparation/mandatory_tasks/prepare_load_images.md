@@ -15,7 +15,7 @@ In the following guidance, the docker CLI is used as a command reference. Tools 
     This is very handy for quick deployments or if you do not have a local container image registry.
     If you want to use the container images directly from Harbor, you do not need to retrieve, re-tag and push the images manually.
 
-    Ensure that you have configured your deployment to authenticate to the Harbor container registry, as described in [Using ImagePullSecrets](./optional_imagepullsecrets.md) and that the repository is configured to [HCL Harbor](#)
+    Ensure that you have configured your deployment to authenticate to the Harbor container registry, as described in [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md) and that the repository is configured to [HCL Harbor](#)
 
 ## Retrieving container images
 
