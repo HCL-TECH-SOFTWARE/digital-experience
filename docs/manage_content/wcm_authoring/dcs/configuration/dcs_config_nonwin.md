@@ -1,6 +1,6 @@
 # Configure Document Conversion Services for Systems Other than Windows
 
-Configure the Document Conversion Services to complete document conversions in an operating system other than Windows. You must complete the following steps whenever you start the Portal server from a new terminal window.
+In HCL Portal version CF205 and later, Document Conversion Services uses Apache Tika for fresh installs. Apache Tika does not require configuration for DCS. In HCL Portal version CF204 and earlier, HCL Portal installations upgraded from CF203 or CF204, and HCL Portal installations upgraded after [manually backing up the Oracle Stellent files](../dcs_backup.md), configure the Document Conversion Services to complete document conversions in an operating system other than Windows. You must complete the following steps whenever you start the Portal server from a new terminal window.
 
 1.  Ensure that the oiexport directory is in the PATH as wp_profile_root/PortalServer/config/oiexport:$PATH.
 

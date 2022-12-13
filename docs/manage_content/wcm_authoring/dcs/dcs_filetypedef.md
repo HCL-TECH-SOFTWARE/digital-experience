@@ -1,9 +1,9 @@
 # Setting Up File Type Definitions to Enable Document Conversion Services
 
-Set up file definition types to ensure that document conversions works for the Microsoft Office and OpenOffice file types.
+!!!Important "Notice of Deprecation and Replacement of Document Conversion Services:"
+    Document Conversion Services components in HCL Digital Experience software has been replaced in HCL DX Cumulative Fix release CF205. HCL Digital Experience has removed the third-party component, which was supplied by Oracle, that provided these capabilities and replaced them with HCL supported functions. At this point, HCL Digital Experience v8.5, v9 and v9.5 Container Update and CF releases include Apache Tika, the newer HCL supported component. Refer to the following HCL Digital Experience support Knowledge Article: [Replacement of Document Conversion Services component in HCL Digital Experience software for additional information](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"}.
 
-!!!important "Notice of Deprecation and Replacement of Document Conversion Services:"
-    Document Conversion Services components in HCL Digital Experience software will be updated and replaced in the future HCL DX Container Update release in 2022. HCL Digital Experience will remove the third-party component, which is supplied by Oracle, that provides these capabilities and replace them with HCL supported functions. After that point, HCL Digital Experience v8.5, v9 and v9.5 Container Update and CF releases will include the newer HCL supported component. Refer to the following HCL Digital Experience support Knowledge Article: [Replacement of Document Conversion Services component in HCL Digital Experience software for additional information](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"}.
+In HCL Portal version CF205 and later, Document Conversion Services uses Apache Tika for fresh installs. Apache Tika does not require configuration for DCS. In HCL Portal version CF204 and earlier, HCL Portal installations upgraded from CF203 or CF204, and HCL Portal installations upgraded after [manually backing up the Oracle Stellent files](../dcs_backup.md), set up file definition types to ensure that document conversions works for the Microsoft Office and OpenOffice file types.
 
 1.  Locate the content-types.properties file in the following directory:
 
