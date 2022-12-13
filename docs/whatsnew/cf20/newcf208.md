@@ -70,7 +70,7 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Configuration updates set SVG to disabled by default. 
 
-    See the Help Center topics [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) and [DAM Limitations statements](../../manage_content/digital_assets/limitations/index.md) for more information. 
+    See the Help Center topic [Manage Media Assets](../../manage_content/digital_assets/usage/managing_dam/manage_media_assets.md) for more information 
 
 ## Digital Asset Management Staging Obtain Subscribers List 
 
