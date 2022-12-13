@@ -10,7 +10,5 @@ Different users will have different access to items and functions in your system
 The security architecture describes what groups are required for your site and what access is required for different groups to the authoring portlet and rendered website.
 
 
-**Related information**  
-
-
-[Setting up access](../../../../build_sites/create_sites/building_website/site_acl)
+???+ info "Related information"
+    - [Setting up access](../../../../../../../../build_sites/create_sites/building_website/site_acl.md)

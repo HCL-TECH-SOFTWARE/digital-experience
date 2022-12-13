@@ -4,79 +4,14 @@ You define the access of a user or group for a library to determine who has acce
 
 |Roles|Rendering and authoring portlet access rights|
 |-----|---------------------------------------------|
-|-   User
-
-|Users and groups that are assigned to this role can:-   view items in a website or rendering portlet that they are assigned at least user access to.
-
-**Tip:** The simplest way to assign users to this role is to select any of the default user groups such as "All Authenticated Portal Users" or "Anonymous Portal User". Users require "user" access to an item before it is rendered in a website or rendering portlet.
-
-|
-|-   Reviewer
-
-|Users and groups that are assigned to this role can:-   view items in a website or rendering portlet that they are assigned at least user access to.
--   run approve, next stage, and previous stage operations for workflowed items.
-
-|
-|-   Draft Creator
-
-|Users and groups that are assigned to this role can:-   view items in a website or rendering portlet that they are assigned at least user access to.
--   access the create draft button if the user also has editor access.
--   access the restart workflow button if the user also has manager access.
-
-|
-|-   Contributor
-
-|Users and groups that are assigned to this role can:-   view items in a rendering portlet or servlet-rendered website that they are assigned at least user access to.
--   view libraries that they are assigned contributor access to in an authoring portlet.
--   access the "My Items" and "All Items" views in an authoring portlet for libraries that they are assigned contributor access to.
--   access the item type view within the authoring portlet for item types that they are assigned at least user access to.
-
-|
-|-   Editor
-
-|Users and groups that are assigned to this role can:-   view items in a rendering portlet or servlet-rendered website that they are assigned at least user access to.
--   view libraries that they are assigned contributor access to in an authoring portlet.
--   access the "My Items" and "All Items" views in an authoring portlet for libraries that they are assigned at least contributor access to.
--   for library item types that user and groups are assigned at least editor access to, editors can access the following actions in the authoring portlet:
-    -   access the item type view
-    -   create a new item
-    -   add/remove links
-    -   apply authoring template
-    -   copy
-    -   delete items they have created
-    -   edit
-    -   link to
-    -   move
-    -   restore a version
-    -   edit version labels
-
-|
-|-   Manager
-
-|Users and groups that are assigned to these roles can:-   view items in a rendering portlet or servlet-rendered website that they are assigned at least user access to.
--   view libraries that they are assigned contributor access to in an authoring portlet.
--   access the "My Items" and "All Items" views in an authoring portlet for libraries that they are assigned at least contributor access to.
-
-For library item types that they are assigned manager access to, managers can access the all of the actions available to editors and also the following actions in the authoring portlet:-   edit access settings
--   next stage
--   purge
--   unlock
--   edit user profile
-
-|
-|-   Administrator
-
-|Users and groups that are assigned to these roles can:-   view items in a rendering portlet or servlet-rendered website that they are assigned at least user access to.
--   view libraries that they are assigned contributor access to in an authoring portlet.
--   access the "My Items" and "All Items" views in an authoring portlet for libraries that they are assigned at least contributor access to.
--   all actions in the authoring portlet for library item types that they are assigned administrator access to.
-
-|
-|-   Security Administrator
--   Privileged User
--   Markup Editor
-
-|These roles have no access to Web Content Manager items.|
+|User|Users and groups that are assigned to this role can:<br> - view items in a website or rendering portlet that they are assigned at least user access to.<br> **Tip:** The simplest way to assign users to this role is to select any of the default user groups such as "All Authenticated Portal Users" or "Anonymous Portal User". Users require "user" access to an item before it is rendered in a website or rendering portlet.|
+|Reviewer|Users and groups that are assigned to this role can:<br> - view items in a website or rendering portlet that they are assigned at least user access to.<br> - run approve, next stage, and previous stage operations for workflowed items.|
+|Draft Creator|Users and groups that are assigned to this role can:<br> - view items in a website or rendering portlet that they are assigned at least user access to.<br> - access the create draft button if the user also has editor access.<br> - access the restart workflow button if the user also has manager access.|
+|Contributor|Users and groups that are assigned to this role can:<br> - view items in a rendering portlet or servlet-rendered website that they are assigned at least user access to.<br> - view libraries that they are assigned contributor access to in an authoring portlet.<br> - access the "My Items" and "All Items" views in an authoring portlet for libraries that they are assigned contributor access to.<br> - access the item type view within the authoring portlet for item types that they are assigned at least user access to.|
+|Editor|Users and groups that are assigned to this role can:<br> - view items in a rendering portlet or servlet-rendered website that they are assigned at least user access to.<br> - view libraries that they are assigned contributor access to in an authoring portlet.<br> - access the "My Items" and "All Items" views in an authoring portlet for libraries that they are assigned at least contributor access to.<br> - for library item types that user and groups are assigned at least editor access to, editors can access the following actions in the authoring portlet:<br> -   access the item type view<br> -   create a new item<br>-   add/remove links<br> -   apply authoring template<br> -   copy<br> -   delete items they have created<br> -   edit<br> -   link to<br> -   move<br> -   restore a version<br> -   edit version labels|
+|Manager|Users and groups that are assigned to these roles can:<br> - view items in a rendering portlet or servlet-rendered website that they are assigned at least user access to.<br> - view libraries that they are assigned contributor access to in an authoring portlet.<br> - access the "My Items" and "All Items" views in an authoring portlet for libraries that they are assigned at least contributor access to.<br> For library item types that they are assigned manager access to, managers can access the all of the actions available to editors and also the following actions in the authoring portlet:<br> -   edit access settings<br> -   next stage<br> -   purge<br> -   unlock<br> -   edit user profile|
+|Administrator|Users and groups that are assigned to these roles can:<br> - view items in a rendering portlet or servlet-rendered website that they are assigned at least user access to.<br> - view libraries that they are assigned contributor access to in an authoring portlet.<br> - access the "My Items" and "All Items" views in an authoring portlet for libraries that they are assigned at least contributor access to.<br> - all actions in the authoring portlet for library item types that they are assigned administrator access to.|
+| Security Administrator<br> - Privileged User<br> - Markup Editor|These roles have no access to Web Content Manager items.|
 
 **HCL Portal Administrators:**
 
