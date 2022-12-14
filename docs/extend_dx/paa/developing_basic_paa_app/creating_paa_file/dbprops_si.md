@@ -16,6 +16,7 @@ The Solution Installer uses the following database properties:
     -   DB2®: 50000
     -   Oracle: 1521
     -   SQL Server: 1433
+
 -   **DbHostname**
 
     The host name or IP address of the server hosting the database.
@@ -28,6 +29,7 @@ The Solution Installer uses the following database properties:
     -   DB2®: db2
     -   Oracle: oracle
     -   SQL Server: SQL Server
+
 -   **dbProviderName**
 
     The name of jdbc provider to be used. Use the following example jdbc provider names:
@@ -36,6 +38,7 @@ The Solution Installer uses the following database properties:
     -   DB2®: wpdbJDBC_db2
     -   Oracle: wpdbJDBC_oracle
     -   SQL Server: wpdbJDBC_sqlserver
+
 -   **dbDriverType**
 
     Connection pool data source
@@ -68,6 +71,7 @@ The Solution Installer uses the following database properties:
             ORACLE_HOME is the environment variable specified during the installation of the Oracle database.
 
     -   SQL Server: installation_directory/sqljdbc_2.0/enu
+
 -   **dbClasspath**
 
     The database class path value. Use one of the following examples with values specific to your database:
@@ -76,6 +80,7 @@ The Solution Installer uses the following database properties:
     -   DB2®: ${dbDriverPath}/db2jcc4.jar:$ {dbDriverPath}/db2jcc_license_cisuz.jar:${dbDriverPath}/db2jcc_license_cu.jar
     -   Oracle: ${dbDriverPath}/ojdbc6.jar
     -   SQL Server: installation_directory/sqljdbc_2.0/enu/sqljdbc4.jar
+
 -   **dbUrl**
 
     The database URL value. Use one of the following examples with values specific to your database:
@@ -84,6 +89,7 @@ The Solution Installer uses the following database properties:
     -   DB2®: jdbc:${dbType}://${dbHostname}:${dbPort}/${dbName}
     -   Oracle: jdbc:${dbType}:thin:@${dbHostname}:${dbPort}:$\{dbName}
     -   SQL Server: jdbc:sqlserver://hostname:$ {DbPort};SelectMethod=cursor;DatabaseName=tbmesg
+
 -   **dbJndiName**
 
     Specify the JNDI name that will be used for a component.
@@ -96,6 +102,7 @@ The Solution Installer uses the following database properties:
     -   DB2®: DB2 Universal JDBC Driver DataSource
     -   Oracle: Oracle JDBC Driver DataSource
     -   SQL Server: Microsoft SQL Server JDBC Driver - XA DataSource
+
 -   **jpTemplateName**
 
     Use one of the following examples with values specific to your database:
@@ -104,6 +111,7 @@ The Solution Installer uses the following database properties:
     -   DB2®: DB2 Universal JDBC Driver Provider
     -   Oracle: Oracle JDBC Driver Provider
     -   SQL Server: Microsoft SQL Server JDBC Driver
+    
 -   **dsDbDriverType**
 
     The type of the database driver that the data source connects to. Valid values are 2 and 4. 

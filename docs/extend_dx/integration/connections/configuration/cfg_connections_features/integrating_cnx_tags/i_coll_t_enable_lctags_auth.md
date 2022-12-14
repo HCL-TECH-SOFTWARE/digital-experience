@@ -6,8 +6,9 @@ This procedure helps you set up authentication by using a shared slot in the por
 
 Configure authentication for either basic authentication or LTPA forwarding.
 
-1.  Option 1: Basic authentication
-2.  If basic authentication is used, specify the credentials for the user ID in the portal credential vault.
+1. Option 1: Basic authentication
+
+    If basic authentication is used, specify the credentials for the user ID in the portal credential vault.
 
     1.  Click the **Administration menu** icon. Then, click **Access** \> **Credential Vault**.
 
@@ -17,8 +18,9 @@ Configure authentication for either basic authentication or LTPA forwarding.
 
     4.  Specify an existing resource or specify a new one.
 
-3.  Option 2: LTPA forwarding
-4.  If LTPA forwarding is used, specify the full distinguished name \(DN\) of a user ID in the portal credential vault.
+2. Option 2: LTPA forwarding
+
+    If LTPA forwarding is used, specify the full distinguished name (DN) of a user ID in the portal credential vault.
 
     1.  Click the **Administration menu** icon. Then, click **Access** \> **Credential Vault**.
 
@@ -27,10 +29,10 @@ Configure authentication for either basic authentication or LTPA forwarding.
     3.  Select a shared vault slot, and enter the DN of the HCL Connections user ID.
 
     4.  Enter an arbitrary password. The password is not necessary to create the LTPA token, but the credential vault portlet requires a password for a vault slot.
-
+        
     5.  Specify an existing resource or specify a new one.
 
-5.  Restart the HCL Portal server.
+3.  Restart the HCL Portal server.
 
 
 

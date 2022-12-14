@@ -35,25 +35,25 @@ Portal Search is pre-configured with a search service, a portal site search coll
 You can perform most of the configuration tasks for Portal Search by using the administration portlet **Manage Search**. By alternative, you can also administer Portal Search by using the WebSphere® Integrated Solutions Console and resource providers in XML format.
 
 All search collections are available by the **All Sources** selection option of the Search Center portlet.
-<!---
--   **[Managing search services](../admin-system/srtmgsrchsrvc.md)**  
+
+-   **[Managing search services](srtmgsrchsrvc.md)**  
 Get an overview of how you manage the portal search services. This task includes creating a new search service or editing an existing search service.
--   **[Search service configuration parameters](../admin-system/srrcfgsrvc.md)**  
+-   **[Search service configuration parameters](../administer_portal_search/search_service_params/index.md)**  
 Learn about the portal search service parameters and possible values.
--   **[Configuring the default location for search collections](../admin-system/srtcfgdfltlctsrchcllc.md)**  
+-   **[Configuring the default location for search collections](srtcfgdfltlctsrchcllc.md)**  
 You can modify the default directory location under which search collections are created on a per search service basis. View some related information.
--   **[Configuring the Search Center portlet](../admin-system/srtcfgsrchcntrprlt.md)**  
+-   **[Configuring the Search Center portlet](../administer_portal_search/cfg_searchcenter/index.md)**  
 Get an overview of how you configure the Search Center.
--   **[Replacing the search administrator user ID](../admin-system/srt_srch_admin_id.md)**  
+-   **[Replacing the search administrator user ID](srt_srch_admin_id.md)**  
 If you changed the portal administrator user ID or password, you need to update the search administrator user ID to match the same values.
--   **[Customizing the Search Center](../admin-system/srtcentercustomze.md)**  
+-   **[Customizing the Search Center](../administer_portal_search/customize_searchcenter/index.md)**  
 Customize the Search Center by adding, removing and configuring additional portlets, such as External Search Results or Recommended Links. The external search results portlet displays search results from third-party external search engines such as Yahoo and Google. Using the recommended links portlet, display search results from a collection of predefined links with predefined keywords. You can also configure the All Sources scope or replace it with a customized scope.
--   **[Using the WebSphere Integrated Solutions Console to administer Portal Search](../admin-system/srtadmsrchadmcnsl.md)**  
+-   **[Using the WebSphere Integrated Solutions Console to administer Portal Search](srtadmsrchadmcnsl.md)**  
 You can administer Portal Search by using the WebSphere Integrated Solutions Console and using resource providers in XML format.
--   **[Setting up search collections](../admin-system/srcmgsrcont.md)**  
+-   **[Setting up search collections](../administer_portal_search/setup_search_collections/index.md)**  
 View information on setting up search collections for search by users. This also includes creating content sources and managing search scopes and custom links.
--   **[Searching and crawling Portal and other sites](../admin-system/srcportals.md)**  
-You can configure your local Portal site and crawl remote Portal sites so that they are searchable by users. Run crawlers against other external websites to make them searchable by local portal users.  --->
+-   **[Searching and crawling Portal and other sites](../administer_portal_search/searching_crawling_portal_sites/index.md)**  
+You can configure your local Portal site and crawl remote Portal sites so that they are searchable by users. Run crawlers against other external websites to make them searchable by local portal users.  
 
 
 ???+ info "Related information"

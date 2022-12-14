@@ -19,5 +19,4 @@ With the HCL Digital Experience 9.5, a new login user interface is presented. HC
 8.  Click **Logout** to see to see the changes made.
 
 
-**Parent topic:**[Modifying portlet apps and portlets](../admin-system/portlets_apps_modes.md)
 

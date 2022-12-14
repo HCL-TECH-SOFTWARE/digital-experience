@@ -1,4 +1,4 @@
-# Mentors to look for in cache \| LikeMinds engine
+# Mentors to look for in cache | LikeMinds engine
 
 Learn how to set numbers of mentors to look for a given user in your LikeMinds Preference Engine.
 

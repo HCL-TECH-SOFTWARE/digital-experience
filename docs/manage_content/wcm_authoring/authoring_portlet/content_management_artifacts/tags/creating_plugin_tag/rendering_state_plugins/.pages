@@ -1,0 +1,11 @@
+title: Rendering state plug-ins
+nav:
+    - index.md
+    - plrf_rendr_plugin_render_parm.md
+    - plrf_rendr_plugin_render_url.md
+    - plrf_rendr_plugin_request_attrbt.md
+    - plrf_rendr_plugin_request_parm.md
+    - plrf_rendr_plugin_resrc_url.md
+    - plrf_rendr_plugin_session_attrbt.md
+    - plugin_portlet_page.md
+    - plugin_portlet_toolbar.md

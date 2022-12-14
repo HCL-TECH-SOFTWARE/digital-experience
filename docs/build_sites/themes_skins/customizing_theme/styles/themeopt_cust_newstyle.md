@@ -45,6 +45,6 @@ These steps add a new style to the Styles tab of the site toolbar.
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating new styles or layouts by using a JSON file](../../../create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_creation_editing/rwd_add_layout_outside.md)
 

@@ -57,10 +57,12 @@ If there is a configuration failure, you see one or more of the following messag
 If the Virtual Member Manager is not working, for example, if community groups are not displaying on the Portal server, first check the timeout settings on the Portal and HCL Connections servers to make sure that they are compatible.
 
 1.  Log in to the WebSphere® Application Server administrator console, go to **Security** \> **Global Security** \> **Authentication** \> **LTPA** and record the value of the timeout setting.
+
 2.  Make the following changes on the Portal server:
     1.  Change to wp\_profile\_directory\\config\\cells\\cellname on a stand-alone server, or dmgr\_profile\_directory\\config\\cellscellname in a clustered environment.
     2.  Open sonata.services.xml.
     3.  Update the value of `<attribute key="CookieTimeout" value="60" />` to a timeout value that is 80 - 90% of the value that is set for the LTPA timeout setting you recorded.
+
 3.  Make the following changes on the HCL Connections server:
     1.  Change to appsvr\_profile\_directory/config/cells/cellname/LotusConnections-config/ for a stand-alone environment and dmgr\_profile\_directory/config/cells/cellname/LotusConnections-config/ in a clustered environment.
     2.  Open LotusConnections-config.xml.
@@ -74,6 +76,7 @@ If the Virtual Member Manager is not working, for example, if community groups a
         ```
 
     4.  Set the value of CookieTimeout to the same value you set in sonata.services.xml on the Portal service.
+
 4.  Restart the HCL Connections and Portal servers.
 5.  Make sure that the HCL Connections server can resolve the Portal server's host name. It can be resolved either by DNS setting \(under LAN properties\) or by adding an entry in the host file on the HCL Connections server. The host file is typically at C:\\Windows\\System32\\drivers\\.
 6.  Delete the Portal SSL certificate that is imported on the HCL Connections server earlier and import a new one.

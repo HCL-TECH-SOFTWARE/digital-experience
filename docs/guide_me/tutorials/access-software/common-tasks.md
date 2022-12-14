@@ -7,7 +7,7 @@ title: Account Management
 
 This section allows you to view the software entitlements and associated maintenance for your organization.
 
-To check your entitlements, hover on Accounts & Entitlements, and then click on **“List Entitlements”.**
+To check your entitlements, hover on **Activation & Entitlements**, and then click on **List Entitlements.**
 
 ![List entitlements](images/common1.png)
 
@@ -19,11 +19,11 @@ You can open each entitlement by clicking the Activation ID links and view more 
 
 This section allows you to expand the list of people who have access to the License portal for viewing the license or downloading software for your organization.
 
-From the [HCL License & Delivery Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/startPage.do), use the navigation banner and click on **“Accounts & Users”** and then **“List Users”**.  
+From the [HCL License & Delivery Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/startPage.do), use the navigation banner and click on **Accounts & Users** and then **List Users**.  
 
 ![List users](images/common2.png)
 
-On the **"Users"** page under "Actions" button, click on **"Create User”.**
+On the **Users** page under **Actions**, click on **Create User.**
 
 ![Create user](images/common3.png)
 
@@ -43,7 +43,7 @@ If you are not the License Manager but you need to have access to the portal, yo
 
 ## Searching Products
 
-To perform a search, hover on **“Downloads”** tab and then click on **“Search Downloads”**.
+To perform a search, hover on **Downloads** tab and then click on **Search Downloads**.
 
 ![Search downloads](images/common5.png)
 
@@ -54,12 +54,12 @@ In the search page, you have 3 options to help with the search.
 ### Search for
 
 * Allows you to search packages or files by keyword.
-* If you do not get results using your keyword, try surrounding your keyword with asterisks. For example, if you are searching for "CF17", try searching for “*CF17*”.
+* If you do not get results using your keyword, try surrounding your keyword with asterisks. For example, if you are searching for CF17, try searching for *CF17*.
 * The search works like regular expressions so you want to type your keywords in the order that it would appear in the file name or description.
 
 ###  Show results for:
 
-* Choose between "Download packages" or “Files”.
+* Choose between **Download packages** or **Files**.
 * Download packages: The packages containing the file names found during the search are listed.
 * Files: The files names found during search are listed. You may get multiple results for the same file name if the file is included in multiple different packages.
 

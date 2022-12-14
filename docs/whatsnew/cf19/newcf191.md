@@ -16,7 +16,7 @@ The [HCL Solution Factory](https://sofy-kc.hclsofy.com/auth/realms/sofySolution/
 
 [HCL Commerce integration](https://www.hcltechsw.com/products/commerce){:target="_blank"} with [HCL Digital Experience](https://www.hcltechsw.com/dx/features){:target="_blank"} allows content and digital assets managed within HCL Digital Experience to be utilized in any Commerce store. Visit the HCL Commerce Help Center [Digital Experience integration](https://help.hcltechsw.com/commerce/9.1.0/integration/concepts/dx_introduction.html){:target="_blank"} for more information and pre-requisites.
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Digital Experience integration](https://help.hcltechsw.com/commerce/9.1.0/integration/concepts/dx_introduction.md)
 
     -->

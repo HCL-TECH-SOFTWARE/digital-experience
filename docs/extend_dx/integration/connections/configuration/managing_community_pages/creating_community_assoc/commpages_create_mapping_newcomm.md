@@ -4,12 +4,13 @@ When you create a template for a community page, you can configure the template 
 
 In this case, when the page is created, a community is created in HCL Connections, and the new page is associated with the new community. The name of the new community is derived from the title of the new page.
 
-**Important:** To create communities automatically when creating pages from a template, the user creating the page must be authorized on the HCL Connections server to create communities.
+!!!important
+    To create communities automatically when creating pages from a template, the user creating the page must be authorized on the HCL Connections server to create communities.
 
 -   There are two ways to specify that a page template requires a community association.
 -   Add a community association to the page template by editing the page associations in the user interface or by using the XML configuration interface.
 
-    See [Managing community associations](commpages_create_mapping.md) for details.
+    See [Managing community associations](../commpages_create_mapping.md) for details.
 
     The new community has the following characteristics:
 
@@ -21,7 +22,7 @@ In this case, when the page is created, a community is created in HCL Connection
 
     1.  Set the ibm.portal.instantiation.community.create.new parameter on the template page with a value of true.
 
-        You can set this parameter by editing the page properties in the user interface or by using the XML configuration interface \(xmlaccess command\).
+        You can set this parameter by editing the page properties in the user interface or by using the XML configuration interface (xmlaccess command).
 
         The new community has the following characteristics:
 
@@ -35,8 +36,6 @@ In this case, when the page is created, a community is created in HCL Connection
 
 
 
-**Related information**  
-
-
-[Creating associations to existing communities during page instantiation](../admin-system/commpages_create_mapping_exist.md)
+???+ info "Related information"
+    - [Creating associations to existing communities during page instantiation](commpages_create_mapping_exist.md)
 

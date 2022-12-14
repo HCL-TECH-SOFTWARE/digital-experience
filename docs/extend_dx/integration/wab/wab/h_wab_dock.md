@@ -9,7 +9,8 @@ Create web dock applications from the Virtual Web Application Manager portlet af
 
 After you select the content provider profile, enter a resource path for the content provider. The resource path that is combined with the profile host is the content provider resource URL. This resource URL is the first content that gets loaded on the web page in the Web Dock portlet. This URL is called the Bootstrap URL for the web dock application. The policies that you created for the profile are loaded at run time that is based on the resource part.
 
-**Note:** If the system administrator changes the host or port information in the content provider profile, you must edit the web dock application and reselect the profile. Otherwise, the web dock application does not pick up the changes.
+!!!note
+    If the system administrator changes the host or port information in the content provider profile, you must edit the web dock application and reselect the profile. Otherwise, the web dock application does not pick up the changes.
 
 You can enter a single resource part; for example: /resource\_path. The /resource\_path must be a valid and complete relative URL of the content application.
 

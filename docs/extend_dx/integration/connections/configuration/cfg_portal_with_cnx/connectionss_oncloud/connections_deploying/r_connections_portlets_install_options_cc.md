@@ -1,4 +1,4 @@
-# Installation options \(Cloud\)
+# Installation options (Cloud)
 
 These options allow you to customize your installation.
 
@@ -22,9 +22,7 @@ These options allow you to customize your installation.
 |-DICwebResourcesURL|https://connections-webresources.example.com|
 |-DICwebResourcesURLUnsecured|http://connections-webresources.example.com|
 |-DICwebResourcesContextRoot|The context root used for making requests for resources by the Activity Stream and Library portlets.  The default is connections/resources.|
-|-DICdateType|Possible values are client \(the default\) or server. This is used to handle the date conversion in portlets for the client timezone or server timezone, respectively. **Note:** The server option is only supported on WebSphere Portal 8.0.01 with CF12 applied, or greater.
-
-|
+|-DICdateType|Possible values are client \(the default\) or server. This is used to handle the date conversion in portlets for the client timezone or server timezone, respectively. **Note:** The server option is only supported on WebSphere Portal 8.0.01 with CF12 applied, or greater.|
 |-DICdateFormat|Used to define the target date pattern when the server timezone setting is applied. For examples of date formats, find information about *Setting parameters to format dates* at [HCL Software Support](https://support.hcltechsw.com/csm).|
 
 |Property|Value|

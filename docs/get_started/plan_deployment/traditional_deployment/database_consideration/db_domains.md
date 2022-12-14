@@ -2,7 +2,7 @@
 
 Sets of databases tables and schemas for portal resources are called database domains. Database domains classify and help you determine how to distribute portal data.
 
-There are six database domains: release, customization, community, JCR, feedback, and Likeminds. The database domains categorize portal data into the following categories and subcategories to help you decide how to distribute portal data into different databases:
+There are six database domains: release, customization, community, JCR, feedback, and LikeMinds. The database domains categorize portal data into the following categories and subcategories to help you decide how to distribute portal data into different databases:
 
 -   **Release data \(release and JCR\)**
 
@@ -37,7 +37,7 @@ For some database software, such as DB2, the database name cannot exceed 8 chara
 
 |Application|Database name|Space required|
 |-----------|-------------|--------------|
-|HCL Portal Used for the portal \(at a minimum\) or to hold all data. Stores information about user customization, such as pages, and user profile and login information.|reldb</br>commdb</br>custdb|Depends on the number of users and portal objects, such as pages and portlets.|
+|HCL Portal Used for the portal (at a minimum) or to hold all data. Stores information about user customization, such as pages, and user profile and login information.|reldb</br>commdb</br>custdb|Depends on the number of users and portal objects, such as pages and portlets.|
 |Personalization,Web Content Manager Contains documents, personalization rules, personalization campaigns, and document library configuration information.
 |jcrdb|Depends on the number and size of Personalization rules and campaigns, and the number and size of items and elements that are created in.Web Content Manager|
 |FeedbackContains the information that is logged by your website for analysis of site activity and generating reports.|fdbkdb|Depends on the amount of traffic to the site. The amount of data that is logged per login-enabled page can vary.|

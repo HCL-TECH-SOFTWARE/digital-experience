@@ -47,5 +47,5 @@ To retrieve changes in the HCL Connections tag cloud, you need to run the Federa
 
 
 ???+ info "Related information"
-   - [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+   - [Working with the XML configuration interface](../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
 

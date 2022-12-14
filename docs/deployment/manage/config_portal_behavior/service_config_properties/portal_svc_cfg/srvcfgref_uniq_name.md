@@ -4,7 +4,8 @@ Administration portlets and themes create URL links to other administration port
 
 In the WebSphere® Integrated Solutions Console, the portal Administrator Unique Names Mapping Service is listed as **WP AdminUniqueNamesMappingService**.
 
-**Note:** If you change the unique name of a portal administration page by using the Manage Unique Names portlet, you also need to update that name in the properties. This is required so that the theme and administration portlets still function.
+!!! note 
+     If you change the unique name of a portal administration page by using the Manage Unique Names portlet, you also need to update that name in the properties. This is required so that the theme and administration portlets still function.
 
 The available mappings are defined as follows:
 

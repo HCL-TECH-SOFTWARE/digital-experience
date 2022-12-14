@@ -53,7 +53,7 @@ To globally configure the method by which social object data is served, proceed 
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Digital Data Connector profiles for social rendering](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/index.md)
     - [Blog-related profiles](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_blogs.md)
     - [Communities and community members profiles](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_communities.md)

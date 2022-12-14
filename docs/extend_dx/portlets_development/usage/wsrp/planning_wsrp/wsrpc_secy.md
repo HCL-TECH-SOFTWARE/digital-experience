@@ -14,6 +14,7 @@ HCL Portal supports the following security mechanisms:
 
     -   It does not require configuration of the WSRP web services.
     -   It makes it possible for the WSRP Producer to accept and process both unauthenticated and authenticated requests. The Producer processes unauthenticated requests that do not contain an LTPA V2 cookie without establishing an individual security context. This way, it can serve requests from anonymous users.
+    
 -   **Web Services Security \(WSS\)**
 
     You can configure the WSRP Consumer and WSRP Producer for Web Services Security according to the WS-Security standard. With a WS Security configuration, the WSRP Consumer sends a header that complies with the WS-Security standard as part of the WSRP request messages. The header contains credentials that identify and authenticate the user. For this option, both the WSRP Consumer and the WSRP Producer must be configured for Web Services Security.
@@ -44,16 +45,10 @@ For a WSRP Producer, security configuration is optional. A WSRP Consumer must us
 For more detailed information about Portal Access Control, read the sections about *Configuring Portal Access Control for a WSRP Producer portal* and *Managing Access Control*.
 
 
-**Related information**  
-
-
-[Configuring Portal Access Control for a WSRP Producer portal](../admin-system/wsrpt_prod_sec_pac.md)
-
-[Managing Access Control](../admin-system/sec_ac_adm.md)
-
-[WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
-
-[Updating a WSRP Producer](../migrate/mig_post_wsrp_producer.md)
-
-[Updating a WSRP Consumer](../migrate/mig_post_wsrp_consumer.md)
+???+ info "Related information"
+    - [Configuring Portal Access Control for a WSRP Producer portal](../portal_wsrp_producer/securing_wsrp_prod_portal/wsrpt_prod_sec_pac.md)
+    - [Managing Access Control](../../../../../deployment/manage/security/people/authorization/controlling_access/sec_ac_adm.md)
+    - [WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
+    - [Updating a WSRP Producer](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_producer.md)
+    - [Updating a WSRP Consumer](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_consumer.md)
 

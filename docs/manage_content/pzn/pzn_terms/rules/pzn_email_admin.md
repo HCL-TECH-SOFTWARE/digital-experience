@@ -18,6 +18,6 @@ Before your run time server can send personalized email:
 -   Additional configuration is available through the PersonalizationService.properties file. Using this file, you configure how often Personalization checks for rule events that run scheduled or repeating emails. You can specify what port an email rule will try to connect to when retrieving the bodyuri of the rule. You can also configure the mail session being used.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Example: Simple email action](../rules/actions/pzn_example_simple_email_action.md)
 

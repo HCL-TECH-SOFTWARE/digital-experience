@@ -8,7 +8,8 @@ Starting with Version 8.5, a basic version of the assembly level sdd.xml file ca
 
 Although the assembly level sdd.xml file can be auto-generated, there are many circumstances where this option is not a viable solution. For example, there are restrictions on server versions on which the PAA file can be installed. It is necessary to include a `<ServerVersionDependencies>` element to illustrate the versions. This information is not handled automatically by the Solution Installer so you must generate the file manually. If you added a /components/order.properties file and do not want to limit the list to only those components in the order.properties file, add the additional `<containedPackage>` elements for each component to the file.
 
-**Note:** In the PortalServer\_root/doc/paa-samples directory, some sample files illustrate the PAA directory structure. You can use the assembly level sdd.xml file of the sample1.paa file as an example. This file can be used as a starting point for developers to create their own working sdd.xml files. This sample PAA file is an installable application. It can be registered with the ConfigEngine. However, it is not a working PAA file because there are no installable resources. The structure is provided so that a developer can use it to create their own PAA files.
+!!! note 
+	In the PortalServer\_root/doc/paa-samples directory, some sample files illustrate the PAA directory structure. You can use the assembly level sdd.xml file of the sample1.paa file as an example. This file can be used as a starting point for developers to create their own working sdd.xml files. This sample PAA file is an installable application. It can be registered with the ConfigEngine. However, it is not a working PAA file because there are no installable resources. The structure is provided so that a developer can use it to create their own PAA files.
 
 The following is an example of an assembly level sdd.xml file:
 

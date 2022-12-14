@@ -4,7 +4,8 @@ Test the configuration of the application-specific Ajax proxy to manage authenti
 
 HCL Connections portlets now use an application-specific Ajax proxy mechanism for forwarding security headers and cookies with each REST service call to authenticate the request with the HCL Connections server. The proxy is configured as part of the installation process. Use the following test URLs to verify that the application-specific proxy configuration is working.
 
-**Note:** If you are in an SSO environment, you must first open a new browser window and log in to Portal as a HCL Connections user.
+!!!note
+    If you are in an SSO environment, you must first open a new browser window and log in to Portal as a HCL Connections user.
 
 -   If you have a web server that is configured for Portal and HCL Connections, use:
 

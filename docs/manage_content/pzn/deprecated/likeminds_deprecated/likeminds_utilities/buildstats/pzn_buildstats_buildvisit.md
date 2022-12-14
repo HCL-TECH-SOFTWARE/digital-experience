@@ -1,4 +1,4 @@
-# Buildstats \| LikeMinds utilities
+# Buildstats | LikeMinds utilities
 
 The buildstats utility updates database statistics. You can use buildstats for all of the Recommendation engines except for the Item Affinity Engine.
 
@@ -6,15 +6,15 @@ When you install the LikeMinds utilities, the installer sets `buildstats` to run
 
 For ratings data, `buildstats` writes to the following fields in the Lps\_Item\_Data table:
 
--   num\_rtg: Total number of ratings for the item.
--   total\_rtg: Sum of all ratings for the item.
--   total\_square\_rtg: Sum of the squares of all ratings for the item.
+-   num_rtg: Total number of ratings for the item.
+-   total_rtg: Sum of all ratings for the item.
+-   total_square_rtg: Sum of the squares of all ratings for the item.
 -   ratability: Priority for an item's presentation to users for rating. ratability is non-negative value. Higher numbers indicate a higher priority for rating.
 -   score: Popularity or unpopularity of an item. If you prefer to have your own applications update this field, you can disable `buildstats` from writing to score.
 
-For transactional data, `buildstats` writes to these fields in Lps\_User\_Trx:
+For transactional data, `buildstats` writes to these fields in Lps_User\_Trx:
 
 -   value: Data value that is associated with the transaction.
--   adj\_count: Adjusted count of transactions. If a new activity is recorded in the transaction table, this value increases. It might diminish over time.
+-   adj_count: Adjusted count of transactions. If a new activity is recorded in the transaction table, this value increases. It might diminish over time.
 
 

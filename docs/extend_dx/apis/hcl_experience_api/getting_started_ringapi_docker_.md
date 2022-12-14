@@ -9,7 +9,8 @@ Follow these steps to get started with the HCL Experience API.
 3.  Extract the HCL Experience API installation binaries and, within a terminal, navigate to the extracted folder.
 4.  Verify if the extracted folder contains the Experience API images, for example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, `hcl-dx-experience-api-sample-ui-v0.2.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, and readme (`README.md`) files.
 
-    **Note:** As HCL Digital Experience releases updated Experience API images, the image version number increases. For example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`.
+    !!! note
+        As HCL Digital Experience releases updated Experience API images, the image version number increases. For example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`.
 
 5.  Load the HCL Experience API image using the following command:
 
@@ -79,7 +80,7 @@ The following limitations exist in HCL Experience API:
 
 To use the REST service, for Web Content Manager a client user will be assigned the User role or higher in the *WCM REST SERVICE* virtual resource. All authenticated users are assigned the User role by default.
 
-An administrator can edit the *WCM REST SERVICE* virtual resource. Click the **Administration menu** icon. Then, click **Access \> Resource Permissions \>Virtual Resources**. For more information, refer [Getting started with the REST service for Web Content Manager](../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/index.md).
+An administrator can edit the *WCM REST SERVICE* virtual resource. Click the **Administration menu** icon. Then, click **Access \> Resource Permissions \>Virtual Resources**. For more information, refer [Getting started with the REST service for Web Content Manager](../../../manage_content/wcm_development/wcm_dev_api/index.md).
 
 If you wish to use the dxrest (in addition to mydxrest) for the REST APIs, you need to change the default user configuration. You need to add '**Anonymous Portal User**' to the virtual resources in **WCM REST SERVICE**.
 

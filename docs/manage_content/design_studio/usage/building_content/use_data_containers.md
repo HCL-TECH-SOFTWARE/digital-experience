@@ -11,7 +11,7 @@ A data container provides the capability of rendering information from an extern
 ## Create an API configuration
 API configurations are stored as **content items**. A content item can be created with **Content Composer**.
 !!! important
-    Refer to the [HCL Content Composer](../../../content_composer/index.md) documentation for a detailed description on how to create content with **Content Composer**.
+    Refer to the [HCL Content Composer](../../../wcm_authoring/content_composer/index.md) documentation for a detailed description on how to create content with **Content Composer**.
 
 !!! note
     This example uses an API from [HCL Volt MX Foundry](https://opensource.hcltechsw.com/volt-mx-docs/). Refer to the [HCL Volt MX User Guide](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Introduction.html) topic for a detailed description on how to create an **integration service**.

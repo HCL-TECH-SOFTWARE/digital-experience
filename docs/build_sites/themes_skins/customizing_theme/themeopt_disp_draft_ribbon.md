@@ -12,6 +12,6 @@ The draft page ribbon makes it easier for users to see if a page has pending cha
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Modules that add features to a theme](../the_module_framework/theme_modules_features.md)
 

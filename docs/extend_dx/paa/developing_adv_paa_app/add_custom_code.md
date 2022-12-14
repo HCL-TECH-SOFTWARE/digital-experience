@@ -4,7 +4,7 @@ Solution developers can create applications that use resource types that the Sol
 
 ## Where to place custom code in the Portal Application Archive \(PAA\) file
 
-An example of a PAA file is located in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/paa-samples/sample1.paa directory. This example contains a sample component file: sample1/components/sample1. The sample component file contains the config/include and config/templates directories. Custom code and Solution Installer generated code are stored in these two directories. The config/templates directory should contain any additional scripts that are required for installation. An example of an additional script is one that configures a .war file. The config/include directory should contain any custom ANT task. Any scripts in the config/include directory are picked up at run time.
+An example of a PAA file is located in the [PortalServer\_root](../../../guide_me/wpsdirstr.md)/doc/paa-samples/sample1.paa directory. This example contains a sample component file: sample1/components/sample1. The sample component file contains the config/include and config/templates directories. Custom code and Solution Installer generated code are stored in these two directories. The config/templates directory should contain any additional scripts that are required for installation. An example of an additional script is one that configures a .war file. The config/include directory should contain any custom ANT task. Any scripts in the config/include directory are picked up at run time.
 
 ## How to name custom code files
 

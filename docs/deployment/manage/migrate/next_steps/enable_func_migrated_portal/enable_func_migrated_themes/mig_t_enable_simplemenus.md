@@ -29,7 +29,7 @@ If you want to use the HCL Digital Experience simple context menus, you must com
     -   WebDAV/themes/Portal 8.5/css/default/contextmenuRTL.css
     -   WebDAV/themes/Portal 8.5/css/default/contextmenuRTL.css.uncompressed.css
     -   WebDAV/themes/Portal 8.5/menuDefinitions/templates/simpleMenuTemplate.html
-3.  Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate Cache** to invalidate the theme cache. You must invalidate the cache so that your profile and module changes are picked up by the Portal server. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../dev-theme/themeopt_an_util.md#).
+3.  Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate Cache** to invalidate the theme cache. You must invalidate the cache so that your profile and module changes are picked up by the Portal server. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../../../../../build_sites/themes_skins/the_module_framework/themeopt_analyzer/utilities/index.md).
 
 
 

@@ -26,5 +26,4 @@ To avoid transitions that can accidentally start or end a screen flow, dialog mo
 
 ```
 
-**Parent topic:**[Transitions](../screenflow/transitions.md)
 

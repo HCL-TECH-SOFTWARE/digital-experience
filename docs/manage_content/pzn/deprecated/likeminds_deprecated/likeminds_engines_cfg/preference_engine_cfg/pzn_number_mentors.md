@@ -1,4 +1,4 @@
-# Number of mentors to use \| LikeMinds engine
+# Number of mentors to use | LikeMinds engine
 
 Learn how to set numbers of mentors to a given user in your LikeMinds Preference Engine.
 

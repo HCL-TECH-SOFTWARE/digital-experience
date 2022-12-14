@@ -72,7 +72,7 @@ As an owner of an HCL Connections community, you can define the set of widgets t
 The social rendering feature in HCL Digital Experience 8.5 is implemented as an Digital Data Connector \(DDC\) for HCL Portal plug-in.
 --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Digital Data Connector profiles for social rendering](../social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/index.md)
     - [Digital Data Connector \(DDC\) for HCL Portal](../../extend_dx/ddc/index.md)
 

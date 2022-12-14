@@ -27,7 +27,7 @@ The clean-outbound-http-connection-config configuration task clears the complete
 
 
 ???+ info "Related information" 
-    - [Preparing your system environment and the prerequisites for Integrator for SAP](../admin-system/sap_int_prep.md)
+    - [Preparing your system environment and the prerequisites for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_prep.html)
     - [Migration](../../../../outbound_http_connection/outbound_http_migrate.md)
     - [Changing from Ajax proxy to outbound HTTP connection](../../../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_enable_outboundhttp.md)
 

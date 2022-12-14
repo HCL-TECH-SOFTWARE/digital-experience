@@ -23,9 +23,9 @@ Use profiles to load only the modules that are required for a page. If a portlet
 
 Skins include more capability and can be used to visually indicate portlets on a page. However, depending on your website design that might not be wanted. The skin that is immediately available and active is a hidden skin. On the rendered website, the skin is not visible. However, the hidden skin is visible when Edit Mode is on. The outline of each portlet helps the author identify the portlets on the page. The skin also includes capability for inline editing.
 
-<!---
+
 -   **[JavaScript libraries](site_jslib.md)**  
-HCL includes JavaScript libraries to support various features. --->
+HCL includes JavaScript libraries to support various features. 
 
 ???+ info "Related information"
     - [Included profiles](../../../themes_skins/the_module_framework/specify_profiles/themeopt_mod_oob_profile.md)

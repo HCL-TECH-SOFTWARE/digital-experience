@@ -10,24 +10,22 @@ If you upgrade your Portal from a previous version to HCL Digital Experience 8.5
 
 -   **Migration of customized global configuration settings:**
 
-    In previous Portal versions, custom global proxy configuration settings were in the WP Configuration Service Resource Environment Provider \(REP\) property named proxy.config.file. The outbound HTTP connections infrastructure migrates these custom global configuration settings when the Portal Version 8.5 outbound HTTP connection service is accessed for the first time after the portal upgrade. Custom global configuration settings are updated into the global configuration profile.
+    In previous Portal versions, custom global proxy configuration settings were in the WP Configuration Service Resource Environment Provider (REP) property named proxy.config.file. The outbound HTTP connections infrastructure migrates these custom global configuration settings when the Portal Version 8.5 outbound HTTP connection service is accessed for the first time after the portal upgrade. Custom global configuration settings are updated into the global configuration profile.
 
 -   **Migration of application-specific proxy configurations**
 
     Application-specific configurations are imported into the outbound HTTP connection configuration when the web module for the application is deployed. The deployment program scans for the file /WEB-INF/proxy-config.xml. If this file exists, the migration program creates a scoped configuration profile that relates to the web module that is created.
 
 
-**Important:** In previous Portal versions, the proxy-config.xml file held the configuration of the Ajax proxy. Changes that you make to this file became effective when you restarted the web module. In contrast, the outbound HTTP connection infrastructure makes only the necessary updates to the proxy-config.xml file. Changes to this file do not become effective until one of the following events occur:
+!!!important
+    In previous Portal versions, the proxy-config.xml file held the configuration of the Ajax proxy. Changes that you make to this file became effective when you restarted the web module. In contrast, the outbound HTTP connection infrastructure makes only the necessary updates to the proxy-config.xml file. Changes to this file do not become effective until one of the following events occur:
 
 -   For global or customized global configuration settings: The outbound HTTP connection service is started for the first time after the portal upgrade.
 -   For application-specific proxy configurations: The web module that contains the proxy-config.xml is deployed.
 -   One of the portal configuration tasks `create-outbound-http-connection-config` or `update-outbound-http-connection-config` is started.
 
 
-**Related information**  
-
-
-[Outbound HTTP connection](../dev-portlet/outbound_http.md)
-
-[Configuring outbound HTTP connections by using configuration tasks](../dev-portlet/outbhttp_cfg_tasks.md)
+???+ info "Related information" 
+    -   [Outbound HTTP connection](../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/index.md)
+    -   [Configuring outbound HTTP connections by using configuration tasks](../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/cfg_outbound_http_using_cfgtsk/index.md)
 

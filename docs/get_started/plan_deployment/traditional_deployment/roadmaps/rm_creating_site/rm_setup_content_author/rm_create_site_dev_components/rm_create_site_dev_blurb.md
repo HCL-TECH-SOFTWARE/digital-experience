@@ -6,12 +6,12 @@ This roadmap describes how to generate the promotional text page component of th
 
 You are a developer on the technical team that is tasked with creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of generating the promotional text page component. The promotional text component is used for short summaries about a web document.
 
-![HTML prototype of the home page with two promotional text page components highlighted. Content authors customize the promotional text page component after they add it to a page. So the same promotional text page component can be added multiple times to show different text - even on the same page!](../images/promotional.jpg)
+![HTML prototype of the home page with two promotional text page components highlighted. Content authors customize the promotional text page component after they add it to a page. So the same promotional text page component can be added multiple times to show different text - even on the same page!](../_img/promotional.jpeg)
 
 
 # Creating your promotional text page component
 
-Ensure that your design library exists, for example, Greenwheels Design. If the library does not exist, more topic information about creating a design library can be found in our product base documentation [here](../welcome/wp_welcome.html).
+Ensure that your design library exists, for example, Greenwheels Design. If the library does not exist, more topic information about creating a design library can be found in our product base documentation.
 
 1.  Click the **Applications menu** icon. Then, click **Content** \> **Web Content Authoring**.
 
@@ -31,7 +31,7 @@ Ensure that your design library exists, for example, Greenwheels Design. If the 
 
 4.  Click the following link in the **Information** dialog box to customize the page component:
 
-    **your\_design\_library** \> **Authoring Templates** \> **your\_page\_component**. For example, click **Greenwheels Design** \> **Authoring Templates** \> **Promotional Text**.
+    **your_design_library** \> **Authoring Templates** \> **your_page_component**. For example, click **Greenwheels Design** \> **Authoring Templates** \> **Promotional Text**.
 
     **Note:** If you close the **Information** dialog box, you can follow the path in your design library.
 
@@ -47,7 +47,7 @@ Ensure that your design library exists, for example, Greenwheels Design. If the 
 
     2.  Enter a name for your element.
 
-        For example, type promotional\_text.
+        For example, type promotional_text.
 
     3.  Click **Add**.
 
@@ -65,7 +65,7 @@ Ensure that your design library exists, for example, Greenwheels Design. If the 
 
 13. Click the following link to customize the page component:
 
-    **your\_design\_library** \> **Presentation Templates** \> **your\_page\_component**. For example, click **Greenwheels Design** \> **Presentation Templates** \> **Promotional Text**.
+    **your_design_library** \> **Presentation Templates** \> **your_page_component**. For example, click **Greenwheels Design** \> **Presentation Templates** \> **Promotional Text**.
 
 14. Click **Edit**.
 
@@ -93,13 +93,13 @@ Ensure that your design library exists, for example, Greenwheels Design. If the 
 
 17. If you do not plan to translate your promotional text, delete the localization page component:
 
-    **your\_design\_library** \> **Localizations** \> **your\_page\_component**. For example, click **Greenwheels Design** \> **Localizations** \> **Promotional Text**.
+    **your_design_library** \> **Localizations** \> **your_page_component**. For example, click **Greenwheels Design** \> **Localizations** \> **Promotional Text**.
 
     If you plan to translate your promotional text, you can add the translations to the page component.
 
 18. In this simple Greenwheels example, you can delete styles page component:
 
-    **your\_design\_library** \> **Components** \> **your\_page\_component** \> **Styles**. For example, click **Greenwheels Design** \> **Components** \> **Promotional Text** \> **Styles**.
+    **your_design_library** \> **Components** \> **your_page_component** \> **Styles**. For example, click **Greenwheels Design** \> **Components** \> **Promotional Text** \> **Styles**.
 
 19. Click **Save and Close**.
 

@@ -66,7 +66,8 @@ The Navigational State SPI offers the following accessor factories, each coverin
 
     The LocaleAccessorFactory provides accessors to read and write locale information. The LocaleAccessorController can be used to set a special locale into the navigational state and thus into a URL.
 
-    **Note:** A locale that is retrieved from such a URL takes precedence over user preferred locales or locales that are defined on your browser.
+    !!! note
+        A locale that is retrieved from such a URL takes precedence over user preferred locales or locales that are defined on your browser.
 
 -   **ExpansionStatesAccessorFactory**
 
@@ -84,7 +85,8 @@ The Navigational State SPI offers the following accessor factories, each coverin
 
     The EngineActionAccessorFactory provides controllers that are used to create engine action URLs. The EngineActionAccessorController, in particular, allows you to set action parameters.
 
-    **Note:** The EngineActionAccessorFactory does not offer a read-only accessor because the portal manages the engine actions.
+    !!! note
+        The EngineActionAccessorFactory does not offer a read-only accessor because the portal manages the engine actions.
 
 
 

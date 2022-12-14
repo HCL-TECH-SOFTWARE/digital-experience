@@ -20,5 +20,5 @@ Projects provide the content owner and the content author the flexibility needed
 -   Based on the template used, the project does not publish until all content in the project is ready to be published. The approval and publishing details are controlled by the Trip project template that is managed by the content owner.
 
 <!--
-???+ info "Related information:"
+???+ info "Related information"
     - [Authoring](../panel_help/welcome_authoring.md)-->

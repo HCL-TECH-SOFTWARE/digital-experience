@@ -59,7 +59,7 @@ You must prepare your system before you uninstall your HCL Digital Experience en
 
     -   Complete the following steps to remove the information from the database:
 
-        1.  Stop all the servers. For specific instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../manage/stopstart.md).
+        1.  Stop all the servers. For specific instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../manage/stopstart.md).
         2.  Open a command prompt and change to the wp_profile_root/ConfigEngine directory.
         3.  Run the ./ConfigEngine.sh remove-schema -DWasPassword=password -Drelease.DbPassword=password -Dcustomization.DbPassword=password -Dcommunity.DbPassword=password -Djcr.DbPassword=password -Dfeedback.DbPassword=password -Dlikeminds.DbPassword=password task.
         

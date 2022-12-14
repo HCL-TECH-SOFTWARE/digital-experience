@@ -25,7 +25,8 @@ In addition to continuous content updates, many organizations plan to restructur
 -   Updates that are applicable to both the old and new systems are made on the old syndicator.
 -   Updates that are only applicable to the new system should be made on the new syndicator.
 
-**Note:** Any changes made on your old system will override changes made on your new system. If making updates on both systems, it is recommended that the items updated or added to the new system are unique to that system. If not, changes on your new system can be replaced by changes from the old system.
+!!!note
+    Any changes made on your old system will override changes made on your new system. If making updates on both systems, it is recommended that the items updated or added to the new system are unique to that system. If not, changes on your new system can be replaced by changes from the old system.
 
 ## Recent items and favorites
 

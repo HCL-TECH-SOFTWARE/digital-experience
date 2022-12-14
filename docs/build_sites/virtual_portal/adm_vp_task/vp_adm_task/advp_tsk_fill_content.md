@@ -7,11 +7,11 @@ This default content is determined by the default XML script file for initializi
 For more information, see the *Virtual portals command reference*. For more information, about the XML configuration interface and how to use it, see the *XML configuration interface*.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Preconfiguring the default content for virtual portals](../../vp_mgr_portlet/preconfig_vp/advp_precfg_content.md)
     - [Administering the portal content and resources for virtual portals](../advp_adm_content.md)
     - [Virtual portals command reference](../../vp_reference/vp_command_ref/index.md)
-    - [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+    - [The XML configuration interface](../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
     - [Preconfiguring the sub-administrators for virtual portals](../../vp_mgr_portlet/preconfig_vp/advp_precfg_subadm.md)
     - [Virtual portal roles and their capabilities](../../vp_planning/vp_roles/index.md)
     - [Configuring the sub administrators for virtual portals](../vp_adm_task/advp_tsk_cfg_subadmin.md)

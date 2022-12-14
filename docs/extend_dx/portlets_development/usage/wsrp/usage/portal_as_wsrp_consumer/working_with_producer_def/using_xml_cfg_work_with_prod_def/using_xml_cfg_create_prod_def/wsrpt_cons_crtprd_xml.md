@@ -54,7 +54,7 @@ The following attributes are listed for the sake of completeness only. Do not ch
 |cookiepolicy|One of: none per\_user per\_group undefined|The Producer's cookie policy. The policy and possible values are defined in the WSRP specification.|
 |wsrpversion|V1 \| V2|This attribute indicates the WSRP protocol version that is used for communication between consumer and producer.|
 
--   **[XML samples for creating Producer definitions](../admin-system/wsrpr_cons_crtprd_samp1.md)**  
+-   **[XML samples for creating Producer definitions](wsrpr_cons_crtprd_samp1.md)**  
 You can modify use these XML samples and use them to create Producer definitions,
 
 

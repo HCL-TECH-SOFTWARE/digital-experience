@@ -4,7 +4,7 @@ You can set up single sign-on with MobileFirst so users can share a session betw
 
 Both HCL Portal and MobileFirst® servers must be configured to use the same user registry, LTPA keys, and be set with a specified domain for SSO. If you are using the WebSphere® Application Server, go to the WebSphere Application Server documentation.
 
-For more information about system support requirements, see [System requirements](../overview/inst_req.html).
+For more information about system support requirements, see [System requirements](../../../../../get_started/system_requirements/index.md).
 
 1.  Run the following configEngine tasks. These configEngine tasks are available only on the HCL Portal server. If the MobileFirst server is on WebSphere Application Server, run the following commands from the WebSphere Integrated Solutions Console. You can use steps B and C if MobileFirst is on the same instance as HCL Portal.
 
@@ -394,8 +394,9 @@ For more information about system support requirements, see [System requirements
 
 20. Install the MobileFirst application to your MobileFirst server. Open the MobileFirst console at http://server:port/worklightconsole and upload the MobileFirst application by adding it to the **Deploy application or adapter** field. Your MobileFirst application file can be found in your Eclipse workspace in the bin folder. The MobileFirst application file has the .wlapp extension.
 
+[]()
 
--   **[Setting up single sign-on with MobileFirst](../integrate/wl_sso.md)**  
+-   **[Setting up single sign-on with MobileFirst](wl_sso.md)**  
 You can set up single sign-on with MobileFirst so users can share a session between an HCL Portal and MobileFirst server.
 
 

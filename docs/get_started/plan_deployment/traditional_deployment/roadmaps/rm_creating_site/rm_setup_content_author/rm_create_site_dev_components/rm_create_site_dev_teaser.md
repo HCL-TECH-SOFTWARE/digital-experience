@@ -6,7 +6,7 @@ This roadmap describes how to create the teaser page component of the design fro
 
 You are a developer on the technical team that is tasked with creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of developing the teaser component.
 
-![HTML prototype of the home page with two teaser page components highlighted.](../images/teaser.jpg)
+![HTML prototype of the home page with two teaser page components highlighted.](../../../../../../../images/teaser.jpg)
 
 
 # Creating your teaser page component

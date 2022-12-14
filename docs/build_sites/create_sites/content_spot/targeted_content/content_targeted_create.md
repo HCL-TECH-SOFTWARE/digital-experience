@@ -6,7 +6,7 @@ title: Adding targeted content to a spot
 
 You can add targeted content to a spot to match the best content with the most appropriate segments or audiences. You can also hide the spot for particular user segments.
 
-Before you create **Segments**, ensure that your system administrator has set up the proper access control permissions. Go to the *Access permissions for Business Rules* table in [Access permissions](../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md) for more information.
+Before you create **Segments**, ensure that your system administrator has set up the proper access control permissions. Go to the *Access permissions for Business Rules* table in [Access permissions](../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md) for more information.
 
 To add targeted content, click **Add Content** to select a content item. Then, add segments that can view or not view these content items. All content items that can display in the spot are summarized in the Targeted Content list.
 

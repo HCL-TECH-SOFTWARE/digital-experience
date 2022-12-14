@@ -45,6 +45,6 @@ There are three main types of web content systems:
     -   A combination of the previous three.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [HCL Web Content Manager \(WCM\) environments](../wcm_env/index.md)
 

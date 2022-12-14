@@ -4,7 +4,8 @@ Search Collections use a seedlist framework to crawl and index all of the HCL Co
 
 To configure a search collection, you specify one content source for each HCL Connections seedlist. Each HCL Connections service \(for example, Profiles, Communities, or Blogs\) displays its own seedlist so there is one content source per HCL Connections service.
 
-**Important:** Ensure that these HCL Connections seedlist are available with basic authentication. Depending on your security configuration, basic authentication might be the default or can be accomplished with an additional virtual host in your HTTP Server, by addressing a WebSphere node directly, or by altering Security Access Manager or eTrust SiteMinder configuration to open a basic authentication protected endpoint.
+!!!important
+    Ensure that these HCL Connections seedlist are available with basic authentication. Depending on your security configuration, basic authentication might be the default or can be accomplished with an additional virtual host in your HTTP Server, by addressing a WebSphere node directly, or by altering Security Access Manager or eTrust SiteMinder configuration to open a basic authentication protected endpoint.
 
 1.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration** \> **Manage Search**.
 
@@ -16,7 +17,8 @@ To configure a search collection, you specify one content source for each HCL Co
 
 5.  Click **OK** to create the collection and create the associated folders and files on the file system.
 
-    **Note:** The path must not point to an existing directory.
+    !!!note
+        The path must not point to an existing directory.
 
 6.  Click **Collection** to view the metadata of the collection created.
 
@@ -30,17 +32,17 @@ To configure a search collection, you specify one content source for each HCL Co
 
         A seedlist URL has the form: https://<connection\_server\_name\>:port/<service\_name\>/seedlist/myserver For example: https://connections.ibm.com:9444/activities/seedlist/myserver.
 
-        **Note:** If HCL Connections is configured to use Security Access Manager and SPNEGO security, or just SPNEGO, configure the seedlist URL and host without Security Access Manager, by using IHS host only.
+        !!!note
+            If HCL Connections is configured to use Security Access Manager and SPNEGO security, or just SPNEGO, configure the seedlist URL and host without Security Access Manager, by using IHS host only.
 
     4.  Click the **Security tab** and enter your HCL Connections administrator credentials so that you can access the service seedlist URL, then click the **Create** button.
 
     5.  Click **Create** to create the corresponding Content Source to enable crawling over the specified service.
 
-    6.  Create other HCL Connections services,
+    6.  Create other HCL Connections services, for example, Activities or Blogs, by repeating these steps.
 
-        For example, Activities, or Blogs, by repeating these steps.
-
-        **Note:** You can either select to run the crawler on the complete set or on individual service
+        !!!note
+            You can either select to run the crawler on the complete set or on individual service.
 
 
 

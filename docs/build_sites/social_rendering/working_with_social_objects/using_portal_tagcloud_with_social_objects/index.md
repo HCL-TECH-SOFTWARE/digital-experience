@@ -46,7 +46,7 @@ After you set this configuration, the Tag Cloud portlet communicates with those 
 If you include the HCL Portal Tag Cloud portlet on your social pages, you need to configure it to work with social lists.
 
 -->
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuring the portal Tag Cloud for social rendering](soc_rendr_cfg_tag_cloud.md)
     - [Customizing social list definitions by using inline editing](../../customizing_view_definitions/soc_rendr_cust_socl_list.md)
     - [Configuring the tag cloud](https://help.hcltechsw.com/digital-experience/8.5/panel_help/tag_cloud_cfg.html)

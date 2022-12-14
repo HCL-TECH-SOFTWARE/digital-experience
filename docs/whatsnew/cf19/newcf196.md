@@ -11,14 +11,14 @@ You can access the latest software requirements and updates that support HCL Dig
 !!!note
         For new capabilities that are available for HCL DX on-premise deployments, see [What's new in the CF196](https://help.hcltechsw.com/digital-experience/9.5/overview/new_noncf196.html) topic.
 
-## Design Studio \(Beta\)
+## Design Studio (Beta)
 
 Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites.
 
 !!!note
         Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF196. **It is not yet supported for use in production deployments**.
 
-See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information.
+See the [Design Studio (Beta)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information.
 
 ## Deploy HCL DX CF196 to container platforms using Helm
 
@@ -34,9 +34,9 @@ See the [Docker image deployment using Docker Compose](../../deployment/install/
 
 ## Web Content Manager Multilingual Solution Enhancements
 
-The [HCL Web Content Manager Multilingual Solution](../../manage_content/wcm/mls/index.md) is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF196 release, support is added to import and export multiple libraries to a format supported by a translation service, support a maximum field length, export changed contents from a library, and export to projects. A new option to switch the language in an HCL DX 9.5 mobile view is also available.
+The [HCL Web Content Manager Multilingual Solution](../../manage_content/wcm_authoring/multi_lingual/index.md) is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF196 release, support is added to import and export multiple libraries to a format supported by a translation service, support a maximum field length, export changed contents from a library, and export to projects. A new option to switch the language in an HCL DX 9.5 mobile view is also available.
 
-See the [How to export and import WCM library content using DXClient](../../extend_dx/development_tools/dxclient/usage/dxclient_artifact_types/wcm_mls_export_import.md) and [The Woodburn Studio demo site](../../build_sites/woodburn_studio/index.md) topics for more information.
+See the [How to export and import WCM library content using DXClient](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/wcm_mls_export_import.md) and [The Woodburn Studio demo site](../../build_sites/woodburn_studio/index.md) topics for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
@@ -48,17 +48,17 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../..
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/9.5_express/supportedsoftware.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in new videos and webinars. See the following HCL Digital Experience Help Center topics:
 
 -   [Configuring user access permissions to Digital Asset Management assets](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md)
--   [Deep dive: Progressive Web Applications with HCL DX 9.5](../../build_sites/mobile/usage/progressive_web_applications.md)
--   [Content Security Policy with HCL DX 9.5](../../deployment/manage/security/content_sec_policy/index.md)
+-   [Deep dive: Progressive Web Applications with HCL DX 9.5](../../build_sites/mobile/progressive_web_applications.md)
+-   [Content Security Policy with HCL DX 9.5](../../deployment/manage/security/information/integrity/content_sec_policy/index.md)
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [How to export and import WCM library content using DXClient](../wcm/wcm_mls_export_import.md)
     - [Configuring user access permissions to Digital Asset Management assets](../digital_asset_mgmt/manage_collections.md)
     - [Deep dive: Progressive Web Applications with HCL DX 9.5](../install/progressive_web_applications.md)

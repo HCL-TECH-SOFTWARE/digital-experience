@@ -68,7 +68,7 @@ for your environment.
 3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
     !!!note
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md).
 
 4.  Select **Set Up a Stand-alone Server > Database Transfer**.
 
@@ -109,7 +109,7 @@ After you install your web experience, a default file-based repository is your a
 3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
     !!!note
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md).
 
 4.  Select **Set Up a Stand-alone Server> Enable Federated Security**.
 

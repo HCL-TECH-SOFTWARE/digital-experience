@@ -40,7 +40,7 @@ As the target rendering portal does not include HCL Web Content Manager, you mus
 
 The target rendering portal that does not include HCL Web Content Manager and still uses the Portlet API Remote Web Content Viewer becomes the WSRP consumer. It consumes the JSR 286 Web Content Viewer from the target authoring portal that includes HCL Web Content Manager and contains the web content.
 
-1.  To configure remote rendering, follow the instructions at [Enabling remote rendering with WSRP and the Web Content Viewer](../wcm/wcm_config_wcmviewer_wsrp.md).
+1.  To configure remote rendering, follow the instructions at [Enabling remote rendering with WSRP and the Web Content Viewer](../../../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/enable_remote_render_wsrp/index.md).
 
 2.  On the target rendering portal that acts as WSRP consumer:
 
@@ -50,7 +50,8 @@ The target rendering portal that does not include HCL Web Content Manager and st
 
     3.  After replacing all instances of the Portlet API Remote Web Content Viewer portlet and of its portlet clones, uninstall the ilwwcm-remoterendering-portlet.war web module.
 
-    **Note:** This option has limitations that do not exist when rendering web content locally. For more information, see *Performing remote rendering with WSRP and the web content viewer*.
+    !!!note
+        This option has limitations that do not exist when rendering web content locally. For more information, see *Performing remote rendering with WSRP and the web content viewer*.
 
 
 # Options 2 and 3: Local web content rendering with JSR 286 Web Content Viewer
@@ -59,7 +60,7 @@ The source rendering portal of the migration does not contain the web content it
 
 If you choose this option, you will change the web content delivery model from remote rendering to local rendering. After you make the web content libraries available on the target rendering portal, you can use the JSR 286 Web Content Viewer portlet for local rendering.
 
-1.  To make the web content available on the target rendering portal, syndicate the web content libraries from the target authoring portal to the target rendering portal. For more information, see [Syndication](../wcm/wcm_administering.md).
+1.  To make the web content available on the target rendering portal, syndicate the web content libraries from the target authoring portal to the target rendering portal. For more information, see [Syndication](../../../../../../../manage_content/wcm_delivery/syndication/index.md).
 
 2.  On the target rendering portal:
 
@@ -68,9 +69,11 @@ If you choose this option, you will change the web content delivery model from r
         1.  Click the **Administration menu** icon. Then, click **Portlet Management** \> **Web Modules**.
         2.  Search for the web module with the file name ilwwcm-localrenderingportlet-jsr.war.
         3.  If the search result is empty, install the JSR 286 Web Content Viewer portlet from PortalServer\_root/pzn.ext/portlet.localrendering.jsr/localrendering.war/installableApps/ilwwcm-localrenderingportlet-jsr.war.
+        
     2.  To convert the instances of the Portlet API Remote Web Content Viewer portlet to the JSR 286 Web Content Viewer portlet, follow the steps given at [Converting a Portal API web content viewer to the JSR 286 API](migrt_ptlt_api_wcm.md).
 
-        **Important:** If you use clones of the Portlet API Remote Web Content Viewer portlet, you also need to convert their instances.
+        !!!important
+            If you use clones of the Portlet API Remote Web Content Viewer portlet, you also need to convert their instances.
 
     3.  After replacing all instances of the Portlet API Web Content Viewer portlet and of its portlet clones, uninstall the ilwwcm-localrendering-portlet.war web module.
 

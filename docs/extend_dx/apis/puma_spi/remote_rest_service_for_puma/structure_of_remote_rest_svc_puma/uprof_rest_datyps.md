@@ -33,11 +33,10 @@ You can use the following of data types with the PUMA REST API:
     A hex encoded binary string.
 
 
-**Note:** The Puma REST API converts the preceding data type names to conform with the XML Schema Definition (XSD) language.
+!!! note
+    The Puma REST API converts the preceding data type names to conform with the XML Schema Definition (XSD) language.
 
 
-**Related information**  
-
-
-[XMLSchema-datatypes](https://www.w3.org/2001/XMLSchema-datatypes)
+???+ info "Related information"
+    - [XMLSchema-datatypes](https://www.w3.org/2001/XMLSchema-datatypes)
 

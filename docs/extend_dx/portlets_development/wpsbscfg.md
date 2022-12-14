@@ -259,11 +259,11 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
         
         ```
 
-    After the WAR file is created, it can be installed to HCL DX as described in [Portal administration portlets](../../extend_dx/development_tools/portal_admin_tools/portal_admin_portlets/index.md).
+    After the WAR file is created, it can be installed to HCL DX as described in [Portal administration portlets](../../deployment/manage//portal_admin_tools/portal_admin_portlets/index.md).
 
 -   **Preparing the portlet application for installation**
 
-    To facilitate deployment of portlet applications and complex portlets, you can provide a portlet configuration file that can be invoked by the XML configuration interface (XMLAccess). The XML configuration interface allows the portlet developer to specify places, pages, themes, skins, supported markups and clients, and other settings for a portlet application. This is especially useful for portlets that use messaging because these portlets must be placed on the same page. For more information, see [The XML configuration interface](../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md).
+    To facilitate deployment of portlet applications and complex portlets, you can provide a portlet configuration file that can be invoked by the XML configuration interface (XMLAccess). The XML configuration interface allows the portlet developer to specify places, pages, themes, skins, supported markups and clients, and other settings for a portlet application. This is especially useful for portlets that use messaging because these portlets must be placed on the same page. For more information, see [The XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/index.md).
 
     When you construct XMLAccess scripts for use in installing standard portlets, use the following values:
 

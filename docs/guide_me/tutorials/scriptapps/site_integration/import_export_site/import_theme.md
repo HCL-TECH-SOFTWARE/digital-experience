@@ -74,6 +74,6 @@
 
 !!!tip "See more detailed information [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/themes.html)."
 
-## Related Pages
-   - [Exporting your theme from your system](export_theme.md)
-   - [Manually exporting your Theme via Practitioner Studio](manual_export_theme.md)
+???+ info "Related information"
+      - [Exporting your theme from your system](export_theme.md)
+      - [Manually exporting your Theme via Practitioner Studio](manual_export_theme.md)

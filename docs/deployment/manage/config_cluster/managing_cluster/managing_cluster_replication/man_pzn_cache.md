@@ -16,6 +16,7 @@ Enable the Personalization cache replication if you want to propagate invalidati
     -   **ruleMappings**
     -   **rules**
     -   **uuidPathConversions**
+    
 4.  Click the **Enable cache replication** check box to select it.
 
 5.  Ensure that **Replication type** is set to Not Shared.

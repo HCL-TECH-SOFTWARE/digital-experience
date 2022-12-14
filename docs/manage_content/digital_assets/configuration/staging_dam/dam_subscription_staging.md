@@ -13,6 +13,22 @@ The DAM staging framework allows you to stage your DAM content from an authoring
     !!! note
         A subscriber must be registered with a publisher. Access rights from DAM staging assets are not transferred for subscribers that do not share the same Lightweight Directory Access Protocol \(LDAP\).
 
+### Configure LDAP
+
+**Both environments should share the same LDAP**: <br>
+It is recommended that both environments used for DAM staging share the same LDAP. This is to address the current limitation of the dxclient DAM Staging.
+It should still work with the environment with a different LDAP. However, every value should be the same between the LDAPs (for example, DNs, username, passwords). Make sure that both LDAPs have matching values.
+
+### Credentials used during staging
+
+**Registration and file transfer:** <br>
+Currently, the user transfers files between the primary server and the subscriber in the DX deployment. The secret needs to be the primary portal admin user used for deployment of the DX environment. The user in the secret on the transferring server and the subscriber must be the same.
+The credentials used in the registration are only used for authentication and authorization during the DXClient registration steps. They are not used for transferring files during staging.
+
+**To update new secret for staging**:<br>
+There is only one secret. The secret is used to store the portal admin credentials used by the DX in its internal process. You cannot add a separate secret for staging. The values can be updated through helm update command. However, when you update the credentials in secret, you also change the portal primary admin. The new user specified in secret will be the new primary portal admin. For more information, see [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).
+
+
 ![Use separate Digital Asset Management and staging between HCL DX environments](../../../../images/new_dam_staging_options.png)
 
 ## Manage DAM staging
@@ -37,61 +53,62 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 
 -   **Command options**
 
-    Use this attribute to specify the protocol with which to connect to the DX server (default: "")
+    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
 
     ```
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the host name of the DX server (default: "")
+    Use this attribute to specify the host name of the DX server of the publisher (default: "")
 
     ```
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -dxPort <value>
     ```
 
-    Use this attribute to specify the user name that is required for authenticating with the DX server (default: "")
+    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
 
     ```
     -dxUsername <value> 
     ```
 
-    Use this attribute to specify the password that is required for authenticating with the DX Core (default: "")
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/>
+    (default: "")
 
     ```
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the port number of the DAM server (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -damAPIPort <value>
     ```
 
-    Use this attribute to specify the port number of the DX Core API server (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -ringAPIVersion <value>
     ```
 
-    Use this attribute to specify the host name of the target environment:
+    Use this attribute to specify the host name of the target environment of the subscriber:
 
     ```
     -targetHostname <value>
@@ -150,67 +167,68 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
 
 -   **Command options**
 
-    Use this attribute to specify the protocol with which to connect to the DX server (default: "")
+    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
 
     ```
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the host name of the DX server (default: "")
+    Use this attribute to specify the host name of the DX server of the publisher
+    (default: "")
 
     ```
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -dxPort <value>
     ```
 
-    Use this attribute to specify the user name that is required for authenticating with the DX server (default: "")
+    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
 
     ```
     -dxUsername <value> 
     ```
 
-    Use this attribute to specify the password that is required for authenticating with the DX Core (default: "")
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: "")
 
     ```
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the port number of the DAM server (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -damAPIPort <value>
     ```
 
-    Use this attribute to specify the port number of the DX Core API server (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -ringAPIVersion <value>
     ```
 
-    Use this attribute to specify the host name of the target environment:
+    Use this attribute to specify the host name of the target environment of the subscriber:
 
     ```
     -targetHostname <value>
     ```
 
-    Use this attribute to specify the subscriber ID of the target environment:
+    Use this attribute to specify the subscriber ID of the target environment of the subscriber:
 
     ```
     -subscriberId <value>
@@ -272,55 +290,58 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
 
 -   **Command options**
 
-    Use this attribute to specify the protocol with which to connect to the DX server (default: "")
+    Use this attribute to specify the protocol with which to connect to the DX server  of the publisher (default: "")
 
     ```
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the host name of the DX server (default: "")
+    Use this attribute to specify the host name of the DX server of the publisher
+     (default: "")
 
     ```
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -dxPort <value>
     ```
 
-    Use this attribute to specify the user name that is required for authenticating with the DX server (default: "")
+    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
 
     ```
     -dxUsername <value> 
     ```
 
-    Use this attribute to specify the password that is required for authenticating with the DX Core (default: "")
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/>
+    (default: "")
 
     ```
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the port number of the DAM server (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -damAPIPort <value>
     ```
 
-    Use this attribute to specify the port number of the DX Core API server (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher 
+    (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
 
     ```
     -ringAPIVersion <value>

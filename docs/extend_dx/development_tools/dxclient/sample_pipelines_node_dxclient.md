@@ -40,13 +40,11 @@ This topic describes how to install the DXClient tool in a pipeline, by providin
 ![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file2.png)
 ![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file3.png)
 
-<!-- ???Info "Related information:"
 
-[How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
 
-[Sample Pipelines for the DXClient Docker image file](../containerization/sample_pipelines_docker_dxclient.md)
-
-[Sample Pipelines for the DXClient node package file](../containerization/sample_pipelines_node_dxclient.md)
-
-[Sample Pipelines for use with HCL DXClient and Automation servers](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md) -->
+???+ info "Related information" 
+    - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
+    - [Sample Pipelines for the DXClient Docker image file](sample_pipelines_docker_dxclient.md)
+    - [Sample Pipelines for the DXClient node package file](sample_pipelines_node_dxclient.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
 

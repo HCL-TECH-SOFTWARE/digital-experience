@@ -63,5 +63,5 @@ Install and configure the web server plug-in. The IBM WebSphere Application Serv
 
     8.  Stop and restart the **wp.vwat.servlet.ear** application.
 
-11. If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, refer to [Providing short vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_short.md).
+11. If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, refer to [Providing short vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md).
 

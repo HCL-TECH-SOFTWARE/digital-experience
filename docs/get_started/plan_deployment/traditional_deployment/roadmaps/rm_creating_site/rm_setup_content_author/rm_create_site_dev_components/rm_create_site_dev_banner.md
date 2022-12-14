@@ -6,12 +6,12 @@ This roadmap highlights how to create the banner page component of the design fr
 
 You are a developer on the technical team that is tasked with creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of developing the banner. You might refer to the banner as a hero image that spans full width across the one-column layout.
 
-![HTML prototype of the home page with the banner page component highlighted. Content authors customize the image and text in the banner page component after they add it to a page, so the same banner page component can be used in all of the pages of a website.](../images/banner.jpg)
+![HTML prototype of the home page with the banner page component highlighted. Content authors customize the image and text in the banner page component after they add it to a page, so the same banner page component can be used in all of the pages of a website.](../_img/banner.jpg)
 
 
 # Creating your banner page component
 
-Ensure that your design library exists, for example, Greenwheels Design. If the library does not exist, more topic information about creating a design library can be found in our product base documentation [here](../welcome/wp_welcome.html).
+Ensure that your design library exists, for example, Greenwheels Design. If the library does not exist, more topic information about creating a design library can be found in our product base documentation.
 
 1.  Click the **Applications menu** icon. Then, click **Content** \> **Web Content Authoring**.
 

@@ -84,11 +84,13 @@ You can add vertical cluster members to your dynamic cluster. The members share 
         -   The Node 1/Server 1 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp_profile/jcr/binary
         -   The Node 1/Server 2 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp_profile2/jcr/binary
         -   The Node 2/Server 1 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp_profile/jcr/binary
-        -   The Node 2/Server 2 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp_profile2/jcr/binary
+        -   The Node 2/Server 2 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp_profile2/jcr/binary    
+
         The following values are not supported:
 
         -   The Node 1/Server 1 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp_profile/jcr/binary
-        -   The Node 1/Server 2 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp_profile/jcr/binary
+        -   The Node 1/Server 2 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp_profile/jcr/binary    
+
         If the value is not unique, complete the following steps:
 
         1.  Click **jcr.binaryValueFileDir**.

@@ -1,0 +1,7 @@
+title: Information
+nav:
+    - index.md
+    - Confidentiality: confidentiality
+    - Integrity: integrity
+    - Availability: availability
+    

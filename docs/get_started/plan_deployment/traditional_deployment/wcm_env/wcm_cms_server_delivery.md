@@ -36,6 +36,6 @@ In a remote portlet delivery environment, content is syndicated from the authori
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [HCL Web Content Manager \(WCM\) environments](../wcm_env/index.md)
 

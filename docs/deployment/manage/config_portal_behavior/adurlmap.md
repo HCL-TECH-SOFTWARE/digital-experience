@@ -12,8 +12,8 @@ Depending on your requirements, you can use vanity URLs, or friendly URLs:
 You can create both vanity URLs and friendly URLs for the same portal page.
 
 
-**Related information**  
-[Vanity URLs](../../../manage_content/wcm/wcm_content_delivery/vanity_url/index.md)<br>
-[Using friendly URLs](../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)<br>
-[Human readable URL mappings for virtual portals](../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
+???+ info "Related information"  
+    -   [Vanity URLs](../../../manage_content/wcm_delivery/vanity_url/index.md)
+    -   [Using friendly URLs](../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
+    -   [Human readable URL mappings for virtual portals](../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
 

@@ -32,7 +32,7 @@ Front-end developers create custom input forms to capture context-specific infor
  This specific provider surfaces tasks for WebSphere Lombardi Edition in the Unified Task List portlet.
 -   **[Configuring an IBM Business Process Manager task provider instance](utl_cfg_bpm_tsk_prvdr.md)**  
 This task provider retrieves tasks from IBM Business Process Manager and surfaces them in the Unified Task List portlet.
--   **[Configuring a Forms Experience Builder task provider instance](utl_configuring_form_experience_builder_task_provider.md)**  
+-   **[Configuring a Forms Experience Builder task provider instance](../creating_task_provider_instance/cfg_feb_task_provider_instance/index.md)**  
 The task provider retrieves Forms applications from Forms Experience Builder and surfaces them in the Unified Task List portlet.
 -   **[Delete, enable, or disable a task provider instance](utl_del_task_provider_inst.md)**  
 Use the Unified Task List Portlet to manage task provider instances.

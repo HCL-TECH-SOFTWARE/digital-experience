@@ -23,7 +23,7 @@ The Manage Virtual Portals portlet enables you to deploy additional portals on a
 The virtual portals reference provides information about using commands for configuring virtual portals, usage hints and tips, and known limitations.
 
 
-???+ info "Related information:"  
+???+ info "Related information"  
     - [Migration: Virtual portals](../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_vp.md)
 
 <!--
