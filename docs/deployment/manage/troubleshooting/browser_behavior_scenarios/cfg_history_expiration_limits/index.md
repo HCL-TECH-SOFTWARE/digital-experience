@@ -9,9 +9,9 @@ HCL Portal provides two different approaches for controlling the page history in
 1.  The **history manager** allows you to control the number of previously visited pages for which the portal tracks the navigational state.
 2.  The history expiration limit for swapped render parameters
 
--   **[History manager for pages](../admin-system/historylimit_cfg_histmgr.md)**  
+-   **[History manager for pages](historylimit_cfg_histmgr.md)**  
 The history manager allows you to control for how many visited pages navigational state you want to tracked. In other words it controls the maximum number of pages whose state is contained in the portal URLs. The visited pages are tracked within the navigational state in a LRU algorithm based way.
--   **[History expiration limit for render parameters](../admin-system/historylimit_scn.md)**  
+-   **[History expiration limit for render parameters](historylimit_scn.md)**  
 You can configure the portal so that it discards the render parameters for pages that the user has not visited recently within the same session. The purpose of this setting is to limit the URL length. This might be of benefit for the performance of your portal. The portal discards the navigational state of the portlet application of standard API portlets on pages that are too far back in the history.
 
 

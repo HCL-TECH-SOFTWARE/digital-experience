@@ -6,28 +6,8 @@ The following table describes the provided WSRP application policy sets and the 
 
 |WSRP application policy sets|WSRP client policy set bindings|
 |----------------------------|-------------------------------|
-|-   **LTPA-based message authentication policy set**
-
-This policy set defines LTPA token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.
-
-
-|-   **Username and LTPA-based message authentication client binding**
-
-You must use this client policy set binding with each of the two WSRP policy sets. It defines the corresponding client binding.
-
-
-|
-|-   **Username-based message authentication policy set**
-
-This policy set defines Username token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.
-
-
-|-   **Username and LTPA-based message authentication client binding**
-
-You must use this client policy set binding with each of the two WSRP policy sets. It defines the corresponding client binding.
-
-
-|
+|-   **LTPA-based message authentication policy set** <br>This policy set defines LTPA token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.|-   **Username and LTPA-based message authentication client binding** <br>You must use this client policy set binding with each of the two WSRP policy sets. It defines the corresponding client binding.|
+|-   **Username-based message authentication policy set** <br>This policy set defines Username token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.|-   **Username and LTPA-based message authentication client binding**<br>You must use this client policy set binding with each of the two WSRP policy sets. It defines the corresponding client binding.|
 
 The WSRP application policy sets and client policy set bindings are contained in compressed format in the directory PortalServer/doc/policy-sets-samples of the portal installation.
 

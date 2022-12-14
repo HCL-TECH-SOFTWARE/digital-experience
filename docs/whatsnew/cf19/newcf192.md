@@ -18,7 +18,7 @@ See the [HCL Digital Experience 9.5 Docker and Container Initialization Performa
 
 Beginning with the HCL Digital Experience 9.5 Container Update CF192 release, transaction logging for the DX Docker Core image is updated to improve performance.
 
-See the [Logging and tracing for Containers and new services Help Center](../../deployment/manage/troubleshooting/logging_and_tracing/logging_tracing_containers_and_new_services.md)topic for more information.
+See the [Logging and tracing for Containers and new services Help Center](../../deployment/manage/troubleshooting/logging_and_tracing/logging_tracing_containers_and_new_services.md) topic for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
@@ -30,13 +30,13 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../..
 
 New Content Composer features are added with HCL Digital Experience Container Update CF192, including a new Version Comparison interface and capabilities to View and Filter Workflow comments, and more.
 
-See the [HCL Content Composer](../../manage_content/content_composer/index.md) topic for additional information.
+See the [HCL Content Composer](../../manage_content/wcm_authoring/content_composer/index.md) topic for additional information.
 
 ## New Digital Asset Management Features
 
 New Digital Asset Management Features are added with HCL Digital Experience Container Update CF192, including enhanced crop functionality, Kaltura video player support, thumbnail preview support, asset size filter, Renditions and Versioning support, and more.
 
-See the [HCL Digital Asset Management Help Center](../../manage_content/digital_assets/index.md topic for additional information.
+See the [HCL Digital Asset Management Help Center](../../manage_content/digital_assets/index.md) topic for additional information.
 
 ## HCL Digital Experience 9.5 Integration with HCL Unica Discover
 
@@ -48,28 +48,28 @@ See the [Integrate HCL Unica Discover with HCL Digital Experience](../../build_s
 
 The Content-Security-Policy header is used by modern browsers to enhance the security of HCL Digital Experience site documents or web pages by allowing HCL Digital Experience administrators or developers declare which dynamic resources are allowed to load. With HCL Digital Experience Container Update CF192 and later releases, developers can apply platform support and guidance to update their DX sites to validate trusted sources before rendering pages to end users.
 
-See the [Content Security Policy Help Center](../../deployment/manage/security/content_sec_policy/index.md) topic for more information.
+See the [Content Security Policy Help Center](../../deployment/manage/security/information/integrity/content_sec_policy/index.md) topic for more information.
 
 ## New Digital Experience REST APIs
 
 New HCL DX APIs are introduced with the HCL DX CF192 Container Update release:
 
--   [Using the WCM Add Comment API](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_workflow.md)
--   [Web Content Manager Find Rendering and Script Portlet References](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_REST_web_content_manager_find_rendering_script_portlet_references.md)
--   [Web Content Manager Access Control Filter REST API](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_REST_web_content_manager_access_control_filter.html){:target="_blank"}<!-- (../wcm/wcm_REST_web_content_manager_access_control_filter.md) -->
--   [Clear Theme Cache API](../../build_sites/themes_skins/troubleshooting/themeopt_analyzer/utilities/clear_themes_caches.md)
--   [Work with Deleted Web Content Items](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_delete.md    )
--   [Web Content Manager Multilingual Solution APIs](../../manage_content/wcm/usage/wcm_dev/wcm_dev_api/wcm_mls_api.md)
+-   [Using the WCM Add Comment API](../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_workflow.md#using-the-wcm-add-comment-api)
+-   [Web Content Manager Find Rendering and Script Portlet References](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_rendering_script_portlet_references.md)
+-   [Web Content Manager Access Control Filter REST API](../../manage_content/wcm_development/wcm_rest/index.md){:target="_blank"}<!-- (../wcm/wcm_REST_web_content_manager_access_control_filter.md) -->
+-   [Clear Theme Cache API](../../build_sites/themes_skins/the_module_framework/themeopt_analyzer/utilities/clear_themes_caches.md)
+-   [Work with Deleted Web Content Items](../../manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/index.md)
+-   [Web Content Manager Multilingual Solution APIs](../../manage_content/wcm_development/wcm_dev_api/wcm_mls_api.md)
 
 ## New HCL Digital Experience ‘How To’ Videos
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in new videos and webinars. See the following HCL Digital Experience Help Center topics:
 
 -   [HCL Digital Experience 9.5 Container Deployment](../../deployment/install/container/helm_deployment/overview.md)
--   [Using the dxctl tool to deploy Digital Experience 9.5 on Red Hat OpenShift](../../deployment/manage/container_configuration/operator-based/dxtools_dxctl.md)
--   [Create a WAR-based theme copy on HCL Digital Experience 9.5](../../build_sites/themes_skins/usage//customizing_theme/copying_theme/manual_copy_theme/creating_war_theme_copy/themeopt_themedev_manual_warbased.md)
+-   [Using the dxctl tool to deploy Digital Experience 9.5 on Red Hat OpenShift](https://opensource.hcltechsw.com/digital-experience/cf202/platform/kubernetes/operator-based/dxtools_dxctl/)
+-   [Create a WAR-based theme copy on HCL Digital Experience 9.5](../../build_sites/themes_skins/customizing_theme/copying_theme/manual_copy_theme/creating_war_theme_copy/index.md)
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [HCL Digital Experience 9.5 Docker and Container Initialization Performance Help Center](../containerization/container_init_performance.md)
     - [Logging and tracing for Containers and new services Help Center](../trouble/logging_tracing_containers_and_new_services.md)
     - [DXClient and DXConnect tooling supporting CICD release processes](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)

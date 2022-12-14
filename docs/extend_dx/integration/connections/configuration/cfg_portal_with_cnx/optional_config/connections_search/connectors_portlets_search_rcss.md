@@ -1,6 +1,6 @@
-# Configuring search with Remote Content Server Search Service Type \(RCSS\)
+# Configuring search with Remote Content Server Search Service Type (RCSS)
 
-Use the Remote Content Server Search Service Type \(RCSS\) to implement live search for HCL Connections content from an HCL Portal application.
+Use the Remote Content Server Search Service Type (RCSS) to implement live search for HCL Connections content from an HCL Portal application.
 
 Consider these issues before you configure RCSS:
 
@@ -33,8 +33,8 @@ Search Service is a live search and uses REST to search on a target information 
     |LocationParam|scope|
     |RequestLocationType|/atom/scopes|
     |RestServiceHost|connections.host.com|
-    |RestServiceUnSecurePort|9081 **Note:** Use the direct server port for the Connections server, not the IHS port.|
-    |RestServiceSecurePort|9444 **Note:** Use the direct server port for the Connections server, not the IHS port.|
+    |RestServiceUnSecurePort|9081<br>**Note:** Use the direct server port for the Connections server, not the IHS port.|
+    |RestServiceSecurePort|9444<br>**Note:** Use the direct server port for the Connections server, not the IHS port.|
     |UseHTTPOutbound|Takes a value of true or false (default).  Setting this parameter to true results in the RCSS code to use the HTTP Outbound service.|
     |HTTPOutboundMappingPath|The value is a path, as defined in the HTTP Outbound proxy configuration. If the HTTP Outbound support is enabled, this parameter defaults to /IBM\_RCSS.  This value is the mapping path that is used when you access the HTTP Outbound service. A proxy configuration with this context path must exist in the proxy configuration. The configuration then determines how the HTTP invocation is handled.|
     |highlight=\[\]|Use this setting to avoid Connection search feeds injecting bold tags to highlight search results.|
@@ -46,8 +46,6 @@ Search Service is a live search and uses REST to search on a target information 
 The RCSS component does not use the keystore that is managed by WebSphere® Application Server. If you try to set the `RestServiceSecureProtocol` property to https and the `RestServiceSecurePort` property to the SSL port for the HCL Connections server when you configure the RCSS search service, you cannot to retrieve the search scopes from HCL Connections and thus cannot complete the search configuration. You see SSL handshake errors in the HCL Portal `SystemOut` logs even though you imported the HCL Connections SSL certificate into the WebSphere Application Server SSL certificate truststore.
 
 
-**Related information**  
-
-
-[Search Services](../panel_help/srch_srvs.md)
+???+ info "Related information"
+    - [Search Services](../../../../../../../build_sites/search/manage_search/srch_srvs.md)
 

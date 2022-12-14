@@ -59,62 +59,20 @@ Depending on the conditions that you select, values that you enter for some typi
 |**LikeMinds configuration password**|likeminds.DbPassword|To see this field, select **No** for using the same user ID and passwords across portal database domains.| |
 |**LikeMinds database administrator**|likeminds.DBA.DbUser|To see this field, select **No** for using the same user ID and passwords across portal database domains.| |
 |**LikeMinds database administrator password**|likeminds.DBA.DbPassword|To see this field, select **No** for using the same user ID and passwords across portal database domains.| |
-|**Runtime user**|The value that you enter is copied to fields in the Advanced view for the dbdomain.DbRuntimeUser properties.|To see this field:-   Continue to use the **Yes** selection for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.
-
-| |
-|**Runtime password**|The value that you enter is copied to fields in the Advanced view for the dbdomain.DbRuntimeDbRuntimePassword properties.|To see this field:-   Continue to use the **Yes** selection for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.
-
-| |
-|**Release runtime user**|release.DbRuntimeUser|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**Release runtime password**|release.DbRuntimePassword|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**Community runtime user**|community.DbRuntimeUser|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**Community runtime password**|community.DbRuntimePassword|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**Customization runtime user**|customization.DbRuntimeUser|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**Customization runtime password**|customization.DbRuntimePassword|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**JCR runtime user**|jcr.DbRuntimeUser|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**JCR runtime password**|jcr.DbRuntimePassword|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**Feedback runtime user**|feedback.DbRuntimeUser|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**Feedback runtime password**|feedback.DbRuntimePassword|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**LikeMinds runtime user**|likeminds.DbRuntimeUser|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
-|**LikeMinds runtime password**|likeminds.DbRuntimePassword|To see this field:-   Select **No** for using the same user ID and passwords across portal database domains.
--   Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations
-
-| |
+|**Runtime user**|The value that you enter is copied to fields in the Advanced view for the dbdomain.DbRuntimeUser properties.|To see this field:<br> - Continue to use the **Yes** selection for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**Runtime password**|The value that you enter is copied to fields in the Advanced view for the dbdomain.DbRuntimeDbRuntimePassword properties.|To see this field:<br> - Continue to use the **Yes** selection for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**Release runtime user**|release.DbRuntimeUser|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**Release runtime password**|release.DbRuntimePassword|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**Community runtime user**|community.DbRuntimeUser|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**Community runtime password**|community.DbRuntimePassword|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**Customization runtime user**|customization.DbRuntimeUser|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**Customization runtime password**|customization.DbRuntimePassword|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**JCR runtime user**|jcr.DbRuntimeUser|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**JCR runtime password**|jcr.DbRuntimePassword|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**Feedback runtime user**|feedback.DbRuntimeUser|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**Feedback runtime password**|feedback.DbRuntimePassword|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**LikeMinds runtime user**|likeminds.DbRuntimeUser|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
+|**LikeMinds runtime password**|likeminds.DbRuntimePassword|To see this field:<br> - Select **No** for using the same user ID and passwords across portal database domains.<br> - Continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
 
 ## Field used for the database collation condition
 
@@ -122,8 +80,6 @@ Database collation is an optional condition available to you.
 
 |Field Label|Property|Conditions|Your Value|
 |-----------|--------|----------|----------|
-|**Temporary directory to be used for collation**| |To see this field, you must select the **Yes** option for advanced database collation support. The default selection is **No**.
-
-| |
+|**Temporary directory to be used for collation**| |To see this field, you must select the **Yes** option for advanced database collation support. The default selection is **No**.| |
 
 

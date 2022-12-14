@@ -8,18 +8,18 @@ You can access product software at [HCL Software Licensing Portal](https://www.
 
 You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
 
-## Design Studio \(Beta\)
+## Design Studio (Beta)
 
 Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with the Container Update CF198 release include the ability to create new DX sites, reading and updating site metadata, accessing site and page UUID and URLs, and client-side logging services.
 
 !!!note
     Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF198, and includes a sample DX site.  It is not yet supported for use in production deployments.
 
-See the [Design Studio \(Beta\)](../../productfeatures/design_studio/index.md)<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/) topic for more information. 
 
 ## Deploy HCL DX CF198 to container platforms using Helm
 
-Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Support for hybrid deployments is provided, enabling to update from HCL DX 9.5 CF197 to CF198 in the Red Hat OpenShift, Microsoft Azure Elastic Kubernetes Service \(AKS\) and Amazon Elastic Kubernetes Service \(EKS\) platforms.
+Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Support for hybrid deployments is provided, enabling to update from HCL DX 9.5 CF197 to CF198 in the Red Hat OpenShift, Microsoft Azure Elastic Kubernetes Service (AKS) and Amazon Elastic Kubernetes Service (EKS) platforms.
 
 See the [HCL DX 9.5 Helm deployment](../../deployment/install/container/operator-migration/operator_migration_preparation.md) topic for more information.
 
@@ -39,7 +39,7 @@ See the [Using the Digital Experience Custom Layout Editor](https://help.hcltec
 
 New HCL Experience Web Content Manager REST APIs are available for new menu component update, collection responses conversion utilities, the ability to use the page editor to edit elements inline and update metadata, set locations for sites, set HTML tags for text elements, and more.
 
-See the [HCL Experience API](../../extend_dx/apis/hcl_experience_api/openapi_overview.md) topic for more information
+See the [HCL Experience API](../../extend_dx/apis/hcl_experience_api/index.md) topic for more information.
 
 ## Rationalized CF release versioning
 
@@ -58,9 +58,9 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/9.5_express/supportedsoftware.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) topic for more information.
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Design Studio \(Beta\)](../design_studio/design_studio_overview.md)
     - [CF release versioning and update path](../install/rm_cf.md#cf_release_versioning_update)
     [Digital Asset Management Help Center](../design/digital_asset_mgmt/digital_asset_mgmt_overview.md)

@@ -3,7 +3,7 @@
 Use the XML configuration interface (XML Access) for exchanging portal configurations.
 
 ???+ info "Related information"  
-    -   [XML configuration interface parameters for the Web Content Viewer](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_delivery_env/wcm_config_wcmviewer_xmlaccess.md)
+    -   [XML configuration interface parameters for the Web Content Viewer](../../../../manage_content/wcm_delivery/cfg_webcontent_delivery_env/wcm_config_wcmviewer_xmlaccess.md)
     -   [Configuring a Credential Vault for overlay reports](../../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/displaying_overlay_analytics_reports/sa_asa_overlay_cfg_crd_vlt.md)
     -   [Tools for staging to production](../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_tools.md)
     -   [Syndication and staging](../../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)

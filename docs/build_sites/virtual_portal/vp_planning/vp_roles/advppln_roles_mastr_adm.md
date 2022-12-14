@@ -30,12 +30,12 @@ For more information about Portal Access Control, go to *Controlling access*. Fo
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Administering virtual portals](../../adm_vp_task/index.md)
     - [Content of a virtual portal](../advppln_content.md)
-    - [Controlling access](../../../../deployment/manage/security/controlling_access/index.md)
-    - [Setting user and group permissions](../../../../deployment/manage/security/controlling_access/sec_ugpp.md)
-    - [Setting resource permissions](../../../../deployment/manage/security/controlling_access/sec_rpp.md)
+    - [Controlling access](../../../../deployment/manage/security/people/authorization/controlling_access/index.md)
+    - [Setting user and group permissions](../../../../deployment/manage/security/people/authorization/controlling_access/sec_ugpp.md)
+    - [Setting resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md)
     - [WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)
-    - [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+    - [The XML configuration interface](../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
 

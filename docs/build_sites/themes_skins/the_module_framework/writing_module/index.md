@@ -313,7 +313,7 @@ Simple modules for the resource aggregator framework are provided in the WebDAV 
 You can use a module to add menu items to a menu where the menu item displays only on certain pages.
 
 
-???+ info "Related information:"
+???+ info "Related information"
 [Resource Aggregator overview](../themeopt_reso_agg.md)
 [Modules and dynamic content spots](../../customizing_theme/dynamic_content_spots/working_with_dcs/themeopt_modules_dyn_cnt_spts.md)
 

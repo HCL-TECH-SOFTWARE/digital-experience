@@ -8,7 +8,7 @@ Follow the steps to map the community pages to a community based on what HCL Dig
 
 2.  Assign access to the page.
 
-    If the community restricts membership, you can secure the page so that only members of the community can see the page in the Portal navigation. You can access assign on community pages that are mapped to public or moderated communities, but doing so does not restrict access to the content in the community. There are other mechanisms, including APIs, mobile clients, connectors, and search and portlets on other pages, which might show the content outside the community page. Membership lists in HCL Connections communities must have the correct level of access to community content and Portal pages must reflect that level. Before you use communities for access control on pages, follow the steps in *Integrating community membership with Portal security*.
+    If the community restricts membership, you can secure the page so that only members of the community can see the page in the Portal navigation. You can access assign on community pages that are mapped to public or moderated communities, but doing so does not restrict access to the content in the community. There are other mechanisms, including APIs, mobile clients, connectors, and search and portlets on other pages, which might show the content outside the community page. Membership lists in HCL Connections communities must have the correct level of access to community content and Portal pages must reflect that level. Before you use communities for access control on pages, follow the steps in [Integrating community membership with Portal security](connections_vmm/index.md).
 
     1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**. Find the community page for which you want to set access.
 
@@ -18,7 +18,7 @@ Follow the steps to map the community pages to a community based on what HCL Dig
 
     4.  Click **Edit Role** in the Privileged User and User columns and make sure that no users or groups are added that you do not want to access the page.
 
-    5.  Click the **Edit Role** button in the Privileged User or User column, depending on what level of access you want to grant to community members. See the [Roles](../wcm/wcm_security_items.md) topic for a description of roles in HCL Portal.
+    5.  Click the **Edit Role** button in the Privileged User or User column, depending on what level of access you want to grant to community members. See the [Roles](../../../../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_roles.md) topic for a description of roles in HCL Portal.
 
     6.  Click **Add**.
 
@@ -35,6 +35,7 @@ Follow the steps to map the community pages to a community based on what HCL Dig
     For example, before you add a Blogs portlet to the community page, make sure that the HCL Connections community contains a blog. If not, add the Blogs widget to the HCL Connections community by using the browser interface.
 
 
-**Note:** If the portal administrator configures a portlet with a new connections server URL for a community page, the changes take effect only after the community page is configured with a valid community ID for the new connections server. The community ID is configured by editing the portal page parameters settings to include the new community ID.
+!!!note
+    If the portal administrator configures a portlet with a new connections server URL for a community page, the changes take effect only after the community page is configured with a valid community ID for the new connections server. The community ID is configured by editing the portal page parameters settings to include the new community ID.
 
 

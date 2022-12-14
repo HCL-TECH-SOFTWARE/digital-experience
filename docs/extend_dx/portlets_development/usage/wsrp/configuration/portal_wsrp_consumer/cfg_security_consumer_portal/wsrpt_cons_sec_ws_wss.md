@@ -14,11 +14,10 @@ HCL Portal Version 8.5 provides three security token types for the most common s
 
     The Consumer portal provides an LTPA version 1 token in the WS-Security message header. This token type requires that the Consumer and Producer portals share their user registry and LTPA configuration.
 
-    **Note:**
+    !!! note
+        IBM® WebSphere® Application Server Version 8.5 supports the LTPA v2 token by default. Use the LTPA\_Token only if a Producer requires an LTPA v1 token and cannot be configured to use LTPA v2 tokens. A HCL Portal Version 8.5 Producer does not require LTPA v1 tokens. If you use a HCL Portal V 8.5 Producer, do not use this token type.
 
-    IBM® WebSphere® Application Server Version 8.5 supports the LTPA v2 token by default. Use the LTPA\_Token only if a Producer requires an LTPA v1 token and cannot be configured to use LTPA v2 tokens. A HCL Portal Version 8.5 Producer does not require LTPA v1 tokens. If you use a HCL Portal V 8.5 Producer, do not use this token type.
-
-    As WebSphere® Application Server Version 8.5 does not support LTPA v1 by default, you need to enable the single sign-on interoperability mode in WebSphere® Application Server to use LTP v1. To do so, use the single sign-on \(SSO\) panel within the WebSphere® Integrated Solutions Console. For more information about this option, read the documentation about single sign-on settings in the WebSphere® Application Server product documentation. If you select this token type and did not enable LTPA v1 tokens before, the WSRP Consumer throws an exception when trying to create the security token for a WSRP request message.
+        As WebSphere® Application Server Version 8.5 does not support LTPA v1 by default, you need to enable the single sign-on interoperability mode in WebSphere® Application Server to use LTP v1. To do so, use the single sign-on \(SSO\) panel within the WebSphere® Integrated Solutions Console. For more information about this option, read the documentation about single sign-on settings in the WebSphere® Application Server product documentation. If you select this token type and did not enable LTPA v1 tokens before, the WSRP Consumer throws an exception when trying to create the security token for a WSRP request message.
 
 -   **Username\_Token**
 
@@ -50,8 +49,6 @@ The WSRP Consumer provides a token of the selected type in the WS-Security heade
 The token types correspond to the default WSRP policy sets and provider policy bindings that are available for the configuration of Producers. The tokens are also compatible to a corresponding HCL Portal Version 7 or 8 Producer security configuration.
 
 
-**Related information**  
-
-
-[Updating a WSRP Consumer](../migrate/mig_post_wsrp_consumer.md)
+???+ info "Related information"
+    - [Updating a WSRP Consumer](../../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_consumer.md)
 

@@ -10,17 +10,11 @@ Review the two different methods that you can use to migrate to Version 8.5 from
 
 -   **Manually perform an in-place migration.**
 
-    You must manually uninstall and install the Portal binary files, and back up and restore the source Portal profile. This method might be faster, but you must update the source environment in-place, so you must have a backup and a plan for rolling back in case there is a failure. In addition, this procedure cannot be reversed, and when complete the Portal 8.0.0.1 version server is fully updated to HCL Portal Version 8.5.
+    You must manually uninstall and install the Portal binary files, and back up and restore the source Portal profile. This method might be faster, but you must update the source environment in-place, so you must have a backup and a plan for rolling back in case there is a failure. In addition, this procedure cannot be reversed, and when complete the Portal 8.0.0.1 version server is fully updated to HCL Portal Version 8.5. 
 
-
--   **[Using staging to production techniques to complete the migration](../migrate/mig_plan_was_s2p.md)**  
-Choose this option if you want to use staging to production techniques to migrate from Portal Version 8.0.0.1 on WebSphere Application Server Version 8.5.5.2 to HCL Digital Experience 8.5.
--   **[Performing a manual in-place migration](../migrate/mig_plan_was_manual.md)**  
 If you proceed with this method of migration for Portal Version 8.0.0.1 on WebSphere Application Server Version 8.5.5.2, be aware that you cannot use the WebSphere remote migration tool because the WebSphere version of the source and target environments are the same. This migration is an in-place migration, and the source environment will no longer be available after the migration is complete.
 
 
-**Related information**  
-
-
-[Migration overview](../migrate/mig_over.md)
+???+ info "Related information"  
+    -   [Migration overview](../../../../../../deployment/manage/migrate/mig_over.md)
 

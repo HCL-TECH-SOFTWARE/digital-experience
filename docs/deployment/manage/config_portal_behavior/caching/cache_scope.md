@@ -13,6 +13,7 @@ There are two types of caching:
 
     -   Remote cache scope is `non-shared`
     -   Remote cache expiry is `0 seconds`
+    
 -   **Non-shared cache for a single user \(Web browser cache\)**
 
     This type of caching provides a much smaller performance improvement. The cache is typically located in each user's Web browser. This type of caching can be used for all content, including content that is personalized. If the computer is shared among multiple users, a user may see personalized content from other users if served from the browser cache. To prevent this from happening, do not enable private caching, even for personalize content.

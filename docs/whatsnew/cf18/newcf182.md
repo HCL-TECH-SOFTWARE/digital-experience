@@ -17,7 +17,7 @@ This topic provides guidance to update artifacts in HCL Digital Experience 9.5 c
 This topic outlines optional configuration steps to tune Digital Asset Management storage services Storage Class and Volume. See [Optional Digital Asset Management Storage Configuration Settings](https://help.hcltechsw.com/digital-experience/9.5/containerization/optional_digital_asset_management_storage_configuration_settings.html){:target="_blank"}<!-- (../containerization/optional_digital_asset_management_storage_configuration_settings.md) --> for details.
 
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939#CF18)
     - [Deploying HCL DX 9.5 Container artifact updates with minimal operations downtime](../containerization/deploy_container_artifact_updates.md)
     - [Optional Digital Asset Management Storage Configuration Settings](../containerization/optional_digital_asset_management_storage_configuration_settings.md)

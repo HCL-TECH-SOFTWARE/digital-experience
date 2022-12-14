@@ -25,7 +25,7 @@ When you enable managed pages after migration, several considerations apply:
 -   Private pages
 Each virtual portal has its own Portal Site library.
 
--   In scenarios where the configured user realm does not contain the domain administrator, an alternative user must be provided. If you have a multi-realm configuration, see [Defining alternative administrators for multi-realm configurations](../../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_admin_multirealm.md).
+-   In scenarios where the configured user realm does not contain the domain administrator, an alternative user must be provided. If you have a multi-realm configuration, see [Defining alternative administrators for multi-realm configurations](../../../../../manage_content/wcm_configuration/wcm_svc_cfg/wcm_config_admin_multirealm.md).
 
 !!!note
     To take advantage of the features available to managed pages in the user interface, your pages must use the Portal 8.5 theme.
@@ -119,11 +119,11 @@ Each virtual portal has its own Portal Site library.
 
     For example, they have user access.<br>
 
-After you migrate from Version 7.0 or Version 8.0, vanity URLs are not available. After you enable managed pages, you can enable vanity URL support. If you migrated from Version 7.0 or 8.0, go to [Enabling vanity URL support](../../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md).
+After you migrate from Version 7.0 or Version 8.0, vanity URLs are not available. After you enable managed pages, you can enable vanity URL support. If you migrated from Version 7.0 or 8.0, go to [Enabling vanity URL support](../../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md).
 
 
 ???+ info "Related information"  
     -   [Enabling vanity URL support after migration](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/mig_post_vurls.md)
-    -   [Transferring content associations to the Portal Site library](../../../../../manage_content/wcm/wcm_artifacts/managed_pages/cfg_managed_pages/wcm_config_mngpages_transfer.md)
-    -   [Enabling vanity URL support](../../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
-    -   [Synchronizing the vanity URL database](../../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_sync_db.md)
+    -   [Transferring content associations to the Portal Site library](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_transfer.md)
+    -   [Enabling vanity URL support](../../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
+    -   [Synchronizing the vanity URL database](../../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_sync_db.md)

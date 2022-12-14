@@ -10,7 +10,7 @@ The following solutions can help you solve troubleshooting issues.
 
     When HCL Web Content Manager caching is turned on, the changes might not be reflected in preview pane of Script Application. Caching is likely to happen while you run Configuration Wizard to federate an LDAP.
 
-    To resolve this issue, assign no cache preprocessor to the Script Application. Follow the instructions in *Portal administration and performance*.
+    To resolve this issue, assign no cache preprocessor to the Script Application. Follow the instructions in [Portal administration tools](../../deployment/manage/portal_admin_tools/index.md).
 
 - **The Script Application user interface features do not show or work for users as expected.**
 
@@ -34,4 +34,4 @@ The following solutions can help you solve troubleshooting issues.
 
     `EJQHH0011E: The content at path location Script Portlet Library/Script Portlet Library Site Area/Untitled could not be found in the repository.`
 
-    To resolve this issue, run the portal configuration engine task that imports the Web Content Manager libraries that CF09 installs to virtual portals that you create after you installed CF09. For more information, read *Installing the Script Application*.
+    To resolve this issue, run the portal configuration engine task that imports the Web Content Manager libraries that CF09 installs to virtual portals that you create after you installed CF09. For more information, read [Build applications with the Script Application](build_app_with_script_application/index.md).

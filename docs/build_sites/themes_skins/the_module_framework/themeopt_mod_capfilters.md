@@ -126,7 +126,7 @@ With auto-loading on, a deferred capability does not load until the page is in e
 The `deferredCapability` sequence-number is independent of the `capability` sequence-number. For example, both can start at 1. And, like `capability`, `deferredCapability.sequence-number.minValue` is optional.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Resource Aggregator overview](../the_module_framework/themeopt_reso_agg.md)
     - [Modules that are provided with the modularized theme](../the_module_framework/oob_modules/index.md)
     - [Configuration settings for capability filters](../customizing_theme/cfg_portal_theme_and_modules/themeopt_mod_capfilter_settings.md)

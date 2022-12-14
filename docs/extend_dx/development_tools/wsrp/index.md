@@ -20,7 +20,7 @@ Before you start working with WSRP in your portal, read the relevant topics abou
 Currently, there are two versions of the WSRP standard, WSRP 1.0 and WSRP 2.0. HCL Digital Experience supports both versions of the WSRP standard.
 
 ???+ info "Related information"  
--   [Enabling remote rendering with WSRP and the Web Content Viewer](../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/index.md)
+-   [Enabling remote rendering with WSRP and the Web Content Viewer](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/enable_remote_render_wsrp/index.md)
 -   [Deploying the initial release](../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_deploy.md)
 -   [Deploying the differential release](../../../deployment/manage/staging_to_production/creating_deploying_diff_release/dep_deploy_diff.md)
 -   [Planning for virtual portals](../../../build_sites/virtual_portal/vp_planning/index.md)

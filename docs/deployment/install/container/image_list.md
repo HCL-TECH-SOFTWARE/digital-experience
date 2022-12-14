@@ -1,10 +1,123 @@
-# Container image list
+# Container and Supported OS File listings 
 
 This section presents the latest available HCL Digital Experience (DX) 9.5 Container images available.
 
 You can obtain the HCL DX 9.5 container update releases may be obtained from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}, in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry, and the **HCL_DX_9.5_Container_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo){:target="_blank"}
+
+
+## HCL DX 9.5 CF208  
+
+-  **Container Update CF208**
+
+    If you are deploying the HCL DX 9.5 CF208 Container update release, the package name and images are as follows:
+
+-  **HCL DX 9.5 CF208 DXClient files:**
+
+    -  ```
+       hcl-dxclient-image-v95_CF208_20221208-2242.zip
+       ```
+
+    -	```
+        hcl-dxclient-v95_CF208_20221208-2242.zip
+        ```
+
+-  **hcl-dx-kubernetes-v95-CF208.zip:**
+
+    - 	```
+        HCL DX notices V9.5 CF208.txt
+        ```
+
+    -	```
+        hcl-dx-content-composer-image-v1.21.0_20221208-2224.tar.gz
+        ```
+
+    -	```
+        hcl-dx-core-image-v95_CF208_20221208-2224.tar.gz
+        ```
+    -	```
+        hcl-dx-dam-plugin-google-vision-image-v0.1.0_20221208-2225.tar.gz
+        ```
+
+    - 	```
+        hcl-dx-dam-plugin-kaltura-image-v0.1.0_20221208-2225.tar.gz
+        ```
+
+    -	```
+        hcl-dx-deployment-v2.11.2_20221209-1526.tgz
+        ```
+
+    -	```
+        hcl-dx-design-studio-image-v0.12.0_20221208-2233.tar.gz
+        ```
+
+    -	```
+        hcl-dx-digital-asset-manager-image-v1.20.0_20221208-2234.tar.gz
+        ```
+
+    -	```
+        hcl-dx-experience-api-sample-ui-v0.2.0.20221208-2237.zip
+        ```
+
+    -	```
+        hcl-dx-haproxy-image-v1.4.0_20221208-2240.tar.gz
+        ```
+
+    -	```
+        hcl-dx-image-processor-image-v1.21.0_20221208-2229.tar.gz
+        ```
+
+    -	```
+        hcl-dx-license-manager-image-v95_CF208_20221208-2224.tar.gz
+        ```
+
+    -	```
+        hcl-dx-logging-sidecar-image-v1.0.0_20221208-2227.tar.gz
+        ```
+
+    -	```
+        hcl-dx-openldap-image-v1.2.0_20221208-2224.tar.gz
+        ```
+
+    -	```
+        hcl-dx-persistence-connection-pool-image-v1.21.0_20221208-2237.tar.gz
+        ```
+
+    -	```
+        hcl-dx-persistence-metrics-exporter-image-v1.19.0_20221208-2237.tar.gz
+        ```
+
+    -	```
+        hcl-dx-persistence-node-image-v1.11_20221208-2238.tar.gz
+        ```
+
+    -	```
+        hcl-dx-prereqs-checker-image-v0.1.0_20221208-2227.tar.gz
+        ```
+
+    -	```
+        hcl-dx-remote-search-image-v95_CF208_20221208-2224.tar.gz
+        ```
+
+    -	```
+        hcl-dx-ringapi-image-v1.21.0_20221208-2240.tar.gz
+        ```
+
+    -	```
+        hcl-dx-runtime-controller-image-v95_CF208_20221208-2228.tar.gz
+        ```
+
+
+-  **HCL Digital Experience File package listings (supported OS platforms):**
+
+    If you are deploying the HCL DX 9.5 CF208 release to supported OS platforms, the file package names are as follows:
+
+    |File name| Folder name|
+    |          |            |
+    |HCL_DX_CF208 Express_Update|	HCL-DX-CF208_Express_Update.zip|
+    |HCL_DX_CF208_RemoteSearch_Update|	HCL-DX-CF208_RemoteSearch_Update.zip|
+    |HCL_DX_CF208_Server_Update|	HCL-DX-CF208_Server_Update.zip|
 
 
 ## HCL DX 9.5 CF207

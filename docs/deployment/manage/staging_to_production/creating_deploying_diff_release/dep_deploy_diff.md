@@ -101,5 +101,5 @@ After you create the differential release PAA file, you can install and deploy y
 
 ???+ info "Related information"  
     -   [WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)<br>
-    -   [Exporting and importing a web content library](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
+    -   [Exporting and importing a web content library](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
     -   [Portal configuration tasks for administering virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)

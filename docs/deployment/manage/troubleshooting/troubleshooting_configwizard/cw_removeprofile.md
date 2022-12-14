@@ -55,4 +55,4 @@ The manageprofiles command creates a log for every profile that it creates, dele
 
 **Related information**  
 [Remove an HCL Portal profile](../../../manage/profile/cw_remove_profile.md)<br>
-[Accessing the Configuration Wizard](./../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+[Accessing the Configuration Wizard](../../../manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)

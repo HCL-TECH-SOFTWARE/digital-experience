@@ -160,7 +160,8 @@ Code sample
 
 ```
 
-**Note:** In the context of dialog chaining and dialog nesting, the definition of a mapper as part of an outgoing transition's target is invalid. The definition of a mapper as part of the called dialog's start transition's source is also invalid.
+!!!note
+    In the context of dialog chaining and dialog nesting, the definition of a mapper as part of an outgoing transition's target is invalid. The definition of a mapper as part of the called dialog's start transition's source is also invalid.
 
-**Parent topic:**[Retrieve and store event payload](../screenflow/ret_str_evnt_pyld.md)
+
 

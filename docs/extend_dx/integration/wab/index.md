@@ -6,26 +6,25 @@ The intention of the Web Applications Bridge is to support the complex and heter
 
 For those web applications that do not comply or are unable to work correctly, modify the application to support the integration through the Web Application Bridge. In cases where the application cannot be modified to comply with the Web Application Bridge, add custom filters to the Web Application Bridge to process the markup. Take care when you implement these filters for performance and reliability. The customer makes the customization themselves. When you use the Web Application Bridge, access HCL Portal with the fully qualified host name.
 
-Integrating the web applications with HCL Digital Experience is a multi-step process. To learn more about the Web Application Bridge, go to [Web Application Bridge](../panel_help/h_wab_ov.html).
+Integrating the web applications with HCL Digital Experience is a multi-step process. To learn more about the Web Application Bridge, go to [Web Application Bridge](wab/index.md).
 
 Mobile support is provided for web applications that were developed and tested for rendering inside mobile device browsers. If the web application was originally built and tested for desktops, they will not work properly on a mobile device. Instead, they display the same way that they would on the desktop. If the web application provides navigation, content, and features for a mobile device, it is available when rendered through the Web Dock portlet.
 
 Configure the Web Dock portlet to always allow dynamic size. This setting allows the screen to respond to the different sizes of the applications. If you do not have Dynamic Size set to always, the Web Dock portlet shows the desktop version of the content.
 
-**Note:** Mobile devices might not show scroll bars for any overflow content. Instead, the swipe feature of the mobile is enabled.
+!!!note
+    Mobile devices might not show scroll bars for any overflow content. Instead, the swipe feature of the mobile is enabled.
 
--   **[Web Application Bridge](../admin-system/wab_alogin.md)**  
+-   **[Web Application Bridge](wab/index.md)**  
 The Web Application Bridge uses reverse proxy technology to integrate web-based content providers, such as the Microsoft SharePoint server, with HCL Digital Experience.
--   **[Configuring the Web Application Bridge for anonymous login](../admin-system/wab_alogin.md)**  
+-   **[Configuring the Web Application Bridge for anonymous login](wab_alogin.md)**  
 You can map your web application bridge to allow anonymous users to log on and access information.
--   **[Configuring multiple web dock applications on a page](../admin-system/wab_multi.md)**  
+-   **[Configuring multiple web dock applications on a page](wab_multi.md)**  
 You can have multiple web dock applications that point to different hosts on the same portal page. You can also allow users to open two different portal pages that contain web dock applications in a new browser window or tab.
--   **[Troubleshooting the Web Application Bridge](../admin-system/trouble_wab.md)**  
-The troubleshooting information is useful for planning and implementing your Web Application Bridge integration \(WAB\).
+-   **[Troubleshooting the Web Application Bridge](trouble_wab.md)**  
+The troubleshooting information is useful for planning and implementing your Web Application Bridge integration (WAB).
 
 
-**Related information**  
-
-
-[Providing short vanity URLs](../wcm/van_url_short.md)
+???+ info "Related information"
+    - [Providing short vanity URLs](../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md)
 

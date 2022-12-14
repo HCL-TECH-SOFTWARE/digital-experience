@@ -22,6 +22,7 @@ To set up communication with a Producer portal, the Consumer portal requires the
 -   The WSDL \(Web Services Description Language\) service description document, which provides the following information:
     -   Descriptions of the WSRP interfaces and WSRP services that the Producer provides.
     -   Technical information, such as the service endpoint addresses.
+
 -   Information about the quality of service and security configuration of the WSRP services on the Producer portal.
 
 When the Consumer has this information, the administrator of the Consumer portal can configure the Consumer portal accordingly. After this configuration, the Consumer can consume remote portlets from the Producer portal.
@@ -42,7 +43,8 @@ To comply with the JAX-WS standard, the WSRP Producer of HCL Portal provides a s
 
 You can administer and configure each of the WSRP 1.0 and 2.0 service providers separately. You administer and configure them by using the administration clients of WebSphere Application Server. For example, you can use the WebSphere Integrated Solutions Console.
 
-**Note:** Do not change the configuration of the WSRP 2.0 service providers for portal-internal WSRP communication. These service providers are used internally by HCL Portal during client side aggregation. Remote consumer portals cannot access these service providers.
+!!! note
+    Do not change the configuration of the WSRP 2.0 service providers for portal-internal WSRP communication. These service providers are used internally by HCL Portal during client side aggregation. Remote consumer portals cannot access these service providers.
 
 ## Service clients and references of the WSRP Consumer
 
@@ -57,11 +59,10 @@ The following table lists the supported service clients and service references:
 
 The service clients support all WSRP service interfaces: Service Description, Markup, Portlet Management, and Registration.
 
-**Note:** The configuration of the WSRP service clients is managed outside HCL Portal. The portal WSRP Consumer supports all service client configurations that are configured in WebSphere Application Server. This support includes message level security, transport level security, and other quality of service configuration. However, the service client configuration of the WSRP Consumer must be compatible with the web service configuration of the WSRP Producer. Example: If the service providers of the Producer portal are configured for WS-Security, the service references of the Consumer portal must also be configured for WS-Security. Otherwise, the WSRP communication fails.
+!!! note
+    The configuration of the WSRP service clients is managed outside HCL Portal. The portal WSRP Consumer supports all service client configurations that are configured in WebSphere Application Server. This support includes message level security, transport level security, and other quality of service configuration. However, the service client configuration of the WSRP Consumer must be compatible with the web service configuration of the WSRP Producer. Example: If the service providers of the Producer portal are configured for WS-Security, the service references of the Consumer portal must also be configured for WS-Security. Otherwise, the WSRP communication fails.
 
 
-**Related information**  
-
-
-[How Producer and Consumer portals communicate](../admin-system/wsrpc_comint.md)
+???+ info "Related information"
+    - [How Producer and Consumer portals communicate](../learning_wsrp/wsrpc_comint.md)
 

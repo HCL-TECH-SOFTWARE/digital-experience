@@ -48,8 +48,6 @@ Some ConfigEngine extension points are required when you install an application 
 |Templates|delete-templates-applySIFeaturePack|Removes templates|
 
 
-**Related information**  
-
-
-[Portal administration tools](../admin-system/admtools.md)
+???+ info "Related information"
+    - [Portal administration tools](../../../deployment/manage/portal_admin_tools/index.md)
 

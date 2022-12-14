@@ -1,4 +1,4 @@
-# Use and number of archetypes \| LikeMinds engine
+# Use and number of archetypes | LikeMinds engine
 
 Learn how to set use and number of archtypes to improve your LikeMinds Preference engine.
 

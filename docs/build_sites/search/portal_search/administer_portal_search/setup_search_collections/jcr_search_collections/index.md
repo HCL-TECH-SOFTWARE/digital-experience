@@ -119,9 +119,9 @@ To set up a JCR search collection manually, proceed as follows:
     -   To start the crawler manually, go to the content source and click **Start Crawler** for the content source.
     -   To schedule the seedlist crawler, click **Edit Content Source**, and click the **Scheduler** tab. Specify the date and time and the frequency for the crawl. The crawler is triggered automatically at the time that you scheduled.
 
-<!--
--   **[Re-creating a JCR search collection after it was deleted](../admin-system/recreate_jcr_sc.md)**  
-The portal installation has the JCR search collection created by default. It is named JCRCollection1. If this collection is removed or does not exist for other reasons, you can re-create the JCR search collection. -->
+
+-   **[Re-creating a JCR search collection after it was deleted](recreate_jcr_sc.md)**  
+The portal installation has the JCR search collection created by default. It is named JCRCollection1. If this collection is removed or does not exist for other reasons, you can re-create the JCR search collection.
 
 
 ???+ info "Related information"

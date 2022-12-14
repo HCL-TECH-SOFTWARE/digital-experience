@@ -97,5 +97,4 @@ Example: In a travel site, a passenger information portlet `portlet1` emits a pa
     ```
 
 
-**Parent topic:**[Event Mappers](../screenflow/evnt_mprs.md)
 

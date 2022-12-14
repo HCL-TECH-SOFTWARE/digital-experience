@@ -1,8 +1,0 @@
-Title: HCL Web Content Manager Multilingual Solution
-nav:
-    - index.md
-    - wcm_mls_framework.md
-    - wcm_mls_ovr.md
-    - Multilingual deployment, installation, and configuration Multilingual Solution: mls_install
-    - How to use the HCL Web Content Manager Multilingual Solution: using_mls
-    - Extensions for multilingual sites Multilingual Solution: mls_extension

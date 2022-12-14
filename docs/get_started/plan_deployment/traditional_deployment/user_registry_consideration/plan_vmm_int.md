@@ -26,6 +26,6 @@ The preceding diagram includes the following components:
     -   *Sample custom adapters for federated repositories examples*
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Managing the user population for virtual portals](../../../../build_sites/virtual_portal/vp_planning/advppln_mgupop.md)
 

@@ -244,8 +244,8 @@ To move tags and ratings between portals, for example for staging purposes, proc
 
 ???+ info "Related information"
     - [Configuring task to retrieve tags](../../extend_dx/integration/connections/configuration/cfg_connections_features/integrating_cnx_tags/i_coll_t_enable_lctags_task.md)
-    - [Types of portal resources](../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_resrc_types.md)
-    - [Working with the XML configuration interface](../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+    - [Types of portal resources](../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_resrc_types.md)
+    - [Working with the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
     - [Tagging and rating](../tagging_rating/hints_tips_tag_rate/index.md)
     - [Hints and tips for developers and portal administrators](../tagging_rating/hints_tips_tag_rate/index.md)
 

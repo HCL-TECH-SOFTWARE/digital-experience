@@ -6,6 +6,6 @@ To do so, set the following property in the Configuration Service: wsrp.resource
 
 
 ???+ info "Related information"  
-    -   [CORS and remote web content rendering with WSRP and the Web Content Viewer](../../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_cors.md)
-    -   [OpenAjax security and remote web content rendering with WSRP and the Web Content Viewer](../../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_open_ajax.md)
+    -   [CORS and remote web content rendering with WSRP and the Web Content Viewer](../../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_cors.md)
+    -   [OpenAjax security and remote web content rendering with WSRP and the Web Content Viewer](../../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_open_ajax.md)
 

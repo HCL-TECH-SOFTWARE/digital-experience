@@ -5,7 +5,7 @@ title: Creating segments with personalization
 
 Learn more about creating segments with personalization through an example.
 
-Before you create segments, ensure that your system administrator has set up the proper access control permissions. Go to the *Access permissions for Business Rules* table in [Access permissions](../../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md) for information.
+Before you create segments, ensure that your system administrator has set up the proper access control permissions. Go to the *Access permissions for Business Rules* table in [Access permissions](../../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md) for information.
 
 In this example, your goal is to create two segments: Smartphone User and Tablet User. Each segment views content through different devices.
 

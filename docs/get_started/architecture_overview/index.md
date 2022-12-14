@@ -6,7 +6,7 @@ There are different options to deploy DX:
 - **Traditional deployments**: HCL DX can be deployed on-premises in the WebSphere Application Server infrastructure.
 - **Container-based deployments**: HCL supports container-based deployments. HCL DX can be deployed into Kubernetes infrastructures to manage and maintain multiple environments such as testing, development, staging, and production.
 
-For more information, refer to the detailed system requirements for [traditional deployments](../system_requirements/traditional/operatingsystems.md) or [container-based deployments](../system_requirements/kubernetes/kubernetes-runtime.md).
+For more information, refer to the detailed system requirements for [traditional deployments](../system_requirements/traditional/index.md) or [container-based deployments](../system_requirements/kubernetes/kubernetes-runtime.md).
 
 ![Containerization Architecture Overview](../../images/haproxy-optional-ingress-architecture.png)
 

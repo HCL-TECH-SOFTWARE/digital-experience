@@ -13,6 +13,7 @@ During this procedure, modify the following property in the WP\_ConnectionsInteg
     !!! note
         If you increase this value too much, the response times of the HCL Connections server can become slow.
 
+[]()
 
 1.  On the portal server, log in to the WebSphere® Integrated Solutions Console.
 

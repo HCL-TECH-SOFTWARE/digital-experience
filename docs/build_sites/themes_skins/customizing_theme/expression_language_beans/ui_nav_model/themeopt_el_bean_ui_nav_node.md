@@ -2,7 +2,7 @@
 
 Provides access to a navigation node in a navigation model.
 
-To access the uiNavigationModel Bean, you must use the [uiNavigationModel](../dev-portlet/dgn_ptlnavig.md#uinavmodel) tag and define the variable name that you want the bean to be available under. For example:
+To access the uiNavigationModel Bean, you must use the [uiNavigationModel](../ui_nav_model/index.md) tag and define the variable name that you want the bean to be available under. For example:
 
 ```
 <portal-navigation:uiNavigationModel var="uiNavigationModel"
@@ -24,7 +24,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [ContentNode](themeopt_el_bean_content_node.md). Never null.
+    Returns: [ContentNode](../nav_model/themeopt_el_bean_content_node.md). Never null.
 
 -   **description**
 
@@ -38,7 +38,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Description](themeopt_el_bean_description.md) object for the navigation node; it is never null. You can use the value of the title object to retrieve the description in current locale.
+    Returns: [Description](../common_beans/themeopt_el_bean_description.md) object for the navigation node; it is never null. You can use the value of the title object to retrieve the description in current locale.
 
 -   **isDraft**
 
@@ -122,7 +122,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Metadata](themeopt_el_bean_meta.md), never null.
+    Returns: [Metadata](../common_beans/themeopt_el_bean_meta.md), never null.
 
 -   **moduleList**
 
@@ -138,7 +138,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [CurrentModuleList](themeopt_el_bean_mod_current_list.md), never null.
+    Returns: [CurrentModuleList](../module_list/current_module_list/themeopt_el_bean_mod_current_list.md), never null.
 
 -   **objectID**
 
@@ -194,7 +194,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Title](themeopt_el_bean_title.md) associated with the current object.
+    Returns: [Title](../common_beans/themeopt_el_bean_title.md) associated with the current object.
 
 -   **themeID**
 
@@ -263,6 +263,6 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGenerationPage](themeopt_el_bean_url_gen_page.md); the URL object pointing to this page
+    Returns: [UrlGenerationPage](../common_beans/url_generation/themeopt_el_bean_url_gen_page.md); the URL object pointing to this page
 
 

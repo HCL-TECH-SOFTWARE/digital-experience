@@ -38,8 +38,8 @@ The following topics mention several sample files suitable for different purpose
 -   Windows™: PortalServer_root\doc\xml-samples
 
 ???+ info "Related information"  
-    -   [Scheduling scope synchronization](../../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_sched.md)
-    -   [Synchronizing scopes manually](../../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_manual.md)
+    -   [Scheduling scope synchronization](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_sched.md)
+    -   [Synchronizing scopes manually](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_manual.md)
     -   [Encrypting sensitive data](../../../../../build_sites/search/planning_portal_search/security_considerations/srtencrpsnstdt.md)
     -   [Configuring a Credential Vault for overlay reports](../../../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/displaying_overlay_analytics_reports/sa_asa_overlay_cfg_crd_vlt.md)
     -   [Working with analytics tags](../../../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/analytics_tags_site_promo/analytics_tags/sa_asa_anal_tags_work.md)

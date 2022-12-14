@@ -36,7 +36,7 @@ For more information, read *Integrating the business card and online status in a
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
       - [Configuring global settings for social rendering](../../cfg_global_settings_social_rendering/index.md)
       - [Integrating with HCL Connections](../../../../extend_dx/integration/connections/installation/index.md)
       - [Integrating the Business card and online status in a custom portlet](../../../../extend_dx/portlets_development/collaborative_services_api_person_tag/i_domi_t_api_ptag_add_to_portlet.md)

@@ -14,7 +14,7 @@ The side navigation is composed of three parts:
 
     The dynamic content spot recursively loops over the navigation hierarchy to render the pages. The dynamic content spot is a JSP that uses expression logic to access the navigation and provides easy to read code. You can customize the start level parameter of the dynamic content spot to render different sets of pages.
 
-    Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots\\sideNavigation.jsp
+    Location: [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots\\sideNavigation.jsp
 
 -   **Styles**
 
@@ -29,16 +29,14 @@ The side navigation is composed of three parts:
     -   dav:fs-type1\\themes\\Portal8.5\\css\\master.css
     -   dav:fs-type1\\themes\\Portal8.5\\css\\masterRTL.css
 
--   **[Set side navigation for a page](../dev-theme/themeopt_cust_nav_sidepage.md)**  
+-   **[Set side navigation for a page](themeopt_cust_nav_sidepage.md)**  
 You can set the side navigation template for a specific page.
--   **[Set side navigation as theme default](../dev-theme/themeopt_cust_nav_sidedefault.md)**  
+-   **[Set side navigation as theme default](themeopt_cust_nav_sidedefault.md)**  
 You can set the side navigation template as the theme default by changing the ready-to-use template to become the default theme.html.
--   **[Customizing side navigation](../dev-theme/themeopt_cust_nav_sidecust.md)**  
+-   **[Customizing side navigation](themeopt_cust_nav_sidecust.md)**  
 You can customize your side navigation by scoping styles specifically to the side navigation template or changing the width of the side navigation area or main content area.
 
 
-**Related information**  
-
-
-[Navigation with consecutive labels is dynamic](../dev-theme/themeopt_upgrade_secnav_labels.md)
+???+ info "Related information"  
+    -   [Navigation with consecutive labels is dynamic](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/themeopt_upgrade_secnav_labels.md)
 

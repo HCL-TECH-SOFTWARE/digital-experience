@@ -53,7 +53,8 @@ sessionvalidation.filterchain = colon or semicolon-separated list of fully quali
 
 ```
 
-**Note:** Use the properties to specify only the custom filter elements, as the default filter implementation is added implicitly by the Portal infrastructure. Thus, by default no value is set for the properties.
+!!!note
+      Use the properties to specify only the custom filter elements, as the default filter implementation is added implicitly by the Portal infrastructure. Thus, by default no value is set for the properties.
 
 In addition, you can set properties in the portal WP Authentication Service according to the following pattern:
 
@@ -69,7 +70,7 @@ For details about setting portal configuration properties see the topic about Se
 
 The following gives an example of a custom filter plugged into the filter chain for the explicit Portal login. The custom filter holds properties that define particular redirect URLs for particular user IDs and triggers the corresponding redirect if one of those users who are logged in successfully. To implement such an example, proceed by the following steps:
 
-1.  Implement the **com.ibm.portal.auth.ExplicitLoginFilter** interface and make your class available to the portal class path. See the topic [Extending HCL Portal class path](../dev/ext_wp_classpath.md) for where to place your compiled custom code on the Portal filesystem. Refer to the following sample code as an example to implement the methods of the interface:
+1.  Implement the **com.ibm.portal.auth.ExplicitLoginFilter** interface and make your class available to the portal class path. See the topic [Extending DX class path](../../../../extend_dx/development_tools/ext_wp_classpath/ext_wp_classpath.md) for where to place your compiled custom code on the Portal filesystem. Refer to the following sample code as an example to implement the methods of the interface:
 
     ```
     package com.ibm.portal.example;
@@ -132,13 +133,9 @@ The following gives an example of a custom filter plugged into the filter chain 
 
 The new filter for the explicit login is now available. Users who are defined in the properties will be redirected to the specified URL after they log in through the login portlet or login URL.
 
--   **[Enhanced Cross Origin Resource Sharing Configuration](../admin-system/enhanced_cross_origin_resource_sharing_configuration.md)**  
-Enhanced Cross Origin Resource Sharing Configuration adds new options for HCL Digital  Experience administrators to set configuration for CORS using a WP configuration service in  the IBM WebSphere Application Server resource environment provider. This new configuration  option is supported with HCL DX 9.5 Container Update CF195 and higher, and HCL DX CF196 and  higher for customers deploying to on premises platforms.
-
-
-**Related information**  
-[Authentication Service](../admin-system/srvcfgref_secy_auth.md)<br>
-[Configuring Integrator for SAP](../admin-system/sap_int_cfg.md)<br>
-[Configuring Basic Authentication for SSO for the SAP navigation integration](../admin-system/sap_int_cfg_basauth_sso_4nav.md)<br>
-[Page properties for configuring the SAP navigation integration](../admin-system/sap_int_cfg_parms_4nav.md)
+???+ info "Related information" 
+      -  [Authentication Service](../service_config_properties/portal_svc_cfg/security_svc/srvcfgref_secy_auth.md)
+      -  [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)
+      -  [Configuring Basic Authentication for SSO for the SAP navigation integration](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_basauth_sso_4nav.html)
+      -  [Page properties for configuring the SAP navigation integration](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_parms_4nav.html)
 

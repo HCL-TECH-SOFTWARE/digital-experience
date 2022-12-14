@@ -73,7 +73,7 @@ Use of the XML configuration interface for the following tasks is limited:
 
 For more information, refer to the section [About the XML configuration interface](../portal_admin_tools/xml_config_interface/adxmlabt.md).
 
-The XML configuration interface is also used for release staging, that is, for staging a portal from development through test to production. For more information about staging your portal to production, refer to the topics about [Staging to production](../../../deployment/manage/staging_to_production/index.md) and [Deploy DX components using HCL DXClient](../dxclient/index.md) for non-containerized platforms and containerized platforms and the ReleaseBuilder.
+The XML configuration interface is also used for release staging, that is, for staging a portal from development through test to production. For more information about staging your portal to production, refer to the topics about [Staging to production](../../../deployment/manage/staging_to_production/index.md) and [Deploy DX components using DXClient](../../../extend_dx/development_tools/dxclient/index.md) for non-containerized platforms and containerized platforms and the ReleaseBuilder.
 
 ## Overview of ReleaseBuilder
 
@@ -125,6 +125,6 @@ For more information, refer to the section [Configuration Wizard](../portal_admi
 
 ## Overview of ConfigEngine
 
-The ConfigEngine allows various configuration tasks to be executed that change major DX and WAS configuration. Some configurations can cause conflicts between Portal resources or with other web modules deployed into the WebSphere Application Server. You can check for conflicts by using ConfigEngine validation targets. You cannot access the ConfigEngine remotely. The ConfigEngine pages are documented in the places where it is used, for example, the import and export of web content (see [Exporting and importing a web content library](../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)). It is also used and may be extended in the Solution Installer. See [ConfigEngine extension points for the Solution Installer](../../paa/developing_adv_paa_app/extpnts_si.md).
+The ConfigEngine allows various configuration tasks to be executed that change major DX and WAS configuration. Some configurations can cause conflicts between Portal resources or with other web modules deployed into the WebSphere Application Server. You can check for conflicts by using ConfigEngine validation targets. You cannot access the ConfigEngine remotely. The ConfigEngine pages are documented in the places where it is used, for example, the import and export of web content (see [Exporting and importing a web content library](../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)). It is also used and may be extended in the Solution Installer. See [ConfigEngine extension points for the Solution Installer](../../../extend_dx/paa/developing_adv_paa_app/extpnts_si.md).
 
-A few tasks are exposed via the user interface in the ConfigWiard. For more information, refer to the section [Configuration Wizard](../portal_admin_tools/cfg_wizard/configuration/index.md).
+A few tasks are exposed via the user interface in the ConfigWizard. For more information, refer to the section [Configuration Wizard](../portal_admin_tools/cfg_wizard/configuration/index.md).

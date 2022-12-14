@@ -55,17 +55,17 @@ You can disable the toolbar logo for the entire portal that includes all the vir
 The toolbar tabs of the Portal 8.5 site toolbar are represented as portal pages. The content of the toolbar tabs can be implemented by using portlets.
 -   **[Customizing the More menu of the action bar](epc_custom_more_menu.md)**  
 The More menu is a public extension point that you can use to plug in your own menu actions that you want to make available in the action bar.
--   **[Customizing the Page Component palette](epc_custom_add_site_toolbar.md)**  
+-   **[Customizing the Page Component palette](../prep_site_toolbar/customizing_page_cmpnt_palette/index.md)**  
 The Page Component palette, which is accessed from the site toolbar, contains the content items a content author can add to a page. This was known as the Content palette prior to CF08.
--   **[Customizing the Applications palette](epc_app_categories.md)**  
+-   **[Customizing the Applications palette](../prep_site_toolbar/customizing_applications_palette/index.md)**  
 HCL Portal includes ready to use portlets that you can browse through in the site toolbar. To ease browsing through this set of portlets, HCL Portal supports assigning portlets to one or more categories. As the site administrator, you can create, delete, and modify categories and assign portlets to them.
--   **[Customizing page creation and page editing options](epc_custom_page_tab.md)**  
+-   **[Customizing page creation and page editing options](../prep_site_toolbar/customizing_page_creation_editing/index.md)**  
 When content authors edit a page, they can choose layouts and styles. As an administrator, you can customize these page editing options. If you are on Combined Cumulative Fix 8 or later, you can also customize page creation for your content authors.
 -   **[Customizing toolbar layouts](layout_toolbar_customization.md)**  
 The toolbar layouts can be customized by adding theme metadata to the theme deployment file.
 -   **[Customizing site manager User Interface](Customize_Site_Manager_User_Interface.md)**  
 The site manager user interface can be customized by adding additional functionality.
--   **[Controlling the visibility of the site toolbar and toolbar tabs](cntrl_vsblty_ste_tlbr.md)**  
+-   **[Controlling the visibility of the site toolbar and toolbar tabs](../prep_site_toolbar/controlling_visibility_site_toolbar/index.md)**  
 You can control the visibility of the site toolbar and single toolbar tabs per virtual portal by using Portal Access Control.
 -   **[Removing the site toolbar on a production server](wcm_mngpages_disabletool.md)**  
 The site toolbar provides access to editing features for managed pages, including adding and editing pages and web content. Although essential for an authoring server, it is recommended that you disable the site toolbar on a delivery server. You can disable the toolbar for an entire portal or for specific virtual portals.

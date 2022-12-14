@@ -100,6 +100,6 @@ Client-side content spots are replaced at page load time or at run time through 
     -   var skinConstants: `com.ibm.mashups.enabler.runtime.skin.Constants`.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Apache Ant - Welcome Page](http://ant.apache.org)
 

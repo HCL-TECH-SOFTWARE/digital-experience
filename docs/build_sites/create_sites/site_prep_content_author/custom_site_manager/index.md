@@ -9,6 +9,7 @@ Specify portlet preferences by using the Manage Portlets portlet. To access the 
 
 1.  Click the **Administration menu** icon. Then, click **Portlet Management** \> **Portlets**.
 2.  Locate the Site Manager portlet in one of two ways:
+
     -   If you are searching by **Title starts with**, search for SiteMap Portlet.
     -   If you are searching by **Unique name contains**, search for wps.p.SiteMapTab.
     

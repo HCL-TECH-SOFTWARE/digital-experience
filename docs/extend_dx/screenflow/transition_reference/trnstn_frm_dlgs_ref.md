@@ -34,7 +34,7 @@ The following code sample shows a transition where the source and the target poi
 
 A dispatching transition is triggered when the transition returns from one dialog and it causes another dialog to start. In this sample when `dialog2` emits the event `eX`, `dialog3` is started and is initialized with the event `eY`. For more information about dispatching transition, go to *Dialog Chaining and Nesting*.
 
-Code sample
+Code sample:
 
 ```
 
@@ -52,12 +52,8 @@ Code sample
 </transition>
 ```
 
-**Parent topic:**[Transitions reference](../screenflow/ref_trnstntns.md)
 
-**Related information**  
-
-
-[Dialog chaining and nesting](../screenflow/dlg_chng_nstng.md)
-
-[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)
+???+ info "Related information"
+    -   [Dialog chaining and nesting](../../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transitions/dialog_chain_nest/index.md)
+    -   [Transition endpoints](../../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transition_endpoints/index.md)
 

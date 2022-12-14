@@ -106,7 +106,8 @@ The following list shows and describes all the possible URI path operations, tog
 
             Determines if the sorting according to sortByAttributes will be descending.
 
-        **Note:** The parameters `memberOf`, `searchAttributes`, and `identifier` are mutually exclusive. Paged search (resultsPerPage) only works for searchAttributes.
+        !!! note
+            The parameters `memberOf`, `searchAttributes`, and `identifier` are mutually exclusive. Paged search (resultsPerPage) only works for searchAttributes.
 
     -   **For the HTTP method POST:**
 

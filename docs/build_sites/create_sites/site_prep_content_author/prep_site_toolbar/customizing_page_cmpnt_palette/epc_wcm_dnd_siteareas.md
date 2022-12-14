@@ -4,7 +4,7 @@ By default, only web content items can be drag and dropped from the toolbar. You
 
 To enable a site area to be drag and drop ready from the toolbar, you need to add a keyword to the profile of a site area to enable this behavior.
 
-Before doing so, you must enable profiling for site areas: See [Running the profile enablement tool](../../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_admin_profile_enable.md) for details.
+Before doing so, you must enable profiling for site areas: See [Running the profile enablement tool](../../../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md) for details.
 
 After you have enabled profiling for site areas, you are ready to make a site area drag and drop ready.
 

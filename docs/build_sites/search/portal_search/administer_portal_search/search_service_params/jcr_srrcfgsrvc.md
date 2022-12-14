@@ -67,6 +67,6 @@ The following new properties are integrated in [CF16 and later](https://www.ibm.
     This value defines the maximum number of rows that the Seedlist Cleanup Utility will attempt to delete from the `ICMSTJCRTSSEEDLISTPENDING` table in a single SQL call.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Database transfer: Set up JCR collation](../../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/kc-db-createdb-db2.md)
     - [Setting up a JCR search collection](../setup_search_collections/jcr_search_collections/index.md)

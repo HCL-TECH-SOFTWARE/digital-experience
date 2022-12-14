@@ -14,7 +14,8 @@ HCL Digital Experience 8.5 is packaged with IBM® WebSphere Application Server v
 
 The following high-level steps provide guidance for using the IBM Installation Manager. Refer to the Installing the Exceptional Digital Experience section for other installation alternatives.
 
-**Note:** If you previously did a full Portal installation, you must remove all profiles.
+!!!note
+    If you previously did a full Portal installation, you must remove all profiles.
 
 1.  Start the IBM Installation Manager.
 2.  Follow the IBM Installation Manager instructions through the different screens.

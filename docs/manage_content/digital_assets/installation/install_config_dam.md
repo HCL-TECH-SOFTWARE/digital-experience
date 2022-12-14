@@ -182,7 +182,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
             A `dx.dam.config.cors` config map setting is auto-generated and provides the ability for Cross Origin Resource Sharing across Content Composer and Digital Asset Management resources.
 
-            In the Digital Experience 9.5 core deployment, the `dx.config.cors` setting is set in the DX configuration map. Reference the [Containerization Deployment](../../platform/kubernetes/deployment/helm_deployment.md) pages for additional details.
+            In the Digital Experience 9.5 core deployment, the `dx.config.cors` setting is set in the DX configuration map. Reference the [Containerization Deployment](../../../deployment/install/container/helm_deployment/overview.md) pages for additional details.
 
             An additional self-provisioning volume is created for each of the HCL Digital Asset Management Persistence \(Postgres\) pods. The access mode of these self-provisioning persistent volumes must include `ReadWriteOnce`. If this volume is not present the images are lost and shows blank if/when the HCL Digital Asset Management library is restarted.
 

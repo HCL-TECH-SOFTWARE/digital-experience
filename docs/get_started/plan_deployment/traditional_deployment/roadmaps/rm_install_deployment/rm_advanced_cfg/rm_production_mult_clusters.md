@@ -86,7 +86,7 @@ for your environment.
 3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
     !!!note
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md).
 
 4.  Select **Set Up a Cluster > Database Transfer**.
 
@@ -107,6 +107,7 @@ for your environment.
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+
 8.  Log in to HCL Portal to verify that you have a working portal server.
 
 9.  Select **Set Up a Cluster > Create a Deployment Manager**.
@@ -200,7 +201,7 @@ for your environment.
 2.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
     !!!note
-        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Digital Experience user interfaces, see [Language support](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Digital Experience user interfaces, see [Language support](../../../../../../deployment/manage/portal_admin_tools/language_support/index.md).
 
 3.  Select **Set Up a Stand-alone Server > Database Transfer**.
 
@@ -215,6 +216,7 @@ for your environment.
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+
 7.  Log in to HCL Digital Experience to verify that you have a working portal server.
 
 8.  Select **Set Up a Stand-alone Server > Enable Federated Security**.
@@ -299,8 +301,10 @@ After you create cluster A and portal B, run the various tasks to create the mul
 
     1.  Remove the node if the AddNode task succeeded in creating the node.
     2.  If the items exist, log on to the deployment manager and complete the following steps:
+
         1.  Remove the HCL Portal server definition.
         2.  Remove the HCL Portal JDBC Provider.
+
 5.  Stop the HCL Portal server on the primary node of Cluster B and ensure that the following parameters are set correctly in the wkplc.properties file:
 
     !!!note
@@ -376,31 +380,40 @@ After you create cluster A and portal B, run the various tasks to create the mul
 14. Choose one of the following options to define a cluster with Portal B as the basis:
 
     -   Complete the following steps to define a static cluster:
+
         -   Run the following task:
+
             -   AIX and Linux: `./ConfigEngine.sh cluster-node-config-cluster-setup -DWasPassword=dmgr_password`
             -   Windows: `ConfigEngine.bat cluster-node-config-cluster-setup -DWasPassword=dmgr_password`
+
         -   Configure the cluster to use an external web server to take advantage of features such as workload management. Go to [Configuring a web server and an application server on separate machines (remote)](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/tins_webplugins_remotesa.html) for information.
 
             !!!note
                 Start with the step about starting the plug-ins installation wizard.
 
     -   Complete the following steps to define a dynamic cluster:
+
         -   Log on to the deployment manager WebSphere Integrated Solutions Console.
         -   Complete the following steps to create a node group:
+
             -   Click **System administration > Node groups**.
             -   Click **New**.
             -   Type the node group **Name**.
             -   Type any information about the node group in the **Description** text box.
             -   Click **OK**.
             -   Click the **Save** link to save your changes to the master configuration.
+
         -   Complete the following steps to add members to the node group:
+
             -   Click **System administration > Node groups**.
             -   Click the name of the node group that you want to add members to.
             -   Click **Node group members** under Additional Properties.
             -   Click **Add**.
             -   Select the primary node and then click **Add**.
             -   Click the **Save** link to save your changes to the master configuration.
+
         -   Complete the following steps to create a dynamic cluster in the node group:
+
             -   Click **Servers > Clusters > Dynamic clusters**.
             -   Click **New**.
             -   Select WebSphere Application Server from the **Server Type** menu and then click **Next**.
@@ -408,20 +421,24 @@ After you create cluster A and portal B, run the various tasks to create the mul
             -   Type the cluster name in the **Dynamic cluster name** text box. Then, click **Next**. Type the same value that you provided for the ClusterName parameter in the wkplc.properties file of your primary node.
             -   Remove all default membership policies and then click **Subexpression builder**.
             -   Enter the following information in the Subexpression builder window:
+
                 -   Select **and** from the **Logical operator** menu.
                 -   Select **Nodegroup** from the **Select operand** menu.
                 -   Select **Equals (=)** from the **Operator** menu.
                 -   Type the node group name that you created in the previous step in the **Value** text box.
                 -   Click **Generate subexpression**.
                 -   Click **Append**.
+
             -   Click **Preview membership** to verify that all nodes included in the node group display and then click **Next**.
             -   Click **Create the cluster member using an existing server as a template** and then select the primary node HCL Digital Experience server.
             -   Click **Next**.
             -   Specify the dynamic cluster properties for the minimum and maximum number of server instances.
             -   Review the summary page to verify your actions and then click **Finish**.
             -   Run the following task to create the dynamic cluster:
+
                 -   AIX and Linux: `./ConfigEngine.sh cluster-node-config-dynamic-cluster-setup -DWasPassword=dmgr_password`
                 -   Windows: `ConfigEngine.bat cluster-node-config-dynamic-cluster-setup -DWasPassword=dmgr_password`
+                
 15. Complete the following steps to access the Web Content Manager content through an external web server:
 
     1.  Log on to the deployment manager WebSphere Integrated Solutions Console.

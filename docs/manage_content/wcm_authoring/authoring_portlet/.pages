@@ -1,0 +1,10 @@
+title: Authoring Portlet
+nav:
+    - index.md
+    - accessing_authoring_portlet.md
+    - navigation
+    - web_content_libraries
+    - content_management_artifacts
+    - change_management
+    - accessibility.md
+    - auth_portlet_settings
