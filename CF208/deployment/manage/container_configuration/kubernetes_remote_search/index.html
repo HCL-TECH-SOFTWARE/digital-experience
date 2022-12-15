@@ -1,0 +1,1915 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A next-gen documentation site for HCL Digital Experience.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/CF208/deployment/manage/container_configuration/kubernetes_remote_search/">
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Configure Remote Search - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/dx_style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-169645537-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configure-remote-search" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div class="md-banner--feedback">
+<span class="twemoji">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.25 21.6 13.52l68.6 141.28 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5L433.6 328.4l26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5L31.11 218.2c-6.46-6.3-8.75-15.8-5.91-24.5 2.83-8.6 10.3-14.9 19.29-16.2l153.21-22.7 68.6-141.28C270.4 5.249 278.7 0 287.9 0zm0 78.95L235.4 187.2c-3.5 7.1-10.3 12.1-18.1 13.3L98.98 217.9 184.9 303c5.5 5.5 8 13.4 6.7 21.1l-20.2 119.6 105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2-20.2-119.6c-1.3-7.7 1.3-15.6 6.8-21.1l85.9-85.1-118.3-17.4c-7.9-1.2-14.7-6.2-18.1-13.3L287.9 78.95z"/></svg> 
+</span>
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. <br>Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/deployment/manage/container_configuration/kubernetes_remote_search/"> 
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configure Remote Search
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../get_started/product_overview/" class="md-tabs__link">
+        Get Started
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../whatsnew/cf20/newcf208/" class="md-tabs__link">
+        What's New
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+        Deploy DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../build_sites/" class="md-tabs__link">
+        Build Sites
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../manage_content/" class="md-tabs__link">
+        Manage Content
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../extend_dx/" class="md-tabs__link">
+        Extend DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../guide_me/tutorials/" class="md-tabs__link">
+        Guide Me
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../.." class="md-nav__link">
+    Home
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../../get_started/product_overview/"
+    class="md-nav__link"
+  >
+    Get Started
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../../whatsnew/cf20/newcf208/"
+    class="md-nav__link"
+  >
+    What's New
+  </a>
+</li>
+  
+    
+      
+      
+                 
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4"
+    type="checkbox"
+    id="__nav_4"
+    checked
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../">Deploy DX</a>
+
+     
+    <label for="__nav_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Deploy DX"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_4">
+      <span class="md-nav__icon md-icon"></span>
+      Deploy DX
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_2"
+    type="checkbox"
+    id="__nav_4_2"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../install/">Install</a>
+
+     
+    <label for="__nav_4_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3"
+    type="checkbox"
+    id="__nav_4_3"
+    checked
+  />
+                                                                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../">Manage</a>
+
+     
+    <label for="__nav_4_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Manage"
+    data-md-level="2"
+  >
+    <label class="md-nav__title" for="__nav_4_3">
+      <span class="md-nav__icon md-icon"></span>
+      Manage
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_2"
+    type="checkbox"
+    id="__nav_4_3_2"
+    checked
+  />
+                                 
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../">Configure Kubernetes Deployment</a>
+
+     
+    <label for="__nav_4_3_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Configure Kubernetes Deployment"
+    data-md-level="3"
+  >
+    <label class="md-nav__title" for="__nav_4_3_2">
+      <span class="md-nav__icon md-icon"></span>
+      Configure Kubernetes Deployment
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+                
+<li class="md-nav__item">
+  <a href="../core_interactions_kubernetes/" class="md-nav__link">
+    Core Behavior
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../helm_dam_backup_restore/" class="md-nav__link">
+    Back up and restore DAM
+  </a>
+</li>
+    
+                
+<li class="md-nav__item md-nav__item--active">
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="toc"
+    type="checkbox"
+    id="__toc"
+  />
+
+        
+  <label class="md-nav__link md-nav__link--active" for="__toc">
+    Configure Remote Search
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  
+  <a href="./" class="md-nav__link md-nav__link--active">
+    Configure Remote Search
+  </a>
+
+    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-remote-search-in-hcl-digital-experience-95-openshift-and-kubernetes-platforms" class="md-nav__link">
+    Deploying Remote Search in HCL Digital Experience 9.5 OpenShift and Kubernetes platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejbs-and-host-names" class="md-nav__link">
+    EJBs and host names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-serverindexxml-on-the-remote-search-server" class="md-nav__link">
+    Defining serverindex.xml on the Remote Search server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-search-services-configuration" class="md-nav__link">
+    Remote Search services configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jcr-content-source-configuration" class="md-nav__link">
+    JCR Content Source Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-wcm-authoring-portlet-search-function" class="md-nav__link">
+    Configure WCM Authoring Portlet search function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-routing-configuration-for-supported-kubernetes-platforms" class="md-nav__link">
+    Additional Routing Configuration for supported Kubernetes platforms
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+  
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../run_core_config_engine/" class="md-nav__link">
+    Running DX Core configuration tasks
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../container_scaling/" class="md-nav__link">
+    Scaling
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../container_staging/" class="md-nav__link">
+    Container Staging
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../deploy_container_artifact_updates/" class="md-nav__link">
+    Deploying HCL DX 9.5 Container artifact updates with minimal operations downtime
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_2_9"
+    type="checkbox"
+    id="__nav_4_3_2_9"
+    
+  />
+                           
+
+  <div class="md-nav__link md-nav__link--index">
+    <a href="../troubleshooting/helm_troubleshooting/"> Troubleshooting </a>
+    <label for="__nav_4_3_2_9">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+  </div>
+
+      
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_2_10"
+    type="checkbox"
+    id="__nav_4_3_2_10"
+    
+  />
+                           
+
+  <div class="md-nav__link md-nav__link--index">
+    <a href="../monitoring/basic_monitor_helm_deployment/"> Monitoring </a>
+    <label for="__nav_4_3_2_10">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+  </div>
+
+      
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../stopstart/" class="md-nav__link">
+    Starting and stopping servers, deployment managers, and node agents
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../itlm/" class="md-nav__link">
+    Configuring the IBM License Metric Tool
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../config_standalone/" class="md-nav__link">
+    Configuring a stand-alone server
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_6"
+    type="checkbox"
+    id="__nav_4_3_6"
+    
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../config_cluster/">Setting up a cluster</a>
+
+     
+    <label for="__nav_4_3_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_7"
+    type="checkbox"
+    id="__nav_4_3_7"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../portalfarm_cfg/">Setting up and maintaining a portal farm</a>
+
+     
+    <label for="__nav_4_3_7">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_8"
+    type="checkbox"
+    id="__nav_4_3_8"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../security/">Security</a>
+
+     
+    <label for="__nav_4_3_8">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_9"
+    type="checkbox"
+    id="__nav_4_3_9"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../tune_servers/">Tune your environment</a>
+
+     
+    <label for="__nav_4_3_9">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../port_chg/" class="md-nav__link">
+    Changing ports
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_11"
+    type="checkbox"
+    id="__nav_4_3_11"
+    
+  />
+                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../siteurl_cfg/">Changing your site URL</a>
+
+     
+    <label for="__nav_4_3_11">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_12"
+    type="checkbox"
+    id="__nav_4_3_12"
+    
+  />
+                                                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../config_portal_behavior/">Configuring portal behavior</a>
+
+     
+    <label for="__nav_4_3_12">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_13"
+    type="checkbox"
+    id="__nav_4_3_13"
+    
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../portal_admin_tools/">Portal administration tools</a>
+
+     
+    <label for="__nav_4_3_13">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_14"
+    type="checkbox"
+    id="__nav_4_3_14"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../manage_portal_using_iim/">Managing Interim Fixes for HCL Portal</a>
+
+     
+    <label for="__nav_4_3_14">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_15"
+    type="checkbox"
+    id="__nav_4_3_15"
+    
+  />
+                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../config_webservers/">Web server</a>
+
+     
+    <label for="__nav_4_3_15">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_16"
+    type="checkbox"
+    id="__nav_4_3_16"
+    
+  />
+                                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../db_mgmt_sys/">Database Management Systems</a>
+
+     
+    <label for="__nav_4_3_16">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_17"
+    type="checkbox"
+    id="__nav_4_3_17"
+    
+  />
+                                
+
+  <div class="md-nav__link md-nav__link--index">
+    <a href="../../profile/iim_modify/"> Profile </a>
+    <label for="__nav_4_3_17">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+  </div>
+
+      
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_18"
+    type="checkbox"
+    id="__nav_4_3_18"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../cfg_property_files/">Configuration properties</a>
+
+     
+    <label for="__nav_4_3_18">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_19"
+    type="checkbox"
+    id="__nav_4_3_19"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../backup_restore/">Backup and restore</a>
+
+     
+    <label for="__nav_4_3_19">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_20"
+    type="checkbox"
+    id="__nav_4_3_20"
+    
+  />
+                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../change_dev_mode_env/">Changing to a developer mode environment</a>
+
+     
+    <label for="__nav_4_3_20">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_21"
+    type="checkbox"
+    id="__nav_4_3_21"
+    
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../staging_to_production/">Staging to production</a>
+
+     
+    <label for="__nav_4_3_21">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_22"
+    type="checkbox"
+    id="__nav_4_3_22"
+    
+  />
+                           
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../migrate/">Migrating</a>
+
+     
+    <label for="__nav_4_3_22">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_23"
+    type="checkbox"
+    id="__nav_4_3_23"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../multiple_profiles/">Supporting multiple profiles</a>
+
+     
+    <label for="__nav_4_3_23">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_24"
+    type="checkbox"
+    id="__nav_4_3_24"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../remote_spell_checker/">Setting up a remote spell checker</a>
+
+     
+    <label for="__nav_4_3_24">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_25"
+    type="checkbox"
+    id="__nav_4_3_25"
+    
+  />
+                 
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../upsell/">Upgrading your existing product offering</a>
+
+     
+    <label for="__nav_4_3_25">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_26"
+    type="checkbox"
+    id="__nav_4_3_26"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../monitoring/">Monitoring</a>
+
+     
+    <label for="__nav_4_3_26">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4_3_27"
+    type="checkbox"
+    id="__nav_4_3_27"
+    
+  />
+                           
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../troubleshooting/">Troubleshooting</a>
+
+     
+    <label for="__nav_4_3_27">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+ 
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../build_sites/" class="md-nav__link">
+    Build Sites
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../manage_content/" class="md-nav__link">
+    Manage Content
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../extend_dx/" class="md-nav__link">
+    Extend DX
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../../guide_me/tutorials/"
+    class="md-nav__link"
+  >
+    Guide Me
+  </a>
+</li>
+  
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-remote-search-in-hcl-digital-experience-95-openshift-and-kubernetes-platforms" class="md-nav__link">
+    Deploying Remote Search in HCL Digital Experience 9.5 OpenShift and Kubernetes platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejbs-and-host-names" class="md-nav__link">
+    EJBs and host names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-serverindexxml-on-the-remote-search-server" class="md-nav__link">
+    Defining serverindex.xml on the Remote Search server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-search-services-configuration" class="md-nav__link">
+    Remote Search services configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jcr-content-source-configuration" class="md-nav__link">
+    JCR Content Source Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-wcm-authoring-portlet-search-function" class="md-nav__link">
+    Configure WCM Authoring Portlet search function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-routing-configuration-for-supported-kubernetes-platforms" class="md-nav__link">
+    Additional Routing Configuration for supported Kubernetes platforms
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/deployment/manage/container_configuration/kubernetes_remote_search.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="configure-remote-search">Configure Remote Search</h1>
+<p>This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prior to Container Update CF195, the HCL Digital Experience 9.5 Remote Search image is supported for deployment to Red Hat OpenShift. With the Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.</p>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>Using HCL Digital Experience 9.5 Remote Search images in the supported cloud container platforms, such as Red Hat OpenShift, require a different setup and configuration steps than those used to <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/installrssman.html">set up Remote Search on a non-Docker or Kubernetes container platform</a><!-- (../admin-system/installrssman.md) -->.</p>
+<ul>
+<li>As information, the serverindex.xml file on the Remote Search server when deployed to on-premises environments may have a host name that is not accurate in a container environment with respect to the actual host name of the server hosting the Remote Search server.</li>
+<li>Follow the guidance in this section to define collections in the core HCL DX 9.5 container environment with respect to JCR text search collections, rather than guidance published for the on-premises <a href="../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/">(non-Docker or Kubernetes) platforms</a><!-- (../admin-system/srtcfg_jcr_colls.md) --> for the JCR collection URL.</li>
+</ul>
+<h2 id="deploying-remote-search-in-hcl-digital-experience-95-openshift-and-kubernetes-platforms">Deploying Remote Search in HCL Digital Experience 9.5 OpenShift and Kubernetes platforms</h2>
+<p><strong>Prerequisite</strong>: Download the HCL Digital Experience 9.5 Docker containers from your HCL Digital Experience entitlements from the <a href="https://www.hcltech.com/software/support/release" target="_blank">HCL Software License Portal</a>.</p>
+<p>The HCL DX 9.5 container update CF181 and later packages include a core software and Remote search container. Load both of these images into an OpenShift release platform supported by HCL DX 9.5 such as Red Hat OpenShift. Use CF195 and later if you deploy to a Kubernetes platform. See the following <a href="#additional-routing-configuration-for-supported-kubernetes-platforms">Additional Routing Configuration for supported Kubernetes platforms</a> topic for information about deploying to Kubernetes container platforms such as Amazon EKS, Azure AKS, or Google GKE.</p>
+<p>In this example, the OpenShift load command can be used. Note that if your organization has a corporate OpenShift repository, you might use OpenShift pull instead to put it into your local repository.</p>
+<div class="highlight"><pre><span></span><code>hcl-dx-core-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>hcl-dx-dxrs-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
+</code></pre></div>
+<p>The first one (dx-core-image), is the core HCL DX 9.5 Portal and Web Content Manager image while the second one (dx-dxrs-image) is the remote search image.</p>
+<p>After the Remote Search images are loaded to the Kubernetes environment that you deploy to, follow deployment steps for that platform presented in the <a href="../../../install/container/helm_deployment/overview/">HCL Digital Experience 9.5 Container Deployment</a> topic.</p>
+<h2 id="ejbs-and-host-names">EJBs and host names</h2>
+<p>HCL Digital Experience 9.5 Container core and Portal Remote Search each use WebSphere Application Server as a base. As these components are on different hosts (containers), they need to communicate via IP. The initial conversation between HCL Digital Experience 9.5 core and the Remote Search server takes place over IIOP (rmi) which is the internet protocol of EJBs.</p>
+<p>Ideally, the /etc/hosts file of both containers would have the host name of the other. In other words, the /etc/hosts file of the HCL Digital Experience Container core would have a host reference for the Remote Search and vice versa. However, three factors make this impossible. The containers are based on Red Hat UBI, the /etc/hosts file is owned by <code>root</code>, and the <code>root</code> password (and <code>sudo</code>) is not available. Apply the command below to define host references for the Remote Search service from the Digital Experience Container core. Therefore, a way to force the Kubernetes environment, such as Red Hat OpenShift to write the /etc/hosts file at container initialization time is needed.</p>
+<p>HCL DX 9.5 Container operators that execute image deployment to Kubernetes platforms such as Red Hat OpenShift create the correct host-name in /etc/hosts for the local container. In addition, these operators execute a DNS resolution on foreign host-names as long as they are on the same Kubernetes deployment.</p>
+<p>Portal and Portal Remote Search both use WebSphere Application Server as a base. As they are on different hosts (containers), they have to be able to talk to each other via IP. The initial conversation between Portal DX and the Remote Search server take place over IIOP (rmi) which is the internet protocol of EJBs.</p>
+<h2 id="defining-serverindexxml-on-the-remote-search-server">Defining serverindex.xml on the Remote Search server</h2>
+<p>When deploying the Remote Search image on supported Kubernetes platforms, additional configuration settings for the serverindex.xml are required. When deployed to Kubernetes, the HCL DX 9.5 container operators are configured to check to ensure that the server name is correct.</p>
+<p>Note that dx-deployment-service-remotesearch is a DNS resolvable name from the point of view of the HCL Digital Experience 9.5 Server. The remote search server includes the “ping” command. You can use this to verify that the host name dx-deployment-service-remotesearch resolves to a valid IP address.</p>
+<p>Now, when the HCL DX 9.5 server communicates to the Remote Search server over IIOP, the Remote Search Server returns dx-deployment-service-remotesearch as the host name of the Remote Search Server. The HCL DX 9.5 Server has configuration that appends the port to the host name that was just returned.</p>
+<h2 id="remote-search-services-configuration">Remote Search services configuration</h2>
+<p>The following guidance aligns with the Remote Search services configuration instructions available in the <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html">Remote Search services</a><!-- (../admin-system/srcusgrmtsrchsrv.md) --> topic for deployment to non-container HCL Digital Experience servers.</p>
+<p>All of the instructions contained in the <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html">Remote Search services</a><!-- (../admin-system/srcusgrmtsrchsrv.md) --> topic must be completed in a Kubernetes container-based HCL Digital Experience deployment. The following guidance outlines specific settings that were used in the Remote Search service DX 9.5 image deployment to supported Kubernetes platforms.</p>
+<ol>
+<li>
+<p>Create a single sign-on (SSO) domain between HCL Digital Experience 9.5 container and the Remote Search service container by following the non-container on-premises procedure for <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/sso_portal_rss.html">Creating a single sign-on domain between HCL Portal and the Remote Search service</a><!-- (../../9.0/admin-system/sso_portal_rss.md) -->. This entails exchanging SSL certificates and LTPA domain tokens.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When retrieving the SSL certificates from the host server, use the URL configuration host as defined in the table below (dx-deployment-service-remotesearch) as the host, and the appropriate port for the SSL access. You must also complete <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/srtsttusrid.html">Setting the search user ID</a><!-- (../../9.0/admin-system/srtsttusrid.md) --> and <a href="https://help.hcltechsw.com/digital-experience/9.5/install/rmv_search_coll.html">Removing search collections</a><!-- (../../9.0/install/rmv_search_coll.md) --> before creating a new search service.</p>
+</div>
+</li>
+<li>
+<p>Create a new search service and use the following values for a Remote Search services configuration to a Kubernetes container deployment. See the section on <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_service.html">Creating a new search service</a><!-- (../../9.0/admin-system/create_search_service.md) --> for more information.</p>
+<p>For testing <strong>Search Services</strong> configuration, the following are used:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IIOP_URL</td>
+<td>iiop://dx-deployment-service-remotesearch:2809</td>
+</tr>
+<tr>
+<td>PSE TYPE</td>
+<td>Select ejb from the pull down.</td>
+</tr>
+<tr>
+<td>EJB</td>
+<td>ejb/com/ibm/hrl/portlets/WsPse/WebScannerLiteEJBHome</td>
+</tr>
+<tr>
+<td>DefaultCollectionsDirectory</td>
+<td>Leave empty.</td>
+</tr>
+<tr>
+<td>Search service implementation</td>
+<td>Select Portal Search Service Type from the pull down.</td>
+</tr>
+<tr>
+<td>CONFIG_FOLDER_PATH</td>
+<td>Did not set (differs from non-container instructions).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once completed and saved, the HCL Digital Experience 9.5 container deployment has a new search service called <strong>Remote PSE service EJB</strong>, with a green check mark confirming that the service was correctly set up and is able to communicate with the Remote Search container.</p>
+</div>
+</li>
+<li>
+<p>Based on the previously created Remote Search service, create a <strong>Portal Search Collection</strong> and a <strong>JCR Search Collection</strong> using the following parameters.</p>
+<ol>
+<li>
+<p>Use the following parameters to create a <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_coll.html">Portal search collection</a><!-- (../../9.0/admin-system/create_search_coll.md) -->.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search collection name</td>
+<td>Portal Search Collection</td>
+</tr>
+<tr>
+<td>Search collection location</td>
+<td>/opt/HCL/AppServer/profiles/prs_profile/SearchCollections/PortalSearchCollection</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The “search collection location” is relative to the remote search container. Furthermore, one places the collection in the <strong>profile</strong> of the Remote Search server because the profile of the remote search server is persisted. One obviously wants the search indexes persisted across restarts.</p>
+</div>
+</li>
+<li>
+<p>Use the following parameters to create a Content Source <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/srtcfg_jcr_colls.html">JCR search collection</a><!-- (../admin-system/srtcfg_jcr_colls.md) -->.</p>
+<p>The <strong>Collect documents linked from this URL</strong> is</p>
+<div class="highlight"><pre><span></span><code>https://dx-deployment-service:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&amp;Action=GetDocuments&amp;Range=100&amp;locale=en-US
+</code></pre></div>
+<p>Note that the host and port are the Kubernetes (for example, Red Hat OpenShift) service host and the port to which <code>10042</code> was mapped. In this case, <code>10042</code>is the <code>HttpQueueInboundDefaultSecure</code> port on the HCL DX 9.5 Server. Note also that one can put this URL in a browser (on the OpenShift host) and confirm that the response is an ATOM feed.</p>
+<p>On the <strong>Security</strong> panel, use <code>dx-deployment-service</code> as the host name, along with the username <code>wpsadmin</code> and the associated password for <code>wpsadmin</code>. One can also specify <strong>Realm</strong> as <code>CrawlerUsersRealm</code></p>
+<p>Complete the following configuration parameters to enable search in the <strong>Web Content Manager Authoring i</strong>interfaces:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search collection name</td>
+<td>JCRCollection1</td>
+</tr>
+<tr>
+<td>Search collection location</td>
+<td>/opt/HCL/AppServer/profiles/prs_profile/SearchCollections/JCRCollection1</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="jcr-content-source-configuration">JCR Content Source Configuration</h2>
+<p>Use the following URL for <strong>Collect documents linked from this URL</strong>:</p>
+<div class="highlight"><pre><span></span><code>https://dx-deployment-service:10042/wps/seedlist/myserver?Action=GetDocuments&amp;Format=ATOM&amp;Locale=en_US&amp;Range=100&amp;Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&amp;Start=0&amp;SeedlistId=1@OOTB_CRAWLER1
+</code></pre></div>
+<p>The parsing of the <code>SeedlistId</code> positional parameter in this URL uses an index of the virtual portal being crawled. In this case <code>1</code> (in 2 places) represents the <code>base</code> virtual portal.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The host and port are the Kubernetes (for example, Red Hat OpenShift ) service host and the port to which <code>10042</code> was mapped. In this case, <code>10042</code> is the <code>HttpQueueInboundDefaultSecure</code> port on the HCL DX 9.5 server. Note also that one can put this URL in a browser (on the OpenShift host) and confirm that the response is an ATOM feed.</p>
+</div>
+<p>On the <strong>Security</strong> panel, use <code>dx-deployment-service</code> as the host name, along with the username <code>wpsadmin</code> and the associated password for <code>wpsadmin</code>. One can also specify <strong>Realm</strong> as <code>CrawlerUsersRealm</code></p>
+<h2 id="configure-wcm-authoring-portlet-search-function">Configure WCM Authoring Portlet search function</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Even though the documents are gathered by the Remote Search function from the JCR, additional configuration is needed in order for the HCL Web Content Manager (WCM) Authoring Portlet search to use document search. Set the following values for this configuration.</p>
+</div>
+<p>Set the <strong>Custom properties</strong> for the WebSphere Application Server Resource Environment Provider, <strong>JCR ConfigService</strong>, using the following values:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jcr.textsearch.enabled</td>
+<td>true</td>
+</tr>
+<tr>
+<td>jcr.textsearch.indexdirectory</td>
+<td>/opt/HCL/AppServer/profiles/prs_profile/SearchCollections</td>
+</tr>
+<tr>
+<td>jcr.textsearch.PSE.type</td>
+<td>ejb</td>
+</tr>
+<tr>
+<td>jcr.textsearch.EJB.IIOP.URL</td>
+<td>iiop://dx-deployment-service-remotesearch:2809</td>
+</tr>
+<tr>
+<td>jcr.textsearch.EJB.EJBName</td>
+<td>ejb/com/ibm/hrl/portlets/WsPse/WebScannerLiteEJBHome</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On the <strong>jcr.textsearch.indexdirectory</strong>, the sub-directory JCRCollection1 is NOT included in the path.</p>
+</div>
+<h2 id="additional-routing-configuration-for-supported-kubernetes-platforms">Additional Routing Configuration for supported Kubernetes platforms</h2>
+<p>To configure Remote Search to DX 9.5 container deployments to supported Kubernetes platforms: Amazon Elastic Kubernetes Service (EKS), Microsoft Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE) requires specific steps. The HCL DX 9.5 core and Remote Search services each require <code>/ibm/console</code> as the route path when accessing the Admin Console. Due to the overlapping of the path mappings, to configure Remote Search, DX administrators can apply a solution to expose the Remote Search route via an additional Load balancer, as follows:</p>
+<ul>
+<li>
+<p>Create a new service for Remote Search with service type as Loadbalancer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not alter the Remote Search Service created by the DX-Operator.</p>
+</div>
+</li>
+</ul>
+<p>Sample Yaml:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dx-deployment-remotesearch</span><span class="w"></span>
+<span class="w">  </span><span class="nt">release</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dx-deployment</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dx-deployment-service-remotesearch-lb</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">was-admin</span><span class="w"></span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9060</span><span class="w"></span>
+<span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9060</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">was-admin-sec</span><span class="w"></span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9043</span><span class="w"></span>
+<span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9043</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boot-port</span><span class="w"></span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2809</span><span class="w"></span>
+<span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2809</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rs-port</span><span class="w"></span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9403</span><span class="w"></span>
+<span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9403</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dx-deployment-remotesearch</span><span class="w"></span>
+<span class="w">  </span><span class="nt">sessionAffinity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">None</span><span class="w"></span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LoadBalancer</span><span class="w"></span>
+</code></pre></div>
+<p>Apply this configuration using the following example command:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl apply -f filename.yaml
+</code></pre></div>
+<p>Remote Search Routes (example results):</p>
+<p><img alt="" src="../../../../images/Container_deploy_redhat_openshift.png" title="Remote Search Routes" /></p>
+<p>Access the Remote Search Admin Console via the external IP address of your DX 9.5 Container deployment:</p>
+<p>Example: <code>https://35.xxx.174.3:9043/ibm/console</code></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 14, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../helm_dam_backup_restore/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Back up and restore DAM" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Back up and restore DAM
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../run_core_config_engine/" class="md-footer__link md-footer__link--next" aria-label="Next: Running DX Core configuration tasks" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Running DX Core configuration tasks
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        <label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        <label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
