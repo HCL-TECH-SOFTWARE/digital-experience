@@ -66,7 +66,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | haproxy | 1 | haproxy | haproxy | 200m | 300Mi |
 | image-processor | 1 | image-processor | image-processor | 100m | 1280Mi |
 | license-manager | 1 | license-manager | license-manager | 100m | 300Mi |
-| open-ldap | 1 | ldap | openldap | 200m | 512Mi |
+| open-ldap | 1 | ldap | openldap | 200m | 768Mi |
 | persistence-connection-pool | 1 | persistence-connection-pool | persistence-connection-pool | 500m | 512Mi |
 | persistence-node | 1 | persistence-node | persistence-node | 1000m | 1024Mi |
 |  |  | persistence-metrics-exporter | persistence-metrics-exporter | 100m | 128Mi |
