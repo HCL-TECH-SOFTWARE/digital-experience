@@ -81,10 +81,10 @@ The following features and updates are available to customers installing HCL Dig
 
 A new option can be configured to control syndication of staging documents in production operations. See the Help Center topics [Install Commands to Deploy](../../deployment/install/container/helm_deployment/helm_install_commands.md) for more information.
 
-## Content Composer Move content items UI and error handling updates 
+## Move or duplicate content items in Content Composer
 
 === "Containers"
-    See the topics Content Composer Move content items and [Content authoring actions in dashboard view](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/index.md) for more information.
+    Content items can now be moved or duplicated through Content Composer. They are available as [authoring actions in the dashboard view](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#create-new-content-with-default-keywords).
 
 ## WCM column sorting enhancement  
 
