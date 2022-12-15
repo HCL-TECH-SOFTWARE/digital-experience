@@ -99,16 +99,17 @@ A new option can be configured to control syndication of staging documents in pr
 ##  New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
 
 === "Containers"
-    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information.     
+    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information.     
 
 
 ===  "On-Premises"
-    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information. 
+    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information. 
 
 
 ## Experience API update  
 
-The Content Controller PUT /webcontent/contents/{content_id} endpoint has been updated to accept new optional parameters; "parent" and "library". This enables moving content items from one location to another. See the [HCL Experience API on HCL Software Github](https://github.com/HCL-TECH-SOFTWARE/experience-api-documentation) for more information. 
+=== "Containers"
+    The Content Controller PUT /webcontent/contents/{content_id} endpoint has been updated to accept new optional parameters; "parent" and "library". This enables moving content items from one location to another. See the [HCL Experience API on HCL Software Github](https://github.com/HCL-TECH-SOFTWARE/experience-api-documentation) for more information. 
 
 ## New option to configure a local HCL Flexnet Entitlement server 
 
