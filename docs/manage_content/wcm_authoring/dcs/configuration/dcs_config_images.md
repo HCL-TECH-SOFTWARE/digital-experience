@@ -1,6 +1,6 @@
 # Configure Images for Document Conversion Services
 
-In HCL Portal version CF205 and later, Document Conversion Services uses Apache Tika for fresh installs. Apache Tika does not require configuration for DCS. In HCL Portal version CF204 and earlier, HCL Portal installations upgraded from CF203 or CF204, and HCL Portal installations upgraded after [manually backing up the Oracle Stellent files](../dcs_backup.md), configure the Document Conversion Services to view images in an operating system other than Windows.
+In HCL Portal version CF205 and later, DX Document Conversion Services is automatically configured to use HCL supported functions. The third-party component, which was supplied by Oracle is no longer included.  In HCL Portal version CF204 and earlier, HCL Portal installations upgraded from CF203 or CF204, and HCL Portal installations upgraded after [manually backing up the Oracle Stellent files](../dcs_backup.md), configure the Document Conversion Services to view images in an operating system other than Windows.
 
 1.  Connect to one of the following workstations from your Windows™ workstation with PuTTY or any other Telnet client.
 

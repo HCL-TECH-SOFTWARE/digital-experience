@@ -1,6 +1,6 @@
 # Configure Document Conversion Services
 
-In HCL Portal version CF205 and later, Document Conversion Services uses Apache Tika for fresh installs. Apache Tika does not require configuration for DCS.  In HCL Portal version CF204 and earlier, HCL Portal installations upgraded from CF203 or CF204, and HCL Portal installations upgraded after [manually backing up the Oracle Stellent files](../dcs_backup.md), you may configure the Document Conversion Services.  A knowledge of these prerequisites steps can assist you in preventing, identifying, and correcting problems that are related to Document Conversion Services.
+In HCL Portal version CF205 and later, DX Document Conversion Services is automatically configured to use HCL supported functions. The third-party component, which was supplied by Oracle is no longer included.  In HCL Portal version CF204 and earlier, HCL Portal installations upgraded from CF203 or CF204, and HCL Portal installations upgraded after [manually backing up the Oracle Stellent files](../dcs_backup.md), you may configure the Document Conversion Services.  A knowledge of these prerequisites steps can assist you in preventing, identifying, and correcting problems that are related to Document Conversion Services.
 
 ## Visual C++ libraries are required for Windows™
 
