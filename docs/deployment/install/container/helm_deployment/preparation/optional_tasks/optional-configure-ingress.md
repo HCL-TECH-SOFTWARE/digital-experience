@@ -1,9 +1,9 @@
 # Configure Ingress For DX Deployment
 
-With HAProxy replacing Ambassador in our DX deployment, it is much easier to run Ingress in front of DX to handle advance requirements to routing, proxying and other similar use cases. This document explains how to leverage external Ingress alongside with HAProxy as the internal service and loadbalancer.
+With HAProxy replacing Ambassador in our DX deployment, it is much easier to run Ingress in front of DX to handle advance requirements to routing, proxying and other similar use cases. This document explains how to leverage external Ingress alongside with HAProxy as the internal service and load balancer.
 
 !!! note
-        HCL DX intentionally does not ship any Ingress, but only contains an reverse proxy "HAProxy" which provides similar functionalities.
+        **HCL DX intentionally does not ship any Ingress to reduce DX's deployment footprint in any Kubernetes cluster.**</br></br>
         This document shows an example configuration for some Ingress controller and briefly describes minimally necessary steps to implement it inside a Kubernetes environment. This configuration is neither a proposal, nor does HCL provide official support for it.
         Implementing an Ingress for use with a HCL DX deployment in Kubernetes is an optional effort base on the Kubernetes cluster’s requirements and customers’s discretion.
 
@@ -11,7 +11,7 @@ With HAProxy replacing Ambassador in our DX deployment, it is much easier to run
 
 ## Ingress Implementation
 
-Here’s a basic guide on implementing a generic Ingress on your DX cluster
+Here’s a basic guide on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX
 
 - In the `custom-values.yaml` by default HAProxy `serviceType` is set to `loadBalancer`. To test the external Ingress you want to deploy you must set the serviceType applicable for your use case, for this example `ClusterIP` is used, with that HAProxy service will not have any External IP.
 
@@ -20,7 +20,7 @@ haproxy:
   serviceType: ClusterIP
 ```
 
-- Install an Ingress controller of your choice, this will serve as the entry point to the cluster. The Ingress controller evaluates the rules that you will set on your Ingress instance and it also handles redirection. Ingress controller can be deployed on any namespace and does not have to be in the same namespace as DX. The controller can be used to route multiple applications in multiple namespaces. NGINX Ingress Controller is used here as an example. To install a NGINX Ingress on your cluster
+- Install an Ingress controller of your choice, this will serve as the entry point to the cluster. The Ingress controller evaluates the rules that you will set on your Ingress instance and it also handles redirection. Ingress controller can be deployed on any namespace and does not have to be in the same namespace as DX. The controller can be used to route multiple applications in multiple namespaces. NGINX Ingress Controller is used here as an example. To install a NGINX Ingress on your cluster, please issue the following command:
 
 ```console
 $ helm upgrade --install ingress-nginx ingress-nginx \
