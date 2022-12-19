@@ -42,7 +42,7 @@ Run these configuration tasks to change the configuration of the rich text edito
 
 ## Enabling Textbox I/O editor
 
-1.  To enable the new Textbox I/O editor fix using HCL Digital Experience CF18 or later, run this configuration process in the Textbox I/O editor:
+1.  To enable the new Textbox I/O editor fix using HCL Digital Experience CF18 or later, run this configuration process:
 
     ```
     ConfigEngine(sh/bat) action-deploy-tiny-editors
@@ -119,6 +119,22 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
     !!!note
         To revert to the default editor toolbar, run the task that is named remove-wcm-ephox-editor-custom-configuration on the primary node only.
+
+## Enabling TinyMCE editor
+
+1.  As of CF208, the TinyMCE editor is enabled out of the box. If you disabled this editor and need to enable it again, run this configuration process:
+
+    ```
+    ConfigEngine(sh/bat) action-deploy-tiny-editors
+    ```
+
+2.  If a custom configuration is used for this editor, run this configuration process:
+
+    ```
+    ConfigEngine(sh/bat) configure-wcm-ephox-editor-custom-configuration
+    ```
+
+3.  Restart the WebSphere\_Portal server once the configuration process is completed.
 
 ## Disabling TinyMCE editor to use the OOB editor
 
