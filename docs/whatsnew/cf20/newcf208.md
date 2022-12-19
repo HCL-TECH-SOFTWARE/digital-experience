@@ -83,7 +83,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Config Option to set absolute value Content Composer and DAM syndication
 
-==== "Containers"
+=== "Containers"
     When syndicating DAM assets and Content Composer items that point to DAM assets, the target URLs need to be updated to point to the new server. A new option can be configured to control syndication of staging documents in production operations so that references will point to the appropriate server location. See the Help Center topic [Install Commands to Deploy](../../deployment/install/container/helm_deployment/helm_install_commands.md) for more information.
 
 ## Move or duplicate content items in Content Composer 
