@@ -4,7 +4,7 @@ Instructions to back up Document Conversion Services (DCS) files, prior to the r
 
 [Document Conversion Services](dcs_backup.md) components in HCL Digital Experience software have been replaced in HCL DX Cumulative Fix release CF205. HCL Digital Experience has removed the third-party component, which was supplied by Oracle, that provided these capabilities and replaced them with HCL-supported functions. At this point, HCL Digital Experience v8.5, v9 and v9.5 Container Update and CF releases include the HCL supported component. Refer to the following HCL Digital Experience support Knowledge Article: [Replacement of Document Conversion Services component in HCL Digital Experience software for additional information](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"}.
 
-!!!important "**Important notes:**"
+!!!important
     -   Effective August 20, 2022 the Oracle supplied DCSs are not provided or supported by HCL. Customers continuing to use these components will need to acquire support and updates directly from Oracle.
     -   Effective August 20, 2022 the HCL supplied DCS will be set as the default in Digital Experience CF and Container Update releases. Customers, who are already using the Oracle DCS product, have been provided an option to change the default DCS setting, so that they can use the Oracle supplied DCS services and obtain support directly from Oracle. Customers can use the backup files that are created using the steps outlined below to ensure continuing operations.
 
