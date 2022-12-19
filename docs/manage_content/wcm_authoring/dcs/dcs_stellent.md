@@ -1,6 +1,6 @@
 # Using Document Conversion Services with Stellent
 
-In HCL Portal version CF205 and later, DX Document Conversion Services is automatically configured to use HCL supported functions. The third-party component, which was supplied by Oracle is no longer included. In HCL Portal version CF204 and earlier, HCL Portal installations upgraded from CF203 or CF204, and HCL Portal installations upgraded after [manually backing up the Oracle Stellent files](../dcs_backup.md), for Linux, when using Stellent version 8.1.0 and later, the X-server dependency has been removed.
+In HCL Portal versions CF205 and later, DX Document Conversion Services is automatically configured to use HCL-supported functions. The third-party component, which was supplied by Oracle, is no longer included. In HCL Portal versions CF204 and earlier, HCL Portal installations upgraded from CF203 or CF204, and HCL Portal installations upgraded after [manually backing up the Oracle Stellent files](../dcs_backup.md), for Linux, when using Stellent version 8.1.0 and later, the X-server dependency has been removed.
 
 1.  Prepare the system using the steps outlined in [Configure Document Conversion Services](./configuration/index.md).
 
