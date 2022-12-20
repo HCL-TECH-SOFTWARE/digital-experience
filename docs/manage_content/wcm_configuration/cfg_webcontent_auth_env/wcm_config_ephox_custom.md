@@ -56,7 +56,7 @@ Run these configuration tasks to change the configuration of the rich text edito
 
 3.  Restart the WebSphere\_Portal server once the configuration process is completed.
 
-**Beginning with HCL DX 9.5 Container Update CF182**, the updated Textbox.io Rich Text editor is deployed out-of-box for the HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, **a ConfigEngine task is required** to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager). Run the ConfigEngine task:
+**Beginning with HCL DX 9.5 Container Update CF182**, the updated Textbox.io Rich Text editor is deployed out-of-box for the HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine task is required to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager). Run the ConfigEngine task:
 
 ```
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh action-create-was-variable-tiny-editors-cloud -DDxHost=<FQDN of the exposed DX host> 
@@ -122,19 +122,25 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
 ## Enabling TinyMCE editor
 
-1.  As of CF208, the TinyMCE editor is enabled out of the box. If you disabled this editor and need to enable it again, run this configuration process:
+1.  As of CF208, the TinyMCE editor is enabled out of the box. If you disabled this editor in an on-premise setup and need to enable it again, run this configuration process:
 
     ```
-    ConfigEngine(sh/bat) action-deploy-tiny-editors
+    ConfigEngine(sh/bat) action-deploy-tinymce-editor
     ```
 
-2.  If a custom configuration is used for this editor, run this configuration process:
+2.  As of CF208, the TinyMCE editor is enabled out of the box. If you disabled this editor and need to enable it again in a Kubernetes deployment, run this configuration process:
+
+    ```
+    ConfigEngine(sh/bat) action-deploy-tinymce-editor-cloud
+    ```
+
+3.  If a custom configuration is used for this editor, run this configuration process:
 
     ```
     ConfigEngine(sh/bat) configure-wcm-ephox-editor-custom-configuration
     ```
 
-3.  Restart the WebSphere\_Portal server once the configuration process is completed.
+4.  Restart the WebSphere\_Portal server once the configuration process is completed.
 
 ## Disabling TinyMCE editor to use the OOB editor
 
@@ -157,7 +163,7 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 ## Using a custom EditLive! editor toolbar
 
 !!! note
-    Ephox EditLive! is a deprecated feature as of CF11 or higher.
+    Ephox EditLive! is an unsupported feature as of CF11 or higher.
 
 1.  The EditLive! editor uses a custom configuration file that is named config.xml.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\ephox.
 
@@ -187,7 +193,7 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 !!!note
     To revert to the default editor toolbar, run the task that is named `remove-wcm-ephox-editor-custom-configuration` on the primary node only.
 
-**Beginning with HCL Digital Experience Container Update CF182,**, the updated Textbox.io Rich Text editor is deployed out-of-the-box for HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine must be required to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager.
+**Beginning with HCL Digital Experience Container Update CF182,**, the updated Textbox.io Rich Text editor is deployed out-of-the-box for HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine task is required to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager.
 
 ## Reverting to the EditLive! editor version 7 toolbar
 
