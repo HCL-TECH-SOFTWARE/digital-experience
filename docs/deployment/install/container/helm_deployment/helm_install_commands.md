@@ -115,6 +115,8 @@ helm upgrade -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
 ```
 
 ## (Optional) Override Content Composer and DAM URL
+If you are using a hybrid deployment with Content Composer and/or DAM and have multiple environments connected to different Kubernetes deployments and syndicate pages you can use the following overrides to avoid the same Kubernetes deployment being used across environments. 
+
 To override the static user interface URL being set in React Integration Portlet, do it in the DX WebSphere Application Server user interface. In the WAS Server, go to **Resources** and select **Resources Environment Providers**. In **Resources Environment Providers**, select **WP_ConfigService** and go to **Custom properties** to add new variables as provided below:
 
 - For Content Composer:
