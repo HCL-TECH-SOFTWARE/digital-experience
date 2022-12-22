@@ -4,7 +4,7 @@ The IBM® Connections Bookmarks portlet gives you access to your bookmarks from 
 
 ## Using the Bookmarks portlet
 
-use the Bookmarks portlet to access your IBM Connections bookmarks without leaving the IBM WebSphere Portal environment. The portlet has two views, **All Bookmarks** and **My Bookmarks**.
+use the Bookmarks portlet to access your HCL Connections bookmarks without leaving the IBM WebSphere Portal environment. The portlet has two views, **All Bookmarks** and **My Bookmarks**.
 
 The **All Bookmarks** view displays bookmarks you created as well as bookmarks shared with you by others in your organization. The **My Bookmarks** view displays only the bookmarks that you created. You can click the **More** option for a bookmark to edit or delete it.
 
