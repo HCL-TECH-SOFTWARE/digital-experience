@@ -3,9 +3,9 @@
 With HAProxy replacing Ambassador in our DX deployment, it is much easier to run Ingress in front of DX to handle advance requirements to routing, proxying and other similar use cases. This document explains how to leverage external Ingress alongside with HAProxy as the internal service and load balancer.
 
 !!! note
-        **HCL DX intentionally does not ship any Ingress to reduce DX's deployment footprint in any Kubernetes cluster.**</br></br>
-        This document shows an example configuration for some Ingress controller and briefly describes minimally necessary steps to implement it inside a Kubernetes environment. This configuration is neither a proposal, nor does HCL provide official support for it.
-        Implementing an Ingress for use with a HCL DX deployment in Kubernetes is an optional effort base on the Kubernetes cluster’s requirements and customers’s discretion.
+       -  **HCL DX intentionally does not ship any Ingress to reduce DX's deployment footprint in any Kubernetes cluster.**<br>
+       -  This document shows an example configuration for some Ingress controllers and briefly describes minimally necessary steps to implement it inside a Kubernetes environment. This configuration is neither a proposal nor does HCL provide official support for it. <br>
+       -  Implementing an Ingress for use with a HCL DX deployment in Kubernetes is an optional effort base on the Kubernetes cluster’s requirements and customer’s discretion.
 
 ![Ingress Implementation](../../../../../../images/HCL-DX-deployment-diagram-Kubernetes.png)
 
