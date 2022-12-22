@@ -4,27 +4,31 @@
 The following features and updates are available to customers installing HCL Digital Experience Container Update CF208 on supported platforms:
 
 - Kubernetes deployment Pre-requisites checking 
-- Kubernetes deployment HA Proxy option to configure Ingress 
+<!---  Kubernetes deployment HA Proxy option to configure Ingress  -->
 - Web Content Manager Author options now include Tiny MCE
-- Web Content Manager and Digital Asset Management
+- Web Content Manager set SVG to disabled by default
+- Digital Asset Management set SVG to disabled by default
 - Digital Asset Management Staging Obtain Subscribers List 
 - Config Option to set absolute value Content Composer and DAM syndication
-- Content Composer Move content items UI and error handling updates 
+- Move or duplicate content items in Content Composer 
 - WCM column sorting enhancement  
 - New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
 - Experience API update
+- New option to configure a local HCL Flexnet Entitlement server
+- DAM Keyword enhancements
 - Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
 
 ## Kubernetes deployment Pre-requisites checking  
 
 === "Containers"                                  
-    DX 9.5 Container Update CF208 adds deployment pre-requisites checking for Helm deployments to supported Kubernetes platforms. See the topic [Configure Prereqs Checker For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md) for more information
+    DX 9.5 Container Update CF208 adds deployment pre-requisites checking for Helm deployments to supported Kubernetes platforms. See the topic [Configure Prereqs Checker For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md) for more information.
 
+<!--
 ## Kubernetes deployment HA Proxy option to configure Ingress 
 
 === "Containers"                                                                                                    
-    DX 9.5 Container Update CF208 adds an option to configure an ingress in front of HA Proxy.  See the [Configure Ingress For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) for more information.
+    DX 9.5 Container Update CF208 adds an option to configure an ingress in front of HA Proxy.  See the [Configure Ingress For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) for more information. -->
 
 ## Web Content Manager Author options now include Tiny MCE
 
@@ -35,7 +39,7 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     Content Authors can now choose to use TinyMCE as the default editor for creating and editing WCM content. See the topic [Web Content Author Editor options](../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md), and [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-the-editor-used-for-in-place-editing) for more information.
 
-## Web Content Manager
+## Web Content Manager set SVG to disabled by default
 
 === "Containers"
     Configuration updates set SVG to disabled by default. 
@@ -65,7 +69,7 @@ The following features and updates are available to customers installing HCL Dig
 
     See the Help Center topic [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) for more information.
 
-## Digital Asset Management 
+## Digital Asset Management set SVG to disabled by default
 
 === "Containers"
     Configuration updates set SVG to disabled by default. 
@@ -79,12 +83,15 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Config Option to set absolute value Content Composer and DAM syndication
 
-A new option can be configured to control syndication of staging documents in production operations. See the Help Center topics [Install Commands to Deploy](../../deployment/install/container/helm_deployment/helm_install_commands.md) for more information.
+=== "Containers"
+    When syndicating DAM assets and Content Composer items that point to DAM assets, the target URLs need to be updated to point to the new server. A new option can be configured to control syndication of staging documents in production operations so that references will point to the appropriate server location. See the Help Center topic [Install Commands to Deploy](../../deployment/install/container/helm_deployment/helm_install_commands.md) for more information.
 
-## Move or duplicate content items in Content Composer
+
+## Move or duplicate content items in Content Composer 
 
 === "Containers"
-    Content items can now be moved or duplicated through Content Composer. They are available as [authoring actions in the dashboard view](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#create-new-content-with-default-keywords).
+    Content items can now be moved or duplicated through Content Composer. See the topic [authoring actions in dashboard view](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#create-new-content-with-default-keywords) for more information.
+
 
 ## WCM column sorting enhancement  
 
@@ -99,21 +106,27 @@ A new option can be configured to control syndication of staging documents in pr
 ##  New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
 
 === "Containers"
-    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information.     
+    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information.     
 
 
 ===  "On-Premises"
-    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information. 
+    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information. 
 
 
 ## Experience API update  
 
-The Content Controller PUT /webcontent/contents/{content_id} endpoint has been updated to accept new optional parameters; "parent" and "library". This enables moving content items from one location to another. See the [HCL Experience API on HCL Software Github](https://github.com/HCL-TECH-SOFTWARE/experience-api-documentation) for more information. 
+=== "Containers"
+    The Content Controller PUT /webcontent/contents/{content_id} endpoint has been updated to accept new optional parameters; "parent" and "library". This enables moving content items from one location to another. See the [HCL Experience API on HCL Software Github](https://github.com/HCL-TECH-SOFTWARE/experience-api-documentation) for more information. 
 
 ## New option to configure a local HCL Flexnet Entitlement server 
 
 === "Containers"    
     Customers with HCL Digital Experience Cloud Native 9.5 entitlements deploying to supported Kubernetes environments can optionally install a local Flexnet Entitlement server. See the topic [Configuring a local HCL Flexnet entitlement server](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_local_flexnet_entitlement_server.md) for more information.
+
+## DAM Keyword enhancements
+
+=== "Containers" 
+    Added new sections "Remove All Keywords tagged in a media asset" and "Error validation on adding duplicate keywords". See the topic [DAM Keyword enhancements](../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_keyword_enhancement.md) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 

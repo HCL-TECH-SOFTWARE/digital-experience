@@ -17,7 +17,7 @@ From the **Status Updates** view, you can:
 
 From the **My Profile** view, you can:
 
--   View and update your profile information (This feature takes you to IBM Connections Profiles)
+-   View and update your profile information (This feature takes you to HCL Connections Profiles)
 -   View report-to chain for yourself or your colleagues
 -   View network information for yourself or your colleagues
 -   Search Profiles by name, tag, or keyword

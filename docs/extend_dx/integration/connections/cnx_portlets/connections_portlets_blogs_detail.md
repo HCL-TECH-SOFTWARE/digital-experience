@@ -4,7 +4,7 @@ The IBM® Connections Blogs detail portlet gives you access to your blogs from w
 
 ## Purpose
 
-Use the Blogs portlets to interact with the IBM Connections Blogs feature so you can read or contribute to blogs without leaving the IBM WebSphere Portal environment. You can also view and contribute to Ideation Blogs you can access. Ideation blogs, unlike standard blogs, are used to generate and promote ideas in a community.
+Use the Blogs portlets to interact with the HCL Connections Blogs feature so you can read or contribute to blogs without leaving the IBM WebSphere Portal environment. You can also view and contribute to Ideation Blogs you can access. Ideation blogs, unlike standard blogs, are used to generate and promote ideas in a community.
 
 -   If the Blogs portlet is deployed on a community page, Ideation blogs can display in the portlet if the **Show Ideation blog in this community** option is checked on the Edit shared settings.
 
@@ -56,7 +56,7 @@ You must have administrative access to the portlet to be able to configure it. C
 |Option|Description|
 |------|-----------|
 |Profile photos for Latest Entries|Displays author pictures next to blog entries.|
-|Display icon to open IBM Connections in a browser window|Display an icon that opens IBM Connections in a browser so users can fully access the application.|
-|Display link to open IBM Connections in a browser window|Opens IBM Connections in a browser window so that users can interact with the full application.|
+|Display icon to open HCL Connections in a browser window|Display an icon that opens HCL Connections in a browser so users can fully access the application.|
+|Display link to open HCL Connections in a browser window|Opens HCL Connections in a browser window so that users can interact with the full application.|
 |Display page controls only in bottom bar|Hides the page controls in the header of the window. Clear the check box to display paging controls in the header as well as the footer of the page.|
 
