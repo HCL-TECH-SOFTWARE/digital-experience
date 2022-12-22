@@ -92,6 +92,9 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
 ## Using a custom TinyMCE editor toolbar
 
+!!!note
+    These customization steps only apply to the Enhanced editor used in the HCL Web Content Manager authoring portlet. Customization is not currently offered for Web content inline editing with the TinyMCE editor.
+
 1.  The TinyMCE editor uses a custom configuration file that is named tiny_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\tinymce.
 
     !!!note
