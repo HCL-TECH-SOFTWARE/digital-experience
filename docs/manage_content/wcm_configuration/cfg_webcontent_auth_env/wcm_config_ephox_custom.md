@@ -122,25 +122,31 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
 ## Enabling TinyMCE editor
 
-1.  As of CF208, the TinyMCE editor is enabled out of the box. If you disabled this editor in an on-premise setup and need to enable it again, run this configuration process:
+As of CF208, the TinyMCE editor is enabled out of the box.
 
-    ```
-    ConfigEngine(sh/bat) action-deploy-tinymce-editor
-    ```
+1. Depending on where you enabled the TinyMCE editor, run the appropriate configuration process.
 
-2.  As of CF208, the TinyMCE editor is enabled out of the box. If you disabled this editor and need to enable it again in a Kubernetes deployment, run this configuration process:
+    -   If you disabled this editor in an on-premise setup and need to enable it again, run:
 
-    ```
-    ConfigEngine(sh/bat) action-deploy-tinymce-editor-cloud
-    ```
+        ```
+        ConfigEngine(sh/bat) action-deploy-tinymce-editor
+        ```
 
-3.  If a custom configuration is used for this editor, run this configuration process:
+    -   If you disabled this editor and need to enable it again in a Kubernetes deployment, run:
+
+        ```
+        ConfigEngine(sh/bat) action-deploy-tinymce-editor-cloud
+        ```
+
+2.  If a custom configuration is used for this editor, run this configuration process:
 
     ```
     ConfigEngine(sh/bat) configure-wcm-ephox-editor-custom-configuration
     ```
+    
+    If no custom configuration is used, proceed to Step 3. 
 
-4.  Restart the WebSphere\_Portal server once the configuration process is completed.
+3.  Restart the WebSphere\_Portal server once the configuration process is completed.
 
 ## Disabling TinyMCE editor to use the OOB editor
 
