@@ -113,6 +113,10 @@ configuration:
                     metadata: {}
 ```
 
+!!! note 
+    The default renditions and stacks under those default renditions cannot be removed. For eg., Cannot remove the stack configurations under the renditions but can be modified. Even if they are removed, those default configurations will be still be available.
+    In Original rendition, transformations stack should be always empty. Even if anything is configured, it won't be considered during the uploads.
+
 Below is the sample configuration for Plugins
 
 ```
