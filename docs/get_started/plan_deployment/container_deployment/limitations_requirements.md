@@ -79,7 +79,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | ring-api | 1 | ring-api | ringapi | 100m | 128Mi |
 | runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
 |  |  |  |  |  |  |
-| **Overall** |  |  |  | **5000m** | **10392Mi** |
+| **Overall** |  |  |  | **4500m** | **10392Mi** |
 
 <!--
 ???+ info "Related information"
@@ -89,4 +89,3 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     - [Deploy DX Container to Amazon EKS](../containerization/kubernetes_eks.md)
     - [Deploy DX CF192 and later release Containers to Amazon EKS](../containerization/kubernetes_eks_cf192andlater.md)
     - [Deploy DX CF191 and earlier release Containers to Amazon EKS](../containerization/kubernetes_eks_cf191andearlier.md)-->
-
