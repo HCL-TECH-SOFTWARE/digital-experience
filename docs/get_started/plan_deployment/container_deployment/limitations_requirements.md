@@ -39,17 +39,17 @@ Internally, HCL tests DX against a range of Kubernetes platforms that is regular
 
 To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms using Helm, the following are required:
 
-- **Helm installation**:
+-   **Helm installation**:
 
-  Download and install Helm to your target environment. HCL DX 9.5 CF200 and later container deployment is tested and is supported with Helm v3. For more information regarding the supported Helm version for individual Kubernetes versions, refer [Helm documentation](https://helm.sh/).
+    Download and install Helm to your target environment. HCL DX 9.5 CF200 and later container deployment is tested and is supported with Helm v3. For more information regarding the supported Helm version for individual Kubernetes versions, refer [Helm documentation](https://helm.sh/).
 
-- **Migration**:
+-   **Migration**:
 
-  For information about migrating from Operator-based to Helm-based deployments, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
+    For information about migrating from Operator-based to Helm-based deployments, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
 
-- **Container platform capacity resource requirements**:
+-   **Container platform capacity resource requirements**:
 
-  The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the minimum of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly. Please consider that every Kubernetes node requires some headroom for Kubernetes specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. Please be aware that the overall requested amount of resources may vary based on disabled/enabled applications.
+    The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the minimum of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly. Please consider that every Kubernetes node requires some headroom for Kubernetes specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. Please be aware that the overall requested amount of resources may vary based on disabled/enabled applications.
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request** | **Container Memory request** |
 |---|---|---|---|---|---|
