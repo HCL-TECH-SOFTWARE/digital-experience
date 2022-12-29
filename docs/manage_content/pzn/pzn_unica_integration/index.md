@@ -10,13 +10,13 @@ The Unica Campaign API explorer can be reached via **/Campaign/api/campaign/rest
 ![unica-campaign-segments](../../../images/unica-campaign-segments.png)
 
 Personalization-Unica Integration here helps the customers integrate [HCL Unica Campaign Segments](https://help.hcltechsw.com/unica/Campaign/en/12.1.4/Campaign/Sessions/About_strategic_segments.html) in DX Personalization.
-It helps leverage segment lists from Unica Campaign in DX Personalization Rules for decisions on Content Visibility or Content Selection.
+With the integration you can leverage segment lists from Unica Campaign in DX Personalization Rules for decisions on Content Visibility or Content Selection.
 
-Users can leverage segments from Unica Campaigns in Personalization with different methods viz.
+Users can leverage segments from Unica Campaigns in Personalization with different options as described below:
 
 -  [Sample for leveraging Unica segments in PZN Rules](../pzn_unica_integration/sample_code_method.md)  
-Sample code approach allows the user to create Custom Application Object with parameters that allows user to access Unica Campaign APIs to use segments in DX Personalization for content selection or visibility. Users can create multiple application object as per requirement to handle customer needs.
+The Sample code approach allows the user to create Custom Application Object with parameters that allows user to access Unica Campaign APIs to use segments in DX Personalization for content selection or visibility. Users can create multiple application object as per requirement to handle customer needs. Creating your own plugin with the sample is the most flexible way to integrate with Unica but requires java coding. See the link for more information.
 -  [Out-of-box application object for shipping Unica with PZN](../pzn_unica_integration/out_of_box_method.md)  
-Out-of-box application object method allows you to create a Default Application Object with default attributes by running a ConfigEngine task with some parameters required to connect with Unica Campaign APIs.
+The Out-of-box application object method allows you to create a Default Application Object with default attributes by running a ConfigEngine task with some parameters required to connect with Unica Campaign APIs. It does not require custom coding but limits the way the user is identified for the selection in Unica. See the link for more information.
 
 These application objects can then be used in Personalization Rules by validating the segments against the conditions for providing better Content visibility or Content Selection.
