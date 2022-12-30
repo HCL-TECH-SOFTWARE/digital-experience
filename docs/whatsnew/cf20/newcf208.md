@@ -91,6 +91,7 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Content items can now be moved or duplicated through Content Composer. See the topic [authoring actions in dashboard view](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#create-new-content-with-default-keywords) for more information.
 
+
 ## WCM column sorting enhancement  
 
 === "Containers"
@@ -104,11 +105,11 @@ The following features and updates are available to customers installing HCL Dig
 ##  New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
 
 === "Containers"
-    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information.     
+    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information.     
 
 
 ===  "On-Premises"
-    See the topic [Sample for leveraging Unica segments in PZN Rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md) for more information. 
+    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information. 
 
 
 ## Experience API update  
