@@ -711,11 +711,13 @@
 
 <h1 id="architecture-overview">Architecture Overview</h1>
 <p>HCL Digital Experience is a solid and reliable platform that can help deliver the vital services of your organization. It is designed to be scalable and flexible, supports authentication for security and personalization, and aids in easy integration with varied applications. Strong encryption and cross-system authentication keep your business-critical functions safe. Your teams can easily create, manage, and deliver powerful and reliable digital experiences everyday.</p>
-<p>There are different options to deploy DX:
-- <strong>Traditional deployments</strong>: HCL DX can be deployed on-premises in the WebSphere Application Server infrastructure.
-- <strong>Container-based deployments</strong>: HCL supports container-based deployments. HCL DX can be deployed into Kubernetes infrastructures to manage and maintain multiple environments such as testing, development, staging, and production.</p>
+<p>There are different options to deploy DX:</p>
+<ul>
+<li><strong>Traditional deployments</strong>: HCL DX can be deployed on-premises in the WebSphere Application Server infrastructure.</li>
+<li><strong>Container-based deployments</strong>: HCL supports container-based deployments. HCL DX can be deployed into Kubernetes infrastructures to manage and maintain multiple environments such as testing, development, staging, and production.</li>
+</ul>
 <p>For more information, refer to the detailed system requirements for <a href="../system_requirements/traditional/">traditional deployments</a> or <a href="../system_requirements/kubernetes/kubernetes-runtime/">container-based deployments</a>.</p>
-<p><img alt="Containerization Architecture Overview" src="../../images/haproxy-optional-ingress-architecture.png" /></p>
+<p><img alt="Containerization Architecture Overview" src="../../images/HCL-DX-deployment-diagram-Kubernetes.png" /></p>
 <p>There is one component called DX Core that is common for both deployment options. DX Core contains functionalities, which were originally available for traditional deployments, that are now applicable for both traditional and container-based deployments.</p>
 <p>Besides the DX Core features, there are container-specific features that are available only for the container-based deployments.</p>
 <p>Whether developing, testing, or running a full production environment, the use of container-based deployments are preferred for the ease of deploying applications, including the latest version of HCL Digital Experience. Deploy in a fraction of the time than what it takes in the traditional deployment model.</p>
@@ -725,7 +727,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
       
     
   </small>

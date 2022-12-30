@@ -896,24 +896,13 @@
 <p>Ambassador is deprecated in CF203 and is replaced by HAProxy. Starting with CF204, Ambassador is completely removed.</p>
 </div>
 <p>Up to version CF202, the deployment of HCL Digital Experience included an ingress controller "Ambassador" as part of the DX Kubernetes namespace. Ambassador required a set of <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/"><code>CustomResourceDefinitions</code></a>, which needed to be deployed as a cluster-wide Kubernetes resource.</p>
-<table>
-<thead>
-<tr>
-<th align="center"><a href="../../_img/ambassador-architecture.png" target="_blank"><img alt="Containerization Architecture Overview" src="../../_img/ambassador-architecture.png" /></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">DX Ambassador before CF203</td>
-</tr>
-</tbody>
-</table>
 <p>To prevent incompatibilities with newer Ambassador versions and allow more flexible use of other <a href="https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/">Ingress Controllers</a>, starting with CF203, the Ambassador ingress controller is deprecated and will be removed in the subsequent releases.
-With CF203, HAProxy is introduced as a new component that replaces Ambassador. It acts as a single-entry point into the DX namespace and handles all internal routing. It can either be configured to expose a <a href="https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer"><code>LoadBalancer</code></a> service to directly accept incoming traffic into the cluster or act only as an internal Kubernetes service to accept traffic from a Kubernetes Ingress Controller at the cluster level. As a result, HAProxy takes over all functionalities that the Ambassador ingress controller provided for DX beforehand.</p>
+With CF203, HAProxy is introduced as a new component that replaces Ambassador.
+Please note that HAProxy is not a one-by-one replacement, because it doesn't act as an Ingress, it acts as a single-entry point into the DX namespace and handles all internal routing. HAProxy can either be configured to expose a <a href="https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer"><code>LoadBalancer</code></a> service to directly accept incoming traffic into the cluster or can act as an internal Kubernetes service only to accept traffic from a Kubernetes Ingress Controller at the cluster level. As a result, HAProxy takes over all functionalities that the Ambassador ingress controller provided for DX beforehand.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><a href="../_img/haproxy-optional-ingress-architecture.png" target="_blank"><img alt="Containerization Architecture Overview Optional Ingress" src="../_img/haproxy-optional-ingress-architecture.png" /></a></th>
+<th align="center"><a href="../../../../../images/HCL-DX-deployment-diagram-Kubernetes.png" target="_blank"><img alt="Containerization Architecture Overview Optional Ingress" src="../../../../../images/HCL-DX-deployment-diagram-Kubernetes.png" /></a></th>
 </tr>
 </thead>
 <tbody>
@@ -928,7 +917,7 @@ With CF203, HAProxy is introduced as a new component that replaces Ambassador. I
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
       
     
   </small>

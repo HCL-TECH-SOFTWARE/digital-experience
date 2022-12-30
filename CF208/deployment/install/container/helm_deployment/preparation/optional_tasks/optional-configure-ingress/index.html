@@ -1136,29 +1136,33 @@
 
 
 <h1 id="configure-ingress-for-dx-deployment">Configure Ingress For DX Deployment</h1>
-<p>With HAProxy replacing Ambassador in our DX deployment, it is much easier to run ingress in front of DX to handle advance requirements to routing, proxying and other similar use cases. This document explains how to leverage external ingress alongside with HAProxy as the internal service and loadbalancer. </p>
+<p>With HAProxy replacing Ambassador in our DX deployment, it is much easier to run Ingress in front of DX to handle advance requirements to routing, proxying and other similar use cases. This document explains how to leverage external Ingress alongside with HAProxy as the internal service and load balancer.</p>
 <div class="admonition note">
-<p class="admonition-title">Note<p>This document will only serve as a basic guide and implementing ingress are optional based on the cluster’s use case and user’s discretion, hence we do not ship any ingress implementation along with our current deployment.</p>
-</p>
-</div>
-<p><img alt="Ingress Implementation" src="../../../_img/ingressOverview.png" /></p>
-<h2 id="ingress-implementation">Ingress Implementation</h2>
-<p>Here’s a basic guide on implementing a generic ingress on your DX cluster</p>
+<p class="admonition-title">Note</p>
 <ul>
-<li>In the <code>custom-values.yaml</code> by default HAProxy <code>serviceType</code> is set to <code>loadBalancer</code>. To test the external ingress you want to deploy you must set the serviceType applicable for your use case, for this example <code>ClusterIP</code> is used, with that HAProxy service will not have any External IP.</li>
+<li><strong>HCL DX intentionally does not ship any Ingress to reduce DX's deployment footprint in any Kubernetes cluster.</strong><br></li>
+<li>This document shows an example configuration for some Ingress controllers and briefly describes minimally necessary steps to implement it inside a Kubernetes environment. This configuration is neither a proposal nor does HCL provide official support for it. <br></li>
+<li>Implementing an Ingress for use with a HCL DX deployment in Kubernetes is an optional effort base on the Kubernetes cluster’s requirements and customer’s discretion.</li>
+</ul>
+</div>
+<p><img alt="Ingress Implementation" src="../../../../../../../images/HCL-DX-deployment-diagram-Kubernetes.png" /></p>
+<h2 id="ingress-implementation">Ingress Implementation</h2>
+<p>Here’s a basic guide on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX</p>
+<ul>
+<li>In the <code>custom-values.yaml</code> by default HAProxy <code>serviceType</code> is set to <code>loadBalancer</code>. To test the external Ingress you want to deploy you must set the serviceType applicable for your use case, for this example <code>ClusterIP</code> is used, with that HAProxy service will not have any External IP.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">haproxy</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">serviceType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterIP</span><span class="w"></span>
 </code></pre></div>
 <ul>
-<li>Install an Ingress controller of your choice, this will serve as the entry point to the cluster. The Ingress controller evaluates the rules that you will set on your ingress instance and it also handles redirection. Ingress controller can be deployed on any namespace and does not have to be in the same namespace as DX. The controller can be used to route multiple applications in multiple namespaces. NGINX Ingress Controller is used here as an example. To install a NGINX Ingress on your cluster</li>
+<li>Install an Ingress controller of your choice, this will serve as the entry point to the cluster. The Ingress controller evaluates the rules that you will set on your Ingress instance and it also handles redirection. Ingress controller can be deployed on any namespace and does not have to be in the same namespace as DX. The controller can be used to route multiple applications in multiple namespaces. NGINX Ingress Controller is used here as an example. To install a NGINX Ingress on your cluster, please issue the following command:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>helm upgrade --install ingress-nginx ingress-nginx <span class="se">\</span>
   --repo https://kubernetes.github.io/ingress-nginx <span class="se">\</span>
   --namespace &lt;namespace&gt;
 </code></pre></div>
 <ul>
-<li>Check if the Ingress controller pod and service is deployed </li>
+<li>Check if the Ingress controller pod and service is deployed</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>Kubectl get pod -n &lt;namespace&gt;
 <span class="gp">$ </span>Kubectl get service -n &lt;namespace&gt;
@@ -1187,14 +1191,14 @@
 <span class="w">              </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
 </code></pre></div>
 <ul>
-<li>Configure your ingress based on your preference whether you want to access your host via <code>http</code> or <code>https</code>. To handle <code>https</code> request a certificate must be declared on your ingress yaml file. This certificate will be used for the Ingress client to ingress instance connection.</li>
+<li>Configure your Ingress based on your preference whether you want to access your host via <code>http</code> or <code>https</code>. To handle <code>https</code> request a certificate must be declared on your Ingress yaml file. This certificate will be used for the Ingress client to Ingress instance connection.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">ingressClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
 <span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">tls</span><span class="p p-Indicator">:</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dx-tls-cert</span><span class="w"></span>
 </code></pre></div>
 <ul>
-<li>Configure your ingress to HAProxy connection based on your preference. To handle <code>https</code> request a certificate must also be declared on your <code>custom-values.yaml</code> along with the SSL offloading configuration. set SSL to <code>true</code> to access your host via <code>https</code>.</li>
+<li>Configure your Ingress to HAProxy connection based on your preference. To handle <code>https</code> request a certificate must also be declared on your <code>custom-values.yaml</code> along with the SSL offloading configuration. set SSL to <code>true</code> to access your host via <code>https</code>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">haproxy</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">ssl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
@@ -1206,7 +1210,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
       
     
   </small>

@@ -730,6 +730,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#enabling-tinymce-editor" class="md-nav__link">
+    Enabling TinyMCE editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#disabling-tinymce-editor-to-use-the-oob-editor" class="md-nav__link">
     Disabling TinyMCE editor to use the OOB editor
   </a>
@@ -1058,6 +1065,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#enabling-tinymce-editor" class="md-nav__link">
+    Enabling TinyMCE editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#disabling-tinymce-editor-to-use-the-oob-editor" class="md-nav__link">
     Disabling TinyMCE editor to use the OOB editor
   </a>
@@ -1151,7 +1165,7 @@
 <h2 id="enabling-textbox-io-editor">Enabling Textbox I/O editor</h2>
 <ol>
 <li>
-<p>To enable the new Textbox I/O editor fix using HCL Digital Experience CF18 or later, run this configuration process in the Textbox I/O editor:</p>
+<p>To enable the new Textbox I/O editor fix using HCL Digital Experience CF18 or later, run this configuration process:</p>
 <div class="highlight"><pre><span></span><code>ConfigEngine(sh/bat) action-deploy-tiny-editors
 </code></pre></div>
 </li>
@@ -1164,7 +1178,7 @@
 <p>Restart the WebSphere_Portal server once the configuration process is completed.</p>
 </li>
 </ol>
-<p><strong>Beginning with HCL DX 9.5 Container Update CF182</strong>, the updated Textbox.io Rich Text editor is deployed out-of-box for the HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, <strong>a ConfigEngine task is required</strong> to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager). Run the ConfigEngine task:</p>
+<p><strong>Beginning with HCL DX 9.5 Container Update CF182</strong>, the updated Textbox.io Rich Text editor is deployed out-of-box for the HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine task is required to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager). Run the ConfigEngine task:</p>
 <div class="highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh action-create-was-variable-tiny-editors-cloud -DDxHost=&lt;FQDN of the exposed DX host&gt; 
 -DWasUserid=wpsadmin -DWasPassword=wpsadmin
 </code></pre></div>
@@ -1189,6 +1203,10 @@
 </li>
 </ol>
 <h2 id="using-a-custom-tinymce-editor-toolbar">Using a custom TinyMCE editor toolbar</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These customization steps only apply to the Enhanced editor used in the HCL Web Content Manager authoring portlet. Customization is not currently offered for Web content inline editing with the TinyMCE editor.</p>
+</div>
 <ol>
 <li>
 <p>The TinyMCE editor uses a custom configuration file that is named tiny_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\tinymce.</p>
@@ -1227,6 +1245,34 @@
 </div>
 </li>
 </ol>
+<h2 id="enabling-tinymce-editor">Enabling TinyMCE editor</h2>
+<p>As of CF208, the TinyMCE editor is enabled out of the box.</p>
+<ol>
+<li>
+<p>Depending on where you enabled the TinyMCE editor, run the appropriate configuration process.</p>
+<ul>
+<li>
+<p>If you disabled this editor in an on-premise setup and need to enable it again, run:</p>
+<div class="highlight"><pre><span></span><code>ConfigEngine(sh/bat) action-deploy-tinymce-editor
+</code></pre></div>
+</li>
+<li>
+<p>If you disabled this editor and need to enable it again in a Kubernetes deployment, run:</p>
+<div class="highlight"><pre><span></span><code>ConfigEngine(sh/bat) action-deploy-tinymce-editor-cloud
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>If a custom configuration is used for this editor, run this configuration process:</p>
+<div class="highlight"><pre><span></span><code>ConfigEngine(sh/bat) configure-wcm-ephox-editor-custom-configuration
+</code></pre></div>
+<p>If no custom configuration is used, proceed to Step 3. </p>
+</li>
+<li>
+<p>Restart the WebSphere_Portal server once the configuration process is completed.</p>
+</li>
+</ol>
 <h2 id="disabling-tinymce-editor-to-use-the-oob-editor">Disabling TinyMCE editor to use the OOB editor</h2>
 <ol>
 <li>
@@ -1245,7 +1291,7 @@
 <h2 id="using-a-custom-editlive-editor-toolbar">Using a custom EditLive! editor toolbar</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Ephox EditLive! is a deprecated feature as of CF11 or higher.</p>
+<p>Ephox EditLive! is an unsupported feature as of CF11 or higher.</p>
 </div>
 <ol>
 <li>
@@ -1285,7 +1331,7 @@
 <p class="admonition-title">Note</p>
 <p>To revert to the default editor toolbar, run the task that is named <code>remove-wcm-ephox-editor-custom-configuration</code> on the primary node only.</p>
 </div>
-<p><strong>Beginning with HCL Digital Experience Container Update CF182,</strong>, the updated Textbox.io Rich Text editor is deployed out-of-the-box for HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine must be required to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager.</p>
+<p><strong>Beginning with HCL Digital Experience Container Update CF182,</strong>, the updated Textbox.io Rich Text editor is deployed out-of-the-box for HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine task is required to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager.</p>
 <h2 id="reverting-to-the-editlive-editor-version-7-toolbar">Reverting to the EditLive! editor version 7 toolbar</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1300,7 +1346,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
       
     
   </small>
