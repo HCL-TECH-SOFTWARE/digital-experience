@@ -4,7 +4,6 @@
 The following features and updates are available to customers installing HCL Digital Experience Container Update CF208 on supported platforms:
 
 - Kubernetes deployment Pre-requisites checking 
-<!---  Kubernetes deployment HA Proxy option to configure Ingress  -->
 - Web Content Manager Author options now include Tiny MCE
 - Web Content Manager set SVG to disabled by default
 - Digital Asset Management set SVG to disabled by default
@@ -17,7 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 - New option to configure a local HCL Flexnet Entitlement server
 - DAM Keyword enhancements
 - Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
-
+<!---  Kubernetes deployment HA Proxy option to configure Ingress  -->
 
 ## Kubernetes deployment Pre-requisites checking  
 
