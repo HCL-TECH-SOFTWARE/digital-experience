@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/cf208/manage_content/wcm_authoring/dcs/disable_3rdparty_dcs/">
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/CF208/manage_content/wcm_authoring/dcs/disable_3rdparty_dcs/">
       
       <link rel="icon" href="../../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
@@ -1081,50 +1081,24 @@
 <li>If you are upgrading from CF202 or later, Oracle DCS files will be automatically backed up to your Digital Experience profile location and you can continue to utilize Oracle DCS.</li>
 <li>If you are upgrading from CF201 or earlier, you must <a href="../dcs_backup/">manually back up</a> your existing Oracle DCS files.</li>
 </ul>
-<p><strong>Don't have the backup of the DCS files:</strong> Do not set the <code>disableStellentDCS</code> flag to false or run the manual tasks if you do not have the backup of the Oracle DCS files in your DX environment.</p>
-<p>If you want to continue using the Oracle DCS with Digital Experience CF205 or later upgrade, ensure that <code>disableStellentDCS=false</code> is configured in <code>wkplc.properties</code> before running the <code>applyCF.sh|bat</code> command or pass <code>-DdisableStellentDCS=false</code> on the command line when running the <code>applyCF.sh|bat</code> command.</p>
-<p>If you are upgrading to a Kubernetes deployment, add/set the <code>disableStellentDCS</code> to false in your custom-values.yaml file before running the Helm upgrade command.</p>
+<p><strong>If you do not have the backup of the DCS files:</strong> Do not set the <code>disableStellentDCS</code> flag to false or run the manual tasks if you do not have the backup of the Oracle DCS files in your DX environment.</p>
+<p>If you want to continue using Oracle Stellent DCS with Digital Experience CF205 or later upgrade, ensure that <code>disableStellentDCS=false</code> is configured in <code>wkplc.properties</code> before running the <code>applyCF.sh|bat</code> command or pass <code>-DdisableStellentDCS=false</code> on the command line when running the <code>applyCF.sh|bat</code> command.</p>
+<p>If you are upgrading to a Kubernetes deployment, see <a href="../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps/#replacing-document-conversion-services-with-apache-tika">Replacing Document Conversion Services with Apache Tika</a>.</p>
 <h2 id="enabling-dcs-manually">Enabling DCS manually</h2>
-<p>You can enable DCS manually anytime. For example, when you ran <code>applyCF</code> without setting the <code>disableStellentDCS</code> flag to false or if you decide to set and use Oracle DCS again as your DX DCS, you can manually re-enable by running the following <code>ConfigEngine</code> task.</p>
+<p>You can enable DCS manually anytime. For example, if you run <code>applyCF</code> without setting the <code>disableStellentDCS</code> flag to false or if you decide to set and use Oracle DCS again as your DX DCS, you can manually re-enable by running the following <code>ConfigEngine</code> task.</p>
 <div class="highlight"><pre><span></span><code>ConfigEngine.sh|bat action-re-enable-stellent-dcs
 </code></pre></div>
-<p>If you are running in a Kubernetes environment, you can re-enable Oracle DCS for DX DCS by running the <code>ConfigEngine</code> task in the DX core container.</p>
-<ol>
-<li>
-<p>Obtain a shell within your DX Core container:</p>
-<div class="highlight"><pre><span></span><code>kubectl/oc exec -it &lt;DX CORE POD CONTAINER NAME&gt; bash -n namespace/project -c core
-</code></pre></div>
-</li>
-<li>
-<p>Run the following <code>ConfigEngine</code> task:</p>
-<div class="highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-re-enable-stellent-dcs
-</code></pre></div>
-</li>
-</ol>
 <h2 id="disabling-dcs-manually">Disabling DCS manually</h2>
 <p>If after enabling Oracle DCS as DX DCS, you prefer not to use it, you can manually disable Oracle DCS by running the following <code>ConfigEngine</code> task:</p>
 <div class="highlight"><pre><span></span><code>ConfigEngine.sh|bat action-disable-stellent-dcs
 </code></pre></div>
-<p>If you are running in a Kubernetes environment, you can disable Oracle DCS by running the <code>ConfigEngine</code> task in the DX core container.</p>
-<ol>
-<li>
-<p>Obtain a shell within your DX Core container:</p>
-<div class="highlight"><pre><span></span><code>kubectl/oc exec -it &lt;DX CORE POD CONTAINER NAME&gt; bash -n namespace/project -c core
-</code></pre></div>
-</li>
-<li>
-<p>Run the following <code>ConfigEngine</code> task:</p>
-<div class="highlight"><pre><span></span><code>/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-disable-stellent-dcs
-</code></pre></div>
-</li>
-</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2022</span>
       
     
   </small>
