@@ -66,9 +66,9 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | haproxy | 1 | haproxy | haproxy | 200m | 300Mi |
 | image-processor | 1 | image-processor | image-processor | 100m | 1280Mi |
 | license-manager | 1 | license-manager | license-manager | 100m | 300Mi |
-| open-ldap | 1 | ldap | openldap | 200m | 512Mi |
+| open-ldap | 1 | ldap | openldap | 200m | 768Mi |
 | persistence-connection-pool | 1 | persistence-connection-pool | persistence-connection-pool | 500m | 512Mi |
-| persistence-node | 1 | persistence-node | persistence-node | 1000m | 1024Mi |
+| persistence-node | 1 | persistence-node | persistence-node | 500m | 1024Mi |
 |  |  | persistence-metrics-exporter | persistence-metrics-exporter | 100m | 128Mi |
 |  |  | persistence-repmgr-log | logging-sidecar | 100m | 64Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
@@ -79,7 +79,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | ring-api | 1 | ring-api | ringapi | 100m | 128Mi |
 | runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
 |  |  |  |  |  |  |
-| **Overall** |  |  |  | **5000m** | **10392Mi** |
+| **Overall** |  |  |  | **4500m** | **10392Mi** |
 
 <!--
 ???+ info "Related information"
@@ -89,4 +89,3 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     - [Deploy DX Container to Amazon EKS](../containerization/kubernetes_eks.md)
     - [Deploy DX CF192 and later release Containers to Amazon EKS](../containerization/kubernetes_eks_cf192andlater.md)
     - [Deploy DX CF191 and earlier release Containers to Amazon EKS](../containerization/kubernetes_eks_cf191andearlier.md)-->
-
