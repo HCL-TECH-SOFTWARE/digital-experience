@@ -1173,17 +1173,17 @@
 <h2 id="configuration-parameters">Configuration parameters</h2>
 <p>To access the PersistentVolumes (PVs) on your cluster, the HCL Digital Experience 9.5 Kubernetes or OpenShift deployment using Helm creates PersistentVolumeClaims (PVCs) that binds the PVs to the corresponding pods.</p>
 <p>Each PVC that applications require allows you to configure the following parameters, as shown below. For a PVC of the Core application:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span><span class="w"></span>
-<span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span><span class="w"></span>
-<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10Gi&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Optional volume name to specifically map to</span><span class="w"></span>
-<span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span>
+<span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10Gi&quot;</span>
+<span class="w">      </span><span class="c1"># Optional volume name to specifically map to</span>
+<span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span>
 </code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -1223,177 +1223,177 @@
 <p>The following are some examples for configuration of the PersistentVolumeClaims (PVCs) using your custom-values.yaml:</p>
 <p><strong>Fallback to default <code>StorageClass</code> for all applications</strong></p>
 <p>Leaving an empty <code>StorageClassName</code> causes Kubernetes or OpenShift to fall back to the <code>StorageClass</code> that has been configured as the default one in your cluster:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span><span class="w"></span>
-<span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span><span class="w"></span>
-<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Transaction Log PVC, one per Core pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tranlog</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Application Log PVC, one per Core pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">log</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Digital Asset Management</span><span class="w"></span>
-<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Binary storage PVC, shared by all Digital Asset Management Pods</span><span class="w"></span>
-<span class="w">    </span><span class="nt">binaries</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Persistence</span><span class="w"></span>
-<span class="w">  </span><span class="nt">persistence</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Database PVC, one per Persistence pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Open LDAP</span><span class="w"></span>
-<span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># slapd directory PVC, one per Open LDAP pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">slapd</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># certificate directory, on per Open LDAP pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">certificate</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># ldap directory PVC, one per Open LDAP pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ldap</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Remote Search</span><span class="w"></span>
-<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Remote Search profile PVC, one per Remote Search pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prsprofile</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="c1"># Transaction Log PVC, one per Core pod</span>
+<span class="w">    </span><span class="nt">tranlog</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="c1"># Application Log PVC, one per Core pod</span>
+<span class="w">    </span><span class="nt">log</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Digital Asset Management</span>
+<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Binary storage PVC, shared by all Digital Asset Management Pods</span>
+<span class="w">    </span><span class="nt">binaries</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Persistence</span>
+<span class="w">  </span><span class="nt">persistence</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Database PVC, one per Persistence pod</span>
+<span class="w">    </span><span class="nt">database</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Open LDAP</span>
+<span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># slapd directory PVC, one per Open LDAP pod</span>
+<span class="w">    </span><span class="nt">slapd</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="c1"># certificate directory, on per Open LDAP pod</span>
+<span class="w">    </span><span class="nt">certificate</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="c1"># ldap directory PVC, one per Open LDAP pod</span>
+<span class="w">    </span><span class="nt">ldap</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Remote Search</span>
+<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Remote Search profile PVC, one per Remote Search pod</span>
+<span class="w">    </span><span class="nt">prsprofile</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div>
 <p><strong>Specific StorageClasses for all applications</strong></p>
 <p>Setting the <code>StorageClassName</code> to <code>mycloudstorage</code> causes Kubernetes or OpenShift to create PVCs that only accepts PVs with the <code>StorageClass</code> <code>mycloudstorage</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span><span class="w"></span>
-<span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span><span class="w"></span>
-<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Transaction Log PVC, one per Core pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tranlog</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Application Log PVC, one per Core pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">log</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Digital Asset Management</span><span class="w"></span>
-<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Binary storage PVC, shared by all Digital Asset Management Pods</span><span class="w"></span>
-<span class="w">    </span><span class="nt">binaries</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Persistence</span><span class="w"></span>
-<span class="w">  </span><span class="nt">persistence</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Database PVC, one per Persistence pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Open LDAP</span><span class="w"></span>
-<span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># slapd directory PVC, one per Open LDAP pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">slapd</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># certificate directory, on per Open LDAP pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">certificate</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># ldap directory PVC, one per Open LDAP pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ldap</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Remote Search</span><span class="w"></span>
-<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Remote Search profile PVC, one per Remote Search pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prsprofile</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">    </span><span class="c1"># Transaction Log PVC, one per Core pod</span>
+<span class="w">    </span><span class="nt">tranlog</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">    </span><span class="c1"># Application Log PVC, one per Core pod</span>
+<span class="w">    </span><span class="nt">log</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Digital Asset Management</span>
+<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Binary storage PVC, shared by all Digital Asset Management Pods</span>
+<span class="w">    </span><span class="nt">binaries</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Persistence</span>
+<span class="w">  </span><span class="nt">persistence</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Database PVC, one per Persistence pod</span>
+<span class="w">    </span><span class="nt">database</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Open LDAP</span>
+<span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># slapd directory PVC, one per Open LDAP pod</span>
+<span class="w">    </span><span class="nt">slapd</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">    </span><span class="c1"># certificate directory, on per Open LDAP pod</span>
+<span class="w">    </span><span class="nt">certificate</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">    </span><span class="c1"># ldap directory PVC, one per Open LDAP pod</span>
+<span class="w">    </span><span class="nt">ldap</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Remote Search</span>
+<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Remote Search profile PVC, one per Remote Search pod</span>
+<span class="w">    </span><span class="nt">prsprofile</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
 </code></pre></div>
 <p><strong>Specific volumes using selectors and labels</strong></p>
 <p>In the custom-values.yaml file, set the selectors for a specific application. In this example, the <code>persistenceNode</code> is used.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Persistence Node</span><span class="w"></span>
-<span class="w">  </span><span class="nt">persistenceNode</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Database PVC, one per persistence node</span><span class="w"></span>
-<span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Optional label selector to further filter the set of volumes. Only the volumes whose labels match the selector can be bound to the claim.</span><span class="w"></span>
-<span class="w">      </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">myVolumeLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Persistence Node</span>
+<span class="w">  </span><span class="nt">persistenceNode</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Database PVC, one per persistence node</span>
+<span class="w">    </span><span class="nt">database</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Optional label selector to further filter the set of volumes. Only the volumes whose labels match the selector can be bound to the claim.</span>
+<span class="w">      </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">myVolumeLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node</span>
 </code></pre></div>
 <p>By default, 3 replicas of <code>persistenceNode</code> are created. To make sure all <code>PersistenceVolumeClaims</code> are satisfied, we need to create at least 3 <code>PersistentVolumes</code> with matching labels.</p>
 <p>Each <code>PersistentVolume</code> should look similar to the following example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node-volume-0</span><span class="w"></span>
-<span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">myVolumeLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node</span><span class="w"></span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">capacity</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100Gi</span><span class="w"></span>
-<span class="w">  </span><span class="nt">volumeMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Filesystem</span><span class="w"></span>
-<span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span><span class="w"></span>
-<span class="w">  </span><span class="nt">persistentVolumeReclaimPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recycle</span><span class="w"></span>
-<span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mycloudstorage</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node-volume-0</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">myVolumeLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">capacity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100Gi</span>
+<span class="w">  </span><span class="nt">volumeMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Filesystem</span>
+<span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+<span class="w">  </span><span class="nt">persistentVolumeReclaimPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recycle</span>
+<span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mycloudstorage</span>
 </code></pre></div>
 <p>This will make sure that one of the <code>persistenceNode</code> Pods will pick up the Volume. To ensure an exact 1 to 1 match between Volume and Claim, refer to the <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reserving-a-persistentvolume">"Reserving a PersistentVolume"</a> documentation for Kubernetes to set a <code>claimRef</code> in the <code>PersistentVolume</code> in addition to the selectors.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node-volume-0</span><span class="w"></span>
-<span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">myVolumeLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node</span><span class="w"></span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">capacity</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100Gi</span><span class="w"></span>
-<span class="w">  </span><span class="nt">volumeMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Filesystem</span><span class="w"></span>
-<span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span><span class="w"></span>
-<span class="w">  </span><span class="nt">persistentVolumeReclaimPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recycle</span><span class="w"></span>
-<span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mycloudstorage</span><span class="w"></span>
-<span class="w">  </span><span class="nt">claimRef</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database-dx-deployment-persistence-node-0</span><span class="w"></span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myDXNamespace</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node-volume-0</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">myVolumeLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistence-node</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">capacity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100Gi</span>
+<span class="w">  </span><span class="nt">volumeMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Filesystem</span>
+<span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+<span class="w">  </span><span class="nt">persistentVolumeReclaimPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recycle</span>
+<span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mycloudstorage</span>
+<span class="w">  </span><span class="nt">claimRef</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database-dx-deployment-persistence-node-0</span>
+<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myDXNamespace</span>
 </code></pre></div>
 <p>This will ensure that only the <code>dx-deployment-persistence-node-0</code> Pod and none of the other replicas will use this <code>PersistentVolume</code>.</p>
 <p><strong>Specific volume names</strong></p>
 <p>Specifying a name ensures that Kubernetes or OpenShift only assigns PVs with the matching name to the PVCs created for the applications:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span><span class="w"></span>
-<span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span><span class="w"></span>
-<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Optional volume name to specifically map to</span><span class="w"></span>
-<span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;core-profile&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Digital Asset Management</span><span class="w"></span>
-<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Binary storage PVC, shared by all Digital Asset Management Pods</span><span class="w"></span>
-<span class="w">    </span><span class="nt">binaries</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Optional volume name to specifically map to</span><span class="w"></span>
-<span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dam-binaries&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">      </span><span class="c1"># Optional volume name to specifically map to</span>
+<span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;core-profile&quot;</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Digital Asset Management</span>
+<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Binary storage PVC, shared by all Digital Asset Management Pods</span>
+<span class="w">    </span><span class="nt">binaries</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">      </span><span class="c1"># Optional volume name to specifically map to</span>
+<span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dam-binaries&quot;</span>
 </code></pre></div>
 <p><strong>Adjusted volume size for Core PVCs</strong></p>
 <p>You may override the default sizes for PVCs by adjusting the storage requests:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span><span class="w"></span>
-<span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span><span class="w"></span>
-<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;150Gi&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Transaction Log PVC, one per Core pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tranlog</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Application Log PVC, one per Core pod</span><span class="w"></span>
-<span class="w">    </span><span class="nt">log</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Persistent Volume Setup</span>
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Shared profile PVC shared by all Core pods</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;150Gi&quot;</span>
+<span class="w">    </span><span class="c1"># Transaction Log PVC, one per Core pod</span>
+<span class="w">    </span><span class="nt">tranlog</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span>
+<span class="w">    </span><span class="c1"># Application Log PVC, one per Core pod</span>
+<span class="w">    </span><span class="nt">log</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mycloudstorage&quot;</span>
+<span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span>
 </code></pre></div>
 <h2 id="sample-persistent-volume-definitions">Sample Persistent Volume definitions</h2>
 <p><strong>Sample <code>StorageClass</code></strong></p>
@@ -1411,12 +1411,12 @@
 <p><strong>Sample Persistent Volume</strong></p>
 <p>To leverage the <code>StorageClass</code> you created, you can use the following Persistent Volume example, which connects to an NFS Server of your choice to provide a PV:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span><span class="w"> </span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wp-profile-volume</span><span class="w"> </span>
 <span class="nt">spec</span><span class="p">:</span><span class="w"> </span>
 <span class="w">  </span><span class="nt">capacity</span><span class="p">:</span><span class="w"> </span>
-<span class="w">    </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100Gi</span><span class="w"></span>
+<span class="w">    </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100Gi</span>
 <span class="w">  </span><span class="nt">nfs</span><span class="p">:</span><span class="w"> </span>
 <span class="w">    </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_nfs_server.com</span><span class="w"> </span>
 <span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/exports/volume_name</span><span class="w"> </span>
@@ -1432,7 +1432,7 @@
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timeo=600</span><span class="w"> </span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">retrans=2</span><span class="w"> </span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">noresvport</span><span class="w"> </span>
-<span class="w">  </span><span class="nt">volumeMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Filesystem</span><span class="w"></span>
+<span class="w">  </span><span class="nt">volumeMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Filesystem</span>
 </code></pre></div>
 <h2 id="configuring-additional-core-persistent-volumes">Configuring additional core persistent volumes</h2>
 <p>A HCL Digital Experience Kubernetes deployment requires a number of persistent volumes as standard, such as for the Core profile and for digital asset storage. It is now also possible to connect additional persistent volumes to the Core stateful set and mount them in the main container of all Core pods. It is anticipated that this optional feature will be of use to customers running custom applications on DX that require additional persistent storage.</p>
@@ -1442,48 +1442,48 @@
 <p>Core pods will remain "Pending" until all the new claims have been satisfied. Please ensure that you have created the necessary Persistent Volumes in advance or have suitable provisioners in your Kubernetes cluster to create the volumes on demand.</p>
 </div>
 <p>The following syntax can be used to configure additional Persistent Volume Claims (PVCs) in your <code>custom-values.yaml</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># List of optional additional Core PVCs for customer applications</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Each list element must include a unique &quot;name&quot;, one or more &quot;accessModes&quot; </span><span class="w"></span>
-<span class="w">    </span><span class="c1"># from the options ReadWriteOnce, ReadOnlyMany or ReadWriteMany, a &quot;mountPath&quot; specifying where in the </span><span class="w"></span>
-<span class="w">    </span><span class="c1"># core container it should be mounted, a &quot;storageClassName&quot; and a size in &quot;requests/storage&quot;.</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># It may also optionally include a &quot;selector&quot; section to select specific PVs based on their labels.</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># It may also optionally include a &quot;volumeName&quot; to select a specific PV.</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Example:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># customPVCs:</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#   - name: &quot;test1&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#     accessModes: </span><span class="w"></span>
-<span class="w">    </span><span class="c1">#       - &quot;ReadWriteMany&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#     mountPath: &quot;/opt/HCL/test1&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#     storageClassName: &quot;manual&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#     requests:</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#       storage: &quot;20Gi&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#     selector:</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#       matchLabels:</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#         label: test</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#       matchExpressions:</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#         - key: name</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#           operator: In</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#           values:</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#             - test1</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#             - test2</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#     volumeName: &quot;test-pv&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">customPVCs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># List of optional additional Core PVCs for customer applications</span>
+<span class="w">    </span><span class="c1"># Each list element must include a unique &quot;name&quot;, one or more &quot;accessModes&quot; </span>
+<span class="w">    </span><span class="c1"># from the options ReadWriteOnce, ReadOnlyMany or ReadWriteMany, a &quot;mountPath&quot; specifying where in the </span>
+<span class="w">    </span><span class="c1"># core container it should be mounted, a &quot;storageClassName&quot; and a size in &quot;requests/storage&quot;.</span>
+<span class="w">    </span><span class="c1"># It may also optionally include a &quot;selector&quot; section to select specific PVs based on their labels.</span>
+<span class="w">    </span><span class="c1"># It may also optionally include a &quot;volumeName&quot; to select a specific PV.</span>
+<span class="w">    </span><span class="c1"># Example:</span>
+<span class="w">    </span><span class="c1"># customPVCs:</span>
+<span class="w">    </span><span class="c1">#   - name: &quot;test1&quot;</span>
+<span class="w">    </span><span class="c1">#     accessModes: </span>
+<span class="w">    </span><span class="c1">#       - &quot;ReadWriteMany&quot;</span>
+<span class="w">    </span><span class="c1">#     mountPath: &quot;/opt/HCL/test1&quot;</span>
+<span class="w">    </span><span class="c1">#     storageClassName: &quot;manual&quot;</span>
+<span class="w">    </span><span class="c1">#     requests:</span>
+<span class="w">    </span><span class="c1">#       storage: &quot;20Gi&quot;</span>
+<span class="w">    </span><span class="c1">#     selector:</span>
+<span class="w">    </span><span class="c1">#       matchLabels:</span>
+<span class="w">    </span><span class="c1">#         label: test</span>
+<span class="w">    </span><span class="c1">#       matchExpressions:</span>
+<span class="w">    </span><span class="c1">#         - key: name</span>
+<span class="w">    </span><span class="c1">#           operator: In</span>
+<span class="w">    </span><span class="c1">#           values:</span>
+<span class="w">    </span><span class="c1">#             - test1</span>
+<span class="w">    </span><span class="c1">#             - test2</span>
+<span class="w">    </span><span class="c1">#     volumeName: &quot;test-pv&quot;</span>
+<span class="w">    </span><span class="nt">customPVCs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </code></pre></div>
 <p><strong>Example</strong></p>
 <p>The following example creates a new PVC called <code>&lt;deployment-name&gt;-core-custom-test1</code> and mounts it in the main Core pod containers at <code>/opt/HCL/test1</code>. To be satisfied this claim requires a Persistent Volume with access mode <code>ReadWriteOnce</code>, storage class <code>manual</code> and at least 20Gb capacity. Since <code>volumeName</code> and <code>selector</code> are not specified, Kubernetes is free to choose any unbound volume that meets the above criteria.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">customPVCs</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;test1&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">accessModes</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;ReadWriteOnce&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/opt/HCL/test1&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;20Gi&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">customPVCs</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;test1&quot;</span>
+<span class="w">        </span><span class="nt">accessModes</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;ReadWriteOnce&quot;</span>
+<span class="w">        </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/opt/HCL/test1&quot;</span>
+<span class="w">        </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span>
+<span class="w">        </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;20Gi&quot;</span>
 </code></pre></div>
 
   <hr>
@@ -1491,7 +1491,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

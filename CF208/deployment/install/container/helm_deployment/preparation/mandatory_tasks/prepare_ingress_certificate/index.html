@@ -1142,10 +1142,10 @@ kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n dig
 <h2 id="configure-secret-in-deployment">Configure secret in deployment</h2>
 <p>You need to make sure that the reference to the secret is set up correctly in your <code>custom-values.yaml</code> file. Otherwise, HAProxy cannot answer HTTPS requests due to a missing certificate.</p>
 <p>You can set the name of the certificate used with the following syntax, the default value is <code>dx-tls-cert</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Networking specific configuration</span><span class="w"></span>
-<span class="nt">networking</span><span class="p">:</span><span class="w"></span>
-<span class="w"> </span><span class="c1"># TLS Certificate secret used for HAProxy</span><span class="w"></span>
-<span class="w"> </span><span class="nt">tlsCertSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx-tls-cert&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Networking specific configuration</span>
+<span class="nt">networking</span><span class="p">:</span>
+<span class="w"> </span><span class="c1"># TLS Certificate secret used for HAProxy</span>
+<span class="w"> </span><span class="nt">tlsCertSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx-tls-cert&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1157,7 +1157,7 @@ kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n dig
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

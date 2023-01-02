@@ -1017,36 +1017,36 @@
 <p>Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.</p>
 <h2 id="uploads-via-dxclient">Uploads via DXClient</h2>
 <p>=== "MacOS or Linux"
-       <div class="highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt; <span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt; npm run dx-deploy-app 
+       <div class="highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app<span class="w"> </span>
 </code></pre></div>
    === "Windows"
-       <div class="highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt; <span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt; npm run dx-deploy-app-win
+       <div class="highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app-win
 </code></pre></div></p>
 <p>Sample successful <em>deployDxModule</em> log:</p>
-<div class="highlight"><pre><span></span><code>     <span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt; <span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt; npm run dx-deploy-app 
-         &gt; sample-app@1.0.0 dx-deploy-app
-         &gt; dxclient deploy-Script Applicationlication push -dxUsername <span class="nv">$dxUsername</span> -dxPassword <span class="nv">$dxPassword</span> -wcmContentName <span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmContentName</span><span class="s2">&quot;</span> -wcmSiteArea <span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmSiteArea</span><span class="s2">&quot;</span> -mainHtmlFile <span class="nv">$npm_package_config_dxclient_mainHtmlFile</span> -contentRoot <span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_contentRoot</span><span class="s2">&quot;</span> -dxProtocol <span class="nv">$npm_package_config_dxclient_protocol</span> -hostname <span class="nv">$npm_package_config_dxclient_hostname</span> -dxPort <span class="nv">$npm_package_config_dxclient_port</span>
+<div class="highlight"><pre><span></span><code><span class="w">     </span><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app<span class="w"> </span>
+<span class="w">         </span>&gt;<span class="w"> </span>sample-app@1.0.0<span class="w"> </span>dx-deploy-app
+<span class="w">         </span>&gt;<span class="w"> </span>dxclient<span class="w"> </span>deploy-Script<span class="w"> </span>Applicationlication<span class="w"> </span>push<span class="w"> </span>-dxUsername<span class="w"> </span><span class="nv">$dxUsername</span><span class="w"> </span>-dxPassword<span class="w"> </span><span class="nv">$dxPassword</span><span class="w"> </span>-wcmContentName<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmContentName</span><span class="s2">&quot;</span><span class="w"> </span>-wcmSiteArea<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmSiteArea</span><span class="s2">&quot;</span><span class="w"> </span>-mainHtmlFile<span class="w"> </span><span class="nv">$npm_package_config_dxclient_mainHtmlFile</span><span class="w"> </span>-contentRoot<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_contentRoot</span><span class="s2">&quot;</span><span class="w"> </span>-dxProtocol<span class="w"> </span><span class="nv">$npm_package_config_dxclient_protocol</span><span class="w"> </span>-hostname<span class="w"> </span><span class="nv">$npm_package_config_dxclient_hostname</span><span class="w"> </span>-dxPort<span class="w"> </span><span class="nv">$npm_package_config_dxclient_port</span>
 
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:36 : Begin content push to Portal.
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:36 : WCM content ID: .
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:36 : WCM Content Path: .
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:36 : WCM Content Title: .
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:36 : Main HTML file: index.html.
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:36 : PrebuiltZip path does not exist.
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:36 : Archive file:
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>Begin<span class="w"> </span>content<span class="w"> </span>push<span class="w"> </span>to<span class="w"> </span>Portal.
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>content<span class="w"> </span>ID:<span class="w"> </span>.
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>Content<span class="w"> </span>Path:<span class="w"> </span>.
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>Content<span class="w"> </span>Title:<span class="w"> </span>.
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>Main<span class="w"> </span>HTML<span class="w"> </span>file:<span class="w"> </span>index.html.
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>PrebuiltZip<span class="w"> </span>path<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist.
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:36<span class="w"> </span>:<span class="w"> </span>Archive<span class="w"> </span>file:
 
-                 /var/folders/8x/4zt3nlmn6sg1574fb4pdz56w0000gp/T/tmp--31802-W4L6zoRtZi5a-.zip
-                 <span class="o">(</span><span class="m">13834</span> bytes <span class="k">in</span> <span class="m">4</span> files<span class="o">)</span> 
+<span class="w">                 </span>/var/folders/8x/4zt3nlmn6sg1574fb4pdz56w0000gp/T/tmp--31802-W4L6zoRtZi5a-.zip
+<span class="w">                 </span><span class="o">(</span><span class="m">13834</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>files<span class="o">)</span><span class="w"> </span>
 
-                 4fe75d5f9adb18067b85.ico
-                 index.html
-                 main.bfc69d9380a37f7c3db2.bundle.js
-                 sp-config.json.
-         <span class="o">(</span>node:31802<span class="o">)</span> Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to <span class="s1">&#39;0&#39;</span> makes TLS connections and HTTPS requests insecure by disabling certificate verification.
-         <span class="o">(</span>Use <span class="sb">`</span>node --trace-warnings ...<span class="sb">`</span> to show where the warning was created<span class="o">)</span>
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:39 : Content push was successful.
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:39 : End content push to Portal.
-         <span class="m">2022</span>-08-19 <span class="m">22</span>:57:39 : Body content: <span class="o">{</span><span class="s2">&quot;results&quot;</span>:<span class="o">{</span><span class="s2">&quot;status&quot;</span>:<span class="s2">&quot;success&quot;</span>,<span class="s2">&quot;importedFiles&quot;</span>:<span class="o">{</span><span class="s2">&quot;file&quot;</span>:<span class="o">[{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;HTML/index.html&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;JavaScript/main.bfc69d9380a37f7c3db2.bundle.js&quot;</span><span class="o">}]}</span>,<span class="s2">&quot;skippedFiles&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;message&quot;</span>:<span class="s2">&quot;The file that you selected was imported successfully.&quot;</span>,<span class="s2">&quot;contentId&quot;</span>:<span class="s2">&quot;8ce2958e-86b0-4700-b6f1-ef7542c10f86&quot;</span><span class="o">}}</span>. 
+<span class="w">                 </span>4fe75d5f9adb18067b85.ico
+<span class="w">                 </span>index.html
+<span class="w">                 </span>main.bfc69d9380a37f7c3db2.bundle.js
+<span class="w">                 </span>sp-config.json.
+<span class="w">         </span><span class="o">(</span>node:31802<span class="o">)</span><span class="w"> </span>Warning:<span class="w"> </span>Setting<span class="w"> </span>the<span class="w"> </span>NODE_TLS_REJECT_UNAUTHORIZED<span class="w"> </span>environment<span class="w"> </span>variable<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;0&#39;</span><span class="w"> </span>makes<span class="w"> </span>TLS<span class="w"> </span>connections<span class="w"> </span>and<span class="w"> </span>HTTPS<span class="w"> </span>requests<span class="w"> </span>insecure<span class="w"> </span>by<span class="w"> </span>disabling<span class="w"> </span>certificate<span class="w"> </span>verification.
+<span class="w">         </span><span class="o">(</span>Use<span class="w"> </span><span class="sb">`</span>node<span class="w"> </span>--trace-warnings<span class="w"> </span>...<span class="sb">`</span><span class="w"> </span>to<span class="w"> </span>show<span class="w"> </span>where<span class="w"> </span>the<span class="w"> </span>warning<span class="w"> </span>was<span class="w"> </span>created<span class="o">)</span>
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:39<span class="w"> </span>:<span class="w"> </span>Content<span class="w"> </span>push<span class="w"> </span>was<span class="w"> </span>successful.
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:39<span class="w"> </span>:<span class="w"> </span>End<span class="w"> </span>content<span class="w"> </span>push<span class="w"> </span>to<span class="w"> </span>Portal.
+<span class="w">         </span><span class="m">2022</span>-08-19<span class="w"> </span><span class="m">22</span>:57:39<span class="w"> </span>:<span class="w"> </span>Body<span class="w"> </span>content:<span class="w"> </span><span class="o">{</span><span class="s2">&quot;results&quot;</span>:<span class="o">{</span><span class="s2">&quot;status&quot;</span>:<span class="s2">&quot;success&quot;</span>,<span class="s2">&quot;importedFiles&quot;</span>:<span class="o">{</span><span class="s2">&quot;file&quot;</span>:<span class="o">[{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;HTML/index.html&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;JavaScript/main.bfc69d9380a37f7c3db2.bundle.js&quot;</span><span class="o">}]}</span>,<span class="s2">&quot;skippedFiles&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;message&quot;</span>:<span class="s2">&quot;The file that you selected was imported successfully.&quot;</span>,<span class="s2">&quot;contentId&quot;</span>:<span class="s2">&quot;8ce2958e-86b0-4700-b6f1-ef7542c10f86&quot;</span><span class="o">}}</span>.<span class="w"> </span>
 </code></pre></div>
 <p>If there's a deployment error, check the DXClient logs in the &lt;app-folder&gt;/store/logs/logger.log file.</p>
 <h2 id="add-application-to-a-page">Add Application to a Page</h2>
@@ -1060,7 +1060,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

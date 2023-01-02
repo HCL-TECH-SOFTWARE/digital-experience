@@ -1578,10 +1578,10 @@
 </div>
 <h2 id="setting-the-log-configuration-for-a-dx-application">Setting the log configuration for a DX application</h2>
 <p>You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the <code>level</code> property for the specified application. These properties are found in the <code>logging</code> section. For example, to set the configuration for Content Composer, use the following property:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Content Composer specific logging configuration</span><span class="w"></span>
-<span class="w">  </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:*=info&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Content Composer specific logging configuration</span>
+<span class="w">  </span><span class="nt">contentComposer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:*=info&quot;</span>
 </code></pre></div>
 <p>You can see the string format in the following section. Once the property is set, run the <code>helm upgrade</code> command.</p>
 <h2 id="log-configuration-string-format">Log configuration string format</h2>
@@ -1842,7 +1842,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 23, 2022</span>
       
     
   </small>

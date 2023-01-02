@@ -1003,38 +1003,38 @@
 </ul>
 <h2 id="check-the-clusters-customresourcedefinitions">Check the clusters <code>CustomResourceDefinitions</code></h2>
 <p>To check if the definitions are on the cluster, run the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl get crd --selector app.kubernetes.io/name<span class="o">=</span>ambassador
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>crd<span class="w"> </span>--selector<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>ambassador
 </code></pre></div>
 <p>This should return the 19 <code>CRDs</code> listed previously. If more <code>CRDs</code> are returned, it indicates that another Ambassador instance is deployed in your cluster. This needs to be taken into consideration when removing the <code>CRDs</code></p>
 <h2 id="check-the-clusters-customresources">Check the clusters <code>CustomResources</code></h2>
 <p>To see the actual resources that are using the <code>CRDs</code> above, run the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl get ambassador-crds --all-namespaces
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>ambassador-crds<span class="w"> </span>--all-namespaces
 </code></pre></div>
 <p>If HCL Digital Experience is migrated to HAProxy and Ambassador is disabled, then the previous command should return the following message:</p>
 <div class="highlight"><pre><span></span><code>No resources found
 </code></pre></div>
 <h2 id="remove-the-customresourcedefinitions">Remove the <code>CustomResourceDefinitions</code></h2>
 <p>If no resources are using <code>CRDs</code>, it is safe to remove the resources from the cluster by running the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete crd <span class="se">\</span>
-  filters.getambassador.io <span class="se">\</span>
-  filterpolicies.getambassador.io <span class="se">\</span>
-  authservices.getambassador.io <span class="se">\</span>
-  consulresolvers.getambassador.io <span class="se">\</span>
-  devportals.getambassador.io <span class="se">\</span>
-  hosts.getambassador.io <span class="se">\</span>
-  kubernetesendpointresolvers.getambassador.io <span class="se">\</span>
-  kubernetesserviceresolvers.getambassador.io <span class="se">\</span>
-  logservices.getambassador.io <span class="se">\</span>
-  mappings.getambassador.io <span class="se">\</span>
-  modules.getambassador.io <span class="se">\</span>
-  ratelimitservices.getambassador.io <span class="se">\</span>
-  tcpmappings.getambassador.io <span class="se">\</span>
-  tlscontexts.getambassador.io <span class="se">\</span>
-  tracingservices.getambassador.io <span class="se">\</span>
-  projects.getambassador.io <span class="se">\</span>
-  projectcontrollers.getambassador.io <span class="se">\</span>
-  projectrevisions.getambassador.io <span class="se">\</span>
-  ratelimits.getambassador.io
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>crd<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>filters.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>filterpolicies.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>authservices.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>consulresolvers.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>devportals.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>hosts.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>kubernetesendpointresolvers.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>kubernetesserviceresolvers.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>logservices.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>mappings.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>modules.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>ratelimitservices.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>tcpmappings.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>tlscontexts.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>tracingservices.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>projects.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>projectcontrollers.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>projectrevisions.getambassador.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>ratelimits.getambassador.io
 </code></pre></div>
 <h2 id="restore-customresourcedefinitions-as-fallback">Restore  <code>CustomResourceDefinitions</code> as fallback</h2>
 <p>In case you want the deleted <code>CRDs</code> back,  you can restore them from the HCL Digital Experience Helm chart. To restore CRDs, unpack the <code>CRDs</code> and apply them by running the following command:</p>
@@ -1047,7 +1047,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 24, 2022</span>
       
     
   </small>

@@ -1254,38 +1254,38 @@
 <p>Currently, the configuration capability is quite limited. For more complex configurations, use the ConfigWizard instead.</p>
 <p><strong>Example Configuration</strong></p>
 <p>You can use the following syntax in your custom-values.yaml file to adjust LDAP settings:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span><span class="w"></span>
-<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Application specific configuration for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Settings for LDAP configuration</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ldap</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Determines which type of LDAP to use</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Accepts: &quot;none&quot;, &quot;dx&quot; or &quot;other&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># &quot;none&quot; - no LDAP configuration</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># &quot;dx&quot; - use DX openLDAP and configure it</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># &quot;other&quot; - use provided configuration for other LDAP</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># User used to connect to LDAP, only used if ldap type is &quot;other&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">bindUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Password used to connect to LDAP, only used if ldap type is &quot;other&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">bindPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Suffix in LDAP, only used if ldap type is &quot;other&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">suffix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Host of LDAP, only used if ldap type is &quot;other&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Port of LDAP, only used if ldap type is &quot;other&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Supported LDAP Server types - CUSTOM</span><span class="w"></span>
-<span class="w">      </span><span class="nt">serverType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;CUSTOM&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># LDAP configuration id</span><span class="w"></span>
-<span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx_ldap&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Mapping attributes between LDAP and DX, LDAP attribute names (comma-separated list)</span><span class="w"></span>
-<span class="w">      </span><span class="nt">attributeMappingLdap</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mail,title,userPassword&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Mapping attributes between LDAP and DX, DX attribute names (comma-separated list)</span><span class="w"></span>
-<span class="w">      </span><span class="nt">attributeMappingPortal</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ibm-primaryEmail,ibm-jobTitle,password&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Non-supported LDAP attributes (comma-separated list)</span><span class="w"></span>
-<span class="w">      </span><span class="nt">attributeNonSupported</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;certificate,members&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Settings for LDAP configuration</span>
+<span class="w">    </span><span class="nt">ldap</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Determines which type of LDAP to use</span>
+<span class="w">      </span><span class="c1"># Accepts: &quot;none&quot;, &quot;dx&quot; or &quot;other&quot;</span>
+<span class="w">      </span><span class="c1"># &quot;none&quot; - no LDAP configuration</span>
+<span class="w">      </span><span class="c1"># &quot;dx&quot; - use DX openLDAP and configure it</span>
+<span class="w">      </span><span class="c1"># &quot;other&quot; - use provided configuration for other LDAP</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;none&quot;</span>
+<span class="w">      </span><span class="c1"># User used to connect to LDAP, only used if ldap type is &quot;other&quot;</span>
+<span class="w">      </span><span class="nt">bindUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">      </span><span class="c1"># Password used to connect to LDAP, only used if ldap type is &quot;other&quot;</span>
+<span class="w">      </span><span class="nt">bindPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">      </span><span class="c1"># Suffix in LDAP, only used if ldap type is &quot;other&quot;</span>
+<span class="w">      </span><span class="nt">suffix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">      </span><span class="c1"># Host of LDAP, only used if ldap type is &quot;other&quot;</span>
+<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">      </span><span class="c1"># Port of LDAP, only used if ldap type is &quot;other&quot;</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">      </span><span class="c1"># Supported LDAP Server types - CUSTOM</span>
+<span class="w">      </span><span class="nt">serverType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;CUSTOM&quot;</span>
+<span class="w">      </span><span class="c1"># LDAP configuration id</span>
+<span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx_ldap&quot;</span>
+<span class="w">      </span><span class="c1"># Mapping attributes between LDAP and DX, LDAP attribute names (comma-separated list)</span>
+<span class="w">      </span><span class="nt">attributeMappingLdap</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mail,title,userPassword&quot;</span>
+<span class="w">      </span><span class="c1"># Mapping attributes between LDAP and DX, DX attribute names (comma-separated list)</span>
+<span class="w">      </span><span class="nt">attributeMappingPortal</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ibm-primaryEmail,ibm-jobTitle,password&quot;</span>
+<span class="w">      </span><span class="c1"># Non-supported LDAP attributes (comma-separated list)</span>
+<span class="w">      </span><span class="nt">attributeNonSupported</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;certificate,members&quot;</span>
 </code></pre></div>
 <p>Refer to the following Help Center documentation for more information about LDAP and Configuration Wizard configuration:</p>
 <ul>
@@ -1297,23 +1297,23 @@
 <p>You can choose if the environment you deploy is configured as a WCM authoring or rendering type. This has implications on things like caching of Core.</p>
 <p>As default, this defaults to true. The deployment is configured as an authoring environment.</p>
 <p>If you want to adjust this to deploy a rendering environment, you can use the following syntax in your custom-values.yaml file:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span><span class="w"></span>
-<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Application specific configuration for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Settings for tuning</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tuning</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Configures if the environment should be configured for authoring or not</span><span class="w"></span>
-<span class="w">      </span><span class="nt">authoring</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Settings for tuning</span>
+<span class="w">    </span><span class="nt">tuning</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Configures if the environment should be configured for authoring or not</span>
+<span class="w">      </span><span class="nt">authoring</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <h3 id="expose-ibm-websphere-application-server-solution-console">Expose IBM WebSphere Application Server Solution Console</h3>
 <p>Refer to the following code sample to configure the server and expose the port <code>10203</code>, which will be placed under <code>configuration.core.exposeConfigurationConsole</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span><span class="w"></span>
-<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Application specific configuration for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Defines if the configuration console for the IBM WebSphere Application Server of Core is exposed to the network</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exposeConfigurationConsole</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Defines if the configuration console for the IBM WebSphere Application Server of Core is exposed to the network</span>
+<span class="w">    </span><span class="nt">exposeConfigurationConsole</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>When <code>Admin Console</code> is enabled by setting its property to <code>true</code>, the IBM WebSphere Application Server Solution Console becomes available on port <code>10203</code>, as shown in the following example:</p>
 <div class="highlight"><pre><span></span><code>https://yourhost:10203/ibm/console/
@@ -1323,15 +1323,15 @@
 <p>Although the Config Wizard is started together with the Core application by default, you can set the value to 'false' to change the default behavior
 If <code>configWizard</code> is set to <code>true</code>, then the Configuration Wizard, IBM WebSphere Application Server Solution Console, and DXConnect are also accessible on port <code>10203</code>.</p>
 <p>If you want to adjust this setting, you can use the following syntax in your file:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span><span class="w"></span>
-<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Application specific configuration for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Settings for tuning</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tuning</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="c1"># Configures if the server for configWizard and dxconnect is started.</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># If this is set to true, the WAS console for configWizard and dxconnect is also exposed on port 10203 at the path /ibm/console</span><span class="w"></span>
-<span class="w">      </span><span class="nt">configWizard</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Settings for tuning</span>
+<span class="w">    </span><span class="nt">tuning</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Configures if the server for configWizard and dxconnect is started.</span>
+<span class="w">      </span><span class="c1"># If this is set to true, the WAS console for configWizard and dxconnect is also exposed on port 10203 at the path /ibm/console</span>
+<span class="w">      </span><span class="nt">configWizard</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <h3 id="replacing-document-conversion-services-with-apache-tika">Replacing Document Conversion Services with Apache Tika</h3>
 <p>Beginning with HCL Digital Experience release 205,<a href="../../../../../../../manage_content/wcm_authoring/dcs/">Document Conversion Services</a>, which is used by <a href="../../../../../../../build_sites/search/portal_search/">HCL Digital Experience Portal Search</a> and <a href="../../../../../../manage/container_configuration/kubernetes_remote_search/">HCL Digital Experience Remote Search</a> is not distributed or supported by HCL. Oracle functionality is replaced by <a href="https://tika.apache.org/" target="_blank">Apache Tika</a>, which is included in the HCL DX CF205 and later offering. For additional information on DCS services available in CF205 and later, see the <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0096908" target="_blank">Replacement of Document Conversion Services component</a> knowledge article.</p>
@@ -1376,28 +1376,28 @@ If <code>configWizard</code> is set to <code>true</code>, then the Configuration
 </tbody>
 </table>
 <p>By default, both parameters are set to <code>true</code> as given in the following example:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span><span class="w"></span>
-<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Application specific configuration for Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Settings for enabling/disabling Tika</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Application specific configuration for Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Settings for enabling/disabling Tika</span>
 <span class="w">    </span><span class="nt">configureTika</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span>
-<span class="w">    </span><span class="c1"># Settings for enabling/disabling Stellent</span><span class="w"></span>
-<span class="w">    </span><span class="nt">disableStellentDCS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Settings for enabling/disabling Stellent</span>
+<span class="w">    </span><span class="nt">disableStellentDCS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <h2 id="openldap-configuration">OpenLDAP configuration</h2>
 <p>If you choose to deploy the OpenLDAP container in your deployment, you can change country, organization and suffix, that may be configured in OpenLDAP for use.</p>
 <p>Use the following syntax in your custom-values.yaml file to adjust the configuration:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span><span class="w"></span>
-<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Application specific configuration for Open LDAP</span><span class="w"></span>
-<span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Country configuration for Open LDAP</span><span class="w"></span>
-<span class="w">    </span><span class="nt">country</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;US&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Org configuration for Open LDAP</span><span class="w"></span>
-<span class="w">    </span><span class="nt">org</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;DX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Suffix configuration for Open LDAP</span><span class="w"></span>
-<span class="w">    </span><span class="nt">suffix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dc=dx,dc=com&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Application specific configuration for Open LDAP</span>
+<span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Country configuration for Open LDAP</span>
+<span class="w">    </span><span class="nt">country</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;US&quot;</span>
+<span class="w">    </span><span class="c1"># Org configuration for Open LDAP</span>
+<span class="w">    </span><span class="nt">org</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;DX&quot;</span>
+<span class="w">    </span><span class="c1"># Suffix configuration for Open LDAP</span>
+<span class="w">    </span><span class="nt">suffix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dc=dx,dc=com&quot;</span>
 </code></pre></div>
 <h2 id="remote-search-configuration">Remote Search configuration</h2>
 <p>You can configure whether the Remote Search configuration through the IBM WebSphere Application Server Solution Console is exposed as an additional port on HAProxy or not. This defaults to true.</p>
@@ -1405,12 +1405,12 @@ If <code>configWizard</code> is set to <code>true</code>, then the Configuration
 <div class="highlight"><pre><span></span><code>https://yourhost:9043/ibm/console
 </code></pre></div>
 <p>Use the following syntax in your custom-values.yaml file:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span><span class="w"></span>
-<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Application specific configuration for Remote Search</span><span class="w"></span>
-<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Should the configuration interface be exposed</span><span class="w"></span>
-<span class="w">    </span><span class="nt">exposeConfigurationConsole</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Application specific configuration for Remote Search</span>
+<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Should the configuration interface be exposed</span>
+<span class="w">    </span><span class="nt">exposeConfigurationConsole</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 
   <hr>
@@ -1418,7 +1418,7 @@ If <code>configWizard</code> is set to <code>true</code>, then the Configuration
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2022</span>
       
     
   </small>

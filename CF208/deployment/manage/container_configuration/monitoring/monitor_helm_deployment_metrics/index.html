@@ -1583,25 +1583,25 @@
 <ul>
 <li>
 <p><strong>Default configuration</strong>: Metrics are enabled for Core with the appropriate <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/"><code>annotation</code></a> for Prometheus:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">scrape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prometheusDiscoveryType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;annotation&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">scrape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">prometheusDiscoveryType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;annotation&quot;</span>
 </code></pre></div>
 </li>
 <li>
 <p>Create a <a href="https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources"><code>ServiceMonitor</code></a> for Prometheus Operator:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">scrape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">    </span><span class="nt">prometheusDiscoveryType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;serviceMonitor&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">scrape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">prometheusDiscoveryType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;serviceMonitor&quot;</span>
 </code></pre></div>
 </li>
 <li>
 <p>Disable the metrics for Core:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">scrape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">scrape</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 </li>
 </ul>
@@ -1692,7 +1692,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 23, 2022</span>
       
     
   </small>

@@ -1040,225 +1040,225 @@
 <ol>
 <li>
 <p>Create a webpack.common.js file. Update the main entry section to point to the correct index js/ts file .
-   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;mini-css-extract-plugin&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mini-svg-data-uri&#39;</span><span class="p">);</span><span class="w"></span>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;mini-css-extract-plugin&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mini-svg-data-uri&#39;</span><span class="p">);</span>
 
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">main</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./src/index.js&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">preferRelative</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nx">extensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.jsx&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.module.scss&quot;</span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(js|mjs|jsx|ts|tsx)$/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="sr">/(node_modules|bower_components)/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                    </span><span class="nx">loader</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;babel-loader&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                    </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                        </span><span class="nx">presets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;@babel/preset-env&#39;</span><span class="p">,</span><span class="s1">&#39;@babel/preset-react&#39;</span><span class="p">],</span><span class="w"></span>
-<span class="w">                        </span><span class="nx">cacheDirectory</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">                    </span><span class="p">}</span><span class="w"></span>
-<span class="w">                </span><span class="p">}</span><span class="w"></span>
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(htm|html)$/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;html-loader&#39;</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(js|mjs|jsx|ts|tsx)$/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ts-loader&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="sr">/node_modules/</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.s[ac]ss$/i</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">MiniCssExtractPlugin</span><span class="p">.</span><span class="nx">loader</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;css-loader&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sass-loader&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.css$/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;style-loader&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;css-loader&#39;</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.svg/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset/inline&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">generator</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                    </span><span class="nx">dataUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                        </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span><span class="w"></span>
-<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span><span class="w"></span>
-<span class="w">                    </span><span class="p">}</span><span class="w"></span>
-<span class="w">                </span><span class="p">}</span><span class="w"></span>
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">            </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(png|jpg|jpeg|gif|woff|woff2|ttf|eot|ico)$/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset&#39;</span><span class="w"></span>
-<span class="w">            </span><span class="p">},</span><span class="w"></span>
-<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">main</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./src/index.js&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">preferRelative</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">extensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.jsx&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.module.scss&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(js|mjs|jsx|ts|tsx)$/</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="sr">/(node_modules|bower_components)/</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">loader</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;babel-loader&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nx">presets</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;@babel/preset-env&#39;</span><span class="p">,</span><span class="s1">&#39;@babel/preset-react&#39;</span><span class="p">],</span>
+<span class="w">                        </span><span class="nx">cacheDirectory</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(htm|html)$/</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;html-loader&#39;</span><span class="p">],</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(js|mjs|jsx|ts|tsx)$/</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ts-loader&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="sr">/node_modules/</span><span class="p">,</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.s[ac]ss$/i</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">MiniCssExtractPlugin</span><span class="p">.</span><span class="nx">loader</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;css-loader&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sass-loader&quot;</span><span class="p">],</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.css$/</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;style-loader&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;css-loader&#39;</span><span class="p">],</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.svg/</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset/inline&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">generator</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">dataUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(png|jpg|jpeg|gif|woff|woff2|ttf|eot|ico)$/</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">        </span><span class="p">],</span>
 
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">};</span><span class="w">      </span>
 </code></pre></div></p>
 </li>
 <li>
 <p>Create a webpack.dev.js file. Update the template, filename, favicon and manifest in the HTMLWebPackPlugin section (you may remove filename, favicon and manifest if your project does not have them).
-   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./webpack.common&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// New import based on the 5.0.3 changelog</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;html-webpack-plugin&#39;</span><span class="p">);</span><span class="w"></span>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./webpack.common&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// New import based on the 5.0.3 changelog</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;html-webpack-plugin&#39;</span><span class="p">);</span>
 
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">(</span><span class="nx">common</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;development&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">devtool</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;eval&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dev&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">            </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/index.html&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./index.html&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nx">favicon</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/favicon.ico&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nx">manifest</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/manifest.json&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="p">})</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">(</span><span class="nx">common</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;development&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">devtool</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;eval&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dev&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/index.html&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./index.html&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">favicon</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/favicon.ico&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">manifest</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/manifest.json&quot;</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>Create a webpack.dx-scriptapp.js file. Update the template in the HTMLWebPackPlugin section.
-   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./webpack.common&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">webpack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">CleanWebpackPlugin</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;clean-webpack-plugin&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;mini-css-extract-plugin&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">OptimizeCssAssetsPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;css-minimizer-webpack-plugin&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;terser-webpack-plugin&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DllReferencePlugin</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;html-webpack-plugin&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">CopyPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;copy-webpack-plugin&quot;</span><span class="p">);</span><span class="w"></span>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">common</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./webpack.common&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">webpack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">merge</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack-merge&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">CleanWebpackPlugin</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;clean-webpack-plugin&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;mini-css-extract-plugin&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">OptimizeCssAssetsPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;css-minimizer-webpack-plugin&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;terser-webpack-plugin&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DllReferencePlugin</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;html-webpack-plugin&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">CopyPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;copy-webpack-plugin&quot;</span><span class="p">);</span>
 
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">merge</span><span class="p">(</span><span class="nx">common</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].[contenthash].bundle.js&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">     </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dx-scriptapp&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nx">optimization</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">minimizer</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">OptimizeCssAssetsPlugin</span><span class="p">(),</span><span class="w"></span>
-<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="p">(),</span><span class="w"></span>
-<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">                </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/index.html&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nx">minify</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                    </span><span class="nx">removeAttributeQuotes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">                    </span><span class="nx">removeComments</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">                    </span><span class="nx">collapseWhitespace</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="p">}</span><span class="w"></span>
-<span class="w">            </span><span class="p">})</span><span class="w"></span>
-<span class="w">        </span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">CopyPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">            </span><span class="nx">patterns</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;./src/sp-config.json&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="p">]</span><span class="w"></span>
-<span class="w">        </span><span class="p">}),</span><span class="w"></span>
-<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">            </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].[contenthash].css&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}),</span><span class="w"></span>
-<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">CleanWebpackPlugin</span><span class="p">(),</span><span class="w"></span>
-<span class="w">    </span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">merge</span><span class="p">(</span><span class="nx">common</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].[contenthash].bundle.js&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dx-scriptapp&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">optimization</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">minimizer</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">OptimizeCssAssetsPlugin</span><span class="p">(),</span>
+<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="p">(),</span>
+<span class="w">            </span><span class="ow">new</span><span class="w"> </span><span class="nx">HTMLWebpackPlugin</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./public/index.html&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">minify</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">removeAttributeQuotes</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">removeComments</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">collapseWhitespace</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">CopyPlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">patterns</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s1">&#39;./src/sp-config.json&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}),</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].[contenthash].css&quot;</span>
+<span class="w">        </span><span class="p">}),</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">CleanWebpackPlugin</span><span class="p">(),</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="p">});</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>Update your project's package.json file.</p>
 <ul>
 <li>If a homepage value is set in package.json, replace it with "./".
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="s2">&quot;homepage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./&quot;</span><span class="p">,</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="s2">&quot;homepage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./&quot;</span><span class="p">,</span>
 </code></pre></div></li>
 <li>Add the dxclient parameters as config. Double-check and update the config values as needed.
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="err">...</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;dxclient&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">           </span><span class="nt">&quot;wcmContentName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EducSampleScriptApp01&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="nt">&quot;wcmSiteArea&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Script Application Library/Script Applications&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="nt">&quot;mainHtmlFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;index.html&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="nt">&quot;contentRoot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./dist-dx-scriptapp&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10041&quot;</span><span class="w"></span>
-<span class="w">       </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="w">    </span><span class="nt">&quot;config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="nt">&quot;dxclient&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">           </span><span class="nt">&quot;wcmContentName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EducSampleScriptApp01&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nt">&quot;wcmSiteArea&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Script Application Library/Script Applications&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nt">&quot;mainHtmlFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;index.html&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nt">&quot;contentRoot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./dist-dx-scriptapp&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nt">&quot;protocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10041&quot;</span>
+<span class="w">       </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
 
-<span class="w">    </span><span class="err">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="err">...</span>
+<span class="p">}</span>
 </code></pre></div></li>
 <li>Modify the start and build scripts to use the webpack config files. Also, add the four(4) deploy-dx-app lines as-is among the scripts. The variables in the scripts will automatically pick up the values from environment variables and config.
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="err">...</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack-dev-server --config  webpack.dev.js --open&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.dx-scriptapp.js&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="err">...</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;dx-deploy-app&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername $dxUsername -dxPassword $dxPassword -wcmContentName \&quot;$npm_package_config_dxclient_wcmContentName\&quot; -wcmSiteArea \&quot;$npm_package_config_dxclient_wcmSiteArea\&quot; -mainHtmlFile $npm_package_config_dxclient_mainHtmlFile -contentRoot \&quot;$npm_package_config_dxclient_contentRoot\&quot; -dxProtocol $npm_package_config_dxclient_protocol -hostname $npm_package_config_dxclient_hostname -dxPort $npm_package_config_dxclient_port&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;dx-deploy-app-win&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername %dxUsername% -dxPassword %dxPassword% -wcmContentName \&quot;%npm_package_config_dxclient_wcmContentName%\&quot; -wcmSiteArea \&quot;%npm_package_config_dxclient_wcmSiteArea%\&quot; -mainHtmlFile %npm_package_config_dxclient_mainHtmlFile% -contentRoot \&quot;%npm_package_config_dxclient_contentRoot%\&quot; -dxProtocol %npm_package_config_dxclient_protocol% -hostname %npm_package_config_dxclient_hostname% -dxPort %npm_package_config_dxclient_port%&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;dx-deploy-app-use-env&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername $dxUsername -dxPassword $dxPassword -wcmContentName \&quot;$npm_package_config_dxclient_wcmContentName\&quot; -wcmSiteArea \&quot;$npm_package_config_dxclient_wcmSiteArea\&quot; -mainHtmlFile $npm_package_config_dxclient_mainHtmlFile -contentRoot \&quot;$npm_package_config_dxclient_contentRoot\&quot; -dxProtocol $dxProtocol -hostname $dxHostname -dxPort $dxPort&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;dx-deploy-app-use-env-win&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername %dxUsername% -dxPassword %dxPassword% -wcmContentName \&quot;%npm_package_config_dxclient_wcmContentName%\&quot; -wcmSiteArea \&quot;%npm_package_config_dxclient_wcmSiteArea%\&quot; -mainHtmlFile %npm_package_config_dxclient_mainHtmlFile% -contentRoot \&quot;%npm_package_config_dxclient_contentRoot%\&quot; -dxProtocol %dxProtocol% -hostname %dxHostname% -dxPort %dxPort%&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="err">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="w">    </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack-dev-server --config  webpack.dev.js --open&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.dx-scriptapp.js&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="err">...</span>
+<span class="w">        </span><span class="nt">&quot;dx-deploy-app&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername $dxUsername -dxPassword $dxPassword -wcmContentName \&quot;$npm_package_config_dxclient_wcmContentName\&quot; -wcmSiteArea \&quot;$npm_package_config_dxclient_wcmSiteArea\&quot; -mainHtmlFile $npm_package_config_dxclient_mainHtmlFile -contentRoot \&quot;$npm_package_config_dxclient_contentRoot\&quot; -dxProtocol $npm_package_config_dxclient_protocol -hostname $npm_package_config_dxclient_hostname -dxPort $npm_package_config_dxclient_port&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;dx-deploy-app-win&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername %dxUsername% -dxPassword %dxPassword% -wcmContentName \&quot;%npm_package_config_dxclient_wcmContentName%\&quot; -wcmSiteArea \&quot;%npm_package_config_dxclient_wcmSiteArea%\&quot; -mainHtmlFile %npm_package_config_dxclient_mainHtmlFile% -contentRoot \&quot;%npm_package_config_dxclient_contentRoot%\&quot; -dxProtocol %npm_package_config_dxclient_protocol% -hostname %npm_package_config_dxclient_hostname% -dxPort %npm_package_config_dxclient_port%&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;dx-deploy-app-use-env&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername $dxUsername -dxPassword $dxPassword -wcmContentName \&quot;$npm_package_config_dxclient_wcmContentName\&quot; -wcmSiteArea \&quot;$npm_package_config_dxclient_wcmSiteArea\&quot; -mainHtmlFile $npm_package_config_dxclient_mainHtmlFile -contentRoot \&quot;$npm_package_config_dxclient_contentRoot\&quot; -dxProtocol $dxProtocol -hostname $dxHostname -dxPort $dxPort&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;dx-deploy-app-use-env-win&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dxclient deploy-scriptapplication push -dxUsername %dxUsername% -dxPassword %dxPassword% -wcmContentName \&quot;%npm_package_config_dxclient_wcmContentName%\&quot; -wcmSiteArea \&quot;%npm_package_config_dxclient_wcmSiteArea%\&quot; -mainHtmlFile %npm_package_config_dxclient_mainHtmlFile% -contentRoot \&quot;%npm_package_config_dxclient_contentRoot%\&quot; -dxProtocol %dxProtocol% -hostname %dxHostname% -dxPort %dxPort%&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="p">}</span>
 </code></pre></div></li>
 <li>Add devDependencies required for the WebPack library and its plugins.
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="err">...</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;devDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;babel-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^8.2.5&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;clean-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.0.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;copy-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^10.2.4&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;css-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^6.7.1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;css-minimizer-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.0.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;html-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.1.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;html-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.5.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;mini-css-extract-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^2.6.1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;mini-svg-data-uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^1.4.4&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;style-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^3.3.1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;ts-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^9.3.1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;typescript&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.7.4&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;webpack&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.74.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;webpack-cli&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.10.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;webpack-dev-server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.9.3&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="nt">&quot;webpack-merge&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.8.0&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="err">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="w">   </span><span class="nt">&quot;devDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="nt">&quot;babel-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^8.2.5&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;clean-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.0.0&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;copy-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^10.2.4&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;css-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^6.7.1&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;css-minimizer-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.0.0&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;html-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.1.0&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;html-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.5.0&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;mini-css-extract-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^2.6.1&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;mini-svg-data-uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^1.4.4&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;style-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^3.3.1&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;ts-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^9.3.1&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;typescript&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.7.4&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;webpack&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.74.0&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;webpack-cli&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.10.0&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;webpack-dev-server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.9.3&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;webpack-merge&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.8.0&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="p">}</span>
 </code></pre></div></li>
 </ul>
 </li>
 <li>
 <p>Test your React App in local browser:
-    <div class="highlight"><pre><span></span><code>    <span class="nb">cd</span> &lt;app-folder&gt;
-    npm install
-    npm start
+    <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
+<span class="w">    </span>npm<span class="w"> </span>install
+<span class="w">    </span>npm<span class="w"> </span>start
 </code></pre></div></p>
 </li>
 <li>
 <p>Build your application as-usual:
-    <div class="highlight"><pre><span></span><code>    <span class="nb">cd</span> &lt;app-folder&gt;
-    npm install
-    npm run build
+    <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>&lt;app-folder&gt;
+<span class="w">    </span>npm<span class="w"> </span>install
+<span class="w">    </span>npm<span class="w"> </span>run<span class="w"> </span>build
 </code></pre></div></p>
 </li>
 <li>
@@ -1268,34 +1268,34 @@
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt; <span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt; npm run dx-deploy-app
+<div class="highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app
 </code></pre></div>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt; <span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt; npm run dx-deploy-app-win
+<div class="highlight"><pre><span></span><code><span class="nv">dxUsername</span><span class="o">=</span>&lt;username&gt;<span class="w"> </span><span class="nv">dxPassword</span><span class="o">=</span>&lt;password&gt;<span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>dx-deploy-app-win
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>    &gt; sample-app@0.1.0 dx-deploy-app
-    &gt; dxclient deploy-Script Applicationlication push -dxUsername <span class="nv">$dxUsername</span> -dxPassword <span class="nv">$dxPassword</span> -wcmContentName <span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmContentName</span><span class="s2">&quot;</span> -wcmSiteArea <span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmSiteArea</span><span class="s2">&quot;</span> -mainHtmlFile <span class="nv">$npm_package_config_dxclient_mainHtmlFile</span> -contentRoot <span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_contentRoot</span><span class="s2">&quot;</span> -dxProtocol <span class="nv">$npm_package_config_dxclient_protocol</span> -hostname <span class="nv">$npm_package_config_dxclient_hostname</span> -dxPort <span class="nv">$npm_package_config_dxclient_port</span>
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:36 : Begin content push to Portal.
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:36 : WCM content ID: .
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:36 : WCM Content Path: .
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:36 : WCM Content Title: .
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:36 : Main HTML file: index.html.
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:36 : PrebuiltZip path does not exist.
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:36 : Archive file: 
-    /var/folders/mp/bcmnxk3s0rbbj1cbbl0875bw0000gn/T/tmp--14373-oFwJoCUJU4yG-.zip
-    <span class="o">(</span><span class="m">51965</span> bytes <span class="k">in</span> <span class="m">5</span> files<span class="o">)</span> 
-    <span class="m">131</span>.d190506afae2cd09f1fd.bundle.js
-    index.html
-    main.269f6c0111b67c725c63.bundle.js
-    main.269f6c0111b67c725c63.bundle.js.LICENSE.txt
-    main.9a71fbc56a658baede15.css.
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:39 : Content push was successful.
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:39 : End content push to Portal.
-    <span class="m">2022</span>-08-08 <span class="m">21</span>:13:39 : Body content: <span class="o">{</span><span class="s2">&quot;results&quot;</span>:<span class="o">{</span><span class="s2">&quot;status&quot;</span>:<span class="s2">&quot;success&quot;</span>,<span class="s2">&quot;importedFiles&quot;</span>:<span class="o">{</span><span class="s2">&quot;file&quot;</span>:<span class="o">[{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;HTML/index.html&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;JavaScript/main.269f6c0111b67c725c63.bundle.js&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;JavaScript/131.d190506afae2cd09f1fd.bundle.js&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;CSS/main.9a71fbc56a658baede15.css&quot;</span><span class="o">}]}</span>,<span class="s2">&quot;skippedFiles&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;message&quot;</span>:<span class="s2">&quot;The file that you selected was imported successfully.&quot;</span>,<span class="s2">&quot;contentId&quot;</span>:<span class="s2">&quot;6fa0b659-7b18-499d-a8de-090a0e9f8987&quot;</span><span class="o">}}</span>.    
+<div class="highlight"><pre><span></span><code><span class="w">    </span>&gt;<span class="w"> </span>sample-app@0.1.0<span class="w"> </span>dx-deploy-app
+<span class="w">    </span>&gt;<span class="w"> </span>dxclient<span class="w"> </span>deploy-Script<span class="w"> </span>Applicationlication<span class="w"> </span>push<span class="w"> </span>-dxUsername<span class="w"> </span><span class="nv">$dxUsername</span><span class="w"> </span>-dxPassword<span class="w"> </span><span class="nv">$dxPassword</span><span class="w"> </span>-wcmContentName<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmContentName</span><span class="s2">&quot;</span><span class="w"> </span>-wcmSiteArea<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_wcmSiteArea</span><span class="s2">&quot;</span><span class="w"> </span>-mainHtmlFile<span class="w"> </span><span class="nv">$npm_package_config_dxclient_mainHtmlFile</span><span class="w"> </span>-contentRoot<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$npm_package_config_dxclient_contentRoot</span><span class="s2">&quot;</span><span class="w"> </span>-dxProtocol<span class="w"> </span><span class="nv">$npm_package_config_dxclient_protocol</span><span class="w"> </span>-hostname<span class="w"> </span><span class="nv">$npm_package_config_dxclient_hostname</span><span class="w"> </span>-dxPort<span class="w"> </span><span class="nv">$npm_package_config_dxclient_port</span>
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:36<span class="w"> </span>:<span class="w"> </span>Begin<span class="w"> </span>content<span class="w"> </span>push<span class="w"> </span>to<span class="w"> </span>Portal.
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>content<span class="w"> </span>ID:<span class="w"> </span>.
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>Content<span class="w"> </span>Path:<span class="w"> </span>.
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:36<span class="w"> </span>:<span class="w"> </span>WCM<span class="w"> </span>Content<span class="w"> </span>Title:<span class="w"> </span>.
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:36<span class="w"> </span>:<span class="w"> </span>Main<span class="w"> </span>HTML<span class="w"> </span>file:<span class="w"> </span>index.html.
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:36<span class="w"> </span>:<span class="w"> </span>PrebuiltZip<span class="w"> </span>path<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist.
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:36<span class="w"> </span>:<span class="w"> </span>Archive<span class="w"> </span>file:<span class="w"> </span>
+<span class="w">    </span>/var/folders/mp/bcmnxk3s0rbbj1cbbl0875bw0000gn/T/tmp--14373-oFwJoCUJU4yG-.zip
+<span class="w">    </span><span class="o">(</span><span class="m">51965</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>files<span class="o">)</span><span class="w"> </span>
+<span class="w">    </span><span class="m">131</span>.d190506afae2cd09f1fd.bundle.js
+<span class="w">    </span>index.html
+<span class="w">    </span>main.269f6c0111b67c725c63.bundle.js
+<span class="w">    </span>main.269f6c0111b67c725c63.bundle.js.LICENSE.txt
+<span class="w">    </span>main.9a71fbc56a658baede15.css.
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:39<span class="w"> </span>:<span class="w"> </span>Content<span class="w"> </span>push<span class="w"> </span>was<span class="w"> </span>successful.
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:39<span class="w"> </span>:<span class="w"> </span>End<span class="w"> </span>content<span class="w"> </span>push<span class="w"> </span>to<span class="w"> </span>Portal.
+<span class="w">    </span><span class="m">2022</span>-08-08<span class="w"> </span><span class="m">21</span>:13:39<span class="w"> </span>:<span class="w"> </span>Body<span class="w"> </span>content:<span class="w"> </span><span class="o">{</span><span class="s2">&quot;results&quot;</span>:<span class="o">{</span><span class="s2">&quot;status&quot;</span>:<span class="s2">&quot;success&quot;</span>,<span class="s2">&quot;importedFiles&quot;</span>:<span class="o">{</span><span class="s2">&quot;file&quot;</span>:<span class="o">[{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;HTML/index.html&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;JavaScript/main.269f6c0111b67c725c63.bundle.js&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;JavaScript/131.d190506afae2cd09f1fd.bundle.js&quot;</span><span class="o">}</span>,<span class="o">{</span><span class="s2">&quot;filename&quot;</span>:<span class="s2">&quot;CSS/main.9a71fbc56a658baede15.css&quot;</span><span class="o">}]}</span>,<span class="s2">&quot;skippedFiles&quot;</span>:<span class="s2">&quot;&quot;</span>,<span class="s2">&quot;message&quot;</span>:<span class="s2">&quot;The file that you selected was imported successfully.&quot;</span>,<span class="s2">&quot;contentId&quot;</span>:<span class="s2">&quot;6fa0b659-7b18-499d-a8de-090a0e9f8987&quot;</span><span class="o">}}</span>.<span class="w">    </span>
 </code></pre></div>
 </li>
 <li>
@@ -1310,7 +1310,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

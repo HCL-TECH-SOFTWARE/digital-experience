@@ -1112,14 +1112,14 @@ kubectl create ns my-namespace
 <h2 id="openshift">OpenShift</h2>
 <p>For OpenShift, you must create a namespace with specific settings.</p>
 <p>Use the following namespace definition and save it as namespace.yaml. You must replace <code>my-namespace</code> in the template with the name of the namespace you are using.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-namespace</span><span class="w"></span>
-<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">openshift.io/sa.scc.mcs</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;s0:c24,c4&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">openshift.io/sa.scc.supplemental-groups</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1001/10000&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">openshift.io/sa.scc.uid-range</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000/10000&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-namespace</span>
+<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">openshift.io/sa.scc.mcs</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;s0:c24,c4&quot;</span>
+<span class="w">    </span><span class="nt">openshift.io/sa.scc.supplemental-groups</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1001/10000&quot;</span>
+<span class="w">    </span><span class="nt">openshift.io/sa.scc.uid-range</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1000/10000&quot;</span>
 </code></pre></div>
 <p><strong>OpenShift client</strong></p>
 <div class="highlight"><pre><span></span><code># Command to create namespace from template file
@@ -1131,7 +1131,7 @@ oc apply -f namespace.yaml
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

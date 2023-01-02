@@ -1070,15 +1070,15 @@
 <div class="admonition example">
 <p class="admonition-title">sample.config</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># the protocol with which to connect to the server</span>
-<span class="nb">export</span> <span class="nv">DXPROTOCOL</span><span class="o">=</span>https
+<span class="nb">export</span><span class="w"> </span><span class="nv">DXPROTOCOL</span><span class="o">=</span>https
 <span class="c1"># the hostname of the target server</span>
-<span class="nb">export</span> <span class="nv">HOSTNAME</span><span class="o">=</span>localhost
+<span class="nb">export</span><span class="w"> </span><span class="nv">HOSTNAME</span><span class="o">=</span>localhost
 <span class="c1"># the port on which to connect to the server (for Kubernetes Environment, dxPort is 443)</span>
-<span class="nb">export</span> <span class="nv">DXPORT</span><span class="o">=</span><span class="m">10041</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DXPORT</span><span class="o">=</span><span class="m">10041</span>
 <span class="c1"># the port number of the cw_profile (for Kubernetes Environment, dxConnectPort is 443)</span>
-<span class="nb">export</span> <span class="nv">DXCONNECTPORT</span><span class="o">=</span><span class="m">10202</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DXCONNECTPORT</span><span class="o">=</span><span class="m">10202</span>
 <span class="c1"># the profile name of the DX core server</span>
-<span class="nb">export</span> <span class="nv">DXPROFILENAME</span><span class="o">=</span>wp_profile
+<span class="nb">export</span><span class="w"> </span><span class="nv">DXPROFILENAME</span><span class="o">=</span>wp_profile
 </code></pre></div>
 </div>
 </div>
@@ -1157,24 +1157,24 @@
 <span class="cm">--&gt;</span>
 
 <span class="nt">&lt;request</span>
-   <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-   <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;PortalConfig_8.0.0.xsd&quot;</span>
-   <span class="na">type=</span><span class="s">&quot;export&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<span class="w">   </span><span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;PortalConfig_8.0.0.xsd&quot;</span>
+<span class="w">   </span><span class="na">type=</span><span class="s">&quot;export&quot;</span><span class="nt">&gt;</span>
 
-   <span class="nt">&lt;portal</span> <span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;skin</span> <span class="na">action=</span><span class="s">&quot;export&quot;</span> <span class="na">objectid=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;theme</span> <span class="na">action=</span><span class="s">&quot;export&quot;</span> <span class="na">objectid=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span> <span class="nt">/&gt;</span>
-   <span class="nt">&lt;/portal&gt;</span>
+<span class="w">   </span><span class="nt">&lt;portal</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;skin</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;export&quot;</span><span class="w"> </span><span class="na">objectid=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;theme</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;export&quot;</span><span class="w"> </span><span class="na">objectid=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/portal&gt;</span>
 <span class="nt">&lt;/request&gt;</span>
 </code></pre></div>
 </div>
 <ul>
 <li>
 <p>Modify the objectid to match yours.</p>
-<div class="highlight"><pre><span></span><code>   <span class="nt">&lt;portal</span> <span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;skin</span> <span class="na">action=</span><span class="s">&quot;export&quot;</span> <span class="na">objectid=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;theme</span> <span class="na">action=</span><span class="s">&quot;export&quot;</span> <span class="na">objectid=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span> <span class="nt">/&gt;</span>
-   <span class="nt">&lt;/portal&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="nt">&lt;portal</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;skin</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;export&quot;</span><span class="w"> </span><span class="na">objectid=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;theme</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;export&quot;</span><span class="w"> </span><span class="na">objectid=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/portal&gt;</span>
 </code></pre></div>
 </li>
 <li>
@@ -1213,23 +1213,23 @@
 <span class="cm">--&gt;</span>
 
 <span class="nt">&lt;request</span>
-   <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-   <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;PortalConfig_8.0.0.xsd&quot;</span>
-   <span class="na">type=</span><span class="s">&quot;export&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<span class="w">   </span><span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;PortalConfig_8.0.0.xsd&quot;</span>
+<span class="w">   </span><span class="na">type=</span><span class="s">&quot;export&quot;</span><span class="nt">&gt;</span>
 
-   <span class="cm">&lt;!-- sample for exporting a page --&gt;</span>
-   <span class="nt">&lt;portal</span> <span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="cm">&lt;!-- sample for exporting a page --&gt;</span>
+<span class="w">   </span><span class="nt">&lt;portal</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
 
-      <span class="nt">&lt;content-node</span> <span class="na">action=</span><span class="s">&quot;export&quot;</span> <span class="na">uniquename=</span><span class="s">&quot;Woodburn Insurance&quot;</span>  <span class="na">export-descendants=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;content-node</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;export&quot;</span><span class="w"> </span><span class="na">uniquename=</span><span class="s">&quot;Woodburn Insurance&quot;</span><span class="w">  </span><span class="na">export-descendants=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
 
-   <span class="nt">&lt;/portal&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/portal&gt;</span>
 <span class="nt">&lt;/request&gt;</span>
 </code></pre></div>
 </div>
 <ul>
 <li>
 <p>Modify the uniquename to match yours.</p>
-<div class="highlight"><pre><span></span><code>      <span class="nt">&lt;content-node</span> <span class="na">action=</span><span class="s">&quot;export&quot;</span> <span class="na">uniquename=</span><span class="s">&quot;Woodburn Insurance&quot;</span>  <span class="na">export-descendants=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nt">&lt;content-node</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;export&quot;</span><span class="w"> </span><span class="na">uniquename=</span><span class="s">&quot;Woodburn Insurance&quot;</span><span class="w">  </span><span class="na">export-descendants=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
 </li>
 <li>
@@ -1243,7 +1243,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2022</span>
       
     
   </small>

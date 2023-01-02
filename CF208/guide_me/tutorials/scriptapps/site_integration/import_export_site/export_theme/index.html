@@ -1011,13 +1011,13 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c1"># assumes other required parameters are already set via config file in store or via enviroment variables</span>
-dxclient xmlaccess <span class="se">\</span>
-   -dxUsername <span class="o">{</span>DXUSERNAME<span class="o">}</span> <span class="se">\</span>
-   -dxPassword <span class="o">{</span>DXPASSWORD<span class="o">}</span> <span class="se">\</span>
-   -xmlFile <span class="o">{</span>XMLEXPORT<span class="o">}</span> <span class="se">\</span>
-   -dxProtocol <span class="nv">$DXPROTOCOL</span> <span class="se">\</span>
-   -hostname <span class="nv">$HOSTNAME</span> <span class="se">\</span>
-   -dxPort <span class="nv">$DXPORT</span><span class="p">;</span>
+dxclient<span class="w"> </span>xmlaccess<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxUsername<span class="w"> </span><span class="o">{</span>DXUSERNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxPassword<span class="w"> </span><span class="o">{</span>DXPASSWORD<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-xmlFile<span class="w"> </span><span class="o">{</span>XMLEXPORT<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxProtocol<span class="w"> </span><span class="nv">$DXPROTOCOL</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-hostname<span class="w"> </span><span class="nv">$HOSTNAME</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxPort<span class="w"> </span><span class="nv">$DXPORT</span><span class="p">;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1067,9 +1067,9 @@ dxclient xmlaccess <span class="se">^</span>
 <ul>
 <li>
 <p>Modify the uniquename to match yours.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;portal</span> <span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;skin</span> <span class="na">action=</span><span class="s">&quot;delete&quot;</span> <span class="na">uniquename=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;theme</span> <span class="na">action=</span><span class="s">&quot;delete&quot;</span> <span class="na">uniquename=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;portal</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;skin</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;delete&quot;</span><span class="w"> </span><span class="na">uniquename=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;theme</span><span class="w"> </span><span class="na">action=</span><span class="s">&quot;delete&quot;</span><span class="w"> </span><span class="na">uniquename=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/portal&gt;</span>
 </code></pre></div>
 </li>
@@ -1088,21 +1088,21 @@ dxclient xmlaccess <span class="se">^</span>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">MacOS or Linux</label><label for="__tabbed_2_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nb">source</span> ./<span class="o">{</span>configfile<span class="o">}</span>
-dxclient undeploy-theme <span class="se">\</span>
-   -dxProtocol <span class="o">{</span>DXPROTOCOL<span class="o">}</span> <span class="se">\</span>
-   -hostname <span class="o">{</span>HOSTNAME<span class="o">}</span> <span class="se">\</span>
-   -dxPort <span class="o">{</span>DXPORT<span class="o">}</span> <span class="se">\</span>
-   -dxUsername <span class="o">{</span>DXUSERNAME<span class="o">}</span> <span class="se">\</span>
-   -dxPassword <span class="o">{</span>DXPASSWORD<span class="o">}</span> <span class="se">\</span>
-   -hostname <span class="o">{</span>HOSTNAME<span class="o">}</span> <span class="se">\</span>
-   -dxConnectPort <span class="o">{</span>DXCONNECTPORT<span class="o">}</span> <span class="se">\</span>
-   -dxConnectUsername <span class="o">{</span>DXUSERNAME<span class="o">}</span> <span class="se">\</span>
-   -dxConnectPassword <span class="o">{</span>DXPASSWORD<span class="o">}</span> <span class="se">\</span>
-   -xmlFile <span class="o">{</span>XMLEXPORT<span class="o">}</span> <span class="se">\</span>
-   -themeName <span class="o">{</span>THEMENAME<span class="o">}</span> <span class="se">\</span>
-   -enableBackup <span class="nb">true</span> <span class="se">\</span>
-   -dxProfileName <span class="o">{</span>DXPROFILENAME<span class="o">}</span>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>./<span class="o">{</span>configfile<span class="o">}</span>
+dxclient<span class="w"> </span>undeploy-theme<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxProtocol<span class="w"> </span><span class="o">{</span>DXPROTOCOL<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-hostname<span class="w"> </span><span class="o">{</span>HOSTNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxPort<span class="w"> </span><span class="o">{</span>DXPORT<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxUsername<span class="w"> </span><span class="o">{</span>DXUSERNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxPassword<span class="w"> </span><span class="o">{</span>DXPASSWORD<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-hostname<span class="w"> </span><span class="o">{</span>HOSTNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxConnectPort<span class="w"> </span><span class="o">{</span>DXCONNECTPORT<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxConnectUsername<span class="w"> </span><span class="o">{</span>DXUSERNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxConnectPassword<span class="w"> </span><span class="o">{</span>DXPASSWORD<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-xmlFile<span class="w"> </span><span class="o">{</span>XMLEXPORT<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-themeName<span class="w"> </span><span class="o">{</span>THEMENAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-enableBackup<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxProfileName<span class="w"> </span><span class="o">{</span>DXPROFILENAME<span class="o">}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1151,20 +1151,20 @@ dxclient undeploy-theme <span class="se">^</span>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">MacOS or Linux</label><label for="__tabbed_3_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nb">source</span> ./<span class="o">{</span>configfile<span class="o">}</span>
-dxclient deploy-theme <span class="se">\</span>
-   -xmlFile <span class="o">{</span>INSTALLTHEME<span class="o">}</span> <span class="se">\</span>
-   -themeName <span class="s2">&quot;{THEMENAME}&quot;</span> <span class="se">\</span>
-   -themePath <span class="o">{</span>PATH/TO/YOUR/THEME/ZIP<span class="o">}</span> <span class="se">\</span>
-   -dxUsername <span class="o">{</span>DXUSERNAME<span class="o">}</span> <span class="se">\</span>
-   -dxPassword <span class="o">{</span>DXPASSWORD<span class="o">}</span> <span class="se">\</span>
-   -dxConnectUsername <span class="o">{</span>DXUSERNAME<span class="o">}</span> <span class="se">\</span>
-   -dxConnectPassword <span class="o">{</span>DXPASSWORD<span class="o">}</span> <span class="se">\</span>
-   -hostname <span class="nv">$HOSTNAME</span> <span class="se">\</span>
-   -dxProtocol <span class="nv">$DXPROTOCOL</span> <span class="se">\</span>
-   -dxPort <span class="nv">$DXPORT</span> <span class="se">\</span>
-   -hostname <span class="nv">$HOSTNAME</span> <span class="se">\</span>
-   -dxProfileName <span class="nv">$DXPROFILENAME</span>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>./<span class="o">{</span>configfile<span class="o">}</span>
+dxclient<span class="w"> </span>deploy-theme<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-xmlFile<span class="w"> </span><span class="o">{</span>INSTALLTHEME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-themeName<span class="w"> </span><span class="s2">&quot;{THEMENAME}&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-themePath<span class="w"> </span><span class="o">{</span>PATH/TO/YOUR/THEME/ZIP<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxUsername<span class="w"> </span><span class="o">{</span>DXUSERNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxPassword<span class="w"> </span><span class="o">{</span>DXPASSWORD<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxConnectUsername<span class="w"> </span><span class="o">{</span>DXUSERNAME<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxConnectPassword<span class="w"> </span><span class="o">{</span>DXPASSWORD<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-hostname<span class="w"> </span><span class="nv">$HOSTNAME</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxProtocol<span class="w"> </span><span class="nv">$DXPROTOCOL</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxPort<span class="w"> </span><span class="nv">$DXPORT</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-hostname<span class="w"> </span><span class="nv">$HOSTNAME</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-dxProfileName<span class="w"> </span><span class="nv">$DXPROFILENAME</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1236,7 +1236,7 @@ dxclient deploy-theme <span class="se">^</span>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2022</span>
       
     
   </small>

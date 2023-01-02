@@ -1159,36 +1159,36 @@
 <h2 id="configuring-pod-count">Configuring pod count</h2>
 <p>Even if you don't want to automatically scale your DX 9.5 deployment based on CPU and memory utilization, you still can control the amount of pods per application.</p>
 <p>You can use the following syntax to reconfigure the pod count per application in your custom-values.yaml file:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span><span class="w"></span>
-<span class="nt">scaling</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># The default amount of replicas per application</span><span class="w"></span>
-<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">designStudio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
-<span class="w">    </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
-<span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
+<span class="nt">scaling</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># The default amount of replicas per application</span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">designStudio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 </code></pre></div>
 <h2 id="configuring-horizontalpodautoscalers">Configuring HorizontalPodAutoscalers</h2>
 <p>The use of HorizontalPodAutoscalers requires your cluster to have the <a href="https://github.com/kubernetes-sigs/metrics-server">Kubernetes Metrics</a> running. Ensure that this is the case, and reference your cloud provider documentation for further information.</p>
 <p>You can set up the use of <code>HorizontalPodAutoscalers</code> on a per application basis using the following syntax in your custom-values.yaml file, showing Content Composer, as an example:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span><span class="w"></span>
-<span class="nt">scaling</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Automated scaling using HorizontalPodAutoscaler</span><span class="w"></span>
-<span class="w">  </span><span class="nt">horizontalPodAutoScaler</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Autoscaling settings for Content Composer</span><span class="w"></span>
-<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Enable or disable autoscaling</span><span class="w"></span>
-<span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Minimum and maximum Pod count</span><span class="w"></span>
-<span class="w">      </span><span class="nt">minReplicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">      </span><span class="nt">maxReplicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Target CPU utilization scaling threshold</span><span class="w"></span>
-<span class="w">      </span><span class="nt">targetCPUUtilizationPercentage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Target Memory utilization scaling threshold</span><span class="w"></span>
-<span class="w">      </span><span class="nt">targetMemoryUtilizationPercentage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
+<span class="nt">scaling</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Automated scaling using HorizontalPodAutoscaler</span>
+<span class="w">  </span><span class="nt">horizontalPodAutoScaler</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Autoscaling settings for Content Composer</span>
+<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Enable or disable autoscaling</span>
+<span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="c1"># Minimum and maximum Pod count</span>
+<span class="w">      </span><span class="nt">minReplicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">maxReplicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">      </span><span class="c1"># Target CPU utilization scaling threshold</span>
+<span class="w">      </span><span class="nt">targetCPUUtilizationPercentage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="w">      </span><span class="c1"># Target Memory utilization scaling threshold</span>
+<span class="w">      </span><span class="nt">targetMemoryUtilizationPercentage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
 </code></pre></div>
 <p>The example configures a <code>HorizontalPodAutoscaler</code> for Content Composer, that scales up to 3 pods maximum. It considers scaling when a CPU utilization of 75% or Memory utilization of 80% per pod is reached.</p>
 <p>Refer to the default values.yaml file for all configurable applications.</p>
@@ -1198,7 +1198,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

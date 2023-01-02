@@ -1153,19 +1153,19 @@
 <p>This section contains the procedure to deploy DX on the internal network.</p>
 <h2 id="how-to-deploy-dx-on-the-internal-network">How to deploy DX on the internal network</h2>
 <p>To deploy DX on the internal network (with no public access), we need to add the platform-specific annotations for the HAProxy service. Update your custom <code>values.yaml</code> file with the annotation specific to your cloud provider. Refer to the list of <a href="https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer">annotations</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span>
-<span class="w">    </span><span class="c1"># Annotations for haproxy service.</span><span class="w"></span>
-<span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Annotations for haproxy service.</span>
+<span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </code></pre></div>
 <details class="example">
 <summary>Example for GKE:</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span>
-<span class="w">    </span><span class="c1"># Annotations for haproxy service.</span><span class="w"></span>
-<span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud.google.com/load-balancer-type</span><span class="w"></span>
-<span class="w">      </span><span class="nt">value </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Internal&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Annotations for haproxy service.</span>
+<span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud.google.com/load-balancer-type</span>
+<span class="w">      </span><span class="nt">value </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Internal&quot;</span>
 </code></pre></div>
 </details>
 <h2 id="how-to-update-the-existing-deployment">How to update the existing deployment</h2>
@@ -1179,10 +1179,10 @@
 <p>Disable HAProxy in your custom <code>values.yaml</code> file and then do helm update.</p>
 <details class="example">
 <summary>Example:</summary>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="c1"># Controls which application is deployed and configured</span><span class="w"></span>
-<span class="nt">applications</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys haproxy</span><span class="w"></span>
-<span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="c1"># Controls which application is deployed and configured</span>
+<span class="nt">applications</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Deploys haproxy</span>
+<span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 </details>
 </li>
@@ -1198,24 +1198,24 @@
 </li>
 <li>
 <p>After the update is completed, enable HAProxy and add annotations specific to your cloud provider in custom <code>values.yaml</code> file.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Controls which application is deployed and configured</span><span class="w"></span>
-<span class="nt">applications</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys haproxy</span><span class="w"></span>
-<span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="c1"># Annotations for different DX Resources.</span><span class="w"></span>
-<span class="c1"># Type: Array of objects</span><span class="w"></span>
-<span class="c1"># Sample values for core:</span><span class="w"></span>
-<span class="c1"># core:</span><span class="w"></span>
-<span class="c1"># - key: KEY1</span><span class="w"></span>
-<span class="c1"># value: VALUE1</span><span class="w"></span>
-<span class="c1"># - key: KEY2</span><span class="w"></span>
-<span class="c1"># value: VALUE2</span><span class="w"></span>
-<span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Controls which application is deployed and configured</span>
+<span class="nt">applications</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Deploys haproxy</span>
+<span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="c1"># Annotations for different DX Resources.</span>
+<span class="c1"># Type: Array of objects</span>
+<span class="c1"># Sample values for core:</span>
+<span class="c1"># core:</span>
+<span class="c1"># - key: KEY1</span>
+<span class="c1"># value: VALUE1</span>
+<span class="c1"># - key: KEY2</span>
+<span class="c1"># value: VALUE2</span>
+<span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span>
-<span class="w">    </span><span class="c1"># Annotations for haproxy service.</span><span class="w"></span>
-<span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"></span>
-<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud.google.com/load-balancer-type</span><span class="w"></span>
-<span class="w">       </span><span class="nt">value </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Internal&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Annotations for haproxy service.</span>
+<span class="w">    </span><span class="nt">haproxy</span><span class="p">:</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud.google.com/load-balancer-type</span>
+<span class="w">       </span><span class="nt">value </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Internal&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note<p>To switch your existing deployment from an internal network to a public network, remove the annotation from the <strong><em>haproxy service.</em></strong></p>
@@ -1250,7 +1250,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

@@ -1227,39 +1227,39 @@
 <p>Create an xml file on your local machine and modify it according to your needs. For more information, refer to the <a href="../../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy/">Adding an outbound connection policy</a> topic.</p>
 <p>You can use this sample outbound policy as a base:
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;proxy-rules</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-  <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;</span><span class="nt">&gt;</span>  
+<span class="nt">&lt;proxy-rules</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<span class="w">  </span><span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0&quot;</span><span class="nt">&gt;</span><span class="w">  </span>
 
-  <span class="nt">&lt;variables&gt;</span>
-        <span class="cm">&lt;!-- Note: The &#39;.url&#39; at the end of the name is not required but good practice to follow.--&gt;</span>
-      <span class="nt">&lt;dynamic-policy</span> <span class="na">name=</span><span class="s">&quot;demo-volt-mx-foundry-service.url&quot;</span><span class="nt">&gt;</span>
-        <span class="cm">&lt;!-- Step 1. Add the URL pattern. Use the base URL of your service. You can view it in the Developer Portal &gt; API &gt; your App &gt; View. You should see a Swagger UI Page --&gt;</span>
-        <span class="nt">&lt;value&gt;</span>https://hcl-dx-dev.hclvoltmx.net/services/account/*<span class="nt">&lt;/value&gt;</span>
-      <span class="nt">&lt;/dynamic-policy&gt;</span>
-  <span class="nt">&lt;/variables&gt;</span>  
+<span class="w">  </span><span class="nt">&lt;variables&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Note: The &#39;.url&#39; at the end of the name is not required but good practice to follow.--&gt;</span>
+<span class="w">      </span><span class="nt">&lt;dynamic-policy</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;demo-volt-mx-foundry-service.url&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Step 1. Add the URL pattern. Use the base URL of your service. You can view it in the Developer Portal &gt; API &gt; your App &gt; View. You should see a Swagger UI Page --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>https://hcl-dx-dev.hclvoltmx.net/services/account/*<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/dynamic-policy&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/variables&gt;</span><span class="w">  </span>
 
-  <span class="nt">&lt;policy</span> <span class="na">name=</span><span class="s">&quot;demo_volt_mx_foundry_service&quot;</span> <span class="na">url=</span><span class="s">&quot;{$demo_volt_mx_foundry_service.url}&quot;</span> <span class="na">basic-auth-support=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;actions&gt;</span>
-        <span class="cm">&lt;!-- Step 2. Add the HTTP Method.  We will use GET or POST since this is what we defined when we created the operation of our service.--&gt;</span>
-        <span class="nt">&lt;method&gt;</span>GET<span class="nt">&lt;/method&gt;</span>
-        <span class="nt">&lt;method&gt;</span>POST<span class="nt">&lt;/method&gt;</span>
-      <span class="nt">&lt;/actions&gt;</span>    
+<span class="w">  </span><span class="nt">&lt;policy</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;demo_volt_mx_foundry_service&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;{$demo_volt_mx_foundry_service.url}&quot;</span><span class="w"> </span><span class="na">basic-auth-support=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;actions&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Step 2. Add the HTTP Method.  We will use GET or POST since this is what we defined when we created the operation of our service.--&gt;</span>
+<span class="w">        </span><span class="nt">&lt;method&gt;</span>GET<span class="nt">&lt;/method&gt;</span>
+<span class="w">        </span><span class="nt">&lt;method&gt;</span>POST<span class="nt">&lt;/method&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/actions&gt;</span><span class="w">    </span>
 
-      <span class="cm">&lt;!-- Step 3. Add the credential vault slot that we have created. The vault slot name is also the vault slot id hpaa.slotid you will need to put in the policy. --&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- Step 3. Add the credential vault slot that we have created. The vault slot name is also the vault slot id hpaa.slotid you will need to put in the policy. --&gt;</span>
 
-      <span class="nt">&lt;meta-data&gt;</span>
-        <span class="nt">&lt;name&gt;</span>hpaa.authtype<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;value&gt;</span>http-basic<span class="nt">&lt;/value&gt;</span>
-      <span class="nt">&lt;/meta-data&gt;</span>
-      <span class="nt">&lt;meta-data&gt;</span>
-        <span class="nt">&lt;name&gt;</span>hpaa.slotid<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;value&gt;</span>demo-volt-mx-foundry-service<span class="nt">&lt;/value&gt;</span>
-      <span class="nt">&lt;/meta-data&gt;</span>
-      <span class="nt">&lt;meta-data&gt;</span>
-        <span class="nt">&lt;name&gt;</span>forward-credentials-from-vault<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;value&gt;</span>true<span class="nt">&lt;/value&gt;</span>
-      <span class="nt">&lt;/meta-data&gt;</span>
-  <span class="nt">&lt;/policy&gt;</span>                
+<span class="w">      </span><span class="nt">&lt;meta-data&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>hpaa.authtype<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>http-basic<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/meta-data&gt;</span>
+<span class="w">      </span><span class="nt">&lt;meta-data&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>hpaa.slotid<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>demo-volt-mx-foundry-service<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/meta-data&gt;</span>
+<span class="w">      </span><span class="nt">&lt;meta-data&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>forward-credentials-from-vault<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;value&gt;</span>true<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/meta-data&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/policy&gt;</span><span class="w">                </span>
 <span class="nt">&lt;/proxy-rules&gt;</span>
 </code></pre></div></p>
 </li>
@@ -1351,7 +1351,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 8, 2022</span>
       
     
   </small>

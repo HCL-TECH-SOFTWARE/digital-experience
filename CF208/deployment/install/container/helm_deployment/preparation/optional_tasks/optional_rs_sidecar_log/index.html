@@ -1107,24 +1107,24 @@
 <p class="admonition-title">Important</p>
 <p>You can only expose log files inside of the /var/profile/ directory.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># List of sidecar containers mapping a container name to a file path for a log file to be exposed</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Each element must consist of a `containerName` and a `logFilePath`, the latter must be located in /var/profile</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Example:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># customLogSidecarContainers:</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#   - containerName: &quot;trace&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">#     logFilePath: &quot;/var/profile/logs/server1/trace.log&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">customLogSidecarContainers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># List of sidecar containers mapping a container name to a file path for a log file to be exposed</span>
+<span class="w">    </span><span class="c1"># Each element must consist of a `containerName` and a `logFilePath`, the latter must be located in /var/profile</span>
+<span class="w">    </span><span class="c1"># Example:</span>
+<span class="w">    </span><span class="c1"># customLogSidecarContainers:</span>
+<span class="w">    </span><span class="c1">#   - containerName: &quot;trace&quot;</span>
+<span class="w">    </span><span class="c1">#     logFilePath: &quot;/var/profile/logs/server1/trace.log&quot;</span>
+<span class="w">    </span><span class="nt">customLogSidecarContainers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example:</p>
 <p>The following example starts a new sidecar container, and exposes the logs in /var/profile/logs/server1/trace.log.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">customLogSidecarContainers</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;trace&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">logFilePath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/var/profile/logs/server1/trace.log&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">customLogSidecarContainers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;trace&quot;</span>
+<span class="w">        </span><span class="nt">logFilePath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/var/profile/logs/server1/trace.log&quot;</span>
 </code></pre></div>
 </div>
 
@@ -1133,7 +1133,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

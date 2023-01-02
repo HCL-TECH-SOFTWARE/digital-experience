@@ -948,28 +948,28 @@
 <p>In case of PostgreSQL master server failure, the <code>repmgr</code> service switches the server role from master to standby.</p>
 <p>The <code>persistence-node</code> configurations are available in the Helm Chart <a href="../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/">values.yaml</a> file as <code>persistenceNode</code>.</p>
 <p>The administrator can configure number of <code>persistence-node</code> under <code>scaling</code> configuration.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span><span class="w"></span>
-<span class="nt">scaling</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># The default amount of replicas per application</span><span class="w"></span>
-<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">persistenceConnectionPool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">persistenceNode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
+<span class="nt">scaling</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># The default amount of replicas per application</span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">persistenceConnectionPool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">persistenceNode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Scaling affects only the read requests and ensures fail-over capabilities. Write requests are always directed only to the primary pod.</p>
 </div>
 <p>The <code>persistence-node</code> is a stateful application and it requires a volume. The configuration must have a dynamic volume class to start the container. The <code>storageClassName</code> and <code>storage</code> must be updated according to the cloud service provider and project requirement.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Persistent Volumes for Persistence Node</span><span class="w"></span>
-<span class="w">  </span><span class="nt">persistenceNode</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Database PVC, one per Persistence Node</span><span class="w"></span>
-<span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2Gi&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="c1"># Optional volume name to specifically map to.</span><span class="w"></span>
-<span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Persistent Volumes for Persistence Node</span>
+<span class="w">  </span><span class="nt">persistenceNode</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Database PVC, one per Persistence Node</span>
+<span class="w">    </span><span class="nt">database</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;manual&quot;</span>
+<span class="w">      </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2Gi&quot;</span>
+<span class="w">      </span><span class="c1"># Optional volume name to specifically map to.</span>
+<span class="w">      </span><span class="nt">volumeName</span><span class="p">:</span>
 </code></pre></div>
 <h2 id="persistence-connection-pool"><code>persistence-connection-pool</code></h2>
 <p>The <code>persistence-connection-pool</code> container runs the <a href="https://www.pgpool.net/mediawiki/index.php/Main_Page">Pg-pool</a> service. Pg-pool is a middleware that works between <code>persistence-node</code> and HCL Digital Asset Management <a href="../../../../manage_content/digital_assets/">HCL Digital Asset Management</a>.</p>
@@ -979,12 +979,12 @@
 <li>Load balancing</li>
 </ul>
 <p>For better performance, administrator can scale the <code>persistence-connection-pool</code> to more than one pod. The <code>persistence-connection-pool</code> configurations are available in Helm Chart <a href="../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration/">values.yaml</a> file as <code>persistenceConnectionPool</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span><span class="w"></span>
-<span class="nt">scaling</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># The default amount of replicas per application</span><span class="w"></span>
-<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">persistenceConnectionPool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">persistenceNode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Scaling settings for deployed applications</span>
+<span class="nt">scaling</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># The default amount of replicas per application</span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">persistenceConnectionPool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">persistenceNode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 </code></pre></div>
 <p>The following is an example of a persistence cluster in a successful deployment.</p>
 <p><img alt="" src="../../../../images/cluster_status_example.png" title="Persistence cluster in a successful deployment" /></p>
@@ -996,7 +996,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2022</span>
       
     
   </small>

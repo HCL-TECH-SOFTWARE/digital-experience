@@ -1139,34 +1139,34 @@
 <p>HCL Digital Experience 9.5 consists of multiple applications and services that can be deployed. Depending on your needs, it might not be necessary to have all applications deployed.</p>
 <h2 id="disabling-or-enabling-specific-applications">Disabling or enabling specific applications</h2>
 <p>You can easily enable or disable specific applications by adding the following parts to your custom-values.yaml file:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Controls which application is deployed and configured</span><span class="w"></span>
-<span class="nt">applications</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys Content Composer</span><span class="w"></span>
-<span class="w">  </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys Core</span><span class="w"></span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys Design Studio</span><span class="w"></span>
-<span class="w">  </span><span class="nt">designStudio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys Digital Asset Management</span><span class="w"></span>
-<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys the Image Processor</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Enabling digitalAssetManagement will override this setting with: true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploy Open LDAP</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Setting the ldap type in the core application configuration to dx will override this setting with: true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys the Persistence Layer</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Enabling digitalAssetManagement will override this setting with: true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">persistence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys the Remote Search</span><span class="w"></span>
-<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys the Ring API</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Enabling either digitalAssetManagement or contentComposer will override this setting with: true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploys the Runtime Controller</span><span class="w"></span>
-<span class="w">  </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Deploy HAProxy</span><span class="w"></span>
-<span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Controls which application is deployed and configured</span>
+<span class="nt">applications</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Deploys Content Composer</span>
+<span class="w">  </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="c1"># Deploys Core</span>
+<span class="w">  </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="c1"># Deploys Design Studio</span>
+<span class="w">  </span><span class="nt">designStudio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="c1"># Deploys Digital Asset Management</span>
+<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="c1"># Deploys the Image Processor</span>
+<span class="w">  </span><span class="c1"># Enabling digitalAssetManagement will override this setting with: true</span>
+<span class="w">  </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="c1"># Deploy Open LDAP</span>
+<span class="w">  </span><span class="c1"># Setting the ldap type in the core application configuration to dx will override this setting with: true</span>
+<span class="w">  </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="c1"># Deploys the Persistence Layer</span>
+<span class="w">  </span><span class="c1"># Enabling digitalAssetManagement will override this setting with: true</span>
+<span class="w">  </span><span class="nt">persistence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="c1"># Deploys the Remote Search</span>
+<span class="w">  </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="c1"># Deploys the Ring API</span>
+<span class="w">  </span><span class="c1"># Enabling either digitalAssetManagement or contentComposer will override this setting with: true</span>
+<span class="w">  </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="c1"># Deploys the Runtime Controller</span>
+<span class="w">  </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="c1"># Deploy HAProxy</span>
+<span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 <p>You can set applications that you do not want to be deployed to <code>false</code>. As noted in the <a href="../../../../overview/">Deploy DX 9.5 to container platforms using Helm</a> Help Center topic, some DX applications are pre-requisites for others to be deployed. It can appear that you have disabled an application, but it still gets deployed. This is due to other applications requiring that one.</p>
 
@@ -1175,7 +1175,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

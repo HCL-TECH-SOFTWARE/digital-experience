@@ -941,14 +941,14 @@
 
 <h1 id="configure-friendly-urls-for-digital-asset-management">Configure Friendly URLs for Digital Asset Management</h1>
 <p>Optional custom path definition to access the DAM resources using friendly URLs. A new context route is created based on the value defined in <code>friendlyUrlContextRoot</code>. By default, this feature is disabled with no value set for <code>friendlyUrlContextRoot</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">friendlyUrlContextRoot</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">friendlyUrlContextRoot</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">friendlyUrlContextRoot</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/assets&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">friendlyUrlContextRoot</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/assets&quot;</span>
 </code></pre></div>
 <p>When the context root is set as <code>/assets</code>, it will make the  DAM assets accessible at <code>/assets/{collection name/unique id}/{asset name/unique id}</code>.</p>
 <p>The following optional query parameters can be used with the friendly URLs:</p>
@@ -965,7 +965,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 30, 2022</span>
       
     
   </small>

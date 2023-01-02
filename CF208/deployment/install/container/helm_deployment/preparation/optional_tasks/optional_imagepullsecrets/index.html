@@ -1158,13 +1158,13 @@
 </div>
 <h2 id="configure-deployment-to-use-imagepullsecrets">Configure deployment to use ImagePullSecrets</h2>
 <p>In order for the HCL Digital Experience 9.5 deployment to leverage <code>ImagePullSecrets</code> you need to adjust your <code>custom-values.yaml</code> file to include the following syntax:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">images</span><span class="p">:</span><span class="w"></span>
-<span class="w"> </span><span class="nt">imagePullSecrets</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">images</span><span class="p">:</span>
+<span class="w"> </span><span class="nt">imagePullSecrets</span><span class="p">:</span>
 <span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">regcred</span><span class="w">         </span>
 </code></pre></div>
 <p>The name <code>regcred</code> can be different, depending on how you have created your <code>ImagePullSecret</code> and how it is named. Ensure that you reference the correct name in the configuration.</p>
 <p>It is assume that you have moved the HCL Digital Experience 9.5 images to your registry; make sure it is also configured properly in your <code>custom-values.yaml</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">images</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">images</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;your-repo:port&quot;</span><span class="w">                </span>
 </code></pre></div>
 <p>All pods created now have that secret configured for pulling DX container images.</p>
@@ -1173,9 +1173,9 @@
 <p>If you want to leverage this feature, you will have to configure an ImagePullSecret with your HCL Harbor credentials.</p>
 <p>To do so, use the following command targeting your the Kubernetes namespace for your deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># E-Mail and username are your harbor login, the password is your harbor CLI secret</span>
-kubectl create secret -n &lt;YOUR-NAMESPACE&gt; docker-registry dx-harbor --docker-server<span class="o">=</span><span class="s2">&quot;hclcr.io&quot;</span> <span class="se">\</span>
---docker-email<span class="o">=</span><span class="s1">&#39;&lt;YOUR_HARBOR_USERNAME&gt;&#39;</span> <span class="se">\</span>
---docker-username<span class="o">=</span><span class="s1">&#39;&lt;YOUR_HARBOR_USERNAME&gt;&#39;</span> <span class="se">\</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>-n<span class="w"> </span>&lt;YOUR-NAMESPACE&gt;<span class="w"> </span>docker-registry<span class="w"> </span>dx-harbor<span class="w"> </span>--docker-server<span class="o">=</span><span class="s2">&quot;hclcr.io&quot;</span><span class="w"> </span><span class="se">\</span>
+--docker-email<span class="o">=</span><span class="s1">&#39;&lt;YOUR_HARBOR_USERNAME&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+--docker-username<span class="o">=</span><span class="s1">&#39;&lt;YOUR_HARBOR_USERNAME&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
 --docker-password<span class="o">=</span><span class="s1">&#39;&lt;YOUR_HARBOR_CLI_SECRET&gt;&#39;</span>
 </code></pre></div>
 <p>You can obtain the CLI secret from harbor by navigating to your <code>User Profile</code> in <a href="https://hclcr.io">HCL Harbor</a>. You can copy it from the field called <code>CLI secret</code>.</p>
@@ -1183,11 +1183,11 @@ kubectl create secret -n &lt;YOUR-NAMESPACE&gt; docker-registry dx-harbor --dock
 <div class="highlight"><pre><span></span><code>secret/dx-harbor created
 </code></pre></div>
 <p>Inside your <code>custom-values.yaml</code> you can now adjust the ImagePullSecret to the secret that was just created and point to the HCL Harbor container registry.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Image related configuration</span><span class="w"></span>
-<span class="nt">images</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Image pull secrets used for accessing the repository</span><span class="w"></span>
-<span class="w">  </span><span class="nt">imagePullSecrets</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx-harbor&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Image related configuration</span>
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Image pull secrets used for accessing the repository</span>
+<span class="w">  </span><span class="nt">imagePullSecrets</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx-harbor&quot;</span>
 </code></pre></div>
 <p>You deployment can now directly pull the container images from the HCL Harbor container registry.</p>
 
@@ -1196,7 +1196,7 @@ kubectl create secret -n &lt;YOUR-NAMESPACE&gt; docker-registry dx-harbor --dock
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 3, 2022</span>
       
     
   </small>

@@ -1300,21 +1300,21 @@
 <h2 id="prereqs-checker-configuration-options">Prereqs Checker configuration options</h2>
 <p>The Prereqs Checker can be configured and enabled/disabled in the <code>custom-values.yaml</code> file.</p>
 <p>The checks are running periodically. The frequency can be configured using a value in cron syntax in <code>checkSchedule</code> which by default is set to <code>0 8 * * *</code> i.e the cron job is run at 8AM every day.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span><span class="w"></span>
-<span class="nt">configuration</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Prereqs Checker configurations</span><span class="w"></span>
-<span class="w">  </span><span class="nt">prereqsChecker</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># For changing the state enable/disable</span><span class="w"></span>
-<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Cronjob expression to run the checks periodically</span><span class="w"></span>
-<span class="w">    </span><span class="nt">checkSchedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0</span><span class="nv"> </span><span class="s">8</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Application configuration</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Prereqs Checker configurations</span>
+<span class="w">  </span><span class="nt">prereqsChecker</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># For changing the state enable/disable</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="c1"># Cronjob expression to run the checks periodically</span>
+<span class="w">    </span><span class="nt">checkSchedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0</span><span class="nv"> </span><span class="s">8</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
 </code></pre></div>
 <h2 id="automatic-running-of-checks">Automatic Running of Checks</h2>
 <p>Prereqs Checker by default would be deployed as a sidecar container for each of the applications mentioned <a href="#how-to-manually-trigger-the-checks">below</a>, scaling the StatefulSet would also create a sidecar container per pod instance.</p>
 <p>Prereqs Checker would only run periodically in the first pod of the <code>StatefulSet</code> since it is not required that all pods (for the same application or <code>StatefulSet</code>) should perform the checks as all the pods would have similar configuration.</p>
 <p>Persistence Node for example will have the checks running periodically based on the <code>checkSchedule</code> on the <strong>first pod</strong> but not on the subsequent ones.</p>
 <p>First Pod (<code>dx-deployment-persistence-node-0</code>)
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>kubectl -n dxns logs dx-deployment-persistence-node-0 -c prereqs-checker
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>logs<span class="w"> </span>dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>prereqs-checker
 <span class="go">Checks are scheduled */5 * * * *.</span>
 <span class="go">[2022-10-28 07:25:00]: == File permission check for /mnt/prereqs-checks-volumes/database/ ==</span>
 <span class="go">[2022-10-28 07:25:00]: dx_user is current user.</span>
@@ -1323,13 +1323,13 @@
 <span class="go">...</span>
 </code></pre></div>
 Second Pod (<code>dx-deployment-persistence-node-1</code>)
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>kubectl -n dxns logs dx-deployment-persistence-node-1 -c prereqs-checker
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>logs<span class="w"> </span>dx-deployment-persistence-node-1<span class="w"> </span>-c<span class="w"> </span>prereqs-checker
 <span class="go">Prereqs checker will NOT run.</span>
 <span class="go">Hostname &quot;dx-deployment-persistence-node-1&quot; ends with a number greater than 0 so we assume this is a subsequent Pod in a Helm deployment. Checks are only scheduled on the first Pod.</span>
 <span class="go">If this is not a Helm deployment and you need to have the test running please change &quot;dx-deployment-persistence-node-1&quot; to something that ends with 0 or that doesn&#39;t end with a number.</span>
 </code></pre></div></p>
 <p>Subsequent pod(s) would still have the <code>prereqs-checker</code> container so you can still <a href="#how-to-manually-trigger-the-checks">trigger the checks</a> manually for the other pods.</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>kubectl -n dxns <span class="nb">exec</span> --stdin --tty dx-deployment-persistence-node-1 -c prereqs-checker -- /bin/bash /usr/local/sbin/run_test.sh
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--stdin<span class="w"> </span>--tty<span class="w"> </span>dx-deployment-persistence-node-1<span class="w"> </span>-c<span class="w"> </span>prereqs-checker<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>/usr/local/sbin/run_test.sh
 </code></pre></div>
 <h2 id="how-to-manually-trigger-the-checks">How to manually trigger the checks:</h2>
 <p>The following command can be triggered to run the checks manually, once all the checks will get performed, results will be available in the logs</p>
@@ -1338,10 +1338,10 @@ Second Pod (<code>dx-deployment-persistence-node-1</code>)
 - <code>digital-asset-management</code>
 - <code>remote-search</code>
 - <code>persistence-node</code></p>
-<div class="highlight"><pre><span></span><code>kubectl -n &lt;my-namespace&gt; <span class="nb">exec</span> --stdin --tty &lt;release-name&gt;-&lt;application-name&gt;-0 -c prereqs-checker -- /bin/bash /usr/local/sbin/run_test.sh
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;my-namespace&gt;<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--stdin<span class="w"> </span>--tty<span class="w"> </span>&lt;release-name&gt;-&lt;application-name&gt;-0<span class="w"> </span>-c<span class="w"> </span>prereqs-checker<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>/usr/local/sbin/run_test.sh
 </code></pre></div>
 <p>The following command can be run to print the logs:</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns logs pod/&lt;release-name&gt;-&lt;application-name&gt;-0 prereqs-checker
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>logs<span class="w"> </span>pod/&lt;release-name&gt;-&lt;application-name&gt;-0<span class="w"> </span>prereqs-checker
 </code></pre></div>
 
   <hr>
@@ -1349,7 +1349,7 @@ Second Pod (<code>dx-deployment-persistence-node-1</code>)
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2022</span>
       
     
   </small>

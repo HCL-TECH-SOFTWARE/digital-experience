@@ -1018,58 +1018,58 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">MacOS or Linux</label><label for="__tabbed_1_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>./gradlew ear
+<div class="highlight"><pre><span></span><code>./gradlew<span class="w"> </span>ear
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>gradlew.bat ear
+<div class="highlight"><pre><span></span><code>gradlew.bat<span class="w"> </span>ear
 </code></pre></div>
 </div>
 </div>
 </div>
 <p>Sample successful gradle <em>ear</em> task log:</p>
-<div class="highlight"><pre><span></span><code>&gt; Task :npmSetup
-added <span class="m">1</span> package, and audited <span class="m">202</span> packages <span class="k">in</span> 3s
-<span class="m">11</span> packages are looking <span class="k">for</span> funding
-  run <span class="sb">`</span>npm fund<span class="sb">`</span> <span class="k">for</span> details
-found <span class="m">0</span> vulnerabilities
-&gt; Task :npmInstallSubModule01
-added <span class="m">167</span> packages, and audited <span class="m">168</span> packages <span class="k">in</span> 20s
-<span class="m">24</span> packages are looking <span class="k">for</span> funding
-  run <span class="sb">`</span>npm fund<span class="sb">`</span> <span class="k">for</span> details
-found <span class="m">0</span> vulnerabilities
-&gt; Task :npmBuildSubModule01
-&gt; webapp-dx-module@1.0.0 build-dxsubmodule
-&gt; webpack --config  webpack.dxmodules.js
-assets by info <span class="m">209</span> KiB <span class="o">[</span>immutable<span class="o">]</span>
-  asset 007b2705c0a8f69dfdf6.png <span class="m">69</span>.2 KiB <span class="o">[</span>emitted<span class="o">]</span> <span class="o">[</span>immutable<span class="o">]</span> <span class="o">[</span>from: node_modules/smart-webcomponents-react/source/styles/images/flags.png<span class="o">]</span>
-  asset 75a2e72c473f568f06e0.eot <span class="m">46</span>.4 KiB <span class="o">[</span>emitted<span class="o">]</span> <span class="o">[</span>immutable<span class="o">]</span> <span class="o">[</span>from: node_modules/smart-webcomponents-react/source/styles/font/smart-icons.eot<span class="o">]</span>
-  asset 998692c57524bcfca735.ttf <span class="m">46</span>.2 KiB <span class="o">[</span>emitted<span class="o">]</span> <span class="o">[</span>immutable<span class="o">]</span> <span class="o">[</span>from: node_modules/smart-webcomponents-react/source/styles/font/smart-icons.ttf<span class="o">]</span>
-  asset 561238502ed7d8ebb9bf.woff <span class="m">25</span>.8 KiB <span class="o">[</span>emitted<span class="o">]</span> <span class="o">[</span>immutable<span class="o">]</span> <span class="o">[</span>from: node_modules/smart-webcomponents-react/source/styles/font/smart-icons.woff<span class="o">]</span>
-  asset ff14b8dae29e19ca9a56.woff2 <span class="m">21</span>.4 KiB <span class="o">[</span>emitted<span class="o">]</span> <span class="o">[</span>immutable<span class="o">]</span> <span class="o">[</span>from: node_modules/smart-webcomponents-react/source/styles/font/smart-icons.woff2<span class="o">]</span>
-assets by chunk <span class="m">2</span>.7 MiB <span class="o">(</span>name: dxmodules<span class="o">)</span>
-  asset dxmodules.bundle.css <span class="m">1</span>.56 MiB <span class="o">[</span>emitted<span class="o">]</span> <span class="o">(</span>name: dxmodules<span class="o">)</span>
-  asset dxmodules.bundle.js <span class="m">1</span>.14 MiB <span class="o">[</span>emitted<span class="o">]</span> <span class="o">[</span>minimized<span class="o">]</span> <span class="o">(</span>name: dxmodules<span class="o">)</span> <span class="m">1</span> related asset
-Entrypoint dxmodules <span class="m">2</span>.7 <span class="nv">MiB</span> <span class="o">=</span> dxmodules.bundle.css <span class="m">1</span>.56 MiB dxmodules.bundle.js <span class="m">1</span>.14 MiB
-orphan modules <span class="m">1</span>.65 MiB <span class="o">(</span>javascript<span class="o">)</span> <span class="m">209</span> KiB <span class="o">(</span>asset<span class="o">)</span> <span class="m">1</span>.01 KiB <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>orphan<span class="o">]</span> <span class="m">27</span> modules
-runtime modules <span class="m">670</span> bytes <span class="m">3</span> modules
-built modules <span class="m">1</span>.23 MiB <span class="o">(</span>javascript<span class="o">)</span> <span class="m">1</span>.56 MiB <span class="o">(</span>css/mini-extract<span class="o">)</span> <span class="o">[</span>built<span class="o">]</span>
-  javascript modules <span class="m">1</span>.23 MiB
-    modules by path ./node_modules/ <span class="m">1</span>.13 MiB <span class="m">9</span> modules
-    dll dxmodules <span class="m">12</span> bytes <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-    ./modules-index.js + <span class="m">2</span> modules <span class="m">85</span>.3 KiB <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-    ./common/data/data.js <span class="m">14</span>.7 KiB <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-  css modules <span class="m">1</span>.56 MiB
-    modules by path ./node_modules/smart-webcomponents-react/source/styles/components/*.css <span class="m">310</span> KiB
-      css ./node_modules/css-loader/dist/cjs.js!./node_modules/smart-webcomponents-react/source/styles/components/smart.table.css <span class="m">300</span> KiB <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-      css ./node_modules/css-loader/dist/cjs.js!./node_modules/smart-webcomponents-react/source/styles/components/smart.accordion.css <span class="m">10</span>.4 KiB <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-    css ./node_modules/css-loader/dist/cjs.js!./node_modules/smart-webcomponents-react/source/styles/smart.default.css <span class="m">1</span>.26 MiB <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-    css ./node_modules/css-loader/dist/cjs.js!./styles-index.css <span class="m">1</span> bytes <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-webpack <span class="m">5</span>.74.0 compiled successfully <span class="k">in</span> <span class="m">11919</span> ms
-&gt; Task :buildAllSubModules
- Task buildAllSubModules Done
-BUILD SUCCESSFUL <span class="k">in</span> 1m 42s
-<span class="m">10</span> actionable tasks: <span class="m">10</span> executed
+<div class="highlight"><pre><span></span><code>&gt;<span class="w"> </span>Task<span class="w"> </span>:npmSetup
+added<span class="w"> </span><span class="m">1</span><span class="w"> </span>package,<span class="w"> </span>and<span class="w"> </span>audited<span class="w"> </span><span class="m">202</span><span class="w"> </span>packages<span class="w"> </span><span class="k">in</span><span class="w"> </span>3s
+<span class="m">11</span><span class="w"> </span>packages<span class="w"> </span>are<span class="w"> </span>looking<span class="w"> </span><span class="k">for</span><span class="w"> </span>funding
+<span class="w">  </span>run<span class="w"> </span><span class="sb">`</span>npm<span class="w"> </span>fund<span class="sb">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>details
+found<span class="w"> </span><span class="m">0</span><span class="w"> </span>vulnerabilities
+&gt;<span class="w"> </span>Task<span class="w"> </span>:npmInstallSubModule01
+added<span class="w"> </span><span class="m">167</span><span class="w"> </span>packages,<span class="w"> </span>and<span class="w"> </span>audited<span class="w"> </span><span class="m">168</span><span class="w"> </span>packages<span class="w"> </span><span class="k">in</span><span class="w"> </span>20s
+<span class="m">24</span><span class="w"> </span>packages<span class="w"> </span>are<span class="w"> </span>looking<span class="w"> </span><span class="k">for</span><span class="w"> </span>funding
+<span class="w">  </span>run<span class="w"> </span><span class="sb">`</span>npm<span class="w"> </span>fund<span class="sb">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>details
+found<span class="w"> </span><span class="m">0</span><span class="w"> </span>vulnerabilities
+&gt;<span class="w"> </span>Task<span class="w"> </span>:npmBuildSubModule01
+&gt;<span class="w"> </span>webapp-dx-module@1.0.0<span class="w"> </span>build-dxsubmodule
+&gt;<span class="w"> </span>webpack<span class="w"> </span>--config<span class="w">  </span>webpack.dxmodules.js
+assets<span class="w"> </span>by<span class="w"> </span>info<span class="w"> </span><span class="m">209</span><span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>immutable<span class="o">]</span>
+<span class="w">  </span>asset<span class="w"> </span>007b2705c0a8f69dfdf6.png<span class="w"> </span><span class="m">69</span>.2<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>emitted<span class="o">]</span><span class="w"> </span><span class="o">[</span>immutable<span class="o">]</span><span class="w"> </span><span class="o">[</span>from:<span class="w"> </span>node_modules/smart-webcomponents-react/source/styles/images/flags.png<span class="o">]</span>
+<span class="w">  </span>asset<span class="w"> </span>75a2e72c473f568f06e0.eot<span class="w"> </span><span class="m">46</span>.4<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>emitted<span class="o">]</span><span class="w"> </span><span class="o">[</span>immutable<span class="o">]</span><span class="w"> </span><span class="o">[</span>from:<span class="w"> </span>node_modules/smart-webcomponents-react/source/styles/font/smart-icons.eot<span class="o">]</span>
+<span class="w">  </span>asset<span class="w"> </span>998692c57524bcfca735.ttf<span class="w"> </span><span class="m">46</span>.2<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>emitted<span class="o">]</span><span class="w"> </span><span class="o">[</span>immutable<span class="o">]</span><span class="w"> </span><span class="o">[</span>from:<span class="w"> </span>node_modules/smart-webcomponents-react/source/styles/font/smart-icons.ttf<span class="o">]</span>
+<span class="w">  </span>asset<span class="w"> </span>561238502ed7d8ebb9bf.woff<span class="w"> </span><span class="m">25</span>.8<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>emitted<span class="o">]</span><span class="w"> </span><span class="o">[</span>immutable<span class="o">]</span><span class="w"> </span><span class="o">[</span>from:<span class="w"> </span>node_modules/smart-webcomponents-react/source/styles/font/smart-icons.woff<span class="o">]</span>
+<span class="w">  </span>asset<span class="w"> </span>ff14b8dae29e19ca9a56.woff2<span class="w"> </span><span class="m">21</span>.4<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>emitted<span class="o">]</span><span class="w"> </span><span class="o">[</span>immutable<span class="o">]</span><span class="w"> </span><span class="o">[</span>from:<span class="w"> </span>node_modules/smart-webcomponents-react/source/styles/font/smart-icons.woff2<span class="o">]</span>
+assets<span class="w"> </span>by<span class="w"> </span>chunk<span class="w"> </span><span class="m">2</span>.7<span class="w"> </span>MiB<span class="w"> </span><span class="o">(</span>name:<span class="w"> </span>dxmodules<span class="o">)</span>
+<span class="w">  </span>asset<span class="w"> </span>dxmodules.bundle.css<span class="w"> </span><span class="m">1</span>.56<span class="w"> </span>MiB<span class="w"> </span><span class="o">[</span>emitted<span class="o">]</span><span class="w"> </span><span class="o">(</span>name:<span class="w"> </span>dxmodules<span class="o">)</span>
+<span class="w">  </span>asset<span class="w"> </span>dxmodules.bundle.js<span class="w"> </span><span class="m">1</span>.14<span class="w"> </span>MiB<span class="w"> </span><span class="o">[</span>emitted<span class="o">]</span><span class="w"> </span><span class="o">[</span>minimized<span class="o">]</span><span class="w"> </span><span class="o">(</span>name:<span class="w"> </span>dxmodules<span class="o">)</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>related<span class="w"> </span>asset
+Entrypoint<span class="w"> </span>dxmodules<span class="w"> </span><span class="m">2</span>.7<span class="w"> </span><span class="nv">MiB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>dxmodules.bundle.css<span class="w"> </span><span class="m">1</span>.56<span class="w"> </span>MiB<span class="w"> </span>dxmodules.bundle.js<span class="w"> </span><span class="m">1</span>.14<span class="w"> </span>MiB
+orphan<span class="w"> </span>modules<span class="w"> </span><span class="m">1</span>.65<span class="w"> </span>MiB<span class="w"> </span><span class="o">(</span>javascript<span class="o">)</span><span class="w"> </span><span class="m">209</span><span class="w"> </span>KiB<span class="w"> </span><span class="o">(</span>asset<span class="o">)</span><span class="w"> </span><span class="m">1</span>.01<span class="w"> </span>KiB<span class="w"> </span><span class="o">(</span>runtime<span class="o">)</span><span class="w"> </span><span class="o">[</span>orphan<span class="o">]</span><span class="w"> </span><span class="m">27</span><span class="w"> </span>modules
+runtime<span class="w"> </span>modules<span class="w"> </span><span class="m">670</span><span class="w"> </span>bytes<span class="w"> </span><span class="m">3</span><span class="w"> </span>modules
+built<span class="w"> </span>modules<span class="w"> </span><span class="m">1</span>.23<span class="w"> </span>MiB<span class="w"> </span><span class="o">(</span>javascript<span class="o">)</span><span class="w"> </span><span class="m">1</span>.56<span class="w"> </span>MiB<span class="w"> </span><span class="o">(</span>css/mini-extract<span class="o">)</span><span class="w"> </span><span class="o">[</span>built<span class="o">]</span>
+<span class="w">  </span>javascript<span class="w"> </span>modules<span class="w"> </span><span class="m">1</span>.23<span class="w"> </span>MiB
+<span class="w">    </span>modules<span class="w"> </span>by<span class="w"> </span>path<span class="w"> </span>./node_modules/<span class="w"> </span><span class="m">1</span>.13<span class="w"> </span>MiB<span class="w"> </span><span class="m">9</span><span class="w"> </span>modules
+<span class="w">    </span>dll<span class="w"> </span>dxmodules<span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">    </span>./modules-index.js<span class="w"> </span>+<span class="w"> </span><span class="m">2</span><span class="w"> </span>modules<span class="w"> </span><span class="m">85</span>.3<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">    </span>./common/data/data.js<span class="w"> </span><span class="m">14</span>.7<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">  </span>css<span class="w"> </span>modules<span class="w"> </span><span class="m">1</span>.56<span class="w"> </span>MiB
+<span class="w">    </span>modules<span class="w"> </span>by<span class="w"> </span>path<span class="w"> </span>./node_modules/smart-webcomponents-react/source/styles/components/*.css<span class="w"> </span><span class="m">310</span><span class="w"> </span>KiB
+<span class="w">      </span>css<span class="w"> </span>./node_modules/css-loader/dist/cjs.js!./node_modules/smart-webcomponents-react/source/styles/components/smart.table.css<span class="w"> </span><span class="m">300</span><span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">      </span>css<span class="w"> </span>./node_modules/css-loader/dist/cjs.js!./node_modules/smart-webcomponents-react/source/styles/components/smart.accordion.css<span class="w"> </span><span class="m">10</span>.4<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">    </span>css<span class="w"> </span>./node_modules/css-loader/dist/cjs.js!./node_modules/smart-webcomponents-react/source/styles/smart.default.css<span class="w"> </span><span class="m">1</span>.26<span class="w"> </span>MiB<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">    </span>css<span class="w"> </span>./node_modules/css-loader/dist/cjs.js!./styles-index.css<span class="w"> </span><span class="m">1</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+webpack<span class="w"> </span><span class="m">5</span>.74.0<span class="w"> </span>compiled<span class="w"> </span>successfully<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">11919</span><span class="w"> </span>ms
+&gt;<span class="w"> </span>Task<span class="w"> </span>:buildAllSubModules
+<span class="w"> </span>Task<span class="w"> </span>buildAllSubModules<span class="w"> </span>Done
+BUILD<span class="w"> </span>SUCCESSFUL<span class="w"> </span><span class="k">in</span><span class="w"> </span>1m<span class="w"> </span>42s
+<span class="m">10</span><span class="w"> </span>actionable<span class="w"> </span>tasks:<span class="w"> </span><span class="m">10</span><span class="w"> </span>executed
 </code></pre></div>
 <h2 id="manually-upload-the-ear-file-to-websphere">Manually upload the EAR file to WebSphere</h2>
 <ol>
@@ -1094,7 +1094,7 @@ BUILD SUCCESSFUL <span class="k">in</span> 1m 42s
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2022</span>
       
     
   </small>

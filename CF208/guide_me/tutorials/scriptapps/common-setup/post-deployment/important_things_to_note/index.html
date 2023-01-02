@@ -1030,87 +1030,87 @@
 <h1 id="important-things-to-note">Important Things To Note</h1>
 <h2 id="generated-dll-manifest">Generated DLL manifest</h2>
 <p>Take note of the location of the generated DLL manifest as configured in the DllPlugin section of submodule's webpack.<dxmodules>.js. The location and content of the manifest are critical as it is required to optimize and correctly build the dependent Script Applications.</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">     </span><span class="nx">dxmodules</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./modules-index.js&#39;</span><span class="w"></span>
-<span class="w"> </span><span class="p">},</span><span class="w"></span>
-<span class="w"> </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w"> </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;web&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w"> </span><span class="nx">node</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">global</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
-<span class="w"> </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">     </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">     </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dx-module&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">     </span><span class="nx">library</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="w"></span>
-<span class="w"> </span><span class="p">},</span><span class="w"></span>
-<span class="w"> </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">     </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">         </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest.json&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">         </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">     </span><span class="p">}),</span><span class="w"></span>
-<span class="w">     </span><span class="ow">new</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">         </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.css&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">     </span><span class="p">})</span><span class="w"></span>
-<span class="w"> </span><span class="p">],</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nx">dxmodules</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./modules-index.js&#39;</span>
+<span class="w"> </span><span class="p">},</span>
+<span class="w"> </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;web&#39;</span><span class="p">,</span>
+<span class="w"> </span><span class="nx">node</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">global</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="w"> </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dx-module&quot;</span><span class="p">),</span>
+<span class="w">     </span><span class="nx">library</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span>
+<span class="w"> </span><span class="p">},</span>
+<span class="w"> </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">     </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span>
+<span class="w">         </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest.json&quot;</span><span class="p">),</span>
+<span class="w">         </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">     </span><span class="p">}),</span>
+<span class="w">     </span><span class="ow">new</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="p">({</span>
+<span class="w">         </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.css&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="p">})</span>
+<span class="w"> </span><span class="p">],</span>
 </code></pre></div>
 <h2 id="generated-library-name">Generated Library Name</h2>
 <p>Take note of the generated library name (with the added fullhash) and the exported component aliases in the generated DLL manifest (dx-dll-manifest.json). Please keep in mind that even minor edits in the DX module will result to a modified fullhash in the library name that will then require the dependent Script Applications to be rebuilt and redeployed. It is recommended to keep the fullhash suffix in the webpack library name config mentioned in previous step.</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dxmodules_2a35376eb9d458555803&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">   </span><span class="s2">&quot;content&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">     </span><span class="s2">&quot;./modules-index.js&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">       </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">239</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="s2">&quot;buildMeta&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;tsLoaderDefinitionFileVersions&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">           </span><span class="s2">&quot;node_modules/terser-webpack-plugin/types/index.d.ts@0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="s2">&quot;node_modules/terser-webpack-plugin/types/utils.d.ts@0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="p">...</span><span class="w"></span>
-<span class="w">           </span><span class="s2">&quot;node_modules/react/index.js@?&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="s2">&quot;node_modules/react-dom/client.js@?&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="p">],</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;tsLoaderFileVersion&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;exportsType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;namespace&quot;</span><span class="w"></span>
-<span class="w">       </span><span class="p">},</span><span class="w"></span>
-<span class="w">       </span><span class="s2">&quot;exports&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">         </span><span class="s2">&quot;ReactV18&quot;</span><span class="w"></span>
-<span class="w">       </span><span class="p">]</span><span class="w"></span>
-<span class="w">     </span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="p">}</span><span class="w"></span>
-<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dxmodules_2a35376eb9d458555803&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s2">&quot;content&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;./modules-index.js&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">239</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;buildMeta&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;tsLoaderDefinitionFileVersions&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">           </span><span class="s2">&quot;node_modules/terser-webpack-plugin/types/index.d.ts@0&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="s2">&quot;node_modules/terser-webpack-plugin/types/utils.d.ts@0&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="p">...</span>
+<span class="w">           </span><span class="s2">&quot;node_modules/react/index.js@?&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="s2">&quot;node_modules/react-dom/client.js@?&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="s2">&quot;tsLoaderFileVersion&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;exportsType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;namespace&quot;</span>
+<span class="w">       </span><span class="p">},</span>
+<span class="w">       </span><span class="s2">&quot;exports&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">         </span><span class="s2">&quot;ReactV18&quot;</span>
+<span class="w">       </span><span class="p">]</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 <h2 id="deployment-descriptors">Deployment Descriptors</h2>
 <p>Any change in the aliases in both the entry config or in the output filenames in any of the SubModules Webpack config, will require corresponding changes to DX Module's deployment descriptor file src/main/config/war/WEB-INF/plugin.xml. The Javascript and styling files in the output folder dist-dx-module must correspond to the files listed in the  deployment descriptor. All @@auto-replaced-with-rootProject.name@@ tokens are dynamically replaced by the rootProject.name value set in settings.gradle.</p>
 <ul>
 <li>webpack.react18.js or webpack.react16.js or webpack.dxmodules.js
-   <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">     </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nx">react18</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./modules-index.js&#39;</span><span class="w"></span>
-<span class="w">     </span><span class="p">},</span><span class="w"></span>
-<span class="w">     </span><span class="p">...</span><span class="w"></span>
-<span class="w">     </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;../dist-dx-module&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">         </span><span class="nx">library</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="w"></span>
-<span class="w">     </span><span class="p">},</span><span class="w"></span>
-<span class="w">     </span><span class="p">...</span><span class="w"></span>
+   <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nx">react18</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./modules-index.js&#39;</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="p">...</span>
+<span class="w">     </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;../dist-dx-module&quot;</span><span class="p">),</span>
+<span class="w">         </span><span class="nx">library</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="p">...</span>
 <span class="w"> </span><span class="p">}</span><span class="w"> </span>
 </code></pre></div></li>
 <li>DxModule/src/main/config/war/WEB-INF/plugin.xml
-   <div class="highlight"><pre><span></span><code> ...
- <span class="nt">&lt;module</span> <span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
-     <span class="nt">&lt;contribution</span> <span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
-         <span class="nt">&lt;sub-contribution</span> <span class="na">type=</span><span class="s">&quot;js&quot;</span><span class="nt">&gt;</span>
-             <span class="nt">&lt;uri</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.js&quot;</span><span class="nt">/&gt;</span>
-             <span class="nt">&lt;uri</span> <span class="na">type=</span><span class="s">&quot;debug&quot;</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.js&quot;</span><span class="nt">/&gt;</span>
-         <span class="nt">&lt;/sub-contribution&gt;</span>
-     <span class="nt">&lt;/contribution&gt;</span>
-     <span class="nt">&lt;contribution</span> <span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
-         <span class="nt">&lt;sub-contribution</span> <span class="na">type=</span><span class="s">&quot;css&quot;</span><span class="nt">&gt;</span>
-             <span class="nt">&lt;uri</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.css&quot;</span><span class="nt">/&gt;</span>
-             <span class="nt">&lt;uri</span> <span class="na">type=</span><span class="s">&quot;debug&quot;</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.css&quot;</span><span class="nt">/&gt;</span>
-         <span class="nt">&lt;/sub-contribution&gt;</span>
-     <span class="nt">&lt;/contribution&gt;</span>
- <span class="nt">&lt;/module&gt;</span>
- ...
+   <div class="highlight"><pre><span></span><code><span class="w"> </span>...
+<span class="w"> </span><span class="nt">&lt;module</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;sub-contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;js&quot;</span><span class="nt">&gt;</span>
+<span class="w">             </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.js&quot;</span><span class="nt">/&gt;</span>
+<span class="w">             </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;debug&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.js&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/sub-contribution&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/contribution&gt;</span>
+<span class="w">     </span><span class="nt">&lt;contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;sub-contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;css&quot;</span><span class="nt">&gt;</span>
+<span class="w">             </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.css&quot;</span><span class="nt">/&gt;</span>
+<span class="w">             </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;debug&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.css&quot;</span><span class="nt">/&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/sub-contribution&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/contribution&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/module&gt;</span>
+<span class="w"> </span>...
 </code></pre></div></li>
 </ul>
 
@@ -1119,7 +1119,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

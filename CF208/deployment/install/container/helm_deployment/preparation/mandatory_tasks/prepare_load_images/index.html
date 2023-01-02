@@ -1259,31 +1259,31 @@ hcl-dx-deployment-vX.X.X_XXXXXXXX-XXX.tar.gz
 <p>To load the individual image files, you may use the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Command to load container image into local repository</span>
 <span class="c1"># docker load &lt; image-file-name.tar.gz</span>
-docker load &lt; hcl-dx-core-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
+docker<span class="w"> </span>load<span class="w"> </span>&lt;<span class="w"> </span>hcl-dx-core-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
 </code></pre></div>
 <p>If you want to load all DX 9.5 CFxxx image files via one command, you may use the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Command to load all images at once</span>
 <span class="c1"># Since HCL Digital Experience images are all containing the word &quot;images&quot;, </span>
 <span class="c1"># we can filter for fitting tar.gz files</span>
-ls -f <span class="p">|</span> grep image <span class="p">|</span> xargs -L <span class="m">1</span> docker load -i
+ls<span class="w"> </span>-f<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>image<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-L<span class="w"> </span><span class="m">1</span><span class="w"> </span>docker<span class="w"> </span>load<span class="w"> </span>-i
 </code></pre></div>
 <p>This loads all images to your local repository, ready for further usage.</p>
 <p>You may verify if the loading is successful with the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># List all images</span>
-docker images
+docker<span class="w"> </span>images
 
 <span class="c1"># Command output (minified, example)</span>
-REPOSITORY                                    TAG                                   IMAGE ID       CREATED         SIZE
-hcl/dx/remote-search                          v95_CF195_20210514-1708               e4c46618f404   <span class="m">4</span> weeks ago     <span class="m">2</span>.25GB
-hcl/dx/cloud-operator                         v95_CF195_20210515-0201               62cc304706a3   <span class="m">4</span> weeks ago     220MB
-hcl/dx/core                                   v95_CF195_20210514-1708               36e30c620cdd   <span class="m">4</span> weeks ago     <span class="m">6</span>.29GB
-hcl/dx/openldap                               v1.1.0-master_20210514_1621013302     a5519e06dd17   <span class="m">4</span> weeks ago     772MB
-hcl/dx/image-processor                        v1.8.0_20210514-1712                  d5d99d86f81a   <span class="m">4</span> weeks ago     507MB
-hcl/dx/digital-asset-manager                  v1.8.0_20210514-1711                  19c8b76b1cad   <span class="m">4</span> weeks ago     547MB
-hcl/dx/digital-asset-management-operator      v95_CF195_20210514-1714               bc0f5638817a   <span class="m">4</span> weeks ago     218MB
-hcl/dx/content-composer                       v1.8.0_20210514-1707                  62b7b54d3895   <span class="m">4</span> weeks ago     427MB
-hcl/dx/postgres                               v1.8.0_20210514-1708                  d94672f395ad   <span class="m">4</span> weeks ago     498MB
-hcl/dx/ringapi                                v1.8.0_20210514-1709                  505eebb52ebf   <span class="m">4</span> weeks ago     397MB
+REPOSITORY<span class="w">                                    </span>TAG<span class="w">                                   </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">         </span>SIZE
+hcl/dx/remote-search<span class="w">                          </span>v95_CF195_20210514-1708<span class="w">               </span>e4c46618f404<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">2</span>.25GB
+hcl/dx/cloud-operator<span class="w">                         </span>v95_CF195_20210515-0201<span class="w">               </span>62cc304706a3<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>220MB
+hcl/dx/core<span class="w">                                   </span>v95_CF195_20210514-1708<span class="w">               </span>36e30c620cdd<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">6</span>.29GB
+hcl/dx/openldap<span class="w">                               </span>v1.1.0-master_20210514_1621013302<span class="w">     </span>a5519e06dd17<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>772MB
+hcl/dx/image-processor<span class="w">                        </span>v1.8.0_20210514-1712<span class="w">                  </span>d5d99d86f81a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>507MB
+hcl/dx/digital-asset-manager<span class="w">                  </span>v1.8.0_20210514-1711<span class="w">                  </span>19c8b76b1cad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>547MB
+hcl/dx/digital-asset-management-operator<span class="w">      </span>v95_CF195_20210514-1714<span class="w">               </span>bc0f5638817a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>218MB
+hcl/dx/content-composer<span class="w">                       </span>v1.8.0_20210514-1707<span class="w">                  </span>62b7b54d3895<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>427MB
+hcl/dx/postgres<span class="w">                               </span>v1.8.0_20210514-1708<span class="w">                  </span>d94672f395ad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>498MB
+hcl/dx/ringapi<span class="w">                                </span>v1.8.0_20210514-1709<span class="w">                  </span>505eebb52ebf<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>397MB
 </code></pre></div>
 <h3 id="from-harbor-container-registry">From Harbor container registry</h3>
 <div class="admonition note">
@@ -1291,7 +1291,7 @@ hcl/dx/ringapi                                v1.8.0_20210514-1709              
 <p>This is only available from CF205 onwards. Previous releases need to use the packaged container images the way that is described in the previous section.</p>
 </div>
 <p>To access the harbor container registry, you need to log in with docker. This can easily be done using the following command:</p>
-<div class="highlight"><pre><span></span><code>docker login hclcr.io
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>hclcr.io
 <span class="c1"># Enter your harbor username and CLI secret to login</span>
 </code></pre></div>
 <p>You can obtain the CLI secret from harbor by navigating to your <code>User Profile</code> in <a href="https://hclcr.io">HCL Harbor</a>. You can copy it from the field called <code>CLI secret</code>.</p>
@@ -1311,60 +1311,60 @@ hcl/dx/ringapi                                v1.8.0_20210514-1709              
 <span class="c1"># docker tag OLD_IMAGE_PATH:VERSION NEW_IMAGE_TAG:VERSION</span>
 
 <span class="c1"># Example command for DX Core:</span>
-docker tag dx/core:v95_CF195_20210514-1708 my/test/repository/dx/core:v95_CF195_20210514-1708
+docker<span class="w"> </span>tag<span class="w"> </span>dx/core:v95_CF195_20210514-1708<span class="w"> </span>my/test/repository/dx/core:v95_CF195_20210514-1708
 </code></pre></div>
 <p>If you want to prefix all HCL Digital Experience 9.5 container images with your repository structure, you may use the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Command to prefix all HCL Digital Experience container images</span>
 <span class="c1"># export the prefix for the repository structure, without tailing slash</span>
-<span class="nb">export</span> <span class="nv">REMOTE_REPO_PREFIX</span><span class="o">=</span><span class="s2">&quot;my/test/repository&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">REMOTE_REPO_PREFIX</span><span class="o">=</span><span class="s2">&quot;my/test/repository&quot;</span>
 
 <span class="c1"># First we list all HCL Digital Experience 9.5 Images, then we remove the first line containing the header</span>
 <span class="c1"># Then we execute the docker tag command, prefixing each image with the $REMOTE_REPO_PREFIX</span>
-docker images dx/* <span class="p">|</span> tail -n +2 <span class="p">|</span> awk -F <span class="s1">&#39; &#39;</span> <span class="s1">&#39;{system(&quot;docker tag &quot; $1 &quot;:&quot; $2 &quot; $REMOTE_REPO_PREFIX/&quot; $1 &quot;:&quot; $2) }&#39;</span>
+docker<span class="w"> </span>images<span class="w"> </span>dx/*<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span>+2<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;{system(&quot;docker tag &quot; $1 &quot;:&quot; $2 &quot; $REMOTE_REPO_PREFIX/&quot; $1 &quot;:&quot; $2) }&#39;</span>
 </code></pre></div>
 <p>The output may be verified by using the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># List all images</span>
-docker images
+docker<span class="w"> </span>images
 
 <span class="c1"># Command output (minified, example)</span>
 
-REPOSITORY                                                    TAG                                  IMAGE ID       CREATED         SIZE
-hcl/dx/remote-search                                          v95_CF195_20210514-1708              e4c46618f404   <span class="m">4</span> weeks ago     <span class="m">2</span>.25GB
-my/test/repository/hcl/dx/remote-search                       v95_CF195_20210514-1708              e4c46618f404   <span class="m">4</span> weeks ago     <span class="m">2</span>.25
-hcl/dx/cloud-operator                                         v95_CF195_20210515-0201              62cc304706a3   <span class="m">4</span> weeks ago     220MB
-my/test/repository/hcl/dx/cloud-operator                      v95_CF195_20210515-0201              62cc304706a3   <span class="m">4</span> weeks ago     220MB
-hcl/dx/core                                                   v95_CF195_20210514-1708              36e30c620cdd   <span class="m">4</span> weeks ago     <span class="m">6</span>.29GB
-my/test/repository/hcl/dx/core                                v95_CF195_20210514-1708              6e30c620cdd    <span class="m">4</span> weeks ago     <span class="m">6</span>.29GB
-hcl/dx/openldap                                               v1.1.0-master_20210514_1621013302    a5519e06dd17   <span class="m">4</span> weeks ago     772MB
-my/test/repository/hcl/dx/openldap                            v1.1.0-master_20210514_1621013302    a5519e06dd17   <span class="m">4</span> weeks ago     772MB
-hcl/dx/image-processor                                        v1.8.0_20210514-1712                 d5d99d86f81a   <span class="m">4</span> weeks ago     507MB
-my/test/repository/hcl/dx/image-processor                     v1.8.0_20210514-1712                 d5d99d86f81a   <span class="m">4</span> weeks ago     507MB
-hcl/dx/digital-asset-manager                                  v1.8.0_20210514-1711                 19c8b76b1cad   <span class="m">4</span> weeks ago     547MB
-my/test/repository/hcl/dx/digital-asset-manager               v1.8.0_20210514-1711                 19c8b76b1cad   <span class="m">4</span> weeks ago     547MB
-hcl/dx/digital-asset-management-operator                      v95_CF195_20210514-1714              bc0f5638817a   <span class="m">4</span> weeks ago     218MB
-my/test/repository/hcl/dx/digital-asset-management-operator   v95_CF195_20210514-1714              bc0f5638817a   <span class="m">4</span> weeks ago     218MB
-my/test/repository/hcl/dx/content-composer                    v1.8.0_20210514-1707                 62b7b54d3895   <span class="m">4</span> weeks ago     427MB
-hcl/dx/content-composer                                       v1.8.0_20210514-1707                 62b7b54d3895   <span class="m">4</span> weeks ago     427MB 
-hcl/dx/postgres                                               v1.8.0_20210514-1708                 d94672f395ad   <span class="m">4</span> weeks ago     498MB
-my/test/repository/hcl/dx/postgres                            v1.8.0_20210514-1708                 d94672f395ad   <span class="m">4</span> weeks ago     498MB
-hcl/dx/ringapi                                                v1.8.0_20210514-1709                 505eebb52ebf   <span class="m">4</span> weeks ago     397MB
-my/test/repository/hcl/dx/ringapi                             v1.8.0_20210514-1709                 505eebb52ebf   <span class="m">4</span> weeks ago     397MB
+REPOSITORY<span class="w">                                                    </span>TAG<span class="w">                                  </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">         </span>SIZE
+hcl/dx/remote-search<span class="w">                                          </span>v95_CF195_20210514-1708<span class="w">              </span>e4c46618f404<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">2</span>.25GB
+my/test/repository/hcl/dx/remote-search<span class="w">                       </span>v95_CF195_20210514-1708<span class="w">              </span>e4c46618f404<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">2</span>.25
+hcl/dx/cloud-operator<span class="w">                                         </span>v95_CF195_20210515-0201<span class="w">              </span>62cc304706a3<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>220MB
+my/test/repository/hcl/dx/cloud-operator<span class="w">                      </span>v95_CF195_20210515-0201<span class="w">              </span>62cc304706a3<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>220MB
+hcl/dx/core<span class="w">                                                   </span>v95_CF195_20210514-1708<span class="w">              </span>36e30c620cdd<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">6</span>.29GB
+my/test/repository/hcl/dx/core<span class="w">                                </span>v95_CF195_20210514-1708<span class="w">              </span>6e30c620cdd<span class="w">    </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span><span class="m">6</span>.29GB
+hcl/dx/openldap<span class="w">                                               </span>v1.1.0-master_20210514_1621013302<span class="w">    </span>a5519e06dd17<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>772MB
+my/test/repository/hcl/dx/openldap<span class="w">                            </span>v1.1.0-master_20210514_1621013302<span class="w">    </span>a5519e06dd17<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>772MB
+hcl/dx/image-processor<span class="w">                                        </span>v1.8.0_20210514-1712<span class="w">                 </span>d5d99d86f81a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>507MB
+my/test/repository/hcl/dx/image-processor<span class="w">                     </span>v1.8.0_20210514-1712<span class="w">                 </span>d5d99d86f81a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>507MB
+hcl/dx/digital-asset-manager<span class="w">                                  </span>v1.8.0_20210514-1711<span class="w">                 </span>19c8b76b1cad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>547MB
+my/test/repository/hcl/dx/digital-asset-manager<span class="w">               </span>v1.8.0_20210514-1711<span class="w">                 </span>19c8b76b1cad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>547MB
+hcl/dx/digital-asset-management-operator<span class="w">                      </span>v95_CF195_20210514-1714<span class="w">              </span>bc0f5638817a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>218MB
+my/test/repository/hcl/dx/digital-asset-management-operator<span class="w">   </span>v95_CF195_20210514-1714<span class="w">              </span>bc0f5638817a<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>218MB
+my/test/repository/hcl/dx/content-composer<span class="w">                    </span>v1.8.0_20210514-1707<span class="w">                 </span>62b7b54d3895<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>427MB
+hcl/dx/content-composer<span class="w">                                       </span>v1.8.0_20210514-1707<span class="w">                 </span>62b7b54d3895<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>427MB<span class="w"> </span>
+hcl/dx/postgres<span class="w">                                               </span>v1.8.0_20210514-1708<span class="w">                 </span>d94672f395ad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>498MB
+my/test/repository/hcl/dx/postgres<span class="w">                            </span>v1.8.0_20210514-1708<span class="w">                 </span>d94672f395ad<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>498MB
+hcl/dx/ringapi<span class="w">                                                </span>v1.8.0_20210514-1709<span class="w">                 </span>505eebb52ebf<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>397MB
+my/test/repository/hcl/dx/ringapi<span class="w">                             </span>v1.8.0_20210514-1709<span class="w">                 </span>505eebb52ebf<span class="w">   </span><span class="m">4</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">     </span>397MB
 </code></pre></div>
 <h2 id="push-to-repository">Push to repository</h2>
 <p>You may use the following command to push the container images to your repository:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Push the new tagged images</span>
 <span class="c1"># docker push NEW_IMAGE_TAG:VERSION</span>
 <span class="c1"># Example command for core:</span>
-docker push my/test/repository/dx/core:v95_CF195_20210514-1708
+docker<span class="w"> </span>push<span class="w"> </span>my/test/repository/dx/core:v95_CF195_20210514-1708
 </code></pre></div>
 <p>If you want to push all your locally processed images, you may use the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Command to push all HCL Digital Experience images to a remote repository</span>
 <span class="c1"># export the prefix for the repository structure, without tailing slash</span>
-<span class="nb">export</span> <span class="nv">REMOTE_REPO_PREFIX</span><span class="o">=</span><span class="s2">&quot;my/test/repository&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">REMOTE_REPO_PREFIX</span><span class="o">=</span><span class="s2">&quot;my/test/repository&quot;</span>
 
 <span class="c1"># Push the images, first we filter for the ones necessary</span>
 <span class="c1"># Second we execute a docker push for each image</span>
-docker images <span class="nv">$REMOTE_REPO_PREFIX</span>/dx/* <span class="p">|</span> awk -F <span class="s1">&#39; &#39;</span> <span class="s1">&#39;{system(&quot;docker push &quot; $1 &quot;:&quot; $2)}&#39;</span>
+docker<span class="w"> </span>images<span class="w"> </span><span class="nv">$REMOTE_REPO_PREFIX</span>/dx/*<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;{system(&quot;docker push &quot; $1 &quot;:&quot; $2)}&#39;</span>
 </code></pre></div>
 <p>After running this command, Docker goes ahead and pushes the images to your remote repository. After the push, the container images are now ready for use by your Kubernetes or OpenShift cluster.</p>
 <h2 id="adjust-deployment-configuration">Adjust deployment configuration</h2>
@@ -1378,42 +1378,42 @@ docker images <span class="nv">$REMOTE_REPO_PREFIX</span>/dx/* <span class="p">|
 <p class="admonition-title">Note</p>
 <p>From CF205 onwards, the image name and tag configuration of the Helm Chart is pre-filled using the default image names and matching version tags for the respective version of DX. You might need to re-adjust these if you have renamed/re-tagged the images in your local container image repository.</p>
 <p>If you want to use the HCL Harbor container registry, ensure to configure your target repository accordingly and have the <a href="../../optional_tasks/optional_imagepullsecrets/">ImagePullSecret</a> configured:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">images</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Configure the HCL Harbor registry repository</span><span class="w"></span>
-<span class="w">  </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hclcr.io&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># Use the image pull secret configured before</span><span class="w"></span>
-<span class="w">  </span><span class="nt">imagePullSecrets</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx-harbor&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">images</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Configure the HCL Harbor registry repository</span>
+<span class="w">  </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;hclcr.io&quot;</span>
+<span class="w">  </span><span class="c1"># Use the image pull secret configured before</span>
+<span class="w">  </span><span class="nt">imagePullSecrets</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx-harbor&quot;</span>
 </code></pre></div>
 </div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Fill in the values fitting to your configuration</span><span class="w"></span>
-<span class="c1"># Ensure to use the correct image version tags</span><span class="w"></span>
-<span class="nt">images</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my/test/repository&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Image tag for each application</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v95_CFXXX_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v95_CFXXX_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">designStudio</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">persistence</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v95_CFXXX_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Image name for each application</span><span class="w"></span>
-<span class="w">    </span><span class="nt">names</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/content-composer&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/core&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">designStudio</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/design-studio&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/digital-asset-manager&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/image-processor&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/openldap&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">persistence</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/postgres&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/remote-search&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/ringapi&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/runtime-controller&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Fill in the values fitting to your configuration</span>
+<span class="c1"># Ensure to use the correct image version tags</span>
+<span class="nt">images</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my/test/repository&quot;</span>
+<span class="w">    </span><span class="c1"># Image tag for each application</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v95_CFXXX_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v95_CFXXX_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">designStudio</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">persistence</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v95_CFXXX_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;vX.X.X_XXXXXXXX-XXXX&quot;</span>
+<span class="w">    </span><span class="c1"># Image name for each application</span>
+<span class="w">    </span><span class="nt">names</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/content-composer&quot;</span>
+<span class="w">    </span><span class="nt">core</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/core&quot;</span>
+<span class="w">    </span><span class="nt">designStudio</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/design-studio&quot;</span>
+<span class="w">    </span><span class="nt">digitalAssetManagement</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/digital-asset-manager&quot;</span>
+<span class="w">    </span><span class="nt">imageProcessor</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/image-processor&quot;</span>
+<span class="w">    </span><span class="nt">openLdap</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/openldap&quot;</span>
+<span class="w">    </span><span class="nt">persistence</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/postgres&quot;</span>
+<span class="w">    </span><span class="nt">remoteSearch</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/remote-search&quot;</span>
+<span class="w">    </span><span class="nt">ringApi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/ringapi&quot;</span>
+<span class="w">    </span><span class="nt">runtimeController</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dx/runtime-controller&quot;</span>
 </code></pre></div>
 <h2 id="additional-tasks">Additional Tasks</h2>
 <p>If your remote repository requires access credentials, it is necessary to configure an <code>ImagePullSecret</code> to allow your cluster nodes to have proper access to the HCL DX 9.5 container images. This is also required if you want to use the HCL Harbor container registry directly.</p>
@@ -1426,7 +1426,7 @@ docker images <span class="nv">$REMOTE_REPO_PREFIX</span>/dx/* <span class="p">|
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2022</span>
       
     
   </small>

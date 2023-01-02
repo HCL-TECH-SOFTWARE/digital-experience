@@ -1120,37 +1120,37 @@
 </li>
 <li>
 <p>Create a DxModule/gradle.properties file and set the node and npm versions required. Set nodeInstall to false if the existing executables of the current environment is preferred. The gradle project included in this guide is going to be capable of downloading and using its own set of node and npm executables for the build process.
-    <div class="highlight"><pre><span></span><code><span class="na">nodeInstall</span><span class="o">=</span><span class="s">true</span><span class="w"></span>
-<span class="na">nodeVersion</span><span class="o">=</span><span class="s">16.17.0</span><span class="w"></span>
-<span class="na">npmVersion</span><span class="o">=</span><span class="s">8.15.0</span><span class="w"></span>
+    <div class="highlight"><pre><span></span><code><span class="na">nodeInstall</span><span class="o">=</span><span class="s">true</span>
+<span class="na">nodeVersion</span><span class="o">=</span><span class="s">16.17.0</span>
+<span class="na">npmVersion</span><span class="o">=</span><span class="s">8.15.0</span>
 </code></pre></div>
     Add the details of the DX deployment target. They will be relayed as parameters whenever the DXClient executable is called by the deploy tasks.
-    <div class="highlight"><pre><span></span><code><span class="na">dxProtocol</span><span class="o">=</span><span class="s">https</span><span class="w"></span>
-<span class="na">dxHostname</span><span class="o">=</span><span class="s">localhost</span><span class="w"></span>
-<span class="na">dxPort</span><span class="o">=</span><span class="s">10041</span><span class="w"></span>
-<span class="na">dxProfileName</span><span class="o">=</span><span class="s">wp_profile</span><span class="w"></span>
+    <div class="highlight"><pre><span></span><code><span class="na">dxProtocol</span><span class="o">=</span><span class="s">https</span>
+<span class="na">dxHostname</span><span class="o">=</span><span class="s">localhost</span>
+<span class="na">dxPort</span><span class="o">=</span><span class="s">10041</span>
+<span class="na">dxProfileName</span><span class="o">=</span><span class="s">wp_profile</span>
 </code></pre></div>
     Add the folder names for the submodules and Script Applications. Use only one submodule and/or Script Application folder each if it's the requirement for this setup.</p>
 <ul>
 <li>Single SubModule
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c"># SubModules</span><span class="w"></span>
-<span class="na"> subModulesCSV</span><span class="o">=</span><span class="s">SubModule01</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1"># SubModules</span>
+<span class="w"> </span><span class="na">subModulesCSV</span><span class="o">=</span><span class="s">SubModule01</span>
 
-<span class="w"> </span><span class="c"># ScriptApp Projects</span><span class="w"></span>
-<span class="na"> baseFolder</span><span class="o">=</span><span class="s">../</span><span class="w"></span>
-<span class="w"> </span><span class="c">## last subfolder of path (i.e: subfolder1/subfolder2 --&gt; subfolder2) must be unique to avoid overlapping gradle task names</span><span class="w"></span>
-<span class="w"> </span><span class="c">## verify using ./gradlew tasks</span><span class="w"></span>
-<span class="na"> scriptAppFoldersCSV</span><span class="o">=</span><span class="s">ScriptApp01</span><span class="w"></span>
+<span class="w"> </span><span class="c1"># ScriptApp Projects</span>
+<span class="w"> </span><span class="na">baseFolder</span><span class="o">=</span><span class="s">../</span>
+<span class="w"> </span><span class="c1">## last subfolder of path (i.e: subfolder1/subfolder2 --&gt; subfolder2) must be unique to avoid overlapping gradle task names</span>
+<span class="w"> </span><span class="c1">## verify using ./gradlew tasks</span>
+<span class="w"> </span><span class="na">scriptAppFoldersCSV</span><span class="o">=</span><span class="s">ScriptApp01</span>
 </code></pre></div></li>
 <li>Multiple SubModules
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c"># SubModules</span><span class="w"></span>
-<span class="na"> subModulesCSV</span><span class="o">=</span><span class="s">SubModuleReact16,SubModuleReact18</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1"># SubModules</span>
+<span class="w"> </span><span class="na">subModulesCSV</span><span class="o">=</span><span class="s">SubModuleReact16,SubModuleReact18</span>
 
-<span class="w"> </span><span class="c"># ScriptApp Projects</span><span class="w"></span>
-<span class="na"> baseFolder</span><span class="o">=</span><span class="s">../</span><span class="w"></span>
-<span class="w"> </span><span class="c">## last subfolder of path (i.e: subfolder1/subfolder2 --&gt; subfolder2) must be unique to avoid overlapping gradle task names</span><span class="w"></span>
-<span class="w"> </span><span class="c">## verify using ./gradlew tasks</span><span class="w"></span>
-<span class="na"> scriptAppFoldersCSV</span><span class="o">=</span><span class="s">SampleAppReact16,SampleAppReact18</span><span class="w"></span>
+<span class="w"> </span><span class="c1"># ScriptApp Projects</span>
+<span class="w"> </span><span class="na">baseFolder</span><span class="o">=</span><span class="s">../</span>
+<span class="w"> </span><span class="c1">## last subfolder of path (i.e: subfolder1/subfolder2 --&gt; subfolder2) must be unique to avoid overlapping gradle task names</span>
+<span class="w"> </span><span class="c1">## verify using ./gradlew tasks</span>
+<span class="w"> </span><span class="na">scriptAppFoldersCSV</span><span class="o">=</span><span class="s">SampleAppReact16,SampleAppReact18</span>
 </code></pre></div></li>
 </ul>
 </li>
@@ -1158,61 +1158,61 @@
 <p>Create or update the package.json file for each of the submodule to enumerate the libraries that will be included.</p>
 <ul>
 <li>DxModule/SubModuleReact16/package.json and DxModule/SubModuleReact18/package.json
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WebAppDxModule&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;modules-index.js&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;build-dxsubmodule&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.react16.js&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;license&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ISC&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;react&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;react-dom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;devDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;css-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^6.7.1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;file-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^6.2.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;mini-css-extract-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^2.6.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;mini-svg-data-uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^1.4.4&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;terser-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.3.3&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;ts-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^9.3.1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;typescript&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.7.4&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;webpack&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.73.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;webpack-cli&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.10.0&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;overrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WebAppDxModule&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;modules-index.js&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;build-dxsubmodule&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.react16.js&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;license&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ISC&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;react&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;react-dom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;devDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;css-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^6.7.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;file-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^6.2.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;mini-css-extract-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^2.6.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;mini-svg-data-uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^1.4.4&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;terser-webpack-plugin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.3.3&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ts-loader&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^9.3.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;typescript&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.7.4&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;webpack&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^5.73.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;webpack-cli&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.10.0&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;overrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">}</span>
 </code></pre></div></li>
 <li>Set the appropriate dependencies for the submodule. DxModule/SubModuleReact16/package.json
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;react&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^16.14.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;react-dom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^16.14.0&quot;</span><span class="w"></span>
-<span class="p">},</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;react&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^16.14.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;react-dom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^16.14.0&quot;</span>
+<span class="p">},</span>
 </code></pre></div></li>
 <li>Set the appropriate dependencies for the submodule. DxModule/SubModuleReact18/package.json
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;react&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;react-dom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span><span class="w"></span>
-<span class="p">},</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;react&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;react-dom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^18.2.0&quot;</span>
+<span class="p">},</span>
 </code></pre></div></li>
 <li>Make sure to set the main file to modules-index.js
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;modules-index.js&quot;</span><span class="p">,</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;modules-index.js&quot;</span><span class="p">,</span>
 </code></pre></div></li>
 <li>Make sure to add the build-dx-modules among the scripts. DxModule/SubModuleReact16/package.json:
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="err">...</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;build-dxsubmodule&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.react16.js&quot;</span><span class="w"></span>
-<span class="p">},</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">...</span>
+<span class="w">  </span><span class="nt">&quot;build-dxsubmodule&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.react16.js&quot;</span>
+<span class="p">},</span>
 </code></pre></div></li>
 <li>Make sure to add the build-dx-modules among the scripts. DxModule/SubModuleReact18/package.json:
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="err">...</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;build-dxsubmodule&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.react18.js&quot;</span><span class="w"></span>
-<span class="p">},</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">...</span>
+<span class="w">  </span><span class="nt">&quot;build-dxsubmodule&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;webpack --config  webpack.react18.js&quot;</span>
+<span class="p">},</span>
 </code></pre></div></li>
 </ul>
 </li>
@@ -1222,30 +1222,30 @@
 <li>
 <p>DxModule/SubModuleReact16/module-index.js
    <div class="highlight"><pre><span></span><code><span class="cm">/* Import and Export Main Libraries</span>
-<span class="cm"> */</span><span class="w"></span>
-<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React16</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ReactDOM16</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-dom&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">ReactV16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">React</span><span class="o">:</span><span class="w"> </span><span class="nx">React16</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">ReactDOM</span><span class="o">:</span><span class="w"> </span><span class="nx">ReactDOM16</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="cm"> */</span>
+<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React16</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ReactDOM16</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-dom&#39;</span><span class="p">;</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">ReactV16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">React</span><span class="o">:</span><span class="w"> </span><span class="nx">React16</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ReactDOM</span><span class="o">:</span><span class="w"> </span><span class="nx">ReactDOM16</span>
+<span class="p">};</span>
 <span class="cm">/* Export index file for the styles (added here to be able to share the filename of JS bundle&#39;s alias in Webpack entry config).</span>
-<span class="cm"> */</span><span class="w"></span>
+<span class="cm"> */</span>
 <span class="k">export</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./styles-index.css&#39;</span><span class="w">    </span>
 </code></pre></div></p>
 </li>
 <li>
 <p>DxModule/SubModuleReact18/module-index.js
    <div class="highlight"><pre><span></span><code><span class="cm">/* Import and Export Main Libraries</span>
-<span class="cm"> */</span><span class="w"></span>
-<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React18</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ReactDOM18</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-dom&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">ReactV18</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">React</span><span class="o">:</span><span class="w"> </span><span class="nx">React18</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">ReactDOM</span><span class="o">:</span><span class="w"> </span><span class="nx">ReactDOM18</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="cm"> */</span>
+<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">React18</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">ReactDOM18</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-dom&#39;</span><span class="p">;</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">ReactV18</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">React</span><span class="o">:</span><span class="w"> </span><span class="nx">React18</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ReactDOM</span><span class="o">:</span><span class="w"> </span><span class="nx">ReactDOM18</span>
+<span class="p">};</span>
 <span class="cm">/* Export index file for the styles (added here to be able to share the filename of JS bundle&#39;s alias in Webpack entry config).</span>
-<span class="cm"> */</span><span class="w"></span>
+<span class="cm"> */</span>
 <span class="k">export</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./styles-index.css&#39;</span><span class="w">    </span>
 </code></pre></div></p>
 </li>
@@ -1257,379 +1257,379 @@
 <li>DxModule/SubModuleReact16/styles-index.css  and DxModule/SubModuleReact16/styles-index.css
   <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cm">/* sample import:</span>
 <span class="cm">   *    @import &#39;smart-webcomponents-react/source/styles/smart.default.css&#39;;</span>
-<span class="cm">   */</span><span class="w"></span>
+<span class="cm">   */</span>
 </code></pre></div></li>
 </ul>
 </li>
 <li>Add a DxModule/settings.gradle file. Set the value of the rootProject.name. It will be used as the name of the DX Module (war file, ear file, etc.) and the names and ids in the deployment descriptors (web context path, etc.).
-    <div class="highlight"><pre><span></span><code><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;React16AndReact18&#39;</span><span class="w"></span>
+    <div class="highlight"><pre><span></span><code><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;React16AndReact18&#39;</span>
 </code></pre></div></li>
 <li>Add a tsconfig.json file to each of the submodules:</li>
 <li>DxModule/SubModuleReact16/tsconfig.json and DxModule/SubModuleReact18/tsconfig.json
-   <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;compilerOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;outDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./dist/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;noImplicitAny&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;es6&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;es5&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;allowJs&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;moduleResolution&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;node&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;resolveJsonModule&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;esModuleInterop&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+   <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;compilerOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;outDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./dist/&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;noImplicitAny&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;es6&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;es5&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;allowJs&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;moduleResolution&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;node&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;resolveJsonModule&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;esModuleInterop&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></li>
 </ol>
 <h3 id="add-a-gradle-build-script">Add a Gradle Build Script</h3>
 <ol>
 <li>Add a DxModule/build.gradle file with the following content:
-   <div class="highlight"><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;ear&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;war&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;com.github.node-gradle.node&quot;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s2">&quot;3.4.0&quot;</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
-<span class="n">OperatingSystem</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">org</span><span class="o">.</span><span class="na">gradle</span><span class="o">.</span><span class="na">nativeplatform</span><span class="o">.</span><span class="na">platform</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">DefaultNativePlatform</span><span class="o">.</span><span class="na">getCurrentOperatingSystem</span><span class="o">()</span><span class="w"></span>
-<span class="n">Architecture</span><span class="w"> </span><span class="n">arch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">org</span><span class="o">.</span><span class="na">gradle</span><span class="o">.</span><span class="na">nativeplatform</span><span class="o">.</span><span class="na">platform</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">DefaultNativePlatform</span><span class="o">.</span><span class="na">getCurrentArchitecture</span><span class="o">()</span><span class="w"></span>
-<span class="kt">def</span><span class="w"> </span><span class="n">dxClientExec</span><span class="o">=</span><span class="s1">&#39;dxclient&#39;</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">os</span><span class="o">.</span><span class="na">windows</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">dxClientExec</span><span class="o">=</span><span class="s1">&#39;dxclient.bat&#39;</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+   <div class="highlight"><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;ear&#39;</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;war&#39;</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;com.github.node-gradle.node&quot;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s2">&quot;3.4.0&quot;</span>
+<span class="o">}</span>
+<span class="n">OperatingSystem</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">org</span><span class="o">.</span><span class="na">gradle</span><span class="o">.</span><span class="na">nativeplatform</span><span class="o">.</span><span class="na">platform</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">DefaultNativePlatform</span><span class="o">.</span><span class="na">getCurrentOperatingSystem</span><span class="o">()</span>
+<span class="n">Architecture</span><span class="w"> </span><span class="n">arch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">org</span><span class="o">.</span><span class="na">gradle</span><span class="o">.</span><span class="na">nativeplatform</span><span class="o">.</span><span class="na">platform</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">DefaultNativePlatform</span><span class="o">.</span><span class="na">getCurrentArchitecture</span><span class="o">()</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">dxClientExec</span><span class="o">=</span><span class="s1">&#39;dxclient&#39;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">os</span><span class="o">.</span><span class="na">windows</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">dxClientExec</span><span class="o">=</span><span class="s1">&#39;dxclient.bat&#39;</span>
+<span class="o">}</span>
 
 
-<span class="n">group</span><span class="w"> </span><span class="s1">&#39;com.company.dx.module.custom&#39;</span><span class="w"></span>
-<span class="c1">//version &#39;1.0-SNAPSHOT&#39;</span><span class="w"></span>
+<span class="n">group</span><span class="w"> </span><span class="s1">&#39;com.company.dx.module.custom&#39;</span>
+<span class="c1">//version &#39;1.0-SNAPSHOT&#39;</span>
 
-<span class="n">sourceCompatibility</span><span class="o">=</span><span class="mi">11</span><span class="w"></span>
-<span class="n">targetCompatibility</span><span class="o">=</span><span class="mi">11</span><span class="w"></span>
+<span class="n">sourceCompatibility</span><span class="o">=</span><span class="mi">11</span>
+<span class="n">targetCompatibility</span><span class="o">=</span><span class="mi">11</span>
 
-<span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">mavenLocal</span><span class="o">()</span><span class="w"></span>
-<span class="w">    </span><span class="n">mavenCentral</span><span class="o">()</span><span class="w"></span>
-<span class="w">    </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://plugins.gradle.org/m2/&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">mavenLocal</span><span class="o">()</span>
+<span class="w">    </span><span class="n">mavenCentral</span><span class="o">()</span>
+<span class="w">    </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://plugins.gradle.org/m2/&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
 
-<span class="n">dependencies</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">deploy</span><span class="w"> </span><span class="n">files</span><span class="o">(</span><span class="n">war</span><span class="o">)</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">deploy</span><span class="w"> </span><span class="n">files</span><span class="o">(</span><span class="n">war</span><span class="o">)</span>
+<span class="o">}</span>
 
-<span class="c1">// to make sure old files are not going to mix in the bundle</span><span class="w"></span>
-<span class="n">task</span><span class="w"> </span><span class="n">deleteDistDxModule</span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">delete</span><span class="o">(</span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;dist-dx-module&quot;</span><span class="o">))</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="c1">// to make sure old files are not going to mix in the bundle</span>
+<span class="n">task</span><span class="w"> </span><span class="n">deleteDistDxModule</span><span class="o">{</span>
+<span class="w">    </span><span class="n">delete</span><span class="o">(</span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;dist-dx-module&quot;</span><span class="o">))</span>
+<span class="o">}</span>
 
-<span class="kt">def</span><span class="w"> </span><span class="n">subModules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;subModulesCSV&quot;</span><span class="o">).</span><span class="na">split</span><span class="o">(</span><span class="s2">&quot;,&quot;</span><span class="o">)</span><span class="w"></span>
-<span class="kt">def</span><span class="w"> </span><span class="n">allSubModulesTasks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">tasks</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s2">&quot;deleteDistDxModule&quot;</span><span class="o">)]</span><span class="w"></span>
+<span class="kt">def</span><span class="w"> </span><span class="n">subModules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;subModulesCSV&quot;</span><span class="o">).</span><span class="na">split</span><span class="o">(</span><span class="s2">&quot;,&quot;</span><span class="o">)</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">allSubModulesTasks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">tasks</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s2">&quot;deleteDistDxModule&quot;</span><span class="o">)]</span>
 
-<span class="n">subModules</span><span class="o">.</span><span class="na">each</span><span class="o">{</span><span class="w"> </span><span class="n">subModule</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subModule</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;-&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">).</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">allSubModulesTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span><span class="w"></span>
-<span class="w">            </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmInstall&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;deleteDistDxModule&quot;</span><span class="o">]</span><span class="w"></span>
-<span class="w">                </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;${project.projectDir}/${subModule}&quot;</span><span class="o">)</span><span class="w"></span>
-<span class="w">                </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span><span class="w"></span>
-<span class="w">                </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;install&#39;</span><span class="o">]</span><span class="w"></span>
-<span class="w">            </span><span class="o">});</span><span class="w"></span>
-<span class="w">    </span><span class="n">allSubModulesTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span><span class="w"></span>
-<span class="w">            </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmBuild&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;npmInstall&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">]</span><span class="w"></span>
-<span class="w">                </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;${project.projectDir}/${subModule}&quot;</span><span class="o">)</span><span class="w"></span>
-<span class="w">                </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span><span class="w"></span>
-<span class="w">                </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;run&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;build-dxsubmodule&#39;</span><span class="o">]</span><span class="w"></span>
-<span class="w">            </span><span class="o">});</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">subModules</span><span class="o">.</span><span class="na">each</span><span class="o">{</span><span class="w"> </span><span class="n">subModule</span><span class="w"> </span><span class="o">-&gt;</span>
+<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subModule</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;-&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">).</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">);</span>
+<span class="w">    </span><span class="n">allSubModulesTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span>
+<span class="w">            </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmInstall&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;deleteDistDxModule&quot;</span><span class="o">]</span>
+<span class="w">                </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;${project.projectDir}/${subModule}&quot;</span><span class="o">)</span>
+<span class="w">                </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span>
+<span class="w">                </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;install&#39;</span><span class="o">]</span>
+<span class="w">            </span><span class="o">});</span>
+<span class="w">    </span><span class="n">allSubModulesTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span>
+<span class="w">            </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmBuild&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;npmInstall&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">]</span>
+<span class="w">                </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;${project.projectDir}/${subModule}&quot;</span><span class="o">)</span>
+<span class="w">                </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span>
+<span class="w">                </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;run&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;build-dxsubmodule&#39;</span><span class="o">]</span>
+<span class="w">            </span><span class="o">});</span>
+<span class="o">}</span>
 
-<span class="n">task</span><span class="w"> </span><span class="nf">buildAllSubModules</span><span class="o">(</span><span class="nl">dependsOn:</span><span class="w"> </span><span class="n">allSubModulesTasks</span><span class="o">){</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// an array named allSubModulesTasks was dynamically generated from the subModules array to contain all needed npm calls</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// all tasks needed were invoked via dependsOn parameter, so now we just need to echo that it&#39;s done</span><span class="w"></span>
-<span class="w">    </span><span class="n">doLast</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">println</span><span class="w"> </span><span class="s1">&#39;Task buildAllSubModules done&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">task</span><span class="w"> </span><span class="nf">buildAllSubModules</span><span class="o">(</span><span class="nl">dependsOn:</span><span class="w"> </span><span class="n">allSubModulesTasks</span><span class="o">){</span>
+<span class="w">    </span><span class="c1">// an array named allSubModulesTasks was dynamically generated from the subModules array to contain all needed npm calls</span>
+<span class="w">    </span><span class="c1">// all tasks needed were invoked via dependsOn parameter, so now we just need to echo that it&#39;s done</span>
+<span class="w">    </span><span class="n">doLast</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">println</span><span class="w"> </span><span class="s1">&#39;Task buildAllSubModules done&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
 
-<span class="c1">// to make sure the latest rootProject.name is in the web.xml file</span><span class="w"></span>
-<span class="n">task</span><span class="w"> </span><span class="n">deleteWebXml</span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">delete</span><span class="o">(</span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;build/tmp/war/web.xml&quot;</span><span class="o">))</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="c1">// to make sure the latest rootProject.name is in the web.xml file</span>
+<span class="n">task</span><span class="w"> </span><span class="n">deleteWebXml</span><span class="o">{</span>
+<span class="w">    </span><span class="n">delete</span><span class="o">(</span><span class="n">file</span><span class="o">(</span><span class="s2">&quot;build/tmp/war/web.xml&quot;</span><span class="o">))</span>
+<span class="o">}</span>
 
-<span class="n">task</span><span class="w"> </span><span class="nf">prepareWebXml</span><span class="w"> </span><span class="o">(</span><span class="nl">type:</span><span class="w"> </span><span class="n">Copy</span><span class="o">,</span><span class="w"> </span><span class="nl">dependsOn:</span><span class="w"> </span><span class="s1">&#39;deleteWebXml&#39;</span><span class="o">){</span><span class="w"></span>
-<span class="w">    </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;src/main/config/war/web.xml&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;build/tmp/war/&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="n">filter</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">it</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;@@auto-replaced-with-rootProject.name@@&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">)</span><span class="w"> </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">task</span><span class="w"> </span><span class="nf">prepareWebXml</span><span class="w"> </span><span class="o">(</span><span class="nl">type:</span><span class="w"> </span><span class="n">Copy</span><span class="o">,</span><span class="w"> </span><span class="nl">dependsOn:</span><span class="w"> </span><span class="s1">&#39;deleteWebXml&#39;</span><span class="o">){</span>
+<span class="w">    </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;src/main/config/war/web.xml&#39;</span>
+<span class="w">    </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;build/tmp/war/&#39;</span>
+<span class="w">    </span><span class="n">filter</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">it</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;@@auto-replaced-with-rootProject.name@@&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">)</span><span class="w"> </span><span class="o">}</span>
+<span class="o">}</span>
 
-<span class="n">war</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">dependsOn</span><span class="w"> </span><span class="n">buildAllSubModules</span><span class="o">,</span><span class="w"> </span><span class="n">prepareWebXml</span><span class="w"></span>
-<span class="w">    </span><span class="n">webAppDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;src/main/webapp/&#39;</span><span class="o">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">webXml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;build/tmp/war/web.xml&#39;</span><span class="o">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">from</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;src/main/config/war/WEB-INF/&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s1">&#39;*&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;WEB-INF&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="n">filter</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">it</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;@@auto-replaced-with-rootProject.name@@&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">)</span><span class="w"> </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">from</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;dist-dx-module&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s1">&#39;*&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">manifest</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">attributes</span><span class="w"> </span><span class="s1">&#39;Manifest-Version&#39;</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">        </span><span class="n">attributes</span><span class="w"> </span><span class="s1">&#39;Created-By&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">war</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">dependsOn</span><span class="w"> </span><span class="n">buildAllSubModules</span><span class="o">,</span><span class="w"> </span><span class="n">prepareWebXml</span>
+<span class="w">    </span><span class="n">webAppDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;src/main/webapp/&#39;</span><span class="o">)</span>
+<span class="w">    </span><span class="n">webXml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;build/tmp/war/web.xml&#39;</span><span class="o">)</span>
+<span class="w">    </span><span class="n">from</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;src/main/config/war/WEB-INF/&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;WEB-INF&#39;</span>
+<span class="w">        </span><span class="n">filter</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">it</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;@@auto-replaced-with-rootProject.name@@&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">)</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">from</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;dist-dx-module&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;/&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">manifest</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">attributes</span><span class="w"> </span><span class="s1">&#39;Manifest-Version&#39;</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="n">attributes</span><span class="w"> </span><span class="s1">&#39;Created-By&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
 
-<span class="n">ear</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">setLibDirName</span><span class="o">(</span><span class="kc">null</span><span class="o">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">deploymentDescriptor</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">setDisplayName</span><span class="o">(</span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">webModule</span><span class="o">(</span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s1">&#39;.war&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">setVersion</span><span class="o">(</span><span class="s1">&#39;1.4&#39;</span><span class="o">)</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">from</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;src/main/config/ear/META-INF/&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s1">&#39;*&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;META-INF&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">manifest</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">attributes</span><span class="w"> </span><span class="s1">&#39;Manifest-Version&#39;</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="w">        </span><span class="n">attributes</span><span class="w"> </span><span class="s1">&#39;Created-By&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">ear</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">setLibDirName</span><span class="o">(</span><span class="kc">null</span><span class="o">)</span>
+<span class="w">    </span><span class="n">deploymentDescriptor</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">setDisplayName</span><span class="o">(</span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">)</span>
+<span class="w">        </span><span class="n">webModule</span><span class="o">(</span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s1">&#39;.war&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">)</span>
+<span class="w">        </span><span class="n">setVersion</span><span class="o">(</span><span class="s1">&#39;1.4&#39;</span><span class="o">)</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">from</span><span class="w"> </span><span class="o">(</span><span class="s1">&#39;src/main/config/ear/META-INF/&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;META-INF&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">manifest</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">attributes</span><span class="w"> </span><span class="s1">&#39;Manifest-Version&#39;</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="n">attributes</span><span class="w"> </span><span class="s1">&#39;Created-By&#39;</span><span class="o">:</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
 
-<span class="kt">def</span><span class="w"> </span><span class="nf">getParamValue</span><span class="o">(</span><span class="n">String</span><span class="w"> </span><span class="n">paramName</span><span class="o">){</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">project</span><span class="o">.</span><span class="na">hasProperty</span><span class="o">(</span><span class="n">paramName</span><span class="o">)){</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="n">paramName</span><span class="o">)</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">getProperties</span><span class="o">().</span><span class="na">containsKey</span><span class="o">(</span><span class="n">paramName</span><span class="o">)){</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="n">paramName</span><span class="o">)</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="kt">def</span><span class="w"> </span><span class="nf">getParamValue</span><span class="o">(</span><span class="n">String</span><span class="w"> </span><span class="n">paramName</span><span class="o">){</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">project</span><span class="o">.</span><span class="na">hasProperty</span><span class="o">(</span><span class="n">paramName</span><span class="o">)){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="n">paramName</span><span class="o">)</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">getProperties</span><span class="o">().</span><span class="na">containsKey</span><span class="o">(</span><span class="n">paramName</span><span class="o">)){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="n">paramName</span><span class="o">)</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="o">}</span>
 
-<span class="kt">def</span><span class="w"> </span><span class="nf">checkRequiredParam</span><span class="o">(</span><span class="n">String</span><span class="w"> </span><span class="n">paramName</span><span class="o">){</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">getParamValue</span><span class="o">(</span><span class="n">paramName</span><span class="o">).</span><span class="na">trim</span><span class="o">()==</span><span class="s2">&quot;&quot;</span><span class="o">){</span><span class="w"></span>
-<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GradleException</span><span class="o">(</span><span class="s2">&quot;#### Required gradle parameter or env value: -D$paramName=&lt;****&gt; OR -P$paramName=&lt;****&gt; &quot;</span><span class="o">)</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="kt">def</span><span class="w"> </span><span class="nf">checkRequiredParam</span><span class="o">(</span><span class="n">String</span><span class="w"> </span><span class="n">paramName</span><span class="o">){</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">getParamValue</span><span class="o">(</span><span class="n">paramName</span><span class="o">).</span><span class="na">trim</span><span class="o">()==</span><span class="s2">&quot;&quot;</span><span class="o">){</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GradleException</span><span class="o">(</span><span class="s2">&quot;#### Required gradle parameter or env value: -D$paramName=&lt;****&gt; OR -P$paramName=&lt;****&gt; &quot;</span><span class="o">)</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
 
-<span class="n">task</span><span class="w"> </span><span class="nf">deployDxModule</span><span class="o">(</span><span class="nl">type:</span><span class="n">Exec</span><span class="o">,</span><span class="w"> </span><span class="nl">dependsOn:</span><span class="s1">&#39;ear&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">doFirst</span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">checkRequiredParam</span><span class="o">(</span><span class="s2">&quot;dxUsername&quot;</span><span class="o">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">checkRequiredParam</span><span class="o">(</span><span class="s2">&quot;dxPassword&quot;</span><span class="o">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">logger</span><span class="o">.</span><span class="na">quiet</span><span class="o">(</span><span class="s1">&#39;cd build/libs/&#39;</span><span class="o">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">logger</span><span class="o">.</span><span class="na">quiet</span><span class="o">(</span><span class="s1">&#39;dxclient deploy-application&#39;</span><span class="o">+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --dxUsername ****&#39;</span><span class="o">+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --dxPassword ****&#39;</span><span class="o">+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --dxConnectUsername ****&#39;</span><span class="o">+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --dxConnectPassword ****&#39;</span><span class="o">+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --applicationFile &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s1">&#39;.ear&#39;</span><span class="o">+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --applicationName &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --dxProtocol &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProtocol&quot;</span><span class="o">)+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --hostname &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxHostname&quot;</span><span class="o">)+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --dxPort &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxPort&quot;</span><span class="o">)+</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39; --dxProfileName &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProfileName&quot;</span><span class="o">));</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">workingDir</span><span class="w"> </span><span class="s1">&#39;./build/libs&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="nl">DXCLIENT_DISABLE_INTERACTIVE:</span><span class="s1">&#39;true&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="n">commandLine</span><span class="w"> </span><span class="n">dxClientExec</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;deploy-application&#39;</span><span class="o">,</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--dxUsername&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxUsername&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--dxPassword&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxPassword&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--dxConnectUsername&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxUsername&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--dxConnectPassword&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxPassword&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--applicationFile&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s1">&#39;.ear&#39;</span><span class="o">,</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--applicationName&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">,</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--dxProtocol&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProtocol&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--hostname&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxHostname&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--dxPort&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxPort&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                </span><span class="s1">&#39;--dxProfileName&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProfileName&quot;</span><span class="o">)</span><span class="w"></span>
+<span class="n">task</span><span class="w"> </span><span class="nf">deployDxModule</span><span class="o">(</span><span class="nl">type:</span><span class="n">Exec</span><span class="o">,</span><span class="w"> </span><span class="nl">dependsOn:</span><span class="s1">&#39;ear&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">doFirst</span><span class="o">{</span>
+<span class="w">        </span><span class="n">checkRequiredParam</span><span class="o">(</span><span class="s2">&quot;dxUsername&quot;</span><span class="o">)</span>
+<span class="w">        </span><span class="n">checkRequiredParam</span><span class="o">(</span><span class="s2">&quot;dxPassword&quot;</span><span class="o">)</span>
+<span class="w">        </span><span class="n">logger</span><span class="o">.</span><span class="na">quiet</span><span class="o">(</span><span class="s1">&#39;cd build/libs/&#39;</span><span class="o">)</span>
+<span class="w">        </span><span class="n">logger</span><span class="o">.</span><span class="na">quiet</span><span class="o">(</span><span class="s1">&#39;dxclient deploy-application&#39;</span><span class="o">+</span>
+<span class="w">                </span><span class="s1">&#39; --dxUsername ****&#39;</span><span class="o">+</span>
+<span class="w">                </span><span class="s1">&#39; --dxPassword ****&#39;</span><span class="o">+</span>
+<span class="w">                </span><span class="s1">&#39; --dxConnectUsername ****&#39;</span><span class="o">+</span>
+<span class="w">                </span><span class="s1">&#39; --dxConnectPassword ****&#39;</span><span class="o">+</span>
+<span class="w">                </span><span class="s1">&#39; --applicationFile &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s1">&#39;.ear&#39;</span><span class="o">+</span>
+<span class="w">                </span><span class="s1">&#39; --applicationName &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">+</span>
+<span class="w">                </span><span class="s1">&#39; --dxProtocol &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProtocol&quot;</span><span class="o">)+</span>
+<span class="w">                </span><span class="s1">&#39; --hostname &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxHostname&quot;</span><span class="o">)+</span>
+<span class="w">                </span><span class="s1">&#39; --dxPort &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxPort&quot;</span><span class="o">)+</span>
+<span class="w">                </span><span class="s1">&#39; --dxProfileName &#39;</span><span class="o">+</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProfileName&quot;</span><span class="o">));</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">workingDir</span><span class="w"> </span><span class="s1">&#39;./build/libs&#39;</span>
+<span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="nl">DXCLIENT_DISABLE_INTERACTIVE:</span><span class="s1">&#39;true&#39;</span>
+<span class="w">    </span><span class="n">commandLine</span><span class="w"> </span><span class="n">dxClientExec</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;deploy-application&#39;</span><span class="o">,</span>
+<span class="w">                </span><span class="s1">&#39;--dxUsername&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxUsername&quot;</span><span class="o">),</span>
+<span class="w">                </span><span class="s1">&#39;--dxPassword&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxPassword&quot;</span><span class="o">),</span>
+<span class="w">                </span><span class="s1">&#39;--dxConnectUsername&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxUsername&quot;</span><span class="o">),</span>
+<span class="w">                </span><span class="s1">&#39;--dxConnectPassword&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxPassword&quot;</span><span class="o">),</span>
+<span class="w">                </span><span class="s1">&#39;--applicationFile&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s1">&#39;.ear&#39;</span><span class="o">,</span>
+<span class="w">                </span><span class="s1">&#39;--applicationName&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="o">,</span>
+<span class="w">                </span><span class="s1">&#39;--dxProtocol&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProtocol&quot;</span><span class="o">),</span>
+<span class="w">                </span><span class="s1">&#39;--hostname&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxHostname&quot;</span><span class="o">),</span>
+<span class="w">                </span><span class="s1">&#39;--dxPort&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxPort&quot;</span><span class="o">),</span>
+<span class="w">                </span><span class="s1">&#39;--dxProfileName&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProfileName&quot;</span><span class="o">)</span>
 
-<span class="w">    </span><span class="n">standardOutput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ByteArrayOutputStream</span><span class="o">()</span><span class="w"></span>
-<span class="w">    </span><span class="n">ext</span><span class="o">.</span><span class="na">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">standardOutput</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">standardOutput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ByteArrayOutputStream</span><span class="o">()</span>
+<span class="w">    </span><span class="n">ext</span><span class="o">.</span><span class="na">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">standardOutput</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
 
-<span class="kt">def</span><span class="w"> </span><span class="n">allScriptAppsTasks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span><span class="w"></span>
-<span class="kt">def</span><span class="w"> </span><span class="n">baseFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;baseFolder&quot;</span><span class="o">)</span><span class="w"></span>
-<span class="kt">def</span><span class="w"> </span><span class="n">scriptAppFolders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;scriptAppFoldersCSV&quot;</span><span class="o">).</span><span class="na">split</span><span class="o">(</span><span class="s2">&quot;,&quot;</span><span class="o">)</span><span class="w"></span>
+<span class="kt">def</span><span class="w"> </span><span class="n">allScriptAppsTasks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">baseFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;baseFolder&quot;</span><span class="o">)</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">scriptAppFolders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;scriptAppFoldersCSV&quot;</span><span class="o">).</span><span class="na">split</span><span class="o">(</span><span class="s2">&quot;,&quot;</span><span class="o">)</span>
 
-<span class="n">scriptAppFolders</span><span class="o">.</span><span class="na">each</span><span class="o">{</span><span class="w"> </span><span class="n">folder</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">folder</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">folder</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="s2">&quot;/&quot;</span><span class="o">)+</span><span class="mi">1</span><span class="o">).</span><span class="na">trim</span><span class="o">().</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;-&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">).</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">);</span><span class="w"></span>
-<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">appBaseFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseFolder</span><span class="o">+</span><span class="n">folder</span><span class="w"></span>
-<span class="w">    </span><span class="n">allScriptAppsTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmCleanStored&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">delete</span><span class="o">(</span><span class="n">file</span><span class="o">(</span><span class="n">appBaseFolder</span><span class="o">+</span><span class="s2">&quot;/store/dist-dx-scriptapp/&quot;</span><span class="o">))</span><span class="w"></span>
-<span class="w">        </span><span class="o">});</span><span class="w"></span>
-<span class="w">    </span><span class="n">allScriptAppsTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmInstall&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;deployDxModule&#39;</span><span class="o">]</span><span class="w"></span>
-<span class="w">            </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">appBaseFolder</span><span class="o">)</span><span class="w"></span>
-<span class="w">            </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span><span class="w"></span>
-<span class="w">            </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;install&#39;</span><span class="o">]</span><span class="w"></span>
-<span class="w">        </span><span class="o">});</span><span class="w"></span>
-<span class="w">    </span><span class="n">allScriptAppsTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmBuild&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">dependsOn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;npmInstall&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">]</span><span class="w"></span>
-<span class="w">            </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;deployDxModule&#39;</span><span class="o">]</span><span class="w"></span>
-<span class="w">            </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">appBaseFolder</span><span class="o">)</span><span class="w"></span>
-<span class="w">            </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span><span class="w"></span>
-<span class="w">            </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;run&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;build&#39;</span><span class="o">]</span><span class="w"></span>
-<span class="w">        </span><span class="o">});</span><span class="w"></span>
-<span class="w">    </span><span class="n">allScriptAppsTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;deploy&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">dependsOn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;npmBuild&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;npmCleanStored&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">]</span><span class="w"></span>
-<span class="w">            </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;deployDxModule&#39;</span><span class="o">]</span><span class="w"></span>
-<span class="w">            </span><span class="n">environment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;dxUsername&#39;</span><span class="o">:</span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxUsername&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                           </span><span class="s1">&#39;dxPassword&#39;</span><span class="o">:</span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxPassword&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                           </span><span class="s1">&#39;dxProtocol&#39;</span><span class="o">:</span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProtocol&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                           </span><span class="s1">&#39;dxHostname&#39;</span><span class="o">:</span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxHostname&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                           </span><span class="s1">&#39;dxPort&#39;</span><span class="o">:</span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxPort&quot;</span><span class="o">),</span><span class="w"></span>
-<span class="w">                           </span><span class="s1">&#39;DXCLIENT_DISABLE_INTERACTIVE&#39;</span><span class="o">:</span><span class="s1">&#39;true&#39;</span><span class="o">]</span><span class="w"></span>
-<span class="w">            </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">appBaseFolder</span><span class="o">)</span><span class="w"></span>
-<span class="w">            </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span><span class="w"></span>
-<span class="w">            </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;run&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="na">windows</span><span class="o">?</span><span class="s1">&#39;dx-deploy-app-use-env-win&#39;</span><span class="o">:</span><span class="s1">&#39;dx-deploy-app-use-env&#39;</span><span class="o">]</span><span class="w"></span>
-<span class="w">        </span><span class="o">});</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">scriptAppFolders</span><span class="o">.</span><span class="na">each</span><span class="o">{</span><span class="w"> </span><span class="n">folder</span><span class="w"> </span><span class="o">-&gt;</span>
+<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">folder</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">folder</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="o">(</span><span class="s2">&quot;/&quot;</span><span class="o">)+</span><span class="mi">1</span><span class="o">).</span><span class="na">trim</span><span class="o">().</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;-&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">).</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">,</span><span class="s1">&#39;&#39;</span><span class="o">);</span>
+<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">appBaseFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseFolder</span><span class="o">+</span><span class="n">folder</span>
+<span class="w">    </span><span class="n">allScriptAppsTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span>
+<span class="w">        </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmCleanStored&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">delete</span><span class="o">(</span><span class="n">file</span><span class="o">(</span><span class="n">appBaseFolder</span><span class="o">+</span><span class="s2">&quot;/store/dist-dx-scriptapp/&quot;</span><span class="o">))</span>
+<span class="w">        </span><span class="o">});</span>
+<span class="w">    </span><span class="n">allScriptAppsTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span>
+<span class="w">        </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmInstall&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;deployDxModule&#39;</span><span class="o">]</span>
+<span class="w">            </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">appBaseFolder</span><span class="o">)</span>
+<span class="w">            </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span>
+<span class="w">            </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;install&#39;</span><span class="o">]</span>
+<span class="w">        </span><span class="o">});</span>
+<span class="w">    </span><span class="n">allScriptAppsTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span>
+<span class="w">        </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;npmBuild&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">dependsOn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;npmInstall&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">]</span>
+<span class="w">            </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;deployDxModule&#39;</span><span class="o">]</span>
+<span class="w">            </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">appBaseFolder</span><span class="o">)</span>
+<span class="w">            </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span>
+<span class="w">            </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;run&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;build&#39;</span><span class="o">]</span>
+<span class="w">        </span><span class="o">});</span>
+<span class="w">    </span><span class="n">allScriptAppsTasks</span><span class="o">.</span><span class="na">add</span><span class="w"> </span><span class="o">(</span>
+<span class="w">        </span><span class="n">tasks</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="w"> </span><span class="s1">&#39;deploy&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="n">NpxTask</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">dependsOn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;npmBuild&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;npmCleanStored&#39;</span><span class="o">+</span><span class="n">appName</span><span class="o">]</span>
+<span class="w">            </span><span class="n">shouldRunAfter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;deployDxModule&#39;</span><span class="o">]</span>
+<span class="w">            </span><span class="n">environment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;dxUsername&#39;</span><span class="o">:</span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxUsername&quot;</span><span class="o">),</span>
+<span class="w">                           </span><span class="s1">&#39;dxPassword&#39;</span><span class="o">:</span><span class="n">getParamValue</span><span class="o">(</span><span class="s2">&quot;dxPassword&quot;</span><span class="o">),</span>
+<span class="w">                           </span><span class="s1">&#39;dxProtocol&#39;</span><span class="o">:</span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxProtocol&quot;</span><span class="o">),</span>
+<span class="w">                           </span><span class="s1">&#39;dxHostname&#39;</span><span class="o">:</span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxHostname&quot;</span><span class="o">),</span>
+<span class="w">                           </span><span class="s1">&#39;dxPort&#39;</span><span class="o">:</span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;dxPort&quot;</span><span class="o">),</span>
+<span class="w">                           </span><span class="s1">&#39;DXCLIENT_DISABLE_INTERACTIVE&#39;</span><span class="o">:</span><span class="s1">&#39;true&#39;</span><span class="o">]</span>
+<span class="w">            </span><span class="n">workingDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">appBaseFolder</span><span class="o">)</span>
+<span class="w">            </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;npm&#39;</span>
+<span class="w">            </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;run&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="na">windows</span><span class="o">?</span><span class="s1">&#39;dx-deploy-app-use-env-win&#39;</span><span class="o">:</span><span class="s1">&#39;dx-deploy-app-use-env&#39;</span><span class="o">]</span>
+<span class="w">        </span><span class="o">});</span>
+<span class="o">}</span>
 
-<span class="n">task</span><span class="w"> </span><span class="nf">deployAllScriptApps</span><span class="o">(</span><span class="nl">dependsOn:</span><span class="w"> </span><span class="n">allScriptAppsTasks</span><span class="o">){</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// an array named allScriptAppsTasks was dynamically generated from the scriptApps array to contain all needed npm calls</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// all tasks needed were invoked via dependsOn parameter, so now we just need to echo that it&#39;s done</span><span class="w"></span>
-<span class="w">    </span><span class="n">doLast</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">println</span><span class="w"> </span><span class="s1">&#39;Task deployAllScriptApps done&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">task</span><span class="w"> </span><span class="nf">deployAllScriptApps</span><span class="o">(</span><span class="nl">dependsOn:</span><span class="w"> </span><span class="n">allScriptAppsTasks</span><span class="o">){</span>
+<span class="w">    </span><span class="c1">// an array named allScriptAppsTasks was dynamically generated from the scriptApps array to contain all needed npm calls</span>
+<span class="w">    </span><span class="c1">// all tasks needed were invoked via dependsOn parameter, so now we just need to echo that it&#39;s done</span>
+<span class="w">    </span><span class="n">doLast</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">println</span><span class="w"> </span><span class="s1">&#39;Task deployAllScriptApps done&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
 
-<span class="n">task</span><span class="w"> </span><span class="nf">deployAll</span><span class="o">(</span><span class="nl">dependsOn:</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;deployDxModule&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;deployAllScriptApps&#39;</span><span class="o">]){</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// all tasks needed were invoked via dependsOn parameter</span><span class="w"></span>
-<span class="w">    </span><span class="n">doLast</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">println</span><span class="w"> </span><span class="s1">&#39;Task deployAll done&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="n">task</span><span class="w"> </span><span class="nf">deployAll</span><span class="o">(</span><span class="nl">dependsOn:</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;deployDxModule&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;deployAllScriptApps&#39;</span><span class="o">]){</span>
+<span class="w">    </span><span class="c1">// all tasks needed were invoked via dependsOn parameter</span>
+<span class="w">    </span><span class="n">doLast</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">println</span><span class="w"> </span><span class="s1">&#39;Task deployAll done&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
 
 
-<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">project</span><span class="o">.</span><span class="na">hasProperty</span><span class="o">(</span><span class="s2">&quot;nodeInstall&quot;</span><span class="o">))</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Workaround node grade plugin not working on apple silicon https://github.com/node-gradle/gradle-node-plugin/issues/154</span><span class="w"></span>
-<span class="w">    </span><span class="n">Boolean</span><span class="w"> </span><span class="n">downloadNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">os</span><span class="o">.</span><span class="na">isMacOsX</span><span class="o">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">arch</span><span class="o">.</span><span class="na">isAmd64</span><span class="o">()</span><span class="w"></span>
-<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;nodeVersion&quot;</span><span class="o">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">npmVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;npmVersion&quot;</span><span class="o">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">download</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">downloadNode</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">project</span><span class="o">.</span><span class="na">hasProperty</span><span class="o">(</span><span class="s2">&quot;nodeInstall&quot;</span><span class="o">))</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1">// Workaround node grade plugin not working on apple silicon https://github.com/node-gradle/gradle-node-plugin/issues/154</span>
+<span class="w">    </span><span class="n">Boolean</span><span class="w"> </span><span class="n">downloadNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">os</span><span class="o">.</span><span class="na">isMacOsX</span><span class="o">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">arch</span><span class="o">.</span><span class="na">isAmd64</span><span class="o">()</span>
+<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;nodeVersion&quot;</span><span class="o">)</span>
+<span class="w">        </span><span class="n">npmVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s2">&quot;npmVersion&quot;</span><span class="o">)</span>
+<span class="w">        </span><span class="n">download</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">downloadNode</span>
+<span class="w">    </span><span class="o">}</span>
 
-<span class="w">    </span><span class="c1">// Copy local node and npm to a fixed location for npmw</span><span class="w"></span>
-<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">fixedNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tasks</span><span class="o">.</span><span class="na">register</span><span class="o">(</span><span class="s2">&quot;fixedNode&quot;</span><span class="o">,</span><span class="w"> </span><span class="n">Copy</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">from</span><span class="w"> </span><span class="n">nodeSetup</span><span class="w"></span>
-<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;build/node&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">tasks</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s2">&quot;nodeSetup&quot;</span><span class="o">).</span><span class="na">configure</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">finalizedBy</span><span class="w"> </span><span class="n">fixedNode</span><span class="w"> </span><span class="o">}</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Copy local node and npm to a fixed location for npmw</span>
+<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">fixedNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tasks</span><span class="o">.</span><span class="na">register</span><span class="o">(</span><span class="s2">&quot;fixedNode&quot;</span><span class="o">,</span><span class="w"> </span><span class="n">Copy</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">from</span><span class="w"> </span><span class="n">nodeSetup</span>
+<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;build/node&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">tasks</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s2">&quot;nodeSetup&quot;</span><span class="o">).</span><span class="na">configure</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">finalizedBy</span><span class="w"> </span><span class="n">fixedNode</span><span class="w"> </span><span class="o">}</span>
 
-<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">fixedNpm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tasks</span><span class="o">.</span><span class="na">register</span><span class="o">(</span><span class="s2">&quot;fixedNpm&quot;</span><span class="o">,</span><span class="w"> </span><span class="n">Copy</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">from</span><span class="w"> </span><span class="n">npmSetup</span><span class="w"></span>
-<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;build/node&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">tasks</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s2">&quot;npmSetup&quot;</span><span class="o">).</span><span class="na">configure</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">finalizedBy</span><span class="w"> </span><span class="n">fixedNpm</span><span class="w"> </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
+<span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">fixedNpm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tasks</span><span class="o">.</span><span class="na">register</span><span class="o">(</span><span class="s2">&quot;fixedNpm&quot;</span><span class="o">,</span><span class="w"> </span><span class="n">Copy</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">from</span><span class="w"> </span><span class="n">npmSetup</span>
+<span class="w">        </span><span class="n">into</span><span class="w"> </span><span class="s1">&#39;build/node&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">tasks</span><span class="o">.</span><span class="na">named</span><span class="o">(</span><span class="s2">&quot;npmSetup&quot;</span><span class="o">).</span><span class="na">configure</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">finalizedBy</span><span class="w"> </span><span class="n">fixedNpm</span><span class="w"> </span><span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></li>
 </ol>
 <h3 id="add-webpack-files">Add Webpack Files</h3>
 <ol>
 <li>Add a webpack file to each of the submodules. Assign a unique filename(path) for the DLL Manifest that could describe the submodule.<ul>
 <li>DxModule/SubModuleReact16/webpack.react16.js and DxModule/SubModuleReact18/webpack.react18.js
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;terser-webpack-plugin&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mini-css-extract-plugin&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mini-svg-data-uri&#39;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span>
+<span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;terser-webpack-plugin&quot;</span><span class="p">);</span>
+<span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mini-css-extract-plugin&#39;</span><span class="p">);</span>
+<span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span>
+<span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mini-svg-data-uri&#39;</span><span class="p">);</span>
 
-<span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">     </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nx">dxmodules</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./modules-index.js&#39;</span><span class="w"></span>
-<span class="w">     </span><span class="p">},</span><span class="w"></span>
-<span class="w">     </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">     </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;web&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">     </span><span class="nx">node</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">global</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
-<span class="w">     </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dx-module&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">         </span><span class="nx">library</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="w"></span>
-<span class="w">     </span><span class="p">},</span><span class="w"></span>
-<span class="w">     </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">         </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">             </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">             </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest.json&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">             </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="p">}),</span><span class="w"></span>
-<span class="w">         </span><span class="ow">new</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">             </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.css&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">         </span><span class="p">})</span><span class="w"></span>
-<span class="w">     </span><span class="p">],</span><span class="w"></span>
-<span class="w">     </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nx">extensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;.ts&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;.js&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;.json&#39;</span><span class="p">]</span><span class="w"></span>
-<span class="w">     </span><span class="p">},</span><span class="w"></span>
-<span class="w">     </span><span class="nx">optimization</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nx">minimizer</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">             </span><span class="ow">new</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="p">(),</span><span class="w"></span>
-<span class="w">         </span><span class="p">]</span><span class="w"></span>
-<span class="w">     </span><span class="p">},</span><span class="w"></span>
-<span class="w">     </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">         </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">             </span><span class="p">{</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(js|mjs|jsx|ts|tsx)$/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ts-loader&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="sr">/node_modules/</span><span class="p">,</span><span class="w"></span>
-<span class="w">             </span><span class="p">},</span><span class="w"></span>
-<span class="w">             </span><span class="p">{</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.css$/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">                     </span><span class="nx">MiniCssExtractPlugin</span><span class="p">.</span><span class="nx">loader</span><span class="p">,</span><span class="w"></span>
-<span class="w">                     </span><span class="s1">&#39;css-loader&#39;</span><span class="w"></span>
-<span class="w">                 </span><span class="p">],</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">                     </span><span class="sr">/smart-/</span><span class="w"></span>
-<span class="w">                 </span><span class="p">]</span><span class="w"></span>
-<span class="w">             </span><span class="p">},</span><span class="w"></span>
-<span class="w">             </span><span class="p">{</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.scss$/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">                     </span><span class="nx">MiniCssExtractPlugin</span><span class="p">.</span><span class="nx">loader</span><span class="p">,</span><span class="w"></span>
-<span class="w">                     </span><span class="s1">&#39;css-loader&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                     </span><span class="s1">&#39;sass-loader&#39;</span><span class="w"></span>
-<span class="w">                 </span><span class="p">],</span><span class="w"></span>
-<span class="w">             </span><span class="p">},</span><span class="w"></span>
-<span class="w">             </span><span class="p">{</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.svg/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset/inline&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">generator</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                     </span><span class="nx">dataUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                         </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span><span class="w"></span>
-<span class="w">                         </span><span class="k">return</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span><span class="w"></span>
-<span class="w">                     </span><span class="p">}</span><span class="w"></span>
-<span class="w">                 </span><span class="p">}</span><span class="w"></span>
-<span class="w">             </span><span class="p">},</span><span class="w"></span>
-<span class="w">             </span><span class="p">{</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(png|jpg|jpeg|gif|woff|woff2|ttf|eot)$/</span><span class="p">,</span><span class="w"></span>
-<span class="w">                 </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset&#39;</span><span class="w"></span>
-<span class="w">             </span><span class="p">},</span><span class="w"></span>
-<span class="w">         </span><span class="p">]</span><span class="w"></span>
-<span class="w">     </span><span class="p">},</span><span class="w"></span>
-<span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nx">entry</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nx">dxmodules</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./modules-index.js&#39;</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;web&#39;</span><span class="p">,</span>
+<span class="w">     </span><span class="nx">node</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">global</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="w">     </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.js&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dist-dx-module&quot;</span><span class="p">),</span>
+<span class="w">         </span><span class="nx">library</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">         </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span>
+<span class="w">             </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest.json&quot;</span><span class="p">),</span>
+<span class="w">             </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">         </span><span class="p">}),</span>
+<span class="w">         </span><span class="ow">new</span><span class="w"> </span><span class="nx">MiniCssExtractPlugin</span><span class="p">({</span>
+<span class="w">             </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name].bundle.css&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="p">})</span>
+<span class="w">     </span><span class="p">],</span>
+<span class="w">     </span><span class="nx">resolve</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nx">extensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;.ts&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;.js&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;.json&#39;</span><span class="p">]</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="nx">optimization</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nx">minimizer</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">             </span><span class="ow">new</span><span class="w"> </span><span class="nx">TerserPlugin</span><span class="p">(),</span>
+<span class="w">         </span><span class="p">]</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">             </span><span class="p">{</span>
+<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(js|mjs|jsx|ts|tsx)$/</span><span class="p">,</span>
+<span class="w">                 </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ts-loader&#39;</span><span class="p">,</span>
+<span class="w">                 </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="sr">/node_modules/</span><span class="p">,</span>
+<span class="w">             </span><span class="p">},</span>
+<span class="w">             </span><span class="p">{</span>
+<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.css$/</span><span class="p">,</span>
+<span class="w">                 </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                     </span><span class="nx">MiniCssExtractPlugin</span><span class="p">.</span><span class="nx">loader</span><span class="p">,</span>
+<span class="w">                     </span><span class="s1">&#39;css-loader&#39;</span>
+<span class="w">                 </span><span class="p">],</span>
+<span class="w">                 </span><span class="nx">exclude</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                     </span><span class="sr">/smart-/</span>
+<span class="w">                 </span><span class="p">]</span>
+<span class="w">             </span><span class="p">},</span>
+<span class="w">             </span><span class="p">{</span>
+<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.scss$/</span><span class="p">,</span>
+<span class="w">                 </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                     </span><span class="nx">MiniCssExtractPlugin</span><span class="p">.</span><span class="nx">loader</span><span class="p">,</span>
+<span class="w">                     </span><span class="s1">&#39;css-loader&#39;</span><span class="p">,</span>
+<span class="w">                     </span><span class="s1">&#39;sass-loader&#39;</span>
+<span class="w">                 </span><span class="p">],</span>
+<span class="w">             </span><span class="p">},</span>
+<span class="w">             </span><span class="p">{</span>
+<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.svg/</span><span class="p">,</span>
+<span class="w">                 </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset/inline&#39;</span><span class="p">,</span>
+<span class="w">                 </span><span class="nx">generator</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                     </span><span class="nx">dataUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                         </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">content</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+<span class="w">                         </span><span class="k">return</span><span class="w"> </span><span class="nx">svgToMiniDataURI</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span>
+<span class="w">                     </span><span class="p">}</span>
+<span class="w">                 </span><span class="p">}</span>
+<span class="w">             </span><span class="p">},</span>
+<span class="w">             </span><span class="p">{</span>
+<span class="w">                 </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="sr">/\.(png|jpg|jpeg|gif|woff|woff2|ttf|eot)$/</span><span class="p">,</span>
+<span class="w">                 </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;asset&#39;</span>
+<span class="w">             </span><span class="p">},</span>
+<span class="w">         </span><span class="p">]</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w"> </span><span class="p">};</span>
 </code></pre></div></li>
 <li>DxModule/SubModuleReact16/webpack.react16.js
-<div class="highlight"><pre><span></span><code><span class="p">...</span><span class="w"></span>
-<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">            </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest-react16.json&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">            </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="p">}),</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">...</span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest-react16.json&quot;</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="p">}),</span>
+<span class="p">...</span>
 </code></pre></div></li>
 <li>DxModule/SubModuleReact16/webpack.react18.js
-<div class="highlight"><pre><span></span><code><span class="p">...</span><span class="w"></span>
-<span class="w">       </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span><span class="w"></span>
-<span class="w">           </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">           </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest-react18.json&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">           </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="p">}),</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">...</span>
+<span class="w">       </span><span class="ow">new</span><span class="w"> </span><span class="nx">DllPlugin</span><span class="p">({</span>
+<span class="w">           </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[name]_[fullhash]&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;./dx-dll-manifest-react18.json&quot;</span><span class="p">),</span>
+<span class="w">           </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">       </span><span class="p">}),</span>
+<span class="p">...</span>
 </code></pre></div></li>
 </ul>
 </li>
@@ -1640,62 +1640,62 @@
 <p>Create the plugin.xml file in the DxModule/src/main/config/war/WEB-INF folder. Note that each generated JS and CSS files in the dist-dx-module folder after a DX Module build needs to be declared in the plugin.xml file.</p>
 <ul>
 <li>Single Sub Module
-<div class="highlight"><pre><span></span><code>  <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
-  <span class="cp">&lt;?eclipse version=&quot;3.0&quot;?&gt;</span>
-  <span class="nt">&lt;plugin</span> <span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span> <span class="na">name=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span> <span class="na">provider-name=</span><span class="s">&quot;IBM&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span class="w">  </span><span class="cp">&lt;?eclipse version=&quot;3.0&quot;?&gt;</span>
+<span class="w">  </span><span class="nt">&lt;plugin</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span><span class="w"> </span><span class="na">provider-name=</span><span class="s">&quot;IBM&quot;</span><span class="nt">&gt;</span>
 
-    <span class="nt">&lt;extension</span> <span class="na">point=</span><span class="s">&quot;com.ibm.portal.resourceaggregator.module&quot;</span> <span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;module</span> <span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;contribution</span> <span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;sub-contribution</span> <span class="na">type=</span><span class="s">&quot;js&quot;</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;uri</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.js&quot;</span><span class="nt">/&gt;</span>
-                    <span class="nt">&lt;uri</span> <span class="na">type=</span><span class="s">&quot;debug&quot;</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.js&quot;</span><span class="nt">/&gt;</span>
-                <span class="nt">&lt;/sub-contribution&gt;</span>
-            <span class="nt">&lt;/contribution&gt;</span>
-            <span class="nt">&lt;contribution</span> <span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;sub-contribution</span> <span class="na">type=</span><span class="s">&quot;css&quot;</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;uri</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.css&quot;</span><span class="nt">/&gt;</span>
-                    <span class="nt">&lt;uri</span> <span class="na">type=</span><span class="s">&quot;debug&quot;</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.css&quot;</span><span class="nt">/&gt;</span>
-                <span class="nt">&lt;/sub-contribution&gt;</span>
-            <span class="nt">&lt;/contribution&gt;</span>
-        <span class="nt">&lt;/module&gt;</span>
-    <span class="nt">&lt;/extension&gt;</span>
-  <span class="nt">&lt;/plugin&gt;</span>
+<span class="w">    </span><span class="nt">&lt;extension</span><span class="w"> </span><span class="na">point=</span><span class="s">&quot;com.ibm.portal.resourceaggregator.module&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;module</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;sub-contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;js&quot;</span><span class="nt">&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.js&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;debug&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.js&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/sub-contribution&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/contribution&gt;</span>
+<span class="w">            </span><span class="nt">&lt;contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;sub-contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;css&quot;</span><span class="nt">&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.css&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;debug&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/dxmodules.bundle.css&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/sub-contribution&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/contribution&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/module&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/extension&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/plugin&gt;</span>
 </code></pre></div></li>
 <li>Multiple Sub Modules
-<div class="highlight"><pre><span></span><code> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
- <span class="cp">&lt;?eclipse version=&quot;3.0&quot;?&gt;</span>
- <span class="nt">&lt;plugin</span> <span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span> <span class="na">name=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span> <span class="na">provider-name=</span><span class="s">&quot;IBM&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span class="w"> </span><span class="cp">&lt;?eclipse version=&quot;3.0&quot;?&gt;</span>
+<span class="w"> </span><span class="nt">&lt;plugin</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span><span class="w"> </span><span class="na">provider-name=</span><span class="s">&quot;IBM&quot;</span><span class="nt">&gt;</span>
 
-   <span class="nt">&lt;extension</span> <span class="na">point=</span><span class="s">&quot;com.ibm.portal.resourceaggregator.module&quot;</span> <span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
-       <span class="nt">&lt;module</span> <span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
-           <span class="nt">&lt;contribution</span> <span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;sub-contribution</span> <span class="na">type=</span><span class="s">&quot;js&quot;</span><span class="nt">&gt;</span>
-                   <span class="nt">&lt;uri</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react16.bundle.js&quot;</span><span class="nt">/&gt;</span>
-                   <span class="nt">&lt;uri</span> <span class="na">type=</span><span class="s">&quot;debug&quot;</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react16.bundle.js&quot;</span><span class="nt">/&gt;</span>
-               <span class="nt">&lt;/sub-contribution&gt;</span>
-           <span class="nt">&lt;/contribution&gt;</span>
-           <span class="nt">&lt;contribution</span> <span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;sub-contribution</span> <span class="na">type=</span><span class="s">&quot;js&quot;</span><span class="nt">&gt;</span>
-                   <span class="nt">&lt;uri</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react18.bundle.js&quot;</span><span class="nt">/&gt;</span>
-                   <span class="nt">&lt;uri</span> <span class="na">type=</span><span class="s">&quot;debug&quot;</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react18.bundle.js&quot;</span><span class="nt">/&gt;</span>
-               <span class="nt">&lt;/sub-contribution&gt;</span>
-           <span class="nt">&lt;/contribution&gt;</span>
-           <span class="nt">&lt;contribution</span> <span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;sub-contribution</span> <span class="na">type=</span><span class="s">&quot;css&quot;</span><span class="nt">&gt;</span>
-                   <span class="nt">&lt;uri</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react16.bundle.css&quot;</span><span class="nt">/&gt;</span>
-                   <span class="nt">&lt;uri</span> <span class="na">type=</span><span class="s">&quot;debug&quot;</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react16.bundle.css&quot;</span><span class="nt">/&gt;</span>
-               <span class="nt">&lt;/sub-contribution&gt;</span>
-           <span class="nt">&lt;/contribution&gt;</span>
-           <span class="nt">&lt;contribution</span> <span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;sub-contribution</span> <span class="na">type=</span><span class="s">&quot;css&quot;</span><span class="nt">&gt;</span>
-                   <span class="nt">&lt;uri</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react18.bundle.css&quot;</span><span class="nt">/&gt;</span>
-                   <span class="nt">&lt;uri</span> <span class="na">type=</span><span class="s">&quot;debug&quot;</span> <span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react18.bundle.css&quot;</span><span class="nt">/&gt;</span>
-               <span class="nt">&lt;/sub-contribution&gt;</span>
-           <span class="nt">&lt;/contribution&gt;</span>
-       <span class="nt">&lt;/module&gt;</span>
-   <span class="nt">&lt;/extension&gt;</span>
- <span class="nt">&lt;/plugin&gt;</span>
+<span class="w">   </span><span class="nt">&lt;extension</span><span class="w"> </span><span class="na">point=</span><span class="s">&quot;com.ibm.portal.resourceaggregator.module&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;module</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">&gt;</span>
+<span class="w">           </span><span class="nt">&lt;contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
+<span class="w">               </span><span class="nt">&lt;sub-contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;js&quot;</span><span class="nt">&gt;</span>
+<span class="w">                   </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react16.bundle.js&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                   </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;debug&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react16.bundle.js&quot;</span><span class="nt">/&gt;</span>
+<span class="w">               </span><span class="nt">&lt;/sub-contribution&gt;</span>
+<span class="w">           </span><span class="nt">&lt;/contribution&gt;</span>
+<span class="w">           </span><span class="nt">&lt;contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
+<span class="w">               </span><span class="nt">&lt;sub-contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;js&quot;</span><span class="nt">&gt;</span>
+<span class="w">                   </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react18.bundle.js&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                   </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;debug&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react18.bundle.js&quot;</span><span class="nt">/&gt;</span>
+<span class="w">               </span><span class="nt">&lt;/sub-contribution&gt;</span>
+<span class="w">           </span><span class="nt">&lt;/contribution&gt;</span>
+<span class="w">           </span><span class="nt">&lt;contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
+<span class="w">               </span><span class="nt">&lt;sub-contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;css&quot;</span><span class="nt">&gt;</span>
+<span class="w">                   </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react16.bundle.css&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                   </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;debug&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react16.bundle.css&quot;</span><span class="nt">/&gt;</span>
+<span class="w">               </span><span class="nt">&lt;/sub-contribution&gt;</span>
+<span class="w">           </span><span class="nt">&lt;/contribution&gt;</span>
+<span class="w">           </span><span class="nt">&lt;contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;head&quot;</span><span class="nt">&gt;</span>
+<span class="w">               </span><span class="nt">&lt;sub-contribution</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;css&quot;</span><span class="nt">&gt;</span>
+<span class="w">                   </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react18.bundle.css&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                   </span><span class="nt">&lt;uri</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;debug&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;res:{war:context-root}/react18.bundle.css&quot;</span><span class="nt">/&gt;</span>
+<span class="w">               </span><span class="nt">&lt;/sub-contribution&gt;</span>
+<span class="w">           </span><span class="nt">&lt;/contribution&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/module&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/extension&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/plugin&gt;</span>
 </code></pre></div></li>
 </ul>
 </li>
@@ -1735,36 +1735,36 @@ grant codeBase &quot;file:${ejbComponent}&quot; {
 <li>
 <p>Create the ibm-web-bnd.xmi file in the DxModule/src/main/config/war/WEB-INF folder:
     <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;webappbnd:WebAppBinding</span> <span class="na">xmi:version=</span><span class="s">&quot;2.0&quot;</span> <span class="na">xmlns:xmi=</span><span class="s">&quot;http://www.omg.org/XMI&quot;</span> <span class="na">xmlns:webappbnd=</span><span class="s">&quot;webappbnd.xmi&quot;</span> <span class="na">xmi:id=</span><span class="s">&quot;WebAppBinding_1203959801006&quot;</span> <span class="na">virtualHostName=</span><span class="s">&quot;default_host&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;webapp</span> <span class="na">href=</span><span class="s">&quot;WEB-INF/web.xml#@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;webappbnd:WebAppBinding</span><span class="w"> </span><span class="na">xmi:version=</span><span class="s">&quot;2.0&quot;</span><span class="w"> </span><span class="na">xmlns:xmi=</span><span class="s">&quot;http://www.omg.org/XMI&quot;</span><span class="w"> </span><span class="na">xmlns:webappbnd=</span><span class="s">&quot;webappbnd.xmi&quot;</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;WebAppBinding_1203959801006&quot;</span><span class="w"> </span><span class="na">virtualHostName=</span><span class="s">&quot;default_host&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;webapp</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;WEB-INF/web.xml#@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/webappbnd:WebAppBinding&gt;</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>Create the ibm-web-ext.xmi file in the DxModule/src/main/config/war/WEB-INF folder:
    <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;webappext:WebAppExtension</span> <span class="na">xmi:version=</span><span class="s">&quot;2.0&quot;</span> <span class="na">xmlns:xmi=</span><span class="s">&quot;http://www.omg.org/XMI&quot;</span> <span class="na">xmlns:webappext=</span><span class="s">&quot;webappext.xmi&quot;</span> <span class="na">xmi:id=</span><span class="s">&quot;WebAppExtension_1203959801006&quot;</span> <span class="na">reloadInterval=</span><span class="s">&quot;3&quot;</span> <span class="na">reloadingEnabled=</span><span class="s">&quot;true&quot;</span> <span class="na">additionalClassPath=</span><span class="s">&quot;&quot;</span> <span class="na">fileServingEnabled=</span><span class="s">&quot;true&quot;</span> <span class="na">directoryBrowsingEnabled=</span><span class="s">&quot;false&quot;</span> <span class="na">serveServletsByClassnameEnabled=</span><span class="s">&quot;false&quot;</span> <span class="na">preCompileJSPs=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;webApp</span> <span class="na">href=</span><span class="s">&quot;WEB-INF/web.xml#@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;jspAttributes</span> <span class="na">xmi:id=</span><span class="s">&quot;JSPAttribute_1&quot;</span> <span class="na">name=</span><span class="s">&quot;jdkSourceLevel&quot;</span> <span class="na">value=</span><span class="s">&quot;15&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;jspAttributes</span> <span class="na">xmi:id=</span><span class="s">&quot;JSPAttribute_2&quot;</span> <span class="na">name=</span><span class="s">&quot;keepgenerated&quot;</span> <span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;webappext:WebAppExtension</span><span class="w"> </span><span class="na">xmi:version=</span><span class="s">&quot;2.0&quot;</span><span class="w"> </span><span class="na">xmlns:xmi=</span><span class="s">&quot;http://www.omg.org/XMI&quot;</span><span class="w"> </span><span class="na">xmlns:webappext=</span><span class="s">&quot;webappext.xmi&quot;</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;WebAppExtension_1203959801006&quot;</span><span class="w"> </span><span class="na">reloadInterval=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">reloadingEnabled=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">additionalClassPath=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">fileServingEnabled=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">directoryBrowsingEnabled=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">serveServletsByClassnameEnabled=</span><span class="s">&quot;false&quot;</span><span class="w"> </span><span class="na">preCompileJSPs=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;webApp</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;WEB-INF/web.xml#@@auto-replaced-with-rootProject.name@@&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;jspAttributes</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;JSPAttribute_1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jdkSourceLevel&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;15&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;jspAttributes</span><span class="w"> </span><span class="na">xmi:id=</span><span class="s">&quot;JSPAttribute_2&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;keepgenerated&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/webappext:WebAppExtension&gt;</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>Create the template web.xml file in the DxModule/src/main/config/war folder:
    <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;web-app</span> <span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span> <span class="na">version=</span><span class="s">&quot;2.4&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://java.sun.com/xml/ns/j2ee&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;display-name&gt;</span>@@auto-replaced-with-rootProject.name@@<span class="nt">&lt;/display-name&gt;</span>
-    <span class="nt">&lt;context-param&gt;</span>
-        <span class="nt">&lt;description&gt;</span>A regular expression that defines which of the resources in the war file can be served by the portal res datasource.<span class="nt">&lt;/description&gt;</span>
-        <span class="nt">&lt;param-name&gt;</span>com.ibm.portal.resource.whitelist<span class="nt">&lt;/param-name&gt;</span>
-        <span class="nt">&lt;param-value&gt;</span>.*<span class="nt">&lt;/param-value&gt;</span>
-    <span class="nt">&lt;/context-param&gt;</span>
-    <span class="nt">&lt;context-param&gt;</span>
-        <span class="nt">&lt;description&gt;</span>A regular expression that defines which of the resources in the war file cannot be served by the portal res datasource.<span class="nt">&lt;/description&gt;</span>
-        <span class="nt">&lt;param-name&gt;</span>com.ibm.portal.resource.blacklist<span class="nt">&lt;/param-name&gt;</span>
-        <span class="nt">&lt;param-value&gt;</span>WEB-INF/.*<span class="nt">&lt;/param-value&gt;</span>
-    <span class="nt">&lt;/context-param&gt;</span>
+<span class="nt">&lt;web-app</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;@@auto-replaced-with-rootProject.name@@&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.4&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://java.sun.com/xml/ns/j2ee&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="w"> </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;display-name&gt;</span>@@auto-replaced-with-rootProject.name@@<span class="nt">&lt;/display-name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;context-param&gt;</span>
+<span class="w">        </span><span class="nt">&lt;description&gt;</span>A<span class="w"> </span>regular<span class="w"> </span>expression<span class="w"> </span>that<span class="w"> </span>defines<span class="w"> </span>which<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>resources<span class="w"> </span>in<span class="w"> </span>the<span class="w"> </span>war<span class="w"> </span>file<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>served<span class="w"> </span>by<span class="w"> </span>the<span class="w"> </span>portal<span class="w"> </span>res<span class="w"> </span>datasource.<span class="nt">&lt;/description&gt;</span>
+<span class="w">        </span><span class="nt">&lt;param-name&gt;</span>com.ibm.portal.resource.whitelist<span class="nt">&lt;/param-name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;param-value&gt;</span>.*<span class="nt">&lt;/param-value&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/context-param&gt;</span>
+<span class="w">    </span><span class="nt">&lt;context-param&gt;</span>
+<span class="w">        </span><span class="nt">&lt;description&gt;</span>A<span class="w"> </span>regular<span class="w"> </span>expression<span class="w"> </span>that<span class="w"> </span>defines<span class="w"> </span>which<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>resources<span class="w"> </span>in<span class="w"> </span>the<span class="w"> </span>war<span class="w"> </span>file<span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>served<span class="w"> </span>by<span class="w"> </span>the<span class="w"> </span>portal<span class="w"> </span>res<span class="w"> </span>datasource.<span class="nt">&lt;/description&gt;</span>
+<span class="w">        </span><span class="nt">&lt;param-name&gt;</span>com.ibm.portal.resource.blacklist<span class="nt">&lt;/param-name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;param-value&gt;</span>WEB-INF/.*<span class="nt">&lt;/param-value&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/context-param&gt;</span>
 <span class="nt">&lt;/web-app&gt;</span>
 </code></pre></div></p>
 </li>
@@ -1775,7 +1775,7 @@ grant codeBase &quot;file:${ejbComponent}&quot; {
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

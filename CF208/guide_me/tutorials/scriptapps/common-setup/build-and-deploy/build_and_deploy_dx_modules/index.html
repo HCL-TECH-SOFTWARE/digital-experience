@@ -1007,47 +1007,47 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">On MacOS or Linux</label><label for="__tabbed_1_2">On Windows </label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>./gradlew deployDxModule -DdxUsername<span class="o">={</span>username<span class="o">}</span> -DdxPassword<span class="o">={</span>password<span class="o">}</span>
+<div class="highlight"><pre><span></span><code>./gradlew<span class="w"> </span>deployDxModule<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>gradlew.bat deployDxModule -DdxUsername<span class="o">={</span>username<span class="o">}</span> -DdxPassword<span class="o">={</span>password<span class="o">}</span>
+<div class="highlight"><pre><span></span><code>gradlew.bat<span class="w"> </span>deployDxModule<span class="w"> </span>-DdxUsername<span class="o">={</span>username<span class="o">}</span><span class="w"> </span>-DdxPassword<span class="o">={</span>password<span class="o">}</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <p>Sample successful <em>deployDxModule</em> log:</p>
-<div class="highlight"><pre><span></span><code>     &gt; Task :npmInstallDXModule
-     up to date, audited <span class="m">167</span> packages <span class="k">in</span> 932ms
-     <span class="m">24</span> packages are looking <span class="k">for</span> funding
-       run <span class="sb">`</span>npm fund<span class="sb">`</span> <span class="k">for</span> details
-     found <span class="m">0</span> vulnerabilities
-     &gt; Task :npmBuildDxModule
-     &gt; webapp-dx-module@1.0.0 build-dxmodules
-     &gt; webpack --config  webpack.dxmodules.js
-     asset dxmodules.bundle.js <span class="m">137</span> KiB <span class="o">[</span>compared <span class="k">for</span> emit<span class="o">]</span> <span class="o">[</span>minimized<span class="o">]</span> <span class="o">(</span>name: dxmodules<span class="o">)</span> <span class="m">1</span> related asset
-     asset dxmodules.bundle.css <span class="m">97</span> bytes <span class="o">[</span>compared <span class="k">for</span> emit<span class="o">]</span> <span class="o">(</span>name: dxmodules<span class="o">)</span>
-     Entrypoint dxmodules <span class="m">137</span> <span class="nv">KiB</span> <span class="o">=</span> dxmodules.bundle.css <span class="m">97</span> bytes dxmodules.bundle.js <span class="m">137</span> KiB
-     orphan modules <span class="m">2</span>.89 KiB <span class="o">(</span>javascript<span class="o">)</span> <span class="m">937</span> bytes <span class="o">(</span>runtime<span class="o">)</span> <span class="o">[</span>orphan<span class="o">]</span> <span class="m">8</span> modules
-     runtime modules <span class="m">670</span> bytes <span class="m">3</span> modules
-     built modules <span class="m">143</span> KiB <span class="o">(</span>javascript<span class="o">)</span> <span class="m">96</span> bytes <span class="o">(</span>css/mini-extract<span class="o">)</span> <span class="o">[</span>built<span class="o">]</span>
-       modules by path ./node_modules/ <span class="m">142</span> KiB
-         modules by path ./node_modules/react-dom/ <span class="m">131</span> KiB <span class="m">3</span> modules
-         modules by path ./node_modules/react/ <span class="m">6</span>.94 KiB
-           ./node_modules/react/index.js <span class="m">190</span> bytes <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-           ./node_modules/react/cjs/react.production.min.js <span class="m">6</span>.75 KiB <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-         modules by path ./node_modules/scheduler/ <span class="m">4</span>.33 KiB
-           ./node_modules/scheduler/index.js <span class="m">198</span> bytes <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-           ./node_modules/scheduler/cjs/scheduler.production.min.js <span class="m">4</span>.14 KiB <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-       dll dxmodules <span class="m">12</span> bytes <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-       ./modules-index.js <span class="m">764</span> bytes <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-       css ./node_modules/css-loader/dist/cjs.js!./styles-index.css <span class="m">96</span> bytes <span class="o">[</span>built<span class="o">]</span> <span class="o">[</span>code generated<span class="o">]</span>
-     webpack <span class="m">5</span>.74.0 compiled successfully <span class="k">in</span> <span class="m">9087</span> ms
-     &gt; Task :deployDxModule
-     <span class="nb">cd</span> build/libs/
-     dxclient deploy-application --dxUsername **** --dxPassword **** --dxConnectUsername **** --dxConnectPassword **** --applicationFile Reactv18r2.ear --applicationName Reactv18r2 --dxProtocol https --hostname localhost --dxPort <span class="m">10041</span> --dxProfileName wp_profile
-     BUILD SUCCESSFUL <span class="k">in</span> 1m 41s
-     <span class="m">10</span> actionable tasks: <span class="m">6</span> executed, <span class="m">4</span> up-to-date
+<div class="highlight"><pre><span></span><code><span class="w">     </span>&gt;<span class="w"> </span>Task<span class="w"> </span>:npmInstallDXModule
+<span class="w">     </span>up<span class="w"> </span>to<span class="w"> </span>date,<span class="w"> </span>audited<span class="w"> </span><span class="m">167</span><span class="w"> </span>packages<span class="w"> </span><span class="k">in</span><span class="w"> </span>932ms
+<span class="w">     </span><span class="m">24</span><span class="w"> </span>packages<span class="w"> </span>are<span class="w"> </span>looking<span class="w"> </span><span class="k">for</span><span class="w"> </span>funding
+<span class="w">       </span>run<span class="w"> </span><span class="sb">`</span>npm<span class="w"> </span>fund<span class="sb">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>details
+<span class="w">     </span>found<span class="w"> </span><span class="m">0</span><span class="w"> </span>vulnerabilities
+<span class="w">     </span>&gt;<span class="w"> </span>Task<span class="w"> </span>:npmBuildDxModule
+<span class="w">     </span>&gt;<span class="w"> </span>webapp-dx-module@1.0.0<span class="w"> </span>build-dxmodules
+<span class="w">     </span>&gt;<span class="w"> </span>webpack<span class="w"> </span>--config<span class="w">  </span>webpack.dxmodules.js
+<span class="w">     </span>asset<span class="w"> </span>dxmodules.bundle.js<span class="w"> </span><span class="m">137</span><span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>compared<span class="w"> </span><span class="k">for</span><span class="w"> </span>emit<span class="o">]</span><span class="w"> </span><span class="o">[</span>minimized<span class="o">]</span><span class="w"> </span><span class="o">(</span>name:<span class="w"> </span>dxmodules<span class="o">)</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>related<span class="w"> </span>asset
+<span class="w">     </span>asset<span class="w"> </span>dxmodules.bundle.css<span class="w"> </span><span class="m">97</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">[</span>compared<span class="w"> </span><span class="k">for</span><span class="w"> </span>emit<span class="o">]</span><span class="w"> </span><span class="o">(</span>name:<span class="w"> </span>dxmodules<span class="o">)</span>
+<span class="w">     </span>Entrypoint<span class="w"> </span>dxmodules<span class="w"> </span><span class="m">137</span><span class="w"> </span><span class="nv">KiB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>dxmodules.bundle.css<span class="w"> </span><span class="m">97</span><span class="w"> </span>bytes<span class="w"> </span>dxmodules.bundle.js<span class="w"> </span><span class="m">137</span><span class="w"> </span>KiB
+<span class="w">     </span>orphan<span class="w"> </span>modules<span class="w"> </span><span class="m">2</span>.89<span class="w"> </span>KiB<span class="w"> </span><span class="o">(</span>javascript<span class="o">)</span><span class="w"> </span><span class="m">937</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">(</span>runtime<span class="o">)</span><span class="w"> </span><span class="o">[</span>orphan<span class="o">]</span><span class="w"> </span><span class="m">8</span><span class="w"> </span>modules
+<span class="w">     </span>runtime<span class="w"> </span>modules<span class="w"> </span><span class="m">670</span><span class="w"> </span>bytes<span class="w"> </span><span class="m">3</span><span class="w"> </span>modules
+<span class="w">     </span>built<span class="w"> </span>modules<span class="w"> </span><span class="m">143</span><span class="w"> </span>KiB<span class="w"> </span><span class="o">(</span>javascript<span class="o">)</span><span class="w"> </span><span class="m">96</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">(</span>css/mini-extract<span class="o">)</span><span class="w"> </span><span class="o">[</span>built<span class="o">]</span>
+<span class="w">       </span>modules<span class="w"> </span>by<span class="w"> </span>path<span class="w"> </span>./node_modules/<span class="w"> </span><span class="m">142</span><span class="w"> </span>KiB
+<span class="w">         </span>modules<span class="w"> </span>by<span class="w"> </span>path<span class="w"> </span>./node_modules/react-dom/<span class="w"> </span><span class="m">131</span><span class="w"> </span>KiB<span class="w"> </span><span class="m">3</span><span class="w"> </span>modules
+<span class="w">         </span>modules<span class="w"> </span>by<span class="w"> </span>path<span class="w"> </span>./node_modules/react/<span class="w"> </span><span class="m">6</span>.94<span class="w"> </span>KiB
+<span class="w">           </span>./node_modules/react/index.js<span class="w"> </span><span class="m">190</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">           </span>./node_modules/react/cjs/react.production.min.js<span class="w"> </span><span class="m">6</span>.75<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">         </span>modules<span class="w"> </span>by<span class="w"> </span>path<span class="w"> </span>./node_modules/scheduler/<span class="w"> </span><span class="m">4</span>.33<span class="w"> </span>KiB
+<span class="w">           </span>./node_modules/scheduler/index.js<span class="w"> </span><span class="m">198</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">           </span>./node_modules/scheduler/cjs/scheduler.production.min.js<span class="w"> </span><span class="m">4</span>.14<span class="w"> </span>KiB<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">       </span>dll<span class="w"> </span>dxmodules<span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">       </span>./modules-index.js<span class="w"> </span><span class="m">764</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">       </span>css<span class="w"> </span>./node_modules/css-loader/dist/cjs.js!./styles-index.css<span class="w"> </span><span class="m">96</span><span class="w"> </span>bytes<span class="w"> </span><span class="o">[</span>built<span class="o">]</span><span class="w"> </span><span class="o">[</span>code<span class="w"> </span>generated<span class="o">]</span>
+<span class="w">     </span>webpack<span class="w"> </span><span class="m">5</span>.74.0<span class="w"> </span>compiled<span class="w"> </span>successfully<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">9087</span><span class="w"> </span>ms
+<span class="w">     </span>&gt;<span class="w"> </span>Task<span class="w"> </span>:deployDxModule
+<span class="w">     </span><span class="nb">cd</span><span class="w"> </span>build/libs/
+<span class="w">     </span>dxclient<span class="w"> </span>deploy-application<span class="w"> </span>--dxUsername<span class="w"> </span>****<span class="w"> </span>--dxPassword<span class="w"> </span>****<span class="w"> </span>--dxConnectUsername<span class="w"> </span>****<span class="w"> </span>--dxConnectPassword<span class="w"> </span>****<span class="w"> </span>--applicationFile<span class="w"> </span>Reactv18r2.ear<span class="w"> </span>--applicationName<span class="w"> </span>Reactv18r2<span class="w"> </span>--dxProtocol<span class="w"> </span>https<span class="w"> </span>--hostname<span class="w"> </span>localhost<span class="w"> </span>--dxPort<span class="w"> </span><span class="m">10041</span><span class="w"> </span>--dxProfileName<span class="w"> </span>wp_profile
+<span class="w">     </span>BUILD<span class="w"> </span>SUCCESSFUL<span class="w"> </span><span class="k">in</span><span class="w"> </span>1m<span class="w"> </span>41s
+<span class="w">     </span><span class="m">10</span><span class="w"> </span>actionable<span class="w"> </span>tasks:<span class="w"> </span><span class="m">6</span><span class="w"> </span>executed,<span class="w"> </span><span class="m">4</span><span class="w"> </span>up-to-date
 </code></pre></div>
 <ol>
 <li>If you intend to manually upload the EAR file, follow this <a href="../manual_ear_upload/">guide</a> and skip the next step below.</li>
@@ -1061,7 +1061,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 2, 2022</span>
       
     
   </small>

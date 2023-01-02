@@ -1172,10 +1172,10 @@
 <p>Harbor is an open-source Container Image and Helm Chart registry.  It can be accessed through use of CLI tools, such as Docker and HELM using a CLI Secret. For more information about Harbor capabilities reference the Harbor documentation at <a href="https://goharbor.io" target="_blank">https://goharbor.io</a>.</p>
 <h2 id="adding-hcl-harbor-helm-repository">Adding HCL Harbor Helm repository</h2>
 <p>To add the HCL Harbor Helm repository to your Helm installation, you can use the following command:</p>
-<div class="highlight"><pre><span></span><code>helm repo add <span class="se">\</span>
---username &lt;YOUR_HARBOR_USERNAME&gt; <span class="se">\</span>
---password &lt;YOUR_HARBOR_CLI_SECRET_&gt; <span class="se">\</span>
-hcl-dx https://hclcr.io/chartrepo/dx
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span><span class="se">\</span>
+--username<span class="w"> </span>&lt;YOUR_HARBOR_USERNAME&gt;<span class="w"> </span><span class="se">\</span>
+--password<span class="w"> </span>&lt;YOUR_HARBOR_CLI_SECRET_&gt;<span class="w"> </span><span class="se">\</span>
+hcl-dx<span class="w"> </span>https://hclcr.io/chartrepo/dx
 </code></pre></div>
 <p>To obtain the <code>CLI secret</code>, you must log in to <a href="https://hclcr.io/" target="_blank">HCL Harbor</a> using your authorized user credentials, navigate to your <code>User Profile</code> in HCL Harbor, and then copy it from the field called <code>CLI secret</code>.</p>
 <p>After adding the repository to Helm, you should see the following message:</p>
@@ -1184,7 +1184,7 @@ hcl-dx https://hclcr.io/chartrepo/dx
 <h2 id="listing-available-helm-chart-versions">Listing available Helm Chart versions</h2>
 <p>To verify that your Helm configuration works and to see which application versions are available, you can use the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Using helm search to find available versions, the DX helm charts are named hcl-dx-deployment</span>
-helm search repo hcl-dx/hcl-dx-deployment --versions
+helm<span class="w"> </span>search<span class="w"> </span>repo<span class="w"> </span>hcl-dx/hcl-dx-deployment<span class="w"> </span>--versions
 </code></pre></div>
 <p>This would return you a list of available versions, looking similar to this:</p>
 <div class="highlight"><pre><span></span><code>NAME                        CHART VERSION   APP VERSION DESCRIPTION                                    
@@ -1196,11 +1196,11 @@ hcl-dx/hcl-dx-deployment    2.7.1           95_CF204    Kubernetes Deployment of
 <p>To use the HCL Digital Experience Helm Chart from the HCL Harbor Helm repository, we recommend you pull it via Helm to your local machine, by that you can work with it the same way, as you would have downloaded it manually.</p>
 <p>To do so, run the following command with the correct Helm Chart version:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Use Helm Pull with the version you want to deploy (example uses 2.7.1, please fill in your desired version)</span>
-helm pull hcl-dx/hcl-dx-deployment --version <span class="m">2</span>.7.1
+helm<span class="w"> </span>pull<span class="w"> </span>hcl-dx/hcl-dx-deployment<span class="w"> </span>--version<span class="w"> </span><span class="m">2</span>.7.1
 </code></pre></div>
 <p>After running this command, you can check if the Helm Chart has been downloaded to your local machine:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># List directory content to check successful pull</span>
-ls -lah 
+ls<span class="w"> </span>-lah<span class="w"> </span>
 
 <span class="c1"># total 8868</span>
 <span class="c1"># -rw-r--r--. 1 user user  136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz</span>
@@ -1212,7 +1212,7 @@ ls -lah
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 3, 2022</span>
       
     
   </small>
