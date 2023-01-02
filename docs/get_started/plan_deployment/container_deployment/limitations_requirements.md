@@ -53,7 +53,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request** | **Container Memory request** |
 |---|---|---|---|---|---|
-| core | 1 | core | core | 800m | 3072Mi |
+| core | 1 | core | core | 1000m | 3072Mi |
 |  |  | system-out-log | logging-sidecar | 100m | 64Mi |
 |  |  | system-err-log | logging-sidecar | 100m | 64Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
@@ -64,7 +64,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | digital-asset-management | 1 | digital-asset-management | digital-asset-manager | 250m | 1024Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
 | haproxy | 1 | haproxy | haproxy | 200m | 300Mi |
-| image-processor | 1 | image-processor | image-processor | 100m | 1280Mi |
+| image-processor | 1 | image-processor | image-processor | 200m | 1280Mi |
 | license-manager | 1 | license-manager | license-manager | 100m | 300Mi |
 | open-ldap | 1 | ldap | openldap | 200m | 768Mi |
 | persistence-connection-pool | 1 | persistence-connection-pool | persistence-connection-pool | 500m | 512Mi |
@@ -79,7 +79,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | ring-api | 1 | ring-api | ringapi | 100m | 128Mi |
 | runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
 |  |  |  |  |  |  |
-| **Overall** |  |  |  | **4500m** | **10392Mi** |
+| **Overall** |  |  |  | **4800m** | **10648Mi** |
 
 <!--
 ???+ info "Related information"
