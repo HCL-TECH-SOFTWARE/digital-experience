@@ -335,10 +335,13 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
 !!! note 
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
-    -   HCL DX 9..5 CF208 release:
+    -   HCL DX 9.5 CF209 release:
+        -   [Restart All Core Pods in Kubernetes Deployment](../dxclient/dxclient_artifact_types/dxcoreserver.md#restart-core-pods)
+
+    -   HCL DX 9.5 CF208 release:
         -   [Get all subscribers details for DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging)
 
-    -   HCL DX 9..5 CF207 release:
+    -   HCL DX 9.5 CF207 release:
         -   Support to set different Container Runtimes.
 
     -   HCL DX 9.5 CF202 release:
@@ -468,7 +471,7 @@ dxclient restart-dx-core
 Use the following command to restart DX Core pods in a Kubernetes deployment:
 
 ```
-dxclient restart-core-pods
+dxclient restart-core-pods [options]
 ```
 
 Use the following command to execute manage-subscriber action:
