@@ -108,7 +108,7 @@ The restart-dx-core command is used to restart the DX Core server.
 
 - **Help command**
 
-  This command shows the help information for `restart-dx-core` command usage:
+  This command shows the help information for `restart-core-pods` command usage:
 
   ```
   dxclient restart-core-pods -h 
