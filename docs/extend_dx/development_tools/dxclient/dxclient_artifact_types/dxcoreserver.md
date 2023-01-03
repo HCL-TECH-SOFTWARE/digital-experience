@@ -115,13 +115,13 @@ The restart-dx-core command is used to restart the DX Core server.
 
 - **Command options**
 
-  Use this attribute to specify the username that is required for authenticating with the DX Core:
+  Use this attribute to specify the username that is required for authenticating with the DX WAS Server:
 
   ```
   -dxWASUsername <value>
   ```
 
-  Use this attribute to specify the password that is required for authenticating with the DX Core:
+  Use this attribute to specify the password that is required for authenticating with the DX WAS Server:
 
   ```
   -dxWASPassword <value>
