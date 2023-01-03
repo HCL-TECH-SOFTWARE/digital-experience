@@ -103,8 +103,6 @@ The restart-dx-core command is used to restart the DX Core server.
   by connecting to runtime controller and runtime controller then triggers the restart internally.
 
   This is useful when some changes are not propagating across multiple core pod properly and would require a server restart. 
- 
-  Since the old `restart-dx-core` command only restart a single instance of the server, this command is useful when having multiple core pods.
 
     ```
     dxclient restart-core-pods
