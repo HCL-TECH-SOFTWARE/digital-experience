@@ -83,13 +83,13 @@ The following sections describe how the administrators can create and manage bac
 
     After the backup command is completed, it is recommended that a copy of the resulting file is created and placed to an alternate long term storage.
 
-    See [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/operator_dam_backup_restore_image.md) for more information.
+    See [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/dam_backup_restore_image.md) for more information.
 
 3.   **Digital Asset Management media backup**
 
     Use the following commands to back up the Digital Asset Management media uploads volume:
 
-    1.  A command similar to the backup command outlined in Step 1 of [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/operator_dam_backup_restore_image.md) to create a backup of wp_profile can be used to back up the two `/opt/app/upload` and `/etc/config` Digital Asset Management mount points.
+    1.  A command similar to the backup command outlined in Step 1 of [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/dam_backup_restore_image.md) to create a backup of wp_profile can be used to back up the two `/opt/app/upload` and `/etc/config` Digital Asset Management mount points.
 
         -   Refer to the following examples:
 
@@ -105,7 +105,7 @@ The following sections describe how the administrators can create and manage bac
 
             ![Backup and restore DAM media example 2](../operator-migration/_img/backup_restore_dam_media2.png)
 
-            See [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/operator_dam_backup_restore_image.md) for more information.
+            See [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/dam_backup_restore_image.md) for more information.
 
         Alternatively, the [Kubernetes documentation](https://kubernetes.io/docs/home/) pages present additional options to backup and clone persistent volumes.
 
@@ -124,7 +124,7 @@ The following sections describe how the administrators can create and manage bac
 
 <!-- -   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_operator.md)**  
 This shows you how to restore the HCL Digital Experience 9.5 Digital Asset Management image to a previous version.
--   **[Back up and restore a DAM image](../digital_asset_mgmt/operator_dam_backup_restore_image.md)**  
+-   **[Back up and restore a DAM image](../digital_asset_mgmt/dam_backup_restore_image.md)**  
 This topic shows you how to backup and restore for Digital Asset Management persistence and binaries in an Operator-based deployment using `dxctl`.
  -->
 

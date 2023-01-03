@@ -25,7 +25,6 @@ There are three levels of access controls for web content
 You need to create a different group for each type of user and then assign those groups different roles within your content management system.
 
 
-**Related Information**
-
-[Script Application security overview](../../../../extend_dx/script_application/script_application_security)
+???+ info "Related information"
+    - [Script Application security overview](../../../../../../../extend_dx/script_application/script_application_security/index.md)
 

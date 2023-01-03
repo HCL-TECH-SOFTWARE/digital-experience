@@ -6,7 +6,8 @@ Complete the following steps to secure LTPA keys on a production environment:
 
 1.  Complete the following steps to regenerate the LTPA keys:
 
-    **Note:** These steps only need to be completed once in a clustered environment.
+    !!!note
+        These steps only need to be completed once in a clustered environment.
 
     1.  Log on to the WebSphere® Integrated Solutions Console.
 

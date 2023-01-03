@@ -51,7 +51,7 @@ This describes the APIs that allow the use of third-party plug-ins with DAM. Eac
 
 This API route/URL is a middleware URL configured in DAM configurations. This is picked from plug-in configurations and a POST request is made to this API with the file, Auth-key, callback-url, and actions parameters passed along. The Auth-key is also configured in the configuration and is also picked by DAM. The `Callback-API` is called back by middleware after the operation is completed successfully by the plug-in and the modified asset is sent back to DAM.
 
-Refer to this documentation for more information on the [Plugin-API Specification](https://opensource.hcltechsw.com/experience-api-documentation/image-processor-api/).
+Refer to this documentation for more information on the [Plugin-API Specification](https://opensource.hcltechsw.com/experience-api-documentation/image-processor-api/#tag/PluginController).
 
 **Body request**:
 

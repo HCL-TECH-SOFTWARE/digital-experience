@@ -33,6 +33,7 @@ Links to more information on the replacement for those items listed for deprecat
 |Migrating |IBM® JSF Bridge |In WAS 9.0.5.2 and 8.5.5.17, IBM removed the JSF Bridge from WAS. To address this, an updated JSF Portlet Bridge is included in DX CF18 release. Customers installing HCL DX CF18, and using an IBM WebSphere Application Server Network Deployment version later than 8.5.5.17 or 9.0.5.2 should utilize the new JSF Portlet Bridge. The HCL JSF Portlet Bridge is built using the same class names as the IBM JSF Portlet Bridge provided in WAS 9.0.0.7 thru 9.0.5.1 and WAS 8.5.5.16 respectively. User applications should be able to continue to function without any modification.|December 2020|
 
 ## Deprecated Dependent Products
+These are the list of Dependent Products that are already Out of Support. 
 
 ### Linux OS family  
 |OS|OS Supported Versions|Hardware|Bitness|Product Minimum|
@@ -113,26 +114,26 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |Oracle Database 12.2.0.1.0 Enterprise Edition|12.2.0.1.0 and later maintenance releases|8.5|
 |Oracle Database 12.2.0.2 Enterprise Edition|12.2.0.2 and later maintenance releases|8.5|  
 
-## Collaboration
+### Collaboration
 |Prerequisite|Supported software versions|Product Minimum|
 |-----------|------------------|-----|
 |HCL Sametime Communicate|9.0 and later maintenance|8.5|
 |HCL Sametime Complete|9.0 and later maintenance|8.5|  
 
-## JDBC Drivers
+### JDBC Drivers
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |DB2 Connect Enterprise Edition|11.1, and later maintenance releases|8.5|
 |Microsoft SQL Server JDBC Driver|4.2, and later maintenance releases|8.5|
 
-## Security Management
+### Security Management
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |IBM Security Access Manager for Web|7.0, and later maintenance releases|8.5|
 |IBM Security Access Manager|9.0, and later maintenance releases|8.5|
 |Tivoli Directory Integrator|7.1.1, and later maintenance releases|8.5|  
 
-## Web Browsers 
+### Web Browsers 
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |Microsoft Internet Explorer|11|8.5| 

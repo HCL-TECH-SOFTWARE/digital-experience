@@ -113,17 +113,11 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
     If you are deploying the HCL DX 9.5 CF208 release to supported OS platforms, the file package names are as follows:
 
-   -  ```
-      HCL_DX_CF208 Express_Update	HCL-DX-CF208_Express_Update.zip
-      ```
-
-   -  ```
-      HCL_DX_CF208_RemoteSearch_Update	HCL-DX-CF208_RemoteSearch_Update.zip
-      ```
-
-   -  ``` 
-      HCL_DX_CF208_Server_Update	HCL-DX-CF208_Server_Update.zip
-      ```
+    |File name| Folder name|
+    |          |            |
+    |HCL_DX_CF208 Express_Update|	HCL-DX-CF208_Express_Update.zip|
+    |HCL_DX_CF208_RemoteSearch_Update|	HCL-DX-CF208_RemoteSearch_Update.zip|
+    |HCL_DX_CF208_Server_Update|	HCL-DX-CF208_Server_Update.zip|
 
 
 ## HCL DX 9.5 CF207

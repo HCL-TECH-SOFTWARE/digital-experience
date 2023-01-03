@@ -5,7 +5,7 @@ Find out what is new in your network and the wider organization using the activi
 ## Using the Activity Stream portlet
 
 !!! note
-    -   Make sure you have imported the IBM Connections security certificate for your browser or this portlet will not work properly. For details, see *Importing the IBM Connections certificate for your browser*.
+    -   Make sure you have imported the HCL Connections security certificate for your browser or this portlet will not work properly. For details, see *Importing the HCL Connections certificate for your browser*.
     -   The Activity Stream portlet does not support basic authentication.
 
 The Activity Stream portlet has three possible modes for displaying information: Homepage Experience, Community Experience, and Profile Board Experience. The mode controls what types of activity you see in the portlet. When the Activity Stream portlet is added to a page, it will default to the Homepage Experience mode unless the page is a community page, in which case it defaults to the Community Experience mode and displays updates from the associated community. To see the Profile Board experience, you must explicitly configure that option for the portlet.
@@ -23,8 +23,8 @@ Select a view from the **Show** list. The following views are available when you
 |----|-----------|
 |**I'm Following**|Displays updates related to the people and content that you are following.|
 |**Status Updates**|Displays the latest status update messages from across your organization.|
-|**My Notifications**|Displays the latest notifications that you received and sent in IBM Connections.|
-|**@Mentions**|Displays messages that mention you directly.<br>**Note:** This feature requires IBM Connections 4.5 or later. The view does not display if you are using IBM Connections 4.0.|
+|**My Notifications**|Displays the latest notifications that you received and sent in HCL Connections.|
+|**@Mentions**|Displays messages that mention you directly.<br>**Note:** This feature requires HCL Connections 4.5 or later. The view does not display if you are using HCL Connections 4.0.|
 |**Action Required**|Displays your latest to-do items from Activities, network and community invitations, requests to join moderated communities, and any third-party events requiring an action on your part.|
 |**Saved**|Displays the updates that you saved.|
 |**Discover**|Displays the latest public updates from all the applications.|

@@ -98,6 +98,7 @@ You can use the following values to specify version control settings:
 
     -   The **Save Version** option is available in the read mode of non-workflow items and in workflow items in the published state.
     -   The **Save and Version** option is available in the edit mode of non-workflow items and in workflow items in the published state.
+
 -   **never**
 
     Disable version control for an item type.
@@ -247,7 +248,7 @@ This class can be overridden by adding the following setting: `inplaceEdit.defau
 
 As many classes as required are added to this setting, which is separated by spaces.
 
-You should base your custom classes on the default stylesheet at `[AppServer\_root](../../../guide_me/wpsdirstr.md#was_root)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css`.
+You should base your custom classes on the default stylesheet at [AppServer\_root](../../../guide_me/wpsdirstr.md)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css.
 
 !!! note 
     Any classes that are specified on the EditableElement or EditableProperty tag takes precedence over this value.

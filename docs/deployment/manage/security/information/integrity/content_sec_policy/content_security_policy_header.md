@@ -2,7 +2,8 @@
 
 The Content-Security-Policy header allows an allowlist of trusted sources to be created that instructs the browser to only execute or render resources included in the list.
 
-**Note:** The header is defined for each page and will be included on every response sent to the browser.
+!!!note
+    The header is defined for each page and will be included on every response sent to the browser.
 
 For example:
 

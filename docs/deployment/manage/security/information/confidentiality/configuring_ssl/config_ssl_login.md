@@ -4,11 +4,13 @@ You can encrypt only the login process to HCL Digital Experience and then allow 
 
 Complete the following steps to configure SSL only for the login process:
 
-**Remember:** These steps configure SSL only for the login; if you want to configure SSL for other features such as themes and skins, complete the steps in *Setting up SSL*.
+!!!important
+    These steps configure SSL only for the login; if you want to configure SSL for other features such as themes and skins, complete the steps in *Setting up SSL*.
 
 1.  Configure SSL for the webserver plug-in if you have an external webserver that is configured for SSL. Consult with your webserver vendor for more details on how to configure SSL for your webserver. For more information, go to *Guide to properly setting up SSL within the IBM HTTP Server* topic in the related information section.
 
-    **Note:** Proceeding with this task without configuring SSL for the webserver plug-in causes the login to fail.
+    !!!note
+        Proceeding with this task without configuring SSL for the webserver plug-in causes the login to fail.
 
 2.  Verify that the following parameters exist and are correctly set for your installation in the **WP ConfigService** application:
 
@@ -22,13 +24,15 @@ Complete the following steps to configure SSL only for the login process:
 
     5.  Locate the redirect.login.ssl property and do one of the following options:
 
-        **Note:** The redirect.login.ssl property determines the protocol that is to be used after login completes. If this property is set to false, the portal uses the protocol that was initially requested before login. The value false is the default. If you set this property to true, the portal uses HTTPS.
+        !!!note
+            The redirect.login.ssl property determines the protocol that is to be used after login completes. If this property is set to false, the portal uses the protocol that was initially requested before login. The value false is the default. If you set this property to true, the portal uses HTTPS.
 
         -   If the property exists, click the property to modify it and change the value to true.
         -   If the property does not exist, click **New** to create the property and enter the following information:
             -   **Name**: redirect.login.ssl
             -   **Value**: true
             -   **Type**: java.lang.String
+
     6.  Locate the host.port.https property and do one of the following options:
 
         -   If the property exists, click the property to modify it and change the value to alias\_port\_for\_HTTPS.
@@ -39,18 +43,22 @@ Complete the following steps to configure SSL only for the login process:
             -   **Name**: host.port.https
             -   **Value**: 443
             -   **Type**: java.lang.String
+
     7.  Locate the host.port.http property and do one of the following options:
 
-        **Note:** Set the host.port.http if you are using a port other than the default 80.
+        !!!note
+            Set the host.port.http if you are using a port other than the default 80.
 
         -   If the property exists, click the property to modify it and change the value to alias\_port\_for\_HTTP.
 
-            **Note:** The alias\_port\_for\_HTTP is the port number that is used for the virtual host alias \(usually 80\).
+            !!!note
+                The alias\_port\_for\_HTTP is the port number that is used for the virtual host alias \(usually 80\).
 
         -   If the property does not exist, click **New** to create the property and enter the following information:
             -   **Name**: host.port.http
             -   **Value**: 80
             -   **Type**: java.lang.String
+
     8.  Click **Save** to save the changes to the master configuration.
 
     9.  Log out of the WebSphere Integrated Solutions Console.
@@ -72,10 +80,7 @@ Complete the following steps to configure SSL only for the login process:
 
 You can test the SSL login by using the following unprotected URL: http://portalserver.com/wps/myportalhttp://portalserver.com/lotus/myquickr and submitting your credentials. You notice that the URL does not change to https.
 
-**Note:** Confirm that the login was encrypted by monitoring the packets through a network utility such as Ethereal or by reviewing the source code of the login form when accessed through an unprotected HTTP URL. The login form must have an action URL that is secured, for example `<form method="post" action="https://....">`. Set your browser to warn you when you change between secure and insecure modes to see the behavior on the client-side.
+!!!note
+    Confirm that the login was encrypted by monitoring the packets through a network utility such as Ethereal or by reviewing the source code of the login form when accessed through an unprotected HTTP URL. The login form must have an action URL that is secured, for example `<form method="post" action="https://....">`. Set your browser to warn you when you change between secure and insecure modes to see the behavior on the client-side.
 
-
-**Previous topic:**[Setting up SSL](../../security/information/confidentiality/configuring_ssl)
-
-**Next topic:**[Setting up Client Certificate Authentication](../../security/information/confidentiality/configuring_ssl/certauth)
 

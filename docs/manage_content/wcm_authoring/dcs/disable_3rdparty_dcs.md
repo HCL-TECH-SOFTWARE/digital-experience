@@ -15,7 +15,7 @@ If you are upgrading to a Kubernetes deployment, see [Replacing Document Convers
 
 ## Enabling DCS manually
 
-You can enable DCS manually anytime. For example, if you ran `applyCF` without setting the `disableStellentDCS` flag to false or if you decide to set and use Oracle DCS again as your DX DCS, you can manually re-enable by running the following `ConfigEngine` task.
+You can enable DCS manually anytime. For example, if you run `applyCF` without setting the `disableStellentDCS` flag to false or if you decide to set and use Oracle DCS again as your DX DCS, you can manually re-enable by running the following `ConfigEngine` task.
 
 ```
 ConfigEngine.sh|bat action-re-enable-stellent-dcs

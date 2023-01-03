@@ -9,12 +9,12 @@ Users of your Portal can search across various types of sites. In addition to se
 -   Users of your Portal site search other Portal sites. This works only for public pages of the other Portals.
 -   Users of your Portal search external websites such as yahoo.com or google.com or cnn.com. When you run a crawler against external websites, you can collect and display external search results next to results from your local Portal site.
 -   External users search your Portal site. This works only for public pages of your Portal.
+<br>
 
-</br>
-</br>
 
--   **[Enabe Apache Tika for Search](enable_3rdparty_tika.md)**
+-  **[Enabe Apache Tika for Search](enable_3rdparty_tika.md)**<br>
 Beginning with Digital Experience Cumulative Fix version 95_CF205, Oracle Stellent use for Search has been replaced with Apache Tika.
+ 
 -   **[Resetting the default search collection](srtcrtprtlstecllc.md)**  
 Under certain circumstances, you might want to change the configuration of the portal site search collection. In this case, you must re-create the collection, as search collections cannot be modified.
 -   **[Crawling a remote portal site](srcsrchngpubportpgs.md)**  
