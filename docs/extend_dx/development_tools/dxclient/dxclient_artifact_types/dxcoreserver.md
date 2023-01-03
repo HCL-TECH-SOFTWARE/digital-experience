@@ -134,7 +134,6 @@ The restart-dx-core command is used to restart the DX Core server.
   -hostname <value>
   ```
 
-  Use this attribute to specify the username that is required for authenticating to the `cw_profile`:
 ## DX Core server configuration report
 
 - **Command description**
