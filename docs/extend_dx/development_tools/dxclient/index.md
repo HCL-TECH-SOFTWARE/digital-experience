@@ -465,6 +465,12 @@ Use the following command to execute the DX Core restart action:
 dxclient restart-dx-core
 ```
 
+Use the following command to restart DX Core pods in a Kubernetes deployment:
+
+```
+dxclient restart-core-pods
+```
+
 Use the following command to execute manage-subscriber action:
 
 ```
