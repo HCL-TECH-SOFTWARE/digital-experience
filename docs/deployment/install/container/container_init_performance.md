@@ -1,6 +1,6 @@
 # HCL Digital Experience 9.5 Docker and Container initialization performance
 
-Beginning with from HCL Digital Experience 9.5 Container Update CF192 release, container DX applications initialization performance is improved. Review the following guidance for information, defaults, and options to manage container applications initialization performance when deployed to Docker, Red Hat OpenShift, and Kubernetes platforms.
+Beginning with HCL Digital Experience 9.5 Container Update CF192 release, container DX applications initialization performance is improved. Review the following guidance for information, defaults, and options to manage container applications initialization performance when deployed to Docker, Red Hat OpenShift, and Kubernetes platforms.
 
 ## Introduction
 
@@ -15,7 +15,7 @@ In DX 9.5 Container Update CF192 and higher, to support a faster initialization 
 Three ConfigEngine tasks are deployed to support improvements to HCL DX Core initialization times. They are:
 
 -   stop-autostart-docker-applications
--   *default*-autostart-docker-applications
+-   default-autostart-docker-applications
 -   start-advanced-editor-applications
 
 ## stop-autostart-docker-applications
@@ -24,9 +24,7 @@ The stop-autostart-docker-applications task is executed during the Docker image 
 
 -   It will stop the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF208, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) files from autostarting.
 -   It will "lazy load" all DX portlets that do not require the Portal and WCM functions to operate.
--   Portlets required for DX operations that will be loaded and initialized include for example, theme modules that are loaded from Portlets. These portlets must be started in order for the theme modules to load. The "Login" and "WCM Local Rendering" portlets are in also this list as they are required to present the Woodburn Studio demonstration site entry page, and therefore the Kubernetes readiness probe. Note that the readiness probe defaults to the WebSphere Application Console via probe functions that execute an HTTP request to the "/wps/portal" or "/ibm/console" page and ensures that it responds. See **Figure: Configure Editor Options** the list of portlets that are needed for DX operations and will automatically load.
-
-![](../../images/config_editor_options.jpg "Configure Editor Options")
+-   Portlets required for DX operations that will be loaded and initialized include for example, theme modules that are loaded from Portlets. These portlets must be started in order for the theme modules to load. The "Login" and "WCM Local Rendering" portlets are in also this list as they are required to present the Woodburn Studio demonstration site entry page, and therefore the Kubernetes readiness probe. Note that the readiness probe defaults to the WebSphere Application Console via probe functions that execute an HTTP request to the "/wps/portal" or "/ibm/console" page and ensures that it responds. See [List of portlets and applications that are automatically initialized by defaults](#source-file-listing-of-hcl-dx-required-portlets-and-applications-that-will-autostart) below for the list of portlets that are needed for DX operations and will automatically load.
 
 ## default-autostart-docker-applications
 
@@ -34,20 +32,22 @@ The default-autostart-docker-applications task will restore the autostart status
 
 ## start-advanced-editor-applications
 
-The start-advanced-editor-applications task will start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF208, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications, if required, and if the customer configures WCM to use the WCM Advanced Editor.
+The start-advanced-editor-applications task will start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF208, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications if the customer configures WCM to use the Advanced or Enhanced Editor.
 
 -   **Prerequisites:**
 
     Portal Administrators should run the start-advanced-editor-applications task to start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF208, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications, then proceed to select the Advanced or Enhanced Editor in the Web Content Manager **Authoring** \> **Configure** \> **Editor Options** interface.
 
+    ![](../../../images/config_editor_options.jpg "Configure Editor Options")
+
 
 ## Important Considerations and Limitations of the Container Initialization Improvements
 
-As a result of not autostarting, these applications and portlets, initialization of DX Portal may be faster, but the initial access of most pages will initially be slower due to the fact that the application/portlet must now be initialized. Note this only affects the first access of that application/portlet \(as initialization is a once per system activity\). As new DX PODS are started, initialization of DX pages with non-required applications and portlets will be slower on first HTTP request.
+As a result of not autostarting these applications and portlets, initialization of DX Portal may be faster, but the initial access of most pages will be slower due to the fact that the application/portlet must now be initialized. Note this only affects the first access of that application/portlet \(as initialization is a once per system activity\). As new DX PODS are started, initialization of DX pages with non-required applications and portlets will be slower on first HTTP request.
 
 ## Using Advanced Editors for WCM
 
-As noted above, beginning with Container Update CF192, and default settings for 'lazy load' of non-required portlets and applications, the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF208, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for WCM are now NOT started. Since this is not a lazy load but rather a stop of the Advanced and Enhanced Rich Text Editor ears containing the advanced and enhanced editors, **they must also start the Advanced Rich Text Editor and Enhanced Rich Text Editor** by running the **"start-advanced-editor-applications" task,** before configuring the Advanced Rich Text editor or the Enhanced Rich Text Editor in the Web Content Manager configuration settings**,** to make the editors available for content authors. It is not necessary in addition to "commit" the new Docker images once this task completes, because these changes are in the profile which is persisted in an external volume and not in the Docker image.
+As noted above, beginning with Container Update CF192, and default settings for 'lazy load' of non-required portlets and applications, the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF208, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for WCM are now NOT started. Since this is not a lazy load but rather a stop of the Advanced and Enhanced Rich Text Editor ears containing the advanced and enhanced editors, the Advanced Rich Text Editor and Enhanced Rich Text Editor applications must be started by running the **start-advanced-editor-applications** ConfigEngine task before configuring the Advanced Rich Text editor or the Enhanced Rich Text Editor in the Web Content Manager Authoring Portlet configuration settings to make the editors available for content authors. The configuration changes made once this task completes will remain in a persisted DX profile.
 
 ## Source File listing of HCL DX required portlets and applications that will autostart:
 
@@ -57,7 +57,7 @@ These configuration tasks use four files to obtain the list of HCL DX portlet/ap
 {configuration root}/PortalServer/installer/wp.config/config/includes
 ```
 
-For example, a list on this reference system is located at:
+For example, a list of this reference system is located at:
 
 ```
 /opt/HCL/PortalServer/installer/wp.config/config/includes
@@ -66,14 +66,14 @@ For example, a list on this reference system is located at:
 The four import files are:
 
 ```
-advancedEditorEAR - Enable the Advanced and Enhanced Editors
+advancedEditorEAR - Enable the WCM Advanced and Enhanced Editors
 defaultListOfEnabledApps - The out of the box autostart parameters
 listOfAppsDockerDisable - List of all portlets and applications who autostart is initially disabled
 listOfAppsDockerEnable - List of portlets and applications to autostart after having disabled the one in listOfAppsDockerDisable
 
 ```
 
--   ****List of portlets and applications that are automatically initialized by default****
+-   **List of portlets and applications that are automatically initialized by default**
 
     \(Container Update CF192 release and later\):
 
@@ -113,8 +113,10 @@ listOfAppsDockerEnable - List of portlets and applications to autostart after ha
 
     PA\_Theme\_Creator
 
+    PA\_Pmizationframework
 
--   ****List of portlets and applications initialized via "lazy load"****
+
+-   **List of portlets and applications initialized via "lazy load"**
 
     AJAX Proxy Configuration
 
@@ -275,14 +277,6 @@ listOfAppsDockerEnable - List of portlets and applications to autostart after ha
     ThemeDevSite
 
     Theme\_Modules
-
-    TinyEditorsServices
-
-    TinyEditorsTextboxio
-
-    TinyMCE
-
-    TinyMCEServices
 
     Toolbar\_Modules
 
