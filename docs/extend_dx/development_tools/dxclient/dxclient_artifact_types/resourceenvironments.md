@@ -95,12 +95,6 @@ This topic describes the commands that are used to create, update, delete, and r
         ```
         resource-env-provider import-properties [OPTIONS]
         ```
--   **Optional**
-
-    Use this attribute to specify whether to restart the deployment after the operation is completed. The default value is false. (Applicable only to Kubernetes-based deployments)
-    ```
-    -restartAfter
-    ```
 -   **Command options required to create, update, delete, and retrieve resource environment providers:**
 
     Use this attribute to specify the protocol with which to connect to the server:
