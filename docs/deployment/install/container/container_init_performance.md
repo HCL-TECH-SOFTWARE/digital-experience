@@ -22,9 +22,9 @@ Three ConfigEngine tasks are deployed to support improvements to HCL DX Core ini
 
 The stop-autostart-docker-applications task is executed during the Docker image build for DX Core when initialized on Docker, Red Hat OpenShift, or Kubernetes platforms. This task manages the following functions:
 
--   It will stop the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF208, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) files from autostarting.
+-   It will stop the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF209, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) files from autostarting.
 -   It will "lazy load" all DX portlets that do not require the Portal and WCM functions to operate.
--   Portlets required for DX operations that will be loaded and initialized include for example, theme modules that are loaded from Portlets. These portlets must be started in order for the theme modules to load. The "Login" and "WCM Local Rendering" portlets are in also this list as they are required to present the Woodburn Studio demonstration site entry page, and therefore the Kubernetes readiness probe. Note that the readiness probe defaults to the WebSphere Application Console via probe functions that execute an HTTP request to the "/wps/portal" or "/ibm/console" page and ensures that it responds. See [List of portlets and applications that are automatically initialized by defaults](#source-file-listing-of-hcl-dx-required-portlets-and-applications-that-will-autostart) below for the list of portlets that are needed for DX operations and will automatically load.
+-   Portlets required for DX operations that will be loaded and initialized include for example, theme modules that are loaded from Portlets. These portlets must be started in order for the theme modules to load. The "Login" and "WCM Local Rendering" portlets are also in this list as they are required to present the Woodburn Studio demonstration site entry page, and therefore the Kubernetes readiness probe. Note that the readiness probe defaults to the WebSphere Application Console via probe functions that execute an HTTP request to the "/wps/portal" or "/ibm/console" page and ensures that it responds. See [List of portlets and applications that are automatically initialized by defaults](#source-file-listing-of-hcl-dx-required-portlets-and-applications-that-will-autostart) below for the list of portlets that are needed for DX operations and will automatically load.
 
 ## default-autostart-docker-applications
 
@@ -32,11 +32,11 @@ The default-autostart-docker-applications task will restore the autostart status
 
 ## start-advanced-editor-applications
 
-The start-advanced-editor-applications task will set the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF209, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications to autostart when the WebSphere_Portal server is started.
+The start-advanced-editor-applications task will start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF209, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications and will set both to autostart when the HCL DX Portal server is started.
 
 -   **Prerequisites:**
 
-    Portal Administrators should run the start-advanced-editor-applications task to start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF208, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications, then proceed to select the Advanced or Enhanced Editor in the Web Content Manager **Authoring** \> **Configure** \> **Editor Options** interface.
+    Portal Administrators should run the start-advanced-editor-applications task to start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF209, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications, then proceed to select the Advanced or Enhanced Editor in the Web Content Manager Authoring \> Configure \> Editor Options interface.
 
     ![](../../../images/config_editor_options.jpg "Configure Editor Options")
 
@@ -47,35 +47,13 @@ As a result of not autostarting these applications and portlets, initialization 
 
 ## Using Advanced Editors for WCM
 
-As noted above, beginning with Container Update CF192, and default settings for 'lazy load' of non-required portlets and applications, the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF209, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for WCM are now NOT started. Since this is not a lazy load but rather a stop of the Advanced and Enhanced Rich Text Editor ears containing the advanced and enhanced editors, the Advanced Rich Text Editor and Enhanced Rich Text Editor applications must be started by running the **start-rich-text-editors** ConfigEngine task before configuring the Advanced Rich Text editor or the Enhanced Rich Text Editor in the Web Content Manager Authoring Portlet configuration settings to make the editors available for content authors.
+As noted above, beginning with Container Update CF192, and default settings for 'lazy load' of non-required portlets and applications, the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF209, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for WCM are now NOT started. Since this is not a lazy load but rather a stop of the Advanced and Enhanced Rich Text Editor ears containing the advanced and enhanced editors, the Advanced Rich Text Editor and Enhanced Rich Text Editor applications must be started by running the **start-advanced-editor-applications** ConfigEngine task before configuring the Advanced Rich Text editor or the Enhanced Rich Text Editor in the Web Content Manager Authoring Portlet configuration settings to make the editors available for content authors.
 
-For example, to start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications, execute the following command.
-
-```
-/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh start-rich-text-editors -DWasPassword={WebSphere Administrator Password}
-```
-
-To start only the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) application OR the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md), specify the application list on the command line using the rteApplicationList parameter.
-
-For example, the command below will start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) application.
-
-```
-/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh start-rich-text-editors -DWasPassword={WebSphere Administrator Password} -DrteApplicationList=TinyEditorsTextboxio,TinyEditorsServices
-```
-
-The following command will start the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) application.
-
-```
-/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh start-rich-text-editors -DWasPassword={WebSphere Administrator Password} -DrteApplicationList=TinyMCE,TinyMCEServices
-```
-
-To set the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications to autostart when the WebSphere_Portal server is started, run the **start-advanced-editor-applications** ConfigEngine task.
-
-The configuration changes made once these tasks completes will remain in a persisted DX profile.
+The configuration changes made once this task completes will remain in a persisted DX profile.
 
 ## Source File listing of HCL DX required portlets and applications that will autostart:
 
-These configuration tasks use four files to obtain the list of HCL DX portlet/applications to autostart. All the files are located in the same directory:
+The introduced ConfigEngine tasks use four files to obtain the list of HCL DX portlet/applications to modify. All the files are located in the same directory:
 
 ```
 {configuration root}/PortalServer/installer/wp.config/config/includes
@@ -92,8 +70,8 @@ The four import files are:
 ```
 advancedEditorEAR - Enable the WCM Advanced and Enhanced Editors
 defaultListOfEnabledApps - The out of the box autostart parameters
-listOfAppsDockerDisable - List of all portlets and applications who autostart is initially disabled
-listOfAppsDockerEnable - List of portlets and applications to autostart after having disabled the one in listOfAppsDockerDisable
+listOfAppsDockerDisable - List of all portlets and applications where autostart is now initially disabled
+listOfAppsDockerEnable - List of portlets and applications to ensure autostart is enabled after having disabled those in listOfAppsDockerDisable
 
 ```
 
