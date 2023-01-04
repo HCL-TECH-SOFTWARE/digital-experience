@@ -6,8 +6,8 @@ The unique name wps.Login is assigned to the page holding the login portlet, and
 
 The Registration/Edit My Profile portlet is for subscriber management. Registration allows users to register for access and information entered during Registration can be updated in Edit My Profile. Registration is also referred to as "Sign up".
 
-Update with CF 209 and higher:
-When applying CF 209 or higher or starting with 209 the anonymous sign up is disabled by default for anonymous users. A lot of customers have not been aware that anonymous sign up is enabled by default even if not desired. This can be re-enabled either by adding the anonymous user to the Editor role of the virtual resource USER_SELF_ENROLLMENT or running a configuration task enable-anonymous-sign-up.
+!!!note "Update with CF209 and higher"
+    In the previous releases, anonymous sign-up is enabled by default. Starting with CF209, the anonymous sign-up feature is disabled by default for   anonymous users. You can enable this by either adding the anonymous user to the Editor role of the virtual resource USER_SELF_ENROLLMENT or by running a configuration task enable-anonymous-sign-up.
 
 ## Registration/Edit My Profile
 
