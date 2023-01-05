@@ -19,7 +19,7 @@ A friendly URL makes a web address easy-to-read by using words to describe the c
 
 In contrast, a `binaryUrl` you get from **Copy link** on the **Edit** page, consists of a string of characters representing the `collection_id`, `item_id`, and `rendition_id`.
 
-![](../../../images/copy_link_edit_page.png "Copy link from the Edit page")
+![](../../../images/copy_link_edit_page.png "Copy link from the Edit page"){ width=50% }
 
 **Sample `binaryUrl`**:
 
@@ -29,7 +29,7 @@ In contrast, a `binaryUrl` you get from **Copy link** on the **Edit** page, cons
 
 Meanwhile, a `customUrl` provides the original rendition of an asset. The `customUrl` is not related to a friendly URL.
 
-![](../../../images/edit_information_tab_custom_url_field.png "Custom URL field from the Edit page")
+![](../../../images/edit_information_tab_custom_url_field.png "Custom URL field from the Edit page"){ width=50% }
 
 **Sample `customUrl`**:
 
@@ -98,11 +98,11 @@ self: /collections/collection-one/items/car.jpg/renditions/Desktop.
 
 If an asset happens to have the same name with another asset in a collection, a notification is displayed in the **Information** panel.
 
-![Notification to rename an asset](../../../images/information_panel_rename_notification.png)
+![Notification to rename an asset](../../../images/information_panel_rename_notification.png){ width=50% }
 
 You can click **Rename** from the notification and provide a unique name.
 
-![Rename asset dialog](../../../images/dialog_rename_field.png)
+![Rename asset dialog](../../../images/dialog_rename_field.png){ width=50% }
 
 ## What is collection unique-name?
 Collection unique-names are the unique identifier for each collection which can be used in friendly url instead of collection UUID to access DAM assets. Collection unique-names supports all languages as per existing system. Collection unique-name does not support any URL reserved characters(e.g. "?!#$&%'*+/;:,=@()\[]").
@@ -110,8 +110,9 @@ Collection unique-names are the unique identifier for each collection which can 
 ## How collection unique-names are generated?
 - While creating a collection, the user has a provision to enter a custom collection unique-name.
 
-![](../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup")
-![](../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup")
+![](../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup"){ width=45% }
+![](../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup"){ width=47% }
+![](../../../images/CreateCollection_friendlyUrl-3.png "Create collection unsupported unique name"){ width=45% }
 
 - Collection unique-name is an optional field. If it is not provided by the user, the system will generate a collection unique-name based on the collection name replacing all the URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]") with underscores.
 - Collection unique-names will follow simple format of adding “_Number” for collections having same collection-names.
@@ -119,17 +120,25 @@ Collection unique-names are the unique identifier for each collection which can 
 
 ## How can the user change the collection unique-names?
 Once the collection unique-name is generated, user will be able to view/edit the collection unique-name in the collection information panel.
-![](../../../images/CollectionEdit_friendlyUrl.png "Collection edit panel")
-![](../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel")
 
-## What happens if collection unique-name already exists while creating collection?
-When creating a collection, DAM checks for any duplication of the unique-name and prompts with an error message if a duplicate is found in any other collection.
-![](../../../images/CreateCollectionError_friendlyUrl_1.png "Create collection duplicate unique name")
-![](../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection unsupported unique name")
+![](../../../images/CollectionEdit_friendlyUrl.png "Collection edit panel"){ width=47% }
+
+![](../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel"){ width=45% }
+
+## What happens if collection unique-name already exists while creating or editing a collection?
+While creating or editing a collection, DAM checks for any duplication of the unique-name and prompts with an error message & an available unique-name as a suggestion if a duplicate is found in any other collection.
+![](../../../images/CreateCollectionError_friendlyUrl_1.png "Create collection duplicate unique name"){ width=45% }
+![](../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection suggestion click"){ width=45% }
+
+- when the user clicks on the suggested name, unique-name input field get prefilled with the suggested unique-name.
+
+![](../../../images/EditCollectionError_friendlyUrl_1.png "Edit collection duplicate unique name"){ width=45% }
+![](../../../images/EditCollectionError_friendlyUrl_2.png "Edit collection suggestion click"){ width=50% }
+
 
 ## Copying friendly URLs for assets
 Users can copy the friendly URL and API URL of an asset from the URLs section of the asset's inspector panel
-![](../../../images/Copy_friendlyUrl.png "Copy friendly URL")
+![](../../../images/Copy_friendlyUrl.png "Copy friendly URL"){ width=50% }
 
 
 ???+ info "Related information"
