@@ -25,6 +25,16 @@ Page templates are created in a specific area of the portal hierarchy located in
 -   If you want to store the content outside of the Portal Site library, create a default content association to a site area outside of the Portal Site library for the parent page of the new page.
 -   If you want to store the content in the Portal Site library, transfer the content for the template page to the Portal Site library first. For more information, go to *Transferring content associations to the Portal Site library*.
 
+## Default page template
+
+The page template with the unique name wps.content.template.default is selected by default when you create a page by using a page template.
+
+To modify, edit the settings of the New Page portlet and add a new parameter:<br>
+
+1. In the **New Preference** field, enter **ibm.portal.explorer.default.page.template**.
+2. In the **New Value** field, enter a unique name of the desired default page template.
+3. Click **Add**.
+
 
 ???+ info "Related information" 
     - [Transferring content associations to the Portal Site library](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_transfer.md)
