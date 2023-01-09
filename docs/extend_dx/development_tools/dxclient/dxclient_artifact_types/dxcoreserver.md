@@ -1,6 +1,6 @@
 # DX Core server
 
-This topic provides information about restarting the DX Core both on Websphere Application Server level or Core Pods-level on Kubernetes-based deployments
+This topic section information about restarting the DX Core both on Websphere Application Server level or Core Pods-level on Kubernetes-based deployments
 
 This topic also provides information about creating core server configuration reports using the DXClient tool. The `dx-core-configuration-reports`command is used to generate the differential reports on various core configurations between two DX server nodes.
 
