@@ -7,7 +7,7 @@ This topic also provides information about creating core server configuration re
 ## Restart DX Core server
 
 !!! important
-    Running the restart-dx-core command in a Kubernetes-based deployment will not restart all of the server from all the pods, for restarting servers on Kubernetes-based deployments see: [Restart DX Core Pods](#restart-dx-core-pods).
+    Running the restart-dx-core command in a Kubernetes-based deployment will not restart all of the Websphere Application servers in all the HCL DX Core pods. To restart all pods on Kubernetes-based deployments see: [Restart DX Core Pods](#restart-dx-core-pods).
 
 The restart-dx-core command is used to restart the DX Core server.
 
