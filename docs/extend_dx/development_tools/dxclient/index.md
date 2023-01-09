@@ -60,7 +60,7 @@ DXClient package comes with a script that you can use to run the container image
 
 7. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
 
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that could be used in on-premises platforms in standalone, cluster platforms is also available under `<working-directory>/store/samples/sample-configurations/default-config.json` for reference.
+    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
 
 
 8. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
@@ -160,14 +160,16 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 9.  Configuration, logger, output, and sample files under location - <working-directory>/store.
 
-Common command arguments can be pre-configured inside the `config.json` file available under <working-directory>/store folder. A sample configuration file that could be used on-premises platforms in standalone, cluster platforms is also available under <working-directory>/store/samples/sample-configurations/default-config.json for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under <working-directory>/store folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
 
 ## DXClient installation configuration
 
-Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used for any of the supported Kubernetes platforms is also available under samples/sample-configurations.json for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
 
 ```
 {
+    "name":"config.json",
+    "desc":"The attributes in this file are used for configuration purpose and those must not be deleted.",
     "dxProtocol": "",
     "dxConnectProtocol": "https",
     "hostname": "",

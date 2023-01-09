@@ -104,6 +104,10 @@ The restart-dx-core command is used to restart the DX Core server.
     dxclient dx-core-configuration-reports [OPTIONS]
     ```
 
+    !!! note
+
+        The target server details are needed only when the user needs to generate the summary of the configurations of both source and target servers. If any one of the target server details are provided , it will prompt you to add all the required target parameters.
+
 -   **Help command**
 
     This command shows the help information for `dx-core-configuration-reports` command usage:
@@ -174,9 +178,6 @@ The restart-dx-core command is used to restart the DX Core server.
     -targetDxProfileName <Profile name of the DX core server>
     ```
 
-    !!! note
-
-        The target server details are needed only when the user needs to generate the summary of the configurations of both source and target servers.
 
 !!! example
 
