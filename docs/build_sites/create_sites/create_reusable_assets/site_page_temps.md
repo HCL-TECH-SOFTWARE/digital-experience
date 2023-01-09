@@ -29,11 +29,16 @@ Page templates are created in a specific area of the portal hierarchy located in
 
 The page template with the unique name wps.content.template.default is selected by default when you create a page by using a page template.
 
+!!!note
+    This default page template is also applicable in previous versions. 
+
 To modify, edit the settings of the New Page portlet and add a new parameter:<br>
 
 1. In the **New Preference** field, enter **ibm.portal.explorer.default.page.template**.
 2. In the **New Value** field, enter a unique name of the desired default page template.
 3. Click **Add**.
+
+For more information, see [Configuring portlet applications or portlet parameters](../../../extend_dx/portlets_development/mng_portlets_apps_widgets/modifying_portlet_app_and_portlets/portletapps_cfg.md) and [Modifying portlet application settings](../../../extend_dx/portlets_development/mng_portlets_apps_widgets/portlet_management/managing_portlet_apps/h_papp_modify_portlet_app_parms.md).
 
 
 ???+ info "Related information" 
