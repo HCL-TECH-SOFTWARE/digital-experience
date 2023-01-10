@@ -1,4 +1,4 @@
-# Tika is Enabled as part of Cumulative Fix 95_CF205 Install
+# Enabling and disabling Apache Tika
 
 Beginning with Digital Experience Cumulative Fix version 95_CF205, Oracle Stellent use for [Search](../../index.md) has been replaced with Apache Tika which is automatically enabled.  This means a change to the out-of-box Digital Experience behavior with an upgrade to CF205. If you are upgrading from CF202 or later, Oracle Stellent files have been automatically backed up to your Digital Experience profile location and you can continue to utilize Oracle Stellent for Search. If you are upgrading from CF201 or earlier, you can [manually backup](../../../../../manage_content/wcm_authoring/dcs/dcs_backup.md) your existing Oracle Stellent files.
 
