@@ -11,6 +11,7 @@ nav:
     - Dynamic User Interfaces: dynamic_user_interfaces
     - Collaborative Services API and the Person Tag: collaborative_services_api_person_tag
     - Portlet API: portlet_api
+    - Managing portlets, portlet applications, and iWidgets: mng_portlets_apps_widgets
     - Portlet Development Reference: portlet_dev_ref
     - Predefined Public Render Parameters: predefined_public_render_params
     - jsrsamp.md
