@@ -4,7 +4,6 @@
 The following features and updates are available to customers installing HCL Digital Experience Container Update CF208 on supported platforms:
 
 - Kubernetes deployment Pre-requisites checking 
-<!---  Kubernetes deployment HA Proxy option to configure Ingress  -->
 - Web Content Manager Author options now include Tiny MCE
 - Web Content Manager set SVG to disabled by default
 - Digital Asset Management set SVG to disabled by default
@@ -17,7 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 - New option to configure a local HCL Flexnet Entitlement server
 - DAM Keyword enhancements
 - Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
-
+<!---  Kubernetes deployment HA Proxy option to configure Ingress  -->
 
 ## Kubernetes deployment Pre-requisites checking  
 
@@ -84,12 +83,14 @@ The following features and updates are available to customers installing HCL Dig
 ## Config Option to set absolute value Content Composer and DAM syndication
 
 === "Containers"
-    When syndicating DAM assets and Content Composer items that point to DAM assets, the target URLs need to be updated to point to the new server. A new option can be configured to control syndication of staging documents in production operations so that references will point to the appropriate server location. See the Help Center topic [Install Commands to Deploy](../../deployment/install/container/helm_deployment/helm_install_commands.md) for more information.
+    When syndicating DAM assets and Content Composer items that point to DAM assets, the target URLs need to be updated to point to the new server. A new option can be configured to control syndication of staging documents in production operations so that references will point to the appropriate server location. See the topic [(Optional) Override Content Composer and DAM URL](../../deployment/install/container/helm_deployment/helm_install_commands.md#optional-override-content-composer-and-dam-url) for more information.
+
 
 ## Move or duplicate content items in Content Composer 
 
 === "Containers"
     Content items can now be moved or duplicated through Content Composer. See the topic [authoring actions in dashboard view](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#create-new-content-with-default-keywords) for more information.
+
 
 ## WCM column sorting enhancement  
 

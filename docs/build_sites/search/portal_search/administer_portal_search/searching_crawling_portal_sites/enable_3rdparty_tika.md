@@ -10,6 +10,7 @@ To continue using Oracle Stellent for DX Search, ensure that configureTika=false
 If you are upgrading a Kubernetes deployment, see [Replacing Document Conversion Services with Apache Tika](../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#replacing-document-conversion-services-with-apache-tika).
 
 ## Enabling Manually
+
 If you have run applyCF without setting the configureTika flag to false, or if you decide after enabling Stellent for DX Search that you prefer to use Tika, you can manually re-enable by taking the following steps.
 
 1.  Run the following ConfigEngine task:
@@ -44,3 +45,4 @@ If you prefer to use Stellent after enabling Tika for use with DX Search, you ca
     ```
     ./startServer.sh|bat WebSphere_Portal
     ```
+

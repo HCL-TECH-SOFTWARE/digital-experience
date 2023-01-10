@@ -24,5 +24,5 @@ You must have administrative access to the portlet to be able to configure it. C
 
 |Option|Description|
 |------|-----------|
-|Display link to open IBM Connections in a browser window|Display a link so users can open Connections in a browser window to access the full application.|
+|Display link to open HCL Connections in a browser window|Display a link so users can open Connections in a browser window to access the full application.|
 

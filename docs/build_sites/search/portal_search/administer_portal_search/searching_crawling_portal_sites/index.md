@@ -11,8 +11,10 @@ Users of your Portal can search across various types of sites. In addition to se
 -   External users search your Portal site. This works only for public pages of your Portal.
 <br>
 
--  **[Enabe Apache Tika for Search](enable_3rdparty_tika.md)**
- Beginning with Digital Experience Cumulative Fix version 95_CF205, Oracle Stellent use for Search has been replaced with Apache Tika.
+
+-  **[Enabe Apache Tika for Search](enable_3rdparty_tika.md)**<br>
+Beginning with Digital Experience Cumulative Fix version 95_CF205, Oracle Stellent use for Search has been replaced with Apache Tika.
+ 
 -   **[Resetting the default search collection](srtcrtprtlstecllc.md)**  
 Under certain circumstances, you might want to change the configuration of the portal site search collection. In this case, you must re-create the collection, as search collections cannot be modified.
 -   **[Crawling a remote portal site](srcsrchngpubportpgs.md)**  

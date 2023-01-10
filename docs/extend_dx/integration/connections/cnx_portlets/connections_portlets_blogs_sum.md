@@ -22,4 +22,4 @@ You must have administrative access to the portlet to be able to configure it. C
 |Option|Description|
 |------|-----------|
 |Homepage Handle|Enter the Homepage Handle for your Blogs deployment.|
-|Display link to open IBM Connections in a browser window|Opens IBM Connections in a browser window so that users can interact with the full application.|
+|Display link to open HCL Connections in a browser window|Opens HCL Connections in a browser window so that users can interact with the full application.|

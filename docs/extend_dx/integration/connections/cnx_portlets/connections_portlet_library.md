@@ -16,7 +16,7 @@ Note the following requirements and restrictions when you add a library portlet 
 
 A community page can contain only one Library portlet. When you add a library portlet to a community page, one of the following scenarios is true:
 
--   If a single library exists for the associated IBM Connections community, that library displays automatically in the Library portlet.
+-   If a single library exists for the associated HCL Connections community, that library displays automatically in the Library portlet.
 -   If multiple libraries exist for the associated Connections community, the contents of the first library in the community displays in the portlet.
 
     !!! note
@@ -39,7 +39,7 @@ Community libraries provide owners and members with the following content manage
 -   Sharing. Community owners can set file-level access to the library, giving them tighter control over who can edit content.
 -   Social content management. Members can interact with content in the community library in a social and dynamic way. For example, they can use tags to categorize content and improve search results, and like files to recommend them to fellow members. Members can also track file updates in the community activity stream, follow files, comment on files, and see who downloaded files.
 
-For details on how to use the library, see the IBM Connections documentation on libraries.
+For details on how to use the library, see the HCL Connections documentation on libraries.
 
 !!! note
     -   The portlet provides only the full page view experience of the Library widget. Therefore, any references in the documentation to configuring the Library or the Overview page capabilities of the Library do not apply to the portlet.

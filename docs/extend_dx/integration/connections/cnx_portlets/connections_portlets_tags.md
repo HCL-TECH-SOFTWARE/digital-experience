@@ -4,7 +4,7 @@ The IBM® Connections Tags portlet gives you access to your profile and network 
 
 ## Using the Tags portlet
 
-Us the Tags portlet to access IBM Connections content by user-defined tags, or keywords. You can see tags for all IBM Connections content or associate tags with a narrower content source, such as a blog or community.
+Us the Tags portlet to access HCL Connections content by user-defined tags, or keywords. You can see tags for all HCL Connections content or associate tags with a narrower content source, such as a blog or community.
 
 ## Editing the shared settings for the Tags portlet
 
