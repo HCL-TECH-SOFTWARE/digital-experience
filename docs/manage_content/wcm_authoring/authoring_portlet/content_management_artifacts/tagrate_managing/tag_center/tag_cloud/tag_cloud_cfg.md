@@ -143,7 +143,7 @@ Configure the following options:
     If a HCL Connections server is integrated into the HCL Portal, check boxes for HCL Connections features such as Activities, Blogs, Bookmarks, Communities, Files, Forums, Profiles, and Wikis are displayed. Each HCL Connections feature can be selected individually. Clicking the **All** check box selects or clears all of the HCL Connections features. When you select aHCL Connections feature, the corresponding HCL Connections tags are integrated in the **Others’ tags** view of the tag cloud.
 
     !!! note
-        One or more Lotus Connections check boxes can be hidden by setting a comma separated list of check box identifiers in the custom property `com.ibm.wps.cp.tagging.federation.ui.disabled.ids` that is located in the WP CPConfigurationService Resource Environment Provider.
+        One or more HCL Connections check boxes can be hidden by setting a comma separated list of check box identifiers in the custom property `com.ibm.wps.cp.tagging.federation.ui.disabled.ids` that is located in the WP CPConfigurationService Resource Environment Provider.
 
     For details about how to set properties in the Portal Configuration Service, see the topic about Setting service configuration properties. The identifiers of the Connections check boxes are: All, Activities, Blogs, Bookmarks, Communities, Files, Forums, Profiles, and Wikis. For example, if you do not want the Blogs and Profiles check boxes to be shown, use the value `Blogs,Profiles` for the properties. You can integrate HCL Connections tags in the All view by selecting the check box **Display HCL Connections tags in the All view**.
 
