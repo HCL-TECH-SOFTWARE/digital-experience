@@ -129,6 +129,12 @@ The restart-dx-core command is used to restart the DX Core server.
   -dxWASPassword <value>
   ```
 
+  Use this attribute to specify the protocol to connect to the server:
+
+  ```
+  -dxProtocol <value>
+  ```
+
   Use this attribute to specify the hostname of the target DX deployment:
 
   ```
