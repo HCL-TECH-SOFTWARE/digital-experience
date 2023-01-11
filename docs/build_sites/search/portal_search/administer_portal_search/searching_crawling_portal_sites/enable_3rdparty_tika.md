@@ -5,7 +5,7 @@ Beginning with Digital Experience Cumulative Fix version 95_CF205, Oracle Stelle
 !!!note
     If you do not have a backup of the Oracle Stellent files in your DX environment, do not set the configureTika flag to false or run the manual tasks.
 
-To continue using Oracle Stellent for DX Search, ensure that configureTika=false is configured in wkplc.properties before running (or pass  -DconfigureTika=false on the command line when running) applyCF.sh|bat commands.
+To continue using Oracle Stellent for DX Search, ensure that configureTika=false is configured in wkplc.properties before running (or pass -DconfigureTika=false on the command line when running) applyCF.sh|bat commands.
 
 If you are upgrading a Kubernetes deployment, see [Replacing Document Conversion Services with Apache Tika](../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#replacing-document-conversion-services-with-apache-tika).
 
