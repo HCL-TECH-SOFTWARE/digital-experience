@@ -2,14 +2,18 @@
 
 ## Helm Chart Value
 
-You can configure the container time zone in the `values.yaml` file. Before applying the changes make sure you understand the implication of updating the timezone in all the applications. 
+By default, time zone of all containers in the Helm Chart would be in **UTC**. 
+
+You can configure this by updating the `containerTimezone` field in the `deploy-values.yaml` file.
+
+Before applying the changes make sure you understand the implication of updating the timezone in all the applications. 
 
 !!! important
     If you are using **DAM Staging** and/or **WCM Syndication** all deployments must have the same timezone, to prevent issues during synchronization.
 
 See [supported input types](#supported-input-types) for examples of valid timezone formats.
 
-Example:
+For example to use **GMT/BST** you need to set the `containerTimezone` to `Europe/London`
 ```yaml
 incubator:
   configuration:
@@ -18,34 +22,37 @@ incubator:
   containerTimezone: "Europe/London"
 ```
 
-Apply Changes  
+And then apply the changes using the following command:
+
 `helm upgrade -n <namespace> -f <custom-values.yaml> <prefix> <chart>`
 
-After the update is completed, this would trigger a restart for all the containers mentioned below you can verify the timezone of the containers by running the following command:
+After the update is completed, this would trigger a restart for all the containers mentioned [below](#containers), you can verify the time zone of the containers by running the following command:
 
 `kubectl -n <namespace> exec <pod-name> -- /usr/bin/date`
 
-## Containers
+If there are multiple containers in the pod, you can specify the container name as well:  
 
-Changing the `containerTimezone` value in `values.yaml` would change the timezone for the following
-application containers:
-- Content Composer
-- Core 
-- DAM Plugins
-- DAM
-- Design Studio
-- Haproxy
-- Image Processor
-- License Manager
-- Open LDAP
-- Persistence
-- Remote Search
-- Ring API
-- Runtime Controller
+`kubectl -n <namespace> exec <pod-name> -c <container-name> -- /usr/bin/date`
+
+If you wish to go back to the **UTC**, you can just pass an empty string to the `containerTimezone` field.
+
+!!! note
+    If you passed an invalid time zone, the time zone would default back to **UTC**.
+
+## Effects
+
+Changing the `containerTimezone` value in `values.yaml` would change the time zone for **all** application containers.
+Including but not limited to: logging sidecar containers, prereq-checker containers, etc.
+
+This also means that application running inside the containers would also be affected by this change.
+
+Effects of changing the time zone would be dependent on the application, but some examples are:
+
+- Timestamps of the logs
+- Timestamps of when was data created/updated
+- CRON Jobs would follow the new time zone.
 
 ## Supported Input Types
-
-You can use any timezone that are in the Timezone DB database. For the comprehensive list please see: [List of Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
 Some Examples:
 
@@ -53,3 +60,4 @@ Some Examples:
 - `Australia/Melbourne`
 - `America/Phoenix`
 
+You can use any timezone that are in the Timezone DB database. For the comprehensive list please see [this list of time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) you can use values from the **TZ database name** column.
