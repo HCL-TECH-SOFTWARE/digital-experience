@@ -3,12 +3,13 @@
 ## Helm Chart Value
 
 You can configure the container time zone in the `values.yaml` file. Before applying the changes make sure you understand the implication of updating the timezone in all the applications. 
-!!! important
 
-If you are using **DAM Staging** and/or **WCM Syndication** all deployments must have the same timezone, to prevent issues during synchronization.
+!!! important
+    If you are using **DAM Staging** and/or **WCM Syndication** all deployments must have the same timezone, to prevent issues during synchronization.
+
+See [supported input types](#supported-input-types) for examples of valid timezone formats.
 
 Example:
-
 ```yaml
 incubator:
   configuration:
@@ -18,9 +19,11 @@ incubator:
 ```
 
 Apply Changes  
-`helm upgrade -n <your namespace> apply -f <>`
+`helm upgrade -n <namespace> -f <custom-values.yaml> <prefix> <chart>`
 
-See [supported input types](#supported-input-types) for examples of valid timezone formats.
+After the update is completed, this would trigger a restart for all the containers mentioned below you can verify the timezone of the containers by running the following command:
+
+`kubectl -n <namespace> exec <pod-name> -- /usr/bin/date`
 
 ## Containers
 
@@ -49,6 +52,4 @@ Some Examples:
 - `Europe/London`
 - `Australia/Melbourne`
 - `America/Phoenix`
-
-## Important Note
 
