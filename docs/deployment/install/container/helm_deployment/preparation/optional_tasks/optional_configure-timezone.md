@@ -16,9 +16,6 @@ See [supported input types](#supported-input-types) for examples of valid timezo
 For example to use **GMT/BST** you need to set the `containerTimezone` to `Europe/London`
 ```yaml
 incubator:
-  configuration:
-  # To change the timezone of all the containers. This value should be a valid timezone format (i.e. Australia/Melbourne, Europe/London, America/Phoenix).
-  # WARNING: If you are using DAM Staging and/or WCM syndication, then all the deployments must be in same timezone, to prevent issues during synchronisation.
   containerTimezone: "Europe/London"
 ```
 
