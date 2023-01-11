@@ -2,7 +2,7 @@
 
 Document Conversion Services (DCS) are used when you work with HCL Web Content Manager authoring, previewing, and search.
 
-Documents that are produced by many standard applications (such as word processors or spreadsheet editors) can be viewed as HTML pages with Document Conversion Services. Documents that are received as attachments to email can be viewed in the browser even if the application that created the document is not installed. Document Conversion Services also allows documents to be searched by content. When using Oracle Stellent DCS, document pages can also be converted into an image format such as GIF, BMP, JPG, or PNG.mkdo
+Documents that are produced by many standard applications (such as word processors or spreadsheet editors) can be viewed as HTML pages with Document Conversion Services. Documents that are received as attachments to email can be viewed in the browser even if the application that created the document is not installed. Document Conversion Services also allows documents to be searched by content. When using Oracle Stellent DCS, document pages can also be converted into an image format such as GIF, BMP, JPG, or PNG.
 
 -   **[Supported operating systems for document conversion services](dcs_platform.md)**  
 Some operating systems support running the DCS locally while others do not. The following table lists the operating systems and versions that support running the document conversion services. On operating systems that do not support running the DCS locally, document conversion must be done on a remote IBM WebSphere Application Server that supports document conversion services.
