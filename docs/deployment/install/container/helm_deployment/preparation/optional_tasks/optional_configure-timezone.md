@@ -31,7 +31,7 @@ If you wish to go back to the **UTC**, you can just pass an empty string to the 
 
 ## Effects
 
-Changing the `containerTimezone` value in `values.yaml` would change the time zone for **all** containers.
+Changing the `incubator.containerTimezone` value in custom values file would change the time zone for **all** containers.
 
 This also means that application running inside the containers would also be affected by this change.
 
