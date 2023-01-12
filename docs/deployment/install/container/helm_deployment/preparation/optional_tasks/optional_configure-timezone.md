@@ -39,7 +39,7 @@ Effects of changing the time zone would be dependent on the application, but som
 
 - Timestamps of the logs
 - Timestamps of when was data created/updated
-- CRON Jobs of Prereqs Checker would follow the new time zone.
+- CRON Jobs of Prereqs Checker would follow the new time zone
   For more information please see: [Prereqs Checker Documentation](../optional-core-prereqs-checker/?h=prereqs#automatic-running-of-checks)
 
 ## Supported Input Types
