@@ -58,6 +58,6 @@ This plug-in uses the following attributes:
     This plug-in tag results in a URL that serves the resource `http://www.ibm.com?a=b&b=c1` through the portal Ajax proxy.
 
 
-???= info "Related information"
+???+ info "Related information"
     - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../extend_dx/ddc/index.md)
 
