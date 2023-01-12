@@ -23,13 +23,6 @@ And then apply the changes using the following command:
 
 `helm upgrade -n <namespace> -f <custom-values.yaml> <prefix> <chart>`
 
-After the update is completed, this would trigger a restart for all the containers mentioned [below](#containers), you can verify the time zone of the containers by running the following command:
-
-`kubectl -n <namespace> exec <pod-name> -- /usr/bin/date`
-
-If there are multiple containers in the pod, you can specify the container name as well:  
-
-`kubectl -n <namespace> exec <pod-name> -c <container-name> -- /usr/bin/date`
 
 If you wish to go back to the **UTC**, you can just pass an empty string to the `containerTimezone` field.
 
