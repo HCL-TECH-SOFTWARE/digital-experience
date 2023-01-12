@@ -103,6 +103,30 @@ Content authors will be able to view and filter comments in HCL Content Composer
 
     ![](../../../../../images/Filter%20selected%20Content's%20comments-2.png)
 
+## Save updates of a Content item as a new Content item
+
+Content authors can save the updates of a content item as a new content item in the current location or in a different location.
+
+1. Access the content item you want to save as a new content item. In this example, the content item example below \(**Image**\) is obtained from **Web Content \> Content \> Articles** site area location. Click the icon to select the content item. Once selected, click the **Edit** icon on the header.
+
+    ![Select a content and edit it](../../../../../images/Select_Content_To_Edit.png)
+
+2. Select **Save As** to save the content as a new content item. 
+
+    ![Click Save As](../../../../../images/Click_Save_As.png)
+
+3. A dialog appears to show the generated name, display title, and the current location. You can can edit the name, display title, or select a different location.
+
+    ![Save As Modal](../../../../../images/save_as_modal.png)
+
+4. Click the **Save** button to save the content as a new content item.
+
+    ![Click Save button](../../../../../images/save_as_modal_click_save.png)
+
+5. The editor loads the new content item.
+
+    ![Save As New Content](../../../../../images/save_as_new_content.png)
+
 <!--
 ## HCL Digital Experience Solution Feedback
 
