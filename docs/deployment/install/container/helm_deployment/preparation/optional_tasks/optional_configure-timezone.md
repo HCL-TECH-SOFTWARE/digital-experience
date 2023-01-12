@@ -4,7 +4,7 @@
 
 By default, time zone of all containers in the Helm-based DX deployment is in **UTC**. 
 
-You can configure this by updating the `containerTimezone` field in the `deploy-values.yaml` file.
+You can configure this by updating the `incubator.containerTimezone` field in the custom values file.
 
 Before applying the changes make sure you understand the implication of updating the timezone in all the applications. 
 
@@ -13,7 +13,7 @@ Before applying the changes make sure you understand the implication of updating
 
 See [supported input types](#supported-input-types) for examples of valid timezone formats.
 
-For example to use **GMT/BST** you need to set the `containerTimezone` to `Europe/London`
+For example to use **GMT/BST** you need to set the `incubator.containerTimezone` to `Europe/London`
 ```yaml
 incubator:
   containerTimezone: "Europe/London"
@@ -39,7 +39,8 @@ Effects of changing the time zone would be dependent on the application, but som
 
 - Timestamps of the logs
 - Timestamps of when was data created/updated
-- CRON Jobs would follow the new time zone.
+- CRON Jobs of Prereqs Checker would follow the new time zone.
+  For more information please see: [Prereqs Checker Documentation](../optional-core-prereqs-checker/?h=prereqs#automatic-running-of-checks)
 
 ## Supported Input Types
 
