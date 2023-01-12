@@ -2,7 +2,7 @@
 
 ## Helm Chart Value
 
-By default, time zone of all containers in the Helm Chart would be in **UTC**. 
+By default, time zone of all containers in the Helm-based DX deployment is in **UTC**. 
 
 You can configure this by updating the `containerTimezone` field in the `deploy-values.yaml` file.
 
