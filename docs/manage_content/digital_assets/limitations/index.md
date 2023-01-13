@@ -12,5 +12,6 @@ The following limitations exist in HCL DAM:
     -   Two-way staging for DAM is currently not supported in HCL Digital Experience CF207 and earlier releases. We are evaluating this feature for future releases. 
     -   WCM syndication and DAM staging are not integrated, and as such, there are times where either DAM or WCM have been updated while the other one is still in progress - during those times links could result in 404 errors or older links being displayed. We are improving the integration for future releases.
     -   In case of issues with DAM staging, a solution can be to [de-register and register the subscriber/s](#registering-or-deregistering-for-dam-staging).
+- Editing functions in DAM are limited to images with a pixel count up to `268402689` (`~268 Megapixels`)
 
 
