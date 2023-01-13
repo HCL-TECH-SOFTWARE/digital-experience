@@ -10,7 +10,7 @@ There are certain HCL Digital Experience functions that are designed to run on a
 
 There are multiple ways to create the support server, including taking advantage of multiple profile support or separate installations. When the support server is on its own server, copy the master server profile to the support server. The directory paths must match on both servers \(master and support\). You can rely on the base HCL Portal and IBM® WebSphere® Application Server binary installation directories shared on the master file system and reference the local file system for the profile. See the Messaging Bus image:
 
-![A shared portal farm configuration includes four farm profiles, the networked storage, a support server, and the shared databases.](../images/portal_farm_supportserver.jpg)
+![A shared portal farm configuration includes four farm profiles, the networked storage, a support server, and the shared databases.](../../../../../images/portal_farm_supportserver.jpg)
 
 The following annotations apply to the image labels:
 
@@ -57,13 +57,13 @@ The following annotations apply to the image labels:
 
 Complete the following tasks to set up your farm instance with a shared configuration:
 
--   **[Installing the Farm Master and setting up the support server](../install/set_portal_farm_master.md)**  
+-   **[Installing the Farm Master and setting up the support server](set_portal_farm_master.md)**  
 The first server where HCL Digital Experience is installed is the basis for the portal farm and is termed the Farm Master.
--   **[Configuring a cloned file system](../install/cfg_farm_clone.md)**  
+-   **[Configuring a cloned file system](cfg_farm_clone.md)**  
 A cloned file system does not require the profile directory to be read-only. Read-only profile directories can cause some limitations with portlets and other applications that try to write to the profile. A cloned file system alleviates this limitation. Nodes in a cloned system do not require that the host name be set to localhost. Therefore, there is no issue related to remote Enterprise Java Beans and other applications that require a real host name.
--   **[Configuring a shared file system](../install/set_portal_farm_gpfs.md)**  
+-   **[Configuring a shared file system](set_portal_farm_gpfs.md)**  
 When you choose the option to install the Farm with a shared file system, provide the file system before you install the first farm member. Tune your file system. Slow access to the files impacts performance. Because all the farm members access the file system concurrently, the system must handle this situation.
--   **[Disabling farm mode](../install/disable_farm.md)**  
+-   **[Disabling farm mode](disable_farm.md)**  
 After setting up your farm using a shared configuration, you may need to disable the farm mode, which will allow you to return the original HCL Digital Experience instance that manages the shared file system to a regular, stand-alone server instance. You can then make system updates, for example change the systemTemp value, and then run the enable-farm-mode task to re-enable the farm or you can use the instance for a different purpose.
 
 
