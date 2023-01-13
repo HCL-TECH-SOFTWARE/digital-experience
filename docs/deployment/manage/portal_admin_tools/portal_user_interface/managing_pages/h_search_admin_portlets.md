@@ -45,11 +45,11 @@ Perform the following steps to search:
 
 ???+ info "Related information*"  
     -   [Managing pages](../../../portal_admin_tools/portal_user_interface/managing_pages/index.md)
-    -   [Managing Web modules](../../../../portlets_development/mng_portlets_apps_widgets/portlet_management/managing_web_modules/index.md)
-    -   [Managing portlet applications](../../../../portlets_development/mng_portlets_apps_widgets/portlet_management/managing_portlet_apps/index.md)
-    -   [Configuring your portal for Web services](../../../../portlets_development/mng_portlets_apps_widgets/portlet_management/cfg_portal_for_webservices/index.md)
-    -   [Working with resource permissions](../../../../../deployment/manage/security/access/working_with_resource_permission/index.md)
-    -   [Managing permissions for users and groups](../../../../../deployment/manage/security/access/user_group_permission/index.md)
+    -   [Managing Web modules](../../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/portlet_management/managing_web_modules/index.md)
+    -   [Managing portlet applications](../../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/portlet_management/managing_portlet_apps/index.md)
+    -   [Configuring your portal for Web services](../../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/portlet_management/cfg_portal_for_webservices/index.md)
+    -   [Working with resource permissions](../../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md)
+    -   [Managing permissions for users and groups](../../../../../deployment/manage/security/people/authorization/controlling_access/user_group_permission/index.md)
     -   [Creating meaningful URLs for your site](../../../../../deployment/manage/config_portal_behavior/h_main_url.md)
     -   [Managing custom unique names](../../../../../build_sites/portal_settings/manage_custom_unique_names/index.md)
     -   [Managing virtual portals](../../../../../build_sites/virtual_portal/wcm_mngpages_virtualportal.md)

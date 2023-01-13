@@ -87,8 +87,8 @@ $Object method [$Object method argInner1 argInner2]
 
 ???+ info "Related information"  
     -   [Work with the Portal Scripting Interface](../../../portal_admin_tools/portal_scripting_interface/adpsitsk.md)
-    -   [Portal Scripting Interface and project support](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/managed_pages/advadmin_managedpages/wcm_mngpages_projectpsi.md)
-    -   [Portal Scripting Interface and web content libraries](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/managed_pages/advadmin_managedpages/wcm_mngpages_librarypsi.md)
+    -   [Portal Scripting Interface and project support](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_projectpsi.md)
+    -   [Portal Scripting Interface and web content libraries](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_librarypsi.md)
     -   [Task: create-virtual-portal](../../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/advp_cfgtsk_create.md)
     -   [Task: modify-virtual-portal](../../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/advp_cfgtsk_modify.md)
 
