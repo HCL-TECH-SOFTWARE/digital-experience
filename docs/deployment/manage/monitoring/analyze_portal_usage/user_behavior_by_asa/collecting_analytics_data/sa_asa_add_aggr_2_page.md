@@ -18,11 +18,13 @@ As a portal administrator, you assign an aggregator to a page by editing the pag
 
 3.  Locate the page to which you want to assign the aggregator. Use the Manage Pages portlet to locate the page.
 
-    **Note:** The page must be located as a child of the portal content root.
+    !!! note
+        The page must be located as a child of the portal content root.
 
 4.  Click **Edit Page Properties** for the page that you selected.
 
-    **Note:** You cannot add an Active Site Analytics aggregator to the content root. **Edit Page Properties** is not available for the content root.
+    !!! note
+        You cannot add an Active Site Analytics aggregator to the content root. **Edit Page Properties** is not available for the content root.
 
 5.  To expand the available choices, click the plus sign \(**+**\) icon next to **Advanced Options**.
 
@@ -43,17 +45,13 @@ As a portal administrator, you assign an aggregator to a page by editing the pag
 13. Click **OK** to save your changes and return to the **Manage Pages** screen.
 
 
-**Note:** Children pages inherit the script that is set on the parent page. If you want to use a different aggregator on a child page, follow the same procedure that is previously addressed for the child page to make the appropriate assignment. If you want to block inheriting the aggregator setting from the parent page, follow the same procedure, but leave the value empty. As a result, the page has no aggregator that is assigned anymore and all children of the page inherit the new setting.
+!!! note
+    Children pages inherit the script that is set on the parent page. If you want to use a different aggregator on a child page, follow the same procedure that is previously addressed for the child page to make the appropriate assignment. If you want to block inheriting the aggregator setting from the parent page, follow the same procedure, but leave the value empty. As a result, the page has no aggregator that is assigned anymore and all children of the page inherit the new setting.
 
 
-**Related information**  
-
-
-[Aggregator patterns and samples](../admin-system/sa_asa_aggr_xmp.md)
-
-[Modules that are provided with the modularized theme](../dev-theme/themeopt_oob.md)
-
-[Instrumenting a theme for Active Site Analytics](../admin-system/sa_asa_use_theme.md)
-
-[Displaying overlay analytics reports](../admin-system/sa_asa_overlay_stats.md)
+???+ info "Related information"
+    - [Aggregator patterns and samples](../collecting_analytics_data/writting_aggregator_for_asa/sa_asa_aggr_xmp.md)
+    - [Modules that are provided with the modularized theme](../../../../../../build_sites/themes_skins/the_module_framework/oob_modules/index.md)
+    - [Instrumenting a theme for Active Site Analytics](../collecting_analytics_data/instrumenting_theme_for_asa/index.md)
+    - [Displaying overlay analytics reports](../displaying_overlay_analytics_reports/index.md)
 

@@ -120,7 +120,7 @@ The following sections describe how the administrators can create and manage bac
 ???+ info "Related information"
     - [Install the HCL Digital Experience 9.5 components](../../../../manage_content/wcm_authoring/content_composer/installation/install_config_cc_dam.md)
     - [Backup and Restore](../../../manage/backup_restore/index.md)
-    - [Backup and restore DAM image](../../../../manage_content/digital_assets/configuration/operator_dam_backup_restore_image.md)
+    - [Backup and restore DAM image](../../../../manage_content/digital_assets/configuration/dam_backup_restore_image.md)
  
 
 
