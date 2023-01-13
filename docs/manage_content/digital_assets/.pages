@@ -5,5 +5,5 @@ nav:
     - Configuration: configuration
     - Usage: usage
     - Limitations: limitations
-    - Failed operation job cleanup: failed_operation_job_cleanup.md
+    - Operation Framework: operation_framework.md
     - DAM not initializing, incomplete schema migration: incomplete_schema_migration.md
