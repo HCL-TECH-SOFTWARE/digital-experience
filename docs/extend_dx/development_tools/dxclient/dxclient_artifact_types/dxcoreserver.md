@@ -1,19 +1,19 @@
 # DX Core server
 
-This topic section provides information about restarting the DX Core both on Websphere Application Server level or Core Pods-level on Kubernetes-based deployments
+This topic provides information about restarting the DX Core both on the Websphere Application Server level and on the Core Pods-level on Kubernetes-based deployments.
 
-This topic also provides information about creating core server configuration reports using the DXClient tool. The `dx-core-configuration-reports`command is used to generate the differential reports on various core configurations between two DX server nodes.
+This topic also provides the steps on creating core server configuration reports using the DXClient tool. The `dx-core-configuration-reports`command is used to generate the differential reports on various core configurations between two DX server nodes.
 
 ## Restart DX Core server
 
 !!! important
-    Running the restart-dx-core command in a Kubernetes-based deployment will not restart all of the Websphere Application servers in all the HCL DX Core pods. To restart all pods on Kubernetes-based deployments see: [Restart DX Core Pods](#restart-dx-core-pods).
+    Running the restart-dx-core command in a Kubernetes-based deployment does not restart all of the Websphere Application servers in all the HCL DX Core pods. To restart all pods on Kubernetes-based deployments, see: [Restart DX Core Pods](#restart-dx-core-pods).
 
 The restart-dx-core command is used to restart the DX Core server.
 
 - **Command description**
 
-  This command invokes the restart-dx-core tool inside the DXClient and runs the DX Core restart action.
+  This command invokes the restart-dx-core tool inside the DXClient and runs the DX Core restart action:
 
   ```
   dxclient restart-dx-core
@@ -83,7 +83,7 @@ The restart-dx-core command is used to restart the DX Core server.
 
   The values that are passed through the command line override the default values.
 
-  Use this attribute and retrigger the command to check the status of any previous request that was incomplete.
+  Use this attribute and retrigger the command to check the status of any previous request that was incomplete:
 
   ```
   -requestId <Unique ID of a previously triggered restart request>
@@ -152,7 +152,7 @@ The restart-dx-core command is used to restart the DX Core server.
   ```
 
     !!! note
-        The target server details are needed only when the user needs to generate the summary of the configurations of both source and target servers. If any one of the target server details is provided, it will prompt you to add all the required target parameters.
+        The target server details are needed only when the user needs to generate the summary of the configurations of both source and target servers. If any one of the target server details is provided, it prompts you to add all the required target parameters.
 
 -   **Help command**
 
