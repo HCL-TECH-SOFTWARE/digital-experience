@@ -95,7 +95,6 @@ This topic describes the commands that are used to create, update, delete, and r
         ```
         resource-env-provider import-properties [OPTIONS]
         ```
-
 -   **Command options required to create, update, delete, and retrieve resource environment providers:**
 
     Use this attribute to specify the protocol with which to connect to the server:
