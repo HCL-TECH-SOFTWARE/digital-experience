@@ -40,7 +40,7 @@ To make up the full HCL Portal URL, the portal appends a suffix to that friendly
 ???+ info "Related information"
     -   [URL mapping](../../../../../../deployment/manage/config_portal_behavior/adurlmap.md)
     -   [Navigation options for static pages](../../../../../../build_sites/create_sites/building_website/static_content/creating_static_page/spa_nav_mcrfrmt.md)
-    -   [DAM API for friendly URLs](../../../../../apis/hcl_experience_api/dam_friendly_urls.md)
+    -   [DAM API for friendly URLs](../../../../../../extend_dx/apis/hcl_experience_api/dam_friendly_urls.md)
     -   [Defining friendly URLs without state information for pages in your site](../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
     -   [Human readable URL mappings for virtual portals](../../../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
 
