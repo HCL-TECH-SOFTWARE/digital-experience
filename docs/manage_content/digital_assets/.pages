@@ -6,4 +6,3 @@ nav:
     - Usage: usage
     - Limitations: limitations
     - Operation Framework: operation_framework.md
-    - DAM not initializing, incomplete schema migration: incomplete_schema_migration.md
