@@ -64,6 +64,7 @@ Content users can move and rename a content item when there is another content w
 1.  A **Save As** modal should appear on the screen, when a user try to move a content item in a site area location that has a content item with the same name. A unique name and display title will be auto-generated, which can be modified.
 
     ![Save as content item during moving conflict](../../../../../assets/save-as-content-item-during-moving-conflict.png)
+
 2.  Click **See All Site Areas** under **Location** to change the prefered location to move your content item. A location selector should appear on the screen and pick the site area to move the content to.
 
     ![Select a site area location and click Move](../../../../../assets/select-site-area-to-move-content-during-moving-conflict.png)
