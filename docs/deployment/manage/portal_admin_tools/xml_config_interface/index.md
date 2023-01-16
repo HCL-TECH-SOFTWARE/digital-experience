@@ -14,7 +14,7 @@ Use the XML configuration interface (XML Access) for exchanging portal configura
     -   [Creating a Producer definition and consuming a portlet by a single XML script](../../../../extend_dx/portlets_development/usage/wsrp/portal_wsrp_consumer/consuming_portlets_consumer_portal/using_xml_cfg/wsrpt_cons_singl_xml.md)
     -   [Work with the Portal Scripting Interface](../../portal_admin_tools/portal_scripting_interface/adpsitsk.md)
     -   [Activating and deactivating portlet applications or portlets](../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/portletapps_activate.md)
-    -   [Managing iWidgets in your portal](../../../portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
+    -   [Managing iWidgets in your portal](../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
     -   [Deploying portlets common across clusters](../../../../deployment/manage/config_cluster/managing_cluster/managing_portlets_in_cluster/clusm_common_ports.md)
     -   [Planning for virtual portals](../../../../build_sites/virtual_portal/vp_planning/index.md)
     -   [The master administrator](../../../../build_sites/virtual_portal/vp_planning/vp_roles/advppln_roles_mastr_adm.md)
