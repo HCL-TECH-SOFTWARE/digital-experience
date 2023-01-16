@@ -115,7 +115,7 @@ Content authors can save the updates of a content item as a new content item in 
 
     ![Click Save As](../../../../../images/Click_Save_As.png)
 
-3. A dialog appears to show the generated name, display title, and the current location. You can can edit the name, display title, or select a different location.
+3. A dialog appears to show the generated name, display title, and the current location. You can edit the name, display title, or select a different location.
 
     ![Save As Modal](../../../../../images/save_as_modal.png)
 
