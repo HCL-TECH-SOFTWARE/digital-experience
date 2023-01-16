@@ -18,7 +18,8 @@ Complete the following steps to set the properties of the HTTP Basic Authenticat
 
 7.  Click **Interceptors** \> **com.ibm.portal.auth.tai.HTTPBasicAuthTAI**.
 
-    **Tip:** If `com.ibm.portal.auth.tai.HTTPBasicAuthTAI` is not available, run the following task to enable the interceptor: enable-http-basic-auth-tai-sitemgmt. See the related links section for instructions.
+    !!!tip
+        If `com.ibm.portal.auth.tai.HTTPBasicAuthTAI` is not available, run the following task to enable the interceptor: enable-http-basic-auth-tai-sitemgmt. 
 
 8.  Click **Custom properties**.
 

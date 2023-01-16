@@ -1,9 +1,4 @@
----
-id: h_rperm_place_external
-title: Placing a resource under external control
----
-
-
+# Placing a resource under external control
 
 
 By default, resources are under the internal control of the portal. You might want to manage some resources with an external security manager. Private resources cannot be externalized.

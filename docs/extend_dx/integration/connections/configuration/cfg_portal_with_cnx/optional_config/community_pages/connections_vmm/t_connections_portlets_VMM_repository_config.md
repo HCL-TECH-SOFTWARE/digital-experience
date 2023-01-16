@@ -13,6 +13,7 @@ This task is done when the server is stopped. In a cluster, you can change the c
         -   Follow the pattern from Step 3 for running the ConfigEngine command for your operating system:
             -   AIX® and Linux: `./ConfigEngine.sh <parameters>`
             -   Windows™: `ConfigEngine.bat <parameters>`
+            
         -   If you are installing in a clustered environment, do this step on the primary node and then synchronize the nodes. Configure, following this pattern: <br>
         `ConfigEngine configure-SNPortletsVMM -DICpersonCorrelationAttribute=personCorrelationAttribute` <br>`-DICpersonCorrelationAttributeType=personCorrelationAttributeType`<br>`-DICcommunityRdnAttribute=communityRdnAttribute -DICmaxSearchResults=120 -DICldapTypeTDS=ldapTypeTDS` `-DICrunAsAdmin=false -DICpumaFilterClassname=com.ibm.connections.vmm.adapter.filter.VMMPrincipalFilter` <br>`-DICpumaFilterPosition=120 -DWasPassword=password -DPortalAdminPwd=password -DPortalAdminPwd=password` <br><br> For example: `ConfigEngine configure-SNPortletsVMM -DICpersonCorrelationAttribute=ibm-entryUuid` <br> `-DICpersonCorrelationAttributeType=uniqueId -DICcommunityRdnAttribute=cn -DICmaxSearchResults=120` <br> `-DICldapTypeTDS=true -DICrunAsAdmin=false -DICpumaFilterClassname=com.ibm.connections.vmm.adapter.filter.` <br> `VMMPrincipalFilter -DICpumaFilterPosition=120 -DWasPassword=password -DPortalAdminPwd=password`
 

@@ -10,9 +10,9 @@ By default, the WSRP Producer and WSRP Consumer do not use any handler.
 
 Before you can use a custom handler, you must first create a handler implementation according to the JAX-WS specification. For details about the handler framework, read the JAX-WS specification. For information about how to use handlers with JAX-WS web services, read the appropriate information in the WebSphere® Application Server documentation.
 
--   **[WSRP Producer portal](../admin-system/wsrpt_websrvc_handlers_prod.md)**  
+-   **[WSRP Producer portal](wsrpt_websrvc_handlers_prod.md)**  
 Learn how to configure and use a handler on a WSRP Producer portal.
--   **[WSRP Consumer portal](../admin-system/wsrpt_websrvc_handlers_cons.md)**  
+-   **[WSRP Consumer portal](wsrpt_websrvc_handlers_cons.md)**  
 Learn how to configure and use a handler on a WSRP Consumer portal.
 
 

@@ -32,6 +32,7 @@ To perform a full offline backup of the WPSDB database, follow these steps:
             Select a time when no users are working with the database or with applications that might be running on the server.
 
     -   To perform a backup without setting a schedule, click **Run now without saving task history** and click **Next**.
+    
 11. Click **Show Command** to view the DB2 commands that the Backup wizard runs.
 
     !!!note "Tip"

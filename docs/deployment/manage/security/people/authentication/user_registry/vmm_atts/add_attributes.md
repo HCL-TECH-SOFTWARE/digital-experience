@@ -22,32 +22,23 @@ The resource tag includes attributes that are specific for the property: propert
 
     -   In a stand-alone environment, ensure that the WebSphere\_Portal server is running.
     -   In a clustered environment, stop all application servers on the system. Ensure that the WebSphere\_Portal server is stopped. Then, start the node agent and deployment manager servers.
-2.  Install the enterprise archive \(.ear\) file on WebSphere® Application Server:
+    
+2.  Install the enterprise archive (.ear) file on WebSphere® Application Server:
 
     1.  Open a command line.
 
-    2.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    2.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
     3.  Run the following task:
 
         |Environment|Task|
         |-----------|----|
-        |Stand-alone environment|        -   AIX® HP-UX Linux™ Solarisz/OS®: ./ConfigEngine.sh wp-la-install-ear -DWasPassword=password
-        -   IBM® i: ConfigEngine.sh wp-la-install-ear -DWasPassword=password
-        -   Windows™: ConfigEngine.bat wp-la-install-ear -DWasPassword=password
-|
-        |Clustered environment|        -   AIX HP-UX Linux Solarisz/OS: ./ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name
-        -   IBM i: ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name
-        -   Windows: ConfigEngine.bat wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name
- Where the default value for dmgr\_server\_name is dmgr. You can find the dmgr\_server\_name value in the WebSphere Integrated Solutions Console. Go to **System administrator** \> **Deployment Manager** \> **Configuration tab** \> **General Properties** \> **Name**.
+        |Stand-alone environment| - AIX® HP-UX Linux™ Solarisz/OS®: ./ConfigEngine.sh wp-la-install-ear -DWasPassword=password<br> - IBM® i: ConfigEngine.sh wp-la-install-ear -DWasPassword=password<br> - Windows™: ConfigEngine.bat wp-la-install-ear -DWasPassword=password|
+        |Clustered environment| - AIX HP-UX Linux Solarisz/OS: ./ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name<br> - IBM i: ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name<br> - Windows: ConfigEngine.bat wp-la-install-ear -DWasPassword=dmgr\_password -DServerName=dmgr\_server\_name -DNodeName=node\_name<br> Where the default value for dmgr\_server\_name is dmgr. You can find the dmgr\_server\_name value in the WebSphere Integrated Solutions Console. Go to **System administrator** \> **Deployment Manager** \> **Configuration tab** \> **General Properties** \> **Name**.<br> Where node\_name is the name of the node where the deployment manager is located. You can find the node\_name value in the WebSphere Integrated Solutions Console. Go to **System administrator** \> **Deployment Manager** \> **Runtime tab** \> **General Properties** \> **Node Name**.|
 
- Where node\_name is the name of the node where the deployment manager is located. You can find the node\_name value in the WebSphere Integrated Solutions Console. Go to **System administrator** \> **Deployment Manager** \> **Runtime tab** \> **General Properties** \> **Node Name**.
+3.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
 
-|
-
-3.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
-
-4.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+4.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 5.  Find the *VMM Property Extension Properties* heading. You can either add a single attribute or multiple attributes.
 
@@ -141,24 +132,18 @@ The resource tag includes attributes that are specific for the property: propert
 
 7.  Run the wp-add-property task to add a property that maps to an attribute in your user registry. If you are defining a new property to store in the property extension database, run wp-add-la-property.
 
-    **Note:** This task calls an EJB that must authenticate against WebSphere Application Server. Depending on the configuration in the sas.client.props file, you might receive a prompt that asks for your user ID and password. Enter the WebSphere Application Server user ID and password.
+    !!!note
+        This task calls an EJB that must authenticate against WebSphere Application Server. Depending on the configuration in the sas.client.props file, you might receive a prompt that asks for your user ID and password. Enter the WebSphere Application Server user ID and password.
 
     -   AIX HP-UX Linux Solaris: ./ConfigEngine.sh wp-add-property -DWasPassword=password
     -   IBM i: ConfigEngine.sh wp-add-property -DWasPassword=password
     -   Windows: ConfigEngine.bat wp-add-property -DWasPassword=password
     -   z/OS: ./ConfigEngine.sh wp-add-property -DWasPassword=password
+
 8.  Stop and restart the appropriate servers to propagate the changes.
 
 
 
-**Previous topic:**[Querying the defined attributes](../install/man_attributes.md)
-
-**Next topic:**[Mapping attributes](../install/map_attributes.md)
-
-**Related information**  
-
-
-[Querying the defined attributes](../install/man_attributes.md)
-
-[Configuring the rule attribute for the Group](../admin-system/rbug_cfg_vmm_attrb.md)
+???+ info "Related information"
+    - [Configuring the rule attribute for the Group](../../../authorization/users_and_groups/rule_based_user_groups/cfg_rule_based_user_groups/cfg_vmm_rule_based_groups_repo/rbug_cfg_vmm_attrb.md)
 

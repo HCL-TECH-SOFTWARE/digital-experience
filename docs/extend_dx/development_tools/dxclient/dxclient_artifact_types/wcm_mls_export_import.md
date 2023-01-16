@@ -5,7 +5,7 @@ The HCL Multilingual Solution \(MLS\) export and import capability allows you to
 ## Prerequisites
 
 -   The libraries for the other languages for translated are already existing and are filled with the content from the main language library, like with the MLS copy portlet.
--   The DXClient tool is used to manage the library export and import functions by providing an integrated solution to export and import CSV files for translation. The DXClient export and import process works on HCL Digital Experience 9.5 only. See the [DXClient Help Center](../dxclient.md) topic for more information.
+-   The DXClient tool is used to manage the library export and import functions by providing an integrated solution to export and import CSV files for translation. The DXClient export and import process works on HCL Digital Experience 9.5 only. See the [DXClient Help Center](../index.md) topic for more information.
 
 ## About this task
 
@@ -141,20 +141,11 @@ MLS Import
 ![DXClient MLS import pipeline sample](../../../../images/wcm_mls_exim_import_pipeline.png)
 
 
-<!-- ???Info "Related information:"
-
-
-[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
-
-[DXClient](../containerization/dxclient.md)
-
-[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-[Sample Pipelines for use with HCL DXClient and Automation servers](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
-
-[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)
-
-[Sample Pipelines for the DXClient Docker image file](../containerization/sample_pipelines_docker_dxclient.md)
-
-[Sample Pipelines for the DXClient node package file](../containerization/sample_pipelines_node_dxclient.md) -->
-
+???+ info "Related information"
+    - [DXClient](../index.md)
+    - [DXClient Artifact Types](../dxclient_artifact_types/index.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](../sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+    - [HCL Web Content Manager Multilingual Solution](../../../../manage_content/wcm_authoring/multi_lingual/index.md)
+    - [Sample Pipelines for the DXClient Docker image file](../sample_pipelines_docker_dxclient.md)
+    - [Sample Pipelines for the DXClient node package file](../sample_pipelines_node_dxclient.md)
+    - [Deploy DX components using HCL DXClient and DXConnect](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.html)

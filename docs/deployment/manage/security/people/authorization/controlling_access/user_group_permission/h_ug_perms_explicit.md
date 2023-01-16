@@ -1,8 +1,4 @@
----
-id: h_ug_perms_explicit
-title: Assigning explicit roles to users and groups
----
-
+# Assigning explicit roles to users and groups
 
 
 
@@ -19,7 +15,8 @@ Perform the following steps to assign or change explicit role assignments:
 4.  Click the required **Resource Type**. A list of resource instances appears. The following two columns display information about roles:
 
     -   **Explicitly Assigned**: A check mark in this column indicates that the role is explicitly assigned. If no check mark is placed here the role is inherited via the resource hierarchy or via group membership.
-    -   **Role\(s\)**: This column lists the roles that the user or group has on the resource instance. Users and groups can have multiple role assignments on a single resource instance.
+    -   **Role(s)**: This column lists the roles that the user or group has on the resource instance. Users and groups can have multiple role assignments on a single resource instance.
+
 5.  Click the **Assign access** icon for the required Page Title.
 
 6.  Click the **Explicitly Assigned** check box to explicitly assign roles.

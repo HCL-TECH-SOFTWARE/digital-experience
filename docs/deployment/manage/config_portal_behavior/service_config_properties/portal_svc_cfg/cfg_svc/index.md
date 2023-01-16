@@ -260,7 +260,8 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
     This value determines whether the nodes in the navigation tree are expanded or collapsed by default. The default is false, which means that the nodes are collapsed. Some exceptions apply; for example, the Portal Administration navigation tree is expanded by default.
 
-    **Note:** Setting this value to true does not affect Web 2.0 themes, as the expansion state is not returned from the portal REST service.
+    !!! note 
+        Setting this value to true does not affect Web 2.0 themes, as the expansion state is not returned from the portal REST service.
 
 -   **page.reload.interval = \(0\)**
 

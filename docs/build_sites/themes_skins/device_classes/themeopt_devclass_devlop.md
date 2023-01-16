@@ -40,7 +40,7 @@ The DeviceClass profile attribute contains only the highest priority device clas
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
 [Target MobileFirst resources](../../../extend_dx/integration/ibm_mobilefirst/wl_device_classes.md)
 
 <!--

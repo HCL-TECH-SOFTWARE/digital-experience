@@ -115,5 +115,5 @@ The remote PUMA SPI gives you access to user profiles through REST services. It 
 
 
 ???+ info "Related information"
-    - [Administering user impersonation](../../../deployment/manage/security/users_and_groups/impersonation/index.md)
+    - [Administering user impersonation](../../../deployment/manage/security/people/authorization/users_and_groups/impersonation/index.md)
 

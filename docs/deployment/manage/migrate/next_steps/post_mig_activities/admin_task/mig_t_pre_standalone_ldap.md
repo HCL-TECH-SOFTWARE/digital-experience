@@ -4,7 +4,8 @@ The stand-alone LDAP user registry configuration is deprecated. Instead, configu
 
 In a stand-alone server environment, you can complete the following task when the servers are either stopped or started. In a clustered environment, start the deployment manager and node agent. Then, verify that they are able to synchronize.
 
-**Remember:** Starting with HCL Digital Experience Version 8.5, the stand-alone LDAP repository is deprecated. Change to the federated LDAP user repository.
+!!!important
+    Starting with HCL Digital Experience Version 8.5, the stand-alone LDAP repository is deprecated. Change to the federated LDAP user repository.
 
 Use the wp_security_federated.properties helper file that is in the wp_profile_root/ConfigEngine/config/helpers directory. It ensures that the correct properties are entered. In the following instructions, where the step refers to the wkplc.properties file, use your wp_security_federated.properties helper file.
 

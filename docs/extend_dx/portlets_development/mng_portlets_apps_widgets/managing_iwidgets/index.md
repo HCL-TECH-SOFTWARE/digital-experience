@@ -12,23 +12,16 @@ Proceed as follows:
 
     For example, you can use the Manage Pages portlet, the portal administration tools embedded in the theme, or the XML configuration interface \(XML Access\) \(XMLAccess\).
 
-
--   **[Task register-iwidget-definition](../dev-portlet/csa2r_cfgtsk_regwidgdef.md)**  
+<br>
+<br>
+-   **[Task register-iwidget-definition](csa2r_cfgtsk_regwidgdef.md)**  
 Run the portal configuration task register-iwidget-definition to register individual iWidget definitions on HCL Portal.
--   **[Task refresh-iwidget-definitions](../dev-portlet/csa2r_cfgtsk_rfrshwdgtdef.md)**  
-Use this configuration task to refresh iWidget definitions in the portal. This task affects all iWidget definitions that are referenced through absolute HTTP or HTTPS URLs in addition to iWidget definitions that are referenced through WebDAV URIs.
 
 
-**Related information**  
-
-
-[Manage pages portlets](../admin-system/mp_manage_pages.md)
-
-[Customizing pages](../admin-system/admcustom.md)
-
-[Putting a portlet on a page](../dev/rest_feed_pt_ptltnpg.md)
-
-[Task register-iwidget-definition](../dev-portlet/csa2r_cfgtsk_regwidgdef.md)
-
-[The XML configuration interface](../admin-system/admxmlai.md)
+???+ info "Related information"
+    - [Manage pages portlets](../../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/index.md)
+    - [Customizing pages](../../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/customizing_pages/index.md)
+    - [Putting a portlet on a page](../../../apis/model_spi/model-spi_rest_service/feeds_rest_svc/use_cases_for_resource_mod/rest_feed_pt_ptltnpg.md)
+    - [Task register-iwidget-definition](csa2r_cfgtsk_regwidgdef.md)
+    - [The XML configuration interface](../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
 

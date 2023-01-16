@@ -24,7 +24,7 @@ The extent to which the portal delegation model and access control is tied in va
 
 ## Overview of DXClient
 
-DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms. Refer to the [DXClient](../dxclient/dxclient.md) Help Center topics for more information.
+DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms. Refer to the [DXClient](../../../extend_dx/development_tools/dxclient/index.md) Help Center topics for more information.
 
 ## Overview of administration portlets
 
@@ -33,6 +33,7 @@ Portal administrative users can use the administration portlets for the followin
 -   Completing administrative tasks and actions on portal resources, depending on the access rights that the administrative user has on those resources. These tasks include:
     -   Configuring individual portal resources.
     -   Configuring individual portal resources, together with their dependent resources. For example, this configuration can be pages and the pages that are derived from them.
+
 -   Giving other users, for example sub-administrators, limited access rights on selected portal resources. These sub-administrators can then complete administrative tasks that their access rights allow. As the master administrator, you can widen or limit that extent by modifying the access rights for these users on the portal resources. This way, you can delegate administrative tasks as required.
 -   Deploying your own custom developed artifacts, such as portlets, themes, or skins.
 
@@ -73,7 +74,7 @@ Use of the XML configuration interface for the following tasks is limited:
 
 For more information, refer to the section [About the XML configuration interface](../portal_admin_tools/xml_config_interface/adxmlabt.md).
 
-The XML configuration interface is also used for release staging, that is, for staging a portal from development through test to production. For more information about staging your portal to production, refer to the topics about [Staging to production](../../../deployment/manage/staging_to_production/index.md) and [Deploy DX components using HCL DXClient](../dxclient/index.md) for non-containerized platforms and containerized platforms and the ReleaseBuilder.
+The XML configuration interface is also used for release staging, that is, for staging a portal from development through test to production. For more information about staging your portal to production, refer to the topics about [Staging to production](../../../deployment/manage/staging_to_production/index.md) and [Deploy DX components using DXClient](../../../extend_dx/development_tools/dxclient/index.md) for non-containerized platforms and containerized platforms and the ReleaseBuilder.
 
 ## Overview of ReleaseBuilder
 
@@ -105,6 +106,7 @@ The Portal Scripting Interface has the following advantages:
 -   Security: The user IDs and access roles of the involved teams provide separation between the responsibilities for the subtasks:
     -   The development and test team do not have access rights on the production portal.
     -   The operator who runs the script must have access rights on the resources that are created and updated by the script. Therefore, if you limit the access rights for that user as required, the script cannot affect other resources unintentionally.
+    
 -   Safety and availability of the production portal:
     -   The scripts can be tested and verified before it is put into production.
     -   After the scripts are tested and verified, they perform the update in a reliable way. Human errors that might happen when you are working with the administration portlets are not possible.
@@ -125,6 +127,6 @@ For more information, refer to the section [Configuration Wizard](../portal_admi
 
 ## Overview of ConfigEngine
 
-The ConfigEngine allows various configuration tasks to be executed that change major DX and WAS configuration. Some configurations can cause conflicts between Portal resources or with other web modules deployed into the WebSphere Application Server. You can check for conflicts by using ConfigEngine validation targets. You cannot access the ConfigEngine remotely. The ConfigEngine pages are documented in the places where it is used, for example, the import and export of web content (see [Exporting and importing a web content library](../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)). It is also used and may be extended in the Solution Installer. See [ConfigEngine extension points for the Solution Installer](../../paa/developing_adv_paa_app/extpnts_si.md).
+The ConfigEngine allows various configuration tasks to be executed that change major DX and WAS configuration. Some configurations can cause conflicts between Portal resources or with other web modules deployed into the WebSphere Application Server. You can check for conflicts by using ConfigEngine validation targets. You cannot access the ConfigEngine remotely. The ConfigEngine pages are documented in the places where it is used, for example, the import and export of web content (see [Exporting and importing a web content library](../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)). It is also used and may be extended in the Solution Installer. See [ConfigEngine extension points for the Solution Installer](../../../extend_dx/paa/developing_adv_paa_app/extpnts_si.md).
 
-A few tasks are exposed via the user interface in the ConfigWiard. For more information, refer to the section [Configuration Wizard](../portal_admin_tools/cfg_wizard/configuration/index.md).
+A few tasks are exposed via the user interface in the ConfigWizard. For more information, refer to the section [Configuration Wizard](../portal_admin_tools/cfg_wizard/configuration/index.md).

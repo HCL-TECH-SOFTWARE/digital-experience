@@ -1,6 +1,6 @@
 # Removing attributes
 
-The Virtual Member Manager \(VMM\) has a limitation. There is no task to update an attribute.
+The Virtual Member Manager (VMM) has a limitation. There is no task to update an attribute.
 
 Remove an attribute for any of the following circumstances:
 
@@ -10,7 +10,8 @@ Remove an attribute for any of the following circumstances:
 
 Use caution when you do these steps.
 
-**Important:** Do not remove attributes that are populated with user values because it can cause inconsistencies.
+!!!important
+    Do not remove attributes that are populated with user values because it can cause inconsistencies.
 
 **Cluster note:** In a clusteredan idle-standby environment, complete these steps on the deployment manager and then resynch the nodes.
 
@@ -98,10 +99,6 @@ Use caution when you do these steps.
 
 
 
-**Previous topic:**[Mapping attributes](../install/map_attributes.md)
-
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+???+ info "Related information"
+    - [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md)
 

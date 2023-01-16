@@ -2,7 +2,7 @@
 
 In addition to the repository configuration, you must define the rule attribute as a new attribute for the entity type Group.
 
-1.  Edit the file wimxmlextension.xml in the directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/config/cell\_name/wim/model/`. If the file does not exist yet, create it.
+1.  Edit the file wimxmlextension.xml in the directory `[PortalServer\_root](../../../manage/wpsdirstr#wp_profile_root)/config/cell\_name/wim/model/`. If the file does not exist yet, create it.
 
 2.  Add the following attribute definitions:
 
@@ -29,8 +29,6 @@ In addition to the repository configuration, you must define the rule attribute 
 
 
 
-**Related information**  
-
-
-[Adding attributes](../install/add_attributes.md)
+???+ info "Related information"
+    - [Adding attributes](../../../../../authentication/user_registry/vmm_atts/add_attributes.md)
 

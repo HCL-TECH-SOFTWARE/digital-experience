@@ -20,7 +20,8 @@ Search collections require manual migration; use the **Import or Export Collecti
 
     7.  Click **OK**.
 
-    **Note:** If you do not export the security information when you export a search collection, you must manually add the user name and password to each content source after you import the search collection into the target portal.
+    !!!note
+        If you do not export the security information when you export a search collection, you must manually add the user name and password to each content source after you import the search collection into the target portal.
 
 2.  Before you migrate your portal to a later version, export your search collections. This step exports the configuration data of your search collections.
 
@@ -34,15 +35,16 @@ Search collections require manual migration; use the **Import or Export Collecti
 
     5.  Click **Export**.
 
-    **Notes:**
+    !!!note "Notes"
+        1.  Before you export a collection, make sure that the user who is running the portal application process has write access to the target directory location. Otherwise, you might get an error message, such as File not found.
+        2.  When you specify the target directory location for the export, be aware that the export overwrites files in that directory.
 
-    1.  Before you export a collection, make sure that the user who is running the portal application process has write access to the target directory location. Otherwise, you might get an error message, such as File not found.
-    2.  When you specify the target directory location for the export, be aware that the export overwrites files in that directory.
 3.  For each collection, document the following data:
 
     -   The target file names and directory locations to which you export the collection.
     -   Location, name, description, and language.
     -   Settings for the **Specify collection language** and **Remove common words from queries** options.
+
 4.  Delete the search collections from your existing portal. Otherwise, they can be corrupted by the import step that follows later.
 
 5.  Upgrade your HCL Portal as needed.
@@ -71,7 +73,7 @@ Search collections require manual migration; use the **Import or Export Collecti
 
         The value is overwritten by the import process.
 
-    -   **Remove common words from queries \(for example. in, of, on, and so on\)**
+    -   **Remove common words from queries (for example. in, of, on, and so on)**
 
         Check or clear this setting to match the old setting as documented in step 2.
 
@@ -91,7 +93,8 @@ Search collections require manual migration; use the **Import or Export Collecti
 
     6.  Click **Add Parameter**.
 
-    **Note:** If you do not import the security information when you import a search collection, you must manually add the user name and password to each content source after you import the search collection into the target portal.
+    !!!note
+        If you do not import the security information when you import a search collection, you must manually add the user name and password to each content source after you import the search collection into the target portal.
 
 8.  Check that the target search collections that you created in step 6 are empty.
 
@@ -101,7 +104,8 @@ Search collections require manual migration; use the **Import or Export Collecti
 
 10. Briefly review the content source's configuration settings to check whether information such as host name and security credentials are still valid or must be modified. Make any necessary changes to the content source's configuration settings.
 
-    **Note:** When you import search collection data into a collection, most of the configuration data such as content sources, schedulers, filters, and language settings are also imported. If you configured such settings when you created the collection, they are overwritten by the imported settings.
+    !!!note
+        When you import search collection data into a collection, most of the configuration data such as content sources, schedulers, filters, and language settings are also imported. If you configured such settings when you created the collection, they are overwritten by the imported settings.
 
 
 

@@ -1,9 +1,4 @@
----
-id: h_rperm_place_internal
-title: Placing a resource back under internal control
----
-
-
+# Placing a resource back under internal control
 
 
 If control of a resource has been moved to an external security manager, such as Tivoli Access Manager, you can move it back to the portal's internal control.

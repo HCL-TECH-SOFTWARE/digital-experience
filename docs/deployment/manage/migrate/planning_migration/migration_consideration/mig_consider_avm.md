@@ -25,7 +25,7 @@ If you plan to do a manual migration, review the following considerations first:
     -   Bring any administrative features such as the administrative portlets from the source system, but you can also bring custom pages and applications.
     -   For Virtual Portals, re-create them on the target system, and then manually moving the artifacts over from the source Virtual portal to the target system Virtual Portal.
     -   If you customized the Virtual Portal creation scripts, you must redo the script customization for the 8.5 scripts
--   You can use [cross-version syndication](mig_content_options_cross-version.md#) from your source environment to the target environment to bring over JCR content:
+-   You can use [cross-version syndication](migrating_wcm_70_80/mig_content_options_cross-version.md) from your source environment to the target environment to bring over JCR content:
     -   You must apply the latest Combined Cumulative Fix on your source environment to use cross-version syndication to your target environment.
     -   If managed pages is not enabled on the source, you must also disable managed pages on the target OOB installation before you syndicate any changes.
     -   From Version 6.1 and earlier, no cross-version syndication is possible

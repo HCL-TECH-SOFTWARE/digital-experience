@@ -11,7 +11,7 @@ The assignment of a resource to a site promotion is called a site promotion mapp
 
 For information about the security of site promotions, refer to the topic about Security for analytics tags and site promotions.
 
--   **[Working with site promotions](../admin-system/sa_asa_site_prom_ui.md)**  
+-   **[Working with site promotions](sa_asa_site_prom_ui.md)**  
 To work with site promotions, the portal provides a dialog. You can create new site promotion mappings and view and delete existing ones.
 
 

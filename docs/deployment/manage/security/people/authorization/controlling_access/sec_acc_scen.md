@@ -4,9 +4,10 @@ These scenarios provide helpful illustrations on how access control can be set u
 
 This section describes basic tasks for administering access control. The following examples use a hypothetical portal user called Mary and a hypothetical group called the Sales group. The following graphic helps illustrate the examples described in this topic.
 
-![Illustration of role inheritance. The Market News page and USA Market News page are editable. Europe Market News has an editing block.](../images/inheritance.jpg)
+![Illustration of role inheritance. The Market News page and USA Market News page are editable. Europe Market News has an editing block.](../../../../../../images/inheritance.jpg)
 
-**Note:** The tasks described here can be performed using either the administrative portlets or the XML configuration interface. For instructions about using the portlets mentioned here, refer to the portlet helps. For instructions about using the XML configuration interface, see the XML configuration interface section of the Help Center.
+!!!note
+    The tasks described here can be performed using either the administrative portlets or the XML configuration interface. For instructions about using the portlets mentioned here, refer to the portlet helps. For instructions about using the XML configuration interface, see the XML configuration interface section of the Help Center.
 
 ## Give a user full access to the portal
 
@@ -37,7 +38,7 @@ Create an inheritance block on the appropriate page. For example, give the Sales
 
 Give the group a role assignment on both the page and the portlet. Role assignments on a page do not contain access rights for portlets that appear on the page. Use the Resource Permissions portlet, the User and Group Permissions portlet, or the XML configuration interface to assign these roles.
 
-For example, suppose there is a Market Targets portlet on the Market News Page. Give the Sales group \(or a user group that contains the Sales group\) the Editor@Market Targets Portlet role and the Editor@Market News Page role.
+For example, suppose there is a Market Targets portlet on the Market News Page. Give the Sales group (or a user group that contains the Sales group) the Editor@Market Targets Portlet role and the Editor@Market News Page role.
 
 ## Allow users to access a page, but not its child pages
 
@@ -55,9 +56,10 @@ The Editor role blocks that are created in the previous examples do not affect P
 
 For example, to allow Mary to assign the Sales group to the role Privileged User@Market News Page, do either of the following steps:
 
--   Give Mary the Privileged User@Market News Page, Security Administrator@Market News Page, and Delegator@Sales Group roles. This allows her to assign the Sales group \(or individual members of this group\) to the Privileged User@Market News Page role or the User@Market News Page role. Mary cannot assign anyone to the Editor@Market News Page role because she is not an Editor on the Market News Page. Mary cannot assign the Global Marketing group to the Privileged User@Market News Page role unless the Global Marketing group is a member of the Sales group.
+-   Give Mary the Privileged User@Market News Page, Security Administrator@Market News Page, and Delegator@Sales Group roles. This allows her to assign the Sales group (or individual members of this group) to the Privileged User@Market News Page role or the User@Market News Page role. Mary cannot assign anyone to the Editor@Market News Page role because she is not an Editor on the Market News Page. Mary cannot assign the Global Marketing group to the Privileged User@Market News Page role unless the Global Marketing group is a member of the Sales group.
 -   Give Mary the Administrator@Portal role. This allows her to assign any user or group to any role on any resource.
 
-**Note:** To administer access control through the administrative portlets, Mary must have role assignments that allow her to view the User Group Permissions or the Resource Permissions portlets and the pages that contain these portlets. To administer access control through the XML configuration interface, Mary must have a role assignment that allows her to access the XMLAccess virtual resource.
+!!!note
+    To administer access control through the administrative portlets, Mary must have role assignments that allow her to view the User Group Permissions or the Resource Permissions portlets and the pages that contain these portlets. To administer access control through the XML configuration interface, Mary must have a role assignment that allows her to access the XMLAccess virtual resource.
 
 

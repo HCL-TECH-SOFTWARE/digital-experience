@@ -86,5 +86,5 @@ Learn about the best practices for indexing web content if you are working with 
 
 **Next topic:**[Configuring Web Content Manager search options](../wcm/wcm_config_search.md)-->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Searching on secured portal sites and pages and content management items](../../search/planning_portal_search/security_considerations/srtsrchscrprtlstepgs.md)

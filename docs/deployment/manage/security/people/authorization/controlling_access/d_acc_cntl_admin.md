@@ -24,7 +24,8 @@ The general policy for creating or deleting role assignments is as follows: A us
 
 For example, in order to assign a group to a role of type Editor on a resource, you must have at least the Delegator@Group + Security\_Administrator@Resource + Editor@Resource roles.
 
-**Note:** The Security Administrator@Portal and Administrator@Portal roles allow users to make unrestricted changes to the access control configuration of resources that are under internal portal control. Users also need the Administrator@External Access Control role or the Security Administrator@External Access Control role in order to change the access control configuration for resources that are externally controlled by a security manager such as Security Access Manager.
+!!!note
+    The Security Administrator@Portal and Administrator@Portal roles allow users to make unrestricted changes to the access control configuration of resources that are under internal portal control. Users also need the Administrator@External Access Control role or the Security Administrator@External Access Control role in order to change the access control configuration for resources that are externally controlled by a security manager such as Security Access Manager.
 
 The general policy for creating or deleting role blocks is as follows: A user U can create or delete a role block on a specific resource R and a role type RT in either of the following cases:
 

@@ -7,9 +7,11 @@ To prevent modifying existing behavior of your environment or losing existing gr
 -   Reusing group information for user management results in all components of HCL Portal benefit from the faster group membership lookup. During the authentication session, the membership of the current user is based on the information that is provided by WebSphere Application Server. This reuse of information reduces load on your LDAP server, increases authentication performance, and results in the ability to define group membership at the authentication layer.
 -   Reusing group information for access control enables the system to react on possible per request changes of the WebSphere Security context. By default the Security context is not modifiable during an authentication session. However,WebSphere Application Server provides plug points, which allow the execution of a Trust Association Interceptor on every request, which might be used to establish a new security Subject on every request. In this case, Portal Access Control would be able to work with the updated subject information and would build a dynamic environment. However, this option requires more system resources, custom extensions to WebSphere Application Server security and impacts performance.
 
-**Note:** The recommended option is for user management, as this case provides the performance and functional enhancements. The second option for access control is used in specific scenarios, typically as directed by IBM Support or IBM technical documentation.
+!!!note
+    The recommended option is for user management, as this case provides the performance and functional enhancements. The second option for access control is used in specific scenarios, typically as directed by IBM Support or IBM technical documentation.
 
-**Note:** Do not combine both options as it leads to high CPU load on your system.
+!!!important
+    Do not combine both options as it leads to high CPU load on your system.
 
 Complete the following steps to reuse group information:
 
@@ -27,6 +29,7 @@ Complete the following steps to reuse group information:
         5.  Enter com.ibm.wps.um.AssertionFilter in the **Value** field.
         6.  Click **Apply**.
         7.  Click **Save** to save the changes to the master configuration.
+        
     -   To reuse group information for access control, complete the following steps:
         1.  Select the **WP PACGroupManagementService** resource environment provider.
         2.  Select **Custom properties**.
@@ -35,6 +38,7 @@ Complete the following steps to reuse group information:
         5.  Enter true in the **Value** field.
         6.  Click **Apply**.
         7.  Click **Save** to save the changes to the master configuration.
+        
     -   To reuse transient attribute information for user management, complete the following steps:
         1.  Select the **WP\_PumaStoreService** resource environment provider.
         2.  Select **Custom properties**.
@@ -46,14 +50,12 @@ Complete the following steps to reuse group information:
         8.  Enter -10 in the **Value** field.
         9.  Click **Apply**.
         10. Click **Save** to save the changes to the master configuration.
+
 4.  Log out of the WebSphere Integrated Solutions Console.
 
 5.  Restart the HCL Portal server.
 
 
-
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+???+ info "Related information"
+    - [Starting and stopping servers, deployment managers, and node agents](../../../../stopstart.md)
 

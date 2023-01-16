@@ -1,8 +1,4 @@
----
-id: h_cred_fields
-title: Field descriptions for the Credential Vault portlet
----
-
+# Field descriptions for the Credential Vault portlet
 
 
 
@@ -62,6 +58,7 @@ Learn more about the fields that are provided with the user interface.
 
     Select an existing vault resource or type a new vault resource.
 
-    **Note:** You must explicitly assign a unique resource for the vault slot. Otherwise, the slots share the same resource and a change in user ID and password in one slot will affect the others that share that resource.
+    !!!note
+        You must explicitly assign a unique resource for the vault slot. Otherwise, the slots share the same resource and a change in user ID and password in one slot will affect the others that share that resource.
 
 

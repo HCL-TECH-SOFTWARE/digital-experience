@@ -1,12 +1,7 @@
----
-id: h_usrgrps_remove_member
-title: Removing members from a group
----
+# Removing members from a group
 
 
-
-
-Learn how to remove a member \(a user or user group\), from a user group.
+Learn how to remove a member (a user or user group), from a user group.
 
 A member can be a user or a user group. Removing members from a group does not delete them from HCL Portal.
 
@@ -20,6 +15,7 @@ Perform these steps to remove a member from a user group:
 
 4.  Click **OK** to save your changes, or **Cancel** to exit without saving your changes.
 
-    **Note:** You can also use XMLAccess to remove multiple members from one group at one time. Contact your administrator for information about using XMLAccess to remove multiple users.
+    !!!note
+        You can also use XMLAccess to remove multiple members from one group at one time. Contact your administrator for information about using XMLAccess to remove multiple users.
 
 

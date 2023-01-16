@@ -56,7 +56,7 @@ See the Help Center topic [Disabling the language switcher](../../build_sites/cr
 The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New modules are available for Digital Experience developers and administrators. See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLearningJourneys) of the HCL Software Academy for more information.
 
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Using DAM Extensibility](../digital_asset_mgmt/dam_extensibility.md)
     - [Digital Experience 8.5 Theme](../design/dev-theme/themeopt_defaultparts.md)
     - [HCL Digital Experience 9.5](../design/script-portlet/script_app_improvements.md)

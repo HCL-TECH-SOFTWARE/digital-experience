@@ -9,19 +9,18 @@ A user registry is an implementation of the UserRegistry interface in WebSphereÂ
     An implementation of the UserRegistry interface that supports multiple repositories. To communicate with the federated repositories, both WebSphereÂ® Application Server and HCL Portal dispatch all operations to VMM.
 
 
-HCL Portal accesses all user repositories through VMM. HCL Portal uses the Portal User Management Architecture \(PUMA\) System Programming Interface \(SPI\) to retrieve and set attributes on user objects. PUMA passes these requests to VMM, which then passes the requests on to a corresponding registry adapter that connects VMM to the repository. For this reason, registry adapters are required to enable communication between HCL Portal and any repository.
+HCL Portal accesses all user repositories through VMM. HCL Portal uses the Portal User Management Architecture (PUMA) System Programming Interface (SPI) to retrieve and set attributes on user objects. PUMA passes these requests to VMM, which then passes the requests on to a corresponding registry adapter that connects VMM to the repository. For this reason, registry adapters are required to enable communication between HCL Portal and any repository.
 
-**Important:** You must create a user registry adapter if you plan to use a custom user repository. To create a user registry adapter, implement the com.ibm.wsspi.wim.Repository interface. Refer to the following topics in the WebSphere Application Server documentation for information and instructions:
+!!!important
+    You must create a user registry adapter if you plan to use a custom user repository. To create a user registry adapter, implement the com.ibm.wsspi.wim.Repository interface. Refer to the following topics in the WebSphere Application Server documentation for information and instructions:
 
--   *Repository SPI \(System programming interfaces for virtual member manager adapters\)*
+-   *Repository SPI (System programming interfaces for virtual member manager adapters)*
 -   *Sample custom adapters for federated repositories examples*
 
--   **[Creating and updating federated repositories](../security/setup_mgmt_cur_fed.md)**  
+-   **[Creating and updating federated repositories](create_update_fed_repo)**  
 You can define additional repositories as required for the out-of-box federated repositories user registry. For example, you can define one or more databases and/or LDAP directories for the user registry. Federated repositories also let you implement multiple realms. Realms define subsets of users and are spread across multiple repositories. For example, you can define one realm in a file-based repository and another realm in an LDAP directory. Because WebSphere Application Server provides an implementation of the UserRegistry interface for federated repositories out-of-box, you do not need to create a custom implementation of this interface.
 
 
-**Related information**  
-
-
-[Websphere Application Server Information center: Sample custom adapters for federated repositories examples](https://www.ibm.com/docs/en/was/8.5.5?topic=repositories-sample-custom-adapters-federated-examples)
+???+ info "Related information"
+    - [Websphere Application Server Information center: Sample custom adapters for federated repositories examples](https://www.ibm.com/docs/en/was/8.5.5?topic=repositories-sample-custom-adapters-federated-examples)
 

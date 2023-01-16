@@ -16,13 +16,24 @@ The main objective is to check if the specified prerequisites are met and inform
 In these checks, the basic file access permission would get checked and according to the access, the result will get printed on the logs.
 
 #### Latency Check for I/O:
-These checks will give the result of the disk latency. This check will help to know the essential efficiency of the file system. This check would get fail if the measured latency will not match the threshold value (minimum requirement).
+This check measures the `Latency` of the file system and evaluate it's efficiency by comparing the actual measured `Latency` with the [threshold value](#threshold-values). This check will print the results on logs according to the comparison. 
 
 #### Soft Links and Hard Links Check:
 This check will give the result of `Soft Links` and `Hard Links` creation capabilities on the file system.
 
 #### Random Read/Write Checks
-In this check, `IOPS` (Input/Output Operations per second) will get measured for the file system. This check is very essential to measure the performance of the file system. This check will get fail if the measured `IOPS` will not be higher or equal to the threshold value.
+In this check, `IOPS` (Input/Output Operations per second) will be measured for the file system. This check is  essential to evaluate the performance of the file system and prints the result on the logs after comparing the actual measured `IOPS` with the threshold value. For the `IOPS` threshold value, refer to [threshold value](#threshold-values).
+
+#### Threshold Values
+The threshold values for `prereqs-checker` are used as a benchmark to evaluate the disk latency and random RW (read/write) efficiency of a file system. These values will be compared to the actual test results  of [disk latency (ms)](#latency-check-for-io) and [random read/write (IOPS)](#random-readwrite-checks). From there the check can evaluate if the file system pass or fail the test.
+
+`Threshold values` are derived from computing the average result of testing disk latency (MS) and random RW (IOPS) efficiency from different cloud platforms with respective file system and storage types.
+
+**Concluded Threshold Values**
+
+-   `3 ms` - concluded threshold value for latency check.
+-   `1800 IOPS` - concluded threshold value for random read check.
+-   `600 IOPS` - concluded threshold value for random write check.
 
 ## Prereqs Checker configuration options
 
@@ -67,6 +78,11 @@ If this is not a Helm deployment and you need to have the test running please ch
 ```
 
 Subsequent pod(s) would still have the `prereqs-checker` container so you can still [trigger the checks](#how-to-manually-trigger-the-checks) manually for the other pods.
+
+```console
+$ kubectl -n dxns exec --stdin --tty dx-deployment-persistence-node-1 -c prereqs-checker -- /bin/bash /usr/local/sbin/run_test.sh
+```
+
 ## How to manually trigger the checks:
 
 The following command can be triggered to run the checks manually, once all the checks will get performed, results will be available in the logs

@@ -16,9 +16,9 @@ Each PAA file is treated as a separate assembly. The top-level sdd.xml contains 
 
 The assembly can be made up of one or more components, each requiring a component level sdd.xml file that can be automatically generated. The number of components depends on how the developer structures the application to be installed. Every artifact can potentially be included in a single component, although it might not be the most practical approach. However, you might want to separate larger applications into multiple components that contain related artifacts to facilitate reuse. Because a component might be required by multiple PAA distributions, this approach allows it to be reused with little extra work for the developer.
 
--   **[The assembly level sdd.xml file](../config/si_assemble_sdd.md)**  
+-   **[The assembly level sdd.xml file](si_assemble_sdd.md)**  
 When you create a Portal Application Archive \(PAA\) file, it might be necessary to add an assembly level sdd.xml file. This file registers the PAA content with the ConfigEngine.
--   **[Component level sdd.xml file overview](../config/si_paa_spec_comp.md)**  
+-   **[Component level sdd.xml file overview](si_paa_spec_comp.md)**  
 For most installation scenarios, generation of the component level sdd.xml file is automated. However, there are still occasions where it might be necessary to create it manually. The component level sdd.xml file contains the information on how to install the artifacts of the component. It lists the extension points that need to be processed. The extension points ensure that the resources can be installed and configured on the server. Ant tasks complete the deployment and configuration work.
 
 

@@ -25,7 +25,7 @@ You can have only one file in the folder at one time because the contribution fi
 
 These modules initialize the MobileFirst Client and Cordova API to enable support for native device capabilities and other functions of the MobileFirst server. The modules are only aggregated when accessed through the MobileFirst hybrid shell.
 
-The plugin.xml file location is [PortalServer\_root](../../../../../guide_me/wpsdirstr.md#portalserver_root)/theme/wp.theme.worklight.ext/installableApps/wp.theme.worklight.ext.ear/wp.theme.worklight.ext.war/WEB-INF/plugin.xml
+The plugin.xml file location is [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)/theme/wp.theme.worklight.ext/installableApps/wp.theme.worklight.ext.ear/wp.theme.worklight.ext.war/WEB-INF/plugin.xml
 
 For more information about these modules, their prerequisites or runtime activation, use the Theme Analyzer Portlet.
 
@@ -50,7 +50,7 @@ For more information about these modules, their prerequisites or runtime activat
 
 These modules initialize the MobileFirst Client and Cordova API to enable support for native device capabilities and other functions of the MobileFirst server. The modules are only aggregated when accessed through the MobileFirst hybrid shell.
 
-The plugin.xml file location is [PortalServer\_root](../../../../../guide_me/wpsdirstr.md#portalserver_root)/theme/wp.theme.worklight.ext/installableApps/wp.theme.worklight.ext.ear/wp.theme.worklight.ext.war/WEB-INF/plugin.xml
+The plugin.xml file location is [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)/theme/wp.theme.worklight.ext/installableApps/wp.theme.worklight.ext.ear/wp.theme.worklight.ext.war/WEB-INF/plugin.xml
 
 For more information about these modules, their prerequisites or runtime activation, use the Theme Analyzer Portlet.
 
@@ -75,7 +75,7 @@ For more information about these modules, their prerequisites or runtime activat
 
 These modules initialize the MobileFirst Client and Cordova API to enable support for native device capabilities and other functions of the MobileFirst server. The modules are only aggregated when accessed through the MobileFirst hybrid shell.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/theme/wp.theme.worklight.ext/installableApps/wp.theme.worklight.ext.ear/wp.theme.worklight.ext.war/WEB-INF/plugin.xml
+The plugin.xml file location is [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)/theme/wp.theme.worklight.ext/installableApps/wp.theme.worklight.ext.ear/wp.theme.worklight.ext.war/WEB-INF/plugin.xml
 
 For more information about these modules, their prerequisites or runtime activation, use the Theme Analyzer Portlet.
 

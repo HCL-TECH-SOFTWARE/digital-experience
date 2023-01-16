@@ -24,7 +24,8 @@ There are two methods that are used to assign roles to access controls on items:
     Inheritance does not apply to draft items.
 
 
-**Note:** By default, inheritance is enabled for all roles and items.
+!!!note
+    By default, inheritance is enabled for all roles and items.
 
 ## Viewing an item's security settings
 
@@ -33,13 +34,7 @@ The following sections are displayed on the security section of each item.
 |Section|Details|
 |:------|:------|
 |**User Defined**|If the item is not participating in a workflow, the user can edit access under user-defined.|
-|**Workflow**|If an item is participating in a workflow, then the user-defined option does not appear and the workflow settings are displayed. This cannot be edited. Workflow-defined access is set in workflow stages.**Published items and workflow defined item security:**
-
--   If you grant a user editor access to an item in a workflow stage that uses a publish action, then those users are able to edit the published item directly. No draft is created. The same is true for administrator defined security when applied to published items.
--   If you grant a user manager access to an item in a workflow stage that uses a publish action, then those users are able to edit and delete the published item directly. No draft is created. The same is true for administrator defined security when applied to published items.
--   If you grant a user reviewer access to an item in a workflow stage that uses a publish action, then those users are able to create drafts of the published item.
-
-|
+|**Workflow**|If an item is participating in a workflow, then the user-defined option does not appear and the workflow settings are displayed. This cannot be edited. Workflow-defined access is set in workflow stages.<br> **Published items and workflow defined item security:**<br> - If you grant a user editor access to an item in a workflow stage that uses a publish action, then those users are able to edit the published item directly. No draft is created. The same is true for administrator defined security when applied to published items.<br> - If you grant a user manager access to an item in a workflow stage that uses a publish action, then those users are able to edit and delete the published item directly. No draft is created. The same is true for administrator defined security when applied to published items.<br> - If you grant a user reviewer access to an item in a workflow stage that uses a publish action, then those users are able to create drafts of the published item.|
 |**Administrator Defined**|Administrators can edit user access to an item at any time by changing the administrator defined settings.|
 |**Inheritance**|You can also choose to inherit access that is assigned in the current web content library, or from an item's parent. Inheritance for all user roles is enabled by default.|
 
@@ -51,27 +46,7 @@ If an item is participating in a workflow, the creator is given manager access t
 
 |Security level|No workflow|First workflow stage|Extra workflow stages|
 |--------------|-----------|--------------------|---------------------|
-|**User****Contributor**
-
-**Editor**
-
-**Manager**
-
-**Reviewer**
-
-**Draft Creator**
-
-|-   User defined
--   Administrator defined
--   Inherited
-
-|-   Administrator defined
--   Workflow defined
-
-|-   Administrator defined
--   Workflow defined
-
-|
+|**User**<br>**Contributor**<br>**Editor**<br>**Manager**<br>**Reviewer**<br>**Draft Creator**|- User defined<br> - Administrator defined<br> - Inherited| - Administrator defined<br> - Workflow defined| - Administrator defined<br> - Workflow defined|
 |**Administrator**|If you are assigned the administrator role to a library, you automatically inherit all administration access down to the item-level. It cannot be turned off.|If you are assigned the administrator role to a library, you automatically inherit all administration access down to the item-level. It cannot be turned off.|If you are assigned the administrator role to a library, you automatically inherit all administration access down to the item-level. It cannot be turned off.|
 
 **Notes on Deleting:**
@@ -127,47 +102,23 @@ You assign item-level access by assigning users and groups different roles for e
 |**Add or move children**|Contributor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Add or remove child links**|Contributor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Add or remove workflows**|Manager access or higher.|When first created, you require manager access to the library resource in any library. When saved, you require manager access to both the item and library resource in the library the item is stored in.|Contributor access or higher.|N.A.|
-|**Add to project**\(Non-workflowed items or existing draft\)
-
-You will also need read access to the project, and access to at least one draft or published item.
-
-|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
-|**Add to project**\(Workflowed items\)
-
-You will also need read access to the project, and access to at least one draft or published item.
-
-|Draft Creator access on the current stage required to create a draft, and editor access or higher on the first stage of the workflow required to add the draft to project.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
-|**Apply authoring template**\(authoring portlet\)
-
-|N.A.|Manager access or higher to the authoring template library resource.**Note:** This default behavior can be changed to allow all users to apply authoring templates to items they have edit access to. See [Web content authoring options](wcm_config_prop_authoring.md) for further information.
-
-|Manager access or higher.|N.A.|
-|**Apply authoring template**\(content form\)
-
-|Editor access or higher.|Contributor access or higher to the authoring template library resource.|Contributor access or higher.|N.A.|
+|**Add to project**<br> (Non-workflowed items or existing draft)<br> You will also need read access to the project, and access to at least one draft or published item.|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
+|**Add to project**<br> (Workflowed items)<br> You will also need read access to the project, and access to at least one draft or published item.|Draft Creator access on the current stage required to create a draft, and editor access or higher on the first stage of the workflow required to add the draft to project.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
+|**Apply authoring template**<br> (authoring portlet)|N.A.|Manager access or higher to the authoring template library resource.<br> **Note:** This default behavior can be changed to allow all users to apply authoring templates to items they have edit access to. See [Web content authoring options](../../../../../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) for further information.|Manager access or higher.|N.A.|
+|**Apply authoring template**<br> (content form)|Editor access or higher.|Contributor access or higher to the authoring template library resource.|Contributor access or higher.|N.A.|
 |**Approve**|Reviewer or administrator.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Approve Project**|Reviewer.|Not required.|Contributor access or higher.|N.A.|
 |**Batch-edit access controls**|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
-|**Cancel draft**|Manager access or higher.Editor access or higher for system workflow.
-
-|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
+|**Cancel draft**|Manager access or higher.Editor access or higher for system workflow.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Copy**|Contributor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
-|**Create draft**\(Workflowed items\)
-
-|Draft Creator access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|Only published or expired items.|
-|**Create draft**\(Non-workflowed items\)
-
-|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
+|**Create draft**<br> (Workflowed items)|Draft Creator access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|Only published or expired items.|
+|**Create draft**<br>(Non-workflowed items)|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Delete**|Manager access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Edit**|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Expire**|Reviewer access.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Generate**|Contributor access or higher.|Editor access or higher to the library resource types of Components, Authoring Templates, Presentation Templates, Content, and Site Areas.|Contributor access or higher.|N.A.|
 |**Link to**|Contributor access or higher, or Reviewer access.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
-|**Manage elements**\(In site areas and content items, not authoring templates.\)
-
-|Administrator accessIf the **Allow elements to be managed by editors** option is selected on the authoring template that is used by an item, then this button is enabled for users with Editor access or higher. This option is enabled by default on Site Areas that are created by using the default Site Area template.
-
-|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
+|**Manage elements**<br>(In site areas and content items, not authoring templates.)|Administrator access<br> If the **Allow elements to be managed by editors** option is selected on the authoring template that is used by an item, then this button is enabled for users with Editor access or higher. This option is enabled by default on Site Areas that are created by using the default Site Area template.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Move**|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Next Stage**|Reviewer access.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Preview item and view rendered item**|User access or higher, or Reviewer access.|Not required.|Contributor access or higher.|N.A.|
@@ -183,16 +134,14 @@ You will also need read access to the project, and access to at least one draft 
 |**Restore**|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Save version**|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
 |**Show hidden fields**|N.A.|Not required.|Administrator access|N.A.|
-|**Submit for review**\(Workflows\)|Reviewer access.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
-|**Submit for review** \(Projects\)|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|Only when a project is in an active state.|
+|**Submit for review**<br> (Workflows)|Reviewer access.|Editor access or higher to the library resource type.|Contributor access or higher.|N.A.|
+|**Submit for review**<br> (Projects)|Editor access or higher.|Editor access or higher to the library resource type.|Contributor access or higher.|Only when a project is in an active state.|
 |**System security**|N.A.|Not required.|Administrator access|N.A.|
 |**Unlock**|Manager access or higher.|Not required.|Manager access or higher.|N.A.|
-|**Validate** \(Projects\)|User access or higher.|Not required.|Not required.|Only when a project is in active, review, pending, or publish failed states.|
+|**Validate**<br> (Projects)|User access or higher.|Not required.|Not required.|Only when a project is in active, review, pending, or publish failed states.|
 |**View references**|User access or higher, or Reviewer access.|Not required.|Contributor access or higher.|N.A.|
 |**View versions**|User access or higher, or Reviewer access.|Not required.|Contributor access or higher.|N.A.|
-|**Withdraw approval**|Reviewer.|Not required.|Contributor access or higher.|Only when a project is in the review state.Only when Joint Approval is selected.
-
-|
+|**Withdraw approval**|Reviewer.|Not required.|Contributor access or higher.|Only when a project is in the review state.<br> Only when Joint Approval is selected.|
 |**Withdraw from review**|Reviewer.|Not required.|Contributor access or higher.|Only when a project is in the review state.|
 
 **Creating new items:**
@@ -208,10 +157,7 @@ You can choose to hide selected buttons on content item forms when you create an
 Using profiling to personalize a site is different from using security to limit what items a user can access. In a profile-based personalized site, although a user might not be able to access all the pages by using personalized menus, they might still be able to access other pages by using navigators, or by searching for content. In a secured site, a user can only view items that they are granted access to.
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
-
-[Searching on secured portal sites and pages and content management items](../admin-system/srtsrchscrprtlstepgs.md)
+???+ info "Related information"
+    - [Setting service configuration properties](../../../../../../../manage/config_portal_behavior/service_config_properties/index.md)
+    - [Searching on secured portal sites and pages and content management items](../../../../../../../../build_sites/search/planning_portal_search/security_considerations/srtsrchscrprtlstepgs.md)
 

@@ -4,10 +4,10 @@ As a WSRP Producer, you must provide information to Consumers of your WSRP servi
 
 The exchange between Producers and Consumers includes the following information:
 
--   [WSRP service description](wsrpc_prod_prep_info.md#web_srvc_dscrpt)
--   [WSRP services configuration](wsrpc_prod_prep_info.md#wsrp_secy)
--   [Information about portal users](wsrpc_prod_prep_info.md#inf_ptl_usrs)
--   [Registration information](wsrpc_prod_prep_info.md#rgstr_info)
+-   [WSRP service description](#wsrp-service-description)
+-   [WSRP services configuration](#wsrp-services-configuration)
+-   [Information about portal users](#information-about-portal-users)
+-   [Registration information](#registration-information)
 
 ## WSRP service description
 

@@ -19,18 +19,18 @@ For typical portal pages use the Active Site Analytics Mediator SPI for implemen
 
 The SPI does not affect the way you can configure aggregators. For details about how to configure aggregators see the topic about *Adding an Active Site Analytics aggregator to a portal page*.
 
--   **[The Active Site Analytics Mediator SPI](../admin-system/sa_asa_med_spi.md)**  
+-   **[The Active Site Analytics Mediator SPI](sa_asa_med_spi.md)**  
 The portal provides a client side JavaScript SPI named Active Site Analytics Mediator SPI. You can use it to implement aggregators. The Active Site Analytics Mediator SPI allows aggregators to register callback functions; the portal framework calls these functions to notify the aggregator about DOM changes that can be relevant for Active Site Analytics.
--   **[Guidelines for implementing an aggregator](../admin-system/sa_asa_med_spi_aggr.md)**  
+-   **[Guidelines for implementing an aggregator](sa_asa_med_spi_aggr.md)**  
 When you implement an aggregator by using the Active Site Analytics Mediator SPI, the following guidelines can be helpful.
--   **[Aggregator patterns and samples](../admin-system/sa_asa_aggr_xmp.md)**  
+-   **[Aggregator patterns and samples](sa_asa_aggr_xmp.md)**  
 The aggregator patterns and samples section provides common aggregator patterns and samples that you might want to adopt to implement your own aggregator.
--   **[How to identify and resolve problems with your aggregator](../admin-system/sa_asa_aggr_trbl.md)**  
-If your custom aggregator is not working correctly, perform the checks listed here.
+
+<!--
+-   **[How to identify and resolve problems with your aggregator](sa_asa_aggr_trbl.md)**  
+If your custom aggregator is not working correctly, perform the checks listed here. -->
 
 
-**Related information**  
-
-
-[Analyzing user behavior by Active Site Analytics](../admin-system/sa_asa_work.md)
+???+ info "Related information"
+    - [Analyzing user behavior by Active Site Analytics](../../../user_behavior_by_asa/index.md)
 

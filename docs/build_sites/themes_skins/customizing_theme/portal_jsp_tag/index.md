@@ -46,8 +46,8 @@ The following `taglib` declarations must be provided to the parent JSP of the sk
 	-   The tags in the `engine.tld` and `portal-internal.tld` tag libraries are not intended for customization, but only to support compatibility with an earlier version and migration. The `engine.tld` tag library are not available in subsequent releases of HCL Portal.
 
 
-???+ info "Related information:"
+???+ info "Related information"
 	- [Instrumenting a theme for Active Site Analytics](../../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/collecting_analytics_data/instrumenting_theme_for_asa/index.md)
 	- [Injecting custom aggregators](../../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/collecting_analytics_data/instrumenting_theme_for_asa/sa_asa_injct_custaggrg.md)
-	- [Dynamically changing the language during the user session](../../../../extend_dx/development_tools/portal_admin_tools/language_support/adchglang_dynamic.md)
+	- [Dynamically changing the language during the user session](../../../../deployment/manage/portal_admin_tools/language_support/adchglang_dynamic.md)
 

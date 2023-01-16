@@ -2,7 +2,8 @@
 
 The Content-Security-Policy header allows an allowlist of trusted sources to be created that instructs the browser to only execute or render resources included in the list.
 
-**Note:** The header is defined for each page and will be included on every response sent to the browser.
+!!!note
+    The header is defined for each page and will be included on every response sent to the browser.
 
 For example:
 
@@ -12,7 +13,7 @@ Content-Security-Policy: script-src 'self' https://apis.google.com
 
 The `Content-Security-Policy` header instructs the browser to allow resources from this site or apis.google.com. It also throws an error, like the one below, if it tries to load script from any other source.
 
-![Content-Security-Policy header](../images/csp-browser-error.png)
+![Content-Security-Policy header](../../../../../../images/csp-browser-error.png)
 
 Below are some of the resource directives which can be included on the `Content-Security-Policy` header:
 

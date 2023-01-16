@@ -31,10 +31,6 @@ If your stand-alone environment meets both of the preceding conditions, complete
 6.  Restart the WebSphere\_Portal server.
 
 
-**Previous topic:**[Setting up Client Certificate Authentication](../security/certauth.md)
-
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+???+ info "Related information"
+    - [Starting and stopping servers, deployment managers, and node agents](../../../../stopstart.md)
 

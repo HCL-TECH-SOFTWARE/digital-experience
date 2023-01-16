@@ -100,8 +100,6 @@ The portal supports the aggregator tags listed in the following for Active Site 
 
 
 
-**Related information**  
-
-
-[Aggregator patterns and samples](../admin-system/sa_asa_aggr_xmp.md)
+???+ info "Related information"
+    - [Aggregator patterns and samples](../writting_aggregator_for_asa/sa_asa_aggr_xmp.md)
 

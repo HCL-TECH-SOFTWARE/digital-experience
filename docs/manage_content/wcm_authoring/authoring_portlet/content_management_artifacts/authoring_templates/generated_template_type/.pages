@@ -1,0 +1,5 @@
+title: Generate author-ready templates
+nav:
+    - index.md
+    - wcm_dev_content_type_article.md
+    - wcm_dev_content_type_event.md

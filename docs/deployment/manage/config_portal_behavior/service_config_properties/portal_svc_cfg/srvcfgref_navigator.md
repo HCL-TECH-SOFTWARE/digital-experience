@@ -14,7 +14,8 @@ The following list gives properties that influence remote caching:
 
     The setting of public.session influences the remote cache scope for public pages. If public.session is set to true, then the cache scope is set to non-shared \(private\). If public.session is set to false, then the cache scope is set to shared \(public\).
 
-    **Note:** Setting public.session to true might reduce performance.
+    !!! note 
+        Setting public.session to true might reduce performance.
 
 -   **public.expires**
 
@@ -27,12 +28,14 @@ The following list gives properties that influence remote caching:
     -   Reduce the cache lifetime
     -   Reduce the cache scope, for example, from public \(shared\) to private \(non-shared\)
     -   Switch off the overall cachability of pages.
+
     Therefore this value might not be static for all responses resulting from requests to unauthenticated pages.
 
     The response of HCL Portal sets the following header fields:
 
     -   The Expires header with the expiration time added to the system date and time.
     -   The Cache-Control : max-age = header with the expiration time as its parameter.
+    
     The default value specified for this property is 60 seconds. If no value is specified, HCL Portal defaults the value to `60` seconds.
 
 -   **remote.cache.expiration**

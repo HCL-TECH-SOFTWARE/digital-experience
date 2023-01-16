@@ -9,7 +9,7 @@ DXClient is a tool that helps developers and administrators manage tasks, such a
     DXClient is enabled in supported Kubernetes platforms from HCL Digital Experience 9.5 CF192 and later releases:
 
     * DXClient is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#dxclient-installation) for more details.
-    * DXClient also exists as [Node.js](https://nodejs.org/en/)-based CLI tool and requires Node.js to be installed as a prerequisite. However, this is deprecated in the HCL Digital Experience Container CF196 release.
+    * DXClient also exists as [Node.js](https://nodejs.org/en/)-based CLI tool and requires Node.js to be installed as a prerequisite. 
 
 
 DXclient is a CLI-based tool wrapped in a container image. This tool will be capable of executing artifacts connecting remotely to DX servers in standalone, cluster, or in Kubernetes environment. The container version of this tool is available from CF196 onwards.
@@ -60,7 +60,7 @@ DXClient package comes with a script that you can use to run the container image
 
 7. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
 
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that could be used in on-premises platforms in standalone, cluster platforms is also available under `<working-directory>/store/samples/sample-configurations/default-config.json` for reference.
+    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
 
 
 8. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
@@ -160,14 +160,16 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 9.  Configuration, logger, output, and sample files under location - <working-directory>/store.
 
-Common command arguments can be pre-configured inside the `config.json` file available under <working-directory>/store folder. A sample configuration file that could be used on-premises platforms in standalone, cluster platforms is also available under <working-directory>/store/samples/sample-configurations/default-config.json for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under <working-directory>/store folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
 
 ## DXClient installation configuration
 
-Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used for any of the supported Kubernetes platforms is also available under samples/sample-configurations.json for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
 
 ```
 {
+    "name":"config.json",
+    "desc":"The attributes in this file are used for configuration purpose and those must not be deleted.",
     "dxProtocol": "",
     "dxConnectProtocol": "https",
     "hostname": "",
@@ -219,7 +221,7 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ```
 
-## Installing using the node package file (deprecated in CF196)
+## Installing using the node package file 
 
 **Prerequisites:** Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
 
@@ -335,20 +337,33 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
 !!! note 
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
-    -   HCL DX 9.5 CF201 release:
+    -   HCL DX 9.5 CF209 release:
+        -   [Restart All Core Pods in Kubernetes Deployment](../dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods)
 
+    -   HCL DX 9.5 CF208 release:
+        -   [Get all subscribers details for DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging)
+
+    -   HCL DX 9.5 CF207 release:
+        -   Support to set different Container Runtimes.
+
+    -   HCL DX 9.5 CF202 release:
+        -   Deprecated parameter `dxConnectHostname`. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+
+        -   [DAM Assets Export & import](https://opensource.hcltechsw.com/digital-experience/CF207/manage_content/digital_assets/usage/managing_dam/dam_exim/)
         
+    -   HCL DX 9.5 CF201 release:
         -   An optional parameter `requestId` added to [Deploy theme](../dxclient/dxclient_artifact_types/themes.md), [Deploy application](../dxclient/dxclient_artifact_types/scriptapplications.md#deploy-script-applications), [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-server), and [Manage virtual portals](../dxclient/dxclient_artifact_types/virtualportals.md).
         
         -   Retrieve feature added to the [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md).
         
-        -   [Accessing ConfigWizard in container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html)
+        -   [Accessing ConfigWizard in container environment](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
         
         -   Note that a few parameters are deprecated and replaced with new parameters in the DX Core configuration reports. For information, see [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report).
     
     -   HCL DX 9.5 CF200 release:
         -   [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
         -   [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report)
+    
     -   HCL DX 9.5 CF199 release:
         -   [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
         -   [Create credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
@@ -366,12 +381,13 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         -   [Undeploy portlets](../dxclient/dxclient_artifact_types/portlets.md)
         -   [Deploy and undeploy themes](../dxclient/dxclient_artifact_types/themes.md)
         -   [Deploy application](../dxclient/dxclient_artifact_types/deployapplication.md)
-
         -   [manage get-syndication report](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
         -   [Restart Core](../dxclient/dxclient_artifact_types/dxcoreserver.md)
         -   [Delete DAM schema](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md)
+    
     -   HCL DX 9.5 CF196 release:
         -   [Shared library](../dxclient/dxclient_artifact_types/sharedlibrary.md)
+    
     -   HCL DX 9.5 CF195 release:
         -   [Undeploy theme](../dxclient/dxclient_artifact_types/themes.md)
         -   [MLS export and import of WCM library](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
@@ -380,7 +396,6 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         -   [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md)
         -   [Deploy Application](../dxclient/dxclient_artifact_types/deployapplication.md)
         -   [Managing syndicators](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
-
         -   [Managing subscribers](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
 
     -   HCL DX 9.5 CF192 release:
@@ -453,6 +468,12 @@ Use the following command to execute the DX Core restart action:
 
 ```
 dxclient restart-dx-core
+```
+
+Use the following command to restart DX Core pods in a Kubernetes deployment:
+
+```
+dxclient restart-core-pods [options]
 ```
 
 Use the following command to execute manage-subscriber action:
@@ -609,30 +630,18 @@ dxclient help [command]
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html).
 
 
-<!-- ???Info "Related information:"
 
-
-[How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
-
-[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-[Troubleshooting DXClient](../containerization/troubleshooting_dxclient.md)
-
-[DXConnect](../containerization/dxconnect.md)
-
-[Sample Pipelines for use with HCL DXClient and Automation servers](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
-
-[Using DAM staging](../containerization/dam_subscription_staging.md)
-
-[Create or update credential vault slot](../containerization/credentialvaultslot.md)
-
-[Personalization rules](../containerization/personalization.md)
-
-[Portlets](../containerization/portlets.md)
-
-[Themes](../containerization/themes.md)
-
-[Script applications](../containerization/scriptapplications.md)
-
-[Resource environment provider](../containerization/resourceenvironments.md) -->
+???+ info "Related information"
+    - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
+    - [DXClient Artifact Types](../dxclient/dxclient_artifact_types/index.md)
+    - [Troubleshooting DXClient](troubleshooting_dxclient.md)
+    - [DXConnect](dxconnect.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+    - [Using DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
+    - [Create or update credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
+    - [Personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
+    - [Portlets](../dxclient/dxclient_artifact_types/portlets.md)
+    - [Themes](../dxclient/dxclient_artifact_types/themes.md)
+    - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
+    - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
 

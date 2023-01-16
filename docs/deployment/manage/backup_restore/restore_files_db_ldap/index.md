@@ -23,12 +23,14 @@ Before you restore HCL Portal databases, remember to adhere to the following pri
 
     Refer to the documentation of the backup utility that you used for instructions on restoring files.
 
-    **WARNING:** Do not overwrite the existing AppServer, PortalServer, or wp\_profile root directories with the backed up files because you risk corrupting the HCL Portal file system. First, remove these old directories and then extract the backed up version in its place.
+    !!! warning
+        Do not overwrite the existing AppServer, PortalServer, or wp\_profile root directories with the backed up files because you risk corrupting the HCL Portal file system. First, remove these old directories and then extract the backed up version in its place.
 
 3.  Restore the HCL Portal databases:
 
     -   For IBM DB2 Universal Database Enterprise Server Edition, refer to the DB2 documentation.
     -   For other database servers, refer to that database server documentation for instructions.
+
 4.  If necessary, restore your LDAP server.
 
     -   For IBM Directory Server, refer to IBM Directory Server documentation.

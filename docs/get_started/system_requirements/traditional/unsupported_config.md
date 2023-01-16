@@ -4,5 +4,5 @@ An “Unsupported Configuration” is a combination of HCL Software and other De
 
 HCL does not provide support for Unsupported Configurations. Resolutions to deficiencies or incompatibilities found in Unsupported Configurations are not generally available.
 
-For more details, make sure to review this document: [HCL DX support statement](/digital-experience/get_started/software_support/).  
+For more details, make sure to review this document: [HCL DX support statement](../../../get_started/software_support.md).  
 

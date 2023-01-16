@@ -253,8 +253,6 @@ dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort
     The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 
-<!-- ???Info "Related information:"
-
-
-[DXClient](../containerization/dxclient.md) -->
+???+ info "Related information"
+    - [DXClient](../index.md)
 

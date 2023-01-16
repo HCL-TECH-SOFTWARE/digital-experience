@@ -133,7 +133,7 @@ Configuring HCL Connections and HCL Portal to share a single deployment manager 
 
         If you cannot manage the Portal node on the WebSphere Application Server Integrated Solutions Console, manually synchronize the node and restart the deployment manager node.
 
-10. Configure Security Access Manager on the Portal server, following the directions in the [Configuring Security Access Manager](../../../../../../../deployment/manage/security/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/index.md) article that corresponds to your Portal server.
+10. Configure Security Access Manager on the Portal server, following the directions in the [Configuring Security Access Manager](../../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/index.md) article that corresponds to your Portal server.
 
     !!!note
         For the connections integration with the portlets, it is important that WebSEAL session cookies are sent to the junction server. This action can be defined by adding the -k option to the commands that create a junction.

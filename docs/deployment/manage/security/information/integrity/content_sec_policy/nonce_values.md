@@ -2,7 +2,8 @@
 
 Inline script is considered risky, and is not recommended. But if it must be used with HCL Digital Experience Container Update CF192 and higher releases, then a nonce value must be appended to the script tag.
 
-**Note:** In the DX default implementation of Content Security Policy, the nonce value is not appended to any script tags due to the risk of marking malicious script as valid. Style changes are considered less risky, therefore, nonce values are appended to style tags.
+!!!note
+     In the DX default implementation of Content Security Policy, the nonce value is not appended to any script tags due to the risk of marking malicious script as valid. Style changes are considered less risky, therefore, nonce values are appended to style tags.
 
 For example, the nonce value that would be included on the header looks like this:
 

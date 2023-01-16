@@ -24,5 +24,5 @@ The Web Content Viewer portlet supports the same set of default languages as HCL
 ???+ info "Related information"  
     -   [Portal administration portlets](../../../portal_admin_tools/portal_admin_portlets/index.md)
     -   [The XML configuration interface](../../../portal_admin_tools/xml_config_interface/index.md)
-    -   [Localized rendering](../../../../../manage_content/wcm/wcm_content_delivery/mls/using_mls/wcm_mls_rendering.md)
+    -   [Localized rendering](../../../../../manage_content/wcm_authoring/multi_lingual/using_mls/wcm_mls_rendering.md)
 

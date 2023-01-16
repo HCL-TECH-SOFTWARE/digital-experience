@@ -21,13 +21,9 @@ The following list shows some of the deprecated parameters and the new parameter
 -   `-targetServerProfileName` replaced by `-targetDxProfileName`
 
 
-<!--- ???Info "Related information:"
-
-[How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
-
-[DXClient](../containerization/dxclient.md)
-
-[Sample Pipelines for use with HCL DXClient and Automation servers](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
-
-[How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/digital-experience/8.5/panel_help/wcm_syndication.html) --->
+???+ Info "Related information"
+    - [How to translate WCM library content using export and import WCM with DXClient](wcm_mls_export_import.md)
+    - [DXClient](../index.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](../sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+    - [How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/digital-experience/8.5/panel_help/wcm_syndication.html) 
 

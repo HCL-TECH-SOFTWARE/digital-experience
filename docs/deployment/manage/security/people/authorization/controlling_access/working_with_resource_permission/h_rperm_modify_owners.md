@@ -1,8 +1,4 @@
----
-id: h_rperm_modify_owners
-title: Modifying resource owners
----
-
+# Modifying resource owners
 
 
 

@@ -1,8 +1,4 @@
----
-id: h_rperm_create_role_external
-title: Creating roles for externalized resources
----
-
+# Creating roles for externalized resources
 
 
 

@@ -111,4 +111,4 @@ Since this is a manual step, any error that occurs is outside the context of the
 
 ???+ info "Related information"  
     -   [Cluster Step 1: Migrate the deployment manager profile](../../migrate/migrate_using_cfgwizard/cw_migrate_cluster_1.md)
-    -   [Accessing the Configuration Wizard](./../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    -   [Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)

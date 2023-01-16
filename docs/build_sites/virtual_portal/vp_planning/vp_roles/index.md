@@ -13,7 +13,7 @@ When you create a virtual portal by using the Virtual Portal Manager portlet, yo
 When you create a virtual portal, you need to be aware of the implications listed here.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Task: create-virtual-portal](../../vp_reference/vp_command_ref/portal_cfg_adm_vp/advp_cfgtsk_create.md)
     - [Filling a virtual portal with content](../../adm_vp_task/vp_adm_task/advp_tsk_fill_content.md)
 

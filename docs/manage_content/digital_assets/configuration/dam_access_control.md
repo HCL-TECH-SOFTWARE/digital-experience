@@ -18,18 +18,27 @@ For DAM, only a subset of the roles is exposed. Possible role types are User (vi
 DAM collection is accessible by the currently logged in user based on his role and the access is managed by DX Portal Access Control as mentioned. 
 
 !!! note
-    Currently, only Administrator, Editor, and User roles are exposed in DAM UI, each user who can create a collection will inherit the Administrator role by default whether it is root level or child-level collection. 
+    Currently, only Administrator, Editor, and User roles are exposed in DAM UI. The user creating the collection gets explicitly assigned the Administrator role on the collection. All child-level collections under that created collection always have the same permissions as the root collection. 
+
 
 ### DAM Access Control in detail
 
-From the DAM perspective, each individual root level collection is a resource instance. 
+From the DAM perspective, each individual root level collection is a resource instance that can be administered. Child collections cannot be administered separately and always have the same permissions as the root collection.
 
-- User role: The user can view the collection
-- Editor role: The user can view, create and edit the collection 
-- Administrator role: The user can view, create, edit, and delete the collection and he can even assign/remove permission for other users as well.
+- User role: The user can view items in the collection and the collection itself as well as child collections.
+- Editor role: All permissions of the User role plus the user can edit collection details as well as upload items.
+- Administrator role: All permissions of the User and Editor role plus the user can view, create, edit, and delete a collection, delete items in a collection and he can assign/remove permission for other users as well on the collections.
+
+A user that creates a root collection gets the Administrator role on the collection and so can do anything with that collection as indicated above.
+
+See the [Out of the box access](#Out-of-the-box-access) section, to understand how the default access works for a collection.
 
 !!! note 
     The Manager Role is not exposed in DAM UI currently.
+    
+To be able to create new root collections the Editor role or higher of the virtual resource DIGITAL ASSET MANAGEMENT is required.
+
+Also, note that if the user has given a User/Editor role to any collection which is not created by him, that user can not modify the access permissions of that collection.
 
 ![DAM Access Control Roles](../../../images/access_roles_dam.png)
 

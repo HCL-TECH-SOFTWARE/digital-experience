@@ -21,12 +21,10 @@ There are three levels of access controls for web content
     Item level access controls define the actions that a user can run on an individual item. For example, a Manager to the Components type has access to the Purge and Unlock actions but, if that user does not also have Manager access to an individual component, then the Purge and Unlock actions are not enabled when that component is selected.
 
 
--   **[Users, Groups and Roles](../wcm/wcm_cms_access.md)**  
+-   **[Users, Groups and Roles](../wcm_security/wcm_cms_access)**  
 You need to create a different group for each type of user and then assign those groups different roles within your content management system.
 
 
-**Related information**  
-
-
-[Script Application security overview](../script-portlet/security.md)
+???+ info "Related information"
+    - [Script Application security overview](../../../../../../../extend_dx/script_application/script_application_security/index.md)
 

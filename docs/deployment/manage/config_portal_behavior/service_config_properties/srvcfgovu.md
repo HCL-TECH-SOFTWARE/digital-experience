@@ -30,7 +30,7 @@ The following table lists the configuration services:
 |[Portlet Container Service](../service_config_properties/portal_svc_cfg/srvcfgref_ptlt_container.md).|WP PortletContainerService|PortletContainerService.properties|
 |[Project Identification Service](../service_config_properties/portal_svc_cfg/srvcfg_projectid.md)|WP ProjectIdentificationService|ProjectIdentificationService.properties|
 |[Registry Service](../service_config_properties/portal_svc_cfg/srvcfgref_registry.md)|WP RegistryService|RegistryService.properties|
-|[State Manager Service](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/index.md) See also [URL normalization for search of portal pages by external search engines](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/srvcfgref_url_normlz.md)|WP StateManagerService|StateManagerService.properties|
+|[State Manager Service](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/index.md)<br> See also [URL normalization for search of portal pages by external search engines](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/srvcfgref_url_normlz.md)|WP StateManagerService|StateManagerService.properties|
 |[Virtual Portal Configuration Service](../service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)|WP VirtualPortalConfigService|VirtualPortalConfigService.properties|
 
 |HCL Portal security service|Service name in the WebSphere Integrated Solutions Console|HCL Portal properties file|
@@ -66,12 +66,12 @@ The following table lists the configuration services:
 
 **Web Content Manager services**
 
-|[Web Content Manager service configuration](../../../../manage_content/wcm/wcm_management/wcm_svc_cfg/index.md)|Service name in the WebSphere Integrated Solutions Console|Properties file|
+|[Web Content Manager service configuration](../../../../manage_content/wcm_configuration/wcm_svc_cfg/index.md)|Service name in the WebSphere Integrated Solutions Console|Properties file|
 |------------------------------------------------------------|----------------------------------------------------------|---------------|
-|[Web Content Manager configuration service](../../../../manage_content/wcm/wcm_management/wcm_svc_cfg/index.md)|WCM\_WCMConfigService|WCMConfigService.properties|
-|[Web Content Manager messaging service](../../../../manage_content/wcm/wcm_management/wcm_svc_cfg/srvcfgwcmref_messaging.md)|WCM_MessagingService|MessagingService.properties|
-|[Web Content Manager pre-rendering service](../../../../manage_content/wcm/wcm_management/wcm_svc_cfg/srvcfgwcmref_prerender.md)|WCM_PrerenderService|PrerenderService.properties|
-|[Web Content Manager search service](../../../../manage_content/wcm/wcm_management/wcm_svc_cfg/srvcfgwcmref_search.md)|WCM_SearchService|SearchService.properties|
+|[Web Content Manager configuration service](../../../../manage_content/wcm_configuration/wcm_svc_cfg/index.md)|WCM\_WCMConfigService|WCMConfigService.properties|
+|[Web Content Manager messaging service](../../../../manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_messaging.md)|WCM_MessagingService|MessagingService.properties|
+|[Web Content Manager pre-rendering service](../../../../manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_prerender.md)|WCM_PrerenderService|PrerenderService.properties|
+|[Web Content Manager search service](../../../../manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_search.md)|WCM_SearchService|SearchService.properties|
 
 There is a number of other Web Content Manager configuration services. The Web Content Manager properties files are located in the `wp_profile_root/PortalServer/wcm/shared/app/config/wcmservices` directory.
 

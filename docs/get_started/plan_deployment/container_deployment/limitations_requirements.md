@@ -2,7 +2,8 @@
 
 This section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations.
 
-**Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](../../../deployment/install/container/overview.md) and will provide support only for [Helm-based deployments](../../../deployment/install/container/helm_deployment/overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
+!!!attention
+    Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX\) [Operator-based deployments](../../../deployment/install/container/overview.md) and will provide support only for [Helm-based deployments](../../../deployment/install/container/helm_deployment/overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
 
 Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) on the HCL DX Support pages for the latest updates on supported platforms, components, and release levels.
 
@@ -10,16 +11,16 @@ Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hclt
 
 This section describes the requirements for supported file systems.
 
--   DX requires two \(2\) `ReadWriteMany` volumes:
+-   DX requires two (2) `ReadWriteMany` volumes:
     -   One volume for Core.
     -   One volume for Digital Asset Management.
 -   All the other pods require `ReadWriteOnce` volumes.
--   DX is input-output \(I/O\) intensive and requires a high-performance file system for optimization.
+-   DX is input-output (I/O) intensive and requires a high-performance file system for optimization.
 -   A `persistence-node` relies on PostgreSQL which requires the use of hard links. Storage systems \(like Azure Files\) that do not support the use of hard links cannot be used. For more information, see the [Microsoft documentation for features not supported by the Azure File service](https://docs.microsoft.com/en-us/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
 -   All DX applications require the use of symbolic links and soft links. Storage systems must support the use of symbolic links and soft links. If you are using Azure Files, you must enable `mountOptions` of the StorageClass using `mfsymlinks`. For more information, see the [Microsoft documentation on troubleshooting Azure Files on Linux \(SMB\)](https://docs.microsoft.com/en-us/azure/storage/files/storage-troubleshoot-linux-file-connection-problems#cannot-create-symbolic-links---ln-failed-to-create-symbolic-link-t-operation-not-supported).
 -   You can configure volume sizes individually per volume and these are dependent of the respective usage. For more information, see the following Help Center topics:
     -   [Configuring PVCs in a Helm deployment](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.md)
-    -   [Customizing the container for Operator-based deployments](customizing_container_deployment.md#section_a2l_xhv_4nb)
+    -   [Customizing the container for Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/customizing_container_deployment.html)
 
 ## Requirements and limitations for Helm-based deployments
 
@@ -48,32 +49,43 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 -   **Container platform capacity resource requirements**:
 
-    The following table outlines the default minimum capacity of container resources requested by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the number of Pods required of each component.
+    The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the minimum of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly. Please consider that every Kubernetes node requires some headroom for Kubernetes specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. Please be aware that the overall requested amount of resources may vary based on disabled/enabled applications.
 
-    |Component|Resource name|Pod Minimum CPU|Pod Minimum Memory|No. of Pods Minimum|
-    |---------|-------------|---------------|------------------|-------------------|
-    |Core|core|0.8|3072MB|1|
-    |Ring API|ringApi|0.1|128MB|1|
-    |Content Composer|contentComposer|0.1|128MB|1|
-    |Design Studio|designStudio|0.1|128MB|1|
-    |Digital Asset Management|digitalAssetManagement|0.25|1024MB|1|
-    |DAM Persistence Connection Pool|persistenceConnectionPool|0.5|512MB|1|
-    |DAM Persistence Node|persistenceNode|1|1024MB|1|
-    |DAM Persistence Metrics Exporter|persistenceMetricsExporter|0.1|128MB|0|
-    |Image processor|imageProcessor|0.1|1280MB|1|
-    |Open LDAP|openLdap|0.2|512MB|1|
-    |Remote search|remoteSearch|0.25|768MB|1 \(Max 1 Pod\)|
-    |Runtime Controller|runtimeController|0.1|256MB|1|
-    |Ambassador Ingress|ambassadorIngress|0.2|300MB|1|
-    |Ambassador Redis|ambassadorRedis|0.1|256MB|0|
-    |Logging Sidecar|loggingSidecar|0.1|64MB|0|
+| **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request** | **Container Memory request** |
+|---|---|---|---|---|---|
+| core | 1 | core | core | 1000m | 3072Mi |
+|  |  | system-out-log | logging-sidecar | 100m | 64Mi |
+|  |  | system-err-log | logging-sidecar | 100m | 64Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| content-composer | 1 | content-composer | content-composer | 100m | 128Mi |
+| dam-plugin-google-vision | 1 | dam-plugin-google-vision | dam-plugin-google-vision | 100m | 128Mi |
+| dam-plugin-kaltura | 1 | dam-plugin-kaltura | dam-plugin-kaltura | 100m | 128Mi |
+| design-studio | 1 | design-studio | design-studio | 100m | 128Mi |
+| digital-asset-management | 1 | digital-asset-management | digital-asset-manager | 250m | 1024Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| haproxy | 1 | haproxy | haproxy | 200m | 300Mi |
+| image-processor | 1 | image-processor | image-processor | 200m | 1280Mi |
+| license-manager | 1 | license-manager | license-manager | 100m | 300Mi |
+| open-ldap | 1 | ldap | openldap | 200m | 768Mi |
+| persistence-connection-pool | 1 | persistence-connection-pool | persistence-connection-pool | 500m | 512Mi |
+| persistence-node | 1 | persistence-node | persistence-node | 500m | 1024Mi |
+|  |  | persistence-metrics-exporter | persistence-metrics-exporter | 100m | 128Mi |
+|  |  | persistence-repmgr-log | logging-sidecar | 100m | 64Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| remote-search | 1 | remote-search | remote-search | 250m | 768Mi |
+|  |  | system-out-log | logging-sidecar | 100m | 64Mi |
+|  |  | system-err-log | logging-sidecar | 100m | 64Mi |
+|  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
+| ring-api | 1 | ring-api | ringapi | 100m | 128Mi |
+| runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
+|  |  |  |  |  |  |
+| **Overall** |  |  |  | **4800m** | **10648Mi** |
 
 <!--
-???+ info "Related information:"
+???+ info "Related information"
     - [HCL Digital Experience 9.5 Roadmap: Container deployment](../container_deployment/rm_container/rm_container_deployment.md)
     - [DX Kubernetes support matrix](../../system_requirements/kubernetes/kubernetes-runtime.md)
     - [Deploy DX 9.5 Container to Red Hat OpenShift](../containerization/openshift.md)
     - [Deploy DX Container to Amazon EKS](../containerization/kubernetes_eks.md)
     - [Deploy DX CF192 and later release Containers to Amazon EKS](../containerization/kubernetes_eks_cf192andlater.md)
     - [Deploy DX CF191 and earlier release Containers to Amazon EKS](../containerization/kubernetes_eks_cf191andearlier.md)-->
-

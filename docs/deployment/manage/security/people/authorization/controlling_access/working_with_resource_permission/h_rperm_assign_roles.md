@@ -1,8 +1,4 @@
----
-id: h_rperm_assign_roles
-title: Viewing and assigning explicit roles
----
-
+# Viewing and assigning explicit roles
 
 
 
@@ -16,7 +12,8 @@ Perform the following steps to edit explicit roles.
 
 3.  Click the **Edit Role** icon for the required role. A list of members appears.
 
-    **Note:** The **Delete Member from Role** icon indicates that the member has an explicit role assignment, which can be deleted. A check mark in the **Inherited** column indicates that the role is acquired via the resource hierarchy. Implicit roles are not displayed in the **Resource Permissions** portlet. To view implicit roles, use the **User and Group Permissions** portlet.
+    !!!note
+        The **Delete Member from Role** icon indicates that the member has an explicit role assignment, which can be deleted. A check mark in the **Inherited** column indicates that the role is acquired via the resource hierarchy. Implicit roles are not displayed in the **Resource Permissions** portlet. To view implicit roles, use the **User and Group Permissions** portlet.
 
 
 Follow these steps to add a user or group to a role:
@@ -31,7 +28,8 @@ Follow these steps to remove a user or group from an explicit role assignment:
 1.  Click the **Delete from Role** icon.
 2.  Click **Yes** when the confirmation dialog box appears.
 
-**Note:** Removing a user or user group from a role does not delete the user or group from the portal. The previous procedure removes the member from explicit assignments to the specified role. This procedure does not affect explicit assignments to other roles on the specified resource. For example, removing a user from the Editor@Market News Page role does not affect the user's assignment to the User@Market News Page role. This procedure does not affect implicit or inherited role assignments.
+    !!!note
+        Removing a user or user group from a role does not delete the user or group from the portal. The previous procedure removes the member from explicit assignments to the specified role. This procedure does not affect explicit assignments to other roles on the specified resource. For example, removing a user from the Editor@Market News Page role does not affect the user's assignment to the User@Market News Page role. This procedure does not affect implicit or inherited role assignments.
 
 To remove implicit role assignments, do one of the following:
 

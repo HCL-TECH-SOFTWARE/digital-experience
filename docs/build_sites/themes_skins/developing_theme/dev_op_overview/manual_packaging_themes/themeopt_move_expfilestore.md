@@ -73,7 +73,7 @@ Browse to the folder you need and copy the files to your local drive.
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Development and operations overview](../../dev_op_overview/index.md)
     - [Adding static content to your custom theme](../../dev_op_overview/manual_packaging_themes/themeopt_move_repack_addstatic.md)
     - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)

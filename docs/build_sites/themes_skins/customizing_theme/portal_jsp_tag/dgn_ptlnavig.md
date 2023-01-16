@@ -10,7 +10,7 @@ The following section provides detailed descriptions of the `<portal-navigation/
 
     By default, the uiNavigationModel lists the visible pages as part of its iterator. When the **Show hidden pages** option is selected in the toolbar, it lists the hidden pages also. There is a special mobile hidden flag for pages. The model also allows you to specify a mobile test device class expression, which is used to evaluate if the system is rendered as part of a mobile request.
 
-    The uiNavigationModel tag makes the [uiNavigationModel](../dev-theme/themeopt_el_bean_ui_nav_mod.md) EL Bean available as a variable that can be specified as part of the `var` attribute.
+    The uiNavigationModel tag makes the [uiNavigationModel](../expression_language_beans/ui_nav_model/index.md) EL Bean available as a variable that can be specified as part of the `var` attribute.
 
     Example:
 
@@ -48,11 +48,11 @@ The following section provides detailed descriptions of the `<portal-navigation/
 
     -   **var**
 
-        This mandatory attribute specifies the name of a scripting variable that is exposed in the body of the tag. This variable is a [uiNavigationModel](../dev-theme/themeopt_el_bean_ui_nav_mod.md) EL Bean.
+        This mandatory attribute specifies the name of a scripting variable that is exposed in the body of the tag. This variable is a [uiNavigationModel](../expression_language_beans/ui_nav_model/index.md) EL Bean.
 
     -   **mobileDeviceClassTest**
 
-        This attribute is a [device class equation](../dev-theme/themeopt_devclass_equat.md), that describes whether the request is part of a mobile device or not.
+        This attribute is a [device class equation](../../device_classes/themeopt_devclass_equat.md), that describes whether the request is part of a mobile device or not.
 
     The following parameters are all optional. If they are not provided, the information is automatically fetched from the request. In some cases, the selection information is not available and must be passed in explicitly. Use the following attributes in that case.
 
@@ -72,7 +72,7 @@ The following section provides detailed descriptions of the `<portal-navigation/
 
         String; is the delimiter that is used to parse the selectionPath.
 
-    Returns: Each individual navigation node that is returned by the uiNavigationModel is also a wrapper around the NavigaitonNode EL Bean and provides additional information, such as isHidden, isDraft, isInSelectionPath, and isSelected. For more information, see [uiNavigationModel](../dev-theme/themeopt_el_bean_ui_nav_mod.md).
+    Returns: Each individual navigation node that is returned by the uiNavigationModel is also a wrapper around the NavigaitonNode EL Bean and provides additional information, such as isHidden, isDraft, isInSelectionPath, and isSelected. For more information, see [uiNavigationModel](../expression_language_beans/ui_nav_model/themeopt_el_bean_ui_nav_node.md).
 
 -   **<portal-navigation:url command="ChangeLanguage"\>**
 
@@ -197,7 +197,8 @@ The following section provides detailed descriptions of the `<portal-navigation/
 
         For a portlet, this attribute indicates the state of the portlet window when it is displayed. If portlet state is not specified, the page is shown with the previous state of the portlet. This parameter is ignored if `layoutNode` is not set.
 
-        **Note:** Use caution when you use this tag to address portlets in solo state. The portlet must be able to exist in solo state that uses the `createReturnURI()` method. If a portlet without this method is placed in solo state, then users are forced to log out or close their browser windows to return to the portal.
+        !!! note
+            Use caution when you use this tag to address portlets in solo state. The portlet must be able to exist in solo state that uses the `createReturnURI()` method. If a portlet without this method is placed in solo state, then users are forced to log out or close their browser windows to return to the portal.
 
     -   **themeTemplate="template\_name"**
 
@@ -302,7 +303,8 @@ The following section provides detailed descriptions of the `<portal-navigation/
 
             This attribute creates a URL that either starts a page if all conditions for the page launch are fulfilled for the navigation node or if just like in the selection URL in `type="link"`.
 
-        **Note:** The global state of the portal navigation trees is collapsed by default \(with some exceptions, such as the Portal Administration navigation\). You can configure the default state of the portal navigation trees to expand all nodes by setting the Portal Configuration Service property `navigation.expansion.defaultstate` to `true`.
+        !!! note
+            The global state of the portal navigation trees is collapsed by default \(with some exceptions, such as the Portal Administration navigation\). You can configure the default state of the portal navigation trees to expand all nodes by setting the Portal Configuration Service property `navigation.expansion.defaultstate` to `true`.
 
     -   **varname**
 

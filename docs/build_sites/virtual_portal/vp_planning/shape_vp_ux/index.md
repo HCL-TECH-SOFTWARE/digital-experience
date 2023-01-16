@@ -9,7 +9,7 @@ You can provide human readable URLs for your users to access their virtual porta
 
 If you expose multiple virtual portals on a single portal installation, you can give each virtual portal its own look and feel for the user experience. 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating a virtual portal](../../adm_vp_task/vp_adm_task/create_vp/index.md)
     - [Using the Virtual Portal Manager administration portlet](../../vp_mgr_portlet/advp_vpmgr_use.md)
 

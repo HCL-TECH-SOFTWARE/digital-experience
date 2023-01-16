@@ -26,7 +26,7 @@ If a JSON file is not formatted correctly it cannot be processed by the server, 
 If your theme is not behaving as it should, it could be because there are syntax problems within the module or profile files.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Theme Optimization Analyzer](../themeopt_analyzer/index.md)
     - [Themes](../../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_themes.md)
 

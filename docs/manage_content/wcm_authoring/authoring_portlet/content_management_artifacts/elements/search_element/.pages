@@ -1,0 +1,6 @@
+title: Search element
+nav:
+    - index.md
+    - How to create a search query: howto_create_search_query
+    - How to display search results: howto_display_search_results
+    - wcm_dev_elements_search_props.md

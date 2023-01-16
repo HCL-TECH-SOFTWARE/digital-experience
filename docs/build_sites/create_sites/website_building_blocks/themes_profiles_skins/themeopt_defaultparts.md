@@ -22,9 +22,9 @@ Static resources include the markup that is defined by .html, .css, and .js file
 -   **[Dynamic content \(jsp\) resources](../../../themes_skins/portal85_modularized_theme/themeopt_defaultparts_jsp.md)**  
 Dynamic content includes resources that are defined by jsp files that are used by the theme. 
 
-???+info "Related information:"  
-    - [Setting up Client Certificate Authentication](../../../../deployment/manage/security/configuring_ssl/certauth.md)
-    - [Changing the login and logout pages](../../../../deployment/manage/security/external_sec_mgmt/sec_chg_login.md)
+???+info "Related information"  
+    - [Setting up Client Certificate Authentication](../../../../deployment/manage/security/information/confidentiality/configuring_ssl/certauth.md)
+    - [Changing the login and logout pages](../../../../deployment/manage/security/people/authentication/external_sec_mgmt/sec_chg_login.md)
     - [Importing a static page from an installed template](../../building_website/static_content/including_static_content_pages/export_import_static_page/spa_xml_impt_tmplt.md)
     - [The module framework](../../../themes_skins/the_module_framework/index.md)
     - [Simple menu framework](../../../themes_skins/customizing_theme/menus/simple_menu_framework/index.md)

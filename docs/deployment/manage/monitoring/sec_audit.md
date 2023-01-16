@@ -33,5 +33,5 @@ To activate and configure the auditing function, modify the auditing service set
 
 ???+ info "Related information" 
     -   [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-    -   [Administering user impersonation](../../../deployment/manage/security/users_and_groups/impersonation/index.md)
+    -   [Administering user impersonation](../../../deployment/manage/security/people/authorization/users_and_groups/impersonation/index.md)
 

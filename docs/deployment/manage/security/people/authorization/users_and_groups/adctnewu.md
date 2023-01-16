@@ -8,7 +8,8 @@ To complete this task, you must have at least the Editor@USERS role to create us
 
 The portlets that are used in this task are Users and Groups
 
-**Note:** As you follow the instructions for this task, refer to the *user IDs and passwords* topic, for more information on the characters you can use in the user ID, password, first name, and last name fields.
+!!!note
+    As you follow the instructions for this task, refer to the *user IDs and passwords* topic, for more information on the characters you can use in the user ID, password, first name, and last name fields.
 
 1.  Log in to your portal as an administrator.
 
@@ -18,7 +19,8 @@ The portlets that are used in this task are Users and Groups
 
 4.  Click **New User** or **New Group**.
 
-    **Note:** If the Editor role is not assigned to the following virtual resources: USER, USER GROUPS, and USER SELF ENROLLMENT, **New User** and **New Group** might not display in virtual portals.
+    !!!note
+        If the Editor role is not assigned to the following virtual resources: USER, USER GROUPS, and USER SELF ENROLLMENT, **New User** and **New Group** might not display in virtual portals.
 
 5.  If you are creating a new user group, enter a name for the user group.
 
@@ -34,16 +36,14 @@ The portlets that are used in this task are Users and Groups
 
     5.  Enter an email address for the new user. This field is not needed for successful creation of a new user.
 
-    **Note:** If you use an LDAP server for your users and groups, your LDAP configuration might place additional restrictions on user and group names. For example, the LDAP configuration might require user names and passwords to be a minimum of 8 characters in length. For information about supported characters, see the related links.
+    !!!note
+        If you use an LDAP server for your users and groups, your LDAP configuration might place additional restrictions on user and group names. For example, the LDAP configuration might require user names and passwords to be a minimum of 8 characters in length. For information about supported characters, see the related links.
 
 7.  Select **Preferred language** from the drop-down list. This field is not needed for successful creation of a new user. If you do not select a preferred language or if the language is not supported by the portal, the default language is the default HCL Portal language.
 
 8.  Click **OK**.
 
 
-
-**Related information**  
-
-
-[User IDs and passwords](../plan/sec_chars.md)
+???+ info "Related information" 
+    - [User IDs and passwords](../../../../../../get_started/plan_deployment/traditional_deployment/sec_chars.md)
 

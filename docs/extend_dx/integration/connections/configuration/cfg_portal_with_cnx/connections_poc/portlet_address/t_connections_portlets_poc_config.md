@@ -10,6 +10,7 @@ The POC resolver handles navigation in following manner:
     -   Search the community page for a detail portlet to render the content.
     -   If no static community page is found, search for a stand-alone page.
     -   If no stand-alone page is found, navigate to an error page.
+    
 -   If the piece of content is from a stand-alone page rather than from a community:
     -   Search the stand-alone page for a detail portlet to render the content.
     -   If no stand-alone page is found, navigate to an error page.

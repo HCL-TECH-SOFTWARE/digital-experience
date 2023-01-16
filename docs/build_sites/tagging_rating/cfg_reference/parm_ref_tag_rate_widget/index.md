@@ -34,7 +34,7 @@ You configure specific tag widget instances by setting the JavaScript parameters
 You configure rating widget instances by setting the JavaScript parameters listed here.
 -->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [CP Configuration Service for tagging and rating](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [How tagging and rating works in the portal](../../howto_tagging_rating/index.md)

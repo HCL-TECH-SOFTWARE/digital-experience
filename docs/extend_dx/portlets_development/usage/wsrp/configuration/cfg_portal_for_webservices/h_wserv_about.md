@@ -28,6 +28,7 @@ Web Services Configuration displays a table that lists the Producers in your por
 -   The status, that is, whether the Producer is in use in your portal
 -   The WSRP version that your Consumer portal and the Producer portal use when you consume web services from the listed Producer.
 -   These icons that you can use for working with Producers:
+
     -   **Edit** for editing an existing Producer.
     -   **Delete** for deleting a Producer.
     -   **Assign Access** for giving users permissions on Producers.

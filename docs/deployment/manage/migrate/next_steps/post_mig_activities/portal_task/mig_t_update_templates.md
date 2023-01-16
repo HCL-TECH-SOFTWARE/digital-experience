@@ -24,6 +24,7 @@ With Version 8.5, there are several new features related to templates used to cr
 
     3.  Copy the marked page to the target location.
 
-        **Note:** If you move the template root page to the **Hidden Pages** label, consider creating a link in the administration area to the template root page. With the link, administrators can access page templates more directly.
+        !!!note
+            If you move the template root page to the **Hidden Pages** label, consider creating a link in the administration area to the template root page. With the link, administrators can access page templates more directly.
 
 

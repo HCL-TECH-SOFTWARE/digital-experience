@@ -1,8 +1,4 @@
----
-id: h_usrgrps_configure
-title: Configuring the Users and Groups portlet
----
-
+# Configuring the Users and Groups portlet
 
 
 
@@ -18,7 +14,8 @@ The following configurations are possible depending on how the views are program
 
 1.  Select the appropriate configuration mode; refer to the previous table for possible modes.
 
-    **Note:** Changes made in the Edit Shared Settings mode override changes made in the Configure mode. For information about customizing the search refer to the Portal Search section.
+    !!!note
+        Changes made in the Edit Shared Settings mode override changes made in the Configure mode. For information about customizing the search refer to the Portal Search section.
 
 2.  Enter the maximum number of items the search will return in the **Never show more than this number of items:** field.
 

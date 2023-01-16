@@ -14,7 +14,7 @@ The following list provides a summary of available options for using groups in H
 
 -   **LDAP**
 
-    Type of group: Static, Nested \(optional\), Dynamic \(optional\)
+    Type of group: Static, Nested (optional), Dynamic (optional)
 
     Advantage: LDAP is an established industry protocol, which can integrate with multiple applications. In most use cases, HCL Portal connects to and uses existing groups in an LDAP server.
 
@@ -38,12 +38,8 @@ The following list provides a summary of available options for using groups in H
 
 
 
-**Related information**  
-
-
-[User registry considerations](../plan/plan_ureg.md)
-
-[Rule-based user groups](../admin-system/rbug.md)
-
-[Configuring dynamic member attributes in a federated repository configuration](https://www.ibm.com/docs/en/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/twim_dynamic_member_attrs.html)
+???+ info "Related information"
+    - [User registry considerations](../../../../../../get_started/plan_deployment/traditional_deployment/user_registry_consideration/index.md)
+    - [Rule-based user groups](rule_based_user_groups/index.md)
+    - [Configuring dynamic member attributes in a federated repository configuration](https://www.ibm.com/docs/en/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/twim_dynamic_member_attrs.html)
 

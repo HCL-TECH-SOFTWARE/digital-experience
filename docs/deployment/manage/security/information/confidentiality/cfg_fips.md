@@ -18,9 +18,6 @@ The tasks involved in enabling FIPS are specific to Web servers and WebSphere® 
     **Remember:** Enable FIPS for your LDAP server only if it requires a secure connection. If you do not use an LDAP server or you do not connect to your LDAP server over a secure connection, you do not need to enable FIPS for an LDAP server.
 
 
-
-**Related information**  
-
-
-[Federal Information Processing Standards and \(NIST\) SP800-131a](../plan/plan_fips.md)
+???+ info "Related information"
+    - [Federal Information Processing Standards and (NIST) SP800-131a](../../people/authentication/sec_auth_consideration/plan_fips.md)
 

@@ -1,10 +1,11 @@
 # Changing the HCL Digital Experience administrator password
 
-HCL Digital Experience treats wpsadmin \(the administrator\) as any other user, just with more permissions granted. With a normal configuration, it is possible to change the wpsadmin or equivalent password through the user interface, just like any other user can manage their own password through the user interface. However, if the wpsadmin account is also used for more than just the administrator, then additional changes, outlined in other steps in this section, must be made to accommodate the change.
+HCL Digital Experience treats wpsadmin (the administrator) as any other user, just with more permissions granted. With a normal configuration, it is possible to change the wpsadmin or equivalent password through the user interface, just like any other user can manage their own password through the user interface. However, if the wpsadmin account is also used for more than just the administrator, then additional changes, outlined in other steps in this section, must be made to accommodate the change.
 
 Perform the following steps to change the administrator password:
 
-**Note:** You can also change the Administrator password, like any other user password, using an LDAP editor.
+!!!note
+    You can also change the Administrator password, like any other user password, using an LDAP editor.
 
 1.  Log in to HCL Digital Experience as an administrator.
 
@@ -51,11 +52,11 @@ Perform the following steps to change the administrator password:
     6. Mkde sure to click Update and then Save. 
 
 
-Additionally, you should also change the password in the wkplc.properties file, located in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+
+Additionally, you should also change the password in the wkplc.properties file, located in the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 
-**Related information**  
+???+ info "Related information"
+    - [Applying fix packs to your portal](../../../../manage_portal_using_iim/apply_fixpacks.md)
 
-
-[Applying fix packs to your portal](../security/apply_fixpacks.md)
 

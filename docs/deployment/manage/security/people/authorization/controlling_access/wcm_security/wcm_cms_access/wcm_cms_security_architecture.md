@@ -2,7 +2,8 @@
 
 The security architecture describes what groups are required for your site and what access is required for different groups to the authoring portlet and rendered website.
 
-**Note:** The following example describes the type of security architecture that is required for an authoring environment. In most cases, the security architecture for a staging or delivery environment would be much simpler with only the **All Portal User Groups** group assigned user access to the library. This strategy prevents users from being able to edit content and disables features like authoring tools from being displayed on the published site.
+!!!note
+    The following example describes the type of security architecture that is required for an authoring environment. In most cases, the security architecture for a staging or delivery environment would be much simpler with only the **All Portal User Groups** group assigned user access to the library. This strategy prevents users from being able to edit content and disables features like authoring tools from being displayed on the published site.
 
 In this example, item type roles are applied to the following groups:
 
@@ -24,17 +25,7 @@ The simplest method of setting library access is to grant contributor access to 
 |Manager|Yes|Yes| |
 |Editor|Yes|Yes| |
 |User|No|Yes|Anonymous Portal User|
-|Contributor|Yes|Yes|WCMAdmins
-
-SiteAdmins
-
-SiteDesigners
-
-ContentAuthors
-
-ContentReviewers
-
-|
+|Contributor|Yes|Yes|WCMAdmins<br> SiteAdmins<br> SiteDesigners<br> ContentAuthors<br> ContentReviewers|
 
 ## Resource permissions
 
@@ -78,14 +69,10 @@ Set the following resource permissions for each role type:
     |-----|-----------------|-----------------|-------------|
     |Administrator|Yes|Yes|WCMAdmins|
     |Manager|Yes|Yes|SiteAdmins|
-    |Editor|Yes|Yes|SiteDesignersContentAuthors
-
-|
+    |Editor|Yes|Yes|SiteDesignersContentAuthors|
     |User|Yes|Yes| |
     |Contributor|Yes|Yes| |
-    |Reviewer|Yes|Yes|ContentReviewers
-
-|
+    |Reviewer|Yes|Yes|ContentReviewers|
 
 -   **Presentation Templates**
 
@@ -145,8 +132,6 @@ The permissions set for item type do not automatically give you access to indivi
 You can also assign specific access to individual groups or users on each item.
 
 
-**Related information**  
-
-
-[Setting up access](../site/site_acl.md)
+???+ info "Related information"
+    - [Setting up access](../../../../../../../../build_sites/create_sites/building_website/site_acl.md)
 

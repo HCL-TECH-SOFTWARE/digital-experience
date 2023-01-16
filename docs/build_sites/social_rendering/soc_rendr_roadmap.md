@@ -19,7 +19,7 @@ To go the advanced path of working with social lists, proceed as follows:
 7.  To enable your page editors to create your own social lists, read *Creating custom authoring templates for social lists*. This work task is done by a website designer.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Integrating with HCL Connections](../../extend_dx/integration/connections/installation/index.md)
     - [Working with lists of social objects](../social_rendering/working_with_social_objects/index.md)
     - [Configuring global settings for social rendering](../social_rendering/cfg_global_settings_social_rendering/index.md)

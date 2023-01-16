@@ -41,6 +41,6 @@ You can also create your own custom style to use with your custom theme defined 
  You can change the default action of a logo to take users to different pages in your portal.
 
 
-???+ info "Related information:"
-     - [Vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/index.md)
+???+ info "Related information"
+     - [Vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/index.md)
 

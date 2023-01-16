@@ -82,6 +82,6 @@ When you use the wizard and provide information about the database for your envi
 
 Optional: After you transfer your data to DB2, run a configuration task to enable support for high availability recovery (HADR) and roll-forward recovery.
 
-???+ info "Related information:" 
+???+ info "Related information" 
     - [JDBC type 2 and type 4 drivers](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
 

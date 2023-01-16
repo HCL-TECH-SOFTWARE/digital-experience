@@ -95,7 +95,6 @@ This topic describes the commands that are used to create, update, delete, and r
         ```
         resource-env-provider import-properties [OPTIONS]
         ```
-
 -   **Command options required to create, update, delete, and retrieve resource environment providers:**
 
     Use this attribute to specify the protocol with which to connect to the server:
@@ -262,7 +261,7 @@ This topic describes the commands that are used to create, update, delete, and r
 !!! note 
     The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
-<!-- ???Info "Related information:" 
 
-[DXClient](../containerization/dxclient.md) -->
+???+ info "Related information"
+    - [DXClient](../index.md)
 

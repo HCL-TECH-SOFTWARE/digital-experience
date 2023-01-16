@@ -8,17 +8,17 @@ Following is a description of the three types of recommendation engines:
 -   **Clickstream engine**: This engine, which also accesses transaction information, generates recommendations based on users' actions as they navigate a Web site; that is, the history of user “clicks” during website visits, and the items that users view, click, and add to their shopping carts.
 -   **Item Affinity engine**: This engine generates recommendations based on the history of the user's site browsing activity. It matches a currently selected product with a second product that the user would most likely want to purchase along with the first product. For example, if a user is purchasing groceries and adds French onion soup to the shopping cart, the Item Affinity engine could recommend Gruyere cheese to go with it.
 
--   **[Preference Engine \| LikeMinds for HCL Digital Experience](pzn_preference_engine.md)**  
+-   **[Preference Engine | LikeMinds for HCL Digital Experience](pzn_preference_engine.md)**  
 The Preference Engine uses explicitly stated user preferences to make highly accurate recommendations for products and content that your site visitors like.
--   **[Clickstream Engine \| LikeMinds for HCL Digital Experience](pzn_clickstream_engine.md)**  
-The Clickstream Engine tracks clickstream \(or rating\) behavior and generates recommendations based on mentors who exhibit similar affinities.
--   **[Item Affinity Engine \| LikeMinds for HCL Digital Experience](pzn_item_affinity_engine.md)**  
+-   **[Clickstream Engine | LikeMinds for HCL Digital Experience](pzn_clickstream_engine.md)**  
+The Clickstream Engine tracks clickstream (or rating) behavior and generates recommendations based on mentors who exhibit similar affinities.
+-   **[Item Affinity Engine | LikeMinds for HCL Digital Experience](pzn_item_affinity_engine.md)**  
 The Item Affinity Engine generates recommendations based on any transactional history available.
--   **[Preference Engine \| LikeMinds for HCL Digital Experience](pzn_preference_engine.md)**  
+-   **[Preference Engine | LikeMinds for HCL Digital Experience](pzn_preference_engine.md)**  
 The Preference Engine uses explicitly stated user preferences to make highly accurate recommendations for products and content that your site visitors like.
--   **[Clickstream Engine \| LikeMinds for HCL Digital Experience](pzn_clickstream_engine.md)**  
-The Clickstream Engine tracks clickstream \(or rating\) behavior and generates recommendations based on mentors who exhibit similar affinities.
--   **[Item Affinity Engine \| LikeMinds for HCL Digital Experience](pzn_item_affinity_engine.md)**  
+-   **[Clickstream Engine | LikeMinds for HCL Digital Experience](pzn_clickstream_engine.md)**  
+The Clickstream Engine tracks clickstream (or rating) behavior and generates recommendations based on mentors who exhibit similar affinities.
+-   **[Item Affinity Engine | LikeMinds for HCL Digital Experience](pzn_item_affinity_engine.md)**  
 The Item Affinity Engine generates recommendations based on any transactional history available.
 
 

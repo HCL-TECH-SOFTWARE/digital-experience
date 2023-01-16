@@ -6,5 +6,5 @@ If you have managed pages enabled and want to share a Web Content Manager librar
 
 
 ???+ info "Related information" 
-    -   [Syndication](../../../../../../../manage_content/wcm/wcm_content_delivery/syndication/index.md)
+    -   [Syndication](../../../../../../../manage_content/wcm_delivery/syndication/index.md)
 

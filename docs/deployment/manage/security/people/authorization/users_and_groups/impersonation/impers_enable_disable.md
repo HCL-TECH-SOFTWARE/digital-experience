@@ -4,7 +4,8 @@ By default, user impersonation is enabled, but you can manually disable or enabl
 
 1.  Complete the following steps to disable or enable the impersonation feature:
 
-    -   To disable the impersonation feature, run the `disable-impersonation` task from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory.
+    -   To disable the impersonation feature, run the `disable-impersonation` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+
         -   **Windows™**
 
             ConfigEngine.bat disable-impersonation -DWasPassword=password -DPortalAdminPwd=password -DCategoriesList=wp.auth.base
@@ -21,7 +22,8 @@ By default, user impersonation is enabled, but you can manually disable or enabl
 
             ./ConfigEngine.sh disable-impersonation -DWasPassword=password -DPortalAdminPwd=password -DCategoriesList=wp.auth.base
 
-    -   To enable the impersonation feature, run the `enable-impersonation` task from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory.
+    -   To enable the impersonation feature, run the `enable-impersonation` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+
         -   **Windows™**
 
             ConfigEngine.bat enable-impersonation -DWasPassword=password -DPortalAdminPwd=password -DCategoriesList=wp.auth.base
@@ -41,9 +43,6 @@ By default, user impersonation is enabled, but you can manually disable or enabl
 2.  Stop and restart the HCL Portal server.
 
 
-
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+???+ info "Related information"
+    - [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md)
 

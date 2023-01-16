@@ -67,7 +67,7 @@ Embedding a toolbar into a theme with a dynamic content spot provides an optimiz
 
     For example theme\_en.html.
 
-7.  After you embed a toolbar, you must either restart your portal server. Or, you must use the WebSphere® Integrated Solutions Console to invalidate the resource aggregator cache. To invalidate your cache, click **Theme Analyzer** \> **Utilities** \> **Control Center** \> **Invalidate Cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](themeopt_an_util.md#).
+7.  After you embed a toolbar, you must either restart your portal server. Or, you must use the WebSphere® Integrated Solutions Console to invalidate the resource aggregator cache. To invalidate your cache, click **Theme Analyzer** \> **Utilities** \> **Control Center** \> **Invalidate Cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../../../../../../build_sites/themes_skins/the_module_framework/themeopt_analyzer/utilities/index.md).
 
 
 

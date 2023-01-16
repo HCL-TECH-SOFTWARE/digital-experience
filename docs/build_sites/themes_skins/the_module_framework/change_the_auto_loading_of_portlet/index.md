@@ -16,7 +16,7 @@ You can change the auto-loading of portlet capabilities with WebDAV.
 You can change the auto-loading of portlet capabilities with XMLAccess.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Resource Aggregator overview](../../the_module_framework/themeopt_reso_agg.md)
     - [Module dependencies in portlets](../themeopt_mod_capfilters.md)
     - [Configuration settings for capability filters](../../customizing_theme/cfg_portal_theme_and_modules/themeopt_mod_capfilter_settings.md)

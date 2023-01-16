@@ -53,6 +53,5 @@ Find in your base directory the xml output in store/outputFiles/wcmLibrary (“T
 
 !!!tip "See more detailed information [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/wcmlibraries.html)."
 
-## Related Page
-
-- [How to Import WCM library](import_wcm_libraries.md)
+???+ info "Related information"
+      - [How to Import WCM library](import_wcm_libraries.md)

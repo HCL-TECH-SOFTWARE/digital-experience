@@ -14,7 +14,7 @@ hide: tags
 ### What You Will Learn In This Tutorial
 - Creation of a Gradle project to simplify working with shared libraries in HCL Digital Experience (DX).
 - Update bundling of new or existing NPM based projects to exclude dependencies and use the libraries in a DX Module.
-- Combine DX Module and Script Applications Projects
+- Combine DX Module and Script Applications Projects.
 
 ### Where To Get The Sample Code
 !!!tip "Sample codes are available in [GitHub: Deploy Multiple DX ScriptApps with Shared Dependencies](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/04AppsWithSharedDependencies)."

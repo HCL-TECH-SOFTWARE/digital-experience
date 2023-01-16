@@ -38,7 +38,7 @@ Specific activities take place in each environment.
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Staging to production list](../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
     - [HCL Web Content Manager \(WCM\) environments](../wcm_env/index.md)
 

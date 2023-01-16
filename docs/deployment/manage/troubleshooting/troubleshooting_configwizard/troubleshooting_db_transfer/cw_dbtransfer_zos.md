@@ -152,5 +152,5 @@ During this step, you are validating that the database is still available and th
 |Clean up step|None required|
 
 **Related information** 
-[Accessing the Configuration Wizard](../../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+[Accessing the Configuration Wizard](../../../../manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
 

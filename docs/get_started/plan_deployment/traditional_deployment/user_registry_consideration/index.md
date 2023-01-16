@@ -34,6 +34,6 @@ A realm is a collection of users or groups from one or more branches of your rep
 Use property extension to store extra user attributes into a database store without touching your backend user registry.
 
 
-???+ info "Related information:"
-    - [Choose the type of group to use](../../../../deployment/manage/security/users_and_groups/type_of_group.md)
+???+ info "Related information"
+    - [Choose the type of group to use](../../../../deployment/manage/security/people/authorization/users_and_groups/type_of_group.md)
 

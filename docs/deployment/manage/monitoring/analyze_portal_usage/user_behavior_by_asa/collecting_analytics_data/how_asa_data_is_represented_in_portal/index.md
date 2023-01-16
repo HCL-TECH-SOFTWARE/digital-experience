@@ -10,9 +10,10 @@ The data is represented as a microformat in the portal page HTML DOM tree and ta
 <span class="asa.portlet.title">My Portlet</span>
 ```
 
-The structure of a page with annotated portlets is shown here: ![Structure of a page with portlets annotated for Site Analytics](../images/asa_page_elements.jpg)
+The structure of a page with annotated portlets is shown here: 
+![Structure of a page with portlets annotated for Site Analytics](../../../../../../../images/asa_page_elements.jpg)
 
--   **[Supported aggregator tags](../admin-system/sa_asa_aggr_tags.md)**  
+-   **[Supported aggregator tags](sa_asa_aggr_tags.md)**  
 The portal supports the aggregator tags listed in the following for Active Site Analytics.
 
 

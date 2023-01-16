@@ -10,6 +10,6 @@ After you create a theme style, use this procedure to apply a customized look an
 You can apply alternate styles to your portal pages using the HCL Portal 8.5 theme that you can apply to your portal pages.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Menu styles](../menus/simple_menu_framework/themeopt_cust_menustyling.md)
 

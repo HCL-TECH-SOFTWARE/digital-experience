@@ -2,7 +2,7 @@
 
 Several authentication handlers require that user credentials are presented in the authentication process. For example, the HTTP basic authentication handler requires such user credentials. Before the outbound connection can be used, these user credentials are set in the Credential Vault.
 
-For details about setting and storing credentials in the Credential vault, read the information about [Credential vault](../../../../../deployment/manage/security/sec_auth_consideration/plan_credvault.md).
+For details about setting and storing credentials in the Credential vault, read the information about [Credential vault](../../../../../deployment/manage/security/people/authentication/sec_auth_consideration/plan_credvault.md).
 
 The outbound HTTP connection configuration references the credentials by the slot name.
 
@@ -27,6 +27,6 @@ You created a credential with user ID and password in the Credential Vault.
 
 
 ???+ info "Related information"
-    - [Credential Vault](../../../../../deployment/manage/security/sec_auth_consideration/plan_credvault.md)
+    - [Credential Vault](../../../../../deployment/manage/security/people/authentication/sec_auth_consideration/plan_credvault.md)
     - [Establishing SSO connections through LTPA token](outbhttp_auth_est_sso_ltpa_tok.md)
 

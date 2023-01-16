@@ -13,6 +13,6 @@ With a WebDAV-based theme, static theme content is deployed through WebDAV. Use 
 With a WAR-based theme, you deploy both static and dynamic content as an EAR file. You can easily deploy your theme to your Portal server when your static and dynamic contents are contained in a single EAR file. Use this option when your theme is ready for production.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Manually packaging themes for deployment](../../../developing_theme/dev_op_overview/manual_packaging_themes/index.md)
 

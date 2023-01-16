@@ -98,6 +98,6 @@ The following are known limitations to public render parameters:
 2.  The optional `<alias>` elements of public render parameter declarations are ignored. Currently, sharing of public render parameters is only controlled by the `<name>` or `<qname>` elements of the parameter declarations.
 
 ???+ info "Related information"
-      - [Creating a web content page with the XML configuration interface](../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/mp_wcm_createpagexml.md)
+      - [Creating a web content page with the XML configuration interface](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/advance_adm_sample/mp_wcm_createpagexml.md)
       - [JSR 286 portlet events based communications](../portlet_communication/portlets_publish_subscribe_mech/define_portlet_comm_capabilities/pltcom_events.md)
       - [Advanced URL generation for data exchange](pltcom_datxchg_xptltlnks.md)
