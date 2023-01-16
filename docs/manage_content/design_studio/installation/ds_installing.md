@@ -29,7 +29,7 @@ Deployment options using [Helm](../../../deployment/install/container/helm_deplo
 
 #### Disable Design Studio (Beta)
 
-Design Studio (Beta) can also be disabled on your Kubernetes deployment when deployed using ../../../deployment/manage/container_configuration/operator-based/dxtools_dxctl.md) or [Helm](../../../deployment/install/container/helm_deployment/overview.md). To disable, set the designStudio flag to false and initiate a reconciliation via your deployment method (dxctl or Helm).
+Design Studio (Beta) can also be disabled on your Kubernetes deployment when deployed using [dxctl](https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-based/dxtools_dxctl/) or [Helm](../../../deployment/install/container/helm_deployment/overview.md). To disable, set the designStudio flag to false and initiate a reconciliation via your deployment method (dxctl or Helm).
 
 ### Deploy on HCL SoFy
 
