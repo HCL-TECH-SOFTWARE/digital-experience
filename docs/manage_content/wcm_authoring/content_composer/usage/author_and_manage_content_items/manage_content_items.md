@@ -68,6 +68,7 @@ Content users can copy a content item to another site area location.
 2. A location selector appears on the screen. Pick the site area to copy the content to. After selecting, click the **Copy** button to finalize copying of the content item.
 
     ![Select a site area location and click Copy](../../../../../assets/Select_Site_Area_to_Copy_Content_to_HCL_Content_Composer.png)
+
 ## Rename Content Item when there is conflict during moving
 
 Content users can move and rename a content item when there is another content with the same name in a site area location.
