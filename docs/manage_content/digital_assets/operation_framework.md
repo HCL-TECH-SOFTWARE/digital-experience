@@ -8,7 +8,7 @@ This allows for better parallelization, scalability by handling multiple operati
 ---
 ## Architectural Overview
 
-The operations framework consists in the core of four key components (Marked **bold** in the text). For storing `operations` we leverage our **existing LB4 datasource**, which to this current time is `postgreSQL`. On top of it sits a **`scheduler`** which will look for `operations` that need to be handled and will assign those to **`workers`**. Those **`workers`** receive the `operation` to be handled via inter-process-communication (IPC) from the DAM main process and will return their result after being done via IPC as well. Each operation has the name of the **`triggerFunction`** it is supposed to execute, as well as `inputs` that define attributes and data to work with for handling this `operation`.
+The operations framework consists in the core of four key components (Marked **bold** in the text). For storing `operations` we leverage our ` DAM database`. On top of it sits a **`scheduler`** which will look for `operations` that need to be handled and will assign those to **`workers`**. Those **`workers`** receive the `operation` to be handled via inter-process-communication (IPC) from the DAM main process and will return their result after being done via IPC as well. Each operation has the name of the **`triggerFunction`** it is supposed to execute, as well as `inputs` that define attributes and data to work with for handling this `operation`.
 
 ![Architectural Overview](.../../../../images/architectural_overview.png)
 
@@ -55,7 +55,7 @@ The `scheduler` is the controlling mechanism of the operations framework. It tak
 The `scheduler heartbeat` defines the intervals in which the `scheduler` will try to claim `operations` for `workers`. This can be configured.
 
 ### Triggerfunction
-A `triggerFunction` is the function that should be executed by a `worker`. It is defined in a `operation` and will be executed by the `worker`. As parameters, it will receive the `inputs` from the `operation`.
+A `triggerFunction` is the function that executed by a `worker`. It is defined in a `operation` and will be executed by the `worker`. As parameters, it will receive the `inputs` from the `operation`.
 
 ### Wait operation
 An operation is considered wait if its current status is `WAIT` and its property `updated` contains a timestamp not older than the configured OPERATION_WAIT_INTERVAL for an operation to be PROCESSING.
