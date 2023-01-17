@@ -101,8 +101,10 @@ The restart-dx-core command is used to restart the DX Core server.
 
   This command triggers a rollout restart of the DX Core Pods similar to `kubectl rollout restart` command.
 
-  This is useful for propagating changes across multiple core pods properly, requiring a server restart. 
+  This is useful for propagating changes across multiple core pods properly, requiring a server restart.
 
+!!! note
+  Only the user set as `wasAdmin` in the Helm values is authorised to trigger this command.
     ```
     dxclient restart-core-pods
     ```
