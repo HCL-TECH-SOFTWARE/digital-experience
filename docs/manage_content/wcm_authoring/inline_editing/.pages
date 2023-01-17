@@ -1,4 +1,6 @@
 title: Inline Editing Strategies
 nav:
     - index.md
-    - ...
+    - wcm_inline_editing.md
+    - wcm_dev_inline_tags.md
+    - wcm_dev_inline_upgrade.md
