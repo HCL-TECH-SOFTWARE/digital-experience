@@ -38,7 +38,7 @@ In the following sections, we described some of the operations that normally run
 
 ### Failed operations clean up job
 
--   The operation framework will have a new heartbeat for the failed operation called “failureOperationHeartbeat”.
+Naturally it might happen that the list of operations in the DAM database gets quite long. The operations cleanup job ensures to clean up obsolete operations to make sure the list it doesn't get cluttered. These kind of obsolete operations includes e.g. failed operations, etc. It is configurable for how long obsolete operations will be kept before they get finally cleaned up.
 -   Naturally it might happen that the list of operations in the DAM database gets quite long. The operations cleanup job ensures to clean up obsolete operations to make sure the list it doesn't get cluttered. These kind of obsolete operations includes e.g. failed operations, etc. It is configurable for how long obsolete operations will be kept before they get finally cleaned up.
 
 #### Configuration attributes in `values.yaml`
