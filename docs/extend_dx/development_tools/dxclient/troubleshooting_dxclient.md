@@ -21,10 +21,7 @@ To enable log tracing in DXConnect you will need to access ConfigWizard admin co
 3. Navigate to Logging and tracing > server1 > Diagnostic trace service.
 4. Select `Runtime` tab.
 5. Navigate to `Change log detail levels`.
-6. Add `com.hcl.dxconnect.*=all` to the list. 
-!!! note
-    There is a possibility of a server restart when this is configured.
-
+6. Add `com.hcl.dxconnect.*=all` to the list. (There is a possibility of a server restart when this is configured.)
 7. You may access the `SystemOut.log` from `/opt/HCL/Appserver/profiles/cw_profile/server1/logs` to trace dxconnect logs.
     
 !!!note 
