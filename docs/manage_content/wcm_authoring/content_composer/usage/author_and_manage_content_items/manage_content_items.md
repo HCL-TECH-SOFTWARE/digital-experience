@@ -61,11 +61,11 @@ Content users can move a content item to another site area location.
 
 Content users can copy a content item to another site area location.
 
-1. Access the content item you wish to copy. In this example, the content item example below \(**Image**\) is obtained from **Web Content \> Content \> Articles** site area location. Click the icon to select the content item. After doing so, click the **Copy** icon on the header. 
+1. Access the content item you want to copy. In this example, the content item example below (**Image**) is obtained from **Web Content > Content > Articles** site area location. Click the icon to select the content item. After doing so, click the **Copy** icon on the header. 
 
     ![Select Content Item to Copy](../../../../../assets/Select_Content_Item_to_Copy_HCL_Content_Composer.png)
 
-2. A location selector should appear on the screen. Pick the site area to copy the content to. After selecting, click the **Copy** button to finalize copying of the content item.
+2. A location selector appears on the screen. Pick the site area to copy the content to. After selecting, click the **Copy** button to finalize copying of the content item.
 
     ![Select a site area location and click Copy](../../../../../assets/Select_Site_Area_to_Copy_Content_to_HCL_Content_Composer.png)
 
