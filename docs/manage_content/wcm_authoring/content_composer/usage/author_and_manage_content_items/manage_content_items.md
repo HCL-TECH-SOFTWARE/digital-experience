@@ -57,23 +57,6 @@ Content users can move a content item to another site area location.
 
     ![Select a site area location and click Move](../../../../../assets/Select_Site_Area_to_Move_Content_to_HCL_Content_Composer.png)
 
-## Rename Content Item when there is conflict during moving
-
-Content users can move and rename a content item when there is another content with the same name in a site area location.
-
-1.  A **Save As** modal should appear on the screen when a user tries to move a content item in a site area location that has a content item with the same name. A unique name and display title will be auto-generated, which can be modified.
-
-    ![Save as content item during moving conflict](../../../../../assets/save-as-content-item-during-moving-conflict.png)
-
-2.  Click **See All Site Areas** under **Location** to change the preferred location to move your content item. A location selector should appear on the screen and pick the site area to move the content to.
-
-    ![Select a site area location and click Move](../../../../../assets/select-site-area-to-move-content-during-moving-conflict.png)
-
-3.  After finalizing the name, display the title and site area location. Click the **Save** button to save the content item to a new location.
-
-    ![Select Content Item to Move](../../../../../assets/save-content-item-to-new-location.png)
-
-
 ## Add Comments
 
 !!!note
