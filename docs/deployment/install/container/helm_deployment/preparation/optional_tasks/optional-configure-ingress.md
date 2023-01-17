@@ -45,7 +45,7 @@ networking:
   tlsCertSecret: "dx-tls-cert"
 ```
 
-- Define an Ingress instance that will be used to configure the routing rules that point to the existing deployment of HAProxy as the internal service. Here we must configure a host and all of the request received by the host will be handle by `<helm release name>-haproxy`. The port number depends on the [protocol or port set for HAProxy in the Helm values](../mandatory_tasks/prepare_configure_networking.md#configure-haproxy-networking) as described in the previous step.
+- Define an Ingress instance that will be used to configure the routing rules that point to the existing deployment of HAProxy as the internal service. Here we must configure a host and all of the requests received by the host will be handled by `<helm release name>-haproxy`. The port number depends on the [protocol or port set for HAProxy in the Helm values](../mandatory_tasks/prepare_configure_networking.md#configure-haproxy-networking) as described in the previous step.
 
 ```yaml
 apiVersion: networking.k8s.io/v1
