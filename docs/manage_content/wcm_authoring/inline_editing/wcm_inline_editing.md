@@ -1,6 +1,6 @@
 # Understanding inline editing using Woodburn Studio
 
-This topic provides an example of how you can use inline editing. This example uses Woodburn Studio, and you can perform the same actions in your own site. 
+This topic provides an example of how you can use inline editing through the Woodburn Studio demo site. You can perform the same actions in your own site. 
 
 ## Editing content in Woodburn Studio
 Through inline editing, users with edit access can modify the content of a webpage.
@@ -84,5 +84,9 @@ After making changes, changes must be approved before they are published.
 
 ## Publishing changes in Woodburn Studio
 After changes are approved, you can publish the changes by opening the **Manage Project** window. Click **Publish Project**. 
+
+???+ info "Related information"
+    - [The Woodburn Studio demo site](../../../build_sites/woodburn_studio/index.md)
+    
 
     
