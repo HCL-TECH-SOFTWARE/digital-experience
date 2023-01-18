@@ -76,7 +76,7 @@ A local Flexnet entitlement server can itself also be configured to function wit
     1.  Using the default user name and password, request a bearer token from the local license server.
 
         ```
-        curl -k --header "CContent-Type: application/json" -- request POST --data "{\"user"\":\"admin\",\"password\":\HCLDefault@\"}" [https://%3clicense]https://<license server hostname>:<port>/api/1.0/instances/~/authorize
+        curl -k --header "Content-Type: application/json" --request POST --data "{\"user\":\"admin\",\"password\":\HCLDefault@\"}" https://<license server hostname>:<port>/api/1.0/instances/~/authorize
         ```
 
         Where:
@@ -90,7 +90,7 @@ A local Flexnet entitlement server can itself also be configured to function wit
         Using the token value obtained in the previous step, obtain the **hostids**.
 
         ```
-        curl -k -H "Authorization: Bearer <token value>" [https://%3clicense]https://<license server hostname>:<port>/api/1.0/hostids
+        curl -k -H "Authorization: Bearer <token value>" https://<license server hostname>:<port>/api/1.0/hostids
         ```
         Where:
 
@@ -153,7 +153,7 @@ A local Flexnet entitlement server can itself also be configured to function wit
     2. Upload the capability response (.bin) file into the server.
 
         ```
-        curl -k -X POST -H "Authorization: Bearer <token value>" -H "Cache-Control: no-cache" --data-binary "@<Bin File Name.bin>" [https://%3clicense]https://<license server hostname>:<port>/api/1.0/capability_response
+        curl -k -X POST -H "Authorization: Bearer <token value>" -H "Cache-Control: no-cache" --data-binary "@<Bin File Name.bin>" https://<license server hostname>:<port>/api/1.0/capability_response
         ```
 
         Where:
