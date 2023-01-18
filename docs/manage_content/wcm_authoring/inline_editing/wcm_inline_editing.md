@@ -1,6 +1,6 @@
-# Inline editing in Woodburn Studio
+# Understanding inline editing using Woodburn Studio
 
-This topic provides information on how to edit content and approve changes in Woodburn Studio.
+This topic provides an example of how you can use inline editing. This example uses Woodburn Studio, and you can perform the same actions in your own site. 
 
 ## Editing content in Woodburn Studio
 Through inline editing, users with edit access can modify the content of a webpage.
