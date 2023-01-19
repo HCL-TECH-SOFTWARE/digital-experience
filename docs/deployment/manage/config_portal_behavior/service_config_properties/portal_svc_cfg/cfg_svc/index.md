@@ -522,6 +522,12 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
     !!!note
         The stateless friendly redirect feature requires the base tag to be enabled in the theme.
 
+-   **sessiontimeout.user.anonymous = \(false\)**
+
+    When the session times out by default the session timeout error screen is being displayed (unless timeout.resume.session is configured).
+    This does not happen if the user hits a link on the anonymous areas of DX - i.e. by default /wps/portal/...
+    By setting this property to true and restarting in the case of a session timeout and hitting an anonymous link (before the LTPA token timeout) the session timeout error screen will be displayed. This property has been introduced with CF210 and can be used with CF210 or higher.
+
 
 ???+ info "Related information" 
     -   [How administrators define persistent session options](../../../../config_portal_behavior/user_session_persistence/adm_define_user_session_persistence/index.md)
