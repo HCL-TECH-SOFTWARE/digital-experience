@@ -50,9 +50,9 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 - **Container platform capacity resource requirements**:
 
     The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 container components in the Helm-based deployments, as well as the minimum number of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly. If you want to deviate from these numbers, you may do so. Increasing any number should never be an issue. In fact in a production environment we highly recommend so increase these numbers to scale your specific needs. It may also be possible to decrease some of the numbers and still be able to start DX, e.g. for development environments, but we can not officially support these.
-    All of the below CPU sizings relate to an environment with 2nd generation Intel Xeon Scalable Processors (Cascade Lake 8223CL) or 1st generation Intel Xeon Platinum 8000 series (Skylake 8124M) processor.
+    All of the below CPU sizings relate to an environment with 2nd generation Intel Xeon scalable processors (Cascade Lake 8223CL) or 1st generation Intel Xeon Platinum 8000 series (Skylake 8124M) processors.
 
-    Please consider that every Kubernetes node requires some headroom for Kubernetes specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. Please be aware that the overall requested amount of resources may vary based on disabled/enabled applications.
+    Please also consider that every Kubernetes node requires some headroom for Kubernetes specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. Please be aware that the overall requested amount of resources may vary based on disabled/enabled applications.
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request** | **Container Memory request** |
 |---|---|---|---|---|---|
