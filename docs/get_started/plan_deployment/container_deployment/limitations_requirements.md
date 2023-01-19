@@ -46,6 +46,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 - **Migration**:
 
     For information about migrating from Operator-based to Helm-based deployments, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
+
 - **Container platform capacity resource requirements**:
 
     The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 container components in the Helm-based deployments, as well as the minimum number of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly. If you want to deviate from these numbers, you may do so. Increasing any number should never be an issue. In fact in a production environment we highly recommend so increase these numbers to scale your specific needs. It may also be possible to decrease some of the numbers and still be able to start DX, e.g. for development environments, but we can not officially support these.
