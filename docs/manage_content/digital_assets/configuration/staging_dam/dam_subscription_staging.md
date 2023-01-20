@@ -2,6 +2,10 @@
 
 This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../index.md) (DAM) content. This allows you to manage subscriber registration or configure periodic sync.
 
+!!! note
+        The WCM syndication and DAM staging are two identical features but not the same in terms of staging process/configuration/authentication.
+
+
 ## DAM staging framework
 
 The DAM staging framework allows you to stage your DAM content from an authoring environment (source environment/publisher) to multiple rendering environments (target environment/subscriber). Using [DXClient](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}, you can configure DAM staging to:
