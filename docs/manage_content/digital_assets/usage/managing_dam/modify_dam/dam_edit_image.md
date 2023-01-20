@@ -63,7 +63,7 @@ configuration:
       - "5:4"
 ```
 
-`cropAspectRatio` as an array of aspect ratio string, which will be passed to DAM as an environment variable.
+`cropAspectRatio` is an array of aspect ratio string, which will be passed to DAM as an environment variable.
 
 Newly added aspect ratios can be seen on the DAM UI.
 
