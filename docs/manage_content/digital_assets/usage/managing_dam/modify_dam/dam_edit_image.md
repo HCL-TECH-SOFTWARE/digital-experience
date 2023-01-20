@@ -24,7 +24,7 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
         Some of the menu options are also available for video and document media assets.
 
     - **Add to Favorites** \(the star located next to the image title and from the edit digital media asset selection\) - This can be used to sort and filter digital media assets from the HCL Digital Asset Management repository \(See [Manage media asset collections](../manage_collections.md)\).
-    - **Crop** - Extracts a region of the specified dimensions from the original image. You can crop the image using the resize handles \(freeform\) or by selecting a preset aspect ratio.
+    - **Crop** - Extracts a region of the specified dimensions from the original image. You can crop the image using the resize handles \(freeform\) or by selecting a preset aspect ratio. You can [configure aspect ratio via helm](../../../configuration/dam_crop_aspect_ratio.md).
     - **Rotate left**, **Rotate right** - You can rotate the image 90° counter-clockwise \(left\) or 90° clockwise \(right\).
 
         !!! note
@@ -43,31 +43,9 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
         - **Delete** - Delete the selected digital media asset.
         - **Download** - Download a copy of the digital media asset, including versions and renditions \(See [Generate Digital Asset Renditions](dam_generate_renditions_and_versions.md)\).
 
-4. Click **Undo**or **Redo** to undo and/or redo any edits to an image prior to saving the image.
-5. Click **Apply**to save your changes.
+4. Click **Undo** or **Redo** to undo and/or redo any edits to an image prior to saving the image.
+5. Click **Apply** to save your changes.
 6. To save your changes, click either **Save** or **Save as new** to save changes as a new digital asset.
-
-## Configure aspect ratios for crop
-
-Inside `values.yaml` file, a new field `cropAspectRatio` has been introduced for crop aspect ratios under `digitalAssetManagement` configurations.
-
-```
-configuration:
-  digitalAssetManagement:
-    cropAspectRatio:
-      - "1:1"
-      - "4:3"
-      - "3:2"
-      - "16:9"
-      - "9:16"
-      - "5:4"
-```
-
-`cropAspectRatio` is an array of aspect ratio string, which will be passed to DAM as an environment variable.
-
-Newly added aspect ratios can be seen on the DAM UI.
-
-![Digital media asset crop ratios](../../../../../images/dam_crop_aspect_ratios.png)
 
 <!--
 ## HCL Digital Experience Solution Feedback
