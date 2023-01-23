@@ -91,6 +91,9 @@ To configure environment variables for kubernetes pods, update your custom-value
 !!! note
     Additional environment values are not mandatory for a deployment.
 
+!!! note
+    This environment variable only applies to Pod's main container and will not apply to other containers of the Pod (i.e., logging sidecar, prereqs checker).
+
 #### Sample environment variables for core pods
 To set environment variable `KEY1` with value `VALUE1` and environment variable `KEY2` with value `VALUE2` on core pods, add the following to your `custom-values.yaml` file:
 
