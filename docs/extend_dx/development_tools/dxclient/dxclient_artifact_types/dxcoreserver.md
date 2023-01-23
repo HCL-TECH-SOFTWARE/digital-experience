@@ -103,11 +103,12 @@ The restart-dx-core command is used to restart the DX Core server.
 
   This is useful for propagating changes across multiple core pods properly, requiring a server restart.
 
-!!! note
-  Only the user set as `wasAdmin` in the Helm values is authorised to trigger this command.
-    ```
-    dxclient restart-core-pods
-    ```
+!!!note
+    Only the user set as `wasAdmin` in the Helm values is authorized to trigger this command.
+<br>
+  ```
+  dxclient restart-core-pods
+  ```
 
 - **Help command**
 
@@ -153,8 +154,8 @@ The restart-dx-core command is used to restart the DX Core server.
   dxclient dx-core-configuration-reports [OPTIONS]
   ```
 
-    !!! note
-        The target server details are needed only when the user needs to generate the summary of the configurations of both source and target servers. If any one of the target server details is provided, it prompts you to add all the required target parameters.
+!!!note
+    The target server details are needed only when the user needs to generate the summary of the configurations of both source and target servers. If any one of the target server details is provided, it prompts you to add all the required target parameters.
 
 -   **Help command**
 
@@ -234,4 +235,4 @@ The restart-dx-core command is used to restart the DX Core server.
     ```
 
 !!! note
-The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
