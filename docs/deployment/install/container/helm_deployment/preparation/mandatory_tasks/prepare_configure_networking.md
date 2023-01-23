@@ -184,7 +184,7 @@ The default value set for "openShiftPassthrough" is `auto` i.e it detects OpenSh
 If you want to deploy OpenShift manually using `Routes`, you need to create a .yaml file like below and any changes required can be made in that. To apply those change the the OpenShift cluster you can run `kubectl apply` and specify its namespace and location.
 For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
 
-By default, sticky sessions for passthrough `Routes` are enabled in OpenShift using the source (IP) as identifier. To make sure traffic gets forwarded to all DX HAProxy Pods even when another proxy is used in front of it, the `Route` should be annotated as shown in the example below. 
+In OpenShift 3.x, by default, sticky sessions for passthrough `Routes` are enabled in OpenShift using the source (IP) as identifier. To make sure traffic gets forwarded to all DX HAProxy Pods even when another proxy is used in front of it, the `Route` should be annotated as shown in the example below. 
 
 ```yaml
 apiVersion: "route.openshift.io/v1"
