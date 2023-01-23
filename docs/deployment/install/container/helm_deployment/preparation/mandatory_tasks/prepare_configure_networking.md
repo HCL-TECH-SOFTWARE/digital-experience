@@ -178,7 +178,7 @@ Helm charts have an `openShiftPassthrough` value to create a `Route` resource, w
 The default value set for "openShiftPassthrough" is `auto` i.e it detects OpenShift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
 
 !!! note
-    The "openShiftPassthrough" value is deprecated and if "openShiftPassthrough" is to be used a new `Route` resource must be created manually 
+    The "openShiftPassthrough" value is deprecated. If "openShiftPassthrough" is to be used, a new `Route` resource must be created manually. 
 
 #### Create the route resource manually
 If you want to deploy OpenShift manually using `Routes`, you need to create a .yaml file like below and any changes required can be made in that. To apply those change the the OpenShift cluster you can run `kubectl apply` and specify its namespace and location.
