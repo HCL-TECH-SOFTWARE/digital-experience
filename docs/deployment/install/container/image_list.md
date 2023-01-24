@@ -25,7 +25,7 @@ hcl-dx-content-composer-image-v1.22.0_20230119-2151.tar.gz
 hcl-dx-core-image-v95_CF209_20230119-2225.tar.gz
 hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230119-2152.tar.gz
 hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230119-2152.tar.gz
-hcl-dx-deployment-v2.12.0_20230120-1731.tgz
+hcl-dx-deployment-v2.12.0_20230123-1623.tgz
 hcl-dx-design-studio-image-v0.12.0_20230119-2221.tar.gz
 hcl-dx-digital-asset-manager-image-v1.21.0_20230119-2229.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20230119-2221.zip
