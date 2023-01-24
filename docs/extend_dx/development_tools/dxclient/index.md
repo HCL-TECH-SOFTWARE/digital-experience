@@ -75,7 +75,7 @@ For Microsoft Windows platforms:
 ```
 SET Timezone=Asia/Kolkata
 ```
-10. The attribute `-dxConnectHostname` has been deprecated and must be replaced with `-hostname` wherever necessary.
+10. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
 
 ## DXConnect
 
@@ -336,6 +336,10 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
 
 !!! note 
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
+
+    -   HCL DX 9.5 CF210 release:
+        -   Removed paramaters deprecated during CF201 & CF202 deployment.
+        -   [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
 
     -   HCL DX 9.5 CF209 release:
         -   [Restart All Core Pods in Kubernetes Deployment](../dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods)

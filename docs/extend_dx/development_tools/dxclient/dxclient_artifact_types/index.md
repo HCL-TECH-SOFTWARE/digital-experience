@@ -19,7 +19,7 @@ The following list shows some of the deprecated parameters and the new parameter
 -   `-targetServerUsername` replaced by `-targetDxConnectUsername`
 -   `-targetServerPassword` replaced by `-targetDxConnectPassword`
 -   `-targetServerProfileName` replaced by `-targetDxProfileName`
-
+    !!! Update - It is removed in CF210 release.
 
 ???+ Info "Related information"
     - [How to translate WCM library content using export and import WCM with DXClient](wcm_mls_export_import.md)
