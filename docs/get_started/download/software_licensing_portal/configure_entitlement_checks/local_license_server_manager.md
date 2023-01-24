@@ -13,8 +13,8 @@ The license manager tracking code so far requires a network connection from the 
 The following are the prerequisites for configuring Digital Experience Cloud Native V9.5 Support for Local License Manager to your DX License Manager instance.  
 
 - Setup local license manager. Follow this documentations on how to setup local license server:
-    - For Linux Server: [How to install HCL Local License Server on Linux Operating System](https://support.hcltechsw.com/csm?sys_kb_id=219670d1db01c9d8a45ad9fcd39619e0&id=kb_article_view&sysparm_rank=4&sysparm_tsqueryId=0ead29fb1b68b810a67e9759bc4bcb41&spa=1). 
-    - For Windows Server: [How to install HCL Local License Server on Windows Operating System](https://support.hcltechsw.com/csm?sys_kb_id=3cb81a751b799950534c4159cc4bcb5a&id=kb_article_view&sysparm_rank=14&sysparm_tsqueryId=2a7531f71be8b810a67e9759bc4bcb9e&spa=1). 
+    - For Linux Server: [How to install HCL Local License Server on Linux](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0090792)
+    - For Windows Server: [How to install HCL Local License Server on Windows](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0082090)
 
 - Once local license server is verified up and running, get the server details:
     - username (by default this is set to 'admin')
@@ -78,7 +78,7 @@ The License Manager component communicates with the local license server to vali
     
     c. `licenseServer URL` – verify your connection to the Local License Server URL.
 
-    d. `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) offering  part your organization has acquired and is mapped to your HCL Flexnet server instance(s). See Table HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and Flexnet License Server Feature Name below.
+    d. `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../product_overview/index.md) offering  part your organization has acquired and is mapped to your HCL Flexnet server instance(s). See Table HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and Flexnet License Server Feature Name below.
     
     e. `licenseManagerUser` – Configure this variable with the user name of the administrator authenticated to manage your Local License Server. (This is by default set to 'admin')
     
