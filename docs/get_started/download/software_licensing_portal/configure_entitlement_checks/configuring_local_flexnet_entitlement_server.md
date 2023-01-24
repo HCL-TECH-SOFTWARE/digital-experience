@@ -15,12 +15,12 @@ A local Flexnet entitlement server can itself also be configured to function wit
     !!!important
         Do not attempt to download the software by searching for the package name. The resulting package, `HCL_CLLS_Beta`, is not the correct package.
 
--   Review this documentation on how to configure to a server based (online) or local license (offline) server: 
+-   Review the following documentation on how to configure a server based (online) or local license (offline) server: 
 
     - For Linux Server: [How to install HCL Local License Server on Linux](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0090792)
     - For Windows Server: [How to install HCL Local License Server on Windows Operating System](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0082090)
 
-    This guide can be used as the primary source document for the installation and configuration of your HCL Flexnet Embedded License Server.
+    These guides can be used as the primary source documents for the installation and configuration of your HCL Flexnet Embedded License Server.
 
 -   Review the readme documents, or the HCL Flexnet Embedded License Server installation guide, and the specific requirements for using the HCL Embedded License Server with HCL Digital Experience Cloud Native 9.5 production environments as highlighted in the following task steps. 
 
