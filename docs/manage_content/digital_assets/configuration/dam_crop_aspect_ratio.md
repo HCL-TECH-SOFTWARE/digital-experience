@@ -16,6 +16,6 @@ configuration:
 
 `cropAspectRatio` is an array of aspect ratio string, which will be passed to DAM as an environment variable.
 
-Newly added aspect ratios can be seen on the DAM UI.
+Newly added aspect ratios can be seen while editing an image
 
 ![Digital media asset crop ratios](../../../images/dam_crop_aspect_ratios.png)
