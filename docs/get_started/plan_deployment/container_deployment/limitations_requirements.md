@@ -54,7 +54,9 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 If you want to use the minimal configuration, adjust the resource requests in your custom-values.yaml accordingly. If you want to deviate from these numbers, you can do so. Increasing any number is not an issue. In fact, in a production environment, it is recommended to increase these numbers to scale your specific needs. You can also decrease some of these numbers and still be able to start DX (for example, for deployment environments), but this is not officially supported.
     All of the following CPU sizings relate to an environment with 2nd generation Intel Xeon scalable processors (Cascade Lake 8223CL) or 1st generation Intel Xeon Platinum 8000 series (Skylake 8124M) processors.
 
-    Please also consider that every Kubernetes node requires some headroom for Kubernetes specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. Please be aware that the overall requested amount of resources may vary based on disabled/enabled applications.
+!!!note
+Every Kubernetes node requires some headroom for Kubernetes-specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. The overall requested amount of resources may vary based on disabled/enabled applications.
+
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request** | **Container Memory request** |
 |---|---|---|---|---|---|
