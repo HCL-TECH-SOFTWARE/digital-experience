@@ -24,7 +24,7 @@ Users do not have to be known in the connected repositories, as long their disti
 
 For more information, refer to the following:
 
--   [Portal transient user support with WAS SAML TAI business case clarification](https://support.hcltechsw.com/csm)
+-   [Portal transient user support with WAS SAML TAI business case clarification](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0084411)
 -   [Enable Appserver RelyingParty TAI for Google authentication with Portal](https://support.hcltechsw.com/csm)
 
 
