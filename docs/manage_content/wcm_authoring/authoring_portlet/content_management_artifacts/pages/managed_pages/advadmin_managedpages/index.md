@@ -14,6 +14,8 @@ With the Portal Scripting Interface, you can create Jacl or Jython scripts to au
 You can use the XML configuration interface (XML Access) to manipulate managed pages just as you can for other portal resources.
 -   **[Lost-found site area](wcm_mngpages_lostfound.md)**  
 When Web Content Manager cannot determine the proper location of a page item in the Portal Site library, the page item is stored in the lost-found site area. This site area ensures that you can recover pages and any content that is stored beneath the pages when a problem occurs.
+- **[Update Sorting Page by Title](wcm_mngpages_sorting_pages.md)**  
+To update sorting of Page by Title, we need to do some of the prerequisite
 
 
 ???+ info "Related information"  
