@@ -3,9 +3,9 @@
 This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../index.md) (DAM) content. This allows you to manage subscriber registration or configure periodic sync.
 
 !!! note
-        The WCM syndication and DAM staging are two identical features but not the same.
+        The WCM syndication and DAM staging are two identical features and a few aspects differ from each other.
 
-## WCM syndication vs DAM staging
+## Differences between DAM staging and WCM syndication
 | Aspect                               | WCM                                  | DAM                                                        |
 | -------------------------------------|--------------------------------------|------------------------------------------------------------|
 | `Credentials for authentication` | Authentication via Vault slot | The helm secret needs to be the primary portal admin user used for deployment of the DX environment. The user in the secret on the publisher and the subscriber must be the same.The credentials used in the registration are only used for authentication and authorisation during the DXClient registration steps. They are not used for transferring files during staging. |
