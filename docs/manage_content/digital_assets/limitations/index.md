@@ -10,9 +10,9 @@ The following limitations exist in HCL DAM:
 -   If you are using a content delivery network (CDN) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn){:target="_blank"}, using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
 -   The following are additional limitations at this time related to [DAM staging](../configuration/staging_dam/dam_subscription_staging.md):
     -   Two-way staging for DAM is currently not supported in HCL Digital Experience. 
-    -   Staging is currently supported when moving smaller batches of assets at a single point in time.  Larger, bulk loading of assets is currently being updated to improve performance and will be supported in the near future.
+    -   Staging assets between DAM servers is currently only supported when moving small batches of assets (around 5) at a single point in time, irrespective of the number of assets in the DAM. Staging larger volumes of assets may experience problems and so is not supported at this time. This functionality is currently being updated to improve performance and robustness, and to provide support for staging larger volumes.
     -   WCM syndication and DAM staging are not integrated, and as such, there are times where either DAM or WCM have been updated while the other one is still in progress - during those times links could result in 404 errors or older links being displayed. We are improving the integration for future releases.
-    -   In case of issues with DAM staging, a solution can be to [de-register and register the subscriber/s](#registering-or-deregistering-for-dam-staging).
+    -   In case of issues with DAM staging, a solution can be to [de-register and register the subscriber/s](../configuration/staging_dam/dam_subscription_staging#registering-or-deregistering-for-dam-staging).
 -   Editing functions in DAM are limited to images with a pixel count of up to `268402689` (`~268 Megapixels`).
 
 
