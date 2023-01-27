@@ -15,7 +15,7 @@ You can use the XML configuration interface (XML Access) to manipulate managed p
 -   **[Lost-found site area](wcm_mngpages_lostfound.md)**  
 When Web Content Manager cannot determine the proper location of a page item in the Portal Site library, the page item is stored in the lost-found site area. This site area ensures that you can recover pages and any content that is stored beneath the pages when a problem occurs.
 - **[Update Sorting Page by Title](wcm_mngpages_sorting_pages.md)**  
-To update sorting of Page by Title, we need to do some of the prerequisite
+Starting with version 210 it is possible to enable a synch of the Page by Title to the WCM Library.
 
 
 ???+ info "Related information"  
