@@ -100,6 +100,9 @@ Following are the supported application and component names, where the applicati
 |`remoteSearch`|`prs_profile`|
 |`ringApi`|`api`|
 |`runtimeController`|`controller`|
+|`licenseManager`|`license-check`|
+|`damPluginKaltura`|`api`|
+|`haproxy`|`haproxy`|
 
 ## Supported log levels
 
