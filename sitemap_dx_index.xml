@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-  <loc>https://opensource.hcltechsw.com/digital-experience/cf208/sitemap.xml</loc>
+    <loc>https://opensource.hcltechsw.com/digital-experience/cf209/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://opensource.hcltechsw.com/digital-experience/cf208/sitemap.xml</loc>
   </sitemap>
   <sitemap>
     <loc>https://opensource.hcltechsw.com/digital-experience/cf207/sitemap.xml</loc>
