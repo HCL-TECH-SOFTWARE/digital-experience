@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Login portlet Anonymous sign-up feature disabled by default
 - Option to configure the Timezone in container deployment Helm chart 
 - DXClient Restart Core Pods command  
+- Notice of deprecation of Textbox.io
 - Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
 ## Content Composer - Save content item updates as a new content item 
@@ -42,7 +43,11 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Notice of deprecation of Textbox.io
 
-The Textbox.io component in the HCL Digital Experience software is being deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the [Deprecated features](../deprecated_features.md) for more information.
+=== "Containers"
+    The Textbox.io component in the HCL Digital Experience software is being deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the [Deprecated features](../deprecated_features.md) for more information.
+
+=== "On-Premises"
+    The Textbox.io component in the HCL Digital Experience software is being deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the [Deprecated features](../deprecated_features.md) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
