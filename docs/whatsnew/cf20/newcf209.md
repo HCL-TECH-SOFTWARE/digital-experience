@@ -42,7 +42,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Notice of deprecation of Textbox.io
 
-The Textbox.io component in the HCL Digital Experience software is being deprecated effective January 31, 2023 and will End of Support (EOS) in January 31, 2024. See the [Deprecated features](../deprecated_features.md) for more information.
+The Textbox.io component in the HCL Digital Experience software is being deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the [Deprecated features](../deprecated_features.md) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
