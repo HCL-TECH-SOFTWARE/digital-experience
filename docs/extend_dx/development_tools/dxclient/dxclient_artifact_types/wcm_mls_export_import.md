@@ -148,7 +148,4 @@ MLS Import
     - [HCL Web Content Manager Multilingual Solution](../../../../manage_content/wcm_authoring/multi_lingual/index.md)
     - [Sample Pipelines for the DXClient Docker image file](../sample_pipelines_docker_dxclient.md)
     - [Sample Pipelines for the DXClient node package file](../sample_pipelines_node_dxclient.md)
-
-<!--
-
- - [Deploy DX components using HCL DXClient and DXConnect](../deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)->
+    - [Deploy DX components using HCL DXClient and DXConnect](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.html)

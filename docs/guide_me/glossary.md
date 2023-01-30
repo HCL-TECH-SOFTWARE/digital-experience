@@ -471,7 +471,7 @@ An individual authenticated by the portal and having a person record in one or m
 
 ## person card
 
-An interface that displays information about a registered user such as phone number and online status (if Sametime is enabled), and additional details typically found on a business card. Available actions let you view the person's complete profile and, depending on how the portal is configured, send email, chat, and link to Lotus Connections features such as Communities, Activities, and Blogs.
+An interface that displays information about a registered user such as phone number and online status (if Sametime is enabled), and additional details typically found on a business card. Available actions let you view the person's complete profile and, depending on how the portal is configured, send email, chat, and link to HCL Connections features such as Communities, Activities, and Blogs.
 
 ## person link
 

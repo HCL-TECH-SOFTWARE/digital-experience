@@ -17,10 +17,11 @@ The Layout bean offers the following functions:
 -   Methods for getting and setting attributes or flags. The following attribute types are supported by the Layout bean:
     -   Plain attributes.
     -   Global flags
+    
 -   Methods to create or delete layout objects. For more information, see *Lifecycle*.
 -   Methods to move or transfer layout objects. You can modify the component hierarchy as described in *Sequence* and *Hierarchy*. For more information, see *Organization*.
 
--   **[Navigation - Component hierarchy](../admin-system/navigation_compnt_hrchy.md)**  
+-   **[Navigation - Component hierarchy](navigation_compnt_hrchy.md)**  
 The Layout bean is a tree bean. The layout bean provides the index command to obtain and resolve so-called index paths. For more information, see Index paths. When started with an ID as argument, the command returns the absolute index path for that component. When started without an argument, it returns the absolute index path for the currently selected component.
 
 ???+ info "Related information"  

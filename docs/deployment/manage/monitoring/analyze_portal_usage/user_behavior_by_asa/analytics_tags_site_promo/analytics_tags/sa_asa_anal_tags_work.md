@@ -14,14 +14,15 @@ You can open this dialog from the resource that you want to associate with an an
 
         -   Two fields for entering the **Analytics tag name** of the tag to which you want to add the resource, and the **Analytics tag value** for that tag. Your input is matched against a regular expression.
 
-            **Notes:**
+            !!! note
+                1.  Special characters and all of the following characters are not valid: parentheses, brackets, angle brackets, hash signs, single and double quotes: `(` , `)` , `[` , `]` , `<` , `>` , `#` , `'` , `"` .
+                2.  The maximum allowed length for a name or a value is 100 characters.
+                3.  You cannot associate the same analytics tag with the same resource twice.
 
-            1.  Special characters and all of the following characters are not valid: parentheses, brackets, angle brackets, hash signs, single and double quotes: `(` , `)` , `[` , `]` , `<` , `>` , `#` , `'` , `"` .
-            2.  The maximum allowed length for a name or a value is 100 characters.
-            3.  You cannot associate the same analytics tag with the same resource twice.
         -   A list of existing analytics tag mappings, that is analytics tags that are associated with the portal resource. They have Delete icons next to them. You can view these icons and delete mappings only if you have the appropriate access rights. For details, see the topic about security for analytics tags.
         -   An **Add** button. To save the mapping between the entered analytics tag and the currently viewed portal resource, click **Add**.
         -   A **Done** button. Click **Done** when you have completed working with analytics tags for the currently viewed resource.
+
     3.  To add a new analytics tag to the resource, type the analytics tag in the tag name field. The field provides a typeahead feature. After you type three characters, it lists the existing tags that start with these three characters.
 
     4.  Type the value for the analytics tag in the second field. You must fill both fields.
@@ -42,8 +43,6 @@ You can open this dialog from the resource that you want to associate with an an
 
 
 
-**Related information**  
-
-
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+???+ info "Related information"
+    - [Working with the XML configuration interface](../../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
 

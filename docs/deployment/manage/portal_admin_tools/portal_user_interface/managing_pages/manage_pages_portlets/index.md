@@ -13,6 +13,6 @@ Available tasks depend on which item is selected. Each page can contain multiple
 
 Both administrators and users with appropriate access can create and delete pages. Users can delete only the pages that they create or the pages for which they have at least Manager access. User can create pages from the site toolbar.
 
-???+ info Related information"
-    -   [Managing iWidgets in your portal](../../../../../portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
+???+ info "Related information"
+    -   [Managing iWidgets in your portal](../../../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
 
