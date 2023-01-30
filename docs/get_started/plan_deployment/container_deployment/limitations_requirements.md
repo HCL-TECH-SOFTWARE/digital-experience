@@ -39,21 +39,29 @@ Internally, HCL tests DX against a range of Kubernetes platforms that is regular
 
 To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms using Helm, the following are required:
 
--   **Helm installation**:
+- **Helm installation**:
 
     Download and install Helm to your target environment. HCL DX 9.5 CF200 and later container deployment is tested and is supported with Helm v3. For more information regarding the supported Helm version for individual Kubernetes versions, refer [Helm documentation](https://helm.sh/).
 
--   **Migration**:
+- **Migration**:
 
     For information about migrating from Operator-based to Helm-based deployments, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
 
--   **Container platform capacity resource requirements**:
+- **Container platform capacity resource requirements**:
 
-    The following table outlines the minimal possible amount of resource requests by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the minimum of Pods required of each component. If you want to use this minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly. Please consider that every Kubernetes node requires some headroom for Kubernetes specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. Please be aware that the overall requested amount of resources may vary based on disabled/enabled applications.
+   The following table outlines the minimum possible amount of resource requests by the HCL DX 9.5 container components in Helm-based deployments and the minimum number of Pods required for each component.
+   
+   If you want to use the minimal configuration, adjust the resource requests in your `custom-values.yaml` accordingly. If you want to deviate from these numbers, you can do so. Increasing any number is not an issue. In fact, in a production environment, it is recommended to increase these numbers to scale your specific needs. You can also decrease some of these numbers and still be able to start DX (for example, for deployment environments), but this is not officially supported.
+   
+   All of the following CPU sizings relate to an environment with 2nd generation Intel Xeon scalable processors (Cascade Lake 8223CL) or 1st generation Intel Xeon Platinum 8000 series (Skylake 8124M) processors.
+
+!!!note
+    Every Kubernetes node requires some headroom for Kubernetes-specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. The overall requested amount of resources may vary based on disabled/enabled applications.
+
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request** | **Container Memory request** |
 |---|---|---|---|---|---|
-| core | 1 | core | core | 1000m | 3072Mi |
+| core | 1 | core | core | 4000m | 4096Mi |
 |  |  | system-out-log | logging-sidecar | 100m | 64Mi |
 |  |  | system-err-log | logging-sidecar | 100m | 64Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
@@ -61,10 +69,10 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | dam-plugin-google-vision | 1 | dam-plugin-google-vision | dam-plugin-google-vision | 100m | 128Mi |
 | dam-plugin-kaltura | 1 | dam-plugin-kaltura | dam-plugin-kaltura | 100m | 128Mi |
 | design-studio | 1 | design-studio | design-studio | 100m | 128Mi |
-| digital-asset-management | 1 | digital-asset-management | digital-asset-manager | 250m | 1024Mi |
+| digital-asset-management | 1 | digital-asset-management | digital-asset-manager | 500m | 1024Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
 | haproxy | 1 | haproxy | haproxy | 200m | 300Mi |
-| image-processor | 1 | image-processor | image-processor | 200m | 1280Mi |
+| image-processor | 1 | image-processor | image-processor | 200m | 2048Mi |
 | license-manager | 1 | license-manager | license-manager | 100m | 300Mi |
 | open-ldap | 1 | ldap | openldap | 200m | 768Mi |
 | persistence-connection-pool | 1 | persistence-connection-pool | persistence-connection-pool | 500m | 512Mi |
@@ -76,10 +84,10 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 |  |  | system-out-log | logging-sidecar | 100m | 64Mi |
 |  |  | system-err-log | logging-sidecar | 100m | 64Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
-| ring-api | 1 | ring-api | ringapi | 100m | 128Mi |
+| ring-api | 1 | ring-api | ringapi | 100m | 256Mi |
 | runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
 |  |  |  |  |  |  |
-| **Overall** |  |  |  | **4800m** | **10648Mi** |
+| **Overall** |  |  |  | **8050m** | **13468Mi** |
 
 <!--
 ???+ info "Related information"

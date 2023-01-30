@@ -12,7 +12,8 @@ Proceed as follows:
 
     For example, you can use the Manage Pages portlet, the portal administration tools embedded in the theme, or the XML configuration interface \(XML Access\) \(XMLAccess\).
 
-
+<br>
+<br>
 -   **[Task register-iwidget-definition](csa2r_cfgtsk_regwidgdef.md)**  
 Run the portal configuration task register-iwidget-definition to register individual iWidget definitions on HCL Portal.
 

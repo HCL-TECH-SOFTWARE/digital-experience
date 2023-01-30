@@ -116,9 +116,6 @@ Example: Deleting analytics tags
 
 ```
 
-
-**Related information**  
-
-
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+???+ info "Related information"
+     - [Working with the XML configuration interface](../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
 

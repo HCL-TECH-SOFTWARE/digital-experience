@@ -10,8 +10,3 @@ The roadmaps in this content section can help a certain user complete user-based
 -   **[Analyzing digital site activity](../../../../../build_sites/site_analytics/index.md)**  
 This section includes information for content authors and marketers to track and analyze digital site user activity.
 
-
-<!---
--   **[Developing websites](developing_websites.md)**  
-This section includes developer documentation on extending applications and development assets for HCL Digital Experience.
-->

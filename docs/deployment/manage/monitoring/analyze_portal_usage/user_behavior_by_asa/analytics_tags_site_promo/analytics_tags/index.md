@@ -20,7 +20,7 @@ name#value
 
 where the tagging and rating tag is made up by a combination of the `name` and `value` of the analytics tag, separated by a hash sign character \( `#` \). Tags that are encoded like this show in the Tag Center under the tab **Analytics**.
 
--   **[Working with analytics tags](../admin-system/sa_asa_anal_tags_work.md)**  
+-   **[Working with analytics tags](sa_asa_anal_tags_work.md)**  
 To work with analytics tags, the portal provides a dialog. You can create new analytics tag mappings and view and delete existing ones.
 
 

@@ -21,8 +21,6 @@ You can enable DCS manually anytime. For example, if you run `applyCF` without s
 ConfigEngine.sh|bat action-re-enable-stellent-dcs
 ```
 
-
-
 ## Disabling DCS manually
 
 If after enabling Oracle DCS as DX DCS, you prefer not to use it, you can manually disable Oracle DCS by running the following `ConfigEngine` task:

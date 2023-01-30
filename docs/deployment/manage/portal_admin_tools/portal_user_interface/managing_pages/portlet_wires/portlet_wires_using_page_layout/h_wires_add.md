@@ -46,7 +46,7 @@ To create a wire, proceed as follows:
 
 
 ???+ info "Related information" 
-    -   [Configuring a Forms Experience Builder task provider instance](../../../../../../integration/unified_task_list/utl_for_adm/creating_task_provider_instance/cfg_feb_task_provider_instance/index.md)
-    -   [Configuring an IBM Business Process Manager](../../../../../../integration/unified_task_list/cfg_utl_portlet_with_process_server/utl_configuring_business_process_manager.md)
-    -   [Configuring the Unified Task List portlet with Forms Experience Builder](../../../../../../integration/unified_task_list/utl_configuring_unified_task_list_with_forms_experience_builder.md)
+    -   [Configuring a Forms Experience Builder task provider instance](../../../../../../../extend_dx/integration/unified_task_list/utl_for_adm/creating_task_provider_instance/cfg_feb_task_provider_instance/index.md)
+    -   [Configuring an IBM Business Process Manager](../../../../../../../extend_dx/integration/unified_task_list/cfg_utl_portlet_with_process_server/utl_configuring_business_process_manager.md)
+    -   [Configuring the Unified Task List portlet with Forms Experience Builder](../../../../../../../extend_dx/integration/unified_task_list/utl_configuring_unified_task_list_with_forms_experience_builder.md)
 

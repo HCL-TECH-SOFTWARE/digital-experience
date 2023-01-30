@@ -27,6 +27,7 @@ To activate and use the portal site analyzer logger for standard portlets, proce
 
         -   If your portal runs stand-alone, use the local WebSphere Integrated Solutions Console.
         -   If your portal is installed in a cluster, use the WebSphere Integrated Solutions Console of the Deployment Manager.
+
     2.  Start the WebSphere Integrated Solutions Console by entering the following URL in the **URL location** field of a web browser:
 
         ```
@@ -43,10 +44,12 @@ To activate and use the portal site analyzer logger for standard portlets, proce
         -   For WebSphere Application Server Version 7.0: Select the appropriate node or cluster from the scopes pull-down list, or clear the **Show Scope** selection drop-down check box and select one of the following options, depending on your portal environment:
             -   If your portal runs as a single server, select **Browse Nodes** and select the node.
             -   If your portal is installed in a cluster, select **Browse Clusters** and select the portal cluster.
+
     5.  In the **Resource environment providers** page, elect the appropriate node or cluster from the scopes pull-down list, or clear the **Show Scope** selection drop-down check box and select one of the following options, depending on your portal environment:
 
         -   If your portal runs as a single server, select **Browse Nodes** and select the node.
         -   If your portal is installed in a cluster, select **Browse Clusters** and select the portal cluster.
+
     6.  Select **WP SiteAnalyzerLogService**.
 
     7.  Click **Custom Properties**.
@@ -56,6 +59,7 @@ To activate and use the portal site analyzer logger for standard portlets, proce
         -   Select the property **SiteAnalyzerJSRPortletLogger.isLogging** and change its value to true.
         -   Create a new property named SiteAnalyzerJSRPortletLogger.isLogging and set its value to true. Use java.lang.String as the property type.
     9.  When you are done, click **Save** at the start of the page under **Message\(s\)**.
+    
 
     10. Click **Save** again when prompted to confirm your change.
 

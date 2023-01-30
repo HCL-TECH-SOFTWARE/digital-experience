@@ -4,7 +4,7 @@
 
 ## User access and control capabilities for HCL DAM EXIM users
 
-DAM \(EXIM\) is exposed via [DXClient](../../../../extend_dx/development_tools/dxclient/dxclient.md).
+DAM \(EXIM\) is exposed via [DXClient](../../../../extend_dx/development_tools/dxclient/index.md).
 
 Administrator users and authorized users with Administrator role privileges have access and control capabilities to DAM EXIM.
 

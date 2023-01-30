@@ -178,16 +178,22 @@ Helm charts have an `openShiftPassthrough` value to create a `Route` resource, w
 The default value set for "openShiftPassthrough" is `auto` i.e it detects OpenShift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
 
 !!! note
-    The "openShiftPassthrough" value is deprecated and if "openShiftPassthrough" is to be used a new route resource must be created manually 
+    The "openShiftPassthrough" value is deprecated. If "openShiftPassthrough" is to be used, a new `Route` resource must be created manually. 
 
 #### Create the route resource manually
-If you want to deploy OpenShift manually using Routes, you need to create a .yaml file like below and any changes required can be made in that. To apply those change the the OpenShift cluster you can run `kubectl apply` and specify its namespace and location.
+If you want to deploy OpenShift manually using `Routes`, you need to create a .yaml file like below and any changes required can be made in that. To apply those changes in the OpenShift cluster, you can run `kubectl apply` and specify its namespace and location.
 For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
+
+In some versions of OpenShift, by default, sticky sessions for passthrough `Routes` are enabled in OpenShift using the source (IP) as identifier. To make sure traffic gets forwarded to all DX HAProxy Pods even when another proxy is used in front of it, the `Route` should be annotated as shown in the example below. Please refer to the OpenShift documentation to select the appropriate value for your deployment. 
 
 ```yaml
 apiVersion: "route.openshift.io/v1"
 kind: "Route"
 metadata:
+  annotations:
+    # By default, OpenShift applies load balancing and sticky sessions are routed to the same Pod depending on the source IP.
+    # This should be disabled to leverage all DX HAProxy Pods when another proxy is used in front of DX.
+    haproxy.router.openshift.io/balance: roundrobin
   name: "<helm-deployment-name>-passthrough"
 spec:
   port:

@@ -24,7 +24,7 @@ The extent to which the portal delegation model and access control is tied in va
 
 ## Overview of DXClient
 
-DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms. Refer to the [DXClient](../dxclient/dxclient.md) Help Center topics for more information.
+DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms. Refer to the [DXClient](../../../extend_dx/development_tools/dxclient/index.md) Help Center topics for more information.
 
 ## Overview of administration portlets
 
@@ -33,6 +33,7 @@ Portal administrative users can use the administration portlets for the followin
 -   Completing administrative tasks and actions on portal resources, depending on the access rights that the administrative user has on those resources. These tasks include:
     -   Configuring individual portal resources.
     -   Configuring individual portal resources, together with their dependent resources. For example, this configuration can be pages and the pages that are derived from them.
+
 -   Giving other users, for example sub-administrators, limited access rights on selected portal resources. These sub-administrators can then complete administrative tasks that their access rights allow. As the master administrator, you can widen or limit that extent by modifying the access rights for these users on the portal resources. This way, you can delegate administrative tasks as required.
 -   Deploying your own custom developed artifacts, such as portlets, themes, or skins.
 
@@ -105,6 +106,7 @@ The Portal Scripting Interface has the following advantages:
 -   Security: The user IDs and access roles of the involved teams provide separation between the responsibilities for the subtasks:
     -   The development and test team do not have access rights on the production portal.
     -   The operator who runs the script must have access rights on the resources that are created and updated by the script. Therefore, if you limit the access rights for that user as required, the script cannot affect other resources unintentionally.
+    
 -   Safety and availability of the production portal:
     -   The scripts can be tested and verified before it is put into production.
     -   After the scripts are tested and verified, they perform the update in a reliable way. Human errors that might happen when you are working with the administration portlets are not possible.
