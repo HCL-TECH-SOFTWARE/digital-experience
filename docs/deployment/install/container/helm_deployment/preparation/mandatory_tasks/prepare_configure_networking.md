@@ -214,10 +214,9 @@ spec:
 ## Configuring Content-Security-Policy Frame Options
 
 The HCL Digital Experience 9.5 Helm Chart allows you to configure `Content-Security-Poilcy` for all the `addon` to Core applications such as Digital Asset Management or Ring API.
-This allows you to frame DX and other addon applications provided that you provide the URLs of the applications in the `Content-Security-Policy` configuration.
+This allows you to frame DX and other addon applications provided that you provide the URLs of the applications in the `Content-Security-Policy` configuration. This is also useful as a way to mitigate Clickjacking attacks. 
 
 You can define a list of allowed URLs for a specific application using the following syntax in your `custom-values.yaml`:
-
 ```
    # Networking specific configuration
    networking:
