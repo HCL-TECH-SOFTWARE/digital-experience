@@ -33,7 +33,7 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
     - **Replace** - Replaces the digital media asset file with a new image media file.
 
         !!! note
-            You can only replace the image with a new image of a supported image filetype. No other assets \(like document and video filetypes\) have the **Replace** option at the moment.
+            You can only replace the image with a new image of a supported image filetype. No other assets (like document and video filetypes) have the **Replace** option at the moment.
 
     - **More** - Click to see additional actions available for the digital media asset.
 
