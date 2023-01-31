@@ -239,7 +239,8 @@ The HCL Digital Experience 9.5 Helm Chart allows you to configure **[SameSite Co
 This configuration sets the `WASReqURL` Cookie Attributes `Secure` and `SameSite`.
 
 You can define the SameSite value in your `custom-values.yaml`:
-```
+
+```yaml
 # Networking specific configuration
 networking:
   core:
