@@ -40,7 +40,7 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
         ![Edit > More options](../../../../../images/dam_edit_more_options.png)
 
         - **Copy link** - Copies the URL address of the digital media asset.
-        - **Delete** - Delete the selected digital media asset.
+        - **Delete** - Deletes the selected digital media asset.
         - **Download** - Download a copy of the digital media asset, including versions and renditions \(See [Generate Digital Asset Renditions](dam_generate_renditions_and_versions.md)\).
 
 4. Click **Undo** or **Redo** to undo and/or redo any edits to an image prior to saving the image.
