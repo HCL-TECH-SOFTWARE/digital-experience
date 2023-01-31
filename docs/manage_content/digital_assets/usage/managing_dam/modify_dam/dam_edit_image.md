@@ -30,7 +30,7 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
         !!! note
             When editing assets in DAM, there is some expected variation in image size.
 
-    - **Replace** - Replace the digital media asset file with a new image media file.
+    - **Replace** - Replaces the digital media asset file with a new image media file.
 
         !!! note
             You can only replace the image with a new image of a supported image filetype. No other assets \(like document and video filetypes\) have the **Replace** option at the moment.
