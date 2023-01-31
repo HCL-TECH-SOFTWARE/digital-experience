@@ -218,14 +218,14 @@ This allows you to frame DX and other addon applications provided that you provi
 
 You can define a list of allowed URLs for a specific application using the following syntax in your `custom-values.yaml`:
 ```
-   # Networking specific configuration
-   networking:
-     # Networking configurations specific to all addon applications
-     addon:
-       contentComposer:
-         # Add header Content-Security-Policy: frame-ancestors 'self' <your-urls>
-         # NOTE: Header will not be set if left blank.
-         cspFrameAncestorsURLs: "https://my-different-application.net, https://the-other-application.com"               
+# Networking specific configuration
+networking:
+  # Networking configurations specific to all addon applications
+  addon:
+    contentComposer:
+      # Add header Content-Security-Policy: frame-ancestors 'self' <your-urls>
+      # NOTE: Header will not be set if left blank.
+      cspFrameAncestorsURLs: "https://my-different-application.net, https://the-other-application.com"          
 ```
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
