@@ -10,7 +10,7 @@ HCL Digital Asset Management \(DAM\) should be installed and configured to HCL D
 
 Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset Management:
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access **Edit** options. Click the **Edit** \(pencil\) icon.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access **Edit** options. Click the **Edit** (pencil) icon.
 
     ![Edit digital media asset](../../../../../images/dam_05_edit_media.png)
 
