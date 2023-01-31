@@ -237,6 +237,8 @@ Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that 
 The HCL Digital Experience 9.5 Helm Chart allows you to configure **[SameSite Cookie Attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)** for DX Core. 
 This configuration sets the `WASReqURL` Cookie Attributes `Secure` and `SameSite`.
 
+!!! note This should only be set in an HTTPS environment to prevent unwanted behaviours
+
 You can define the SameSite value in your `custom-values.yaml`:
 ```
 # Networking specific configuration
