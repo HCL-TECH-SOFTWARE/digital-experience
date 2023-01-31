@@ -8,31 +8,31 @@ Define how search results are displayed for the menu element. These options incl
 
     ![](_img/Old_Menu_Sorting.png)
  
-      a.1.  Select the sort order for the results.
+      1.  Select the sort order for the results.
 
       -   Select **Ascending** to sort results in ascending order.
       -   Select **Descending** to sort results in descending order.
 
-      a.2.  Select the content item fields on which you want to base the sort order.
+      2.  Select the content item fields on which you want to base the sort order.
 
     You can select a primary field and two extra fields to provide more fine-grained sorting of the results. The sort fields are applied in order, so that results are sorted first by the primary field, then by the secondary field, and finally by the tertiary field.
 
-    b. **Starting CF210**, there will be an option to set sort order for each sort field selected:
+    b. **Starting CF210**, there will be an option to set the sort order for each sort field selected:
 
     ![](_img/CF210_Menu_Sorting.png)
 
-      b.1.  Select 3 sorting fields with corresponding sort order. The options are arranged by which field the results will be sorted first. Results are sorted first by the primary field and by its sort order, then by the secondary field and its sort order, and finally by the tertiary field.
+      1.  Select 3 sorting fields with corresponding sort order. The options are arranged by which the field results will be sorted first. Results are sorted first by the primary field and by its sort order, then by the secondary field and its sort order, and finally by the tertiary field.
 
     Limitation:
 
-      Same key can be selected for all 3 fields.
+      The same key can be selected for all 3 fields.
 
     !!!note
-        On creation, default sort key is title and order is ascending
+        On creation, the default sort key is the title and the order is ascending
 
 2.  Specify paging options for the menu element.
 
-    1.  Enter the number of items that are displayed in each menu page.
+    1.  Enter the number of items that are displayed on each menu page.
 
     2.  Enter the number of the start page for displaying search results in the menu.
 
