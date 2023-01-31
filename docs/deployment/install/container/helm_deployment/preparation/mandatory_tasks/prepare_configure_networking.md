@@ -213,8 +213,8 @@ spec:
 
 ## Configuring Content-Security-Policy Frame Options
 
-The HCL Digital Experience 9.5 Helm Chart allows you to configure `Content-Security-Poilcy` for all the `addon` to Core applications such as Digital Asset Management or Ring API.
-This allows you to frame DX and other addon applications provided that you provide the URLs of the applications in the `Content-Security-Policy` configuration. This is also useful as a way to mitigate Clickjacking attacks. 
+The HCL Digital Experience 9.5 Helm Chart allows you to configure **[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): frame-ancestors** for DX Core and all the addon applications to Core such as Digital Asset Management or Ring API. This configuration sets the `source`for `CSP: frame-ancestors` to `self`. The provided URLs are then set as the `host-source`. 
+This allows you to frame DX and other addon applications provided that you provide the URLs of the applications in the `Content-Security-Policy` configuration. This is also useful as a way to mitigate Clickjacking attacks. For more information, please see: [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html)
 
 You can define a list of allowed URLs for a specific application using the following syntax in your `custom-values.yaml`:
 ```
@@ -223,9 +223,10 @@ networking:
   # Networking configurations specific to all addon applications
   addon:
     contentComposer:
-      # Add header Content-Security-Policy: frame-ancestors 'self' <your-urls>
-      # NOTE: Header will not be set if left blank.
-      cspFrameAncestorsURLs: "https://my-different-application.net, https://the-other-application.com"          
+      # Add header Content-Security-Policy: frame-ancestors 'self' <your-urls> (comma separated list)
+      # Note: Header will not be set if left blank
+      # Example: "https://your-application.com,https://www.example.com" 
+      cspFrameAncestorsURLs: "https://your-application.com,https://www.example.com"          
 ```
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
