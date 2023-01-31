@@ -524,7 +524,7 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
 -   **sessiontimeout.user.anonymous = \(false\)**
 
-    When the HTTP session times out and the security session is still valid, by default the session timeout error screen is being displayed (unless timeout.resume.session is configured).
+    When the HTTP session times out and the security session is still valid, the session timeout error screen is displayed by default unless timeout.resume.session is configured.
     This does not happen if the user hits a link on the anonymous areas of DX after the timeout - i.e. by default /wps/portal/...
     By setting this property to **true** and restarting in the case of a session timeout and hitting an anonymous link (before the LTPA token timeout), the session timeout error screen is displayed. This property is introduced in CF210 and can be used in CF210 or higher.
 
