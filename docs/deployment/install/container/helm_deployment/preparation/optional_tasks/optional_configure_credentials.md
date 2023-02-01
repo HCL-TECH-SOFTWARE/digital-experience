@@ -118,7 +118,7 @@ security:
 #### 1. Create a Custom Secret
 Create a secret that will be used to reference credentials, this secret should contain all the required attributes (e.g. "username", "password") needed by the credentials.
 
-There are two way(s) to create and deploy custom secrets:
+There are two ways to create and deploy custom secrets:
 
 **By Kubectl Command**\
 This is the preferred way of creating secret inside a cluster, Kubernetes will handle the encoding of the key-value pairs in a base64-encoding format. 
