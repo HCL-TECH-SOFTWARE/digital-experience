@@ -121,7 +121,7 @@ Create a secret that will be used to reference credentials, this secret should c
 There are two way(s) to create and deploy custom secrets:
 
 **By Kubectl Command**\
-This is the preferred way of creating secret inside a cluster, kubernetes will handle the encoding of the key-value pairs in a base64-encoding format. 
+This is the preferred way of creating secret inside a cluster, Kubernetes will handle the encoding of the key-value pairs in a base64-encoding format. 
 
 ```console
 $ kubectl create secret generic <secret-name> --from-literal=<key1>=username --from-literal=<key2>=password --namespace=<namespace>
