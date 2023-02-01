@@ -83,7 +83,7 @@ Please refer to the [Updating user ID and passwords](../../../../../manage/secur
 
 ## Configuring Credentials from Secrets
 
-You can also configure the credentials that HCL Digital Experience 9.5 is using by creating a secret that contains the credential and referencing them by adding the secret name to your `custom-values.yaml` file and doing a helm upgrade to apply it in the deployments:
+You can also configure the credentials that HCL Digital Experience 9.5 is using by creating a secret that contains the credentials and referencing them by adding the secret name to your `custom-values.yaml` file and doing a `helm upgrade` to apply it in the deployments:
 
 ```yaml
 # Referencing the secret to configure credential, e.g. core credentials
