@@ -80,3 +80,354 @@ If no LDAP is configured in the helm values, HCL Digital Experience is configure
 If a [LDAP is configured](./optional_configure_apps.md#supported-ldap-configuration) in the helm values under `configuration.core.ldap`, the core security credentials need to be manually set to the credentials of the administrator user(s) from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
 
 Please refer to the [Updating user ID and passwords](../../../../../manage/security/people/authentication/updating_userid_pwd/index.md) topic for additional information on how to manually change credentials.
+
+## Configuring Credentials from Secrets
+
+You can also configure the credentials that HCL Digital Experience 9.5 is using by creating a secret that contains the credential and referencing them by adding the secret name to your `custom-values.yaml` file and doing a helm upgrade to apply it in the deployments:
+
+```yaml
+# Referencing the secret to configure credential, e.g. core credentials
+security:
+  # Security configuration for Core using secrets
+  core:
+    # Credentials used for IBM WebSphere Application Server administrative access.
+    # The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.
+    # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
+    # - If a LDAP is used, the the WebSphere Application Server admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
+
+    # - If you are using a seret to configure credentials, you must leave the default credentials string empty 
+    # - If both default credential and secret name are filled it will block the chart from being deployed.
+    wasUser: ""
+    wasPassword: ""
+    # Provide a secret name that will be used to set credentials for WAS
+    # Required attributes:
+    #   - username
+    #   - password
+    # Secret name is being referenced to configure credentials, this secret conatians the key-value pair for "username" and "password"
+    customWasSecret: "my-was-credential-secret"
+```
+
+!!! important
+    Only one method of configuring credential can be applied at once. Either configure it by using secrets or using the default credentials in the helm `custom-values.yaml`, unused credential parameter should be explicitly set to **empty/null**.
+
+!!! important
+    A Helm upgrade is required in order for the new credentials values to reflect inside the containers.
+
+### Guidlines for Configuring Credentials from Secrets
+
+#### 1. Create a Custom Secret
+Create a secret that will be used to reference credentials, this secret should contain all the required attributes (e.g. "username", "password") needed by the credentials.
+
+There are two way(s) to create and deploy custom secrets:
+
+**By YAML files**
+```yaml
+# Example manifest for creating secret by using a yaml file
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # The value of the key-value pair should be strictly base64-encoded
+  username: <username>
+  # The value of the key-value pair should be strictly base64-encoded
+  password: <password>
+metadata:
+  labels:
+  name: <secret-name>
+  namespace: <namespace>
+type: "Opaque"
+```
+
+!!! note
+    The string values assigned in the data fields of the secret should be base64-encoded. The containers expects a base64-encoded string to be pased from the secrets key-value pairs. The credentials wont work if the values passed are plain strings.
+
+**By Kubectl Command**
+
+```console
+$ kubectl create secret generic <secret-name> --from-literal=<key1>=myusername --from-literal=<key2>=mypassword --namespace=<namespace>
+```
+!!! note
+    No need to base64-encode the string values assigned in the key fields if you create the secret using the kubectl command. Kubernetes will do the encoding for you.
+
+#### 2. Reference the Secret
+Once the secret is created inside the cluster, you can now reference them in their respective custom secret fields inside the `custom-values.yaml` under `security` section. See this [example](./optional_configure_credentials.md#configuring-credentials-from-secrets) for reference
+
+!!! note
+    For Core LTPA AND LDAP you can reference your secrets under `configuration.core` section of the helm values.
+
+#### 3. Check the Required Attributes in Secrets
+There are multiple credentials being used in HCL Digital Experience 9.5. Each application have different required attributes for their credential. If you intend to use a secret to configure credentials for a specific application, always check the data attributes of the secret that you will be using in order for the helm chart to map those values and be passed/cascaded accordingly to each applications.
+
+!!! note
+    Helm deployment will be block if required attributes are not set properly in the custom secrets.
+
+Here's a list of the required credential attributes for each application:
+
+**Core WAS Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-was-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Core WPS Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-wps-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Core LDAP Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  bindUser: <bindUser>
+  # Required attribute
+  bindPassword: <bindPassword>
+metadata:
+  labels:
+  name: sample-core-ldap-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Core LTPA Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  "ltpa.version": <version>
+  "ltpa.realm": <realm>
+  "ltpa.desKey": <desKey>
+  "ltpa.privateKey": <privateKey>
+  "ltpa.publicKey": <publicKey>
+  "ltpa.password": <password>
+metadata:
+  labels:
+  name: sample-core-ltpa-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**DAM Plugin Google Vision Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  authenticationKey: <authenticationKey>
+  # Required attribute
+  apiKey: <apiKey>
+metadata:
+  labels:
+  name: sample-google-vision-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**DAM Plugin Kaltura Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  authenticationKey: <authenticationKey>
+  # Required attribute
+  secretKey: <secretKey>
+metadata:
+  labels:
+  name: sample-kaltura-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**DAM Plugin Kaltura Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  authenticationKey: <authenticationKey>
+  # Required attribute
+  secretKey: <secretKey>
+metadata:
+  labels:
+  name: sample-kaltura-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Persistence Connection Pool Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-connection-pool-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Persistence DAM User Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-dam-user-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Persistence Replication Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-replication-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Persistence User Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-replication-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Persistence User Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-persistence-user-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Image Processor Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  authenticationKey: <authenticationKey>
+metadata:
+  labels:
+  name: sample-kaltura-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Image Processor Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  authenticationKey: <authenticationKey>
+metadata:
+  labels:
+  name: sample-image-processor-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**License Manager Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-license-manager-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Open LDAP Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-open-ldap-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Remote Search WAS Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-remote-search-was-secret
+  namespace: <namespace>
+type: "Opaque"
+```
