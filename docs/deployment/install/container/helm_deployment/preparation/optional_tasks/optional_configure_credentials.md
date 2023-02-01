@@ -108,7 +108,7 @@ security:
 ```
 
 !!! important
-    Only one method of configuring credential can be applied at once. Either configure it by using secrets or using the default credentials in the helm `custom-values.yaml`, unused credential parameter should be explicitly set to **empty/null**.
+    Only one method of configuring credentials can be applied at once. Either configure it by using secrets or using the credentials in the helm `custom-values.yaml`, unused credential values should be explicitly set to **empty/null**.
 
 !!! important
     A Helm upgrade is required in order for the new credentials values to reflect inside the containers.
