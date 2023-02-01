@@ -118,9 +118,6 @@ security:
 #### 1. Create a Custom Secret
 Create a secret that will be used to reference credentials, this secret should contain all the required attributes (e.g. "username", "password") needed by the credentials.
 
-!!! note
-    The string values assigned in the data fields of the secret should be base64-encoded. The containers expects a base64-encoded string to be pased from the secrets key-value pairs. The credentials wont work if the values passed are plain strings.
-
 There are two way(s) to create and deploy custom secrets:
 
 **By Kubectl Command**\
@@ -134,6 +131,9 @@ For details please refer to the official Kubernetes documentation about [Managin
 
 **By YAML files**\
 Secrets can also be created using secret yamml manifest. 
+
+!!! note
+    The string values assigned in the data fields of the secret should be base64-encoded. The containers expects a base64-encoded string to be pased from the secrets key-value pairs. The credentials wont work if the values passed are plain strings.
 
 ```yaml
 # Example manifest for creating secret by using a yaml file
