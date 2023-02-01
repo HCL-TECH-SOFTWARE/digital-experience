@@ -180,7 +180,7 @@ Here's a list of the required credential attributes for each application:
 | Image Processor Credential secret             | authenticationKey                                                                                         | Image Processor   |
 | License Manager Credential secret             | username  <br> password                                                                                   | License Manager   |
 | Open LDAP Credential secret                   | username  <br> password                                                                                   | Open LDAP         |
-| Remote Search WAS Credential secret           | username  <br> password                                                                                   | Remote Search     |                                                                                    | Image Processor   |
+| Remote Search WAS Credential secret           | username  <br> password                                                                                   | Remote Search     | 
 
 **Core WAS Credential secret**
 ```yaml
