@@ -30,6 +30,7 @@ The operating systems section specifies the operating systems that HCL Digital E
 |Red Hat Enterprise Linux (RHEL) 7	|7.1 and later maintenance releases|Power System – Little Endian	|64-Exploit, 64-Tolerate	|8.5	|
 |Red Hat Enterprise Linux (RHEL) 7	|7.1 and later maintenance releases|x86-64	|64-Exploit, 64-Tolerate	|8.5	|
 |Red Hat Enterprise Linux (RHEL) 8	|8 and later maintenance releases|x86-64	|64-Exploit, 64-Tolerate	|9.0	|
+|Red Hat Enterprise Linux (RHEL) 9	|9 and later maintenance releases|x86-64	|64-Exploit, 64-Tolerate	|9.5 CF209	|
 |SUSE Linux Enterprise Server (SLES) 12	|Base and later maintenance	releases|x86-64 IBM z Systems	|64-Exploit, 64-Tolerate	|8.5	|
 |SUSE Linux Enterprise Server (SLES) 15	|Base and later maintenance	releases|x86-64	|64-Tolerate	|8.5	|
 |Ubuntu 18.04 LTS	|Base and later maintenance	releases|Power System – Little Endian	|64-Exploit, 64-Tolerate	|8.5	|
