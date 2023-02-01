@@ -165,22 +165,22 @@ There are multiple credentials being used in HCL Digital Experience 9.5. Each ap
 
 Here's a list of the required credential attributes for each application:
 
-| Secrets                                       | Required Attributes                                                                                       | Application       |
-|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------|-------------------|
-| Core WAS Credential secret                    | username <br> password                                                                                    | Core              |
-| Core WPS Credential secret                    | username  <br> password                                                                                   | Core              |
-| Core LDAP Credential secret                   | bindUser  <br> bindPassword                                                                               | Core              |
-| Core LTPA Credential secret                   | ltpa.version <br> ltpa.realm <br> ltpa.desKey <br> ltpa.privateKey <br> ltpa.publicKey <br> ltpa.password | Core              |
-| DAM Plugin Google Vision Credential secret    | authenticationKey <br> apiKey                                                                             | DAM Google Vision |
-| DAM Plugin Kaltura Credential secret          | authenticationKey <br> secretKey                                                                          | DAM Kaltura       |
-| Persistence Connection Pool Credential secret | username  <br> password                                                                                   | Persistence       |
-| Persistence DAM User Credential secret        | username  <br> password                                                                                   | Persistence       |
-| Persistence Replication Credential secret     | username  <br> password                                                                                   | Persistence       |
-| Persistence User Credential secret            | username  <br> password                                                                                   | Persistence       |
-| Image Processor Credential secret             | authenticationKey                                                                                         | Image Processor   |
-| License Manager Credential secret             | username  <br> password                                                                                   | License Manager   |
-| Open LDAP Credential secret                   | username  <br> password                                                                                   | Open LDAP         |
-| Remote Search WAS Credential secret           | username  <br> password                                                                                   | Remote Search     | 
+| Secrets | Helm Reference | Required Attributes | Application |
+|-----------------------------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|-------------------|
+| Core WAS Credential secret | `security.core.customWasSecret` | `username` <br> `password` | Core |
+| Core WPS Credential secret | `security.core.customWpsSecret` | `username`  <br> `password` | Core |
+| Core LDAP Credential secret | `configuration.core.ldap.customLdapSecret` | `bindUser` <br> `bindPassword` | Core |
+| Core LTPA Credential secret | `configuration.core.ltpa.customLtpaSecret` | `ltpa.version` <br> `ltpa.realm` <br> `ltpa.desKey` <br> `ltpa.privateKey` <br> `ltpa.publicKey` <br> `ltpa.password` | Core |
+| DAM Plugin Google Vision Credential secret | `security.damPluginGoogleVision.customDamGoogleVisionSecret` | `authenticationKey` <br> `apiKey` | DAM Google Vision |
+| DAM Plugin Kaltura Credential secret | `security.damPluginKaltura.customDamKalturaSecret` | `authenticationKey <br> secretKey` | DAM Kaltura |
+| Persistence Connection Pool Credential secret | `security.persistence.customConnectionPoolSecret` | `username` <br> password | Persistence |
+| Persistence DAM User Credential secret | `security.digitalAssetManagement.customDamSecret` | `username`  <br> `password` | Digital Asset Management |
+| Persistence Replication Credential secret | `security.digitalAssetManagement.customReplicationSecret` | `username`  <br> `password` | Digital Asset Management |
+| Persistence User Credential secret | `security.digitalAssetManagement.customDBSecret` | `username`  <br> `password` | Digital Asset Management |
+| Image Processor Credential secret | `security.imageProcessor.customImageProcessorSecret` | `authenticationKey` | Image Processor |
+| License Manager Credential secret | `security.licenseManager.customLicenseManagerSecret` | `username`  <br> `password` | License Manager |
+| Open LDAP Credential secret | `security.openLdap.customLdapSecret` | `username`  <br> `password` | Open LDAP         |
+| Remote Search WAS Credential secret | `security.remoteSearch.customWasSecret` | `username` <br> `password` | Remote Search |
 
 **Core WAS Credential secret**
 ```yaml
