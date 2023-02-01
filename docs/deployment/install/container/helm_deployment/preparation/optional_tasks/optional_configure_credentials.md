@@ -127,7 +127,7 @@ There are two way(s) to create and deploy custom secrets:
 This is the preferred way of creating secret inside a cluster, kubernetes will handle the encoding of the key-value pairs in a base64-encoding format. 
 
 ```console
-$ kubectl create secret generic <secret-name> --from-literal=username=<sample-username> --from-literal=password=<sample-password> --namespace=<namespace>
+$ kubectl create secret generic <secret-name> --from-literal=<key1>=username --from-literal=<key2>=password --namespace=<namespace>
 ```
 
 For details please refer to the official Kubernetes documentation about [Managing Secrets using kubectl](https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/).
