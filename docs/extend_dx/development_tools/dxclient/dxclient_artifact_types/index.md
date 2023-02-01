@@ -9,6 +9,9 @@ This section provides information about the artifact types that are currently su
 
 The following list shows some of the deprecated parameters and the new parameters that replace them in CF201 and later releases. It is recommended that you start using the new parameters below because the old parameters might be removed in later releases:
 
+!!!important
+    All parameters listed are removed in CF210 and future releases. 
+
 -   `-dxConnectHostname` replaced by `-hostname`
 
     !!! note
@@ -19,7 +22,7 @@ The following list shows some of the deprecated parameters and the new parameter
 -   `-targetServerUsername` replaced by `-targetDxConnectUsername`
 -   `-targetServerPassword` replaced by `-targetDxConnectPassword`
 -   `-targetServerProfileName` replaced by `-targetDxProfileName`
-    !!! Update - It is removed in CF210 release.
+
 
 ???+ Info "Related information"
     - [How to translate WCM library content using export and import WCM with DXClient](wcm_mls_export_import.md)
