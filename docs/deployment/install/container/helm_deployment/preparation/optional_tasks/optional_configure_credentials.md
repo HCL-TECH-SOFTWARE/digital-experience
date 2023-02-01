@@ -215,11 +215,17 @@ type: "Opaque"
 apiVersion: "v1"
 kind: "Secret"
 data:
+  # Required attribute
   "ltpa.version": <version>
+  # Required attribute
   "ltpa.realm": <realm>
+  # Required attribute
   "ltpa.desKey": <desKey>
+  # Required attribute
   "ltpa.privateKey": <privateKey>
+  # Required attribute
   "ltpa.publicKey": <publicKey>
+  # Required attribute
   "ltpa.password": <password>
 metadata:
   labels:
