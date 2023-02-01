@@ -113,6 +113,9 @@ security:
 !!! important
     A Helm upgrade is required in order for the new credentials values to reflect inside the containers.
 
+!!! Note
+    The mechanism described above for file-based user registries applies in the same way when custom secrets are used
+
 ### Guidlines for Configuring Credentials from Secrets
 
 #### 1. Create a Custom Secret
