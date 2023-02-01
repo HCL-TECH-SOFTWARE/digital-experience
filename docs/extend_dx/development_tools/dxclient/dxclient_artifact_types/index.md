@@ -9,6 +9,9 @@ This section provides information about the artifact types that are currently su
 
 The following list shows some of the deprecated parameters and the new parameters that replace them in CF201 and later releases. It is recommended that you start using the new parameters below because the old parameters might be removed in later releases:
 
+!!!important
+    All parameters listed are removed in CF210 and future releases. 
+
 -   `-dxConnectHostname` replaced by `-hostname`
 
     !!! note
