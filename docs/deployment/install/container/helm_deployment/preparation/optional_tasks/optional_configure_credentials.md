@@ -118,9 +118,23 @@ security:
 #### 1. Create a Custom Secret
 Create a secret that will be used to reference credentials, this secret should contain all the required attributes (e.g. "username", "password") needed by the credentials.
 
+!!! note
+    The string values assigned in the data fields of the secret should be base64-encoded. The containers expects a base64-encoded string to be pased from the secrets key-value pairs. The credentials wont work if the values passed are plain strings.
+
 There are two way(s) to create and deploy custom secrets:
 
-**By YAML files**
+**By Kubectl Command**\
+This is the preferred way of creating secret inside a cluster, kubernetes will handle the encoding of the key-value pairs in a base64-encoding format. 
+
+```console
+$ kubectl create secret generic <secret-name> --from-literal=username=<sample-username> --from-literal=password=<sample-password> --namespace=<namespace>
+```
+
+For details please refer to the official Kubernetes documentation about [Managing Secrets using kubectl](https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/).
+
+**By YAML files**\
+Secrets can also be created using secret yamml manifest. 
+
 ```yaml
 # Example manifest for creating secret by using a yaml file
 apiVersion: "v1"
@@ -137,17 +151,6 @@ metadata:
 type: "Opaque"
 ```
 
-!!! note
-    The string values assigned in the data fields of the secret should be base64-encoded. The containers expects a base64-encoded string to be pased from the secrets key-value pairs. The credentials wont work if the values passed are plain strings.
-
-**By Kubectl Command**
-
-```console
-$ kubectl create secret generic <secret-name> --from-literal=<key1>=myusername --from-literal=<key2>=mypassword --namespace=<namespace>
-```
-!!! note
-    No need to base64-encode the string values assigned in the key fields if you create the secret using the kubectl command. Kubernetes will do the encoding for you.
-
 #### 2. Reference the Secret
 Once the secret is created inside the cluster, you can now reference them in their respective custom secret fields inside the `custom-values.yaml` under `security` section. See this [example](./optional_configure_credentials.md#configuring-credentials-from-secrets) for reference
 
@@ -158,9 +161,26 @@ Once the secret is created inside the cluster, you can now reference them in the
 There are multiple credentials being used in HCL Digital Experience 9.5. Each application have different required attributes for their credential. If you intend to use a secret to configure credentials for a specific application, always check the data attributes of the secret that you will be using in order for the helm chart to map those values and be passed/cascaded accordingly to each applications.
 
 !!! note
-    Helm deployment will be block if required attributes are not set properly in the custom secrets.
+    Helm validates the inputs and the deployment will not be applied if required attributes are not set properly in the custom secrets.
 
 Here's a list of the required credential attributes for each application:
+
+| Secrets                                       | Required Attributes                                                                                       | Application       |
+|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------|-------------------|
+| Core WAS Credential secret                    | username <br> password                                                                                    | Core              |
+| Core WPS Credential secret                    | username  <br> password                                                                                   | Core              |
+| Core LDAP Credential secret                   | bindUser  <br> bindPassword                                                                               | Core              |
+| Core LTPA Credential secret                   | ltpa.version <br> ltpa.realm <br> ltpa.desKey <br> ltpa.privateKey <br> ltpa.publicKey <br> ltpa.password | Core              |
+| DAM Plugin Google Vision Credential secret    | authenticationKey <br> apiKey                                                                             | DAM Google Vision |
+| DAM Plugin Kaltura Credential secret          | authenticationKey <br> secretKey                                                                          | DAM Kaltura       |
+| Persistence Connection Pool Credential secret | username  <br> password                                                                                   | Persistence       |
+| Persistence DAM User Credential secret        | username  <br> password                                                                                   | Persistence       |
+| Persistence Replication Credential secret     | username  <br> password                                                                                   | Persistence       |
+| Persistence User Credential secret            | username  <br> password                                                                                   | Persistence       |
+| Image Processor Credential secret             | authenticationKey                                                                                         | Image Processor   |
+| License Manager Credential secret             | username  <br> password                                                                                   | License Manager   |
+| Open LDAP Credential secret                   | username  <br> password                                                                                   | Open LDAP         |
+| Remote Search WAS Credential secret           | username  <br> password                                                                                   | Remote Search     |                                                                                    | Image Processor   |
 
 **Core WAS Credential secret**
 ```yaml
@@ -266,22 +286,6 @@ metadata:
 type: "Opaque"
 ```
 
-**DAM Plugin Kaltura Credential secret**
-```yaml
-apiVersion: "v1"
-kind: "Secret"
-data:
-  # Required attribute
-  authenticationKey: <authenticationKey>
-  # Required attribute
-  secretKey: <secretKey>
-metadata:
-  labels:
-  name: sample-kaltura-secret
-  namespace: <namespace>
-type: "Opaque"
-```
-
 **Persistence Connection Pool Credential secret**
 ```yaml
 apiVersion: "v1"
@@ -346,22 +350,6 @@ metadata:
 type: "Opaque"
 ```
 
-**Persistence User Credential secret**
-```yaml
-apiVersion: "v1"
-kind: "Secret"
-data:
-  # Required attribute
-  username: <username>
-  # Required attribute
-  password: <password>
-metadata:
-  labels:
-  name: sample-persistence-user-secret
-  namespace: <namespace>
-type: "Opaque"
-```
-
 **Image Processor Credential secret**
 ```yaml
 apiVersion: "v1"
@@ -372,20 +360,6 @@ data:
 metadata:
   labels:
   name: sample-kaltura-secret
-  namespace: <namespace>
-type: "Opaque"
-```
-
-**Image Processor Credential secret**
-```yaml
-apiVersion: "v1"
-kind: "Secret"
-data:
-  # Required attribute
-  authenticationKey: <authenticationKey>
-metadata:
-  labels:
-  name: sample-image-processor-secret
   namespace: <namespace>
 type: "Opaque"
 ```
