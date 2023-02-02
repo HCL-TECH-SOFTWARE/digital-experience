@@ -36,7 +36,7 @@ The start-advanced-editor-applications task starts the [Advanced Rich Text Edito
 
 -   **Prerequisites:**
 
-    Portal Administrators should run the start-advanced-editor-applications task to start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF210, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications, then proceed to select the Advanced or Enhanced Editor in the Web Content Manager Authoring \> Configure \> Editor Options interface.
+    Portal Administrators should run the start-advanced-editor-applications task to start the [Advanced Rich Text Editor (Textbox.io)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF210, the [Enhanced Rich Text Editor (TinyMCE)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md). After starting these applications, select the Advanced or Enhanced Editor in the Web Content Manager Authoring > Configure > Editor Options interface.
 
     ![](../../../images/config_editor_options.jpg "Configure Editor Options")
 
