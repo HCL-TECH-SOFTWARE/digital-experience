@@ -5,7 +5,7 @@ This topic contains the commands that administrators can use to configure the st
 
 ## Differences between DAM staging and WCM syndication
 !!! note
-        WCM syndication and DAM staging are two distinct processes which have similar goals but just differ in quite some details. To learn more about differences have a look at the following table.
+        WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in quite some details. To learn more about differences have a look at the following table.
 | Aspect                               | WCM                                  | DAM                                                        |
 | -------------------------------------|--------------------------------------|------------------------------------------------------------|
 | `Credentials for authentication` |Authentication via credentials Vault slot. |The helm secret needs to be the primary portal admin user used for deployment of the DX environment. The user in the secret on the publisher and the subscriber must be the same.The credentials used in the registration are only used for authentication and authorisation during the DXClient registration steps. They are not used for transferring files during staging.The new user specified in secret will be the new primary portal admin. For more information, see [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).|
