@@ -49,7 +49,7 @@ As a result of not autostarting these applications and portlets, initialization 
 
 As noted above, beginning with Container Update CF192, and default settings for 'lazy load' of non-required portlets and applications, the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF210, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for WCM are now NOT started. Since this is not a lazy load but rather a stop of the Advanced and Enhanced Rich Text Editor ears containing the advanced and enhanced editors, the Advanced Rich Text Editor and Enhanced Rich Text Editor applications must be started by running the **start-advanced-editor-applications** ConfigEngine task before configuring the Advanced Rich Text editor or the Enhanced Rich Text Editor in the Web Content Manager Authoring Portlet configuration settings to make the editors available for content authors.
 
-The configuration changes made once this task completes will remain in a persisted DX profile.
+The configuration changes made once this task completes remains in a persisted DX profile.
 
 ## Source File listing of HCL DX required portlets and applications that will autostart:
 
