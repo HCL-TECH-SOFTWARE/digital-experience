@@ -116,7 +116,7 @@ security:
 !!! Note
     The mechanism described above for file-based user registries applies in the same way when custom secrets are used
 
-### Guidlines for Configuring Credentials from Secrets
+### Guidelines for Configuring Credentials from Secrets
 
 #### 1. Create a Custom Secret
 Create a secret that will be used to reference credentials, this secret should contain all the required attributes (e.g. "username", "password") needed by the credentials.
@@ -124,7 +124,7 @@ Create a secret that will be used to reference credentials, this secret should c
 There are two ways to create and deploy custom secrets:
 
 **By Kubectl Command**\
-This is the preferred way of creating secret inside a cluster, Kubernetes will handle the encoding of the key-value pairs in a base64-encoding format. 
+This is the preferred way of creating a secret inside a cluster, Kubernetes will handle the encoding of the key-value pairs in a base64-encoding format. 
 
 ```console
 $ kubectl create secret generic <secret-name> --from-literal=username=<your-username> --from-literal=password=<your-password> --namespace=<namespace>
@@ -133,10 +133,10 @@ $ kubectl create secret generic <secret-name> --from-literal=username=<your-user
 For details please refer to the official Kubernetes documentation about [Managing Secrets using kubectl](https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/).
 
 **By YAML files**\
-Secrets can also be created using secret yamml manifest. 
+Secrets can also be created using a secret yaml manifest. 
 
 !!! note
-    The string values assigned in the data fields of the secret should be base64-encoded. The containers expects a base64-encoded string to be pased from the secrets key-value pairs. The credentials wont work if the values passed are plain strings.
+    The string values assigned in the data fields of the secret should be base64-encoded. The containers expect a base64-encoded string to be passed from the secrets key-value pairs. The credentials will not work if the values passed are plain strings.
 
 ```yaml
 # Example manifest for creating secret by using a yaml file
@@ -155,13 +155,13 @@ type: "Opaque"
 ```
 
 #### 2. Reference the Secret
-Once the secret is created inside the cluster, you can now reference them in their respective custom secret fields inside the `custom-values.yaml` under `security` section. See this [example](./optional_configure_credentials.md#configuring-credentials-from-secrets) for reference
+Once the secret is created inside the cluster, you can now reference them in their respective custom secret fields inside the `custom-values.yaml` under `security` section. See this [example](./optional_configure_credentials.md#configuring-credentials-from-secrets) for reference.
 
 !!! note
     For Core LTPA AND LDAP you can reference your secrets under `configuration.core` section of the helm values.
 
 #### 3. Check the Required Attributes in Secrets
-There are multiple credentials being used in HCL Digital Experience 9.5. Each application have different required attributes for their credential. If you intend to use a secret to configure credentials for a specific application, always check the data attributes of the secret that you will be using in order for the helm chart to map those values and be passed/cascaded accordingly to each applications.
+There are multiple credentials being used in HCL Digital Experience 9.5. Each application has different required attributes for their credential. If you intend to use a secret to configure credentials for a specific application, always check the data attributes of the secret that you will be using in order for the helm chart to map those values and be passed/cascaded accordingly to each application.
 
 !!! note
     Helm validates the inputs and the deployment will not be applied if required attributes are not set properly in the custom secrets.
