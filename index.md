@@ -13,7 +13,7 @@ You can customize HCL DX to meet the needs of your organization, users, and user
 
 HCL DX includes a range of tools for managing content and maintaining web and mobile digital experiences. Those sites can blend applications and content together in a targeted way according to the users.
 
-Tools for practitioners include content management, asset management, site building through Design Studio and Site Manager, personalization management, and more.
+Tools for practitioners include content management, asset management, site building through Site Manager, personalization management, and more.
 
 ## For developers
 
