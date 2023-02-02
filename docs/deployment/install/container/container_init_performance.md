@@ -28,7 +28,7 @@ The stop-autostart-docker-applications task is executed during the Docker image 
 
 ## default-autostart-docker-applications
 
-The default-autostart-docker-applications task will restore the autostart status of all applications to their "out of the box" status \(and not apply "Lazy load" initialization functions\).
+The default-autostart-docker-applications task restores the autostart status of all applications to their "out-of-the-box" status. This task does not apply "lazy load" initialization.
 
 ## start-advanced-editor-applications
 
