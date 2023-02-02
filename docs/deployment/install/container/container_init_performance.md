@@ -4,7 +4,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF192 release, contai
 
 ## Introduction
 
-When deployed on the supported Red Hat OpenShift and Kubernetes environments, the HCL Digital Experience core platform "Pod" must be started before it can start serving requests. Furthermore, once the Pod is started, HCL Digital Experience Portal and Web Content Manager core must be initialized before the OpenShift or Kubernetes "readiness" probes can determine that the Pod is able to serve requests.
+When deployed on the supported Red Hat OpenShift and Kubernetes environments, you must start the HCL Digital Experience core platform pod before it can start serving requests. After starting the pod, initialize the HCL Digital Experience Portal and Web Content Manager core before the OpenShift or Kubernetes readiness probes can determine if the pod is able to serve requests. 
 
 The OpenShift or Kubernetes readiness probe functions to execute an HTTP request to the "/wps/portal" or "/ibm/console" page and ensures that it responds.The HCL DX core must be initialized by execution of the "startServer.sh WebSphere\_Portal" process before the readiness probes completes successfully. This starts the IBM WebSphere Application Server profile containing HCL DX Portal and Web Content Manager. This initialization process includes several IBM WebSphere and HCL DX applications including select portlets that must initialize before the HCL DX Core can respond to the readiness probe.
 
