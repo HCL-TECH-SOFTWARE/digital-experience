@@ -32,7 +32,7 @@ The default-autostart-docker-applications task restores the autostart status of 
 
 ## start-advanced-editor-applications
 
-The start-advanced-editor-applications task will start the [Advanced Rich Text Editor \(Textbox.io\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF210, the [Enhanced Rich Text Editor \(TinyMCE\)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications and will set both to autostart when the HCL DX Portal server is started.
+The start-advanced-editor-applications task starts the [Advanced Rich Text Editor (Textbox.io)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF210, the [Enhanced Rich Text Editor (TinyMCE)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications. This sets both applications to autostart when the HCL DX Portal server is started.
 
 -   **Prerequisites:**
 
