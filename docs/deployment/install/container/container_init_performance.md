@@ -43,7 +43,7 @@ The start-advanced-editor-applications task starts the [Advanced Rich Text Edito
 
 ## Important Considerations and Limitations of the Container Initialization Improvements
 
-As a result of not autostarting these applications and portlets, initialization of DX Portal may be faster, but the initial access of most pages will be slower due to the fact that the application/portlet must now be initialized. Note this only affects the first access of that application/portlet \(as initialization is a once per system activity\). As new DX PODS are started, initialization of DX pages with non-required applications and portlets will be slower on first HTTP request.
+As a result of not autostarting these applications and portlets, initialization of DX Portal may be faster, but the initial access of most pages is slower because the application/portlet must now be initialized. Note that this only affects the first access of that application/portlet because initialization is a once-per-system activity. As new DX PODS are started, initialization of DX pages with optional applications and portlets is slower on the first HTTP request.
 
 ## Using Advanced Editors for WCM
 
