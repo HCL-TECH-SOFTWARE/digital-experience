@@ -315,4 +315,3 @@ listOfAppsDockerEnable - List of portlets and applications to ensure autostart i
     WSPolicyManager
 
 
-**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
