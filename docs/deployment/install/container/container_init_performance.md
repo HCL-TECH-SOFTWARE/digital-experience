@@ -12,7 +12,7 @@ In DX 9.5 Container Update CF192 and higher, most DX portlets not required for i
 
 ## ConfigEngine Tasks
 
-Three ConfigEngine tasks are deployed to support improvements to HCL DX Core initialization times. They are:
+The following ConfigEngine tasks are deployed to support improvements to HCL DX Core initialization times:
 
 -   stop-autostart-docker-applications
 -   default-autostart-docker-applications
