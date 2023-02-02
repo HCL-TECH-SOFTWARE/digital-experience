@@ -8,7 +8,7 @@ Run these configuration tasks to change the configuration of the rich text edito
     In a clustered environment, these tasks are only run on the primary server.
 
 !!!important
-    The Textbox.io component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the [Deprecated features](../../../whatsnew/deprecated_features.md) for more information.
+    The Textbox.io component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See [Deprecated features](../../../whatsnew/deprecated_features.md) for more information.
 
 ## Using a custom Textbox.io editor toolbar
 
