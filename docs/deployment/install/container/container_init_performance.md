@@ -23,7 +23,7 @@ The following ConfigEngine tasks are deployed to support improvements to HCL DX 
 The stop-autostart-docker-applications task is executed during the Docker image build for DX Core when initialized on Docker, Red Hat OpenShift, or Kubernetes platforms. This task manages the following functions:
 
 -   It stops the [Advanced Rich Text Editor (Textbox.io)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF210, the [Enhanced Rich Text Editor (TinyMCE)](../../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) files from starting automatically.
--   It will "lazy load" all DX portlets that do not require the Portal and WCM functions to operate.
+-   It "lazy loads" all DX portlets that do not require the Portal and WCM functions to operate.
 -   Portlets required for DX operations that will be loaded and initialized include for example, theme modules that are loaded from Portlets. These portlets must be started in order for the theme modules to load. The "Login" and "WCM Local Rendering" portlets are also in this list as they are required to present the Woodburn Studio demonstration site entry page, and therefore the Kubernetes readiness probe. Note that the readiness probe defaults to the WebSphere Application Console via probe functions that execute an HTTP request to the "/wps/portal" or "/ibm/console" page and ensures that it responds. See [List of portlets and applications that are automatically initialized by defaults](#source-file-listing-of-hcl-dx-required-portlets-and-applications-that-will-autostart) below for the list of portlets that are needed for DX operations and will automatically load.
 
 ## default-autostart-docker-applications
