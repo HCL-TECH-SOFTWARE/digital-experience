@@ -15,7 +15,6 @@ The following [Digital Experience 9.5 applications](../../../../get_started/plan
 |Core|10038|/metrics|
 |Remote Search|9060|/metrics|
 |Content Composer|3000|/probe/metrics|
-|Design Studio|3000|/probe/metrics|
 |Digital Asset Management|3000|/probe/metrics|
 |Image Processor|3000|/probe/metrics|
 |Ring API|3000|/probe/metrics|
@@ -79,7 +78,7 @@ You can directly download or import the following dashboards from the Grafana co
 |ID|Dashboard|Applications|
 |--|---------|------------|
 |14151|[WebSphere Application Server PMI metrics dashboard](https://grafana.com/grafana/dashboards/14151)|Core, Remote Search|
-|11159|[NodeJS application dashboard](https://grafana.com/grafana/dashboards/11159)|Content Composer, Design Studio, Digital Asset Management, Image Processor, Experience API|
+|11159|[NodeJS application dashboard](https://grafana.com/grafana/dashboards/11159)|Content Composer, Digital Asset Management, Image Processor, Experience API|
 |9628|[PostgreSQL database](https://grafana.com/grafana/dashboards/9628)|DAM Persistence|
 |12693|[HAProxy dashboard](https://grafana.com/grafana/dashboards/12693)|HAProxy|
 

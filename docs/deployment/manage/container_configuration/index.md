@@ -31,7 +31,6 @@ For development and testing, sometimes it is useful to directly adjust configura
 |----|-----------|
 |`<RELEASE-NAME>-content-composer`|Content Composer|
 |`<RELEASE-NAME>-core`|Core|
-|`<RELEASE-NAME>-design-studio`|Design Studio \(beta\)|
 |`<RELEASE-NAME>-digital-asset-management`|Digital Asset Management|
 |`<RELEASE-NAME>-image-processor`|Image Processor|
 |`<RELEASE-NAME>-persistence`|Persistence|

@@ -13,8 +13,6 @@ applications:
   contentComposer: true
   # Deploys Core
   core: true
-  # Deploys Design Studio
-  designStudio: false
   # Deploys Digital Asset Management
   digitalAssetManagement: true
   # Deploys the Image Processor

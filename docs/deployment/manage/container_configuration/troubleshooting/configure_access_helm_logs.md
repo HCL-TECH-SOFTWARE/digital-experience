@@ -26,9 +26,6 @@ logging:
   # DAM Plugin Google Vision specific logging configuration
   damPluginGoogleVision:
     level: "api:server-v0:*=info"
-  # Design Studio specific logging configuration
-  designStudio:
-    level: "api:server-v0:*=info"
   # Digital Asset Management specific logging configuration
   digitalAssetManagement:
     level: "api:server-v1:*=info,worker:server-v1:*=info"
@@ -232,7 +229,6 @@ The log output for a DX deployment is set to a non-verbose configuration by defa
 |----------------|--------------------|
 |Core|\*=info|
 |Content Composer|api:server-v1:\*=info|
-|Design Studio|api:server-v1:\*=info|
 |Digital Asset Management|api:server-v1:\*=info,worker:server-v1:\*=info|
 |Image Processor|api:server-v1:\*=info|
 |Persistence Connection Pool|pgpool:=info|

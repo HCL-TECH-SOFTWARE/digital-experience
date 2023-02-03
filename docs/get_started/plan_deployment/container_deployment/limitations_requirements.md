@@ -68,7 +68,6 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | content-composer | 1 | content-composer | content-composer | 100m | 128Mi |
 | dam-plugin-google-vision | 1 | dam-plugin-google-vision | dam-plugin-google-vision | 100m | 128Mi |
 | dam-plugin-kaltura | 1 | dam-plugin-kaltura | dam-plugin-kaltura | 100m | 128Mi |
-| design-studio | 1 | design-studio | design-studio | 100m | 128Mi |
 | digital-asset-management | 1 | digital-asset-management | digital-asset-manager | 500m | 1024Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
 | haproxy | 1 | haproxy | haproxy | 200m | 300Mi |
