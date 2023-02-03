@@ -7,7 +7,7 @@ To generate a full export of your Portal's configuration, do the following steps
 1.  Open a terminal or command window. Change directory (cd) to <WP_Profile_root>/PortalServer/bin
 2.  Run the following command all on one line:
 
-    `xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://<myhost>:<port>/wps/config -in <Portal home>/doc/xml -samples/Export.xml -out result.xml`
+    `xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://<myhost>:<port>/wps/config -in <Portal home>/doc/xml-samples/Export.xml -out result.xml`
 
     -   Substitute `Portal_admin_user, Portal_admin_password, myhost`, and `port` with the correct values for your environment. It is recommended to use the direct URL and port so the request can bypass any web server or load balancer that might be present.
     -   The file name that is specified after the `-out` parameter contains the Portal configuration as XML. The output file can have any name.
