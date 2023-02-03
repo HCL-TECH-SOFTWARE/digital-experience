@@ -89,7 +89,6 @@ Following are the supported application and component names, where the applicati
 |-----------|---------------|
 |`core`|`wp_profile`, `cw_profile`|
 |`contentComposer`|`api`|
-|`designStudio`|`api`|
 |`digitalAssetManagement`|`api`, `worker`|
 |`imageProcessor`|`api`|
 |`persistenceConnectionPool`|`pgpool`|

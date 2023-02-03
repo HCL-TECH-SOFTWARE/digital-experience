@@ -26,7 +26,7 @@ Developers can use the DXClient tool to deploy and manage applications and to ma
 Administrators can deploy HCL DX in a traditional IBM® WebSphere Application Server® cluster or in a Kubernetes environment. HCL DX provides a range of scriptable interfaces so that you can automate your infrastructure management. 
 
 !!! note
-    Some services, such as Digital Asset Management, Design Studio, Experience API, and Content Composer, are available only in the Kubernetes environment.
+    Some services, such as Digital Asset Management, Experience API, and Content Composer, are available only in the Kubernetes environment.
 
 ### Notices for HCL Digital Experience
 

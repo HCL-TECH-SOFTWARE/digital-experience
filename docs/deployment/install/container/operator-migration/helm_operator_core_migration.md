@@ -135,7 +135,6 @@ Ensure that the Helm-based deployment is in the correct state before restoring a
         core: true
         runtimeController: true
         contentComposer: false
-        designStudio: false
         digitalAssetManagement: false
         imageProcessor: false
         openLdap: false

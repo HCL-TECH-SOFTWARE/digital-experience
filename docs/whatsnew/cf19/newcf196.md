@@ -1,6 +1,6 @@
 # What's new in CF196
 
-This HCL Digital Experience 9.5 Container Update release includes new releases of HCL Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images, and a beta preview release of Design Studio. New and updated feature references are detailed here.
+This HCL Digital Experience 9.5 Container Update release includes new releases of HCL Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. New and updated feature references are detailed here.
 
 This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
@@ -10,15 +10,6 @@ You can access the latest software requirements and updates that support HCL Dig
 
 !!!note
         For new capabilities that are available for HCL DX on-premise deployments, see [What's new in the CF196](https://help.hcltechsw.com/digital-experience/9.5/overview/new_noncf196.html) topic.
-
-## Design Studio (Beta)
-
-Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites.
-
-!!!note
-        Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF196. **It is not yet supported for use in production deployments**.
-
-See the [Design Studio (Beta)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information.
 
 ## Deploy HCL DX CF196 to container platforms using Helm
 
