@@ -81,6 +81,13 @@ SET Timezone=Asia/Kolkata
 
 DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/index.md). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
 
+For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md).
+
+For supported container deployments,starting from CF192 and in later release, the DXConnect Servlet is pre-configured and started on the Configuration Wizard server.
+
+!!!remember
+    Configuration Wizard Administrator credentials are required to access the DXConnect application.
+    
 ## Architecture
 
 ![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.jpg)
@@ -92,9 +99,6 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
     2.  Beginning with HCL DX 9.5 Container Update CF192 and later releases, the DXConnect Servlet is pre-configured and started on supported Red Hat OpenShift and Kubernetes platforms that DX 9.5 containers are deployed to.
     
     3.  For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md).
-
-!!!remember
-    Configuration Wizard Administrator credentials are required to access the DXConnect application.
 
 
 ## Installing using the container image

@@ -28,7 +28,6 @@ To enable log tracing in DXConnect you will need to access ConfigWizard admin co
     Refer [Configure Core Sidecar Logging](https://opensource.hcltechsw.com/digital-experience/CF207/deployment/install/container/helm_deployment/preparation/optional_tasks/optional_core_sidecar_log/) on how to configure to fetch logs from Core Server in containerised environments.
 
 
-
 ???+ info "Related information"
     -   [DXClient](../dxclient/index.md)
 
