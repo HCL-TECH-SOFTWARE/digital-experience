@@ -1,6 +1,6 @@
 # What's new in CF202
 
-This HCL Digital Experience 9.5 Container Update and CF202 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API. The release also includes updated CICD release process artifacts, new Remote Model REST APIs, Personalization REST APIs, updated Helm deployment guidance to create Persistent Volume Claims for DX Core, configure credentials, also new HCL Digital Experience Cloud Native 9.5 offering, new Digital Experience How-To Videos and Lab exercises, and more.
+This HCL Digital Experience 9.5 Container Update and CF202 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, and Design Studio (Beta) components. The release also includes updated CICD release process artifacts, new Remote Model REST APIs, Personalization REST APIs, updated Helm deployment guidance to create Persistent Volume Claims for DX Core, configure credentials, also new HCL Digital Experience Cloud Native 9.5 offering, new Digital Experience How-To Videos and Lab exercises, and more.
 
 This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
@@ -25,6 +25,15 @@ See the following Help Center topics for more information:
 New Digital Asset Management (DAM) capability enables developers and release managers to use the DXClient capability to Export and Import DAM assets from source to a File system and Import from File system to target DX 9.5 deployment. Enhancements are also available for content authors to fix the duplicate DAM asset names in a particular collection, and there are new DAM APIs that allow you to access the assets by versions, name, and as reflected in the friendly URLs.
 
 See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) and [Digital Asset Management Help Center](../../manage_content/digital_assets/index.md) topics for more information.
+
+## Design Studio (Beta)
+
+Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with Container Update CF202 include baseline stylesheet upload and download in Site overview, guidance when styling elements, replacing images, using the Layers panel, and re-use of Content containers.
+
+!!!note
+    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF202, and includes a sample DX site.  It is not yet supported for use in production deployments. 
+
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> Help Center topic for more information. 
 
 ## Digital Experience Cloud Native 9.5 offering
 

@@ -4,6 +4,7 @@ The HCL Digital Experience 9.5 Container Update and CF205 release includes the f
 
 -	Enhanced configurable log support for HA Proxy
 -	Option for entitled customers to download HCL DX 9.5 Docker images from HCL Harbor 
+-	Design Studio (Beta) Content list item and Data container extensions
 -	Personalization API binding rules
 -	Digital Asset Management extension plugin to Google Vision API service 
 -	Updated Digital Asset Management Kaltura Video extension plugin support 
@@ -27,6 +28,9 @@ In Container Update CF205, configurable logging support for HAProxy is enhanced.
 ## Option for entitled customers to download HCL DX 9.5 Docker images from HCL Harbor 
 For customers considering or managing deployments to supported Kubernetes platforms, beginning with HCL Digital Experience V9.5 Container Update 205 the 
 For customers considering or managing deployments to supported Kubernetes platforms, beginning with HCL Digital Experience V9.5 Container Update 205, the Docker images for deployment to Kubernetes environments can be optionally accessed via Helm charts in the HCL Harbor repository at https://hclcr.io . Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. For more information, see the [Getting the Software and Access](../../get_started/download/software_licensing_portal/index.md) and [Deploy DX 9.5 Docker components from HCL Harbor](../../get_started/download/harbor_container_registry.md) topics. 
+
+## Design Studio (Beta) Content list item and Data container extensions 
+Reusable elements for use with Content lists are added to Design Studio (Beta). APIs are added to support integration with data containers to provide the capability of rendering information from an external data source, such as HCL Volt MX Foundry. For more information, see the [Design Studio (Beta) Reusable blocks](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/use_reusable_blocks/) and [Data Containers](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/use_data_containers/) topics.
 
 ## Personalization REST APIs
 Personalization Selection REST API rules add new Binding rules and Embedded WCM select action rule to add capabilities for developers and marketers to fine-tune delivery of personalized content to the end users. For more information, see below topics for more information:

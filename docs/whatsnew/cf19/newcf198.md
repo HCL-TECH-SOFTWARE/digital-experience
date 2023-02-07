@@ -1,12 +1,21 @@
 # What's new in CF198
 
-This HCL Digital Experience 9.5 Container Update and CF198 release includes new releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, new Helm deployment operations for container deployments, updated CICD release process artifacts, the new Site Manager Custom Layout Editor, HCL Digital Experience Technical Articles, ‘How To’ videos, and more.
+This HCL Digital Experience 9.5 Container Update and CF198 release includes new releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\), new Helm deployment operations for container deployments, updated CICD release process artifacts, the new Site Manager Custom Layout Editor, HCL Digital Experience Technical Articles, ‘How To’ videos, and more.
 
 This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
 You can access product software at [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. See [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2){:target="_blank"} for more information.
 
 You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
+
+## Design Studio (Beta)
+
+Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with the Container Update CF198 release include the ability to create new DX sites, reading and updating site metadata, accessing site and page UUID and URLs, and client-side logging services.
+
+!!!note
+    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF198, and includes a sample DX site.  It is not yet supported for use in production deployments.
+
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/) topic for more information. 
 
 ## Deploy HCL DX CF198 to container platforms using Helm
 
@@ -52,6 +61,7 @@ View the latest Kubernetes and OpenShift platforms tested and supported for spec
 See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) topic for more information.
 
 <!-- ???info "Related information"
+    - [Design Studio \(Beta\)](../design_studio/design_studio_overview.md)
     - [CF release versioning and update path](../install/rm_cf.md#cf_release_versioning_update)
     [Digital Asset Management Help Center](../design/digital_asset_mgmt/digital_asset_mgmt_overview.md)
     - [Digital Experience REST API Explorers](../design/api/api_explorers.md)

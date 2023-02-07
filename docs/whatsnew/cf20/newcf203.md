@@ -1,6 +1,6 @@
 # What's new in CF203
 
-HCL Digital Experience 9.5 Container Update and CF203 release includes Helm configuration of metrics enablement, deploy to internal network, and Ambassador to HA Proxy migration support. The release also adds support for DAM metadata configurations using Extensibility functions, Content Composer in Virtual Portal configuration, Personalization Visibility rules in anonymous use case sample and updates, support for Dynamic Properties, Profiler Rule and update, options to customize the DX Site Manager interface, Notice of deprecation and replacement of Document Conversion services notice, new complementary DX training modules in the HCL Software Academy, and more.
+HCL Digital Experience 9.5 Container Update and CF203 release includes new Design Studio (Beta) Content list and container reuse features, Helm configuration of metrics enablement, deploy to internal network, and Ambassador to HA Proxy migration support. The release also adds support for DAM metadata configurations using Extensibility functions, Content Composer in Virtual Portal configuration, Personalization Visibility rules in anonymous use case sample and updates, support for Dynamic Properties, Profiler Rule and update, options to customize the DX Site Manager interface, Notice of deprecation and replacement of Document Conversion services notice, new complementary DX training modules in the HCL Software Academy, and more.
 
 This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
@@ -35,6 +35,15 @@ See the following Help Center topics for more information:
 ## Digital Asset Management 
 Digital Asset Management (DAM) Extensibility adds capability to support user-defined custom renditions and configure transformations for assets. Updates add options to configure metadata generation specifically for MIME types and their renditions.
 See the [Metadata configuration through DAM Extensibility](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/configure_dam_Metadata_configuration/) Help Center topic for more information.
+
+## Design Studio (Beta)
+
+Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with Container Update CF203 include Content list and container re-use features. 
+
+!!! note
+    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF203,and includes a sample DX site.  It is not yet supported for use in production deployments. 
+
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/) Help Center topic for more information. 
 
 ## Configure Content Composer to Virtual Portals 
 
