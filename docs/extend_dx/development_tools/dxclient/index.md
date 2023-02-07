@@ -53,9 +53,9 @@ DXClient package comes with a script that you can use to run the container image
 
 See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr_frVlojc)
 
-1. Navigate to the `<working-directory>` folder, where you wish to use dxclient from.
+ 1. Navigate to the `<working-directory>` folder, where you wish to use dxclient from.
 
-2.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
+ 2. Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
 
     !!! note
         If you are upgrading from the node to container image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.
@@ -70,7 +70,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
          make_unlink.bat
          ```
 
-3.  Extract the DXClient.zip file locally.
+ 3. Extract the DXClient.zip file locally.
 
 !!! note
     To install DXClient using any OCI-based Container Runtimes, run this command before proceeding further.
@@ -80,9 +80,9 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
     For example: export CONTAINER_RUNTIME=podman
     ```   
 
-4. Run `docker load < dxclient.tar.gz`.
+ 4. Run `docker load < dxclient.tar.gz`.
 
-5. Optional (It is advisable to not set this incase you run multiple DXClient versions in your system). Open terminal, add the execution shell script to the bin directory to the PATH variable, to call dxclient from any directory.
+ 5. Optional (It is advisable to not set this incase you run multiple DXClient versions in your system). Open terminal, add the execution shell script to the bin directory to the PATH variable, to call dxclient from any directory.
 
     ```
     export PATH=<working-directory>/bin:$PATH
@@ -99,38 +99,36 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
     !!! note
         You will loose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
 
-7.  Set appropriate permission.
+ 6. Set appropriate permission.
 
     ```
     chmod xxx <working-directory>/bin
     ```
 
-8. Run `dxclient -V` to verify that the dxclient command line is installed.
+ 7. Run `dxclient -V` to verify that the dxclient command line is installed.
     
-9. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example,
+ 8. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example,
 
     ```
     export VOLUME_DIR=storeForScriptApplication
     ```
-
-10. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
+ 9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
 
     Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
 
+ 10. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
 
-11. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
+ 11. By default, the logs will be available in UTC format, If needed synchronize your local timezone from host to container using an environment variable as given in the example below.
 
-12.  By default, the logs will be available in UTC format, If needed synchronize your local timezone from host to container using an environment variable as given in the example below.
-
-Example Usage:
-```
-export Timezone=Asia/Kolkata
-```
-For Microsoft Windows platforms:
-```
-SET Timezone=Asia/Kolkata
-```
-13. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
+    Example Usage:
+    ```
+    export Timezone=Asia/Kolkata
+    ```
+    For Microsoft Windows platforms:
+    ```
+    SET Timezone=Asia/Kolkata
+    ```
+ 12. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
 
 
 ## DXClient installation configuration
