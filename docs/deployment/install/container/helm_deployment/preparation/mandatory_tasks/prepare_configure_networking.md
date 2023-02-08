@@ -146,8 +146,8 @@ To have your deployment and HAProxy to use the certificate, you must store it in
 
 The secret can be created using the following commands:
 
-!!! note
-  The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
+!!!note
+    The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
 
 ```
   # Create secret with the name "dx-tls-cert"
@@ -239,8 +239,8 @@ Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that 
 The HCL Digital Experience 9.5 Helm Chart allows you to configure **[SameSite Cookie Attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)** for DX Core. 
 This configuration sets the `WASReqURL` Cookie Attributes `Secure` and `SameSite`.
 
-!!! note 
-   This should only be set in an HTTPS environment to prevent unwanted behaviours
+!!!note 
+    This should only be set in an HTTPS environment to prevent unwanted behaviors.
 
 You can define the SameSite value in your `custom-values.yaml`:
 
