@@ -100,7 +100,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
     !!! note
         You will loose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
 
- 6. Set appropriate permission.
+ 6. Set appropriate permissions
 
     ```
     chmod xxx <working-directory>/bin
