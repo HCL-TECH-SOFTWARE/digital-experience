@@ -190,7 +190,7 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ```
 
-## Installing using the Node package file 
+## Installing using the source code package 
 
 **Prerequisites:** Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
 
