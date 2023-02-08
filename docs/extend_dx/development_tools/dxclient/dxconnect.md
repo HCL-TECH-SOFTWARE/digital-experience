@@ -2,13 +2,22 @@
 
 DXConnect is a servlet-based internal application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later releases,that enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server. 
 
-This topic covers the DXConnect installation and configuration instructions for on-premises platforms.
+DXConnect is preconfigured in container environments. This topic covers the DXConnect installation and configuration instructions for on-premises platforms.
 
 ## Authentication
 
 DXConnect requires the `cw_profile` Administrator security role to access the application servlet APIs.
 
-**DXConnect Installation**
+**DXConnect Installation(Required Only for on-premises platforms)**
+
+To install DXConnect under Config Wizard server, you need to issue the command to the ConfigEngine script present under 'wp_profile'.
+
+Navigate to the ConfigEngine script location under 'wp_profile',
+
+```
+cd /opt/HCL/wp_profile/ConfigEngine/
+
+```
 
 To install DXConnect use the command below:
 
