@@ -93,7 +93,7 @@ The **Dashboard** view allows users to perform the following content authoring a
 
 - Selecting the avatar icons of the content items displays the **Edit**, **Delete**,  **Move**, **Copy**, and **Duplicate** options from the Content Composer Dashboard view.
 
-- Ticking the checkbox (beside the **Content Title**) presented in the **Content Collections** column also enables context-specific **Edit**, **Delete**, **Move**, and **Duplicate** options for the content item. This allows users to optionally proceed to the content item's details in **Edit mode**.
+- Ticking the checkbox (beside the **Content Title**) presented in the **Content Collections** column also enables context-specific **Edit**, **Delete**, **Move**, **Copy**, and **Duplicate** options for the content item. This allows users to optionally proceed to the content item's details in **Edit mode**.
 
     ![Authoring actions on HCL Content Composer Dashboard](../../../../../assets/Authoring_actions_single_select_via_HCL_CC_Dashboard.png)
 
