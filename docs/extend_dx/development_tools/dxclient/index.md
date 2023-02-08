@@ -74,7 +74,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 3. Extract the DXClient.zip file
 
 !!! note
-    To install DXClient using any OCI-based Container Runtimes, run this command before proceeding further.
+    The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, please run the following command before proceeding further.
     ```
     export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME> 
 
