@@ -133,16 +133,19 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
 1.  Log in to the WebSphere® Integrated Solutions Console as an administrator.
 
-2.  Click **Resources** \> **Resource Environment** \> **Resource Environment Providers** \> **WCM WCMConfigService**.
+2.  Click **Resources** > **Resource Environment** > **Resource Environment Providers** > **WCM WCMConfigService**.
 
 3.  Click **Custom properties** to update the configuration properties.
 
 4.  Edit or create the property `inplaceEdit.toolbarConfigForRichText`, and set its value to match the desired toolbar icons.
+
     Sample values:
-    * Single toolbar in space seperated list of buttons
+    
+    * Single toolbar in space-separated list of buttons
         ```
         formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat
         ```
+        
     * Multiple toolbars in an array
         ```
         [ 'undo redo | bold italic underline | fontselect fontsizeselect', 'forecolor backcolor | alignleft aligncenter alignright alignfull | numlist bullist outdent indent | a11ycheck' ]
