@@ -267,7 +267,7 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
         ```
 
 
-**DXClient node uninstall**
+**Uninstalling the source code package**
 
  -   To uninstall the DXClient tool, perform the following commands:
 
