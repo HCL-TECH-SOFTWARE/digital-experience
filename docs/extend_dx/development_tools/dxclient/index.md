@@ -82,7 +82,8 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
  4. Run `docker load < dxclient.tar.gz`.
 
- 5. Optional (It is advisable to not set this incase you run multiple DXClient versions in your system). Open terminal, add the execution shell script to the bin directory to the PATH variable, to call dxclient from any directory.
+ 5. Optional: Add DXClient to your PATH.
+     Open terminal, add path to the DXClient bin directory to your PATH variable, to be able to call DXClient from any directory. If you plan to run multiple versions of DXClient on the same system in parallel, you may want to skip this step.
 
     ```
     export PATH=<working-directory>/bin:$PATH
