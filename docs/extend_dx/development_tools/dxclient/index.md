@@ -131,7 +131,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
  12. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
 
 
-## DXClient installation configuration
+## DXClient configuration
 
 Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
 
