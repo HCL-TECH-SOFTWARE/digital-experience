@@ -53,7 +53,7 @@ DXClient package comes with a script that you can use to run the container image
 
 See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr_frVlojc)
 
- 1. Navigate to the `<working-directory>` folder, where you wish to use dxclient from.
+ 1. Navigate to the `<working-directory>` folder, where you wish to use DXClient from.
 
  2. Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
 
