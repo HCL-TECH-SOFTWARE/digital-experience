@@ -70,7 +70,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
          make_unlink.bat
          ```
 
- 3. Extract the DXClient.zip file locally.
+3. Extract the DXClient.zip file
 
 !!! note
     To install DXClient using any OCI-based Container Runtimes, run this command before proceeding further.
