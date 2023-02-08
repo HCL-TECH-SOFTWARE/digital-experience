@@ -46,7 +46,8 @@ For supported container deployments,starting from CF192 and in later release, th
 
 ## Installing using the container package
 
-DXClient package comes with a script that you can use to run the container image. This script creates a store directory and copies the input files from the absolute path to the shared volume location.
+The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification, for example, Docker or Podman.
+In addition to that the package includes scripts for all operating systems that make it even simpler to work with the container image. These scripts handle the storage for the container and take care to sync input files with the container itself.
 
 !!!note
     When you upgrade to use the container image DXClient, you should first uninstall the nodejs DXClient.
