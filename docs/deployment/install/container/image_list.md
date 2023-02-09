@@ -26,6 +26,7 @@ hcl-dx-core-image-v95_CF209_20230119-2225.tar.gz
 hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230119-2152.tar.gz
 hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230119-2152.tar.gz
 hcl-dx-deployment-v2.12.0_20230123-1623.tgz
+hcl-dx-design-studio-image-v0.12.0_20230119-2221.tar.gz
 hcl-dx-digital-asset-manager-image-v1.21.0_20230119-2229.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20230119-2221.zip
 hcl-dx-haproxy-image-v1.5.0_20230119-2219.tar.gz
@@ -70,6 +71,7 @@ hcl-dx-core-image-v95_CF208_20221208-2224.tar.gz
 hcl-dx-dam-plugin-google-vision-image-v0.1.0_20221208-2225.tar.gz
 hcl-dx-dam-plugin-kaltura-image-v0.1.0_20221208-2225.tar.gz
 hcl-dx-deployment-v2.11.2_20221209-1526.tgz
+hcl-dx-design-studio-image-v0.12.0_20221208-2233.tar.gz
 hcl-dx-digital-asset-manager-image-v1.20.0_20221208-2234.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20221208-2237.zip
 hcl-dx-haproxy-image-v1.4.0_20221208-2240.tar.gz
@@ -116,6 +118,7 @@ hcl-dx-core-image-v95_CF207_20221014-1607.tar.gz
 hcl-dx-dam-plugin-google-vision-image-v0.1.0_20221014-1559.tar.gz
 hcl-dx-dam-plugin-kaltura-image-v0.1.0_20221014-1600.tar.gz
 hcl-dx-deployment-v2.10.0_20221017-1419.tgz
+hcl-dx-design-studio-image-v0.12.0_20221014-1613.tar.gz
 hcl-dx-digital-asset-manager-image-v1.19.0_20221014-1611.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20221014-1613.zip
 hcl-dx-haproxy-image-v1.3.0_20221014-1605.tar.gz
@@ -151,6 +154,7 @@ hcl-dx-core-image-v95_CF206_20220908-1237.tar.gz
 hcl-dx-dam-plugin-google-vision-image-v0.1.0_20220908-1229.tar.gz
 hcl-dx-dam-plugin-kaltura-image-v0.1.0_20220908-1230.tar.gz
 hcl-dx-deployment-v2.9.2_20220909-1328.tgz
+hcl-dx-design-studio-image-v0.12.0_20220908-1242.tar.gz
 hcl-dx-digital-asset-manager-image-v1.18.0_20220908-1240.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20220908-1242.zip
 hcl-dx-haproxy-image-v1.2.0_20220908-1233.tar.gz
@@ -185,6 +189,7 @@ hcl-dx-core-image-v95_CF205_20220720-1646.tar.gz
 hcl-dx-dam-plugin-google-vision-image-v0.1.0_20220720-1629.tar.gz
 hcl-dx-dam-plugin-kaltura-image-v0.1.0_20220720-1629.tar.gz
 hcl-dx-deployment-v2.8.5_20220726-1512.tgz
+hcl-dx-design-studio-image-v0.11.0_20220720-1659.tar.gz
 hcl-dx-digital-asset-manager-image-v1.17.0_20220726-1322.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20220720-1650.zip
 hcl-dx-google-vision-image-v0.1.0_20220720-0243.tar.gz
@@ -220,6 +225,7 @@ hcl DX notices V9.5 CF204.txt
 hcl-dx-content-composer-image-v1.17.0_20220602-1750.tar.gz
 hcl-dx-core-image-v95_CF204_20220602-1751.tar.gz
 hcl-dx-deployment-v2.7.1_20220602-1755.tgz
+hcl-dx-design-studio-image-v0.9.0_20220602-1755.tar.gz
 hcl-dx-digital-asset-manager-image-v1.16.0_20220602-1805.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20220602-1755.zip
 hcl-dx-haproxy-image-v1.0.0_20220602-1754.tar.gz
@@ -256,6 +262,7 @@ hcl-dx-ambassador-image-1142.tar.gz
 hcl-dx-content-composer-image-v1.16.0_20220429-1042.tar.gz
 hcl-dx-core-image-v95_CF203_20220429-1033.tar.gz
 hcl-dx-deployment-v2.6.12_20220503-1239.tgz
+hcl-dx-design-studio-image-v0.9.0_20220429-1029.tar.gz
 hcl-dx-digital-asset-manager-image-v1.15.0_20220429-1035.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20220429-1030.zip
 hcl-dx-haproxy-image-v0.1.0_20220429-1036.tar.gz
@@ -291,6 +298,7 @@ hcl-dx-ambassador-image-1142.tar.gz
 hcl-dx-content-composer-image-v1.15.0_20220319-1357.tar.gz
 hcl-dx-core-image-v95_CF202_20220319-1358.tar.gz
 hcl-dx-deployment-v2.5.9_20220319-1358.tgz
+hcl-dx-design-studio-image-v0.8.0_20220319-1409.tar.gz
 hcl-dx-digital-asset-manager-image-v1.14.0_20220319-1405.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20220319-1409.zip
 hcl-dx-image-processor-image-v1.15.0_20220319-1358.tar.gz
@@ -325,6 +333,7 @@ hcl-dx-ambassador-image-1142.tar.gz
 hcl-dx-content-composer-image-v1.14.0_20220207-1550.tar.gz
 hcl-dx-core-image-v95_CF201_20220206-1331.tar.gz
 hcl-dx-deployment-v2.4.0_20220207-1606.tgz
+hcl-dx-design-studio-image-v0.7.0_20220207-1549.tar.gz
 hcl-dx-digital-asset-manager-image-v1.13.0_20220207-1609.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20220207-1549.zip
 hcl-dx-image-processor-image-v1.14.0_20220207-1606.tar.gz
@@ -362,6 +371,7 @@ hcl-dx-ambassador-image-1142.tar.gz
 hcl-dx-content-composer-image-v1.13.0_20211213-1443.tar.gz
 hcl-dx-core-image-v95_CF200_20211213-1442.tar.gz
 hcl-dx-deployment-v2.2.0_20211213-1446.tgz
+hcl-dx-design-studio-image-v0.6.0_20211213-1448.tar.gz
 hcl-dx-digital-asset-manager-image-v1.12.0_20211213-1448.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20211213-1454.zip
 hcl-dx-image-processor-image-v1.13.0_20211213-1446.tar.gz
@@ -398,6 +408,7 @@ hcl-dx-cloud-scripts-v95_CF199_20211029-1700.zip
 hcl-dx-content-composer-image-v1.12.0_20211029-1341.tar.gz
 hcl-dx-core-image-v95_CF199_20211029-1348.tar.gz
 hcl-dx-deployment-v2.1.0_20211029-1346.tgz
+hcl-dx-design-studio-image-v0.5.0_20211029-0013.tar.gz
 hcl-dx-digital-asset-management-operator-image-v95_CF199_20211029-1342.tar.gz
 hcl-dx-digital-asset-manager-image-v1.11.0_20211029-1350.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20211029-1354.zip
@@ -426,6 +437,7 @@ hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz
 |Ring API|hcl-dx-ringapi-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-ringapi-image-v1.11.0_20210917-1441.tar.gz|hcl-dx-ringapi-image-v1.12.0_20211029-1357.tar.gz|
 |Content Composer|hcl-dx-content-composer-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-content-composer-image-v1.10.0_20210917-1437.tar.gz|hcl-dx-content-composer-image-v1.12.0_20211029-1341.tar.gz|
 |DX Deployment|hcl-dx-deployment-vx.x.x_xxxxxxxx-xxxx.tgz|hcl-dx-deployment-v2.0.0_20210917-1441.tgz|hcl-dx-deployment-v2.1.0_20211029-1346.tgz|
+|Design Studio|hcl-dx-design-studio-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-site-manager-image-v0.4.0_20210917-1445.tar.gz**|**hcl-dx-design-studio-image-v0.5.0_20211029-0013.tar.gz**|
 |Digital Asset Management|hcl-dx-digital-asset-manager-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-digital-asset-manager-image-v1.10.0_20210917-1444.tar.gz|hcl-dx-digital-asset-manager-image-v1.11.0_20211029-1350.tar.gz|
 |Persistence Connection Pool|hcl-dx-persistence-connection-pool-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-postgres-persistence-pgpool-image-v1.11.0_20210916-0224.tar.gz**|**hcl-dx-persistence-connection-pool-image-v1.11.0_20211029-0224.tar.gz**|
 |Persistence Node|hcl-dx-persistence-node-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-persistence-postgres-repmgr-image-v1.1_20210916-0148.tar.gz**|**hcl-dx-persistence-node-image-v1.1_20211029-0148.tar.gz**|

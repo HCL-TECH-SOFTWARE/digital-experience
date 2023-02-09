@@ -15,7 +15,7 @@ Design Studio enables content managers and designers to build and style their di
 !!!note
     Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF197, and includes a sample DX site.  It is not yet supported for use in production deployments.
 
-See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
 
 ## Deploy HCL DX CF197 to container platforms using Helm
 
