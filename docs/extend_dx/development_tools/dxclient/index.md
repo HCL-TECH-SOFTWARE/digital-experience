@@ -1,36 +1,20 @@
 # DXClient
 
-## Introduction
+DXClient is a command line tool featuring a single unified interface to all HCL DX automation and CI/CD-related tasks. It helps developers manage many DX tasks, such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. 
+DXClient can take artifacts developed locally and deploy them to HCL DX servers independently of whether these are deployed on-premises platforms in standalone, cluster, or farm-topologies or in a container environment.
+DXClient is therefore meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
 
-DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, manage environment properties,wcm libraries etc between source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms & helps to achieve CI/CD goals in the process.
+DXClient itself comes with two deployment options:
+
+1. The default deployment option is the DXClient container package. DXClient is packaged as a container that can be run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#dxclient-installation) for more details.
+
+2. For backward compatibility, we also still offer DXClient Javascript source codes. Customers who want to rely on this deployment option need to install their own nodejs and npm runtime environment in the correct version and need to install necessary dependencies as needed.
 
 !!!note "Important"
     DXClient version is mostly forward and backward compatible with the DX CF versions, however, in some cases it might not work as expected if the CF versions are different. Hence, ensure that the CF versions of both DXClient and DX Core are the same in your installation.
 
 !!!note
     DXClient is enabled in supported Kubernetes platforms from HCL Digital Experience 9.5 CF192 and later releases:
-
- 
-We have 2 types of DXClient application packages.
-
-   1.  DXClient is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#dxclient-installation) for more details. We recommend to use this as your 1st choice of installation.
-   2. DXClient also exists as [Node Package](https://nodejs.org/en/)-based CLI tool and requires Node.js to be installed as a prerequisite. 
-
-## Prerequisties
-
-1. For option 1 , by default docker container runtime is supported and hence it requires to be installed. However, you may use any container runtime that implements OCI Runtime Specification. For example, Podman.
-2. For option 2, Install [Node.js](https://nodejs.org/en/) runtime environment.
-
-## DXConnect
-
-DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/index.md). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
-
-For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md).
-
-For supported container deployments,starting from CF192 and in later release, the DXConnect Servlet is pre-configured and started on the Configuration Wizard server.
-
-!!!remember
-    Configuration Wizard Administrator credentials are required to access the DXConnect application.
     
 ## Architecture
 
@@ -44,6 +28,22 @@ For supported container deployments,starting from CF192 and in later release, th
     
     3.  For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md).
 
+## DXConnect
+
+DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/index.md). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
+
+For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md).
+
+For supported container deployments,starting from CF192 and in later release, the DXConnect Servlet is pre-configured and started on the Configuration Wizard server.
+
+!!!remember
+    Configuration Wizard Administrator credentials are required to access the DXConnect application.
+
+## Prerequisties
+
+1. For option 1 , by default docker container runtime is supported and hence it requires to be installed. However, you may use any container runtime that implements OCI Runtime Specification. For example, Podman.
+2. For option 2, Install [nodejs](https://nodejs.org/en/) runtime environment.
+
 ## Installing using the container package
 
 The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification, for example, Docker or Podman.
@@ -54,9 +54,9 @@ In addition to that the package includes scripts for all operating systems that 
 
 See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr_frVlojc)
 
- 1. Navigate to the `<working-directory>` folder, where you wish to use DXClient from.
+1. Navigate to the `<working-directory>` folder, where you wish to use DXClient from.
 
- 2. Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
+2. Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
 
     !!! note
         If you are upgrading from the node to container image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.
@@ -71,19 +71,19 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
          make_unlink.bat
          ```
 
-3. Extract the DXClient.zip file
+3. Extract the DXClient.zip file.
 
-!!! note
-    The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, please run the following command before proceeding further.
-    ```
-    export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME> 
+    !!! note
+        The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, please run the following command before proceeding further.
+        ```
+        export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME> 
 
-    For example: export CONTAINER_RUNTIME=podman
-    ```   
+        For example: export CONTAINER_RUNTIME=podman
+        ```   
 
- 4. Run `docker load < dxclient.tar.gz`.
+4. Run `docker load < dxclient.tar.gz`.
 
- 5. Optional: Add DXClient to your PATH.
+5. Optional: Add DXClient to your PATH.
      Open terminal, add path to the DXClient bin directory to your PATH variable, to be able to call DXClient from any directory. If you plan to run multiple versions of DXClient on the same system in parallel, you may want to skip this step.
 
     ```
@@ -101,26 +101,27 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
     !!! note
         You will loose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
 
- 6. Set appropriate permissions
+6. Set appropriate permissions
 
     ```
     chmod xxx <working-directory>/bin
     ```
 
- 7. Run `dxclient -V` to verify that the dxclient command line is installed.
+7. Run `dxclient -V` to verify that the required version of dxclient command line is installed.
     
- 8. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example,
+8. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example,
 
     ```
     export VOLUME_DIR=storeForScriptApplication
     ```
- 9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
+
+9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
 
     Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
 
- 10. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
+10. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
 
- 11. By default, the logs will be available in UTC format, If needed synchronize your local timezone from host to container using an environment variable as given in the example below.
+11. By default, the logs will be available in UTC format, If needed synchronize your local timezone from host to container using an environment variable as given in the example below.
 
     Example Usage:
     ```
@@ -130,7 +131,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
     ```
     SET Timezone=Asia/Kolkata
     ```
- 12. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
+12. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
 
 
 ## DXClient configuration
@@ -194,8 +195,6 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ## Installing using the source code package 
 
-**Prerequisites:** Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
-
 See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience Container Update CF194](https://www.youtube.com/watch?v=OphJ8-WcLxY)
 
 !!! note
@@ -216,9 +215,9 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
         make_unlink.bat
         ```
 
-2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../../get_started/system_requirements/docker/index.md) topic for the latest list of HCL DX 9.5 files available for download.
+2.  Ensure that nodejs version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../../get_started/system_requirements/docker/index.md) topic for the latest list of HCL DX 9.5 files available for download.
 
-3.  Extract the DXClient.zip file locally.
+3.  Extract the DXClient.zip file.
 
 4.  From the extracted folder, run the following command.
 
@@ -238,7 +237,7 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
 
     ![Install DXClient tool](../../../images/Install_DXClient_Command.png)
 
-6.  (Optional) Run the following command to link your application to the local npm module in your machine. Refer to the following Notes section before you proceed.
+6.  Optional: Run the following command to link your application to the local npm module in your machine. Refer to the following Notes section before you proceed.
 
     For Linux and Apple MacOS platforms:
 
@@ -284,7 +283,7 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
     make uninstall.bat
     ```
 
--   **If linked** To unlink the DXClient tool, perform the following commands:
+-   Optional: To unlink the DXClient tool, perform the following commands:
 
     For Linux and Apple MacOS platforms:
 
@@ -308,25 +307,25 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
 !!! note 
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
-    -   HCL DX 9.5 CF210 release:
+    -   HCL DX 9.5 CF210 release: **V1.19.0
         -   Removed paramaters deprecated during CF201 & CF202 deployment.
         -   [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
 
-    -   HCL DX 9.5 CF209 release:
+    -   HCL DX 9.5 CF209 release: **V1.18.0
         -   [Restart All Core Pods in Kubernetes Deployment](../dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods)
 
-    -   HCL DX 9.5 CF208 release:
+    -   HCL DX 9.5 CF208 release: **V1.17.0
         -   [Get all subscribers details for DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging)
 
-    -   HCL DX 9.5 CF207 release:
+    -   HCL DX 9.5 CF207 release: **V1.16.0
         -   Support to set different Container Runtimes.
 
-    -   HCL DX 9.5 CF202 release:
+    -   HCL DX 9.5 CF202 release: **V1.11.0
         -   Deprecated parameter `dxConnectHostname`. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
         -   [DAM Assets Export & import](https://opensource.hcltechsw.com/digital-experience/CF207/manage_content/digital_assets/usage/managing_dam/dam_exim/)
         
-    -   HCL DX 9.5 CF201 release:
+    -   HCL DX 9.5 CF201 release: **V1.10.0
         -   An optional parameter `requestId` added to [Deploy theme](../dxclient/dxclient_artifact_types/themes.md), [Deploy application](../dxclient/dxclient_artifact_types/scriptapplications.md#deploy-script-applications), [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-server), and [Manage virtual portals](../dxclient/dxclient_artifact_types/virtualportals.md).
         
         -   Retrieve feature added to the [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md).
@@ -335,24 +334,24 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         
         -   Note that a few parameters are deprecated and replaced with new parameters in the DX Core configuration reports. For information, see [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report).
     
-    -   HCL DX 9.5 CF200 release:
+    -   HCL DX 9.5 CF200 release: **V1.9.0
         -   [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
         -   [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report)
     
-    -   HCL DX 9.5 CF199 release:
+    -   HCL DX 9.5 CF199 release: **V1.8.0
         -   [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
         -   [Create credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
         -   [Create syndication relation](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
         -   [Export and import multiple resource environment providers](../dxclient/dxclient_artifact_types/resourceenvironments.md)
         -   [Specify the context root for exporting and importing personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
 
-    -   HCL DX 9.5 CF198 release:
+    -   HCL DX 9.5 CF198 release: **V1.7.0
         -   [List DAM schemas](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md)
         -   [Personalization export and import rules](../dxclient/dxclient_artifact_types/personalization.md)
         -   [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
         -   [Manage virtual portals](../dxclient/dxclient_artifact_types/virtualportals.md)
 
-    -   HCL DX 9.5 CF197 release:
+    -   HCL DX 9.5 CF197 release: **V1.6.0
         -   [Undeploy portlets](../dxclient/dxclient_artifact_types/portlets.md)
         -   [Deploy and undeploy themes](../dxclient/dxclient_artifact_types/themes.md)
         -   [Deploy application](../dxclient/dxclient_artifact_types/deployapplication.md)
@@ -360,24 +359,24 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         -   [Restart Core](../dxclient/dxclient_artifact_types/dxcoreserver.md)
         -   [Delete DAM schema](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md)
     
-    -   HCL DX 9.5 CF196 release:
+    -   HCL DX 9.5 CF196 release: **V1.5.0
         -   [Shared library](../dxclient/dxclient_artifact_types/sharedlibrary.md)
     
-    -   HCL DX 9.5 CF195 release:
+    -   HCL DX 9.5 CF195 release: **V1.4.0
         -   [Undeploy theme](../dxclient/dxclient_artifact_types/themes.md)
         -   [MLS export and import of WCM library](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
 
-    -   HCL DX 9.5 CF193 release:
+    -   HCL DX 9.5 CF193 release: **V1.2.0
         -   [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md)
         -   [Deploy Application](../dxclient/dxclient_artifact_types/deployapplication.md)
         -   [Managing syndicators](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
         -   [Managing subscribers](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
 
-    -   HCL DX 9.5 CF192 release:
+    -   HCL DX 9.5 CF192 release: **V1.1.0
         -   [Undeploy script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
         -   [Deploy theme](../dxclient/dxclient_artifact_types/themes.md) (EAR and WebDAV based)
 
-    -   HCL DX 9.5 CF19 release:
+    -   HCL DX 9.5 CF19 release: **V1.0.0
         -   [Deploy Portlets](../dxclient/dxclient_artifact_types/portlets.md)
         -   [Deploy script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
