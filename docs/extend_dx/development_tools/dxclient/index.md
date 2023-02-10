@@ -8,51 +8,19 @@ DXClient itself comes with two deployment options:
 
 1. The default deployment option is the DXClient container package. DXClient is packaged as a container that can be run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#dxclient-installation) for more details.
 
-2. For backward compatibility, we also still offer DXClient Javascript source codes. Customers who want to rely on this deployment option need to install their own nodejs and npm runtime environment in the correct version and need to install necessary dependencies as needed.
+2. For backward compatibility, we also still offer DXClient Javascript source codes. Customers who want to rely on this deployment option need to install their own Node.js and npm runtime environment in the correct version and need to install necessary dependencies as needed.
 
-!!!note "Important"
-    DXClient version is mostly forward and backward compatible with the DX CF versions, however, in some cases it might not work as expected if the CF versions are different. Hence, ensure that the CF versions of both DXClient and DX Core are the same in your installation.
-
-!!!note
-    DXClient is enabled in supported Kubernetes platforms from HCL Digital Experience 9.5 CF192 and later releases:
-    
 ## Architecture
 
 ![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.jpg)
 
-!!! note
-
-    1.  HCL DX 9.5 CF19 or later version is installed on target servers, on [supported on premises platforms](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) (Microsoft Windows, Linux).
-    
-    2.  Beginning with HCL DX 9.5 Container Update CF192 and later releases, the DXConnect Servlet is pre-configured and started on supported Red Hat OpenShift and Kubernetes platforms that DX 9.5 containers are deployed to.
-    
-    3.  For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md).
-
-## DXConnect
-
-DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/index.md). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
-
-For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md).
-
-For supported container deployments,starting from CF192 and in later release, the DXConnect Servlet is pre-configured and started on the Configuration Wizard server.
-
-!!!remember
-    Configuration Wizard Administrator credentials are required to access the DXConnect application.
-
-## Prerequisties
-
-1. For option 1 , by default docker container runtime is supported and hence it requires to be installed. However, you may use any container runtime that implements OCI Runtime Specification. For example, Podman.
-2. For option 2, Install [nodejs](https://nodejs.org/en/) runtime environment.
-
-## Installing using the container package
+## Installation using the container package
 
 The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification, for example, Docker or Podman.
 In addition to that the package includes scripts for all operating systems that make it even simpler to work with the container image. These scripts handle the storage for the container and take care to sync input files with the container itself.
 
 !!!note
-    When you upgrade to use the container image DXClient, you should first uninstall the nodejs DXClient.
-
-See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr_frVlojc)
+    When you upgrade to use the container image DXClient, you should first uninstall the Node.js DXClient.
 
 1. Navigate to the `<working-directory>` folder, where you wish to use DXClient from.
 
@@ -62,12 +30,12 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
         If you are upgrading from the node to container image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.
 
         Syntax for Linux and Apple macOS platforms:
-         ```
+         ```bash
          make unlink
          ```
 
         Syntax for Microsoft Windows platforms:
-         ```
+         ```bash
          make_unlink.bat
          ```
 
@@ -75,18 +43,18 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
     !!! note
         The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, please run the following command before proceeding further.
-        ```
-        export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME> 
 
+        ```bash
+        export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
         For example: export CONTAINER_RUNTIME=podman
-        ```   
+        ```
 
-4. Run `docker load < dxclient.tar.gz`.
+4. Run `docker load < dxclient.tar.gz`
 
 5. Optional: Add DXClient to your PATH.
      Open terminal, add path to the DXClient bin directory to your PATH variable, to be able to call DXClient from any directory. If you plan to run multiple versions of DXClient on the same system in parallel, you may want to skip this step.
 
-    ```
+    ```bash
     export PATH=<working-directory>/bin:$PATH
     ```
 
@@ -94,7 +62,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
     Open command prompt, add `dxclient.bat` script in the bin directory to the PATH variable, to call DXClient from any directory.
 
-    ```
+    ```bash
     set PATH=<working-directory>\bin;%PATH%
     ```
 
@@ -103,15 +71,15 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 6. Set appropriate permissions
 
-    ```
+    ```bash
     chmod xxx <working-directory>/bin
     ```
 
-7. Run `dxclient -V` to verify that the required version of dxclient command line is installed.
-    
+7. Run `dxclient -V` to verify that the required version of DXClient command line is installed.
+
 8. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example,
 
-    ```
+    ```bash
     export VOLUME_DIR=storeForScriptApplication
     ```
 
@@ -124,78 +92,16 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 11. By default, the logs will be available in UTC format, If needed synchronize your local timezone from host to container using an environment variable as given in the example below.
 
     Example Usage:
-    ```
+    ```bash
     export Timezone=Asia/Kolkata
     ```
     For Microsoft Windows platforms:
-    ```
+    ```bash
     SET Timezone=Asia/Kolkata
     ```
 12. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
 
-
-## DXClient configuration
-
-Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
-
-```
-{
-    "name":"config.json",
-    "desc":"The attributes in this file are used for configuration purpose and those must not be deleted.",
-    "dxProtocol": "",
-    "dxConnectProtocol": "https",
-    "hostname": "",
-    "dxPort": "",
-    "dxSoapPort": "10033",
-    "dxConnectPort": "10202",
-    "dxContextRoot":"/wps",
-    "contenthandlerPath": "/wps/mycontenthandler",
-    "projectContext": "",
-    "virtualPortalContext": "",
-    "xmlConfigPath": "/wps/config",
-    "damAPIPort": "",
-    "ringAPIPort": "",
-    "damAPIVersion": "v1",
-    "ringAPIVersion": "v1",
-    "dxConnectHostname": "",
-    "dxConnectUsername": "",
-    "dxConnectPassword": "",
-    "dxUsername": "",
-    "dxPassword": "",
-    "dxProfileName": "",
-    "dxProfilePath": "",
-    "dxWASUsername": "",
-    "dxWASPassword": "",
-    "enableLogger": true,
-    "enableBackup": "false",
-    "lastModifiedAfter": "",
-    "restoreAsPublished": false,
-    "targetHostname": "",
-    "targetDxConnectPort": "",
-    "targetDxConnectUsername":"",
-    "targetDxConnectPassword":"",
-    "targetDxProfileName": "",
-    "targetServerHostname": "",
-    "targetServerPort": "",
-    "targetServerUsername":"",
-    "targetServerPassword":"",
-    "targetServerProfileName": "",
-    "vaultUsername": "",
-    "vaultPassword": "",
-    "wcmContentName": "",
-    "wcmContentId": "",
-    "wcmContentPath": "",
-    "wcmSiteArea": "",
-    "wcmLibraryId": "",
-    "wcmLibraryName": "",
-    "wcmProjectName": ""
-}
-
-```
-
-## Installing using the source code package 
-
-See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience Container Update CF194](https://www.youtube.com/watch?v=OphJ8-WcLxY)
+## Installation using the source code package
 
 !!! note
     You are encouraged to use the DXClient container image package from CF196 onwards for easier installation.
@@ -206,16 +112,16 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
         If you are upgrading from CF19, CF191, or later releases, you should first unlink the current version using the following command before installing the newer version.
 
         Syntax for Linux and Apple macOS platforms:
-        ```
+        ```bash
         make unlink
         ```
 
         Syntax for Microsoft Windows platforms:
-        ```
+        ```bash
         make_unlink.bat
         ```
 
-2.  Ensure that nodejs version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../../get_started/system_requirements/docker/index.md) topic for the latest list of HCL DX 9.5 files available for download.
+2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../../get_started/system_requirements/docker/index.md) topic for the latest list of HCL DX 9.5 files available for download.
 
 3.  Extract the DXClient.zip file.
 
@@ -223,31 +129,27 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
 
     For Linux and Apple macOS platforms:
 
-    ```
+    ```bash
     make install
     ```
 
     For Microsoft Windows platforms:
 
-    ```
+    ```bash
     make_install.bat
     ```
-
-    The following commands are run:
-
-    ![Install DXClient tool](../../../images/Install_DXClient_Command.png)
 
 6.  Optional: Run the following command to link your application to the local npm module in your machine. Refer to the following Notes section before you proceed.
 
     For Linux and Apple MacOS platforms:
 
-    ```
+    ```bash
     make link
     ```
 
     For Microsoft Windows platforms:
 
-    ```
+    ```bash
     make_link.bat
     ```
 
@@ -257,29 +159,29 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
 
         For Linux and Apple MacOS platforms:
 
-        ```
+        ```bash
         ./bin/dxclient
         ```
 
         For Microsoft Windows platforms:
 
-        ```
+        ```bash
         node bin/dxclient
         ```
 
+## Uninstallation of the source code package
 
-**Uninstalling the source code package**
-
- -   To uninstall the DXClient tool, perform the following commands:
+-   To uninstall the DXClient tool, perform the following commands:
 
     For Linux and Apple MacOS platforms:
 
-    ```
+    ```bash
     make clean
     ```
 
     For Microsoft Windows platforms:
-    ```
+
+    ```bash
     make uninstall.bat
     ```
 
@@ -287,24 +189,23 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
 
     For Linux and Apple MacOS platforms:
 
-    ```
+    ```bash
     make unlink
     ```
 
     For Microsoft Windows platforms:
 
-    ```
+    ```bash
     make_unlink.bat
     ```
 
-
-## Verify the DXClient installation
+## Verify your DXClient installation
 
 Successful installation of the DXClient tool can be checked by using the "`dxclient -V`" command, which should show the version of the DXClient tool installed.
 
 Once installed, commands can be executed using the DXClient tool to perform CI / CD actions on HCL DX 9.5 servers.
 
-!!! note 
+!!! note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
     -   HCL DX 9.5 CF210 release: **V1.19.0
@@ -382,228 +283,278 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
 
+## DXClient configuration
+
+Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
+
+```json
+{
+    "name":"config.json",
+    "desc":"The attributes in this file are used for configuration purpose and those must not be deleted.",
+    "dxProtocol": "",
+    "dxConnectProtocol": "https",
+    "hostname": "",
+    "dxPort": "",
+    "dxSoapPort": "10033",
+    "dxConnectPort": "10202",
+    "dxContextRoot":"/wps",
+    "contenthandlerPath": "/wps/mycontenthandler",
+    "projectContext": "",
+    "virtualPortalContext": "",
+    "xmlConfigPath": "/wps/config",
+    "damAPIPort": "",
+    "ringAPIPort": "",
+    "damAPIVersion": "v1",
+    "ringAPIVersion": "v1",
+    "dxConnectHostname": "",
+    "dxConnectUsername": "",
+    "dxConnectPassword": "",
+    "dxUsername": "",
+    "dxPassword": "",
+    "dxProfileName": "",
+    "dxProfilePath": "",
+    "dxWASUsername": "",
+    "dxWASPassword": "",
+    "enableLogger": true,
+    "enableBackup": "false",
+    "lastModifiedAfter": "",
+    "restoreAsPublished": false,
+    "targetHostname": "",
+    "targetDxConnectPort": "",
+    "targetDxConnectUsername":"",
+    "targetDxConnectPassword":"",
+    "targetDxProfileName": "",
+    "targetServerHostname": "",
+    "targetServerPort": "",
+    "targetServerUsername":"",
+    "targetServerPassword":"",
+    "targetServerProfileName": "",
+    "vaultUsername": "",
+    "vaultPassword": "",
+    "wcmContentName": "",
+    "wcmContentId": "",
+    "wcmContentPath": "",
+    "wcmSiteArea": "",
+    "wcmLibraryId": "",
+    "wcmLibraryName": "",
+    "wcmProjectName": ""
+}
+
+```
+
 ## DXClient commands
 
 Command syntax conventions:
 
-```
+```bash
 dxclient [command] [options]
 ```
 
 Use the following command to execute the deploy portlet action:
 
-```
+```bash
 dxclient deploy-portlet [options]
 ```
 
 Use the following command to execute the undeploy portlet action:
 
-```
+```bash
 dxclient undeploy-portlet [options]
 ```
 
 Use the following command to execute the xmlaccess action:
 
-```
+```bash
 dxclient xmlaccess [options]
 ```
 
 Use the following command to execute the *pull* script application action:
 
-```
+```bash
 dxclient deploy-scriptapplication pull [options]
 ```
 
 Use the following command to execute the *push* script application action:
 
-```
+```bash
 dxclient deploy-scriptapplication push [options]
 ```
 
 Use the following command to execute the undeploy script application action:
 
-```
+```bash
 dxclient undeploy-scriptapplication [options]
 ```
 
 Use the following command to execute the restore script application action:
 
-```
+```bash
 dxclient restore-scriptapplication [options]
 ```
 
 Use the following command to execute the deploy application action:
 
-```
+```bash
 dxclient deploy-application [options]
 ```
 
 Use the following command to execute the DX Core restart action:
 
-```
+```bash
 dxclient restart-dx-core
 ```
 
 Use the following command to restart DX Core pods in a Kubernetes deployment:
 
-```
+```bash
 dxclient restart-core-pods [options]
 ```
 
 Use the following command to execute manage-subscriber action:
 
-```
+```bash
 dxclient manage-subscriber -h
 ```
 
 Use the following command to execute manage-syndicator action:
 
-```
+```bash
 dxclient manage-syndicator -h
 ```
 
 Use the following command to execute the deploy theme action:
 
-```
+```bash
 dxclient deploy-theme [options]
 ```
 
 Use the following command to execute the undeploy theme action:
 
-```
+```bash
 dxclient undeploy-theme [options]
-
 ```
 
 Use the following command to execute the manage-syndicator get-syndication-report action:
 
-```
+```bash
 dxclient  manage-syndicator get-syndication-report [options]
 ```
 
 Use the following command to execute the shared-library action:
 
-```
+```bash
 dxclient  shared-library [options]
 ```
 
 Use the following command to execute the delete DAM schema action:
 
-```
+```bash
 dxclient delete-dam-schema [options]
 ```
 
 Use the following command to list all DAM schemas present:
 
-```
+```bash
 dxclient list-dam-schemas  [options]
 ```
 
 Use the following command to export the personalization rules from the target server:
 
-```
+```bash
 dxclient pzn-export  [options]
 ```
 
 Use the following command to import the personalization rules into the target server:
 
-```
+```bash
 dxclient pzn-import  [options]
 ```
 
 Use the following command to manage virtual portal tasks in the DX server:
 
-```
+```bash
 dxclient manage-virtual-portal [options]
 ```
 
 Use the following command to register subscriber:
 
-```
+```bash
 dxclient manage-dam-staging register-dam-subscriber [options]
 ```
 
 Use the following command to deregister subscriber:
 
-```
+```bash
 dxclient manage-dam-staging deregister-dam-subscriber  [options]
 ```
 
 Use the following command to trigger manual sync:
 
-```
+```bash
 dxclient manage-dam-staging trigger-staging  [options]
 ```
 
 Use the following command to create credential vault slot in the DX server:
 
-```
+```bash
 dxclient create-credential-vault  [options]
 ```
 
 Use the following command to create the syndication relation between syndicator and subscriber in DX server:
 
-```
+```bash
 dxclient create-syndication-relation  [options]
 ```
 
 Use the following command to create, update, delete, export or import a custom property from an existing Resource Environment Provider:
 
-```
+```bash
 dxclient resource-env-provider [options]
 ```
 
 Use this command to export WCM libraries:
 
-```
+```bash
 dxclient wcm-library-export
-
 ```
 
 Use this command to import WCM libraries:
 
-```
+```bash
 dxclient wcm-library-import
-
 ```
 
 Use the `dx-core-configuration-reports` command to get a summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.
 
-```
+```bash
 dxclient dx-core-configuration-reports [OPTIONS]
 ```
 
-## DXClient Help commands
+## DXClient command line help
 
 The following commands show the Help documents for DXClient command usage.
 
 Use the following commands to display the Help document for DXClient:
 
-```
+```bash
 dxclient
 ```
 
-```
+```bash
 dxclient -h, --help 
 ```
 
 Use the following command to display the DXClient version number:
 
-```
+```bash
 dxclient -V, --version
 ```
 
 Use the following command to display the detailed help for a specific command:
 
-```
+```bash
 dxclient help [command]
 ```
-
-## Accessing the ConfigWizard admin console in a container environment
-
-You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html).
-
-
 
 ???+ info "Related information"
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
@@ -618,4 +569,3 @@ You can access the ConfigWizard admin console in a container environment from yo
     - [Themes](../dxclient/dxclient_artifact_types/themes.md)
     - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
     - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
-
