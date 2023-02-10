@@ -252,7 +252,7 @@ kubectl exec --stdin --tty pod/dx-deployment-core-0 -n dxns-helm -- /bin/bash
 
 ### Reconfigure applications to use relative paths
 
-Coming from old Operator deployments, it can appear that the applications (Digital Asset Management, Content Composer) are still configured to use absolute URLs for their rendering. If you use any of these applications, it is highly recommended that you reconfigure them to use relative paths.
+Coming from old Operator deployments, it can appear that the applications such as Digital Asset Management and Content Composer are still configured to use absolute URLs for their rendering. If you use any of these applications, it is highly recommended that you reconfigure them to use relative paths.
 
 !!!important 
     Reconfigure relative paths for applications that are active in your deployment. Otherwise, the command will fail.
