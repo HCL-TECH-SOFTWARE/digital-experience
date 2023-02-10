@@ -6,9 +6,9 @@ The HCL Digital Experience 9.5 Cumulative Fix and Container Update releases offe
     Beginning with release CF196, CFs contain updates for both traditional and containerised deployments.
 
 ## [CF199 Overview](newcf199.md)  
-This HCL Digital Experience 9.5 and CF199 release includes new releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\),  new Helm deployment operations for container deployments, updated CICD release process artifacts, “How To” videos, and more.
+This HCL Digital Experience 9.5 and CF199 release includes new releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio (Beta), new Helm deployment operations for container deployments, updated CICD release process artifacts, “How To” videos, and more.
 ## [CF198 Overview](newcf198.md)  
-This HCL Digital Experience 9.5 and CF198 release includes new releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\),  new Helm deployment operations for container deployments, updated CICD release process artifacts, the new Site Manager Custom Layout Editor, HCL Digital Experience Technical Articles, ‘How To’ videos, and more.
+This HCL Digital Experience 9.5 and CF198 release includes new releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio (Beta), new Helm deployment operations for container deployments, updated CICD release process artifacts, the new Site Manager Custom Layout Editor, HCL Digital Experience Technical Articles, ‘How To’ videos, and more.
 ## [CF197 Overview](newcf197.md)  
 This HCL Digital Experience 9.5 and CF197 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management and Experience API images, and an updated beta preview release of Design Studio. New and updated feature references are detailed here.
 ## [CF196 Overview](newcf196.md)  
