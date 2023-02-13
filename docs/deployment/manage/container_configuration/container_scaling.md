@@ -12,7 +12,6 @@ The following DX 9.5 applications can be configured to leverage `HorizontalPodAu
 
 -   Core
 -   Content Composer
--   Design Studio (Beta)
 -   Digital Asset Management
 -   Image Processor
 -   Ring API

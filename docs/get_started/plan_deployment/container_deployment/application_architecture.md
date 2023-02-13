@@ -71,16 +71,6 @@ The Image Processor provides image manipulation capabilities that are leveraged 
 
 ![Image Processor Application definition](../../../images/Image%20Processor%20Application%20definition.png "Image Processor Application definition")
 
-## Design Studio (Beta)
-
-**Depends on:** Core, Ring API
-
-**Type:** Stateless
-
-Refer to the Design Studio (Beta)[Design Studio (Beta)](../../../manage_content/design_studio/index.md) topic section for more information about this application.
-
-![Design Studio (Beta) Application Definition](../../../images/Design%20Studio%20Beta%20Application%20Definition.png "Design Studio (Beta) Application Definition")
-
 ## Runtime Controller
 
 **Depends on:** No dependencies
@@ -105,7 +95,6 @@ Application names are defined as follows:
 |Ring API|Ring API|
 |CC|Content Composer|
 |DAM|Digital Asset Management|
-|DS|Design Studio|
 |PER|Persistence|
 |IMG|Image Processor|
 
@@ -113,5 +102,4 @@ Application names are defined as follows:
     -   [HCL DX Experience API](../../../extend_dx/apis/hcl_experience_api/index.md)
     -   [Content Composer](../../../manage_content/wcm_authoring/content_composer/index.md)
     -   [Digital Asset Management](../../../manage_content/digital_assets/index.md)
-    -   [Design Studio \(Beta\)](../../../manage_content/design_studio/index.md)
     -   [Hybrid deployment](../hybrid_deployment/index.md)

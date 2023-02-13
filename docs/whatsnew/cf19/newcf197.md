@@ -10,12 +10,12 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Design Studio (Beta)
 
-Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New services available with the Container Update CF197 release include ability to render DX site pages and updates using the sample site, Ability to use the page editor to edit elements inline and update metadata, set locations for sites, set html tags for text elements, and more.
+Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New services available with the Container Update CF197 release include ability to render DX site pages and updates using the sample site, Ability to use the page editor to edit elements inline and update metadata, set locations for sites, set html tags for text elements, and more.
 
 !!!note
-    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF197, and includes a sample DX site.  It is not yet supported for use in production deployments.
+    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF197, and includes a sample DX site.  It is not yet supported for use in production deployments.
 
-See the [Design Studio (Beta)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
 
 ## Deploy HCL DX CF197 to container platforms using Helm
 
