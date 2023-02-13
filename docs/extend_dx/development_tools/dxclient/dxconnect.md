@@ -2,12 +2,13 @@
 
 DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/index.md). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
 
-For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md).
+For supported on-premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md).
 
 DXConnect is pre-configured in container environments.
+
 DXConnect has to be installed manually on on-premise environments.
 
-!!!remember
+!!!note
     Configuration Wizard Administrator credentials are required to access the DXConnect application.
 
 ## Authentication
@@ -16,42 +17,42 @@ DXConnect requires the `cw_profile` Administrator security role to access the ap
 
 ## DXConnect Installation (only applicable for on-premises installations)
 
-To install DXConnect under Configuration Wizard server, you need to issue the command to the ConfigEngine script present under 'wp_profile'.
-Navigate to the ConfigEngine script location under 'wp_profile',
+To install DXConnect under Configuration Wizard server, you must issue the command to the ConfigEngine script present under 'wp_profile'.
+Navigate to the ConfigEngine script location under 'wp_profile':
 
 ```bash
 cd /opt/HCL/wp_profile/ConfigEngine/
 ```
 
-To install DXConnect use the command below:
+To install DXConnect, use the command below:
 
 ```bash
 ./ConfigEngine.sh install-dxconnect-application
 ```
 
-This task will not only install the DXConnect application, but it will also create the "DXC\_ConfigSettings" WAS Resource Environment Provider and will create two custom properties in that REP:
+This task not only installs the DXConnect application, but it also creates the "DXC\_ConfigSettings" WAS Resource Environment Provider and creates two custom properties in that REP:
 
 ```bash
 DXCONNECT_MAX_MEMORY_SIZE_MB
 DXCONNECT_MAX_FILE_SIZE_MB
 ```
 
-To remove DXConnect use the command below:
+To remove DXConnect, use the command below:
 
 ```bash
 ./ConfigEngine.sh remove-dxconnect-application
 ```
 
-To re-install DXConnect use the command below:
+To re-install DXConnect, use the command below:
 
 ```bash
 ./ConfigEngine.sh reinstall-dxconnect-application
 ```
 
-!!! note
-    In on-premise environments setups, the `ConfigEngine` task should be run under the `wp_profile` to have DXConnect installed in the correct location, and a restart of the `cw_profile` server may be required.
+!!!note
+    In on-premise environments setups, you must run the `ConfigEngine` task under the `wp_profile` to have DXConnect installed in the correct location. A restart of the `cw_profile` server may be required.
 
-    To verify if DXConnect is installed on a given HCL DX Server 9.5 with CF19 or later, navigate to the **Configuration Wizard** Admin console and then under **Enterprise Applications**. The `dxconnect` application will appear on the console as shown in the example below. For more information on accessing and working with the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md) topics.
+    To verify if DXConnect is installed on a given HCL DX Server 9.5 with CF19 or later, navigate to the **Configuration Wizard** Admin console and then under **Enterprise Applications**. The `dxconnect` application appears on the console as shown in the example below. For more information on accessing and working with the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md) topics.
 
     ![DXConnect installation](../../../images/HCL_DXConnect_installation.png)
 
