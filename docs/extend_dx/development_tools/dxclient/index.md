@@ -1,28 +1,33 @@
 # DXClient
 
-DXClient is a command line tool featuring a single unified interface to all HCL DX automation and CI/CD-related tasks. It helps developers manage many DX tasks, such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. 
-DXClient can take artifacts developed locally and deploy them to HCL DX servers independently of whether these are deployed on-premises platforms in standalone, cluster, or farm-topologies or in a container environment.
-DXClient is therefore meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
+DXClient is a command line tool featuring a single, unified interface to all HCL DX automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. 
 
-DXClient itself comes with two deployment options:
+DXClient can take artifacts developed locally and deploy them to HCL DX servers independently of whether these are deployed on-premises platforms in standalone, cluster, or farm-topologies, or in a container environment.
+
+DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
+
+DXClient comes with two deployment options:
 
 1. The default deployment option is the DXClient container package. DXClient is packaged as a container that can be run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#dxclient-installation) for more details.
 
-2. For backward compatibility, we also still offer DXClient Javascript source codes. Customers who want to rely on this deployment option need to install their own Node.js and npm runtime environment in the correct version and need to install necessary dependencies as needed.
+2. For backward compatibility, we also still offer DXClient Javascript source codes. Customers who want to rely on this deployment option need to install their own Node.js and npm runtime environment in the correct version and must install necessary dependencies as needed.
 
 ## Architecture
 
+The following image illustrates the DXClient Architecture diagram:
+
 ![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.jpg)
 
-## Installation using the container package
+## Installing DXClient using the container package
 
-The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification, for example, Docker or Podman.
-In addition to that the package includes scripts for all operating systems that make it even simpler to work with the container image. These scripts handle the storage for the container and take care to sync input files with the container itself.
+The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification (for example, Docker or Podman).
+
+In addition, the package includes scripts for all operating systems that make it simpler to work with the container image. These scripts handle the storage for the container and sync input files with the container itself.
 
 !!!note
-    When you upgrade to use the container image DXClient, you should first uninstall the Node.js DXClient.
+    When you upgrade to use the container image DXClient, you must first uninstall the Node.js DXClient.
 
-1. Navigate to the `<working-directory>` folder, where you wish to use DXClient from.
+1. Navigate to the `<working-directory>` folder where you wish to use the DXClient from.
 
 2. Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
 
@@ -42,7 +47,7 @@ In addition to that the package includes scripts for all operating systems that 
 3. Extract the DXClient.zip file.
 
     !!! note
-        The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, please run the following command before proceeding further.
+        The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, run the following command before proceeding further.
 
         ```bash
         export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
@@ -52,7 +57,7 @@ In addition to that the package includes scripts for all operating systems that 
 4. Run `docker load < dxclient.tar.gz`
 
 5. Optional: Add DXClient to your PATH.
-     Open terminal, add path to the DXClient bin directory to your PATH variable, to be able to call DXClient from any directory. If you plan to run multiple versions of DXClient on the same system in parallel, you may want to skip this step.
+     Open terminal and add path to the DXClient bin directory to your PATH variable to be able to call DXClient from any directory. If you plan to run multiple versions of DXClient on the same system in parallel, you may want to skip this step.
 
     ```bash
     export PATH=<working-directory>/bin:$PATH
@@ -67,9 +72,9 @@ In addition to that the package includes scripts for all operating systems that 
     ```
 
     !!! note
-        You will loose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
+        You will lose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
 
-6. Set appropriate permissions
+6. Set appropriate permissions.
 
     ```bash
     chmod xxx <working-directory>/bin
@@ -85,13 +90,14 @@ In addition to that the package includes scripts for all operating systems that 
 
 9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
 
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
+    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
 
 10. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
 
-11. By default, the logs will be available in UTC format, If needed synchronize your local timezone from host to container using an environment variable as given in the example below.
+11. By default, the logs will be available in UTC format. If needed, synchronize your local timezone from host to container using an environment variable as shown in the example below.
 
     Example Usage:
+    
     ```bash
     export Timezone=Asia/Kolkata
     ```
@@ -99,9 +105,10 @@ In addition to that the package includes scripts for all operating systems that 
     ```bash
     SET Timezone=Asia/Kolkata
     ```
+    
 12. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
 
-## Installation using the source code package
+## Installing DXClient using the source code package
 
 !!! note
     You are encouraged to use the DXClient container image package from CF196 onwards for easier installation.
@@ -169,7 +176,7 @@ In addition to that the package includes scripts for all operating systems that 
         node bin/dxclient
         ```
 
-## Uninstallation of the source code package
+## Uninstalling DXClient using the source code package
 
 -   To uninstall the DXClient tool, perform the following commands:
 
@@ -199,13 +206,13 @@ In addition to that the package includes scripts for all operating systems that 
     make_unlink.bat
     ```
 
-## Verify your DXClient installation
+## Verifying your DXClient installation
 
 Successful installation of the DXClient tool can be checked by using the "`dxclient -V`" command, which should show the version of the DXClient tool installed.
 
-Once installed, commands can be executed using the DXClient tool to perform CI / CD actions on HCL DX 9.5 servers.
+Once installed, commands can be executed using the DXClient tool to perform CI/CD actions on HCL DX 9.5 servers.
 
-!!! note
+!!!note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
     -   HCL DX 9.5 CF210 release: **V1.19.0
@@ -283,9 +290,9 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
 
-## DXClient configuration
+## Configuring DXClient
 
-Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.
+Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
 
 ```json
 {
