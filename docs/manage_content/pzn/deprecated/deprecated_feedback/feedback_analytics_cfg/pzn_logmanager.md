@@ -1,4 +1,4 @@
-# LogManager
+# Log Manager
 
 When data is logged by either logging beans or rules, log events are generated and are routed to a controller for processing. LogManager is the class that implements this controller. There is a single instance of the LogManager within the Personalization run-time. It is responsible for receiving all logged events and distributing these events to listener objects that implement the LogListener interface and are registered with the LogManager.
 

@@ -1,4 +1,4 @@
-# Glossary
+# Index
 
 |Term|Description|
 |----------|--------------------------------|

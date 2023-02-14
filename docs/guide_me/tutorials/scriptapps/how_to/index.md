@@ -1,4 +1,4 @@
-# How-To Guides
+# How to Guide
 - [Deploy a React App as a Script Application](01_basic_deployments.md)
 - [Deploy JavaScript Libraries/Dependencies as a DX Module](02_dependencies_as_module.md)
 - [Deploy A Script Application Without its Dependencies](03_apps_excluding_dependencies.md)

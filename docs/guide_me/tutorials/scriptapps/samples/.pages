@@ -1,3 +1,4 @@
 title: Sample DX Sites
 nav:
+    - index.md
     - woodburn_insurance_demo

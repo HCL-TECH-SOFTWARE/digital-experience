@@ -1,10 +1,10 @@
 title: Deliver Web Content
 nav:
-    - ...
     - Vanity URLs: vanity_url
     - Syndication: syndication
     - WebDAV: webdav
     - Content as a Service Pages: content_as_a_service
     - Previewing as Another User: preview_another_user
     - Social Media Publisher: socialmedia_publisher
+    - ...
 
