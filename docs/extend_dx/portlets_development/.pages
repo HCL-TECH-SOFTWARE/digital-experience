@@ -15,4 +15,5 @@ nav:
     - Portlet Development Reference: portlet_dev_ref
     - Predefined Public Render Parameters: predefined_public_render_params
     - jsrsamp.md
+    - Usage: usage
 

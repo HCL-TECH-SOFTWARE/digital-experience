@@ -2,8 +2,8 @@ title: Development Tools
 nav:
     - index.md
     - DXClient: dxclient
-    - WebDAV: webdav
     - Web Experience Factory: wef
+    - WSRP services: wsrp
     - Dojo Support: dojo
     - Web Developer Toolkit: web_developer_toolkit
     - Extending DX's cCasspath: ext_wp_classpath
