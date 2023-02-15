@@ -1,4 +1,4 @@
-# Index
+# System Requirements Glossary
 
 |Term|Description|
 |----------|--------------------------------|
