@@ -14,10 +14,10 @@ You can enable the following trace loggers for the WSRP implementation:
 
 |Component|Trace string|
 |---------|------------|
-|Administration|com.ibm.wps.command.wsrp.\*=all com.ibm.wps.wsrp.cmd.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
-|Consumer|com.ibm.wps.wsrp.consumer.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
-|Producer|com.ibm.wps.wsrp.producer.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
-|XMLAccess|com.ibm.wps.command.xml.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
+|Administration|com.ibm.wps.command.wsrp.*=all:com.ibm.wps.wsrp.cmd.*=all:com.ibm.wps.wsrp.common.*=all:com.ibm.ws.websvcs.trace.MessageTrace=all|
+|Consumer|com.ibm.wps.wsrp.consumer.*=all:com.ibm.wps.wsrp.common.*=all:com.ibm.ws.websvcs.trace.MessageTrace=all|
+|Producer|com.ibm.wps.wsrp.producer.*=all:com.ibm.wps.wsrp.common.*=all:com.ibm.ws.websvcs.trace.MessageTrace=all|
+|XMLAccess|com.ibm.wps.command.xml.*=all:com.ibm.wps.wsrp.common.*=all:com.ibm.ws.websvcs.trace.MessageTrace=all|
 
 ## Debugging and monitoring the WSRP protocol flow
 
