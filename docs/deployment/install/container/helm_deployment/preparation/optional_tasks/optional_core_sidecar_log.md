@@ -6,7 +6,7 @@ See the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/
 
 **Shared volume**
 
-The DX Core container and sidecar containers share the same volume. This allows DX Core to write its logs, and have the sidecar containers read those logs. The logs are mounted at /opt/HCL/logs (and symbolically linked from /opt/HCL/wp_profile/logs) in the DX Core container, and at /var/logs/ in the sidecar containers. The different directory paths emphasize that sidecar containers can only read files written by Core under its logs directory. Files in other directories (such as the profile) are not available to the sidecars.
+The DX Core container and sidecar containers share the same volume for the logs as well as the [custom PVCs defined in the values](../mandatory_tasks/prepare_persistent_volume_claims.md#configuring-additional-core-persistent-volumes). This allows DX Core to write its logs, and have the sidecar containers read those logs. The logs are mounted at /opt/HCL/logs (and symbolically linked from /opt/HCL/wp_profile/logs) in the DX Core container. The sidecar containers can only read files written by Core under its logs directory and in the `mountPath` specified in the custom PVCs (`volumes.core.customPVCs`). Files in other directories (such as the profile) are not available to the sidecars.
 
 **Default configuration**
 
@@ -20,28 +20,59 @@ Two sidecar containers are launched with Core:
 Use the following syntax to configure more sidecar containers for additional log files in the custom-values.yaml file.
 
 !!!important
-    You can only expose log files inside of the /var/logs/ directory.
+    You can only expose log files inside of the /opt/HCL/logs directory and the `mountPath` specified for each entry in `volumes.core.customPVCs`.
 
-    ```yaml
-    logging:
-      # Core specific logging configuration
-      core:
-        # List of sidecar containers mapping a container name to a file path for a log file to be exposed
-        # Each element must consist of a `containerName` and a `logFilePath`
-        # Example:
-        # customLogSidecarContainers:
-        #   - containerName: "trace"
-        #     logFilePath: "/var/logs/WebSphere_Portal/trace.log"
-        customLogSidecarContainers: []
-    ```
+```yaml
+logging:
+  # Core specific logging configuration
+  core:
+    level: ""
+    # List of sidecar containers mapping a container name to a file path for a log file to be exposed
+    # Each element must consist of a `containerName` and a `logFilePath`, the latter must be located in one of the mounted volumes.
+    # The mounted volumes include the path `/opt/HCL/logs` and any custom PVC mountPaths specified in `volumes.core.customPVCs`
+    # `logFilePath` can be a file name pattern, use `*` in file path to make generic value. For example `/opt/HCL/logs/*/test.log` or `/opt/HCL/logs/verbosegc.*`
+    # Example:
+    # customLogSidecarContainers:
+    #   - containerName: "trace"
+    #     logFilePath: "/opt/HCL/logs/WebSphere_Portal/trace.log"
+    customLogSidecarContainers: []
+```
 
 !!!example "Example:"
-    The following example starts a new sidecar container, and exposes the logs in /var/logs/WebSphere\_Portal/trace.log.
+    The following example starts a new sidecar container, and exposes the logs in /opt/HCL/logs/WebSphere\_Portal/trace.log.
 
     ```yaml
     logging:
       core:
         customLogSidecarContainers:
           - containerName: "trace"
-            logFilePath: "/var/logs/WebSphere_Portal/trace.log"
+            logFilePath: "/opt/HCL/logs/WebSphere_Portal/trace.log"
     ```
+
+## Config Wizard logs
+
+We can use the combination of [custom PVCs defined in the values](../mandatory_tasks/prepare_persistent_volume_claims.md#configuring-additional-core-persistent-volumes) and `customLogSidecarContainers` to access the logs of the Config Wizard and make them available to Kubernetes.
+
+
+!!!example "Example:"
+    The following example creates a custom PVC for the Config Wizard logs and starts a new sidecar container that tails the `SystemOut.log` of it.
+
+    ```yaml
+    volumes:
+      core:
+        customPVCs:
+          - name: "cw-log-pvc"
+            accessModes:
+              - "ReadWriteOnce"
+            mountPath: "opt/HCL/AppServer/profiles/cw_profile/logs/server1/"
+            storageClassName: "mystorageclass"
+            requests:
+              storage: "10Gi"
+    logging:
+      core:
+        customLogSidecarContainers:
+          - containerName: "cw-system-out-log"
+            logFilePath: "/opt/HCL/AppServer/profiles/cw_profile/logs/server1/SystemOut.log"
+    ```
+
+    The logs can then be accessed using `kubectl logs -n <namespace> <release-name>-core-0 cw-system-out-log`.
