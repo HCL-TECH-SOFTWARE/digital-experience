@@ -228,6 +228,7 @@ networking:
   addon:
     contentComposer:
       # Enables/Disables CSP frame-ancestor header
+      # Note: 'self' is always added when this is enabled to enable DX internal features
       # see: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
       cspFrameAncestorsEnabled: false
       # Add list of allowed source URLS to the the CSP frame-ancestor header this will only reflect if cspFrameAncestorsEnabled is set to true
