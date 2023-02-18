@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
+      <a href="../../../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../../../whatsnew/cf20/newcf209/"
+    href="../../../../../../../whatsnew/cf20/newcf210/"
     class="md-nav__link"
   >
     What's New
@@ -1767,7 +1767,7 @@
     id="__nav_6_2_5"
     
   />
-                   
+                     
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../../../inline_editing/">Inline Editing Strategies</a>
 
@@ -1973,7 +1973,7 @@
     id="__nav_6_7"
     
   />
-                                           
+                                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../../../../pzn/">Personalization</a>
 
@@ -2063,25 +2063,40 @@
 <ol>
 <li>
 <p>Specify how the search results displayed in the menu element are sorted.</p>
+<p>a. <strong>Prior to CF210</strong>, there is only one sort order option for all sort fields:</p>
+<p><img alt="" src="../_img/Old_Menu_Sorting.png" /></p>
 <ol>
 <li>
 <p>Select the sort order for the results.</p>
-<ul>
-<li>Select <strong>Ascending</strong> to sort results in ascending order.</li>
-<li>Select <strong>Descending</strong> to sort results in descending order.<ol>
-<li>Select the content item fields on which you want to base the sort order.</li>
-</ol>
 </li>
-</ul>
+<li>
+<p>Select <strong>Ascending</strong> to sort results in ascending order.</p>
+</li>
+<li>
+<p>Select <strong>Descending</strong> to sort results in descending order.</p>
+</li>
+<li>
+<p>Select the content item fields on which you want to base the sort order.</p>
+</li>
+</ol>
 <p>You can select a primary field and two extra fields to provide more fine-grained sorting of the results. The sort fields are applied in order, so that results are sorted first by the primary field, then by the secondary field, and finally by the tertiary field.</p>
-</li>
+<p>b. <strong>Starting CF210</strong>, there will be an option to set the sort order for each sort field selected:</p>
+<p><img alt="" src="../_img/CF210_Menu_Sorting.png" /></p>
+<ol>
+<li>Select 3 sorting fields with corresponding sort order. The options are arranged by which the field results will be sorted first. Results are sorted first by the primary field and by its sort order, then by the secondary field and its sort order, and finally by the tertiary field.</li>
 </ol>
+<p>Limitation:</p>
+<p>The same key can be selected for all 3 fields.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On creation, the default sort key is the title and the order is ascending</p>
+</div>
 </li>
 <li>
 <p>Specify paging options for the menu element.</p>
 <ol>
 <li>
-<p>Enter the number of items that are displayed in each menu page.</p>
+<p>Enter the number of items that are displayed on each menu page.</p>
 </li>
 <li>
 <p>Enter the number of the start page for displaying search results in the menu.</p>
@@ -2128,7 +2143,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 31, 2023</span>
       
     
   </small>

@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
+      <a href="../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../whatsnew/cf20/newcf209/"
+    href="../../../../whatsnew/cf20/newcf210/"
     class="md-nav__link"
   >
     What's New
@@ -549,7 +549,7 @@
     id="__nav_7_3"
     
   />
-                                           
+                                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../portlets_development/">Portlet Development</a>
 
@@ -610,7 +610,7 @@
   />
                            
   <div class="md-nav__link md-nav__link--index ">
-    <a href="../">Deploy DX components using DXClient</a>
+    <a href="../">DXClient</a>
 
      
     <label for="__nav_7_4_2">
@@ -621,12 +621,12 @@
     
   <nav
     class="md-nav md-nested-nav"
-    aria-label="Deploy DX components using DXClient"
+    aria-label="DXClient"
     data-md-level="3"
   >
     <label class="md-nav__title" for="__nav_7_4_2">
       <span class="md-nav__icon md-icon"></span>
-      Deploy DX components using DXClient
+      DXClient
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
        
@@ -644,7 +644,7 @@
   />
                                              
   <div class="md-nav__link md-nav__link--index ">
-    <a href="../dxclient_artifact_types/">DXClient Artifact Types</a>
+    <a href="../dxclient_artifact_types/">Dxclient artifact types</a>
 
      
     <label for="__nav_7_4_2_2">
@@ -706,8 +706,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#accessing-the-configwizard-admin-console-in-a-container-environment" class="md-nav__link">
-    Accessing the ConfigWizard admin console in a container environment
+  <a href="#dxconnect-installation-only-applicable-for-on-premises-installations" class="md-nav__link">
+    DXConnect Installation (only applicable for on-premises installations)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-configuration-wizard-admin-console-in-a-container-environment" class="md-nav__link">
+    Accessing the Configuration Wizard admin console in a container environment
   </a>
   
 </li>
@@ -746,13 +753,27 @@
 </li>
 
    
-                
-<li class="md-nav__item">
-  <a href="../../../../webdav" class="md-nav__link">
-    WebDAV
-  </a>
-</li>
+             
+  
+<li class="md-nav__item md-nav__item--nested">
     
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_4_3"
+    type="checkbox"
+    id="__nav_7_4_3"
+    
+  />
+               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../wef/">Web experience factory</a>
+
+     
+  </div>
+    
+</li>
+
+   
              
   
 <li class="md-nav__item md-nav__item--nested">
@@ -764,11 +785,15 @@
     id="__nav_7_4_4"
     
   />
-               
+                             
   <div class="md-nav__link md-nav__link--index ">
-    <a href="../../wef/">Web experience factory</a>
+    <a href="../../wsrp/">WSRP services</a>
 
      
+    <label for="__nav_7_4_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
   </div>
     
 </li>
@@ -1055,8 +1080,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#accessing-the-configwizard-admin-console-in-a-container-environment" class="md-nav__link">
-    Accessing the ConfigWizard admin console in a container environment
+  <a href="#dxconnect-installation-only-applicable-for-on-premises-installations" class="md-nav__link">
+    DXConnect Installation (only applicable for on-premises installations)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-configuration-wizard-admin-console-in-a-container-environment" class="md-nav__link">
+    Accessing the Configuration Wizard admin console in a container environment
   </a>
   
 </li>
@@ -1085,39 +1117,41 @@
 
 
 <h1 id="dxconnect">DXConnect</h1>
-<p>DXConnect is a servlet-based internal application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later releases, under the <a href="../../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/">Configuration Wizard profile - <code>cw_profile</code></a>. DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands. This topic covers the DXConnect installation and configuration instructions.</p>
+<p>DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the <a href="../../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/">Configuration Wizard profile - <code>cw_profile</code></a>. DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.</p>
+<p>For supported on-premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to <a href="./">DXConnect</a>) and started under the Configuration Wizard (<code>cw_profile</code>) on target servers. For more information on starting the Configuration Wizard, refer to <a href="../../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run/">Accessing the Configuration Wizard</a>.</p>
+<p>DXConnect is pre-configured in container environments.</p>
+<p>DXConnect has to be installed manually on on-premise environments.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Configuration Wizard Administrator credentials are required to access the DXConnect application.</p>
+</div>
 <h2 id="authentication">Authentication</h2>
-<p>DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in an HCL DX 9.5 CF19 and later deployment, under the Configuration Wizard profile - <code>cw_profile</code>. DXConnect enables the DXClient tool to connect over an HTTPS connection from a client development workstation or automation server to a target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.</p>
-<p><strong>Authentication</strong></p>
 <p>DXConnect requires the <code>cw_profile</code> Administrator security role to access the application servlet APIs.</p>
-<p><strong>DXConnect Installation</strong></p>
-<p>To install DXConnect use the command below:</p>
-<div class="highlight"><pre><span></span><code>./ConfigEngine.sh install-dxconnect-application
+<h2 id="dxconnect-installation-only-applicable-for-on-premises-installations">DXConnect Installation (only applicable for on-premises installations)</h2>
+<p>To install DXConnect under Configuration Wizard server, you must issue the command to the ConfigEngine script present under 'wp_profile'.
+Navigate to the ConfigEngine script location under 'wp_profile':</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/opt/HCL/wp_profile/ConfigEngine/
 </code></pre></div>
-<p>This task will not only install the DxConnect application, but it will create the "DXC_ConfigSettings" WAS Resource Environment Provider and will create two custom properties in that REP:</p>
+<p>To install DXConnect, use the command below:</p>
+<div class="highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>install-dxconnect-application
+</code></pre></div>
+<p>This task not only installs the DXConnect application, but it also creates the "DXC_ConfigSettings" WAS Resource Environment Provider and creates two custom properties in that REP:</p>
 <div class="highlight"><pre><span></span><code>DXCONNECT_MAX_MEMORY_SIZE_MB
 DXCONNECT_MAX_FILE_SIZE_MB
 </code></pre></div>
-<p>To remove DXConnect use the command below:</p>
-<div class="highlight"><pre><span></span><code>./ConfigEngine.sh remove-dxconnect-application
+<p>To remove DXConnect, use the command below:</p>
+<div class="highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>remove-dxconnect-application
 </code></pre></div>
-<p>To re-install DXConnect use the command below:</p>
-<div class="highlight"><pre><span></span><code>./ConfigEngine.sh reinstall-dxconnect-application
+<p>To re-install DXConnect, use the command below:</p>
+<div class="highlight"><pre><span></span><code>./ConfigEngine.sh<span class="w"> </span>reinstall-dxconnect-application
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<ol>
-<li>
-<p>In Standalone and Cluster setups, the <code>ConfigEngine</code> task should be run under the <code>wp_profile</code> to have DXConnect installed in the correct location, and a restart of the <code>cw_profile</code> server may be required.</p>
-<p>To verify it is installed on a given HCL DX Server 9.5 with CF19 or later, navigate to the <strong>Configuration Wizard</strong> Admin console and then under <strong>Enterprise Applications</strong>. The <code>dxconnect</code> application will appear on the console as shown in the example below. For more information on accessing and working with the Configuration Wizard, refer to <a href="../../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run/">Accessing the Configuration Wizard</a> topics.</p>
+<p>In on-premise environments setups, you must run the <code>ConfigEngine</code> task under the <code>wp_profile</code> to have DXConnect installed in the correct location. A restart of the <code>cw_profile</code> server may be required.</p>
+<p>To verify if DXConnect is installed on a given HCL DX Server 9.5 with CF19 or later, navigate to the <strong>Configuration Wizard</strong> Admin console and then under <strong>Enterprise Applications</strong>. The <code>dxconnect</code> application appears on the console as shown in the example below. For more information on accessing and working with the Configuration Wizard, refer to <a href="../../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run/">Accessing the Configuration Wizard</a> topics.</p>
 <p><img alt="DXConnect installation" src="../../../../images/HCL_DXConnect_installation.png" /></p>
-</li>
-<li>
-<p>In Red Hat OpenShift, the route for DXConnect is available under the name dx-deployment-service-dxconnect. For the other supported platforms, there is only one route path as usual.</p>
-</li>
-</ol>
 </div>
-<h2 id="accessing-the-configwizard-admin-console-in-a-container-environment">Accessing the ConfigWizard admin console in a container environment</h2>
+<h2 id="accessing-the-configuration-wizard-admin-console-in-a-container-environment">Accessing the Configuration Wizard admin console in a container environment</h2>
 <p>You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to <a href="https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html">Accessing the ConfigWizard admin console in a container environment</a>.</p>
 <details class="info" open="open">
 <summary>Related information</summary>
@@ -1131,7 +1165,7 @@ DXCONNECT_MAX_FILE_SIZE_MB
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
       
     
   </small>

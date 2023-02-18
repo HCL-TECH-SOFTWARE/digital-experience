@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
+      <a href="../../../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../../../whatsnew/cf20/newcf209/"
+    href="../../../../../../../whatsnew/cf20/newcf210/"
     class="md-nav__link"
   >
     What's New
@@ -1665,9 +1665,28 @@
 <p>If you change your security configuration, you might need to replace your old HCL Digital Experience administrator user ID with a new HCL Digital Experience administrator user ID.</p>
 <p>Complete the following steps to replace the HCL Digital Experience administrator user ID:</p>
 <p><strong>Important cluster note:</strong> If you are using HCL Web Content Manager within your clustered environment, you must complete these steps on every node in the cluster. If Web Content Manager is not configured, complete these steps only on the primary node.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These instructions are applicable to on-premises deployment. </p>
+</div>
 <ol>
 <li>
-<p>Create a user in the <strong>Manage Users and Groups</strong> portlet to replace the current HCL Digital Experience administrative user.</p>
+<p>Log in to HCL Digital Experience and click the <strong>Open applications</strong> menu. Go to <strong>Administration &gt; Security</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Manage Users and Groups</strong> page, click <strong>New User</strong> to create the user to replace the current HCL Digital Experience administrative user.</p>
+</li>
+<li>
+<p>Complete the following required fields:</p>
+<ul>
+<li>User ID</li>
+<li>Password</li>
+<li>Confirm Password</li>
+<li>Last Name</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>OK</strong> to save your changes.</p>
 </li>
 <li>
 <p>Run the following task to replace the old HCL Digital Experience administrative user with the new user:</p>
@@ -1759,7 +1778,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 15, 2023</span>
       
     
   </small>

@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
+      <a href="../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../whatsnew/cf20/newcf209/"
+    href="../../../whatsnew/cf20/newcf210/"
     class="md-nav__link"
   >
     What's New
@@ -549,7 +549,7 @@
     id="__nav_7_3"
     
   />
-                                           
+                                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../portlets_development/">Portlet Development</a>
 
@@ -610,7 +610,7 @@
   />
                            
   <div class="md-nav__link md-nav__link--index md-nav__link--active">
-    <a href="./">Deploy DX components using DXClient</a>
+    <a href="./">DXClient</a>
 
      
     <label for="__nav_7_4_2">
@@ -621,12 +621,12 @@
     
   <nav
     class="md-nav md-nested-nav"
-    aria-label="Deploy DX components using DXClient"
+    aria-label="DXClient"
     data-md-level="3"
   >
     <label class="md-nav__title" for="__nav_7_4_2">
       <span class="md-nav__icon md-icon"></span>
-      Deploy DX components using DXClient
+      DXClient
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
        
@@ -644,7 +644,7 @@
   />
                                              
   <div class="md-nav__link md-nav__link--index ">
-    <a href="dxclient_artifact_types/">DXClient Artifact Types</a>
+    <a href="dxclient_artifact_types/">Dxclient artifact types</a>
 
      
     <label for="__nav_7_4_2_2">
@@ -697,13 +697,27 @@
 </li>
 
    
-                
-<li class="md-nav__item">
-  <a href="../../../webdav" class="md-nav__link">
-    WebDAV
-  </a>
-</li>
+             
+  
+<li class="md-nav__item md-nav__item--nested">
     
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_4_3"
+    type="checkbox"
+    id="__nav_7_4_3"
+    
+  />
+               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../wef/">Web experience factory</a>
+
+     
+  </div>
+    
+</li>
+
+   
              
   
 <li class="md-nav__item md-nav__item--nested">
@@ -715,11 +729,15 @@
     id="__nav_7_4_4"
     
   />
-               
+                             
   <div class="md-nav__link md-nav__link--index ">
-    <a href="../wef/">Web experience factory</a>
+    <a href="../wsrp/">WSRP services</a>
 
      
+    <label for="__nav_7_4_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
   </div>
     
 </li>
@@ -999,27 +1017,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirement" class="md-nav__link">
-    Requirement
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dxclient-installation" class="md-nav__link">
-    DXClient installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dxconnect" class="md-nav__link">
-    DXConnect
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#architecture" class="md-nav__link">
     Architecture
   </a>
@@ -1027,29 +1024,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-using-the-container-image" class="md-nav__link">
-    Installing using the container image
+  <a href="#installing-dxclient-using-the-container-package" class="md-nav__link">
+    Installing DXClient using the container package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dxclient-installation-configuration" class="md-nav__link">
-    DXClient installation configuration
+  <a href="#installing-dxclient-using-the-source-code-package" class="md-nav__link">
+    Installing DXClient using the source code package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-using-the-node-package-file" class="md-nav__link">
-    Installing using the node package file
+  <a href="#uninstalling-dxclient-using-the-source-code-package" class="md-nav__link">
+    Uninstalling DXClient using the source code package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verify-the-dxclient-installation" class="md-nav__link">
-    Verify the DXClient installation
+  <a href="#verifying-your-dxclient-installation" class="md-nav__link">
+    Verifying your DXClient installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-dxclient" class="md-nav__link">
+    Configuring DXClient
   </a>
   
 </li>
@@ -1062,15 +1066,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dxclient-help-commands" class="md-nav__link">
-    DXClient Help commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-the-configwizard-admin-console-in-a-container-environment" class="md-nav__link">
-    Accessing the ConfigWizard admin console in a container environment
+  <a href="#dxclient-command-line-help" class="md-nav__link">
+    DXClient command line help
   </a>
   
 </li>
@@ -1099,111 +1096,31 @@
 
 
 <h1 id="dxclient">DXClient</h1>
-<p>DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms.</p>
-<div class="admonition note">
-<p class="admonition-title">Important</p>
-<p>DXClient version is mostly forward and backward compatible with the DX CF versions, however, in some cases it might not work as expected if the CF versions are different. Hence, ensure that the CF versions of both DXClient and DX Core are the same in your installation.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>DXClient is enabled in supported Kubernetes platforms from HCL Digital Experience 9.5 CF192 and later releases:</p>
-<ul>
-<li>DXClient is available as a container image from HCL DX 9.5 CF196 and later releases. See the <a href="#dxclient-installation">DXClient installation</a> for more details.</li>
-<li>DXClient also exists as <a href="https://nodejs.org/en/">Node.js</a>-based CLI tool and requires Node.js to be installed as a prerequisite. </li>
-</ul>
-</div>
-<p>DXclient is a CLI-based tool wrapped in a container image. This tool will be capable of executing artifacts connecting remotely to DX servers in standalone, cluster, or in Kubernetes environment. The container version of this tool is available from CF196 onwards.</p>
-<h2 id="requirement">Requirement</h2>
-<p>By default docker container runtime is supported, however, you may use any container runtime that implements OCI Runtime Specification. For example, Podman.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>DXClient installation using other container runtimes</p>
-</div>
-<p>To install DXClient using any OCI-based Container Runtimes, run this command before Step 6 under <a href="#dxclient-installation">DXClient installation</a>:</p>
-<div class="highlight"><pre><span></span><code>export CONTAINER_RUNTIME=&lt;YOUR_CONTAINER_RUNTIME&gt; 
-
-For example: export CONTAINER_RUNTIME=podman
-</code></pre></div>
-<h2 id="dxclient-installation">DXClient installation</h2>
-<p>DXClient package comes with a script that you can use to run the container image. This script creates a store directory and copies the input files from the absolute path to the shared volume location.</p>
+<p>DXClient is a command line tool featuring a single, unified interface to all HCL DX automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. </p>
+<p>DXClient can take artifacts developed locally and deploy them to HCL DX servers independently of whether these are deployed on-premises platforms in standalone, cluster, or farm-topologies, or in a container environment.</p>
+<p>DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.</p>
+<p>DXClient comes with two deployment options:</p>
 <ol>
 <li>
-<p>Navigate to the <code>&lt;working-directory&gt;</code> folder, where you wish to use dxclient from.</p>
+<p>The default deployment option is the DXClient container package. DXClient is packaged as a container that can be run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. See the <a href="#dxclient-installation">DXClient installation</a> for more details.</p>
 </li>
 <li>
-<p>Run <code>docker load &lt; dxclient.tar.gz</code>.</p>
-</li>
-<li>
-<p>Add the wrapper script under the bin directory to the PATH variable.</p>
-<p><div class="highlight"><pre><span></span><code>export PATH=&lt;working-directory&gt;/bin:$PATH
-</code></pre></div>
-For Microsoft Windows platforms:</p>
-<p>use <code>dxclient.batscript</code> under the bin directory to set the PATH variable.</p>
-</li>
-<li>
-<p>Set appropriate permission.
-    <div class="highlight"><pre><span></span><code>chmod xxx &lt;working-directory&gt;/bin
-</code></pre></div></p>
-</li>
-<li>
-<p>Run <code>dxclient -V</code> to verify that the dxclient command line is installed.</p>
-</li>
-<li>
-<p>A folder named <code>store</code> will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the <code>VOLUME_DIR</code> to the desired directory name and run your task. For example,</p>
-<div class="highlight"><pre><span></span><code>export VOLUME_DIR=storeForScriptApplication
-</code></pre></div>
-</li>
-<li>
-<p>You can find the configuration, logger, output, and sample files under location  <code>&lt;working-directory&gt;/store</code>.</p>
-<p>Common command arguments can be pre-configured inside the config.json file available under the <code>&lt;working-directory&gt;/store</code> folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.</p>
-</li>
-<li>
-<p>Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.</p>
-</li>
-<li>
-<p>By default, the logs will be available in UTC format, If needed synchronize your local timezone from host to container using an environment variable as given in the example below.</p>
+<p>For backward compatibility, we also still offer DXClient Javascript source codes. Customers who want to rely on this deployment option need to install their own Node.js and npm runtime environment in the correct version and must install necessary dependencies as needed.</p>
 </li>
 </ol>
-<p>Example Usage:
-<div class="highlight"><pre><span></span><code>export Timezone=Asia/Kolkata
-</code></pre></div>
-For Microsoft Windows platforms:
-<div class="highlight"><pre><span></span><code>SET Timezone=Asia/Kolkata
-</code></pre></div>
-10. The attribute <code>-dxConnectHostname</code> has been deprecated and must be replaced with <code>-hostname</code> wherever necessary.</p>
-<h2 id="dxconnect">DXConnect</h2>
-<p>DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the <a href="../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/">Configuration Wizard profile - <code>cw_profile</code></a>. DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.</p>
 <h2 id="architecture">Architecture</h2>
+<p>The following image illustrates the DXClient Architecture diagram:</p>
 <p><img alt="HCL DXclient Architecture diagram" src="../../../images/HCLDXClient_Architecture_Diagram.jpg" /></p>
+<h2 id="installing-dxclient-using-the-container-package">Installing DXClient using the container package</h2>
+<p>The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification (for example, Docker or Podman).</p>
+<p>In addition, the package includes scripts for all operating systems that make it simpler to work with the container image. These scripts handle the storage for the container and sync input files with the container itself.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>When you upgrade to use the container image DXClient, you must first uninstall the Node.js DXClient.</p>
+</div>
 <ol>
 <li>
-<p>HCL DX 9.5 CF19 or later version is installed on target servers, on <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0013514&amp;sys_kb_id=17d6296a1b5df34077761fc58d4bcb03">supported on premises platforms</a> (Microsoft Windows, Linux).</p>
-</li>
-<li>
-<p>Beginning with HCL DX 9.5 Container Update CF192 and later releases, the DXConnect Servlet is pre-configured and started on supported Red Hat OpenShift and Kubernetes platforms that DX 9.5 containers are deployed to.</p>
-</li>
-<li>
-<p>For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to <a href="dxconnect/">DXConnect</a>) and started under the Configuration Wizard (<code>cw_profile</code>) on target servers. For more information on starting the Configuration Wizard, refer to <a href="../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run/">Accessing the Configuration Wizard</a>.</p>
-</li>
-</ol>
-</div>
-<div class="admonition remember">
-<p class="admonition-title">Remember</p>
-<p>Configuration Wizard Administrator credentials are required to access the DXConnect application.</p>
-</div>
-<h2 id="installing-using-the-container-image">Installing using the container image</h2>
-<p><strong>Prerequisites:</strong> You must ensure that container runtime is installed on the workstation.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When you upgrade to use the container image DXClient, you should first uninstall the nodejs DXClient.</p>
-</div>
-<p>DXClient package comes with a script that you can use to run the commands within container runtime. This script creates a store directory and copies the input files from the absolute path to the shared volume location.</p>
-<p>See video: <a href="https://www.youtube.com/watch?v=IFr_frVlojc">CI/CD – DXClient in Container</a></p>
-<ol>
-<li>
-<p>Navigate to &lt;working-directory> folder where you wish to use DXClient from.</p>
+<p>Navigate to the <code>&lt;working-directory&gt;</code> folder where you wish to use the DXClient from.</p>
 </li>
 <li>
 <p>Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.</p>
@@ -1211,7 +1128,7 @@ For Microsoft Windows platforms:
 <p class="admonition-title">Note</p>
 <p>If you are upgrading from the node to container image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.</p>
 <p>Syntax for Linux and Apple macOS platforms:
- <div class="highlight"><pre><span></span><code>make unlink
+ <div class="highlight"><pre><span></span><code>make<span class="w"> </span>unlink
 </code></pre></div></p>
 <p>Syntax for Microsoft Windows platforms:
  <div class="highlight"><pre><span></span><code>make_unlink.bat
@@ -1219,98 +1136,66 @@ For Microsoft Windows platforms:
 </div>
 </li>
 <li>
-<p>Extract the DXClient.zip file locally.</p>
-</li>
-<li>
-<p>To work with multiple versions of DXClient, update the <code>IMAGE_TAG</code> reference in the scripts file under the <code>/bin</code> folder. For example, <code>IMAGE_TAG=v95_CF200_20211201-1021</code>. By default it will be set in the executable script.</p>
-</li>
-<li>
-<p>Run docker load &lt; dxclient.tar.gz.</p>
-</li>
-<li>
-<p>Optional (It is advisable to not set this incase you run multiple DXClient versions in your system). Open terminal, add the execution shell script to the bin directory to the PATH variable, to call dxclient from any directory.</p>
-<div class="highlight"><pre><span></span><code>export PATH=&lt;working-directory&gt;/bin:$PATH
-</code></pre></div>
-<p>For Microsoft Windows platforms:</p>
-<p>Open command prompt, add <code>dxclient.bat</code> script in the bin directory to the PATH variable, to call DXClient from any directory.</p>
-<div class="highlight"><pre><span></span><code>set PATH=&lt;working-directory&gt;\bin;%PATH%
-</code></pre></div>
+<p>Extract the DXClient.zip file.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You will loose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.</p>
+<p>The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, run the following command before proceeding further.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CONTAINER_RUNTIME</span><span class="o">=</span>&lt;YOUR_CONTAINER_RUNTIME&gt;
+For<span class="w"> </span>example:<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">CONTAINER_RUNTIME</span><span class="o">=</span>podman
+</code></pre></div>
 </div>
 </li>
 <li>
-<p>Set appropriate permission.</p>
-<div class="highlight"><pre><span></span><code>chmod xxx &lt;working-directory&gt;/bin
+<p>Run <code>docker load &lt; dxclient.tar.gz</code></p>
+</li>
+<li>
+<p>Optional: Add DXClient to your PATH.
+     Open terminal and add path to the DXClient bin directory to your PATH variable to be able to call DXClient from any directory. If you plan to run multiple versions of DXClient on the same system in parallel, you may want to skip this step.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>&lt;working-directory&gt;/bin:<span class="nv">$PATH</span>
+</code></pre></div>
+<p>For Microsoft Windows platforms:</p>
+<p>Open command prompt, add <code>dxclient.bat</code> script in the bin directory to the PATH variable, to call DXClient from any directory.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">set</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>&lt;working-directory&gt;<span class="se">\b</span>in<span class="p">;</span>%PATH%
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will lose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.</p>
+</div>
+</li>
+<li>
+<p>Set appropriate permissions.</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>xxx<span class="w"> </span>&lt;working-directory&gt;/bin
 </code></pre></div>
 </li>
 <li>
-<p>Run 'dxclient -V' to verify that the dxclient command line is installed.</p>
-<p>A folder named store will be created in your working directory. This is the shared volume location to your container.</p>
+<p>Run <code>dxclient -V</code> to verify that the required version of DXClient command line is installed.</p>
 </li>
 <li>
-<p>Configuration, logger, output, and sample files under location - <working-directory>/store.</p>
+<p>A folder named <code>store</code> will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the <code>VOLUME_DIR</code> to the desired directory name and run your task. For example,</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">VOLUME_DIR</span><span class="o">=</span>storeForScriptApplication
+</code></pre></div>
+</li>
+<li>
+<p>You can find the configuration, logger, output, and sample files under location  <code>&lt;working-directory&gt;/store</code>.</p>
+<p>Common command arguments can be pre-configured inside the config.json file available under the <code>&lt;working-directory&gt;/store</code> folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.</p>
+</li>
+<li>
+<p>Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.</p>
+</li>
+<li>
+<p>By default, the logs will be available in UTC format. If needed, synchronize your local timezone from host to container using an environment variable as shown in the example below.</p>
+<p>Example Usage:</p>
+<p><div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">Timezone</span><span class="o">=</span>Asia/Kolkata
+</code></pre></div>
+For Microsoft Windows platforms:
+<div class="highlight"><pre><span></span><code>SET<span class="w"> </span><span class="nv">Timezone</span><span class="o">=</span>Asia/Kolkata
+</code></pre></div></p>
+</li>
+<li>
+<p>The attribute <code>-dxConnectHostname</code> has been deprecated and removed and must be replaced with <code>-hostname</code> wherever necessary.</p>
 </li>
 </ol>
-<p>Common command arguments can be pre-configured inside the <code>config.json</code> file available under <working-directory>/store folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.</p>
-<h2 id="dxclient-installation-configuration">DXClient installation configuration</h2>
-<p>Common command arguments can be pre-configured inside the <code>config.json</code> file available under dist/src/configuration folder. A sample configuration file that could be used on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. In case you wish to override any of the parameters in the config.json, just add them in your command line.</p>
-<div class="highlight"><pre><span></span><code>{
-    &quot;name&quot;:&quot;config.json&quot;,
-    &quot;desc&quot;:&quot;The attributes in this file are used for configuration purpose and those must not be deleted.&quot;,
-    &quot;dxProtocol&quot;: &quot;&quot;,
-    &quot;dxConnectProtocol&quot;: &quot;https&quot;,
-    &quot;hostname&quot;: &quot;&quot;,
-    &quot;dxPort&quot;: &quot;&quot;,
-    &quot;dxSoapPort&quot;: &quot;10033&quot;,
-    &quot;dxConnectPort&quot;: &quot;10202&quot;,
-    &quot;dxContextRoot&quot;:&quot;/wps&quot;,
-    &quot;contenthandlerPath&quot;: &quot;/wps/mycontenthandler&quot;,
-    &quot;projectContext&quot;: &quot;&quot;,
-    &quot;virtualPortalContext&quot;: &quot;&quot;,
-    &quot;xmlConfigPath&quot;: &quot;/wps/config&quot;,
-    &quot;damAPIPort&quot;: &quot;&quot;,
-    &quot;ringAPIPort&quot;: &quot;&quot;,
-    &quot;damAPIVersion&quot;: &quot;v1&quot;,
-    &quot;ringAPIVersion&quot;: &quot;v1&quot;,
-    &quot;dxConnectHostname&quot;: &quot;&quot;,
-    &quot;dxConnectUsername&quot;: &quot;&quot;,
-    &quot;dxConnectPassword&quot;: &quot;&quot;,
-    &quot;dxUsername&quot;: &quot;&quot;,
-    &quot;dxPassword&quot;: &quot;&quot;,
-    &quot;dxProfileName&quot;: &quot;&quot;,
-    &quot;dxProfilePath&quot;: &quot;&quot;,
-    &quot;dxWASUsername&quot;: &quot;&quot;,
-    &quot;dxWASPassword&quot;: &quot;&quot;,
-    &quot;enableLogger&quot;: true,
-    &quot;enableBackup&quot;: &quot;false&quot;,
-    &quot;lastModifiedAfter&quot;: &quot;&quot;,
-    &quot;restoreAsPublished&quot;: false,
-    &quot;targetHostname&quot;: &quot;&quot;,
-    &quot;targetDxConnectPort&quot;: &quot;&quot;,
-    &quot;targetDxConnectUsername&quot;:&quot;&quot;,
-    &quot;targetDxConnectPassword&quot;:&quot;&quot;,
-    &quot;targetDxProfileName&quot;: &quot;&quot;,
-    &quot;targetServerHostname&quot;: &quot;&quot;,
-    &quot;targetServerPort&quot;: &quot;&quot;,
-    &quot;targetServerUsername&quot;:&quot;&quot;,
-    &quot;targetServerPassword&quot;:&quot;&quot;,
-    &quot;targetServerProfileName&quot;: &quot;&quot;,
-    &quot;vaultUsername&quot;: &quot;&quot;,
-    &quot;vaultPassword&quot;: &quot;&quot;,
-    &quot;wcmContentName&quot;: &quot;&quot;,
-    &quot;wcmContentId&quot;: &quot;&quot;,
-    &quot;wcmContentPath&quot;: &quot;&quot;,
-    &quot;wcmSiteArea&quot;: &quot;&quot;,
-    &quot;wcmLibraryId&quot;: &quot;&quot;,
-    &quot;wcmLibraryName&quot;: &quot;&quot;,
-    &quot;wcmProjectName&quot;: &quot;&quot;
-}
-</code></pre></div>
-<h2 id="installing-using-the-node-package-file">Installing using the node package file</h2>
-<p><strong>Prerequisites:</strong> Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.</p>
-<p>See video: <a href="https://www.youtube.com/watch?v=OphJ8-WcLxY">Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience Container Update CF194</a></p>
+<h2 id="installing-dxclient-using-the-source-code-package">Installing DXClient using the source code package</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You are encouraged to use the DXClient container image package from CF196 onwards for easier installation.</p>
@@ -1322,7 +1207,7 @@ For Microsoft Windows platforms:
 <p class="admonition-title">Note</p>
 <p>If you are upgrading from CF19, CF191, or later releases, you should first unlink the current version using the following command before installing the newer version.</p>
 <p>Syntax for Linux and Apple macOS platforms:
-<div class="highlight"><pre><span></span><code>make unlink
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>unlink
 </code></pre></div></p>
 <p>Syntax for Microsoft Windows platforms:
 <div class="highlight"><pre><span></span><code>make_unlink.bat
@@ -1333,23 +1218,21 @@ For Microsoft Windows platforms:
 <p>Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the <a href="https://www.hcltech.com/software/support/release">HCL Software License Portal</a>. Reference the <a href="../../../get_started/system_requirements/docker/">Docker</a> topic for the latest list of HCL DX 9.5 files available for download.</p>
 </li>
 <li>
-<p>Extract the DXClient.zip file locally.</p>
+<p>Extract the DXClient.zip file.</p>
 </li>
 <li>
 <p>From the extracted folder, run the following command.</p>
 <p>For Linux and Apple macOS platforms:</p>
-<div class="highlight"><pre><span></span><code>make install
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>install
 </code></pre></div>
 <p>For Microsoft Windows platforms:</p>
 <div class="highlight"><pre><span></span><code>make_install.bat
 </code></pre></div>
-<p>The following commands are run:</p>
-<p><img alt="Install DXClient tool" src="../../../images/Install_DXClient_Command.png" /></p>
 </li>
 <li>
-<p>Run the following command to link your application to the local npm module in your machine. Refer to the following Notes section before you proceed.</p>
+<p>Optional: Run the following command to link your application to the local npm module in your machine. Refer to the following Notes section before you proceed.</p>
 <p>For Linux and Apple MacOS platforms:</p>
-<div class="highlight"><pre><span></span><code>make link
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>link
 </code></pre></div>
 <p>For Microsoft Windows platforms:</p>
 <div class="highlight"><pre><span></span><code>make_link.bat
@@ -1364,59 +1247,66 @@ For Microsoft Windows platforms:
 <div class="highlight"><pre><span></span><code>./bin/dxclient
 </code></pre></div>
 <p>For Microsoft Windows platforms:</p>
-<div class="highlight"><pre><span></span><code>node bin/dxclient
+<div class="highlight"><pre><span></span><code>node<span class="w"> </span>bin/dxclient
 </code></pre></div>
 </div>
 </li>
 </ol>
-<p><strong>DXClient node uninstalling</strong></p>
+<h2 id="uninstalling-dxclient-using-the-source-code-package">Uninstalling DXClient using the source code package</h2>
 <ul>
 <li>
 <p>To uninstall the DXClient tool, perform the following commands:</p>
 <p>For Linux and Apple MacOS platforms:</p>
-<div class="highlight"><pre><span></span><code>make clean
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>clean
 </code></pre></div>
-<p>For Microsoft Windows platforms:
-<div class="highlight"><pre><span></span><code>make uninstall.bat
-</code></pre></div></p>
+<p>For Microsoft Windows platforms:</p>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>uninstall.bat
+</code></pre></div>
 </li>
 <li>
-<p>To unlink the DXClient tool, perform the following commands:</p>
+<p>Optional: To unlink the DXClient tool, perform the following commands:</p>
 <p>For Linux and Apple MacOS platforms:</p>
-<div class="highlight"><pre><span></span><code>make unlink
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>unlink
 </code></pre></div>
 <p>For Microsoft Windows platforms:</p>
 <div class="highlight"><pre><span></span><code>make_unlink.bat
 </code></pre></div>
 </li>
 </ul>
-<h2 id="verify-the-dxclient-installation">Verify the DXClient installation</h2>
+<h2 id="verifying-your-dxclient-installation">Verifying your DXClient installation</h2>
 <p>Successful installation of the DXClient tool can be checked by using the "<code>dxclient -V</code>" command, which should show the version of the DXClient tool installed.</p>
-<p>Once installed, commands can be executed using the DXClient tool to perform CI / CD actions on HCL DX 9.5 servers.</p>
+<p>Once installed, commands can be executed using the DXClient tool to perform CI/CD actions on HCL DX 9.5 servers.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Refer to the list of features that were released in the following HCL DX 9.5 Container releases:</p>
 <ul>
 <li>
-<p>HCL DX 9.5 CF209 release:</p>
+<p>HCL DX 9.5 CF210 release: **V1.19.0</p>
+<ul>
+<li>Removed paramaters deprecated during CF201 &amp; CF202 deployment.</li>
+<li><a href="dxclient_artifact_types/wcmlibraries/">Exporting and Importing WCM libraries</a></li>
+</ul>
+</li>
+<li>
+<p>HCL DX 9.5 CF209 release: **V1.18.0</p>
 <ul>
 <li><a href="dxclient_artifact_types/dxcoreserver/#restart-dx-core-pods">Restart All Core Pods in Kubernetes Deployment</a></li>
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF208 release:</p>
+<p>HCL DX 9.5 CF208 release: **V1.17.0</p>
 <ul>
 <li><a href="../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#get-all-subscribers-details-for-dam-staging">Get all subscribers details for DAM staging</a></li>
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF207 release:</p>
+<p>HCL DX 9.5 CF207 release: **V1.16.0</p>
 <ul>
 <li>Support to set different Container Runtimes.</li>
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF202 release:</p>
+<p>HCL DX 9.5 CF202 release: **V1.11.0</p>
 <ul>
 <li>
 <p>Deprecated parameter <code>dxConnectHostname</code>. It is recommended that you start using the replacement parameter <code>-hostname</code> starting from CF202 wherever necessary.</p>
@@ -1427,7 +1317,7 @@ For Microsoft Windows platforms:
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF201 release:</p>
+<p>HCL DX 9.5 CF201 release: **V1.10.0</p>
 <ul>
 <li>
 <p>An optional parameter <code>requestId</code> added to <a href="dxclient_artifact_types/themes/">Deploy theme</a>, <a href="dxclient_artifact_types/scriptapplications/#deploy-script-applications">Deploy application</a>, <a href="dxclient_artifact_types/dxcoreserver/#restart-dx-core-server">Restart DX Core server</a>, and <a href="dxclient_artifact_types/virtualportals/">Manage virtual portals</a>.</p>
@@ -1444,14 +1334,14 @@ For Microsoft Windows platforms:
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF200 release:</p>
+<p>HCL DX 9.5 CF200 release: **V1.9.0</p>
 <ul>
 <li><a href="dxclient_artifact_types/wcmlibraries/">Exporting and Importing WCM libraries</a></li>
 <li><a href="dxclient_artifact_types/dxcoreserver/#dx-core-server-configuration-report">DX Core server configuration report</a></li>
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF199 release:</p>
+<p>HCL DX 9.5 CF199 release: **V1.8.0</p>
 <ul>
 <li><a href="../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/">DAM Staging</a></li>
 <li><a href="dxclient_artifact_types/credentialvaultslot/">Create credential vault slot</a></li>
@@ -1461,7 +1351,7 @@ For Microsoft Windows platforms:
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF198 release:</p>
+<p>HCL DX 9.5 CF198 release: **V1.7.0</p>
 <ul>
 <li><a href="dxclient_artifact_types/dam_artifacts/damschemas/">List DAM schemas</a></li>
 <li><a href="dxclient_artifact_types/personalization/">Personalization export and import rules</a></li>
@@ -1470,7 +1360,7 @@ For Microsoft Windows platforms:
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF197 release:</p>
+<p>HCL DX 9.5 CF197 release: **V1.6.0</p>
 <ul>
 <li><a href="dxclient_artifact_types/portlets/">Undeploy portlets</a></li>
 <li><a href="dxclient_artifact_types/themes/">Deploy and undeploy themes</a></li>
@@ -1481,20 +1371,20 @@ For Microsoft Windows platforms:
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF196 release:</p>
+<p>HCL DX 9.5 CF196 release: **V1.5.0</p>
 <ul>
 <li><a href="dxclient_artifact_types/sharedlibrary/">Shared library</a></li>
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF195 release:</p>
+<p>HCL DX 9.5 CF195 release: **V1.4.0</p>
 <ul>
 <li><a href="dxclient_artifact_types/themes/">Undeploy theme</a></li>
 <li><a href="dxclient_artifact_types/wcm_mls_export_import/">MLS export and import of WCM library</a></li>
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF193 release:</p>
+<p>HCL DX 9.5 CF193 release: **V1.2.0</p>
 <ul>
 <li><a href="dxclient_artifact_types/dxcoreserver/">Restart DX Core server</a></li>
 <li><a href="dxclient_artifact_types/deployapplication/">Deploy Application</a></li>
@@ -1503,14 +1393,14 @@ For Microsoft Windows platforms:
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF192 release:</p>
+<p>HCL DX 9.5 CF192 release: **V1.1.0</p>
 <ul>
 <li><a href="dxclient_artifact_types/scriptapplications/">Undeploy script applications</a></li>
 <li><a href="dxclient_artifact_types/themes/">Deploy theme</a> (EAR and WebDAV based)</li>
 </ul>
 </li>
 <li>
-<p>HCL DX 9.5 CF19 release:</p>
+<p>HCL DX 9.5 CF19 release: **V1.0.0</p>
 <ul>
 <li><a href="dxclient_artifact_types/portlets/">Deploy Portlets</a></li>
 <li><a href="dxclient_artifact_types/scriptapplications/">Deploy script applications</a></li>
@@ -1520,115 +1410,167 @@ For Microsoft Windows platforms:
 </li>
 </ul>
 </div>
+<h2 id="configuring-dxclient">Configuring DXClient</h2>
+<p>Common command arguments can be pre-configured inside the <code>config.json</code> file available under dist/src/configuration folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;config.json&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;desc&quot;</span><span class="p">:</span><span class="s2">&quot;The attributes in this file are used for configuration purpose and those must not be deleted.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxProtocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxConnectProtocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxSoapPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10033&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxConnectPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10202&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxContextRoot&quot;</span><span class="p">:</span><span class="s2">&quot;/wps&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;contenthandlerPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/wps/mycontenthandler&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;projectContext&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;virtualPortalContext&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;xmlConfigPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/wps/config&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;damAPIPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ringAPIPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;damAPIVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ringAPIVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxConnectHostname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxConnectUsername&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxConnectPassword&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxUsername&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxPassword&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxProfileName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxProfilePath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxWASUsername&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;dxWASPassword&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;enableLogger&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;enableBackup&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;false&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;lastModifiedAfter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;restoreAsPublished&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetHostname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetDxConnectPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetDxConnectUsername&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetDxConnectPassword&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetDxProfileName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetServerHostname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetServerPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetServerUsername&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetServerPassword&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;targetServerProfileName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;vaultUsername&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;vaultPassword&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;wcmContentName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;wcmContentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;wcmContentPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;wcmSiteArea&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;wcmLibraryId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;wcmLibraryName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;wcmProjectName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="dxclient-commands">DXClient commands</h2>
 <p>Command syntax conventions:</p>
-<div class="highlight"><pre><span></span><code>dxclient [command] [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the deploy portlet action:</p>
-<div class="highlight"><pre><span></span><code>dxclient deploy-portlet [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-portlet<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the undeploy portlet action:</p>
-<div class="highlight"><pre><span></span><code>dxclient undeploy-portlet [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>undeploy-portlet<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the xmlaccess action:</p>
-<div class="highlight"><pre><span></span><code>dxclient xmlaccess [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>xmlaccess<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the <em>pull</em> script application action:</p>
-<div class="highlight"><pre><span></span><code>dxclient deploy-scriptapplication pull [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-scriptapplication<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the <em>push</em> script application action:</p>
-<div class="highlight"><pre><span></span><code>dxclient deploy-scriptapplication push [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-scriptapplication<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the undeploy script application action:</p>
-<div class="highlight"><pre><span></span><code>dxclient undeploy-scriptapplication [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>undeploy-scriptapplication<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the restore script application action:</p>
-<div class="highlight"><pre><span></span><code>dxclient restore-scriptapplication [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>restore-scriptapplication<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the deploy application action:</p>
-<div class="highlight"><pre><span></span><code>dxclient deploy-application [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-application<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the DX Core restart action:</p>
-<div class="highlight"><pre><span></span><code>dxclient restart-dx-core
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>restart-dx-core
 </code></pre></div>
 <p>Use the following command to restart DX Core pods in a Kubernetes deployment:</p>
-<div class="highlight"><pre><span></span><code>dxclient restart-core-pods [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>restart-core-pods<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute manage-subscriber action:</p>
-<div class="highlight"><pre><span></span><code>dxclient manage-subscriber -h
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-subscriber<span class="w"> </span>-h
 </code></pre></div>
 <p>Use the following command to execute manage-syndicator action:</p>
-<div class="highlight"><pre><span></span><code>dxclient manage-syndicator -h
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-syndicator<span class="w"> </span>-h
 </code></pre></div>
 <p>Use the following command to execute the deploy theme action:</p>
-<div class="highlight"><pre><span></span><code>dxclient deploy-theme [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>deploy-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the undeploy theme action:</p>
-<div class="highlight"><pre><span></span><code>dxclient undeploy-theme [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>undeploy-theme<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the manage-syndicator get-syndication-report action:</p>
-<div class="highlight"><pre><span></span><code>dxclient  manage-syndicator get-syndication-report [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w">  </span>manage-syndicator<span class="w"> </span>get-syndication-report<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the shared-library action:</p>
-<div class="highlight"><pre><span></span><code>dxclient  shared-library [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w">  </span>shared-library<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to execute the delete DAM schema action:</p>
-<div class="highlight"><pre><span></span><code>dxclient delete-dam-schema [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>delete-dam-schema<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to list all DAM schemas present:</p>
-<div class="highlight"><pre><span></span><code>dxclient list-dam-schemas  [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>list-dam-schemas<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to export the personalization rules from the target server:</p>
-<div class="highlight"><pre><span></span><code>dxclient pzn-export  [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>pzn-export<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to import the personalization rules into the target server:</p>
-<div class="highlight"><pre><span></span><code>dxclient pzn-import  [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>pzn-import<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to manage virtual portal tasks in the DX server:</p>
-<div class="highlight"><pre><span></span><code>dxclient manage-virtual-portal [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-virtual-portal<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to register subscriber:</p>
-<div class="highlight"><pre><span></span><code>dxclient manage-dam-staging register-dam-subscriber [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-dam-staging<span class="w"> </span>register-dam-subscriber<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to deregister subscriber:</p>
-<div class="highlight"><pre><span></span><code>dxclient manage-dam-staging deregister-dam-subscriber  [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-dam-staging<span class="w"> </span>deregister-dam-subscriber<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to trigger manual sync:</p>
-<div class="highlight"><pre><span></span><code>dxclient manage-dam-staging trigger-staging  [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>manage-dam-staging<span class="w"> </span>trigger-staging<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to create credential vault slot in the DX server:</p>
-<div class="highlight"><pre><span></span><code>dxclient create-credential-vault  [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>create-credential-vault<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to create the syndication relation between syndicator and subscriber in DX server:</p>
-<div class="highlight"><pre><span></span><code>dxclient create-syndication-relation  [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>create-syndication-relation<span class="w">  </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use the following command to create, update, delete, export or import a custom property from an existing Resource Environment Provider:</p>
-<div class="highlight"><pre><span></span><code>dxclient resource-env-provider [options]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>resource-env-provider<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </code></pre></div>
 <p>Use this command to export WCM libraries:</p>
-<div class="highlight"><pre><span></span><code>dxclient wcm-library-export
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>wcm-library-export
 </code></pre></div>
 <p>Use this command to import WCM libraries:</p>
-<div class="highlight"><pre><span></span><code>dxclient wcm-library-import
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>wcm-library-import
 </code></pre></div>
 <p>Use the <code>dx-core-configuration-reports</code> command to get a summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.</p>
-<div class="highlight"><pre><span></span><code>dxclient dx-core-configuration-reports [OPTIONS]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>dx-core-configuration-reports<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </code></pre></div>
-<h2 id="dxclient-help-commands">DXClient Help commands</h2>
+<h2 id="dxclient-command-line-help">DXClient command line help</h2>
 <p>The following commands show the Help documents for DXClient command usage.</p>
 <p>Use the following commands to display the Help document for DXClient:</p>
 <div class="highlight"><pre><span></span><code>dxclient
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>dxclient -h, --help 
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>-h,<span class="w"> </span>--help<span class="w"> </span>
 </code></pre></div>
 <p>Use the following command to display the DXClient version number:</p>
-<div class="highlight"><pre><span></span><code>dxclient -V, --version
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span>-V,<span class="w"> </span>--version
 </code></pre></div>
 <p>Use the following command to display the detailed help for a specific command:</p>
-<div class="highlight"><pre><span></span><code>dxclient help [command]
+<div class="highlight"><pre><span></span><code>dxclient<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="o">[</span>command<span class="o">]</span>
 </code></pre></div>
-<h2 id="accessing-the-configwizard-admin-console-in-a-container-environment">Accessing the ConfigWizard admin console in a container environment</h2>
-<p>You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to <a href="https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html">Accessing the ConfigWizard admin console in a container environment</a>.</p>
 <details class="info" open="open">
 <summary>Related information</summary>
 <ul>
@@ -1652,7 +1594,7 @@ For Microsoft Windows platforms:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 18, 2023</span>
       
     
   </small>

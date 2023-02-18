@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
+      <a href="../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../whatsnew/cf20/newcf209/"
+    href="../../../../../whatsnew/cf20/newcf210/"
     class="md-nav__link"
   >
     What's New
@@ -1577,30 +1577,44 @@
 <p>OpenLDAP and Redis are not yet configurable using this feature.</p>
 </div>
 <h2 id="setting-the-log-configuration-for-a-dx-application">Setting the log configuration for a DX application</h2>
-<p>You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the <code>level</code> property for the specified application. These properties are found in the <code>logging</code> section. For example, to set the configuration for Content Composer, use the following property:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">logging</span><span class="p">:</span>
-<span class="w">  </span><span class="c1"># Digital Asset Management specific logging configuration</span>
-<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:=debug,worker:server-v1:=debug&quot;</span>
-<span class="w">  </span><span class="c1"># Persistence Pool specific logging configuration</span>
-<span class="w">  </span><span class="nt">persistenceConnectionPool</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;pgpool:=debug&quot;</span>
-<span class="w">  </span><span class="c1"># Persistence Node specific logging configuration</span>
-<span class="w">  </span><span class="nt">persistenceNode</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;psql:=debug,repmgr:=debug&quot;</span>
+<p>You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the <code>level</code> property for the specified application. These properties are found in the <code>logging</code> section. </p>
+<p>You can see the string format in the following list. Once the property is set, run the <code>helm upgrade</code> command to apply the new logging level.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Logging configuration</span>
+<span class="nt">logging</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># Content Composer specific logging configuration</span>
 <span class="w">  </span><span class="nt">contentComposer</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:=debug&quot;</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:*=info&quot;</span>
+<span class="w">  </span><span class="c1"># DAM Plugin Google Vision specific logging configuration</span>
+<span class="w">  </span><span class="nt">damPluginGoogleVision</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v0:*=info&quot;</span>
+<span class="w">  </span><span class="c1"># Digital Asset Management specific logging configuration</span>
+<span class="w">  </span><span class="nt">digitalAssetManagement</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:*=info,worker:server-v1:*=info&quot;</span>
 <span class="w">  </span><span class="c1"># Image Processor specific logging configuration</span>
 <span class="w">  </span><span class="nt">imageProcessor</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:=debug&quot;</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:*=info&quot;</span>
+<span class="w">  </span><span class="c1"># Persistence Pool specific logging configuration</span>
+<span class="w">  </span><span class="nt">persistenceConnectionPool</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;pgpool:=info&quot;</span>
+<span class="w">  </span><span class="c1"># Persistence Node specific logging configuration</span>
+<span class="w">  </span><span class="nt">persistenceNode</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;psql:=info,repmgr:=info&quot;</span>
 <span class="w">  </span><span class="c1"># Ring API specific logging configuration</span>
 <span class="w">  </span><span class="nt">ringApi</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:=debug&quot;</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v1:*=info&quot;</span>
+<span class="w">  </span><span class="c1"># Runtime Controller specific logging configuration</span>
 <span class="w">  </span><span class="nt">runtimeController</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;controller:.=debug,controller:com.hcl.dx.=debug&quot;</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;controller:.*=INFO,controller:com.hcl.dx.*=INFO&quot;</span>
+<span class="w">  </span><span class="c1"># License Manager specific logging configuration</span>
+<span class="w">  </span><span class="nt">licenseManager</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;license-check:.*=INFO,license-check:com.hcl.dx.*=INFO&quot;</span>
+<span class="w">  </span><span class="c1"># DAM Kaltura Plugin specific logging configuration</span>
+<span class="w">  </span><span class="nt">damPluginKaltura</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;api:server-v0:*=info&quot;</span>
+<span class="w">  </span><span class="c1"># HAProxy specific logging configuration</span>
+<span class="w">  </span><span class="nt">haproxy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;haproxy:=info&quot;</span>
 </code></pre></div>
-<p>You can see the string format in the following section. Once the property is set, run the <code>helm upgrade</code> command.</p>
 <h2 id="log-configuration-string-format">Log configuration string format</h2>
 <p>Log configuration strings (the values set in the <code>level</code> properties of the custom-values.yaml) use the following common format, where multiple trace settings for the same application are separated by commas:</p>
 <div class="highlight"><pre><span></span><code>&lt;component&gt;:&lt;pattern&gt;=&lt;log-level&gt;,&lt;component&gt;:&lt;pattern&gt;=&lt;log-level&gt;
@@ -1636,10 +1650,6 @@
 <td><code>api</code></td>
 </tr>
 <tr>
-<td><code>designStudio</code></td>
-<td><code>api</code></td>
-</tr>
-<tr>
 <td><code>digitalAssetManagement</code></td>
 <td><code>api</code>, <code>worker</code></td>
 </tr>
@@ -1666,6 +1676,18 @@
 <tr>
 <td><code>runtimeController</code></td>
 <td><code>controller</code></td>
+</tr>
+<tr>
+<td><code>licenseManager</code></td>
+<td><code>license-check</code></td>
+</tr>
+<tr>
+<td><code>damPluginKaltura</code></td>
+<td><code>api</code></td>
+</tr>
+<tr>
+<td><code>haproxy</code></td>
+<td><code>haproxy</code></td>
 </tr>
 </tbody>
 </table>
@@ -1770,10 +1792,6 @@
 <td>api:server-v1:*=info</td>
 </tr>
 <tr>
-<td>Design Studio</td>
-<td>api:server-v1:*=info</td>
-</tr>
-<tr>
 <td>Digital Asset Management</td>
 <td>api:server-v1:*=info,worker:server-v1:*=info</td>
 </tr>
@@ -1869,7 +1887,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 26, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 3, 2023</span>
       
     
   </small>

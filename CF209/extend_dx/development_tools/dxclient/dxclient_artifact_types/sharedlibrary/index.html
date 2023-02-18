@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
+      <a href="../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../whatsnew/cf20/newcf209/"
+    href="../../../../../whatsnew/cf20/newcf210/"
     class="md-nav__link"
   >
     What's New
@@ -549,7 +549,7 @@
     id="__nav_7_3"
     
   />
-                                           
+                                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../../portlets_development/">Portlet Development</a>
 
@@ -610,7 +610,7 @@
   />
                            
   <div class="md-nav__link md-nav__link--index ">
-    <a href="../../">Deploy DX components using DXClient</a>
+    <a href="../../">DXClient</a>
 
      
     <label for="__nav_7_4_2">
@@ -621,12 +621,12 @@
     
   <nav
     class="md-nav md-nested-nav"
-    aria-label="Deploy DX components using DXClient"
+    aria-label="DXClient"
     data-md-level="3"
   >
     <label class="md-nav__title" for="__nav_7_4_2">
       <span class="md-nav__icon md-icon"></span>
-      Deploy DX components using DXClient
+      DXClient
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
        
@@ -644,7 +644,7 @@
   />
                                              
   <div class="md-nav__link md-nav__link--index ">
-    <a href="../">DXClient Artifact Types</a>
+    <a href="../">Dxclient artifact types</a>
 
      
     <label for="__nav_7_4_2_2">
@@ -655,12 +655,12 @@
     
   <nav
     class="md-nav md-nested-nav"
-    aria-label="DXClient Artifact Types"
+    aria-label="Dxclient artifact types"
     data-md-level="4"
   >
     <label class="md-nav__title" for="__nav_7_4_2_2">
       <span class="md-nav__icon md-icon"></span>
-      DXClient Artifact Types
+      Dxclient artifact types
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
        
@@ -689,7 +689,7 @@
                 
 <li class="md-nav__item">
   <a href="../themes/" class="md-nav__link">
-    Themes
+    Themes Artifacts
   </a>
 </li>
     
@@ -877,13 +877,27 @@
 </li>
 
    
-                
-<li class="md-nav__item">
-  <a href="../../../../../webdav" class="md-nav__link">
-    WebDAV
-  </a>
-</li>
+             
+  
+<li class="md-nav__item md-nav__item--nested">
     
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_4_3"
+    type="checkbox"
+    id="__nav_7_4_3"
+    
+  />
+               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../wef/">Web experience factory</a>
+
+     
+  </div>
+    
+</li>
+
+   
              
   
 <li class="md-nav__item md-nav__item--nested">
@@ -895,11 +909,15 @@
     id="__nav_7_4_4"
     
   />
-               
+                             
   <div class="md-nav__link md-nav__link--index ">
-    <a href="../../../wef/">Web experience factory</a>
+    <a href="../../../wsrp/">WSRP services</a>
 
      
+    <label for="__nav_7_4_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
   </div>
     
 </li>
@@ -1282,9 +1300,9 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Use this attribute to specify the path to a jar/zip file or folder containing jars in it:</p>
-<div class="highlight"><pre><span></span><code>dxclient shared-library upload -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;dxConnectHostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -libFilePath &lt;path to jar/zip/Folder&gt; 
+<div class="highlight"><pre><span></span><code>dxclient shared-library upload -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -libFilePath &lt;path to jar/zip/Folder&gt; 
 </code></pre></div>
-<p><code>dxclient shared-library delete -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;dxConnectHostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -libFileNames &lt;file names&gt; -libFilePath &lt;value&gt;</code></p>
+<p><code>dxclient shared-library delete -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -hostname &lt;hostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -libFileNames &lt;file names&gt; -libFilePath &lt;value&gt;</code></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1296,7 +1314,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 24, 2023</span>
       
     
   </small>
