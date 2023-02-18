@@ -12,6 +12,9 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
     Select this option to use the Textbox.io editor. Browser pop-up windows must be enabled to use this editor.
 
+    !!!important
+        The Textbox.io component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See [Deprecated features](../../../../whatsnew/deprecated_features.md) for more information.
+
 -   **Enhanced Editor**
 
     Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled to use this editor.

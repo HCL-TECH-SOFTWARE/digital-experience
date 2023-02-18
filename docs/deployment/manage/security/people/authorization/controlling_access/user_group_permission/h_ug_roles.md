@@ -1,7 +1,4 @@
-# Roles
-
-
-
+# User Group Roles
 
 Users and user groups might be assigned different roles for each resource.
 

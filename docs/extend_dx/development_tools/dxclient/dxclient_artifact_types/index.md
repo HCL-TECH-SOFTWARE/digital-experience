@@ -6,8 +6,7 @@ This section provides information about the artifact types that are currently su
 
 -   If deploying CICD artifacts using DXClient to the Red Hat OpenShift environment, you might receive failure messages while you run the deploy-theme, deploy-application, or restart-dx-core commands. This might happen because of a connection getting closed due to timeout before the response is ready. In such situations, before re-triggering the request, we advise you to check your target server to verify if the application has been deployed or the server is up, as the request was already triggered from the client-side.
 
-
-The following list shows some of the deprecated parameters and the new parameters that replace them in CF201 and later releases. It is recommended that you start using the new parameters below because the old parameters might be removed in later releases:
+The following list shows some of the deprecated parameters and the new parameters that replace them in CF201 and later releases. It is recommended that you start using the new parameters because the old parameters are removed starting in CF210.
 
 -   `-dxConnectHostname` replaced by `-hostname`
 

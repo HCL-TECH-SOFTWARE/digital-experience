@@ -1,4 +1,4 @@
-# Deleting PAA content after an uninstallation
+# Deleting PAA content after uninstalling
 
 After you run the `uninstall-paa` task and removing the assembly from the ConfigEngine registry, the PAA content remains in the PAA directory. To remove any remaining content, run the `delete-paa` command. This command inspects the PAA directory and removes content that is not registered.
 

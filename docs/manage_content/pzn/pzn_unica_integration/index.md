@@ -18,5 +18,7 @@ Users can leverage segments from Unica Campaigns in Personalization with differe
 The Sample code approach allows the user to create Custom Application Object with parameters that allow the user to access Unica Campaign APIs to use segments in DX Personalization for content selection or visibility. Users can create multiple application objects as per the requirement to handle customer needs. Creating your own plugin with the sample is the most flexible way to integrate with Unica but requires java coding. See the link for more information.
 -  [Out-of-box application object for shipping Unica with PZN](../pzn_unica_integration/out_of_box_method.md)  
 The Out-of-box application object method allows you to create a Default Application Object with default attributes by running a ConfigEngine task with some parameters required to connect with Unica Campaign APIs. It does not require custom coding but limits the way the user is identified for the selection in Unica. See the link for more information.
+-  [Unica Segment Picker for leveraging segments in PZN Rules](../pzn_unica_integration/unica_segment_picker.md)
+The Unica Segment picker allows the user to select a value from the Unica Segment list for the condition added while writing Personalization Rules. See the link for more information.
 
 These application objects can then be used in Personalization Rules by validating the segments against the conditions for providing better Content visibility or Content Selection.

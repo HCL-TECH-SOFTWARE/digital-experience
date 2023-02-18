@@ -111,11 +111,11 @@ The shared-library command uses two sub-commands upload and delete to manage fil
     Use this attribute to specify the path to a jar/zip file or folder containing jars in it:
 
     ```
-    dxclient shared-library upload -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -libFilePath <path to jar/zip/Folder> 
+    dxclient shared-library upload -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -libFilePath <path to jar/zip/Folder> 
     ```
 
      ```
-    dxclient shared-library delete -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -libFileNames <file names> -libFilePath <value>
+    dxclient shared-library delete -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -libFileNames <file names> -libFilePath <value>
     ```
 
 

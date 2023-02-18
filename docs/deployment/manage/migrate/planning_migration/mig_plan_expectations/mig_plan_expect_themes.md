@@ -1,4 +1,4 @@
-# Themes
+# Migration Themes
 
 During the migration process, HCL Digital Experience moves your theme to your target environment without modifications. The pages in your target environment still reference the same theme that was used in the source environment.
 

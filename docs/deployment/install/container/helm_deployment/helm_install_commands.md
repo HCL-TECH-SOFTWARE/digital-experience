@@ -56,15 +56,6 @@ In the following examples, replace <host-url\> with your corresponding externa
         password> -DPortalAdminPwd=<admin-password>
     ```
 
--   Design Studio (Beta):
-
-    ```
-        <Path to wp_profile>/ConfigEngine/ConfigEngine.sh enable-content-sites 
-        -Dcontentsites.static.ui.url=https://<host-url>/dx/ui/site-manager/static 
-        -DWasPassword=<was-password> -DPortalAdminPwd=<admin-password>
-    ```
-
-
 ## Default URLs post installation
 
 During the configuration process, you might need the following URLs to access different administration user interfaces.

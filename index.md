@@ -13,7 +13,7 @@ You can customize HCL DX to meet the needs of your organization, users, and user
 
 HCL DX includes a range of tools for managing content and maintaining web and mobile digital experiences. Those sites can blend applications and content together in a targeted way according to the users.
 
-Tools for practitioners include content management, asset management, site building through Design Studio and Site Manager, personalization management, and more.
+Tools for practitioners include content management, asset management, site building through Site Manager, personalization management, and more.
 
 ## For developers
 
@@ -26,7 +26,7 @@ Developers can use the DXClient tool to deploy and manage applications and to ma
 Administrators can deploy HCL DX in a traditional IBM® WebSphere Application Server® cluster or in a Kubernetes environment. HCL DX provides a range of scriptable interfaces so that you can automate your infrastructure management. 
 
 !!! note
-    Some services, such as Digital Asset Management, Design Studio, Experience API, and Content Composer, are available only in the Kubernetes environment.
+    Some services, such as Digital Asset Management, Experience API, and Content Composer, are available only in the Kubernetes environment.
 
 ### Notices for HCL Digital Experience
 

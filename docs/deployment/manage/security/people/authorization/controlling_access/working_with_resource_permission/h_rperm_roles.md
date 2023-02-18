@@ -1,5 +1,4 @@
-# Roles
-
+# Resource Permission Roles
 
 
 Roles determine the level of access to resources that users and user groups have. Read about the specific permissions that are associated with the different role types.
