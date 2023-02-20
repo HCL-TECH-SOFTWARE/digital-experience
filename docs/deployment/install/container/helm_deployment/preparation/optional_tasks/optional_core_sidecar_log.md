@@ -20,7 +20,7 @@ Two sidecar containers are launched with Core:
 Use the following syntax to configure more sidecar containers for additional log files in the custom-values.yaml file.
 
 !!!important
-    You can only expose log files inside of the /opt/HCL/logs directory and the `mountPath` specified for each entry in `volumes.core.customPVCs`.
+    You can only expose log files inside of the /opt/HCL/logs directory or the `mountPath` specified for each entry in `volumes.core.customPVCs`.
 
 ```yaml
 logging:
