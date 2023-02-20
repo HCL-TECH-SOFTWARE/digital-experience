@@ -6,7 +6,7 @@ See the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/
 
 **Shared volume**
 
-The DX Core container and sidecar containers share the same volume for the logs as well as the [custom PVCs defined in the values](../mandatory_tasks/prepare_persistent_volume_claims.md#configuring-additional-core-persistent-volumes). This allows DX Core to write its logs, and have the sidecar containers read those logs. The logs are mounted at /opt/HCL/logs (and symbolically linked from /opt/HCL/wp_profile/logs) in the DX Core container. The sidecar containers can only read files written by Core under its logs directory and in the `mountPath` specified in the custom PVCs (`volumes.core.customPVCs`). Files in other directories (such as the profile) are not available to the sidecars.
+The DX Core container and sidecar containers share the same volume for the logs as well as the [custom PVCs defined in the values](../mandatory_tasks/prepare_persistent_volume_claims.md#configuring-additional-core-persistent-volumes). This allows DX Core to write its logs, and have the sidecar containers read those logs. The logs are mounted at /opt/HCL/logs (and symbolically linked from /opt/HCL/wp_profile/logs) in the DX Core container. The sidecar containers can only read files written by Core under its logs directory or in the `mountPath` specified in the custom PVCs (`volumes.core.customPVCs`). Files in other directories (such as the profile) are not available to the sidecars.
 
 **Default configuration**
 
