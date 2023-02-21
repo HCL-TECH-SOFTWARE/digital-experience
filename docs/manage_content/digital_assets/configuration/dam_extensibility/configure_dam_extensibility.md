@@ -299,7 +299,7 @@ Add metadata to the new stack configuration `SupplementalStack` in rendition con
             operation:
               metadata: {}
         ```
-DAM extensibility configurations can be seen in settings page:
+DAM extensibility configurations can be seen in settings page
 
 Follow these steps to view the DAM settings:
 
