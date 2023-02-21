@@ -115,7 +115,7 @@ Depending on the content of an XML request, these resources can be created, modi
 
 
 ???+ info "Related information"  
-    -   [Portal administration tools](../../../development_tools/index.md)
-    -   [Setting up SSL](../../../../deployment/manage/security/configuring_ssl/setup_ssl/index.md)
+    -   [Portal administration tools](../../../../extend_dx/development_tools/index.md)
+    -   [Setting up SSL](../../../../deployment/manage/security/information/confidentiality/configuring_ssl/setup_ssl/index.md)
     -   [Deleting orphaned data](../../../../deployment/manage/config_portal_behavior/adelorph.md)
 

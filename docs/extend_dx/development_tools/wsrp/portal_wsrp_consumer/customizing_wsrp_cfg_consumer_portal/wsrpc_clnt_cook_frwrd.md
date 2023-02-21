@@ -17,7 +17,7 @@ By default the WSRP Consumer does not forward client cookies to WSRP Producers o
 
 Description:
 
--   **wsrp.consumer.cookieforward.cookiename = hostdomainnames [; cookiepriority]**
+-   **wsrp.consumer.cookieforward.cookiename = hostdomainnames `[; cookiepriority]`**
 
     This property defines a cookie forwarding rule for the cookie that is identified by the value for cookiename. The cookie forwarding rule specifies a list of host names and domain names and optionally specifies the cookie priority.
 

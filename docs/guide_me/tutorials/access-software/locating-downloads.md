@@ -9,16 +9,16 @@ At this point, you should have been able to register an account and secure acces
 
 There are two ways to browse for the DX software installers or patches entitled to your organization.
 
-From the Homepage view, you can see a couple of widget windows here but our focus is the **“Your Downloads”** window.
-Under “Your Downloads” window, select **“HCL DXPN”** option. DX is under this product line.
+From the Homepage view, you can see a couple of widget windows here but our focus is the **Your Downloads** window.
+Under **Your Downloads** window, select **HCL DXPN** option. DX is under this product line.
 
 ![Your downloads tab](images/download1.png)
 
-Another way is to hover on the **“Downloads”** tab and then click on **“List Downloads”**.
+Another way is to hover on the **Downloads** tab and then click on **List Downloads**.
 
 ![List downloads](images/download2.png)
 
-The portal will list down the Product line of the products you have entitlement for. Again, click on **“HCL DXPN”** to locate DX products.
+The portal will list down the Product line of the products you have entitlement for. Again, click on **HCL DXPN** to locate DX products.
 
 ![Select products DXPN](images/download3.png)
 
@@ -77,41 +77,41 @@ If you only need to download a single file, you can click on the File Name hyper
 
 ![Select a single file](images/download5.png)
 
-You may chose to download multiple files at the same time by selecting the files you want to download and clicking on **“Download Selected Files”**. If you are doing this for the first time, you will be prompted to download and install Download Manager.
+You may chose to download multiple files at the same time by selecting the files you want to download and clicking on **Download Selected Files**. If you are doing this for the first time, you will be prompted to download and install Download Manager.
 
 !!!warning "We don't recommend Download Manager
     There are issues encountered with Download Manager and we recommend NOT to use it by downloading files individually instead.
 
 ![Download manager](images/download6.png)
 
-If you encounter any issue with finding a software or downloading a files, please refer to ["Customer Support FAQ"](support-faqs.md) section to know how to get support.
+If you encounter any issue with finding a software or downloading a files, please refer to [Customer Support FAQ](support-faqs.md) section to know how to get support.
 
 ## For HCL Business Partners
 
-From the Homepage View, you will noticed that there are no **“Downloads**” tab or **“Your Downloads”** widget in it.
+From the Homepage View, you will noticed that there are no **Downloads** tab or **Your Downloads** widget in it.
 
-Where you can find the product is under the **“List of Entitlements”** which can be accessed from the **“Quick Links”** widget 
+Where you can find the product is under the **List of Entitlements** which can be accessed from the **Quick Links** widget. 
 
 ![List of entitlements](images/download7.png)
 
-Alternatively look under **“Activation & Entitlements”** tab then click on **“List Entitlements”**.
+Alternatively, look under **Activation & Entitlements** tab then click on **List Entitlements**.
 
 ![List of entitlements navigation](images/download8.png)
 
-If you are looking for a particular products that were sold to a particular company, the easiest way to do it is to change the Search scope to choose **“Sold-to ID”** if you know your customer’s HCL ID. If you do not know your customer’s HCL ID, you may switch to **“Sold-to Display name”** and type in a keyword from your customer’s company name.
+If you are looking for a particular products that were sold to a particular company, the easiest way to do it is to change the Search scope to choose **Sold-to ID** if you know your customer’s HCL ID. If you do not know your customer’s HCL ID, you may switch to **Sold-to Display name** and type in a keyword from your customer’s company name.
 
 ![Sold-to search](images/download9.png)
 
-You can also search the view by **“Product”** name as shown in the image below.
+You can also search the view by **Product** name as shown in the image below.
 
 ![Search by product](images/download10.png)
 
-To be able to tell what’s Download Packages are associated with the Product or the Entitlement, you need to click on the **“Download Now”** button.
+To be able to tell what’s Download Packages are associated with the Product or the Entitlement, you need to click on the **Download Now** button.
 
 ![Download now](images/download11.png)
 
 
-Here’s a sample list of Download Packages associated with the selected entitlement after clicking the “Download Now” button.
+Here’s a sample list of Download Packages associated with the selected entitlement after clicking the **Download Now** button.
 
 ![List of downloads](images/download12.png)
 
@@ -123,11 +123,11 @@ If you only need to download a single file, you can click on the File Name hyper
 
 ![Select a single file](images/download13.png)
 
-You may chose to download multiple files at the same time by selecting the files you want to download and clicking on **“Download Selected Files”**. If you are doing this for the first time, you will be prompted to download and install Download Manager.
+You may chose to download multiple files at the same time by selecting the files you want to download and clicking on **Download Selected Files**. If you are doing this for the first time, you will be prompted to download and install Download Manager.
 
-!!!warning "We don't recommend Download Manager
-    There are issues encountered with Download Manager and we recommend NOT to use it by downloading files individually instead.
+!!!warning 
+    We do not recommend Download Manager. There are issues encountered with Download Manager and we recommend NOT to use it by downloading files individually instead.
 
 ![Download manager](images/download14.png)
 
-If you encounter any issue with finding a software or downloading a files, please refer to ["Customer Support FAQ"](support-faqs.md) section to know how to get support.
+If you encounter any issue with finding a software or downloading a files, please refer to [Customer Support FAQ](support-faqs.md) section to know how to get support.

@@ -14,7 +14,7 @@ This portlet can be used anywhere on your site to display a video.
 
 1.  Go to the page where you want to add a Video Teaser.
 2.  Click **Edit Mode**.
-3.  Click **Create** \> **Content** \> **Teasers**.
+3.  Click **Create > Content > Teasers**.
 4.  Drag the **Video Teaser** to the page and save the page.
 
 ## Content author customization options
@@ -56,7 +56,8 @@ For support on desktop and mobile devices, videos can be encoded in the differen
 |Opera|Yes for version 25 or higher|Yes|Yes|
 |Safari and Mobile Safari|Yes|No|No|
 
-**Note:** Internet Explorer does not support the video tag for versions before Version 9. If users have older versions of Internet Explorer, you must also set up Adobe Flash Player to play videos. Add the Flash player as a file resource in Web Content Manager. Then edit the Video field component in the CTC Design library to add code similar to the following pointing to the Flash Player to use.
+!!!note
+    Internet Explorer does not support the video tag for versions before Version 9. If users have later versions of Internet Explorer, you must also set up Adobe Flash Player to play videos. Add the Flash player as a file resource in Web Content Manager. Then edit the Video field component in the CTC Design library to add code similar to the following pointing to the Flash Player to use.
 
 ```
 <video>

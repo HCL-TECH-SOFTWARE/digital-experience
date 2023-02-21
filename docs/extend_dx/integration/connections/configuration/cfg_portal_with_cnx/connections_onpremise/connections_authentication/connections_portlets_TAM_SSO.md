@@ -2,7 +2,7 @@
 
 Configure HCL Connections portlets to use single sign-on with IBM Security Access Manager.
 
-Single sign-on \(SSO\) enables users to log in to an HCL Connections application and switch to other applications within the product without having to authenticate again.
+Single sign-on (SSO) enables users to log in to an HCL Connections application and switch to other applications within the product without having to authenticate again.
 
 There are several different ways to configure SSO. This authentication method allows Security Access Manager and users web browsers to prove their identities to one another in a secure manner.
 
@@ -57,9 +57,10 @@ Follow these steps to configure single sign-on.
 
 8.  To configure the IBM® HTTP Server with single sign-on, delete and read the web server on the WebSphere® Application Server Integrated Solutions Console. This configuration remaps all applications, including Portal, and imports the Portal certificate into IBM HTTP Server.
 
-9.  Configure Security Access Manager on the Portal server, following the directions in the [Configuring Security Access Manager](../security/tam.md) article that corresponds to your Portal server:
+9.  Configure Security Access Manager on the Portal server, following the directions in the [Configuring Security Access Manager](../../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/index.md) article that corresponds to your Portal server:
 
-    **Note:** For the connections integration with the portlets, it is important that WebSEAL session cookies are sent to the junction server. This action can be defined by adding the -k option to the commands that create a junction.
+    !!!note
+        For the connections integration with the portlets, it is important that WebSEAL session cookies are sent to the junction server. This action can be defined by adding the -k option to the commands that create a junction.
 
 10. Configure the ACL for WebSEAL to allow HTTP PUT requests by adding an ACL to the Portal junction.
 

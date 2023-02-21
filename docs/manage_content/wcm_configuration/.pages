@@ -1,0 +1,9 @@
+title: Configure Web Content Manager
+nav:
+    - Web content administration tools: wcm_adm_tools
+    - cfg_webcontent_auth_env
+    - cfg_webcontent_delivery_env
+    - Custom Caching: custom_caching
+    - Service Configuration: wcm_svc_cfg
+    - ...
+

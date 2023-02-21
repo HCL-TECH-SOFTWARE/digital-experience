@@ -184,6 +184,6 @@ The following information shows the default WebSphere Application Server install
 
 
 ???+ info "Related information"  
-    -   [Language support](../extend_dx/development_tools/portal_admin_tools/language_support/index.md)
+    -   [Language support](../deployment/manage/portal_admin_tools/language_support/index.md)
     -   [System event logging](../deployment/manage/troubleshooting/logging_and_tracing/adsyslog.md)
 

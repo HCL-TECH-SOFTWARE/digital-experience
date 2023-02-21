@@ -34,5 +34,5 @@ Here is an example XML definition for importing a predeployed portlet applicatio
 
 ```
 
-**Related information**  
-[The XML configuration interface](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+???+ info "Related information"  
+    -   [The XML configuration interface](../../../../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)

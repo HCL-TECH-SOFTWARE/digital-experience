@@ -29,7 +29,7 @@
     Check the information [here](../common-setup/post-deployment/important_things_to_note.md).
 
 ## Project Specific Settings (DX-Module)
-Full configuration steps are listed [here](../common-setup/optimized-scriptapps/dependencies_as_module.md)(common steps). You'll also need to apply the specific steps below:
+Full configuration steps are listed [here](../common-setup/optimized-scriptapps/dependencies_as_module.md) (common steps). You'll also need to apply the specific steps below:
 
 1. Update the module-index.js file to each of the submodule. Enumerate the Javascript libraries and components via import and export commands in the file. Provide descriptive aliases for the group of libraries and components that will be included.
     - DxModule/SubModule01/module-index.js

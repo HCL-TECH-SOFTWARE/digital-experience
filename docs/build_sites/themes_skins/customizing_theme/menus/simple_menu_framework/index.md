@@ -12,7 +12,7 @@ Whether the menu items are visible is controlled in a layered way by client-side
 You can vary the appearance of the items in menus that are delivered through the JSON menu framework.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Customizing the More menu of the action bar](../../../../create_sites/site_prep_content_author/prep_site_toolbar/epc_custom_more_menu.md)
     - [Contribution types](../../../the_module_framework/themeopt_contrib_types.md)
     - [Module schema definition](../../../the_module_framework/writing_module/themeopt_mod_global.md)

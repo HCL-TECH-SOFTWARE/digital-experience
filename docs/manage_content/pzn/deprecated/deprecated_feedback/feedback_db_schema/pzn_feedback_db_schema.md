@@ -16,7 +16,7 @@ Learn about the feedback schema tables and the fields or columns they contain.
 The additional information passed by rule logging events and certain bean logging events is logged to the Feedback database in the form of key value pairs.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [FeedbackListener](../feedback_and_analytics/listeners_and_persistence/pzn_feedbacklistener.md)
     - [Reports](../feedback_analytics_cfg/pzn_reports.md)
 

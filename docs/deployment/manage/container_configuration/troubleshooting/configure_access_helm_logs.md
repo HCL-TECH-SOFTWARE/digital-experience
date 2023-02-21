@@ -17,9 +17,26 @@ You can set a desired log configuration for a DX application by specifying an ap
 
 ```yaml
 logging:
+  # Digital Asset Management specific logging configuration
+  digitalAssetManagement:
+    level: "api:server-v1:=debug,worker:server-v1:=debug"
+  # Persistence Pool specific logging configuration
+  persistenceConnectionPool:
+    level: "pgpool:=debug"
+  # Persistence Node specific logging configuration
+  persistenceNode:
+    level: "psql:=debug,repmgr:=debug"
   # Content Composer specific logging configuration
   contentComposer:
-    level: "api:server-v1:*=info"
+    level: "api:server-v1:=debug"
+  # Image Processor specific logging configuration
+  imageProcessor:
+    level: "api:server-v1:=debug"
+  # Ring API specific logging configuration
+  ringApi:
+    level: "api:server-v1:=debug"
+  runtimeController:
+    level: "controller:.=debug,controller:com.hcl.dx.=debug"
 ```
 
 You can see the string format in the following section. Once the property is set, run the `helm upgrade` command.
@@ -94,14 +111,14 @@ kubectl logs -n dxns
 This retrieves the log for a single sidecar container, which corresponds to a single Core log file.
 
 !!!note
-    The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see [Configure Core sidecar logging](../../deployment/preparation/optional_core_sidecar_log.md).
+    The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see [Configure Core sidecar logging](../../../install/container/helm_deployment/preparation/optional_tasks/optional_core_sidecar_log.md).
 
 By default, two sidecar containers are launched with Core:
 
 -   `system-out-log` - Exposes the `WebSphere_Portal/SystemOut.log` file.
 -   `system-err-log` - Exposes the `WebSphere_Portal/SystemErr.log` file.
 
-For information on configuring additional Core sidecar log containers, please see [Configure Core sidecar logging](../../deployment/preparation/optional_core_sidecar_log.md).
+For information on configuring additional Core sidecar log containers, please see [Configure Core sidecar logging](../../../install/container/helm_deployment/preparation/optional_tasks/optional_core_sidecar_log.md).
 
 ## Accessing Remote Search logs
 
@@ -122,14 +139,14 @@ kubectl logs -n dxns
 This retrieves the log for a single sidecar container, which corresponds to a single Remote Search log file.
 
 !!!note
-    The additional logging enabled for Remote Search goes to trace.log. To configure trace.log for sidecar logging, see [Configure Remote Search sidecar logging](../../deployment/preparation/optional_rs_sidecar_log.md).
+    The additional logging enabled for Remote Search goes to trace.log. To configure trace.log for sidecar logging, see [Configure Remote Search sidecar logging](../../../install/container/helm_deployment/preparation/optional_tasks/optional_core_sidecar_log.md).
 
 By default, two sidecar containers are launched with Remote Search:
 
 -   `system-out-log` - Exposes the `WebSphere_Portal/SystemOut.log` file.
 -   `system-err-log` - Exposes the `WebSphere_Portal/SystemErr.log` file.
 
-For information on configuring additional Remote Search sidecar log containers, please see [Configure Remote Search sidecar logging](../../deployment/preparation/optional_rs_sidecar_log.md).
+For information on configuring additional Remote Search sidecar log containers, please see [Configure Remote Search sidecar logging](../../../install/container/helm_deployment/preparation/optional_tasks/optional_core_sidecar_log.md).
 
 ## Accessing Persistence Node logs
 
@@ -157,10 +174,22 @@ By default, one sidecar container is launched with Persistence Node:
 
 Other applications where only one container is deployed in the Pod, only provide a single log, which can typically be obtained using the command: `kubectl logs -n <namespace> <pod-name>` (omitting a container name), for example:
 
-```
-kubectl logs -n dxns
-      dx-deployment-digital-asset-management-0
-```
+!!! warning 
+    If the main pod name is only used and there are multiple containers an error prompt is returned.
+
+    ```
+    kubectl logs -n dxns dx-deployment-persistence-node-0
+    ```
+
+    > error: a container name must be specified for pod dx-deployment-persistence-node-0, choose one of: [persistence-node persistence-metrics-exporter persistence-repmgr-log prereqs-checker]
+
+    The logs can then be requested from the desired container:
+
+    ```
+    kubectl logs -n dxns dx-deployment-persistence-node-0
+        persistence-node
+    ```
+
 
 ## Accessing all application logs simultaneously
 

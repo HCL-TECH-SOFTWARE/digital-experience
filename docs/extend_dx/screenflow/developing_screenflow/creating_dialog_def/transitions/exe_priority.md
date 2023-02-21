@@ -12,7 +12,7 @@ The value `suspend` defines that start-transitions always win. For example, afte
 
 The following code samples show the outlined behavior under the assumption that `dialog1` is already active. In the following code sample, after `portlet1` emits the event `e1`, both the transitions shown theoretically fit. Since, for `dailog1` the attribute `priority` is set to `suspend`, the intended behavior is to prefer triggering matching start transitions. Matching start transitions are triggered even if they are part of the active dialog. Hence in this case `dialog1` is suspended and the user must continue with `dialog2` and is redirected to `portlet3`.
 
-Code sample
+Code sample:
 
 ```
 
@@ -54,7 +54,7 @@ Code sample
 
 In the following code sample, after `portlet1` emits the event `e1`, both transitions shown theoretically fit. Since for `dialog1` the attribute `priority` is set to `preserve`, the intended behavior is to prefer triggering a matching transition that is a part of the active dialog. Thus, in this case the user continues with `dialog1` and is redirected to `portlet2`.
 
-Code sample
+Code sample:
 
 ```
 
@@ -94,12 +94,11 @@ Code sample
 
 ```
 
-**Note:** In the context of dialog chaining or nesting, the attribute `priority` is not inherited. For example, when a dialog D1 calls another dialog D2, the attribute `priority`, which might be specified for D1 is not propagated to D2.
-
-**Parent topic:**[Transitions](../screenflow/transitions.md)
-
-**Related information**  
+!!!note
+    In the context of dialog chaining or nesting, the attribute `priority` is not inherited. For example, when a dialog D1 calls another dialog D2, the attribute `priority`, which might be specified for D1 is not propagated to D2.
 
 
-[Configuration options](../screenflow/cfg_opt.md)
+
+???+ info "Related information" 
+    -   [Configuration options](../../../cfg_opt.md)
 

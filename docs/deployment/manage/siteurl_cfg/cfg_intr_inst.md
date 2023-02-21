@@ -109,4 +109,4 @@ HCL Digital Experience and Web Services for Remote Portlets (WSRP) are installed
 |
 
 ???+ info "Related information"  
-    -   [Accessing the Configuration Wizard](../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    -   [Accessing the Configuration Wizard](../../../manage/portal_admin_tools/cfg_wizard/configuration/cw_run)

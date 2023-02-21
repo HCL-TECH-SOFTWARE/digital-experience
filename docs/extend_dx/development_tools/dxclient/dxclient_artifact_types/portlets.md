@@ -18,7 +18,7 @@ The `deploy-portlet` command is used to deploy one or more new or updated portle
 
 -   **Portlet Application web archive file**
 
-    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files](../../portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_import_war.md).
+    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files](../../../../deployment/manage//portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_import_war.md).
 
 
 **Command**
@@ -253,8 +253,6 @@ dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort
     The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 
-<!-- ???Info "Related information:"
-
-
-[DXClient](../containerization/dxclient.md) -->
+???+ info "Related information"
+    - [DXClient](../index.md)
 

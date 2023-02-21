@@ -387,7 +387,7 @@ The XML configuration interface manages only resources of the portal core and no
 
 ???+ info "Related information"  
     -   [Transferring portal configuration data by using the XML configuration interface](../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/transfer_portal_cfg_using_xml_config_int/index.md)
-    -   [Task register-iwidget-definition](../../../../../portlets_development/mng_portlets_apps_widgets/managing_iwidgets/csa2r_cfgtsk_regwidgdef.md)
+    -   [Task register-iwidget-definition](../../../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/managing_iwidgets/csa2r_cfgtsk_regwidgdef.md)
     -   [Actions on portal resources](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_actions.md)
     -   [Importing WAR files](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_import_war.md)
     -   [Sample XML configuration files](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)

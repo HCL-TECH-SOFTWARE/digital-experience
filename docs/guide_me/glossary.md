@@ -22,7 +22,7 @@ The structured collection of data objects for subsequent presentation within a p
 
 ## Ajax
 
-A design approach and a set of techniques for delivering rich Internet applications \(RIAs\) using open web formats, for example, HTML, CSS and JavaScript; and rendering using a browser engine.
+A design approach and a set of techniques for delivering rich Internet applications (RIAs) using open web formats, for example, HTML, CSS and JavaScript; and rendering using a browser engine.
 
 ## Ajax portlet
 
@@ -42,11 +42,11 @@ A server program in a distributed network that provides the execution environmen
 
 ## Asynchronous JavaScript and XML
 
-See [Ajax](#x3882016).
+See [Ajax](#ajax). 
 
 ## authenticated user
 
-A portal user who has logged in to the portal with a valid account \(user ID and password\). Authenticated users have access to all public places.
+A portal user who has logged in to the portal with a valid account (user ID and password). Authenticated users have access to all public places.
 
 ## authentication
 
@@ -60,15 +60,15 @@ The process of granting a user, system, or process either complete or restricted
 
 ## B2B
 
-See [business-to-business](#x2167117).
+See [business-to-business](#business-to-business-b2b).
 
 ## B2C
 
-See [business-to-consumer](#x2187303).
+See [business-to-consumer](#business-to-consumer-b2c).
 
 ## B2E
 
-See [business-to-employee](#x2221941).
+See [business-to-employee](#business-to-employee-b2e).
 
 ## bind
 
@@ -78,15 +78,15 @@ To establish a connection between software components on a network using an agre
 
 A customizable, graphical link to databases, views, documents, web pages, and newsgroups.
 
-## business-to-business \(B2B\)
+## business-to-business (B2B)
 
 Refers to Internet applications that exchange information or run transactions between businesses.
 
-## business-to-consumer \(B2C\)
+## business-to-consumer (B2C)
 
 Refers to the subset of Internet applications that exchange information or run transactions between businesses and consumers.
 
-## business-to-employee \(B2E\)
+## business-to-employee (B2E)
 
 A business model that supports electronic communications between a business and its employees.
 
@@ -94,21 +94,21 @@ A business model that supports electronic communications between a business and 
 
 ## CA
 
-See [certificate authority](#x2016383).
+See [certificate authority](#certificate-authority-ca).
 
 ## card
 
 WML document that provides user-interface and navigational settings to display content on mobile devices.
 
-## cascading style sheet \(CSS\)
+## cascading style sheet (CSS)
 
 A file that defines a hierarchical set of style rules for controlling the rendering of HTML or XML files in browsers, viewers, or in print.
 
-## certificate authority \(CA\)
+## certificate authority (CA)
 
 A trusted third-party organization or company that issues the digital certificates. The certificate authority typically verifies the identity of the individuals who are granted the unique certificate.
 
-## client side aggregation \(CSA\)
+## client side aggregation (CSA)
 
 Aggregation based on JavaScript and XSLT transformations that are executed on the client.
 
@@ -118,7 +118,7 @@ An application that is extended to be accessible through the Internet. Cloud app
 
 ## cloud computing
 
-A computing platform where users can have access to applications or compute resources, as services, from anywhere through their connected devices. A simplified user interface and application programming interface \(API\) makes the infrastructure supporting such services transparent to users.
+A computing platform where users can have access to applications or compute resources, as services, from anywhere through their connected devices. A simplified user interface and application programming interface (API) makes the infrastructure supporting such services transparent to users.
 
 ## collaboration
 
@@ -138,7 +138,7 @@ A highly personalized desktop-to-web tool designed for specific audiences and co
 
 ## concrete portlet
 
-A logical representation of a portlet object distinguished by a unique configuration parameter \(PortletSettings\).
+A logical representation of a portlet object distinguished by a unique configuration parameter (PortletSettings).
 
 ## confirmable methods
 
@@ -162,7 +162,7 @@ Software designed to help businesses manage and distribute content from diverse 
 
 ## content partner
 
-See [HCL content partner](#x2222149).
+See [HCL content partner](#hcl-content-partner-content-partner).
 
 ## content provider
 
@@ -182,7 +182,7 @@ A context that defines immutable properties of a resource that you can create
 
 ## CSS
 
-See [cascading style sheet](#x2115362).
+See [cascading style sheet](#cascading-style-sheet-css).
 
 # D
 
@@ -206,11 +206,11 @@ A place whose membership automatically includes all portal users and which appea
 
 One or more child pages that have a shared layout that is inherited from the properties of the parent page.
 
-## differential page rendering \(DPR\)
+## differential page rendering (DPR)
 
 Renders only those parts of a portal page that were affected by the a user interaction.
 
-## document type definition \(DTD\)
+## document type definition (DTD)
 
 The rules that specify the structure for a particular class of SGML or XML documents. The DTD defines the structure with elements, attributes, and notations, and it establishes constraints for how each element, attribute, and notation can be used within the particular class of documents.
 
@@ -220,7 +220,7 @@ A category of widgets in the Lotus Mashups Workshop toolbox that supports drag a
 
 ## DTD
 
-See [document type definition](#x2021178).
+See [document type definition](#document-type-definition-dtd).
 
 ## dynamic layout
 
@@ -230,7 +230,7 @@ Standard portal layout that consists of rows or columns and is persisted in the 
 
 ## ECM
 
-See [Enterprise Content Management](#Glossentry-163)
+See [Enterprise Content Management](#enterprise-content-management-ecm).
 
 ## embedded static page
 
@@ -240,7 +240,7 @@ A static page that is rendered in the content area of the portal.
 
 The process of entering and saving user or user group information in a portal.
 
-## Enterprise Content Management \(ECM\)
+## Enterprise Content Management (ECM)
 
 Software and tools designed to enable companies to manage content and documents, optimize business processes, and enable compliance with an integrated infrastructure.
 
@@ -248,13 +248,13 @@ Software and tools designed to enable companies to manage content and documents,
 
 Software developed by HCL that provides tools for advanced searching, and content customization and summarization.
 
-## Extensible Markup Language \(XML\)
+## Extensible Markup Language (XML)
 
-A standard metalanguage for defining markup languages that is based on Standard Generalized Markup Language \(SGML\).
+A standard metalanguage for defining markup languages that is based on Standard Generalized Markup Language (SGML).
 
-## Extensible Stylesheet Language \(XSL\)
+## Extensible Stylesheet Language (XSL)
 
-A language for specifying style sheets for XML documents. Extensible Stylesheet Language Transformation \(XSLT\) is used with XSL to describe how an XML document is transformed into another document.
+A language for specifying style sheets for XML documents. Extensible Stylesheet Language Transformation (XSLT) is used with XSL to describe how an XML document is transformed into another document.
 
 # F
 
@@ -293,25 +293,25 @@ The top-level web page of a portal.
 
 ## HTML
 
-See [Hypertext Markup Language](#x2056264).
+See [Hypertext Markup Language](#hypertext-markup-language-html).
 
 ## HTTP
 
-See [Hypertext Transfer Protocol](#x2024721).
+See [Hypertext Transfer Protocol](#hypertext-transfer-protocol-http).
 
-## HTTP over SSL \(HTTPS\)
+## HTTP over SSL (HTTPS)
 
 A web protocol for secure transactions that encrypts and decrypts user page requests and pages returned by the web server.
 
 ## HTTPS
 
-See [HTTP over SSL](#x2024679).
+See [HTTP over SSL](#http-over-ssl-https).
 
-## Hypertext Markup Language \(HTML\)
+## Hypertext Markup Language (HTML)
 
 A markup language that conforms to the Standard Generalized Markup Language \(SGML\) standard and was designed primarily to support the online display of textual and graphical information, including hypertext links.
 
-## Hypertext Transfer Protocol \(HTTP\)
+## Hypertext Transfer Protocol (HTTP)
 
 An Internet protocol that is used to transfer and display hypertext and XML documents on the web.
 
@@ -321,7 +321,7 @@ An Internet protocol that is used to transfer and display hypertext and XML docu
 
 An Internet service for wireless devices.
 
-## HCL content partner \(content partner\)
+## HCL content partner (content partner)
 
 HCL partner that provides syndicated content for portals.
 
@@ -337,7 +337,7 @@ An open-source specification that allows for seamless interoperability across va
 
 ## JavaScript
 
-A web scripting language that is used in both browsers and web servers. \(Sun\)
+A web scripting language that is used in both browsers and web servers. (Sun)
 
 ## JavaScript Object Notation
 
@@ -359,7 +359,7 @@ An application whose initialization is deferred until first use.
 
 ## LDAP
 
-See [Lightweight Directory Access Protocol](#x2028538).
+See [Lightweight Directory Access Protocol](#lightweight-directory-access-protocol-ldap).
 
 ## LDAP directory
 
@@ -369,9 +369,9 @@ A type of repository that stores information on people, organizations, and other
 
 An operation method that enhances portal performance by improving start-up time and reducing memory consumption in production environments.
 
-## Lightweight Directory Access Protocol \(LDAP\)
+## Lightweight Directory Access Protocol (LDAP)
 
-An open protocol that uses TCP/IP to provide access to directories that support an X.500 model and that does not incur the resource requirements of the more complex X.500 Directory Access Protocol \(DAP\). For example, LDAP can be used to locate people, organizations, and other resources in an Internet or intranet directory.
+An open protocol that uses TCP/IP to provide access to directories that support an X.500 model and that does not incur the resource requirements of the more complex X.500 Directory Access Protocol (DAP). For example, LDAP can be used to locate people, organizations, and other resources in an Internet or intranet directory.
 
 ## load balancing
 
@@ -389,7 +389,7 @@ The state of being a portal user and a place member. Membership in the portal is
 
 ## mashup
 
-A graphical interface that features two or more reusable web applications \(widgets\) presenting seemingly disparate data in an understandable combination for a specific purpose.
+A graphical interface that features two or more reusable web applications (widgets) presenting seemingly disparate data in an understandable combination for a specific purpose.
 
 ## meta search
 
@@ -403,7 +403,7 @@ A method for communication between programs. Messaging can be synchronous or ind
 
 Software that acts as an intermediate layer between applications or between client and server. It is used most often to support complex, distributed applications in heterogeneous environments.
 
-## model view controller \(MVC\)
+## model view controller (MVC)
 
 A software architecture that separates the components of the application: the model represents the business logic or data; the view represents the user interface; and the controller manages user input or, in some cases, the application flow.
 
@@ -413,25 +413,25 @@ An interface for modifying portal resources that exist in the read only model.
 
 ## MVC
 
-See [model view controller](#x2267351).
+See [model view controller](#model-view-controller-mvc).
 
 # N
 
-## News Industry Text Format \(NITF\)
+## News Industry Text Format (NITF)
 
 An XML-based format that defines the structure and content of news articles.
 
-## News Markup Language \(NewsML\)
+## News Markup Language (NewsML)
 
 An XML-based format for publishing news-related information.
 
 ## NewsML
 
-See [News Markup Language](#x2222200).
+See [News Markup Language](#news-markup-language-newsml).
 
 ## NITF
 
-See [News Industry Text Format](#x2222207).
+See [News Industry Text Format](#news-industry-text-format-nitf).
 
 ## node
 
@@ -441,9 +441,9 @@ A logical group of managed servers.
 
 ## OCS channel
 
-See [open content syndication channel](#x2222214).
+See [open content syndication channel](#open-content-syndication-channel-ocs-channel).
 
-## open content syndication channel \(OCS channel\)
+## open content syndication channel (OCS channel)
 
 An XML-based format for syndicated content.
 
@@ -471,7 +471,7 @@ An individual authenticated by the portal and having a person record in one or m
 
 ## person card
 
-An interface that displays information about a registered user such as phone number and online status \(if Sametime is enabled\), and additional details typically found on a business card. Available actions let you view the person's complete profile and, depending on how the portal is configured, send email, chat, and link to Lotus Connections features such as Communities, Activities, and Blogs.
+An interface that displays information about a registered user such as phone number and online status (if Sametime is enabled), and additional details typically found on a business card. Available actions let you view the person's complete profile and, depending on how the portal is configured, send email, chat, and link to HCL Connections features such as Communities, Activities, and Blogs.
 
 ## person link
 
@@ -479,7 +479,7 @@ A reference to a person's name or a group name that appears with the Sametime on
 
 ## personal group
 
-In Sametime Connect, a group of people designated by the user as a group. A user can choose individuals from the public Directory \(public group\) and create personal groups, which are then stored locally. Users can add and remove people from a personal group, whereas the membership of the public group is defined by the owner of the public Directory.
+In Sametime Connect, a group of people designated by the user as a group. A user can choose individuals from the public Directory (public group) and create personal groups, which are then stored locally. Users can add and remove people from a personal group, whereas the membership of the public group is defined by the owner of the public Directory.
 
 ## personalization
 
@@ -515,7 +515,7 @@ An end point for communication between applications, generally referring to a lo
 
 ## port type
 
-An element in a Web Services Description Language \(WSDL\) document that comprises a set of abstract operations, each of which refers to input and output messages that are supported by the web service.
+An element in a Web Services Description Language (WSDL) document that comprises a set of abstract operations, each of which refers to input and output messages that are supported by the web service.
 
 ## portal
 
@@ -527,7 +527,7 @@ The place where portal administrators set and maintain basic collaboration permi
 
 ## portal artifacts
 
-Stored in the portal file system. All deliverables of software development are usually artifacts \(otherwise referred to as software components\).
+Stored in the portal file system. All deliverables of software development are usually artifacts (otherwise referred to as software components).
 
 ## portal configuration
 
@@ -543,7 +543,7 @@ A series of identically configured, stand-alone portal server instances that off
 
 ## portal member
 
-An individual or group who has a user record in the portal directory \(LDAP or other directory\) and can log in to the portal.
+An individual or group who has a user record in the portal directory (LDAP or other directory) and can log in to the portal.
 
 ## portal solution release
 
@@ -607,7 +607,7 @@ The process of setting up and maintaining a user's access to a system.
 
 ## PSTN
 
-See [public switched telephone network](#x2353760).
+See [public switched telephone network](#public-switched-telephone-network-pstn).
 
 ## public group
 
@@ -615,9 +615,9 @@ A group of individuals, known to all portal users, that the administrator has cr
 
 ## public place
 
-A shared place that is open to all portal users. The person who creates the place \(and who automatically becomes the place manager\) designates it as a public place during place creation.
+A shared place that is open to all portal users. The person who creates the place (and who automatically becomes the place manager) designates it as a public place during place creation.
 
-## public switched telephone network \(PSTN\)
+## public switched telephone network (PSTN)
 
 A communications common carrier network that provides voice and data communications services over switched lines.
 
@@ -631,19 +631,19 @@ A normal server side portlet that uses Java and Java server pages, but usually u
 
 A portal user who has a user ID and password for logging in to a portal.
 
-## Representational State Transfer \(REST\)
+## Representational State Transfer (REST)
 
-A software architectural style for distributed hypermedia systems like the World Wide Web. The term is also often used to describe any simple interface that uses XML \(or YAML, JSON, plain text\) over HTTP without an additional messaging layer such as SOAP.
+A software architectural style for distributed hypermedia systems like the World Wide Web. The term is also often used to describe any simple interface that uses XML (or YAML, JSON, plain text) over HTTP without an additional messaging layer such as SOAP.
 
 ## REST
 
-See [Representational State Transfer](#x3220976).
+See [Representational State Transfer](#representational-state-transfer-rest).
 
 ## restricted place
 
-A shared place that is open to only those individuals and groups whom the place creator \(or place manager\) adds to the place's membership list. The person who creates the place \(and who automatically becomes the place manager\) designates the place as a restricted place during place creation.
+A shared place that is open to only those individuals and groups whom the place creator (or place manager) adds to the place's membership list. The person who creates the place (and who automatically becomes the place manager) designates the place as a restricted place during place creation.
 
-## Rich Site Summary \(RSS\)
+## Rich Site Summary (RSS)
 
 An XML-based format for syndicated web content that is based on the RSS 0.91 specification. The RSS XML file formats are used by Internet users to subscribe to websites that have provided RSS feeds.
 
@@ -653,7 +653,7 @@ A job function that identifies the tasks that a user can perform and the resourc
 
 ## RSS
 
-See [Rich Site Summary](#x2222334).
+See [Rich Site Summary](#rich-site-summary-rss).
 
 ## rules-based personalization
 
@@ -685,7 +685,7 @@ The protection of data, system operations, and devices from accidental or intent
 
 A component that is responsible for authenticating user logins.
 
-## server side aggregation \(SSA\)
+## server side aggregation (SSA)
 
 Aggregation based on Java server pages that are executed on the Server.
 
@@ -705,23 +705,23 @@ A company or program that provides a business function as a service.
 
 The application that initiates an interaction with a web service. The service requestor binds to the service using the published information and calls the service.
 
-## service-oriented architecture \(SOA\)
+## service-oriented architecture (SOA)
 
 A conceptual description of the structure of a software system in terms of its components and the services they provide, without regard for the underlying implementation of these components, services and connections between components.
 
 ## session bean
 
-An enterprise bean that is created by a client and that usually exists only for the duration of a single client/server session. \(Sun\)
+An enterprise bean that is created by a client and that usually exists only for the duration of a single client/server session. (Sun)
 
 ## shared place
 
-A place created for a community of people with a common purpose. Shared places can be public or restricted. The place creator \(who automatically becomes the place manager\) specifies whether a place is public or restricted during place creation.
+A place created for a community of people with a common purpose. Shared places can be public or restricted. The place creator (who automatically becomes the place manager) specifies whether a place is public or restricted during place creation.
 
-## Short Message Service \(SMS\)
+## Short Message Service (SMS)
 
 A service that is used to transmit text to and from a mobile phone.
 
-## single sign-on \(SSO\)
+## single sign-on (SSO)
 
 An authentication process in which a user can access more than one system or application by entering a single user ID and password.
 
@@ -739,7 +739,7 @@ A pre-built sample site that can be used to streamline the process of developing
 
 ## SMS
 
-See [Short Message Service](#x2222612).
+See [Short Message Service](#short-message-service-sms).
 
 ## source portlet
 
@@ -747,7 +747,7 @@ The portlet that sends the information to other portlets.
 
 ## SSO
 
-See [single sign-on](#x2213318).
+See [single sign-on](#single-sign-on-sso).
 
 ## staging
 
@@ -777,7 +777,7 @@ The consumer of a business service.
 
 ## TAI
 
-See [trust association interceptor](#x2239009).
+See [trust association interceptor](#trust-association-interceptor-tai).
 
 ## target portlet
 
@@ -799,31 +799,31 @@ Content adaptation to meet the specific capabilities of a client device.
 
 The process or protocol mechanism of transferring an XML message or document between parties as part of a meaningful, reliable exchange. The most common transports for web services are SOAP/HTTP, SOAP/HTTPs, and SOAP/JMS.
 
-## trust association interceptor \(TAI\)
+## trust association interceptor (TAI)
 
 The mechanism by which trust is validated in the product environment for every request received by the proxy server. The method of validation is agreed upon by the proxy server and the interceptor.
 
 # U
 
-## Uniform Resource Identifier \(URI\)
+## Uniform Resource Identifier (URI)
 
-A unique address that is used to identify content on the web, such as a page of text, a video or sound clip, a still or animated image, or a program. The most common form of URI is the web page address, which is a particular form or subset of URI called a Uniform Resource Locator \(URL\). A URI typically describes how to access the resource, the computer that contains the resource, and the name of the resource \(a file name\) on the computer.
+A unique address that is used to identify content on the web, such as a page of text, a video or sound clip, a still or animated image, or a program. The most common form of URI is the web page address, which is a particular form or subset of URI called a Uniform Resource Locator (URL). A URI typically describes how to access the resource, the computer that contains the resource, and the name of the resource (a file name) on the computer.
 
-## Uniform Resource Locator \(URL\)
+## Uniform Resource Locator (URL)
 
 The unique address of an information resource that is accessible in a network such as the Internet. The URL includes the abbreviated name of the protocol used to access the information resource and the information used by the protocol to locate the information resource.
 
-# Universal Description, Discovery, and Integration \(UDDI\)
+# Universal Description, Discovery, and Integration (UDDI)
 
-A set of standards-based specifications that enables companies and applications to quickly and easily find and use web services over the Internet. See also [Web service](#x2272517).
+A set of standards-based specifications that enables companies and applications to quickly and easily find and use web services over the Internet. See also [Web service](#web-service).
 
 # URI
 
-See [Uniform Resource Identifier](#x2116436).
+See [Uniform Resource Identifier](#uniform-resource-identifier-uri).
 
 # URL
 
-See [Uniform Resource Locator](#x2042491).
+See [Uniform Resource Locator](#uniform-resource-locator-url).
 
 # user group
 
@@ -835,21 +835,21 @@ A group consisting of one or more defined individual users, identified by a sing
 
 ## W3C
 
-See [World Wide Web Consortium](#x2178477).
+See [World Wide Web Consortium](#world-wide-web-consortium-w3c).
 
 ## WAP
 
-See [Wireless Application Protocol](#x2012497).
+See [Wireless Application Protocol](#wireless-application-protocol-wap).
 
 ## WAR
 
-See [Web archive](#x2116506).
+See [Web archive](#web-archive-war).
 
 ## WAR file
 
-See [Web archive](#x2116506).
+See [Web archive](#web-archive-war).
 
-## Web archive \(WAR\)
+## Web archive (WAR)
 
 A compressed file format, defined by the Java EE standard, for storing all the resources required to install and run a web application in a single file.
 
@@ -863,49 +863,49 @@ A type of crawler that explores the web by retrieving a web document and followi
 
 ## Web service
 
-A self-contained, self-describing modular application that can be published, discovered, and invoked over a network using standard network protocols. Typically, XML is used to tag the data, SOAP is used to transfer the data, WSDL is used for describing the services available, and UDDI is used for listing what services are available. See also [Web Services Description Language](#x2116539).
+A self-contained, self-describing modular application that can be published, discovered, and invoked over a network using standard network protocols. Typically, XML is used to tag the data, SOAP is used to transfer the data, WSDL is used for describing the services available, and UDDI is used for listing what services are available. See also [Web Services Description Language](#web-services-description-language-wsdl).
 
 ## Web service endpoint
 
-An entity that is the destination for web service messages. A web service endpoint has a Uniform Resource Identifier \(URI\) address and is described by a Web Service Definition Language \(WSDL\) port element.
+An entity that is the destination for web service messages. A web service endpoint has a Uniform Resource Identifier (URI) address and is described by a Web Service Definition Language (WSDL) port element.
 
 ## Web service interface
 
-A group of operations described by the content of a Web Service Definition Language \(WSDL\) 1.1 port element. These operations can provide access to resource properties and metadata. \(OASIS\)
+A group of operations described by the content of a Web Service Definition Language (WSDL) 1.1 port element. These operations can provide access to resource properties and metadata. (OASIS)
 
-## Web service semantics \(WSDL-S\)
+## Web service semantics (WSDL-S)
 
-A technical specification that defines a mechanism to associate semantic annotations with web services that are described using Web Service Description Language \(WSDL\).
+A technical specification that defines a mechanism to associate semantic annotations with web services that are described using Web Service Description Language (WSDL).
 
-## Web Services Description Language \(WSDL\)
+## Web Services Description Language (WSDL)
 
-An XML-based specification for describing networked services as a set of endpoints operating on messages containing either document-oriented or procedure-oriented information. See also [Web service](#x2272517).
+An XML-based specification for describing networked services as a set of endpoints operating on messages containing either document-oriented or procedure-oriented information. See also [Web service](#web-service).
 
-## Web Services Interoperability Organization \(WSI\)
+## Web Services Interoperability Organization (WSI)
 
 An open industry organization that promotes web services interoperability across platforms, operating systems, and programming languages.
 
-## Web Services Policy Framework \(WS-Policy\)
+## Web Services Policy Framework (WS-Policy)
 
 A model and framework for describing the capabilities, requirements, and general characteristics of a web service as a policy assertion or a collection of policy assertions.
 
-## Web Services Resource Framework \(WSRF\)
+## Web Services Resource Framework (WSRF)
 
-The set of specifications that define the specific rendering of a Web Services Resource \(WS-Resource\), the association of that resource with the web service interface, and the messages that define the querying and updating of the properties of that resource.
+The set of specifications that define the specific rendering of a Web Services Resource (WS-Resource), the association of that resource with the web service interface, and the messages that define the querying and updating of the properties of that resource.
 
 ## widget
 
-A graphical interface that features two or more reusable web applications \(widgets\) presenting seemingly disparate data in an understandable combination for a specific purpose.
+A graphical interface that features two or more reusable web applications (widgets) presenting seemingly disparate data in an understandable combination for a specific purpose.
 
 ## wire
 
 To connect two or more components or cooperative portlets so that they work together. In an application, wiring identifies target services; for portlets changes in the source portlet automatically update the target portlets.
 
-## Wireless Application Protocol \(WAP\)
+## Wireless Application Protocol (WAP)
 
 An open industry standard for mobile Internet access that allows mobile users with wireless devices to easily and instantly access and interact with information and services. 
 
-## Wireless Markup Language \(WML\)
+## Wireless Markup Language (WML)
 
 A markup language based on XML that is used to present content and user interfaces for wireless devices such as cellular phones, pagers, and personal digital assistants.
 
@@ -913,37 +913,37 @@ A markup language based on XML that is used to present content and user interfac
 
 The sequence of activities performed in accordance with the business processes of an enterprise.
 
-## World Wide Web Consortium \(W3C\)
+## World Wide Web Consortium (W3C)
 
 An international industry consortium set up to develop common protocols to promote evolution and interoperability of the World Wide Web.
 
 ## WML
 
-See [Wireless Markup Language](#x2105479).
+See [Wireless Markup Language](#wireless-markup-language-wml).
 
 ## WSDL
 
-See [Web Services Description Language](#x2116539).
+See [Web Services Description Language](#web-services-description-language-wsdl).
 
 ## WSDL-S
 
-See [Web service semantics](#x2556485).
+See [Web service semantics](#web-service-semantics-wsdl-s).
 
 ## WSI
 
-See [Web Services Interoperability Organization](#x2416245).
+See [Web Services Interoperability Organization](#web-services-interoperability-organization-wsi).
 
 ## WSRF
 
-See [Web Services Resource Framework](#x2391028).
+See [Web Services Resource Framework](#web-services-resource-framework-wsrf).
 
 # X
 
 ## XML
 
-See [Extensible Markup Language](#x2027487).
+See [Extensible Markup Language](#extensible-markup-language-xml).
 
 ## XSL
 
-See [Extensible Stylesheet Language](#x2054754).
+See [Extensible Stylesheet Language](#extensible-stylesheet-language-xsl).
 

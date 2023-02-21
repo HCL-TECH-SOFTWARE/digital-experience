@@ -18,13 +18,15 @@ workflowrestart.requires.manager=false
 
 ## Web content configuration changes
 
-**Note:** This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
+!!!note
+    This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
 
-You no longer use the `WCMConfigService.properties` file to update configuration settings for Web Content Manager. Instead, you now use the `WCM WCMConfigService` service to update configuration settings with the WebSphere Integrated Solutions Console. For more information, see [Setting service configuration properties](../admin-system/adsetcfg.md).
+You no longer use the `WCMConfigService.properties` file to update configuration settings for Web Content Manager. Instead, you now use the `WCM WCMConfigService` service to update configuration settings with the WebSphere Integrated Solutions Console. For more information, see [Setting service configuration properties](../../../config_portal_behavior/service_config_properties/index.md).
 
 ## Web content tag format changes
 
-**Note:** This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
+!!!note
+    This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
 
 Web content tags now use brackets. This allows you to add web content tags directly into rich text fields.
 
@@ -40,14 +42,14 @@ The component tag now uses brackets:
 [component name="componentname" ]
 ```
 
-**Note:**
-
--   All web content tags are converted to the new format during migration.
--   After migration, if a user enters a web content tag with the old format, it will be converted to the new format when saved.
+!!!note "Notes"
+    -   All web content tags are converted to the new format during migration.
+    -   After migration, if a user enters a web content tag with the old format, it will be converted to the new format when saved.
 
 ## New web content property tag
 
-**Note:** This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
+!!!note
+    This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
 
 The `IDCmpnt`, `HistoryCmpnt`, `ProfileCmpnt`, `WorkflowCmpnt`, and `SecurityCmpnt` tags are no longer supported. These features are retained and consolidated into a new property tag.
 
@@ -57,14 +59,14 @@ htmlencode=" " awareness=" " ifEmpty=" " include=" " restrict=" " resolve=" "
 start=" " end=" " ]
 ```
 
-**Note:**
-
--   These tags are converted to the new property tag during migration.
--   After migration, if a user enters one of the deprecated tags, it will be converted to the new property tag when saved.
+!!!note "Notes"
+    -   These tags are converted to the new property tag during migration.
+    -   After migration, if a user enters one of the deprecated tags, it will be converted to the new property tag when saved.
 
 ## Autofill parameter in web content tags
 
-**Note:** This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
+!!!note
+    This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
 
 The behavior of the autofill parameter that is used in some web content tags is updated. If used in an item where autofill is not applicable, the tag instead uses the context of the current item.
 
@@ -76,7 +78,8 @@ renderAutoFillTagsAsCurrent=false
 
 ## Federated content component and element
 
-**Note:** This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
+!!!note
+    This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
 
 The federated content component and element are no longer supported in version 8.0. To reference federated content in your website, use one of the following features:
 
@@ -98,7 +101,8 @@ The standard Web Content Viewer portlet supports extra portlet and page display 
 
 ## Links and metadata for remote content
 
-**Note:** This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
+!!!note
+    This was new in Web Content Manager version 8.0. No action is required if migrating from Web Content Manager version 8.0 or higher.
 
 The federated documents feature of Web Content Manager is used to insert links to content from a remote content system or document repository. Examples of supported repositories include HCL Content Manager, IBM® FileNet® Content Manager, and Microsoft™ SharePoint. This capability is provided by the rich text editors in Version 8.5:
 
@@ -118,12 +122,8 @@ To enable the **Insert Link to Remote Content** function after migration, ensure
 To enable the folder selection wizard in Personalization, ensure that the `wp_federated_documents_picker` theme module is available to the page that contains the Personalization Editor.
 
 
-**Related information**  
-
-
-[Configuring the reserved authoring portlet](../wcm/wcm_config_wcmviewer_reservedcfg.md)
-
-[Supported specifications for inserting links to remote content](../overview/new_wcm_standards.md)
-
-[Personalizing federated documents](../wcm/wcm_dev_feddocs.md)
+???+ info "Related information"
+    -   [Configuring the reserved authoring portlet](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/reserved_auth_portlet/wcm_config_wcmviewer_reservedcfg.md)
+    -   [Inserting a Link in an Element](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
+    -   [Personalizing federated documents](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/feddocs/index.md)
 

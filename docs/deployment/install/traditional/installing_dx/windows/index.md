@@ -6,7 +6,7 @@ Before you begin
 
 Roadmaps for installation and deployment are included in this product documentation to guide you through the process. Roadmaps provide a high-level overview of the process from beginning to end. See [Roadmaps to deploy your system](../../../../../get_started/plan_deployment/traditional_deployment/roadmaps/index.md) for more information.
 
-Then, use the Configuration Wizard to complete the deployment configuration. See [Configuration Wizard](../../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md) in our product base documentation to learn more about using the tool.
+Then, use the Configuration Wizard to complete the deployment configuration. See [Configuration Wizard](../../../../manage/portal_admin_tools/cfg_wizard/index.md) in our product base documentation to learn more about using the tool.
 
 -   **[Preparing your Windows OS](../windows/prep_os-windows.md)**  
 Prepare the operating system to ensure a successful HCL Digital Experience installation.

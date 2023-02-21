@@ -77,4 +77,4 @@ If the step fails, check the systemout.log for the deployment manager. The log f
 |Clean up step|None required|
 
 **Related information**  
-[Accessing the Configuration Wizard](./../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+[Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)

@@ -44,7 +44,7 @@ In a default portal installation, the group All Authenticated Portal Users has t
 
 ???+ info "Related information"
     - [Tagging and rating](../tagging_rating/index.md)
-    - [Access permissions](../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md)
+    - [Access permissions](../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md)
     - [The tag and rating widgets](../tagging_rating/tagging_rating_ui/tagging_rating_widget/index.md)
     - [How public and private tags and ratings work in the portal](../tagging_rating/howto_tagging_rating/tag_rate_adm_publc_privt.md)
 

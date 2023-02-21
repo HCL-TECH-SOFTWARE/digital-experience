@@ -144,6 +144,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
         -   stateless.urls.enabled=true
         -   generate.stateless.urls=true
         -   generate.stateless.redirect.urls=true
+
     -   Update the theme parameters to include the following parameters:
 
         ```
@@ -152,6 +153,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
         ```
 
     -   Restart the HCL DX 9.5 server.
+
     Note the display of the PWA install option will vary depending on the device you are using \(e.g. Chrome on MacOS and Safari on iOS\) as noted above in the Updated [Woodburn Studio Demo Site](../woodburn_studio/index.md) detail.
 
     All further steps apply to custom themes and/or to custom sites.
@@ -162,6 +164,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
             -   images \(folder\)
             -   manifest.json
             -   service-worker.js
+
 3.  **Create a new folder under the pwas directory** to represent the site configuration.
 4.  **Create a manifest.json file in the PWA configuration folder**. The manifest file should include the following information:
 
@@ -239,6 +242,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
     -   **Optional: `com.hcl.dx.pwa.manifest.scope`** - Set on a label or page in the site to override the `scope` specified in the PWA manifest \(typically the URL for the root page of the site, for example, /wps/myportal/site1\). The scope can also be set to auto which will cause the scope to be set to the friendly path of the PWA configuration node. See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter.
     -   **Optional: `com.hcl.dx.pwa.manifest.start_url`** - See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter.
     -   **Optional: `pwa.Hidden`** - Set on a label or page in the site to exclude a page from the PWA application navigation \(true or false\).
+    
 11. **Optionally, update the theme files for hiding pages in PWA application mode**. See the *Hiding pages in PWA application mode* guidance above in this section for explanations and guidance to apply these changes.
 
 PWA support in Virtual Portals: Typically, PWAs are designed to serve a single site. Because HCL Digital Experience is capable of serving multiple sites through [Virtual Portal](../virtual_portal/vp_planning/advppln_scope.md) support, HCL DX administrators should be able to configure multiple sites to implement PWA capabilities.

@@ -12,14 +12,13 @@ For using HTTP-cookie-based single sign-on, the WSRP Producer must not be config
 
     -   The WSRP Consumer and the WSRP Producer must be configured to use a shared user registry.
     -   The LTPA keys must be exchanged between WSRP Consumer and WSRP Producer.
+
 -   **Required WSRP Consumer configuration:**
 
     For using HTTP-cookie-based single sign-on, the WSRP Consumer must be configured to forward single sign-on cookies to the WSRP Producer. For more information, read *Securing the WSRP Consumer by HTTP-cookie-based single sign-on*.
 
 
 
-**Related information**  
-
-
-[Securing the WSRP Consumer by HTTP-cookie-based single sign-on](../admin-system/wsrpt_cons_sec_ws_http_cb_sso.md)
+???+ info "Related information"
+    - [Securing the WSRP Consumer by HTTP-cookie-based single sign-on](../../../../portal_wsrp_consumer/wsrp_consumer_info/cfg_security_consumer_portal/wsrpt_cons_sec_ws_http_cb_sso.md)
 

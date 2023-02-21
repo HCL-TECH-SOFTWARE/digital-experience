@@ -63,7 +63,8 @@ catch (PumaException pe){
 
 ```
 
-**Note:** Because PumaProfile, PumaLocator and PumaController store the current user, you must not store these objects in a session or anywhere else. But you can retrieve them from PumaHome each time you use them. PumaHome, however, can be stored.
+!!! note
+    Because PumaProfile, PumaLocator and PumaController store the current user, you must not store these objects in a session or anywhere else. But you can retrieve them from PumaHome each time you use them. PumaHome, however, can be stored.
 
 The following sample shows how a standard portlet would do a standard search for reading and writing attributes:
 
@@ -109,12 +110,10 @@ for (User aUser: buffer)
 List<User> result = pageIter.getPage(null, 5);
 ```
 
--   **[Remote REST service for PUMA](../dev/uprof_rest.md)**  
+-   **[Remote REST service for PUMA](../puma_spi/remote_rest_service_for_puma/index.md)**  
 The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured Portal user repository. It is based on the REST \(REpresentational State Transfer\) architecture model.
 
 
-**Related information**  
-
-
-[Administering user impersonation](../admin-system/impers_user.md)
+???+ info "Related information"
+    - [Administering user impersonation](../../../deployment/manage/security/people/authorization/users_and_groups/impersonation/index.md)
 

@@ -42,12 +42,11 @@
 
 ## Output
 
-Find in your base directory the xml output in store/outputFiles/xmlaccess (“The zip output file should look something like this: `Output-20220926095803.xml`”). Move the exported zip to a different directory to ensure it would not be lost.
+Find in your base directory the xml output in store/outputFiles/xmlaccess (The zip output file should look something like this: `Output-20220926095803.xml`). Move the exported zip to a different directory to ensure it would not be lost.
 
 
 !!!tip "See more detailed information [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/xmlaccess.html)."
 
-## Related Pages
-
-- [Manually exporting the your DX Site Page Hierarchy ](manual_export_site_page_hierarchy.md)
-- [How to import DX Site Page Hierarchy](import_site_page_hierarchy.md)
+???+ info "Related information"
+    - [Manually exporting the your DX Site Page Hierarchy](manual_export_site_page_hierarchy.md)
+    - [How to import DX Site Page Hierarchy](import_site_page_hierarchy.md)

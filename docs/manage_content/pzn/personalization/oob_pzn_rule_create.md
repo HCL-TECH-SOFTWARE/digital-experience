@@ -8,7 +8,7 @@ title: Creating a business rule
 
 Rules are used to define how your website interacts with individuals and groups of site visitors. Rules are composed of easy-to-read logic statements that specify how to evaluate conditions and what actions to take.
 
-There are different types of rules. Personalization decisions are based on calculations, visitor profile information, past interaction on the site \(using LikeMinds\), and other attributes. Each rule includes elements, such as how to order the personalized content. Create a simple visibility rule in the following procedure.
+There are different types of rules. Personalization decisions are based on calculations, visitor profile information, past interaction on the site (using LikeMinds), and other attributes. Each rule includes elements, such as how to order the personalized content. Create a simple visibility rule in the following procedure.
 
 1.  On the Business Rules page, click **New Rule**.
 

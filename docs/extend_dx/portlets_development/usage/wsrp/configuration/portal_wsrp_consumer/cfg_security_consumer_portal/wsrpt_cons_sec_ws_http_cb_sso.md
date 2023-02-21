@@ -27,10 +27,7 @@ The following example properties contain cookie forwarding rules for using HTTP-
 
 
 
-**Related information**  
-
-
-[Securing the WSRP Producer by HTTP-cookie-based single sign-on](../admin-system/wsrpt_prod_sec_ws_http_cb_sso.md)
-
-[Customizing Client Cookie Forwarding](../admin-system/wsrpc_clnt_cook_frwrd.md)
+???+ info "Related information"
+    - [Securing the WSRP Producer by HTTP-cookie-based single sign-on](../../../portal_wsrp_producer/securing_wsrp_prod_portal/cfg_security_producer_portal/wsrpt_prod_sec_ws_http_cb_sso.md)
+    - [Customizing Client Cookie Forwarding](../../../portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/wsrpc_clnt_cook_frwrd.md)
 

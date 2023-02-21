@@ -1,4 +1,4 @@
-# User predictability \| LikeMinds engine
+# User predictability | LikeMinds engine
 
 This section contains the following information regarding user predictability.
 

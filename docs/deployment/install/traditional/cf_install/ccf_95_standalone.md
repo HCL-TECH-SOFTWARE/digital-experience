@@ -26,7 +26,7 @@ It is recommended that servers utilizing syndication have associated syndicators
 
 Otherwise syndication updates that run during install may clash with install modifications and can cause the CF update to fail.
 
-Syndicators and subscribers can be disabled by editing them in the syndication administration portlet. Go to the [How to manage syndicators and subscribers](../../../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs.md) topic section for more information. Syndication should then be re-enabled after the update is complete.
+Syndicators and subscribers can be disabled by editing them in the syndication administration portlet. Go to the [How to manage syndicators and subscribers](../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md) topic section for more information. Syndication should then be re-enabled after the update is complete.
 
 Alternatively, the following ConfigEngine tasks have also been integrated into CF09 or later to globally disable and enable syndication (These tasks can be used in place of the manual updates linked above):
 

@@ -77,14 +77,14 @@ If you are using a website that is shared across virtual portals, then to search
 
 You must do these steps for each virtual portal in your system.
 
-<!--
--   **[Indexing web content in a multilingual environment](../wcm/wcm_dev_search_portal_multi.md)**  
+
+-   **[Indexing web content in a multilingual environment](wcm_dev_search_portal_multi.md)**  
 Learn about the best practices for indexing web content if you are working with a multilingual Web Content Manager site.
 
-
+<!--
 **Previous topic:**[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
 
 **Next topic:**[Configuring Web Content Manager search options](../wcm/wcm_config_search.md)-->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Searching on secured portal sites and pages and content management items](../../search/planning_portal_search/security_considerations/srtsrchscrprtlstepgs.md)

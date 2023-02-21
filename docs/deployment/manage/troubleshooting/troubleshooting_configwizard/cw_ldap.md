@@ -146,4 +146,4 @@ During this step, the wizard runs the member fixer tool to clean up the entries 
 |Clean up step|None required|
 
 **Related information**  
-[Accessing the Configuration Wizard](./../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+[Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)

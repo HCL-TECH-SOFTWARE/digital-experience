@@ -97,7 +97,7 @@ Using the Theme Development tools, you can quickly copy, create, and modify them
 You must repackage the static content as a WAR file or as an EAR file containing the WAR file when it is not possible to exchange the static content with the Operations Team as a separate compressed file.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Installing add-ons](../../../../deployment/install/traditional/install_addons/index.md)
     - [Exporting content from the filestore](../dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md)
     - [Manually packaging themes for deployment](../dev_op_overview/manual_packaging_themes/index.md)

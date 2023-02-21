@@ -34,7 +34,7 @@ Portal ConfigEngine task that deletes a virtual portal.
 You can administer multiple virtual portals by running a single configuration command. The following configuration tasks support working with multiple virtual portals: create-virtual-portal, delete-virtual-portal, and modify-virtual-portal. Use the -DvirtualPortalList parameter with task to create, delete, or modify multiple virtual portals at the same time.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Deploying the initial release](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_deploy.md)
     - [Deploying the differential release](../../../../../deployment/manage/staging_to_production/creating_deploying_diff_release/index.md)
     - [Administering virtual portals](../../../adm_vp_task/index.md)

@@ -46,6 +46,7 @@ If you want to consume remote portlets from a Producer, create a new Producer de
     -   Whether this port supports HTTPS.
     -   Which transport protocol is selected.
     -   Which service reference is selected.
+
     You can edit the configuration for the ports by proceeding as follows:
 
     1.  Click the **Edit** icon for the port that you want to modify.
@@ -59,6 +60,7 @@ If you want to consume remote portlets from a Producer, create a new Producer de
         -   HTTP
         -   HTTPS
         -   Dynamic. This option is only available for the Markup port, and only if the Producer configured this port for both HTTP and HTTPS.
+
     4.  From the drop-down list, select a service reference as required.
 
     5.  Click **OK** to save your data or **Cancel** to return without saving.
@@ -90,7 +92,7 @@ If you want to consume remote portlets from a Producer, create a new Producer de
 
 Use the Manage Web Modules portlet to consume web services.
 
--   **[Setting registration properties for web service Producers](h_wserv_set_props.md)**  
+-   **[Setting registration properties for web service Producers](../creating_producer_definition/reg_prop/index.md)**  
 On the Consumer portal, you can create registration properties for a web service Producer.
 -   **[Setting user attributes to be passed to a web service Producer](h_wserv_set_user.md)**  
 You can set user attributes that you want to be passed on to the web service Producer. The values for the selected attributes are passed on to the Producer when your portal users use the Producer's portlet. For example, if you select the attribute for user name, the user's name is passed on to the Producer. As a result, the Producer's portlet can address your portal users by their names. Setting user attributes is optional.

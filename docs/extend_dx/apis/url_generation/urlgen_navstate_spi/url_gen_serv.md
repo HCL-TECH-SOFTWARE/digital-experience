@@ -89,7 +89,8 @@ private static PortalStateManagerServiceHome getServiceHome() {
 
 ```
 
-**Note:** The PortalStateManagerService interface is derived from the generic StateManagerService interface. As the StateManagerService extends the com.ibm.portal.Disposable interface, you must indicate when you do not need to access the service any longer by starting the offered dispose\(\) method on it. Dispose the request-specific PortalStateManagerService by the end of the processed servlet request.
+!!! note
+  The PortalStateManagerService interface is derived from the generic StateManagerService interface. As the StateManagerService extends the com.ibm.portal.Disposable interface, you must indicate when you do not need to access the service any longer by starting the offered dispose\(\) method on it. Dispose the request-specific PortalStateManagerService by the end of the processed servlet request.
 
 ## Getting access to the PortletStateManagerService
 
@@ -177,7 +178,8 @@ The PortletStateManager and the PortalStateManagerService are derived from the c
 
     This method provides access to the various accessor factories. For more information, see [Accessor SPI](accessor_spi.md) . You must pass the respective accessor factory interface in as a method argument to retrieve a certain accessor factory the Class object.
 
-    **Note:** When you use the PortletStateManagerService, the set of accessor factories is restricted to the SelectionAccessorFactory, PortletAccessorFactory, PortletTargetAccessorFactory, SoloAccessorFactory, ThemeTemplateAccessorFactory, LocaleAccessorFactory, StatePartitionAccessorFactory, and ExpansionStatesAccessorFactory.
+    !!! note
+      When you use the PortletStateManagerService, the set of accessor factories is restricted to the SelectionAccessorFactory, PortletAccessorFactory, PortletTargetAccessorFactory, SoloAccessorFactory, ThemeTemplateAccessorFactory, LocaleAccessorFactory, StatePartitionAccessorFactory, and ExpansionStatesAccessorFactory.
 
 
 Typically, you request an EngineURL object from the URLFactory and then modify the navigational state according to the required URL semantics. To do this step, call the getState() method of the EngineURL to get the StateHolderController object that is required to modify the navigational state through the Accessor SPI. The following code snippet exemplarily illustrates this typical usage pattern. The following example shows how to call the getState() method of the EngineURL:
@@ -246,7 +248,8 @@ In the previous code sample, the newURL(Constants.Clone) method of the URLFactor
     This method creates a URL that points to a generic resource. The file name and resource type identify the resource. It can also contain a resource state that is used to further distinguish the lookup of the resource. The resource lookup takes additional information from the request into account \(if available\). This is the current locale, the client device, markup that is chosen for the client, and the theme name.
 
 
-**Note:** An absolute URL is a complete URL containing protocol, host name, and port. If there is a server-relative URL, the browser implies the current protocol, host name, and port. If there is a relative URL, the browser appends the URL to either the current request URL or to the value of the HTML base tag \(if any\). Server-relative and relative URLs cannot be enforced. In a protocol switch from "http" to "https", for example, the generated URL is absolute in any case.
+!!! note
+  An absolute URL is a complete URL containing protocol, host name, and port. If there is a server-relative URL, the browser implies the current protocol, host name, and port. If there is a relative URL, the browser appends the URL to either the current request URL or to the value of the HTML base tag \(if any\). Server-relative and relative URLs cannot be enforced. In a protocol switch from "http" to "https", for example, the generated URL is absolute in any case.
 
 ## Changing the host name of absolute URLs
 

@@ -2,7 +2,8 @@
 
 You can configure security for the WSRP Producer portal and the provided portlets. If you enable security, the WSRP Producer processes the WSRP requests from the WSRP Consumer under the user identity that is associated with the WSRP request that the Consumer sent. This user identity is represented by a security credential that is included in the WSRP request message. The security credential is provided by the WSRP Consumer. Normally, it represents the identity of the user who is logged in to the Consumer Portal.
 
-**Note:** For the WSRP Producer, security for WSRP services is optional. You can configure it if required, but you do not have to provide security. If you provide security for your WSRP services, the WSRP Consumer must be configured to use the same security mechanism as the WSRP Producer from which the Consumer consumes portlets.
+!!! note
+    For the WSRP Producer, security for WSRP services is optional. You can configure it if required, but you do not have to provide security. If you provide security for your WSRP services, the WSRP Consumer must be configured to use the same security mechanism as the WSRP Producer from which the Consumer consumes portlets.
 
 You can configure security for the WSRP Producer by using either of the following two authentication mechanisms:
 
@@ -12,6 +13,7 @@ You can configure security for the WSRP Producer by using either of the followin
 
     -   It does not require configuration of the WSRP web services. It makes it possible for the WSRP Producer to accept and process both unauthenticated and authenticated requests.
     -   The Producer processes unauthenticated requests that do not contain an LTPA V2 cookie without establishing an individual security context.
+
 -   **Web Service Security**
 
     You can configure the WSRP web service providers for Web Service Security according to the WS-Security standard. The WSRP Consumer sends a header that complies with the WS-Security standard as part of the WSRP request messages. The header contains credentials that identify and authenticate the user. For example, you can configure the Consumer portal to include Lightweight Third-Party Authentication \(LTPA\) version 1 or version 2 tokens or Username tokens in the WS-Security header. For this option, both the WSRP Consumer and the WSRP Producer must be configured for Web Services Security.
@@ -25,9 +27,9 @@ If you use the Web Services Security option, the WSRP Producer accepts only auth
 
 You can choose to not set up security for the WSRP Producer and Consumer portals. In this case, the WSRP Producer does not process the WSRP requests from the Consumer under a specific user identity. Instead, the Producer processes the WSRP requests anonymously. In this case, the Consumer must not be configured for Web Service Security.
 
--   **[Securing the WSRP Producer by HTTP-cookie-based single sign-on](../admin-system/wsrpt_prod_sec_ws_http_cb_sso.md)**  
+-   **[Securing the WSRP Producer by HTTP-cookie-based single sign-on](wsrpt_prod_sec_ws_http_cb_sso.md)**  
 You can provide security for your WSRP Producer by using HTTP-cookie-based single sign-on \(SSO\). For using this security option, the WSRP Producer requires no configuration. The WSRP Consumer must be configured to send or forward LTPA V2 single sign-on cookies as part of the WSRP request message to the WSRP Producer.
--   **[Securing the WSRP Producer by WS-Security](../admin-system/wsrpt_prod_sec_ws_wss.md)**  
+-   **[Securing the WSRP Producer by WS-Security](wsrpt_prod_sec_ws_wss.md)**  
 You can configure Web Services Security according to the WS-Security standard for your WSRP Producer and the provided web services.
 
 

@@ -67,5 +67,5 @@ The following is an example of a persistence cluster in a successful deployment.
 
 ![](../../../images/cluster_status_example.png "Persistence cluster in a successful deployment")
 
- ???info "Related information:"
+???+ info "Related information"
     - [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md)

@@ -4,11 +4,11 @@ The IBM® Connections Tags portlet gives you access to your profile and network 
 
 ## Using the Tags portlet
 
-Us the Tags portlet to access IBM Connections content by user-defined tags, or keywords. You can see tags for all IBM Connections content or associate tags with a narrower content source, such as a blog or community.
+Us the Tags portlet to access HCL Connections content by user-defined tags, or keywords. You can see tags for all HCL Connections content or associate tags with a narrower content source, such as a blog or community.
 
 ## Editing the shared settings for the Tags portlet
 
-You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Choose**Edit Shared Settings** from the portlet menu and choose the Connections applications for which you want to display tags.
+You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Choose **Edit Shared Settings** from the portlet menu and choose the Connections applications for which you want to display tags.
 
 ## Configuring the Tags portlet
 

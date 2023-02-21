@@ -9,11 +9,6 @@ Public render parameters allow JSR 286 portlets to share navigational state info
       -   Information about render parameters is normally encoded into the URL. Therefore their names and values should be as short as possible in order to not exceed the URL length restrictions set by your browser.
 
 
-???+ info "Related information"
-      - [Creating a web content page with the XML configuration interface](../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/mp_wcm_createpagexml.md)
-      - [JSR 286 portlet events based communications](../portlet_communication/portlets_publish_subscribe_mech/define_portlet_comm_capabilities/pltcom_events.md)
-      - [Advanced URL generation for data exchange](pltcom_datxchg_xptltlnks.md)
-
 ## Concepts of the Java Portlet Specification 2.0
 
 Programming details for public render parameters are defined in the Java Portlet Specification 2.0. They are read as request parameters and set in render URLs or on an ActionResponse. For most purposes, public render parameters behave exactly like "normal" or private render parameters. The only difference is that the parameter identifier is explicitly declared by the programmer in the `portlet.xml` deployment descriptor, along with one or more namespaced public names. As a result, a portal can decide which parameters of two portlets must map to the same information.
@@ -102,3 +97,7 @@ The following are known limitations to public render parameters:
 1.  The sharing scope always applies to all parameters of all portlets on a page. You currently cannot control sharing of public render parameters at a more granular level than the page level.
 2.  The optional `<alias>` elements of public render parameter declarations are ignored. Currently, sharing of public render parameters is only controlled by the `<name>` or `<qname>` elements of the parameter declarations.
 
+???+ info "Related information"
+      - [Creating a web content page with the XML configuration interface](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/advance_adm_sample/mp_wcm_createpagexml.md)
+      - [JSR 286 portlet events based communications](../portlet_communication/portlets_publish_subscribe_mech/define_portlet_comm_capabilities/pltcom_events.md)
+      - [Advanced URL generation for data exchange](pltcom_datxchg_xptltlnks.md)

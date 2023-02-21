@@ -31,13 +31,13 @@ Under normal circumstances a valid user ID and password can contain the followin
     These characters are all ASCII characters. Non-ASCII characters are not allowed for user name or password.
 
 !!! note 
-    If you plan on using a non-ASCII-based encoding, ensure your Java™ virtual machine has the correct generic arguments specific for the non-ASCII-based encoding. For example, for UTF-8 encoding, add the following two parameters to the Java virtual machine generic arguments for HCL Portal: -Dfile.encoding=UTF-8 and -Dclient.encoding.override=UTF-8
+    If you plan on using a non-ASCII-based encoding, ensure your Java™ virtual machine has the correct generic arguments specific for the non-ASCII-based encoding. For example, for UTF-8 encoding, add the following two parameters to the Java virtual machine generic arguments for HCL Portal: `-Dfile.encoding=UTF-8` and `-Dclient.encoding.override=UTF-8`.
 
 !!! note 
-    (Linux™ only) Some tasks might require you to enter the fully qualified user ID. If your fully qualified user ID contains a space; for example: cn=wpsadmin,cn=users,l=SharedLDAP,c=US,ou=Lotus,o=Software Group,dc=ibm,dc=com, you must place the fully qualified user ID in the properties file or into a parent properties file instead of as a flag on the command line. For example, create a parent properties file called mysecurity.properties, enter the fully qualified user ID, and then run the task: ./ConfigEngine.sh task_name -DparentProperties=/opt/mysecurity.properties.
+    (Linux™ only) Some tasks might require you to enter the fully qualified user ID. If your fully qualified user ID contains a space; for example: `cn=wpsadmin,cn=users,l=SharedLDAP`,`c=US,ou=Lotus`,`o=Software Group`,`dc=ibm`,`dc=com`, you must place the fully qualified user ID in the properties file or into a parent properties file instead of as a flag on the command line. For example, create a parent properties file called `mysecurity.properties`, enter the fully qualified user ID, and then run the task: `./ConfigEngine.sh task_name -DparentProperties=/opt/mysecurity.properties`.
 
 !!! note
-    (Windows™ only) Some tasks might require you to enter the fully qualified user ID. If your fully qualified user ID contains a space; for example: cn=wpsadmin,cn=users,l=SharedLDAP,c=US,ou=Lotus,o=Software Group,dc=ibm,dc=com, you must place quotations around the fully qualified user ID before you run the task; for example, "cn=wpsadmin,cn=users,l=SharedLDAP,c=US,ou=Lotus,o=Software Group,dc=ibm,dc=com".
+    (Windows™ only) Some tasks might require you to enter the fully qualified user ID. If your fully qualified user ID contains a space; for example: `cn=wpsadmin`,`cn=users`, `l=SharedLDAP`,`c=US`, `ou=Lotus`, `o=Software Group`, `dc=ibm`, `dc=com`, you must place quotations around the fully qualified user ID before you run the task; for example, `"cn=wpsadmin,cn=users,l=SharedLDAP,c=US,ou=Lotus,o=Software Group,dc=ibm,dc=com"`.
 
 The following table contains a list of the required fields on the user information form and the supported characters.
 
@@ -52,7 +52,7 @@ The following table contains a list of the required fields on the user informati
     The previous characters are true if the user.UNIQUEID.charset parameter is set to ascii. If set to unicode, the standard Java Letter definition is used and all characters that are recognized as letter or digit by Java are allowed by default. See the **Puma Validation Service** section in the "Portal configuration services" link for information about further parameters that can be modified to affect the behavior of Portal's validation of users, groups, and passwords.
 
 
-???+ info "Related information:"
-    - [Creating new users and groups](../../../deployment/manage/security/users_and_groups/adctnewu.md)
+???+ info "Related information"
+    - [Creating new users and groups](../../../deployment/manage/security/people/authorization/users_and_groups/adctnewu.md)
     - [Target environment considerations](../../../deployment/manage/migrate/settingup_target_env/mig_plan_targetenvironment.md)
 

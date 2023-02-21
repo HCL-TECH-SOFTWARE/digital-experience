@@ -116,7 +116,7 @@ Configuring HCL Connections and HCL Portal to share a single deployment manager 
         $AdminTask createKrbConfigFile {-krbPath y:\SPNEGO\krb5.conf -realm CN.IBM.COM -kdcHost AD.cn.ibm.com -dns cn.ibm.com -keytabPath y:\SPNEGO\merged.keytab}
         ```
 
-    5.  Enable SPNEGO single sign-on by configuring Kerberos in the WebSphere Application Server Integrated Solutions Console, following the steps in the *Enabling single sign-on for the Windows desktop* topic.
+    5.  Enable SPNEGO single sign-on by configuring Kerberos in the WebSphere Application Server Integrated Solutions Console, following the steps in the [Enabling single sign-on for the Windows desktop](https://help.hcltechsw.com/connections/v65/admin/secure/t_install_kerb_setup_spnego.html) topic.
 
     6.  Synchronize the node and restart the deployment manager node. If you cannot manage the Portal node on the WebSphere Application Server Integrated Solutions Console, manually synchronize the node and restart the deployment manager node.
 

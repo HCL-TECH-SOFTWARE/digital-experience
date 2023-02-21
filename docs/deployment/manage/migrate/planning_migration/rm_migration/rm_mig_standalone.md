@@ -8,7 +8,7 @@ Use this roadmap if you are:
 
 -   Migrating a stand-alone server environment from a previous version to the latest version of HCL Digital Experience.
 
-You must apply the latest cumulative fix and one of the two most recent fix packs to your source environment, and the latest cumulative fix and the most recent fix pack to your target environment before you can migrate to HCL Portal 9.5. For more information, see [Supported migration paths](../plan/mig_plan_supported_paths.md).
+You must apply the latest cumulative fix and one of the two most recent fix packs to your source environment, and the latest cumulative fix and the most recent fix pack to your target environment before you can migrate to HCL Portal 9.5. For more information, see [Supported migration paths](../../../../../deployment/manage/migrate/planning_migration/mig_plan_supported_paths.md).
 
 ## Planning for migration
 
@@ -24,7 +24,8 @@ Prepare the source portal that you want to use for migration. To keep the earlie
 
 ## Setting up your target environment
 
-**Attention:** Before you run the migration, install interim fix [PI50840](https://support.hcltechsw.com/csm?id=kb_article&sys_id=64507a5a1b85409083cb86e9cd4bcb97).
+!!!attention
+    Before you run the migration, install interim fix [PI50840](https://support.hcltechsw.com/csm?id=kb_article&sys_id=64507a5a1b85409083cb86e9cd4bcb97).
 
 Set up your target environment for migrating to the latest version of HCL Digital Experience.
 
@@ -37,17 +38,20 @@ Start the Configuration Wizard to migrate data, applications, databases, propert
 
 1.  To get the latest updates for the wizard, apply the most recent cumulative fix. For more information about applying the latest fix pack, see Combined Cumulative Fix overview.
 
-    **Note:** Skip this step, if you have the most recent fix pack applied.
+    !!!notes
+        Skip this step, if you have the most recent fix pack applied.
 
-2.  Access the Configuration Wizard using your target environment and system host name. Go to: http://your\_server:10200/hcl/wizard.
+2.  Access the Configuration Wizard using your target environment and system host name. Go to: http://your_server:10200/hcl/wizard.
 
-    **Note:** If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+    !!!note
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
 
 3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
-4.  Select **Migrate to a New Version** \> **Migrate a Stand-alone Server**.
+4.  Select **Migrate to a New Version > Migrate a Stand-alone Server**.
 5.  Provide information about your environment.
 6.  Save your wizard selections.
 7.  Choose one of the following options:
+
     -   Click **Download Configuration Scripts** to run the steps remotely.
     -   Click **Start Configuration** to run the steps locally. This option starts to run the automated steps until a manual step is encountered.
 
@@ -60,10 +64,7 @@ Migration is not complete until you review the Next steps section in the product
 After you complete the tasks in the Next steps section of the product documentation, migration is complete.
 
 
-**Related information**  
-
-
-[Portal farm migration](../plan/mig_plan_portal_farm.md)
-
-[Migrate a stand-alone server](../config/cw_migrate_stand_alone.md)
+???+ info "Related information" 
+    -   [Portal farm migration](../../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_plan_portal_farm.md)
+    -   [Migrate a stand-alone server](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_stand_alone.md)
 

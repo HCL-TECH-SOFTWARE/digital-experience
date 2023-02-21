@@ -20,7 +20,7 @@ Using the following configuration options, you can configure the portal server t
         Add an LDAP user registry to the default federated repository to store user account information for authorization.
 
         -   This option is found in **Set Up a Stand-alone Server** and in **Set Up a Cluster**.
-        -   Documentation resource: [Enable federated security](../../../../../deployment/manage/security/user_registry/cw_ldap.md)
+        -   Documentation resource: [Enable federated security](../../../../../deployment/manage/security/people/authentication/user_registry/cw_ldap.md)
         -   Documentation resource: [Troubleshooting: Enable federated security option](../../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_ldap.md)
 
     -   **Shorten Site URLs for Search Engine Optimization**
@@ -69,7 +69,7 @@ Using the following configuration options, you can configure the portal server t
     - **Install a PAA file**
         You do not have to wait until the next release to add on new features to your installed Exceptional Digital Experience software. From the Modify option, you can add HCL Web Content Manager to your portal installation, and use the Solution Installer to distribute Portal Application Archive applications to your environment.
         -   This option is found in **Add On New Capability**.
-        -   Documentation resource: [Install a PAA file](../../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/usage/cw_modify.md#install-a-paa-file)
+        -   Documentation resource: [Install a PAA file](../../../portal_admin_tools/cfg_wizard/usage/cw_modify.md#install-a-paa-file)
 
 4. More options
     -   **Recycle a Managed HCL Digital Experience Cell**

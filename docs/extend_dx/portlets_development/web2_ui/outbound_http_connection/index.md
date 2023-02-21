@@ -39,7 +39,8 @@ You can use an outbound HTTP connection in the following two ways:
 -   Through the outbound HTTP connection service
 -   Through the Ajax Proxy, which is also known as the HTTP proxy for Ajax application.
 
-The following image illustrates the two different ways to connect to a remote system by using outbound HTTP connections: ![Two ways of connecting to a remote system by using HTTP outbound connections](../images/HTTP_OutBound_graphic_1.jpg)
+The following image illustrates the two different ways to connect to a remote system by using outbound HTTP connections: 
+![Two ways of connecting to a remote system by using HTTP outbound connections](../../../../images/HTTP_OutBound_graphic_1.jpg)
 
 -   **[The programming model for the outbound HTTP connection service](outbhttp_progr_model.md)**  
 The outbound HTTP connection service can be used from the context of a servlet request service or from the context of a portlet request service. Here are some code examples.

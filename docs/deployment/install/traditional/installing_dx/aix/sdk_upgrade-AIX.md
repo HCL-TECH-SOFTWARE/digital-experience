@@ -17,10 +17,12 @@ Ensure that your Portal profile is created before you upgrade the SDK.
 
     -   For stand-alone environments: Stop the profile server (node) before you run the `managesdk` command.
     -   For clustered environments:
+
         -   If the profile is a federated node of a deployment manager, ensure that the deployment manager is running before you run the `managesdk` command to update the profile.
         -   Stop all the nodes.
         -   Ensure that the node agent for each node is started.
         -   When you enable the SDK for a node, run the `managesdk` command from the /bin directory to which the node belongs. You can also run the command from the /bin directory of the profile that contains the node that you want to update.
+        
         -   A connection to the deployment manager must exist with a supported connector protocol in the following order of preference:
 
             -   SOAP

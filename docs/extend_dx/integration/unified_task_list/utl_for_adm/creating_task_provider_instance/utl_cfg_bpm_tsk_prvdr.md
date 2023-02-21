@@ -36,8 +36,6 @@ This task provider retrieves tasks from IBM Business Process Manager and surface
 
 The next step is to configure the Coach portlets included with the Unified Task List portlet.
 
-**Related information**  
-
-
-[Configuring an IBM Business Process Manager](../integrate/utl_configuring_business_process_manager.md)
+???+ info "Related information"
+    - [Configuring an IBM Business Process Manager](../../cfg_utl_portlet_with_process_server/utl_configuring_business_process_manager.md)
 

@@ -1,10 +1,10 @@
 # Core Behavior
 
-This section provides more detailed information about how the [HCL Digital Experience 9.5 Core container](../deployment/helm_deployment.md) interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.
+This section provides more detailed information about how the [HCL Digital Experience 9.5 Core container](../../install/container/helm_deployment/overview.md) interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.
 
 ## Volume mount points
 
-The [persistent volumes](../architecture/persistent_volumes.md) used by the DX Core pod are mounted to the following directories in the Core container:
+The [persistent volumes](../../../get_started/plan_deployment/container_deployment/persistent_volumes.md) used by the DX Core pod are mounted to the following directories in the Core container:
 
 -   profile \(WebSphere Application Server profiles for the WebSphere\_Portal application server, shared between pods\): /opt/HCL/profiles
 -   log \(WebSphere Application Server logs for the WebSphere\_Portal application server, unique to a pod\): /opt/HCL/logs
@@ -26,9 +26,9 @@ for example, `prof_95_CF199`. During the Core container startup process the lat
 
 ## Core container Version-to-Version upgrade
 
-When a new version \(tag\) of the DX 9.5 Core container is specified in your [custom values YAML file](../deployment/preparation/overview.md) and you run `helm upgrade`, Kubernetes recycles all the pods in your Core stateful set one by one. It starts with the highest numbered pod and work downwards, only recycling the next pod when the current pod reports that it is "ready".
+When a new version \(tag\) of the DX 9.5 Core container is specified in your [custom values YAML file](../../install/container/helm_deployment/preparation/index.md) and you run `helm upgrade`, Kubernetes recycles all the pods in your Core stateful set one by one. It starts with the highest numbered pod and work downwards, only recycling the next pod when the current pod reports that it is "ready".
 
-Whenever a Core container is started, it compares its container version with the latest profile version. If they do not match, perform an [Update](../operations/update_helm_deployment.md) using the process set out below:
+Whenever a Core container is started, it compares its container version with the latest profile version. If they do not match, perform an [Update](../../install/container/helm_deployment/update_helm_deployment.md) using the process set out below:
 
 ![Core_container_Version-to-Version_upgrade](../../../images/Core_container_Version-to-Version_upgrade.png)
 

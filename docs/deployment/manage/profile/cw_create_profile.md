@@ -6,15 +6,7 @@ During the installation process, the IBM Installation Manager creates the HCL Po
 
 On the Configuration Wizard home page, click **More Options** to find **Create an HCL Portal Profile**.
 
-
-**Related information**  
-
-
-[Troubleshooting: Create an HCL Digital Experience profile](../trouble/cw_createprofile.md)
-
-[Using the Installation Manager to modify your environment](../install/iim_modify.md)
-
-# Creating a new profile
+## Creating a new profile
 
 After you answer questions and provide information about your system, the wizard generates a custom configuration procedure.
 
@@ -24,7 +16,8 @@ If you click **View Step Command**, you can see the task and properties that are
 
 1.  Create the target profile for HCL Portal in the WebSphere® Application Server
 
-    **Important:** WebSphere Application Server Version 8.5.5.5 requires that fix PI37248 is installed when creating the managed portal profile. This step fails if PI37248 is not installed.
+    !!!important
+        WebSphere Application Server Version 8.5.5.5 requires that fix PI37248 is installed when creating the managed portal profile. This step fails if PI37248 is not installed.
 
     -   **Condition**
 
@@ -132,7 +125,7 @@ If you click **View Step Command**, you can see the task and properties that are
 
         none
 
-11. Remove the application server \(server1\) from the profile
+11. Remove the application server (server1) from the profile
 
     -   **Condition**
 
@@ -172,4 +165,6 @@ If you click **View Step Command**, you can see the task and properties that are
 
         none
 
-
+???+ info "Related information"  
+    -   [Troubleshooting: Create an HCL Digital Experience profile](../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_createprofile.md)
+    -   [Using the Installation Manager to modify your environment](iim_modify.md)

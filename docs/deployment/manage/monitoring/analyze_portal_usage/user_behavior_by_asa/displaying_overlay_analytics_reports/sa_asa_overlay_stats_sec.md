@@ -6,10 +6,9 @@ This resource allows you to determine the user rights that are related to the ov
 
 In a default portal installation the `wpsadmins` group has the `USER` role. There is no role assigned to the anonymous user or to the group All authenticated users.
 
-**Notes:**
-
--   To view overlay reports, users need at least the `USER` role to the virtual resource `OVERLAY_REPORTS` , `ADMIN_SLOTS` , and to the resource on which they want to see the overlay report.
--   In a default portal installation only the group wpsadmins has the USER role on OVERLAY\_REPORTS.
+!!! note
+    -   To view overlay reports, users need at least the `USER` role to the virtual resource `OVERLAY_REPORTS` , `ADMIN_SLOTS` , and to the resource on which they want to see the overlay report.
+    -   In a default portal installation only the group wpsadmins has the USER role on OVERLAY\_REPORTS.
 
 -   **USER**
 

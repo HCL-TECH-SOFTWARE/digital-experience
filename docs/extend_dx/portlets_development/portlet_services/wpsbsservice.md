@@ -31,7 +31,7 @@ public interface HelloService extends PortletService
 
 ## Writing the service implementation
 
-The service implementation must implement the PortletServiceProvider interface of the com.ibm.portal.portlet.service.spi package to be able to make use of the portlet service life cycle methods in addition to your service interface. The `PortletServiceConfig` parameter of the init\(\) method allows you, for example, to access the configuration of the service \(see [Registering the service](#reg_service) for more information\).
+The service implementation must implement the PortletServiceProvider interface of the com.ibm.portal.portlet.service.spi package to be able to make use of the portlet service life cycle methods in addition to your service interface. The `PortletServiceConfig` parameter of the init\(\) method allows you, for example, to access the configuration of the service \(see [Registering the service](#registering-the-service) for more information\).
 
 ```xmp
 
@@ -180,7 +180,7 @@ To register this portlet service, add the following property names and values to
 |`sample.portletservice.HelloServiceImpl2.message`|`Greetings`|
 
 !!!note "Tip"
-    To check whether your service has been registered successfully, use the application server dumpNamespace tool. The following command, run from the [AppServer\_root](../reference/wpsdirstr.md#was_root)/bin directory, lists all portlet service entries in JNDI:
+    To check whether your service has been registered successfully, use the application server dumpNamespace tool. The following command, run from the [AppServer\_root](../../../guide_me/wpsdirstr.md)/bin directory, lists all portlet service entries in JNDI:
     
     ```
 

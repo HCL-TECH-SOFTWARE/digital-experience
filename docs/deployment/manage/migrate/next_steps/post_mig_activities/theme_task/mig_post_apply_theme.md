@@ -14,7 +14,7 @@ If you prefer to create a new set of pages and apply the theme, you can use the 
 
 To use the Manage Pages portlet, complete the following steps:
 
-1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 2.  In the **Manage Pages** portlet, select the location in Portal to create the new page.
 3.  Click **New Page** in the portlet.
 4.  Define a name for the page and select the **Portal 8.5** option from the **Theme** menu.
@@ -25,10 +25,7 @@ You can also create a page with the Portal 8.5 theme by using the XML configurat
 When you create a new page and apply the Portal 8.5 theme, the new inline customization features are immediately available for use. Use the inline toolbar to create pages.
 
 
-**Related information**  
-
-
-[Skins](../dev-theme/themeopt_cust_scopeskin.md)
-
-[Sample XML configuration files](../admin-system/admxmsmp.md)
+???+ info "Related information" 
+    -   [Skins](../../../../../../build_sites/themes_skins/customizing_theme/skins/index.md)
+    -   [Sample XML configuration files](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
 

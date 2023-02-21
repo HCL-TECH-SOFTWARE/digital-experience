@@ -171,9 +171,9 @@ Example scenario: View history limit influences only the navigational state of t
 **Related information**  
 
 
-[URL generation by using the Navigational State SPI](../dev/nav_state_spi.md)
+[URL generation by using the Navigational State SPI](../../../../extend_dx/apis/url_generation/urlgen_navstate_spi/index.md)
 
-[Caching](../security/tune_cache.md)
+[Caching](../../../manage/config_portal_behavior/index.md)
 
 [JSR 168: Portlet Specification](http://jcp.org/en/jsr/detail?id=168)
 

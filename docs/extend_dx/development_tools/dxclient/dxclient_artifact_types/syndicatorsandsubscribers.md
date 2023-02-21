@@ -1,6 +1,6 @@
 # Managing Web Content Syndicators and Subscribers using DXClient
 
-The section provides information about using the DXClient process to automate the management of Web Content Manager Syndicators, Subscribers, and get-syndication reports. For more information on the process and settings of the Web Content Manager Syndicators and Subscribers, see [How to manage syndicators and subscribers](../../../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/index.md).
+The section provides information about using the DXClient process to automate the management of Web Content Manager Syndicators, Subscribers, and get-syndication reports. For more information on the process and settings of the Web Content Manager Syndicators and Subscribers, see [How to manage syndicators and subscribers](../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md).
 
 ## Managing syndicators
 
@@ -393,8 +393,6 @@ The `create-syndication-relation` command is used to create the syndication rela
 !!! note 
     The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
-<!-- ???Info "Related information:"
-
-
-[How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_syndication.html) -->
+???+ Info "Related information"
+    - [How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_syndication.html)
 

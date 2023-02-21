@@ -1,10 +1,10 @@
 # DAM Assets Export and Import (EXIM)
 
-[Digital Asset Management](../../digital_asset_mgmt/index.md) \(DAM\) Assets Export and Import \(EXIM\) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
+[Digital Asset Management](../index.md) \(DAM\) Assets Export and Import \(EXIM\) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
 
 ## User access and control capabilities for HCL DAM EXIM users
 
-DAM \(EXIM\) is exposed via [DXClient](../../../platform/administration/DXClient/dxclient.md).
+DAM \(EXIM\) is exposed via [DXClient](../../../../extend_dx/development_tools/dxclient/index.md).
 
 Administrator users and authorized users with Administrator role privileges have access and control capabilities to DAM EXIM.
 
@@ -16,7 +16,7 @@ If you specify a path and run the command from the container, then assets will e
 
 DAM EXIM may be used to take a backup of DAM assets from any environment. The same backup can be used in other environment.
 
-DAM EXIM cannot be used for continuous sync like DAM staging. Refer to [Sharing and staging DAM assets](../staging_dam/index.md) for more information on how to configure a continuous sync of DAM assets.
+DAM EXIM cannot be used for continuous sync like DAM staging. Refer to [Sharing and staging DAM assets](../../configuration/staging_dam/index.md) for more information on how to configure a continuous sync of DAM assets.
 
 DAM Staging is a continuous sync process between environments. If you are using DAM staging, then it is not necessary to use DAM EXIM.
 

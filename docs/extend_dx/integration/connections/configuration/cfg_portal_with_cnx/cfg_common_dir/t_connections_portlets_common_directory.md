@@ -19,7 +19,9 @@ Follow these steps to configure common Directory Services for the HCL Connection
         From wp\_profile-dir/paa/SNPortlets/components/SNPortlets/config/templates/deployment, to portalInstallRoot\\wp\_profile\\config\\cells\\cell\\.
 
     -   For a clustered deployment: On the primary HCL Portal server, copy the files from wp\_profile-dir/paa/SNPortlets/components/SNPortlets/config/templates/deployment, to the DMGR directory at DMGR\_install root\\profiles\\dmgr profile name\\config\\cells\\cell\\.
-    **Note:** For SiteMinder and SPNEGO configuration, the Communities and Profiles services URLs in directory-services.xml must point to theinterServiceURL. For a eTrust SiteMinder and SPNEGO configuration, the Communities and Profiles services URLs in directory-services.xml must point to the interServiceURL. For information on getting the value of interServiceURL, see the last table in [Installation Options](r_connections_portlets_install_options.md).
+    
+    !!!note
+        For SiteMinder and SPNEGO configuration, the Communities and Profiles services URLs in directory-services.xml must point to theinterServiceURL. For a eTrust SiteMinder and SPNEGO configuration, the Communities and Profiles services URLs in directory-services.xml must point to the interServiceURL. For information on getting the value of interServiceURL, see the last table in [Installation Options](../../../installation/r_connections_portlets_install_options.md).
 
 2.  If you are using LTPA SSO, skip this procedure because no change is needed. For other types of authentication, edit sonata.services.xml and change the sonataServices tag, `<sonataServices name="DefaultAuthenticator">`, to the appropriate value for the name attribute.
 
@@ -28,9 +30,11 @@ Follow these steps to configure common Directory Services for the HCL Connection
     -   eTrust SiteMinder: `<sonataServices name="SiteMinderAuthenticator">`
     -   Security Access Manager and SPNEGO: `<sonataServices name="KerberosAuthenticator">`
 
-        **Note:** On a Portal 8 server, use `<sonataServices name="TAMAuthenticator">`
+        !!!note
+            On a Portal 8 server, use `<sonataServices name="TAMAuthenticator">`
 
     -   eTrust SiteMinder and SPNEGO: `<sonataServices name="DefaultAuthenticator">`
+    
 3.  \(Clustered deployment only\) Login to DMGR admin console and go to the **System Administration** \> **Nodes**. Select both HCL Portal nodes and click **Full Resynchronize**.
 
 4.  Restart the Portal server after you update directory.services.xml or restart all of the servers for a clustered deployment.

@@ -78,7 +78,8 @@ You can add vertical cluster members to share the workload demands of your clust
         The following values are not supported:
 
         -   The Node 1/Server 1 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp\_profile/jcr/binary
-        -   The Node 1/Server 2 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp\_profile/jcr/binary
+        -   The Node 1/Server 2 value for **jcr.binaryValueFileDir** is /opt/IBM/WebSphere/wp\_profile/jcr/binary    
+
         If the value is not unique, complete the following steps:
 
         1.  Click **jcr.binaryValueFileDir**.

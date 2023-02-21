@@ -16,7 +16,7 @@ If the pure render parameter approach is not applicable, generating URLs and tra
 
 -   **PortalURLGenerationService based URL generation**
 
-    Use this service to generate render URLs to other portlets. For more information, see [Interface PortalURLGenerationService](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/portal/portlet/service/url/PortalURLGenerationService.html) in the related links. This option might be available only if specific portlets are targeted and if render URLs need to be created for the target portlets in question. For more information, see *Leveraging HCL Portal V6 programming model: Part 2. Advanced URL generation in themes and portlets* in the related links.
+    Use this service to generate render URLs to other portlets. For more information, see [Interface PortalURLGenerationService](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/portal/portlet/service/url/PortalURLGenerationService.html) in the related links. This option might be available only if specific portlets are targeted and if render URLs need to be created for the target portlets in question.
 
 -   **State API-based link generation**
 

@@ -28,11 +28,10 @@ Alternatively, you can use the following JSP code to iterate over the page metad
 </portal-logic:pageMetaData>
 ```
 
-**Note:** The result of `urlFindInTheme` is cached. To clear the cache, restart the portal. Redeploying the theme is not sufficient to trigger a reevaluation of `urlFindInTheme`.
+!!! note
+   The result of `urlFindInTheme` is cached. To clear the cache, restart the portal. Redeploying the theme is not sufficient to trigger a reevaluation of `urlFindInTheme`.
 
 
-**Related information**  
-
-
-[Tags used by the portal JSPs](../dev-portlet/dgn_ptltld.md)
+???+ info "Related information"
+   - [Tags used by the portal JSPs](../../../../../../../build_sites/themes_skins/customizing_theme/portal_jsp_tag/index.md)
 
