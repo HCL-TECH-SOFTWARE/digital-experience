@@ -13,8 +13,14 @@
       
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/container_configuration/helm_dam_backup_restore/">
       
+      
+        <link rel="prev" href="../core_interactions_kubernetes/">
+      
+      
+        <link rel="next" href="../kubernetes_remote_search/">
+      
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
@@ -22,11 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ffa9267a.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.08040f6c.min.css">
-        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -73,7 +78,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
     
@@ -96,7 +101,7 @@
             
 <div class="md-banner--feedback">
 <span class="twemoji">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.25 21.6 13.52l68.6 141.28 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5L433.6 328.4l26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5L31.11 218.2c-6.46-6.3-8.75-15.8-5.91-24.5 2.83-8.6 10.3-14.9 19.29-16.2l153.21-22.7 68.6-141.28C270.4 5.249 278.7 0 287.9 0zm0 78.95L235.4 187.2c-3.5 7.1-10.3 12.1-18.1 13.3L98.98 217.9 184.9 303c5.5 5.5 8 13.4 6.7 21.1l-20.2 119.6 105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2-20.2-119.6c-1.3-7.7 1.3-15.6 6.8-21.1l85.9-85.1-118.3-17.4c-7.9-1.2-14.7-6.2-18.1-13.3L287.9 78.95z"/></svg> 
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.25 21.6 13.52l68.6 141.28 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5L433.6 328.4l26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5L31.11 218.2c-6.46-6.3-8.75-15.8-5.91-24.5 2.83-8.6 10.3-14.9 19.29-16.2l153.21-22.7 68.6-141.28C270.4 5.249 278.7 0 287.9 0zm0 78.95L235.4 187.2c-3.5 7.1-10.3 12.1-18.1 13.3L98.98 217.9 184.9 303c5.5 5.5 8 13.4 6.7 21.1l-20.2 119.6 105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2-20.2-119.6c-1.3-7.7 1.3-15.6 6.8-21.1l85.9-85.1-118.3-17.4c-7.9-1.2-14.7-6.2-18.1-13.3L287.9 78.95z"/></svg> 
 </span>
   <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. <br>Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
 </div>
@@ -107,7 +112,7 @@
       
     </div>
     
-      <div data-md-component="outdated" hidden>
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
         
           <aside class="md-banner md-banner--warning">
             <div class="md-banner__inner md-grid md-typeset">
@@ -187,7 +192,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -199,7 +204,7 @@
         <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/digital-experience
@@ -218,7 +223,7 @@
           
             
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
@@ -401,7 +406,7 @@
       <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     HCL-TECH-SOFTWARE/digital-experience
@@ -1543,10 +1548,8 @@
 
 
 
-  <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/deployment/manage/container_configuration/helm_dam_backup_restore.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
 <h1 id="back-up-and-restore-dam">Back up and restore DAM</h1>
@@ -1559,7 +1562,7 @@
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns get pods
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>get<span class="w"> </span>pods
 </code></pre></div>
 </div>
 <p>You may see more than one <code>persistence-node</code> pods running:</p>
@@ -1577,7 +1580,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-core-0 -c core -- /bin/bash -c <span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /tmp/damExport.xml&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /tmp/damExport.xml&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1587,7 +1590,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl cp -c core dxns/dx-deployment-core-0:/tmp/damExport.xml /tmp/damExport.xml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>dxns/dx-deployment-core-0:/tmp/damExport.xml<span class="w"> </span>/tmp/damExport.xml
 </code></pre></div>
 </div>
 </li>
@@ -1601,7 +1604,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 <p>For <code>&lt;running-node-index&gt;</code>, select the index of any <code>persistence-node</code> that is in the <code>Running</code> state. In most cases, node <code>0</code> can be used.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- repmgr cluster show --compact --terse <span class="m">2</span>&gt;/dev/null <span class="p">|</span> grep <span class="s2">&quot;primary&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span> <span class="p">|</span> xargs
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>repmgr<span class="w"> </span>cluster<span class="w"> </span>show<span class="w"> </span>--compact<span class="w"> </span>--terse<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;primary&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs
 </code></pre></div>
 </div>
 <p>This command returns the name of the primary <code>persistence-node</code>. Please use this node for the following steps when <code>&lt;primary-node-name&gt;</code> is referenced.</p>
@@ -1615,7 +1618,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- /bin/bash -c <span class="s2">&quot;pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1625,7 +1628,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl cp -c persistence-node dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp<span class="w"> </span>/tmp/dxmediadb.dmp
 </code></pre></div>
 </div>
 </li>
@@ -1638,7 +1641,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c <span class="s2">&quot;tar -cvpzf /tmp/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-digital-asset-management-0<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;tar -cvpzf /tmp/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1649,7 +1652,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl cp dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz /tmp/backupml.tar.gz
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz<span class="w"> </span>/tmp/backupml.tar.gz
 </code></pre></div>
 </div>
 </li>
@@ -1661,7 +1664,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns get pods
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span>get<span class="w"> </span>pods
 </code></pre></div>
 </div>
 <p>You may see more than one <code>persistence-node</code> pods running:</p>
@@ -1679,7 +1682,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl cp -c core /tmp/damExport.xml dxns/dx-deployment-core-0:/tmp/damExport.xml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>/tmp/damExport.xml<span class="w"> </span>dxns/dx-deployment-core-0:/tmp/damExport.xml
 </code></pre></div>
 </div>
 </li>
@@ -1689,7 +1692,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-core-0 -c core -- /bin/bash -c <span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /tmp/damExport.xml&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-core-0<span class="w"> </span>-c<span class="w"> </span>core<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /tmp/damExport.xml&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1702,7 +1705,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>/tmp/backupml.tar.gz<span class="w"> </span>dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz
 </code></pre></div>
 </div>
 </li>
@@ -1712,7 +1715,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c <span class="s2">&quot;tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-digital-asset-management-0<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1726,7 +1729,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 <p>For <code>&lt;running-node-index&gt;</code> select the index of any <code>persistence-node</code> that is in the <code>Running</code> state. In most cases, node <code>0</code> can be used.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- repmgr cluster show --compact --terse <span class="m">2</span>&gt;/dev/null <span class="p">|</span> grep <span class="s2">&quot;primary&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span> <span class="p">|</span> xargs
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>repmgr<span class="w"> </span>cluster<span class="w"> </span>show<span class="w"> </span>--compact<span class="w"> </span>--terse<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;primary&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs
 </code></pre></div>
 </div>
 <p>This command returns the name of the primary <code>persistence-node</code>. Please use this node for the following steps when <code>&lt;primary-node-name&gt;</code> is referenced.</p>
@@ -1740,7 +1743,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl cp -c persistence-node /tmp/dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>/tmp/dxmediadb.dmp<span class="w"> </span>dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
 </code></pre></div>
 </div>
 </li>
@@ -1753,7 +1756,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- psql -c <span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 0;&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 0;&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1763,7 +1766,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- psql -c <span class="s2">&quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = &#39;dxmediadb&#39; AND pid &lt;&gt; pg_backend_pid();&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = &#39;dxmediadb&#39; AND pid &lt;&gt; pg_backend_pid();&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1773,13 +1776,13 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- dropdb dxmediadb
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>dropdb<span class="w"> </span>dxmediadb
 </code></pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are getting the following error, run the commands from this step again until they are completed without errors.</p>
-<div class="highlight"><pre><span></span><code>dropdb: database removal failed: ERROR:  database <span class="s2">&quot;dxmediadb&quot;</span> is being accessed by other users
+<div class="highlight"><pre><span></span><code>dropdb:<span class="w"> </span>database<span class="w"> </span>removal<span class="w"> </span>failed:<span class="w"> </span>ERROR:<span class="w">  </span>database<span class="w"> </span><span class="s2">&quot;dxmediadb&quot;</span><span class="w"> </span>is<span class="w"> </span>being<span class="w"> </span>accessed<span class="w"> </span>by<span class="w"> </span>other<span class="w"> </span>users
 </code></pre></div>
 </div>
 </li>
@@ -1789,7 +1792,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- /bin/bash -c <span class="s2">&quot;createdb -O dxuser dxmediadb&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;createdb -O dxuser dxmediadb&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1799,7 +1802,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- /bin/bash -c <span class="s2">&quot;psql dxmediadb &lt; /tmp/dxmediadb.dmp&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql dxmediadb &lt; /tmp/dxmediadb.dmp&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1809,7 +1812,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- psql -c <span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 500;&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>dxns<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>pod/dx-deployment-persistence-node-0<span class="w"> </span>-c<span class="w"> </span>persistence-node<span class="w"> </span>--<span class="w"> </span>psql<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 500;&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -1825,7 +1828,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl delete pod dx-deployment-digital-asset-management-0 -n dxns
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>dx-deployment-digital-asset-management-0<span class="w"> </span>-n<span class="w"> </span>dxns
 </code></pre></div>
 </div>
 </li>
@@ -1836,7 +1839,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 21, 2023</span>
       
     
   </small>
@@ -1864,42 +1867,6 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../core_interactions_kubernetes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Core Behavior" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Core Behavior
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../kubernetes_remote_search/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure Remote Search" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Configure Remote Search
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1920,11 +1887,13 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
   
     
     
+    
+    
       
       
     
     <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -1972,7 +1941,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
           <input type="checkbox" name="analytics" checked>
           <span class="task-list-indicator"></span>
           Google Analytics
-        <label>
+        </label>
       </li>
     
       
@@ -1985,7 +1954,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
           <input type="checkbox" name="github" checked>
           <span class="task-list-indicator"></span>
           GitHub
-        <label>
+        </label>
       </li>
     
   </ul>
@@ -2008,12 +1977,12 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
           </form>
         </aside>
       </div>
-      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
     
   </body>
