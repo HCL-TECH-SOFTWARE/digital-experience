@@ -1,6 +1,6 @@
-title: Inline Editing Strategies
+title: Site Manager
 nav:
     - index.md
-    - wcm_inline_editing_sample.md
+    - site_manager_samples.md
     - wcm_dev_inline_tags.md
     - wcm_dev_inline_upgrade.md
