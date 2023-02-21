@@ -24,7 +24,7 @@ Use your selected roadmap and the Configuration Wizard to complete a new environ
 3. Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
     !!!note
-        The wizard user interface might not be available in all languages. If the language is not currently supported, you might see the English version. For details on the supported languages for all of the HCL Digital Experience user interfaces, see [Language Support](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
+        The wizard user interface might not be available in all languages. If the language is not currently supported, you might see the English version. For details on the supported languages for all of the HCL Digital Experience user interfaces, see [Language Support](../../../portal_admin_tools/language_support/index.md).
 
 4. Click **Set Up a Stand-alone Server**.
 
@@ -32,7 +32,7 @@ Use your selected roadmap and the Configuration Wizard to complete a new environ
 
 ???+ info "Related concepts"
     -   [Database Management Systems](../../../../../deployment/manage/db_mgmt_sys/index.md)
-    -   [Enable federated security](../../../../../deployment/manage/security/user_registry/cw_ldap.md)
+    -   [Enable federated security](../../../../../deployment/manage/security/people/authentication/user_registry/cw_ldap.md)
 
 ???+ info "Related tasks" 
     -   [Accessing the Configuration Wizard](../../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)

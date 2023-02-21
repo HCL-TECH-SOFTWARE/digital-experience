@@ -72,7 +72,7 @@ In the sample XML script, replace the following variables with your actual Corem
 
 
 ???+ info "Related information"  
-   -  [The XML configuration interface](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
-   -  [Working with the XML configuration interface](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
-   -  [Importing pages or page hierarchies by using the XML Import portlet](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_imp.md)
+   -  [The XML configuration interface](../../../../portal_admin_tools/xml_config_interface/index.md)
+   -  [Working with the XML configuration interface](../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+   -  [Importing pages or page hierarchies by using the XML Import portlet](../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_imp.md)
 

@@ -17,9 +17,26 @@ You can set a desired log configuration for a DX application by specifying an ap
 
 ```yaml
 logging:
+  # Digital Asset Management specific logging configuration
+  digitalAssetManagement:
+    level: "api:server-v1:=debug,worker:server-v1:=debug"
+  # Persistence Pool specific logging configuration
+  persistenceConnectionPool:
+    level: "pgpool:=debug"
+  # Persistence Node specific logging configuration
+  persistenceNode:
+    level: "psql:=debug,repmgr:=debug"
   # Content Composer specific logging configuration
   contentComposer:
-    level: "api:server-v1:*=info"
+    level: "api:server-v1:=debug"
+  # Image Processor specific logging configuration
+  imageProcessor:
+    level: "api:server-v1:=debug"
+  # Ring API specific logging configuration
+  ringApi:
+    level: "api:server-v1:=debug"
+  runtimeController:
+    level: "controller:.=debug,controller:com.hcl.dx.=debug"
 ```
 
 You can see the string format in the following section. Once the property is set, run the `helm upgrade` command.
@@ -157,10 +174,22 @@ By default, one sidecar container is launched with Persistence Node:
 
 Other applications where only one container is deployed in the Pod, only provide a single log, which can typically be obtained using the command: `kubectl logs -n <namespace> <pod-name>` (omitting a container name), for example:
 
-```
-kubectl logs -n dxns
-      dx-deployment-digital-asset-management-0
-```
+!!! warning 
+    If the main pod name is only used and there are multiple containers an error prompt is returned.
+
+    ```
+    kubectl logs -n dxns dx-deployment-persistence-node-0
+    ```
+
+    > error: a container name must be specified for pod dx-deployment-persistence-node-0, choose one of: [persistence-node persistence-metrics-exporter persistence-repmgr-log prereqs-checker]
+
+    The logs can then be requested from the desired container:
+
+    ```
+    kubectl logs -n dxns dx-deployment-persistence-node-0
+        persistence-node
+    ```
+
 
 ## Accessing all application logs simultaneously
 

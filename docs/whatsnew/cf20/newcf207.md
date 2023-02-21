@@ -36,7 +36,7 @@ The following features and updates are available to customers installing HCL Dig
 ## DAM Asset keyword updates
 
 === "Containers"
-    We have now added capability to show a detailed display of keywords, options to retain or replace keywords and to generate new keywords. See the [DAM Keyword enhancements](../../manage_content/digital_assets/configuration/dam_extensibility/dam_keyword_enhancement.md) topic for more information.
+    We have now added capability to show a detailed display of keywords, options to retain or replace keywords and to generate new keywords. See the [DAM Keyword enhancements](../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_keyword_enhancement.md) topic for more information.
 
 ## Content Composer enhancements 
 

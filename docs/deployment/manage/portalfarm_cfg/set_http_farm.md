@@ -6,7 +6,7 @@ Your Web server must already be configured to use the IBM® WebSphere® Applicat
 
 Complete the following steps to set up the HTTP server plug-in on the portal farm:
 
-1.  Generate the plug-in configuration from one of the application servers in the farm using the GenPluginCfg script provided by WebSphere Application Server in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/bin directory.
+1.  Generate the plug-in configuration from one of the application servers in the farm using the GenPluginCfg script provided by WebSphere Application Server in the [wp\_profile\_root](../../../guide_me/wpsdirstr.md#wp_profile_root)/bin directory.
 
 2.  Modify the plugin\_cfg.xml file, that was generated in the previous step, to have a server entry for every server in the farm:
 
