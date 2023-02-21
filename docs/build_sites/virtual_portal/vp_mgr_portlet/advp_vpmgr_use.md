@@ -80,7 +80,7 @@ After you complete a regular portal installation, the portal is ready and enable
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating a virtual portal](../adm_vp_task/vp_adm_task/create_vp/index.md)
     - [Shaping the user experience](../vp_planning/shape_vp_ux/index.md)
     - [Preconfiguring the default content for virtual portals](../vp_mgr_portlet/preconfig_vp/advp_precfg_content.md)

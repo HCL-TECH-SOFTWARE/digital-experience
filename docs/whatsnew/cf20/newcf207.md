@@ -21,7 +21,7 @@ The following features and updates are available to customers installing HCL Dig
 ## DX Client Updates support ability to execute in multiple container environments
 
 === "Containers"
-    By default, the Docker container runtime is supported, updates enable use of any container runtime that implements the OCI Runtime Specification.  See the [DX Client](../../extend_dx/development_tools/dxclient/dxclient.md) topic in the Help Center for more information. 
+    By default, the Docker container runtime is supported, updates enable use of any container runtime that implements the OCI Runtime Specification.  See the [DX Client](../../extend_dx/development_tools/dxclient/index.md) topic in the Help Center for more information. 
 
 ## Digital Asset Management Plugin extensibility Helm configuration updates
 
@@ -36,13 +36,13 @@ The following features and updates are available to customers installing HCL Dig
 ## DAM Asset keyword updates
 
 === "Containers"
-    We have now added capability to show a detailed display of keywords, options to retain or replace keywords and to generate new keywords. See the [DAM Keyword enhancements](../../manage_content/digital_assets/configuration/dam_extensibility/dam_keyword_enhancement.md) topic for more information.
+    We have now added capability to show a detailed display of keywords, options to retain or replace keywords and to generate new keywords. See the [DAM Keyword enhancements](../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_keyword_enhancement.md) topic for more information.
 
 ## Content Composer enhancements 
 
 === "Containers"
 
-    We have added ability to add keywords to content items. See the [Content Composer Author Content Items](../../manage_content/content_composer/usage/author_and_manage_content_items/author_content_items.md#create-new-content-and-addremove-keywords) Help Center topic for more information 
+    We have added ability to add keywords to content items. See the [Content Composer Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md) Help Center topic for more information. 
 
 ## New Script Application Tutorials and Sample Applications are available on the HCL Software Github repository
 
@@ -70,21 +70,21 @@ The following features and updates are available to customers installing HCL Dig
 
 === "Containers"
 
-    Developers can now specify a library to apply a content template. See the [Apply Content Template API](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md#apply-content-template-api) topic in the Help Center for more information.
+    Developers can now specify a library to apply a content template. See the [Apply Content Template API](../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md#apply-content-template-api) topic in the Help Center for more information.
 
 === "On-Premises"
 
-    Developers can now specify a library to apply a content template. See the [Apply Content Template API](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md#apply-content-template-api) topic in the Help Center for more information.
+    Developers can now specify a library to apply a content template. See the [Apply Content Template API](../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md#apply-content-template-api) topic in the Help Center for more information.
 
 ## Syndication Administration updates 
 
 === "Containers"
 
-    The Syndication Administration updates extend Delegated Administration roles assignment to define specified user roles to execute syndicators. See the Help Center topic [Allowing delegated access for syndication](../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_delegated_access.md) for more information.
+    The Syndication Administration updates extend Delegated Administration roles assignment to define specified user roles to execute syndicators. See the Help Center topic [Allowing delegated access for syndication](../../manage_content/wcm_delivery/syndication/manage_synd_subs/wcm_syndication_delegated_access.md) for more information.
 
 === "On-Premises"
 
-    The Syndication Administration updates extend Delegated Administration roles assignment to define specified user roles to execute syndicators. See the Help Center topic [Allowing delegated access for syndication](../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_delegated_access.md) for more information.
+    The Syndication Administration updates extend Delegated Administration roles assignment to define specified user roles to execute syndicators. See the Help Center topic [Allowing delegated access for syndication](../../manage_content/wcm_delivery/syndication/manage_synd_subs/wcm_syndication_delegated_access.md) for more information.
 
 ## HCL Digital Experience Cloud Native 9.5 Entitlement checks
 
@@ -96,11 +96,11 @@ Beginning with HCL Digital Experience 9.5 Container Update CF207, you must speci
 
 === "Containers"
      
-    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) Help Center topic.
+    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native  Help Center topic.
 
 === "On-Premises"
 
-    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) Help Center topic.
+    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) Help Center topic.
 
 ## The new HCL Digital Experience Help Center
 

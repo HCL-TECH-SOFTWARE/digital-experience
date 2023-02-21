@@ -10,8 +10,9 @@ In an Idle Standby clustered deployment, adhere to these guidelines:
 
     -   Use the simple commands that are provided by IBM® WebSphere® Application Server: [backupConfig](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/index.jsp?topic=%2Fcom.ibm.websphere.nd.multiplatform.doc%2Fae%2Frxml_backupconfig.html) and [restoreConfig](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/index.jsp?topic=%2Fcom.ibm.websphere.nd.multiplatform.doc%2Fae%2Frxml_restoreconfig.html).
     -   Use IBM Tivoli® Storage Manager or other utility to back up the Deployment Manager profile directory, where this configuration information resides.
+    
 3.  When you restore HCL Portal databases and file systems, make sure to restore the Deployment Manager configuration at the same time that the primary node and secondary node file systems are restored. Then, complete a node synchronization of both nodes by using the Deployment Manager WebSphere Integrated Solutions Console. This step ensures that the configuration is identical on both nodes and is consistent with the restored databases.
 
-**Related information**  
-[Backup and recovery](../migrate/planning_migration/migration_consideration/mig_plan_backup_and_recovery.md)
+???+ info "Related information"  
+    -   [Backup and recovery](../migrate/planning_migration/migration_consideration/mig_plan_backup_and_recovery.md)
 

@@ -9,15 +9,15 @@ View the properties for the rating widget.
 
     Use this property to specify a non-localized custom label to describe the displayed ratings. This property has no default.
 
--   **com.ibm.wps.cp.rating.inline.numStars = \(5\)  **
+-   **com.ibm.wps.cp.rating.inline.numStars = (5)  **
 
     Use this property to specify the number of stars or asterisks of which a rating consists. Specify a positive numeric value. The default value is `5`. Do not specify a value larger than the value specified for the property `com.ibm.wps.cp.rating.maxratingvalue` in the WP CP configuration service for tagging and rating. For more information about this property, read *General properties for tagging and rating*.
 
--   **com.ibm.wps.cp.rating.inline.privateRatingEnabled = \(false\)**
+-   **com.ibm.wps.cp.rating.inline.privateRatingEnabled = (false)**
 
     Use this parameter to enable private rating. To enable private rating, set this parameter to `true`. The default value is `false`.
 
--   **com.ibm.wps.cp.rating.inline.ratingScope = \(COMMUNITY\_PERSONAL\_PUBLIC\)  **
+-   **com.ibm.wps.cp.rating.inline.ratingScope = (COMMUNITY_PERSONAL_PUBLIC)  **
 
     Use this property to specify the scope of ratings that you want to show in this inline widget. Specify one of the following values:
 
@@ -31,11 +31,11 @@ View the properties for the rating widget.
 
     Use this property to specify the rating description that you want to show in this rating widget. By default, this property is not part of the rating widget. If you add this property to the rating widget, the default value is `ALL`. Specify one of the following values:
 
-    -   **RATING\_VALUE**
+    -   **RATING_VALUE**
 
         With this value, the rating description includes only the numerical rating value.
 
-    -   **TOTAL\_NO\_RATING**
+    -   **TOTAL_NO_RATING**
 
         With this value, the rating description includes only the total number of ratings assigned.
 
@@ -48,7 +48,7 @@ View the properties for the rating widget.
         If you do not specify a value, the rating description is not displayed at all.
 
 
-**Related information**  
-[General properties for tagging and rating](../../../../config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_genrl.md)<br>
-[Tag widget parameter reference](../../../../../../build_sites/tagging_rating/cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)<br>
-[The rating widget](../../../../../../build_sites/tagging_rating/tagging_rating_ui/tagging_rating_widget/rating_widget/index.md)
+???+ info "Related information" 
+    -   [General properties for tagging and rating](../../../../config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_genrl.md)
+    -   [Tag widget parameter reference](../../../../../../build_sites/tagging_rating/cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)
+    -   [The rating widget](../../../../../../build_sites/tagging_rating/tagging_rating_ui/tagging_rating_widget/rating_widget/index.md)

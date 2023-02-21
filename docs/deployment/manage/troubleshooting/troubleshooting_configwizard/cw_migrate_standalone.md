@@ -183,4 +183,4 @@ When you run this step, the sub task that is named `action-deploy-portlets-apply
 
 **Related information**  
 [Migrate a stand-alone server](../../migrate/migrate_using_cfgwizard/cw_migrate_stand_alone.md)<br>
-[Accessing the Configuration Wizard](./../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+[Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)

@@ -10,7 +10,8 @@ Construct a POC URI to address Connections content. The syntax has this form:
 connections:atom\_uri&commID=community\_id&service=service\_name&type=content\_type
 ```
 
-**Note:** commID, service, and type must be specified as parameters. Parameter names are case sensitive.
+!!!note
+    commID, service, and type must be specified as parameters. Parameter names are case sensitive.
 
 ## Parameters
 
@@ -24,7 +25,7 @@ connections:atom\_uri&commID=community\_id&service=service\_name&type=content\_t
 
 -   **commID**
 
-    \(optional\) Community ID. Needs to be specified if the content is community-based.
+    (optional) Community ID. Needs to be specified if the content is community-based.
 
 -   **service**
 
@@ -57,7 +58,7 @@ pageLabel
 
 ## POC Servlet
 
-The piece of content \(POC\) servlet checks for authentication. The /poc mapping does not require authentication but recognizes if valid authentication or single sign on information is present. If that case, the resolver framework will redirect to /myportal; otherwise, it redirects to /portal. In many usage scenarios it is appropriate to address the /poc mapping, because it detects potential authentication information automatically. In any case, access control to the actual page and portlets to which the POC URI resolves is enforced by the portal. The POC servlet default path is
+The piece of content (POC) servlet checks for authentication. The /poc mapping does not require authentication but recognizes if valid authentication or single sign on information is present. If that case, the resolver framework will redirect to /myportal; otherwise, it redirects to /portal. In many usage scenarios it is appropriate to address the /poc mapping, because it detects potential authentication information automatically. In any case, access control to the actual page and portlets to which the POC URI resolves is enforced by the portal. The POC servlet default path is
 
 ```
 http://server:port/wps/poc?uri= 

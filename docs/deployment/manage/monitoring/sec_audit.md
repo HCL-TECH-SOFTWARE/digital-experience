@@ -10,7 +10,7 @@ The following details are logged for each event:
 -   The user action
 -   Individual event details
 
-If the user who does the action \(for example, Bob\) is impersonated by another user \(for example, Alice\), the user is shown as \[Bob\[Alice\]\] in the log file.
+If the user who does the action (for example, Bob) is impersonated by another user (for example, Alice), the user is shown as [Bob[Alice]] in the log file.
 
 You can use the auditing function on the following events:
 
@@ -31,10 +31,7 @@ You can use the auditing function on the following events:
 To activate and configure the auditing function, modify the auditing service settings in the Auditing Service by following the steps that are provided in the Setting service configuration properties file.
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
-
-[Administering user impersonation](../admin-system/impers_user.md)
+???+ info "Related information" 
+    -   [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    -   [Administering user impersonation](../../../deployment/manage/security/people/authorization/users_and_groups/impersonation/index.md)
 

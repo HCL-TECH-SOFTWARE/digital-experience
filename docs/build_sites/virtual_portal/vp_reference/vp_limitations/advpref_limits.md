@@ -11,6 +11,6 @@ If you want to use a new host name for an existing virtual portal, you must dele
 If you change the theme for a virtual portal by editing the virtual portal in the Virtual Portals portlet, this change affects only the root page of the virtual portal. 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating a virtual portal](../../adm_vp_task/vp_adm_task/create_vp/index.md)
 

@@ -6,11 +6,11 @@ Retrieve the certificate for the HCL Connections server. Then, import the SSL ce
 
 1.  Enter the URL for the HCL Connections server into a web browser.
 
-    For example:https://your\_Lotus\_Connections\_server.com/activities
+    For example: https://your\_Lotus\_Connections\_server.com/activities
 
 2.  Save the certificate as a PEM certificate. Save it to the portal server in the directory where IBM® WebSphere® Application Server was installed.
 
-    For example: [AppServer\_root](../reference/wpsdirstr.md#was_root)
+    For example: [AppServer\_root](../../../../guide_me/wpsdirstr.md)
 
 3.  Import the saved certificate to the portal server.
 
@@ -28,8 +28,6 @@ Retrieve the certificate for the HCL Connections server. Then, import the SSL ce
 
 
 
-**Related information**  
-
-
-[Configuring single sign-on \(SSO\) for backend calls to HCL Connections in SmartCloud for Social Business](../dev-portlet/configuring_sso_sc4sb.md)
+???+ info "Related information"
+    - [Configuring single sign-on (SSO) for backend calls to HCL Connections in SmartCloud for Social Business](../configuration/cfg_portal_to_work_with_cnx_in_sc/establishing_sso/configuring_sso_sc4sb.md)
 

@@ -10,7 +10,8 @@ If you are using the HTTPS security protocol with RCSS, you must import a certif
 
 3.  Open the cacerts file as a JKS key database by using iKeyman.bat in the  Appserver/bin folder. The cacerts file is in the AppServer/java/jre/lib/security folder. The password is changeit.
 
-    **Note:** If there are two java folders (one named java and the other named java1.7_xxx), use the cacerts file from the java1.7_xxx folder.
+    !!!note
+        If there are two java folders (one named java and the other named java1.7_xxx), use the cacerts file from the java1.7_xxx folder.
 
 4.  After you open iKeyman and load the cacerts file, select the signer certificates from the key database content list and click **Add** to add the Connections certificate. Assign it a name.
 

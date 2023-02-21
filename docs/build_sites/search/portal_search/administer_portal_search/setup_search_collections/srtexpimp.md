@@ -89,7 +89,7 @@ To export and import your search collections, use the **Import or Export Collect
     7.  When you import a collection, a background process fetches, crawls, and indexes all documents that are listed by URL in the previously exported file. Therefore, be aware that the crawling process can require extended memory and time, depending on your Portal Search configuration. For more information, see the topic about Hints and tips for Portal Search crawls.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Importing and exporting search collections](../../../manage_search/search_collection/import_export_srch_coll.md)
     - [HCL Digital Experience Portal Search](../../../portal_search/index.md)
     - [Planning and preparing for Portal Search](../../../planning_portal_search/index.md)

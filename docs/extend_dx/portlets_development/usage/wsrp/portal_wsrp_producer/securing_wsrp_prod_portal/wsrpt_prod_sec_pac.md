@@ -14,10 +14,8 @@ To enable Portal Access Control for the Producer portal again, set the portal co
     -   If you do not use security, assign access rights to the anonymous user.
 
 
-**Related information**  
-
-
-[Access permissions](../admin-system/sec_acc_rights.md)
-
-[Security for WSRP services](../admin-system/wsrpc_secy.md)
+  
+???+ info "Related information"
+    -   [Access permissions](../../../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md)
+    -   [Security for WSRP services](../../../../../../extend_dx/development_tools/wsrp/planning_wsrp/wsrpc_secy.md)
 

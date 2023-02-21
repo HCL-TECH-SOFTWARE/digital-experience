@@ -1,4 +1,4 @@
-# Manage Search
+# Manage Search Portlet
 
 Use the Manage Search portlet to administer portal search.
 
@@ -578,7 +578,7 @@ You can add Custom Links to allow direct searches from web search engines, such 
 
 To set names and descriptions for the custom link, you must create and save the link first. Then, locate the custom link on the list, and edit the link by clicking the **Edit** icon. The option for setting names and descriptions in other locales is available only on the Edit Custom Link page.
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Resetting the default search collection](../portal_search/administer_portal_search/searching_crawling_portal_sites/srtcrtprtlstecllc.md)
     - [Crawling an external site using a seedlist provider](../portal_search/administer_portal_search/searching_crawling_portal_sites/srtseedlistcreate.md)
 

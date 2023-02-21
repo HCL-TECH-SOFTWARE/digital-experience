@@ -29,5 +29,5 @@ Export and save your dialog definitions before you migrate to Version 8.5.
 ???+ info "Related information"
     -   [Importing UX Screen Flow Manager dialog definitions](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/mig_post_uxfm_importdialog.md)
     -   [Uninstalling UX Screen Flow Manager](../../../../../deployment/manage/migrate/preparing_source_env/prepare_ux_screenflow_mgr/mig_pre_uxfm_uninstall.md)
-    -   [Syntax elements for the XML configuration interface command line](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/cmdline_syntax/basic_xml_cmdln_syntax/adxmltsk_cmdln_sntx_elements.md)
+    -   [Syntax elements for the XML configuration interface command line](../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/cmdline_syntax/basic_xml_cmdln_syntax/adxmltsk_cmdln_sntx_elements.md)
 

@@ -19,20 +19,19 @@ The SPI offers two services (obtainable through JNDI) to create such URLs. Which
     **Tip:** A `PortletStateManagerService` instance is obtained with a `com.ibm.portal.portlet.service.PortletServiceHome` instance.
 
 
-**Note:** Consider the new Portal-defined public render parameters support for these use cases, instead of the Navigational State SPI. The render parameters provide most of the same functions in a much simpler way.
+!!! note
+    Consider the new Portal-defined public render parameters support for these use cases, instead of the Navigational State SPI. The render parameters provide most of the same functions in a much simpler way.
 
 For more information about all SPI interfaces, see the Javadoc.
 
--   **[Object Model](../dev/obj_model.md)**  
+-   **[Object Model](obj_model.md)**  
 Learn about the main object models used in the navigational state SPI.
--   **[Accessor SPI](../dev/accessor_spi.md)**  
+-   **[Accessor SPI](accessor_spi.md)**  
 The Accessor SPI provides typed access to the state document model. It allows the programmer to query and modify navigational state information. The Accessor SPI is part of the package com.ibm.portal.state.accessors.\*.
--   **[URL generation services](../dev/url_gen_serv.md)**  
+-   **[URL generation services](url_gen_serv.md)**  
 Learn about the services that are used to create URLs in the navigational state SPI.
 
 
-**Related information**  
-
-
-[Back button behavior](../admin-system/backbut.md)
+???+ info "Related information"
+    - [Back button behavior](../../../../deployment/manage/troubleshooting/browser_behavior_scenarios/backbut.md)
 

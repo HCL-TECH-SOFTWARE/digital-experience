@@ -25,5 +25,5 @@ You can now use the social rendering portlets.
 
 
 ???+ info "Related information"
-    - [Security Access Manager](../../../deployment/manage/security/external_sec_mgmt/security_access_manager/index.md)
+    - [Security Access Manager](../../../deployment/manage/security/people/authentication/external_sec_mgmt/security_access_manager/index.md)
 

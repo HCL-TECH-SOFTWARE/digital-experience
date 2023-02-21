@@ -2,7 +2,7 @@
 
 Consider the database configuration options in relation to your HCL Portal deployment scenario.
 
-HCL Portal data is separated into six portal database domains: release, customization, community, JCR, feedback, and likeminds. The portal database domains facilitate the flexibility that is required to meet different availability requirements. The database topology varies depending on the deployment scenario. A proof-of-concept or development environment has different database topology requirements than a production environment. Review the topologies to determine your portal deployment requirement.
+HCL Portal data is separated into six portal database domains: release, customization, community, JCR, feedback, and LikeMinds. The portal database domains facilitate the flexibility that is required to meet different availability requirements. The database topology varies depending on the deployment scenario. A proof-of-concept or development environment has different database topology requirements than a production environment. Review the topologies to determine your portal deployment requirement.
 
 ## Local database
 
@@ -26,7 +26,7 @@ The topology diagram is similar to the local database topology. The main differe
 
 For high capacity load balancing, use one or multiple remote databases. When you deploy the portal in a large-scale, high-demand environment, you can dedicate a server specifically for database transactions. As more users access the portal, the portal application becomes database intensive. Database activity can take up processor resources and disk I/O time. Separating the database from the server that the portal is running on increases its capacity.
 
-The topology diagram shows a remote database server with four databases. The JCR and release portal database domains have unique databases. They cannot be shared. Also, the release portal database domain cannot be taken offline. Another database contains the customization and community portal database domains. Finally, another database to contain the feedback and likeminds portal database domains.
+The topology diagram shows a remote database server with four databases. The JCR and release portal database domains have unique databases. They cannot be shared. Also, the release portal database domain cannot be taken offline. Another database contains the customization and community portal database domains. Finally, another database to contain the feedback and LikeMinds portal database domains.
 
 ![Database topology for a remote database server with multiple database instances.](../../../../images/db_topology_remote_high1.jpg)
 

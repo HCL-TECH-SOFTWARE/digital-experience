@@ -15,7 +15,7 @@ In the following guidance, the docker CLI is used as a command reference. Tools 
     This is very handy for quick deployments or if you do not have a local container image registry.
     If you want to use the container images directly from Harbor, you do not need to retrieve, re-tag and push the images manually.
 
-    Ensure that you have configured your deployment to authenticate to the Harbor container registry, as described in [Using ImagePullSecrets](./optional_imagepullsecrets.md) and that the repository is configured to [HCL Harbor](#)
+    Ensure that you have configured your deployment to authenticate to the Harbor container registry, as described in [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md) and that the repository is configured to [HCL Harbor](#)
 
 ## Retrieving container images
 
@@ -269,7 +269,6 @@ images:
     tags:
     contentComposer: "v95_CFXXX_XXXXXXXX-XXXX"
     core: "v95_CFXXX_XXXXXXXX-XXXX"
-    designStudio: "vX.X.X_XXXXXXXX-XXXX"
     digitalAssetManagement: "vX.X.X_XXXXXXXX-XXXX"
     imageProcessor: "vX.X.X_XXXXXXXX-XXXX"
     openLdap: "vX.X.X_XXXXXXXX-XXXX"
@@ -281,7 +280,6 @@ images:
     names:
     contentComposer: "dx/content-composer"
     core: "dx/core"
-    designStudio: "dx/design-studio"
     digitalAssetManagement: "dx/digital-asset-manager"
     imageProcessor: "dx/image-processor"
     openLdap: "dx/openldap"
@@ -297,5 +295,5 @@ If your remote repository requires access credentials, it is necessary to config
 
 Please refer to [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md) topic for instructions on how to configure this.
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Hybrid](hybrid_deployment_helm.md) -->

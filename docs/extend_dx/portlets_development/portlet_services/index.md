@@ -13,12 +13,8 @@ Portlet service interfaces used by standard portlets are different from those us
 
 -   [Credential Vault Service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/srvcfgref_cred_vault.md)
 -   [Model SPI services](../../apis/model_spi/index.md)
--   [PumaHome](../dev/wpspuma.md)
--   [DynamicUIManagementFactoryService](wpsdynui_cpts.md)
+-   [Puma Store and Validation Services](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/puma_svc/index.md)
+-   [Dynamic user interfaces](../../portlets_development/dynamic_user_interfaces/index.md)
 
--   **[Accessing portlet services](wpsaccpserv.md)**  
-Using an example, learn how a standard portlet can retrieve and use a sample portlet service. Accessing a portlet service requires a JNDI lookup for a PortletServiceHome. To use the portlet service, you retrieve a service object from the home, cast it to the service-specific interface and invoke service methods.
--   **[Creating your own portlet service](wpsbsservice.md)**  
-Write a portlet service by defining the interface, writing the service implementation, making the service accessible, and registering the service.
 
 

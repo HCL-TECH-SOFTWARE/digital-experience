@@ -28,5 +28,6 @@ In a default portal installation the group wpsadmins has the role EDITOR. There 
 -   Includes all USER and EDITOR actions.
 -   Can delete analytics tags.
 
-**Note:** In a default portal installation only the group wpsadmins has the MANAGER role on ANALYTICS\_TAGS.
+!!! note
+    In a default portal installation only the group wpsadmins has the MANAGER role on ANALYTICS\_TAGS.
 

@@ -9,7 +9,7 @@ HCL Connections portlets are not included with HCL Digital Experience, but you c
 
 The following is a high-level view of the integration process. For detailed instructions, see the HCL Portal and HCL Connections product documentation.
 
-1.  Download the HCL Connections portlets .
+1.  Download the HCL Connections portlets.
 
 2.  Deploy the portlets using the instructions provided with them.
 

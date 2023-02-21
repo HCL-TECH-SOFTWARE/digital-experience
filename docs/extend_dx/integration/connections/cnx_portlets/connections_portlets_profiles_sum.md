@@ -4,7 +4,7 @@ Use the IBM® Connections Profiles summary portlet to add a targeted view of pro
 
 ## Using the Profiles portlet
 
-Use the IBM Connections Profiles summary portlet to add a targeted view of profile and network information to an IBMWebSphere Portal application. The portlet has two views, **Status Updates** and **My Profile**.
+Use the HCL Connections Profiles summary portlet to add a targeted view of profile and network information to an IBMWebSphere Portal application. The portlet has two views, **Status Updates** and **My Profile**.
 
 From the **Status Updates** view, you can:
 
@@ -17,7 +17,7 @@ From the **Status Updates** view, you can:
 
 From the **My Profile** view, you can:
 
--   View and update your profile information \(This feature takes you to IBM Connections Profiles\)
+-   View and update your profile information \(This feature takes you to HCL Connections Profiles\)
 -   View report-to chain for yourself or your colleagues
 -   View network information for yourself or your colleagues
 -   Search Profiles by name, tag, or keyword
@@ -27,7 +27,7 @@ From the **My Profile** view, you can:
 
 ## Editing the shared settings for the Profiles portlet
 
-You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Settings that you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose**Edit Shared Settings** from the portlet menu and choose which view to display in the portlet. Choose which views to display in the portlet. You can choose **Status Updates** or **My Profile**.
+You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Settings that you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose **Edit Shared Settings** from the portlet menu and choose which view to display in the portlet. Choose which views to display in the portlet. You can choose **Status Updates** or **My Profile**.
 
 ## Configuring the Profiles portlet
 

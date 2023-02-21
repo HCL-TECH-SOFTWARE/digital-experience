@@ -10,7 +10,7 @@ If you want access to the appropriate native resources for the device on a parti
 
 `wp_worklight` is a version-independent meta-module that is defined by the mobilefirst70.json file in your theme's contributions folder. This module is a prerequisite of the default MobileFirst® resources that enable access to native features. It also includes the overrides that enhance performance and allow the API libraries to work within the module framework.
 
-The version-dependent platform modules that are included by the module framework are `mf_ios_70` and `mf_android_70`. These platform modules are defined by the plugin.xml file in your theme's [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.worklight.ext\\installedApps\\wp.theme.worklight.ext.ear\\wp.theme.worklight.ext.war\\WEB-INF folder. These platform modules load the appropriate native resources for the device, giving access to the full MobileFirst and Cordova APIs. For example, it gives access to the following resources on the device:
+The version-dependent platform modules that are included by the module framework are `mf_ios_70` and `mf_android_70`. These platform modules are defined by the plugin.xml file in your theme's [PortalServer\_root](../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.worklight.ext\\installedApps\\wp.theme.worklight.ext.ear\\wp.theme.worklight.ext.war\\WEB-INF folder. These platform modules load the appropriate native resources for the device, giving access to the full MobileFirst and Cordova APIs. For example, it gives access to the following resources on the device:
 
 -   Camera
 -   Geolocation

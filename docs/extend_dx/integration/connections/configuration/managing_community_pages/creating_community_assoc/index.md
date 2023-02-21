@@ -8,16 +8,15 @@ When creating the community association, you have several options:
 -   You can associate the new page with a community that is associated with the parent page of the new page.
 -   You can associate the new page with a specific community that already exists.
 
-**Important:** To create communities automatically when creating pages from a template, the user creating the page must be authorized on the HCL Connections server to create communities.
+!!!important
+    To create communities automatically when creating pages from a template, the user creating the page must be authorized on the HCL Connections server to create communities.
 
--   **[Creating communities during community page instantiation](../admin-system/commpages_create_mapping_newcomm.md)**  
+-   **[Creating communities during community page instantiation](commpages_create_mapping_newcomm.md)**  
 When you create a template for a community page, you can configure the template to create a community when you create a page from the template.
--   **[Creating associations to existing communities during page instantiation](../admin-system/commpages_create_mapping_exist.md)**  
+-   **[Creating associations to existing communities during page instantiation](commpages_create_mapping_exist.md)**  
 When you create a template for a community page, you can configure the template to associate the page created from the template with an existing community. In this case, the community is not modified in any way.
 
 
-**Related information**  
-
-
-[Managing community associations](../admin-system/commpages_create_mapping.md)
+???+ info "Related information"
+    - [Managing community associations](../commpages_create_mapping.md)
 

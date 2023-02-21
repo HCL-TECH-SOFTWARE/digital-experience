@@ -10,7 +10,7 @@ This section shows how to configure Remote Search for your HCL Digital Experienc
 Using HCL Digital Experience 9.5 Remote Search images in the supported cloud container platforms, such as Red Hat OpenShift, require a different setup and configuration steps than those used to [set up Remote Search on a non-Docker or Kubernetes container platform](https://help.hcltechsw.com/digital-experience/9.5/admin-system/installrssman.html)<!-- (../admin-system/installrssman.md) -->.
 
 -   As information, the serverindex.xml file on the Remote Search server when deployed to on-premises environments may have a host name that is not accurate in a container environment with respect to the actual host name of the server hosting the Remote Search server.
--   Follow the guidance in this section to define collections in the core HCL DX 9.5 container environment with respect to JCR text search collections, rather than guidance published for the on-premises [\(non-Docker or Kubernetes\) platforms](/../build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md)<!-- (../admin-system/srtcfg_jcr_colls.md) --> for the JCR collection URL.
+-   Follow the guidance in this section to define collections in the core HCL DX 9.5 container environment with respect to JCR text search collections, rather than guidance published for the on-premises [\(non-Docker or Kubernetes\) platforms](../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md)<!-- (../admin-system/srtcfg_jcr_colls.md) --> for the JCR collection URL.
 
 ## Deploying Remote Search in HCL Digital Experience 9.5 OpenShift and Kubernetes platforms
 

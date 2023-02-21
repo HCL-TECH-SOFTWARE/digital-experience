@@ -14,6 +14,6 @@ Multiple clusters and portal farms are advanced configurations.
 In this roadmap, the web server, database, and user registry software are distributed to different physical servers.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [HCL Digital Experience 9.5 Product Documentation](../../../../../index.md)
 

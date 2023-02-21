@@ -2,9 +2,9 @@
 
 You can troubleshoot WSRP by using different methods such as logging and tracing, debugging, and monitoring.
 
--   [Setting traces and using the portal run time log file for WSRP diagnosis](wsrpr_trbl.md#setrac)
--   [Debugging and monitoring the WSRP protocol flow](wsrpr_trbl.md#debug)
--   [Monitoring WSRP messages between the Consumer and Producer by using TCPMon](wsrpr_trbl.md#monmsg)
+-   [Setting traces and using the portal run time log file for WSRP diagnosis](wsrpr_trbl.md#setting-traces-and-using-the-portal-run-time-log-file-for-wsrp-diagnosis)
+-   [Debugging and monitoring the WSRP protocol flow](wsrpr_trbl.md#debugging-and-monitoring-the-wsrp-protocol-flow)
+-   [Monitoring WSRP messages between the Consumer and Producer by using TCPMon](wsrpr_trbl.md#monitoring-wsrp-messages-between-the-consumer-and-producer-by-using-tcpmon)
 
 ## Setting traces and using the portal run time log file for WSRP diagnosis
 
@@ -14,10 +14,10 @@ You can enable the following trace loggers for the WSRP implementation:
 
 |Component|Trace string|
 |---------|------------|
-|Administration|com.ibm.wps.command.wsrp.\*=all com.ibm.wps.wsrp.cmd.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
-|Consumer|com.ibm.wps.wsrp.consumer.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
-|Producer|com.ibm.wps.wsrp.producer.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
-|XMLAccess|com.ibm.wps.command.xml.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
+|Administration|com.ibm.wps.command.wsrp.*=all:com.ibm.wps.wsrp.cmd.*=all:com.ibm.wps.wsrp.common.*=all:com.ibm.ws.websvcs.trace.MessageTrace=all|
+|Consumer|com.ibm.wps.wsrp.consumer.*=all:com.ibm.wps.wsrp.common.*=all:com.ibm.ws.websvcs.trace.MessageTrace=all|
+|Producer|com.ibm.wps.wsrp.producer.*=all:com.ibm.wps.wsrp.common.*=all:com.ibm.ws.websvcs.trace.MessageTrace=all|
+|XMLAccess|com.ibm.wps.command.xml.*=all:com.ibm.wps.wsrp.common.*=all:com.ibm.ws.websvcs.trace.MessageTrace=all|
 
 ## Debugging and monitoring the WSRP protocol flow
 
@@ -36,5 +36,4 @@ In HCL Portal, you can manipulate the WSDL contents by adding URL parameters to 
 After you redirect the traffic, configure the TCPMon tool to listen on the port that you specified on the Consumer side to communicate with the Producer portal. Also, set the target port to the actual port values of the Producer WSRP interfaces. For the HCL Portal Producer, these target ports are the ports that the WSDL file contains when you request the WSDL file without the port parameter.
 
 To run the TCPMonitor tool, follow the instructions that are given in the WebSphere Application Server Help Center under *Tracing SOAP messages with tcpmon*.
-
 

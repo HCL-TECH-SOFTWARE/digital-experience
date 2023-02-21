@@ -120,6 +120,6 @@ You can reduce your levels of navigation to two levels.
 The Portal 8.5 theme includes a side navigation template that can be applied to render pages at the secondary level in a list with the main content. By default, this template is applied to the Administration section of your portal.
 --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Mobile navigation](../../responsive_web_design/rwd_add_navphone.md)
 

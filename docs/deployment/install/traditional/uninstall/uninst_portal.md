@@ -4,7 +4,7 @@ If you have a complete and functional uninstallation program, you can uninstall 
 
 1.  If you uninstall as a non-root user, verify that all product directories and files have the correct permissions. If not, set their permissions to the non-root user.
 
-2.  Stop all the servers. For specific instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../manage/stopstart.md).
+2.  Stop all the servers. For specific instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../manage/stopstart.md).
 
 3.  Verify that you are not running any other installation or uninstallation programs.
 

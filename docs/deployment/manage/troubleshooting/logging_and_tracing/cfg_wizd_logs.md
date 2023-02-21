@@ -13,5 +13,5 @@ You can view log files from the referenced directory. Log files are also generat
 
 
 ???+ info "Related information" 
-    -   [Configuration Wizard: Running the configuration](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/usage/cw_workflow_opt.md)
+    -   [Configuration Wizard: Running the configuration](../../../manage/portal_admin_tools/cfg_wizard/usage/cw_workflow_opt.md)
 

@@ -11,10 +11,10 @@ For search on secured portal sites Portal Search provides a pre-configured defau
 
 3.  When users search a secured portal, the resulting portal pages or resources are filtered based on Portal Access Control. Portal Search filters the results according to the access permissions of the user who is searching. It applies to the following resources: portal pages, portlets, and Web Content Manager content. Portal Search does not provide security-filtering for other HTTP accessible information, such as secured websites. The portal cannot filter the resulting documents by portal security for these types of content source.
 
-<!--
--   **[Enabling search on a secured portal site with the default configuration](../admin-system/srtsrchsecursite.md)**  
+
+-   **[Enabling search on a secured portal site with the default configuration](srtsrchsecursite.md)**  
 By modifying some of the settings, you can use the default search collection to configure search of a secured portal site.
--   **[Customizing your search collection for secured portal pages](../admin-system/srtconfgownsrchsec.md)**  
-Set up your own customized search collection for searching a secured portal site. -->
+-   **[Customizing your search collection for secured portal pages](srtconfgownsrchsec.md)**  
+Set up your own customized search collection for searching a secured portal site.
 
 

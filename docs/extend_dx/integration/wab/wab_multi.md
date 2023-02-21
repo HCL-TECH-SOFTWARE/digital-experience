@@ -2,9 +2,11 @@
 
 You can have multiple web dock applications that point to different hosts on the same portal page. You can also allow users to open two different portal pages that contain web dock applications in a new browser window or tab.
 
-**Restriction:** If you complete these steps, the inter-portlet communication feature is disabled.
+!!!note "Restriction"
+    If you complete these steps, the inter-portlet communication feature is disabled.
 
-**Important:** This alias is prefixed to the server name used to access the portal. It is then used to access the portal internally. If the server name is servername.domain.ibm.com, then make sure that the server is accessible through myhost1.servername.domain.ibm.com and myhost2.servername.domain.ibm.com. If portal is accessed with the https scheme, make sure that valid SSL certificates for host myhost1.servername.domain.ibm.com and myhost2.servername.domain.ibm.com are installed. To install the SSL certificates, log in to the WebSphere® Integrated Solutions Console. Then, go to **SSL certificate and key management** \> **Key stores and certificates** \> **NodeDefaultKeyStore** \> **Personal certificates**. For information, read [Personal certificates collection](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/usec_sslperscerts.html). If the certificates are not available for these hosts, then you must accept the security exception in the browser. Open the web dock iFrame URL in a separate browser window. Then, refresh the portal page to make it work and render the integrated application. Otherwise, the application might not work.
+!!!important
+    This alias is prefixed to the server name used to access the portal. It is then used to access the portal internally. If the server name is servername.domain.ibm.com, then make sure that the server is accessible through myhost1.servername.domain.ibm.com and myhost2.servername.domain.ibm.com. If portal is accessed with the https scheme, make sure that valid SSL certificates for host myhost1.servername.domain.ibm.com and myhost2.servername.domain.ibm.com are installed. To install the SSL certificates, log in to the WebSphere® Integrated Solutions Console. Then, go to **SSL certificate and key management** \> **Key stores and certificates** \> **NodeDefaultKeyStore** \> **Personal certificates**. For information, read [Personal certificates collection](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/usec_sslperscerts.html). If the certificates are not available for these hosts, then you must accept the security exception in the browser. Open the web dock iFrame URL in a separate browser window. Then, refresh the portal page to make it work and render the integrated application. Otherwise, the application might not work.
 
 1.  Log in to the WebSphere Integrated Solutions Console.
 
@@ -20,7 +22,8 @@ You can have multiple web dock applications that point to different hosts on the
 
     For example, enter myhost1 = http://myhost1.servername.domain.hcl.com, myhost2 = http://myhost2.servername.domain.hcl.com.
 
-    **Important:** The aliases for the hosts must all be lowercase.
+    !!!important
+        The aliases for the hosts must all be lowercase.
 
 7.  Click **OK**.
 

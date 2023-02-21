@@ -19,7 +19,7 @@ To define its visual appearance, the default markup for social lists uses severa
 The default social list CSS styles use CSS3 media queries to target specific mobile devices and implement responsive web design. Learn more about media queries.
 --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Using social lists with your own custom theme](../../../working_with_social_objects/soc_rendr_use_oob_socl_list_wcusthm.md)
     - [Modules that are provided with the modularized theme](../../../../themes_skins/the_module_framework/oob_modules/index.md)
     - [Module capabilities](../../../../themes_skins/the_module_framework/oob_modules/themeopt_oob_capability.md)

@@ -53,15 +53,12 @@ Example properties that contain cookie forwarding rules are as follows:
     With this setting, the WSRP Consumer forwards the client cookie named `COOKIE2` to the host `beta.sample.com` and to all hosts in the domain `myorg.com`. It gives client cookies first priority.
 
 
-**Note:** The WSRP Consumer does not send cookies when it requests the WSDL service description documents from a Producer.
+!!! note
+    The WSRP Consumer does not send cookies when it requests the WSDL service description documents from a Producer.
 
 
-**Related information**  
-
-
-[Securing the WSRP Consumer by HTTP-cookie-based single sign-on](../admin-system/wsrpt_cons_sec_ws_http_cb_sso.md)
-
-[Cookie support](../admin-system/wsrpc_cookie.md)
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information"
+    - [Securing the WSRP Consumer by HTTP-cookie-based single sign-on](../wsrp_consumer_info/cfg_security_consumer_portal/wsrpt_cons_sec_ws_http_cb_sso.md)
+    - [Cookie support](../../reference_for_using_wsrp_portal/wsrpc_cookie.md)
+    - [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

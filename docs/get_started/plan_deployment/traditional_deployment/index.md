@@ -27,6 +27,6 @@ Use virtualized environments to meet your business needs like production server 
 -   **[Multiple profile support](plan_multiple_profile.md)**  
 Multiple profiles give you the ability to have multiple, independently configured portal instances that run from the same installation.
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Target environment considerations](../../../deployment/manage/migrate/settingup_target_env/mig_plan_targetenvironment.md)
 

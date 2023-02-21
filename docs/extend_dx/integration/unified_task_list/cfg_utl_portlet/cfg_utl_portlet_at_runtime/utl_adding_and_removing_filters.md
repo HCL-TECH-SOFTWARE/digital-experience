@@ -4,8 +4,6 @@ Filters provide specialized views for tasks. You can separate tasks according to
 
 ## Adding filters
 
-**Procedure:**
-
 1.  Log in to HCL Portal with administrative access to the Unified Task List portlet.
 2.  Access the Unified Task List portlet configuration view and select **Filters** from the navigation menu. The **Filters** window opens.
 3.  Select **Add**.
@@ -13,14 +11,13 @@ Filters provide specialized views for tasks. You can separate tasks according to
 5.  In the **Resource Key** field, enter a resource key.
 6.  From the list, select the task provider instances to include in the filter.
 
-    **Note:** You can apply the filter to multiple task provider instances. Select the add icon to add more task provider instances.
+    !!!note
+        You can apply the filter to multiple task provider instances. Select the add icon to add more task provider instances.
 
 7.  Select **Apply** to add the new filter.
 8.  Select **Apply** to save the **Filters** configuration.
 
 ## Editing filters
-
-**Procedure:**
 
 1.  Log in to HCL Portal with administrative access to the Unified Task List portlet.
 2.  Access the Unified Task List portlet configuration view and select **Filters** from the navigation menu. The **Filters** window opens.
@@ -31,7 +28,8 @@ Filters provide specialized views for tasks. You can separate tasks according to
 7.  Select **Apply** to add the new values of the filter.
 8.  Select **Apply** to save the **Filters** configuration.
 
-    **Note:** If the **Resource Key** is modified, complete these additional steps:
+    !!!note
+        If the **Resource Key** is modified, complete these additional steps:
 
 9.  Select **OK** to close the configuration page.
 10. Select **Edit Shared Settings** from the Unified Task List portlet context menu.
@@ -40,8 +38,6 @@ Filters provide specialized views for tasks. You can separate tasks according to
 13. Select **OK** to close**Edit Shared Settings** view.
 
 ## Removing filters
-
-**Procedure:**
 
 1.  Log in to HCL Portal with administrative access to the Unified Task List portlet.
 2.  Access the Unified Task List portlet configuration view and select **Filters** from the navigation menu. The **Filters** window opens.

@@ -15,8 +15,8 @@ Learn how to enable Tag Cloud portlet support on your portal page. You can enabl
 To get the most benefit from social rendering together with tagging, you can put the HCL Portal Tag Cloud portlet on pages that contain social lists. This way your site visitors can reduce the contents of social lists by selecting individual tags from the tag cloud. The list of social objects is then restricted to content items that are tagged with the tag or tags that the user selected.
 -->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Roadmap: How to work with social rendering](../soc_rendr_roadmap.md)
     - [Integrating with HCL Connections](../../../extend_dx/integration/connections/installation/index.md)
-    - [Enabling remote rendering with WSRP and the Web Content Viewer](../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/index.md)
+    - [Enabling remote rendering with WSRP and the Web Content Viewer](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/enable_remote_render_wsrp/index.md)
 

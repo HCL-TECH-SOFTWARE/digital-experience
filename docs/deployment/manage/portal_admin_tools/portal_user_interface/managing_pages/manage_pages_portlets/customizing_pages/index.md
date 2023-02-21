@@ -20,5 +20,5 @@ Log in to the portal and use one of the following methods to access the portlet:
 
 
 ???+ info "Related information"  
-    -   [Managing iWidgets in your portal](../../../../../../portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
+    -   [Managing iWidgets in your portal](../../../../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
 

@@ -108,8 +108,6 @@ The following listing shows an example of a group membership list XML representa
 ```
 
 
-**Related information**  
-
-
-[XMLSchema-datatypes](https://www.w3.org/2001/XMLSchema-datatypes)
+???+ info "Related information"
+    - [XMLSchema-datatypes](https://www.w3.org/2001/XMLSchema-datatypes)
 

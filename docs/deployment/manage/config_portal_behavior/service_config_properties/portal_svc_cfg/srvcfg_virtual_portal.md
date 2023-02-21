@@ -1,6 +1,6 @@
 # Virtual Portal Configuration Service
 
-The Virtual Portal configuration service \(WP VirtualPortalConfigService\) enables you to specify properties for the default virtual portal and for specific virtual portals. Refer to the Property names section for details about the portal settings this configuration supports.
+The Virtual Portal configuration service (WP VirtualPortalConfigService) enables you to specify properties for the default virtual portal and for specific virtual portals. Refer to the Property names section for details about the portal settings this configuration supports.
 
 ## Property syntax
 
@@ -8,13 +8,13 @@ There are several ways in which you can define properties for virtual portals:
 
 -   **URL context for the virtual portal**
 
-    Property format: `context.virtual\_portal\_context.property.property\_name = property\_value`
+    Property format: `context.virtual_portal_context.property.property_name = property_value`
 
     Example: `context.vp1.property.property1 = true`
 
 -   **Host name of the virtual portal**
 
-    Property format: `hostname.virtual\_portal\_hostname.property.property\_name = property\_value`
+    Property format: `hostname.virtual_portal_hostname.property.property_name = property_value`
 
     Example: `hostname.vp1.example.com.property.property1 = true`
 
@@ -22,7 +22,7 @@ There are several ways in which you can define properties for virtual portals:
 
     The default keyword is used to identify the default virtual portal. The default virtual portal has no dedicated URL context or host name.
 
-    Property format: `default.property\_name = property\_value`
+    Property format: `default.property_name = property_value`
 
     Example: `default.property1 = true`
 
@@ -30,26 +30,26 @@ There are several ways in which you can define properties for virtual portals:
 
     The global keyword is used as a fallback property if there no more specific property that is defined for a virtual portal.
 
-    Property format: `global.property\_name = property\_value`
+    Property format: `global.property\_name = property_value`
 
     Example: `global.property1 = true`
 
 
 Replace the following variables when you define specific properties:
 
--   **`property\_name`**
+-   **`property_name`**
 
     The name of the property that you are defining.
 
--   **`property\_value`**
+-   **`property_value`**
 
     The value of the property that you are defining.
 
--   **`virtual\_portal\_context`**
+-   **`virtual_portal_context`**
 
     The URL context of the target virtual portal.
 
--   **`virtual\_portal\_hostname`**
+-   **`virtual_portal_hostname`**
 
     The host name of the target virtual portal.
 
@@ -59,9 +59,9 @@ Replace the following variables when you define specific properties:
 
 ## Property names
 
-You can use the following values to replace the property\_name variable from Property syntax section of the documentation:
+You can use the following values to replace the property_name variable from Property syntax section of the documentation:
 
--   **toolbar.enabled = \(true\)**
+-   **toolbar.enabled = (true)**
 
     Use this property name to enable or disable the site toolbar for an entire portal or for specific virtual portals. The site toolbar provides access to editing features for managed pages, including adding and editing pages and web content. Although essential for an authoring server, it is recommended that you disable the site toolbar on a delivery server.
 
@@ -78,9 +78,9 @@ The portal evaluates properties for virtual portals in the following order and r
 2.  If no specific property is defined for a virtual portal, the portal checks for a property defined by the global keyword. The value of the property is returned.
 3.  If no global property is defined, the value null is returned.
 
-**Related information**  
-[Removing the site toolbar on a production server](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/wcm_mngpages_disabletool.md)<br>
-[Disabling the toolbar logo](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/disable_toolbar_logo.md)<br>
-[Customizing the More menu of the action bar](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/epc_custom_more_menu.md)<br>
-[Disabling the preview option](../../../../../manage_content/wcm/wcm_content_delivery/preview_another_user/wcm_preview_disable.md)
+???+ info "Related information" 
+    -   [Removing the site toolbar on a production server](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/wcm_mngpages_disabletool.md)
+    -   [Disabling the toolbar logo](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/disable_toolbar_logo.md)
+    -   [Customizing the More menu of the action bar](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/epc_custom_more_menu.md)
+    -   [Disabling the preview option](../../../../../manage_content/wcm_delivery/preview_another_user/wcm_preview_disable.md)
 

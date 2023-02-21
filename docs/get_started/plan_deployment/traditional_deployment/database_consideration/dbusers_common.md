@@ -14,7 +14,7 @@ The database runtime user has fewer privileges than the database configuration u
 
 The following table identifies the minimum privileges that are needed to correct function by the two types of database users: configuration users and runtime users. The privileges that are listed pertain to all HCL Portal database domains.
 
-|Permission within the database domain|Release|Community|Customization|JCR|Feedback|Likeminds|
+|Permission within the database domain|Release|Community|Customization|JCR|Feedback|LikeMinds|
 |-------------------------------------|-------|---------|-------------|---|--------|---------|
 |Access to the database|Yes|Yes|Yes|Yes|Yes|Yes|
 |Read on all tables|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -25,7 +25,7 @@ The following table identifies the minimum privileges that are needed to correct
 |Create indexes|No|No|No|No|No|No|
 |Use of sequences|No|No|No|No|Yes|No|
 
-|Permission within the database domain|Release|Community|Customization|JCR|Feedback|Likeminds|
+|Permission within the database domain|Release|Community|Customization|JCR|Feedback|LikeMinds|
 |-------------------------------------|-------|---------|-------------|---|--------|---------|
 |Access to the database|Yes|Yes|Yes|Yes|Yes|Yes|
 |Read on all tables|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -50,6 +50,6 @@ The following table identifies the minimum privileges that are needed to correct
 |Drop views|No|No|No|Yes|No|No|
 
 
-???+ Info "Related information:"
+???+ Info "Related information"
     - [Database transfer: Granting privileges to database users for DB2 for i](../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/unix_db2i_priv_dbusers_common.md)
 

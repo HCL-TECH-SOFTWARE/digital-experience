@@ -21,7 +21,7 @@ HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Mana
 
 ## Ring API
 
-**Depends on:** Core \(deployed to OpenShift, Kubernetes or Hybrid on-premise\)
+**Depends on:** Core (deployed to OpenShift, Kubernetes or Hybrid on-premise)
 
 **Type:** Stateless
 
@@ -35,7 +35,7 @@ The Ring API, a component of the HCL DX Experience API  [HCL DX Experience API](
 
 **Type:** Stateless
 
-Content Composer [Content Composer](../../../manage_content/content_composer/index.md) requires the Ring API to be deployed to execute Content authoring capabilities.
+Content Composer [HCL Content Composer](../../../manage_content/wcm_authoring/content_composer/index.md) requires the Ring API to be deployed to execute Content authoring capabilities.
 
 ![Content Composer Application Definition](../../../images/Content%20Composer%20Application%20Definition.png "Content Composer Application definition")
 
@@ -71,16 +71,6 @@ The Image Processor provides image manipulation capabilities that are leveraged 
 
 ![Image Processor Application definition](../../../images/Image%20Processor%20Application%20definition.png "Image Processor Application definition")
 
-## Design Studio \(Beta\)
-
-**Depends on:** Core, Ring API
-
-**Type:** Stateless
-
-Refer to the Design Studio \(Beta\)[Design Studio \(Beta\)](../../../manage_content/design_studio/index.md) topic section for more information about this application.
-
-![Design Studio (Beta) Application Definition](../../../images/Design%20Studio%20Beta%20Application%20Definition.png "Design Studio (Beta) Application Definition")
-
 ## Runtime Controller
 
 **Depends on:** No dependencies
@@ -99,19 +89,17 @@ This matrix shows which HCL DX applications have dependencies on other applicati
 
 Application names are defined as follows:
 
-|Shortname|Full Name|
+|Short name|Full Name|
 |---------|---------|
 |Core|HCL DX 9.5 Core|
 |Ring API|Ring API|
 |CC|Content Composer|
 |DAM|Digital Asset Management|
-|DS|Design Studio|
 |PER|Persistence|
 |IMG|Image Processor|
 
-???info "Related information:"
+???info "Related information"
     -   [HCL DX Experience API](../../../extend_dx/apis/hcl_experience_api/index.md)
-    -   [Content Composer](../../../manage_content/content_composer/index.md)
+    -   [Content Composer](../../../manage_content/wcm_authoring/content_composer/index.md)
     -   [Digital Asset Management](../../../manage_content/digital_assets/index.md)
-    -   [Design Studio \(Beta\)](../../../manage_content/design_studio/index.md)
     -   [Hybrid deployment](../hybrid_deployment/index.md)

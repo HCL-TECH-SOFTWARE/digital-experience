@@ -28,12 +28,12 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../..
 
 ## Design Studio (Beta)
 
-Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with Container Update CF202 include baseline stylesheet upload and download in Site overview, guidance when styling elements, replacing images, using the Layers panel, and re-use of Content containers.
+Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with Container Update CF202 include baseline stylesheet upload and download in Site overview, guidance when styling elements, replacing images, using the Layers panel, and re-use of Content containers.
 
 !!!note
-    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF202, and includes a sample DX site.  It is not yet supported for use in production deployments. 
+    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF202, and includes a sample DX site.  It is not yet supported for use in production deployments. 
 
-See the [Design Studio (Beta)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> Help Center topic for more information. 
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> Help Center topic for more information. 
 
 ## Digital Experience Cloud Native 9.5 offering
 
@@ -88,7 +88,7 @@ See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLea
 [Update HCL DX 9.5 Container to a later DX version using Helm](https://www.youtube.com/watch?v=TwZuNOeWdT4)
 
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [Digital Asset Management Help Center](../design/digital_asset_mgmt/digital_asset_mgmt_overview.md)
     - [Digital Experience REST API Explorers](../design/api/api_explorers.md)
     - [Digital Experience Remote Model REST API Explorer](../design/api/remote_model_rest_api.md)

@@ -4,9 +4,9 @@ By default, the WebDAV files in the Simple Theme template are English only, but 
 
 You must add and modify several files to add other locales to your custom theme.
 
-## Theme template \(theme.html\)
+## Theme template (theme.html)
 
-If your theme template contains translatable strings, you can delegate rendering to a specific HTML file for each locale. The following procedure adds support for German as an example, but you can add support for many other languages. Go to [Supported languages](../reference/supportedlanguages.md#) to learn more about the languages that are supported by HCL Digital Experience.
+If your theme template contains translatable strings, you can delegate rendering to a specific HTML file for each locale. The following procedure adds support for German as an example, but you can add support for many other languages. Go to [Language support](../../../../deployment/manage/portal_admin_tools/language_support/index.md) to learn more about the languages that are supported by HCL Digital Experience.
 
 1.  Add the following tags to the head section of your theme template:
 
@@ -18,14 +18,14 @@ If your theme template contains translatable strings, you can delegate rendering
     <link rel="alternate" href="nls/theme_en.html" hreflang="en">
     ```
 
-2.  In WebDAV, create a new directory that is named nls in fs-type1/themes/themename.
-3.  Copy theme.html to theme\_de.html and theme\_en.html to the nls directory.
-4.  Translate the strings to German in theme\_de.html.
-5.  In theme\_de.html, change the `lang` attribute in the HTML tag to de.
+2.  In WebDAV, create a new directory that is named `nls` in `fs-type1/themes/themename`.
+3.  Copy theme.html to theme_de.html and theme_en.html to the `nls` directory.
+4.  Translate the strings to German in theme_de.html.
+5.  In theme_de.html, change the `lang` attribute in the HTML tag to de.
 
-## Skin template \(skin.html\)
+## Skin template (skin.html)
 
-The skin template contains English strings for the menu hover text. You can delegate rendering to a specific skin HTML file for each locale. The following procedure adds support for German as an example, but you can add support for many other languages. Go to [Supported languages](../reference/supportedlanguages.md#) to learn more about the languages that are supported by HCL Digital Experience.
+The skin template contains English strings for the menu hover text. You can delegate rendering to a specific skin HTML file for each locale. The following procedure adds support for German as an example, but you can add support for many other languages. Go to [Language support](../../../../deployment/manage/portal_admin_tools/language_support/index.md) to learn more about the languages that are supported by HCL Digital Experience.
 
 1.  Add the following tag to the section tag of your template:
 
@@ -41,9 +41,9 @@ The skin template contains English strings for the menu hover text. You can dele
     <a rel="alternate" href="nls/skin_en.html" hreflang="en" class="wpthemeDisplayNone"></a>
     ```
 
-2.  In WebDAV, create a new directory that is named nls in fs-type1/themes/themename/yourskin.
-3.  Copy skin.html toskin\_de.html and skin\_en.html to the nls directory.
-4.  Translate the strings to German in skin\_de.html.
+2.  In WebDAV, create a new directory that is named `nls` in `fs-type1/themes/themename/yourskin`.
+3.  Copy skin.html toskin_de.html and skin_en.html to the `nls` directory.
+4.  Translate the strings to German in skin_de.html.
 
 ## Profiles, menus, contributions, and other .json files
 

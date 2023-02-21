@@ -11,6 +11,7 @@ You can install remote search service by using manual steps instead of the IBM I
         SOAP support for remote search services was deprecated with HCL Portal Version 8.0. EJB is still supported.
 
 -   For EJB: If you use EJB, complete the following security administration tasks:
+
     1.  Prepare security for remote search service in a single sign-on domain (SSO).
     2.  Add the signer certification of the remote search service server into the portal search server. To do this addition, proceed by the following steps:
         1.  Access the WebSphere® Integrated Solutions Console of the portal search server.
@@ -193,8 +194,7 @@ You can install remote search service by using manual steps instead of the IBM I
     !!!note "Cluster note"
         In a clustered environment, complete this step on the primary node only.
 
-<!--
--   **[Updating remote search service by using manual steps](../admin-system/update_rssman.md)**  
-If you originally installed the remote service by using manual steps, then you must use manual steps to upgrade it after you apply the Combined Cumulative Fix on the portal server. -->
+-   **[Updating remote search service by using manual steps](update_rssman.md)**  
+If you originally installed the remote service by using manual steps, then you must use manual steps to upgrade it after you apply the Combined Cumulative Fix on the portal server. 
 
 

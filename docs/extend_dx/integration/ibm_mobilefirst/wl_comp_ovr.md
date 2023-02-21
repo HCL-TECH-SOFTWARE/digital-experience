@@ -49,10 +49,7 @@ The new MobileFirst resources allow access to native device capabilities by usin
 To get started, create a MobileFirst hybrid application that points to and renders your HCL Portal URL. Modify your HCL Portal code to call the JavaScript APIs to access the native device capabilities. For example, your application could have a feature for taking and uploading a picture that is available on devices that have cameras and unavailable otherwise. Or a feature that is tailored to the user's geolocation on devices that have GPS and not otherwise. Or a feature that sends and receives push notifications on devices that support push notifications and not otherwise.
 
 
-**Related information**  
-
-
-[Apache Cordova](https://cordova.apache.org/)
-
-[MobileFirst API](https://www.ibm.com/docs/en/mpf/7.1.0?topic=reference-mobilefirst-client-side-api)
+???+ info "Related information"
+    - [Apache Cordova](https://cordova.apache.org/)
+    - [MobileFirst API](https://www.ibm.com/docs/en/mpf/7.1.0?topic=reference-mobilefirst-client-side-api)
 

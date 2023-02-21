@@ -8,9 +8,10 @@ Use this roadmap if you are:
 
 -   Migrating a stand-alone server environment from a previous version to the latest version of HCL Digital Experience.
 
-**Note:** If you are migrating from HCL Digital Experience8.0.0.1 on WebSphere® Application Server8.5.5.2 to the latest version of HCL Digital Experience, you must follow a different migration process.
+!!!note
+    If you are migrating from HCL Digital Experience8.0.0.1 on WebSphere® Application Server8.5.5.2 to the latest version of HCL Digital Experience, you must follow a different migration process.
 
-You must apply the latest cumulative fix and one of the two most recent fix packs to your source environment, and the latest cumulative fix and the most recent fix pack to your target environment before you can migrate to HCL Digital Experience 9.5. For more information, see [Supported migration paths](../plan/mig_plan_supported_paths.md).
+You must apply the latest cumulative fix and one of the two most recent fix packs to your source environment, and the latest cumulative fix and the most recent fix pack to your target environment before you can migrate to HCL Digital Experience 9.5. For more information, see [Supported migration paths](../../../../../deployment/manage/migrate/planning_migration/mig_plan_supported_paths.md).
 
 ## Planning for migration
 
@@ -26,7 +27,8 @@ Prepare the source portal that you want to use for migration. Review the conside
 
 ## Setting up your target environment
 
-**Attention:** Before you run the migration, install interim fix [PI50840](https://support.hcltechsw.com/csm?id=kb_article&sys_id=64507a5a1b85409083cb86e9cd4bcb97).
+!!!attention
+    Before you run the migration, install interim fix [PI50840](https://support.hcltechsw.com/csm?id=kb_article&sys_id=64507a5a1b85409083cb86e9cd4bcb97).
 
 Set up your target environment for migrating to the latest version of HCL Digital Experience.
 
@@ -48,27 +50,29 @@ Start the Configuration Wizard to migrate data, applications, databases, propert
     |Administrator password| |
     |Soap port| |
 
-2.  To get the latest updates for the wizard, apply the most recent cumulative fix. For more information about applying the latest fix pack, Visit [Apply Combined Cumulative Fix](../../../../deployment/install/traditional/cf_install/index.md) for more information for more topic information.
+2.  To get the latest updates for the wizard, apply the most recent cumulative fix. For more information about applying the latest fix pack, Visit [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md) for more information for more topic information.
 
-    **Note:** Skip this step, if you have the most recent fix pack applied.
+    !!!note
+        Skip this step, if you have the most recent fix pack applied.
 
-3.  Access the Configuration Wizard using your target environment and system host name. Go to: http://your\_server:10200/hcl/wizard.
+3.  Access the Configuration Wizard using your target environment and system host name. Go to: http://your_server:10200/hcl/wizard.
 
-    **Note:** If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+    !!!note
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
 
-4.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
-5.  Select **Migrate to a New Version** \> **Migrate a Cluster Step 1: Migrate the Deployment Manager Profile**.
+4.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
+5.  Select **Migrate to a New Version > Migrate a Cluster Step 1: Migrate the Deployment Manager Profile**.
 6.  Provide information about your environment.
 7.  Save your wizard settings.
 8.  Click **Download Configuration Scripts** to run the steps on the deployment manager.
-9.  After you complete the steps from Step 1, select **Migrate to a New Version** \> **Migrate a Cluster Step 2: Migrate Node Profiles**.
+9.  After you complete the steps from Step 1, select **Migrate to a New Version > Migrate a Cluster Step 2: Migrate Node Profiles**.
 10. Provide information about your environment.
 11. Save your wizard settings.
 12. Choose one of the following options:
     -   Click **Download Configuration Scripts** to run the steps remotely.
     -   Click **Start Configuration** to run the steps locally. This option starts to run the automated steps until a manual step is encountered.
 13. Complete these steps on all nodes.
-14. After you complete the steps for Step 2, select **Migrate to a New Version** \> **Migrate a Cluster Step 3: Upgrade Node Profiles**.
+14. After you complete the steps for Step 2, select **Migrate to a New Version > Migrate a Cluster Step 3: Upgrade Node Profiles**.
 15. Provide information about your environment.
 16. Save your wizard settings.
 17. Choose one of the following options:
@@ -83,12 +87,8 @@ Migration is not complete until you review the Next steps section in the product
 After you complete the tasks in the Next steps section of the product documentation, migration is complete.
 
 
-**Related information**  
-
-
-[Cluster Step 1: Migrate the deployment manager profile](../config/cw_migrate_cluster_1.md)
-
-[Cluster Step 2: Migrate node profiles](../config/cw_migrate_cluster_2.md)
-
-[Cluster Step 3: Upgrade node profiles](../config/cw_migrate_cluster_3.md)
+???+ info "Related information" 
+    -   [Cluster Step 1: Migrate the deployment manager profile](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_cluster_1.md)
+    -   [Cluster Step 2: Migrate node profiles](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_cluster_2.md)
+    -   [Cluster Step 3: Upgrade node profiles](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_cluster_3.md)
 

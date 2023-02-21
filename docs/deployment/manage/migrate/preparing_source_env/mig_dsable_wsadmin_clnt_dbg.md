@@ -6,7 +6,7 @@ There is a known issue in wsadmin client connections to node agents on WebSphere
 
 Disable the wsadmin client trace:
 
--   In [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/properties/wsadmin.properties, comment out `com.ibm.ws.scripting.traceString`. For example:
+-   In [wp\_profile\_root](../../../../guide_me/wpsdirstr.md#wp_profile_root)/properties/wsadmin.properties, comment out `com.ibm.ws.scripting.traceString`. For example:
 
     `#com.ibm.ws.scripting.traceString=com.ibm.*=all=enabled`
 

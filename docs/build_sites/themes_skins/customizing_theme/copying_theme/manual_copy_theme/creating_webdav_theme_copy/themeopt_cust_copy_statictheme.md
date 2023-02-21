@@ -33,6 +33,6 @@ You need to make a unique copy of the Portal 8.5 theme static resources before y
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Deploying themes with cacheable resources](../../../../manage_theme_capabilities/themeopt_mod_adminmod.md)
 

@@ -2,7 +2,7 @@
 
 Migrate a web server so that it supports the latest version of WebSphere® Application Server. The Application Migration Toolkit for WebSphere Application Server supports migrating applications from previous versions of WebSphere Application Server to the latest product version.
 
-You can upgrade IBM® HTTP Server \(IHS\) from a previous version in two ways:
+You can upgrade IBM® HTTP Server (IHS) from a previous version in two ways:
 
 -   Install the new version in a new directory
 -   Install the new version in the same directory as the previous version
@@ -20,6 +20,7 @@ For information about migrating applications, read more about the Application Mi
 
     -   If you updated IBM HTTP Server on the original host but in a new directory, update the path by selecting the web server: **Servers** \> **Server Types** \> **Web Servers** in the WebSphere Integrated Solutions Console.
     -   If the updated IBM HTTP Server is on a new host, follow the procedure in *Selecting a web server topology diagram and roadmap* to create a new web server definition. You can remove the old web server definition when you confirm that the new web server is working properly.
+
 4.  Install the latest IBM HTTP Server cumulative fix. Learn more about [Recommended fixes for IBM HTTP Server.](https://support.hcltechsw.com/csm)
 
 
@@ -96,6 +97,7 @@ For information about migrating applications, read more about the Application Mi
     -   WebSphere Application Server provides a new plug-in for Apache 2.2 and IBM HTTP Server 8.5.
     -   If you use modules from third-party vendors, contact your vendor for a version of the module that works with the Apache 2.2 API.
     -   If you use modules that were developed in-house, you must rebuild your modules to support Apache 2.2. The modules might also require some modifications.
+
 4.  Update the IBM HTTP Server service name in the WebSphere Application Server web server definition if the following conditions are true:
 
     -   The server is a Windows server.
@@ -106,7 +108,8 @@ For information about migrating applications, read more about the Application Mi
 5.  Migrate web server definitions. A web server definition is used to manage the web server from a stand-alone profile or the deployment manager.
 
     -   If you updated IBM HTTP Server on the same host and in the same directory, no action is required. The current web server definition suffices.
-    -   If the updated IBM HTTP Server is on a new host, follow the procedure in [Selecting a web server topology diagram and roadmap](http://www-01.ibm.com/support/knowledgecenter/SSD28V_8.5.5/com.ibm.websphere.nd.doc/ae/tins_road_plugins.html) to create a new web server definition. You can remove the old web server definition when you confirm that the new web server is working properly.
+    -   If the updated IBM HTTP Server is on a new host, follow the procedure in [Selecting a web server topology diagram and roadmap](https://www.ibm.com/docs/en/was/8.5.5?topic=SSEQTP_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/tins_road_plugins.html) to create a new web server definition. You can remove the old web server definition when you confirm that the new web server is working properly.
+
 6.  Install the latest IBM HTTP Server cumulative fix. Learn more about [Recommended fixes for IBM HTTP Server](https://support.hcltechsw.com/csm).
 
 

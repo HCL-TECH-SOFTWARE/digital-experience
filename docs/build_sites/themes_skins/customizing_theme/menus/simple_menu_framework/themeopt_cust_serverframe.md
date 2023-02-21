@@ -323,7 +323,7 @@ In HCL Portal version 8.0.0.1 and later, the JSON menu framework accepts one or 
 The `<menu name>` values from these WP ConfigService settings are matched against the value from the `"?uri=menu:<menu name>"` query parameter on the incoming request for a menu. The comparison of the menu names from the WP ConfigService to the received request for a menu is case-sensitive.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Defining theme modules](../../../the_module_framework/writing_module/themeopt_mod_register.md)
     - [Dynamically extending an existing menu item from a module](../../../the_module_framework/writing_module/rwd_add_menu_module.md)
     - [Introducing JSON](https://www.json.org/json-en.html)

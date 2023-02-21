@@ -45,4 +45,4 @@ For example, consider the case of content sources in the form of secured portal 
 5.  Delete the copied file searchsecret.xml that contains your encryption key.
 
 ???+ info "Related information"
-    -   [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+    -   [Working with the XML configuration interface](../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)

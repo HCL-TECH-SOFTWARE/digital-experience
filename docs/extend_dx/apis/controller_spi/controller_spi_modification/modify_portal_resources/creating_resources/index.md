@@ -5,15 +5,22 @@ You create resources by using methods of controllers. Each controller type enabl
 The following list shows the existing controllers and the resources that you can create by using them:
 
 -   `ContentModelController`. This enables the creation of resources of the following types:
+
     -   `ContentPage`
     -   `ContentLabel`
+    
     -   The following two types of content URL:
+
         -   `ExternalContentURL`
         -   `InternalContentURL`
+
 -   `LayoutModelController`. This enables the creation of resources of the following types:
+
     -   `LayoutContainer`
     -   `LayoutControl`
+
 -   `PortletModelController`. This enables the creation of resources of the following types:
+
     -   `PortletDefinition`
     -   `PortletEntity`
 

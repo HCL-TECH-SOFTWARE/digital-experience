@@ -52,7 +52,8 @@ The EngineURL interface provides the following methods:
 
 The crucial method is the getState() method, which returns the state holder object this particular EngineURL instance refers to.
 
-**Note:** The method returns a controller interface (StateHolderController) that allows the programmer to modify the state of this EngineURL. See [Accessor SPI](accessor_spi.md) for additional information about modifying the state.
+!!! note
+    The method returns a controller interface (StateHolderController) that allows the programmer to modify the state of this EngineURL. See [Accessor SPI](accessor_spi.md) for additional information about modifying the state.
 
 ## Resource URLs
 

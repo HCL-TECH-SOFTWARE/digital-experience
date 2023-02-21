@@ -10,7 +10,8 @@ For example, in a travel site, when you start a Flight booking dialog D1, a part
 
 When another dialog, a Car booking dialog D2 starts, another partition P2 is created. And when the Car booking dialog D2 remains active all data from dialog D2 is stored in partition P2. When the suspended Flight booking dialog D1 resumes, P1 resumes as well. This action ensures that when the Flight booking dialog D1 is active data is read from and written to P1 and when the Car booking dialog D2 remains active all data is read and written to P2. The partitions are deleted as soon as the dialog they belong to is canceled or ends.
 
-**Note:** In the context of dialog nesting, a separate partition is created for any nested dialog. In other words, dialogs that call other dialogs read data from and write data to different partitions. This action ensures that the same portlets can be used as part of dialogs that call each other in a nested fashion without causing undesired interferences.
+!!!note
+    In the context of dialog nesting, a separate partition is created for any nested dialog. In other words, dialogs that call other dialogs read data from and write data to different partitions. This action ensures that the same portlets can be used as part of dialogs that call each other in a nested fashion without causing undesired interferences.
 
-**Parent topic:**[Advanced concepts](../screenflow/adv_cncpts.md)
+
 

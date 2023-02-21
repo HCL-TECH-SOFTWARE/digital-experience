@@ -13,6 +13,7 @@ Define the URL that is used to access your portal site.
         -   `localhost` is the portal host name (WpsHostName)
         -   `10039` is the host port (WpsHostPort)
         -   `wps` is the context root (WpsContextRoot).
+
     -   **Default value**
 
         `portal`
@@ -31,6 +32,7 @@ Define the URL that is used to access your portal site.
         -   `localhost` is the portal host name (WpsHostName)
         -   `10039` is the host port (WpsHostPort)
         -   `wps` is the context root (WpsContextRoot).
+        
     -   **Default value**
 
         `myportal`

@@ -36,6 +36,7 @@ To replace an existing WPSDB database with the backup copy using the DB2® Resto
 
     -   If you selected to **Restore to an existing database**, select the most recent backup file to use for the restore operation.
     -   If you selected to **Restore to a new database**, type the media type, path, and date and time of the most recent backup.
+
 10. Click **Next.**
 
 11. On the Set your containers for a redirected restore screen, do not make any changes. Click **Next**.
@@ -48,6 +49,7 @@ To replace an existing WPSDB database with the backup copy using the DB2® Resto
 
     -   Select **Run now without saving task history** to perform the restore immediately.
     -   Select **Enable scheduler** to schedule the restore operation for a later time.
+    
 15. Click **Next.**
 
 16. On the final screen that shows summary information, click the **Show Command** to view the DB2 commands that the Restore wizard will run. You can copy these commands to use in the DB2 Task Center as an alternative to using the Restore Wizard.

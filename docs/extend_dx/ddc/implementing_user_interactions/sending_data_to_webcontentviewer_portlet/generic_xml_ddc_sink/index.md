@@ -14,10 +14,10 @@ The generic XML Digital Data Connector \(DDC\) for HCL Portal data sink supports
 The Digital Data Connector \(DDC\) for HCL Portal data sink returns a JSON string. The JSON string contains the result information for the outbound interaction call that was performed.
 
 
-???+ info "Related information:" 
+???+ info "Related information" 
     - [Implementing interactions with social objects](../../../../../build_sites/social_rendering/customizing_view_definitions/implementing_interactions_social_object/index.md)
     - [Interacting with forums](../../../../../build_sites/social_rendering/customizing_view_definitions/implementing_interactions_social_object/wcm_dev_intract_forum.md)
     - [Creating the HTML form](../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/plrf_sendata2wcv_createhtmlform.md)
-    - [REST service for Web Content Manager](../../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/index.md)
-    - [How to use REST with content items](../../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_content.md)
+    - [REST service for Web Content Manager](../../../../../manage_content/wcm_development/wcm_rest/index.md)
+    - [How to use REST with content items](../../../../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_content.md)
 

@@ -1,9 +1,0 @@
-Title: How to manage syndicators and subscribers
-nav:
-    - index.md
-    - wcm_syndication_settingup.md
-    - wcm_reference_syndicatorfields.md
-    - wcm_reference_subscriberfields.md
-    - wcm_syndication_manual.md
-    - wcm_syndication_monitoring.md
-    - wcm_syndication_delegated_access.md

@@ -8,24 +8,24 @@ You can access product software at [HCL Software Licensing Portal](https://www.
 
 You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
 
-## Design Studio \(Beta\)
+## Design Studio (Beta)
 
-Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New services available with the Container Update CF197 release include ability to render DX site pages and updates using the sample site, Ability to use the page editor to edit elements inline and update metadata, set locations for sites, set html tags for text elements, and more.
+Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New services available with the Container Update CF197 release include ability to render DX site pages and updates using the sample site, Ability to use the page editor to edit elements inline and update metadata, set locations for sites, set html tags for text elements, and more.
 
 !!!note
-    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF197, and includes a sample DX site.  It is not yet supported for use in production deployments.
+    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF197, and includes a sample DX site.  It is not yet supported for use in production deployments.
 
-See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
 
 ## Deploy HCL DX CF197 to container platforms using Helm
 
-Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators a larger degree of transparency and control in deployment operations. Support for new HCL DX 9.5 CF197 deployments to Red Hat OpenShift, Microsoft Azure Elastic Kubernetes Service \(AKS\) and Amazon Elastic Kubernetes Service \(EKS\),and ability to update from HCL DX 9.5 version CF196 to CF197 is supported with the Google Kubernetes Engine \(GKE\) platform.
+Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators a larger degree of transparency and control in deployment operations. Support for new HCL DX 9.5 CF197 deployments to Red Hat OpenShift, Microsoft Azure Elastic Kubernetes Service (AKS) and Amazon Elastic Kubernetes Service (EKS),and ability to update from HCL DX 9.5 version CF196 to CF197 is supported with the Google Kubernetes Engine (GKE) platform.
 
 See the [HCL DX 9.5 Helm deployment](../../deployment/install/container/helm_deployment/preparation/index.md) topic for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
-The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates include new release artifact types supporting, Obtain failed Syndication reports for single or multiple items, and delete Digital Asset Management inactive schema from Persistence are provided in CF197.
+The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates include new release artifact types supporting, obtain failed Syndication reports for single or multiple items, and delete Digital Asset Management inactive schema from Persistence are provided in CF197.
 
 See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
@@ -33,7 +33,7 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../..
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/9.5_express/supportedsoftware.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 

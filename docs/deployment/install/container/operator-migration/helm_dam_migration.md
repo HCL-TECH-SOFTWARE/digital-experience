@@ -163,7 +163,6 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
             core: false
             runtimeController: false
             contentComposer: false
-            designStudio: false
             digitalAssetManagement: true
             imageProcessor: false
             openLdap: false
@@ -304,5 +303,5 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
             helm upgrade -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
             ```
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [requirements and limitations here](helm_extract_operator_properties.md) -->

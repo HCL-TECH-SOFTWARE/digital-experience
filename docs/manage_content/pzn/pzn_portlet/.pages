@@ -1,5 +1,6 @@
-Title: Developing a personalized portlet
+title: Developing a personalized portlet
 nav:
+    - index.md
     - pzn_demoprereq.md
     - pzn_demoinstall.md
     - pzn_demo_create_jsp_rad.md

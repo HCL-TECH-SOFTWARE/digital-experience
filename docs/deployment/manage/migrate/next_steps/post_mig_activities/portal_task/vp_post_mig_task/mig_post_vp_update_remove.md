@@ -8,13 +8,15 @@ For example, if you migrate a Virtual Portal that contains a Document Libraries 
 
 1.  Register your filename.xml file that you used in the previous system to pre-configure the default content for creating the Virtual Portal.
 
-    **Note:** The name of the file might change based on the release and editions of portal that you are using. The following are examples of file names: "InitVirtualContentPortal.xml, InitAdminVirtualPortal.xml."
+    !!!note
+        The name of the file might change based on the release and editions of portal that you are using. The following are examples of file names: "InitVirtualContentPortal.xml, InitAdminVirtualPortal.xml."
 
 2.  **Important:** If you are migrating to HCL Digital Experience 8.5 CF04 or later, you can skip the following steps.
 
 3.  Use the WebSphere® Integrated Solutions Console to update the virtual portal XML scripts to remove references to Dynamic Person Tag portlet.
 
-    **Note:** Your script can contain references to Dynamic Person Tag portlet. This portlet is no longer available and any reference to this portlet causes your script to fail.
+    !!!note
+        Your script can contain references to Dynamic Person Tag portlet. This portlet is no longer available and any reference to this portlet causes your script to fail.
 
     1.  Go to the WebSphere Integrated Solutions Console.
 
@@ -56,7 +58,8 @@ For example, if you migrate a Virtual Portal that contains a Document Libraries 
 
 4.  Use the WebSphere Integrated Solutions Console to update the virtual portal XML scripts to remove references to CAI/TAI portlets. For example, the portlets are defined in a web-app sequence like the following examples.
 
-    **Note:** Your script can contain references to the CAI/TAI portlets. These portlets are no longer available and any reference to these portlets cause your script to fail.
+    !!!note
+        Your script can contain references to the CAI/TAI portlets. These portlets are no longer available and any reference to these portlets cause your script to fail.
 
     ```
     <web-app action="locate" uid="com.ibm.workplace.community.portal">

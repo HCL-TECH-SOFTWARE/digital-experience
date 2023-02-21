@@ -38,5 +38,5 @@ Resetting the steps does not undo any tasks that the wizard completed before the
 After you correct the values, on the Configure page, click **Skip Step** for any steps that ran that you do not need to run again. If you completed a step in the previous attempt that did not use values that you changed, then you can skip the step.
 
 **Related information**  
-[Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+[Accessing the Configuration Wizard](../../../manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
 

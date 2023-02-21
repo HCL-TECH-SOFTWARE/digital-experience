@@ -5,7 +5,7 @@ View the steps to install remote search service by using IBM Installation Manage
 -   WebSphere® Application Server v8.5 must be installed.
 -   HCL Portal and HCL Web Content Manager must not be installed.
 
-Use the WP8.5_iim.remotesearch installation package to install remote search service by using Installation Manager.
+Use the HCL Portal V8.5 Remote Search and Document Conversion Services Multiplatform Multilingual installation package to install remote search service by using Installation Manager.
 
 1.  Enter the installation directory of the remote search service in the installation directory field.
 

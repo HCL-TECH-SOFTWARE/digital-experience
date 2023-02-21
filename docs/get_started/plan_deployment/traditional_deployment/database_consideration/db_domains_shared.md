@@ -61,7 +61,7 @@ This configuration defines a cache lifetime of 900 seconds. You can choose anoth
 
 The VMM database feature makes it much simpler to use multiple repositories, since this capability is achieved through configuration, rather than development, with the use of the new VMM. In essence, with this feature you can map entries from multiple individual user repositories into a single virtual repository. The federated repository consists of a single named realm, which is a set of independent user repositories. Each repository might be an entire external repository or in the case of LDAP, a subtree within that repository. The root of each repository is mapped to a base entry within the federated repository, which is a starting point within the hierarchical namespace of the virtual realm. The Virtual Member Manager (VMM) databases for a full repository and for the property extension can be shared between lines of production. If the VMM databases are out of service, HCL Portal does not function.
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Cache Manager Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfgref_cach_mgr.md)
     - [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411) 
 

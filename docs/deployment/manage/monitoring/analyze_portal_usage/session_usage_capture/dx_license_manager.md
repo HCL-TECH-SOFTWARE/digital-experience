@@ -34,3 +34,8 @@
 
  !!! note
      Starting from HCL Digital Experience 9.5 CF207, it is mandatory to enable deployment of License Manager application with `licenseManager: true`.
+
+ ## Helm Chart Configurations from CF208 for License Manager application
+
+ Starting HCL Digital Experience 9.5 CF208, additional configuration to support local license manager is defined in helm chart.
+

@@ -1,6 +1,6 @@
 # What's new in CF200
 
-This HCL Digital Experience 9.5 Container Update and CF200 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\), new Helm deployment operations for container deployments and migration from Operator deployments, updated CICD release process artifacts, new DX API and Explorer services for Personalization, Search and User and Groups REST APIs, new Digital Experience 9.5 Demo Packs on HCL Sofy, new ‘How To’ videos, and more.
+This HCL Digital Experience 9.5 Container Update and CF200 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio (Beta), new Helm deployment operations for container deployments and migration from Operator deployments, updated CICD release process artifacts, new DX API and Explorer services for Personalization, Search and User and Groups REST APIs, new Digital Experience 9.5 Demo Packs on HCL Sofy, new ‘How To’ videos, and more.
 
 This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
@@ -10,27 +10,27 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Design Studio \(Beta\)
 
-Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with Container Update CF200 include Page creation shortcuts, Delete Site from Overview menu, Define Site base stylesheet, Rename Content container and more.
+Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with Container Update CF200 include Page creation shortcuts, Delete Site from Overview menu, Define Site base stylesheet, Rename Content container and more.
 
 !!!note
         Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF200, and includes a sample DX site. It is not yet supported for use in production deployments.
 
-See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> Help Center topic for more information. 
+See the [Design Studio \(Beta\)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> Help Center topic for more information. 
 
 ## Deploy HCL DX 9.5 Container Update to container platforms using Helm
 
 Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Beginning with Container Update CF200, new servies and updates include support for Sidecars for logging of Remote Search, define central logs location, Incubator section for future DX 9.5 Container Update features, Configuration of labels and annotations, also environment variables for different DX resources, Use of  Persistent Volumes for DX 9.5 Core, Digital Asset Management, and Persistence services file storage, migration process for the Core profile from Operator to Helm deployment, and Helm based Version to Version Update process.
 
 !!!important
-        Beginning with HCL DX Container Update CF200, use of the Operator \(dxctl\) method of container deployment is not supported. Customers should use Helm deployments and migrate existing Operator-based deployments to Helm.
+        Beginning with HCL DX Container Update CF200, use of the Operator (dxctl) method of container deployment is not supported. Customers should use Helm deployments and migrate existing Operator-based deployments to Helm.
 
 See the [HCL DX 9.5 Helm deployment](../../get_started/plan_deployment/hybrid_deployment/index.md) topic for more information. 
 
 ## Digital Asset Management
 
-New Digital Asset Management \(DAM\) staging support enables administrators to stage and synchronize DAM assets from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\), using DXClient.
+New Digital Asset Management (DAM) staging support enables administrators to stage and synchronize DAM assets from an authoring environment (source environment/publisher) to multiple rendering environments (target environment/subscriber), using DXClient.
 
-See the [DAM staging](../../manage_content/digital_assets/usage/staging_dam/dam_subscription_staging.md) Help Center topic for more information.
+See the [DAM staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) Help Center topic for more information.
 
 Support to migrate from the old to new Digital Asset Management database in the Helm-based deployments. See the [Migrate to new DAM DB in Helm-based deployments](../../deployment/install/container/operator-migration/helm_dam_migration_newDB.md) Help Center topic for more information.
 
@@ -66,7 +66,7 @@ Take advantage of step-by-step guidance for HCL Digital Experience practitioners
 
 The following list of HCL Digital Experience deprecated features will reach end of support beginning with HCL Digital Experience Container update and CF 200. Reference the Help Center topic [Deprecated features and themes for HCL Digital Experience 9.5](../deprecated_features.md).
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [DAM staging](../containerization/dam_subscription_staging.md)
     - [Deploying HCL Digital Experience 9.5 with HCL Solution Factory \(SoFy\)](../containerization/hybrid_deployment_HCL_SoFy.md)
     - [Design Studio \(Beta\)](../design_studio/design_studio_overview.md)

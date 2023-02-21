@@ -4,11 +4,11 @@
 
 Manage the portlets and Web services that the site uses.
 
--   **[Managing Web modules](h_main_web_module.md)**  
+-   **[Managing Web modules](../portlet_management/managing_web_modules/index.md)**  
 You can install new portlets from either a Web service or WAR file, or you can manage existing portlets.
--   **[Managing portlet applications](h_main_manage_portlet_app.md)**  
+-   **[Managing portlet applications](../portlet_management/managing_portlet_apps/index.md)**  
 You can enable a portlet application as a Web service and manage existing portlet applications. To view a list of portlets for a portlet application, select the appropriate portlet application title. You can also modify the properties of the portlet.
--   **[Searching](h_search_admin_portlets.md)**  
+-   **[Searching](../../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/h_search_admin_portlets.md)**  
 Use the search feature to search the portlet for portal resources by selecting the type of search and the appropriate search parameters. You can limit the number of portal resources that are listed in the portlet.
 -   **[Checking the availability of a portlet](h_mport_test_portlet.md)**  
 Check to see if a portlet is available so that you can add it to a page. This option appears only for remote portlets.
@@ -30,8 +30,8 @@ Click **Assign access** from the appropriate row, and use Resource Permissions t
 You can modify the search results of this portlet by selecting either **Edit shared settings** or **Configuration** from the portlet menu.
 -   **[Fields for the Manage Portlets portlet](h_mport_fields_portlet.md)**  
 Learn more about the fields that are provided with the user interface.
--   **[Configuring your portal for Web services](h_main_web_services.md)**  
+-   **[Configuring your portal for Web services](../portlet_management/cfg_portal_for_webservices/index.md)**  
 If you want to make remote portlets available to your portal users, you can set up your portal for consuming Web Services for Remote Portlets \(WSRP\) and administer the necessary Producer definitions.
--   **[Web application bridge](h_wab_ov.md)**  
+-   **[Web application bridge](../../../integration/wab/wab/index.md)**  
 The web application bridge uses reverse proxy technology to integrate web-based content providers, such as the Microsoft SharePoint server, with HCL Digital Experience.
 

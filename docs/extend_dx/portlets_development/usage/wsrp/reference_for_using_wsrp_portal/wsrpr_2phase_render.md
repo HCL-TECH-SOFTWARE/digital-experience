@@ -10,7 +10,7 @@ Starting with Portal CF 05, you can configure WSRP to use separate WSRP requests
 
 To configure WSRP two phase rendering, configure the following configuration parameters on the Consumer:
 
--   **wsrp.requiresSeparateRenderPhases=\(false,true\)**
+-   **wsrp.requiresSeparateRenderPhases=(false,true)**
 
     Use this parameter to define whether WSRP uses separate WSRP requests to process the render headers and the render markup phases. The default for this parameter is false. This default setting means that WSRP uses one WSRP request to process both render phases, if no value is specified for this parameter.
 
@@ -20,12 +20,11 @@ To configure WSRP two phase rendering, configure the following configuration par
 
     If you set the parameter as a preference for both a remote portlet and the WP Configuration Service, the value that is defined in the preference of the remote portlet takes precedence.
 
-    **Note:** Enabling this parameter automatically disables WSRP markup caching.
+    !!!note
+        Enabling this parameter automatically disables WSRP markup caching.
 
 
 
-**Related information**  
-
-
-[Using two-phase rendering with JSR 286 portlets](../dev-portlet/jsr2phase_overview.md)
+???+ info "Related information"
+    -   [Using two-phase rendering with JSR 286 portlets](../../../../../extend_dx/portlets_development/standard_portlet_api/twophase_rendering_jsr_portlets/index.md)
 

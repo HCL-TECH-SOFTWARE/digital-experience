@@ -26,11 +26,11 @@ HCL Software has 3 main sites that require separate login. As we are working tow
 Indicated below are the steps on how to register as an HCL Customer or as an HCL Business Partner.
 
 !!!tip
-    If your company admin is already registered and has followed the steps below, you do not need to do this. Simply ask your admin to add you as a “Portal User” or “Portal User Admin” to be able to download product. Refer to this instruction on how to do this : "[Adding Users](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878#AddingUsers)".
+    If your company admin is already registered and has followed the steps below, you do not need to do this. Simply ask your admin to add you as a “Portal User” or “Portal User Admin” to be able to download product. Refer to [Adding Users](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878#AddingUsers) for instructions.
 
 === "For HCL Customers"
 
-    You can register to all three sites by going to the below link and click Get Started:
+    You can register to all three sites by going to the link below and clicking **Get Started**.
     
     <https://www.hcltechsw.com/wps/portal/about/welcome>
 
@@ -40,7 +40,7 @@ Indicated below are the steps on how to register as an HCL Customer or as an HCL
 
 ### Step by step
 
-From the Welcome page click Create Account.
+From the Welcome page, click **Create Account**.
 
 ![Welcome Page](images/bp1.png)
   
@@ -52,7 +52,7 @@ A **Registration confirmation email** will be sent to you from **HCL Software** 
 
 ![Registration confirmation email](images/bp3.png)
 
-Find the email in your Inbox and click Confirm. A message is displayed “**Your Email Address has been verified successfully. You will shortly receive an email to finalize the account registration process.**”.
+Find the email in your Inbox and click Confirm. A message is displayed “**Your Email Address has been verified successfully. You will shortly receive an email to finalize the account registration process.**”
 Upon confirmation, you will receive an **E-Mail Verification Confirmation** Email mentioning that your email has been successfully verified.
 
 ![Email confirmation email](images/bp4.png)

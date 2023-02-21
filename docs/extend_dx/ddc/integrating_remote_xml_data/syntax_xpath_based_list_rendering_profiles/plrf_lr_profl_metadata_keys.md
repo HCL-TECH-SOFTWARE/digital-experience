@@ -81,7 +81,8 @@ You can use them in combination with `ItemAttribute`, `AssociatedItemAttribute`,
     xyz.ItemAttribute.proxiedLink.depends=link
     ```
 
-    **Note:** You do not have to flag dependencies on non-computed attributes. Non-computed attributes are always extracted from the XML before the computed attributes are resolved.
+    !!! note 
+        You do not have to flag dependencies on non-computed attributes. Non-computed attributes are always extracted from the XML before the computed attributes are resolved.
 
 -   **Escape**
 
@@ -91,7 +92,8 @@ You can use them in combination with `ItemAttribute`, `AssociatedItemAttribute`,
 
     Use this metadata in context of `AssociatedItemAttribute` declarations to define the cache scope for the associated XML document. If this document can be shared among multiple users, you can set this metadata to the value `true`. If the associated document can contain different data for different users, cache it per user. In this case, you can leave this metadata undefined or explicitly set it to `false`.
 
-    **Note:** Associated documents are cached in the `com.ibm.workplace.wcm.pzn.plr.xml.DocumentCache`. Associated documents that are cached in scope `Shared` are not automatically invalidated during user login.
+    !!! note 
+        Associated documents are cached in the `com.ibm.workplace.wcm.pzn.plr.xml.DocumentCache`. Associated documents that are cached in scope `Shared` are not automatically invalidated during user login.
 
 -   **Processors**
 
@@ -106,6 +108,6 @@ You can use them in combination with `ItemAttribute`, `AssociatedItemAttribute`,
 
 
 
-???+ info "Related information:" 
+???+ info "Related information" 
     - [Creating and deploying custom attribute value processor plug-ins](../../crt_dply_cstm_attval_pro_plgin.md)
 

@@ -6,15 +6,7 @@ Use the Configuration Wizard to remove a portal profile.
 
 On the Configuration Wizard home page, click **More Options** to find **Remove an HCL Portal Profile**.
 
-
-**Related information**  
-
-
-[Troubleshooting: Remove a WebSphere Portal profile](../trouble/cw_removeprofile.md)
-
-[Using the Installation Manager to modify your environment](../install/iim_modify.md)
-
-# Removing a profile
+## Removing a profile
 
 After you answer questions and provide information about your migration, the wizard generates a custom configuration procedure.
 
@@ -72,4 +64,6 @@ If you click **View Step Command**, you can see the task and properties that are
 
         none
 
-
+???+ info "Related information"  
+    -   [Troubleshooting: Create an HCL Digital Experience profile](../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_createprofile.md)
+    -   [Using the Installation Manager to modify your environment](iim_modify.md)

@@ -1,4 +1,4 @@
-# Preference Engine \| LikeMinds for HCL Digital Experience
+# Preference Engine | LikeMinds for HCL Digital Experience
 
 The Preference Engine uses explicitly stated user preferences to make highly accurate recommendations for products and content that your site visitors like.
 

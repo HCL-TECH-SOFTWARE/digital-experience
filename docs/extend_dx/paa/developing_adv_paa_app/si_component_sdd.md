@@ -10,7 +10,8 @@ For most situations, the SDD automation is enough to allow the PAA files to be d
 
 This information outlines the different pieces of the component level sdd.xml file in terms of their use. In addition, steps on how to create your own custom sdd.xml file and where to include relevant information on the component for successful deployment are also covered.
 
-**Note:** If you are providing a component level sdd.xml file, you do not need to provide information for all the resources included in the PAA file. Provide information only where you are overwriting the function of the Solution Installer.
+!!! note
+	If you are providing a component level sdd.xml file, you do not need to provide information for all the resources included in the PAA file. Provide information only where you are overwriting the function of the Solution Installer.
 
 The following is an example component level sdd.xml file:
 

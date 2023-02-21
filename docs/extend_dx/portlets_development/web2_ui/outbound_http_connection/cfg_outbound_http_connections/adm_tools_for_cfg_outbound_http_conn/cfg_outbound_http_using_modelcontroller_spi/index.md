@@ -2,7 +2,7 @@
 
 To query and administer the outbound HTTP connection, you can also use the model controller SPI.
 
-The information that is given here provides a brief introduction only. For a complete reference about this SPI, visit the [outbound HTTP connection Javadoc](../dev/javadoc/vrm/850/spi_docs/com/ibm/portal/model/controller/package-summary.html).
+The information that is given here provides a brief introduction only. For a complete reference about this SPI, visit the [outbound HTTP connection Javadoc](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/spi_docs/overview-summary.html).
 
 1.  [Obtaining the Model SPI](outbhttp_cfg_mcspi_obtmapi.md)  
 You can obtain the home object for the outbound HTTP connection configuration model by using JNDI lookup.

@@ -17,5 +17,4 @@ Add ibm.portal.toolbar.NewContent as a keyword to either a site area or content 
 6.  Save and close the dialog.
 
 ???+ info "Related information"
-    - [Creating site areas](../../../../../manage_content/wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_sites_items_creating.md)
-
+    - [Creating site areas](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/wcm_dev_sites_items_creating.md)

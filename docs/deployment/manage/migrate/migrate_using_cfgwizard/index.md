@@ -16,6 +16,6 @@ Use the Configuration Wizard to upgrade the nodes profiles for a cluster environ
 
 ???+ info "Related information"  
     -   [Migration from Portal Server Offering 7.0 to Portal 8.5](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md)
-    -   [Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
+    -   [Configuration Wizard](../../portal_admin_tools/cfg_wizard/index.md)
     -   [Roadmaps for migration](../../../../deployment/manage/migrate/planning_migration/rm_migration/index.md)
 

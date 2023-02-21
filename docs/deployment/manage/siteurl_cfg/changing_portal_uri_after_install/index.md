@@ -30,7 +30,7 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
     3.  Use a text editor to open the wkplc.properties file and enter the appropriate value for your environment in the WpsContextRoot property.
 
         !!!note
-            Leaving this value empty might cause system conflict. If you leave this value empty, validate this setting by using the Configuration Wizard or by following the steps that are described in [ConfigEngine validation targets](../../siteurl_cfg/changing_siteurl/cfg_validation_targets.md).
+            Leaving this value empty might cause system conflict. If you leave this value empty, validate this setting by using the Configuration Wizard or by following the steps that are described in [ConfigEngine validation targets](../../siteurl_cfg/changing_siteurl/cfg_validation_targets).
 
     4.  Save and close the file.
 
@@ -162,7 +162,7 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
     6.  Select the member name that you want to stop and then click **Stop**. <br> 7.  Select the member name that you want to start and then click **Start**.|
 
 ???+ info "Related information" 
-    -   [Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)<br>
+    -   [Accessing the Configuration Wizard](../../../manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)<br>
     -   [Starting and stopping servers, deployment managers, and node agents](../../stopstart.md)<br>
     -   [How to access the Producer WSDL](../../../../extend_dx/development_tools/wsrp/portal_wsrp_producer/wsrpr_prod_wsdl.md)
 

@@ -322,5 +322,5 @@ The benefit of this change is that the environment-specific login procedure is r
     -   [Command reference for the Portal Scripting Interface](../../portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
     -   [Configuring portal behavior](../../../../deployment/manage/config_portal_behavior/index.md)
     -   [The XML configuration interface](../../portal_admin_tools/xml_config_interface/index.md)
-    -   [Users and groups](../../../../deployment/manage/security/users_and_groups/index.md)
+    -   [Users and groups](../../../../deployment/manage/security/people/authorization/users_and_groups/index.md)
 

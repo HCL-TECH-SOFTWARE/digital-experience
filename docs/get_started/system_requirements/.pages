@@ -4,4 +4,6 @@ nav:
     - kubernetes
     - traditional
     - docker
-    - othersoftware.md
+    - disclaimer.md
+    - glossary.md
+  

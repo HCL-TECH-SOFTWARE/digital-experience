@@ -79,7 +79,7 @@ Now the jQuery core and your plug-ins are ready and available for use. To learn 
 Once your PowerTip module is active, you can add one or more tooltips to your pages through a dynamic content spot, or a config markup type subcontribution in a module. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [jQuery plug-in download](https://jquery.com)
     - [jQuery PowerTip plug-in download](https://plugins.jquery.com/powertip/)
     - [jQuery basics](https://learn.jquery.com/using-jquery-core/)

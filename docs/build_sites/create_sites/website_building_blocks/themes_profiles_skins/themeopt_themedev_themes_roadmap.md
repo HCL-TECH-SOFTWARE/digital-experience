@@ -41,7 +41,7 @@ Documentation resource: [Changing the theme logo in the Simple Theme](../../../t
 
 After you [create a new theme](../../../themes_skins/getting_started_with_themes/themeopt_themedev_create.md), you can edit the static resources that are associated with the theme. Static theme resources include the theme.html file, layout templates, skins, JavaScript, CSS, and image files.
 
-Use a [WebDAV client](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/manage_content/wcm/wcm_content_delivery/webdav/administer_webdav/?h=using+webdav+hcl+portal) to synchronize all of your static theme resources with your local development environment so that you can modify them with your favorite editor.
+Use a [WebDAV client](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/manage_content/wcm_delivery/webdav/administer_webdav/?h=using+webdav+hcl+portal) to synchronize all of your static theme resources with your local development environment so that you can modify them with your favorite editor.
 
 Documentation resource: [Editing static theme resources and connecting with WebDAV](../../../themes_skins/customizing_theme/themeopt_themedev_editing_static_resources.md)
 

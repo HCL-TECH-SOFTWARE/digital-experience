@@ -69,5 +69,5 @@ The managed pages feature enables you to edit portal resources, such as pages, i
 
 
 ???+ info "Related information"  
-  - [XML configuration interface and managed pages](../../../../manage_content/wcm/wcm_artifacts/managed_pages/advadmin_managedpages/wcm_mngpages_xmlaccess.md)
+  - [XML configuration interface and managed pages](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_xmlaccess.md)
 

@@ -13,6 +13,6 @@ To provide or withdraw a portlet for WSRP services, you can use either of the fo
     2.  Customization of the Producer portlets by Consumer portal users can be exported by using the XML configuration interface.
 
 ???+ info "Related information"  
-    -   [Enabling remote rendering with WSRP and the Web Content Viewer](../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/index.md)
-    -   [Working with the XML configuration interface](../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
-    -   [The XML configuration interface](../../../portal_admin_tools/xml_config_interface/index.md)
+    -   [Enabling remote rendering with WSRP and the Web Content Viewer](../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/enable_remote_render_wsrp/index.md)
+    -   [Working with the XML configuration interface](../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    -   [The XML configuration interface](../../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)

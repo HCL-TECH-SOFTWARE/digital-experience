@@ -4,9 +4,9 @@ Configure HCL Connections portlets to use single sign-on with Computer Associate
 
 1.  Enable eTrust SiteMinder and SPNEGO for HCL Connections, following the steps in [Enabling single-sign on for SiteMinder with SPNEGO](https://help.hcltechsw.com/connections/v65/admin/secure/t_secure_with_siteminder_SPNEGO.html).
 
-2.  Enable and configure single sign-on for HTTP requests with SPNEGO following the steps in this [Enabling and configuring single sign-on for HTTP requests using SPNEGO](../config/cfg_spntaiweb.md).
+2.  Enable and configure single sign-on for HTTP requests with SPNEGO following the steps in this [Enabling and configuring single sign-on for HTTP requests using SPNEGO](../../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/enable_spnego/index.md).
 
-3.  Configure eTrust SiteMinder following the steps in the article [Configuring eTrust SiteMinder](../security/sit_setup_auth.md).
+3.  Configure eTrust SiteMinder following the steps in the article [Configuring eTrust SiteMinder](../../../../../../../deployment/manage/security/people/authentication/external_sec_mgmt/etrust_siteminder/index.md).
 
 4.  Merge all the keytab files to make the deployment manager aware of the SPNs for each node. This step is done on the Portal server only.
 
@@ -17,6 +17,7 @@ Configure HCL Connections portlets to use single sign-on with Computer Associate
     -   krb5.keytab on the deployment manager
     -   krb5NodeA.keytabon Node A
     -   krb5NodeB.keytab on Node B
+
     Run the ktab command with the following switch:
 
     -m source\_keytab\_name\> destination\_keytab\_name.
@@ -55,9 +56,9 @@ Configure HCL Connections portlets to use single sign-on with Computer Associate
 
     6.  Click **OK** and then click the **Save** link to save changes to the master configuration.
 
-6.  Configure the Virtual Member Manager \(VMM\), following the steps in the topic [Configuring the HCL Connections repository for VMM](t_connections_portlets_VMM_repository_config.md).
+6.  Configure the Virtual Member Manager \(VMM\), following the steps in the topic [Configuring the HCL Connections repository for VMM](../../optional_config/community_pages/connections_vmm/t_connections_portlets_VMM_repository_config.md).
 
-    If you did not already do so, follow the instructions in [Configuring portlets to use common directory services](t_connections_portlets_common_directory.md), to copy sonata.services.xml to <wp\_root\>\\config\\cells\\<cell name\>\\
+    If you did not already do so, follow the instructions in [Configuring common Directory Services for your security configuration](../../cfg_common_dir/t_connections_portlets_common_directory.md) to copy sonata.services.xml to <wp\_root\>\\config\\cells\\<cell name\>\\.
 
 7.  Ensure that after Portal has eTrust SiteMinder and SPNEGO enabled that the computer can ping the LDAP and the IIS servers in the SPNEGO domain.
 

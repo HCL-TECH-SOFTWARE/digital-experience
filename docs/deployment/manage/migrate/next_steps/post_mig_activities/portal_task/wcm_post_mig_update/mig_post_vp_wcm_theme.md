@@ -19,7 +19,7 @@ Before using Web Content Manager in virtual portals that are created after migra
     -   ﻿ibm.portal.Portal Content
     1.  Log in to Portal as an administrator.
 
-    2.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > **Manage Pages**.
+    2.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 
     3.  In the **Search by** menu, select **Unique name contains**.
 

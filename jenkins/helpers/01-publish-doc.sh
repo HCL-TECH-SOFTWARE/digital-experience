@@ -70,7 +70,7 @@ git switch -c $branch FETCH_HEAD
 if [ "$publish" == true ]; then
     echo "Perform GH pages deploy"
 
-    if [ "$version" == "in-progress"]; then
+    if [ "$version" == "in-progress" ]; then
         version="${version} latest"
         echo "version=${version}"
     fi

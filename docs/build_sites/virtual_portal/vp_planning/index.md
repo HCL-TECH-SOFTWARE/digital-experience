@@ -18,12 +18,12 @@ The content of a newly created virtual portal can vary, depending on the method 
 You can improve the user experience that users have with your virtual portals by using human readable URLs, or by using custom themes and skins for your virtual portals.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Tasks for administering virtual portals](../adm_vp_task/vp_adm_task/index.md)
     - [Scope of virtual portals](../vp_reference/vp_limitations/advpref_limits_scope.md)
     - [WSRP services](../../../extend_dx/portlets_development/usage/wsrp/index.md)
-    - [Controlling access](../../../deployment/manage/security/controlling_access/index.md)
-    - [The XML configuration interface](../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+    - [Controlling access](../../../deployment/manage/security/people/authorization/controlling_access/index.md)
+    - [The XML configuration interface](../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
     - [Portal configuration tasks for administering virtual portals](../vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)
     - [Administering virtual portals](../adm_vp_task/index.md)
     - [Creating a virtual portal](../adm_vp_task/vp_adm_task/create_vp/index.md)

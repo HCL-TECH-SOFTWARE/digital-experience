@@ -14,7 +14,8 @@ This task modifies the following components:
 
     Portlets and web applications are activated on first access and not at the startup. However, some of the portlets and applications are required at startup. Create a white list, which contains the list of applications, that are required at startup.
 
-    **Note:** To add applications to the white list, modify the wp_profile_root/PortalServer/config/StartupPerformance/wp.base\_TargetMapExclList.properties[wp_profile\_root\\PortalServer\\config\\StartupPerformance\\wp.base\_TargetMapExclList.properties file. Add a line such as App_name, where App_name is the name of the application. Log on to the WebSphere® Integrated Solutions Console and go to **Applications > Application Types > WebSphere enterprise applications** to get a list of available applications.
+    !!! note 
+        To add applications to the white list, modify the wp_profile_root/PortalServer/config/StartupPerformance/wp.base\_TargetMapExclList.properties[wp_profile\_root\\PortalServer\\config\\StartupPerformance\\wp.base\_TargetMapExclList.properties file. Add a line such as App_name, where App_name is the name of the application. Log on to the WebSphere® Integrated Solutions Console and go to **Applications > Application Types > WebSphere enterprise applications** to get a list of available applications.
 
 
 1.  Open a command prompt.

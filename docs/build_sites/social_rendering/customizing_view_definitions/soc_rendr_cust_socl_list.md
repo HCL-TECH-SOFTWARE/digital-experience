@@ -16,7 +16,7 @@ The following settings and options are available for customizing social list vie
 
 -   **Name**
 
-    Use this setting to specify a name for the list of social items. The name must consist of at least one alphanumeric character \(`a-z, A-Z,0-9`\). It can include spaces and the following special characters: `$ - _ . ! ( ) ,`
+    Use this setting to specify a name for the list of social items. The name must consist of at least one alphanumeric character (`a-z, A-Z,0-9`). It can include spaces and the following special characters: `$ - _ . ! ( ) ,`
 
 -   **Display Title**
 
@@ -26,11 +26,12 @@ The following settings and options are available for customizing social list vie
     2.  Select the Text Provider **Social Rendering**.
     3.  In the **Text Provider Key** field, type the key `SR_CONTENT_FILES`.
     4.  To save your updates, click **Save and Close**.
+
 -   **Content Sources**
 
     Use this setting to select the content sources that you want to include in the list of social objects. You can select multiple content sources. Each content source corresponds to a HCL Connections service. Social rendering supports the following HCL Connections services: activities, blogs, bookmarks, communities, files, libraries, forums, profiles, wikis, and events.
 
-    !!! note
+    !!!note
         Outside social rendering, some of the HCL Connections services serve multiple social objects. For example, the **Forums** service serves objects of type **Forum topic** and **Reply**. Social lists serve only the object types that are listed in the following table.
 
     |Content source|HCL Connections service|Content type that the content source serves in social lists|
@@ -63,7 +64,7 @@ The following settings and options are available for customizing social list vie
 
     For more information, read the HCL Portal product documentation under the topic about *Managing community associations*.
 
-    !!! note
+    !!!note
         User profiles are not considered to be content of a community. Therefore, if you activate community filtering, the resulting lists do not contain any user profile entries.
 
 -   **Filter by Type of Access**
@@ -122,13 +123,13 @@ The following settings and options are available for customizing social list vie
         -   The summary of the social object.
     Both of these default appearances are responsive to the theme columns, screen width, and screen orientation. Social rendering uses default CSS styles to provide this responsiveness. For example, they can be useful if users use different types of devices to view the lists or change between portrait and landscape views on a mobile device.
 
--   **Maximum Results \(hidden\)**
+-   **Maximum Results (hidden)**
 
     This field is an optional input field. This setting is hidden by default. To make it show, click **Show hidden fields** at the beginning or end of the screen. Use this setting to specify the maximum number of content items included in this list. This figure determines the maximum number of social objects that HCL Connections returns. Specify a positive integer. It is good practice to match this number with the number of results that the Personalization component can display that you specify at the List Appearance element. To determine that number, multiply the **Results per page** by the **Maximum pages to include** of the Personalization component.
 
     You can also configure this setting globally for all social list portlets in the WP Connections Integration Service in the WebSphere® Integrated Solutions Console. For more information, see *Configuring the maximum number of items loaded from HCL Connections*. If you leave the **Maximum Results** field empty for a social list, then the value that is set in the WP Connections Integration Service applies as the default.
 
--   **Custom Properties \(Hidden\)**
+-   **Custom Properties (Hidden)**
 
     This field is an optional input field. It is hidden by default. To make it show, click **Show hidden fields** at the beginning or end of the screen. Add one or more custom properties in this input field. You can use such more custom properties to add more flexibility to the layout of your list as required. For example, you can change the layout of your social list by defining a specific condition that uses the custom property added in this field. The following code sample shows how you change the color of the social list heading by specifying the string `blue` at the `Custom Properties` element:
 
@@ -141,18 +142,18 @@ The following settings and options are available for customizing social list vie
     [/Plugin:NotEquals]
     ```
 
--   **Custom Link Resolution Root Page \(Hidden\)**
+-   **Custom Link Resolution Root Page (Hidden)**
 
     You can use this field to control the social object resolution behavior for links that users click in this list. For more detailed information, read *Social Object Resolution*.
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Using the view definitions provided with social rendering on your portal pages](../working_with_social_objects/soc_rendr_use_oob_socl_list.md)
     - [Using the portal Tag Cloud with lists of social objects](../working_with_social_objects/using_portal_tagcloud_with_social_objects/index.md)
     - [Configuring the maximum number of items loaded from HCL Connections](../cfg_global_settings_social_rendering/soc_rendr_cfg_connct_item_limit.md)
     - [Customizing the visual design of your view definitions](../customizing_view_definitions/customizing_visualdesign/index.md)
-    - [Dynamic list-rendering contexts](../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/list_rendering_context/plrf_list_rndr_dynamic_cntxts.md)
+    - [Dynamic list-rendering contexts](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/connector_plugins/list_rendering_context/plrf_list_rndr_dynamic_cntxts.md)
     - [Social object resolution](../working_with_social_objects/concept_list_social_objects/soc_rendr_soc_obj_resltn.md)
     - [Managing community associations](../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping.md)
     - [Administering Portal Search](../../search/portal_search/administer_portal_search/index.md)

@@ -24,7 +24,7 @@ You can use the HCL Digital Experience XML configuration interface to configure 
     3.  When you run the cleanup task, the XML configuration interface schedules only the task to be run in WebSphere Application Server and returns. It does not mean that WebSphere Application Server runs the task immediately. To determine when a task started and ended, check the SystemOut.log log file for the messages EJPDE0005I and EJPDE0006I. These messages confirm that the cleanup task successfully completed. After you confirm, you can run the XML script for re-creating a page with the same object ID as it had before the deletion.
 
 
-**Related information**  
-[Setting service configuration properties](../../config_portal_behavior/service_config_properties/index.md)<br>
-[Portal service configuration](../../config_portal_behavior/service_config_properties/portal_svc_cfg/index.md)
+???+ info "Related information"   
+    -   [Setting service configuration properties](../../config_portal_behavior/service_config_properties/index.md)
+    -   [Portal service configuration](../../config_portal_behavior/service_config_properties/portal_svc_cfg/index.md)
 

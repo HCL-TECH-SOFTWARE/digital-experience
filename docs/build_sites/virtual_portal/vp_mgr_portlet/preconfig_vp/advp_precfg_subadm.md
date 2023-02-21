@@ -29,7 +29,7 @@ You can configure the roles and access rights that are assigned to sub-administr
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Content of a virtual portal](../../vp_planning/advppln_content.md)
     - [Sub-administrators of a virtual portal and their access roles and permissions](../../vp_planning/vp_roles/advppln_roles_subadm.md)
     - [Filling a virtual portal with content](../../adm_vp_task/vp_adm_task/advp_tsk_fill_content.md)

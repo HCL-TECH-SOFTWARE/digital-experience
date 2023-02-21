@@ -8,24 +8,24 @@ You can access product software at [HCL Software Licensing Portal](https://www.
 
 You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
 
-## Design Studio \(Beta\)
+## Design Studio (Beta)
 
-Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with the Container Update CF199 release include the ability to select Web Content Manager library assets when creating sites, UI globalization, support for alternate and no context root when defining sites, and more.
+Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with the Container Update CF199 release include the ability to select Web Content Manager library assets when creating sites, UI globalization, support for alternate and no context root when defining sites, and more.
 
 !!!note
-    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF196, and includes a sample DX site.  It is not yet supported for use in production deployments.
+    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF196, and includes a sample DX site.  It is not yet supported for use in production deployments.
 
-See the [Design Studio \(Beta\)](../../productfeatures/design_studio/index.md) topic for more information. 
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/) topic for more information. 
 
 ## Migrate from HCL DX 9.5 Operator to Helm Deployments
 
-Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Beginning with Container Update CF199, support for migration from Operator-based \(dxctl\) to Helm-based deployments is provided.
+Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Beginning with Container Update CF199, support for migration from Operator-based (dxctl) to Helm-based deployments is provided.
 
 See the [HCL DX 9.5 Helm deployment](../../deployment/install/container/operator-migration/operator_migration_preparation.md) topic for more information.
 
 ## Digital Asset Management Staging
 
-New Digital Asset Management \(DAM\) staging support enables administrators to stage and synchronize DAM assets from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\), using DXClient.
+New Digital Asset Management (DAM) staging support enables administrators to stage and synchronize DAM assets from an authoring environment (source environment/publisher) to multiple rendering environments (target environment/subscriber), using DXClient.
 
 See the [DAM staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) topic for more information.
 
@@ -41,9 +41,9 @@ The following list of HCL Digital Experience deprecated features will reach end 
 
 ## New Experience APIs
 
-New HCL Experience APIs are available for creating, updating and deleting Design Studio \(Beta\) sites, pages, and containers. New Web Content Manager REST V2 APIs are available for creating content templates, categories, and more.
+New HCL Experience APIs are available for creating, updating and deleting Design Studio (Beta) sites, pages, and containers. New Web Content Manager REST V2 APIs are available for creating content templates, categories, and more.
 
-See the [HCL Experience API](../../extend_dx/apis/hcl_experience_api/openapi_overview.md) topic for more information.
+See the [HCL Experience API](../../extend_dx/apis/hcl_experience_api/index.md) topic for more information.
 
 ## New REST APIs to Configure Remote Search
 
@@ -54,9 +54,9 @@ Beginning with HCL Digital Experience CF and Container Update CF199, additional 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in articles and videos from the following HCL Digital Experience Help Center topics:
 
 -   Video: [Deploy HCL DX 9.5 Container Update using Helm](../../deployment/install/container/helm_deployment/overview.md)
--   Video: [Experience API V2 Web Content Manager REST APIs](../../extend_dx/apis/hcl_experience_api/openapi_overview.md)
+-   Video: [Experience API V2 Web Content Manager REST APIs](../../extend_dx/apis/hcl_experience_api/index.md)
 
-<!-- ???info "Related information:"
+<!-- ???info "Related information"
     - [HCL Experience API](../open_api/openapi_overview.md)
     - [Configure Remote Search using REST APIs](../containerization/REST_APIs_remote_search.md)
 

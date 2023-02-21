@@ -260,7 +260,8 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
     This value determines whether the nodes in the navigation tree are expanded or collapsed by default. The default is false, which means that the nodes are collapsed. Some exceptions apply; for example, the Portal Administration navigation tree is expanded by default.
 
-    **Note:** Setting this value to true does not affect Web 2.0 themes, as the expansion state is not returned from the portal REST service.
+    !!! note 
+        Setting this value to true does not affect Web 2.0 themes, as the expansion state is not returned from the portal REST service.
 
 -   **page.reload.interval = \(0\)**
 
@@ -519,13 +520,19 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
     This property enables the stateless friendly redirect feature. The stateless friendly redirect feature is disabled by default. The feature can be enabled by setting the following custom properties in REP WP ConfigService. `stateless.urls.enabled = true` `generate.stateless.redirect.urls = true`
 
     !!!note
-    The stateless friendly redirect feature requires the base tag to be enabled in the theme.
+        The stateless friendly redirect feature requires the base tag to be enabled in the theme.
+
+-   **sessiontimeout.user.anonymous = \(false\)**
+
+    When the HTTP session times out and the security session is still valid, the session timeout error screen is displayed by default unless timeout.resume.session is configured.
+    This does not happen if the user hits a link on the anonymous areas of DX after the timeout (for example, `wps/portal/...`).
+    By setting this property to **true** and restarting in the case of a session timeout and hitting an anonymous link (before the LTPA token timeout), the session timeout error screen is displayed. This property is introduced in CF210 and can be used in CF210 or higher.
 
 
-**Related information**  
-[How administrators define persistent session options](../../../../config_portal_behavior/user_session_persistence/adm_define_user_session_persistence/index.md)<br>
-[Configuring globally how social object links are resolved](../../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_reslv_links.md)<br>
-[Authenticating outbound HTTP connections](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/index.md)<br>
-[Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)<br>
-[Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_tfimsaml_sso.html)<br>
-[Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_perf_tun.html)
+???+ info "Related information" 
+    -   [How administrators define persistent session options](../../../../config_portal_behavior/user_session_persistence/adm_define_user_session_persistence/index.md)
+    -   [Configuring globally how social object links are resolved](../../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_reslv_links.md)
+    -   [Authenticating outbound HTTP connections](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/index.md)
+    -   [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)
+    -   [Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_tfimsaml_sso.html)
+    -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_perf_tun.html)
