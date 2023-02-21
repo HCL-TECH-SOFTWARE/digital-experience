@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
+      <a href="../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../whatsnew/cf20/newcf210/"
+    href="../../../../whatsnew/cf20/newcf209/"
     class="md-nav__link"
   >
     What's New
@@ -723,15 +723,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-a-custom-tinymce-editor-toolbar-in-the-hcl-web-content-manager-authoring-portlet" class="md-nav__link">
-    Using a custom TinyMCE editor toolbar in the HCL Web Content Manager authoring portlet
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-a-custom-tinymce-editor-toolbar-with-inline-editing" class="md-nav__link">
-    Using a custom TinyMCE editor toolbar with inline editing
+  <a href="#using-a-custom-tinymce-editor-toolbar" class="md-nav__link">
+    Using a custom TinyMCE editor toolbar
   </a>
   
 </li>
@@ -973,7 +966,7 @@
     id="__nav_6_7"
     
   />
-                                             
+                                           
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../pzn/">Personalization</a>
 
@@ -1065,15 +1058,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-a-custom-tinymce-editor-toolbar-in-the-hcl-web-content-manager-authoring-portlet" class="md-nav__link">
-    Using a custom TinyMCE editor toolbar in the HCL Web Content Manager authoring portlet
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-a-custom-tinymce-editor-toolbar-with-inline-editing" class="md-nav__link">
-    Using a custom TinyMCE editor toolbar with inline editing
+  <a href="#using-a-custom-tinymce-editor-toolbar" class="md-nav__link">
+    Using a custom TinyMCE editor toolbar
   </a>
   
 </li>
@@ -1135,10 +1121,6 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In a clustered environment, these tasks are only run on the primary server.</p>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The Textbox.io component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See <a href="../../../../whatsnew/deprecated_features/">Deprecated features</a> for more information.</p>
 </div>
 <h2 id="using-a-custom-textboxio-editor-toolbar">Using a custom Textbox.io editor toolbar</h2>
 <ol>
@@ -1220,10 +1202,10 @@
 <p>Restart the WebSphere_Portal server.</p>
 </li>
 </ol>
-<h2 id="using-a-custom-tinymce-editor-toolbar-in-the-hcl-web-content-manager-authoring-portlet">Using a custom TinyMCE editor toolbar in the HCL Web Content Manager authoring portlet</h2>
+<h2 id="using-a-custom-tinymce-editor-toolbar">Using a custom TinyMCE editor toolbar</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These customization steps only apply to the Enhanced editor used in the HCL Web Content Manager authoring portlet.</p>
+<p>These customization steps only apply to the Enhanced editor used in the HCL Web Content Manager authoring portlet. Customization is not currently offered for Web content inline editing with the TinyMCE editor.</p>
 </div>
 <ol>
 <li>
@@ -1260,48 +1242,6 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To revert to the default editor toolbar, run the task that is named remove-wcm-ephox-editor-custom-configuration on the primary node only.</p>
-</div>
-</li>
-</ol>
-<h2 id="using-a-custom-tinymce-editor-toolbar-with-inline-editing">Using a custom TinyMCE editor toolbar with inline editing</h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>These customization steps only apply for Web content inline editing with the TinyMCE editor.</p>
-</div>
-<ol>
-<li>
-<p>Log in to the WebSphere® Integrated Solutions Console as an administrator.</p>
-</li>
-<li>
-<p>Click <strong>Resources</strong> &gt; <strong>Resource Environment</strong> &gt; <strong>Resource Environment Providers</strong> &gt; <strong>WCM WCMConfigService</strong>.</p>
-</li>
-<li>
-<p>Click <strong>Custom properties</strong> to update the configuration properties.</p>
-</li>
-<li>
-<p>Edit or create the property <code>inplaceEdit.toolbarConfigForRichText</code>, and set its value to match the desired toolbar icons.</p>
-<p>Sample values:</p>
-<ul>
-<li>
-<p>Single toolbar in space-separated list of buttons
-    <div class="highlight"><pre><span></span><code>formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat
-</code></pre></div></p>
-</li>
-<li>
-<p>Multiple toolbars in an array
-    <div class="highlight"><pre><span></span><code>[ &#39;undo redo | bold italic underline | fontselect fontsizeselect&#39;, &#39;forecolor backcolor | alignleft aligncenter alignright alignfull | numlist bullist outdent indent | a11ycheck&#39; ]
-</code></pre></div></p>
-</li>
-</ul>
-</li>
-<li>
-<p>Save your changes.</p>
-</li>
-<li>
-<p>Restart the Portal server to apply your changes.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To revert to the default editor toolbar, remove the property <code>inplaceEdit.toolbarConfigForRichText</code> and restart the server.</p>
 </div>
 </li>
 </ol>
@@ -1406,7 +1346,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2022</span>
       
     
   </small>

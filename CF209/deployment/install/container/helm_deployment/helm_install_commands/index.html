@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
+      <a href="../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../whatsnew/cf20/newcf210/"
+    href="../../../../../whatsnew/cf20/newcf209/"
     class="md-nav__link"
   >
     What's New
@@ -1087,6 +1087,13 @@ helm install -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
     password&gt; -DPortalAdminPwd=&lt;admin-password&gt;
 </code></pre></div>
 </li>
+<li>
+<p>Design Studio (Beta):</p>
+<div class="highlight"><pre><span></span><code>    &lt;Path to wp_profile&gt;/ConfigEngine/ConfigEngine.sh enable-content-sites 
+    -Dcontentsites.static.ui.url=https://&lt;host-url&gt;/dx/ui/site-manager/static 
+    -DWasPassword=&lt;was-password&gt; -DPortalAdminPwd=&lt;admin-password&gt;
+</code></pre></div>
+</li>
 </ul>
 <h2 id="default-urls-post-installation">Default URLs post installation</h2>
 <p>During the configuration process, you might need the following URLs to access different administration user interfaces.</p>
@@ -1151,7 +1158,7 @@ helm upgrade -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 22, 2022</span>
       
     
   </small>

@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
+      <a href="../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../whatsnew/cf20/newcf210/"
+    href="../../../../../whatsnew/cf20/newcf209/"
     class="md-nav__link"
   >
     What's New
@@ -1260,6 +1260,7 @@ dx.replicas: 0
     core: true
     runtimeController: true
     contentComposer: false
+    designStudio: false
     digitalAssetManagement: false
     imageProcessor: false
     openLdap: false
@@ -1354,7 +1355,7 @@ dx.replicas: 0
 </li>
 </ol>
 <h3 id="reconfigure-applications-to-use-relative-paths">Reconfigure applications to use relative paths</h3>
-<p>Coming from old Operator deployments, it can appear that the applications such as Digital Asset Management and Content Composer are still configured to use absolute URLs for their rendering. If you use any of these applications, it is highly recommended that you reconfigure them to use relative paths.</p>
+<p>Coming from old Operator deployments, it can appear that the applications (Digital Asset Management, Content Composer, and Design Studio) are still configured to use absolute URLs for their rendering. If you use any of these applications, it is highly recommended that you reconfigure them to use relative paths.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Reconfigure relative paths for applications that are active in your deployment. Otherwise, the command will fail.</p>
@@ -1370,6 +1371,11 @@ dx.replicas: 0
 </ul>
 <div class="highlight"><pre><span></span><code>kubectl exec -n &lt;NAMESPACE&gt; dx-deployment-core-0 -- bash -c &#39;cd /opt/HCL/ConfigEngine/ &amp;&amp; ./ConfigEngine.sh action-deploy-media-library-pages -Ddam.static.ui.url=/dx/ui/dam/static -DWasPassword=&lt;YOUR_WAS_ADMIN_USER&gt; -DPortalAdminPwd=&lt;YOUR_WAS_ADMIN_PASSWORD&gt;&#39;
 </code></pre></div>
+<ul>
+<li>For Design Studio:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>kubectl exec -n &lt;NAMESPACE&gt; dx-deployment-core-0 -- bash -c &#39;cd /opt/HCL/ConfigEngine/ &amp;&amp; ./ConfigEngine.sh action-deploy-content-sites-pages -Dcontentsites.ui.url=/dx/ui/site-manager/static -DWasPassword=&lt;YOUR_WAS_ADMIN_USER&gt; -DPortalAdminPwd=&lt;YOUR_WAS_ADMIN_PASSWORD&gt;&#39;
+</code></pre></div>
 <h3 id="create-ingress-secret">Create Ingress Secret</h3>
 <p>Create the secret with your TLS certificate for the Ambassador Ingress in your Helm-based deployment.</p>
 <p>To make your migrated Helm deployment accessible, you need to configure the TLS certificate that is used by the Ambassador Ingress. See <a href="../../helm_deployment/preparation/mandatory_tasks/prepare_ingress_certificate/#use-certificate">Use certificate</a> for more information.</p>
@@ -1384,7 +1390,7 @@ dx.replicas: 0
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

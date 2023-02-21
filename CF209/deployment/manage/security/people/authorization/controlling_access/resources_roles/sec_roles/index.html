@@ -18,7 +18,7 @@
     
     
       
-        <title>Resource Roles - HCL Digital Experience Help Center</title>
+        <title>Roles - HCL Digital Experience Help Center</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#resource-roles" class="md-skip">
+        <a href="#roles" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Resource Roles
+              Roles
             
           </span>
         </div>
@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
+      <a href="../../../../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../../../../whatsnew/cf20/newcf210/"
+    href="../../../../../../../../whatsnew/cf20/newcf209/"
     class="md-nav__link"
   >
     What's New
@@ -1002,12 +1002,12 @@
 
         
   <label class="md-nav__link md-nav__link--active" for="__toc">
-    Resource Roles
+    Roles
     <span class="md-nav__icon md-icon"></span>
   </label>
   
   <a href="./" class="md-nav__link md-nav__link--active">
-    Resource Roles
+    Roles
   </a>
 
     
@@ -1820,7 +1820,7 @@
   </a>
 
 
-<h1 id="resource-roles">Resource Roles</h1>
+<h1 id="roles">Roles</h1>
 <p>Roles provide task permissions for users on resources. For example, Editor is a role that allows users to view, modify, and create resources. Roles are denoted as Role@Resource; for example, Editor@Portal Page.</p>
 <p>Roles are organized in a hierarchy. Roles are organized in a hierarchy. Roles that are higher in the hierarchy generally inherit the permissions of child roles. For example, to install web modules the Editor role on the virtual resource <code>Web Modules</code>, <code>Editor@Web Modules</code>, is the minimum role assignment for this operation. The Manager role is higher in the hierarchy than the Editor role. For this reason, the Manager role includes the permissions of the Editor role. The <code>Manager@Web Modules</code> role also allows users to install web modules.</p>
 <p><img alt="Illustration of role hierarchy. Refer to the topic text for information about this graphic." src="../../../../../../../../images/rolehierarchy.jpg" /></p>
@@ -1898,10 +1898,7 @@
 <p>You can use the XML configuration interface or the Resource Permissions portlet to change the owner of a resource.</p>
 <h2 id="private-pages">Private pages</h2>
 <p>A private page can be accessed only by its owner. Privileged Users (users assigned the <code>Privileged User</code> role) can explicitly create new private pages that are accessible only by themselves. Additionally, a Privileged User on a non-private page can personalize the page and create new private pages underneath it. Customizing a non-private page usually creates a private copy of the corresponding non-private page. Any changes that a Privileged User makes to a non-private page are not accessible by other users.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Private pages cannot be controlled by an external security manager. Access control for private pages is always internally controlled by HCL Digital Experience.</p>
-</div>
+<p><strong>Note:</strong> Private pages cannot be controlled by an external security manager. Access control for private pages is always internally controlled by HCL Digital Experience.</p>
 <h2 id="traversal-support">Traversal support</h2>
 <p>Users with role assignments on the resources <code>Page</code> or <code>URL Mapping</code> get the implicit permission to go to those resources. These users can go through all parent resources of those resources. Users see only the title of those resources. The corresponding resource content remains inaccessible unless those users have further role assignments that grant them normal access to those resources.</p>
 <details class="info" open="open">
@@ -1917,7 +1914,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 12, 2022</span>
       
     
   </small>

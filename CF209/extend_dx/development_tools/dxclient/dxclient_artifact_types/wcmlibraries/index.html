@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
+      <a href="../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../whatsnew/cf20/newcf210/"
+    href="../../../../../whatsnew/cf20/newcf209/"
     class="md-nav__link"
   >
     What's New
@@ -549,7 +549,7 @@
     id="__nav_7_3"
     
   />
-                                             
+                                           
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../../portlets_development/">Portlet Development</a>
 
@@ -689,7 +689,7 @@
                 
 <li class="md-nav__item">
   <a href="../themes/" class="md-nav__link">
-    Themes Artifacts
+    Themes
   </a>
 </li>
     
@@ -884,27 +884,13 @@
 </li>
 
    
-             
-  
-<li class="md-nav__item md-nav__item--nested">
-    
-  <input
-    class="md-nav__toggle md-toggle"
-    data-md-toggle="__nav_7_4_3"
-    type="checkbox"
-    id="__nav_7_4_3"
-    
-  />
-               
-  <div class="md-nav__link md-nav__link--index ">
-    <a href="../../../wef/">Web experience factory</a>
-
-     
-  </div>
-    
+                
+<li class="md-nav__item">
+  <a href="../../../../../webdav" class="md-nav__link">
+    WebDAV
+  </a>
 </li>
-
-   
+    
              
   
 <li class="md-nav__item md-nav__item--nested">
@@ -916,15 +902,11 @@
     id="__nav_7_4_4"
     
   />
-                             
+               
   <div class="md-nav__link md-nav__link--index ">
-    <a href="../../../wsrp/">WSRP services</a>
+    <a href="../../../wef/">Web experience factory</a>
 
      
-    <label for="__nav_7_4_4">
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    
   </div>
     
 </li>
@@ -1295,14 +1277,11 @@
 <p>Use this attribute to specify the export libraries. This value can be either true or false. If the value is true, then export the all libraries:</p>
 <div class="highlight"><pre><span></span><code>-exportAllLibraries &lt;value&gt;
 </code></pre></div>
-<p>Use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to export, if any:</p>
-<div class="highlight"><pre><span></span><code>-virtualPortalContext &lt;value&gt;
-</code></pre></div>
 <p>Log files from running the command can be found in the logs directory of the DXClient installation.</p>
 </li>
 <li>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code> dxclient wcm-library-export -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -hostname &lt;hostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxWASUsername &lt;dxWASUsername&gt; -dxProfileName &lt;dxProfileName&gt; -librariesName &lt;librariesName&gt; 
+<div class="highlight"><pre><span></span><code> dxclient wcm-library-export -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -hostname &lt;dxConnectHostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxWASUsername &lt;dxWASUsername&gt; -dxProfileName &lt;dxProfileName&gt; -librariesName &lt;librariesName&gt; 
 </code></pre></div>
 </li>
 </ul>
@@ -1358,15 +1337,12 @@
 <p>Use this attribute to specify the path to a zip file or folder that contains the WCM libraries:</p>
 <div class="highlight"><pre><span></span><code>-libFilePath &lt;value&gt;
 </code></pre></div>
-<p>Use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to import, if any:</p>
-<div class="highlight"><pre><span></span><code>-virtualPortalContext &lt;value&gt;
-</code></pre></div>
 <p>Log files from running the command can be found in the logs directory of the DXClient installation.</p>
 </li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>dxclient wcm-library-import -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -hostname &lt;hostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxWASUsername &lt;dxWASUsername&gt; -dxProfileName &lt;dxProfileName&gt; -libFilePath &lt;libFilePath&gt; 
+<div class="highlight"><pre><span></span><code>dxclient wcm-library-import -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt;  -hostname &lt;dxConnectHostname&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxWASUsername &lt;dxWASUsername&gt; -dxProfileName &lt;dxProfileName&gt; -libFilePath &lt;libFilePath&gt; 
 </code></pre></div>
 </div>
 <div class="admonition note">
@@ -1379,7 +1355,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2022</span>
       
     
   </small>

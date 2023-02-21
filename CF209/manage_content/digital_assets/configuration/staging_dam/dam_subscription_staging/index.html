@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
+      <a href="../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../whatsnew/cf20/newcf210/"
+    href="../../../../../whatsnew/cf20/newcf209/"
     class="md-nav__link"
   >
     What's New
@@ -673,7 +673,7 @@
     id="__nav_6_6_3"
     checked
   />
-                               
+                           
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../">Configuration</a>
 
@@ -778,13 +778,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#differences-between-dam-staging-and-wcm-syndication" class="md-nav__link">
-    Differences between DAM staging and WCM syndication
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#dam-staging-framework" class="md-nav__link">
@@ -899,20 +892,6 @@
   </a>
 </li>
     
-                
-<li class="md-nav__item">
-  <a href="../../dam_crop_aspect_ratio/" class="md-nav__link">
-    DAM Crop Aspect Ratio Configuration
-  </a>
-</li>
-    
-                
-<li class="md-nav__item">
-  <a href="../../Configure_DAM_virtual_portals/" class="md-nav__link">
-    Configure Digital Asset Management in virtual portals
-  </a>
-</li>
-    
     </ul>
   </nav>
   
@@ -989,7 +968,7 @@
     id="__nav_6_7"
     
   />
-                                             
+                                           
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../../pzn/">Personalization</a>
 
@@ -1058,13 +1037,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#differences-between-dam-staging-and-wcm-syndication" class="md-nav__link">
-    Differences between DAM staging and WCM syndication
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#dam-staging-framework" class="md-nav__link">
@@ -1146,42 +1118,6 @@
 
 <h1 id="staging-dam-to-rendering-environments">Staging DAM to rendering environments</h1>
 <p>This topic contains the commands that administrators can use to configure the staging of <a href="../../../">Digital Asset Management</a> (DAM) content. This allows you to manage subscriber registration or configure periodic sync.</p>
-<h2 id="differences-between-dam-staging-and-wcm-syndication">Differences between DAM staging and WCM syndication</h2>
-<div class="admonition note">
-<p class="admonition-title">Note<p>WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in some details. To learn more about differences have a look at the following table.</p>
-</p>
-</div>
-<table>
-<thead>
-<tr>
-<th>Aspect</th>
-<th>WCM</th>
-<th>DAM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Credentials for authentication</code></td>
-<td>Authentication via credentials Vault slot.</td>
-<td>The helm secret needs to be the primary portal admin user used for deployment of the DX environment. The user in the secret on the publisher and the subscriber must be the same. The credentials used in the registration are only used for authentication and authorisation during the DXClient registration steps. They are not used for transferring files during staging. The new user specified in secret will be the new primary portal admin. For more information, see <a href="../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials/">Configure Credentials</a>.</td>
-</tr>
-<tr>
-<td><code>Configuration syndication</code></td>
-<td>WCM syndication can be configured via UI or REST API one time. Sync can be triggered via REST API or UI.</td>
-<td>Subscriber can be configured by dxclient.</td>
-</tr>
-<tr>
-<td><code>Syndication ordering</code></td>
-<td>One-way or two-way syndication is possible, with one or many subscriber's resource.</td>
-<td>DAM staging only supports one-way syndication.</td>
-</tr>
-<tr>
-<td><code>Different user repository support per environment</code></td>
-<td>Supported via member fixer in WCM</td>
-<td>Not supported by DAM at this time</td>
-</tr>
-</tbody>
-</table>
 <h2 id="dam-staging-framework">DAM staging framework</h2>
 <p>The DAM staging framework allows you to stage your DAM content from an authoring environment (source environment/publisher) to multiple rendering environments (target environment/subscriber). Using <a href="https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html" target="_blank">DXClient</a>, you can configure DAM staging to:</p>
 <ul>
@@ -1430,28 +1366,13 @@ dam.host.overwrite.port=3000
 <p class="admonition-title">Example</p>
 <p>If a content item is moved from the staging environment to production, and production has the host overwrite set to <code>production.hcl.com</code>, then all DAM references are returned with <code>production.hcl.com</code>. <br>For instance, <code>production.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true</code> even if we received the following from syndication: <code>staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true</code>.</p>
 </div>
-<p><strong>(Optional)</strong> Starting with release 210 you can configure WCM <code>WCMConfigService</code> in the WAS Admin Console to use relative URLs for DAM references in WCM using the following:</p>
-<div class="highlight"><pre><span></span><code>dam.host.relative=true
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>dam.host.relative=true
-</code></pre></div>
-</div>
-<p>You must restart the DX Core JVM for changes to take effect.</p>
-<p><strong>Effect</strong></p>
-<p>If the properties are in place when using the REST API or WCM Admin UI or WCM API, the returned DAM references have no hostname or port.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>If a content item is moved from the staging environment to production, and production has the relative URL option enabled, then all DAM references are returned relatively. <br>For instance, <code>/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true</code> even if we received the following from syndication: <code>staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true</code>.</p>
-</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 17, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 6, 2022</span>
       
     
   </small>

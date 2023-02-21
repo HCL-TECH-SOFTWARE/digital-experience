@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../../whatsnew/cf20/newcf210/" class="md-tabs__link">
+      <a href="../../../../../../../whatsnew/cf20/newcf209/" class="md-tabs__link">
         What's New
       </a>
     </li>
@@ -439,7 +439,7 @@
                   
 <li class="md-nav__item">
   <a
-    href="../../../../../../../whatsnew/cf20/newcf210/"
+    href="../../../../../../../whatsnew/cf20/newcf209/"
     class="md-nav__link"
   >
     What's New
@@ -819,20 +819,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-content-security-policy-frame-options" class="md-nav__link">
-    Configuring Content-Security-Policy Frame Options
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-samesite-cookie-attribute" class="md-nav__link">
-    Configuring SameSite Cookie Attribute
-  </a>
   
 </li>
       
@@ -1241,20 +1227,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#configuring-content-security-policy-frame-options" class="md-nav__link">
-    Configuring Content-Security-Policy Frame Options
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-samesite-cookie-attribute" class="md-nav__link">
-    Configuring SameSite Cookie Attribute
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1428,8 +1400,8 @@
 <p>The secret can be created using the following commands:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses <code>dx-tls-cert</code>). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses <code>digital-experience</code>).</p>
 </div>
+<p>The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses <code>dx-tls-cert</code>). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses <code>digital-experience</code>).</p>
 <div class="highlight"><pre><span></span><code>  # Create secret with the name &quot;dx-tls-cert&quot;
   # Secret will be created in the namespace &quot;digital-experience&quot;
   # You can either reference the cert and key file created before, or a proper signed certificate e.g. from your CA
@@ -1479,45 +1451,13 @@ For more information, refer to the <a href="https://docs.openshift.com/container
 <span class="w">  </span><span class="nt">wildcardPolicy</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;None&quot;</span>
 </code></pre></div>
 <p><code>&lt;helm-deployment-name&gt;</code> must be replaced with the name of the deployed Helm release.</p>
-<h2 id="configuring-content-security-policy-frame-options">Configuring Content-Security-Policy Frame Options</h2>
-<p>The HCL Digital Experience 9.5 Helm Chart allows you to configure <strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors">Content Security Policy</a>: frame-ancestors</strong> for DX Core and all the add-on applications to Core such as Digital Asset Management or Ring API. This configuration sets the <code>source</code>for <code>CSP: frame-ancestors</code> to <code>self</code>. The provided URLs are then set as the <code>host-source</code>.</p>
-<p>This allows you to frame DX and other add-on applications provided that you provide the URLs of the applications in the <code>Content-Security-Policy</code> configuration. This is also useful as a way to mitigate Clickjacking attacks. For more information, please see: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html">Clickjacking Defense Cheat Sheet</a></p>
-<p>You can define a list of allowed URLs for a specific application using the following syntax in your <code>custom-values.yaml</code>. This example uses <code>contentComposer</code>, but the same applies for other applications:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Networking specific configuration</span>
-<span class="nt">networking</span><span class="p">:</span>
-<span class="w">  </span><span class="c1"># Networking configurations specific to all addon applications</span>
-<span class="w">  </span><span class="nt">addon</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">contentComposer</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Add header Content-Security-Policy: frame-ancestors &#39;self&#39; &lt;your-urls&gt; (comma separated list)</span>
-<span class="w">      </span><span class="c1"># Note: Header will not be set if left blank</span>
-<span class="w">      </span><span class="c1"># Example: &quot;https://your-application.com,https://www.example.com&quot; </span>
-<span class="w">      </span><span class="nt">cspFrameAncestorsURLs</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://your-application.com,https://www.example.com&quot;</span><span class="w">          </span>
-</code></pre></div>
-<p>Refer to the HCL DX 9.5 <code>values.yaml</code> detail for all possible applications that can be configured.</p>
-<h2 id="configuring-samesite-cookie-attribute">Configuring SameSite Cookie Attribute</h2>
-<p>The HCL Digital Experience 9.5 Helm Chart allows you to configure <strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite Cookie Attribute</a></strong> for DX Core. 
-This configuration sets the <code>WASReqURL</code> Cookie Attributes <code>Secure</code> and <code>SameSite</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This should only be set in an HTTPS environment to prevent unwanted behaviors.</p>
-</div>
-<p>You can define the SameSite value in your <code>custom-values.yaml</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Networking specific configuration</span>
-<span class="nt">networking</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">core</span><span class="p">:</span>
-<span class="w">    </span><span class="c1"># None, Lax, Strict, or empty string</span>
-<span class="w">    </span><span class="c1"># Setting this to an empty string would not add the SameSite attribute for WASReqURL cookie</span>
-<span class="w">    </span><span class="c1"># Note: This should only be set in an HTTPS environment to prevent unwanted behaviours</span>
-<span class="w">    </span><span class="nt">cookieSameSiteAttribute</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-</code></pre></div>
-<p>Refer to the HCL DX 9.5 <code>values.yaml</code> detail for all possible applications that can be configured.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 23, 2023</span>
       
     
   </small>
