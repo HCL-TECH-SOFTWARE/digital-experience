@@ -299,25 +299,25 @@ Add metadata to the new stack configuration `SupplementalStack` in rendition con
             operation:
               metadata: {}
         ```
-DAM extensibility configurations can be seen in settings page
+DAM extensibility configurations can be seen on the settings page
 
-Follow these steps to view the DAM settings:
+Follow the below steps to view the DAM settings:
 
-1.  Click **Settings Icon**, to open settings page
+1.  Click **Settings Icon**, to open settings page.
 ![Digital media asset settings](../../../../images/dam-settings.png)
 
-4.  Click any of the following left side menu options to view the settngs:
-    -   **Files** – Displays supported file types and maximum supported file size. 
+2.  Click on menu options to view their settings:
+    -   **Files**: – Displays supported file types and maximum supported file size. 
     ![Digital media asset files settings](../../../../images/dam-settings-files.png)
-    -   **Versions** - Displays maximum number of supported versions.
+    -   **Versions**: - Displays the maximum number of supported versions.
     ![Digital media asset versions settings](../../../../images/dam-settings-versions.png)
-    -   **Renditions** - Displays rendition configurations to manage renditions and their operations for the images based on the MIME type.
+    -   **Renditions**: - Displays rendition configurations to manage renditions and their operations for the images based on the MIME type.
     ![Digital media asset renditions settings](../../../../images/dam-settings-renditions.png)
-    -   **Plugin** - Displays plugin configurations in DAM to perform additional or extend the existing actions.
+    -   **Plugin**: - Displays plugin configurations in DAM to perform additional or extend the existing actions.
     ![Digital media asset plugins settings](../../../../images/dam-settings-plugin.png)
 
 !!! note 
-    Clear Browser cache in order to see the updated plugins configurations and renditions configurations after helm upgrade.
+    Clear the Browser cache in order to see the updated plugin configurations and renditions configurations after the helm upgrade.
 
 <!--
 
