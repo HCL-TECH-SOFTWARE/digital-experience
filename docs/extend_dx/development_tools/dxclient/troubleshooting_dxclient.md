@@ -30,4 +30,3 @@ To enable log tracing in DXConnect you will need to access ConfigWizard admin co
 
 ???+ info "Related information"
     -   [DXClient](../dxclient/index.md)
-
