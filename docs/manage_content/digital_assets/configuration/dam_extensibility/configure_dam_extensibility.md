@@ -301,9 +301,9 @@ Add metadata to the new stack configuration `SupplementalStack` in rendition con
         ```
 ## Viewing DAM extensibility configurations
 
-DAM extensibility configurations can be seen on the settings page:
+DAM extensibility configurations can be seen on the settings page.
 
-1.  Click **Settings Icon** to open settings page.
+1.  Click the **Settings Icon** to open the settings page.
 ![Digital media asset settings](../../../../images/dam-settings.png)
 
 2.  Click on menu options to view their settings:
