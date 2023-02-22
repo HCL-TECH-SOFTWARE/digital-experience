@@ -317,7 +317,7 @@ DAM extensibility configurations can be seen on the settings page.
     ![Digital media asset plugins settings](../../../../images/dam-settings-plugin.png)
 
 !!! note 
-    Clear the browser cache in order to see the updated plugin configurations and renditions configurations after the helm upgrade.
+    Clear the browser cache in order to see the updated plugin configurations and rendition configurations after the helm upgrade.
 
 <!--
 
