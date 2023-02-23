@@ -13,6 +13,8 @@ This topic provides information to apply container scaling capabilities, and how
        
     - **Persistence**  
         The Persistence used for Digital Asset Management currently supports scaling only with the updated persistence feature. For more information, see [Digital Asset Management persistence architecture](../../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md). During scale down of persistence nodes, DAM will be unavailable for few seconds as there would be a DB disconnection.
+
+        
 ## Use of `HorizontalPodAutoscalers` in DX 9.5 Deployments using Helm
 
 The following DX 9.5 applications can be configured to leverage `HorizontalPodAutoscalers` for Kubernetes and OpenShift based automated scaling:
