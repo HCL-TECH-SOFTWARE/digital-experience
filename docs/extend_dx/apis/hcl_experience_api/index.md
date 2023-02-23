@@ -23,9 +23,9 @@ The HCL Experience API provides simplified APIs to make it easier for developers
 
 The HCL Experience API describes a high-level API through which the following specific APIs are exposed:
 
--   **HCL Ring API**: Presents developer entry points to HCL Digital Experience 9.5 core platform capabilities which are divided into two main categories - **Authorization APIs** and **Web Content APIs**.
--   **HCL Digital Asset Management API**: Presents developer entry points to the Digital Asset Management features of HCL Digital Experience 9.5.
--   **HCL Image Processor API**: Presents developer entry points to the Digital Asset Management Image Processor functions of HCL Digital Experience 9.5.
+-   **[HCL Ring API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/)**: Presents developer entry points to HCL Digital Experience 9.5 core platform capabilities which are divided into two main categories - **Authorization APIs** and **Web Content APIs**.
+-   **[HCL Digital Asset Management API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/)**: Presents developer entry points to the Digital Asset Management features of HCL Digital Experience 9.5.
+-   **[HCL Image Processor API](https://opensource.hcltechsw.com/experience-api-documentation/image-processor-api/)**: Presents developer entry points to the Digital Asset Management Image Processor functions of HCL Digital Experience 9.5.
 
 !!! note
     Future HCL Digital Experience 9.5 feature functionality will also be exposed through the HCL Digital Experience API.
