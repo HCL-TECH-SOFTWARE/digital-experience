@@ -213,11 +213,11 @@ spec:
 
 ## Configuring Content-Security-Policy Frame Options
 
-The HCL Digital Experience 9.5 Helm Chart allows you to configure **[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): frame-ancestors** for DX Core and all the add-on applications to Core such as Digital Asset Management or Ring API.    
+The HCL Digital Experience 9.5 Helm Chart allows you to configure **[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): frame-ancestors** for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.    
 
-Once `cspFrameAncestorsEnabled` is set to true, this would add a `content-security-policy: frame-ancestor 'self'` headers to the responses, enabling you to frame DX and other add-on applications.
+Setting `cspFrameAncestorsEnabled` to true adds `content-security-policy: frame-ancestor 'self'` headers to the responses, enabling you to frame DX and other add-on applications. 
 
-You can also optionally specify allowed URLs that can frame your application using the `cspFrameAncestorAllowedSourceURLs` property. This is also useful as a way to mitigate Clickjacking attacks. For more information, please see: [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html)
+There is also an option to specify allowed URLs that can frame your application by using the `cspFrameAncestorAllowedSourceURLs` property. This is a useful as a way to mitigate Clickjacking attacks. For more information, see: [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html).
 
 You can define a list of allowed URLs for a specific application using the following syntax in your `custom-values.yaml`. This example uses `contentComposer`, but the same applies for other applications:
 
