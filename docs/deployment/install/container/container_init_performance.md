@@ -32,11 +32,11 @@ The default-autostart-docker-applications task restores the autostart status of 
 
 ## start-advanced-editor-applications
 
-The start-advanced-editor-applications task starts the [Advanced Rich Text Editor (Textbox.io)](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and beginning with CF210, the [Enhanced Rich Text Editor (TinyMCE)](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications if not started and all accompanying server side components. This task sets all applications to autostart when the HCL DX Portal server is started.
+The start-advanced-editor-applications task starts the [Advanced Rich Text Editor (Textbox.io)](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) and, beginning with CF210, the [Enhanced Rich Text Editor (TinyMCE)](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) applications if not started and all accompanying server side components. This task sets all applications to autostart when the HCL DX Portal server is started.
 
 -   **Prerequisites:**
 
-    It is recommended that Portal Administrators run the start-advanced-editor-applications task to start the Advanced Rich Text Editor (Textbox.io) and, beginning with CF210, the Enhanced Rich Text Editor (TinyMCE) server side components. After starting these applications, the Tiny Image Proxy, Hyperlinking and Spelling services are available when you select the Advanced or Enhanced Editor in the Web Content Manager Authoring > Configure > Editor Options interface.
+    It is recommended that Portal Administrators run the start-advanced-editor-applications task to start the Advanced Rich Text Editor (Textbox.io) and, beginning with CF210, the Enhanced Rich Text Editor (TinyMCE) server side components. After starting these applications, the Tiny Image Proxy, Hyperlinking, and Spelling services are available when you select the Advanced or Enhanced Editor in the **Web Content Manager Authoring > Configure > Editor Options** interface.
 
     ![](../../../images/config_editor_options.jpg "Configure Editor Options")
 
@@ -47,7 +47,7 @@ As a result of not autostarting these applications and portlets, initialization 
 
 ## Using Advanced Editors for WCM
 
-Beginning with Container Update CF192, and with the default settings for "lazy load" of optional portlets and applications, the Advanced Rich Text Editor (Textbox.io) Services and, beginning with CF210, the Enhanced Rich Text Editor (TinyMCE) Services for WCM are NOT started. This is not a "lazy load" but rather a stop of the Advanced and Enhanced Rich Text Editor Services ears containing the advanced and enhanced editors server side components. Before configuring these applications in the Web Content Manager Authoring Portlet configuration settings, it is recommended to start the Advanced Rich Text Editor and Enhanced Rich Text Editor Services applications by running the **start-advanced-editor-applications** ConfigEngine task. Running this task makes the editors server side functionalities, Image Proxy, Hyperlinking and Spelling, available for content authors.
+Beginning with Container Update CF192, and with the default settings for "lazy load" of optional portlets and applications, the Advanced Rich Text Editor (Textbox.io) Services and, beginning with CF210, the Enhanced Rich Text Editor (TinyMCE) Services for WCM are NOT started. This is not a "lazy load" but rather a stop of the Advanced and Enhanced Rich Text Editor Services ears containing the advanced and enhanced editors server side components. Before configuring these applications in the Web Content Manager Authoring Portlet configuration settings, it is recommended to start the Advanced Rich Text Editor and Enhanced Rich Text Editor Services applications by running the **start-advanced-editor-applications** ConfigEngine task. Running this task makes the editors server side functionalities, Image Proxy, Hyperlinking, and Spelling services available for content authors.
 
 The configuration changes made once this task completes remains in a persisted DX profile.
 
