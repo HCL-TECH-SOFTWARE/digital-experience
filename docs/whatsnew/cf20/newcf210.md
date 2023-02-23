@@ -2,6 +2,8 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF210 on supported platforms:
 
+- Updated minimal system requirements for Kubernetes deployments [in our documentation](../../../get_started/plan_deployment/container_deployment/limitations_requirements/) and updated the default settings in the helm charts' `values.yaml`.
+  Please ensure to review the updated settings to make sure the settings still fit your purpose.
 - Copy content from one site area to another in Content Composer
 - Remove Design Studio (Beta) from delivery
 - DX-Connections 8 integration
