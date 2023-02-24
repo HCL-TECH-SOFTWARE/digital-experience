@@ -3,8 +3,8 @@
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF210 on supported platforms:
 
 - Updated minimal system requirements for Kubernetes deployments [in our documentation](../../../get_started/plan_deployment/container_deployment/limitations_requirements/)
-- Reduced default CPU and memory settings in the helm charts' `values.yaml`.
-**NOTE**: If you have not overwritten the resource configuration in your helm chart, effectively with 210 the resource limits are reduced and your scenarios might not work any more. Ensure proper performance testing before rolling this change out. If you want to go with the previous values you can find them in the values.yaml file of the previous release.
+- Reduced default CPU and memory resource settings in the helm charts' `values.yaml`.
+  If you have not overwritten the resource configuration in your `custom-values.yaml`, please double check on the updated settings to ensure they still fit your purpose. As mentioned above, resource limits have been reduced and might not fit your scenarios any more. Ensure proper performance testing before rolling this change out. Feel free to update your `custom-values.yaml` with resource settings that fit your needs. You may also want to check the default resource settings in previous releases.
 - Copy content from one site area to another in Content Composer
 - Remove Design Studio (Beta) from delivery
 - DX-Connections 8 integration
