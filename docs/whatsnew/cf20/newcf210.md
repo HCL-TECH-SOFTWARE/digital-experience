@@ -4,7 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Updated minimal system requirements for Kubernetes deployments [in our documentation](../../../get_started/plan_deployment/container_deployment/limitations_requirements/)
 - Reduced default CPU and memory settings in the helm charts' `values.yaml`.
-  Please ensure to review the updated settings to make sure the settings still fit your purpose.
+**NOTE**: If you have not overwritten the resource configuration in your helm chart, effectively with 210 the resource limits are reduced and your scenarios might not work any more. Ensure proper performance testing before rolling this change out. If you want to go with the previous values you can find them in the values.yaml file of the previous release.
 - Copy content from one site area to another in Content Composer
 - Remove Design Studio (Beta) from delivery
 - DX-Connections 8 integration
