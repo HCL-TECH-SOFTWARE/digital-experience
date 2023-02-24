@@ -4,7 +4,8 @@ The tag support profile provides access to a list of tags that is associated wit
 
 It declares the following attribute name:
 
--   **Tagstags**
+-   **Tags**
+    **tags**
 
     This attribute specifies the tags that are associated with this item.
 

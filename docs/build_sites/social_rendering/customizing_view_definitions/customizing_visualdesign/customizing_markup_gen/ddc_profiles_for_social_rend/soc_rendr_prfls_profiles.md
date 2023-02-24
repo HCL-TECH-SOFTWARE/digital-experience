@@ -12,7 +12,7 @@ The profiles profile provides access to HCL Connections profile feed data. It de
 
 -   **Assistant's profile URLassistantLink**
 
-    This attribute specifies the URL of the user profile that represents the assistant of the user who is represented by this profile. This attribute is computed by the social rendering Digital Data Connector \(DDC\) for HCL Portal plug-in.
+    This attribute specifies the URL of the user profile that represents the assistant of the user who is represented by this profile. This attribute is computed by the social rendering Digital Data Connector (DDC) for HCL Portal plug-in.
 
 -   **Assistant's nameassistantName**
 
