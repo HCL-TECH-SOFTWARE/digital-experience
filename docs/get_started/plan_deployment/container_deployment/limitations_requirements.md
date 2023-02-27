@@ -26,10 +26,10 @@ This section describes the requirements for supported file systems.
 
 This section describes the requirements and limitations for HCL Digital Experience 9.5 Container Update CF200 and later deployments using Helm.
 
-HCL DX 9.5 CF200 and later is designed to run on any certified Kubernetes platform \([https://www.cncf.io/certification/software-conformance](https://www.cncf.io/certification/software-conformance)\), provided that,
+HCL DX 9.5 CF200 and later is designed to run on any certified Kubernetes platform \([https://www.cncf.io/certification/software-conformance](https://www.cncf.io/certification/software-conformance)\), provided that:
 
-- the Kubernetes platform is hosted on x86\_64 hardware
-- the Kubernetes platform is officially supported by Helm \([https://helm.sh/docs/topics/kubernetes\_distros/](https://helm.sh/docs/topics/kubernetes_distros/)\).
+- the Kubernetes platform is hosted on x86\_64 hardware.
+- the Kubernetes platform is officially supported by Helm ([https://helm.sh/docs/topics/kubernetes\_distros/](https://helm.sh/docs/topics/kubernetes_distros/)).
 
 For the list of Kubernetes versions that are tested and supported by HCL, refer to the [HCL DX supported hardware and software statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=ba230c701b983c50f37655352a4bcb29) page.
 
@@ -88,8 +88,8 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | **Overall** |  |  |  | **7950m** | **13184Mi** |
 
 !!!note
-    Please keep in mind that the overall sums for CPU and memory include all components of HCL DX. 
-    In most cases you will only want to deploy a subset of all components, therefore the minimal system requirements will decrease accordingly.
+    Remember that the overall sums for CPU and memory include all components of HCL DX. 
+    In most cases, you will only want to deploy a subset of all components, therefore the minimal system requirements will decrease accordingly.
 
 <!--
 ???+ info "Related information"
