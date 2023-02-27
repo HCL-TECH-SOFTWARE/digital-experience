@@ -1,8 +1,8 @@
 # Unica Segment Picker for leveraging segments in PZN Rules
-In this document, we outline the usage of the new Unica segment picker with steps to pick Unica segments while creating PZN rules.
+This document outlines the usage of the new Unica segment picker with steps to pick Unica segments while creating PZN rules.
 
 ## Prerequisites
-Configure the Unica segment picker in PZN rules [Out-of-box application object for shipping Unica with PZN](../pzn_unica_integration/out_of_box_method.md) using the ConfigEngine task.
+Configure [Out-of-box application object for shipping Unica with PZN](../pzn_unica_integration/out_of_box_method.md) using the ConfigEngine task.
 
 ## Unica Segment Picker
 The Unica Segment Picker helps customers retrieve Unica segments directly in the PZN UI. The PZN UI shows the available segments so that customers do not have to remember the exact name of the segments.
