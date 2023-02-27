@@ -213,9 +213,11 @@ spec:
 
 ## Configuring Content-Security-Policy Frame Options
 
-The HCL Digital Experience 9.5 Helm Chart allows you to configure **[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): frame-ancestors** for DX Core and all the add-on applications to Core such as Digital Asset Management or Ring API. This configuration sets the `source`for `CSP: frame-ancestors` to `self`. The provided URLs are then set as the `host-source`.
+The HCL Digital Experience 9.5 Helm Chart allows you to configure **[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): frame-ancestors** for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.    
 
-This allows you to frame DX and other add-on applications provided that you provide the URLs of the applications in the `Content-Security-Policy` configuration. This is also useful as a way to mitigate Clickjacking attacks. For more information, please see: [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html)
+Setting `cspFrameAncestorsEnabled` to true adds `content-security-policy: frame-ancestor 'self'` headers to the responses, enabling you to frame DX and other add-on applications. 
+
+There is also an option to specify allowed URLs that can frame your application using the `cspFrameAncestorAllowedSourceURLs` property. Using this property is a way to mitigate clickjacking attacks. For more information, see: [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html).
 
 You can define a list of allowed URLs for a specific application using the following syntax in your `custom-values.yaml`. This example uses `contentComposer`, but the same applies for other applications:
 
@@ -225,10 +227,17 @@ networking:
   # Networking configurations specific to all addon applications
   addon:
     contentComposer:
-      # Add header Content-Security-Policy: frame-ancestors 'self' <your-urls> (comma separated list)
-      # Note: Header will not be set if left blank
-      # Example: "https://your-application.com,https://www.example.com" 
-      cspFrameAncestorsURLs: "https://your-application.com,https://www.example.com"          
+      # Enables/Disables CSP frame-ancestor header
+      # Note: 'self' is always added when this is enabled to enable DX internal features
+      # see: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
+      cspFrameAncestorsEnabled: false
+      # Add list of allowed source URLS to the the CSP frame-ancestor header this will only reflect if cspFrameAncestorsEnabled is set to true
+      # Example:
+      # cspFrameAncestorsAllowedSourceURLs:
+      #   - 'https://example.com'
+      # This would result to the following response header:
+      # content-security-policy: frame-ancestors 'self' https://example.com
+      cspFrameAncestorsAllowedSourceURLs: []        
 ```
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
