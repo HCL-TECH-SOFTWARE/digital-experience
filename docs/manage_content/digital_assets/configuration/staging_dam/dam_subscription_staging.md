@@ -373,6 +373,14 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
         dxclient manage-dam-staging get-all-subscribers -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
 
+!!! note
+        If during DAM staging the Publisher and the Subscriber have content items that contain the same name, the items would not be staged or synchronized to the subscriber.
+
+        When items are not able to be created on the subscriber notifications will be printed in the DAM logs of the subscriber.
+
+        The only way to know that something does not get staged or synchronized to the subscriber would be to monitor the DAM logs.
+
+        The DAM UUIDs used in content items would vary for items that are not able to be staged.
 
 ## Using WCM with DAM staging
 
