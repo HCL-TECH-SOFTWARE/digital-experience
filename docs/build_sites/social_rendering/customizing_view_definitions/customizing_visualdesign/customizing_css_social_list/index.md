@@ -11,11 +11,11 @@ The `wp_social_rendering_85` theme module defines the capability with the name `
 **Style sheet note:** The lists of social objects use CSS styles that render differently, depending on the layout container that contains the social list web content viewer. Different classification CSS classes are assigned to these layout containers. As a result, the styles change when a social list web content viewer is moved from the center column into a narrower side column or vice versa. Furthermore, the styles are responsive to screen width and screen orientation. This responsiveness is achieved by using HTML5 and CSS3 media queries.
 
 
--   **[Providing custom styles for social lists](../social/soc_rendr_provide_custom_styles.md)**  
+-   **[Providing custom styles for social lists](soc_rendr_provide_custom_styles.md)**  
 The default CSS styles that are used to define the visual appearance of social lists are defined in the wp\_social\_rendering\_85 theme module. You can define your own styles.
--   **[CSS class hierarchy for social lists](../social/soc_rendr_css_class_hierarchy.md)**  
+-   **[CSS class hierarchy for social lists](soc_rendr_css_class_hierarchy.md)**  
 To define its visual appearance, the default markup for social lists uses several CSS classes. They are defined in the wp\_social\_rendering\_85 theme module. Learn about the purpose of the most important CSS classes.
--   **[Using media queries to target mobile devices](../social/soc_rendr_media_qs_4_mobile.md)**  
+-   **[Using media queries to target mobile devices](soc_rendr_media_qs_4_mobile.md)**  
 The default social list CSS styles use CSS3 media queries to target specific mobile devices and implement responsive web design. Learn more about media queries.
 
 
