@@ -18,7 +18,7 @@ It declares the following attribute names:
 
 -   **Author's image URLauthorImageLink**
 
-    This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image either directly from HCL Connections or by using the Ajax proxy of the portal. For more information about this attribute, read *Configuring globally how social object data is served*. This attribute is computed by the social rendering Digital Data Connector \(DDC\) for HCL Portal plug-in.
+    This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image either directly from HCL Connections or by using the Ajax proxy of the portal. For more information about this attribute, read *Configuring globally how social object data is served*. This attribute is computed by the social rendering Digital Data Connector (DDC) for HCL Portal plug-in.
 
 -   **Author's nameauthorName**
 
@@ -54,7 +54,7 @@ It declares the following attribute names:
 
 -   **Community UUIDcommunityUUID**
 
-    This attribute references the internal Universally Unique Identifier \(UUID\) of the community that contains this social object. It represents the community identifier from the HCL Connections server where the social object is stored. If the social object does not belong to a community, this attribute does not have a value.
+    This attribute references the internal Universally Unique Identifier (UUID) of the community that contains this social object. It represents the community identifier from the HCL Connections server where the social object is stored. If the social object does not belong to a community, this attribute does not have a value.
 
 -   **Download URLdownloadLink**
 
