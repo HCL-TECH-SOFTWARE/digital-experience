@@ -12,16 +12,16 @@ The Unica Segment Picker helps customers retrieve Unica segments directly in the
 ![create-rule-with-oob-application-object](../../../images/create-rule-with-oob-application-object.png)
 
 2. After selecting the attribute, click the **value** dropdown menu and click **Select Unica Segment**.
-![picker-option-for-unica-segment](../../../images/picker-option-for-unica-segment.png)
+    ![picker-option-for-unica-segment](../../../images/picker-option-for-unica-segment.png)
 
- The **Select Unica segment** window lists all the Unica Campaign segments retrieved from Unica.
- ![unica-segment-list-view](../../../images/unica-segment-list-view.png)
+    The **Select Unica Segment** window lists all the Unica Campaign segments retrieved from Unica.
+    ![unica-segment-list-view](../../../images/unica-segment-list-view.png)
 
 3. Select the Unica segment value to add against the condition in the rule and click **OK**.
-![unica-segment-selected](../../../images/unica-segment-selected.png)
+    ![unica-segment-selected](../../../images/unica-segment-selected.png)
 
- Once the segment is selected, the value is returned to the **Personalization Editor**.
- ![unica-segment-selected-using-picker](../../../images/unica-segment-selected-using-picker.png)
+    Once the segment is selected, the value is returned to the **Personalization Editor**.
+    ![unica-segment-selected-using-picker](../../../images/unica-segment-selected-using-picker.png)
 
 4. Save the rule created.
 ![unica-picker-save-rule](../../../images/unica-picker-save-rule.png)
