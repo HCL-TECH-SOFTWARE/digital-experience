@@ -374,9 +374,9 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
         ```
 
 !!! note
-        Media assets and collections won't be staged from publisher to subscriber, if the media assets or collections with the same name, but not the identical unique id as in the publisher already exist in the subscriber.
+        Media assets and collections are not staged from publisher to subscriber if the media assets or collections with the same name, but a different unique id as in the publisher, already exist in the subscriber.
 
-        If items couldn't be staged to the subscriber, respective log messages will be available in the DAM logs of the subscriber.
+        If items are not staged to the subscriber, you can find the respective log messages in the DAM logs of the subscriber.
 
 ## Using WCM with DAM staging
 
