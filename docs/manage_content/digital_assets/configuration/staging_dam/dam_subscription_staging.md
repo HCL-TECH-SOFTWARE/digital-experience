@@ -374,13 +374,9 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
         ```
 
 !!! note
-        The items are not staged or synchronized to the subscriber if the Publisher and the Subscriber have content items that contain the same name during DAM staging.
+        Media assets and collections won't be staged from publisher to subscriber, if the media assets or collections with the same name, but not the identical unique id as in the publisher already exist in the subscriber.
 
-        When items are not created on the subscriber, notifications are printed in the DAM logs of the subscriber.
-
-        You can monitor the DAM logs to know if something did not get staged or synchronized to the subscriber.
-
-        The DAM UUIDs used in content items vary for items that were not staged.
+        If items couldn't be staged to the subscriber, respective log messages will be available in the DAM logs of the subscriber.
 
 ## Using WCM with DAM staging
 
