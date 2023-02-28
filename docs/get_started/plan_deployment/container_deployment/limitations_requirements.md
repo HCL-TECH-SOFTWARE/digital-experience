@@ -58,7 +58,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 !!!note
     Every Kubernetes node requires some headroom for Kubernetes-specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services as well as HCL DX. The overall requested amount of resources may vary based on disabled/enabled applications.
 
-| **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request** | **Container Memory request** |
+| **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request and limit** | **Container Memory request and limit** |
 |---|---|---|---|---|---|
 | core | 1 | core | core | 4000m | 4096Mi |
 |  |  | system-out-log | logging-sidecar | 100m | 64Mi |
