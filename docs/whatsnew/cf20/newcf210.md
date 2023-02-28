@@ -20,11 +20,14 @@ The following features and updates are available to customers installing HCL Dig
 
 ## ATTENTION: Updated default resource requests and limits for Kubernetes deployments
 
-=== Updated minimal system requirements for Kubernetes deployments [in our documentation](../../../get_started/plan_deployment/container_deployment/limitations_requirements/)
-
-=== Reduced default CPU and memory resource settings in the helm charts' `values.yaml` to match HCL DX's minimal system requirements.
-    If you have not overwritten the resource configuration in your `custom-values.yaml`, please double check on the updated settings to ensure they still fit your purpose. As mentioned above, resource limits have been reduced and might not fit your scenarios any more. Ensure proper performance testing before rolling this change out.
-    Feel free to update your `custom-values.yaml` with resource settings that fit your needs. You may also want to check the default resource settings in previous releases.
+=== "Containers"
+    The minimal system requirements for Kubernetes deployments has been updated. See the topic [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements/) for more information. 
+    
+   The reduced default CPU and memory resource settings in the helm charts' `values.yaml` match HCL DX's minimal system requirements.
+    
+   If you have not overwritten the resource configuration in your `custom-values.yaml`, verify the updated settings to ensure they still fit your purpose. As mentioned above, resource limits have been reduced and might not fit your scenarios anymore. Ensure proper performance testing before rolling this change out.
+    
+   Feel free to update your `custom-values.yaml` with resource settings that fit your needs. You may also want to check the default resource settings in previous releases.
 
 ## Content Composer – Copy content items and new rename option
 
