@@ -37,3 +37,8 @@ For development and testing, sometimes it is useful to directly adjust configura
 |`<RELEASE-NAME>-ring-api`|Ring API|
 |`<RELEASE-NAME>-runtime-controller`|Runtime Controller|
 
+## Limitation
+
+Config Wizard on Kube using Chrome browser can hang while filling out entries.
+
+When using the Configuration Wizard on a Kubernetes deployment, the browser can hang indefinitely due to the autofill feature of Chrome. To work around this, you can use another supported browser or disable the **Chrome Auto-fill** feature.
