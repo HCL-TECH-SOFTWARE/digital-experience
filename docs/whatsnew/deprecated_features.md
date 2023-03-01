@@ -37,7 +37,7 @@ Links to more information on the replacement for those items listed for deprecat
 
 ## Deprecated Dependent Products
 
-These are the list of Dependent Products that are already Out of Support.
+These are the lists of Dependent Products that are already Out of Support.
 
 ### Linux OS family
 
