@@ -1,7 +1,7 @@
 # Containerization requirements and limitations before CF210
 
 The table below shows previous default resource requests and limits for HCL DX Kubernetes as shipped in the `values.yaml` for releases **before** CF210.
-To see the updated default settings, reflecting the minimal system requirements, please visit [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements/).
+To see the updated default settings reflecting the minimal system requirements, see the Help Center topic [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements/).
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request/limit** | **Container Memory request/limit** |
 |---|---|---|---|---|---|
