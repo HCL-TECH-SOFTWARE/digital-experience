@@ -17,7 +17,7 @@ The tranlog directory /opt/HCL/cw\_profile/tranlog is symbolically linked to 
 The profile persistent volume \(and thus, the /opt/HCL/profiles directory\) contains a directory per container version, named:
 
 ```
-prof_< product-version >_< container-version >
+cw_prof_< product-version >_< container-version >
 ```
 
 for example, `prof_95_CF210`. During the Core container startup process the latest version directory is symbolically linked from /opt/HCL/cw\_profile.
