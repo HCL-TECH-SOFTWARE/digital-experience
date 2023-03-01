@@ -2,15 +2,7 @@
 
 ## Volume mount points
 
-The [persistent volumes](../../../get_started/plan_deployment/container_deployment/persistent_volumes.md) used by the DX Core pod are mounted to the following directories in the Core container:
-
--   profile \(WebSphere Application Server profiles for the WebSphere\_Portal application server, shared between pods\): /opt/HCL/profiles
--   log \(WebSphere Application Server logs for the WebSphere\_Portal application server, unique to a pod\): /opt/HCL/logs
--   tranlog \(transaction log, unique to a pod\): /opt/HCL/tranlog
-
-The logs directory /opt/HCL/cw\_profile/logs is symbolically linked to /opt/HCL/logs. 
-
-The tranlog directory /opt/HCL/cw\_profile/tranlog is symbolically linked to /opt/HCL/tranlog.
+The [persistent volumes](../../../get_started/plan_deployment/container_deployment/persistent_volumes.md) used by the DX Core pod are mounted in profile \(WebSphere Application Server profiles for the WebSphere\_Portal application server, shared between pods\): /opt/HCL/profiles
 
 ## Additional Information about profile directories
 
