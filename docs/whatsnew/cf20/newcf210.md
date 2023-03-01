@@ -26,7 +26,7 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     The minimal system requirements for Kubernetes deployments have been updated. See the [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements/) for more information.
 
-    The minimal system requirements are now also reflected as the default settings HCL DX's helm charts' `values.yaml`.
+    The minimal system requirements are now the default settings in the HCL DX's helm charts' `values.yaml`.
 
     If you have not overwritten the resource configuration in your `custom-values.yaml`, verify the updated settings to ensure they still fit your purpose. 
     
