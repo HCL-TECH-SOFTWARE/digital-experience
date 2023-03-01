@@ -30,7 +30,7 @@ The following features and updates are available to customers installing HCL Dig
 
     If you have not overwritten the resource configuration in your `custom-values.yaml`, verify the updated settings to ensure they still fit your purpose. 
     
-    If you used the default values in previous versions, check if the minimal system requirement settings still fit your deployment scenario. Ensure proper performance testing before rolling this change out.
+    If you relied on the default values in previous versions, check if the minimal system requirement settings still fit your deployment scenario. Ensure proper performance testing before rolling this change out.
 
     Feel free to update your `custom-values.yaml` with resource settings that fit your needs. You may also want to check the [default resource settings in previous releases](./newcf210-old-resources-detail.md).
 
@@ -121,12 +121,12 @@ The following features and updates are available to customers installing HCL Dig
 ## Option to configure Content-Security-Policy Frame Options
 
 === "Containers"
-    A new configuration option in the `custom-values.yaml` file allows you to configure [Content Security Policy:frame-ancestors](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-content-security-policy-frame-options) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
+    A new configuration option in the `custom-values.yaml` file allows to configure [Content Security Policy:frame-ancestors](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-content-security-policy-frame-options) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
 
 ## Option to configure SameSite Cookie Attribute
 
 === "Containers"
-    A new configuration option in the `custom-values.yaml` file allows you to configure [SameSite Cookie Attribute](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-samesite-cookie-attribute) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
+    A new configuration option in the `custom-values.yaml` file allows to configure [SameSite Cookie Attribute](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-samesite-cookie-attribute) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
 
 ## Option to configure aspect ratios for cropping of images in DAM
 
@@ -136,10 +136,10 @@ The following features and updates are available to customers installing HCL Dig
 ## Notice of deprecation of Textbox.io Rich Text Editor
 
 === "Containers"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the [Deprecated features](../deprecated_features.md) for more information.
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 === "On-Premises"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the [Deprecated features](../deprecated_features.md) for more information.
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
