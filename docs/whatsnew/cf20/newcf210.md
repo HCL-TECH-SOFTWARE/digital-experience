@@ -30,7 +30,7 @@ The following features and updates are available to customers installing HCL Dig
 
     If you have not overwritten the resource configuration in your `custom-values.yaml`, verify the updated settings to ensure they still fit your purpose. 
     
-    If you relied on the default values in previous versions, please check if the minimal system requirement settings still fit your deployment scenario. Ensure proper performance testing before rolling this change out.
+    If you used the default values in previous versions, check if the minimal system requirement settings still fit your deployment scenario. Ensure proper performance testing before rolling this change out.
 
     Feel free to update your `custom-values.yaml` with resource settings that fit your needs. You may also want to check the [default resource settings in previous releases](./newcf210-old-resources-detail.md).
 
@@ -87,7 +87,7 @@ The following features and updates are available to customers installing HCL Dig
 ## Design Studio Beta Update
 
 === "Containers"
-    Effective with HCL Digital Experience 9.5 CF210, the Design Studio Beta component has been removed. Future Digital Experience 9.5 releases will incorporate feedback on the component features received during the Beta evaluation period. [Deprecated features](../deprecated_features.md) for more information.
+    Effective with HCL Digital Experience 9.5 CF210, the Design Studio Beta component has been removed. Future Digital Experience 9.5 releases will incorporate feedback on the component features received during the Beta evaluation period. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## New Portlet Development Utilities and Page creation samples on HCL GitHub
 
@@ -121,12 +121,12 @@ The following features and updates are available to customers installing HCL Dig
 ## Option to configure Content-Security-Policy Frame Options
 
 === "Containers"
-    A new configuration option in the `custom-values.yaml` file allows to configure [Content Security Policy:frame-ancestors](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-content-security-policy-frame-options) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
+    A new configuration option in the `custom-values.yaml` file allows you to configure [Content Security Policy:frame-ancestors](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-content-security-policy-frame-options) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
 
 ## Option to configure SameSite Cookie Attribute
 
 === "Containers"
-    A new configuration option in the `custom-values.yaml` file allows to configure [SameSite Cookie Attribute](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-samesite-cookie-attribute) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
+    A new configuration option in the `custom-values.yaml` file allows you to configure [SameSite Cookie Attribute](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-samesite-cookie-attribute) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
 
 ## Option to configure aspect ratios for cropping of images in DAM
 
