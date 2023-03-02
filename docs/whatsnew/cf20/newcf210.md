@@ -8,7 +8,6 @@ The following features and updates are available to customers installing HCL Dig
 - New HCL Unica Campaign Segment Picker for leveraging segments in PZN Rules
 - Ability to Sync the Title of DX pages to the Portal Site WCM library in the JCR
 - Menu Element Sorting Options
-- HCL Connections 8 Integration
 - Option to apply relative URLs for DAM references in WCM during staging to production
 - Design Studio Beta Update
 - New Portlet Development Utilities and Page creation samples on HCL GitHub
@@ -42,10 +41,10 @@ The following features and updates are available to customers installing HCL Dig
 ## Guidance to configure a custom TinyMCE editor toolbar in the HCL Web Content Manager authoring portlet
 
 === "Containers"
-    New guidance is added to configure the Tiny MCE Editor toolbar and set desired icons for use with the inline editor functions of the Web Content Manager portlet. See the topic [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for more information.
+    New guidance is added to configure the [Tiny MCE Editor toolbar](https://www.tiny.cloud/docs/tinymce/6/menus-configuration-options/) and set desired icons for use with the inline editor functions of the Web Content Manager portlet. See the topic [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for more information.
 
 === "On-Premises"
-    New guidance is added to configure the Tiny MCE Editor toolbar and set desired icons for use with the inline editor functions of the Web Content Manager portlet. See the topic [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for more information.
+    New guidance is added to configure the [Tiny MCE Editor toolbar](https://www.tiny.cloud/docs/tinymce/6/menus-configuration-options/) and set desired icons for use with the inline editor functions of the Web Content Manager portlet. See the topic [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for more information.
 
 ## New HCL Unica Campaign Segment Picker for leveraging segments in PZN Rules
 
@@ -71,13 +70,13 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     New sorting options are available when defining a Menu element. See the Help Center topic [Defining menu element formatting options](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/menu_element/wcm_dev_elements_menu_format.md) for more information.
 
-## HCL Connections 8 Integration
+<!--## HCL Connections 8 Integration
 
 === "Containers"
     Content from [HCL Connections 8](https://opensource.hcltechsw.com/connections-doc/v8-cr1/) can be integrated to Digital Experience sites. See the Help Center topics [Digital Experience Support Configuration requirements](../../get_started/system_requirements/traditional/supported_config.md) and [Digital Data Connector](../../get_started//product_overview/application_integration.md#digital-data-connector) for more information. 
 
 === "On-Premises"
-    Content from [HCL Connections 8](https://opensource.hcltechsw.com/connections-doc/v8-cr1/) can be integrated to Digital Experience sites. See the Help Center topics [Digital Experience Support Configuration requirements](../../get_started/system_requirements/traditional/supported_config.md) and [Digital Data Connector](../../get_started//product_overview/application_integration.md#digital-data-connector) for more information. 
+    Content from [HCL Connections 8](https://opensource.hcltechsw.com/connections-doc/v8-cr1/) can be integrated to Digital Experience sites. See the Help Center topics [Digital Experience Support Configuration requirements](../../get_started/system_requirements/traditional/supported_config.md) and [Digital Data Connector](../../get_started//product_overview/application_integration.md#digital-data-connector) for more information. -->
 
 ## Option to apply relative URLs for DAM references in WCM during staging to production
 
@@ -100,10 +99,10 @@ The following features and updates are available to customers installing HCL Dig
 ## DXClient Updates
 
 === "Containers"
-    Updates to DXclient release tooling adds a virtual portal context option for WCM export/import library functions and removes deprecated parameters. See the Help Center topics [DXClient - Exporting and importing WCM libraries](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/wcmlibraries.md) and [DXClient Artifact Types](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/index.md) for more information.
+    Updates to DXClient release tooling adds a virtual portal context option for WCM export/import library functions and removes deprecated parameters. See the Help Center topics [DXClient - Exporting and importing WCM libraries](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/wcmlibraries.md) and [DXClient Artifact Types](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/index.md) for more information.
 
 === "On-Premises"
-    Updates to DXclient release tooling adds a virtual portal context option for WCM export/import library functions and removes deprecated parameters. See the Help Center topics [DXClient - Exporting and importing WCM libraries](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/wcmlibraries.md) and [DXClient Artifact Types](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/index.md) for more information.
+    Updates to DXClient release tooling adds a virtual portal context option for WCM export/import library functions and removes deprecated parameters. See the Help Center topics [DXClient - Exporting and importing WCM libraries](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/wcmlibraries.md) and [DXClient Artifact Types](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/index.md) for more information.
 
 ## Option to configure session timeout for non-authenticated Site area pages
 
