@@ -6,4 +6,4 @@ In this getting started with HCL Digital Experience section, you get an introduc
 
 - [HCL Digital Experience in Action](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D279): In this lesson you see the different recorded demos with DX in action.
 
-- [Try HCL Digital Experience Now](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D280): I in this lesson you will learn how to deploy HCL DX Solution Modules on HCL SoFy and run the previous demos on your own sandbox.
+- [Try HCL Digital Experience Now](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D280): In this lesson you will learn how to deploy HCL DX Solution Modules on HCL SoFy and run the previous demos on your own sandbox.
