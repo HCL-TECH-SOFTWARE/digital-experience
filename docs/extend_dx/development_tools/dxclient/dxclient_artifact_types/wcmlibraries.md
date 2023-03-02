@@ -92,7 +92,7 @@ The `wcm-library-export` command is used to export the WCM libraries from the so
     -exportAllLibraries <value>
     ```
 
-    Use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to export, if any:
+    Starting in CF210, use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to export, if any:
 
     ```
     -virtualPortalContext <value>
@@ -188,7 +188,7 @@ The `wcm-library-import` command is used to import the WCM libraries from the so
     -libFilePath <value>
     ```
 
-    Use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to import, if any:
+    Starting in CF210, use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to import, if any:
 
     ```
     -virtualPortalContext <value>

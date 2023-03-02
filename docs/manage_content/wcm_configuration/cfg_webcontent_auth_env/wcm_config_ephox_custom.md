@@ -126,10 +126,10 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
     !!!note
         To revert to the default editor toolbar, run the task that is named remove-wcm-ephox-editor-custom-configuration on the primary node only.
         
-## Using a custom TinyMCE editor toolbar with inline editing
+## Using a custom TinyMCE editor toolbar with in-place editing
 
 !!!note
-    These customization steps only apply for Web content inline editing with the TinyMCE editor.
+    These customization steps only apply for Web content in-place editing with the TinyMCE editor.
 
 1.  Log in to the WebSphere® Integrated Solutions Console as an administrator.
 
