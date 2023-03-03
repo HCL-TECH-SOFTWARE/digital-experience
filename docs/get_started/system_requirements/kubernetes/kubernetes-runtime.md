@@ -40,9 +40,9 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 |CF Level|Kubernetes versions|
 |--------------|-----------------|
+|CF210| Kubernetes 1.25<br/>Kubernetes 1.24<br/>Kubernetes 1.23<br/>Kubernetes 1.22<br/>|
 |CF209| Kubernetes 1.24<br/>Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>|
-|CF208| Kubernetes 1.24<br/>Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>|
-|CF207| Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>|
+|CF208| Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.21<br/>|
 
 !!! attention "__*__ CF203 limited support statement"
     In CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments
