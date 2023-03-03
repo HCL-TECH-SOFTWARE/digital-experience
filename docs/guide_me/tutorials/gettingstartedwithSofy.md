@@ -1,4 +1,4 @@
-# Getting Started with Sofy
+# Getting Started with HCL Digital Experience
 
 In this getting started with HCL Digital Experience section, you get an introduction to HCL Digital Experience. This provides an overview of the HCL Digital Experience (DX) where you learn the market trends, what, why, and how HCL Digital Experience is the right solution for you. You can also see DX in Action with a few recorded demos. Lastly, you can learn how to run these demos yourself using a sandbox for HCL Digital Experience Solution Modules Business Solution that runs on HCL SoFy (HCL Solutions Factory). This is the link to the [DX Introduction course](https://hclsw.co/hdx-intro). For specific lessons, access the following links:
 
