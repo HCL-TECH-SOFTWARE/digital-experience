@@ -2,7 +2,7 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF210 on supported platforms:
 
-**All versions (8.5, 9.0, 9.5)**
+**All  Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Guidance to configure a custom TinyMCE editor toolbar in the HCL Web Content Manager authoring portlet
 - New HCL Unica Campaign Segment Picker for leveraging segments in PZN Rules
@@ -13,7 +13,7 @@ The following features and updates are available to customers installing HCL Dig
 - Option to configure session timeout for non-authenticated Site pages
 - Notice of deprecation of Textbox.io Rich Text Editor
 
-**Container-based deployment only**
+**Digital Experience 9.5 Container Version**
 
 - **ATTENTION:** Updated default resource requests and limits for Kubernetes deployments
 - Content Composer - Copy content items and new rename option  
@@ -24,7 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 - Option to configure SameSite Cookie Attribute
 - Option to configure aspect ratios for cropping of images in DAM
 
-## All versions (8.5, 9.0, 9.5)
+## ll  Digital Experience Versions (8.5, 9.0, 9.5)
 
 ### Guidance to configure a custom TinyMCE editor toolbar
 
@@ -90,12 +90,12 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
-## Container-based deployment only
+## Digital Experience 9.5 Container Version
 
 ### ATTENTION: Updated default resource requests and limits for Kubernetes deployments
 
 === "Containers"
-    The minimal system requirements for Kubernetes deployments have been updated. See the [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements/) for more information.
+    The minimal system requirements for Kubernetes deployments have been updated. See the [Containerization requirements and limitations](../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for more information.
 
     The minimal system requirements are now the default settings in the HCL DX's helm charts' `values.yaml`.
 
@@ -118,7 +118,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Design Studio Beta Update
 
 === "Containers"
-    Effective with HCL Digital Experience 9.5 CF210, the Design Studio Beta component has been removed. Future Digital Experience 9.5 releases will incorporate feedback on the component features received during the Beta evaluation period. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+    Effective with HCL Digital Experience 9.5 CF210, the Design Studio Beta has been removed. Future Digital Experience 9.5 releases will incorporate feedback on the features received during the Beta evaluation period. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ### Option to Configure Credentials from Secrets
 
