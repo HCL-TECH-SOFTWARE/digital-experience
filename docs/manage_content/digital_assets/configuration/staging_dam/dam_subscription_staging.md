@@ -373,6 +373,10 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
         dxclient manage-dam-staging get-all-subscribers -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
 
+!!! note
+        Media assets and collections are not staged from publisher to subscriber if the media assets or collections are with the same name, but a different unique id as in the publisher already exists in the subscriber.
+
+        If items are not staged to the subscriber, you can find the respective log messages in the DAM logs of the subscriber.
 
 ## Using WCM with DAM staging
 
