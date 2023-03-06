@@ -15,7 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Updated default resource requests and limits for Kubernetes deployments
+- **ATTENTION:** Updated default resource requests and limits for Kubernetes deployments
 - Content Composer - Copy content items and new rename option  
 - Option to apply relative URLs for DAM references in WCM during staging to production
 - Design Studio Beta Update
