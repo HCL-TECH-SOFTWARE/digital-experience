@@ -15,16 +15,17 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- **ATTENTION:** Updated default resource requests and limits for Kubernetes deployments
+- Updated default resource requests and limits for Kubernetes deployments
 - Content Composer - Copy content items and new rename option  
 - Option to apply relative URLs for DAM references in WCM during staging to production
 - Design Studio Beta Update
+- Option to configure aspect ratios for cropping of images in DAM
 - Option to Configure Credentials from Secrets
 - Option to configure Content-Security-Policy Frame Options
 - Option to configure SameSite Cookie Attribute
-- Option to configure aspect ratios for cropping of images in DAM
 
-## ll  Digital Experience Versions (8.5, 9.0, 9.5)
+
+## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
 ### Guidance to configure a custom TinyMCE editor toolbar
 
@@ -120,6 +121,19 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Effective with HCL Digital Experience 9.5 CF210, the Design Studio Beta has been removed. Future Digital Experience 9.5 releases will incorporate feedback on the features received during the Beta evaluation period. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
+    As a result of the removal of Design Studio Beta (software) from the release, the following [Web Content Manager APIs](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/#tag/Content/paths/~1contents/get) related to that software are removed:
+
+    - /component/content-spots - Used to manage content-spot components.
+    - /containers - Used to manage container objects.
+    - /content-pages - Used to manage content-page objects.
+    - /content-sites - Used to manage content-site objects.
+
+
+### Option to configure aspect ratios for cropping of images in DAM
+
+=== "Containers"
+    It is now possible to [define custom aspect rations for cropping](../../manage_content/digital_assets/configuration/dam_crop_aspect_ratio.md) of images in DAM.    
+
 ### Option to Configure Credentials from Secrets
 
 === "Containers"
@@ -135,10 +149,6 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     A new configuration option in the `custom-values.yaml` file allows to configure [SameSite Cookie Attribute](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-samesite-cookie-attribute) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
 
-### Option to configure aspect ratios for cropping of images in DAM
-
-=== "Containers"
-    It is now possible to [define custom aspect rations for cropping](../../manage_content/digital_assets/configuration/dam_crop_aspect_ratio.md) of images in DAM.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
