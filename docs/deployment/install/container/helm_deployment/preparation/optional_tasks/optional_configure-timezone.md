@@ -37,14 +37,15 @@ This also means that application running inside the containers would also be aff
 
 Effects of changing the time zone would be dependent on the application, but some examples are:
 
-- Timestamps of the logs
-- Timestamps of when was data created/updated
-- CRON Jobs of Prereqs Checker would follow the new time zone
+- [`TZ` environment variable](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html) is set for all containers 
+- Timestamps of files inside the container reflect the set timezone
+- CRON Jobs of Prereqs Checker follow the new time zone
   For more information please see: [Prereqs Checker Documentation](../optional-core-prereqs-checker/?h=prereqs#automatic-running-of-checks)
+- Timestamps of the logs are currently partially affected depending on each application's logging framework. Some of the logs adapt the timezone of the container, while others always log UTC timestamps 
 
-## Logs of the containers
+## Uniform log timestamps
 
-Currently, mix of logging solutions is being used for each container (i.e.: nodejs logger, java loggers, product specific loggers like for postgres), therefor, the logs are will not reflect the timezone uniformaly. So the logs that have been fatched via `kubectl` command, may prints the different timestamp and that might not align with the timezone set to helm chart.
+Currently, depending on the logging solution used inside each container, the logs will not reflect the timezone uniformly. To get uniform log timestamps with `kubectl`, the [`--timestamps` flag](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) can be passed to `kubectl logs`.
 
 ## Supported Input Types
 
