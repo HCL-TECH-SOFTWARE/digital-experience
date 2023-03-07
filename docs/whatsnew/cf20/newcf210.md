@@ -4,22 +4,22 @@ The following features and updates are available to customers installing HCL Dig
 
 **All  Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- Guidance to configure a custom TinyMCE editor toolbar in the HCL Web Content Manager authoring portlet
+- Guidance to configure a custom TinyMCE editor toolbar
+- Notice of deprecation of Textbox.io Rich Text Editor
 - New HCL Unica Campaign Segment Picker for leveraging segments in PZN Rules
 - Ability to Sync the Title of DX pages to the Portal Site WCM library in the JCR
 - Menu Element Sorting Options
 - New Portlet Development Utilities and Page creation samples on HCL GitHub
 - DXClient Updates
 - Option to configure session timeout for non-authenticated Site pages
-- Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 9.5 Container Version**
 
 - **ATTENTION:** Updated default resource requests and limits for Kubernetes deployments
 - Content Composer - Copy content items and new rename option  
 - Option to apply relative URLs for DAM references in WCM during staging to production
-- Design Studio Beta Update
 - Option to configure aspect ratios for cropping of images in DAM
+- Design Studio Beta Update
 - Option to Configure Credentials from Secrets
 - Option to configure Content-Security-Policy Frame Options
 - Option to configure SameSite Cookie Attribute
@@ -34,6 +34,14 @@ The following features and updates are available to customers installing HCL Dig
 
 === "On-Premises"
     New guidance is added to configure the [Tiny MCE Editor toolbar](https://www.tiny.cloud/docs/tinymce/6/menus-configuration-options/) and set desired icons for use both in the HCL Web Content Manager authoring portlet and with the Web Content in-place editing function. See the topic [Rich text editor toolbar configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for more information.
+
+### Notice of deprecation of Textbox.io Rich Text Editor
+
+=== "Containers"
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+
+=== "On-Premises"
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ### New HCL Unica Campaign Segment Picker for leveraging segments in PZN Rules
 
@@ -83,13 +91,6 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     A new configuration option is provided to control the display of timeout error messaging for users accessing anonymous site pages. See the Help Center topic [Configuration Service](../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cfg_svc/index.md) for more information.
     
-### Notice of deprecation of Textbox.io Rich Text Editor
-
-=== "Containers"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
-
-=== "On-Premises"
-    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## Digital Experience 9.5 Container Version
 
@@ -116,6 +117,12 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     A new option is available to configure Web Content Manager services in the IBM WebSphere Administrative Console to use relative URLs for DAM references in WCM content during staging to production operations. See the topic [Staging DAM to rendering environments](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) for more information.
 
+
+### Option to configure aspect ratios for cropping of images in DAM
+
+=== "Containers"
+    It is now possible to [define custom aspect rations for cropping](../../manage_content/digital_assets/configuration/dam_crop_aspect_ratio.md) of images in DAM.   
+
 ### Design Studio Beta Update
 
 === "Containers"
@@ -129,10 +136,6 @@ The following features and updates are available to customers installing HCL Dig
     - /content-sites - Used to manage content-site objects.
 
 
-### Option to configure aspect ratios for cropping of images in DAM
-
-=== "Containers"
-    It is now possible to [define custom aspect rations for cropping](../../manage_content/digital_assets/configuration/dam_crop_aspect_ratio.md) of images in DAM.    
 
 ### Option to Configure Credentials from Secrets
 
