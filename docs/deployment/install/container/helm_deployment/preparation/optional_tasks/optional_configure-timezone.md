@@ -42,6 +42,10 @@ Effects of changing the time zone would be dependent on the application, but som
 - CRON Jobs of Prereqs Checker would follow the new time zone
   For more information please see: [Prereqs Checker Documentation](../optional-core-prereqs-checker/?h=prereqs#automatic-running-of-checks)
 
+## Logs of the containers
+
+Currently, mix of logging solutions is being used for each container (i.e.: nodejs logger, java loggers, product specific loggers like for postgres), therefor, the logs are will not reflect the timezone uniformaly. So the logs that have been fatched via `kubectl` command, may prints the different timestamp and that might not align with the timezone set to helm chart.
+
 ## Supported Input Types
 
 Some Examples:
