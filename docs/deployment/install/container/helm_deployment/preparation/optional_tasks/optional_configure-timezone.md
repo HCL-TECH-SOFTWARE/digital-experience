@@ -45,7 +45,7 @@ Effects of changing the time zone would be dependent on the application, but som
 
 ## Uniform log timestamps
 
-Currently, depending on the logging solution used inside each container, the logs will not reflect the timezone uniformly. To get uniform log timestamps with `kubectl`, the [`--timestamps` flag](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) can be passed to `kubectl logs`.
+Currently, depending on the logging solution used inside each container, the logs will not reflect the timezone uniformly. To get uniform log timestamps with `kubectl`, the [`--timestamps` flag](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) can be passed to `kubectl logs`. This will prepend all log outputs with a UTC timestamp.
 
 ## Supported Input Types
 
