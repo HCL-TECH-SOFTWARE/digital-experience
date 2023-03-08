@@ -9,7 +9,7 @@ This feature can be used to increase the size of PVCs used by HCL Digital Experi
 
 To resize a PVC:
 
-1. Resize the PVC manually using `kubectl`:
+1. Resize the PVC manually using `kubectl`.
    
    1. Edit the PVC resource.
 
@@ -25,7 +25,7 @@ To resize a PVC:
            storage: 3Gi
       ```
 
-2. Delete the StatefulSet that uses the PVC:
+2. Delete the StatefulSet that uses the PVC.
 
    Make sure to use the [`--cascade=orphan`](https://kubernetes.io/docs/tasks/administer-cluster/use-cascading-deletion/#set-orphan-deletion-policy) option to only delete the StatefulSet, but keep the Pods.
 
@@ -42,6 +42,6 @@ To resize a PVC:
    helm upgrade -n <namespace> -f <custom-values.yaml> <deployment name> <chart>
    ```
 
-After running the steps, the previously deleted StatefulSet should have been recreated with the appropriate storage size while the previously resized PVCs should still have their updated storage size.
+The previously deleted StatefulSet should have been recreated with the appropriate storage size while the previously resized PVCs should still have their updated storage size.
 
 Any new Pods created by the StatefulSet due to autoscaling or manual scaling should be created with PVCs of the new size.
