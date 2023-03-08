@@ -134,7 +134,7 @@ The following features and updates are available to customers installing HCL Dig
     - /containers - Used to manage container objects.
     - /content-pages - Used to manage content-page objects.
     - /content-sites - Used to manage content-site objects.
-
+    - /contentsRest - Used to manage content objects with API configuration including endpoint and HTTP methods.
 
 
 ### Option to Configure Credentials from Secrets
