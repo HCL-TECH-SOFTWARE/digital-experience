@@ -40,8 +40,8 @@ Effects of changing the time zone depends on the application, but some examples 
 - [`TZ` environment variable](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html) is set for all containers. 
 - Timestamps of files inside the container reflect the set timezone.
 - CRON Jobs of Prereqs Checker follow the new time zone.
-  For more information, see [Prereqs Checker Documentation](../optional-core-prereqs-checker/?h=prereqs#automatic-running-of-checks).
-- Timestamps of the logs are currently partially affected depending on each application's logging framework. Some of the logs adapt the timezone of the container, while others always log UTC timestamps 
+  For more information, see the [Prereqs Checker Documentation](../optional-core-prereqs-checker/?h=prereqs#automatic-running-of-checks).
+- Timestamps of the logs are currently partially affected depending on each application's logging framework. Some of the logs adapt the timezone of the container, while others always log UTC timestamps.
 
 ## Uniform log timestamps
 
