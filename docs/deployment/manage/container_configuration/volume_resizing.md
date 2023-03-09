@@ -31,9 +31,9 @@ To resize a PVC:
 
       This allows the Pods to be picked up again after the updated StatefulSet is created in the next step.
 
-         ```sh
-         kubectl -n <namespace> delete sts <statefulset-name> --cascade=orphan
-         ```
+      ```sh
+      kubectl -n <namespace> delete sts <statefulset-name> --cascade=orphan
+      ```
 
 3. Update the `custom-values.yaml` file to reflect the new storage size. Enter the appropriate storage request in the `volumes` section of your values.
 
