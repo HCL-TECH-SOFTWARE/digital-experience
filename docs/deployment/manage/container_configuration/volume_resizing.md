@@ -11,36 +11,37 @@ To resize a PVC:
 
 1. Resize the PVC manually using `kubectl`.
    
-   1. Edit the PVC resource.
+      1. Edit the PVC resource.
 
-      ```sh
-      kubectl -n <namespace> edit pvc <pvc-name>
-      ```
+         ```sh
+         kubectl -n <namespace> edit pvc <pvc-name>
+         ```
    
-   2. Increase the storage request according to your requirements.
+      2. Increase the storage request according to your requirements.
 
-      ```yaml
-       resources:
-         requests:
-           storage: 3Gi
-      ```
+         ```yaml
+         resources:
+            requests:
+            storage: 3Gi
+         ```
 
 2. Delete the StatefulSet that uses the PVC.
 
-   Make sure to use the [`--cascade=orphan`](https://kubernetes.io/docs/tasks/administer-cluster/use-cascading-deletion/#set-orphan-deletion-policy) option to only delete the StatefulSet, but keep the Pods.
+      Make sure to use the [`--cascade=orphan`](https://kubernetes.io/docs/tasks/administer-cluster/use-cascading-deletion/#set-orphan-deletion-policy) option to only delete the StatefulSet, but keep the Pods.
 
-   This allows the Pods to be picked up again after the updated StatefulSet is created in the next step.
+      This allows the Pods to be picked up again after the updated StatefulSet is created in the next step.
 
-   ```sh
-   kubectl -n <namespace> delete sts <statefulset-name> --cascade=orphan
-   ```
+         ```sh
+         kubectl -n <namespace> delete sts <statefulset-name> --cascade=orphan
+         ```
 
 3. Update the `custom-values.yaml` file to reflect the new storage size. Enter the appropriate storage request in the `volumes` section of your values.
+
 4. Recreate the StatefulSet with the updated parameters from the values by running `helm upgrade`:
 
-   ```sh
-   helm upgrade -n <namespace> -f <custom-values.yaml> <deployment name> <chart>
-   ```
+      ```sh
+      helm upgrade -n <namespace> -f <custom-values.yaml> <deployment name> <chart>
+      ```
 
 The previously deleted StatefulSet should have been recreated with the appropriate storage size while the previously resized PVCs should still have their updated storage size.
 
