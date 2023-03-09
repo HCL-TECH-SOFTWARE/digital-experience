@@ -380,8 +380,8 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
         
         - Collection - When there is a same collection name on the same level, but a unique name in the entire set of collections
         - Media - When there is a same file name in the same collection 
-        - Rendition- When there is a same custom URL in the entire set
-        - Version- When the version is for a rendition (for example, v1, v2, v3)
+        - Rendition - When there is a same custom URL in the entire set
+        - Version - When the version is for a rendition (for example, v1, v2, v3)
 
         If items are not staged to the subscriber, you can find the respective log messages in the DAM logs of the subscriber.
 
