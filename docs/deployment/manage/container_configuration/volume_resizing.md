@@ -8,7 +8,7 @@ Since version 1.24, Kubernetes offers a stable feature to expand PersistentVolum
 This feature can be used to increase the size of PVCs used by HCL Digital Experience (DX). Due to the immutability of some of the fields in StatefulSets, a workaround must be used for resizing any volumes that are used by DX. This makes sure that the resizing is applied and the Helm values are still in sync with the actually deployed PVCs in the cluster. This prevents any unwanted behavior when using `helm upgrade` at a later time.
 
 !!! important
-    Please make sure that during this procedure no scaling of the Pods is happening as this could result in Pods with the previous storage size. If in doubt, disable the HorizontalPodAutoscaler for the application you are changing the PVC for.
+    During this procedure, make sure that no scaling of the Pods is happening because this could result in Pods with the previous storage size. If in doubt, disable the HorizontalPodAutoscaler for the application you are changing the PVC for.
 
 To resize a PVC:
 
