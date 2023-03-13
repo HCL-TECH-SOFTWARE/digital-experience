@@ -21,38 +21,55 @@ You can see the string format in the following list. Once the property is set, r
 # Logging configuration
 logging:
   # Content Composer specific logging configuration
-  contentComposer:
-    level: ["api:server-v1:*=info"]
+contentComposer:
+    level: 
+      - "api:server-v1:*=info"
   # DAM Plugin Google Vision specific logging configuration
   damPluginGoogleVision:
-    level: ["api:server-v0:*=info"]
+    level: 
+      - "api:server-v0:*=info"
   # Digital Asset Management specific logging configuration
   digitalAssetManagement:
-    level: ["api:server-v1:*=info", "worker:server-v1:*=info"]
+    level: 
+      - "api:server-v1:*=info"
+      - "worker:server-v1:*=info"
   # Image Processor specific logging configuration
   imageProcessor:
-    level: ["api:server-v1:*=info"]
+    level: 
+      - "api:server-v1:*=info"
   # Persistence Pool specific logging configuration
   persistenceConnectionPool:
-    level: ["pgpool:=info"]
+    level: 
+      - "pgpool:=info"
   # Persistence Node specific logging configuration
   persistenceNode:
-    level: ["psql:=info", "repmgr:=info"]
+    level: 
+      - "psql:=info,repmgr:=info"
+  # Remote Search specific logging configuration
+  remoteSearch:
+    level: []
   # Ring API specific logging configuration
   ringApi:
-    level: ["api:server-v1:*=info"]
+    level: 
+      - "api:server-v1:*=info"
   # Runtime Controller specific logging configuration
   runtimeController:
-    level: ["controller:.*=INFO", "controller:com.hcl.dx.*=INFO"]
+    level: 
+     - "controller:.*=INFO"
+     -  "controller:com.hcl.dx.*=INFO"
   # License Manager specific logging configuration
   licenseManager:
-    level: ["license-check:.*=INFO", "license-check:com.hcl.dx.*=INFO"]
+    level: 
+      - "license-check:.*=INFO"
+      - "license-check:com.hcl.dx.*=INFO"
   # DAM Kaltura Plugin specific logging configuration
   damPluginKaltura:
-    level: ["api:server-v0:*=info"]
+    level: 
+      - "api:server-v0:*=info"
   # HAProxy specific logging configuration
   haproxy:
-    level: ["haproxy:=info"]
+    level:  
+      - "haproxy:=info"
 ```
 
 ## Log configuration string format

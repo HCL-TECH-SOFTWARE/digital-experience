@@ -44,11 +44,19 @@ configuration:
       # LDAP configuration id
       id: "dx_ldap"
       # Mapping attributes between LDAP and DX, LDAP attribute names (array of elements)
-      attributeMappingLdap: ["mail", "title", "userPassword"]
+      attributeMappingLdap: 
+        - "mail"
+        - "title"
+        - "userPassword"
       # Mapping attributes between LDAP and DX, DX attribute names (array of elements)
-      attributeMappingPortal: ["ibm-primaryEmail", "ibm-jobTitle,password"]
+      attributeMappingPortal: 
+        - "ibm-primaryEmail"
+        - "ibm-jobTitle"
+        - "password"
       # Non-supported LDAP attributes (array of elements)
-      attributeNonSupported: ["certificate", "members"]
+      attributeNonSupported: 
+        - "certificate"
+        - "members"
 ```
 
 Refer to the following Help Center documentation for more information about LDAP and Configuration Wizard configuration:
