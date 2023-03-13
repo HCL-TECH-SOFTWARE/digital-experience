@@ -37,7 +37,7 @@ You can define a list of allowed hosts for a specific application using the foll
      # Networking configurations specific to all addon applications
      addon:
        contentComposer:
-         # CORS Origin configuration for Content Composer, comma separated list
+         # CORS Origin configuration for Content Composer, array of elements
          corsOrigin: "https://my-different-application.net,https://the-other-application.com"               
 ```
 
@@ -57,7 +57,7 @@ networking:
     host
     # Example: eks-hybrid.dx.com
     host: "your-dx-core-instance.whateverdomain.com"
-    port: "10042"
+    port: 10042
     contextRoot: "wps"
     personalizedHome: "myportal"
     home: "portal"
@@ -72,12 +72,12 @@ networking:
     # Port of the addon applications
     # If you are running hybrid, you can specify a port
     # If left empty, no specific port will be added to the host
-    port: "443"
+    port: 443
     # Setting if SSL is enabled for addon applications
     # If you are running hybrid, make sure to set this accordingly to the Kubernetes 
     deployment configuration
     # Will default to true if not set    
-    ssl: "true"
+    ssl: true
 ```
 
 Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
