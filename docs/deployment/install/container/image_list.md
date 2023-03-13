@@ -14,33 +14,33 @@ If you are deploying the HCL DX 9.5 CF210 Container update release, the package 
 ### HCL DX 9.5 CF210 DXClient files
 
 ```shell
-hcl-dxclient-image-v95_CF210_20230302-2003.zip
-hcl-dxclient-v95_CF210_20230302-2003.zip
+hcl-dxclient-image-v95_CF210_20230307-1921.zip
+hcl-dxclient-v95_CF210_20230307-1920.zip
 ```
 
 ### hcl-dx-kubernetes-v95-CF210.zip
 
 ```shell
 HCL DX notices V9.5 CF210.txt
-hcl-dx-content-composer-image-v1.23.0_20230302-1948.tar.gz
-hcl-dx-core-image-v95_CF210_20230302-2030.tar.gz
-hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230302-1949.tar.gz
-hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230302-1949.tar.gz
-hcl-dx-deployment-v2.13.0_20230303-1512.tgz
-hcl-dx-digital-asset-manager-image-v1.22.0_20230302-1956.tar.gz
+hcl-dx-content-composer-image-v1.23.0_20230307-1654.tar.gz
+hcl-dx-core-image-v95_CF210_20230307-1922.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230307-1903.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230307-1903.tar.gz
+hcl-dx-deployment-v2.13.0_20230310-1530.tgz
+hcl-dx-digital-asset-manager-image-v1.22.0_20230307-1917.tar.gz
 hcl-dx-experience-api-sample-ui-v0.2.0.20230302-2003.zip
-hcl-dx-haproxy-image-v1.6.0_20230302-1953.tar.gz
-hcl-dx-image-processor-image-v1.23.0_20230302-1953.tar.gz
-hcl-dx-license-manager-image-v95_CF210_20230302-1949.tar.gz
-hcl-dx-logging-sidecar-image-v1.0.0_20230302-1951.tar.gz
-hcl-dx-openldap-image-v1.2.0_20230302-1949.tar.gz
-hcl-dx-persistence-connection-pool-image-v1.23.0_20230302-1959.tar.gz
-hcl-dx-persistence-metrics-exporter-image-v1.21.0_20230302-2000.tar.gz
-hcl-dx-persistence-node-image-v1.13_20230302-2001.tar.gz
-hcl-dx-prereqs-checker-image-v1.0.0_20230302-1952.tar.gz
-hcl-dx-remote-search-image-v95_CF210_20230302-2030.tar.gz
-hcl-dx-ringapi-image-v1.23.0_20230302-2002.tar.gz
-hcl-dx-runtime-controller-image-v95_CF210_20230302-1952.tar.gz
+hcl-dx-haproxy-image-v1.6.0_20230307-1910.tar.gz
+hcl-dx-image-processor-image-v1.23.0_20230307-1913.tar.gz
+hcl-dx-license-manager-image-v95_CF210_20230307-1904.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20230307-1907.tar.gz
+hcl-dx-openldap-image-v1.2.0_20230307-1902.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.23.0_20230307-1916.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.21.0_20230307-1916.tar.gz
+hcl-dx-persistence-node-image-v1.13_20230307-1918.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20230307-1907.tar.gz
+hcl-dx-remote-search-image-v95_CF210_20230307-1922.tar.gz
+hcl-dx-ringapi-image-v1.23.0_20230307-1921.tar.gz
+hcl-dx-runtime-controller-image-v95_CF210_20230307-1910.tar.gz
 ```
 
 ### HCL Digital Experience File package listings (supported OS platforms)
