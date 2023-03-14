@@ -28,7 +28,7 @@ XMLAccess exports the base or default Portal for the specified host by using the
 
 For example, given a Portal 7.0 virtual portal VP1 an example XMLAccess command to export the content of VP1 is:
 
-`xmlaccess -user Portal_admin_user -password Portal_admin_password -url http;//host.raleigh.ibm.com:10039/wps0config/VP1 -in Export.xml -out result_VP1.xml`
+`xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://host.raleigh.ibm.com:10039/wps/config/VP1 -in Export.xml -out result_VP1.xml`
 
 If your Virtual Portal is defined by using an optional host name, specify the host name and /config URI to export the Virtual Portal content:
 
