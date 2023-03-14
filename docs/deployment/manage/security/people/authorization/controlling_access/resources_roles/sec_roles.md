@@ -1,4 +1,4 @@
-# Roles
+# Resource Roles
 
 Roles provide task permissions for users on resources. For example, Editor is a role that allows users to view, modify, and create resources. Roles are denoted as Role@Resource; for example, Editor@Portal Page.
 
@@ -54,7 +54,8 @@ You can use the XML configuration interface or the Resource Permissions portlet 
 
 A private page can be accessed only by its owner. Privileged Users \(users assigned the `Privileged User` role\) can explicitly create new private pages that are accessible only by themselves. Additionally, a Privileged User on a non-private page can personalize the page and create new private pages underneath it. Customizing a non-private page usually creates a private copy of the corresponding non-private page. Any changes that a Privileged User makes to a non-private page are not accessible by other users.
 
-**Note:** Private pages cannot be controlled by an external security manager. Access control for private pages is always internally controlled by HCL Digital Experience.
+!!! note
+    Private pages cannot be controlled by an external security manager. Access control for private pages is always internally controlled by HCL Digital Experience.
 
 ## Traversal support
 
@@ -64,4 +65,3 @@ Users with role assignments on the resources `Page` or `URL Mapping` get the imp
 ???+ info "Related information"
     - [Automatically grant page access to community members](../../../../../../../extend_dx/integration/connections/configuration/cfg_community_pages/commpages_delegate_access.md)
     - [Delegated Access Control Administration](../d_acc_cntl_admin.md)
-

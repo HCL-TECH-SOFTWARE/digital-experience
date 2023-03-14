@@ -25,6 +25,9 @@ The inline editing feature requires:
 !!! note
     When a user tabs between in-place editing enabled fields, users need to click each field in turn to access in-place editing for each field.
 
+<!-- 
+-   **[Understanding inline editing using Woodburn Studio](wcm_inline_editing_sample.md)**  
+HCL Web Content Manager includes sample content such as web content template pages and predefined portlets that you can add to pages to render content. If you upgrade, these sample web content template items continue to use the editing method of the earlier release. To use the inline editing method with the earlier template items, you must complete several manual steps. -->
 -   **[Updating sample template items for inline editing after an upgrade installation | HCL Web Content Manager](wcm_dev_inline_upgrade.md)**  
 HCL Web Content Manager includes sample content such as web content template pages and predefined portlets that you can add to pages to render content. If you upgrade, these sample web content template items continue to use the editing method of the earlier release. To use the inline editing method with the earlier template items, you must complete several manual steps.
 -   **[Enabling inline editing for content items](wcm_dev_inline_tags.md)**  

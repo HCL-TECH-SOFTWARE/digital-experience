@@ -114,4 +114,4 @@ This code is an example in `application/atom+xml` format:
    </entry>
 ```
 
-
+For more information, see [Sample URLs for WCM REST Service aka WCM REST API](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074521).

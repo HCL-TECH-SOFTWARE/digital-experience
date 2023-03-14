@@ -1,41 +1,41 @@
 # Digital Data Connector profiles for social rendering
 
-Starting with Version 8.5, HCL Digital Experience includes a set of Digital Data Connector \(DDC\) for HCL Portal profiles. You can use them with the social rendering DDC plug-in that is identified by the extension ID ibm.portal.ddc.sr.
+Starting with Version 8.5, HCL Digital Experience includes a set of Digital Data Connector (DDC) for HCL Portal profiles. You can use them with the social rendering DDC plug-in that is identified by the extension ID ibm.portal.ddc.sr.
 
 You can use these profiles to define social lists and detail views for the following types of social data that is served by the HCL Connections server:
 
 -   Blogs, blog posts, and blog post comments, as served by the Blogs service:
-    -   Blogs \(`ibm.portal.sr.blogs`\)
-    -   Blog details \(`ibm.portal.sr.blogs.details`\)
-    -   Blog posts \(`ibm.portal.sr.blogs.posts`\)
-    -   Blog post comments \(`ibm.portal.sr.blogs.post.comments`\)
+    -   Blogs (`ibm.portal.sr.blogs`)
+    -   Blog details (`ibm.portal.sr.blogs.details`)
+    -   Blog posts (`ibm.portal.sr.blogs.posts`)
+    -   Blog post comments (`ibm.portal.sr.blogs.post.comments`)
 -   Communities and community members as served by the Communities service:
-    -   Communities \(`ibm.portal.sr.communities`\)
-    -   Community members \(`ibm.portal.sr.communities.members`\)
+    -   Communities (`ibm.portal.sr.communities`)
+    -   Community members (`ibm.portal.sr.communities.members`)
 -   Forums, forum topics, forum topic replies as served by the Forums service:
-    -   Forums \(`ibm.portal.sr.forums`\)
-    -   Forum topics \(`ibm.portal.sr.forums.topics`\)
-    -   Forum topic replies \(`ibm.portal.sr.forums.replies`\)
-    -   Forum topic and reply attachments \(`ibm.portal.sr.forums.attachments`\)
+    -   Forums (`ibm.portal.sr.forums`)
+    -   Forum topics (`ibm.portal.sr.forums.topics`)
+    -   Forum topic replies (`ibm.portal.sr.forums.replies`)
+    -   Forum topic and reply attachments (`ibm.portal.sr.forums.attachments`)
 -   User profiles, user network connections as served by the Profiles service:
-    -   Profiles \(`ibm.portal.sr.profiles`\)
-    -   Profiles connections \(`ibm.portal.sr.profiles.connections`\)
+    -   Profiles (`ibm.portal.sr.profiles`)
+    -   Profiles connections (`ibm.portal.sr.profiles.connections`)
 -   Wiki pages, as served by the Wikis service:
-    -   Wiki pages \(`ibm.portal.sr.wikis.pages`\)
-    -   Wiki page comments \(`ibm.portal.sr.wikis.page.comments`\)
-    -   Wiki page attachments \(`ibm.portal.sr.wikis.attachments`\)
+    -   Wiki pages (`ibm.portal.sr.wikis.pages`)
+    -   Wiki page comments (`ibm.portal.sr.wikis.page.comments`)
+    -   Wiki page attachments (`ibm.portal.sr.wikis.attachments`)
 -   Search results as served by the HCL Connections search service:
-    -   Social objects \(`ibm.portal.sr.search`\)
--   Tags that are served with the search results of the HCL Connections search service: \(`ibm.portal.sr.tags`\).
+    -   Social objects (`ibm.portal.sr.search`)
+-   Tags that are served with the search results of the HCL Connections search service: (`ibm.portal.sr.tags`).
 
--   Common profile: \(`ibm.portal.sr.common`\).
+-   Common profile: (`ibm.portal.sr.common`).
 
 The profiles listed so far partly inherit attribute definitions from a set of profiles that are available for inheritance purposes only. You cannot see these profiles in the tag helper because they are used only by other profiles that inherit attribute definitions from them and thereby reuse them. Note that you might need to selectively overwrite parts of these profiles if the feed that you intend to consume does not serve data as expected by the profiles listed in the following:
 
--   Common profile: \(`ibm.portal.sr.common`\)
--   Modifier support profile: \(`ibm.portal.sr.modifiersupport`\)
--   Tag support profile: \(`ibm.portal.sr.shared.tagsupport`\)
--   OpenSearch support profile: \(`ibm.portal.sr.shared.opensearchsupport`\).
+-   Common profile: (`ibm.portal.sr.common`)
+-   Modifier support profile: (`ibm.portal.sr.modifiersupport`)
+-   Tag support profile: (`ibm.portal.sr.shared.tagsupport`)
+-   OpenSearch support profile: (`ibm.portal.sr.shared.opensearchsupport`).
 
 All list view definitions that HCL Portal provides use the Social Objects 1.0 profile. This profile works against the search services. for more information, read *The social objects profile*.
 

@@ -9,7 +9,8 @@ For more information about how to extend this profile, read *XPath list-renderin
 
 The common profile defines the following attributes:
 
--   **Author's email addressauthorEmail**
+-   **Author's email 
+    addressauthorEmail**
 
     This attribute references the email address of the author of the social object.
 
@@ -19,7 +20,7 @@ The common profile defines the following attributes:
 
 -   **Author's image URLauthorImageLink**
 
-    This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image either directly from HCL Connections or by using the Ajax proxy of the portal. This attribute is computed by the social rendering Digital Data Connector \(DDC\) for HCL Portal plug-in. For more information about this attribute, read *Configuring globally how social object data is served*.
+    This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image either directly from HCL Connections or by using the Ajax proxy of the portal. This attribute is computed by the social rendering Digital Data Connector (DDC) for HCL Portal plug-in. For more information about this attribute, read *Configuring globally how social object data is served*.
 
 -   **Author's nameauthorName**
 

@@ -6,238 +6,296 @@ These profiles provide access to HCL Connections blog-related feed data for blog
 
 The blogs profile provides access to HCL Connections blogs feed data. It declares the following attribute names:
 
--   **Author's email addressauthorEmail**
+-   **Author's email address**
+    **authorEmail**
 
     This attribute references the email address of the author of the social object.
 
--   **Author's IDauthorID**
+-   **Author's ID**
+    **authorID**
 
     This attribute references the internal ID of the author of the social object. It represents the author ID from the HCL Connections server where the social object is stored.
 
--   **Author's image URLauthorImageLink**
+-   **Author's image URL**
+    **authorImageLink**
 
-    This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image either directly from HCL Connections or by using the Ajax proxy of the portal. For more information about this attribute, read *Configuring globally how social object data is served*. This attribute is computed by the social rendering Digital Data Connector \(DDC\) for HCL Portal plug-in.
+    This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image either directly from HCL Connections or by using the Ajax proxy of the portal. For more information about this attribute, read *Configuring globally how social object data is served*. This attribute is computed by the social rendering Digital Data Connector (DDC) for HCL Portal plug-in.
 
--   **Author's nameauthorName**
+-   **Author's name**
+    **authorName**
 
     You can use this attribute to include the name of the author of the social object in the design of a social list.
 
--   **Author's object IDauthorObjectID**
+-   **Author's object ID**
+    **authorObjectID**
 
     This attribute references the serialized object ID of the author of the social object. In contrast to the `authorID` attribute, the `authorObjectID` attribute represents an ID that is used by HCL Portal rather than by HCL Connections. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's UIDauthorUID**
+-   **Author's UID**
+    **authorUID**
 
     This attribute specifies the value of the UID attribute of the author of the social object. This value reflects the UID user attribute as defined by the user repository of the portal. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Body HTMLbody HTML**
+-   **Body HTML**
+    **bodyHTML**
 
     The HTML content of this item.
 
--   **Body plainbody plain**
+-   **Body plain**
+    **bodyplain**
 
     The plain content of this item.
 
--   **Body content typebodyContentType**
+-   **Body content type**
+    **bodyContentType**
 
     This attribute specifies the content type identifier for the body attribute of this item.
 
--   **Can create blog postcanCreateBlogPost**
+-   **Can create blog post**
+    **canCreateBlogPost**
 
     If the current user has permission to create posts for this blog, this attribute returns the string `true`. Otherwise, it returns `false`. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Community UUIDcommunityUUID**
+-   **Community UUID**
+    **communityUUID**
 
     If the current blog is a community blog, this attribute specifies the UUID of the community that contains the blog. If the current blog is not contained in a community, this attribute is empty.
 
--   **Feed entryentry**
+-   **Feed entry**
+    **entry**
 
     The original feed entry of this item.
 
--   **Handlehandle**
+-   **Handle**
+    **handle**
 
     This attribute represents the handle of this blog.
 
--   **IDid**
+-   **ID**
+    **id**
 
     The unique identifier for this item.
 
--   **Is closedisClosed**
+-   **Is closed**
+    **isClosed**
 
     If the current blog is in state `closed`, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is commenting graduated ideas enabledisCommentingGraduatedIdeasEnabled**
+-   **Is commenting graduated ideas enabled**
+    **isCommentingGraduatedIdeasEnabled**
 
     If the Commenting Graduated Ideas feature is enabled, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is community blogisCommunityBlog**
+-   **Is community blog**
+    **isCommunityBlog**
 
     If the current blog is a community blog, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is frozenisFrozen**
+-   **Is frozen**
+    **isFrozen**
 
     If the current blog is in state `frozen`, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is ideation blogisIdeationBlog**
+-   **Is ideation blog**
+    **isIdeationBlog**
 
     If the current blog is an ideation blog, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is moderatedisModerated**
+-   **Is moderated**
+    **isModerated**
 
     If the moderation feature is enabled for the current blog, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is openisOpen**
+-   **Is open**
+    **isOpen**
 
     If the current blog is in state `open`, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is privateisPrivate**
+-   **Is private**
+    **isPrivate**
 
     If the current blog is contained in a private community, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is publicisPublic**
+-   **Is public**
+    **isPublic**
 
     If the current blog is contained in a public community, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is restrictedisRestricted**
+-   **Is restricted**
+    **isRestricted**
 
     If the current blog is contained in a restricted community, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is Vote Limit enabledisVoteLimitEnabled**
+-   **Is Vote Limit enabled**
+    **isVoteLimitEnabled**
 
     If the Vote Limit feature is enabled, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Is Voting Graduated Ideas enabledisVotingGraduatedIdeasEnabled**
+-   **Is Voting Graduated Ideas enabled**
+    **isVotingGraduatedIdeasEnabled**
 
     If the Voting Graduated Ideas feature is enabled, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **View URLlink**
+-   **View URL**
+    **link**
 
     This attribute specifies the URL that points to the details view of this blog. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Number of LikesnumberOfLikes**
+-   **Number of Likes**
+    **numberOfLikes**
 
     This attribute specifies the number of people who like this blog.
 
--   **Author's portal image URLportalAuthorImageLink**
+-   **Author's portal image URL**
+    **portalAuthorImageLink**
 
     This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image from HCL Connections by using the Ajax proxy of the portal. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's portal URLportalAuthorLink**
+-   **Author's portal URL**
+    **portalAuthorLink**
 
     This attribute specifies the link for rendering the details view of the author of this item in the context of the portal. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Portal view URLportalLink**
+-   **Portal view URL**
+    **portalLink**
 
     This attribute specifies the HCL Portal URL that points to the details view of this blog. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Published datepublished**
+-   **Published date**
+    **published**
 
     This attribute indicates the time when the social object was published. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **Author's raw Atom entry URLrawAuthorEntryLink**
+-   **Author's raw Atom entry URL**
+    **rawAuthorEntryLink**
 
     Link to the Atom entry that represents the author of this item. This URL directly addresses the HCL Connections server. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's raw image URLrawAuthorImageLink**
+-   **Author's raw image URL**
+    **rawAuthorImageLink**
 
     This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL for downloading the image directly from HCL Connections. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Raw Community entry URLrawCommunityEntryLink**
+-   **Raw Community entry URL**
+    **rawCommunityEntryLink**
 
     This attribute specifies the HCL Connections URL of the Atom entry that represents the community that contains this blog. This attribute is empty for stand-alone blogs.
 
--   **Raw view URLrawLink**
+-   **Raw view URL**
+    **rawLink**
 
     This attribute specifies the URL that points to the details view of this blog on the HCL Connections server.
 
--   **Raw service doc URLrawServiceDocLink**
+-   **Raw service doc URL**
+    **rawServiceDocLink**
 
     This attribute specifies the URL of the service document feed of this blog. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Summarysummary**
+-   **Summary**
+    **summary**
 
     A summary of the content of this item.
 
--   **Tagstags**
+-   **Tags**
+    **tags**
 
     This attribute specifies the tags that are associated with this item.
 
--   **Time zonetimezone**
+-   **Time zone**
+    **timezone**
 
     This attribute specifies the time zone information for the current blog.
 
--   **Titletitle**
+-   **Title**
+    **title**
 
     The title of this item.
 
--   **Updated dateupdated**
+-   **Updated date**
+    **updated**
 
     This attribute indicates the time of the last update of the social object. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **Blog UUIDuuid**
+-   **Blog UUID**
+    **uuid**
 
     This attribute specifies the UUID of the current blog.
 
--   **Vote limitvoteLimit**
+-   **Vote limit**
+    **voteLimit**
 
     This attribute represents the configured vote limit for this blog.
 
--   **Number of remaining votesvotesLeft**
+-   **Number of remaining votes**
+    **votesLeft**
 
     This attribute represents the number of votes that remain for this blog.
 
--   **Accept value for weblog entriesweblogEntriesAccept**
+-   **Accept value for weblog entries**
+    **weblogEntriesAccept**
 
     This attribute specifies the accept value for weblog entries for this blog. For more information, read the HCL Connections Remote API documentation.
 
 
 In addition to these attributes, the blogs profile also provides access to the following list properties:
 
--   **Updated dateupdated**
+-   **Updated date**
+    **updated**
 
     This list property indicates the time of the last update of the list that is represented by the feed at hand. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **Raw URL to this feedselfLink**
+-   **Raw URL to this feed**
+    **selfLink**
 
     This list property specifies the link to this feed.
 
--   **Feed titletitle**
+-   **Feed title**
+    **title**
 
     This list property specifies the link to this feed.
 
--   **Total Number of ItemstotalNumberOfItems**
+-   **Total Number of Items**
+    **totalNumberOfItems**
 
     This list property specifies the total number of items that were found for this search.
 
--   **Requested Number of ItemsrequestedNumberOfItems**
+-   **Requested Number of Items**
+    **requestedNumberOfItems**
 
     This list property specifies the requested number of items for this search.
 
--   **Start IndexstartIndex**
+-   **Start Index**
+    **startIndex**
 
     This list property specifies the start index for the paged list of items.
 
--   **Raw first URLrawFirstLink**
+-   **Raw first URL**
+    **rawFirstLink**
 
     This list property specifies the HCL Connections URL of the first page of items that were found for this search.
 
--   **Raw next URLrawNextLink**
+-   **Raw next URL**
+    **rawNextLink**
 
     This list property specifies the HCL Connections URL of the next page of items that were found for this search.
 
--   **Raw previous URLrawPreviousLink**
+-   **Raw previous URL**
+    **rawPreviousLink**
 
     This list property specifies the HCL Connections URL of the previous page of items that were found for this search.
 
--   **Raw last URLrawLastLink**
+-   **Raw last URL**
+    **rawLastLink**
 
     This list property specifies the HCL Connections URL of the last page of items that are found for this search.
 
--   **Is truncatedisTruncated**
+-   **Is truncated**
+    **isTruncated**
 
     If the list that represents a search result is truncated, this list property returns the string `true`. Otherwise, it returns `false`.
 
--   **Raw tags link rawTagsLink**
+-   **Raw tags link**
+    **rawTagsLink**
 
     This attribute specifies the URL of the Atom feed that represents the tags for this list of blogs.
 
@@ -246,47 +304,58 @@ In addition to these attributes, the blogs profile also provides access to the f
 
 The blog details profile provides access to HCL Connections blog details feed data. It declares the following attribute names:
 
--   **Can create blog postcanCreateBlogPost**
+-   **Can create blog post**
+    **canCreateBlogPost**
 
     If the current user has permission to create posts for this blog, this attribute returns the string `true`. Otherwise, it returns `false`. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **IDid**
+-   **ID**
+    **id**
 
     The unique ID of this blog.
 
--   **Blog posts URLrawBlogPostsLink**
+-   **Blog posts URL**
+    **rawBlogPostsLink**
 
     This attribute specifies the URL that points to the Atom feed serving the blog posts for this blog.
 
--   **Raw Atom entry URLrawEntryLink**
+-   **Raw Atom entry URL**
+    **rawEntryLink**
 
     This attribute specifies the URL of the Atom resource that represents this blog.
 
--   **Raw view URLrawLink**
+-   **Raw view URL**
+    **rawLink**
 
     This attribute specifies the URL pointing to the details view of this blog on the HCL Connections server.
 
--   **Raw service doc URLrawServiceDocLink**
+-   **Raw service doc URL**
+    **rawServiceDocLink**
 
     This attribute specifies the URL of the service document feed of this blog. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Raw Weblog Entries URLrawWeblogEntriesLink**
+-   **Raw Weblog Entries URL**
+    **rawWeblogEntriesLink**
 
     This attribute specifies the URL of the Weblog entries feed of this blog.
 
--   **Summarysummary**
+-   **Summary**
+    **summary**
 
     This attribute specifies the summary of the content of this blog.
 
--   **Titletitle**
+-   **Title**
+    **title**
 
     This attribute specifies the title of this blog.
 
--   **Updated dateupdated**
+-   **Updated date**
+    **updated**
 
     This attribute indicates the most recent time when this blog was updated. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **Accept value for weblog entriesweblogEntriesAccept**
+-   **Accept value for weblog entries**
+    **weblogEntriesAccept**
 
     This attribute specifies the accept value for weblog entries for this blog.
 
@@ -295,210 +364,261 @@ The blog details profile provides access to HCL Connections blog details feed da
 
 The blog posts profile provides access to HCL Connections blog posts feed data. It declares the following attribute names:
 
--   **Author's email addressauthorEmail**
+-   **Author's email address**
+    **authorEmail**
 
     This attribute references the email address of the author of the social object.
 
--   **Author's IDauthorID**
+-   **Author's ID**
+    **authorID**
 
     This attribute references the internal ID of the author of the social object. It represents the author ID from the HCL Connections server where the social object is stored.
 
--   **Author's image URLauthorImageLink**
+-   **Author's image URL**
+    **authorImageLink**
 
     This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image either directly from HCL Connections or by using the Ajax proxy of the portal. For more information about this attribute, read *Configuring globally how social object data is served*. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's nameauthorName**
+-   **Author's name**
+    **authorName**
 
     You can use this attribute to include the name of the author of the social object in the design of a social list.
 
--   **Author's object IDauthorObjectID**
+-   **Author's object ID**
+    **authorObjectID**
 
     This attribute references the serialized object ID of the author of the social object. In contrast to the `authorID` attribute, the `authorObjectID` attribute represents an ID that is used by HCL Portal rather than by HCL Connections. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's UIDauthorUID**
+-   **Author's UID**
+    **authorUID**
 
     This attribute specifies the value of the UID attribute of the author of the social object. This value reflects the UID user attribute as defined by the user repository of the portal. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Body HTMLbody HTML**
+-   **Body HTML**
+    **bodyHTML**
 
     The HTML content of this item.
 
--   **Body plainbody plain**
+-   **Body plain**
+    **bodyplain**
 
     The plain content of this item.
 
--   **Body content typebodyContentType**
+-   **Body content type**
+    **bodyContentType**
 
     This attribute specifies the content type identifier for the body attribute of this item.
 
--   **Can create blog post commentcanCreateBlogPostComment**
+-   **Can create blog post comment**
+    **canCreateBlogPostComment**
 
     If the current user has permission to create comments for this blog post, this attribute returns the string `true`. Otherwise, it returns `false`. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Can delete blog post.canDeleteBlogPost**
+-   **Can delete blog post**
+    **canDeleteBlogPost**
 
     If the current user has permission to delete this blog post, this attribute returns the string `true`. Otherwise, it returns `false`.
 
--   **Can edit blog post.canEditBlogPost**
+-   **Can edit blog post**
+    **canEditBlogPost**
 
     If the current user has permission to edit this blog post, this attribute returns the string `true`. Otherwise, it returns `false`. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Accept value for comment entriescommentEntriesAccept**
+-   **Accept value for comment entries**
+    **commentEntriesAccept**
 
     This attribute specifies the accept value for comment entries for this blog post.
 
--   **Community UUIDcommunityUUID**
+-   **Community UUID**
+    **communityUUID**
 
     If the current blog post is contained in a community blog, this attribute specifies the UUID of the community that contains the blog. If the current blog post is not contained in a community blog, this attribute is empty.
 
--   **Feed entryentry**
+-   **Feed entry**
+    **entry**
 
     The original feed entry of this item.
 
--   **IDid**
+-   **ID**
+    **id**
 
     The unique identifier for this item.
 
--   **View URLlink**
+-   **View URL**
+    **link**
 
     This attribute specifies the URL that points to the details view of this blog post. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Number of commentsnumberOfComments**
+-   **Number of comments**
+    **numberOfComments**
 
     This attribute specifies the number of comments that were posted on this blog post.
 
--   **Number of LikesnumberOfLikes**
+-   **Number of Likes**
+    **numberOfLikes**
 
     This attribute specifies the number of people who like this blog post.
 
--   **Author's portal image URLportalAuthorImageLink**
+-   **Author's portal image URL**
+    **portalAuthorImageLink**
 
     This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image from HCL Connections by using the Ajax proxy of the portal. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's portal URLportalAuthorLink**
+-   **Author's portal URL**
+    **portalAuthorLink**
 
     This attribute specifies the link for rendering the details view of the author of this item in the context of the portal. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Portal view URLportalLink**
+-   **Portal view URL**
+    **portalLink**
 
     This attribute specifies the HCL Portal URL that points to the details view of this blog post. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Published datepublished**
+-   **Published date**
+    **published**
 
     This attribute indicates the time when the social object was published. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **Author's raw Atom entry URLrawAuthorEntryLink**
+-   **Author's raw Atom entry URL**
+    **rawAuthorEntryLink**
 
     Link to the Atom entry that represents the author of this item. This URL directly addresses the HCL Connections server. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's raw image URLrawAuthorImageLink**
+-   **Author's raw image URL**
+    **rawAuthorImageLink**
 
     This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL for downloading the image directly from HCL Connections. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Raw publishing entry URLrawBlogPostPublishingEntryLink**
+-   **Raw publishing entry URL**
+    **rawBlogPostPublishingEntryLink**
 
     This attribute specifies the URL to the publishing entry of this blog post. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Raw edit comments URLrawCommentsEditLink**
+-   **Raw edit comments URL**
+    **rawCommentsEditLink**
 
     This attribute specifies the HCL Connections URL that points to the comments collection of this blog post.
 
--   **Raw View comments URLrawCommentsReadLink**
+-   **Raw View comments URL**
+    **rawCommentsReadLink**
 
     This attribute specifies the HCL Connections URL that points to the feed of comments for this blog post.
 
--   **Raw edit entry URLrawEditLink**
+-   **Raw edit entry URL**
+    **rawEditLink**
 
     This attribute specifies the URL to the editable entry of this blog post.
 
--   **Raw Atom entry URLrawEntryLink**
+-   **Raw Atom entry URL**
+    **rawEntryLink**
 
     This attribute specifies the HCL Connections URL of the Atom entry that represents this blog post.
 
--   **Raw likes edit URLrawLikesEditLink**
+-   **Raw likes edit URL**
+    **rawLikesEditLink**
 
     This attribute specifies the HCL Connections URL of the entry that makes it possible to edit the "liked" status of this blog post.
 
--   **Raw View Likes URLrawLikesLink**
+-   **Raw View Likes URL**
+    **rawLikesLink**
 
     This attribute specifies the HCL Connections URL that points to the "recommend" collection of this blog post.
 
--   **Raw view URLrawLink**
+-   **Raw view URL**
+    **rawLink**
 
     This attribute specifies the URL of the details view of this blog post on the HCL Connections server.
 
--   **Raw service doc URLrawServiceDocLink**
+-   **Raw service doc URL**
+    **rawServiceDocLink**
 
     This attribute specifies the URL of the service document feed of this blog. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Summarysummary**
+-   **Summary**
+    **summary**
 
     A summary of the content of this item.
 
--   **Tagstags**
+-   **Tags**
+    **tags**
 
     This attribute specifies the tags that are associated with this item.
 
--   **Titletitle**
+-   **Title**
+    **title**
 
     The title of this item.
 
--   **Updated dateupdated**
+-   **Updated date**
+    **updated**
 
     This attribute indicates the time of the last update of the social object. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **User likes userLikes**
+-   **User likes**
+    **userLikes**
 
     If this blog post is liked by the current user, this attribute returns the string `true`. Otherwise, it returns `false`.
 
 
 In addition to these attributes, the blog posts profile also provides access to the following list properties:
 
--   **Updated dateupdated**
+-   **Updated date**
+    **updated**
 
     This list property indicates the time of the last update of the list that is represented by the feed at hand. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **Raw URL to this feedselfLink**
+-   **Raw URL to this feed**
+    **selfLink**
 
     This list property specifies the link to this feed.
 
--   **Feed titletitle**
+-   **Feed title**
+    **title**
 
     This list property specifies the link to this feed.
 
--   **Total Number of ItemstotalNumberOfItems**
+-   **Total Number of Items**
+    **totalNumberOfItems**
 
     This list property specifies the total number of items that were found for this search.
 
--   **Requested Number of ItemsrequestedNumberOfItems**
+-   **Requested Number of Items**
+    **requestedNumberOfItems**
 
     This list property specifies the requested number of items for this search.
 
--   **Start IndexstartIndex**
+-   **Start Index**
+    **startIndex**
 
     This list property specifies the start index for the paged list of items.
 
--   **Raw first URLrawFirstLink**
+-   **Raw first URL**
+    **rawFirstLink**
 
     This list property specifies the HCL Connections URL of the first page of items that were found for this search.
 
--   **Raw next URLrawNextLink**
+-   **Raw next URL**
+    **rawNextLink**
 
     This list property specifies the HCL Connections URL of the next page of items that were found for this search.
 
--   **Raw previous URLrawPreviousLink**
+-   **Raw previous URL**
+    **rawPreviousLink**
 
     This list property specifies the HCL Connections URL of the previous page of items that were found for this search.
 
--   **Raw last URLrawLastLink**
+-   **Raw last URL**
+    **rawLastLink**
 
     This list property specifies the HCL Connections URL of the last page of items that are found for this search.
 
--   **Is truncatedisTruncated**
+-   **Is truncated**
+    **isTruncated**
 
     If the list that represents a search result is truncated, this list property returns the string `true`. Otherwise, it returns `false`.
 
--   **Raw tags linkrawTagsLink**
+-   **Raw tags link**
+    **rawTagsLink**
 
     This attribute specifies the URL of the Atom feed that represents the tags for this list of blog posts.
 
@@ -507,130 +627,161 @@ In addition to these attributes, the blog posts profile also provides access to 
 
 The blog post comments profile provides access to HCL Connections blog post comments feed data. It declares the following attribute names:
 
--   **Author's email addressauthorEmail**
+-   **Author's email address**
+    **authorEmail**
 
     This attribute references the email address of the author of the social object.
 
--   **Author's IDauthorID**
+-   **Author's ID**
+    **authorID**
 
     This attribute references the internal ID of the author of the social object. It represents the author ID from the HCL Connections server where the social object is stored.
 
--   **Author's image URLauthorImageLink**
+-   **Author's image URL**
+    **authorImageLink**
 
     This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image either directly from HCL Connections or by using the Ajax proxy of the portal. For more information about this attribute, read *Configuring globally how social object data is served*. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's nameauthorName**
+-   **Author's name**
+    **authorName**
 
     You can use this attribute to include the name of the author of the social object in the design of a social list.
 
--   **Author's object IDauthorObjectID**
+-   **Author's object ID**
+    **authorObjectID**
 
     This attribute references the serialized object ID of the author of the social object. In contrast to the `authorID` attribute, the `authorObjectID` attribute represents an ID that is used by HCL Portal rather than by HCL Connections. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's UIDauthorUID**
+-   **Author's UID**
+    **authorUID**
 
     This attribute specifies the value of the UID attribute of the author of the social object. This value reflects the UID user attribute as defined by the user repository of the portal. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Body HTMLbody HTML**
+-   **Body HTML**
+    **bodyHTML**
 
     The HTML content of this item.
 
--   **Body plainbody plain**
+-   **Body plain**
+    **bodyplain**
 
     The plain content of this item.
 
--   **Body content typebodyContentType**
+-   **Body content type**
+    **bodyContentType**
 
     This attribute specifies the content type identifier for the body attribute of this item.
 
--   **Can delete blog post commentcanDeleteBlogPostComment**
+-   **Can delete blog post comment**
+    **canDeleteBlogPostComment**
 
     If the current user has permission to delete this comment, this attribute returns the string `true`. Otherwise, it returns `false`. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Feed entryentry**
+-   **Feed entry**
+    **entry**
 
     The original feed entry of this item.
 
--   **IDid**
+-   **ID**
+    **id**
 
     The unique identifier for this item.
 
--   **Number of LikesnumberOfLikes**
+-   **Number of Likes**
+    **numberOfLikes**
 
     This attribute specifies the number of people who like this blog post comment.
 
--   **Author's portal image URLportalAuthorImageLink**
+-   **Author's portal image URL**
+    **portalAuthorImageLink**
 
     This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL where you can download the image from HCL Connections by using the Ajax proxy of the portal. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's portal URLportalAuthorLink**
+-   **Author's portal URL**
+    **portalAuthorLink**
 
     This attribute specifies the link for rendering the details view of the author of this item in the context of the portal. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Published datepublished**
+-   **Published date**
+    **published**
 
     This attribute indicates the time when the social object was published. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **Author's raw Atom entry URLrawAuthorEntryLink**
+-   **Author's raw Atom entry URL**
+    **rawAuthorEntryLink**
 
     Link to the Atom entry that represents the author of this item. This URL directly addresses the HCL Connections server. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Author's raw image URLrawAuthorImageLink**
+-   **Author's raw image URL**
+    **rawAuthorImageLink**
 
     This attribute specifies the link to the profile image of the author of the social object. The HCL Connections server that provides the social object also stores the profile image of the author. This attribute contains a URL for downloading the image directly from HCL Connections. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Raw publishing entry URLrawBlogPostCommentPublishingEntryLink**
+-   **Raw publishing entry URL**
+    **rawBlogPostCommentPublishingEntryLink**
 
     This attribute specifies the URL to the publishing entry of this blog post comment. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
--   **Raw edit URLrawEditLink**
+-   **Raw edit URL**
+    **rawEditLink**
 
     This attribute specifies the HCL Connections URL of the entry that makes it possible to edit this blog post comment.
 
--   **Raw Atom entry URLrawEntryLink**
+-   **Raw Atom entry URL**
+    **rawEntryLink**
 
     This attribute specifies the HCL Connections URL of the Atom entry that represents this blog post comment.
 
--   **Raw likes edit URLrawLikesEditLink**
+-   **Raw likes edit URL**
+    **rawLikesEditLink**
 
     This attribute specifies the HCL Connections URL of the entry that makes it possible to edit the "liked" status of this blog post comment.
 
--   **Raw view Likes URLrawLikesLink**
+-   **Raw view Likes URL**
+    **rawLikesLink**
 
     This attribute specifies the HCL Connections URL that points to the "recommend" collection of this blog post comment.
 
--   **Raw view URLrawLink**
+-   **Raw view URL**
+    **rawLink**
 
     This attribute specifies the URL of the details view of this blog post comment on the HCL Connections server.
 
--   **Summarysummary**
+-   **Summary**
+    **summary**
 
     This attribute specifies the summary of the content of this blog post comment.
 
--   **Titletitle**
+-   **Title**
+    **title**
 
     The title of this item.
 
--   **Updated dateupdated**
+-   **Updated date**
+    **updated**
 
     This attribute indicates the time of the last update of the social object. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **User likes userLikes**
+-   **User likes**
+    **userLikes**
 
     If this blog post comment is liked by the current user, this attribute returns the string `true`. Otherwise, it returns `false`.
 
 
 In addition to these attributes, the blog post comments profile also provides access to the following list properties:
 
--   **Updated dateupdated**
+-   **Updated date**
+    **updated**
 
     This list property indicates the time of the last update of the list that is represented by the feed at hand. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
--   **Raw URL to this feedselfLink**
+-   **Raw URL to this feed**
+    **selfLink**
 
     This list property specifies the link to this feed.
 
--   **Feed titletitle**
+-   **Feed title**
+    **title**
 
     This list property specifies the link to this feed.
 
@@ -638,31 +789,38 @@ In addition to these attributes, the blog post comments profile also provides ac
 
     This list property specifies the total number of items that were found for this search.
 
--   **Requested Number of ItemsrequestedNumberOfItems**
+-   **Requested Number of Items**
+    **requestedNumberOfItems**
 
     This list property specifies the requested number of items for this search.
 
--   **Start IndexstartIndex**
+-   **Start Index**
+    **startIndex**
 
     This list property specifies the start index for the paged list of items.
 
--   **Raw first URLrawFirstLink**
+-   **Raw first URL**
+    **rawFirstLink**
 
     This list property specifies the HCL Connections URL of the first page of items that were found for this search.
 
--   **Raw next URLrawNextLink**
+-   **Raw next URL**
+    **rawNextLink**
 
     This list property specifies the HCL Connections URL of the next page of items that were found for this search.
 
--   **Raw previous URLrawPreviousLink**
+-   **Raw previous URL**
+    **rawPreviousLink**
 
     This list property specifies the HCL Connections URL of the previous page of items that were found for this search.
 
--   **Raw last URLrawLastLink**
+-   **Raw last URL**
+    **rawLastLink**
 
     This list property specifies the HCL Connections URL of the last page of items that are found for this search.
 
--   **Is truncatedisTruncated**
+-   **Is truncated**
+    **isTruncated**
 
     If the list that represents a search result is truncated, this list property returns the string `true`. Otherwise, it returns `false`.
 

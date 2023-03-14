@@ -6,9 +6,22 @@ Complete the following steps to replace the HCL Digital Experience administrator
 
 **Important cluster note:** If you are using HCL Web Content Manager within your clustered environment, you must complete these steps on every node in the cluster. If Web Content Manager is not configured, complete these steps only on the primary node.
 
-1.  Create a user in the **Manage Users and Groups** portlet to replace the current HCL Digital Experience administrative user.
+!!!note
+    These instructions are applicable to on-premises deployment. 
 
-2.  Run the following task to replace the old HCL Digital Experience administrative user with the new user:
+1.  Log in to HCL Digital Experience and click the **Open applications** menu. Go to **Administration > Security**.
+
+2.  In the **Manage Users and Groups** page, click **New User** to create the user to replace the current HCL Digital Experience administrative user.
+
+3.  Complete the following required fields:
+    - User ID
+    - Password
+    - Confirm Password
+    - Last Name
+
+4. Click **OK** to save your changes.
+
+5.  Run the following task to replace the old HCL Digital Experience administrative user with the new user:
 
     -   **AIX® HP-UX Linux™ Solaris:** ./ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
     -   **IBM® i:** ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupId parameter is required only if you plan to replace the old administrative group ID.
@@ -18,9 +31,9 @@ Complete the following steps to replace the HCL Digital Experience administrator
 
     **Additional parameter for stopped servers:** This task verifies the user against a running server instance. If the server is stopped, add the -Dskip.ldap.validation=true parameter to the task to skip the validation.
 
-3.  Verify that the task completed successfully. Stop and restart all required servers.
+6.  Verify that the task completed successfully. Stop and restart all required servers.
 
-4.  Complete the following steps to change the information stored in the **SearchAdminUser** alias:
+7.  Complete the following steps to change the information stored in the **SearchAdminUser** alias:
 
     1.  Log in to the WebSphere® Integrated Solutions Console.
 
@@ -32,7 +45,7 @@ Complete the following steps to replace the HCL Digital Experience administrator
 
     5.  Update the user ID and/or password to match your HCL Digital Experience administrator information.
 
-5.  Clustered environments: Synchronize the nodes.
+8.  Clustered environments: Synchronize the nodes.
 
     1.  Log on to the Deployment Manager.
 
@@ -42,7 +55,7 @@ Complete the following steps to replace the HCL Digital Experience administrator
 
     4.  Click **Full Resynchronize**.
 
-6.  **Note:** This step is required only if you have HCL Digital Experience Version 8.5 with CF03 through CF07. CF02 and earlier cumulative fixes do not have the StartupCheck application yet. CF08 and later cumulative fixes do not require this manual step any more.
+9.  **Note:** This step is required only if you have HCL Digital Experience Version 8.5 with CF03 through CF07. CF02 and earlier cumulative fixes do not have the StartupCheck application yet. CF08 and later cumulative fixes do not require this manual step any more.
 
     Update the user ID and password for the RunAs role mapping for the StartupCheck application.
 

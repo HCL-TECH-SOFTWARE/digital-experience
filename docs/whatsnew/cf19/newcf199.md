@@ -10,12 +10,12 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Design Studio (Beta)
 
-Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with the Container Update CF199 release include the ability to select Web Content Manager library assets when creating sites, UI globalization, support for alternate and no context root when defining sites, and more.
+Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with the Container Update CF199 release include the ability to select Web Content Manager library assets when creating sites, UI globalization, support for alternate and no context root when defining sites, and more.
 
 !!!note
-    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF196, and includes a sample DX site.  It is not yet supported for use in production deployments.
+    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF196, and includes a sample DX site.  It is not yet supported for use in production deployments.
 
-See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/) topic for more information. 
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/) topic for more information. 
 
 ## Migrate from HCL DX 9.5 Operator to Helm Deployments
 

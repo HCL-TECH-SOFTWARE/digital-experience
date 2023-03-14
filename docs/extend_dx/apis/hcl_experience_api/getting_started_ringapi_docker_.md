@@ -84,6 +84,8 @@ An administrator can edit the *WCM REST SERVICE* virtual resource. Click the **A
 
 If you wish to use the dxrest (in addition to mydxrest) for the REST APIs, you need to change the default user configuration. You need to add '**Anonymous Portal User**' to the virtual resources in **WCM REST SERVICE**.
 
+For some operations such as searching for content, the **Editor** role is required. Editor role might also be required for some endpoints of the Ring core wcm REST API.
+
 ![](../../../images/open_api_resources_permission.png)
 
 

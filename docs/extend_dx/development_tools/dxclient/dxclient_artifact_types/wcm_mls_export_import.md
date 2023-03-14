@@ -56,7 +56,7 @@ dxclient mls-export -h
 -   `-dxPassword <value>` - use this attribute to specify the password required for authenticating with the server.
 -   `-wcmLibraryId <value>` - the WCM library ID to export the contents of the library.
 -   `-exportPath <value>` - the path to export the WCM contents of a library.
--   `-virtualPortalContext <value>` - the context of the virtual portal that contains the Script Application instance you want to create or update.
+-   `-virtualPortalContext <value>` - the context of the virtual portal that contains the WCM Library you want to export.
 
 **Usage sample**:
 
@@ -90,7 +90,7 @@ dxclient mls-import -h
 -   `-dxUsername <value>` - use this attribute to specify the user name required for authenticating with the server.
 -   `-dxPassword <value>` - use this attribute to specify the password required for authenticating with the server.
 -   `-importPath <value>` - the path to import the translated contents into DX.
--   `-virtualPortalContext <value>` - the context of the virtual portal that contains the Script Application instance you want to create or update.
+-   `-virtualPortalContext <value>` - the context of the virtual portal that contains the WCM Library you want to import.
 
 **Usage sample**:
 
