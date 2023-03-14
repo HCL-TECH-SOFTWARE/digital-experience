@@ -2,7 +2,7 @@
 # ********************************************************************
 # * Licensed Materials - Property of HCL                             *
 # *                                                                  *
-# * Copyright HCL Technologies Ltd. 2022. All Rights Reserved.       *
+# * Copyright HCL Technologies Ltd. 2023. All Rights Reserved.       *
 # *                                                                  *
 # * Note to US Government Users Restricted Rights:                   *
 # *                                                                  *
@@ -50,7 +50,7 @@ make install
 cd ~
 
 # Install mkdocs
-pip3 install mkdocs-material mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin
+pip3 install mkdocs-material mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin pytz
 
 # Chmod private key for Git Access
 chmod -R 600 /root/.ssh/id_rsa
@@ -70,7 +70,7 @@ git switch -c $branch FETCH_HEAD
 if [ "$publish" == true ]; then
     echo "Perform GH pages deploy"
 
-    if [ "$version" == "in-progress"]; then
+    if [ "$version" == "in-progress" ]; then
         version="${version} latest"
         echo "version=${version}"
     fi

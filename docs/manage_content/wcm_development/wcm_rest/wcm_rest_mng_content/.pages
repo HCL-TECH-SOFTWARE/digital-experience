@@ -25,4 +25,5 @@ nav:
     - wcm_rest_crud_favorites.md
     - wcm_rest_attach_images.md
     - wcm_rest_crud_read.md
+    - ...
 

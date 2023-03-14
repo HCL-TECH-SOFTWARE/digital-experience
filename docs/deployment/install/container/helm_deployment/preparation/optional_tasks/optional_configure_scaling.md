@@ -20,7 +20,6 @@ scaling:
   replicas:
     contentComposer: 1
     core: 1
-    designStudio: 1
     digitalAssetManagement: 3
     imageProcessor: 5
     ringApi: 3

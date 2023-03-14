@@ -57,6 +57,35 @@ Content users can move a content item to another site area location.
 
     ![Select a site area location and click Move](../../../../../assets/Select_Site_Area_to_Move_Content_to_HCL_Content_Composer.png)
 
+## Copy Content item
+
+Content users can copy a content item to another site area location.
+
+1. Go to the content item you want to copy. In the example below, the content item is obtained from **Web Content > Content > Articles** site area location. Click the icon to select the content item and then click the **Copy** icon on the header. 
+
+    ![Select Content Item to Copy](../../../../../assets/Select_Content_Item_to_Copy_HCL_Content_Composer.png)
+
+2. A location selector appears. Select the site area you want to copy the content to. After selecting, click the **Copy** button to finalize copying of the content item.
+
+    ![Select a site area location and click Copy](../../../../../assets/Select_Site_Area_to_Copy_Content_to_HCL_Content_Composer.png)
+
+
+## Rename Content item when there is conflict during move or copy
+
+Content users can rename a content item during moving or copying when there is another content with the same name in the selected site area location.
+
+1.  A **Save As** modal appears when a user tries to move or copy a content item in a site area location that has a content item with the same name. An auto-generated name and a display title are suggested.
+
+    ![Save as content item during moving conflict](../../../../../assets/save-as-content-item-during-copy-conflict.png)
+
+2.  Click **See All Site Areas** under **Location** to change the preferred location to move or copy the content item. A location selector appears where you can select the site area you want to save the content to.
+
+    ![Select a site area location and click Move/Copy](../../../../../assets/select-site-area-to-move-content-during-copy-conflict.png)
+
+3.  After finalizing the name, display title, and site area location, click the **Save** button to save the content item in the selected location.
+
+    ![Select Content Item to Move/Copy](../../../../../assets/save-content-item-to-new-location.png)
+
 ## Add Comments
 
 !!!note
@@ -102,6 +131,30 @@ Content authors will be able to view and filter comments in HCL Content Composer
     ![Filter selected Content's comments](../../../../../images/Filter%20selected%20Content's%20comments.png)
 
     ![](../../../../../images/Filter%20selected%20Content's%20comments-2.png)
+
+## Save updates of a Content item as a new Content item
+
+Content authors can save the updates of a content item as a new content item in the current location or in a different location.
+
+1. Access the content item you want to save as a new content item. In this example, the content item example below \(**Image**\) is obtained from **Web Content \> Content \> Articles** site area location. Click the icon to select the content item. Once selected, click the **Edit** icon on the header.
+
+    ![Select a content and edit it](../../../../../images/Select_Content_To_Edit.png)
+
+2. Select **Save As** to save the content as a new content item. 
+
+    ![Click Save As](../../../../../images/Click_Save_As.png)
+
+3. A dialog appears to show the generated name, display title, and the current location. You can edit the name, display title, or select a different location.
+
+    ![Save As Modal](../../../../../images/save_as_modal.png)
+
+4. Click the **Save** button to save the content as a new content item.
+
+    ![Click Save button](../../../../../images/save_as_modal_click_save.png)
+
+5. The editor loads the new content item.
+
+    ![Save As New Content](../../../../../images/save_as_new_content.png)
 
 <!--
 ## HCL Digital Experience Solution Feedback

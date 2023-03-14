@@ -34,7 +34,7 @@ See the following Help Center topics for more information:
 
 ## Digital Asset Management 
 Digital Asset Management (DAM) Extensibility adds capability to support user-defined custom renditions and configure transformations for assets. Updates add options to configure metadata generation specifically for MIME types and their renditions.
-See the [Metadata configuration through DAM Extensibility](../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_Metadata_configuration.md) Help Center topic for more information.
+See the [Metadata configuration through DAM Extensibility](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/configure_dam_Metadata_configuration/) Help Center topic for more information.
 
 ## Design Studio (Beta)
 
@@ -43,7 +43,7 @@ Design Studio enables content managers and designers to build and style their di
 !!! note
     Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF203,and includes a sample DX site.  It is not yet supported for use in production deployments. 
 
-See the [Design Studio (Beta)](../../manage_content/design_studio/index.md) Help Center topic for more information. 
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/) Help Center topic for more information. 
 
 ## Configure Content Composer to Virtual Portals 
 

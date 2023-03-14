@@ -45,7 +45,7 @@ HCL Digital Experience CF19 and higher includes a DXClient toolset, and DX Conne
 !!!note
     The DXClient tool is not supported for use with HCL DX 9.5 deployments in Red Hat OpenShift or supported Kubernetes platforms. Use of the DXClient tool with those platforms will be available in future HCL DX 9.5 update releases.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/dxclient.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html) topic for more information.
 
 ## Digital Asset Management and Kaltura Integration
 

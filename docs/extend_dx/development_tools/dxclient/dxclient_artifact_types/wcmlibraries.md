@@ -92,12 +92,18 @@ The `wcm-library-export` command is used to export the WCM libraries from the so
     -exportAllLibraries <value>
     ```
 
+    Starting in CF210, use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to export, if any:
+
+    ```
+    -virtualPortalContext <value>
+    ```
+
     Log files from running the command can be found in the logs directory of the DXClient installation.
 
 -   **Example:**
 
     ```
-     dxclient wcm-library-export -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword>  -hostname <dxConnectHostname> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxWASUsername <dxWASUsername> -dxProfileName <dxProfileName> -librariesName <librariesName> 
+     dxclient wcm-library-export -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword>  -hostname <hostname> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxWASUsername <dxWASUsername> -dxProfileName <dxProfileName> -librariesName <librariesName> 
     ```
 
 
@@ -182,12 +188,18 @@ The `wcm-library-import` command is used to import the WCM libraries from the so
     -libFilePath <value>
     ```
 
+    Starting in CF210, use this attribute to specify the context of the virtual portal that contains the WCM Library that you want to import, if any:
+
+    ```
+    -virtualPortalContext <value>
+    ```
+
     Log files from running the command can be found in the logs directory of the DXClient installation.
 
 !!! example
 
     ```
-    dxclient wcm-library-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword>  -hostname <dxConnectHostname> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxWASUsername <dxWASUsername> -dxProfileName <dxProfileName> -libFilePath <libFilePath> 
+    dxclient wcm-library-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword>  -hostname <hostname> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxWASUsername <dxWASUsername> -dxProfileName <dxProfileName> -libFilePath <libFilePath> 
     ```
 
 

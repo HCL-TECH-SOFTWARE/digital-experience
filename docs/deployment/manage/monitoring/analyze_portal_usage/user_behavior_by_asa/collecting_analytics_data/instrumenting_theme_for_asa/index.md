@@ -52,7 +52,8 @@ For more details about these tasks refer to the following sections:
 
     This code loops over every implementation of the theme extension point and executes it. The default implementation included with the portal follows the approach previously outlined.
 
-    **Note:** HCL Portal Version 8.5 does not support the extension point with the ID `com.ibm.portal.theme.plugin.ActiveSiteAnalyticsItems` from previous versions. If you have migrated a theme from an earlier portal version, make sure to use the extension ID `com.ibm.portal.theme.plugin.ActiveSiteAnalyticsAggregators` .
+    !!! note
+        HCL Portal Version 8.5 does not support the extension point with the ID `com.ibm.portal.theme.plugin.ActiveSiteAnalyticsItems` from previous versions. If you have migrated a theme from an earlier portal version, make sure to use the extension ID `com.ibm.portal.theme.plugin.ActiveSiteAnalyticsAggregators` .
 
 -   **Including dependencies with the page**
 
@@ -75,7 +76,8 @@ For more details about these tasks refer to the following sections:
 
     You configure the JSP similarly to the aggregator itself: Add page metadata with the key of `asa_jsp` to the page. The portal interprets the value as a file name relative to the theme.html of the theme in WebDAV. For example, if you want to add markup from a JSP in a file named page.jsp , you can put this JSP next to theme.html using WebDAV and configure a new page property with the key `asa_jsp` and the value `page.jsp` .
 
-    **Example:** If the key of a piece of metadata is `asa_jsp` and its value is set to `asa_sample.jsp`, then the portal searches for a JSP with a file name asa\_sample.jsp and, if it finds such a file, it includes it in the page contents.
+    !!! example
+        If the key of a piece of metadata is `asa_jsp` and its value is set to `asa_sample.jsp`, then the portal searches for a JSP with a file name asa\_sample.jsp and, if it finds such a file, it includes it in the page contents.
 
     You can use the extension point `com.ibm.portal.theme.plugin.ActiveSiteAnalyticsInclude` to include a JSP into the page content. The metadata key must start with `asa_jsp` . Add the following code in the theme:
 
@@ -112,14 +114,11 @@ For more details about these tasks refer to the following sections:
     In this case, `asa.portlet.title` is recognized as the class for all span elements that encompass the rendered text of the portlet titles.
 
 
--   **[Injecting custom aggregators](../admin-system/sa_asa_injct_custaggrg.md)**  
+-   **[Injecting custom aggregators](sa_asa_injct_custaggrg.md)**  
 By implementing a new theme extension point, you can apply different approaches to Active Site Analytics.
 
 
-**Related information**  
-
-
-[Adding an Active Site Analytics aggregator to a portal page](../admin-system/sa_asa_add_aggr_2_page.md)
-
-[Tags used by the portal JSPs](../dev-portlet/dgn_ptltld.md)
+???+ info "Related information"
+    - [Adding an Active Site Analytics aggregator to a portal page](../sa_asa_add_aggr_2_page.md)
+    - [Tags used by the portal JSPs](../../../../../../../build_sites/themes_skins/customizing_theme/portal_jsp_tag/index.md)
 

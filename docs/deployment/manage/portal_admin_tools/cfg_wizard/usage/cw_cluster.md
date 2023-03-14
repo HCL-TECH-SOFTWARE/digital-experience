@@ -24,7 +24,7 @@ The Configuration Wizard supports adding additional nodes to a horizontal cluste
 3. Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
     !!!note
-        The wizard user interface might not be available in all languages. If the language is not currently supported, you might see the English version. For details on the supported languages for all of the HCL Digital Experience user interfaces, see [Language Support](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
+        The wizard user interface might not be available in all languages. If the language is not currently supported, you might see the English version. For details on the supported languages for all of the HCL Digital Experience user interfaces, see [Language Support](../../../portal_admin_tools/language_support/index.md).
 
 4. Click **Set Up a Cluster**.
 5. Complete each sub step in the order that is shown in the wizard. Use the Configuration Wizard in conjunction with your selected Roadmap.

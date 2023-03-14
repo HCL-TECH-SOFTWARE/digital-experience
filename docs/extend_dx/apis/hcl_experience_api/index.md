@@ -23,9 +23,9 @@ The HCL Experience API provides simplified APIs to make it easier for developers
 
 The HCL Experience API describes a high-level API through which the following specific APIs are exposed:
 
--   **HCL Ring API**: Presents developer entry points to HCL Digital Experience 9.5 core platform capabilities which are divided into two main categories - **Authorization APIs** and **Web Content APIs**.
--   **HCL Digital Asset Management API**: Presents developer entry points to the Digital Asset Management features of HCL Digital Experience 9.5.
--   **HCL Image Processor API**: Presents developer entry points to the Digital Asset Management Image Processor functions of HCL Digital Experience 9.5.
+-   **[HCL Ring API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/)**: Presents developer entry points to HCL Digital Experience 9.5 core platform capabilities which are divided into two main categories - **Authorization APIs** and **Web Content APIs**.
+-   **[HCL Digital Asset Management API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/)**: Presents developer entry points to the Digital Asset Management features of HCL Digital Experience 9.5.
+-   **[HCL Image Processor API](https://opensource.hcltechsw.com/experience-api-documentation/image-processor-api/)**: Presents developer entry points to the Digital Asset Management Image Processor functions of HCL Digital Experience 9.5.
 
 !!! note
     Future HCL Digital Experience 9.5 feature functionality will also be exposed through the HCL Digital Experience API.
@@ -35,7 +35,7 @@ It is recommended that developers building solutions for HCL Digital Experience 
 The HCL Experience API is a component of the HCL Digital Experience offerings. HCL Digital Experience offering license and download packages are provided with HCL Digital Experience entitlements available to customers on the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}.
 
 !!!note
-    Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Design Studio (Beta)](../../../manage_content/design_studio/index.md) and [Web Content Manager](../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wcm_post_mig_update/index.md) functions.
+    Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Web Content Manager](../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wcm_post_mig_update/index.md) functions.
 
 Video: [Using the Digital Experience V2 Web Content Manager APIs](https://www.youtube.com/watch?v=7N4yVJUjqOo&list=PLEjl4yzB6ckH2QJw886wkwqmSotdCLxdf&index=6).
 

@@ -1,4 +1,4 @@
-# Updating sample template items for inline editing after an upgrade installation \| HCL Web Content Manager
+# Updating sample template items for inline editing after an upgrade installation | HCL Web Content Manager
 
 HCL Web Content Manager includes sample content such as web content template pages and predefined portlets that you can add to pages to render content. If you upgrade, these sample web content template items continue to use the editing method of the earlier release. To use the inline editing method with the earlier template items, you must complete several manual steps.
 

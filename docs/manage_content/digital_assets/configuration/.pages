@@ -6,3 +6,5 @@ nav:
     - Backup and Restore DAM Images: dam_backup_restore_image.md
     - Configure Friendly URLs: configure_dam_friendlyUrl.md
     - DAM Access Control: dam_access_control.md
+    - DAM Crop Aspect Ratio Configuration: dam_crop_aspect_ratio.md
+    - Configure Digital Asset Management in virtual portals: Configure_DAM_virtual_portals.md

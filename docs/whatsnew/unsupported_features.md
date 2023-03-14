@@ -1,10 +1,10 @@
 # Unsupported features
 
-
 !!!important
     Unsupported features and themes must be removed prior to migration.
 
 ## Recently unsupported features
+
 Newly unsupported features and themes must be removed prior to migration.
 
 |Category|Unsupported|Recommended Action|Effective Date|
@@ -12,6 +12,7 @@ Newly unsupported features and themes must be removed prior to migration.
 |Configuring Web Content Manager|Ephox EditLive! Java based Rich Text Editor|The Ephox EditLive! Java based Rich Text Editor is no longer supported. You can also use the CK Editor as an alternative to Ephox EditLive!|December 2020|
 
 ## Previously unsupported features
+
 ### Unsupported in HCL Digital Experience 8.5 and later
 
 |Category|Unsupported|Recommended Action|
@@ -29,8 +30,8 @@ Newly unsupported features and themes must be removed prior to migration.
 |Integrating|Deprecated Sametime portlets|The Sametime portlets **Who Is Here** (SametimeWhoIsHere.war)   **Sametime Contact List** (SametimeContactList.war) were removed and are no longer supported.|
 |Developing|Deprecated Themes and Tags|The `<portal-core:cacheProxyUrl/>` tag was removed and is no longer supported: -   All Legacy themes|
 
-
 ### Unsupported in HCL Digital Experience 8.0 and later
+
 |Unsupported|Recommended Action|
 |-----------|------------------|
 |Policy Editor portlet for Mail |CPP portlet is no longer shipped in WebSphere Portal Version 8.0  |

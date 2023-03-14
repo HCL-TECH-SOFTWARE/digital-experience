@@ -13,16 +13,47 @@ In CF200, a new mechanism is introduced for configuring log settings at runtime 
 
 ## Setting the log configuration for a DX application
 
-You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the `level` property for the specified application. These properties are found in the `logging` section. For example, to set the configuration for Content Composer, use the following property:
+You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the `level` property for the specified application. These properties are found in the `logging` section. 
+
+You can see the string format in the following list. Once the property is set, run the `helm upgrade` command to apply the new logging level.
 
 ```yaml
+# Logging configuration
 logging:
   # Content Composer specific logging configuration
   contentComposer:
     level: "api:server-v1:*=info"
+  # DAM Plugin Google Vision specific logging configuration
+  damPluginGoogleVision:
+    level: "api:server-v0:*=info"
+  # Digital Asset Management specific logging configuration
+  digitalAssetManagement:
+    level: "api:server-v1:*=info,worker:server-v1:*=info"
+  # Image Processor specific logging configuration
+  imageProcessor:
+    level: "api:server-v1:*=info"
+  # Persistence Pool specific logging configuration
+  persistenceConnectionPool:
+    level: "pgpool:=info"
+  # Persistence Node specific logging configuration
+  persistenceNode:
+    level: "psql:=info,repmgr:=info"
+  # Ring API specific logging configuration
+  ringApi:
+    level: "api:server-v1:*=info"
+  # Runtime Controller specific logging configuration
+  runtimeController:
+    level: "controller:.*=INFO,controller:com.hcl.dx.*=INFO"
+  # License Manager specific logging configuration
+  licenseManager:
+    level: "license-check:.*=INFO,license-check:com.hcl.dx.*=INFO"
+  # DAM Kaltura Plugin specific logging configuration
+  damPluginKaltura:
+    level: "api:server-v0:*=info"
+  # HAProxy specific logging configuration
+  haproxy:
+    level: "haproxy:=info"
 ```
-
-You can see the string format in the following section. Once the property is set, run the `helm upgrade` command.
 
 ## Log configuration string format
 
@@ -58,7 +89,6 @@ Following are the supported application and component names, where the applicati
 |-----------|---------------|
 |`core`|`wp_profile`, `cw_profile`|
 |`contentComposer`|`api`|
-|`designStudio`|`api`|
 |`digitalAssetManagement`|`api`, `worker`|
 |`imageProcessor`|`api`|
 |`persistenceConnectionPool`|`pgpool`|
@@ -66,6 +96,9 @@ Following are the supported application and component names, where the applicati
 |`remoteSearch`|`prs_profile`|
 |`ringApi`|`api`|
 |`runtimeController`|`controller`|
+|`licenseManager`|`license-check`|
+|`damPluginKaltura`|`api`|
+|`haproxy`|`haproxy`|
 
 ## Supported log levels
 
@@ -157,10 +190,22 @@ By default, one sidecar container is launched with Persistence Node:
 
 Other applications where only one container is deployed in the Pod, only provide a single log, which can typically be obtained using the command: `kubectl logs -n <namespace> <pod-name>` (omitting a container name), for example:
 
-```
-kubectl logs -n dxns
-      dx-deployment-digital-asset-management-0
-```
+!!! warning 
+    If the main pod name is only used and there are multiple containers an error prompt is returned.
+
+    ```
+    kubectl logs -n dxns dx-deployment-persistence-node-0
+    ```
+
+    > error: a container name must be specified for pod dx-deployment-persistence-node-0, choose one of: [persistence-node persistence-metrics-exporter persistence-repmgr-log prereqs-checker]
+
+    The logs can then be requested from the desired container:
+
+    ```
+    kubectl logs -n dxns dx-deployment-persistence-node-0
+        persistence-node
+    ```
+
 
 ## Accessing all application logs simultaneously
 
@@ -183,7 +228,6 @@ The log output for a DX deployment is set to a non-verbose configuration by defa
 |----------------|--------------------|
 |Core|\*=info|
 |Content Composer|api:server-v1:\*=info|
-|Design Studio|api:server-v1:\*=info|
 |Digital Asset Management|api:server-v1:\*=info,worker:server-v1:\*=info|
 |Image Processor|api:server-v1:\*=info|
 |Persistence Connection Pool|pgpool:=info|

@@ -10,6 +10,7 @@ nav:
     - deploy_container_artifact_updates.md
     - troubleshooting
     - monitoring
+    - volume_resizing.md
     
 
   

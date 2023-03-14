@@ -13,7 +13,7 @@ Likewise, updates to enterprise application or portlet EAR and WAR files will no
 -   The application is restarted on each server
 -   Each server in the farm is restarted
 
-To restart an application, you can either access the WebSphere Integrated Solutions Console on each server and restart the application, or you can use the wsadmin scripting command to restart the application. To restart the server, use the stop\_HCL Portal and HCL Web Content Manager and start\_HCL Portal and HCL Web Content Manager scripts profiled in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin directory.
+To restart an application, you can either access the WebSphere Integrated Solutions Console on each server and restart the application, or you can use the wsadmin scripting command to restart the application. To restart the server, use the stop\_HCL Portal and HCL Web Content Manager and start\_HCL Portal and HCL Web Content Manager scripts profiled in the [wp\_profile\_root](../../../../guide_me/wpsdirstr.md#wp_profile_root)/PortalServer/bin directory.
 
 If the administrative action is extensive, updating several WebSphere Application Server and HCL Portal assets at once, you may want to follow the instructions under the Maintaining a portal farm section, which walks through an update procedure involving a second filesystem and database, ensuring that the updates are isolated from the original configuration and each server can be switched to the updated configuration, tested, and returned to production traffic without affecting other farm instances in any way. This option has the added benefit of providing a fallback configuration if the changes do not work as expected.
 

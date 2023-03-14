@@ -10,13 +10,13 @@ The setup for Content as a Service pages comprises both resources that are share
 
 2.  Run the following command to initiate the setup of shared resources:
 
-    -   AIX® and Linux™: `./ConfigEngine.sh install-caas -DPortalAdminID=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password`
-    -   Windows™: `ConfigEngine.bat install-caas -DPortalAdminID=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password`
+    -   AIX® and Linux™: `./ConfigEngine.sh install-caas -DPortalAdminId=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password`
+    -   Windows™: `ConfigEngine.bat install-caas -DPortalAdminId=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password`
     
 3.  Run the following command to initiate the setup of default virtual portal scoped resources:
 
-    -   AIX and Linux: `./ConfigEngine.sh install-caas-vp -DPortalAdminID=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password`
-    -   Windows: `ConfigEngine.bat install-caas-vp -DPortalAdminID=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password`
+    -   AIX and Linux: `./ConfigEngine.sh install-caas-vp -DPortalAdminId=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password`
+    -   Windows: `ConfigEngine.bat install-caas-vp -DPortalAdminId=user_id -DPortalAdminPwd=password -DWasUserid=user_id -DWasPassword=password`
 
 4.  If you have virtual portals, run the following command on each virtual portals to initiate the setup of virtual portal scoped resources:
 

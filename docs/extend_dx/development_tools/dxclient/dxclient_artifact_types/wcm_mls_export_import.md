@@ -56,7 +56,7 @@ dxclient mls-export -h
 -   `-dxPassword <value>` - use this attribute to specify the password required for authenticating with the server.
 -   `-wcmLibraryId <value>` - the WCM library ID to export the contents of the library.
 -   `-exportPath <value>` - the path to export the WCM contents of a library.
--   `-virtualPortalContext <value>` - the context of the virtual portal that contains the Script Application instance you want to create or update.
+-   `-virtualPortalContext <value>` - the context of the virtual portal that contains the WCM Library you want to export.
 
 **Usage sample**:
 
@@ -90,7 +90,7 @@ dxclient mls-import -h
 -   `-dxUsername <value>` - use this attribute to specify the user name required for authenticating with the server.
 -   `-dxPassword <value>` - use this attribute to specify the password required for authenticating with the server.
 -   `-importPath <value>` - the path to import the translated contents into DX.
--   `-virtualPortalContext <value>` - the context of the virtual portal that contains the Script Application instance you want to create or update.
+-   `-virtualPortalContext <value>` - the context of the virtual portal that contains the WCM Library you want to import.
 
 **Usage sample**:
 
@@ -148,7 +148,4 @@ MLS Import
     - [HCL Web Content Manager Multilingual Solution](../../../../manage_content/wcm_authoring/multi_lingual/index.md)
     - [Sample Pipelines for the DXClient Docker image file](../sample_pipelines_docker_dxclient.md)
     - [Sample Pipelines for the DXClient node package file](../sample_pipelines_node_dxclient.md)
-
-<!--
-
- - [Deploy DX components using HCL DXClient and DXConnect](../deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)->
+    - [Deploy DX components using HCL DXClient and DXConnect](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.html)

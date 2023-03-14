@@ -4,13 +4,14 @@ A “Supported Configuration” is a combination of HCL Software and other Depen
 
 HCL provides full support for configurations within this category. Support is provided under the terms of the product license, to ensure that the product operates within its specifications.  
 
-For more details, make sure to review this document: [HCL DX support statement](../../../get_started/software_support.md).  
+For more details, make sure to review this document: [HCL DX support statement](../../../get_started/software_support.md).
 
 ## Operating Systems
 
 The operating systems section specifies the operating systems that HCL Digital Experience 9.5 supports, and is organized by the operating system family. Operating system families include AIX, Linux, and Windows.
 
 ### AIX family
+
 |Operating system (OS)|OS Supported Versions|Hardware|Bitness|Product minimum|
 |-------|-------|-------|-------|-------|
 |AIX 7.1|Base and later maintenance releases|POWER System - Big Endian|64-Exploit, 64-Tolerate|8.5|
@@ -24,25 +25,25 @@ The operating systems section specifies the operating systems that HCL Digital E
     Portal Express offering does not support AIX.
 
 ### Linux family
+
 |OS|OS Supported Versions|Hardware|Bitness|Product Minimum|
 |-------|-------|-------|-------|-------|
-|Red Hat Enterprise Linux (RHEL) Server 7	|Base and later maintenance	releases|IBM Z Systems	|64-Exploit, 64-Tolerate	|8.5	|
-|Red Hat Enterprise Linux (RHEL) 7	|7.1 and later maintenance releases|Power System – Little Endian	|64-Exploit, 64-Tolerate	|8.5	|
-|Red Hat Enterprise Linux (RHEL) 7	|7.1 and later maintenance releases|x86-64	|64-Exploit, 64-Tolerate	|8.5	|
-|Red Hat Enterprise Linux (RHEL) 8	|8 and later maintenance releases|x86-64	|64-Exploit, 64-Tolerate	|9.0	|
-|SUSE Linux Enterprise Server (SLES) 12	|Base and later maintenance	releases|x86-64 IBM z Systems	|64-Exploit, 64-Tolerate	|8.5	|
-|SUSE Linux Enterprise Server (SLES) 15	|Base and later maintenance	releases|x86-64	|64-Tolerate	|8.5	|
-|Ubuntu 18.04 LTS	|Base and later maintenance	releases|Power System – Little Endian	|64-Exploit, 64-Tolerate	|8.5	|
-|Ubuntu 18.04 LTS	|Base and later maintenance	releases|x86-64	|64-Exploit, 64-Tolerate	|8.5	|
-|Ubuntu 20.04 LTS	|Base and later maintenance	releases|Power System – Little Endian	|64-Exploit, 64-Tolerate	|8.5	|
-|Ubuntu 20.04 LTS	|Base and later maintenance	releases|x86-64|	64-Exploit, 64-Tolerate|	8.5	|
-
+|Red Hat Enterprise Linux (RHEL) Server 7 | Base and later maintenance releases | IBM Z Systems | 64-Exploit, 64-Tolerate | 8.5 |
+|Red Hat Enterprise Linux (RHEL) 7 | 7.1 and later maintenance releases | Power System – Little Endian | 64-Exploit, 64-Tolerate | 8.5 |
+|Red Hat Enterprise Linux (RHEL) 7 | 7.1 and later maintenance releases | x86-64 | 64-Exploit, 64-Tolerate | 8.5 |
+|Red Hat Enterprise Linux (RHEL) 8 | 8 and later maintenance releases | x86-64 | 64-Exploit, 64-Tolerate | 9.0 |
+|Red Hat Enterprise Linux (RHEL) 9 |9 and later maintenance releases | x86-64 |64-Exploit, 64-Tolerate |9.5 CF209 |
+|SUSE Linux Enterprise Server (SLES) 12 | Base and later maintenance releases | x86-64 IBM z Systems | 64-Exploit, 64-Tolerate | 8.5 |
+|SUSE Linux Enterprise Server (SLES) 15 | Base and later maintenance releases | x86-64 | 64-Tolerate | 8.5 |
+|Ubuntu 18.04 LTS | Base and later maintenance releases | Power System – Little Endian | 64-Exploit, 64-Tolerate | 8.5 |
+|Ubuntu 18.04 LTS | Base and later maintenance releases | x86-64 | 64-Exploit, 64-Tolerate | 8.5 |
+|Ubuntu 20.04 LTS | Base and later maintenance releases | Power System – Little Endian | 64-Exploit, 64-Tolerate | 8.5 |
+|Ubuntu 20.04 LTS | Base and later maintenance releases | x86-64| 64-Exploit, 64-Tolerate| 8.5 |
 
 ### Windows family
 
 !!! note
-
-	As of Cumulative Fix 09 – Windows Server 2008 is no longer supported. The operating system went out of mainstream support in January 2015.
+    As of Cumulative Fix 09 – Windows Server 2008 is no longer supported. The operating system went out of mainstream support in January 2015.
 
 |OS|Supported Versions|Hardware|Bitness|Product Minimum|
 |---------|---------|---------|---------|---------|
@@ -56,22 +57,22 @@ The operating systems section specifies the operating systems that HCL Digital E
 
 *Support for developer platform only.
 
-
 ## Hypervisors
+
 The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.5 supports.
 
 ### AIX Summary
+
 |Hypervisor|Product minimum|Deployment Units|Supported Guest Operating System|
 |---------|-----|-----|----------------------------------|
 |IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version|8.5|Server|-	AIX 7.1 POWER System \– Big Endian<Br>-	AIX 7.2 POWER System \- Big Endian|
 |WPAR: Product installed in System Workload Partition AIX 6.1|8.5|Server|-	AIX 7.1 POWER System \– Big Endian<br>-	AIX 7.2 POWER System \– Big Endian|
 
 !!! important "AIX support"
-
-	Portal Express offering does not support AIX.  
-
+    Portal Express offering does not support AIX.  
 
 ### Linux Summary
+
 |Hypervisor|Product Minimum|Deployment Units|Supported Guest Operating System|
 |---------|-----|-----|----------------------------------|
 |IBM PR/SM any version|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM zSystems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
@@ -79,8 +80,6 @@ The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.
 |Red Hat KVM as delivered with Red Hat Enterprise Linux (RHEL) and its RHEV equivalent 7.0|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian|<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 |VMware ESXi 6.5 and later|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 |VMware ESXi 7.0|9.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
-
-
 
 ### Windows Summary
 

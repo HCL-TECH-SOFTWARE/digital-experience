@@ -82,7 +82,8 @@ By using this pattern, the aggregator module exports two functions:
 1.  The `parse()` function is responsible for handling the DOM notifications that are sent by the SiteAnalyticsMediator. It complies with the function signature that is defined by the Active Site Analytics Mediator SPI as discussed in the topic about *The Active Site Analytics Mediator SPI*. Use this function to parse the DOM to find the analytics-specific microformats that interest you. Typically, the parse function stores the found microformats in an internal bucket, for example a JSON object, that is transmitted to the external analytics service later on. In the JavaScript module pattern template, you can also see how the aggregator can distinguish between page notifications and page element notifications \(a page element can either be a portlet or an Ajax component\).
 2.  The `submit()` function is responsible for sending the collected data to the external analytics service. Use your preferred technique to initiate an HTTP request, which carries the data to the analytics service. For performance reasons, communicate the data asynchronously, for example by a tracking image or an asynchronous XmlHTTPRequest.
 
-**Note:** The registration aspect and the logic that triggers the data transmission are not part of the aggregator module. These aspects need to be handled outside of the aggregator module.
+!!! note
+  The registration aspect and the logic that triggers the data transmission are not part of the aggregator module. These aspects need to be handled outside of the aggregator module.
 
 ## Registering with the Site Analytics Mediator
 
@@ -184,13 +185,8 @@ HCL Portal provides several sample aggregators. They are in the `[PortalServer\_
     This aggregator is a generic aggregator. It collects all the analytics data and sends it to the URL `http://example.org` by using a tracking image. The collected data is appended to the image URL as a query string. The names of the URL parameters correspond with the microformat names as defined in *Supported aggregator tags*.
 
 
-
-**Related information**  
-
-
-[Guidelines for implementing an aggregator](../admin-system/sa_asa_med_spi_aggr.md)
-
-[Adding an Active Site Analytics aggregator to a portal page](../admin-system/sa_asa_add_aggr_2_page.md)
-
-[Supported aggregator tags](../admin-system/sa_asa_aggr_tags.md)
+???+ info "Related information"
+  - [Guidelines for implementing an aggregator](sa_asa_med_spi_aggr.md)
+  - [Adding an Active Site Analytics aggregator to a portal page](../sa_asa_add_aggr_2_page.md)
+  - [Supported aggregator tags](../how_asa_data_is_represented_in_portal/sa_asa_aggr_tags.md)
 

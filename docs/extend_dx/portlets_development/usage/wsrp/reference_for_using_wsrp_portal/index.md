@@ -12,7 +12,5 @@ The WSRP Consumer and the WSRP Producer in the portal support two-phase renderin
 You can configure both the WSRP Producer and the Consumer to ignore headers.
 -   **[Hints and tips for using WSRP with the portal](wsrpr_hints_tips.md)**  
 Here are some hints and tips for using WSRP with HCL Digital Experience.
--   **[Troubleshooting WSRP](wsrpr_trbl.md)**  
+-   **[Troubleshooting WSRP](../troubleshooting/wsrpr_trbl.md)**  
 You can troubleshoot WSRP by using different methods such as logging and tracing, debugging, and monitoring.
-
-

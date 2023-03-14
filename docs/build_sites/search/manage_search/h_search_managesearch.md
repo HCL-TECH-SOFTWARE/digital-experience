@@ -1,4 +1,4 @@
-# Manage Search
+# Manage Search Portlet
 
 Use the Manage Search portlet to administer portal search.
 

@@ -34,5 +34,5 @@ You can use this sample plugin.xml file to register the sample filter.
 
 
 ???+ info "Related information"
-    - [Defining friendly URLs without state information for pages in your site](../../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
+    - [Defining friendly URLs without state information for pages in your site](../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
 

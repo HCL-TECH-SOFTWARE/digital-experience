@@ -2,6 +2,18 @@
 
 This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../index.md) (DAM) content. This allows you to manage subscriber registration or configure periodic sync.
 
+
+## Differences between DAM staging and WCM syndication
+!!! note
+        WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in some details. To learn more about differences have a look at the following table.
+| Aspect                               | WCM                                  | DAM                                                        |
+| -------------------------------------|--------------------------------------|------------------------------------------------------------|
+| `Credentials for authentication` |Authentication via credentials Vault slot. |The helm secret needs to be the primary portal admin user used for deployment of the DX environment. The user in the secret on the publisher and the subscriber must be the same. The credentials used in the registration are only used for authentication and authorisation during the DXClient registration steps. They are not used for transferring files during staging. The new user specified in secret will be the new primary portal admin. For more information, see [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).|
+| `Configuration syndication` |WCM syndication can be configured via UI or REST API one time. Sync can be triggered via REST API or UI.|Subscriber can be configured by dxclient.|
+| `Syndication ordering` |One-way or two-way syndication is possible, with one or many subscriber's resource. |DAM staging only supports one-way syndication.|
+| `Different user repository support per environment` |Supported via member fixer in WCM|Not supported by DAM at this time |Not supported by DAM at this time.|
+
+
 ## DAM staging framework
 
 The DAM staging framework allows you to stage your DAM content from an authoring environment (source environment/publisher) to multiple rendering environments (target environment/subscriber). Using [DXClient](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}, you can configure DAM staging to:
@@ -361,6 +373,17 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
         dxclient manage-dam-staging get-all-subscribers -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
 
+!!! note
+        Media assets and collections are not staged from publisher to subscriber if the media assets or collections exist with the same name and have a different unique id on the publisher and the subscriber servers.
+
+        The following list enumerates the scenarios where items are not staged from publisher to subscriber:
+        
+        - Collection - When there is a same collection name on the same level, but a unique name in the entire set of collections
+        - Media - When there is a same file name in the same collection 
+        - Rendition - When there is a same custom URL in the entire set
+        - Version - When the version is for a rendition (for example, v1, v2, v3)
+
+        If items are not staged to the subscriber, you can find the respective log messages in the DAM logs of the subscriber.
 
 ## Using WCM with DAM staging
 
@@ -391,5 +414,27 @@ If the properties are in place when using the REST API or WCM Admin UI or WCM AP
 
 !!! example 
     If a content item is moved from the staging environment to production, and production has the host overwrite set to `production.hcl.com`, then all DAM references are returned with `production.hcl.com`. <br>For instance, `production.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true` even if we received the following from syndication: `staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true`.
+
+
+**(Optional)** Starting with release 210 you can configure WCM `WCMConfigService` in the WAS Admin Console to use relative URLs for DAM references in WCM using the following:
+
+```
+dam.host.relative=true
+```
+
+!!! example
+
+    ```
+    dam.host.relative=true
+    ```
+
+You must restart the DX Core JVM for changes to take effect.
+
+**Effect**
+
+If the properties are in place when using the REST API or WCM Admin UI or WCM API, the returned DAM references have no hostname or port.
+
+!!! example 
+    If a content item is moved from the staging environment to production, and production has the relative URL option enabled, then all DAM references are returned relatively. <br>For instance, `/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true` even if we received the following from syndication: `staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true`.
 
 

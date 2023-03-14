@@ -41,8 +41,6 @@ The multilingual solution consists of a set of extensions to Web Content Manager
 
 6.  Repeat these steps on every server and cluster node.
 
-
-
-???+ info 'Related information"
+???+ info "Related information"
     - [Multilingual deployment, installation, and configuration Multilingual Solution](../mls_install/index.md)
 

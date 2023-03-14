@@ -64,24 +64,21 @@ To set up Active Site Analytics overlay reports, perform the procedures given he
 
 For more information about enabling inline display of overlay reports, see the following topics.
 
-1.  [Configuring overlay reports](../admin-system/sa_asa_overlay_config.md)  
+1.  [Configuring overlay reports](sa_asa_overlay_config.md)  
 In order to activate overlay reports for your site, you need to configure some security-related settings.
-2.  [Configuring security for overlay analytics reports](../admin-system/sa_asa_overlay_stats_sec.md)  
+2.  [Configuring security for overlay analytics reports](sa_asa_overlay_stats_sec.md)  
 You can administer which users can view overlay reports. To do this, you use the virtual resource OVERLAY\_REPORTS.
-3.  [Configuring a Credential Vault for overlay reports](../admin-system/sa_asa_overlay_cfg_crd_vlt.md)  
+3.  [Configuring a Credential Vault for overlay reports](sa_asa_overlay_cfg_crd_vlt.md)  
 To access the IBM Coremetrics Web Analytics system, you have to store your user information in a Credential Vault slot. If you do not do this, the portal overlay reports cannot show data from the Coremetrics system.
-4.  [Configuring the theme for overlay reports](../admin-system/sa_asa_overlay_cfg_theme.md)  
+4.  [Configuring the theme for overlay reports](sa_asa_overlay_cfg_theme.md)  
 To integrate the overlay analytics features into your theme, add a theme module to the theme profiles of your modular theme. If you do not add the theme, the overlay menu items are not displayed.
-5.  [Viewing overlay analytics statistics](../admin-system/sa_asa_ovrly_stats_ui.md)  
+5.  [Viewing overlay analytics statistics](sa_asa_ovrly_stats_ui.md)  
 Users with the appropriate access rights can use Active Site Analytics to view graphical statistics about individual portal resources, such as pages or portlets.
-6.  [Customizing overlay reports](../admin-system/sa_asa_overlay_custom.md)  
+6.  [Customizing overlay reports](sa_asa_overlay_custom.md)  
 You can customize your own overlay reports by setting specific parameters as required. Learn about the parameters and the levels at which you can specify them.
 
 
-**Related information**  
-
-
-[Adding an Active Site Analytics aggregator to a portal page](../admin-system/sa_asa_add_aggr_2_page.md)
-
-[HCL Portal 8 Integration with IBM Digital Analytics \(Coremetrics\)](https://support.hcltech.com/csm?id=kb_article&sysparm_article=KB0074915&sys_kb_id=2742800e1bda809083cb86e9cd4bcb4a)
+???+ info "Related information"
+    - [Adding an Active Site Analytics aggregator to a portal page](../collecting_analytics_data/sa_asa_add_aggr_2_page.md)
+    - [HCL Portal 8 Integration with IBM Digital Analytics \(Coremetrics\)](https://support.hcltech.com/csm?id=kb_article&sysparm_article=KB0074915&sys_kb_id=2742800e1bda809083cb86e9cd4bcb4a)
 

@@ -1,4 +1,4 @@
-# Themes
+# Themes Artifacts
 
 This topic provides information about the deployment and undeployment of themes artifacts.
 
