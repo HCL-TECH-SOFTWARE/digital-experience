@@ -81,7 +81,7 @@ A local Flexnet entitlement server can itself also be configured to function wit
     1.  Using the default user name and password, request a bearer token from the local license server.
 
         ```
-        curl -k --header "CContent-Type: application/json" -- request POST --data "{\"user"\":\"admin\",\"password\":\HCLDefault@\"}" [https://%3clicense]https://<license server hostname>:<port>/api/1.0/instances/~/authorize
+        curl -k --header "Content-Type: application/json" --request POST --data "{\"user\":\"admin\",\"password\":\HCLDefault@\"}" https://<license server hostname>:<port>/api/1.0/instances/~/authorize
         ```
 
         Where:

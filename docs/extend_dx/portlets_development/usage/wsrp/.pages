@@ -8,4 +8,8 @@ nav:
     - Using your portal as a WSRP Consumer: portal_wsrp_consumer
     - Using handlers for WSRP web services: handlers_wsrp_webservices
     - Reference for using WSRP with the portal: reference_for_using_wsrp_portal
+    - Configuration: configuration
+    - Installation: installation
+    - Troubleshooting: troubleshooting
+    - Usage: usage
 

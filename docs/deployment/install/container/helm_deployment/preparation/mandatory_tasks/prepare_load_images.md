@@ -269,7 +269,6 @@ images:
     tags:
     contentComposer: "v95_CFXXX_XXXXXXXX-XXXX"
     core: "v95_CFXXX_XXXXXXXX-XXXX"
-    designStudio: "vX.X.X_XXXXXXXX-XXXX"
     digitalAssetManagement: "vX.X.X_XXXXXXXX-XXXX"
     imageProcessor: "vX.X.X_XXXXXXXX-XXXX"
     openLdap: "vX.X.X_XXXXXXXX-XXXX"
@@ -281,7 +280,6 @@ images:
     names:
     contentComposer: "dx/content-composer"
     core: "dx/core"
-    designStudio: "dx/design-studio"
     digitalAssetManagement: "dx/digital-asset-manager"
     imageProcessor: "dx/image-processor"
     openLdap: "dx/openldap"

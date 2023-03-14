@@ -57,7 +57,6 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     |Core|core|0.8|3072MB|1|
     |Ring API|ringApi|0.1|128MB|1|
     |Content Composer|contentComposer|0.1|128MB|1|
-    |Design Studio|designStudio|0.1|128MB|1|
     |Digital Asset Management|digitalAssetManagement|0.25|1024MB|1|
     |DAM Persistence Connection Pool|persistenceConnectionPool|0.5|512MB|1|
     |DAM Persistence Node|persistenceNode|1|1024MB|1|

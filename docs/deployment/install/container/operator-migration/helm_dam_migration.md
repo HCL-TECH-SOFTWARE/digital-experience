@@ -163,7 +163,6 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
             core: false
             runtimeController: false
             contentComposer: false
-            designStudio: false
             digitalAssetManagement: true
             imageProcessor: false
             openLdap: false

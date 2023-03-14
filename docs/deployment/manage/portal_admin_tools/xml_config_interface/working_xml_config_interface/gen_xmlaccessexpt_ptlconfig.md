@@ -7,7 +7,7 @@ To generate a full export of your Portal's configuration, do the following steps
 1.  Open a terminal or command window. Change directory (cd) to <WP_Profile_root>/PortalServer/bin
 2.  Run the following command all on one line:
 
-    `xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://<myhost>:<port>/wps/config -in <Portal home>/doc/xml -samples/Export.xml -out result.xml`
+    `xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://<myhost>:<port>/wps/config -in <Portal home>/doc/xml-samples/Export.xml -out result.xml`
 
     -   Substitute `Portal_admin_user, Portal_admin_password, myhost`, and `port` with the correct values for your environment. It is recommended to use the direct URL and port so the request can bypass any web server or load balancer that might be present.
     -   The file name that is specified after the `-out` parameter contains the Portal configuration as XML. The output file can have any name.
@@ -28,7 +28,7 @@ XMLAccess exports the base or default Portal for the specified host by using the
 
 For example, given a Portal 7.0 virtual portal VP1 an example XMLAccess command to export the content of VP1 is:
 
-`xmlaccess -user Portal_admin_user -password Portal_admin_password -url http;//host.raleigh.ibm.com:10039/wps0config/VP1 -in Export.xml -out result_VP1.xml`
+`xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://host.raleigh.ibm.com:10039/wps/config/VP1 -in Export.xml -out result_VP1.xml`
 
 If your Virtual Portal is defined by using an optional host name, specify the host name and /config URI to export the Virtual Portal content:
 

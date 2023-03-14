@@ -1,4 +1,4 @@
-# Themes
+# Themes Profile Skin
 
 The theme controls the presentation layer of your website. The theme profile contains modules and controls which modules load per page. A skin surrounds the portlet on a page.
 

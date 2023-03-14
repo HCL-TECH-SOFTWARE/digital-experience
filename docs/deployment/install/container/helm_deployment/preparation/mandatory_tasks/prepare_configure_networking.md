@@ -146,8 +146,8 @@ To have your deployment and HAProxy to use the certificate, you must store it in
 
 The secret can be created using the following commands:
 
-!!! note
-  The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
+!!!note
+    The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
 
 ```
   # Create secret with the name "dx-tls-cert"
@@ -173,6 +173,7 @@ You can set the name of the certificate used with the following syntax, the defa
     Verify you have entered the correct name.
 
 ### OpenShift Passthrough
+
 Helm charts have an `openShiftPassthrough` value to create a `Route` resource, which only passes through the main HAProxy port (443 most of the time). Instead of having such a flavor-specific configuration in Helm charts, such setups are documented and point to the flavor-specific documentation and will be deprecated.
 
 The default value set for "openShiftPassthrough" is `auto` i.e it detects OpenShift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
@@ -181,6 +182,7 @@ The default value set for "openShiftPassthrough" is `auto` i.e it detects OpenSh
     The "openShiftPassthrough" value is deprecated. If "openShiftPassthrough" is to be used, a new `Route` resource must be created manually. 
 
 #### Create the route resource manually
+
 If you want to deploy OpenShift manually using `Routes`, you need to create a .yaml file like below and any changes required can be made in that. To apply those changes in the OpenShift cluster, you can run `kubectl apply` and specify its namespace and location.
 For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
 
@@ -209,3 +211,55 @@ spec:
 ```
 
 `<helm-deployment-name>` must be replaced with the name of the deployed Helm release.
+
+## Configuring Content-Security-Policy Frame Options
+
+The HCL Digital Experience 9.5 Helm Chart allows you to configure **[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): frame-ancestors** for DX Core and all other components, such as Digital Asset Management, Ring API, etc.
+
+Setting `cspFrameAncestorsEnabled` to true adds `content-security-policy: frame-ancestor 'self'` headers to the responses, enabling you to frame DX and other add-on applications.
+
+There is also an option to specify allowed URLs that can frame your application using the `cspFrameAncestorAllowedSourceURLs` property. Using this property is a way to mitigate clickjacking attacks. For more information, see: [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html).
+
+You can define a list of allowed URLs for a specific application using the following syntax in your `custom-values.yaml`. This example uses `contentComposer`, but the same applies for other applications:
+
+```yaml
+# Networking specific configuration
+networking:
+  # Networking configurations specific to all addon applications
+  addon:
+    contentComposer:
+      # Enables/Disables CSP frame-ancestor header
+      # Note: 'self' is always added when this is enabled to enable DX internal features
+      # see: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
+      cspFrameAncestorsEnabled: false
+      # Add list of allowed source URLS to the the CSP frame-ancestor header this will only reflect if cspFrameAncestorsEnabled is set to true
+      # Example:
+      # cspFrameAncestorsAllowedSourceURLs:
+      #   - 'https://example.com'
+      # This would result to the following response header:
+      # content-security-policy: frame-ancestors 'self' https://example.com
+      cspFrameAncestorsAllowedSourceURLs: []        
+```
+
+Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
+
+## Configuring SameSite Cookie Attribute
+
+The HCL Digital Experience 9.5 Helm Chart allows you to configure **[SameSite Cookie Attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)** for DX Core. This configuration sets the `WASReqURL` Cookie Attributes `Secure` and `SameSite`.
+
+!!!note
+    This should only be set in an HTTPS environment to prevent unwanted behaviors.
+
+You can define the SameSite value in your `custom-values.yaml`:
+
+```yaml
+# Networking specific configuration
+networking:
+  core:
+    # None, Lax, Strict, or empty string
+    # Setting this to an empty string would not add the SameSite attribute for WASReqURL cookie
+    # Note: This should only be set in an HTTPS environment to prevent unwanted behaviours
+    cookieSameSiteAttribute: ""
+```
+
+Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.

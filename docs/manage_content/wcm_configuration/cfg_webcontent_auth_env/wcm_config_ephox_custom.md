@@ -7,6 +7,9 @@ Run these configuration tasks to change the configuration of the rich text edito
 !!!note
     In a clustered environment, these tasks are only run on the primary server.
 
+!!!important
+    The Textbox.io component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See [Deprecated features](../../../whatsnew/deprecated_features.md) for more information.
+
 ## Using a custom Textbox.io editor toolbar
 
 1.  The Textbox.io editor uses a custom configuration file that is named tbio_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\textboxio.
@@ -90,10 +93,10 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
 2.  Restart the WebSphere_Portal server.
 
-## Using a custom TinyMCE editor toolbar
+## Using a custom TinyMCE editor toolbar in the HCL Web Content Manager authoring portlet
 
 !!!note
-    These customization steps only apply to the Enhanced editor used in the HCL Web Content Manager authoring portlet. Customization is not currently offered for Web content inline editing with the TinyMCE editor.
+    These customization steps only apply to the Enhanced editor used in the HCL Web Content Manager authoring portlet.
 
 1.  The TinyMCE editor uses a custom configuration file that is named tiny_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\tinymce.
 
@@ -122,6 +125,38 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
     !!!note
         To revert to the default editor toolbar, run the task that is named remove-wcm-ephox-editor-custom-configuration on the primary node only.
+        
+## Using a custom TinyMCE editor toolbar with in-place editing
+
+!!!note
+    These customization steps only apply for Web content in-place editing with the TinyMCE editor.
+
+1.  Log in to the WebSphere® Integrated Solutions Console as an administrator.
+
+2.  Click **Resources** > **Resource Environment** > **Resource Environment Providers** > **WCM WCMConfigService**.
+
+3.  Click **Custom properties** to update the configuration properties.
+
+4.  Edit or create the property `inplaceEdit.toolbarConfigForRichText`, and set its value to match the desired toolbar icons.
+
+    Sample values:
+    
+    * Single toolbar in space-separated list of buttons
+        ```
+        formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat
+        ```
+        
+    * Multiple toolbars in an array
+        ```
+        [ 'undo redo | bold italic underline | fontselect fontsizeselect', 'forecolor backcolor | alignleft aligncenter alignright alignfull | numlist bullist outdent indent | a11ycheck' ]
+        ```
+
+5.  Save your changes.
+
+6.  Restart the Portal server to apply your changes.
+
+    !!!note
+        To revert to the default editor toolbar, remove the property `inplaceEdit.toolbarConfigForRichText` and restart the server.
 
 ## Enabling TinyMCE editor
 
