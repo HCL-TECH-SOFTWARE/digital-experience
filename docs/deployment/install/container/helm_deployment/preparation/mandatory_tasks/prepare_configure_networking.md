@@ -38,7 +38,9 @@ You can define a list of allowed hosts for a specific application using the foll
      addon:
        contentComposer:
          # CORS Origin configuration for Content Composer, array of elements
-         corsOrigin: "https://my-different-application.net,https://the-other-application.com"               
+         corsOrigin: 
+          - "https://my-different-application.net"
+          - "https://the-other-application.com"
 ```
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
