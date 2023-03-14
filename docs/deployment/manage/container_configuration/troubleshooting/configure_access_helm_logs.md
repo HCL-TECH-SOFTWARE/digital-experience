@@ -21,7 +21,7 @@ You can see the string format in the following list. Once the property is set, r
 # Logging configuration
 logging:
   # Content Composer specific logging configuration
-contentComposer:
+  contentComposer:
     level: 
       - "api:server-v1:*=info"
   # DAM Plugin Google Vision specific logging configuration
