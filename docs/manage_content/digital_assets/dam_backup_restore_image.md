@@ -2,7 +2,8 @@
 
 This topic shows you how to backup and restore for Digital Asset Management persistence and binaries in a Helm-based deployment.
 
-This procedure is not meant for moving DAM data to another deployment. The backup data is valid only on the deployment where the backup is performed.
+!!! note
+    This procedure is not meant for moving DAM data to another deployment. The backup data is valid only on the deployment where the backup is performed. The recommended approach to move data between DAM deployments is [Export/Import](../usage/managing_dam/dam_exim.md).
 
 ## Backup
 
@@ -10,18 +11,18 @@ This procedure is not meant for moving DAM data to another deployment. The backu
 
 Verify that `core`, `persistence-node` and `digital-asset-management` pods are up and in `Running` state.
 
-```
+```bash
 kubectl -n <namespace> get pods
 ```
 
 !!! example
-    ```shell
+    ```bash
     kubectl -n dxns get pods
     ```
 
 You may see more than one `persistence-node` pods running:
 
-```
+```bash
 dx-deployment-core-0                                         3/3     Running   0          3h49m
 dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
 dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
