@@ -3,7 +3,7 @@
 This topic shows you how to backup and restore for Digital Asset Management persistence and binaries in a Helm-based deployment.
 
 !!! note
-    This procedure is not meant for moving DAM data to another deployment. The backup data is valid only on the deployment where the backup is performed. The recommended approach to move data between DAM deployments is [Export/Import](../usage/managing_dam/dam_exim.md).
+    This procedure is not meant for moving DAM data to another deployment. The backup data is valid only on the deployment where the backup is performed. The recommended approach to move data between DAM deployments is [Export/Import](./usage/managing_dam/dam_exim.md).
 
 ## Backup
 
