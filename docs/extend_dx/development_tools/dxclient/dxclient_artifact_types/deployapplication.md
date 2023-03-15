@@ -144,7 +144,7 @@ The undeploy-application command is used to undeploy the EAR file from the WebSp
 
 -   **Command description**
 
-    This command undeploys the application from WAS. User could opt to store backup by setting 'enable-backup' parameter to true.
+    This command undeploys the application from WAS. Users can opt to store backup by setting the 'enable-backup' parameter to true.
 
     ```
     dxclient undeploy-application
@@ -214,7 +214,7 @@ The undeploy-application command is used to undeploy the EAR file from the WebSp
     -dxConnectPassword <value>
     ```
 
-    Use this attribute to specify Soap port of the DX server:
+    Use this attribute to specify the Soap port of the DX server:
 
     ```
     -dxSoapPort <Soap port of the DX server>
@@ -232,7 +232,7 @@ The undeploy-application command is used to undeploy the EAR file from the WebSp
     -applicationName <value>
     ```
 
-    Use this attribute to set the flag to enable taking backup of the application to be undeployed. Default is false.
+    Use this attribute to set the flag to enable taking a backup of the application to be undeployed. the default is false.
 
     ```
     -enable-backup <value>
