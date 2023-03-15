@@ -4,11 +4,13 @@ The tags profile provides access to the HCL Connections tags facet that is serve
 
 The tags profile declares the following attribute names:
 
--   **IDid**
+-   **ID**
+    **id**
 
     The tag name that represents this tag.
 
--   **Frequencyfrequency**
+-   **Frequency**
+    **frequency**
 
     This attribute specifies how often this tag was assigned.
 

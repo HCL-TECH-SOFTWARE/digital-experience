@@ -54,7 +54,7 @@ The inline editing feature requires:
 
 !!! note
     When a user tabs between in-place editing enabled fields, users need to click each field in turn to access in-place editing for each field.
-
+    
 ## Inline editing
 
 Inline editing enables users with edit access to modify a content item through an authoring portlet as shown in the example below.

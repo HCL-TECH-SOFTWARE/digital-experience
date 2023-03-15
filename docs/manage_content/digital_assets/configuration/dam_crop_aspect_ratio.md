@@ -1,6 +1,6 @@
 # Configure aspect ratios for crop
 
-`cropAspectRatio` can be configured in `values.yaml` under `configurations` section of `digitalAssetManagement`. 
+`cropAspectRatio` can be configured in `values.yaml` under `configurations` section of `digitalAssetManagement`.
 
 ```Yaml
 configuration:

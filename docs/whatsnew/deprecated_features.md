@@ -5,8 +5,10 @@ Deprecation means that the features are supported at this time but can be remove
 Links to more information on the replacement for those items listed for deprecation will be posted as they become available to provide help as you move away from these features.
 
 ## Recently Deprecated Features
+
 |Category|Deprecated|Recommended Action|Effective Date|
 |--------|----------|------------------|--------------|
+|Manage Content|Design Studio|The Design Studio Beta component has been removed. Future Digital Experience 9.5 releases will incorporate feedback on the component features received during the Beta evaluation period.|March 2023|
 |Manage Content |Textbox.io |The Textbox.io component in the HCL Digital Experience software is being deprecated and will End of Support (EOS) on January 31, 2024. From CF208 onwards, the TinyMCE editor can be used as the embedded Rich text editor. For more information, see [Web Content Author Editor options](../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md) and [Web content authoring options](../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-the-editor-used-for-in-place-editing).| January 2023|
 |Configuring |Deprecation of OpenShift Passthrough|Helm charts have an "enableOpenShiftPassthrough" value to create a "Route" resource which only passes through the main HAProxy port (443 most of the time). Instead of having such flavour specific configuration in helm charts, such setups are documented and point to the flavour specific documentation and will be deprecated.|August 2022|
 |Developing|DAM API|Effective June 2022, the following DAM API will be deprecated.<br>- PUT /plugins/{plugin_id}<br>- PATCH /plugins/{plugin_id}<br>- GET /plugins/{plugin_id}<br>- DELETE /plugins/{plugin_id}<br>- POST /plugins<br>- GET /plugins<br>For more information, refer to the latest [HCL Experience API](https://github.com/HCL-TECH-SOFTWARE/experience-api-documentation) Github repository.|June 2022|
@@ -34,16 +36,19 @@ Links to more information on the replacement for those items listed for deprecat
 |Migrating |IBM® JSF Bridge |In WAS 9.0.5.2 and 8.5.5.17, IBM removed the JSF Bridge from WAS. To address this, an updated JSF Portlet Bridge is included in DX CF18 release. Customers installing HCL DX CF18, and using an IBM WebSphere Application Server Network Deployment version later than 8.5.5.17 or 9.0.5.2 should utilize the new JSF Portlet Bridge. The HCL JSF Portlet Bridge is built using the same class names as the IBM JSF Portlet Bridge provided in WAS 9.0.0.7 thru 9.0.5.1 and WAS 8.5.5.16 respectively. User applications should be able to continue to function without any modification.|December 2020|
 
 ## Deprecated Dependent Products
-These are the list of Dependent Products that are already Out of Support. 
 
-### Linux OS family  
+These are the lists of Dependent Products that are already Out of Support.
+
+### Linux OS family
+
 |OS|OS Supported Versions|Hardware|Bitness|Product Minimum|
 |-------|-------|-------|-------|-------|
 |SUSE Linux Enterprise Server (SLES) 11	|Base and later maintenance	releases|x86-64 IBM z Systems	|64-Exploit, 64-Tolerate	|8.5	|
 |Ubuntu 16.04 LTS	|Base and later maintenance	releases|Power System – Little Endian	|64-Exploit, 64-Tolerate	|8.5	|
 |Ubuntu 16.04 LTS	|Base and later maintenance	releases|x86-64	|64-Exploit, 64-Tolerate	|8.5	|  
 
-### Windows OS family  
+### Windows OS family
+
 |OS|Supported Versions|Hardware|Bitness|Product Minimum|
 |---------|---------|---------|---------|---------|
 |Windows 8.1 Enterprise*|Base and later maintenance releases|x86-64|64-Exploit, 64-Tolerate|8.5|
@@ -59,16 +64,17 @@ These are the list of Dependent Products that are already Out of Support.
 
 *Support for developer platform only.  
 
-### Hypervisor - AIX Summary  
+### Hypervisor - AIX Summary
 |Hypervisor|Product minimum|Deployment Units|Supported Guest Operating System|
 |---------|-----|-----|----------------------------------|
 |Application Workload Partition (WPAR) AIX 7.1|8.5|Server|	-	AIX 7.1 POWER System \- Big Endian<br>-	AIX 7.2 POWER System \- Big Endian|
 
 !!! important "AIX support"
 
-	Portal Express offering does not support AIX.  
+    Portal Express offering does not support AIX.  
 
-### Hypervisor - Linux Summary  
+### Hypervisor - Linux Summary
+
 |Hypervisor|Product Minimum|Deployment Units|Supported Guest Operating System|
 |---------|-----|-----|----------------------------------|
 |KVM in SUSE Linux Enterprise Server (SLES) 11 and later|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
@@ -116,28 +122,32 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |Oracle Database 12.2.0.2 Enterprise Edition|12.2.0.2 and later maintenance releases|8.5|  
 
 ### Collaboration
+
 |Prerequisite|Supported software versions|Product Minimum|
 |-----------|------------------|-----|
 |HCL Sametime Communicate|9.0 and later maintenance|8.5|
 |HCL Sametime Complete|9.0 and later maintenance|8.5|  
 
 ### JDBC Drivers
+
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |DB2 Connect Enterprise Edition|11.1, and later maintenance releases|8.5|
 |Microsoft SQL Server JDBC Driver|4.2, and later maintenance releases|8.5|
 
 ### Security Management
+
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |IBM Security Access Manager for Web|7.0, and later maintenance releases|8.5|
 |IBM Security Access Manager|9.0, and later maintenance releases|8.5|
 |Tivoli Directory Integrator|7.1.1, and later maintenance releases|8.5|  
 
-### Web Browsers 
+### Web Browsers
+
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
-|Microsoft Internet Explorer|11|8.5| 
+|Microsoft Internet Explorer|11|8.5|
 
 ## Previously Deprecated Features
 

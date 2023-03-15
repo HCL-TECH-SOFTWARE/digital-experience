@@ -67,10 +67,8 @@ If no LDAP is configured in the helm values, HCL Digital Experience is configure
 !!! important
     If the Websphere primary admin user was at any time changed manually and not through the helm values, the values for `wasUser` and `wasPassword` need to be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterwards, the helm values can be used to change the credentials.
 
-
 !!! important
     Do not change the admin credentials during the update of the DX deployment to a later version. Always set the current credentials in the `custom-values.yaml` before upgrading.
-
 
 !!! note
     Currently, the Configuration Wizard and DXConnect always use the `wpsadmin` user. Changes to the `wasUser` do therefore not affect the Configuration Wizard and DXClient (which connects to DXConnect). If the `wasUser` is kept as the default `wpsadmin` but its password is changed, the new password will also apply to the Configuration Wizard and DXConnect.
@@ -119,6 +117,7 @@ security:
 ### Guidelines for Configuring Credentials from Secrets
 
 #### 1. Create a Custom Secret
+
 Create a secret that will be used to reference credentials, this secret should contain all the required attributes (e.g. "username", "password") needed by the credentials.
 
 There are two ways to create and deploy custom secrets:
@@ -155,12 +154,14 @@ type: "Opaque"
 ```
 
 #### 2. Reference the Secret
+
 Once the secret is created inside the cluster, you can now reference them in their respective custom secret fields inside the `custom-values.yaml` under `security` section. See this [example](./optional_configure_credentials.md#configuring-credentials-from-secrets) for reference.
 
 !!! note
     For Core LTPA AND LDAP you can reference your secrets under `configuration.core` section of the helm values.
 
 #### 3. Check the Required Attributes in Secrets
+
 There are multiple credentials being used in HCL Digital Experience 9.5. Each application has different required attributes for their credential. If you intend to use a secret to configure credentials for a specific application, always check the data attributes of the secret that you will be using in order for the helm chart to map those values and be passed/cascaded accordingly to each application.
 
 !!! note
