@@ -23,5 +23,4 @@ The following list shows some of the deprecated parameters and the new parameter
     - [DXClient](../index.md)
     - [Sample Pipelines for use with HCL DXClient and Automation servers](../sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
     - [How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/digital-experience/8.5/panel_help/wcm_syndication.html)
-    - [DAM Assets Export and Import (EXIM)](../../../../manage_content/digital_assets/usage/managing_dam/dam_exim.md) 
-
+    - [DAM Assets Export and Import (EXIM)](../../../../manage_content/digital_assets/usage/managing_dam/dam_exim.md)
