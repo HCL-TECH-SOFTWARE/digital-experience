@@ -215,6 +215,9 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
+    -   HCL DX 9.5 CF211 release: **V1.20.0
+        -   [Deploy and Undeloy Applications](../dxclient/dxclient_artifact_types/deployapplication.md)
+
     -   HCL DX 9.5 CF210 release: **V1.19.0
         -   Removed paramaters deprecated during CF201 & CF202 deployment.
         -   [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
