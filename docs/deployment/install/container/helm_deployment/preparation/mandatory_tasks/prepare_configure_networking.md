@@ -176,7 +176,7 @@ You can set the name of the certificate used with the following syntax, the defa
 
 ### OpenShift Passthrough
 
-From CF211, a new `Route` resource must be created manually.
+Previous versions of the Helm chart had an `openShiftPassthrough` value that created an OpenShift `Route` resource automatically. This was deprecated and removed and from CF211, a `Route` resource must be created manually when required as part of the deployment.
 
 #### Create the route resource manually
 
