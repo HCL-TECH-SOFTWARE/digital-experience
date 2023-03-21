@@ -82,7 +82,7 @@ Follow the configuration steps outlined in the Procedure section below before yo
     3. `licenseServer URL` – verify your connection to the HCL Flexnet Server URL. Ensure that your system and network firewalls allow for outbound connections to hclsoftware.compliance.flexnetoperations.com.
     4. `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering  part your organization has acquired and is mapped to your HCL Flexnet server instance(s). See Table HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and Flexnet License Server Feature Name below.
     5. `licenseManagerUser` – Configure this variable with the user name of the administrator authenticated to manage your HCL Software License Portal entitlements. 
-    6. `licenseManagerPassword` – Configure this variable with the password associated with the user name of the administrator to manage your HCL Software License Portal entitlements defined in Step 5 above.
+    6. `licenseManagerPassword` – Configure this variable with the password associated with the user name of the administrator to manage your HCL Software License Portal entitlements defined in the previous step.
 
 **HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and HCL Flexnet License Server Feature Name**
 

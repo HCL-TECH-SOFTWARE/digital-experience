@@ -239,11 +239,11 @@ The License Manager component communicates with the local license server to vali
 
     3. `licenseServer URL` – verify your connection to the Local License Server URL.
 
-    4. `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering part your organization has acquired and is mapped to your HCL Flexnet server instance(s). See Table HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and Flexnet License Server Feature Name below.
+    4. `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering part your organization has acquired and is mapped to your HCL Flexnet server instance(s). See Table [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and Flexnet License Server Feature Name](../configure_entitlement_checks/index.md#procedure).
 
     5. `licenseManagerUser` – Configure this variable with the user name of the administrator authenticated to manage your Local License Server. (This is by default set to 'admin')
 
-    6. `licenseManagerPassword` – Configure this variable with the password associated with the user name of the administrator to manage your Local License Server defined in Step 6 above.
+    6. `licenseManagerPassword` – Configure this variable with the password associated with the user name of the administrator to manage your Local License Server defined in the previous step.
 
 3. Import the generated SSL certificate for the local license manager to the Kubernetes secret manually. As mentioned above, use 'license-secret' as secret name. Below is an example command in a namespace dxns and where hostname.certs is the filename:
 
