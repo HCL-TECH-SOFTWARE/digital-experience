@@ -27,6 +27,8 @@ The following DX 9.5 applications can be configured to leverage `HorizontalPodAu
 
 `HorizontalPodAutoscalers` monitor Pod resources such as CPU and Memory usage, and automatically scales up/down applications based on specific thresholds defined and scaling limits.
 
-For the above mentioned DX applications, the maximum and minimum count of Replicas can be configured via the values.yaml. In terms of scaling the pods, the recommended way is to update the replicas in the `values.yaml` and not use `kubectl replica`. The thresholds for CPU and Memory usage are also configurable allowing for load-based automated scaling of these applications.
+For the above mentioned DX applications, the maximum and minimum count of Replicas can be configured via the values.yaml. The thresholds for CPU and Memory usage are also configurable allowing for load-based automated scaling of these applications.
+
+Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) for more information on these services.
 
 Per default, the automated scaling is not active and needs to be enabled before taking effect.
