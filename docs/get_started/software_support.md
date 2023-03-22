@@ -11,7 +11,7 @@ While HCL cannot reasonably describe all possible configurations that a customer
 HCL only provides Support for configuration and problem determination of Third Party Software that is supplied with HCL’s Programs. In all other cases, it is your responsibility to obtain configuration assistance and support for Third Party Software yourself. In those cases, if HCL determines that a problem reported to HCL is caused by Third Party Software, we will ask you to engage directly with your service provider to obtain support or assistance.
 
 !!! note 
-    The statements in this document reflect the general level of Support that can be expected for HCL Digital Experience in accordance with HCL’s Support Guide available at: https://support.hcltechsw.com/cs. Nothing in this document shall be construed as supplementing, modifying, or superseding the terms of your HCL Master License Agreement, or other applicable agreement, for HCL Digital Experience, nor shall it create any obligation for HCL to deliver a level of support other than that provided under a relevant HCL agreements.
+    The statements in this document reflect the general level of Support that can be expected for HCL Digital Experience in accordance with HCL’s Support Guide available at: [https://support.hcltechsw.com/cs](https://support.hcltechsw.com/cs). Nothing in this document shall be construed as supplementing, modifying, or superseding the terms of your HCL Master License Agreement, or other applicable agreement, for HCL Digital Experience, nor shall it create any obligation for HCL to deliver a level of support other than that provided under a relevant HCL agreements.
 
 
 ## Categories of Support
