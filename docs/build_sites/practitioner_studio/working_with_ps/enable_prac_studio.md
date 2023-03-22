@@ -4,12 +4,12 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
 
 ## Enabling Practitioner Studio and Woodburn Studio in base portal
 
-!!! note 
+!!! note
     It is not necessary to stop or restart Portal when running these configuration tasks. Please note that in order for you to deploy Practitioner Studio and Woodburn Studio to a virtual portal, you must first enable the 95 UI features in base Portal.
 
-1.  Open a command line.
-2.  Change to the wp\_profile-root/ConfigEngine directory.
-3.  Run the **enable-v95-UI-features** config task.
+1. Open a command line.
+2. Change to the wp\_profile-root/ConfigEngine directory.
+3. Run the **enable-v95-UI-features** config task.
 
     -   AIX: `./ConfigEngine.sh **enable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
     -   Linux: `./ConfigEngine.sh **enable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
@@ -20,9 +20,9 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
 
 ## Enabling Practitioner Studio and Woodburn Studio in an existing virtual portal
 
-1.  Open a command line.
-2.  Change to the wp\_profile-root/ConfigEngine directory.
-3.  Run the **enable-v95-UI-features-virtual-portal** config task.
+1. Open a command line.
+2. Change to the wp\_profile-root/ConfigEngine directory.
+3. Run the **enable-v95-UI-features-virtual-portal** config task.
 
     -   AIX: `./ConfigEngine.sh **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
     -   Linux: `./ConfigEngine.sh **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
@@ -41,13 +41,8 @@ Enabling Practitioner Studio via the enable task has the following effect to you
 
 Follow the steps to enable your site to be seen in SiteMap:
 
-1.  Navigate to **Administration** \> **Managed Pages**.
-2.  Click **Edit Page Properties** for your home page.
-3.  Expand **Advanced Options** and then click **I want to set parameters**.
-4.  Create a new parameter com.ibm.portal.Hidden with value false.
-5.  Save, then test.
-
-
-???+ info "Related information"  
-    - [Install the HCL Digital Experience 9.5 components](../../../manage_content/digital_assets/installation/install_config_dam.md)
-
+1. Navigate to **Administration** \> **Managed Pages**.
+2. Click **Edit Page Properties** for your home page.
+3. Expand **Advanced Options** and then click **I want to set parameters**.
+4. Create a new parameter com.ibm.portal.Hidden with value false.
+5. Save, then test.

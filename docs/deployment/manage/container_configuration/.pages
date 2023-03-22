@@ -2,7 +2,6 @@ Title: Configure Kubernetes Deployment
 nav:
     - index.md
     - core_interactions_kubernetes.md
-    - helm_dam_backup_restore.md
     - kubernetes_remote_search.md
     - run_core_config_engine.md
     - container_scaling.md

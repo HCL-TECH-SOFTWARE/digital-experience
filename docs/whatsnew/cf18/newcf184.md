@@ -20,15 +20,6 @@ The HCL Experience API is a set of OpenAPI-compliant REST APIs available for cus
 
 Take advantage of new step by step guidance for HCL Digital Experience practitioners presented in several new videos. See the following HCL Digital Experience Help Center topics:
 
--   [HCL Digital Experience Combined Cumulative Fix (CF) Installation](../../deployment/install/traditional/cf_install/index.md)
--   [Deploy HCL Digital Experience 9.5 to Red Hat OpenShift](https://help.hcltechsw.com/digital-experience/9.5/containerization/openshift.html){:target="_blank"}<!-- (../containerization/openshift.md) -->
--   [Deploy Digital Asset Management, Content Composer and Experience API to Red Hat OpenShift](../../manage_content/digital_assets/installation/install_config_dam.md)
-
-<!-- ???info "Related information"
-    - [HCL Digital Experience Combined Cumulative Fix \(CF\) Installation](ccf_strategy95.md)
-    - [Deploy HCL Digital Experience 9.5 to Red Hat OpenShift](../containerization/openshift.md)
-    - [Deploy Digital Asset Management, Content Composer and Experience API to Red Hat OpenShift](../containerization/install_config_cc_dam.md)
-    - [Experience API](../open_api/openapi_overview.md)
-    - [Web Content Manager Syndication REST APIs](../wcm/wcm_REST_web_content_manager_control_syndication.md)
-
--->
+- [HCL Digital Experience Combined Cumulative Fix (CF) Installation](../../deployment/install/traditional/cf_install/index.md)
+- [Deploy HCL Digital Experience 9.5 to Red Hat OpenShift](https://help.hcltechsw.com/digital-experience/9.5/containerization/openshift.html){:target="_blank"}
+- [Deploy Digital Asset Management, Content Composer and Experience API to Red Hat OpenShift](/digital-experience/CF210/manage_content/digital_assets/installation/install_config_dam.md)
