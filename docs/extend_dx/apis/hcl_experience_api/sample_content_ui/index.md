@@ -26,4 +26,8 @@ There are certain prerequisites that need to be followed before Sample Content U
 -   **[Getting started with Sample Content UI \| HCL Experience API](./getting_started_sample_api.md)**  
 Learn how to get started with the Sample Content UI application on HCL Digital Experience 9.5.
 
+## HCL Software Academy course
+
+For an introduction and a demo on how to use Experience API, go to [Experience API](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416). To try it out yourself, refer to [Experience API Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf) and [Experience API Lab Resources](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
+
 
