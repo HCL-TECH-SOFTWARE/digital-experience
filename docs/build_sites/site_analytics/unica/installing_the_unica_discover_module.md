@@ -71,6 +71,23 @@ Follow these steps to enable HCL Unica Discover integration with HCL Digital Exp
 
     ![Invalidate the Theme Cache using Practitioner Studio](../../../images/Invalidate%20the%20Theme%20Cache%20using%20Practitioner%20Studio.png "Invalidate the Theme Cache using Practitioner Studio")
 
+## Setup HCL Digital Experience theme with Discover extension
+
+You can configure HCL Discover with HCL Digital Experience is with theme modules. This gives you more granular control per page when to use it. In this part, you will update your theme to add the Discover modules and update the profile. 
+
+1. Use the instructions in Part 3 of Lab [HDX-DEV-100 Theme Development](https://academy.hcltechsw.com/courses/course/hdx-dev-100-dx-developer-beginner) to work on your theme. From your DX Solution Modules SoFy instance, choose the Spotlight theme. Then add the two modules discover_vxxx and pako_vxxx from the host of your DX server under PortalServer/doc/discover or get them from your unzipped lab files under the theme’s modules folder. Then edit the DiscoverUI_for_DX-js.uncompressed.js. Search for the endpoint and change its entry to the Discover Packet Forwarder URL you just copied and save it. 
+[](../../../images/Discover_1.png)
+
+2. Update the compressed version, DiscoverUI_for_DX.js, as well. You may either use a minifier, that can be installed as an extension or update it manually. You will see that the part of the services in the DiscoverUI_for_DX.js is not compressed. Find that area again using a search on the endpoint and change the URL to your Unica Discover Packet Forwarder URL you copied before. Save your changes.
+[](../../../images/Discover_2.png)
+
+3. Then update the profile(s) of the theme for the sites you want to integrate. In DX Demo this is the spotlight profile. Edit the profiles/profile_spotlight.json file and add on the top the module for Discover, which is named that of the module directory, in our case discover_v1210.
+[](../../../images/Discover_3.png)
+
+4.	Save again and push the changes to your DX server. And then test it. First ensure, you clear the cache. Go to the Practitioner Studio – Themes, select Utilities – Control Center, and under Invalidate Cache click Click to invalidate and test it again, as you did in part 1.
+[](../../../images/Discover_4.png)
+
+You have successfully deployed the Discover theme modules and added them to your profile used by your pages.
 
 ## Troubleshooting
 
