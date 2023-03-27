@@ -106,33 +106,22 @@ Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including
 
     ![Check references and delete media asset](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
 
-## Copy a media asset
+## Copying a media asset
 
-### Introduction
-This feature helps the user to quickly transfer Asset from one Collection to another.
+This feature helps the user to quickly transfer a media asset from one collection to another.
 
-### Steps
-Follow these steps to copy an asset to another Collection
+1. Click the **more menu** option of the asset. This allows you to view options such as Properties, Preview, Copy Link, Download, Copy, and Delete.
 
-1. Click **more menu** option of the asset. This allows you to view the options like Properties,
- Preview, copy Link, Download, Copy, Delete.
+2. Click **Copy**.
+A dialogue box appears that shows the list of collections. You can search for a specific collection. You can also navigate inside a collection of a sub collection is present. 
 
-2. Click on **Copy**.
+3. Check the **Add new keywords to existing** box if you want newly generated keywords to be added to existing keywords. This is available only when Plugin is enabled.
 
-3. After Clicking on **copy**  you are prompted to a dialogue box that shows the list of **Collections**,
-as well as there is an option to **Search** for a collection.
+6. Select a collection you want to copy the asset to and click **Copy**.
 
-4. You can Navigate inside the collection if sub collection is present.
+If you copied an asset to the same collection, a dialogue box to rename the asset appears. 
 
-5. Select **Add new keywords to existing** Checkbox if you want newly generated keywords 
-to be added to existing keywords (only shows when Plugin is enabled).
-
-6. select the Collection and Click on **Copy**.
-
-7. After Clicking on the **Copy** button you are either prompted to Rename dialog (if copied to the same collection) or it shows a 
-success message.
-
-8. Click **View Location** to navigate inside that collection.
+8. Click **View Location** to navigate inside the collection.
 
 ## HCL Digital Experience Solution Feedback
 
