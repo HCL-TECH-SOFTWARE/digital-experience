@@ -24,11 +24,8 @@ HCL Digital Experience page editors can use social rendering to feature social d
 -   **[HCL Web Content Manager Multilingual Solution](../../manage_content/wcm_authoring/multi_lingual/index.md)**  
 The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites. 
 
+## HCL Software Academy course
 
-<!--
--   **[Setting up marketing campaigns](site_market.md)**  
-Use these tools and features to setup marketing campaigns for your website.
--->
-
+For an introduction and a demo on how to use the Site Manager, go to [Site Manager](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D291). To try it out yourself, refer to [Site Manager Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HCL_Digital_Experience_Getting_Started_Lab.pdf) and [Site Manager Lab Resources](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HCL_Digital_Experience_Getting_Started_Lab_Resources.zip).
 
 
