@@ -26,6 +26,12 @@ The HCL Experience API describes a high-level API through which the following sp
 -   **[HCL Ring API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/)**: Presents developer entry points to HCL Digital Experience 9.5 core platform capabilities which are divided into two main categories - **Authorization APIs** and **Web Content APIs**.
 -   **[HCL Digital Asset Management API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/)**: Presents developer entry points to the Digital Asset Management features of HCL Digital Experience 9.5.
 -   **[HCL Image Processor API](https://opensource.hcltechsw.com/experience-api-documentation/image-processor-api/)**: Presents developer entry points to the Digital Asset Management Image Processor functions of HCL Digital Experience 9.5.
+-  **[HCL Personalization API](https://opensource.hcltechsw.com/experience-api-documentation/pzn-api/)**: Presents developer entry points to the Personalization Rule functions of HCL DX 9.5.
+-  **[HCL WCM API](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/)**: Presents redesigned developer entry points to the Web Content Manager functions of HCL DX 9.5. Intended to facilitate the management of Web content, content-sites, and content-pages.
+- **[HCL Access Control API](https://opensource.hcltechsw.com/experience-api-documentation/access-api/)**: Presents developer entry points to the Access Control Management functions of HCL DX 9.5.
+- **[HCL Remote Model API](https://opensource.hcltechsw.com/experience-api-documentation/remotemodel-api/)**: Presents developer entry points to the various models for pages, layouts, and more functions of HCL DX 9.5.
+- **[HCL Search API](https://opensource.hcltechsw.com/experience-api-documentation/search-api/)**: Presents redesigned developer entry points to the search (like text or keyword searches) functions of HCL DX 9.5.
+- **[HCL Users and Groups API](https://opensource.hcltechsw.com/experience-api-documentation/users-api/)**: Presents developer entry points to the user and group management functions of HCL DX 9.5.
 
 !!! note
     Future HCL Digital Experience 9.5 feature functionality will also be exposed through the HCL Digital Experience API.
