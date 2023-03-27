@@ -88,9 +88,15 @@ In addition, the package includes scripts for all operating systems that make it
     export VOLUME_DIR=storeForScriptApplication
     ```
 
-9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
+    Set appropriate permissions for the `VOLUME_DIR`.
 
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
+    ```bash
+    chmod xxx <working-directory>/<VOLUME_DIR>
+    ```
+
+9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/<VOLUME_DIR>`.
+
+    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
 
 10. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
 
@@ -295,7 +301,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
 ## Configuring DXClient
 
-Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
+Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
 
 ```json
 {
