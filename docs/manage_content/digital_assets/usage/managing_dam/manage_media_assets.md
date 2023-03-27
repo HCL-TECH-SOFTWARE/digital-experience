@@ -106,6 +106,34 @@ Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including
 
     ![Check references and delete media asset](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
 
+## Copy a media asset
+
+### Introduction
+This feature helps the user to quickly transfer Asset from one Collection to another.
+
+### Steps
+Follow these steps to copy an asset to another Collection
+
+1. Click **more menu** option of the asset. This allows you to view the options like Properties,
+ Preview, copy Link, Download, Copy, Delete.
+
+2. Click on **Copy**.
+
+3. After Clicking on **copy**  you are prompted to a dialogue box that shows the list of **Collections**,
+as well as there is an option to **Search** for a collection.
+
+4. You can Navigate inside the collection if sub collection is present.
+
+5. Select **Add new keywords to existing** Checkbox if you want newly generated keywords 
+to be added to existing keywords (only shows when Plugin is enabled).
+
+6. select the Collection and Click on **Copy**.
+
+7. After Clicking on the **Copy** button you are either prompted to Rename dialog (if copied to the same collection) or it shows a 
+success message.
+
+8. Click **View Location** to navigate inside that collection.
+
 ## HCL Digital Experience Solution Feedback
 
 HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
