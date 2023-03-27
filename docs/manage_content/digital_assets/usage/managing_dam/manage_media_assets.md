@@ -117,11 +117,11 @@ A dialogue box appears that shows the list of collections. You can search for a 
 
 3. Check the **Add new keywords to existing** box if you want newly generated keywords to be added to existing keywords. This is available only when Plugin is enabled.
 
-6. Select a collection you want to copy the asset to and click **Copy**.
+4. Select a collection you want to copy the asset to and click **Copy**.
 
 If you copied an asset to the same collection, a dialogue box to rename the asset appears. 
 
-8. Click **View Location** to navigate inside the collection.
+5. Click **View Location** to navigate inside the collection.
 
 ## HCL Digital Experience Solution Feedback
 
