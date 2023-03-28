@@ -71,7 +71,7 @@ Follow these steps to enable HCL Unica Discover integration with HCL Digital Exp
 
     ![Invalidate the Theme Cache using Practitioner Studio](../../../images/Invalidate%20the%20Theme%20Cache%20using%20Practitioner%20Studio.png "Invalidate the Theme Cache using Practitioner Studio")
 
-## Setup HCL Digital Experience theme with Discover extension
+## Setting up HCL Digital Experience theme with Discover extension
 
 You can configure HCL Discover with HCL Digital Experience with theme modules. This gives you more granular control per page and when to use it. In this part, you will update your theme to add the Discover modules and update the profile. 
 
