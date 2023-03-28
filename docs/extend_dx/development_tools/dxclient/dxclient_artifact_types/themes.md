@@ -175,7 +175,7 @@ The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from
 
         -   For new WebDAV theme collection, DXClient tool adds the provided collection (folder/zip) to the WebDAV file store.
         -   For existing WebDAV theme collection, the existing theme collection is replaced by the provided theme collection during the update. To get the latest theme collection from the DX server, see [Exporting content from the filestore](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md) and make modifications on the same folder to get it updated in the DX Server WebDAV file store.
-        -   For WebDAV theme collection update, a backup of the existing theme collection is taken and placed in `store/outputFiles/themes/backup/foldername` folder in case it is required to revert back the update.
+        -   For the WebDAV theme collection update, a backup of the existing theme collection is taken and placed in the `store/outputFiles/themes/backup/foldername` folder in case it is required to revert back to the update.
         Log files from command execution can be found in the logs directory of the DXClient installation.
 
     !!! example
