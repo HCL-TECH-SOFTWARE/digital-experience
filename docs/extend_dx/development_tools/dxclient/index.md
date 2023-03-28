@@ -74,7 +74,7 @@ In addition, the package includes scripts for all operating systems that make it
     !!! note
         You will lose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
 
-6. Set appropriate permissions.
+6. Set appropriate read and execute permissions as per user/group/owner.
 
     ```bash
     chmod xxx <working-directory>/bin
@@ -88,7 +88,7 @@ In addition, the package includes scripts for all operating systems that make it
     export VOLUME_DIR=storeForScriptApplication
     ```
 
-    Set appropriate permissions for the `VOLUME_DIR`.
+    The `VOLUME_DIR` will require read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
 
     ```bash
     chmod xxx <working-directory>/<VOLUME_DIR>
