@@ -162,7 +162,7 @@ To do so, connect into the DX Core Pod and create a file. See the following exam
 
 ```sh
 # Connect into your DX Core Pod
-# adjust the deployment prefix "dx" and the namespace "dxns" to match your environment
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
 kubectl exec -it -n dxns dx-core-0 -c core -- /bin/bash
 # Create the preflight check override file
 # This file is persisted in the DX Core Pods Persistent Volume
@@ -179,7 +179,7 @@ Remove the configuration semaphore file in the DX Core Pod:
 
 ```sh
 # Connect into your DX Core Pod
-# adjust the deployment prefix "dx" and the namespace "dxns" to match your environment
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
 kubectl exec -it -n dxns dx-core-0 -c core -- /bin/bash
 # Remove the config status semaphore file
 rm -f /opt/HCL/wp_profile/rsAutoConfigStatus
@@ -189,7 +189,7 @@ Remove the configuration semaphore file in the DX Remote Search Pod:
 
 ```sh
 # Connect into your DX Remote Search Pod
-# adjust the deployment prefix "dx" and the namespace "dxns" to match your environment
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
 kubectl exec -it -n dxns dx-remote-search-0 -c remote-search -- /bin/bash
 # Remove the config status semaphore file
 rm -f /opt/HCL/AppServer/profiles/prs_profile/rsAutoConfigStatus
@@ -199,10 +199,10 @@ Perform a restart rollout of DX Core and DX Remote Search:
 
 ```sh
 # Perform the restart of DX Remote Search
-# adjust the deployment prefix "dx" and the namespace "dxns" to match your environment
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
 kubectl rollout restart statefulset dx-remote-search -n dxns
 # Perform the restart of DX Core
-# adjust the deployment prefix "dx" and the namespace "dxns" to match your environment
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
 kubectl rollout restart statefulset dx-core -n dxns
 ```
 
@@ -223,10 +223,11 @@ Execute the ConfigEngine task:
 
 ```sh
 # Connect into your DX Core Pod
-# adjust the deployment prefix "dx" and the namespace "dxns" to match your environment
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
 kubectl exec -it -n dxns dx-core-0 -c core -- /bin/bash
 # Inside the container execute the ConfigEngine task
 # make sure that your deployment prefix (dx in this sample, e.g. dx-remote-search) is adjusted to your environment
+# Ensure to use the right credentials for DWasPassword
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh configure-portal-for-remote-search -DWasPassword=[WAS ADMIN PASSWORD] -Dremote.search.host.name="dx-remote-search" -Dremote.search.host.port="9043" -Dremote.search.cert.alias="remotesearchalias" -Dremote.search.iiop.url="iiop://dx-remote-search:2809" -Dremote.search.index.directory="/opt/HCL/AppServer/profiles/prs_profile/SearchCollections
 ```
 
@@ -235,15 +236,61 @@ Copy that file out of the Container into your local host:
 
 ```sh
 # Copy out the LTPA key export
-# adjust the deployment prefix "dx" and the namespace "dxns" to match your environment
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
 kubectl cp dx-core-0:/home/dx_user/LTPAKeyExported ./LTPAKeyExported -c core -n dxns
 ```
 
 ### Configure the Remote Search Pod
 
+Copy the LTPA Key exported from DX Core into the Remote Search Pod:
 
+```sh
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
+kubectl cp ./LTPAKeyExported dx-remote-search-0:/home/dx_user/ -c remote-search -n dxns
+```
+
+Execute the ConfigEngine task:
+```sh
+# Connect into your DX Remote Search Pod
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
+kubectl exec -it -n dxns dx-remote-search-0 -c remote-search -- /bin/bash
+# Inside the container execute the ConfigEngine task
+# make sure that your deployment prefix (dx in this sample, e.g. dx-core) is adjusted to your environment
+# Ensure to use the right credentials for DWasPassword
+/opt/HCL/AppServer/profiles/prs_profile/ConfigEngine/./ConfigEngine.sh configure-remote-search-server-for-remote-search -DWasPassword=[WAS ADMIN PASSWORD] -Dportal.host.name="dx-core" -Dportal.port.number="10042" -Dportal.cert.alias="portaldockeralias" -Dremote.search.host.name="localhost"
+```
 
 ### Restart both Core and Remote Search
+
+To restart Remote Search:
+
+```sh
+# Connect into your DX Remote Search Pod
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
+kubectl exec -it -n dxns dx-remote-search-0 -c remote-search -- /bin/bash
+# Create a semaphore file which will ensure, the Pod is not recycled during your restart
+touch /home/dx_user/configInProgress
+# Perform restart, fill in the proper credentials
+/opt/HCL/AppServer/profiles/prs_profile/bin/./stopServer.sh server1 -user [WAS ADMINISTRATOR NAME] -password [WAS ADMINISTRATOR PASSWORD]
+/opt/HCL/AppServer/profiles/prs_profile/bin/./startServer.sh server1
+# Remove semaphore file
+rm -f /home/dx_user/configInProgress
+```
+
+To restart DX Core:
+
+```sh
+# Connect into your DX Core Pod
+# adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
+kubectl exec -it -n dxns dx-core-0 -c core -- /bin/bash
+# Create a semaphore file which will ensure, the Pod is not recycled during your restart
+touch /opt/app/configInProgress
+# Perform restart, fill in the proper credentials
+/opt/HCL/wp_profile/bin/./stopServer.sh WebSphere_Portal -user [WAS ADMINISTRATOR NAME] -password [WAS ADMINISTRATOR PASSWORD]
+/opt/HCL/wp_profile/bin/./startServer.sh WebSphere_Portal
+# Remove semaphore file
+rm -f /opt/app/configInProgress
+```
 
 ### Search Services and Collections
 
