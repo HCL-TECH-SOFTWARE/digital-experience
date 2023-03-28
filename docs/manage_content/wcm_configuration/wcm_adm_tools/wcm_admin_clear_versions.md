@@ -73,7 +73,19 @@ There are two methods available when the tool is run on a virtual portal:
     http://[Virtual_HOST]:[PORT]/wps/wcm/myconnect?MOD=ClearVersions
     ```
 
+## ConfigEngine command
 
+You can clear the version history using the following ConfigEngine command:
+
+`ConfigEngine.sh|bat run-wcm-admin-task-clear-versions`
+
+|Parameter|Value or Action|
+|---------|---------|
+|`-Dlibrary=libraryName`|Name of the library to crop versions from|
+|`-DallLibraries=true`|To run against all libraries|
+|`-Dkeep=number`|The number of versions to keep|
+|`-Ddeleted=false`|To skip deleted items|
+|`-Dbatch=number`|The batch size|
 
 ???+ info "Related information"
     - [Cloning data](../wcm_adm_tools/wcm_cloning/wcm_cloning_live.md)
