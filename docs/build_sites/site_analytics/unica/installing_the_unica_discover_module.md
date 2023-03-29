@@ -94,8 +94,8 @@ You can configure HCL Discover with HCL Digital Experience with theme modules. T
 
 4. Save again and push the changes to your DX server. 
 5. Test the changes are applied, 
-    1. clear the cache
-    2. Go to the **Practitioner Studio** –> **Themes**
+    1. Clear the cache.
+    2. Go to the **Practitioner Studio** –> **Themes**.
     3. Select **Utilities** –> **Control Center**, and under Invalidate Cache click **Click to invalidate**.
 [](../../../images/Discover_4.png)
 
