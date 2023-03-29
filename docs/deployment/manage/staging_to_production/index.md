@@ -10,7 +10,7 @@ HCL Digital Experience and HCL Web Content Manager solutions can consist of many
 
 ## HCL Software Academy course
 
-For an introduction and a demo on DX staging, go to [Staging](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505). To try it out yourself, refer to [DXClient Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf).
+For an introduction and a demo on DX staging, go to [Staging](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505).
 
 ???+ info "Related information" 
     - [Multiple tier environments](../migrate/planning_migration/migration_consideration/mig_multiple_envs.md)
