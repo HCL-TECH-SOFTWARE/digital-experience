@@ -71,6 +71,21 @@ There are two methods available when the tool is run on a virtual portal:
     http://[Virtual_HOST]:[PORT]/wps/wcm/myconnect?MOD=ClearHistory&fix=true
     ```
 
+## ConfigEngine command
+
+You can clear the version item history using the following ConfigEngine command:
+
+ - `ConfigEngine`
+ - `{bat | sh}`
+ - `run-wcm-admin-task-clear-history -Dlibrary libName`
+
+|Parameter|Value or Action|
+|---------|---------|
+|`-Dlibrary libraryName`|Name of the library to crop history from.|
+|`-DallLibraries=true`|Run against all libraries.|
+|`-Dkeep number`|The number of history entries to keep.|
+|`-Dsize number`|(Optional) The minimum size of the history entry log as a percentage. If specified, the size of the history log must be greater or equal to this value or else the item will be ignored.|
+|`-Dlimit number`|(Optional) The max length limit of the history entry log property within the DB. If not specified, the default value of 5000000 is used.|
 
 
 ???+ info "Related information"
