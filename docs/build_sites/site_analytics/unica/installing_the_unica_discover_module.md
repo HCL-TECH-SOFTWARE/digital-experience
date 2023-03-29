@@ -82,7 +82,7 @@ You can configure HCL Discover with HCL Digital Experience with theme modules. T
     4. Search for the endpoint and change its entry to the Discover Packet Forwarder URL you just copied and save it. 
 [](../../../images/Discover_1.png)
 
-2. Update the compressed version, DiscoverUI_for_DX.js. You can use a minifier, that can be installed as an extension or update it manually. You will see that the part of the services in the DiscoverUI_for_DX.js is not compressed. 
+2. Update the compressed version, DiscoverUI_for_DX.js. You can use a minifier, that can be installed as an extension or you can update it manually. You will see that the part of the services in the DiscoverUI_for_DX.js is not compressed. 
     1. Find DiscoverUI_for_DX.js area using a search on the endpoint.
     2. Change the URL to your Unica Discover Packet Forwarder URL you copied before. 
     3. Save your changes.
@@ -93,10 +93,10 @@ You can configure HCL Discover with HCL Digital Experience with theme modules. T
 [](../../../images/Discover_3.png)
 
 4. Save again and push the changes to your DX server. 
-5. To test the changes are applied, 
-    - First ensure, you clear the cache
-    - Go to the `Practitioner Studio` – `Themes` 
-    - Select `Utilities` – `Control Center`, and under Invalidate Cache click `Click to invalidate`.
+5. Test the changes are applied, 
+    1. clear the cache
+    2. Go to the **Practitioner Studio** –> **Themes**
+    3. Select **Utilities** –> **Control Center**, and under Invalidate Cache click **Click to invalidate**.
 [](../../../images/Discover_4.png)
 
 You have successfully deployed the Discover theme modules and added them to your profile used by your pages.
