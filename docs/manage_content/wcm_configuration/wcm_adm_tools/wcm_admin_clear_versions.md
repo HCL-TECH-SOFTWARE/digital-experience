@@ -83,9 +83,9 @@ You can clear the version history using the following ConfigEngine command:
 |Parameter|Value or Action|
 |---------|---------|
 |`-Dlibrary=libraryName`|Name of the library to crop versions from|
-|`-DallLibraries=true`|Run against all libraries.|
+|`-DallLibraries=true`|Run against all libraries|
 |`-Dkeep=number`|Number of versions to keep|
-|`-Ddeleted=false`|Skip deleted items.|
+|`-Ddeleted=false`|Skip deleted items|
 |`-Dbatch=number`|Batch size|
 |`-DPortalAdminPwd=wpsadmin`|Password|
 
