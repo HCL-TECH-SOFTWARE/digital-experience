@@ -23,7 +23,7 @@ Device classes are used in HCL Digital Experience as an abstraction for common p
 Responsive Web Design provides content parity between mobile devices and desktop channels, which enhances user experience and brand consistency. Seamless changes in screen size, from small to large, are now possible while the order of the content is maintained. Content maintenance is simplified by having one site that is represented by one set of assets.
 -   **[Directory structure](../../guide_me/wpsdirstr.md)**  
 The topic shows the naming conventions that are used to denote the location of files on the servers and the types of resources you can find in those directories.
-
+<!--
 ## HCL Software Academy course
 
 For an introduction and a demo on how to use themes, go to [Theme](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D413). To try it out yourself, refer to [Theme Development Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Theme_Development_for_Beginners.pdf) and corresponding [Theme Development Lab Resources](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Theme_Development_Resources.zip).
