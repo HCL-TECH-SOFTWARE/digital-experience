@@ -12,7 +12,8 @@ If you choose to not enable Practitioner Studio, you can still manage Personaliz
     -   [Digital Experience Personalization](../../manage_content/pzn/personalization/index.md)
     Digital Experience Personalization provides automatic customization of website content presented to individual users and user groups.
 
+<!--
 ## HCL Software Academy course
 
 For an introduction and a demo on how to use Targeted Content, go to [Content Targeting](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D304).
-
+-->

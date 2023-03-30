@@ -586,6 +586,8 @@ dxclient help [command]
     - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
     - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
 
+<!--
 ## HCL Software Academy course
 
 For an introduction and a demo on how to use DXClient, go to [Staging](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505). To try it out yourself, refer to [DXClient Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf).
+-->
