@@ -82,12 +82,12 @@ You can clear the version history using the following ConfigEngine command:
 
 |Parameter|Value or Action|
 |---------|---------|
-|`-Dlibrary=libraryName`|Name of the library to crop versions from.|
+|`-Dlibrary=libraryName`|Name of the library to crop versions from|
 |`-DallLibraries=true`|Run against all libraries.|
-|`-Dkeep=number`|The number of versions to keep.|
+|`-Dkeep=number`|Number of versions to keep|
 |`-Ddeleted=false`|Skip deleted items.|
-|`-Dbatch=number`|The batch size.|
-|`-DPortalAdminPwd=wpsadmin`|The password.|
+|`-Dbatch=number`|Batch size|
+|`-DPortalAdminPwd=wpsadmin`|Password|
 
 ???+ info "Related information"
     - [Cloning data](../wcm_adm_tools/wcm_cloning/wcm_cloning_live.md)
