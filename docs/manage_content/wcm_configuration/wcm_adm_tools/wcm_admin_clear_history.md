@@ -80,7 +80,7 @@ You can clear the version item history using the following ConfigEngine command:
 
 |Parameter|Value or Action|
 |---------|---------|
-|`-Dlibrary libraryName`|Name of the library to crop history from.|
+|`-Dlibrary libraryName`|Name of the library to crop history from|
 |`-DallLibraries=true`|Run against all libraries.|
 |`-Dkeep number`|Number of history entries to keep|
 |`-DPortalAdminPwd=wpsadmin`|Password|
