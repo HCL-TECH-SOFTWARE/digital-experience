@@ -63,6 +63,7 @@ This section describes the DAM API that allows you to create a friendly URL for 
 To give users more insight on how to use Experience API, the following samples are provided.
 -   **[Sample Content UI \| HCL Experience API](../hcl_experience_api/sample_content_ui/index.md)**  
 Learn how to use the Sample Content UI application for HCL Experience API.
+
 <!--
 ## HCL Software Academy course
 
@@ -70,4 +71,4 @@ For an introduction and a demo on how to use Experience API, go to [Experience A
 
 ???+ info "Related information"
 -    [API explorers](../hcl_experience_api/api_explorers.md)
-
+-->

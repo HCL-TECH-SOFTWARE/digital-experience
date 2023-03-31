@@ -9,7 +9,9 @@ HCL Digital Experience (DX) is a solid and reliable platform that can help deliv
 -   [Hybrid Platform](../deployment/install/hybrid/index.md) - This section describes how to install HCL Digital Experience 9.5 Container Update CF198 and later Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management, Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms using the Helm deployment method.
 
 -   [(Docker) Development Platform](../deployment/install/docker/index.md) - HCL Digital Experience 9.5 supports deployments on Docker and popular Kubernetes platforms. Learn more about the latest list of container images and supported deployment platforms.
+
 <!--
 ## HCL Software Academy course
 
 For an introduction and a demo on DX deployment, go to [Deployment](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1479). To try it out yourself, refer to [Deploying HCL DX Using HCL SoFy Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HDX-INTRO_Setup_DX_Solution_Modules_in_SoFy.pdf).
+-->

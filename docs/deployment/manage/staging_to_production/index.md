@@ -7,6 +7,7 @@ Staging is required at multiple times during the development cycle of a solution
 Staging is only possible between the same product release. In contrast, upgrading from one release to a newer release is called migration.
 
 HCL Digital Experience and HCL Web Content Manager solutions can consist of many artifacts. These artifacts include portlets, themes and skins, portlet services, page layouts, wires, portlet configurations, portlet data, web content, and personalization rules. Staging helps you move those artifacts to the production environment in a controlled way.
+
 <!--
 ## HCL Software Academy course
 
@@ -14,7 +15,6 @@ For an introduction and a demo on DX staging, go to [Staging](https://academy.hc
 
 ???+ info "Related information" 
     - [Multiple tier environments](../migrate/planning_migration/migration_consideration/mig_multiple_envs.md)
-
-
+-->
 
 
