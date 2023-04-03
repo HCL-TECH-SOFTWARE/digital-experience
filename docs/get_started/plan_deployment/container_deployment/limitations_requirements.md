@@ -60,7 +60,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request and limit** | **Container Memory request and limit** |
 |---|---|---|---|---|---|
-| core | 1 | core | core | 4000m | 4096Mi |
+| core | 1 | core | core | 4000m | 6144Mi |
 |  |  | system-out-log | logging-sidecar | 100m | 64Mi |
 |  |  | system-err-log | logging-sidecar | 100m | 64Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
@@ -85,7 +85,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | ring-api | 1 | ring-api | ringapi | 100m | 256Mi |
 | runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
 |  |  |  |  |  |  |
-| **Overall** |  |  |  | **7950m** | **13184Mi** |
+| **Overall** |  |  |  | **7950m** | **15232Mi** |
 
 !!!note
     Remember that the overall sums for CPU and memory include all components of HCL DX. 

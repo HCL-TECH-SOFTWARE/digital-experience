@@ -8,6 +8,9 @@ The Indexes API returns the set of supported values that can be passed to the in
 |------------|--------------|
 |/PORTAL\_CONTEXT/contenthandler/searchfeed/indexes|Indexes API|
 
+!!! attention "Use the Context Path below for Virtual Portal" 
+  	 /PORTAL\_CONTEXT/contenthandler/!ut/p/searchfeed/scopes  
+
 ## Response Format
 
 Response is Atom formatted list of possible values that can be passed to the Search API by using the index parameter of the Search API.

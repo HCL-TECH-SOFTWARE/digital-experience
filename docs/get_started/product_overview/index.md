@@ -53,3 +53,9 @@ To enable the use cases and users mentioned above, HCL DX provides the key featu
 * [**Forms building**](forms_building.md) to enable non-technical users to quickly build data capture applications.
 
 You can read more about the platform's architecture and technical capabilities in the [Architecture overview](../architecture_overview/index.md) section.
+
+<!--
+## HCL Software Academy course
+
+For an introduction to HCL Digital Experience, go to [HDX-INTRO HCL Digital Experience Introduction](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Fcourse%2Fhcl-digital-experience-introduction).
+-->
