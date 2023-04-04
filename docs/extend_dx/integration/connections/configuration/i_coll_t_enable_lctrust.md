@@ -25,9 +25,3 @@ Retrieve the certificate for the HCL Connections server. Then, import the SSL ce
     5.  On the Add signer certificate page, provide a name for the certificate that you added, and enter the full qualified name of the saved certificate.
 
 4.  Import the saved certificate to the portal server.
-
-
-
-???+ info "Related information"
-    - [Configuring single sign-on (SSO) for backend calls to HCL Connections in SmartCloud for Social Business](../configuration/cfg_portal_to_work_with_cnx_in_sc/establishing_sso/configuring_sso_sc4sb.md)
-
