@@ -30,7 +30,7 @@ The configuration is a one-off process. Once you have Remote Search configured, 
 Before you can leverage the automated configuration, you need to be aware on certain requirements and limitations that the automated configuration has:
 
 - This configuration will only work in containerized deployments running on Kubernetes.
-- The configuration of DX Core will not continue automatically if you have configured JCR Text Search or the suppression of automated default search collection creation 
+- The configuration of DX Core will not continue automatically if you have configured JCR Text Search or the suppression of automated default search collection creation. 
 - Both DX Core and DX Remote Search have their credentials configured correctly inside your `custom-values.yaml` used for the Helm deployment.
 - There is currently no ConfigEngine task or similar being performed on either DX Core or DX Remote Search Pods
 
