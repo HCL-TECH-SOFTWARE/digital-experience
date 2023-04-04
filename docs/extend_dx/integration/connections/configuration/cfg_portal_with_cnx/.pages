@@ -2,8 +2,8 @@ title: Configure HCL Portal to work with HCL Connections
 nav:
     - index.md
     - collab_cfg_connect.md
-    - Configure HCL Connections on-premise: connections_onpremise
-    - Configure HCL Connections on Cloud: connectionss_oncloud
+    - connections_onpremise
+    - connections_deploying
     - i_coll_t_enable_lcsso.md
     - Configuring common directory service: cfg_common_dir
     - Set up Ajax proxy: setup_ajax

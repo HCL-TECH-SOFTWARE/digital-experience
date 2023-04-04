@@ -1,0 +1,13 @@
+title: Base Portal Tuning
+nav:
+    - Tuning_via_the_integrated_solutions_Console
+    - TuningaHCLPortalAdministration.md
+    - OtherPortalTuning
+    - JavaAndWASFixes.md
+    - DatabaseTuning.md
+    - OracleTuning.md
+    - SQLTuning.md
+    - OtherDatabaseConsiderations.md
+    - DirectoryServerTuning.md
+    - WebServerTuning
+    - ReverseProxyTuning.md

@@ -74,7 +74,7 @@ In addition, the package includes scripts for all operating systems that make it
     !!! note
         You will lose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
 
-6. Set appropriate permissions.
+6. Set appropriate read and execute permissions as per user/group/owner.
 
     ```bash
     chmod xxx <working-directory>/bin
@@ -88,9 +88,15 @@ In addition, the package includes scripts for all operating systems that make it
     export VOLUME_DIR=storeForScriptApplication
     ```
 
-9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
+    The `VOLUME_DIR` will require read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
 
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
+    ```bash
+    chmod xxx <working-directory>/<VOLUME_DIR>
+    ```
+
+9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/<VOLUME_DIR>`.
+
+    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
 
 10. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
 
@@ -295,7 +301,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
 ## Configuring DXClient
 
-Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/store/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
+Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
 
 ```json
 {
@@ -565,6 +571,10 @@ Use the following command to display the detailed help for a specific command:
 ```bash
 dxclient help [command]
 ```
+<!--
+## HCL Software Academy course
+
+For an introduction and a demo on how to use DXClient, go to [Staging](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505). To try it out yourself, refer to [DXClient Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf).-->
 
 ???+ info "Related information"
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
@@ -580,6 +590,9 @@ dxclient help [command]
     - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
     - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
 
+<!--
 ## HCL Software Academy course
 
 For an introduction and a demo on how to use DXClient, go to [Staging](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505). To try it out yourself, refer to [DXClient Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf).
+-->
+

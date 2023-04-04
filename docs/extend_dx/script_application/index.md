@@ -23,6 +23,8 @@ The Script Application has the following advantages:
 
 **Video**: [Start building your first HCL Digital Experience Script Application in minutes](https://hclsw.co/dx-scriptapp-webinar)
 
+<!--
 ## HCL Software Academy course
 
 For an introduction and a demo on how to use Script Application, go to [Script Application](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D415). To try it out yourself, refer to [Script Application Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_for_Beginners.pdf) and corresponding [Script Application Lab Resources](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_Lab_Resources.zip).
+-->
