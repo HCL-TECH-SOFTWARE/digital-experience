@@ -18,7 +18,7 @@ The configuration is a one-off process. Once you have Remote Search configured, 
     The process of configuring Remote Search will include deleting the default Search Service and its corresponding Search collections.
 
 !!!tip
-    This guide uses `kubectl` for all commands that are related to Kubernetes. If you are Running on OpenShift, you can replace the `kubectl` command if `oc`.
+    This guide uses `kubectl` for all commands that are related to Kubernetes. If you are Running on OpenShift, you can replace the `kubectl` command with `oc`.
 
 ## Automated configuration
 
@@ -30,7 +30,7 @@ The configuration is a one-off process. Once you have Remote Search configured, 
 Before you can leverage the automated configuration, you need to be aware on certain requirements and limitations that the automated configuration has:
 
 - This configuration will only work in containerized deployments running on Kubernetes.
-- The configuration of DX Core will not continue automatically if you have configured JCR Text Search or the surpression of automated default search collection creation 
+- The configuration of DX Core will not continue automatically if you have configured JCR Text Search or the suppression of automated default search collection creation 
 - Both DX Core and DX Remote Search have their credentials configured correctly inside your `custom-values.yaml` used for the Helm deployment.
 - There is currently no ConfigEngine task or similar being performed on either DX Core or DX Remote Search Pods
 
@@ -66,19 +66,19 @@ The following parameters are available for adjustments:
 
 It is recommended to have generous wait time values, as not waiting long enough by either of the applications may cause the configuration to fail.  
 
-The given values should suffice for general deployments, but if you are applying those changes directly during a update from on CF to a newer one, it will be good to increase those values based on experienced startup times in your deployment.
+The given values should suffice for general deployments, but if you are applying those changes directly during an update from on CF to a newer one, it is good to increase those values based on already experienced startup times in your deployment.
 
 If the configuration process fails due to too low wait time values check the [Troubleshooting](#troubleshooting) section that contains steps to re-trigger the configuration process.
 
 ### Apply configuration
 
-After you have adjusted your `custom-values.yaml` with the settings mentioned in the previous sections, you can use `helm upgrade` with the reference to your `custom-values.yaml` if you have an existing deployment you want to configure. If you are deploying fresh, you can 
+After you have adjusted your `custom-values.yaml` with the settings mentioned in the previous sections, you can use `helm upgrade` with the reference to your `custom-values.yaml` if you have an existing deployment you want to configure. If you are deploying fresh, you can use `helm install` for the initial setup of DX.
 
 This will apply the new configuration and the (re-)start of both the Remote Search and Core Pods will perform the steps necessary to their respective configuration.
 
 ### Configuration flow
 
-This sections explains the flow that occurs when the automated configuration is performed. This section does not contain any steps that are required to be executed by you and just serves as information material.
+This section explains the flow that occurs when the automated configuration is performed. This section does not contain any steps that are required to be executed by you and just serves as information material.
 
 #### Phase 1: Startup
 
@@ -117,7 +117,7 @@ Once the DX Remote Search Pod becomes ready, DX Core will notice that and contin
 Before running the configuration, the configuration logic will check if:
 
 - The JCR Text Search configuration
-- The surpression of automated default search collection creation
+- The suppression of automated default search collection creation
 
 are enabled. This could be a sign of Remote Search being already configured.
 
@@ -126,7 +126,7 @@ If those settings are set, the configuration will not continue. To override this
 The configuration steps in DX Core include:
 
 - Remotely retrieving the DX Remote Search SSL Certificate for trusted communication
-- Enabling surpression of automated default search collection creation
+- Enabling suppression of automated default search collection creation
 - Configuration for JCR Text Search
 - Deletion of the Default Search Service
 - Creation of a Remote Search Service
@@ -156,7 +156,7 @@ After adjusting these properties, you can re-run the automated configuration.
 
 #### Overriding pre-flight checks
 
-If case you have at some point configured either the surpression of automated default search collection creation or the JCR Text Search, but not configured Remote Search yet, you can override the pre-flight checks that would cause the configuration to not continue in that case.
+If case you have at some point configured either the suppression of automated default search collection creation or the JCR Text Search, but not configured Remote Search yet, you can override the pre-flight checks that would cause the configuration to not continue in that case.
 
 To do so, connect into the DX Core Pod and create a file. See the following example:
 
@@ -212,7 +212,7 @@ For manual configuration, you can rely on existing ConfigEngine tasks that will 
 
 ### Pre-requisites and limitations
 
-- This configuration will is intended for containerized deployments running on Kubernetes.
+- This configuration is intended for containerized deployments running on Kubernetes.
 - Both DX Core and DX Remote Search have their credentials configured correctly inside your `custom-values.yaml` used for the Helm deployment.
 - There is currently no ConfigEngine task or similar being performed on either DX Core or DX Remote Search Pods
 - Both DX Core and DX Remote Search are deployed in your environment and the Pods are up and ready.
@@ -255,7 +255,7 @@ Execute the ConfigEngine task:
 # adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
 kubectl exec -it -n dxns dx-remote-search-0 -c remote-search -- /bin/bash
 # Inside the container execute the ConfigEngine task
-# make sure that your deployment prefix (dx in this sample, e.g. dx-core) is adjusted to your environment
+# make sure that your deployment prefix (dx in this sample, e.g., dx-core) is adjusted to your environment
 # Ensure to use the right credentials for DWasPassword
 /opt/HCL/AppServer/profiles/prs_profile/ConfigEngine/./ConfigEngine.sh configure-remote-search-server-for-remote-search -DWasPassword=[WAS ADMIN PASSWORD] -Dportal.host.name="dx-core" -Dportal.port.number="10042" -Dportal.cert.alias="portaldockeralias" -Dremote.search.host.name="localhost"
 ```
@@ -313,7 +313,7 @@ For **Search Services** configuration, the following values are used:
     Take care when defining the `IIOP_URL` parameter, as the target URL is the Service of Remote Search inside your Kubernetes deployment. The prefix `dx-deployment` may be different in your deployment scenario and is based on the deployment name chosen during the `helm install` command.
 
 !!!note
-    Once completed and saved, the HCL Digital Experience 9.5 container deployment has a new search service called **Remote PSE service EJB**, with a green check mark confirming that the service was correctly set up and is able to communicate with the Remote Search container.
+    Once completed and saved, the HCL Digital Experience 9.5 container deployment has a new search service called **Remote PSE service EJB**, with a green check mark confirming that the service was correctly set up and can communicate with the Remote Search container.
 
 #### New Search Collections
 
@@ -341,7 +341,7 @@ Create the two following Content Sources:
 |Content Source Name|Portal Content Source|
 |Collect documents linked from this URL|`https://dx-core-service:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments&Range=100`|
 
-In the `Security` panel, use the DX Core Service name (e.g. `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 !!!tip
     Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.
@@ -354,7 +354,7 @@ In the `Security` panel, use the DX Core Service name (e.g. `dx-core`) as the ho
 |Content Source Name|Portal Content Source|
 |Collect documents linked from this URL|`https://dx-core-service:10042//wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`|
 
-In the `Security` panel, use the DX Core Service name (e.g. `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 !!!tip
     Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server.  Adjust this according to your deployment configuration.
@@ -381,7 +381,7 @@ Create the following Content Source:
 |Content Source Name|Portal Content Source|
 |Collect documents linked from this URL|`https://dx-core:10042/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`|
 
-In the `Security` panel, use the DX Core Service name (e.g. `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 !!!tip
     Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server.  Adjust this according to your deployment configuration.
