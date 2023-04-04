@@ -12,7 +12,7 @@ Make sure to perform the steps for the global portal proxy entry point as descri
     !!!note
         The following example creates a policy for an SSO connection to https://apps.na.collabserv.com, which is controlled by the Tivoli Federated Identity Manager Identity Provider. If you connect to another URL, modify the path accordingly.
 
-    Replace the variable placeholders, indicated in uppercase, (for example, IDP_HOST) with the values that map to your deployment. A detailed description of their meaning can in the HCL Digital Experience Knowledge Center article [Creating Identity Provider settings at the Outbound Connection Service configuration](../../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_tfim/outbhttp_auth_est_sso_tfim_idpp_settings.md).
+    Replace the variable placeholders, indicated in uppercase, (for example, IDP_HOST) with the values that map to your deployment. A detailed description of their meaning can in the HCL Digital Experience Knowledge Center article [Creating Identity Provider settings at the Outbound Connection Service configuration](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_tfim/outbhttp_auth_est_sso_tfim_idpp_settings.md).
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
