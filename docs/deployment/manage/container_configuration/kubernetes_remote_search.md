@@ -66,7 +66,7 @@ The following parameters are available for adjustments:
 
 It is recommended to have generous wait time values, as not waiting long enough by either of the applications may cause the configuration to fail.  
 
-The given values should suffice for general deployments, but if you are applying those changes directly during an update from on CF to a newer one, it is good to increase those values based on already experienced startup times in your deployment.
+The given values should suffice for general deployments, but if you are applying those changes directly during an update from one CF to a newer one, it is good to increase those values based on already experienced startup times in your deployment.
 
 If the configuration process fails due to too low wait time values check the [Troubleshooting](#troubleshooting) section that contains steps to re-trigger the configuration process.
 
