@@ -44,12 +44,12 @@ JSESSIONID: from the Java Servlet specification: The session management of Digit
 • Enable Security Integration (this is enabled by default in v8.5+) 
     ◦ This tightly binds the user identity (LTPAToken2) with the session (JSESSIONID). 
     ◦ Application servers > WebSphere_Portal > Session management > Security integration 
-    ◦ This is especially important if HttpSessionIdReuse has been enabled. ◦ Certain errors may occur if an authenticated user tries to access an anonymous session. To guard against such errors, configure WebSphere Application Server to use available authentication data (enabled by default in v8.5+): 
+    ◦ This is especially important if HttpSessionIdReuse has been enabled. ◦ Certain errors may occur if an authenticated user tries to access an anonymous session. To guard against such errors, configure WebSphere Application Server to [use available authentication data](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=users-selecting-authentication-mechanism) (enabled by default in v8.5+): 
         ▪ In the WebSphere Application Server Integrated Solutions Console > Global security > Web security - General settings > Use available authentication data when an unprotected URI is accessed 
 
-• Consider setting HTTPOnly for any other cookies your application might leverage, at the web container level. 
+• Consider setting HTTPOnly for any other cookies your application might leverage, at the [web container level](https://www.ibm.com/docs/en/was/9.0.5?topic=configuration-web-container-custom-properties#blockingjavascriptaccess). 
 
-• If the controls above prove insufficient for any application cookies, consider setting attributes at the web server (with mod_headers.so): 
+• If the controls above prove insufficient for any application cookies, consider setting attributes at the web server (with [mod_headers.so](https://publib.boulder.ibm.com/httpserv/manual70/mod/mod_headers.html)): 
     Header edit Set Cookie ^(.*)$ $1;HttpOnly;Secure
     or: 
     Header set Set Cookie HttpOnly;Secure
