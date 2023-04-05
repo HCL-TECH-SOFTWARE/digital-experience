@@ -4,3 +4,7 @@ nav:
     - ComprehensiveSecurityPlanning.md
     - Installallavailablesecurityfixes.md
     - EnableHTTPS.md
+    - Guardyourcookies.md
+    - Authenticationmechanism.md
+    - Externalsecuritymanagers.md
+    - Initialaccesscontrolsettings.md
