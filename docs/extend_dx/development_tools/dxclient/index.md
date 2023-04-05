@@ -16,7 +16,7 @@ DXClient comes with two deployment options:
 
 The following image illustrates the DXClient Architecture diagram:
 
-![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.jpg)
+![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.png)
 
 ## Installing DXClient using the container package
 
