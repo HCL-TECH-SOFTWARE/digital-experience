@@ -1,0 +1,3 @@
+# Conclusion
+
+Administrators, architects, and developers must consider many factors when evaluating the security of their web application. HCL Digital Experience and IBM WebSphere Application Server can be leveraged to address many security requirements. HCL Digital Experience and IBM WebSphere Application Server both provide extension points to allow custom code to extend security functionality as well.

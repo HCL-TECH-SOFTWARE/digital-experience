@@ -8,3 +8,17 @@ nav:
     - Authenticationmechanism.md
     - Externalsecuritymanagers.md
     - Initialaccesscontrolsettings.md
+    - PortalAccessControl.md
+    - SecurecommunicationswiththeLDAPserver.md
+    - Impersonation.md
+    - Remembermecookieandstepupauthentication.md
+    - OutboundHTTPconnection.md
+    - Auditing.md
+    - CredentialVault.md
+    - HTTPbasicauthentication.md
+    - Customcode.md
+    - Containers.md
+    - Availability.md
+    - OddsandEnds.md
+    - Beyondthescopeofthisguide.md
+    - Conclusion.md
