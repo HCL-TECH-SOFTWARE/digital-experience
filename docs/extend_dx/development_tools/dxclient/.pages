@@ -1,7 +1,7 @@
 title: DXClient
 nav:
     - index.md
-    - dxclient_artifact_types
+    - dxclient_artifact_types: DXClient Artifact Types
     - troubleshooting_dxclient.md
     - dxconnect.md
     - sample_pipelines_for_use_with_dx_client_and_automation_servers.md

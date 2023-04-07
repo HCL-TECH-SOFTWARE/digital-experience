@@ -10,7 +10,7 @@ DXClient comes with two deployment options:
 
 1. The default deployment option is the DXClient container package. DXClient is packaged as a container that can be run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#dxclient-installation) for more details.
 
-2. For backward compatibility, we also still offer DXClient Javascript source codes. Customers who want to rely on this deployment option need to install their own Node.js and npm runtime environment in the correct version and must install necessary dependencies as needed.
+2. For backward compatibility, we also still offer DXClient JavaScript source codes. Customers who want to rely on this deployment option need to install their own Node.js and npm runtime environment in the correct version and must install necessary dependencies as needed.
 
 ## Architecture
 
@@ -134,11 +134,13 @@ In addition, the package includes scripts for all operating systems that make it
         make_unlink.bat
         ```
 
-2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../../get_started/system_requirements/docker/index.md) topic for the latest list of HCL DX 9.5 files available for download.
+2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
 
-3.  Extract the DXClient.zip file.
+3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../../get_started/system_requirements/docker/index.md) topic for the latest list of HCL DX 9.5 files available for download.
 
-4.  From the extracted folder, run the following command.
+4.  Extract the DXClient.zip file.
+
+5.  From the extracted folder, run the following command.
 
     For Linux and Apple macOS platforms:
 
@@ -222,10 +224,10 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
     -   HCL DX 9.5 CF211 release: **V1.20.0
-        -   [Deploy and Undeloy Applications](../dxclient/dxclient_artifact_types/deployapplication.md)
+        -   [Deploy and Undeploy Applications](../dxclient/dxclient_artifact_types/deployapplication.md)
 
     -   HCL DX 9.5 CF210 release: **V1.19.0
-        -   Removed paramaters deprecated during CF201 & CF202 deployment.
+        -   Removed parameters deprecated during CF201 & CF202 deployment.
         -   [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
 
     -   HCL DX 9.5 CF209 release: **V1.18.0
@@ -235,7 +237,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Get all subscribers details for DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging)
 
     -   HCL DX 9.5 CF207 release: **V1.16.0
-        -   Support to set different Container Runtimes.
+        -   Support to set different Container Runtime.
 
     -   HCL DX 9.5 CF202 release: **V1.11.0
         -   Deprecated parameter `dxConnectHostname`. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
