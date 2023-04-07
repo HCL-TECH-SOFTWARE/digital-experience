@@ -4,20 +4,24 @@ Though Lightweight Directory Access Protocol (LDAP) underlies many security func
 
 ## Recommended actions and considerations 
 
-• When you initially integrate HCL Digital Experience with the LDAP, ensure that LDAP communications are over TLS.
-    ◦ Refer to the [Product Documentation](https://help.hcltechsw.com/digital-experience/8.5/config/cw_ldap.html) for general instructions.
-    ◦ For additional guidance on LDAP integration, refer to the [LDAP Integration Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0076380).
+- When you initially integrate HCL Digital Experience with the LDAP, ensure that LDAP communications are over TLS.
 
-• If you initially configured non-secure communications with LDAP (e.g. port 389), you may use the WebSphere Application Server Integrated Solutions Console to update the LDAP definition to use a secure connection instead (e.g. port 636).
+    - Refer to the [Product Documentation](https://help.hcltechsw.com/digital-experience/8.5/config/cw_ldap.html) for general instructions.
 
-    ◦ For example, for an LDAP in a federated repository:
+    - For additional guidance on LDAP integration, refer to the [LDAP Integration Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0076380).
 
-        ▪ Global security > Federated repositories > Repository Identifier >
+- If you initially configured non-secure communications with LDAP (e.g. port 389), you may use the WebSphere Application Server Integrated Solutions Console to update the LDAP definition to use a secure connection instead (e.g. port 636).
 
-            • Port
-            • Require SSL communications
-            • SSL configuration
+    - For example, for an LDAP in a federated repository:
 
-    ◦ Refer to Product Documentation or LDAP Integration Guide, linked above, for instructions on getting the LDAP server's certificate.
+        - Global security > Federated repositories > Repository Identifier >
 
-• Recognize that nearly all requests to the LDAP server are done as the LDAP bind user (primarily through the WebSphere Application Server component, Virtual Member Manager (VMM) - assuming a federated repository, no ESM, and only custom code that uses PUMA for user/group requests; the only exception is the request to validate a user's password during authentication, which is an LDAP bind operation as that user identity). The LDAP server is entirely reliant upon HCL Digital Experience access controls to protect objects in the Directory Information Tree (DIT) to which the bind user has access. Ask the LDAP administrator to verify that access rights have been assigned to the bind user according to the principle of least privilege.
+            - Port
+
+            - Require SSL communications
+
+            - SSL configuration
+
+    - Refer to Product Documentation or LDAP Integration Guide, linked above, for instructions on getting the LDAP server's certificate.
+
+- Recognize that nearly all requests to the LDAP server are done as the LDAP bind user (primarily through the WebSphere Application Server component, Virtual Member Manager (VMM) - assuming a federated repository, no ESM, and only custom code that uses PUMA for user/group requests; the only exception is the request to validate a user's password during authentication, which is an LDAP bind operation as that user identity). The LDAP server is entirely reliant upon HCL Digital Experience access controls to protect objects in the Directory Information Tree (DIT) to which the bind user has access. Ask the LDAP administrator to verify that access rights have been assigned to the bind user according to the principle of least privilege.
