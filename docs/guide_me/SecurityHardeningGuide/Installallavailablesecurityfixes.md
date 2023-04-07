@@ -8,27 +8,35 @@ HCL also posts important information regarding security vulnerabilities to the [
 
 ## Recommended actions and considerations
 
-• Install the most current maintenance for HCL Digital Experience that is suitable for your application.
+- Install the most current maintenance for HCL Digital Experience that is suitable for your application.
 
-• Subscribe to the HCL PSIRT Blog to be notified when security bulletins are published for new vulnerabilities.
+- Subscribe to the HCL PSIRT Blog to be notified when security bulletins are published for new vulnerabilities.
 
-    ◦ It may not be practical for you to immediately install fixes on production systems. Minimally, you should establish a procedure and schedule for evaluating vulnerabilities, installing security fixes, and testing your application. Consider using CVSS scores as the basis for decisions regarding installation schedules.
+    - It may not be practical for you to immediately install fixes on production systems. Minimally, you should establish a procedure and schedule for evaluating vulnerabilities, installing security fixes, and testing your application. Consider using CVSS scores as the basis for decisions regarding installation schedules.
 
-• Integrate security fixes delivered for default themes into your custom theme.
+- Integrate security fixes delivered for default themes into your custom theme.
 
-    ◦ Theme developers initially copy a default theme to prevent fix packs from overwriting customization. If a fix pack includes security fixes for a default theme, then any custom theme based on that default theme would need to be rebuilt to incorporate the fixes.
-    ◦ Later versions of HCL Digital Experience support custom themes based on certain default themes delivered with earlier versions. Monitor security bulletins for your current HCL Digital Experience version and any older versions used in your custom themes.
+    - Theme developers initially copy a default theme to prevent fix packs from overwriting customization. If a fix pack includes security fixes for a default theme, then any custom theme based on that default theme would need to be rebuilt to incorporate the fixes.
 
-• Similarly to custom themes, integrate any security fixes for samples in custom code based on those samples (e.g. Struts Portlet Framework samples, Content Template Catalog).
-• Install current maintenance for all other software that is integrated with your application, including:
-    ◦ client browsers, including any plug-in or add-on like Java
-    ◦ the application server
-    ◦ operating systems (client and server)
-    ◦ web servers
-    ◦ databases
-    ◦ external security managers
-    ◦ LDAP servers
+    - Later versions of HCL Digital Experience support custom themes based on certain default themes delivered with earlier versions. Monitor security bulletins for your current HCL Digital Experience version and any older versions used in your custom themes.
+
+- Similarly to custom themes, integrate any security fixes for samples in custom code based on those samples (e.g. Struts Portlet Framework samples, Content Template Catalog).
+
+- Install current maintenance for all other software that is integrated with your application, including:
+    - client browsers, including any plug-in or add-on like Java
+
+    - the application server
+
+    - operating systems (client and server)
+
+    - web servers
+
+    - databases
+
+    - external security managers
+    
+    - LDAP servers
 
     Refer to your vendors for these components regarding their practices for publishing security bulletins.
 
-• If you discover a new security vulnerability in HCL Digital Experience, report it to HCL by opening a case.
+- If you discover a new security vulnerability in HCL Digital Experience, report it to HCL by opening a case.

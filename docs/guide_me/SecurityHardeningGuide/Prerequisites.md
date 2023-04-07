@@ -24,21 +24,21 @@ Independently research web application security to identify other resources to i
 
 -  [OWASP](https://owasp.org/www-project-top-ten/)
 
-    ▪ [Top 10](https://owasp.org/www-project-top-ten/)
+    - [Top 10](https://owasp.org/www-project-top-ten/)
 
-    ▪ [Secure Coding](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
+    - [Secure Coding](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
 
-    ▪ [Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/)
+    - [Application Security Verification Standard](https://owasp.org/www-project-application-security-verification-standard/)
 
-    ▪ [Proactive Controls](https://owasp.org/www-project-proactive-controls/)
+    - [Proactive Controls](https://owasp.org/www-project-proactive-controls/)
 
-    ▪ [Secure Development Lifecycle](https://owasp.org/www-project-samm/)
+    - [Secure Development Lifecycle](https://owasp.org/www-project-samm/)
 
 - [National Institute of Standards and Technology](https://www.nist.gov)
 
-    ▪ [National Vulnerability Database](https://nvd.nist.gov)
+    - [National Vulnerability Database](https://nvd.nist.gov)
 
-    ▪ [Computer Security Resource Center](https://csrc.nist.gov)
+    - [Computer Security Resource Center](https://csrc.nist.gov)
 
 - [MDN – HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
 
@@ -48,7 +48,7 @@ Independently research web application security to identify other resources to i
 
 - [Cybersecurity and Infrastructure Security Agency](https://www.cisa.gov)
 
-    ▪ [Information Security](https://www.cisa.gov/sites/default/files/publications/infosecuritybasics.pdf)
+    - [Information Security](https://www.cisa.gov/sites/default/files/publications/infosecuritybasics.pdf)
 
 - [European Union Agency for Cybersecurity](https://www.enisa.europa.eu)
 
