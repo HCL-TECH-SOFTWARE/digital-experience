@@ -368,127 +368,127 @@ Command syntax conventions:
 dxclient [command] [options]
 ```
 
-Use the following command to execute the deploy portlet action:
+Use the following command to execute the [deploy portlet action](../dxclient/dxclient_artifact_types/portlets.md):
 
 ```bash
 dxclient deploy-portlet [options]
 ```
 
-Use the following command to execute the undeploy portlet action:
+Use the following command to execute the [undeploy portlet action](../dxclient/dxclient_artifact_types/portlets.md):
 
 ```bash
 dxclient undeploy-portlet [options]
 ```
 
-Use the following command to execute the xmlaccess action:
+Use the following command to execute the [xmlaccess action](../dxclient/dxclient_artifact_types/xmlaccess.md):
 
 ```bash
 dxclient xmlaccess [options]
 ```
 
-Use the following command to execute the *pull* script application action:
+Use the following command to execute the *pull* [script application action](../dxclient/dxclient_artifact_types/scriptapplications.md):
 
 ```bash
 dxclient deploy-scriptapplication pull [options]
 ```
 
-Use the following command to execute the *push* script application action:
+Use the following command to execute the *push* [script application action](../dxclient/dxclient_artifact_types/scriptapplications.md):
 
 ```bash
 dxclient deploy-scriptapplication push [options]
 ```
 
-Use the following command to execute the undeploy script application action:
+Use the following command to execute the undeploy [script application action](../dxclient/dxclient_artifact_types/scriptapplications.md):
 
 ```bash
 dxclient undeploy-scriptapplication [options]
 ```
 
-Use the following command to execute the restore script application action:
+Use the following command to execute the restore [script application action](../dxclient/dxclient_artifact_types/scriptapplications.md):
 
 ```bash
 dxclient restore-scriptapplication [options]
 ```
 
-Use the following command to execute the deploy application action:
+Use the following command to execute the [deploy application action](../dxclient/dxclient_artifact_types/deployapplication.md):
 
 ```bash
 dxclient deploy-application [options]
 ```
 
-Use the following command to execute the DX Core restart action:
+Use the following command to execute the [DX Core restart action](../dxclient/dxclient_artifact_types/dxcoreserver.md):
 
 ```bash
 dxclient restart-dx-core
 ```
 
-Use the following command to restart DX Core pods in a Kubernetes deployment:
+Use the following command to restart [DX Core pods in a Kubernetes deployment](../dxclient/dxclient_artifact_types/dxcoreserver.md):
 
 ```bash
 dxclient restart-core-pods [options]
 ```
 
-Use the following command to execute manage-subscriber action:
+Use the following command to execute [manage-subscriber action](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md):
 
 ```bash
 dxclient manage-subscriber -h
 ```
 
-Use the following command to execute manage-syndicator action:
+Use the following command to execute [manage-syndicator action](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md):
 
 ```bash
 dxclient manage-syndicator -h
 ```
 
-Use the following command to execute the deploy theme action:
+Use the following command to execute the [deploy theme action](../dxclient/dxclient_artifact_types/themes.md):
 
 ```bash
 dxclient deploy-theme [options]
 ```
 
-Use the following command to execute the undeploy theme action:
+Use the following command to execute the [undeploy theme action](../dxclient/dxclient_artifact_types/themes.md):
 
 ```bash
 dxclient undeploy-theme [options]
 ```
 
-Use the following command to execute the manage-syndicator get-syndication-report action:
+Use the following command to execute the [manage-syndicator get-syndication-report action](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md):
 
 ```bash
 dxclient  manage-syndicator get-syndication-report [options]
 ```
 
-Use the following command to execute the shared-library action:
+Use the following command to execute the [shared-library action](../dxclient/dxclient_artifact_types/wcmlibraries.md):
 
 ```bash
 dxclient  shared-library [options]
 ```
 
-Use the following command to execute the delete DAM schema action:
+Use the following command to execute the delete [DAM schema action](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md):
 
 ```bash
 dxclient delete-dam-schema [options]
 ```
 
-Use the following command to list all DAM schemas present:
+Use the following command to list all [DAM schemas present](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md):
 
 ```bash
 dxclient list-dam-schemas  [options]
 ```
 
-Use the following command to export the personalization rules from the target server:
+Use the following command to export the [personalization rules](../dxclient/dxclient_artifact_types/personalization.md) from the target server:
 
 ```bash
 dxclient pzn-export  [options]
 ```
 
-Use the following command to import the personalization rules into the target server:
+Use the following command to import the [personalization rules](../dxclient/dxclient_artifact_types/personalization.md) into the target server:
 
 ```bash
 dxclient pzn-import  [options]
 ```
 
-Use the following command to manage virtual portal tasks in the DX server:
+Use the following command to [manage virtual portal](../dxclient/dxclient_artifact_types/virtualportals.md) tasks in the DX server:
 
 ```bash
 dxclient manage-virtual-portal [options]
@@ -512,31 +512,31 @@ Use the following command to trigger manual sync:
 dxclient manage-dam-staging trigger-staging  [options]
 ```
 
-Use the following command to create credential vault slot in the DX server:
+Use the following command to create [credential vault](../dxclient/dxclient_artifact_types/credentialvaultslot.md) slot in the DX server:
 
 ```bash
 dxclient create-credential-vault  [options]
 ```
 
-Use the following command to create the syndication relation between syndicator and subscriber in DX server:
+Use the following command to create the [syndication relation between syndicator and subscriber](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md) in DX server:
 
 ```bash
 dxclient create-syndication-relation  [options]
 ```
 
-Use the following command to create, update, delete, export or import a custom property from an existing Resource Environment Provider:
+Use the following command to create, update, delete, export or import a custom property from an existing [Resource Environment](../dxclient/dxclient_artifact_types/resourceenvironments.md) Provider:
 
 ```bash
 dxclient resource-env-provider [options]
 ```
 
-Use this command to export WCM libraries:
+Use this command to [export WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md):
 
 ```bash
 dxclient wcm-library-export
 ```
 
-Use this command to import WCM libraries:
+Use this command to [import WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md):
 
 ```bash
 dxclient wcm-library-import
