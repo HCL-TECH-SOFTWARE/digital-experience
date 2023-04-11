@@ -9,10 +9,10 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Notice of deprecation of Textbox.io Rich Text Editor
-- Addition of more content authoring actions in Content Composer
 - Digital Asset Management – Copy Media assets from one Collection to another 
 - Remote Search Automated configuration option
 - Deprecation of OpenShift Passthrough
+- Addition of more content authoring actions in Content Composer
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -23,13 +23,6 @@ The following features and updates are available to customers installing HCL Dig
 
 === "On-Premises"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
-    
-### Addition of more content authoring actions in Content Composer
-=== "Containers"
-    An overflow menu is added displaying more content authoring actions when in Dashboard view. See the Help Center topic [Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#content-authoring-actions-in-dashboard-view) for more information.
-
-=== "On-Premises"
-    An overflow menu is added displaying more content authoring actions when in Dashboard view. See the Help Center topic [Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#content-authoring-actions-in-dashboard-view) for more information.
 
 ## Digital Experience 9.5 Container Version
 
@@ -46,6 +39,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Deprecation of OpenShift Passthrough option
 === "Containers"
     The Helm chart option to specify Route values typically processed through the HAProxy port is deprecated. Documentation and setup references are provided as options tor deployment requirements. See the [Deprecated Features](../deprecated_features.md) page for more information. 
+    
+### Addition of more content authoring actions in Content Composer
+=== "Containers"
+    In the Dashboard view, an overflow menu is added displaying more content authoring actions such as Edit, Overview, Move, Copy, Duplicate, and Delete. See the Help Center topic [Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#content-authoring-actions-in-dashboard-view) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
