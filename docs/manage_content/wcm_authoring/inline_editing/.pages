@@ -1,6 +1,5 @@
-title: Site Manager
+title: Inline editing
 nav:
     - index.md
-    - site_manager_samples.md
     - wcm_dev_inline_tags.md
     - wcm_dev_inline_upgrade.md

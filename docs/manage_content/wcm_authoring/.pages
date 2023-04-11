@@ -1,7 +1,6 @@
 title: Author Web Content
 nav:
     - index.md
-    - inline_editing
     - content_composer
     - authoring_portlet
     - dcs
