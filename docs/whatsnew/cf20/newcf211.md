@@ -8,7 +8,6 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Notice of deprecation of Textbox.io Rich Text Editor
 - Digital Asset Management – Copy Media assets from one Collection to another 
 - Remote Search Automated configuration option
 - Deprecation of OpenShift Passthrough

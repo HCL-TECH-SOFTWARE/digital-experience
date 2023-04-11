@@ -94,7 +94,7 @@ The **Dashboard** view allows users to perform the following content authoring a
 - Ticking the checkbox (beside the **Content Title**) presented in the **Content Collections** column also enables context-specific **Edit**, **Delete**, **Move**, **Copy**, and **Duplicate** options for the content item.
     ![Authoring actions on HCL Content Composer Dashboard](../../../../../assets/Authoring_actions_single_select_via_HCL_CC_Dashboard.png)
 
-- While hovering over the content item, an overflow menu button is displayed on the right of the content item's title. Clicking on that button opens a menu which displays the **Edit**, **Overview**, **Move**, **Copy**, **Duplicate**, and **Delete** options.
+- Starting in CF211, while hovering over the content item, an overflow menu button is displayed on the right of the content item's title. Clicking on that button opens a menu which displays the **Edit**, **Overview**, **Move**, **Copy**, **Duplicate**, and **Delete** options.
     ![Authoring actions on HCL Content Composer Dashboard Overflow Menu](../../../../../assets/Content_authoring_actions_in_dashboard_overflow_menu.png)
 
 ## Create new content and add/remove keywords
