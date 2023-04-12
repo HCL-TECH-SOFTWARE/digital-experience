@@ -83,7 +83,7 @@ You can clear the version item history using the following ConfigEngine command:
 | <nobr>`-Dlibrary=libraryName`</nobr> |Name of the library to crop history from|
 | <nobr>`-DallLibraries=true`</nobr> |Run against all libraries.|
 | <nobr>`-Dkeep=number`</nobr> |Number of history entries to keep|
-| <nobr>`-DPortalAdminPwd=wpsadmin`</nobr> |Password|
+| <nobr>`-DPortalAdminPwd=password`</nobr> |Password|
 | <nobr>`-Dsize=number`</nobr> |(Optional) Minimum size of the history entry log as a percentage. If specified, the size of the history log must be greater or equal to this value or else the item will be ignored.|
 | <nobr>`-Dlimit=number`</nobr> |(Optional) Maximum length limit of the history entry log property within the DB. If not specified, the default value of 5000000 is used.|
 
