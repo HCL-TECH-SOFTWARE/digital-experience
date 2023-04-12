@@ -87,7 +87,7 @@ You can clear the version history using the following ConfigEngine command:
 |`-Dkeep=number`|Number of versions to keep|
 |`-Ddeleted=false`|Skip deleted items|
 |`-Dbatch=number`|Batch size|
-|`-DPortalAdminPwd=wpsadmin`|Password|
+|`-DPortalAdminPwd=password`|Password|
 
 ???+ info "Related information"
     - [Cloning data](../wcm_adm_tools/wcm_cloning/wcm_cloning_live.md)
