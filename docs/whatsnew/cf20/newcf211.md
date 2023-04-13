@@ -8,7 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Increase of several parameters for minimal system requirements
+- Increase in several parameters for minimal system requirements
 - Digital Asset Management – Copy Media assets from one Collection to another 
 - Remote Search Automated configuration option
 - Deprecation of OpenShift Passthrough
@@ -26,10 +26,10 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Digital Experience 9.5 Container Version
 
-### Increase of several parameters for minimal system requirements
+### Increase in several parameters for minimal system requirements
 
 === "Containers"
-    There is an increase of several parameters for the minimal system requirements for Kubernetes deployments. See the [Containerization requirements and limitations](../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for more information.
+    There is an increase in the value of several parameters for the minimal system requirements for Kubernetes deployments. See the [Containerization requirements and limitations](../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for more information.
 
 ### Digital Asset Management – Copy Media Assets from one Collection to another 
 
