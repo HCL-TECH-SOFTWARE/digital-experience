@@ -29,7 +29,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Increase in several parameters for minimal system requirements
 
 === "Containers"
-    There is an increase in the value of several parameters for the minimal system requirements for Kubernetes deployments. See the [Containerization requirements and limitations](../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for more information.
+    There is an increase in the minimal system requirements for core and remote-search containers for Kubernetes deployments. See the [Containerization requirements and limitations](../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for more information.
 
 ### Digital Asset Management – Copy Media Assets from one Collection to another 
 
