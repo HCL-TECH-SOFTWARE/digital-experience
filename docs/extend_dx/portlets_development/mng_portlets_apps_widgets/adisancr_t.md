@@ -6,6 +6,6 @@ The use of the anchors depends on the configuration of your device, for example 
 
 If you want to enable the anchors again, restore the FRAGMENT\_IDENTIFIER capability. Use the same portlet to add it back to the appropriate clients.
 
-If you want to disable anchors just for certain portlets you can configure a portlet preference of wps.fragment.identifier=false as well.
+If you want to disable anchors just for certain portlets you can configure a portlet preference of wps.fragment.identifier=false just for that portlet as well.
 
 
