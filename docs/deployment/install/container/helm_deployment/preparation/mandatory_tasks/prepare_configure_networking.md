@@ -84,6 +84,8 @@ networking:
 
 Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
 
+As of CF212, the addon host is now required for all hybrid deployments. An absolute FQDN must be set. See [Relative Hostname for CC and DAM](../../../../../../../whatsnew/cf20/newcf212/#relative-hostnames-for-cc-and-dam-addons) for more details.
+
 ## Configure HAProxy certificate
 
 For HAProxy to allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
