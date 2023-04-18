@@ -17,7 +17,7 @@ The configuration is a one-off process. Once you have Remote Search configured, 
     The process of configuring Remote Search will include deleting the default Search Service and its corresponding Search collections.
 
 !!!warning
-    If you change your administrative user password, you will have to adjust the security configuration of your Search Collection Sources, otherwise they can not be crawled. Please see [Changing the HCL Digital Experience administrator password](../../security/people/authentication/updating_userid_pwd/wpsadmin) for further information on that topic.
+    If you change your administrative user password, you have to adjust the security configuration of your Search Collection Sources, otherwise they cannot be crawled. Refer to [Changing the HCL Digital Experience administrator password](../../security/people/authentication/updating_userid_pwd/wpsadmin) for more information.
 
 !!!warning
     If you see that the Remote Search Service in the DX Search Administration is unavailable after a DX Remote Search Pod restart, it may be required to restart DX Core as well. You can use the following command to perform a ripple restart of all DX Core Pods:
