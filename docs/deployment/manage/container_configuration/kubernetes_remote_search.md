@@ -2,7 +2,6 @@
 
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments. This guidance is for containerized deployments running on Kubernetes. If you are looking for guidance on configuration of Remote Search for non-containerized deployments, please see [Remote search service](../../../../build_sites/search/remotesearch/)
 
-
 ## Introduction
 
 For using the HCL Digital Experience Search with multiple Pods of Core running, it is required to have Remote Search configured. Remote Search itself is provided as a singleton Pod that will provide all required functionality.
@@ -16,6 +15,18 @@ The configuration is a one-off process. Once you have Remote Search configured, 
     If you have configured search collections already and want them and their index backed up, see the topic [Exporting and importing search collections](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srtexpimp/) for further information.  
 
     The process of configuring Remote Search will include deleting the default Search Service and its corresponding Search collections.
+
+!!!warning
+    If you change your administrative user password, you have to adjust the security configuration of your Search Collection Sources, otherwise they cannot be crawled. Refer to [Changing the HCL Digital Experience administrator password](../../security/people/authentication/updating_userid_pwd/wpsadmin) for more information.
+
+!!!warning
+    If you see that the Remote Search Service in the DX Search Administration is unavailable after a DX Remote Search Pod restart, it may be required to restart DX Core as well. You can use the following command to perform a ripple restart of all DX Core Pods:
+
+    ```sh
+    # Perform the restart of DX Core
+    # adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
+    kubectl rollout restart statefulset dx-core -n dxns
+    ```
 
 !!!tip
     This guide uses `kubectl` for all commands that are related to Kubernetes. If you are Running on OpenShift, you can replace the `kubectl` command with `oc`.
