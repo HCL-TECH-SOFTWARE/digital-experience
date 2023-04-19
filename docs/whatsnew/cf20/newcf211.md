@@ -9,7 +9,8 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Increase in several parameters for minimal system requirements
-- Digital Asset Management – Copy Media assets from one Collection to another 
+- Digital Asset Management – Copying Media assets from one Collection to another
+- Digital Asset Management – Enabling the use of SVG files in DAM API 
 - Remote Search Automated configuration option
 - Deprecation of OpenShift Passthrough
 - Addition of more content authoring actions in Content Composer
@@ -31,10 +32,15 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     There is an increase in the minimal system requirements for core and remote-search containers for Kubernetes deployments. See the [Containerization requirements and limitations](../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for more information.
 
-### Digital Asset Management – Copy Media Assets from one Collection to another 
+### Digital Asset Management – Copying Media Assets from one Collection to another 
 
 === "Containers"
     DX 9.5 Container Update CF211 adds capability to copy Media assets from one DAM Collection to another, along with associated keywords, and includes an option to save the copied asset under a new name if naming conflicts occur. See the topic [Digital Asset Management - Manage Media - Copy a Media Asset](../../manage_content/digital_assets/usage/managing_dam/manage_media_assets.md#copying-a-media-asset) for more information.
+
+### Digital Asset Management – Enabling the use of SVG files in DAM API
+
+=== "Containers"
+   Added steps on how to enable the use of SVG files in DAM API. See the topic [Enabling the use of SVG files in DAM API](../../extend_dx/apis/hcl_experience_api/openapi_example_API_calls.md#enabling-the-use-of-svg-files-in-dam-api) for more information.
 
 ### Remote Search Auto Configuration option
 
