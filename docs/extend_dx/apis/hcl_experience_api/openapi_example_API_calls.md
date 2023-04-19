@@ -108,11 +108,11 @@ See example result:
         ![Experience API get roles script with authorization](./assets/ExperienceAPI_get_roles_with_auth.png)
 
 
-## Enable SVG file in  DAM API
+## Enabling the use of SVG files in DAM API
 
-Follow the below steps to enable a SVG file in DAM API:
+Follow the steps below to enable uploading an SVG file in DAM API:
 
-1. In **POSTMAN**, login to Ring API via:
+1. In **POSTMAN**, log in to Ring API via:
 
     `POST - https://<domain>/dx/api/core/v1/auth/login`
 
@@ -120,11 +120,11 @@ Follow the below steps to enable a SVG file in DAM API:
 
     `{ "username": "wpsadmin", "password": "wpsadmin" }`
 
-3. Access **GET** mediatypes to verify the if SVG file type is available and enabled:
+3. Access **GET** mediatypes to verify if the SVG file type is available and enabled by going to the following URL:
 
     `https://<domain>/dx/api/dam/v1/mediatypes`
 
-    Sample disabled SVG entry.
+    Here is an example of a disabled SVG entry:
 
     {
             "id": "973422667d9d4b9ed6d668db017ba049",
@@ -141,20 +141,20 @@ Follow the below steps to enable a SVG file in DAM API:
     }
 
 
-4. Do a **PATCH** to update the enable flag to **True** for SVG file:
+4. Do a **PATCH** to update the enable flag to **True** for SVG files:
 
     `PATCH - https://<domain>/dx/api/dam/v1/mediatypes/<id>`
 
-    Eg: https://dx.com/dx/api/dam/v1/mediatypes/973422667d9d4b9ed6d668db017ba049
+    Example: https://dx.com/dx/api/dam/v1/mediatypes/973422667d9d4b9ed6d668db017ba049,
 
     {
        "enabled": true
     }
 
 
-5. Verify if the SVG is enabled by repeating Step 3. If enabled, proceed with SVG upload in DAM. 
+5. Verify if the SVG is enabled by repeating Step 3. If enabled, proceed with uploading SVG files in DAM. 
 
-You can also verify in DAM->Settings section if the SVG file type is enabled.
+You can also verify in **DAM->Settings** if the SVG file type is enabled.
 
 ![Enable SVG file in  DAM API](../../../images/Enable_svgfile_DAM_API.png)
 
