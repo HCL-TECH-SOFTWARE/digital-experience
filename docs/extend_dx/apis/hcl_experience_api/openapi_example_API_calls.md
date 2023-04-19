@@ -154,9 +154,9 @@ Follow the steps below to enable uploading an SVG file in DAM API:
 
 5. Verify if the SVG is enabled by repeating Step 3. If enabled, proceed with uploading SVG files in DAM. 
 
-You can also verify in **DAM->Settings** if the SVG file type is enabled.
+    - You can also verify in **DAM->Settings** if the SVG file type is enabled.
 
-![Enable SVG file in  DAM API](../../../images/Enable_svgfile_DAM_API.png)
+    ![Enable SVG file in  DAM API](../../../images/Enable_svgfile_DAM_API.png)
 
 <!--
 ## HCL Software Academy course
