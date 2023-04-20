@@ -30,10 +30,3 @@ To configure the HCL Connections server type, you set a custom property named `s
 7.  Save your changes.
 
 8.  Restart your portal server for the changes to take effect.
-
-
-
-
-???+ info "Related information"
-    -  [Configuring a connection between HCL Portal and HCL Connections in SmartCloud for Social Business](../../../extend_dx/integration/connections/configuration/cfg_portal_to_work_with_cnx_in_sc/config_calls_sc4sb.md)
-

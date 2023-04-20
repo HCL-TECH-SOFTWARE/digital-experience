@@ -1,15 +1,6 @@
-# Backup and Recovery Procedures 
+# Backup and Recovery Procedures
 
 This section shows the deployment architecture and provides the instructions to create and manage backup and recovery of HCL Digital Experience components in containerized DX 9.5 environments.
-
-## Digital Experience 9.5 Container deployment architecture
-
-Learn about the HCL DX 9.5 Container deployment architecture to get a better understanding of the backup and recovery options.
-
-!!! note
-    This topology is also available in the [Install the HCL Digital Experience 9.5 components](../../../../manage_content/digital_assets/installation/install_config_dam.md) topic.
-
-![](../operator-migration/_img/cf_173_topology.png)
 
 ## Instructions to back up the Digital Experience 9.5 Container components
 
@@ -83,13 +74,13 @@ The following sections describe how the administrators can create and manage bac
 
     After the backup command is completed, it is recommended that a copy of the resulting file is created and placed to an alternate long term storage.
 
-    See [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/dam_backup_restore_image.md) for more information.
+    See [Backup and restore a DAM image](../../../../manage_content/digital_assets/dam_backup_restore_image.md) for more information.
 
 3.   **Digital Asset Management media backup**
 
     Use the following commands to back up the Digital Asset Management media uploads volume:
 
-    1.  A command similar to the backup command outlined in Step 1 of [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/dam_backup_restore_image.md) to create a backup of wp_profile can be used to back up the two `/opt/app/upload` and `/etc/config` Digital Asset Management mount points.
+    1.  A command similar to the backup command outlined in Step 1 of [Backup and restore a DAM image](../../../../manage_content/digital_assets/dam_backup_restore_image.md) to create a backup of wp_profile can be used to back up the two `/opt/app/upload` and `/etc/config` Digital Asset Management mount points.
 
         -   Refer to the following examples:
 
@@ -105,7 +96,7 @@ The following sections describe how the administrators can create and manage bac
 
             ![Backup and restore DAM media example 2](../operator-migration/_img/backup_restore_dam_media2.png)
 
-            See [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/dam_backup_restore_image.md) for more information.
+            See [Backup and restore a DAM image](../../../../manage_content/digital_assets/dam_backup_restore_image.md) for more information.
 
         Alternatively, the [Kubernetes documentation](https://kubernetes.io/docs/home/) pages present additional options to backup and clone persistent volumes.
 
@@ -116,17 +107,6 @@ The following sections describe how the administrators can create and manage bac
 
         HCL Digital Experience has successfully tested the volume snapshot and CSI volume cloning methods with HCL Digital Experience 9.5 container deployments. It is recommended that customers perform the additional testing if they are using options Step 2 and Step 3 to manage the wp_profile backup.
 
-
 ???+ info "Related information"
-    - [Install the HCL Digital Experience 9.5 components](../../../../manage_content/wcm_authoring/content_composer/installation/install_config_cc_dam.md)
     - [Backup and Restore](../../../manage/backup_restore/index.md)
-    - [Backup and restore DAM image](../../../../manage_content/digital_assets/configuration/dam_backup_restore_image.md)
- 
-
-
-<!-- -   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_operator.md)**  
-This shows you how to restore the HCL Digital Experience 9.5 Digital Asset Management image to a previous version.
--   **[Back up and restore a DAM image](../digital_asset_mgmt/dam_backup_restore_image.md)**  
-This topic shows you how to backup and restore for Digital Asset Management persistence and binaries in an Operator-based deployment using `dxctl`.
- -->
-
+    - [Backup and restore DAM image](../../../../manage_content/digital_assets/dam_backup_restore_image.md)

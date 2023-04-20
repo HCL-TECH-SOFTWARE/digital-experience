@@ -5,5 +5,6 @@ nav:
     - Export or Import DAM: dam_exim.md
     - XML Access to Import or Export DAM: adxmldam.md
     - Manage Collections: manage_collections.md
-    - Modify Media Assets: modify_dam    
+    - Modify Media Assets: modify_dam
+    - Access control management: dam_access_control.md
    

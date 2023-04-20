@@ -15,7 +15,5 @@ The Java Authentication and Authorization Service (JAAS) login module is availab
 
 
 ???+ info "Related information"
-    - [Establishing single sign-on (SSO) between the portal installation and HCL Connections in SmartCloud for Social Business](../../../../../../../integration/connections/configuration/cfg_portal_to_work_with_cnx_in_sc/establishing_sso/index.md)
-    - [Configuring single sign-on (SSO) for backend calls to HCL Connections in SmartCloud for Social Business](../../../../../../../integration/connections/configuration/cfg_portal_to_work_with_cnx_in_sc/establishing_sso/configuring_sso_sc4sb.md)
     - [Creating a generic SAML 2.0 federation with a new or existing domain](https://www.ibm.com/docs/en/tfim/6.2.2.7?topic=ipsc-creating-generic-saml-20-federation-new-existing-domain)
 

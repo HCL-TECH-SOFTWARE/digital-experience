@@ -37,8 +37,10 @@ You can define a list of allowed hosts for a specific application using the foll
      # Networking configurations specific to all addon applications
      addon:
        contentComposer:
-         # CORS Origin configuration for Content Composer, comma separated list
-         corsOrigin: "https://my-different-application.net,https://the-other-application.com"               
+         # CORS Origin configuration for Content Composer, array of elements
+         corsOrigin: 
+          - "https://my-different-application.net"
+          - "https://the-other-application.com"
 ```
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
@@ -57,7 +59,7 @@ networking:
     host
     # Example: eks-hybrid.dx.com
     host: "your-dx-core-instance.whateverdomain.com"
-    port: "10042"
+    port: 10042
     contextRoot: "wps"
     personalizedHome: "myportal"
     home: "portal"
@@ -72,12 +74,12 @@ networking:
     # Port of the addon applications
     # If you are running hybrid, you can specify a port
     # If left empty, no specific port will be added to the host
-    port: "443"
+    port: 443
     # Setting if SSL is enabled for addon applications
     # If you are running hybrid, make sure to set this accordingly to the Kubernetes 
     deployment configuration
     # Will default to true if not set    
-    ssl: "true"
+    ssl: true
 ```
 
 Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
@@ -174,19 +176,14 @@ You can set the name of the certificate used with the following syntax, the defa
 
 ### OpenShift Passthrough
 
-Helm charts have an `openShiftPassthrough` value to create a `Route` resource, which only passes through the main HAProxy port (443 most of the time). Instead of having such a flavor-specific configuration in Helm charts, such setups are documented and point to the flavor-specific documentation and will be deprecated.
-
-The default value set for "openShiftPassthrough" is `auto` i.e it detects OpenShift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
-
-!!! note
-    The "openShiftPassthrough" value is deprecated. If "openShiftPassthrough" is to be used, a new `Route` resource must be created manually. 
+Previous versions of the Helm chart had an `openShiftPassthrough` value that created an OpenShift `Route` resource automatically. This is deprecated and removed and from CF211, a `Route` resource must be created manually when required as part of the deployment.
 
 #### Create the route resource manually
 
 If you want to deploy OpenShift manually using `Routes`, you need to create a .yaml file like below and any changes required can be made in that. To apply those changes in the OpenShift cluster, you can run `kubectl apply` and specify its namespace and location.
 For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
 
-In some versions of OpenShift, by default, sticky sessions for passthrough `Routes` are enabled in OpenShift using the source (IP) as identifier. To make sure traffic gets forwarded to all DX HAProxy Pods even when another proxy is used in front of it, the `Route` should be annotated as shown in the example below. Please refer to the OpenShift documentation to select the appropriate value for your deployment. 
+In some versions of OpenShift, by default, sticky sessions for passthrough `Routes` are enabled in OpenShift using the source (IP) as identifier. To make sure traffic gets forwarded to all DX HAProxy Pods even when another proxy is used in front of it, the `Route` should be annotated as shown in the example below. Please refer to the [OpenShift documentation](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) to select the appropriate value for your deployment. 
 
 ```yaml
 apiVersion: "route.openshift.io/v1"

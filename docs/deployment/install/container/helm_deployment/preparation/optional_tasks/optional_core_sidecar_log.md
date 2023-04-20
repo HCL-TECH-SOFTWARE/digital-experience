@@ -26,7 +26,7 @@ Use the following syntax to configure more sidecar containers for additional log
 logging:
   # Core specific logging configuration
   core:
-    level: ""
+    level: []
     # List of sidecar containers mapping a container name to a file path for a log file to be exposed
     # Each element must consist of a `containerName` and a `logFilePath`, the latter must be located in one of the mounted volumes.
     # The mounted volumes include the path `/opt/HCL/logs` and any custom PVC mountPaths specified in `volumes.core.customPVCs`

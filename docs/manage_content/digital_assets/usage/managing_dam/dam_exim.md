@@ -1,10 +1,10 @@
 # DAM Assets Export and Import (EXIM)
 
-[Digital Asset Management](../index.md) \(DAM\) Assets Export and Import \(EXIM\) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
+[Digital Asset Management](../index.md) (DAM) Assets Export and Import (EXIM) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
 
 ## User access and control capabilities for HCL DAM EXIM users
 
-DAM \(EXIM\) is exposed via [DXClient](../../../../extend_dx/development_tools/dxclient/index.md).
+DAM (EXIM) is exposed via [DXClient](../../../../extend_dx/development_tools/dxclient/index.md).
 
 Administrator users and authorized users with Administrator role privileges have access and control capabilities to DAM EXIM.
 
@@ -233,6 +233,9 @@ The import command is used to import the DAM assets to the target environment fr
         ```
         dxclient manage-dam-assets import-assets -dxProtocol https -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -exportPath <exportPath> -importBinary <importBinary>
         ```
+
+???+ info "Related information" 
+    -   [DAM artifacts](../../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dam_artifacts/index.md)
 
 ## HCL Digital Experience Solution Feedback
 

@@ -49,9 +49,7 @@ Enable the use of IBM WebSphere® Application Server trace facilities to create 
 !!!note
     In order to improve runtime performance, beginning with HCL Digital Experience 9.5 Container Update CF192, the [DX Docker core image](../../../../deployment/install/docker/docker_image_deployment.md) is revised so that the /opt/HCL/wp_profile/temp directory is a now a symbolic link to /opt/HCL/PortalServer/temp. This means that the output usually written to /opt/HCL/wp_profile/temp (including servlet cache, `extensionregistry` storage, and `osgi_instance_location` data) now writes to /opt/HCL/PortalServer/temp. Accessing this new temp location is possible only from within the DX container as the /opt/HCL/wp_profile/temp directory no longer exists in the persisted profile file system.
 
-Prerequisite: Install and configure Content Composer and Digital Asset Management to your Digital Experience 9.5 CF181 and later deployment.
-
--   Documentation resource: [Install Digital Asset Management components](../../../../manage_content/digital_assets/installation/install_config_dam.md)
+Prerequisite: Install and configure Content Composer and Digital Asset Management to your HCL Digital Experience deployment.
 
 -   **Trace string format**
 
@@ -62,7 +60,6 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
     ```
 
     The text strings in angled bracket placeholders must be replaced as described here.
-
 
 -   **app-name**
 
@@ -96,7 +93,6 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
     HCL Digital Experience 9.5 uses the IBM® WebSphere Application Server trace facilities to create trace information.
 
     If you need detailed trace output of Content Composer or Digital Asset Management to troubleshoot a problem, follow these steps in the succeeding sections.
-
 
 ## Permanently enable tracing
 
@@ -135,7 +131,5 @@ Once a trace string is added or removed in the Tracing portlet, the Digital Expe
 !!!important
     WebSphere Application Server consolidates the trace strings list by removing strings that are logically contained within others. For example, if you have a string `x.y.z.*=all` in the list, it disappears when you add `x.y.*=all`
 
-
 ???+ info "Related information"  
     -   [Troubleshooting your Helm deployment](../../../../deployment/manage/container_configuration/troubleshooting/helm_troubleshooting.md)
-

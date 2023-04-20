@@ -1,13 +1,5 @@
 # Edit image
 
-HCL Digital Experience comes with functionalities to edit media assets.
-
-## Prerequisite
-
-HCL Digital Asset Management \(DAM\) should be installed and configured to HCL Digital Experience 9.5 Container Release Update CF181 and higher. See the [Install the HCL Digital Experience 9.5 Container components](../../../installation/install_config_dam.md) topic for instructions.
-
-## Edit image
-
 Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset Management:
 
 1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access **Edit** options. Click the **Edit** (pencil) icon.
@@ -46,8 +38,3 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
 4. Click **Undo** or **Redo** to undo and/or redo any edits to an image prior to saving the image.
 5. Click **Apply** to save your changes.
 6. To save your changes, click either **Save** or **Save as new** to save changes as a new digital asset.
-
-<!--
-## HCL Digital Experience Solution Feedback
-
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).-->

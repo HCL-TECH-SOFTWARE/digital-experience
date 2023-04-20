@@ -32,7 +32,7 @@ To configure the VMM to recognize an HCL Connections repository, the following a
 -   Hidden email is supported. In the 3.0.1.1 refresh, it is not mandatory any longer to enable the email.
 -   Single sign-on must be configured between HCL Connections and Portal. Follow the steps in [Set up single sign-on](../../../i_coll_t_enable_lcsso.md).
 -   HCL Connections and HCL Digital Experience must share a common LDAP.
--   Import the SSL certificate from HCL Digital Experience server to HCL Connections. Follow the steps in [Importing a certificate to support SSL](../../../connectionss_oncloud/connections_deploying/t_connections_portlets_import_cert.md) with the following differences:
+-   Import the SSL certificate from HCL Digital Experience server to HCL Connections. Follow the steps in [Importing a certificate to support SSL](../../../connections_deploying/t_connections_portlets_import_cert.md) with the following differences:
     -   Log in to the WebSphere Application Server Integrated Solutions Console for the HCL Connections server, rather than the Portal server.
     -   Enter the host, port, and alias for the Portal server. For example:
 
