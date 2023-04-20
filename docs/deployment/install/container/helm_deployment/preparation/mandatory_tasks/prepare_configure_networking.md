@@ -65,7 +65,7 @@ networking:
     home: "portal"
   addon:
     # Host of the addon applications
-    # If you are not running hybrid, you can leave this value empty and the Core host 
+    # If you are not running hybrid, you can leave this value empty to use relative hostnames 
     will be used
     # If you are running hybrid, you need to specify the FQDN of the Kubernetes 
     deployment
@@ -84,7 +84,7 @@ networking:
 
 Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
 
-As of CF212, the addon host is now required for all hybrid deployments. An absolute FQDN must be set. See [Relative Hostname for CC and DAM](../../../../../../../whatsnew/cf20/newcf212/#relative-hostnames-for-cc-and-dam-addons) for more details.
+Starting with CF212 release, the addon host is now required for all hybrid deployments. Since the transition to relative hostnames as default, an absolute FQDN must now be set for hybrid deployments. API calls must still point to one absolute hostname to avoid authentication issues when making requests. As such, the use of multiple hostnames is also currently unavailable for hybrid deployments. See [Hybrid Deployment Installation](../../../../../../../deployment/install/hybrid) for more details.
 
 ## Configure HAProxy certificate
 
