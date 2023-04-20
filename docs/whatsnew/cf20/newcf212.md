@@ -2,7 +2,7 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF212 on supported platforms:
 
-## Transition to Use of Relative Hostnames
+## Transition to use of relative hostnames
 
 === "Containers"
 
