@@ -3,4 +3,5 @@ nav:
     - index.md
     - content_composer
     - authoring_portlet
+    - dcs
     - ...

@@ -38,17 +38,25 @@ configuration:
       # Host of LDAP, only used if ldap type is "other"
       host: ""
       # Port of LDAP, only used if ldap type is "other"
-      port: ""
+      port: 
       # Supported LDAP Server types - CUSTOM
       serverType: "CUSTOM"
       # LDAP configuration id
       id: "dx_ldap"
-      # Mapping attributes between LDAP and DX, LDAP attribute names (comma-separated list)
-      attributeMappingLdap: "mail,title,userPassword"
-      # Mapping attributes between LDAP and DX, DX attribute names (comma-separated list)
-      attributeMappingPortal: "ibm-primaryEmail,ibm-jobTitle,password"
-      # Non-supported LDAP attributes (comma-separated list)
-      attributeNonSupported: "certificate,members"
+      # Mapping attributes between LDAP and DX, LDAP attribute names (array of elements)
+      attributeMappingLdap: 
+        - "mail"
+        - "title"
+        - "userPassword"
+      # Mapping attributes between LDAP and DX, DX attribute names (array of elements)
+      attributeMappingPortal: 
+        - "ibm-primaryEmail"
+        - "ibm-jobTitle"
+        - "password"
+      # Non-supported LDAP attributes (array of elements)
+      attributeNonSupported: 
+        - "certificate"
+        - "members"
 ```
 
 Refer to the following Help Center documentation for more information about LDAP and Configuration Wizard configuration:

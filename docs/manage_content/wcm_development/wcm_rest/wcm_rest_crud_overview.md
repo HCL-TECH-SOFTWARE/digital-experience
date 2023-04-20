@@ -114,4 +114,23 @@ This code is an example in `application/atom+xml` format:
    </entry>
 ```
 
+## Virtual portal usage in WCM REST API
+
+When using the REST API on virtual portals, the correct format should be:
+
+```
+/wps/mycontenthandler/vpcontext/!ut/p/wcmrest/...
+```
+
+!!! note
+    The API needs to contain /!ut/p/ after the VP context.
+
+For example:
+```
+/wps/mycontenthandler/VP1/!ut/p/wcmrest/query?type=Library
+Set the contentHandlerPath to be /wps/mycontenthandler/VP1 like this:
+{ "connectionId": "myserver-vp1" , "host": "myserver.hcl.com" , "port": 10039 , "username" : "wpsadmin" , "password" : "wpsadmin" , "contentHandlerPath" : "/wps/mycontenthandler/VP1" , "secure" : false , "libraryName" : "" }
+```
+
+
 For more information, see [Sample URLs for WCM REST Service aka WCM REST API](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074521).

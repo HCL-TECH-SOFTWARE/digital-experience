@@ -8,6 +8,9 @@ The Scopes API returns the set of supported values that can be passed to the sco
 |------------|--------------|
 |/PORTAL\_CONTEXT/contenthandler/searchfeed/scopes|Scopes API|
 
+!!! attention "Use the Context Path below for Virtual Portal" 
+  	 /PORTAL\_CONTEXT/contenthandler/!ut/p/searchfeed/scopes  
+
 ## Response Format
 
 Response is Atom formatted list of possible values that can be passed to the Search API by using the scope parameter of the Search API.

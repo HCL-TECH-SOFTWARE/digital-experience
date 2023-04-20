@@ -44,7 +44,7 @@ Create the new search collection for the remote search service. For detailed ins
 
     3.  In the **Content source type** field, specify **WCM site**.
 
-    4.  In the **Collect documents linked from this URL** field, specify the following URL: http://server\_name:port\_number/wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments
+    4.  In the **Collect documents linked from this URL** field, specify the following URL: http://server_name:port_number/wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments&Range=100&locale=en_US
 
         !!! note 
             If you are using a webserver, in the **Collect documents linked from this URL** field, specify the webserver host name and port.

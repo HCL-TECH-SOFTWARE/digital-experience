@@ -60,7 +60,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request and limit** | **Container Memory request and limit** |
 |---|---|---|---|---|---|
-| core | 1 | core | core | 4000m | 4096Mi |
+| core | 1 | core | core | 4000m | 6144Mi |
 |  |  | system-out-log | logging-sidecar | 100m | 64Mi |
 |  |  | system-err-log | logging-sidecar | 100m | 64Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
@@ -78,14 +78,14 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 |  |  | persistence-metrics-exporter | persistence-metrics-exporter | 100m | 128Mi |
 |  |  | persistence-repmgr-log | logging-sidecar | 100m | 64Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
-| remote-search | 1 | remote-search | remote-search | 250m | 768Mi |
+| remote-search | 1 | remote-search | remote-search | 500m | 2048Mi |
 |  |  | system-out-log | logging-sidecar | 100m | 64Mi |
 |  |  | system-err-log | logging-sidecar | 100m | 64Mi |
 |  |  | prereqs-checker | prereqs-checker | 100m | 64Mi |
 | ring-api | 1 | ring-api | ringapi | 100m | 256Mi |
 | runtime-controller | 1 | runtime-controller | runtime-controller | 100m | 256Mi |
 |  |  |  |  |  |  |
-| **Overall** |  |  |  | **7950m** | **13184Mi** |
+| **Overall** |  |  |  | **8200m** | **16512Mi** |
 
 !!!note
     Remember that the overall sums for CPU and memory include all components of HCL DX. 

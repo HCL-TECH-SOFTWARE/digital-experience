@@ -6,7 +6,7 @@ Choose the deployment type for your organization and follow the installation and
 
 -   **[Configure HCL Connections on-premise](../connections/configuration/cfg_portal_with_cnx/connections_onpremise/index.md)**<br>
 Bring the power of HCL Connections to your portal applications.
--   **[Configure HCL Connections on Cloud](../connections/configuration/cfg_portal_with_cnx/connectionss_oncloud/index.md)**  
+-   **[Configuring Security for HCL Connections](../connections/configuration/cfg_portal_with_cnx/connections_deploying/index.md)**  
 Bring the power of HCL Connections to your portal applications.
 -   **[Configuring common Directory Services for your security configuration](../connections/configuration/cfg_portal_with_cnx/cfg_common_dir/t_connections_portlets_common_directory.md)**  
 Configure the common Directory Services to work with your security configuration.

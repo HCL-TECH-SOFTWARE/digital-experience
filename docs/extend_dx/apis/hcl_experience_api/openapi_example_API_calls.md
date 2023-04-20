@@ -108,4 +108,58 @@ See example result:
         ![Experience API get roles script with authorization](./assets/ExperienceAPI_get_roles_with_auth.png)
 
 
+## Enabling the use of SVG files in DAM API
 
+Follow the steps below to enable uploading an SVG file in DAM API:
+
+1. In **POSTMAN**, log in to Ring API via:
+
+    `POST - https://<domain>/dx/api/core/v1/auth/login`
+
+2. Enter the **username** and **password**:
+
+    `{ "username": "wpsadmin", "password": "wpsadmin" }`
+
+3. Access **GET** mediatypes to verify if the SVG file type is available and enabled by going to the following URL:
+
+    `https://<domain>/dx/api/dam/v1/mediatypes`
+
+    Here is an example of a disabled SVG entry:
+
+    {
+            "id": "973422667d9d4b9ed6d668db017ba049",
+            "mimeType": "image/svg+xml",
+            "extensions": [
+                "svg"
+            ],
+            "mediaTypeGroupId": "59b514174bffe4ae402b3d63aad79fe0",
+            "created": "2023-04-19T06:45:42.088Z",
+            "updated": "2023-04-19T14:05:28.270Z",
+            "enabled": false,
+            "self": "/mediatypes/973422667d9d4b9ed6d668db017ba049",
+            "type": "image"
+    }
+
+
+4. Do a **PATCH** to update the enable flag to **True** for SVG files:
+
+    `PATCH - https://<domain>/dx/api/dam/v1/mediatypes/<id>`
+
+    Example: https://dx.com/dx/api/dam/v1/mediatypes/973422667d9d4b9ed6d668db017ba049,
+
+    {
+       "enabled": true
+    }
+
+
+5. Verify if the SVG is enabled by repeating Step 3. If enabled, proceed with uploading SVG files in DAM. 
+
+    You can also verify in **DAM > Settings** if the SVG file type is enabled.
+
+    ![Enable SVG file in  DAM API](../../../images/Enable_svgfile_DAM_API.png)
+
+<!--
+## HCL Software Academy course
+
+For an introduction and a demo on how to use Experience API, go to [Experience API](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416). To try it out yourself, refer to [Experience API Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf) and corresponding [Experience API Lab Resources](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
+-->

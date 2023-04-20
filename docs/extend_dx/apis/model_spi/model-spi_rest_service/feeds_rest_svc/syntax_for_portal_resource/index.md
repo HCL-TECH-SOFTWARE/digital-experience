@@ -10,6 +10,11 @@ In order to obtain a feed that contains certain portal resources, you send an HT
 /wps/[my]contenthandler[/vpmapping]?(uri=model-uri)+(&mode=verb)?(&name=value)*
 ```
 
+For Virtual Portals, use the following URL instead:
+```
+/wps/[my]contenthandler[/vpmapping]/!ut/p/?(uri=model-uri)+(&mode=verb)?(&name=value)*
+```
+
 The meanings of the syntax elements are as follows:
 
 -   **contenthandler**
