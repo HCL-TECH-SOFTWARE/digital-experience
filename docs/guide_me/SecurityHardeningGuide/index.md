@@ -7,29 +7,35 @@ Security is a broad topic with many aspects t- consider. This can become quite c
 - Authentication
 
     - What is this?
+    
     - Users provide credentials t- identify themselves t- the application.
 
 - Authorization
 
     - What can they do?
+
     - Application determines what data the user can access and what functions they can perform on/with that data.
 
 - Non-repudiation
 
     - What have they done?
+
     - Establish a record of actions against which user claims can be verified.
 
 - Confidentiality
 
     - Keep secrets
+
     - Prevent unauthorized disclosure of data, in storage and in transit.
 
 - Integrity
 
     - Stop corruption
+
     - Prevent unauthorized modification of data, in storage and in transit.
 
 - Availability
 
     - Be reliable
+    
     - Ensure that authorized users can access data, when needed.
