@@ -4,11 +4,11 @@ This guide assumes a general understanding of web application security.
 
 Web application security is:
 
-• Fundamental [information security](https://www.cisa.gov/sites/default/files/publications/infosecuritybasics.pdf) concepts,
+- Fundamental [information security](https://www.cisa.gov/sites/default/files/publications/infosecuritybasics.pdf) concepts,
 
-• Considered from the perspective of a [web application](https://www.cisa.gov/security-publications/website-security),
+- Considered from the perspective of a [web application](https://www.cisa.gov/security-publications/website-security),
 
-• Integrated into a comprehensive security plan via [risk management](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf).
+- Integrated into a comprehensive security plan via [risk management](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf).
 
 Web applications are commonly the primary interface by which end users access information. Few are entirely self-contained, but are distinct components of broader, integrated information systems.
 
