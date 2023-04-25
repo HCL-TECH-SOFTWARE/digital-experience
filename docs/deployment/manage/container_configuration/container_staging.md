@@ -47,8 +47,6 @@ Follow these steps to export the source HCL Portal server.
 
 ## Import the source HCL Portal server
 
-Log in to the machine from where you will access your HCL Portal Container.
-
 1.  Log in to the machine from where you will access your HCL Portal Container.
 
 2.  Download, install, and log in to the command line client for your Kubernetes environment according to the client instructions. For OpenShift, that is Red Hat OpenShift Command Line Client. For Non OpenShift, that is the Kubectl command line tool.
