@@ -66,7 +66,6 @@ networking:
   addon:
     # Host of the addon applications
     # If you are not running hybrid, you can leave this value empty to use relative hostnames 
-    will be used
     # If you are running hybrid, you need to specify the FQDN of the Kubernetes 
     deployment
     # Example: eks-hybrid.apps.dx.com
