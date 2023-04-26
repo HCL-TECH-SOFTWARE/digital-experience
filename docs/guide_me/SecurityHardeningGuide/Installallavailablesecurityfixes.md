@@ -8,11 +8,11 @@ HCL also posts important information regarding security vulnerabilities to the [
 
 ## Recommended actions and considerations
 
-- Install the most current maintenance for HCL Digital Experience that is suitable for your application.
+- Install the [most current maintenance](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do) for HCL Digital Experience that is suitable for your application.
 
-- Subscribe to the HCL PSIRT Blog to be notified when security bulletins are published for new vulnerabilities.
+- Subscribe to the [HCL PSIRT Blog](https://support.hcltechsw.com/community?id=community_forum&sys_id=038a2b921b7bb34c77761fc58d4bcb0d) to be notified when security bulletins are published for new vulnerabilities.
 
-    - It may not be practical for you to immediately install fixes on production systems. Minimally, you should establish a procedure and schedule for evaluating vulnerabilities, installing security fixes, and testing your application. Consider using CVSS scores as the basis for decisions regarding installation schedules.
+    - It may not be practical for you to immediately install fixes on production systems. Minimally, you should establish a procedure and schedule for evaluating vulnerabilities, installing security fixes, and testing your application. Consider using [CVSS scores](https://www.first.org/cvss/) as the basis for decisions regarding installation schedules.
 
 - Integrate security fixes delivered for default themes into your custom theme.
 
@@ -39,4 +39,4 @@ HCL also posts important information regarding security vulnerabilities to the [
 
     Refer to your vendors for these components regarding their practices for publishing security bulletins.
 
-- If you discover a new security vulnerability in HCL Digital Experience, report it to HCL by opening a case.
+- If you discover a new security vulnerability in HCL Digital Experience, report it to [HCL by opening a case](https://support.hcltechsw.com/csm).
