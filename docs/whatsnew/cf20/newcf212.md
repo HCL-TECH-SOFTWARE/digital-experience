@@ -10,4 +10,4 @@ Starting with the CF212 release, we are transitioning to using relative hostname
 
 !!! note "Action Required for Hybrid Deployments"
 
-    The FQDN must be set as these deployments would need absolute host names. Hybrid deployments will fail if this is not set. The use of multiple hostnames is currently not available for any kind hybrid deployment. See the [Hybrid Host Configurations](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking/#hybrid-host) for more details.
+    The FQDN must be set because hybrid deployments need absolute hostnames. These deployments will fail if this is not set. The use of multiple hostnames is currently not available for any kind of hybrid deployment. See the [Hybrid Host Configurations](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking/#hybrid-host) for more details.
