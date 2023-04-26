@@ -6,7 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 === "Containers"
 
-Starting with the CF212 release, we are transitioning to using relative hostnames within our internal configurations. We do this to enable the use of multiple hostnames for Kubernetes-based deployments. This transition begins with Content Composer and Digital Asset Management having relative hostnames as their default configuration. Kubernetes-based deployments should continue to work as intended without any changes.
+We are transitioning to using relative hostnames within our internal configurations. This is to enable the use of multiple hostnames for Kubernetes-based deployments. This transition begins with Content Composer and Digital Asset Management having relative hostnames as their default configuration. Kubernetes-based deployments should continue to work as intended without any changes.
 
 !!! note "Action Required for Hybrid Deployments"
 
