@@ -174,7 +174,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 ## Product Specific or Mixed Content 
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
-|Dojo Toolkit|1.9 and later maintenance releases|8.5|
+|Dojo Toolkit|1.9.7|8.5|
 |IBM License Metric Tool|9.2 and later maintenance releases|8.5|
 |jQuery|3.5.1|8.5|  
 
