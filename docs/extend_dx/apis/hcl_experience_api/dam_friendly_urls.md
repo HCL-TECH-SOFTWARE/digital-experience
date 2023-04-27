@@ -62,11 +62,14 @@ With a friendly URL for the collection unique-name, asset file name, rendition n
 
 Before doing the steps in this section, you must have the following information from the asset:
 
--   The `collection_id` where the asset is located \(required\).
--   The `item_id` of the asset to set the friendly URL for \(required\).
--   The `rendition_id` for the asset rendition \(required, as applicable\).
+-   The `collection_id` where the asset is located (required).
+-   The `item_id` of the asset to set the friendly URL for (required).
+-   The `rendition_id` for the asset rendition (required, as applicable).
+
+[]()
 
 1.  Open the DAM API explorer.
+
 2.  From the `CollectionController` or `RenditionController`, select the API to use and provide the `collection_id`, `item_id`, or `rendition_id`.
 
     -   For the collection ID field, you can use the `collection_id` or the collection unique-name.
@@ -74,6 +77,7 @@ Before doing the steps in this section, you must have the following information 
     -   For the rendition ID field, you can use the `rendition_id` or the rendition type.
 
 3.  Click **Execute** to run the API.
+
 4.  Check the request API URL looks similar to the following:
 
     ```
@@ -105,7 +109,7 @@ You can click **Rename** from the notification and provide a unique name.
 ![Rename asset dialog](../../../images/dialog_rename_field.png){ width=50% }
 
 ## What is collection unique-name?
-Collection unique-names are the unique identifier for each collection which can be used in friendly url instead of collection UUID to access DAM assets. Collection unique-names supports all languages as per existing system. Collection unique-name does not support any URL reserved characters(e.g. "?!#$&%'*+/;:,=@()\[]").
+Collection unique-names are the unique identifier for each collection which can be used in friendly url instead of collection UUID to access DAM assets. Collection unique-names support all languages as per existing system. A collection unique-name does not support any URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]").
 
 ## How collection unique-names are generated?
 - While creating a collection, the user has a provision to enter a custom collection unique-name.
@@ -119,25 +123,25 @@ Collection unique-names are the unique identifier for each collection which can 
 - For existing collections, the system will generate a collection unique-name based on the collection name by using the migration script.
 
 ## How can the user change the collection unique-names?
-Once the collection unique-name is generated, user will be able to view/edit the collection unique-name in the collection information panel.
+Once the collection unique-name is generated, user can view/edit the collection unique-name in the collection information panel.
 
 ![](../../../images/CollectionEdit_friendlyUrl.png "Collection edit panel"){ width=47% }
 ![](../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel"){ width=45% }
 
 ## What happens if collection unique-name already exists while creating or editing a collection?
-While creating or editing a collection, DAM checks for any duplication of the unique-name and prompt with an error message and also suggests available unique-name if a duplicate is found in any other collection.
+While creating or editing a collection, DAM checks for any duplication of the unique-name and prompts with an error message. It also suggests an available unique-name if a duplicate is found in any other collection.
 
 ![](../../../images/CreateCollectionError_friendlyUrl_1.png "Create collection duplicate unique name"){ width=45% }
 ![](../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection suggestion click"){ width=45% }
 
-- when the user clicks on the suggested name, unique-name input field get prefilled with the suggested unique-name.
+When the user clicks on the suggested name, the unique-name input field gets pre-filled with the suggested unique-name.
 
 ![](../../../images/EditCollectionError_friendlyUrl_1.png "Edit collection duplicate unique name"){ width=45% }
 ![](../../../images/EditCollectionError_friendlyUrl_2.png "Edit collection suggestion click"){ width=50% }
 
 
 ## Copying friendly URLs for assets
-Users can copy the friendly URL and API URL of an asset from the URLs section of the asset's inspector panel
+Users can copy the friendly URL and API URL of an asset from the URLs section of the asset's inspector panel.
 ![](../../../images/Copy_friendlyUrl.png "Copy friendly URL"){ width=50% }
 
 
