@@ -89,6 +89,19 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
     dxclient livesync push-theme -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -themePath <themePath> -themeName <themeName>
     ```
 
+### Ignoring Files
+You can opt to ignore files and folder paths to push to server by creating an ignore file (`.ignore`) under the root of the theme folder (the theme that is provided in `--themePath`).
+
+When changing contents of the ignore file, the command needs to be re-run again to reflect the files the needs to be ignored.
+
+Sample `.ignore` file contents:
+```txt
+#.ignore
+
+.DS_Store
+logs/
+```
+
 ## LiveSync Pull Theme
 
 This command is used to sync a theme from a DX WebDAV theme on a remote server to a local folder.​
