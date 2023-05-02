@@ -29,7 +29,7 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
 
 -   **Required files**
 
-    WebDAV theme collection: The theme collection folder/zip is used to create or update the collection in WebDAV file store of the DX Server.
+    WebDAV theme collection: The theme collection folder is used to create or update the collection in WebDAV file store of the DX Server.
 
 -   **Common Command options**
 
@@ -71,7 +71,7 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
     -themeName <value>
     ```
 
-    Use this attribute to specify the theme file path that contains all static files to be pushed into DX theme, it accepts either folder or zip file path of the WebDAV theme collection:
+    Use this attribute to specify the theme file path that contains all static files to be pushed into DX theme, it accepts the folder path of the WebDAV theme collection:
 
     ```shell
     -themePath <value>
@@ -126,7 +126,7 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
 
 -   **Required files**
 
-    WebDAV theme collection: The theme collection folder/zip is used to create or update the collection in WebDAV file store of the DX Server.
+    WebDAV theme collection: The theme collection folder is used to store the downloaded files from WebDAV Server.
 
 -   **Common Command options**
 
@@ -168,7 +168,7 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
     -themeName <value>
     ```
 
-    Use this attribute to specify the theme file path that contains all static files to be pushed into DX theme, it accepts either folder or zip file path of the WebDAV theme collection:
+    Use this attribute to specify the theme file path that contains all static files to be pulled into DX theme, it accepts either folder path of the WebDAV theme collection:
 
     ```shell
     -themePath <value>
