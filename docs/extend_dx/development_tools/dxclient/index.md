@@ -599,7 +599,7 @@ Use this command to sync WebDAV themes in server and then watch for succeeding c
 dxclient livesync push-theme [options]
 ```
 
-Use this command to download the theme files in WebDAV Server in preparation for [`livesync push-theme`](../dxclient/dxclient_artifact_types/livesync.md):
+Use this command to download the theme files in WebDAV Server in preparation for [`livesync push-theme`](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-theme):
 
 ```bash
 dxclient livesync pull-theme [options]
