@@ -10,7 +10,7 @@ Learn more about managing libraries, creating, editing or cleaning up data, and 
     -   [Web content feed management](../../manage_content/wcm_authoring/wci/webcontentfeed_mgmt/index.md)
 
 
-## HCLSoftware U courses
+## HCLSoftware U learning materials
 
 For an introduction and a demo on web content management, go to [Web Content](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D301). To try it out yourself, refer to [Web Content - Content Composer Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-100_Web_Content_-_Content_Composer_Lab.pdf).
 

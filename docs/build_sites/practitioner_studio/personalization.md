@@ -9,7 +9,7 @@ Personalization allows a Portal Administrator to configure the site so that diff
 If you choose to not enable Practitioner Studio, you can still manage Personalization using the Application navigation menu in the toolbar.
 
 
-## HCLSoftware U course
+## HCLSoftware U learning materials
 
 For an introduction and a demo on how to use Targeted Content, go to [Content Targeting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D304).
 
