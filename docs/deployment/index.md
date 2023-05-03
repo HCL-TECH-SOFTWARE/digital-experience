@@ -16,7 +16,7 @@ To learn more about deploying HCL DX using Helm, Docker, and Docker Compose, wat
 - [HCL Digital Experience - Getting Started with HCL Portal 9.5 on Docker](https://youtu.be/GX6Fbv7yidI)
 - [HCL Digital Experience - Using Docker Compose to Deploy HCL DX Portal, DAM and CC](https://youtu.be/7MshqLFpphA)
 
-## HCLSoftware U course
+## HCLSoftware U learning materials
 
-For an introduction and a demo on DX deployment, go to [Deployment](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1479). To try it out yourself, refer to [Deploying HCL DX Using HCL SoFy Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HDX-INTRO_Setup_DX_Solution_Modules_in_SoFy.pdf).
+For an introduction and a demo on DX deployment, go to [Deployment](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1479). Several deployment options are provided in the course. 
 

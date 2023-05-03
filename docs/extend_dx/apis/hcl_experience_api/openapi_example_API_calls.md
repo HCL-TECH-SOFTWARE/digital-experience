@@ -159,7 +159,7 @@ Follow the steps below to enable uploading an SVG file in DAM API:
     ![Enable SVG file in  DAM API](../../../images/Enable_svgfile_DAM_API.png)
 
 
-## HCLSoftware U course
+## HCLSoftware U learning materials
 
 For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416). To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf) and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
 

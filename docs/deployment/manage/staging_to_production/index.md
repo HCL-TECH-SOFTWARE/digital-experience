@@ -8,7 +8,7 @@ Staging is only possible between the same product release. In contrast, upgradin
 
 HCL Digital Experience and HCL Web Content Manager solutions can consist of many artifacts. These artifacts include portlets, themes and skins, portlet services, page layouts, wires, portlet configurations, portlet data, web content, and personalization rules. Staging helps you move those artifacts to the production environment in a controlled way.
 
-## HCLSoftware U course
+## HCLSoftware U learning materials
 
 For an introduction and a demo on DX staging, go to [Staging](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505).
 
