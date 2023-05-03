@@ -60,5 +60,9 @@ throughput, but also allows changing mount options on the cache disk. For best p
 noatime option on the filesystem to prevent writing access times on each file read.
 
 More information on configuring disk caching can be found on the HCL Digital Experience Q&A forum :
+<<<<<<< Updated upstream
 https://hclpnpsupport.hcltech.com/community?id=community_question&sys_id=bb14b57d1be10c9c7776
 1fc58d4bcbd1
+=======
+https://hclpnpsupport.hcltech.com/community?id=community_question&sys_id=bb14b57d1be10c9c77761fc58d4bcbd1
+>>>>>>> Stashed changes
