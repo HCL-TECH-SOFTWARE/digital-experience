@@ -25,6 +25,16 @@ The DAM staging framework allows you to stage your DAM content from an authoring
     !!! note
         A subscriber must be registered with a publisher. Access rights from DAM staging assets are not transferred for subscribers that do not share the same Lightweight Directory Access Protocol \(LDAP\).
 
+### Configure LTPA Token Refresh Time
+LTPA token stored in cache will refresh every `5 minutes` by default.`ltpaTokenRefreshTimeInMinutes` can be configured in `values.yaml` under `configurations` section of `digitalAssetManagement`.
+
+```yaml
+configuration:
+  digitalAssetManagement:
+    ltpaTokenRefreshTimeInMinutes: 5
+```
+`ltpaTokenRefreshTimeInMinutes` is a Token refresh time configuration in minutes, which is passed to DAM as an environment variable.
+
 ### Configure LDAP
 
 **Both environments should share the same LDAP**: <br>
