@@ -25,6 +25,12 @@ The DAM staging framework allows you to stage your DAM content from an authoring
     !!! note
         A subscriber must be registered with a publisher. Access rights from DAM staging assets are not transferred for subscribers that do not share the same Lightweight Directory Access Protocol \(LDAP\).
 
+### Configure staging Host name via HELM
+The host name configuration for Publisher and subscriber should be specified in the values.yaml file. If the value is empty, the default host details will be the Load balancer host name. In case of hybrid, the host name details should be specified.
+
+!!! note
+        In values yaml the host, port, ssl settings can be configured under networking.addon.digitalAssetManagement.staging
+
 ### Configure LDAP
 
 **Both environments should share the same LDAP**: <br>
