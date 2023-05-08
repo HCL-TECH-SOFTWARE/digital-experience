@@ -19,6 +19,6 @@ applying this feature to all Web Content Viewer portlets.
 - Click OK to save and leave the Edit Shared Settings mode. [Asynchronous Web Content Rendering Setting](../../../../images/AsynchronousWebContentRendering.png)
 - There are other values that can be set. For more details, see: https://help.hcltechsw.com/digitalexperience/9.5/wcm/wcm_config_asynch_wcm_rendr.html
 
-Use of WCM advanced caching with Aynchronous Web Content Rendering is recommended to improve
-response times of subsequent requests. See the WCM Advanced Caching section for instructions on
-how to enable WCM advanced caching.
+Use of WCM advanced caching with Aynchronous Web Content Rendering is recommended to improve response times of subsequent requests. See the WCM Advanced Caching section for instructions on how to enable WCM advanced caching.
+
+
