@@ -25,7 +25,7 @@ Through in-place editing, users with edit access can directly modify the content
 
 1. In the Woodburn Studio site, switch the **Edit Mode** toggle button to **ON**. 
 
-    Going into Edit mode allows you to create and modify content.
+    Going into edit mode allows you to create and modify content.
 
 2. Make your changes directly on the page view frame.
 
@@ -46,9 +46,9 @@ Unlike in-place editing where you can directly edit content items on the page re
 
 1. In the Woodburn Studio site, switch the **Edit Mode** toggle button to **ON**. 
 
-    Going into Edit mode opens the site toolbar and allows you to create and modify content. 
+    Going into edit mode opens the site toolbar and allows you to create and modify content. 
 
-2. Click the **Add page components and applications** icon to add components to the demo site. 
+2. Click **Add page components and applications** icon to add components to the demo site. 
 
     The toolbar expands to display the Page Components and Applications you can add to your site. 
 
@@ -70,7 +70,7 @@ Unlike in-place editing where you can directly edit content items on the page re
 
 In this example, you can edit page properties such as the Site Area properties, CSS, and the Multilingual System Text. 
 
-1. Go to the page you want to edit and click the **Content menu** icon on the upper right corner. 
+1. Go to the page you want to edit and click **Content menu** icon on the upper right corner. 
 
 2. Click **Open Edit Form**. A new window appears where you can modify the properties of the page you are working on. 
     
