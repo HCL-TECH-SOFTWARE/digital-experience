@@ -30,6 +30,15 @@ The host name configuration for Publisher and subscriber should be specified in 
 
 !!! note
         In values yaml the host, port, ssl settings can be configured under networking.addon.digitalAssetManagement.staging
+### Configure LTPA Token Refresh Time
+LTPA token stored in cache will refresh every `5 minutes` by default.`ltpaTokenRefreshTimeInMinutes` can be configured in `values.yaml` under `configurations` section of `digitalAssetManagement`.
+
+```yaml
+configuration:
+  digitalAssetManagement:
+    ltpaTokenRefreshTimeInMinutes: 5
+```
+`ltpaTokenRefreshTimeInMinutes` is a token refresh time configuration in minutes, which is passed to DAM as an environment variable.
 
 ### Configure LDAP
 
