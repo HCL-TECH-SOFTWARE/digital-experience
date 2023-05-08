@@ -76,7 +76,7 @@ On the upper right corner of a page, you can find the Content menu and Portlet m
 
 ### Editing content using the Content menu
 
-Click the **Content menu** icon to display the following actions:
+Click **Content menu** icon to display the following actions:
 
 - **Configure Spot** - Allows you to select the type of content to display in a web content viewer. For more information, see [Configure your content spot](../../../build_sites/create_sites/content_spot/index.md).
 - **Open Read Form** - Opens a read-only form of the selected page's properties.
@@ -86,7 +86,7 @@ Click the **Content menu** icon to display the following actions:
 
 ### Configuring your website using the Portlet menu
 
-Click the **Portlet menu** icon to show the following actions:
+Click **Portlet menu** icon to show the following actions:
 
 - **Edit Shared Settings** - Opens the Web Content Viewer where you can manage the page's properties, portlet settings, and several advanced options such as adding or receiving links and adding plug-ins. 
 - **Maximize** - Maximizes the page.
