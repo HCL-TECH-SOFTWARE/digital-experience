@@ -40,4 +40,4 @@ After you complete these steps, the sample content items that are provided by de
 -   The following content items in the **Web Content** category of the **Content** tab are updated: **Article**, **Image**, **List of Articles**, **Rich Text**. These content items are modified to reference new versions of the items that are provided in the Template Page Content 3.0 library.
 -   The Articles page template is modified to reference a new version of the template that is provided in the Template Page Content 3.0 library.
 
-
+For more information on how to use these content items, see [Creating content with sample web content template items](../../wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/index.md).
