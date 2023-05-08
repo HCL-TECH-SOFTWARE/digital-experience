@@ -33,7 +33,7 @@ configuration:
   digitalAssetManagement:
     ltpaTokenRefreshTimeInMinutes: 5
 ```
-`ltpaTokenRefreshTimeInMinutes` is a Token refresh time configuration in minutes, which is passed to DAM as an environment variable.
+`ltpaTokenRefreshTimeInMinutes` is a token refresh time configuration in minutes, which is passed to DAM as an environment variable.
 
 ### Configure LDAP
 
