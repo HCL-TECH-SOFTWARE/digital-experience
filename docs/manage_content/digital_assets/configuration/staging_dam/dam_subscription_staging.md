@@ -26,12 +26,13 @@ The DAM staging framework allows you to stage your DAM content from an authoring
         A subscriber must be registered with a publisher. Access rights from DAM staging assets are not transferred for subscribers that do not share the same Lightweight Directory Access Protocol \(LDAP\).
 
 ### Configure staging hostname
-The hostname configuration for the DAM staging publisher and subscriber should be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details have to be specified.
+The hostname configuration for the DAM staging publisher and subscriber must be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details must be specified.
 
 !!! note
-        In values yaml the host, port, ssl settings can be configured under networking.addon.digitalAssetManagement.staging
+        In values.yaml, the host, port, and ssl settings can be configured under `networking.addon.digitalAssetManagement.staging`.
+     
 ### Configure LTPA Token Refresh Time
-LTPA token stored in cache will refresh every `5 minutes` by default.`ltpaTokenRefreshTimeInMinutes` can be configured in `values.yaml` under `configurations` section of `digitalAssetManagement`.
+LTPA token stored in cache refreshes every `5 minutes` by default.`ltpaTokenRefreshTimeInMinutes` can be configured in `values.yaml` under the `configurations` section of `digitalAssetManagement`.
 
 ```yaml
 configuration:
