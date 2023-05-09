@@ -26,7 +26,7 @@ We have introduced configuration options for hostname, port, SSL details for DAM
 
 !!! note
 
-    Host details should be configured for hybrid deployments. See the [DAM Staging host Configurations](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#Configure-staging-hostname) for more details.
+    Host details have to be configured for hybrid deployments. See the [DAM Staging host Configurations](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#Configure-staging-hostname) for more details.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
