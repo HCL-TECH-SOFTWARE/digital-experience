@@ -9,8 +9,11 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Transition to use of relative hostnames
+- Configuration options for DAM Staging
 
-## Transition to use of relative hostnames
+## Digital Experience 9.5 Container Version
+
+### Transition to use of relative hostnames
 
 === "Containers"
 
@@ -20,13 +23,15 @@ We are transitioning to using relative hostnames within our internal configurati
 
     The FQDN must be set because hybrid deployments need absolute hostnames. These deployments will fail if this is not set. The use of multiple hostnames is currently not available for any kind of hybrid deployment. See the [Hybrid Host Configurations](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking/#hybrid-host) for more details.
 
-## Host details for DAM Staging
+### Configuration options for DAM Staging
 
-We have introduced configuration options for hostname, port, SSL details for DAM Staging. Kubernetes-based deployments should continue to work as intended without any changes.
+=== "Containers"
+
+We have introduced configuration options for hostname, port, and SSL details for DAM Staging. Kubernetes-based deployments should continue to work as intended without any changes.
 
 !!! note
 
-    Host details have to be configured for hybrid deployments. See the [DAM Staging host Configurations](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#Configure-staging-hostname) for more details.
+    Host details must be configured for hybrid deployments. See the [DAM Staging host Configurations](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#Configure-staging-hostname) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
