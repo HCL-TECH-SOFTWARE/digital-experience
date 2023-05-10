@@ -78,7 +78,7 @@ In this example, you can edit page properties such as the Site Area properties, 
 
 3. Click **Save and Close** to save your changes. 
 
-## Editing using the Portlet menu
+## Configuring your website using the Portlet menu
 
 In this example, you can modify the various settings of a specific page.
 
@@ -97,7 +97,11 @@ In this example, you can modify the various settings of a specific page.
 
 
 ???+ info "Related information"
+    - [Authoring tools](../../../build_sites/create_sites/authoring_tools/index.md)
+    - [Preparing for content authors](../../../build_sites/create_sites/site_prep_content_author/index.md)
     - [Adding pages, content, and more](../../../build_sites/create_sites/adding_pages_content_more/index.md)
+    - [Configure your content spot](../../../build_sites/create_sites/content_spot/index.md)
+    - [Developing and managing content](../../../build_sites/create_sites/developing_managing_content/index.md)
     - [The Woodburn Studio demo site](../../../build_sites/woodburn_studio/index.md)
     
 

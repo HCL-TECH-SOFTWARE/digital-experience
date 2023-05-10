@@ -37,6 +37,7 @@ The following image shows you the different parts of the site toolbar.
 
 3. Toggle this switch to go on or off Edit mode. Edit mode must be on to edit pages and content items in the website. When you turn on Edit mode, the site toolbar and Site Manager open automatically.
 
+For more information, see [Site toolbar and site manager](../../../build_sites/create_sites/authoring_tools/site_site_toolbar.md) and [Preparing the site toolbar](../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/index.md).
 
 ## In-place editing
 
@@ -62,7 +63,7 @@ The in-place editing feature requires:
     
 ## Inline editing
 
-Inline editing enables users with edit access to work with a content item. They can create, read, edit, approve, reject, and delete content. When creating or editing, it shows the content form shown in the example below. 
+Inline editing enables users with edit access to work with a content item. They can create, read, edit, approve, reject, and delete content. When creating or editing, it shows the content form shown in the following example. 
 
 ![Inline editing sample](../../../images/woodburn_inline_editing.png)
 
@@ -76,20 +77,20 @@ On the upper right corner of a page, you can find the Content menu and Portlet m
 
 ### Editing content using the Content menu
 
-Click **Content menu** icon to display the following actions:
+Click the **Content menu** icon to display the following actions:
 
 - **Configure Spot** - Allows you to select the type of content to display in a web content viewer. For more information, see [Configure your content spot](../../../build_sites/create_sites/content_spot/index.md).
 - **Open Read Form** - Opens a read-only form of the selected page's properties.
 - **Open Edit Form** - Opens an editable form where you can modify the selected page's properties. 
 - **Delete** - Deletes the page.
 
-For more information, see [Moving, copying, and pasting pages and content items](../../../build_sites/create_sites/adding_pages_content_more/toolbar_pages_move.md).
+For more information about the Content menu, see [Moving, copying, and pasting pages and content items](../../../build_sites/create_sites/adding_pages_content_more/toolbar_pages_move.md).
 
 ### Configuring your website using the Portlet menu
 
-Click **Portlet menu** icon to show the following actions:
+Click the **Portlet menu** icon to show the following actions:
 
-- **Edit Shared Settings** - Opens the Web Content Viewer where you can manage the page's properties, portlet settings, and several advanced options such as adding or receiving links and adding plug-ins. 
+- **Edit Shared Settings** - Opens the Web Content Viewer where you can manage the page's properties, portlet settings, and several advanced options such as adding or receiving links and adding plug-ins.
 - **Maximize** - Maximizes the page.
 - **Minimize** - Minimizes the page.
 - **Help** - Opens a new window containing a help topic. 
@@ -98,7 +99,6 @@ Click **Portlet menu** icon to show the following actions:
 - **Delete** - Deletes the page. 
 - **Hide** - Hides the page.
 
-For examples on how to use the Site Manager, see [Examples of using the Site Manager in Woodburn Studio](site_manager_samples.md).
 
 -   **[Examples of using the Site Manager in Woodburn Studio](site_manager_samples.md)**  
 This topic provides examples of how you can use the Site Manager through the Woodburn Studio demo site. You can perform the same actions in your own site.
@@ -112,6 +112,11 @@ You can enable inline editing for content item fields in your site design.
 For an introduction and a demo on how to use the Site Manager, go to [Site Manager](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D291). To try it out yourself, refer to [Site Manager Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HCL_Digital_Experience_Getting_Started_Lab.pdf) and corresponding [Site Manager Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-100_Web_Content_-_Content_Composer_Lab.pdf).
 
 ???+ info "Related information"
+    - [Authoring tools](../../../build_sites/create_sites/authoring_tools/index.md)
+    - [Preparing for content authors](../../../build_sites/create_sites/site_prep_content_author/index.md)
+    - [Adding pages, content, and more](../../../build_sites/create_sites/adding_pages_content_more/index.md)
+    - [Configure your content spot](../../../build_sites/create_sites/content_spot/index.md)
+    - [Developing and managing content](../../../build_sites/create_sites/developing_managing_content/index.md)
     - [Creating an editable property tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_property_edit.md)
     - [Creating an editable element tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements_edit.md)
     - [Creating an If Edit Mode tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_tag_ifeditmode.md)
