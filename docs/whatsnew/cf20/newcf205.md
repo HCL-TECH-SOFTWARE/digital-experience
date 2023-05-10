@@ -12,7 +12,7 @@ The HCL Digital Experience 9.5 Container Update and CF205 release includes the f
 -	HCL Web Experience Factory V8.5.1 (available in the DX 8.5 offerings)
 -	End of Support is announced for the Digital Experience Pattern v8.5 offerings
 -   The Ring API strictly enforces the case on query parameters
--	New complementary DX training modules in the HCL Software Academy, and more
+-	New complementary DX training modules in the HCLSoftware U, and more
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases. 
 
@@ -87,5 +87,6 @@ Refer to the Limitations table in [REST API Explorers](../../extend_dx/apis/hcl_
 ## Site Manager - Delete pages and their contents
 Beginning with CF205, a new feature is added, which allows you to delete a page and its contents along with the content that is referenced by the WCM rendering portlets on the page. For more information, see [Delete pages and their contents](https://help.hcltechsw.com/digital-experience/9.5/admin-system/delete_page_and_contents.html){:target="_blank"}. 
 
-## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
-The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New **What’s New in the latest DX CF** release modules are available for Digital Experience business users, developers and administrators. See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLearningJourneys){:target="_blank"} of the HCL Software Academy and [What’s New for Digital Experience section](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){:target="_blank"} for more information.
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. New **What’s New in the latest DX CF** release modules are available for Digital Experience business users, developers, and administrators. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+
