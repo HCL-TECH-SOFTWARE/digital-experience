@@ -153,6 +153,6 @@ The following features and updates are available to customers installing HCL Dig
     A new configuration option in the `custom-values.yaml` file allows to configure [SameSite Cookie Attribute](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-samesite-cookie-attribute) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
 
 
-## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://academy.hcltechsw.com/#HCLDXLearningJourneys) section of the HCL Software Academy and [What’s New for Digital Experience](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.

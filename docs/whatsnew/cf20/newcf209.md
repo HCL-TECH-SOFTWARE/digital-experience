@@ -8,7 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Option to configure the Timezone in container deployment Helm chart 
 - DXClient Restart Core Pods command  
 - Notice of deprecation of Textbox.io
-- Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+- Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 ## Content Composer - Save content item updates as a new content item 
 
@@ -49,6 +49,6 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     The Textbox.io component in the HCL Digital Experience software is being deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the [Deprecated features](../deprecated_features.md) for more information.
 
-## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://academy.hcltechsw.com/#HCLDXLearningJourneys) section of the HCL Software Academy and [What’s New for Digital Experience](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.

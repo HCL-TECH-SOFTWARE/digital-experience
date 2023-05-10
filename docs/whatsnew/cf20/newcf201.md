@@ -51,9 +51,9 @@ Introduced in Container Update CF201, you can disable the language switcher by s
 
 See the Help Center topic [Disabling the language switcher](../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/wcm_mngpages_disable_lang_switch.md) for more information.
 
-## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New modules are available for Digital Experience developers and administrators. See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLearningJourneys) of the HCL Software Academy for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. New modules are available for Digital Experience developers and administrators. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
 
 
 <!-- ???info "Related information"

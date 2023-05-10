@@ -77,11 +77,11 @@ A new optional process is added to retain customizations made to the [Woodburn S
 
 See the [Upgrade to Woodburn Studio Pages Optional](https://help.hcltechsw.com/digital-experience/9.5/woodburn_studio/update_pages_optional.html){:target="_blank"}<!-- (../woodburn_studio/update_pages_optional.md) --> Help Center topic for additional information.
 
-## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New modules are available for Digital Experience developers and administrators.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. New modules are available for Digital Experience developers and administrators.
 
-See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLearningJourneys){:target="_blank"} of the HCL Software Academy and [What’s New for Digital Experience section](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){:target="_blank"} for more information.
+See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
 
 ## New Digital Experience 9.5 How-To Video:
 
