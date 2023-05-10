@@ -5,6 +5,10 @@ This section provides the steps on using DDC for HCL Portal framework to integra
 ## Prerequisite
 
 Ensure that the your Volt MX Foundry application is configured correctly according to [this guide](./configuring_voltmx_foundry_to_connect_to_ddc.md).
+
+!!!note
+    Refer to the Lesson Links for Lab in [HDX-DEV-100 Digital Data Connector for Beginners Lab](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451) for more in-depth instructions on how to setup your first DDC integration.
+
 ## Create a mapping for the DDC plug-in for the List-rendering profile
 This section describes how to define the set of attributes available in the beans that are contained in bean lists that a DDC plug-in generates in List-rendering profile.
 
@@ -74,7 +78,7 @@ This section describes how to define the set of attributes available in the bean
 You may use an existing or new WCM library. For this example we have used a new library with default items such as site area and workflow. You will have to create WCM artifacts under 4 folders: Content, Components, Authoring Templates, and Presentation Templates.
 
 !!!note
-    Refer to [Creating web content libraries](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_config_wcmlibraries.html) for more in depth instructions on how to work with WCM libraries.
+    Refer to [Creating web content libraries](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_config_wcmlibraries.html) for more in-depth instructions on how to work with WCM libraries.
 
 ### Create List Appearance
 
@@ -142,6 +146,19 @@ Steps to create Presentation Template are as follows:
 
 3. Save and close.
 
+    !!!note
+        If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, then you might need the capability to submit data to the API which DDC will try to parse as **sourceParams**. In that case, you need to include that in your Presentation Template.
+
+    Sample Presentation Template Options - with params
+
+    ```
+    [Plugin:ListRenderingContext action="set" attribute="source=[Element context='current' type='content' key='sourceuri']" attribute="sourceParams=[Element context='current' type='content' key='params']" profile="[Element context='current' type='content' key='profile']" extension-id="[Element context='current' type='content' key='provider']"][Component name="ddc foundry/appearances/ddc volt mx list appearances" resultsPerPage="" startPage=""]
+    ```
+
+    - Under `attribute`, define the data `sourceParams`. The content field set in this example is `params`, which is saved in the content item.
+
+    ![](../../../assets/DDC_presentation_template_using_params.png "DDC Presentation Template with attribute sourceParams")
+
 ###  Create a Content Template
 
 Under Authoring Templates, create a Content Template.
@@ -181,6 +198,15 @@ Under Authoring Templates, create a Content Template.
 
 5. Save and close.
 
+    !!!note
+        If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, then you might need the capability to submit data to the API which DDC will try to parse as **sourceParams** using the Presentation Template you created in the previous section. In that case, you need to add a content field in your Content Template that will save this. It can have any name but for this example, we're using **params**.
+
+    | Element type                   | Name                                       | Display title              |
+    | ------------------------------ | ------------------------------------------ | ---------------------------|
+    | Short Text                     | params                                     | Request Body               |
+
+    ![](../../../assets/DDC_content_template_with_params.png "DDC Content Template with content field named params")
+
 ### Create a Content item
 
 1. Under your libraries, click `Content`, then click `Articles`, and create a new **Content** from the Content Template that you created earlier.
@@ -209,6 +235,15 @@ Under Authoring Templates, create a Content Template.
     ![](../../../assets/WCM_Input_Content_Element_Post.png "Input Main Content for Post.")
 
 3. Save and close.
+
+    !!!note
+        If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, then you might need the capability to submit data to the API which DDC will try to parse as **sourceParams** using the Presentation Template you created in a previous section. In that case, you need to provide value for **params**. You can pass many key-value pairs of data and it should have the format of a URL query string.
+
+    | Content field title            | Value                                                        |
+    | ------------------------------ | ------------------------------------------                   |
+    | Request Body                   | ?id=2                                                        |
+
+    ![](../../../assets/DDC_content_with_params.png "DDC Content item with value for params")
 
 ## Use in Portal Page
 
@@ -239,3 +274,7 @@ Now you can use all the WCM artifacts that you created on a portal page.
 6. Click `OK`, and the following output page will be displayed.
 
     ![](../../../assets/WCM_Output_Page.png "Result output.")
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to integrate DX with HCL Volt MX, go to [DX Integration with HCL Volt MX](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1458). To try it out yourself, refer to the Lesson Links for Lab in [HDX-DEV-100 Digital Data Connector for Beginners Lab](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451).
