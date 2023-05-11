@@ -14,9 +14,9 @@ This information is primarily aimed at non-technical users who are responsible f
 
 This section contains more detailed information as follows:
 
+* [Site Manager](./inline_editing/index.md)
 * [Authoring Portlet](./authoring_portlet/index.md)
 * [Content Composer](./content_composer/index.md)
 * [Document Conversion Services](./dcs/index.md)
-* [Inline Editing](./inline_editing/index.md)
 * [Multi-lingual Content](./multi_lingual/index.md)
 * [Web Content Integrator](./wci/index.md)

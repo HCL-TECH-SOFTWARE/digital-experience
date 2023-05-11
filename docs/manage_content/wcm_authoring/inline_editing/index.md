@@ -33,6 +33,8 @@ The following image shows you the different parts of the site toolbar.
         - Collapse the tree view.
         - For every item on the tree, you can click the **Context menu** icon to open the Context menu. This menu shows you more available actions for your selected page. 
 
+    For more information, see [Adding reusable page components to your page](../../../build_sites/create_sites/adding_pages_content_more/toolbar_add_comp.md).
+
 2. Click this icon to open the **Project menu**. In a project, you can group content and page edits together to make managing and publishing related changes easier. From the **Projects menu**, you can create a new project or manage existing projects. For more information, see [Projects: Organizing and coordinating changes to your site](../../../build_sites/create_sites/adding_pages_content_more/projects_organizing_coord_chgs_site/index.md).
 
 3. Toggle this switch to go on or off Edit mode. Edit mode must be on to edit pages and content items in the website. When you turn on Edit mode, the site toolbar and Site Manager open automatically.
@@ -45,6 +47,12 @@ In-place editing enables users with edit access to a content item to edit that i
 
 ![In-place editing sample](../../../images/inplace_editing_sample.png)
 
+In-place editing is available in two modes: 
+
+- `embed` - enables embedded editing of an element
+- `dialog` - enables editing in a pop-up dialog
+
+Developers can choose which mode to use. To set the in-place editing mode, see [Default in-place editing mode](../../wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#default-in-place-editing-mode).
 
 The in-place editing feature requires:
 
@@ -67,7 +75,7 @@ Inline editing enables users with edit access to work with a content item. They 
 
 ![Inline editing sample](../../../images/woodburn_inline_editing.png)
 
-Inline item creation can be enabled for authoring tool components so that users can create a new content item without having to access the authoring interface. For more information, see [Create an Authoring tools element](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/authoringtools_element/index.md).
+Inline item creation can be enabled using authoring tool components so that users can create a new content item without having to access the authoring interface. For more information about authoring tools, see [Create an Authoring tools element](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/authoringtools_element/index.md) and [What is an Authoring tools element?](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/authoringtools_element/wcm_dev_elements_authoring-tools.md).
 
 ## Web content viewer
 
@@ -99,6 +107,7 @@ Click the **Portlet menu** icon to show the following actions:
 - **Delete** - Deletes the page. 
 - **Hide** - Hides the page.
 
+Refer to the following pages for more information:
 
 -   **[Examples of using the Site Manager in Woodburn Studio](site_manager_samples.md)**  
 This topic provides examples of how you can use the Site Manager through the Woodburn Studio demo site. You can perform the same actions in your own site.
