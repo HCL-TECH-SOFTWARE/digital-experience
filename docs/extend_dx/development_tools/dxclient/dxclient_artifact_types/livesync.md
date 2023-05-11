@@ -1,6 +1,12 @@
 # LiveSync
 
-This topic provides information about the syncing Theme files from local-to-server, server-to-local.
+This topic provides information about the syncing files from local-to-server, server-to-local.
+
+!!! note
+    1. We recommend to use node version of DXClient while working with LiveSync as it is accurate and better performant.
+    2. LiveSync is currently only intended for 1:1, developer : server use.
+    3. Conflict Detections (and/or Resolutions) are not be part of CF 212 release.
+    4. In any case sync is disrupted, disconnect and connect again.
 
 ## LiveSync Push Theme
 

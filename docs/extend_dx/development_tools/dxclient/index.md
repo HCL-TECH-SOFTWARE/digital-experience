@@ -164,8 +164,6 @@ In addition, the package includes scripts for all operating systems that make it
         ```batch
         SET Timezone=Asia/Kolkata
         ```
-    
-12. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
 
 ## Installing DXClient using the source code package
 
