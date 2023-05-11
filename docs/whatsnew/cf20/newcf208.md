@@ -15,7 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 - Experience API update
 - New option to configure a local HCL Flexnet Entitlement server
 - DAM Keyword enhancements
-- Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+- Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 <!---  Kubernetes deployment HA Proxy option to configure Ingress  -->
 
 ## Kubernetes deployment Pre-requisites checking  
@@ -127,6 +127,6 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers" 
     Added new sections "Remove All Keywords tagged in a media asset" and "Error validation on adding duplicate keywords". See the topic [DAM Keyword enhancements](../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_keyword_enhancement.md) for more information.
 
-## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://academy.hcltechsw.com/#HCLDXLearningJourneys) section of the HCL Software Academy and [What’s New for Digital Experience](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
