@@ -11,6 +11,16 @@ The following features and updates are available to customers installing HCL Dig
 - Transition to use of relative hostnames
 - Configuration options for DAM Staging
 
+## All  Digital Experience Versions (8.5, 9.0, 9.5)
+
+### Notice of deprecation of Textbox.io Rich Text Editor
+
+=== "Containers"
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+
+=== "On-Premises"
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+
 ## Digital Experience 9.5 Container Version
 
 ### Transition to use of relative hostnames
