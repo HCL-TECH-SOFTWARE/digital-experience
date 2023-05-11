@@ -149,7 +149,7 @@ In addition, the package includes scripts for all operating systems that make it
 
     Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
 
-10. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
+10. Refer to the sample pipeline provided to find out how to integrate the container image in the automation server.
 
 11. By default, the logs will be available in UTC format. If needed, synchronize your local timezone from host to container using an environment variable as shown in the example below.
 
@@ -343,6 +343,10 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Deploy script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
+
+## Some generic points to note
+1. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
+2. The maximum file size that can be input in DXClient is 256 MB currently. This limitation will be addressed in one of the future releases.
 
 ## Configuring DXClient
 
