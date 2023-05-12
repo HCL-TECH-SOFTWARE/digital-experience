@@ -96,6 +96,10 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
     dxclient livesync push-theme -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -themePath <themePath> -themeName <themeName>
     ```
 
+!!! warning
+    1. Please avoid using `#` `%` `&` and `*` special characters when naming files and folders.
+    2. For theme names, it supports non-english characters but `a-z`, `A-Z`, `0-9`, `spaces`, and `- _ . ! ( )` characters will only be used for theme system name. Other invalid characters will be converted in underscores(`_`). (e.g. `来源folder` will be translated to `__folder`).
+
 ### Ignoring Files
 You can opt to ignore files and folder paths to push to server by creating an ignore file (`.ignore`) under the root of the theme folder (the theme that is provided in `--themePath`).
 
