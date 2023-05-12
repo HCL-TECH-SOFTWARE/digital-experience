@@ -3,17 +3,17 @@
 This topic provides information about the syncing files from local-to-server, server-to-local.
 
 !!! note
-    1. We recommend to use node version of DXClient while working with LiveSync as it is accurate and better performant.
-    2. LiveSync is currently only intended for 1:1, developer : server use.
-    3. Conflict Detections (and/or Resolutions) are not be part of CF 212 release.
-    4. In any case sync is disrupted, disconnect and connect again.
+    We recommend to use node version of DXClient while working with LiveSync as it is accurate and better performant.
 
 ## LiveSync Push Theme
 
 This command lets you sync your theme in WebDAV Server. Then, it'll watch for succeeding changes within the given `themePath` and immediately reflect in the WebDAV Server.
 
 !!! note
-    This command does not register/unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) and/or [Undeploy Themes](./themes.md#undeploy-theme) commands.
+    1. This command does not register/unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) and/or [Undeploy Themes](./themes.md#undeploy-theme) commands.
+    2. LiveSync Push Theme is currently only intended for 1:1, developer : server use. Concurrent usage of this command of (i.e. two (2) developers working in the same theme) will produce unwanted errors. Similarly, usage of LiveSync Push Theme and [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md) when editing files of the same theme will also produce unwanted errors.
+    3. Conflict Detections (and/or Resolutions) are not part of CF212 release.
+    4. In any case LiveSync Push Theme is disrupted, disconnect and reconnect again.
 
 -   **Command description**
 
@@ -35,7 +35,8 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
 
 -   **Required files**
 
-    WebDAV theme collection: The theme collection folder is used to create or update the collection in WebDAV file store of the DX Server.
+    1. WebDAV theme files in local.
+    2. Registered WebDAV Theme in Server.
 
 -   **Common Command options**
 
@@ -71,13 +72,13 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
 
 -   **Required options for LiveSync Push Theme**
 
-    Use this attribute to specify the theme name of the collection created under WebDAV server in DX:
+    Use this attribute to specify the Theme System Name (or Theme Title) of the theme created under WebDAV server in DX:
 
     ```shell
     -themeName <value>
     ```
 
-    Use this attribute to specify the theme file path that contains all static files to be pushed into DX theme, it accepts the folder path of the WebDAV theme collection:
+    Use this attribute to specify the theme folder path that contains all static files to be pushed into DX theme, it accepts the folder path of the WebDAV theme folder:
 
     ```shell
     -themePath <value>
@@ -132,7 +133,8 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
 
 -   **Required files**
 
-    WebDAV theme collection: The theme collection folder is used to store the downloaded files from WebDAV Server.
+    1. A local folder where all the WebDAV theme files will be placed after downloading.
+    2. Registered WebDAV Theme in Server.
 
 -   **Common Command options**
 
@@ -168,13 +170,13 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
 
 -   **Required options for LiveSync Pull Theme**
 
-    Use this attribute to specify the theme name of the collection created under WebDAV server in DX:
+    Use this attribute to specify the Theme System Name (or Theme Title) of the theme created under WebDAV server in DX:
 
     ```shell
     -themeName <value>
     ```
 
-    Use this attribute to specify the theme file path that contains all static files to be pulled into DX theme, it accepts either folder path of the WebDAV theme collection:
+    Use this attribute to specify the theme folder path where DX theme static files will be placed. It accepts a folder path:
 
     ```shell
     -themePath <value>
