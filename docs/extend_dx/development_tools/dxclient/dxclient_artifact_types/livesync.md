@@ -14,6 +14,7 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
     2. LiveSync Push Theme is currently only intended for 1:1, developer : server use. Concurrent usage of this command of (i.e. two (2) developers working in the same theme) will produce unwanted errors. Similarly, usage of LiveSync Push Theme and [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md) when editing files of the same theme will also produce unwanted errors.
     3. Conflict Detections (and/or Resolutions) are not part of CF212 release.
     4. In any case LiveSync Push Theme is disrupted, disconnect and reconnect again.
+    5. Ensure that you do not trigger the command inside the target local theme path.
 
 -   **Command description**
 
@@ -78,6 +79,10 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
     -themeName <value>
     ```
 
+    !!! warning
+        If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server. (e.g. `来源folder` will be translated to `__folder`). **For theme name use the one with `_` like `__folder` in the example.** 
+        ![livesync proper theme name](../../../../images/livesync_themename.png)
+
     Use this attribute to specify the theme folder path that contains all static files to be pushed into DX theme, it accepts the folder path of the WebDAV theme folder:
 
     ```shell
@@ -97,8 +102,7 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
     ```
 
 !!! warning
-    1. Please avoid using `#` `%` `&` and `*` special characters when naming files and folders.
-    2. For theme names, it supports non-english characters but `a-z`, `A-Z`, `0-9`, `spaces`, and `- _ . ! ( )` characters will only be used for theme system name. Other invalid characters will be converted in underscores(`_`). (e.g. `来源folder` will be translated to `__folder`).
+    Please avoid using `#` `%` `&` and `*` special characters when naming files and folders.
 
 ### Ignoring Files
 You can opt to ignore files and folder paths to push to server by creating an ignore file (`.ignore`) under the root of the theme folder (the theme that is provided in `--themePath`).
@@ -122,6 +126,9 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
     This command invokes the livesync push-theme tool inside the DXClient.
 
     This command will download the theme files in WebDAV Server under the given theme name (provided in `-themeName`). This will then be saved to the target local directory of the theme (provided in `-themePath`), overwriting existing files in this local directory which also deletes stale files in the process.
+
+    !!! warning
+        Ensure that you do not trigger the command inside the target local theme path.
 
     ```shell
     dxclient livesync pull-theme
@@ -179,6 +186,10 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
     ```shell
     -themeName <value>
     ```
+
+    !!! warning
+        If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server. (e.g. `来源folder` will be translated to `__folder`). **For theme name use the one with `_` like `__folder` in the example.** 
+        ![livesync proper theme name](../../../../images/livesync_themename.png)
 
     Use this attribute to specify the theme folder path where DX theme static files will be placed. It accepts a folder path:
 
