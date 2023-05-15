@@ -8,9 +8,9 @@ Ensure that the your Volt MX Foundry application is configured correctly accordi
 
 Refer to the HCLSoftware U course [HDX-DEV-100 Digital Data Connector for Beginners Lab](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451) for instructions on how to set up your first DDC integration.
 
-## Create a mapping for the DDC plug-in for the list-rendering profile
+## Creating a mapping for the DDC plug-in for the list-rendering profile
 
-This section describes how to define the set of attributes available in the beans that are contained in bean lists that a DDC plug-in generates in List-rendering profile.
+This section describes how to define the set of attributes available in the beans that are contained in bean lists that a DDC plug-in generates in list-rendering profile.
 
 For more information, see [Technical concepts | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/social/plrf_tech_concepts.html).
 
