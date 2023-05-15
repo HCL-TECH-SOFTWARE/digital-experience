@@ -1,0 +1,26 @@
+title: Base Portal Cache Instances
+nav:
+    - index.md
+    - AccessControl.md
+    - Datastore.md
+    - DynamicAssemblyProcessIntegration.md
+    - Model.md
+    - Policy.md
+    - PortalUserManagement.md
+    - DigitalDataConnector.md
+    - Mobile.md
+    - OutboundHTTPConnectionService.md
+    - Personalization.md
+    - PageManagement.md
+    - PortletEnvironment.md
+    - ResolverStaticPages.md
+    - Search.md
+    - SocialRendering.md
+    - URLMappings.md
+    - TaggingRating.md
+    - VirtualPortals.md
+    - WebDav.md
+    - WSRPConsumer.md
+    - WSRPProducer.md
+    - WebSphere.md
+    - Miscellaneous.md

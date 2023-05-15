@@ -1,4 +1,11 @@
 title: Performance Tuning
 nav:
-    - PerformanceTuningOverview.md
+    - index.md
     - Base_Portal_Tuning
+    - OperatingSystemTuning
+    - WebContentManagementTuning
+    - WebApplicationBridgeTuning
+    - WebExperienceFactory.md
+    - ClusterTuning
+    - HighVolumeSites.md
+    - OtherTuningConsiderations
