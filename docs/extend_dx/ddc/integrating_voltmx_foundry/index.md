@@ -6,8 +6,7 @@ This section provides the steps on using DDC for HCL Portal framework to integra
 
 Ensure that the your Volt MX Foundry application is configured correctly according to [this guide](./configuring_voltmx_foundry_to_connect_to_ddc.md).
 
-!!!note
-    Refer to the Lesson Links for Lab in [HDX-DEV-100 Digital Data Connector for Beginners Lab](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451) for more in-depth instructions on how to setup your first DDC integration.
+Refer to the HCLSoftware U course [HDX-DEV-100 Digital Data Connector for Beginners Lab](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451) for instructions on how to set up your first DDC integration.
 
 ## Create a mapping for the DDC plug-in for the List-rendering profile
 This section describes how to define the set of attributes available in the beans that are contained in bean lists that a DDC plug-in generates in List-rendering profile.
