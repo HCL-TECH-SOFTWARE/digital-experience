@@ -37,19 +37,18 @@ For a fresh full installation, follow the installation path using the components
 1.  IBM® Installation Manager.
 2.  IBM WebSphere® Application Server 9.0.5.
 3.  HCL Portal 8.5
-4.  HCL Digital Experience CF17
+4.  Latest available HCL Digital Experience CF, at least CF205
 5.  HCL Digital Experience 9.5
 6.  Corresponding edition files according to your HCL Digital Experience entitlements (HCL Portal Enable, HCL Portal Extend, HCL Portal Server, and HCL Portal Express)
 
-After installing the [IBM Installation Manager](https://www.ibm.com/support/knowledgecenter/SSDV2W/im_family_welcome.html){:target="_blank"}, users need to configure the repositories for IBM WebSphere Application Server 9.0.5, HCL Portal 8.5, HCL Digital Experience CF17, and HCL Digital Experience 9.5, and the corresponding edition files.
+After installing the [IBM Installation Manager](https://www.ibm.com/support/knowledgecenter/SSDV2W/im_family_welcome.html){:target="_blank"}, users need to configure the repositories for IBM WebSphere Application Server 9.0.5, HCL Portal 8.5, HCL Digital Experience CF205 or higher, and HCL Digital Experience 9.5, and the corresponding edition files.
 
 ## Update an existing HCL Digital Experience 8.5 or 9.0 system
 
-The path from an existing HCL Digital Experience 8.5 or 9.0 system to HCL Digital Experience 9.5 is to download CF17 as well as the 9.5 files. Then install the cumulative fix via the usual CF process.
+The path from an existing HCL Digital Experience 8.5 or 9.0 system to HCL Digital Experience 9.5 is to download the latest available HCL Digital Experience CF as well as the 9.5 files. Then install the cumulative fix via the usual CF process.
 
 Afterwards, users start the IBM Installation Manager, then configure the 9.5 repository, and add 9.5. Users who are using HCL Portal Enable, HCL Portal Extend, or HCL Web Content Manager need to add both the HCL Portal 9.5 Server and the applicable edition via IBM Installation Manager.
 
--   Documentation resource: [Fixlist of fixes included in CF17](../../../whatsnew/cf17/new_cf17.md)
 -   Documentation resource: [Apply Combined Cumulative Fix](../../../deployment/install/traditional/cf_install/index.md)
 
 ## Deployment of HCL Digital Experience to Docker and supported Kubernetes platforms
