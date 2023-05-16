@@ -102,7 +102,7 @@ HAProxy is deployed with a `LoadBalancer` type service to handle the incoming tr
 |`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled` | Boolean |`true`|
 |`strictTransportSecurity.maxAge`|This value is used to set for how long the browser should remember the HSTS rule | Number |`31536000`|
 |`strictTransportSecurity.includeSubDomains`|This optional parameter is specified, this rule applies to all of the site's subdomains as well. | Boolean |`false`|
-|`strictTransportSecurity.preload`|This directive must be specified. When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. Not part of the specification.
+|`strictTransportSecurity.preload`|This optional parameter is specified, When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. Not part of the specification.
  | Boolean |`false`|
 
 
