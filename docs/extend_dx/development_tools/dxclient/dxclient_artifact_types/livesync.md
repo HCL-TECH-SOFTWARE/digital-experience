@@ -1,6 +1,6 @@
 # LiveSync
 
-This topic provides information about syncing files from local-to-server and server-to-local in real time.
+This topic provides information about syncing files from local-to-server and server-to-local in real time. It replaces your existing WebDAV client and watches file system changes in the background.
 
 !!! note
     We recommend using the node version of DXClient while working with LiveSync, as it is more accurate and more performant.
@@ -9,13 +9,6 @@ This topic provides information about syncing files from local-to-server and ser
 
 This command lets you sync your theme on the WebDAV server. Then, it'll watch for succeeding changes within the given `themePath` and immediately reflect them in the WebDAV Server.
 
-### Limitations
-    1. This command does not register/unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) and/or [Undeploy Themes](./themes.md#undeploy-theme) commands.
-    2. LiveSync Push Theme is currently only intended for 1:1, developer: server use. Concurrent usage of this command (i.e. two (2) developers working on the same theme) will produce unwanted errors. Similarly, usage of LiveSync Push Theme and [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md) when editing files of the same theme will also produce unwanted errors.
-    3. Conflict detections (and/or resolutions) are not part of the CF212 release.
-    4. In any case, if the real-time sync of Theme during the push command gets disrupted, disconnect and reconnect again.
-    5. Do not trigger the live sync commands inside the target local theme path without setting the `Ignore Files` option. In dxclient, there are certain local files and folders such as config.json and logger.log that get generated in the working directory from which the command is run. Hence it will corrupt the server-side theme folder if you run the command without setting ignore files option.
-    6. Uploading files of the same name with different cases are not supported (e.g. sample-file.txt and sample-FILE.txt), especially when working on devices with different OS. Forcibly doing this may cause Theme corruption and will also corrupt pull-theme action and erase local data. To resolve this, identify the last uploaded file or corrupted file that cause this issue in the server copy and delete it to have both push and pull working properly again.
 
 -   **Command description**
 
@@ -206,3 +199,11 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
     ```
     dxclient livesync pull-theme -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -themePath <themePath> -themeName <themeName>
     ```
+
+### Limitations & Troubleshooting
+    1. This command does not register/unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) and/or [Undeploy Themes](./themes.md#undeploy-theme) commands.
+    2. LiveSync Push Theme is currently only intended for 1:1, developer: server use. Concurrent usage of this command (i.e. two (2) developers working on the same theme) or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), will cause it to overwrite each user's changes.
+    3. Conflict detections (and/or resolutions) are not enabled.
+    4. Do not trigger the live sync commands inside the target local theme path. It will corrupt the server-side theme folder.
+    5. Uploading files of the same name with different cases are not supported (e.g. sample-file.txt and sample-FILE.txt), especially when working on devices with different OS. Forcibly doing this may cause Theme corruption and will also corrupt pull-theme action and erase local data. To resolve this, identify the last uploaded file or corrupted file that cause this issue in the server copy and delete it to have both push and pull working properly again.
+    6. In any case, if the real-time sync of Theme during the push command gets disrupted, disconnect and reconnect again.
