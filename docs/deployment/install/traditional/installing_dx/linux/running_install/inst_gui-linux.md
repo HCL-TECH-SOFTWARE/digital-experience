@@ -52,7 +52,7 @@ The installation program verifies the operating system and its prerequisites, av
 6.  Using the IBM Installation Manager, do the following:
 
     1.  Install **HCL Portal 8.5** on **WebSphere Application Server 9.0.5** with the required fixes.
-    2.  Update **HCL Portal 8.5** to **CF17**, and then run `applyCF.sh`.
+    2.  Update **HCL Portal 8.5** to the latest available HCL Digital Experience CF, minimally CF205, and then run `applyCF.sh`.
     3.  Install **HCL Portal Server 9.5**, along with applicable extended offerings (like WCM, ENABLE, EXTEND, etc.).
     
     !!!note
