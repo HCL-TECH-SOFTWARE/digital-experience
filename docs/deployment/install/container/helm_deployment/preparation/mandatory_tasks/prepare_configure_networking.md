@@ -101,6 +101,9 @@ HAProxy is deployed with a `LoadBalancer` type service to handle the incoming tr
 |`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. | Number |`null`|
 |`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled` | Boolean |`true`|
 |`strictTransportSecurity.maxAge`|This value is used to set for how long the browser should remember the HSTS rule | Number |`31536000`|
+|`strictTransportSecurity.includeSubDomains`|This optional parameter is specified, this rule applies to all of the site's subdomains as well. | boolean |`false`|
+|`strictTransportSecurity.preload`|This Preloading Strict Transport Security for details. When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. Not part of the specification. | boolean |`false`|
+
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -121,6 +124,8 @@ networking:
     strictTransportSecurity:
       enabled: true
       maxAge: 31536000
+      includeSubDomains: false
+      preload: false
 ```
   
 This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
