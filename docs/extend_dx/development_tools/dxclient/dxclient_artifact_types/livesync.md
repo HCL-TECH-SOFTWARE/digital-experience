@@ -15,7 +15,7 @@ This command lets you sync your theme on the WebDAV server. Then, it'll watch fo
     3. Conflict detections (and/or resolutions) are not part of the CF212 release.
     4. In any case, if the real-time sync of Theme during the push command gets disrupted, disconnect and reconnect again.
     5. Do not trigger the live sync commands inside the target local theme path without setting the `Ignore Files` option. In dxclient, there are certain local files and folders such as config.json and logger.log that get generated in the working directory from which the command is run. Hence it will corrupt the server-side theme folder if you run the command without setting ignore files option.
-
+    6. Uploading files of the same name with different cases are not supported (e.g. sample-file.txt and sample-FILE.txt), especially when working on devices with different OS. Forcibly doing this may cause Theme corruption and will also corrupt pull-theme action and erase local data. To resolve this, identify the last uploaded file or corrupted file that cause this issue in the server copy and delete it to have both push and pull working properly again.
 
 -   **Command description**
 
