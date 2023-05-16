@@ -81,7 +81,7 @@ This command lets you sync your theme on the WebDAV server. Then, it'll watch fo
 
     !!! warning
         1. Avoid using `#` `%` `&` and `*` special characters when naming files and folders.
-        2. If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server. (for example `来源folder` is translated to `__folder`). For theme name use the Theme System Name, the one with `_` like `__folder` in the following example.
+        2. If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server (for example, `来源folder` is translated to `__folder`). For the theme name, use the Theme System Name, the one with `_` like `__folder` in the following example.
         ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
 
     Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
@@ -185,7 +185,7 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
 
     !!!warning
         1. Avoid using `#` `%` `&` and `*` special characters when naming files and folders.
-        2. If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server. (For example, `来源folder` is translated to `__folder`). For theme name use the Theme System Name, the one with `_` like `__folder` in the following example.
+        2. If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server (for example, `来源folder` is translated to `__folder`). For the theme name, use the Theme System Name, the one with `_` like `__folder` in the following example.
         ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
 
     Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
@@ -203,8 +203,8 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
 ### Limitations & Troubleshooting
 
 1. This command does not register or unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) or [Undeploy Themes](./themes.md#undeploy-theme) commands.
-2. LiveSync Push Theme is currently only intended for 1:1, developer: server use. Concurrent usage of this command (for example, two (2) developers working on the same theme) or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), causes it to overwrite each user's changes.
+2. LiveSync Push Theme is currently only intended for 1:1, developer: server use. Concurrent usage of this command (for example, two developers working on the same theme) or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), causes it to overwrite each user's changes.
 3. Conflict detections or resolutions are not enabled.
-4. Do not trigger the live sync commands inside the target local theme path. Triggering them corrupts the server-side theme folder.
-5. Uploading files of the same name with different cases is not supported (for example, sample-file.txt and sample-FILE.txt), especially when working on devices with different OS. Forcibly doing this may cause Theme corruption and corrupts pull-theme action and erase local data. To resolve this, identify the last uploaded file or corrupted file that caused this issue in the server copy and delete it to have both push and pull working properly again.
+4. Do not trigger the live sync commands inside the target local theme path. Triggering the live sync commands corrupts the server-side theme folder.
+5. Uploading files of the same name with different cases is not supported (for example, sample-file.txt and sample-FILE.txt), especially when working on devices with different OS. Forcibly doing this may cause theme corruption and corrupts pull-theme action and erase local data. To resolve this, identify the last uploaded file or corrupted file that caused this issue in the server copy and delete it to have both push and pull working properly again.
 6. In any case, if the real-time sync of Theme during the push command gets disrupted, disconnect and reconnect again.
