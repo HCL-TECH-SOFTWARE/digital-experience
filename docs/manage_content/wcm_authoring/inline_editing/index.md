@@ -71,11 +71,11 @@ The in-place editing feature requires:
     
 ## Inline editing
 
-Inline editing enables users with edit access to work with a content item. They can create, read, edit, approve, reject, and delete content. When creating or editing, it shows the content form shown in the following example. 
+Inline editing enables users with edit access to work with a content item. They can create, read, edit, approve, reject, and delete content. Unlike in-place editing where users can edit individual content properties and elements, inline editing allows users to edit content forms that contain page properties and elements not readily available on the user interface. Inline editing uses a content form shown in the following example. 
 
 ![Inline editing sample](../../../images/woodburn_inline_editing.png)
 
-Inline item creation can be enabled using authoring tool components so that users can create a new content item without having to access the authoring interface. For more information about authoring tools, see [Create an Authoring tools element](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/authoringtools_element/index.md) and [What is an Authoring tools element?](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/authoringtools_element/wcm_dev_elements_authoring-tools.md).
+Inline editing can be enabled using authoring tool components so that users can manage the content item without accessing the authoring portlet. For more information about authoring tools, see [Create an Authoring tools element](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/authoringtools_element/index.md) and [What is an Authoring tools element?](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/authoringtools_element/wcm_dev_elements_authoring-tools.md).
 
 ## Web content viewer
 
