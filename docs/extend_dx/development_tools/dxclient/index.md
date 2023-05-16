@@ -345,6 +345,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
 
 ## Some generic points to note
+    
 1. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
 2. The maximum input file size allowed in DXClient is 256 MB currently. This limitation will be addressed in one of the future releases.
 
