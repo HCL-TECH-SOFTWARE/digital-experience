@@ -1,33 +1,26 @@
 # LiveSync
 
-This topic provides information about the syncing files from local-to-server, server-to-local.
+This topic provides information about syncing files from local-to-server and server-to-local in real time.
 
 !!! note
-    We recommend to use node version of DXClient while working with LiveSync as it is accurate and better performant.
-
-!!! warning "Things to consider before getting started"
-    1. Please avoid using `#` `%` `&` and `*` special characters when naming files and folders.
-    2. If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server. (e.g. `来源folder` will be translated to `__folder`). **For theme name, use the Theme System Name (the one with `_` like `__folder` in the example image below).**
-    ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
+    We recommend using the node version of DXClient while working with LiveSync, as it is more accurate and more performant.
 
 ## LiveSync Push Theme
 
-This command lets you sync your theme in WebDAV Server. Then, it'll watch for succeeding changes within the given `themePath` and immediately reflect in the WebDAV Server.
+This command lets you sync your theme on the WebDAV server. Then, it'll watch for succeeding changes within the given `themePath` and immediately reflect them in the WebDAV Server.
 
 !!! note
     1. This command does not register/unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) and/or [Undeploy Themes](./themes.md#undeploy-theme) commands.
-    2. LiveSync Push Theme is currently only intended for 1:1, developer : server use. Concurrent usage of this command of (i.e. two (2) developers working in the same theme) will produce unwanted errors. Similarly, usage of LiveSync Push Theme and [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md) when editing files of the same theme will also produce unwanted errors.
-    3. Conflict Detections (and/or Resolutions) are not part of CF212 release.
-    4. In any case LiveSync Push Theme is disrupted, disconnect and reconnect again.
+    2. LiveSync Push Theme is currently only intended for 1:1, developer: server use. Concurrent usage of this command (i.e. two (2) developers working on the same theme) will produce unwanted errors. Similarly, usage of LiveSync Push Theme and [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md) when editing files of the same theme will also produce unwanted errors.
+    3. Conflict detections (and/or resolutions) are not part of the CF212 release.
+    4. In any case, if LiveSync Push Theme is disrupted, disconnect and reconnect again.
 
-!!! warning
-    Ensure that you do not trigger the command inside the target local theme path.
 
 -   **Command description**
 
     This command invokes the livesync push-theme tool inside the DXClient.
 
-    This command initially pushes the local theme (provided in `themePath`) in WebDAV Server with the theme name (provided in `themeName`). It will then create a file system watcher which will watch for any changes (files or folders) under `themePath` and immediately reflect those changes in WebDAV Server. To stop watching, press (ctrl + c).
+    This command initially pushes the local theme (provided in `themePath`) in WebDAV Server with the theme name (provided in `themeName`). It will then create a file system watcher which will watch for any changes (files or folders) under `themePath` and immediately reflect those changes in WebDAV Server. To stop watching, press (Ctrl + C).
 
     ```shell
     dxclient livesync push-theme
@@ -92,6 +85,12 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
     -themePath <value>
     ```
 
+    !!! warning
+    1. Please avoid using `#` `%` `&` and `*` special characters when naming files and folders.
+    2. If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server. (e.g. `来源folder` will be translated to `__folder`). **For theme name, use the Theme System Name (the one with `_` like `__folder` in the example image below).**
+    ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
+    3. Ensure that you do not trigger the command inside the target local theme path.
+
     Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
 
     ```shell
@@ -105,9 +104,9 @@ This command lets you sync your theme in WebDAV Server. Then, it'll watch for su
     ```
 
 ### Ignoring Files
-You can opt to ignore files and folder paths to push to server by creating an ignore file (`.ignore`) under the root of the theme folder (the theme that is provided in `--themePath`).
+You can opt to ignore files and folder paths to push to the server by creating an ignore file (`.ignore`) under the root of the theme folder (the theme that is provided in `--themePath`).
 
-When changing contents of the ignore file, the command needs to be re-run again to reflect the files the needs to be ignored.
+When changing the contents of the ignore file, the command needs to be re-run again to reflect the files that needs to be ignored.
 
 Sample `.ignore` file contents:
 ```txt
@@ -127,8 +126,6 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
 
     This command will download the theme files in WebDAV Server under the given theme name (provided in `-themeName`). This will then be saved to the target local directory of the theme (provided in `-themePath`), overwriting existing files in this local directory which also deletes stale files in the process.
 
-    !!! warning
-        Ensure that you do not trigger the command inside the target local theme path.
 
     ```shell
     dxclient livesync pull-theme
@@ -192,6 +189,12 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
     ```shell
     -themePath <value>
     ```
+    
+    !!! warning
+    1. Please avoid using `#` `%` `&` and `*` special characters when naming files and folders.
+    2. If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server. (e.g. `来源folder` will be translated to `__folder`). **For theme name, use the Theme System Name (the one with `_` like `__folder` in the example image below).**
+    ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
+    3. Ensure that you do not trigger the command inside the target local theme path.
 
     Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
 
