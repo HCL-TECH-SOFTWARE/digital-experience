@@ -101,7 +101,7 @@ HAProxy is deployed with a `LoadBalancer` type service to handle the incoming tr
 |`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. | Number |`null`|
 |`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled` | Boolean |`true`|
 |`strictTransportSecurity.maxAge`|This value is used to set for how long the browser should remember the HSTS rule | Number |`31536000`|
-|`strictTransportSecurity.includeSubDomains`|This optional parameter is specified, this rule applies to all of the site's subdomains as well. | Boolean |`false`|
+|`strictTransportSecurity.includeSubDomains`|If this optional parameter is specified, this rule applies to all of the site's subdomains as well. | Boolean |`false`|
 |`strictTransportSecurity.preload`|See [Preloading Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security) for details. When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. Not part of the specification. | Boolean |`false`|
 
 
