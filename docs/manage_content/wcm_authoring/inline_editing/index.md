@@ -71,7 +71,7 @@ The in-place editing feature requires:
     
 ## Inline editing
 
-Inline editing enables users with edit access to work with a content item. They can create, read, edit, approve, reject, and delete content. Unlike in-place editing where users can edit individual content properties and elements, inline editing allows users to have actions to create, approve, and edit content with a content dialog form containing properties and elements. This content form can be customized to show the right information in the right format. The following image shows an example of a content form.
+Inline editing enables users with edit access to work with a content item. They can create, read, edit, approve, reject, and delete content. Unlike in-place editing where users can edit individual content properties and elements, inline editing allows users to have actions to create, approve, and edit content with a content dialog form containing properties and elements. This content form can be customized to show the right information in the right format. For more information, see [Defining form properties](../authoring_portlet/content_management_artifacts/authoring_templates/creating_sitearea_template/wcm_dev_auth-temp_formprop.md) and [Defining display settings of fields and elements](../authoring_portlet/content_management_artifacts/authoring_templates/wcm_dev_auth-temp_fields.md). The following image shows an example of a content form.
 
 ![Inline editing sample](../../../images/woodburn_inline_editing.png)
 
