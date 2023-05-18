@@ -18,13 +18,11 @@ base Portal tuning for instructions on how to set these values.
 See the VMM Caches section in the base Portal tuning for instructions on how to set these values.
 
 Table: VMM Attribute Cache Settings for High Volume Sites
+
 |Attribute Cache Property|Default Value |Value Used|
 |------------------------|--------------|----------|
 |Cache size |4000 |15009|
-|Cache time out <br>For the performance benchmarks a timeout of 18,000 was used to avoid having
-caches timeout when thousands of users were simulated. In an actual customer
-deployment lower timeout values might work just as well, depending on the login
-rate and total number of logged in users. |1200 |18000|
+|Cache time out <br>For the performance benchmarks a timeout of 18,000 was used to avoid having caches timeout when thousands of users were simulated. In an actual customer deployment lower timeout values might work just as well, depending on the login rate and total number of logged in users. |1200 |18000|
 
 Table: VMM Search Results Cache Settings for High Volume Sites
 
@@ -41,10 +39,15 @@ throughput drop in Portal after running at high load for long periods of time.
 ### How to Set
 In the WebSphere Integrated Solutions Console
 Security -> Global Security
+
 1. Click Authentication cache settings
+
 2. Change the Maximum cache size to 50000 entries
+
 3. Click OK
+
 4. Save Changes
+
 5. Restart the server
 
 ## Cache Manager Service

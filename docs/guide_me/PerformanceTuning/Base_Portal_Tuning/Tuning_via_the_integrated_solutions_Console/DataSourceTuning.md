@@ -8,10 +8,11 @@ The default settings of 10 minimum and 50 maximum were used for the connection p
 
 ### How to Set
 
-In the WebSphere Integrated Solutions Console: Resources → JDBC Providers → provider name → Data Sources → data source name → Connection pool properties
+In the WebSphere Integrated Solutions Console: Resources -> JDBC Providers -> provider name -> Data Sources -> data source name -> Connection pool properties
 
-    • Maximum connections
-    • Minimum connections
+- Maximum connections
+
+- Minimum connections
 
 If deployed applications also use database connections, ensure that the connection pool is tuned for those
 data sources as well.
@@ -22,8 +23,8 @@ All data sources are configured in a similar manner. The default setting of 10 w
 ### How to Set
 
 In the WebSphere Integrated Solutions Console
-Resources → JDBC Providers → provider name → Data Sources → data source name → WebSphere
-Application Server data source properties → Statement cache size.
+Resources -> JDBC Providers -> provider name -> Data Sources -> data source name -> WebSphere
+Application Server data source properties -> Statement cache size.
 
 The provider name and data source name are based on the names selected for that database during the database transfer step.
 

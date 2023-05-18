@@ -4,13 +4,13 @@
 
 For Portal systems where no WCM authoring or page management is taking place locally, syndication
 overhead can be eliminated by specifying ‘subscriber only’. Set deployment.subscriberOnly to true in WCM
-WCMConfigService. Additional information can be found at https://help.hcltechsw.com/digitalexperience/9.5/wcm/wcm_config_prop_syndication.html.
+WCMConfigService. Additional information can be found at [Syndication properties](../../../../../manage_content/wcm_delivery/syndication/wcm_config_prop_syndication.md).
 
 ### How to Set
 
 In the WebSphere Integrated Solutions Console
 
-Resources → Resource Environment → Resource Environment Providers → WCM WCMConfigService → Custom properties
+Resources -> Resource Environment -> Resource Environment Providers -> WCM WCMConfigService -> Custom properties
 
 Name: deployment.subscriberOnly
 Value: true
@@ -23,12 +23,12 @@ disabled. Set global.toolbar.enabled to false and default.toolbar.enabled to fal
 ### How to Set
 
 In the WebSphere Integrated Solutions Console
-Resources → Resource Environment → Resource Environment Providers → WPVirtualPortalConfigService
+Resources -> Resource Environment -> Resource Environment Providers -> WPVirtualPortalConfigService
 
 Modify the following custom properties:
 
-    • Name: global.toolbar.enabled
-      Value: false
+- Name: global.toolbar.enabled
+  Value: false
 
-    • Name: default.toolbar.enabled
-      Value: false
+- Name: default.toolbar.enabled
+  Value: false

@@ -8,6 +8,7 @@ overall throughput by overriding the automatic sizing of the nursery.
 ## How to Set
 
 In the WebSphere Integrated Solutions Console
+
 Servers → Server Types → WebSphere application servers → WebSphere_Portal → Server Infrastructure:
 Java and Process Management→Process Definition → Java Virtual Machine
 

@@ -23,11 +23,11 @@ before the cache is destroyed. The cache size setting should be also made on the
 addition to Portal so that starting the DMGR and node agent do not override the Portal server setting.
 
 ## How to Set
+
 1. In the WebSphere Integrated Solutions Console.
 
-Servers → Server Types → WebSphere application servers → WebSphere_Portal → Server
-Infrastructure: Java and Process Management→Process Definition → Java Virtual Machine
-Add -Xscmxnnnm to the Generic JVM Arguments field, where nnn is the size in MB.
+Servers → Server Types → WebSphere application servers → WebSphere_Portal → Server Infrastructure: 
+Java and Process Management→Process Definition → Java Virtual Machine Add -Xscmxnnnm to the Generic JVM Arguments field, where nnn is the size in MB.
 
 2. Stop Portal server.
 
@@ -35,11 +35,11 @@ Add -Xscmxnnnm to the Generic JVM Arguments field, where nnn is the size in MB.
 shareclasses changes depending upon platform and release. To determine the name you need to
 use, search the verbose GC log (native_stderr.log) and look for Xshareclasses:name=
 
-    • AIX: ./java -Xshareclasses:name=webspherev85_1.7_64_%g,groupAccess,destroy
+- AIX: ./java -Xshareclasses:name=webspherev85_1.7_64_%g,groupAccess,destroy
 
-    • Windows: java -Xshareclasses:name=webspherev85_1.7_64,groupAccess,destroy
+- Windows: java -Xshareclasses:name=webspherev85_1.7_64,groupAccess,destroy
     
-    • Linux: ./java -Xshareclasses:name=webspherev85_1.7_64%g,groupAccess,destroy
+- Linux: ./java -Xshareclasses:name=webspherev85_1.7_64%g,groupAccess,destroy
 
 4. Look for the message.
     JVMSHRC010I Shared cache "webspherev85_xxx" is destroyed. Could not create the Java virtual machine.
@@ -48,11 +48,11 @@ use, search the verbose GC log (native_stderr.log) and look for Xshareclasses:na
 
 6. Check cache size in use.
 
-    • AIX: ./java -Xshareclasses:name= webspherev85_1.7_64_%g,groupAccess,printStats
+- AIX: ./java -Xshareclasses:name= webspherev85_1.7_64_%g,groupAccess,printStats
 
-    • Windows: java -Xshareclasses:name= webspherev85_1.7_64_%g,groupAccess,printStats
+- Windows: java -Xshareclasses:name= webspherev85_1.7_64_%g,groupAccess,printStats
 
-    • Linux: ./java -Xshareclasses:name= webspherev85_1.7_64%g,groupAccess,printStats
+- Linux: ./java -Xshareclasses:name= webspherev85_1.7_64%g,groupAccess,printStats
 
 |AIX| Windows| Linux|
 |----|----|----|
