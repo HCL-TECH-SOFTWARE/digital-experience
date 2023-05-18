@@ -11,6 +11,7 @@ The following features and updates are available to customers installing HCL Dig
 - Transition to use of relative hostnames
 - Configuration options for DAM Staging
 - New guidance for using Site Manager in Woodburn Studio
+- Additional steps in DDC for sending request body via content item
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -36,9 +37,9 @@ The following features and updates are available to customers installing HCL Dig
 ### Configuration options for DAM Staging
 
 === "Containers"
-    We have introduced configuration options for hostname, port, and SSL details for DAM Staging. Kubernetes-based deployments should continue to work as intended without any changes.
+    We have introduced configuration options for hostname, port, and SSL details for DAM Staging. Kubernetes-based deployments should continue to work as intended without any changes. See the topic [Configure staging hostname](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#configure-staging-hostname) for more information.
 
-    !!! note
+    !!! note "Action Required for Hybrid Deployments"
 
         Host details must be configured for hybrid deployments. See the [DAM Staging host Configurations](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#configure-staging-hostname) for more information.
 
@@ -46,6 +47,12 @@ The following features and updates are available to customers installing HCL Dig
 
 === "Containers"
     Added additional documentation for using Site Manager to author and manage content in Woodburn Studio. See the topics [Site Manager](../../manage_content/wcm_authoring/inline_editing/index.md) and [Examples of using the Site Manager in Woodburn Studio](../../manage_content/wcm_authoring/inline_editing/site_manager_samples.md) for more information.
+
+
+### Additional steps in DDC for sending request body via content item
+
+=== "Containers"
+    Added steps on how to send a request body through a content item in Digital Data Connector (DDC). See the topic [Connecting to HCL Volt MX Foundry through Digital Data Connector (DDC)](../../extend_dx/ddc/integrating_voltmx_foundry/index.md) for more information.
 
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
