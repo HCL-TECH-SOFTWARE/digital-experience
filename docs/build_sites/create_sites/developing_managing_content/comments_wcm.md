@@ -50,9 +50,8 @@ Note: We can specify our own library for commentsLibrary field to store comments
 ## Limitations
 
 1. Comments nested reply not yet supported
-2. Woodburn Theme commenting feature not yet supported
-3. Posting/replying of long comments not yet supported
-4. Localized date not yet properly rendered
+2. Posting/replying of long comments not yet supported
+3. Localized date not yet properly rendered
 
 ## Update global "Article" presentation template
 
