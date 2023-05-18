@@ -9,11 +9,11 @@ If you want to enable SAP for functional reasons, you can reduce the overhead us
 ### How to Set When Propagation Is Not Required
 
 1. In the WebSphere Integrated Solutions Console
-Security->Global security->Web and Sip security->Single sign-on(SSO) ->uncheck Web inbound security attribute propagation
+Security>Global security>Web and Sip security>Single sign-on(SSO) >uncheck Web inbound security attribute propagation
 
 2. In the WebSphere Integrated Solutions Console
 
-- Security -> Global security -> Custom properties -> New
+- Security > Global security > Custom properties > New
 
 - Name: com.ibm.CSI.disablePropagationCallerList
 
@@ -28,7 +28,7 @@ authenticated and unauthenticated users.
 ### How to Set
 1. In the WebSphere Integrated Solutions Console:
 
-    Security -> Global security
+    Security > Global security
 
 2. Expand Web and SIP security
 
@@ -53,7 +53,7 @@ The settings specified here depend on the number of users that will be accessing
 ### How to Set in ISC
 
 1. In the WebSphere Integrated Solutions Console
-    Security -> Global security
+    Security > Global security
 
 2. Under Available realm definitions ensure Federated Repositories is selected
 3. Click the Configure button
@@ -90,7 +90,7 @@ Tune VMM search results and attributes cache to improve the performance of VMM s
 ### How to Set in ISC
 
 1. In the WebSphere Integrated Solutions Console
-    Security -> Global security
+    Security > Global security
 
 2. Under Available realm definitions ensure Federated Repositories is selected
 3. Click the Configure button

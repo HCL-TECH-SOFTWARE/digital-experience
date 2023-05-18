@@ -10,7 +10,7 @@ To fully use friendly URLs, pages must be configured with friendly names.
 
 ## How to Set
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WP ConfigService
+Resources > Resource Environment > Resource Environment Providers > WP ConfigService
 
 Modify the following custom properties:
 

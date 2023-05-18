@@ -10,9 +10,9 @@ If response times increase before CPU loads reach a high level, monitor the Web 
 ## How to Set
 
 In the WebSphere Integrated Solutions Console
-Servers -> Server Types -> WebSphere application servers -> WebSphere_Portal -> Additional Properties:
+Servers > Server Types > WebSphere application servers > WebSphere_Portal > Additional Properties:
 
-Thread Pools-> Web Container -> Thread Pool
+Thread Pools> Web Container > Thread Pool
 
 - Minimum size threads
 

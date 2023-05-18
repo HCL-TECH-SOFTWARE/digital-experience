@@ -16,7 +16,7 @@ classes, it is safe to disable this service.
 
 ## How to Set
 
-In the WebSphere Integrated Solutions Console Servers -> Server Types -> WebSphere application servers -> WebSphere_Portal -> Container Services:
+In the WebSphere Integrated Solutions Console Servers > Server Types > WebSphere application servers > WebSphere_Portal > Container Services:
 
 - Internationalization service
 

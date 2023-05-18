@@ -6,7 +6,7 @@ disabling this may cause performance issues on client side aggregation themes fr
 ## How to Set
 
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WP CommonComponentConfigService -> Custom properties
+Resources > Resource Environment > Resource Environment Providers > WP CommonComponentConfigService > Custom properties
 
 Modify the following custom properties:
 

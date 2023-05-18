@@ -38,7 +38,7 @@ throughput drop in Portal after running at high load for long periods of time.
 
 ### How to Set
 In the WebSphere Integrated Solutions Console
-Security -> Global Security
+Security > Global Security
 
 1. Click Authentication cache settings
 

@@ -6,8 +6,8 @@ improved capacity by 3%.
 ## How to Set
 
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WP CPConfigurationService
--> Custom properties
+Resources > Resource Environment > Resource Environment Providers > WP CPConfigurationService
+> Custom properties
 
 Modify the following custom properties:
 

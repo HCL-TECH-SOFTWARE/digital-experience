@@ -26,8 +26,8 @@ addition to Portal so that starting the DMGR and node agent do not override the 
 
 1. In the WebSphere Integrated Solutions Console.
 
-Servers → Server Types → WebSphere application servers → WebSphere_Portal → Server Infrastructure: 
-Java and Process Management→Process Definition → Java Virtual Machine Add -Xscmxnnnm to the Generic JVM Arguments field, where nnn is the size in MB.
+Servers > Server Types > WebSphere application servers > WebSphere_Portal > Server Infrastructure: 
+Java and Process Management>Process Definition > Java Virtual Machine Add -Xscmxnnnm to the Generic JVM Arguments field, where nnn is the size in MB.
 
 2. Stop Portal server.
 

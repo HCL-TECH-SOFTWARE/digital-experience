@@ -18,8 +18,8 @@ requesting large pages. Consider the following when using large pages:
 
 ## How to Set Large Pages
 
-In the WebSphere Integrated Solutions Console Servers → Server Types → WebSphere application servers → WebSphere_Portal → Server
-Infrastructure: Java and Process Management → Process Definition → Java Virtual Machine
+In the WebSphere Integrated Solutions Console Servers > Server Types > WebSphere application servers > WebSphere_Portal > Server
+Infrastructure: Java and Process Management > Process Definition > Java Virtual Machine
 
 Add -Xlp to the Generic JVM Arguments field
 
@@ -65,8 +65,8 @@ data area (DATASIZE) gives the best performance.
 ### How to Set
 
 In the WebSphere Integrated Solutions Console
-Servers → Server Types → WebSphere application servers → WebSphere_Portal → Server Infrastructure:
-Java and Process Management→Process Definition→ Environment Entries → New
+Servers > Server Types > WebSphere application servers > WebSphere_Portal > Server Infrastructure:
+Java and Process Management>Process Definition> Environment Entries > New
 
 Name: LDR_CNTRL
 

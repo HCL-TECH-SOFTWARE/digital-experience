@@ -10,7 +10,7 @@ WCMConfigService. Additional information can be found at [Syndication properties
 
 In the WebSphere Integrated Solutions Console
 
-Resources -> Resource Environment -> Resource Environment Providers -> WCM WCMConfigService -> Custom properties
+Resources > Resource Environment > Resource Environment Providers > WCM WCMConfigService > Custom properties
 
 Name: deployment.subscriberOnly
 Value: true
@@ -23,7 +23,7 @@ disabled. Set global.toolbar.enabled to false and default.toolbar.enabled to fal
 ### How to Set
 
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WPVirtualPortalConfigService
+Resources > Resource Environment > Resource Environment Providers > WPVirtualPortalConfigService
 
 Modify the following custom properties:
 

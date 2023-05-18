@@ -9,5 +9,5 @@ In the base Portal performance evaluation, we use an average think time of 12 se
 
 In the WebSphere Integrated Solutions Console
 
-Servers → Server Types → WebSphere application servers → WebSphere_Portal → Container Settings:
-Web Container Settings → Session Management → Session Timeout → Set Timeout
+Servers > Server Types > WebSphere application servers > WebSphere_Portal > Container Settings:
+Web Container Settings > Session Management > Session Timeout > Set Timeout

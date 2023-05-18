@@ -5,7 +5,7 @@ To reduce unnecessary cache invalidations set cache.dynamic.content.spot to fals
 ## How to Set
 
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WP ConfigService -> Custom properties
+Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties
 
 Name: cache.dynamic.content.spot
 
