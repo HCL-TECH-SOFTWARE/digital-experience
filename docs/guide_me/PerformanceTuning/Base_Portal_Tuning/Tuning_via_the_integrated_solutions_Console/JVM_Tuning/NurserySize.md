@@ -8,8 +8,9 @@ overall throughput by overriding the automatic sizing of the nursery.
 ## How to Set
 
 In the WebSphere Integrated Solutions Console
-Servers → Server Types → WebSphere application servers → WebSphere_Portal → Server Infrastructure:
-Java and Process Management→Process Definition → Java Virtual Machine
+
+Servers > Server Types > WebSphere application servers > WebSphere_Portal > Server Infrastructure:
+Java and Process Management>Process Definition > Java Virtual Machine
 
 Add -Xmnxxxm to the Generic JVM Arguments, where xxx is the size in MB.
 
@@ -17,5 +18,4 @@ Add -Xmnxxxm to the Generic JVM Arguments, where xxx is the size in MB.
 |-----|----|----|
 |1024| 1024| 1024|  
 
-The higher nursery size on Windows reflects the higher maximum heap size used on that platform. Larger
-JVM heaps often perform better with larger nursery sizes.
+The higher nursery size on Windows reflects the higher maximum heap size used on that platform. Larger JVM heaps often perform better with larger nursery sizes.

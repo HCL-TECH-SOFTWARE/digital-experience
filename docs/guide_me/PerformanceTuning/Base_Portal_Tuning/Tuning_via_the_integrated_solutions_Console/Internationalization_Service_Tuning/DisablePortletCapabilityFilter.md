@@ -13,8 +13,9 @@ To disable, set `resourceaggregation.enableRuntimePortletCapabilitiesFilter` to 
 ## How to Set
 
 In the WebSphere Integrated Solutions Console
-Resources → Resource Environment → Resource Environment Providers → WP ConfigService → Custom
+Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom
 properties
 
-    Name: resourceaggregation.enableRuntimePortletCapabilitiesFilter
-    Value: false
+Name: resourceaggregation.enableRuntimePortletCapabilitiesFilter
+
+Value: false
