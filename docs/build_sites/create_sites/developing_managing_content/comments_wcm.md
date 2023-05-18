@@ -47,3 +47,9 @@ Note: We can specify our own library for commentsLibrary field to store comments
 6. After setting up comments UI in page, you can now add, reply, like/unlike, and delete comments. You can also view total comments count on the page.
 ![WCM Comments UI](../developing_managing_content/_img/wcm-comments-ui.png)
 
+## Limitations
+
+1. Comments nested reply not yet supported
+2. Not yet integrated in Woodburn Theme commenting feature
+3. Posting/replying of long comments not yet supported
+4. Localized date not yet properly rendered
