@@ -91,6 +91,18 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     Remember that the overall sums for CPU and memory include all components of HCL DX. 
     In most cases, you will only want to deploy a subset of all components, therefore the minimal system requirements will decrease accordingly.
 
+## Prereqs Checker For DX Deployment
+
+HCL DX has introduced a tool called "Prereqs Checker" that runs a number of checks to confirm if the prerequisites for various components are met.  
+
+You can get the result of these checks from the container logs of the `prereqs-checker` container in the pod where Prereqs Checker is installed [(more info)](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker#)  
+
+For these checks, one separate sidecar container is deployed along with the main application container. This is a lightweight container so the main application performance would not get affected.
+
+The main objective is to check if the specified prerequisites are met and inform about the result in the logs, i.e. if the checks have passed or failed. It can also be used to check the basic information about the file system of the mounted volumes which would help to track the issues related to the file systems.
+
+
+
 <!--
 ???+ info "Related information"
     - [HCL Digital Experience 9.5 Roadmap: Container deployment](../container_deployment/rm_container/rm_container_deployment.md)
