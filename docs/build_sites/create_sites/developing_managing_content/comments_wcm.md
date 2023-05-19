@@ -4,7 +4,22 @@ title: Comments in WCM
 
 # Comments in WCM
 
-Learn more about Comments in WCM from configuration, custom library and access controls.
+Starting with version 213 the product contains a new solution for the ability for users to leave comments for WCM.
+We envision comments to be used in Intranet scenarios or in controlled settings allowing external comments.
+
+This article describes how to enable and configure or disable the solution.
+
+## Description of the feature
+
+The actual comments are stored in WCM as well and can be managed like regular content. 
+You can choose which library is being used for storing the comments.
+
+Only authorized users can view / edit / delete the comments (specific to the library the comments are stored in).
+The User role or higher is required to see the comments.
+The Contributor role or higher is required to create comments.
+The Manager role or higher is required to delete comments. Additionally a specific group can be configured that is the only one to delete comments (in addition to Manager role).
+
+Note that this solution is not related to the existing comments for blogs/wikis ability.
 
 ## Enable comments plugin in WAS Console 
 
@@ -20,7 +35,7 @@ Note: After adding the configuration, JVM restart is required.
 
 ## Adding Admin Group Configuration in WAS Console for User Access Control
 
-In order to make sure that users in the admin group be able to do all the operations on the comments as per portal access control feature, we need to configuration in WAS Console. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Input the details below:
+For added security one can configure an admin group to be able to delete comments. Fro that a new configuration in the WAS Console is needed. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Input the details below:
 
 - Name: comments.admin.group
 - Value: cn=wpsadmins,o=defaultWIMFileBasedRealm
@@ -50,8 +65,9 @@ Note: We can specify our own library for commentsLibrary field to store comments
 ## Limitations
 
 1. Comments nested reply not yet supported
-2. Posting/replying of long comments not yet supported
-3. Localized date not yet properly rendered
+2. Posting/replying of long comments not yet supported (TBD)
+3. Localized date not yet properly rendered (TBD)
+4. Rendering comments outside WCM
 
 ## Update global "Article" presentation template
 
