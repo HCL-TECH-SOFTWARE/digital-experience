@@ -43,4 +43,4 @@ configuration:
 ```
 
 !!! note 
-    enableCleanUpOrRenditionVersionHeartBeats is `true` by default. This enables all four heartbearts (validationHeartBeat, renditionOrVersionHeartbeat, cleanUpHeartBeat, orphanDataAndFileCleanupHeartBeat). User can turn off heartbeats by setting it to `false` if not required.
+    enableCleanUpOrRenditionVersionHeartBeats is `false` by default. To enable all four heartbearts (validationHeartBeat, renditionOrVersionHeartbeat, cleanUpHeartBeat, orphanDataAndFileCleanupHeartBeat) user can set it to `true`.

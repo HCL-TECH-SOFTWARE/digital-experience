@@ -12,6 +12,7 @@ The following features and updates are available to customers installing HCL Dig
 - Configuration options for DAM Staging
 - New guidance for using Site Manager in Woodburn Studio
 - Additional steps in DDC for sending request body via content item
+- Rendition Version Regeneration and Cleanup
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -54,6 +55,10 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Added steps on how to send a request body through a content item in Digital Data Connector (DDC). See the topic [Connecting to HCL Volt MX Foundry through Digital Data Connector (DDC)](../../extend_dx/ddc/integrating_voltmx_foundry/index.md) for more information.
 
+### Rendition Version Regeneration and Cleanup
+
+=== "Containers"
+    We have introduced a feature for regeneration of renditions/versions of broken assets and for cleanup of invalid assets. Added steps to enable this feature. See the topic [Rendition Version Regeneration and Cleanup](../../../manage_content/digital_assets/configuration/rendition_version_regeneration_and_cleanup.md) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
