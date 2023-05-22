@@ -35,7 +35,7 @@ Note: After adding the configuration, JVM restart is required.
 
 ## Adding Admin Group Configuration in WAS Console for User Access Control
 
-For added security one can configure an admin group to be able to delete comments. Fro that a new configuration in the WAS Console is needed. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Input the details below:
+For added security one can configure an admin group to be able to delete comments. From that a new configuration in the WAS Console is needed. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Input the details below:
 
 - Name: comments.admin.group
 - Value: cn=wpsadmins,o=defaultWIMFileBasedRealm
