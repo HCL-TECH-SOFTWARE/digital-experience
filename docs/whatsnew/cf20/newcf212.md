@@ -10,7 +10,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Transition to use of relative hostnames
 - Configuration options for DAM Staging
-- New guidance for using Site Manager in Woodburn Studio
+- New guidance for using Site Manager 
 - Additional steps in DDC for sending request body via content item
 - Rendition Version Regeneration and Cleanup
 
@@ -44,7 +44,7 @@ The following features and updates are available to customers installing HCL Dig
 
         Host details must be configured for hybrid deployments. See the [DAM Staging host Configurations](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/#configure-staging-hostname) for more information.
 
-### New guidance for using Site Manager in Woodburn Studio
+### New guidance for using Site Manager
 
 === "Containers"
     Added additional documentation for using Site Manager to author and manage content in Woodburn Studio. See the topics [Site Manager](../../manage_content/wcm_authoring/inline_editing/index.md) and [Examples of using the Site Manager in Woodburn Studio](../../manage_content/wcm_authoring/inline_editing/site_manager_samples.md) for more information.
