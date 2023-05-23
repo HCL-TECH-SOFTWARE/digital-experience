@@ -23,7 +23,7 @@ Migration is supported between equivalent HCL Digital Experience offerings.
     Install HCL Digital Experience 9.5 using the following installation path:
 
 1.  We recommend you to move to IBM WebSphere Application Server Version 9.0.5 from IBM WebSphere Application Server Version 9.0. Install IBM WebSphere Application Server Version 9.0.5 using IBM Installation Manager.
-2.  Install the latest Fixpack update (HCL-Portal-CF17_Server_Update) using IBM Installation Manager to upgrade HCL Digital Experience to CF17.
+2.  Install the latest Fixpack update available from Flexnet under HCL_Portal_8.5_9.0_9.5_CFs using IBM Installation Manager to upgrade HCL Digital Experience.
 3.  Install HCL Digital Experience 9.5 using IBM Installation Manager.
 
 The following table summarizes the supported migration paths:
