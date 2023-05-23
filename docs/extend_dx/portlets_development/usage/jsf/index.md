@@ -37,7 +37,7 @@ Customers should be aware of the following limitations and best coding practices
 
 5.  In order to utilize Portlet Session Beans, you must use the JSF bean/scope implementation (import `javax.faces.bean.ManagedBean`, `javax.faces.bean.SessionScoped`). Portlet Session Bean support of CDI in JSF 2.2 is dependent on a Portlet 3.0 container, which is not yet available for HCL Digital Experience.
 
-6.  Ensure that all portlet implementations are not utilizing internal Portlet Bridge for JSF classes. In the past, articles and samples had been published utilizing the older bridge classes. Following list of samples or articles must not be used in custom portlets developed for DX 8.5 and 9.5 running on WAS 9.0 and later:
+6.  Ensure that all portlet implementations are not utilizing internal Portlet Bridge for JSF classes. In the past, articles and samples had been published utilizing the older bridge classes. The following list of imports/apis must not be used in custom portlets developed for DX 8.5 and 9.5 running on WAS 9.0 and later:
 
     -   `import com.ibm.faces20.portlet.httpbridge.BridgePortletRequestWrapper;`
     -   `import com.ibm.faces20.portlet.httpbridge.BridgePortletResponseWrapper;`
