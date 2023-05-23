@@ -33,17 +33,23 @@ Note: After adding the configuration, JVM restart is required.
 
 ![Enable comments plugin in WAS Server](../developing_managing_content/_img/enable-comment-plugin.png)
 
-## Adding Admin Group Configuration in WAS Console for User Access Control
+## Adding Admin User Group Configuration in WAS Console for User Access Control (Optional)
 
-For added security one can configure an admin group to be able to delete comments. From that a new configuration in the WAS Console is needed. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Input the details below:
+By default, if the configuration for the admin user group is not present in the console, users with manager level access only would be able to delete comments.
+
+For security purposes if you need to limit the delete comments option into a specific user group you need to add the below configuration. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Input the details below:
 
 - Name: comments.admin.group
-- Value: cn=wpsadmins,o=defaultWIMFileBasedRealm
+- Value: cn=<user-group>,o=defaultWIMFileBasedRealm
 - Type: String
 
-Note: After adding the configuration, JVM restart is required. Also note that, we are in the process of including manager role to do all the operation on comments as per the portal access control feature.
+Note: 
+- user-group can be any user group like managers, admins, editor, etc. 
+- Only users with manager level access inside the user group can delete comments 
+- After adding the configuration, JVM restart is required. Also note that, we are in the process of including manager role to do all the operation on comments as per the portal access control feature.
 
-![Adding Admin Group Configuration in WAS Console](../developing_managing_content/_img/comments-admin-group.png)
+
+![Adding Admin User Group Configuration in WAS Console](../developing_managing_content/_img/comments-admin-group.png)
 
 ## Adding Custom Plugin
 
@@ -56,7 +62,7 @@ Note: After adding the configuration, JVM restart is required. Also note that, w
 Note: We can specify our own library for commentsLibrary field to store comments.
 5. Setup and View Comments UI in page. 
     1. Create Page and add above content directly
-    2. Render content on the page and select content with custom plugin in Web Content Viewer
+    2. Using the Web Content Viewer portlet, select the content to render
     3. Click OK after selecting content.
 ![Page with Web Content](../developing_managing_content/_img/page-with-web-content.png)
 6. After setting up comments UI in page, you can now add, reply, like/unlike, and delete comments. You can also view total comments count on the page.
