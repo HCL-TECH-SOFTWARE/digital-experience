@@ -58,7 +58,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Rendition Version Regeneration and Cleanup
 
 === "Containers"
-    A new feature that allows users to regenerate renditions and versions of broken assets and to clean up invalid assets is now available. For instructions on how to enable this feature,  see the topic [Rendition Version Regeneration and Cleanup](../../../manage_content/digital_assets/configuration/rendition_version_regeneration_and_cleanup).
+    A new feature that allows users to regenerate renditions and versions of broken assets and to clean up invalid assets is now available. For instructions on how to enable this feature, see the topic [Rendition Version Regeneration and Cleanup](../../../manage_content/digital_assets/configuration/rendition_version_regeneration_and_cleanup).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
