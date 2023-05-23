@@ -9,13 +9,13 @@ Migration is supported between equivalent HCL Digital Experience offerings.
     HCL Digital Experience 9.5 can install directly to IBM WebSphere Application Server Version ND 9.0.5 using the following installation path:
 
 1.  Install HCL Digital Experience 8.5 with IBM WebSphere Application Server ND Version 9.0.5 and JDK Version 8 using the IBM Installation Manager.
-2.  Install the latest Fixpack update (HCL-Portal-CF17_Server_Update) using IBM Installation Manager to upgrade HCL Digital Experience to CF17.
+2.  Install the latest Fixpack update available from Flexnet under HCL_Portal_8.5_9.0_9.5_CFs using IBM Installation Manager to upgrade HCL Digital Experience.
 3.  Install HCL Digital Experience 9.5 using IBM Installation Manager.
 
 !!!note "Note for V8.5 customers"
     Install HCL Digital Experience 9.5 using the following installation path either by staying at WebSphere Application Server ND 8.5.x or moving to IBM WebSphere Application Server ND Version 9.0.5:
 
-1.  Install the latest Fixpack update (HCL-Portal-CF17_Server_Update) using IBM Installation Manager to upgrade HCL Digital Experience to CF17.
+1.  Install the latest Fixpack update available from Flexnet under HCL_Portal_8.5_9.0_9.5_CFs using IBM Installation Manager to upgrade HCL Digital Experience.
 2.  We recommend you to move to IBM WebSphere Application Server Version Network Deployment Version 9.0.5 from IBM WebSphere Application Server Version 9.0. Install IBM WebSphere Application Server Version 9.0.5 using IBM Installation Manager.
 3.  Install HCL Digital Experience 9.5 using IBM Installation Manager.
 
