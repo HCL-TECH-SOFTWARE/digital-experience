@@ -192,6 +192,27 @@ The existing search query API is extended and two new parameters are added. See 
     </feed>
     
     ```
+## Adding Workflow date fields to the REST API search query results
+
+The date fields associated with the workflow of a requested item can be included by specifying the `options=workflow` URL parameter. Only the date fields that have been set to a valid value will be returned. This option is ignored for items that do not have a workflow. For example:
+
+```
+
+HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?name=SiteAreaName&options=workflow
+
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm">
+    ...
+    <wcm:workflow>
+        <wcm:publishDate>2023-05-22T14:05:03.000Z</wcm:publishDate>
+        <wcm:expiryDate>2088-06-09T00:00:00.000Z</wcm:expiryDate>
+        <wcm:generalDateOne>1776-07-04T04:00:00.000Z</wcm:generalDateOne>
+        <wcm:generalDateTwo>2023-05-31T17:00:00.000Z</wcm:generalDateTwo>
+    </wcm:workflow>
+…
+</entry>
+   
+```
 
 
 
