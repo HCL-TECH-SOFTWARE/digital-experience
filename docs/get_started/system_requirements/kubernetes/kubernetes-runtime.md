@@ -51,7 +51,7 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 HCL DX has introduced a tool called "Prereqs Checker" that runs a number of checks to confirm if the prerequisites for various components are met.  
 
-You can get the result of these checks from the container logs of the `prereqs-checker` container in the pod where Prereqs Checker is installed. For more information, see [Configure Prereqs Checker For DX Deployment](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md).   
+You can get the result of these checks from the container logs of the `prereqs-checker` container in the pod where Prereqs Checker is installed. For more information, see [Configure Prereqs Checker For DX Deployment](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md).   
 
 For these checks, one separate sidecar container is deployed along with the main application container. This is a lightweight container so the main application performance would not get affected.
 
