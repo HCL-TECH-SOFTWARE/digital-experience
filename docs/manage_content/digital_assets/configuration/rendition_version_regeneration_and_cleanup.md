@@ -1,20 +1,17 @@
 # Rendition Version Regeneration and Cleanup
 
-This section describes regeneration of missing renditions and versions and clean up of incomplete records which need to be deleted.
-The following new hearbeats are introduced. All of these will run on configured interval.
+This section discusses the regeneration of missing renditions and versions and the cleanup of incomplete records that must be deleted. The following new hearbeats are introduced:
 
-**Validation HeartBeat** : This heartbeat runs every 10 min and validates the media items by checking
+- **Validation HeartBeat** - This heartbeat runs every 10 minutes and validates the media items by checking the following:
+    
+    - if they are invalid and then marks them as cleanup required, and
+    - if they have broken renditions/versions/thumbnails and then marks them as renditions/versions required.
+    
+- **Rendition or Version Heartbeat** - This heartbeat runs every one hour and regenerates renditions and versions for items marked as renditions/versions required.
+- **CleanUp HeartBeat** - This heartbeat runs once a day and deletes binary and records of all invalid media which are marked as cleanup required.
+- **Orphan Data and File Cleanup HeartBeat** - This heartbeat runs once a day and deletes orphan directories/binaries and orphan media storage records.
 
-- if they are invalid and marks them for cleanup required, 
-- if they have broken renditions/versions/thumbnails and marks them for renditions/versions required.
-
-**Rendition or Version Heartbeat**: This heartbeat runs every 1 hour and regenerates renditions and versions for items marked as renditions/versions required.
-
-**CleanUp HeartBeat**: This heartbeat runs once in a day and deletes binary and records of all invalid media which are marked as cleanup required.
-
-**Orphan Data and File Cleanup HeartBeat**: This heartbeat runs once in a day and deletes orphan directories/binaries and orphan media storage records.
-
-Heartbeat intervals and Threshold times can be configured in `values.yaml` under `incubator.configuration.digitalAssetManagement` section.
+All of these heartbeats run on a configured interval. Heartbeat intervals and Threshold times can be configured in `values.yaml` under `incubator.configuration.digitalAssetManagement` section.
 
 ```Yaml
 configuration:
@@ -43,4 +40,4 @@ configuration:
 ```
 
 !!! note 
-    enableCleanUpOrRenditionVersionHeartBeats is `false` by default. To enable all four heartbearts (validationHeartBeat, renditionOrVersionHeartbeat, cleanUpHeartBeat, orphanDataAndFileCleanupHeartBeat) user can set it to `true`.
+    enableCleanUpOrRenditionVersionHeartBeats is `false` by default. To enable all four heartbearts (validationHeartBeat, renditionOrVersionHeartbeat, cleanUpHeartBeat, orphanDataAndFileCleanupHeartBeat), set enableCleanUpOrRenditionVersionHeartBeats to `true`.
