@@ -4,15 +4,14 @@ title: Comments in WCM
 
 # Comments in WCM
 
-Starting with version 213 the product contains a new solution for the ability for users to leave comments for WCM.
+Starting with version 95_CF213 the product contains a new solution for the ability for users to leave comments for WCM.
 We envision comments to be used in Intranet scenarios or in controlled settings allowing external comments.
 
 This article describes how to enable and configure or disable the solution.
 
 ## Description of the feature
 
-The actual comments are stored in WCM as well and can be managed like regular content. 
-You can choose which library is being used for storing the comments.
+WCM Comments is a feature that allows customers to enhance their presentation template by adding in a plugin for commenting. The actual comments are stored in WCM as well and can be managed like regular content. You can choose which library is being used for storing the comments.
 
 Only authorized users can view / edit / delete the comments (specific to the library the comments are stored in).
 The User role or higher is required to see the comments.
@@ -29,7 +28,7 @@ In order to make comments plugin visible in the plugin component tag which we wi
 - Value: true
 - Type: String
 
-Note: After adding the configuration, JVM restart is required.
+Note: After adding the configuration, a JVM restart is required.
 
 ![Enable comments plugin in WAS Server](../developing_managing_content/_img/enable-comment-plugin.png)
 
@@ -65,16 +64,16 @@ Note: We can specify our own library for commentsLibrary field to store comments
     2. Using the Web Content Viewer portlet, select the content to render
     3. Click OK after selecting content.
 ![Page with Web Content](../developing_managing_content/_img/page-with-web-content.png)
-6. After setting up comments UI in page, you can now add, reply, like/unlike, and delete comments. You can also view total comments count on the page.
+6. After setting up comments UI in page, you can now add, reply, like/unlike, and delete comments. You can also view total comments count on the content item.
 ![WCM Comments UI](../developing_managing_content/_img/wcm-comments-ui.png)
 
 ## Limitations
 
-1. Comments nested reply not yet supported
-2. Posting/replying of long comments not yet supported (TBD)
-3. Localized date not yet properly rendered (TBD)
-4. Rendering comments outside WCM
+1. Nested replies to comments are not supported yet
+2. Posting/replying of long comments not yet supported
+3. Localized date not yet properly rendered
+4. Comments can not be rendered outside of WCM
 
 ## Update global "Article" presentation template
 
-If you want to do a replacement of the OOB components that are shipped, please see [Adding the sample web content libraries in the authoring portlet](https://opensource.hcltechsw.com/digital-experience/CF211/manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries/)
+If you want to do a replacement of the OOB components that are shipped, please see [Adding the sample web content libraries in the authoring portlet](https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries/)
