@@ -42,10 +42,11 @@ For security purposes if you need to limit the delete comments option into a spe
 - Value: cn=<user-group>,o=defaultWIMFileBasedRealm
 - Type: String
 
-Note: 
-- user-group can be any user group like managers, admins, editor, etc. 
-- Only users with manager level access inside the user group can delete comments 
-- After adding the configuration, JVM restart is required. Also note that, we are in the process of including manager role to do all the operation on comments as per the portal access control feature.
+Note:
+
+-   user-group can be any user group like managers, admins, editor, etc.
+-   Only users with manager level access inside the user group can delete comments
+-   After adding the configuration, a JVM restart is required. Also note that, we are in the process of including manager role to do all the operation on comments as per the portal access control feature.
 
 
 ![Adding Admin User Group Configuration in WAS Console](../developing_managing_content/_img/comments-admin-group.png)
