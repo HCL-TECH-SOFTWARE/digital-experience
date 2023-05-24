@@ -42,12 +42,7 @@ The initial allocation of physical memory for these buffers is 64MB. This initia
 not tunable.
 
 ## Monitoring
-Especially as the maximum allocation size is increased, the overall Java process size should be monitored to
-ensure that the server’s physical memory is not being overcommitted which would cause paging. The
-process size should also be monitored to make sure it is not growing over time; this could indicate a
-memory leak. 
-
-See [IBM TechXchange Community](https://www.ibm.com/developerworks/community/blogs/kevgrig/entry/tracking_directbytebuffer_allocations_and_frees_in_ibm_java) for more information.
+Especially as the maximum allocation size is increased, the overall Java process size should be monitored to ensure that the server’s physical memory is not being overcommitted which would cause paging. The process size should also be monitored to make sure it is not growing over time; this could indicate a memory leak. 
 
 ## Tested Values
 In the majority of our measurements with WebSphere Portal, the best results were obtained by explicitly
