@@ -172,7 +172,7 @@ Under Authoring Templates, create a Content Template.
 
     ![](../../../assets/WCM_Library_Component.png "WCM Library default components")
 
-2. Create an Appearances folder under Components. This is only so that your personalization components that use the DDC selection rule. Select pluggable resources can be found easily in one place.
+2. Create an Appearances folder under Components. This is to ensure that your personalization components use the DDC selection rule. Select pluggable resources can be found easily in one place.
 
     ![](../../../assets/WCM_Appearance.png "WCM Appearance")
 
