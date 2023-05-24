@@ -39,7 +39,7 @@ By default, if the configuration for the admin user group is not present in the 
 For security purposes if you need to limit the delete comments option into a specific user group you need to add the below configuration. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Input the details below:
 
 - Name: comments.admin.group
-- Value: cn=<user-group>,o=defaultWIMFileBasedRealm
+- Value: cn={user-group},o=defaultWIMFileBasedRealm
 - Type: String
 
 Note:
