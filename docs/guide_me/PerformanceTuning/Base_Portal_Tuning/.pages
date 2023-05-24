@@ -1,5 +1,6 @@
 title: Base Portal Tuning
 nav:
+    - index.md
     - Tuning_via_the_integrated_solutions_Console
     - TuningaHCLPortalAdministration.md
     - OtherPortalTuning

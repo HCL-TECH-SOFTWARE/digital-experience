@@ -47,8 +47,7 @@ ensure that the server’s physical memory is not being overcommitted which woul
 process size should also be monitored to make sure it is not growing over time; this could indicate a
 memory leak. 
 
-See https://www.ibm.com/developerworks/community/blogs/kevgrig/entry/tracking_directbytebuffer_allocati
-ons_and_frees_in_ibm_java for more information.
+See [IBM TechXchange Community](https://www.ibm.com/developerworks/community/blogs/kevgrig/entry/tracking_directbytebuffer_allocations_and_frees_in_ibm_java) for more information.
 
 ## Tested Values
 In the majority of our measurements with WebSphere Portal, the best results were obtained by explicitly
@@ -64,14 +63,14 @@ with "real world data" in a test environment.
 
 As of Portal 8, **MaxDirectMemorySize** can be specified using a shorthand notation. For example:
 
-    -XX:MaxDirectMemorySize=1G will set it to 1 gigabyte. If there is sufficient real memory on the server, there is no penalty for specifying.
+-XX:MaxDirectMemorySize=1G will set it to 1 gigabyte. If there is sufficient real memory on the server, there is no penalty for specifying.
     
-    -XX:MaxDirectMemorySize=1G and that value will avoid the out of direct memory condition for most workloads.
+-XX:MaxDirectMemorySize=1G and that value will avoid the out of direct memory condition for most workloads.
 
 ## How to Set
 
 In the WebSphere Integrated Solutions Console **Servers → Server Types → WebSphere application servers → WebSphere_Portal → Server Infrastructure**:
 
-    - Java and Process Management→ Process Definition → Java Virtual Machine
+- Java and Process Management→ Process Definition → Java Virtual Machine
 
-    - Add -XX:MaxDirectMemorySize=1G to the Generic JVM Arguments field.
+- Add -XX:MaxDirectMemorySize=1G to the Generic JVM Arguments field.

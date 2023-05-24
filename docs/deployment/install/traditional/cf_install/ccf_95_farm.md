@@ -15,10 +15,10 @@ Applying the cumulative fix is a multi-step process. You must first update the p
 The procedures below describe these steps in detail.
 
 !!!note "Version 9.0 note"
-    After CF13 or later is fully installed and Portal runtime is operational, HCL Portal 9.0 can be installed. Visit [HCL Digital Experience 9.0 Product Documentation](https://help.hcltechsw.com/digital-experience/9.0/welcome/wp9_welcome.html) for product base documentation on concepts, instructions, procedures, tips to configure, maintain, troubleshoot and use HCL Digital Experience.
+    After CF13 or higher is fully installed and Portal runtime is operational, HCL Portal 9.0 can be installed. Visit [HCL Digital Experience 9.0 Product Documentation](https://help.hcltechsw.com/digital-experience/9.0/welcome/wp9_welcome.html) for product base documentation on concepts, instructions, procedures, tips to configure, maintain, troubleshoot and use HCL Digital Experience.
 
 !!!note "Version 9.5 note"
-     After CF17 or later is fully installed and Portal runtime is operational, HCL Portal 9.5 can be installed. Visit [HCL Digital Experience 9.5 Product Documentation](https://opensource.hcltechsw.com/digital-experience) for instructions, procedures, tips to configure, maintain, troubleshoot and use the latest version of HCL Digital Experience.
+     For existing deployments, as long as CF17 or higher is fully installed and Portal runtime is operational, HCL Portal 9.5 can be installed. Visit [HCL Digital Experience 9.5 Product Documentation](https://opensource.hcltechsw.com/digital-experience) for instructions, procedures, tips to configure, maintain, troubleshoot and use the latest version of HCL Digital Experience.  If you are at a CF level lower than CF17, download the latest available CF to proceed.
 
 ## Before you begin
 

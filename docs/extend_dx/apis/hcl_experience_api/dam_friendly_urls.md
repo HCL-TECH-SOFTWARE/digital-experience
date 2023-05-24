@@ -27,16 +27,6 @@ In contrast, a `binaryUrl` you get from **Copy link** on the **Edit** page, cons
 /collections/5c11a585-c8e6-4ef7-ba6b-6c79977ee408/items/e0a81aeb-86bb-42a8-8287-338a65e13db1/renditions/8b5e2885-e7ca-4a68-83ed-24faf58ca574?binary=true
 ```
 
-Meanwhile, a `customUrl` provides the original rendition of an asset. The `customUrl` is not related to a friendly URL.
-
-![](../../../images/edit_information_tab_custom_url_field.png "Custom URL field from the Edit page"){ width=50% }
-
-**Sample `customUrl`**:
-
-```
-https://sample-url.com/dx/api/dam/custom/car
-```
-
 Using the DAM API explorer, you can set a friendly URL for each asset, individually.
 
 You can get the content of an asset by choosing a specific property such as:
@@ -58,7 +48,7 @@ With a friendly URL for the collection unique-name, asset file name, rendition n
 /collections/collection-one/items/img_1705.jpg/renditions/Desktop/versions/2 
 ```
 
-## How to set a friendly URL for an asset using DAM API explorer
+## Setting a friendly URL for an asset using DAM API explorer
 
 Before doing the steps in this section, you must have the following information from the asset:
 
@@ -98,55 +88,10 @@ self: /collections/collection-one/items/car.jpg/renditions/Desktop.
 ```
 
 
-## How to change duplicate asset names using DAM
-
-If an asset happens to have the same name with another asset in a collection, a notification is displayed in the **Information** panel.
-
-![Notification to rename an asset](../../../images/information_panel_rename_notification.png){ width=50% }
-
-You can click **Rename** from the notification and provide a unique name.
-
-![Rename asset dialog](../../../images/dialog_rename_field.png){ width=50% }
-
-## What is collection unique-name?
-Collection unique-names are the unique identifier for each collection which can be used in friendly url instead of collection UUID to access DAM assets. Collection unique-names support all languages as per existing system. A collection unique-name does not support any URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]").
-
-## How collection unique-names are generated?
-- While creating a collection, the user has a provision to enter a custom collection unique-name.
-
-![](../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup"){ width=45% }
-![](../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup"){ width=47% }
-![](../../../images/CreateCollection_friendlyUrl-3.png "Create collection unsupported unique name"){ width=45% }
-
-- Collection unique-name is an optional field. If it is not provided by the user, the system will generate a collection unique-name based on the collection name replacing all the URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]") with underscores.
-- Collection unique-names will follow simple format of adding “_Number” for collections having same collection-names.
-- For existing collections, the system will generate a collection unique-name based on the collection name by using the migration script.
-
-## How can the user change the collection unique-names?
-Once the collection unique-name is generated, user can view/edit the collection unique-name in the collection information panel.
-
-![](../../../images/CollectionEdit_friendlyUrl.png "Collection edit panel"){ width=47% }
-![](../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel"){ width=45% }
-
-## What happens if collection unique-name already exists while creating or editing a collection?
-While creating or editing a collection, DAM checks for any duplication of the unique-name and prompts with an error message. It also suggests an available unique-name if a duplicate is found in any other collection.
-
-![](../../../images/CreateCollectionError_friendlyUrl_1.png "Create collection duplicate unique name"){ width=45% }
-![](../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection suggestion click"){ width=45% }
-
-When the user clicks on the suggested name, the unique-name input field gets pre-filled with the suggested unique-name.
-
-![](../../../images/EditCollectionError_friendlyUrl_1.png "Edit collection duplicate unique name"){ width=45% }
-![](../../../images/EditCollectionError_friendlyUrl_2.png "Edit collection suggestion click"){ width=50% }
-
-
-## Copying friendly URLs for assets
-Users can copy the friendly URL and API URL of an asset from the URLs section of the asset's inspector panel.
-![](../../../images/Copy_friendlyUrl.png "Copy friendly URL"){ width=50% }
-
-
 ???+ info "Related information"
     - [Using friendly URLs](../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
     - [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md)
     - [Manage collections](../../../manage_content/digital_assets/usage/managing_dam/manage_collections.md)
+    - [Set unique custom URL for a media asset](../../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_set_unique_custom_URL_media_asset.md)
+    - [Manage media assets](../../../manage_content/digital_assets/usage/managing_dam/manage_media_assets.md)
     

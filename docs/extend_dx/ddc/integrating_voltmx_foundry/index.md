@@ -9,13 +9,13 @@ Ensure that the your Volt MX Foundry application is configured correctly accordi
 !!!note
     Refer to the HCLSoftware U course [HDX-DEV-100 Digital Data Connector for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451) for instructions on how to set up your first DDC integration.
 
-## Create a mapping for the DDC plug-in for the List-rendering profile
-This section describes how to define the set of attributes available in the beans that are contained in bean lists that a DDC plug-in generates in List-rendering profile.
+## Creating a mapping for the DDC plug-in for the list-rendering profile
 
-!!!note
-    Refer to [Technical concepts | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/social/plrf_tech_concepts.html)
+This section describes how to define the set of attributes available in the beans that are contained in bean lists that a DDC plug-in generates in list-rendering profile.
 
-- Following API end point and response are used to create this sample document.
+For more information, see [Technical concepts | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/social/plrf_tech_concepts.html).
+
+The following API end point and response are used to create this sample document:
     
     Sample API end point for **GET**
 
@@ -25,7 +25,7 @@ This section describes how to define the set of attributes available in the bean
 
     ![](../../../assets/Volt_MX_Sample_POST_Endpoint.png "VOLTMX Sample POST API Endpoint.")
 
-### Steps to create the list rendering profile are as follows:
+### Creating the list-rendering profile
 
 1. Log in to the WAS console.
     ![](../../../assets/WAS_Console_Login_Screen.png "Log in to WAS Console")
@@ -77,8 +77,7 @@ This section describes how to define the set of attributes available in the bean
 
 You may use an existing or new WCM library. For this example we have used a new library with default items such as site area and workflow. You will have to create WCM artifacts under 4 folders: Content, Components, Authoring Templates, and Presentation Templates.
 
-!!!note
-    Refer to [Creating web content libraries](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_config_wcmlibraries.html) for more in-depth instructions on how to work with WCM libraries.
+Refer to [Creating web content libraries](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_config_wcmlibraries.html) for instructions on how to work with WCM libraries.
 
 ### Create a Presentation Template
 
@@ -108,7 +107,7 @@ Steps to create Presentation Template are as follows:
 3. Save and close.
 
     !!!note
-        If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, then you might need the capability to submit data to the API which DDC will try to parse as **sourceParams**. In that case, you need to include that in your Presentation Template.
+        If you selected any other **Resource Method** (for example, **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, you might need the capability to submit data to the API which DDC will try to parse as **sourceParams**. In that case, you must include that in your Presentation Template.
 
     Sample Presentation Template Options - with params
 
@@ -160,7 +159,7 @@ Under Authoring Templates, create a Content Template.
 5. Save and close.
 
     !!!note
-        If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, then you might need the capability to submit data to the API which DDC will try to parse as **sourceParams** using the Presentation Template you created in the previous section. In that case, you need to add a content field in your Content Template that will save this. It can have any name but for this example, we're using **params**.
+        If you selected any other **Resource Method** (for example, **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, you might need the capability to submit data to the API which DDC will try to parse as **sourceParams** using the Presentation Template you created in the previous section. In that case, you must add a content field in your Content Template that will save this. It can have any name but for this example, we're using **params**.
 
     | Element type                   | Name                                       | Display title              |
     | ------------------------------ | ------------------------------------------ | ---------------------------|
@@ -237,7 +236,7 @@ Under Authoring Templates, create a Content Template.
 3. Save and close.
 
     !!!note
-        If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, then you might need the capability to submit data to the API which DDC will try to parse as **sourceParams** using the Presentation Template you created in a previous section. In that case, you need to provide value for **params**. You can pass many key-value pairs of data and it should have the format of a URL query string.
+        If you selected any other **Resource Method** (for example, **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, you might need the capability to submit data to the API which DDC will try to parse as **sourceParams** using the Presentation Template you created in a previous section. In that case, you must provide value for **params**. You can pass many key-value pairs of data and it should have the format of a URL query string.
 
     | Content field title            | Value                                                        |
     | ------------------------------ | ------------------------------------------                   |

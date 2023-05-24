@@ -149,7 +149,7 @@ In addition, the package includes scripts for all operating systems that make it
 
     Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
 
-10. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
+10. Refer to the sample pipeline provided to find out how to integrate the container image in the automation server.
 
 11. By default, the logs will be available in UTC format. If needed, synchronize your local timezone from host to container using an environment variable as shown in the example below.
 
@@ -164,8 +164,6 @@ In addition, the package includes scripts for all operating systems that make it
         ```batch
         SET Timezone=Asia/Kolkata
         ```
-    
-12. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
 
 ## Installing DXClient using the source code package
 
@@ -265,9 +263,6 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
-    -   HCL DX 9.5 CF212 release: **V1.21.0
-        -   [Livesync for Themes](../dxclient/dxclient_artifact_types/livesync.md)
-
     -   HCL DX 9.5 CF211 release: **V1.20.0
         -   [Deploy and Undeploy Applications](../dxclient/dxclient_artifact_types/deployapplication.md)
 
@@ -345,6 +340,11 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Deploy script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
+
+## Some generic points to note
+    
+1. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
+2. The maximum input file size allowed in DXClient is 256 MB currently. This limitation will be addressed in one of the future releases.
 
 ## Configuring DXClient
 
@@ -592,7 +592,7 @@ Use the `dx-core-configuration-reports` command to get a summary of the configur
 ```bash
 dxclient dx-core-configuration-reports [OPTIONS]
 ```
-
+<!----
 Use this command to sync WebDAV themes in server and then watch for succeeding changes which will immediately reflect in the WebDAV Server:
 
 ```bash
@@ -604,6 +604,7 @@ Use this command to download the theme files in WebDAV Server in preparation for
 ```bash
 dxclient livesync pull-theme [options]
 ```
+---->
 
 ## DXClient command line help
 
