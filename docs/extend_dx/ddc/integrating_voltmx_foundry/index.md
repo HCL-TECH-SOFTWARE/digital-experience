@@ -6,7 +6,7 @@ This section provides the steps on using DDC for HCL Portal framework to integra
 
 Ensure that the your Volt MX Foundry application is configured correctly according to [this guide](./configuring_voltmx_foundry_to_connect_to_ddc.md).
 
-Refer to the HCLSoftware U course [HDX-DEV-100 Digital Data Connector for Beginners Lab](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451) for instructions on how to set up your first DDC integration.
+Refer to the HCLSoftware U course [HDX-DEV-100 Digital Data Connector for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451) for instructions on how to set up your first DDC integration.
 
 ## Creating a mapping for the DDC plug-in for the list-rendering profile
 
@@ -78,46 +78,7 @@ You may use an existing or new WCM library. For this example we have used a new 
 
 Refer to [Creating web content libraries](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_config_wcmlibraries.html) for instructions on how to work with WCM libraries.
 
-### Create List Appearance
-
-1. Go to the Library Explorer, here you will see default items `Content`, `Categories`, `Components`, `Authoring Templates`, `Presentation Templates`,`Workflow Items` and `Segments`
-
-    ![](../../../assets/WCM_Library_Component.png "WCM Library default components")
-
-2. Create an Appearances folder under Components. This is only so that your personalization components that use the DDC selection rule. Select pluggable resources can be found easily in one place.
-
-    ![](../../../assets/WCM_Appearance.png "WCM Appearance")
-
-3. Under Appearances folder, create a new Personalization component.
-    - Click on `New` button. Then, click `Component`, then `Personalization` component
-
-        ![](../../../assets/WCM_Personalization_Component.png "WCM Personalization Component")
-
-    - Enter the name and title. Suggested name: `DDC Volt MX List Appearances`
-
-        ![](../../../assets/WCM_Personalization_Title.png "WCM Personalization Title")
-
-    - Under `Personalization Element`, click `New`. As a `New Rule`, instead of `Select Web Content`, click on the `Web Content` phrase and select `Pluggable Resources` instead and click `Save`.
-
-        ![](../../../assets/WCM_Personalization_Rule.png "Create a rule for New Personalization Element")
- 
-    - In the List Presentation Markup, add the following:
-        - Header: `<ul>`
-        - Result design:
-              ```
-              <li>[AttributeResource attributeName="fullname" separator=","]</li>
-              <li>[AttributeResource attributeName="username" separator=","]</li>
-              <li>[AttributeResource attributeName="email" separator=","]</li>
-              ```
-        - Footer: `</ul>`
-        !!!note
-            The `attributeName` used here is the last part of the `itemAttribute` you have specified in your [list rendering profile](#steps-to-create-the-list-rendering-profile-are-as-follows). E.g. `ddcDemo.ItemAttribute.fullname`
-
-        ![](../../../assets/WCM_List_Markup.png "Use HTML to define how list results are presented to your site visitors, including a header, footer, and separator.")
-
-    - Click `Save and Close`.
-
-### Create a Presentation Template
+### Creating a Presentation Template
 
 Set the context of the DDC content.
 
@@ -157,7 +118,7 @@ Steps to create Presentation Template are as follows:
 
     ![](../../../assets/DDC_presentation_template_using_params.png "DDC Presentation Template with attribute sourceParams")
 
-###  Create a Content Template
+###  Creating a Content Template
 
 Under Authoring Templates, create a Content Template.
 
@@ -205,7 +166,47 @@ Under Authoring Templates, create a Content Template.
 
     ![](../../../assets/DDC_content_template_with_params.png "DDC Content Template with content field named params")
 
-### Create a Content item
+### Creating a List Appearance
+
+1. Go to the Library Explorer. The following default items are available: `Content`, `Categories`, `Components`, `Authoring Templates`, `Presentation Templates`,`Workflow Items`, and `Segments`.
+
+    ![](../../../assets/WCM_Library_Component.png "WCM Library default components")
+
+2. Create an Appearances folder under Components. This is to ensure that your personalization components use the DDC selection rule. Select pluggable resources can be found easily in one place.
+
+    ![](../../../assets/WCM_Appearance.png "WCM Appearance")
+
+3. Under Appearances folder, create a new Personalization component.
+
+    1. Click `New` > `Component` > `Personalization`.
+
+        ![](../../../assets/WCM_Personalization_Component.png "WCM Personalization Component")
+
+    2. Enter the name and title. Suggested name: `DDC Volt MX List Appearances`
+
+        ![](../../../assets/WCM_Personalization_Title.png "WCM Personalization Title")
+
+    3. Under `Personalization Element`, click `New`. As a `New Rule`, instead of `Select Web Content`, click on the `Web Content` phrase and select `Pluggable Resources` and click `Save`.
+
+        ![](../../../assets/WCM_Personalization_Rule.png "Create a rule for New Personalization Element")
+ 
+    4. In the List Presentation Markup, add the following:
+        - Header: `<ul>`
+        - Result design:
+              ```
+              <li>[AttributeResource attributeName="fullname" separator=","]</li>
+              <li>[AttributeResource attributeName="username" separator=","]</li>
+              <li>[AttributeResource attributeName="email" separator=","]</li>
+              ```
+        - Footer: `</ul>`
+        !!!note
+            The `attributeName` used here is the last part of the `itemAttribute` you have specified in your [list rendering profile](#steps-to-create-the-list-rendering-profile-are-as-follows). For example, `ddcDemo.ItemAttribute.fullname`.
+
+        ![](../../../assets/WCM_List_Markup.png "Use HTML to define how list results are presented to your site visitors, including a header, footer, and separator.")
+
+    5. Click `Save and Close`.
+
+### Creating a Content item
 
 1. Under your libraries, click `Content`, then click `Articles`, and create a new **Content** from the Content Template that you created earlier.
 
