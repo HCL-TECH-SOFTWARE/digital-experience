@@ -14,8 +14,4 @@ The following limitations exist in HCL DAM:
     -   WCM syndication and DAM staging are not integrated, and as such, there are times where either DAM or WCM have been updated while the other one is still in progress - during those times links could result in 404 errors or older links being displayed. We are improving the integration for future releases.
     -   In case of issues with DAM staging, a solution can be to [de-register and register the subscriber/s](../configuration/staging_dam/dam_subscription_staging#registering-or-deregistering-for-dam-staging).
 -   Editing functions in DAM are limited to images with a pixel count of up to `268402689` (`~268 Megapixels`).
--   Deployments which are on or before CF204 cannot be migrated directly to CF208 or above. If the existing CF (CF204 or before) already contains image/webp mime type, the upgrade should work fine. If not then, there are 2 ways to perform the upgrade:
-    -   On CF204 or pre CF204 environment, add image/webp mime type as one of the allowed mime types using [API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.createAll)
-    -   Or upgrade to CF205 (This release contains image/webp mime type added by default)
-    -   Now perform the upgrade to CF208 or above
-  
+-  When migrating from CF204 or below to CF208 or above, ensure you have image/webp added to your allowed media types via [API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.createAll). If not, upgrade to CF205 and then upgrade to any version of CF208 or above.
