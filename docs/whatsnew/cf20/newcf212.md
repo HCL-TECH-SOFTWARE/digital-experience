@@ -60,6 +60,11 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     A new feature that allows users to regenerate renditions and versions of broken assets and to clean up invalid assets is now available. For instructions on how to enable this feature, see the topic [Rendition Version Regeneration and Cleanup](../../../manage_content/digital_assets/configuration/rendition_version_regeneration_and_cleanup).
 
+### DAM Limitation on CF upgrades
+
+=== "Containers"
+    Upgrading DAM from CF204 or below to CF208 or above has limitations. For more instructions on how to handle the upgrade, see the topic [Limitations](../../manage_content/digital_assets/limitations/index.md)
+
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
