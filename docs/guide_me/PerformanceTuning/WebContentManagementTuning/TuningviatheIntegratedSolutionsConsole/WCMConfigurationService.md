@@ -1,6 +1,7 @@
 # WCM Configuration Service
 
 |Cache Name |Default Value|WCM Rendering Value|WCM Authoring Value|
+|-----------|-------------|-------------------|-------------------|
 |deployment.subscriberOnly| false| true| False|
 |user.cache.enable |false |true |True|
 |resourceserver.browserCacheMaxAge| 600 |86400 |600|
@@ -14,100 +15,101 @@ production rendering environment.
 ### How to Set in the Integrated Solutions Console
 
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WCM WCMConfigService -> Custom properties
+
+Resources > Resource Environment > Resource Environment Providers > WCM WCMConfigService > Custom properties
 
 Name: user.cache.enable
+
 Value: true
 
 Name: deployment.subscriberOnly
+
 Value: true
 
 ## WCM browserCacheMaxAge
 
 Caching WCM resources in a browser or caching proxy.
-Static files like images, CSS and Javascript can be stored in WCM and referenced, via a URL, from a Web
-Content Viewer portlet or the theme. A performance benefit can be obtained by setting the security on
-these static resources to allow anonymous users to access them so that they can be shared,cacheable
-amongst several users through a caching proxy and avoid being served directly from WCM on every
+Static files like images, CSS and Javascript can be stored in WCM and referenced, via a URL, from a Web Content Viewer portlet or the theme. A performance benefit can be obtained by setting the security on these static resources to allow anonymous users to access them so that they can be shared,cacheable amongst several users through a caching proxy and avoid being served directly from WCM on every
 request.
 
-WCM will attach a cache-control header to these resources to ensure proper caching by browsers and
-caching proxies. If the security settings of the resource allows anonymous users to access it, WCM will
-attach a "public,max-age=600,post-check=300,pre-check=600" cache-control header to the response by
-default. If the security on the WCM resource only allows authenticated users to see it, you will see a
-"private, max-age=600" instead. If you wish to modify the timeout WCM uses for the cache-control header,
-update the following property in the WCMConfigService Resource Environment Provider (REP) using the
+WCM will attach a cache-control header to these resources to ensure proper caching by browsers and caching proxies. If the security settings of the resource allows anonymous users to access it, WCM will attach a "public,max-age=600,post-check=300,pre-check=600" cache-control header to the response by default. If the security on the WCM resource only allows authenticated users to see it, you will see a "private, max-age=600" instead. If you wish to modify the timeout WCM uses for the cache-control header, update the following property in the WCMConfigService Resource Environment Provider (REP) using the
 instructions below.
 
 ### How to Set in the Integrated Solutions Console
 
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WCM WCMConfigService -> Custom properties
+Resources > Resource Environment > Resource Environment Providers > WCM WCMConfigService > Custom properties
 
 Name: resourceserver.browserCacheMaxAge
-Value: <timeout value in seconds>
+
+Value: `<timeout value in seconds>`
 
 ## Versions
-Typically versions are not necessary in rendering environments since there is no active authoring occurring
-in your rendering environment. There are however other actions that can cause versions to be created
-unexpectedly. One example would be modifying Managed Pages using xmlaccess. For this reason we
-recommend turning off versioning by setting it to manual in rendering only environments. The default
-setting is to always create a version.
+Typically versions are not necessary in rendering environments since there is no active authoring occurring in your rendering environment. There are however other actions that can cause versions to be created unexpectedly. One example would be modifying Managed Pages using xmlaccess. For this reason we recommend turning off versioning by setting it to manual in rendering only environments. The default setting is to always create a version.
 
 ### How to Set in the Integrated Solutions Console
 
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WCM WCMConfigService -> Custom properties
 
-Name: versioningStrategy.Default
-Value: manual
+Resources > Resource Environment > Resource Environment Providers > WCM WCMConfigService > Custom properties
+
+- Name: versioningStrategy.Default
+  Value: manual
 
 Name: versioningStrategy.AuthoringTemplate
+
 Value: manual
 
 Name: versioningStrategy.Component
+
 Value: manual
 
 Name: versioningStrategy.Content
+
 Value: manual
 
 Name: versioningStrategy.PresentationTemplate
+
 Value: manual
 
 Name: versioningStrategy.SiteArea
+
 Value: manual
 
 Name: versioningStrategy.PortalPage
+
 Value: manual
 
 Name: versioningStrategy.Taxonomy
+
 Value: manual
 
 Name: versioningStrategy.Workflow
+
 Value: manual
 
 ## WCM Advanced Caching
-WCM implements a time based internal caching layer called the Advanced Cache that can be used to
-significantly increase capacity when using WCM rendering portlets. In our own internal testing of our WCM
-rendering scenario using a timeout of 24 hour (REL 1D), we were able to achieve a 32% increase in capacity
-with the SITE cache level setting and a 15% increase in capacity with the SECURED cache level setting. Use
-of WCM Advanced Caching is recommended if your business requirements allow it.
+WCM implements a time based internal caching layer called the Advanced Cache that can be used to significantly increase capacity when using WCM rendering portlets. In our own internal testing of our WCM rendering scenario using a timeout of 24 hour (REL 1D), we were able to achieve a 32% increase in capacity with the SITE cache level setting and a 15% increase in capacity with the SECURED cache level setting. Use of WCM Advanced Caching is recommended if your business requirements allow it.
 
 ### How to Set
 
-Pick your desired Cache Level (see “When to Use Each Caching Level”)
-Select the related entries from the table below
+Pick your desired Cache Level (see “When to Use Each Caching Level”) and  select the related entries from the table below.
+
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WCM WCMConfigService -> Custom properties
+
+Resources > Resource Environment > Resource Environment Providers > WCM WCMConfigService > Custom properties
 
 Name: connect.businesslogic.defaultcache
+
 Value: See defaultcache value in table below for your desired cache level
 
 Name: connect.moduleconfig.ajpe.contentcache.defaultcontentcache
+
 Value: See defaultcontentcache value in table below for your desired cache level
 
 Name: connect.moduleconfig.ajpe.contentcache.contentcacheexpires
-Value: <formatted_time>
+
+Value: `<formatted_time>`
 
 |Cache Level |defaultcache value| defaultcontentcache value|
 |------------|------------------|--------------------------|
@@ -183,7 +185,7 @@ filter
 ### How to Set
 
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WCM WCMConfigService ->Custom properties
+Resources > Resource Environment > Resource Environment Providers > WCM WCMConfigService >Custom properties
 
 Name: connect.moduleconfig.ajpe.contentcache.secured.cache.group.subset
 Value: <groups to be used in filter>

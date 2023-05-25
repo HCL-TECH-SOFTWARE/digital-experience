@@ -11,7 +11,7 @@
 
 ## How To Set
 In the WebSphere Integrated Solutions Console
-Resources -> Cache instances -> Object cache instances
 
-Detailed descriptions of these caches can be found in the WCM Cache Instances section of this
-document.
+Resources > Cache instances > Object cache instances
+
+Detailed descriptions of these caches can be found in the [WCM Cache Instances](../../OtherTuningConsiderations/HCLPortalLightMode/InternalPortalCaches/WCMCacheInstances.md) section of this document.

@@ -7,7 +7,7 @@
 |COMMUNITY<br>JCR |10/100<br>10/150| 10/50 (default)<br>10/150|
 
 
-See the Connection Pool Size tuning section for base Portal.
+See the [Connection Pool Size](../../Base_Portal_Tuning/Tuning_via_the_integrated_solutions_Console/DataSourceTuning.md#connection-pool-size) tuning section for base Portal.
 
 !!! note 
     The JCR data pool size should be set to 2.5 times the size of the Web Container Thread pool.
