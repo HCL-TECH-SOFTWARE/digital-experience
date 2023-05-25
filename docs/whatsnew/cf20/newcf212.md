@@ -53,7 +53,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Additional steps in DDC for sending request body via content item
 
 === "Containers"
-    Added steps on how to send a request body through a content item in Digital Data Connector (DDC). See the topic [Connecting to HCL Volt MX Foundry through Digital Data Connector (DDC)](../../extend_dx/ddc/integrating_voltmx_foundry/index.md) for more information.
+    Added steps on how to send a request body through a content item in Digital Data Connector (DDC). See the topic [WCM presentation components](../../extend_dx/ddc/integrating_voltmx_foundry/index.md#wcm-presentation-components) for more information.
 
 ### Rendition Version Regeneration and Cleanup
 
@@ -62,4 +62,4 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
