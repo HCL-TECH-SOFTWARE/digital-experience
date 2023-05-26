@@ -2,6 +2,9 @@
 
 This section shows the guidance to back up and restore your DAM persistence and binaries.
 
+!!! note
+    Operator-based deployments are not supported from CF200 onwards.
+
 Follow this guidance to create a backup of the DAM persistence and binaries from your Operator deployment, and restore them to a Helm-based deployment.
 
 ## Back up from an Operator-based deployment
