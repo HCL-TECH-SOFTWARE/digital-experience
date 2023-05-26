@@ -4,7 +4,7 @@
 ## How to Set
 In the WebSphere Integrated Solutions Console
 
-Resources -> Resource Environment -> Resource Environment Providers -> WP CacheManagerService -> Custom properties
+Resources > Resource Environment > Resource Environment Providers > WP CacheManagerService > Custom properties
 
 |Parameter |Default Value|Value Used|
 |----------|-------------|----------|
