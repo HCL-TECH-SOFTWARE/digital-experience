@@ -1,0 +1,4 @@
+title: REST API for AI analyis of a content
+nav:
+    - index.md
+    - wcm_rest_content_xai_analysis.md
