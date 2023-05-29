@@ -8,4 +8,4 @@ nav:
     - AccessControlDataManagementService.md
     - WCMConfigurationService.md
     - JCRTextSearch.md
-    - Public Page Invalidation.md
+    - PublicPageInvalidation.md

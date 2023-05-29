@@ -7,10 +7,10 @@ The `loadRolesParentBased` setting changes the loading algorithm for the `ROLE_I
 ## How to Set
 
 In the WebSphere Integrated Solutions Console
-Resources -> Resource Environment -> Resource Environment Providers -> WP
-AccessControlDataManagementService -> Custom properties
-Alternatively, the cache settings can be set in the AccessControlDataManagementService.properties file
-and updated via the ConfigEngine.
+
+Resources > Resource Environment > Resource Environment Providers > WP AccessControlDataManagementService > Custom properties
+
+Alternatively, the cache settings can be set in the AccessControlDataManagementService.properties file and updated via the ConfigEngine.
 
 |Parameter |Default Value|Value Used|
 |----------|-------------|----------|
@@ -18,5 +18,5 @@ and updated via the ConfigEngine.
 |accessControlDataManagement.loadRolesParentBased |false |true|
 
 !!! note
-    Use the loadRolesParentBased setting in WCM authoring environments only. Leave the default false value in rendering environments. 
-    Setting accessControlDataManagement.acucIgnoreResourceTypes can interfere with strict access controls in environments where role assignments change based on workflow stage.
+    Use the `loadRolesParentBased` setting in WCM authoring environments only. Leave the default false value in rendering environments. 
+    Setting `accessControlDataManagement.acucIgnoreResourceTypes` can interfere with strict access controls in environments where role assignments change based on workflow stage.

@@ -13,6 +13,7 @@ The following features and updates are available to customers installing HCL Dig
 - New guidance for using Site Manager 
 - Additional steps in DDC for sending request body via content item
 - Rendition Version Regeneration and Cleanup
+- DAM Limitation on CF upgrades
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -63,7 +64,7 @@ The following features and updates are available to customers installing HCL Dig
 ### DAM Limitation on CF upgrades
 
 === "Containers"
-    Upgrading DAM from CF204 or below to CF208 or above has limitations. For more instructions on how to handle the upgrade, see the topic [Limitations](../../manage_content/digital_assets/limitations/index.md)
+    Upgrading DAM from CF204 or below to CF208 or above has limitations. For more instructions on how to handle the upgrade, see the topic [Limitations](../../manage_content/digital_assets/limitations/index.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
