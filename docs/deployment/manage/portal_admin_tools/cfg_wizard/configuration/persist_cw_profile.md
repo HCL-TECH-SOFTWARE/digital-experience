@@ -14,6 +14,10 @@ cw_prof_< product-version >_< container-version >
 
 for example, `cw_prof_95_CF210`. During the Core container startup process, the latest version directory is symbolically linked from /opt/HCL/cw\_profile.
 
+### Backward Compatibility
+
+When upgrading to a newer CF version, if the wpsadmin password is updated the cw_profile contains the newly updated password and the new credentials are copied to the config wizard user registery, and if the wpsadmin password is not updated then the cw_profile and the config wizard user registry contains the default password.
+
 ## Core container Version-to-Version upgrade
 
 When a new version \(tag\) of the DX 9.5 Core container is specified in your [custom values YAML file](../../../../install/container/helm_deployment/preparation/index.md) and you run `helm upgrade`, Kubernetes recycles all the pods in your Core stateful set one by one. It starts with the highest numbered pod and works downwards, only recycling the next pod when the current pod reports that it is "ready".
