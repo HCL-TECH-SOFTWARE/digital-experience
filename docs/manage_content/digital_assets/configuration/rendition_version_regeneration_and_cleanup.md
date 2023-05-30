@@ -1,6 +1,6 @@
 # Rendition Version Regeneration and Cleanup
 
-This section discusses the regeneration of missing renditions and versions and the cleanup of incomplete records that must be deleted. The following new hearbeats are introduced:
+This section discusses the regeneration of missing renditions and versions and the cleanup of incomplete records that must be deleted. The following new heartbeats are introduced:
 
 - **Validation HeartBeat** - This heartbeat runs every 10 minutes and validates the media items by checking the following:
     
