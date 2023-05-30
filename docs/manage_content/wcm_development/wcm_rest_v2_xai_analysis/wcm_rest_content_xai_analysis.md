@@ -274,6 +274,6 @@ Note: If you need sentiment analysis for a specific content element, please spec
 
 - Only Text Elements (Plain texts/ Rich Texts) are supported and will be used for AI analysis
 - Only Content Elements are used for AI analysis. In other words, only those components within the elements data array (Refer above request body's "data": {} item to understand more) are used for AI analysis and other fields in parent level like description, name and title of content are not used for AI analysis.
-- If value of request parameter selected is summary: By default extractive summarization is done during analysis. If you need analysis that provides abstractive summarization, then summarization method of type as abstractive needs to be specified in the request body like ```"method": "abstractive"```.
+- If value of request parameter selected is summary: By default extractive summarization is done during analysis. Currently abstractive summarization is not supported.
 
 For more understanding on the API request and response details, refer ```/contents/analysis``` API with method type as ```POST``` in the swagger REST API documentation at ```http or https://host:port/dx/api/wcm/v2/explorer/```
