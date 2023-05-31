@@ -1,6 +1,0 @@
-title: WCM Database Tuning
-nav:
-    - BufferPoolsDB2SelfTuningMemoryManager.md
-    - QueryOptimization.md
-    - DB2AutoMaintenance.md
-    - Oracle.md

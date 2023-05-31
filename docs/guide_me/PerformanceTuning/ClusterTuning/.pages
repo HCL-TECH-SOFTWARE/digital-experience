@@ -1,9 +1,0 @@
-title: Cluster Tuning
-nav:
-    - index.md
-    - BasePortalTuning.md
-    - TuningviatheIntegratedSolutionsConsole
-    - OperatingSystemTuning.md
-    - WebServerTuning.md
-    - TuningSessionPersistenceMemory-to-Memory.md
-    - TuningPersistenceDatabase.md
