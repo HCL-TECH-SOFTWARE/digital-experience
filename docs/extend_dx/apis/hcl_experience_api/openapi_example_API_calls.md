@@ -167,7 +167,7 @@ Refer to the following steps to enable uploading an SVG file in DAM API:
 
     `POST - https://<domain>/dx/api/core/v1/auth/login`
 
-2. Enter the **username** and **password**:
+The payload of the POST request should look like this:
 
     `{ "username": "<userId>" "password": "<password>" }`
 
