@@ -158,8 +158,38 @@ Follow the steps below to enable uploading an SVG file in DAM API:
 
     ![Enable SVG file in  DAM API](../../../images/Enable_svgfile_DAM_API.png)
 
-<!--
-## HCL Software Academy course
 
-For an introduction and a demo on how to use Experience API, go to [Experience API](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416). To try it out yourself, refer to [Experience API Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf) and corresponding [Experience API Lab Resources](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
--->
+## Adding a new mime type in DAM 
+
+Refer to the following steps to enable uploading an SVG file in DAM API:
+
+1. Using any API Tool, log in to Ring API via:
+
+    `POST - https://<domain>/dx/api/core/v1/auth/login`
+
+    The payload of the POST request should look like this:
+
+    `{ "username": "<userId>" "password": "<password>" }`
+
+2. Access **GET** mediatypegroups to get the media type group into which the new media type should be added. Find the id for image media type group.
+
+    `https://<domain>/dx/api/dam/v1/mediatypegroups`
+
+3. Do a **POST** request to the following endpoint to add a new mime type:
+
+    `https://<domain>/dx/api/dam/v1/mediatypes`
+
+    To add a new webp file type, use a payload similar to:
+    
+        [{
+            "mimeType": "image/webp",
+            "extensions": ["webp"],
+            "mediaTypeGroupId": "<mediaTypeGroupId from step #3>"
+        }]
+
+If you want to configure renditions for the newly added mime type, refer to [Extensibility configuration](../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md).
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416). To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf) and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
+

@@ -13,7 +13,7 @@ The following features and updates are available to customers installing HCL Dig
 -   HCL Digital Experience Cloud Native 9.5 Entitlement checks
 -   HCL Digital Experience Cloud Native 9.5 offering adds components for on-premises installations and [HCL Leap](https://www.hcltechsw.com/leap)
 -   New HCL Digital Experience Help Center
--   Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+-   Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 !!!note
     Tabs in each section indicate the supported platforms/deployments each feature is available on.
@@ -106,6 +106,6 @@ Beginning with HCL Digital Experience 9.5 Container Update CF207, you must speci
 
 At HCL, we are continuously improving the quality and overall user experience of our product documentation. The new HCL Digital Experience 9.5 product documentation has enhanced search capability and an improved content architecture for easy navigation and access to topics that are relevant to you. 
 
-## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://academy.hcltechsw.com/#HCLDXLearningJourneys) section of the HCL Software Academy and [What’s New for Digital Experience](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.

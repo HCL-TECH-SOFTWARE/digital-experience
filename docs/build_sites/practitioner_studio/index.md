@@ -35,10 +35,8 @@ Use the Portal administration portlets that are provided with HCL Digital Experi
 -   **[Registration/Edit my profile](../practitioner_studio/edit_my_profile.md)**  
 Managing Registration/Edit my Profile is one of the available Administrator-related features in the Practitioner Studio interface.
 
-<!--
-## HCL Software Academy course
+## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use Practitioner Studio, go to [Practitioner Studio](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D300).
+For an introduction and a demo on how to use Practitioner Studio, go to [Practitioner Studio](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D300).
 
-For an introduction and a demo on how to use Practitioner Studio for administration tasks, go to [Practitioner Studio Administration](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D506). To try it out yourself, refer to [HCL DX Practitioner Studio Administration Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_Practitioner_Studio_Administration_for_Beginners.pdf).
--->
+For an introduction and a demo on how to use Practitioner Studio for administration tasks, go to [Practitioner Studio Administration](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D506). To try it out yourself, refer to [HCL DX Practitioner Studio Administration Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_Practitioner_Studio_Administration_for_Beginners.pdf).
