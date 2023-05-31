@@ -1,0 +1,2470 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A next-gen documentation site for HCL Digital Experience.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/links_element/wcm_dev_elements_link_add_template/">
+      
+      <link rel="icon" href="../../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Adding a link element to a template - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/dx_style.css">
+    
+    <script>__md_scope=new URL("../../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-169645537-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adding-a-link-element-to-a-template" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div class="md-banner--feedback">
+<span class="twemoji">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.25 21.6 13.52l68.6 141.28 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5L433.6 328.4l26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5L31.11 218.2c-6.46-6.3-8.75-15.8-5.91-24.5 2.83-8.6 10.3-14.9 19.29-16.2l153.21-22.7 68.6-141.28C270.4 5.249 278.7 0 287.9 0zm0 78.95L235.4 187.2c-3.5 7.1-10.3 12.1-18.1 13.3L98.98 217.9 184.9 303c5.5 5.5 8 13.4 6.7 21.1l-20.2 119.6 105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2-20.2-119.6c-1.3-7.7 1.3-15.6 6.8-21.1l85.9-85.1-118.3-17.4c-7.9-1.2-14.7-6.2-18.1-13.3L287.9 78.95z"/></svg> 
+</span>
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. <br>Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../../latest/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/links_element/wcm_dev_elements_link_add_template/"> 
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Adding a link element to a template
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../get_started/product_overview/" class="md-tabs__link">
+        Get Started
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../whatsnew/cf20/newcf212/" class="md-tabs__link">
+        What's New
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../deployment/" class="md-tabs__link">
+        Deploy DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../build_sites/" class="md-tabs__link">
+        Build Sites
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../" class="md-tabs__link md-tabs__link--active">
+        Manage Content
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../extend_dx/" class="md-tabs__link">
+        Extend DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../../guide_me/tutorials/" class="md-tabs__link">
+        Guide Me
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../../../.." class="md-nav__link">
+    Home
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../../../../../get_started/product_overview/"
+    class="md-nav__link"
+  >
+    Get Started
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../../../../../whatsnew/cf20/newcf212/"
+    class="md-nav__link"
+  >
+    What's New
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../../../../deployment/" class="md-nav__link">
+    Deploy DX
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../../../../build_sites/" class="md-nav__link">
+    Build Sites
+  </a>
+</li>
+  
+    
+      
+      
+                 
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6"
+    type="checkbox"
+    id="__nav_6"
+    checked
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../../">Manage Content</a>
+
+     
+    <label for="__nav_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Manage Content"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_6">
+      <span class="md-nav__icon md-icon"></span>
+      Manage Content
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2"
+    type="checkbox"
+    id="__nav_6_2"
+    checked
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../">Author Web Content</a>
+
+     
+    <label for="__nav_6_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Author Web Content"
+    data-md-level="2"
+  >
+    <label class="md-nav__title" for="__nav_6_2">
+      <span class="md-nav__icon md-icon"></span>
+      Author Web Content
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_2"
+    type="checkbox"
+    id="__nav_6_2_2"
+    
+  />
+                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../inline_editing/">Site Manager</a>
+
+     
+    <label for="__nav_6_2_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_3"
+    type="checkbox"
+    id="__nav_6_2_3"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../content_composer/">Content Composer</a>
+
+     
+    <label for="__nav_6_2_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4"
+    type="checkbox"
+    id="__nav_6_2_4"
+    checked
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../">Authoring Portlet</a>
+
+     
+    <label for="__nav_6_2_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Authoring Portlet"
+    data-md-level="3"
+  >
+    <label class="md-nav__title" for="__nav_6_2_4">
+      <span class="md-nav__icon md-icon"></span>
+      Authoring Portlet
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+                
+<li class="md-nav__item">
+  <a href="../../../../accessing_authoring_portlet/" class="md-nav__link">
+    Access the Authoring Portlet
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_3"
+    type="checkbox"
+    id="__nav_6_2_4_3"
+    
+  />
+                           
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../navigation/">Authoring Portlet Navigation</a>
+
+     
+    <label for="__nav_6_2_4_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_4"
+    type="checkbox"
+    id="__nav_6_2_4_4"
+    
+  />
+                               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../web_content_libraries/">Web Content Libraries</a>
+
+     
+    <label for="__nav_6_2_4_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5"
+    type="checkbox"
+    id="__nav_6_2_4_5"
+    checked
+  />
+                                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../">Content Artifacts</a>
+
+     
+    <label for="__nav_6_2_4_5">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Content Artifacts"
+    data-md-level="4"
+  >
+    <label class="md-nav__title" for="__nav_6_2_4_5">
+      <span class="md-nav__icon md-icon"></span>
+      Content Artifacts
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_2"
+    type="checkbox"
+    id="__nav_6_2_4_5_2"
+    
+  />
+                                     
+
+  <div class="md-nav__link md-nav__link--index">
+    <a href="../../../common/grant_access/"> Common Steps </a>
+    <label for="__nav_6_2_4_5_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+  </div>
+
+      
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../../folders/" class="md-nav__link">
+    Web Content Folders
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_4"
+    type="checkbox"
+    id="__nav_6_2_4_5_4"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../content_items/">Content Items</a>
+
+     
+    <label for="__nav_6_2_4_5_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5"
+    type="checkbox"
+    id="__nav_6_2_4_5_5"
+    checked
+  />
+                                                                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../">Elements</a>
+
+     
+    <label for="__nav_6_2_4_5_5">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Elements"
+    data-md-level="5"
+  >
+    <label class="md-nav__title" for="__nav_6_2_4_5_5">
+      <span class="md-nav__icon md-icon"></span>
+      Elements
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+                
+<li class="md-nav__item">
+  <a href="../../wcm_dev_elements_adding/" class="md-nav__link">
+    Adding elements to an item
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_3"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_3"
+    
+  />
+                           
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../authoringtools_element/">Authoring tools element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_4"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_4"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../component_reference_element/">Component Reference Element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_5"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_5"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../date_time_element/">Date and Time Elements</a>
+
+     
+    <label for="__nav_6_2_4_5_5_5">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_6"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_6"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../html_element/">HTML element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_7"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_7"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../image_element/">Image element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_7">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_8"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_8"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../jsp_element/">JSP element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_8">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_9"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_9"
+    checked
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../">Link element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_9">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Link element"
+    data-md-level="6"
+  >
+    <label class="md-nav__title" for="__nav_6_2_4_5_5_9">
+      <span class="md-nav__icon md-icon"></span>
+      Link element
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+                
+<li class="md-nav__item">
+  <a href="../wcm_dev_elements_link/" class="md-nav__link">
+    Link element
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../wcm_dev_elements_link_creating/" class="md-nav__link">
+    link component
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../wcm_dev_elements_link_adding/" class="md-nav__link">
+    Adding a ink element to an item
+  </a>
+</li>
+    
+                
+<li class="md-nav__item md-nav__item--active">
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="toc"
+    type="checkbox"
+    id="__toc"
+  />
+
+       
+  <a href="./" class="md-nav__link md-nav__link--active">
+    Adding a link element to a template
+  </a>
+
+  
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../wcm_dev_elements_link_props/" class="md-nav__link">
+    Selecting a link
+  </a>
+</li>
+    
+    </ul>
+  </nav>
+  
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_10"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_10"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../list_presentation/">List presentation uses</a>
+
+     
+    <label for="__nav_6_2_4_5_5_10">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_11"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_11"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../menu_element/">Menu element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_11">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_12"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_12"
+    
+  />
+                           
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../navigator_element/">Navigator element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_12">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_13"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_13"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../number_element/">Number element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_13">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_14"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_14"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../page_nav_element/">Page navigation element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_14">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_15"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_15"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../pzn_element/">Personalization element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_15">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_16"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_16"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../richtext_element/">Rich text element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_16">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_17"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_17"
+    
+  />
+                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../search_element/">Search element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_17">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_18"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_18"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../selection_element/">Selection elements</a>
+
+     
+    <label for="__nav_6_2_4_5_5_18">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_19"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_19"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../short_text_element/">Short text element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_19">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_20"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_20"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../stylesheet_element/">Style sheet element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_20">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_21"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_21"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../taxonomy_element/">Taxonomy element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_21">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_22"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_22"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../text_element/">Text element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_22">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_23"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_23"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../user_selection_element/">User selection element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_23">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_24"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_24"
+    
+  />
+                 
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../username_element/">User name element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_24">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_25"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_25"
+    
+  />
+                           
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../using_file_resource_element/">File resource element</a>
+
+     
+    <label for="__nav_6_2_4_5_5_25">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_5_26"
+    type="checkbox"
+    id="__nav_6_2_4_5_5_26"
+    
+  />
+                               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../element_designs/">Element Designs</a>
+
+     
+    <label for="__nav_6_2_4_5_5_26">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../wcm_config_wcmviewer_urlgen/" class="md-nav__link">
+    URL Generation by using PathCmpnt
+  </a>
+</li>
+    
+    </ul>
+  </nav>
+  
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_6"
+    type="checkbox"
+    id="__nav_6_2_4_5_6"
+    
+  />
+                               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../authoring_templates/">Authoring Templates</a>
+
+     
+    <label for="__nav_6_2_4_5_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../../components/" class="md-nav__link">
+    Components
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../../wcm_dev_pres-temp/" class="md-nav__link">
+    Presentation templates
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../../wcm_dev_profiling_categories_creating/" class="md-nav__link">
+    Categories
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../../wcm_dev_sites_items_creating/" class="md-nav__link">
+    Site areas
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_11"
+    type="checkbox"
+    id="__nav_6_2_4_5_11"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../feddocs/">Personalizing federated documents</a>
+
+     
+    <label for="__nav_6_2_4_5_11">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_12"
+    type="checkbox"
+    id="__nav_6_2_4_5_12"
+    
+  />
+                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../pages/">Pages</a>
+
+     
+    <label for="__nav_6_2_4_5_12">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_13"
+    type="checkbox"
+    id="__nav_6_2_4_5_13"
+    
+  />
+                 
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../reserved_auth_portlet/">Reserved authoring portlet</a>
+
+     
+    <label for="__nav_6_2_4_5_13">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_14"
+    type="checkbox"
+    id="__nav_6_2_4_5_14"
+    
+  />
+                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../tagrate_managing/">Tagging and Rating for web content</a>
+
+     
+    <label for="__nav_6_2_4_5_14">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_15"
+    type="checkbox"
+    id="__nav_6_2_4_5_15"
+    
+  />
+                           
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../tags/">Web Content Tags</a>
+
+     
+    <label for="__nav_6_2_4_5_15">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_5_16"
+    type="checkbox"
+    id="__nav_6_2_4_5_16"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../taxonomies/">Taxonomies</a>
+
+     
+    <label for="__nav_6_2_4_5_16">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_6"
+    type="checkbox"
+    id="__nav_6_2_4_6"
+    
+  />
+                                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../change_management/">Change Management</a>
+
+     
+    <label for="__nav_6_2_4_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../../../accessibility/" class="md-nav__link">
+    Accessibility Features
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_4_8"
+    type="checkbox"
+    id="__nav_6_2_4_8"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../auth_portlet_settings/">Authoring portlet settings</a>
+
+     
+    <label for="__nav_6_2_4_8">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_5"
+    type="checkbox"
+    id="__nav_6_2_5"
+    
+  />
+                               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../dcs/">Document Conversion Services</a>
+
+     
+    <label for="__nav_6_2_5">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_6"
+    type="checkbox"
+    id="__nav_6_2_6"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../multi_lingual/">Multilingual Content</a>
+
+     
+    <label for="__nav_6_2_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_7"
+    type="checkbox"
+    id="__nav_6_2_7"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../renditions/">Renditions</a>
+
+     
+    <label for="__nav_6_2_7">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2_8"
+    type="checkbox"
+    id="__nav_6_2_8"
+    
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../wci/">Web Content Integrator</a>
+
+     
+    <label for="__nav_6_2_8">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_3"
+    type="checkbox"
+    id="__nav_6_3"
+    
+  />
+                                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../../wcm_delivery/">Deliver Web Content</a>
+
+     
+    <label for="__nav_6_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_4"
+    type="checkbox"
+    id="__nav_6_4"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../../wcm_configuration/">Configure Web Content Manager</a>
+
+     
+    <label for="__nav_6_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_5"
+    type="checkbox"
+    id="__nav_6_5"
+    
+  />
+                                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../../wcm_development/">Extend Web Content Manager</a>
+
+     
+    <label for="__nav_6_5">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_6"
+    type="checkbox"
+    id="__nav_6_6"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../../digital_assets/">Digital Asset Management</a>
+
+     
+    <label for="__nav_6_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_7"
+    type="checkbox"
+    id="__nav_6_7"
+    
+  />
+               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../../design_studio/">Design studio</a>
+
+     
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8"
+    type="checkbox"
+    id="__nav_6_8"
+    
+  />
+                                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../../../pzn/">Personalization</a>
+
+     
+    <label for="__nav_6_8">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+ 
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../../../../extend_dx/" class="md-nav__link">
+    Extend DX
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../../../../../guide_me/tutorials/"
+    class="md-nav__link"
+  >
+    Guide Me
+  </a>
+</li>
+  
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/links_element/wcm_dev_elements_link_add_template.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="adding-a-link-element-to-a-template">Adding a link element to a template</h1>
+<p>You add a link element to an authoring template when you want the link element to be used by a set of items that use the same authoring template.</p>
+<ol>
+<li>
+<p>Open or create an authoring template.</p>
+</li>
+<li>
+<p>Click <strong>Manage Elements</strong> .</p>
+</li>
+<li>
+<p>Select <strong>Link</strong> as the element type.</p>
+</li>
+<li>
+<p>Enter a name. Do not use double-byte and non-ASCII characters.</p>
+</li>
+<li>
+<p>Enter a display title to use as the title of the element displayed indexes and forms.</p>
+</li>
+<li>
+<p>If you have created a text provider plug-in for a multi-locale site, you can also select the text provider and enter a key to look up a string from the selected text provider. The text provider displays a different display title for each language it has been configured for. The text entered in the <strong>Display Title</strong> field is only used if an appropriate display title is not available from the selected text provider, or if the text provider is not available.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>. The link element is added to your form.</p>
+</li>
+<li>
+<p>Go to the link element you created. You create a link, or leave the link element fields blank if you want your content creators to select a link.</p>
+</li>
+<li>
+<p>Select either <strong>External URL</strong>, or <strong>Web Content</strong>.</p>
+</li>
+<li>
+<p>To add a link to a URL, either type or paste the URL in the <strong>Type a URL</strong> field.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The inserted URL is rendered relative to the URL of the site area of the currently rendered content item. Internet protocols, such as "<code>Http://</code>", must be added at the beginning of the inserted link if an absolute URL is intended to be rendered.</p>
+</div>
+</li>
+<li>
+<p>To add a link to web content, an image component, a file component, or an existing link component, click <strong>Browse Content</strong>.</p>
+<p>In CF08 or higher, click <strong>Browse</strong>.</p>
+<ol>
+<li>
+<p>Select the library that the item is stored in.</p>
+</li>
+<li>
+<p>Select the item to link to.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong></p>
+</li>
+</ol>
+</li>
+<li>
+<p>To add a link to a document in the current place, click <strong>Browse Libraries</strong>.</p>
+<p>In CF08 or higher, click <strong>Browse</strong>.</p>
+<ol>
+<li>
+<p>Select the library that the document is stored in.</p>
+</li>
+<li>
+<p>Select the document to link to.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <strong>Link Attributes</strong> to set additional settings.</p>
+<ol>
+<li>
+<p>For external URLs:</p>
+<p>Select a link display type:</p>
+<ul>
+<li>
+<p><strong>Text</strong></p>
+<p>Select this type to display the link as text.</p>
+<ul>
+<li><strong>Use URL as link text</strong>: Select this option to use the URL of the item that is linked to as the link text.</li>
+<li><strong>Link text</strong>: Enter the text to use as the link text. To enter text, you must clear the <strong>Use URL as link text</strong> check box.
+        -   <strong>Image Component</strong></li>
+</ul>
+<p>Select this type to display the link as an image. Click <strong>Select Image</strong> to select an image component to use as the link image.</p>
+</li>
+</ul>
+<p>Enter a description of the link by selecting either:</p>
+<ul>
+<li>
+<p><strong>Use URL as link description</strong></p>
+<p>Select this option to use the URL of the item that is linked to as the link description.</p>
+</li>
+<li>
+<p><strong>Enter description</strong></p>
+<p>Select this option to enter the text to use as the link description. To enter a description, you must clear the <strong>Use URL as link description</strong> check box.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For Web content:</p>
+<p>Select a link display type:</p>
+<ul>
+<li>
+<p><strong>Text</strong></p>
+<p>Select this type to display the link as text.</p>
+<ul>
+<li><strong>Use title of linked item</strong>: Select this option to use the title of the item that is linked to as the link text.</li>
+<li><strong>Link text</strong>: Enter the text to use as the link text. To enter text, you must clear the <strong>Use title of linked item</strong> check box.
+        -   <strong>Image Component</strong></li>
+</ul>
+<p>Select this type to display the link as an image. Click <strong>Select Image</strong> to select an image component to use as the link image.</p>
+</li>
+</ul>
+<p>Enter a description of the link by selecting either:</p>
+<ul>
+<li>
+<p><strong>Use description of linked item</strong></p>
+<p>Select this option to use the description of the item that is linked to as the link description.</p>
+</li>
+<li>
+<p><strong>Enter description</strong></p>
+<p>Select this option to enter the text to use as the link description. To enter a description, you must clear the <strong>Use description of linked item</strong> check box.</p>
+</li>
+</ul>
+<p>Enter an optional query string. You can use a query string here as a search parameter in a menu element. For example, you might enter this query string: <code>myquery=shoes</code> You can then specify "myquery" as a search parameter in a menu element.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Select a link target:</p>
+<ul>
+<li>
+<p><strong>Name</strong></p>
+<p>Select this option to specify the name of the link target.</p>
+</li>
+<li>
+<p><strong>New Window</strong></p>
+<p>Select this option to open the link in a new browser window.</p>
+</li>
+<li>
+<p><strong>None</strong></p>
+<p>Select this option specify no link target.</p>
+</li>
+<li>
+<p><strong>Parent</strong></p>
+<p>Select this option to open the link in the parent frameset of the frame the link appears in, replacing the entire frameset.</p>
+</li>
+<li>
+<p><strong>Self</strong></p>
+<p>Select this option to open the link in the current frame, replacing the content in that frame.</p>
+</li>
+<li>
+<p><strong>Top</strong></p>
+<p>Select this option to open the link in the current browser window, replacing all frames.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Enter extra attributes, such as style sheet classes or JavaScript. These attributes are used in the same way as using an attribute in a "<code>&lt;a href=" "&gt;&lt;/a&gt;</code>" tag.</p>
+<p>For example:</p>
+<ul>
+<li>To create the link tag, <code>&lt;a class="classname" href="http://www.ibm.com"&gt;&lt;/a&gt;</code> you would enter class="classname" in the <strong>Additional attributes</strong> field.</li>
+<li>To create the link tag, <code>&lt;a name="homepage" class="classname" href="http://www.ibm.com"&gt;&lt;/a&gt;</code> you would enter name="homepage" class="classname" in the <strong>Additional attributes</strong> field.</li>
+<li>
+<p>Click <img alt="properties" src="../../../../../../../images/propIcon.jpg" /> to open the display properties of the element. This is where you define how the element is displayed on the item form.</p>
+</li>
+<li>
+<p>To display the element as a required field select <strong>Identify this as a required field</strong>.</p>
+</li>
+<li>
+<p>To hide a field on the content form from all users select <strong>Hide field</strong>. You must specify a default value if the field is a required field.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Administrators and managers can choose to display hidden fields and elements in an item by clicking <strong>Show hidden fields</strong>.</p>
+</div>
+</li>
+<li>
+<p>By default, a content creator can select any type of link. To restrict the types of links that a content creator can select, click <strong>Select</strong> within the <strong>Restrict Link Types</strong> section. Select the appropriate link types and then click <strong>OK</strong>. To remove a link type from the restricted list, select the checkbox next to the link type, and click <strong>Remove</strong>.</p>
+</li>
+<li>
+<p>Type the number of characters to use in <strong>Field Width</strong> to set the size of the displayed field. If you leave this blank, the default field size is used.</p>
+</li>
+<li>
+<p>Type a number into the maximum or minimum characters or words fields to set limits on the number of characters or words a user can enter in a field.</p>
+</li>
+<li>
+<p>Select the users or groups you want to grant exclusive edit access to a field or element by clicking <strong>Add Editors</strong>.</p>
+</li>
+<li>
+<p>Select the users or groups you want to grant exclusive view access to a field or element by clicking <strong>Add Viewers</strong>.</p>
+</li>
+<li>
+<p>Type field-specific help into <strong>Field help</strong> text. This displays with the element in the content form.</p>
+<p>If you have created a text provider plug-in for a multi-locale site, you can also select the text provider and enter a key to look up a string from the selected text provider. The text provider displays a different help text for each language it has been configured for. The text entered in the <strong>Field help</strong> field will then only be used if an appropriate help text is not available from the selected text provider, or if the text provider is not available.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save the authoring template.</p>
+</li>
+</ol>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../wcm_dev_elements_link_adding/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding a ink element to an item" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Adding a ink element to an item
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../wcm_dev_elements_link_props/" class="md-footer__link md-footer__link--next" aria-label="Next: Selecting a link" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Selecting a link
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        <label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        <label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

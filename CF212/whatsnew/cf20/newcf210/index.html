@@ -1,0 +1,1494 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A next-gen documentation site for HCL Digital Experience.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/whatsnew/cf20/newcf210/">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>What's new in CF210 - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/dx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-169645537-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#whats-new-in-cf210" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div class="md-banner--feedback">
+<span class="twemoji">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.25 21.6 13.52l68.6 141.28 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5L433.6 328.4l26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5L31.11 218.2c-6.46-6.3-8.75-15.8-5.91-24.5 2.83-8.6 10.3-14.9 19.29-16.2l153.21-22.7 68.6-141.28C270.4 5.249 278.7 0 287.9 0zm0 78.95L235.4 187.2c-3.5 7.1-10.3 12.1-18.1 13.3L98.98 217.9 184.9 303c5.5 5.5 8 13.4 6.7 21.1l-20.2 119.6 105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2-20.2-119.6c-1.3-7.7 1.3-15.6 6.8-21.1l85.9-85.1-118.3-17.4c-7.9-1.2-14.7-6.2-18.1-13.3L287.9 78.95z"/></svg> 
+</span>
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. <br>Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../latest/whatsnew/cf20/newcf210/"> 
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              What's new in CF210
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../get_started/product_overview/" class="md-tabs__link">
+        Get Started
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../newcf212/" class="md-tabs__link md-tabs__link--active">
+        What's New
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../deployment/" class="md-tabs__link">
+        Deploy DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../build_sites/" class="md-tabs__link">
+        Build Sites
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../manage_content/" class="md-tabs__link">
+        Manage Content
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../extend_dx/" class="md-tabs__link">
+        Extend DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../guide_me/tutorials/" class="md-tabs__link">
+        Guide Me
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../.." class="md-nav__link">
+    Home
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../get_started/product_overview/"
+    class="md-nav__link"
+  >
+    Get Started
+  </a>
+</li>
+  
+    
+      
+      
+                 
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3"
+    type="checkbox"
+    id="__nav_3"
+    checked
+  />
+                           
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="What's New"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_3">
+      <span class="md-nav__icon md-icon"></span>
+      What's New
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3_1"
+    type="checkbox"
+    id="__nav_3_1"
+    checked
+  />
+                                                                                  
+
+  <div class="md-nav__link md-nav__link--index">
+    <a href="../newcf212/"> CF200 and later </a>
+    <label for="__nav_3_1">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+  </div>
+
+      
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="CF200 and later"
+    data-md-level="2"
+  >
+    <label class="md-nav__title" for="__nav_3_1">
+      <span class="md-nav__icon md-icon"></span>
+      CF200 and later
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+                
+<li class="md-nav__item">
+  <a href="../newcf212/" class="md-nav__link">
+    What's new in CF212
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf211/" class="md-nav__link">
+    What's new in CF211
+  </a>
+</li>
+    
+                
+<li class="md-nav__item md-nav__item--active">
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="toc"
+    type="checkbox"
+    id="__toc"
+  />
+
+        
+  <label class="md-nav__link md-nav__link--active" for="__toc">
+    What's new in CF210
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  
+  <a href="./" class="md-nav__link md-nav__link--active">
+    What's new in CF210
+  </a>
+
+    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#all-digital-experience-versions-85-90-95" class="md-nav__link">
+    All  Digital Experience Versions (8.5, 9.0, 9.5)
+  </a>
+  
+    <nav class="md-nav" aria-label="All  Digital Experience Versions (8.5, 9.0, 9.5)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidance-to-configure-a-custom-tinymce-editor-toolbar" class="md-nav__link">
+    Guidance to configure a custom TinyMCE editor toolbar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notice-of-deprecation-of-textboxio-rich-text-editor" class="md-nav__link">
+    Notice of deprecation of Textbox.io Rich Text Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-hcl-unica-campaign-segment-picker-for-leveraging-segments-in-pzn-rules" class="md-nav__link">
+    New HCL Unica Campaign Segment Picker for leveraging segments in PZN Rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ability-to-sync-the-title-of-dx-pages-to-the-portal-site-wcm-library-in-the-jcr" class="md-nav__link">
+    Ability to Sync the Title of DX pages to the Portal Site WCM library in the JCR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menu-element-sorting-options" class="md-nav__link">
+    Menu Element Sorting Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-portlet-development-utilities-and-page-creation-samples-on-hcl-github" class="md-nav__link">
+    New Portlet Development Utilities and Page creation samples on HCL GitHub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dxclient-updates" class="md-nav__link">
+    DXClient Updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-session-timeout-for-non-authenticated-site-pages" class="md-nav__link">
+    Option to configure session timeout for non-authenticated Site pages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-experience-95-container-version" class="md-nav__link">
+    Digital Experience 9.5 Container Version
+  </a>
+  
+    <nav class="md-nav" aria-label="Digital Experience 9.5 Container Version">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attention-updated-default-resource-requests-and-limits-for-kubernetes-deployments" class="md-nav__link">
+    ATTENTION: Updated default resource requests and limits for Kubernetes deployments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-composer-copy-content-items-and-new-rename-option" class="md-nav__link">
+    Content Composer – Copy content items and new rename option
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-apply-relative-urls-for-dam-references-in-wcm-during-staging-to-production" class="md-nav__link">
+    Option to apply relative URLs for DAM references in WCM during staging to production
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-aspect-ratios-for-cropping-of-images-in-dam" class="md-nav__link">
+    Option to configure aspect ratios for cropping of images in DAM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-studio-beta-update" class="md-nav__link">
+    Design Studio Beta Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-credentials-from-secrets" class="md-nav__link">
+    Option to Configure Credentials from Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-content-security-policy-frame-options" class="md-nav__link">
+    Option to configure Content-Security-Policy Frame Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-samesite-cookie-attribute" class="md-nav__link">
+    Option to configure SameSite Cookie Attribute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-latest-hcl-digital-experience-95-education-materials-on-hclsoftware-u" class="md-nav__link">
+    Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+  
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../newcf209/" class="md-nav__link">
+    What's new in CF209
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf208/" class="md-nav__link">
+    What's new in CF208
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf207/" class="md-nav__link">
+    What's new in CF207
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf206/" class="md-nav__link">
+    What's new in CF206
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf205/" class="md-nav__link">
+    What's new in CF205
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf204/" class="md-nav__link">
+    What's new in CF204
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf203/" class="md-nav__link">
+    What's new in CF203
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf202/" class="md-nav__link">
+    What's new in CF202
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf201/" class="md-nav__link">
+    What's new in CF201
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf200/" class="md-nav__link">
+    What's new in CF200
+  </a>
+</li>
+    
+    </ul>
+  </nav>
+  
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3_2"
+    type="checkbox"
+    id="__nav_3_2"
+    
+  />
+                                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../cf19/">CF19 to CF199</a>
+
+     
+    <label for="__nav_3_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3_3"
+    type="checkbox"
+    id="__nav_3_3"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../cf18/">CF18 to CF184</a>
+
+     
+    <label for="__nav_3_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3_4"
+    type="checkbox"
+    id="__nav_3_4"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../cf17/">CF17 to CF173</a>
+
+     
+    <label for="__nav_3_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../deprecated_features/" class="md-nav__link">
+    Deprecated features
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../unsupported_features/" class="md-nav__link">
+    Unsupported features
+  </a>
+</li>
+    
+    </ul>
+  </nav>
+  
+</li>
+
+ 
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../deployment/" class="md-nav__link">
+    Deploy DX
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../build_sites/" class="md-nav__link">
+    Build Sites
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../manage_content/" class="md-nav__link">
+    Manage Content
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../extend_dx/" class="md-nav__link">
+    Extend DX
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../guide_me/tutorials/"
+    class="md-nav__link"
+  >
+    Guide Me
+  </a>
+</li>
+  
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#all-digital-experience-versions-85-90-95" class="md-nav__link">
+    All  Digital Experience Versions (8.5, 9.0, 9.5)
+  </a>
+  
+    <nav class="md-nav" aria-label="All  Digital Experience Versions (8.5, 9.0, 9.5)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidance-to-configure-a-custom-tinymce-editor-toolbar" class="md-nav__link">
+    Guidance to configure a custom TinyMCE editor toolbar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notice-of-deprecation-of-textboxio-rich-text-editor" class="md-nav__link">
+    Notice of deprecation of Textbox.io Rich Text Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-hcl-unica-campaign-segment-picker-for-leveraging-segments-in-pzn-rules" class="md-nav__link">
+    New HCL Unica Campaign Segment Picker for leveraging segments in PZN Rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ability-to-sync-the-title-of-dx-pages-to-the-portal-site-wcm-library-in-the-jcr" class="md-nav__link">
+    Ability to Sync the Title of DX pages to the Portal Site WCM library in the JCR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menu-element-sorting-options" class="md-nav__link">
+    Menu Element Sorting Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-portlet-development-utilities-and-page-creation-samples-on-hcl-github" class="md-nav__link">
+    New Portlet Development Utilities and Page creation samples on HCL GitHub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dxclient-updates" class="md-nav__link">
+    DXClient Updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-session-timeout-for-non-authenticated-site-pages" class="md-nav__link">
+    Option to configure session timeout for non-authenticated Site pages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-experience-95-container-version" class="md-nav__link">
+    Digital Experience 9.5 Container Version
+  </a>
+  
+    <nav class="md-nav" aria-label="Digital Experience 9.5 Container Version">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attention-updated-default-resource-requests-and-limits-for-kubernetes-deployments" class="md-nav__link">
+    ATTENTION: Updated default resource requests and limits for Kubernetes deployments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-composer-copy-content-items-and-new-rename-option" class="md-nav__link">
+    Content Composer – Copy content items and new rename option
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-apply-relative-urls-for-dam-references-in-wcm-during-staging-to-production" class="md-nav__link">
+    Option to apply relative URLs for DAM references in WCM during staging to production
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-aspect-ratios-for-cropping-of-images-in-dam" class="md-nav__link">
+    Option to configure aspect ratios for cropping of images in DAM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-studio-beta-update" class="md-nav__link">
+    Design Studio Beta Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-credentials-from-secrets" class="md-nav__link">
+    Option to Configure Credentials from Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-content-security-policy-frame-options" class="md-nav__link">
+    Option to configure Content-Security-Policy Frame Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-to-configure-samesite-cookie-attribute" class="md-nav__link">
+    Option to configure SameSite Cookie Attribute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-latest-hcl-digital-experience-95-education-materials-on-hclsoftware-u" class="md-nav__link">
+    Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/whatsnew/cf20/newcf210.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="whats-new-in-cf210">What's new in CF210</h1>
+<p>The following features and updates are available to customers installing HCL Digital Experience Container Update and CF210 on supported platforms:</p>
+<p><strong>All  Digital Experience Versions (8.5, 9.0, 9.5)</strong></p>
+<ul>
+<li>Guidance to configure a custom TinyMCE editor toolbar</li>
+<li>Notice of deprecation of Textbox.io Rich Text Editor</li>
+<li>New HCL Unica Campaign Segment Picker for leveraging segments in PZN Rules</li>
+<li>Ability to Sync the Title of DX pages to the Portal Site WCM library in the JCR</li>
+<li>Menu Element Sorting Options</li>
+<li>New Portlet Development Utilities and Page creation samples on HCL GitHub</li>
+<li>DXClient Updates</li>
+<li>Option to configure session timeout for non-authenticated Site pages</li>
+</ul>
+<p><strong>Digital Experience 9.5 Container Version</strong></p>
+<ul>
+<li><strong>ATTENTION:</strong> Updated default resource requests and limits for Kubernetes deployments</li>
+<li>Content Composer - Copy content items and new rename option  </li>
+<li>Option to apply relative URLs for DAM references in WCM during staging to production</li>
+<li>Option to configure aspect ratios for cropping of images in DAM</li>
+<li>Design Studio Beta Update</li>
+<li>Option to Configure Credentials from Secrets</li>
+<li>Option to configure Content-Security-Policy Frame Options</li>
+<li>Option to configure SameSite Cookie Attribute</li>
+</ul>
+<h2 id="all-digital-experience-versions-85-90-95">All  Digital Experience Versions (8.5, 9.0, 9.5)</h2>
+<h3 id="guidance-to-configure-a-custom-tinymce-editor-toolbar">Guidance to configure a custom TinyMCE editor toolbar</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Containers</label><label for="__tabbed_1_2">On-Premises</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>New guidance is added to configure the <a href="https://www.tiny.cloud/docs/tinymce/6/menus-configuration-options/">Tiny MCE Editor toolbar</a> and set desired icons for use both in the HCL Web Content Manager authoring portlet and with the Web Content in-place editing function. See the topic <a href="../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom/">Rich text editor toolbar configuration options</a> for more information.</p>
+</div>
+<div class="tabbed-block">
+<p>New guidance is added to configure the <a href="https://www.tiny.cloud/docs/tinymce/6/menus-configuration-options/">Tiny MCE Editor toolbar</a> and set desired icons for use both in the HCL Web Content Manager authoring portlet and with the Web Content in-place editing function. See the topic <a href="../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom/">Rich text editor toolbar configuration options</a> for more information.</p>
+</div>
+</div>
+</div>
+<h3 id="notice-of-deprecation-of-textboxio-rich-text-editor">Notice of deprecation of Textbox.io Rich Text Editor</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Containers</label><label for="__tabbed_2_2">On-Premises</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic <a href="../../deprecated_features/">Deprecated features</a> for more information.</p>
+</div>
+<div class="tabbed-block">
+<p>The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic <a href="../../deprecated_features/">Deprecated features</a> for more information.</p>
+</div>
+</div>
+</div>
+<h3 id="new-hcl-unica-campaign-segment-picker-for-leveraging-segments-in-pzn-rules">New HCL Unica Campaign Segment Picker for leveraging segments in PZN Rules</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Containers</label><label for="__tabbed_3_2">On-Premises</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A new Unica Segment picker is available to select and add <a href="https://www.hcltechsw.com/unica/offerings/campaign">HCL Unica Campaign</a> segments when defining Digital Experience Personalization rules. See the Help Center topic <a href="../../../manage_content/pzn/pzn_unica_integration/unica_segment_picker/">Unica Segment Picker for leveraging segments in PZN Rules</a> for more information.</p>
+</div>
+<div class="tabbed-block">
+<p>A new Unica Segment picker is available to select and add <a href="https://www.hcltechsw.com/unica/offerings/campaign">HCL Unica Campaign</a> segments when defining Digital Experience Personalization rules. See the Help Center topic <a href="../../../manage_content/pzn/pzn_unica_integration/unica_segment_picker/">Unica Segment Picker for leveraging segments in PZN Rules</a> for more information.</p>
+</div>
+</div>
+</div>
+<h3 id="ability-to-sync-the-title-of-dx-pages-to-the-portal-site-wcm-library-in-the-jcr">Ability to Sync the Title of DX pages to the Portal Site WCM library in the JCR</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Containers</label><label for="__tabbed_4_2">On-Premises</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The Managed Pages feature enables the storing of pages in the Digital Experience Portal Site WCM library. A new feature is provided to sync the title of DX pages in addition to storage of page object ids, improving page sorting and search functions. See the Help Center topic <a href="../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_sorting_pages/">Update Sorting Page by Title</a> for more information.</p>
+</div>
+<div class="tabbed-block">
+<p>The Managed Pages feature enables the storing of pages in the Digital Experience Portal Site WCM library. A new feature is provided to sync the title of DX pages in addition to storage of page object ids, improving page sorting and search functions. See the Help Center topic <a href="../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_sorting_pages/">Update Sorting Page by Title</a> for more information. </p>
+</div>
+</div>
+</div>
+<h3 id="menu-element-sorting-options">Menu Element Sorting Options</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Containers</label><label for="__tabbed_5_2">On-Premises</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>New sorting options are available when defining a Menu element. See the Help Center topic <a href="../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/menu_element/wcm_dev_elements_menu_format/">Defining menu element formatting options</a> for more information.</p>
+</div>
+<div class="tabbed-block">
+<p>New sorting options are available when defining a Menu element. See the Help Center topic <a href="../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/menu_element/wcm_dev_elements_menu_format/">Defining menu element formatting options</a> for more information.</p>
+</div>
+</div>
+</div>
+<h3 id="new-portlet-development-utilities-and-page-creation-samples-on-hcl-github">New Portlet Development Utilities and Page creation samples on HCL GitHub</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Containers</label><label for="__tabbed_6_2">On-Premises</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Developers can access a new repository of Portlet Development Utilities to automate creating pages, also pages from templates and option to deploy through DXClient, using the DX Java API and as a custom maven archetype to create a new JSR286 portlet. See the <a href="https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities">HCL Github repositories</a> for details. </p>
+</div>
+<div class="tabbed-block">
+<p>Developers can access a new repository of Portlet Development Utilities to automate creating pages, also pages from templates and option to deploy through DXClient, using the DX Java API and as a custom maven archetype to create a new JSR286 portlet. See the <a href="https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities">HCL Github repositories</a> for details. </p>
+</div>
+</div>
+</div>
+<h3 id="dxclient-updates">DXClient Updates</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Containers</label><label for="__tabbed_7_2">On-Premises</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Updates to DXClient release tooling adds a virtual portal context option for WCM export/import library functions and removes deprecated parameters. See the Help Center topics <a href="../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/wcmlibraries/">DXClient - Exporting and importing WCM libraries</a> and <a href="../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/">DXClient Artifact Types</a> for more information.</p>
+</div>
+<div class="tabbed-block">
+<p>Updates to DXClient release tooling adds a virtual portal context option for WCM export/import library functions and removes deprecated parameters. See the Help Center topics <a href="../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/wcmlibraries/">DXClient - Exporting and importing WCM libraries</a> and <a href="../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/">DXClient Artifact Types</a> for more information.</p>
+</div>
+</div>
+</div>
+<h3 id="option-to-configure-session-timeout-for-non-authenticated-site-pages">Option to configure session timeout for non-authenticated Site pages</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Containers</label><label for="__tabbed_8_2">On-Premises</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A new configuration option is provided to control the display of timeout error messaging for users accessing anonymous site pages. See the Help Center topic <a href="../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cfg_svc/">Configuration Service</a> for more information.</p>
+</div>
+<div class="tabbed-block">
+<p>A new configuration option is provided to control the display of timeout error messaging for users accessing anonymous site pages. See the Help Center topic <a href="../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cfg_svc/">Configuration Service</a> for more information.</p>
+</div>
+</div>
+</div>
+<h2 id="digital-experience-95-container-version">Digital Experience 9.5 Container Version</h2>
+<h3 id="attention-updated-default-resource-requests-and-limits-for-kubernetes-deployments">ATTENTION: Updated default resource requests and limits for Kubernetes deployments</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Containers</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The minimal system requirements for Kubernetes deployments have been updated. See the <a href="../../../get_started/plan_deployment/container_deployment/limitations_requirements/">Containerization requirements and limitations</a> for more information.</p>
+<p>The minimal system requirements are now the default settings in the HCL DX's helm charts' <code>values.yaml</code>.</p>
+<p>If you have not overwritten the resource configuration in your <code>custom-values.yaml</code>, verify the updated settings to ensure they still fit your purpose. </p>
+<p>If you relied on the default values in previous versions, check if the minimal system requirement settings still fit your deployment scenario. Ensure proper performance testing before rolling this change out.</p>
+<p>Feel free to update your <code>custom-values.yaml</code> with resource settings that fit your needs. You may also want to check the <a href="../newcf210-old-resources-detail/">default resource settings in previous releases</a>.</p>
+</div>
+</div>
+</div>
+<h3 id="content-composer-copy-content-items-and-new-rename-option">Content Composer – Copy content items and new rename option</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Containers</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>DX 9.5 Container Update CF210 adds capability to copy content items to another site location, and an option to save a content item under a new name if naming conflicts occur. See the topic <a href="../../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items/">Content Composer Manage Content Items</a> for more information.</p>
+</div>
+</div>
+</div>
+<h3 id="option-to-apply-relative-urls-for-dam-references-in-wcm-during-staging-to-production">Option to apply relative URLs for DAM references in WCM during staging to production</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Containers</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A new option is available to configure Web Content Manager services in the IBM WebSphere Administrative Console to use relative URLs for DAM references in WCM content during staging to production operations. See the topic <a href="../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/">Staging DAM to rendering environments</a> for more information.</p>
+</div>
+</div>
+</div>
+<h3 id="option-to-configure-aspect-ratios-for-cropping-of-images-in-dam">Option to configure aspect ratios for cropping of images in DAM</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Containers</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>It is now possible to <a href="../../../manage_content/digital_assets/configuration/dam_crop_aspect_ratio/">define custom aspect rations for cropping</a> of images in DAM.   </p>
+</div>
+</div>
+</div>
+<h3 id="design-studio-beta-update">Design Studio Beta Update</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Containers</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Effective with HCL Digital Experience 9.5 CF210, the Design Studio Beta has been removed. Future Digital Experience 9.5 releases will incorporate feedback on the features received during the Beta evaluation period. See the Help Center topic <a href="../../deprecated_features/">Deprecated features</a> for more information.</p>
+<p>As a result of the removal of Design Studio Beta (software) from the release, the following <a href="https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/#tag/Content/paths/~1contents/get">Web Content Manager APIs</a> related to that software are removed:</p>
+<ul>
+<li>/component/content-spots - Used to manage content-spot components.</li>
+<li>/containers - Used to manage container objects.</li>
+<li>/content-pages - Used to manage content-page objects.</li>
+<li>/content-sites - Used to manage content-site objects.</li>
+<li>/contentsRest - Used to manage content objects with API configuration including endpoint and HTTP methods.</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="option-to-configure-credentials-from-secrets">Option to Configure Credentials from Secrets</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Containers</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A new option is added for administrators to configure the credentials used in HCL Digital Experience 9.5 Helm deployments by creating a secret and adjusting references in the <code>custom-values.yaml</code> file. See the Help Center topic <a href="../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials/#configuring-credentials-from-secrets">Configure Credentials from Secrets</a> for more information.</p>
+</div>
+</div>
+</div>
+<h3 id="option-to-configure-content-security-policy-frame-options">Option to configure Content-Security-Policy Frame Options</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Containers</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A new configuration option in the <code>custom-values.yaml</code> file allows to configure <a href="../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking/#configuring-content-security-policy-frame-options">Content Security Policy:frame-ancestors</a> for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.</p>
+</div>
+</div>
+</div>
+<h3 id="option-to-configure-samesite-cookie-attribute">Option to configure SameSite Cookie Attribute</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Containers</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A new configuration option in the <code>custom-values.yaml</code> file allows to configure <a href="../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking/#configuring-samesite-cookie-attribute">SameSite Cookie Attribute</a> for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.</p>
+</div>
+</div>
+</div>
+<h2 id="access-the-latest-hcl-digital-experience-95-education-materials-on-hclsoftware-u">Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U</h2>
+<p>The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the <a href="https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys">HCL Digital Experience</a> section of HCLSoftware U and the <a href="https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=">What’s New for Digital Experience</a> section for more information.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 10, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../newcf211/" class="md-footer__link md-footer__link--prev" aria-label="Previous: What&#39;s new in CF211" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              What's new in CF211
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../newcf209/" class="md-footer__link md-footer__link--next" aria-label="Next: What&#39;s new in CF209" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              What's new in CF209
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        <label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        <label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
