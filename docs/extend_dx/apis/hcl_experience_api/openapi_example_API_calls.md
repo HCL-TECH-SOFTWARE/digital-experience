@@ -159,9 +159,9 @@ Follow the steps below to enable uploading an SVG file in DAM API:
     ![Enable SVG file in  DAM API](../../../images/Enable_svgfile_DAM_API.png)
 
 
-## Add a new mime type in DAM 
+## Adding a new mime type in DAM 
 
-Follow the steps below to enable uploading an SVG file in DAM API:
+Refer to the following steps to enable uploading an SVG file in DAM API:
 
 1. Using any API Tool, log in to Ring API via:
 
@@ -175,17 +175,19 @@ Follow the steps below to enable uploading an SVG file in DAM API:
 
     `https://<domain>/dx/api/dam/v1/mediatypegroups`
 
-4. Do a **POST** request to the below endpoint to add a new mime type
+4. Do a **POST** request to the following endpoint to add a new mime type:
+
     `https://<domain>/dx/api/dam/v1/mediatypes`
 
-    Example to add a new webp file type:
+    To add a new webp file type, refer to the following example:
+    
         [{
             "mimeType": "image/webp",
             "extensions": ["webp"],
             "mediaTypeGroupId": "59b514174bffe4ae402b3d63aad79fe0"
         }]
 
-If you wish to configure renditions for the newly added mime type, refer [Extensibility configuration](../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md)
+If you want to configure renditions for the newly added mime type, refer to [Extensibility configuration](../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md).
 
 ## HCLSoftware U learning materials
 
