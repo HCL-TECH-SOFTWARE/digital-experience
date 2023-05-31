@@ -179,7 +179,7 @@ The payload of the POST request should look like this:
 
     `https://<domain>/dx/api/dam/v1/mediatypes`
 
-    To add a new webp file type, refer to the following example:
+    To add a new webp file type, use a payload similar to:
     
         [{
             "mimeType": "image/webp",
