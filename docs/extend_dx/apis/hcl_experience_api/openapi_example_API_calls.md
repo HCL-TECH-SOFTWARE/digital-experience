@@ -171,7 +171,7 @@ Refer to the following steps to enable uploading an SVG file in DAM API:
 
     `{ "username": "<userId>" "password": "<password>" }`
 
-3. Access **GET** mediatypegroups to get the media type group against which the new media type is to be added and find the id for image media type group.
+3. Access **GET** mediatypegroups to get the media type group into which the new media type should be added. Find the id for image media type group.
 
     `https://<domain>/dx/api/dam/v1/mediatypegroups`
 
