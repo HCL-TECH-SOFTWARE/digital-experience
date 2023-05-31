@@ -35,9 +35,13 @@ You can deploy custom Digital Data Connector \(DDC\) for HCL Portal plug-ins as 
 -   **[Creating and deploying custom attribute value processor plug-ins](crt_dply_cstm_attval_pro_plgin.md)**  
 You can deploy custom attribute value processor plug-ins for DDC into the HCL Portal application extension registry. Attribute value processor plug-ins can be used to process the value of an item attribute after the value is determined by the list rendering profile.
 -   **[Digital Data Connector cache tuning](../ddc/ddc_cache_tuning/index.md)**  
-To improve performance, you can tune the caches for the Digital Data Connector \(DDC\) for HCL Portal framework.
+To improve performance, you can tune the caches for the Digital Data Connector (DDC) for HCL Portal framework.
 -   **[Hints and tips for Digital Data Connector](plrf_hint_tip.md)**  
-Learn about things that are useful to know when you work with the social rendering integration with Digital Data Connector \(DDC\) for HCL Portal.
+Learn about things that are useful to know when you work with the social rendering integration with Digital Data Connector (DDC) for HCL Portal.
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use the Digital Data Connector, go to [Digital Data Connector](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451). To try it out yourself, refer to [Digital Data Connector for Beginners Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Digital_Data_Connector_for_Beginners.pdf) and corresponding [Digital Data Connector for Beginners Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Digital_Data_Connector_Lab_Resources.zip).
 
 
 ???+ info "Related information"

@@ -8,3 +8,4 @@ nav:
     - DAM Crop Aspect Ratio Configuration: dam_crop_aspect_ratio.md
     - Configure Digital Asset Management in virtual portals: Configure_DAM_virtual_portals.md
     - Configure Digital Asset Management with a CDN: configure_dam_with_CDN.md
+    - Rendition Version Regeneration and Cleanup: rendition_version_regeneration_and_cleanup.md

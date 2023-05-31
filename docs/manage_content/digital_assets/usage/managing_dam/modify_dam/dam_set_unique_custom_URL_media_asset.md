@@ -1,13 +1,23 @@
 # Set unique custom URL for a media asset
 
-The media assets in the HCL Digital Asset Management \(DAM\) can be accessed through a URL. However, this URL is long and complex since it contains unique identifiers to locate the resource. Digital Asset Management allows users to customize complex URLs and change them to human-readable URLs, which are shorter, readable, and easier to use.
+The media assets in the HCL Digital Asset Management (DAM) can be accessed through a URL. However, this URL is long and complex since it contains unique identifiers to locate the resource. Digital Asset Management allows users to customize complex URLs and change them to human-readable URLs, which are shorter, readable, and easier to use.
 
-## Set a unique custom URL for a media asset
+A `customUrl` provides the original rendition of an asset. The `customUrl` is not related to a friendly URL.
+
+![](../../../../../images/edit_information_tab_custom_url_field.png "Custom URL field from the Edit page"){ width=50% }
+
+**Sample `customUrl`**:    
+
+```
+https://sample-url.com/dx/api/dam/custom/car
+```
+
+## Setting a unique custom URL for a media asset
 
 Follow these steps to set a unique custom URL value for a media asset:
 
 1.  From the HCL Digital Experience 9.5 DAM user interface, click to select the collection where the media asset is located.
-2.  Hover over a media asset and click **Edit** \(pencil icon\).
+2.  Hover over a media asset and click **Edit** (pencil icon).
 3.  Click **Information** and enter the expected text in the **Custom URL** field. A helper text shows a preview of the custom URL below the field.
 
     !!! note 
@@ -34,7 +44,7 @@ Follow these steps to set a unique custom URL value for a media asset:
 
 4.  Click **Save**. A **Copy link** option appears on top of the **Custom URL** field. You can access the media asset using the custom URL after you click the **Copy link** option. A notification shows custom URL is copied successfully.
 
-## Edit or delete a custom URL for a media asset
+## Editing or deleting a custom URL for a media asset
 
 Follow these steps to edit or delete a custom URL value for a media asset:
 

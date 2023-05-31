@@ -1,6 +1,6 @@
 # Manage media assets
 
-This section provides the steps on how to manage media assets and view configuration settings using HCL Digital Asset Management \(DAM\).
+This section provides the steps on how to manage media assets and view configuration settings using HCL Digital Asset Management (DAM).
 
 ## Prerequisite
 
@@ -101,7 +101,7 @@ Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, 
 
 Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including its renditions:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access and click the Overflow menu on the far right \(three vertical dots icon\). Then, select **Delete**.
+1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access and click the Overflow menu on the far right (three vertical dots icon). Then, select **Delete**.
 2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
     ![Check references and delete media asset](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
@@ -121,6 +121,22 @@ A dialogue box appears that shows the list of collections. You can search for a 
 If you copied an asset to the same collection, a dialogue box to rename the asset appears. 
 
 5. Click **View Location** to navigate inside the collection.
+
+## Changing duplicate asset names using DAM
+
+If an asset happens to have the same name with another asset in a collection, a notification is displayed in the **Information** panel.
+
+![Notification to rename an asset](../../../../images/information_panel_rename_notification.png){ width=50% }
+
+You can click **Rename** from the notification and provide a unique name.
+
+![Rename asset dialog](../../../../images/dialog_rename_field.png){ width=50% }
+
+## Copying friendly URLs for assets
+
+You can can copy the friendly URL and API URL of an asset from the URLs section of the asset's inspector panel.
+
+![](../../../../images/Copy_friendlyUrl.png "Copy friendly URL"){ width=50% }
 
 ## HCL Digital Experience Solution Feedback
 

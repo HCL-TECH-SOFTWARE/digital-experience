@@ -1,8 +1,43 @@
 # Manage collections
 
-Learn more about creating, configuring, and deleting media asset collections using Digital Asset Management \(DAM\).
+Learn more about creating, configuring, and deleting media asset collections using Digital Asset Management (DAM).
 
-## Browse and search media assets in a collection
+## What is a collection unique-name?
+
+Collection unique-names are the unique identifier for each collection which can be used in friendly url instead of collection UUID to access DAM assets. Collection unique-names support all languages as per existing system. A collection unique-name does not support any URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]").
+
+## How are collection unique-names generated?
+
+- While creating a collection, the user has a provision to enter a custom collection unique-name.
+
+![](../../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup"){ width=45% }
+![](../../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup"){ width=47% }
+![](../../../../images/CreateCollection_friendlyUrl-3.png "Create collection unsupported unique name"){ width=45% }
+
+- Collection unique-name is an optional field. If it is not provided by the user, the system will generate a collection unique-name based on the collection name replacing all the URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]") with underscores.
+- Collection unique-names will follow simple format of adding “_Number” for collections having same collection-names.
+- For existing collections, the system will generate a collection unique-name based on the collection name by using the migration script.
+
+## How can the user change the collection unique-names?
+
+Once the collection unique-name is generated, user can view/edit the collection unique-name in the collection information panel.
+
+![](../../../../images/CollectionEdit_friendlyUrl.png "Collection edit panel"){ width=47% }
+![](../../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel"){ width=45% }
+
+## What happens if a collection unique-name already exists while creating or editing a collection?
+
+While creating or editing a collection, DAM checks for any duplication of the unique-name and prompts with an error message. It also suggests an available unique-name if a duplicate is found in any other collection.
+
+![](../../../../images/CreateCollectionError_friendlyUrl_1.png "Create collection duplicate unique name"){ width=45% }
+![](../../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection suggestion click"){ width=45% }
+
+When the user clicks on the suggested name, the unique-name input field gets pre-filled with the suggested unique-name.
+
+![](../../../../images/EditCollectionError_friendlyUrl_1.png "Edit collection duplicate unique name"){ width=45% }
+![](../../../../images/EditCollectionError_friendlyUrl_2.png "Edit collection suggestion click"){ width=50% }
+
+## Browsing and searching for media assets in a collection
 
 Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
@@ -12,7 +47,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
     Following options are displayed in Collections interface:
 
-    - **Create Collection** - Create a new collection or a new nested collection \(when used inside an existing collection\)
+    - **Create Collection** - Create a new collection or a new nested collection (when used inside an existing collection)
     - **View information** - Opens the Information panel and shows Access Control
 
         ![Information Panel](../../../../images/dam_collections_interface_view_information.png)
@@ -109,7 +144,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 8. Once done, click **Add users and groups** to save changes.
 
-## Delete a collection
+## Deleting a collection
 
 1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Delete**.
 2. A pop-up message displays to confirm your action. Once a collection is deleted, you can no longer retrieve it, including the media assets, renditions, and versions you have used as your web content.

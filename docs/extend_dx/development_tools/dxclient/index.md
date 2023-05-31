@@ -8,7 +8,7 @@ DXClient is meant to be the one-stop, platform-independent solution that lets yo
 
 DXClient comes with two deployment options:
 
-1. The default deployment option is the DXClient container package. DXClient is packaged as a container that can be run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#dxclient-installation) for more details.
+1. The default deployment option is the DXClient container package. DXClient is packaged as a container that can be run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#installing-dxclient-using-the-container-package) for more details.
 
 2. For backward compatibility, we also still offer DXClient JavaScript source codes. Customers who want to rely on this deployment option need to install their own Node.js and npm runtime environment in the correct version and must install necessary dependencies as needed.
 
@@ -34,85 +34,136 @@ In addition, the package includes scripts for all operating systems that make it
     !!! note
         If you are upgrading from the node to container image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.
 
-        Syntax for Linux and Apple macOS platforms:
-         ```bash
-         make unlink
-         ```
-
-        Syntax for Microsoft Windows platforms:
-         ```bash
-         make_unlink.bat
-         ```
+        === "Linux and Apple macOS"
+            ```bash
+            make unlink
+            ```
+        
+        === "Microsoft Windows"
+            ```bash
+            make_unlink.bat
+            ```
 
 3. Extract the DXClient.zip file.
 
     !!! note
         The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, run the following command before proceeding further.
 
+        === "Linux and Apple macOS"
+            ```bash
+            export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
+            
+            # For example: export CONTAINER_RUNTIME=podman
+            ```
+
+        === "Microsoft Windows"
+            ```batch
+            set CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
+            
+            :: For example: set CONTAINER_RUNTIME=podman
+            ```
+
+4. Load `dxclient.tar.gz` image.
+
+    === "Linux and Apple macOS"
         ```bash
-        export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
-        For example: export CONTAINER_RUNTIME=podman
+        docker load < dxclient.tar.gz
         ```
 
-4. Run `docker load < dxclient.tar.gz`
+    === "Microsoft Windows"
+        ```batch
+        docker load -i dxclient.tar.gz
+        ```
 
 5. Optional: Add DXClient to your PATH.
      Open terminal and add path to the DXClient bin directory to your PATH variable to be able to call DXClient from any directory. If you plan to run multiple versions of DXClient on the same system in parallel, you may want to skip this step.
 
-    ```bash
-    export PATH=<working-directory>/bin:$PATH
-    ```
+    === "Linux and Apple macOS"
+        ```bash
+        export PATH=<working-directory>/bin:$PATH
+        ```
 
-    For Microsoft Windows platforms:
+    === "Microsoft Windows"
+        Open command prompt, add `dxclient.bat` script in the bin directory to the PATH variable, to call DXClient from any directory.
 
-    Open command prompt, add `dxclient.bat` script in the bin directory to the PATH variable, to call DXClient from any directory.
-
-    ```bash
-    set PATH=<working-directory>\bin;%PATH%
-    ```
+        ```batch
+        set PATH=<working-directory>\bin;%PATH%
+        ```
 
     !!! note
         You will lose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
 
 6. Set appropriate read and execute permissions as per user/group/owner.
 
-    ```bash
-    chmod xxx <working-directory>/bin
-    ```
+    === "Linux and Apple macOS"
+        ```bash
+        chmod xxx <working-directory>/bin
+
+        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
+        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
+        ```
+
+    === "Microsoft Windows"
+        1. Right click `<working-directory>/bin` directory > "Properties" > "Security" Tab.
+        2. Set the appropriate permission for the folder.
 
 7. Run `dxclient -V` to verify that the required version of DXClient command line is installed.
 
-8. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example,
+8. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
 
-    ```bash
-    export VOLUME_DIR=storeForScriptApplication
-    ```
+    === "Linux and Apple macOS"
+        ```bash
+        export VOLUME_DIR=storeForScriptApplication
 
-    The `VOLUME_DIR` will require read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
+        # or if you want spaces in its value, enclosed it in double quotes ("")
+        export VOLUME_DIR="store for script application"
+        ```
 
-    ```bash
-    chmod xxx <working-directory>/<VOLUME_DIR>
-    ```
+    === "Microsoft Windows"
+        ```batch
+        set VOLUME_DIR=storeForScriptApplication
+
+        :: or if you want spaces in its value
+        set VOLUME_DIR=store for script application
+        ```
+
+        !!!warning
+            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This will produce unwanted errors when executing dxclient commands.
+
+     The `VOLUME_DIR` will require read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
+
+    === "Linux and Apple macOS"
+        ```bash
+        chmod xxx <working-directory>/<VOLUME_DIR>
+
+        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
+        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
+        ```
+
+    === "Microsoft Windows"
+        1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
+        2. Set the appropriate permission for the folder.
+
 
 9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/<VOLUME_DIR>`.
 
     Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
 
-10. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
+10. Refer to the sample pipeline provided to find out how to integrate the container image in the automation server.
 
 11. By default, the logs will be available in UTC format. If needed, synchronize your local timezone from host to container using an environment variable as shown in the example below.
 
     Example Usage:
     
-    ```bash
-    export Timezone=Asia/Kolkata
-    ```
-    For Microsoft Windows platforms:
-    ```bash
-    SET Timezone=Asia/Kolkata
-    ```
+    === "Linux and Apple macOS"
+        ```bash
+        export Timezone=Asia/Kolkata
+        ```
     
-12. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
+    === "Microsoft Windows"
+        ```batch
+        SET Timezone=Asia/Kolkata
+        ```
 
 ## Installing DXClient using the source code package
 
@@ -124,15 +175,15 @@ In addition, the package includes scripts for all operating systems that make it
     !!! note
         If you are upgrading from CF19, CF191, or later releases, you should first unlink the current version using the following command before installing the newer version.
 
-        Syntax for Linux and Apple macOS platforms:
-        ```bash
-        make unlink
-        ```
+        === "Linux and Apple macOS"
+            ```bash
+            make unlink
+            ```
 
-        Syntax for Microsoft Windows platforms:
-        ```bash
-        make_unlink.bat
-        ```
+        === "Microsoft Windows"
+            ```batch
+            make_unlink.bat
+            ```
 
 2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
 
@@ -142,77 +193,66 @@ In addition, the package includes scripts for all operating systems that make it
 
 5.  From the extracted folder, run the following command.
 
-    For Linux and Apple macOS platforms:
+    === "Linux and Apple macOS"
+        ```bash
+        make install
+        ```
 
-    ```bash
-    make install
-    ```
-
-    For Microsoft Windows platforms:
-
-    ```bash
-    make_install.bat
-    ```
+    === "Microsoft Windows"
+        ```bash
+        make_install.bat
+        ```
 
 6.  Optional: Run the following command to link your application to the local npm module in your machine. Refer to the following Notes section before you proceed.
 
-    For Linux and Apple MacOS platforms:
+    === "Linux and Apple macOS"
+        ```bash
+        make link
+        ```
 
-    ```bash
-    make link
-    ```
-
-    For Microsoft Windows platforms:
-
-    ```bash
-    make_link.bat
-    ```
+    === "Microsoft Windows"
+        ```bash
+        make_link.bat
+        ```
 
     !!! note
         -   Avoid using this command when scripting deployments from an automation server (for example, in pipelines) as there is a chance of picking up the wrong dependencies during tool version upgrades.
         -   If the `link` command is not used (such as on automation servers), then use the following command to run the application:
 
-        For Linux and Apple MacOS platforms:
+        === "Linux and Apple macOS"
+            ```bash
+            ./bin/dxclient
+            ```
 
-        ```bash
-        ./bin/dxclient
-        ```
-
-        For Microsoft Windows platforms:
-
-        ```bash
-        node bin/dxclient
-        ```
+        === "Microsoft Windows"
+            ```bash
+            node bin/dxclient
+            ```
 
 ## Uninstalling DXClient using the source code package
 
 -   To uninstall the DXClient tool, perform the following commands:
 
-    For Linux and Apple MacOS platforms:
+    === "Linux and Apple macOS"
+        ```bash
+        make clean
+        ```
 
-    ```bash
-    make clean
-    ```
-
-    For Microsoft Windows platforms:
-
-    ```bash
-    make uninstall.bat
-    ```
+    === "Microsoft Windows"
+        ```bash
+        make_uninstall.bat
+        ```
 
 -   Optional: To unlink the DXClient tool, perform the following commands:
 
-    For Linux and Apple MacOS platforms:
-
-    ```bash
-    make unlink
-    ```
-
-    For Microsoft Windows platforms:
-
-    ```bash
-    make_unlink.bat
-    ```
+    === "Linux and Apple macOS"
+        ```bash
+        make unlink
+        ```
+    === "Microsoft Windows"
+        ```bash
+        make_unlink.bat
+        ```
 
 ## Verifying your DXClient installation
 
@@ -300,6 +340,11 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Deploy script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
+
+## Some generic points to note
+    
+1. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
+2. The maximum input file size allowed in DXClient is 256 MB currently. This limitation will be addressed in one of the future releases.
 
 ## Configuring DXClient
 
@@ -547,6 +592,19 @@ Use the `dx-core-configuration-reports` command to get a summary of the configur
 ```bash
 dxclient dx-core-configuration-reports [OPTIONS]
 ```
+<!----
+Use this command to sync WebDAV themes in server and then watch for succeeding changes which will immediately reflect in the WebDAV Server:
+
+```bash
+dxclient livesync push-theme [options]
+```
+
+Use this command to download the theme files in WebDAV Server in preparation for [`livesync push-theme`](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-theme):
+
+```bash
+dxclient livesync pull-theme [options]
+```
+---->
 
 ## DXClient command line help
 
@@ -573,10 +631,10 @@ Use the following command to display the detailed help for a specific command:
 ```bash
 dxclient help [command]
 ```
-<!--
-## HCL Software Academy course
 
-For an introduction and a demo on how to use DXClient, go to [Staging](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505). To try it out yourself, refer to [DXClient Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf).-->
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use DXClient, go to [Staging](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505). To try it out yourself, refer to [DXClient Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf).
 
 ???+ info "Related information"
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
@@ -592,7 +650,3 @@ For an introduction and a demo on how to use DXClient, go to [Staging](https://a
     - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
     - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
 
-<!--
-## HCL Software Academy course
-For an introduction and a demo on how to use DXClient, go to [Staging](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505). To try it out yourself, refer to [DXClient Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf).
--->

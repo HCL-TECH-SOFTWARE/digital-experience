@@ -2,6 +2,6 @@ title: Guide Me
 nav:
     - Tutorials: tutorials
     - wpsdirstr.md
+    - SecurityHardeningGuide
     - PerformanceTuning.md
-    - SecurityHardeneingGuide.md
     - glossary.md

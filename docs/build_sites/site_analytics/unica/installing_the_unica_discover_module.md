@@ -75,7 +75,7 @@ Follow these steps to enable HCL Unica Discover integration with HCL Digital Exp
 
 You can configure HCL Discover with HCL Digital Experience with theme modules. This gives you more granular control per page and when to use it. In this part, you will update your theme to add the Discover modules and update the profile. 
 
-1. Use the instructions in Part 3 of Lab [HDX-DEV-100 Theme Development](https://academy.hcltechsw.com/courses/course/hdx-dev-100-dx-developer-beginner) to work on your theme. 
+1. Use the instructions in Part 3 of Lab [HDX-DEV-100 Theme Development](https://hclsoftwareu.hcltechsw.com/courses/course/hdx-dev-100-dx-developer-beginner) to work on your theme. 
     1. From your DX Solution Modules SoFy instance, choose the Spotlight theme. 
     2. Add the two modules discover_vxxx and pako_vxxx from the host of your DX server under PortalServer/doc/discover or get them from your unzipped lab files under the theme’s modules folder. 
     3. Edit the DiscoverUI_for_DX-js.uncompressed.js. 

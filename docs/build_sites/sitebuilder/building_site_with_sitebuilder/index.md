@@ -15,3 +15,6 @@ Rapidly deploy websites or add new sections to existing sites from predefined si
 -   **[Next steps after using Site Builder](sitebuilder_next.md)**  
 After adding a site or section, use the toolbar to add content to your site or section. --->
 
+???+ info "Related information"
+    - [Adding pages, content, and more](../../create_sites/adding_pages_content_more/index.md)
+

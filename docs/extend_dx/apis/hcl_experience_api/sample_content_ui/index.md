@@ -21,14 +21,12 @@ The Sample UI page shows you the list of contents that corresponds to a search o
 This shows how to create a new content:
 ![](../assets/Dev_Sample_UI_update.png)
 
--   **[Sample Content UI prerequisites \| HCL Experience API](../openapi_prerequisites.md)**  
+-   **[Sample Content UI prerequisites | HCL Experience API](../openapi_prerequisites.md)**  
 There are certain prerequisites that need to be followed before Sample Content UI application can be used.
--   **[Getting started with Sample Content UI \| HCL Experience API](./getting_started_sample_api.md)**  
+-   **[Getting started with Sample Content UI | HCL Experience API](./getting_started_sample_api.md)**  
 Learn how to get started with the Sample Content UI application on HCL Digital Experience 9.5.
 
-<!--
-## HCL Software Academy course
+## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use Experience API, go to [Experience API](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416). To try it out yourself, refer to [Experience API Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf) and corresponding [Experience API Lab Resources](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
+For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416). To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf) and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
 
--->

@@ -40,9 +40,19 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 |CF Level|Kubernetes versions|
 |--------------|-----------------|
+|CF212| Kubernetes 1.25<br/>Kubernetes 1.24<br/>Kubernetes 1.23<br/>Kubernetes 1.22<br/>|
 |CF211| Kubernetes 1.25<br/>Kubernetes 1.24<br/>Kubernetes 1.23<br/>Kubernetes 1.22<br/>|
 |CF210| Kubernetes 1.25<br/>Kubernetes 1.24<br/>Kubernetes 1.23<br/>Kubernetes 1.22<br/>|
-|CF209| Kubernetes 1.24<br/>Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>|
 
 !!! attention "__*__ CF203 limited support statement"
     In CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments
+
+## Prereqs Checker For DX Deployment
+
+HCL DX has introduced a tool called "Prereqs Checker" that runs a number of checks to confirm if the prerequisites for various components are met.  
+
+You can get the result of these checks from the container logs of the `prereqs-checker` container in the pod where Prereqs Checker is installed. For more information, see [Configure Prereqs Checker For DX Deployment](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md).   
+
+For these checks, one separate sidecar container is deployed along with the main application container. This is a lightweight container so the main application performance would not get affected.
+
+The main objective of the Prereqs Checker is to know if the specified prerequisites are met and to inform users the result in the logs, that is, if the checks have passed or failed. It can also be used to check basic information about the file system of the mounted volumes which helps track the issues related to the file systems.

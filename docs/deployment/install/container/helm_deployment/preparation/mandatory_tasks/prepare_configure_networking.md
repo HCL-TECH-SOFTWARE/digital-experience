@@ -65,8 +65,7 @@ networking:
     home: "portal"
   addon:
     # Host of the addon applications
-    # If you are not running hybrid, you can leave this value empty and the Core host 
-    will be used
+    # If you are not running hybrid, you can leave this value empty to use relative hostnames 
     # If you are running hybrid, you need to specify the FQDN of the Kubernetes 
     deployment
     # Example: eks-hybrid.apps.dx.com
@@ -84,6 +83,8 @@ networking:
 
 Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
 
+Setting the add-on host is required for all hybrid deployments. Given the default use of relative hostnames, you must set an absolute FQDN for hybrid deployments. API calls must still point to one absolute hostname to avoid authentication issues when making requests. With that, it is not supported to configure your HCL DX environment to support multiple hostnames if you are running a hybrid deployment. See [Hybrid Deployment Installation](../../../../../../../deployment/install/hybrid) for more details.
+
 ## Configure HAProxy certificate
 
 For HAProxy to allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
@@ -100,6 +101,9 @@ HAProxy is deployed with a `LoadBalancer` type service to handle the incoming tr
 |`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. | Number |`null`|
 |`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled` | Boolean |`true`|
 |`strictTransportSecurity.maxAge`|This value is used to set for how long the browser should remember the HSTS rule | Number |`31536000`|
+|`strictTransportSecurity.includeSubDomains`|If this optional parameter is specified, this rule applies to all of the site's subdomains as well. | Boolean |`false`|
+|`strictTransportSecurity.preload`|See [Preloading Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security) for details. When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. This parameter is not part of the HSTS specification. For more information, see [Strict-Transport-Security HTTP Response Header Field](https://www.rfc-editor.org/rfc/rfc6797#section-6.1). | Boolean |`false`|
+
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -120,6 +124,8 @@ networking:
     strictTransportSecurity:
       enabled: true
       maxAge: 31536000
+      includeSubDomains: false
+      preload: false
 ```
   
 This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.

@@ -29,8 +29,7 @@ After you define the content type, attributes of the content are shown to the ru
 -   Personalization also includes a recommendation engine that provides collaborative filtering capabilities. Collaborative filtering uses statistical techniques to identify groups of users with similar interests or behaviors. Inferences can be made about what a particular user might be interested in, based on the interests of the other members of the group.
 -   Campaign management tools are also included with Personalization. Campaigns are sets of business rules that work together to accomplish a business objective. For example, a Human Resources manager might want to run a campaign to encourage employees to enroll in a stock purchase plan or sign up for some other new benefit that is now available to employees. The Human Resources manager would define a set of rules that are shown to accomplish this business objective. Campaigns have start and stop dates and times and can be email and web-page based. Several campaigns can run simultaneously and can be prioritized.
 
-<!--
-## HCL Software Academy course
 
-For an introduction and a demo on how to use Targeted Content, go to [Content Targeting](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D304). 
--->
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Targeted Content, go to [Content Targeting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D304).

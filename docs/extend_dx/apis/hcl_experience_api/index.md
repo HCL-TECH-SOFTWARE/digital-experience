@@ -49,9 +49,9 @@ Installation instructions for HCL DX 9.5 image components may be viewed in the [
 
 Detailed API listings for the HCL Experience API, and updates, may be viewed at the [HCL Digital Experience GitHub repository](https://github.com/hcl-dx/experience-api-documentation){:target="_blank"}.
 
--   **[Prerequisites \| HCL Experience API](openapi_prerequisites.md)**  
+-   **[Prerequisites | HCL Experience API](openapi_prerequisites.md)**  
 The HCL Experience API requires software prerequisites to successfully run. The build package also includes this information, along with the installation and configuration steps.
--   **[Configuration options \| HCL Experience API](openapi_configuration_options.md)**  
+-   **[Configuration options | HCL Experience API](openapi_configuration_options.md)**  
 The HCL Experience API comes with a set of default configurations. The build package also includes this information, along with the installation steps.
 -   **[Getting started with HCL Experience API](getting_started_ringapi_docker_.md)**  
 Follow these steps to get started with the HCL Experience API.
@@ -59,16 +59,15 @@ Follow these steps to get started with the HCL Experience API.
 
 -   **[DAM API for friendly URLs](dam_friendly_urls.md)**  
 This section describes the DAM API that allows you to create a friendly URL for an asset.
--   **[Example API calls \| HCL Experience API](openapi_example_API_calls.md)**  
+-   **[Example API calls | HCL Experience API](openapi_example_API_calls.md)**  
 To give users more insight on how to use Experience API, the following samples are provided.
--   **[Sample Content UI \| HCL Experience API](../hcl_experience_api/sample_content_ui/index.md)**  
+-   **[Sample Content UI | HCL Experience API](../hcl_experience_api/sample_content_ui/index.md)**  
 Learn how to use the Sample Content UI application for HCL Experience API.
 
-<!--
-## HCL Software Academy course
 
-For an introduction and a demo on how to use Experience API, go to [Experience API](https://academy.hcltechsw.com/component/axs/?view=sso_config&id=1&forward=https%3A%2F%2Facademy.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416). To try it out yourself, refer to [Experience API Lab](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf) and corresponding [Experience API Lab Resources](https://academy.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416). To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf) and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
 
 ???+ info "Related information"
--    [API explorers](../hcl_experience_api/api_explorers.md)
--->
+    - [API explorers](../hcl_experience_api/api_explorers.md)

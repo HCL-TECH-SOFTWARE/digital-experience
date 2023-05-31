@@ -54,7 +54,7 @@ In the search page, you have 3 options to help with the search.
 ### Search for
 
 * Allows you to search packages or files by keyword.
-* If you do not get results using your keyword, try surrounding your keyword with asterisks. For example, if you are searching for CF17, try searching for *CF17*.
+* If you do not get results using your keyword, try surrounding your keyword with asterisks. For example, if you are searching for CF205, try searching for *CF205*.
 * The search works like regular expressions so you want to type your keywords in the order that it would appear in the file name or description.
 
 ###  Show results for:
