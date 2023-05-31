@@ -20,6 +20,6 @@ When upgrading to a newer CF version, if the wpsadmin password is updated the cw
 
 When a new version \(tag\) of the DX 9.5 Core container is specified in your [custom values YAML file](../../../../install/container/helm_deployment/preparation/index.md) and you run `helm upgrade`, Kubernetes recycles all the pods in your Core stateful set one by one. It starts with the highest numbered pod and works downwards, only recycling the next pod when the current pod reports that it is "ready".
 
-   1. When upgrading to a newer CF version (first time creation of cw_prof and older version doesnt contain cw_profile persisting) the user registry of wp_profile will be copied to cw_profile which ensures that if the user registry is modified on the older deployment it will be also be migrated to the new deployment. 
-   2. On any further new deployments the old profile from the container will be symlinked to the newly created profile in the persistent volume.
-   3. Pod performs the actual upgrade \("`applyCF`"\) and, when this is complete, its declared "ready" to Kubernetes. The profile in the persisted volume will just be overwritten by the new updates.
+-   When upgrading to a newer CF version (first time creation of cw_prof and older version doesnt contain cw_profile persisting) the user registry of wp_profile will be copied to cw_profile which ensures that if the user registry is modified on the older deployment it will be also be migrated to the new deployment. 
+-   On any further new deployments the old profile from the container will be symlinked to the newly created profile in the persistent volume.
+-   Pod performs the actual upgrade \("`applyCF`"\) and, when this is complete, its declared "ready" to Kubernetes. The profile in the persisted volume will just be overwritten by the new updates.
