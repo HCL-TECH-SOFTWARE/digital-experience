@@ -184,7 +184,7 @@ The payload of the POST request should look like this:
         [{
             "mimeType": "image/webp",
             "extensions": ["webp"],
-            "mediaTypeGroupId": "59b514174bffe4ae402b3d63aad79fe0"
+            "mediaTypeGroupId": "<mediaTypeGroupId from step #3>"
         }]
 
 If you want to configure renditions for the newly added mime type, refer to [Extensibility configuration](../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md).
