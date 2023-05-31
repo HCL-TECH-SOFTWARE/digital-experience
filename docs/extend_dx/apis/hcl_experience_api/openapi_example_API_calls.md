@@ -167,15 +167,15 @@ Refer to the following steps to enable uploading an SVG file in DAM API:
 
     `POST - https://<domain>/dx/api/core/v1/auth/login`
 
-The payload of the POST request should look like this:
+    The payload of the POST request should look like this:
 
     `{ "username": "<userId>" "password": "<password>" }`
 
-3. Access **GET** mediatypegroups to get the media type group into which the new media type should be added. Find the id for image media type group.
+2. Access **GET** mediatypegroups to get the media type group into which the new media type should be added. Find the id for image media type group.
 
     `https://<domain>/dx/api/dam/v1/mediatypegroups`
 
-4. Do a **POST** request to the following endpoint to add a new mime type:
+3. Do a **POST** request to the following endpoint to add a new mime type:
 
     `https://<domain>/dx/api/dam/v1/mediatypes`
 
