@@ -14,7 +14,7 @@ cw_prof
 
 ### Backward Compatibility
 
-When upgrading to a newer CF version, if the wpsadmin password is updated the cw_profile contains the newly updated password and the new credentials are copied to the config wizard user registery, and if the wpsadmin password is not updated then the cw_profile and the config wizard user registry contains the default password.
+When upgrading to a newer CF version containing the cw_profile persistence changes from an older deployment which doesn't implement cw_profile persistence, if the wpsadmin password is updated the cw_profile contains the newly updated password and the new credentials are copied to the config wizard user registery, and if the wpsadmin password is not updated then the cw_profile and the config wizard user registry contains the default password.
 
 ## Core container upgrade
 
