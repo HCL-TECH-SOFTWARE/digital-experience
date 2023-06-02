@@ -72,7 +72,7 @@ If no LDAP is configured in the helm values, HCL Digital Experience is configure
 | `wpsPassword` | Sets the password of the `wpsUser` to this value. |
 
 !!! important
-    If the Websphere primary admin user was at any time changed manually and not through the helm values, the values for `wasUser` and `wasPassword`or the credentials in the custom secret must set to the current credentials once and a `helm upgrade` with those values must be executed. Afterwards, the helm values can be used to change the credentials.
+    If the Websphere primary admin user was at any time changed manually and not through the helm values, the values for `wasUser` and `wasPassword` or the credentials in the custom secret must set to the current credentials once and a `helm upgrade` with those values must be executed. Afterwards, the helm values can be used to change the credentials.
 
 !!! important
     Do not change the admin credentials during the update of the DX deployment to a later version. Always set the current credentials in the `custom-values.yaml` before upgrading.
