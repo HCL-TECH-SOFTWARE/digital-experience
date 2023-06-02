@@ -1,13 +1,13 @@
 # LiveSync
 
-This topic provides information about syncing files from local-to-server and server-to-local in real time. It replaces your existing WebDAV client and watches file system changes in the background.
+This topic provides information about syncing files from local-to-server and server-to-local in real time. It watches the file system for changes in the background.
 
 !!! note
     We recommend using the node version of DXClient while working with LiveSync, as it is more performant.
 
 ## LiveSync Push Theme
 
-This command lets you sync your theme on the WebDAV server. Then, it'll watch for succeeding changes within the given `themePath` and immediately reflect them in the WebDAV Server.
+This command lets you sync your theme on the server. Then, it'll watch for succeeding changes within the given `themePath` and immediately reflect them in the Server.
 
 
 -   **Command description**
@@ -30,8 +30,8 @@ This command lets you sync your theme on the WebDAV server. Then, it'll watch fo
 
 -   **Required files**
 
-    1. WebDAV theme files in local.
-    2. Registered WebDAV Theme in Server.
+    1. WebDAV based theme files in local.
+    2. Registered Theme in Server.
 
 -   **Common Command options**
 
@@ -67,13 +67,13 @@ This command lets you sync your theme on the WebDAV server. Then, it'll watch fo
 
 -   **Required options for LiveSync Push Theme**
 
-    Use this attribute to specify the Theme System Name (or Theme Title) of the theme created under WebDAV server in DX:
+    Use this attribute to specify the Theme System Name (or Theme Title) of the theme created under DX server:
 
     ```shell
     -themeName <value>
     ```
 
-    Use this attribute to specify the theme folder path that contains all static files to be pushed into DX theme, it accepts the folder path of the WebDAV theme folder:
+    Use this attribute to specify the theme folder path that contains all static WebDAV based files to be pushed into DX theme, it accepts the folder path of the WebDAV based theme folder:
 
     ```shell
     -themePath <value>
@@ -88,7 +88,7 @@ This command lets you sync your theme on the WebDAV server. Then, it'll watch fo
     !!! warning
         1. Avoid using `#` `%` `&` and `*` special characters when naming files and folders.
         2. If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server (for example, `来源folder` is translated to `__folder`). For the theme name, use the Theme System Name, the one with `_` like `__folder` in the following example.
-        
+
         ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
 
     Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
@@ -118,13 +118,13 @@ logs/
 
 ## LiveSync Pull Theme
 
-This command is used to sync a theme from a DX WebDAV theme on a remote server to a local folder.​
+This command is used to sync a theme from a DX WebDAV based theme on a remote server to a local folder.​
 
 -   **Command description**
 
     This command invokes the livesync push-theme tool inside the DXClient.
 
-    This command will download the theme files in WebDAV Server under the given theme name (provided in `-themeName`). This will then be saved to the target local directory of the theme (provided in `-themePath`), overwriting existing files in this local directory which also deletes stale files in the process.
+    This command will download the WebDAV based theme files in WebDAV Server under the given theme name (provided in `-themeName`). This will then be saved to the target local directory of the theme (provided in `-themePath`), overwriting existing files in this local directory which also deletes stale files in the process.
 
 
     ```shell
@@ -141,8 +141,8 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
 
 -   **Required files**
 
-    1. A local folder where all the WebDAV theme files will be placed after downloading.
-    2. Registered WebDAV Theme in Server.
+    1. A local folder where all the WebDAV based theme files will be placed after downloading.
+    2. Registered WebDAV based Theme in Server.
 
 -   **Common Command options**
 
@@ -178,7 +178,7 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
 
 -   **Required options for LiveSync Pull Theme**
 
-    Use this attribute to specify the Theme System Name (or Theme Title) of the theme created under WebDAV server in DX:
+    Use this attribute to specify the Theme System Name (or Theme Title) of the theme created under the DX server:
 
     ```shell
     -themeName <value>
@@ -198,7 +198,7 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
     !!!warning
         1. Avoid using `#` `%` `&` and `*` special characters when naming files and folders.
         2. If you have a theme name with special characters, those are automatically converted to underscores (`_`) by the server (for example, `来源folder` is translated to `__folder`). For the theme name, use the Theme System Name, the one with `_` like `__folder` in the following example.
-        
+
         ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
 
     Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
@@ -217,7 +217,9 @@ This command is used to sync a theme from a DX WebDAV theme on a remote server t
 
 1. This command does not register or unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) or [Undeploy Themes](./themes.md#undeploy-theme) commands.
 2. LiveSync Push Theme is currently only intended 1 developer working on 1 theme. Concurrent usage of this command (for example, two developers working on the same theme) or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), causes it to overwrite each user's changes.
-3. Conflict Resolutions are not possible.
-4. Do not trigger the live sync commands inside the target local theme path. Triggering the live sync commands corrupts the server-side theme folder.
-5. Uploading files of the same name with different cases is not supported (for example, sample-file.txt and sample-FILE.txt), especially when working on devices with different OS. Forcibly doing this may cause theme corruption and corrupts pull-theme action and erase local data. To resolve this, identify the last uploaded file or corrupted file that caused this issue in the server copy and delete it to have both push and pull working properly again.
-6. In any case, if the real-time sync of Theme during the push command gets disrupted, disconnect and reconnect again.
+3. Do not use this as a collaboration tool with several users modifying a single theme at the same time.
+4. Conflict Detection and Resolutions are not possible.
+5. Do not trigger the LiveSync commands inside the target local theme path. Triggering the live sync commands corrupts the server-side theme folder.
+6. Uploading files of the same name with different cases is not supported (for example, sample-file.txt and sample-FILE.txt), especially when working on devices with different OS. Forcibly doing this may cause theme corruption and corrupts pull-theme action and erase local data. To resolve this, identify the last uploaded file or corrupted file that caused this issue in the server copy and delete it to have both push and pull working properly again.
+7. In any case, if the real-time sync of Theme during the push command gets disrupted, disconnect and reconnect again.
+8. It is not recommended to use this on production server.
