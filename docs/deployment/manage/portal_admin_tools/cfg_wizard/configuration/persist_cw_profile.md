@@ -1,6 +1,7 @@
 # Persisting CW Profile
 
 Starting with CF213 the profile of the Config Wizard is persisted on the same persistent volume as the Core profile. This allows advanced configuration of the Config Wizard profile that are persisted through restarts.
+
 ## Volume mount points
 
 Config Wizard is reusing the `/opt/HCL/profiles` directory of Core. A single directory is created for the Config Wizard profile called `cw_prof`. It is symbolically linked to `/opt/HCL/AppServer/profiles/cw_profile`.

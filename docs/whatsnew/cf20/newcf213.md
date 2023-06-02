@@ -11,4 +11,4 @@ The following features and updates are available to customers installing HCL Dig
 ### Persisting CW Profile
 
 === "Containers"
-    Updated the documentation for Persisting CW Profile. See [Persisting CW Profile](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md) for more information.
+    Implemented Persistence of cw_profile which allows advanced configuration of the Config Wizard profile to be persisted through restarts. See [Persisting CW Profile](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md) for more information.
