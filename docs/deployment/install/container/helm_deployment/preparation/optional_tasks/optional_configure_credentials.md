@@ -21,6 +21,13 @@ security:
     # - If a LDAP is used, the HCL Digital Experience Core admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wpsUser and wpsPassword need to be manually updated accordingly.
     wpsUser: "wpsadmin"
     wpsPassword: "wpsadmin"
+    # Credentials used for Config Wizard administrative access. This only takes effect when "configuration.core.tuning.configWizard" is enabled.
+    # The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.
+    # This will also map the user as the user for Config Wizard and dxconnect (for dxclient)
+    # - If the Config Wizard admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for configWizardUser and configWizardPassword.
+    # - If a LDAP is used, the the Config Wizard admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for configWizardUser and configWizardPassword need to be manually updated accordingly.
+    configWizardUser: "wpsadmin"
+    configWizardPassword: "wpsadmin"
   # Security configuration for Digital Asset Management
   digitalAssetManagement:
     # Credentials used by Digital Asset Management to access the persistence database.
@@ -51,7 +58,7 @@ The security credentials defined in the `security` section of the helm values ar
 
 ### Remote Search security credentials
 
-Same as Core, when Remote Search is enabled, WAS admin credentials can be configurable from the helm chart. The properties for credentials are found under the `security` section of the value file. For Remote Search also, the behaviour slightly differs depending on the user registry that is configured for HCL Digital Experience (read further for more details).
+Same as Core, when Remote Search is enabled, WAS admin credentials can be configured from the helm chart. The properties for credentials are found under the `security` section of the values file. For Remote Search also, the behaviour slightly differs depending on the user registry that is configured for HCL Digital Experience as described in the following section.
 
 #### 1. File-based user registry
 
@@ -65,19 +72,28 @@ If no LDAP is configured in the helm values, HCL Digital Experience is configure
 | `wpsPassword` | Sets the password of the `wpsUser` to this value. |
 
 !!! important
-    If the Websphere primary admin user was at any time changed manually and not through the helm values, the values for `wasUser` and `wasPassword` need to be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterwards, the helm values can be used to change the credentials.
+    If the Websphere primary admin user was at any time changed manually and not through the helm values, the values for `wasUser` and `wasPassword`or the credentials in the custom secret must set to the current credentials once and a `helm upgrade` with those values must be executed. Afterwards, the helm values can be used to change the credentials.
 
 !!! important
     Do not change the admin credentials during the update of the DX deployment to a later version. Always set the current credentials in the `custom-values.yaml` before upgrading.
-
-!!! note
-    Currently, the Configuration Wizard and DXConnect always use the `wpsadmin` user. Changes to the `wasUser` do therefore not affect the Configuration Wizard and DXClient (which connects to DXConnect). If the `wasUser` is kept as the default `wpsadmin` but its password is changed, the new password will also apply to the Configuration Wizard and DXConnect.
 
 #### 2. LDAP
 
 If a [LDAP is configured](./optional_configure_apps.md#supported-ldap-configuration) in the helm values under `configuration.core.ldap`, the core security credentials need to be manually set to the credentials of the administrator user(s) from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
 
 Please refer to the [Updating user ID and passwords](../../../../../manage/security/people/authentication/updating_userid_pwd/index.md) topic for additional information on how to manually change credentials.
+
+
+### Config Wizard security credentials
+
+Similar to Core, the Config Wizard admin credentials can be configured from the helm chart. The properties for credentials are found under the `security` section of the values file. The behaviour slightly differs depending on the user registry that is configured for HCL Digital Experience.
+
+If the default file-based user registry is used for the Config Wizard profile, changes of the credentials in the helm values or custom secret are applied automatically by a `helm upgrade`. This changes the Config Wizard admin user and also applies the configured credentials for the Config Wizard login and the [`dxConnectUsername` and `dxConnectPassword` for connections of DXClient to dxconnect](../../../../../../extend_dx/development_tools/dxclient/index.md). 
+
+!!! important
+    If the Websphere primary admin user was at any time changed manually and not through the helm values, the values for `configWizardUser` and `configWizardPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterwards, the helm values can be used to change the credentials.
+
+If an LDAP is configured for Config Wizard, the security credentials need to be manually set to the credentials of the administrator user from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
 
 ## Configuring Credentials from Secrets
 
@@ -173,6 +189,7 @@ Here's a list of the required credential attributes for each application:
 |-----------------------------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|-------------------|
 | Core WAS Credential secret | `security.core.customWasSecret` | `username` <br> `password` | Core |
 | Core WPS Credential secret | `security.core.customWpsSecret` | `username`  <br> `password` | Core |
+| Core Config Wizard Credential secret | `security.core.customConfigWizardSecret` | `username`  <br> `password` | Core (Config Wizard) |
 | Core LDAP Credential secret | `configuration.core.ldap.customLdapSecret` | `bindUser` <br> `bindPassword` | Core |
 | Core LTPA Credential secret | `configuration.core.ltpa.customLtpaSecret` | `ltpa.version` <br> `ltpa.realm` <br> `ltpa.desKey` <br> `ltpa.privateKey` <br> `ltpa.publicKey` <br> `ltpa.password` | Core |
 | DAM Plugin Google Vision Credential secret | `security.damPluginGoogleVision.customDamGoogleVisionSecret` | `authenticationKey` <br> `apiKey` | DAM Google Vision |
@@ -214,6 +231,22 @@ data:
 metadata:
   labels:
   name: sample-wps-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Core Config Wizard Credential secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  username: <username>
+  # Required attribute
+  password: <password>
+metadata:
+  labels:
+  name: sample-config-wizard-secret
   namespace: <namespace>
 type: "Opaque"
 ```
