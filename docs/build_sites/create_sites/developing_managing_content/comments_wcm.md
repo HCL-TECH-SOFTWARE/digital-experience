@@ -4,10 +4,10 @@ title: Comments in WCM
 
 # Comments in WCM
 
-Starting from CF213, the product contains a new solution for the ability for users to leave comments for Web Content Manager (WCM).
+Starting from CF213, the product contains a new solution that allows users to leave comments for Web Content Manager (WCM).
 These comments can be used in Intranet scenarios or in controlled settings allowing external comments.
 
-This page describes how to enable and configure or disable the solution.
+This page describes how to enable, configure, and disable the solution.
 
 ## Overview
 
@@ -15,7 +15,7 @@ WCM Comments is a feature that allows customers to enhance their presentation te
 
 Only authorized users can view, edit, and delete the comments ([user access permission](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authorization/controlling_access/managing_users_groups/) to the library the comments are stored in).
 
-The actions available for a user are dependent on their role:
+The actions available for a user depend on their role:
 
 - The **User** role or higher is required to see the comments.
 - The **Contributor** role or higher is required to create comments.
