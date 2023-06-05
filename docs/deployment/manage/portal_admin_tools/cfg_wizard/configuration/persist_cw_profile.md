@@ -13,7 +13,7 @@ For deployments prior to CF213 that have not persisted the Config Wizard profile
 After this initial migration the two profiles have separated user registries and can be managed independently.
 
 !!!note
-    Upgrading to CF213 would require additional space of approximately *110MiB* to persist the Config Wizard Profile. 
+    Upgrading to CF213 would require additional space of approximately *120MiB* to persist the Config Wizard Profile. 
 
 ## Core container upgrade
 
