@@ -86,4 +86,4 @@ Take note of the following:
 
 ## Update global "Article" presentation template
 
-If you want to perform a replacement of the OOB components that are shipped, see [Adding the sample web content libraries in the authoring portlet](https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries/).
+If you want to perform a replacement of the OOB components that are shipped, see [Adding the sample web content libraries in the authoring portlet](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries.md).
