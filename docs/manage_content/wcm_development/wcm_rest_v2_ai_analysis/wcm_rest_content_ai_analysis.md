@@ -38,4 +38,4 @@ Once you access the WCM REST V2 API explorer, you can also access the following 
 - Only Content Elements are used for AI analysis. In other words, only those components within the elements data array (Refer above request body's "data": {} item to understand more) are used for AI analysis and other fields in parent level like description, name and title of content are not used for AI analysis.
 - If value of request parameter selected is summary: By default extractive summarization is done during analysis. Currently abstractive summarization is not supported.
 
-For more understanding on the API request and response details, refer ```/contents/analysis``` API with method type as ```POST``` in the Swagger REST API documentation at ```http or https://host:port/dx/api/wcm/v2/explorer/```
+For more information on the API request and response details, refer to ```/contents/analysis``` API with method type as ```POST``` in the Swagger REST API documentation at ```http or https://host:port/dx/api/wcm/v2/explorer/```.
