@@ -88,7 +88,7 @@ Please refer to the [Updating user ID and passwords](../../../../../manage/secur
 
 The following only takes effect when [Config Wizard is enabled](./optional_configure_apps.md#configuration-wizard-configuration).
 
-Similar to Core, the Config Wizard admin credentials can be configured from the helm chart. The properties for credentials are found under the `security` section of the values file. The behaviour slightly differs depending on the user registry that is configured for HCL Digital Experience.
+Similar to Core, you can configure the Config Wizard admin credentials from the helm chart. The properties for credentials are found under the `security` section of the values file. The behaviour slightly differs depending on the user registry that is configured for HCL Digital Experience.
 
 If the default file-based user registry is used for the Config Wizard profile, changes of the credentials in the helm values or custom secret are applied automatically by a `helm upgrade`. This changes the Config Wizard admin user and also applies the configured credentials for the Config Wizard login and the [`dxConnectUsername` and `dxConnectPassword` for connections of DXClient to dxconnect](../../../../../../extend_dx/development_tools/dxclient/index.md). 
 
