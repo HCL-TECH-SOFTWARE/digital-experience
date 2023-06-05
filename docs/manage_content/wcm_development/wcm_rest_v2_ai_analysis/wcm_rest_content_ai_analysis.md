@@ -25,7 +25,7 @@ http or https://host:port/dx/api/wcm/v2/explorer/
 ### How to use REST with AI analyzer API for content
 #### Request Details
 
-Once you access WCM REST V2 API explorer, you can access below mentioned AI analyzer API endpoint.
+Once you access the WCM REST V2 API explorer, you can also access the following AI analyzer API endpoint.
 
 -   POST request to:
 
@@ -34,7 +34,7 @@ Once you access WCM REST V2 API explorer, you can access below mentioned AI anal
     ```
 ### Current API capabilities and limitations
 
-- Only Text Elements (Plain texts/ Rich Texts) are supported and will be used for AI analysis
+- Only Text Elements such as Plain Texts and Rich Texts are supported and are used for AI analysis.
 - Only Content Elements are used for AI analysis. In other words, only those components within the elements data array (Refer above request body's "data": {} item to understand more) are used for AI analysis and other fields in parent level like description, name and title of content are not used for AI analysis.
 - If value of request parameter selected is summary: By default extractive summarization is done during analysis. Currently abstractive summarization is not supported.
 
