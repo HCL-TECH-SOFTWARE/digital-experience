@@ -9,7 +9,7 @@ These comments can be used in Intranet scenarios or in controlled settings allow
 
 This page describes how to enable and configure or disable the solution.
 
-## Description of the feature
+## Overview
 
 WCM Comments is a feature that allows customers to enhance their presentation template by adding in a plugin for commenting. The actual comments are stored in WCM as well and can be managed like regular content. You can choose which library is being used for storing the comments.
 
