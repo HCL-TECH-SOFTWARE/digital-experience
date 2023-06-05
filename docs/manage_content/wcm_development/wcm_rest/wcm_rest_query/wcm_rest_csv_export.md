@@ -37,7 +37,7 @@ The comment lines generated at the top of the file save the query that was used 
 # ============================================================
 </pre>
 
-Most CSV tools recognize the syntax of a line starting with # as being a comment, but it is not part of the CSV standard. In the case where the CSV comment lines should not be automatically generated, a config setting can be used to disable this feature. You define and manage options in the **WCM WCMConfigService** service by using the WebSphere® Integrated Solutions Console.
+Most CSV tools recognize the syntax of a line starting with a number sign (#) as being a comment, but it is not part of the CSV standard. In the case where the CSV comment lines should not be automatically generated, a config setting can be used to disable this feature. You define and manage options in the **WCM WCMConfigService** service by using the WebSphere® Integrated Solutions Console.
 
 -   `wcm.rest.disable.csv.export.comments=true`
 
@@ -49,5 +49,5 @@ The CSV file uses the following column headers:
 ID,NAME,TITLE,TYPE,WORKFLOW_STATUS,AUTHORS,OWNERS,CREATION_DATE,CREATOR,LAST_MODIFIED_DATE,LAST_MODIFIER,LANGUAGE,PATH,PUBLISH_DATE,EXPIRATION_DATE,GENERAL_DATE_ONE,GENERAL_DATE_TWO
 </pre>
 
-For fields that can have multiple entries such as AUTHORS and OWNERS, the entries are delimited with a semi-colon.
-The PATH entries are delimited with a /. 
+For fields that can have multiple entries such as AUTHORS and OWNERS, the entries are delimited with a semi-colon (;).
+The PATH entries are delimited with a forward slash (/). 
