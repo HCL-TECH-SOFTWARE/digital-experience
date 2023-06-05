@@ -13,18 +13,18 @@ This page describes how to enable and configure or disable the solution.
 
 WCM Comments is a feature that allows customers to enhance their presentation template by adding in a plugin for commenting. The actual comments are also stored in WCM and can be managed like regular content. You can choose which library is being used for storing the comments.
 
-Only authorized users can view / edit / delete the comments (specific to the library the comments are stored in).
+Only authorized users can view, edit, and delete the comments (user access permission ![user access permission](https://pages.git.cwp.pnp-hcl.com/CWPDoc/dx-mkdocs/in-progress/deployment/manage/security/people/authorization/controlling_access/wcm_security/wcm_cms_access/wcm_security_items/) to the library the comments are stored in).
 
 The actions available for a user are dependent on their role:
 - The **User** role or higher is required to see the comments.
 - The **Contributor** role or higher is required to create comments.
-- The **Manager** role or higher is required to delete comments. Additionally a specific group can be configured that is the only one to delete comments (in addition to Manager role).
+- The **Manager** role or higher is required to delete comments. In addition to the Manager role, you can configure a specific group solely for deleting comments.
 
 Note that this solution is not related to the existing comments for blogs/wikis ability.
 
-## Enable comments plugin in WAS Console 
+## Enabling the comments plugin in WAS Console 
 
-In order to make comments plugin visible in the plugin component tag which we will add to presentation template, we need to add the configuraton in WAS Console. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Input the details below:
+To make the comments plugin visible in the plugin component tag which should be added to presentation template, you must first add the configuraton in WAS Console. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Enter the following details:
 
 - Name: enable.comment.plugin
 - Value: true
@@ -37,19 +37,19 @@ In order to make comments plugin visible in the plugin component tag which we wi
 
 ## Adding Admin User Group Configuration in WAS Console for User Access Control (Optional)
 
-By default, if the configuration for the admin user group is not present in the console, users with manager level access only would be able to delete comments.
+By default, if the configuration for the admin user group is not present in the console, only users with manager-level access can delete comments.
 
-For security purposes if you need to limit the delete comments option into a specific user group you need to add the below configuration. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Input the details below:
+For security purposes, if you need to limit the delete comments option to a specific user group, you must add the following configuration. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Enter the details below:
 
 - Name: comments.admin.group
 - Value: cn={user-group},o=defaultWIMFileBasedRealm
 - Type: String
 
-Note:
+**user-group** can be any user group such as managers, admins, editors, etc.
 
--   user-group can be any user group like managers, admins, editor, etc.
+Take note of the following:
+
 -   Only users with manager level access inside the user group can delete comments
--   After adding the configuration, a JVM restart is required. Also note that, we are in the process of including manager role to do all the operation on comments as per the portal access control feature.
 
 
 ![Adding Admin User Group Configuration in WAS Console](../developing_managing_content/_img/comments-admin-group.png)
@@ -75,7 +75,7 @@ Note:
 ## Limitations
 
 1. Nested replies to comments are yet supported.
-2. Posting and replying of long comments are not yet supported.
+2. Posting and replying are limited to 500 characters. 
 3. Localized date is not yet properly rendered.
 4. Comments cannot be rendered outside of WCM.
 
