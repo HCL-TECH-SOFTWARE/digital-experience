@@ -64,7 +64,7 @@ Note:
 ![Plugin Tag](../developing_managing_content/_img/plugin-tag.png)
 !!!note
     We can specify our own library for commentsLibrary field to store comments.
-5. Setup and View Comments UI in page. 
+5. Set up and view the Comments UI in page. 
     1. Create Page and add above content directly
     2. Using the Web Content Viewer portlet, select the content to render.
     3. Click **OK**.
