@@ -65,7 +65,7 @@ Note:
 !!!note
     We can specify our own library for commentsLibrary field to store comments.
 5. Set up and view the Comments UI in page. 
-    1. Create Page and add above content directly
+    1. Click **Create Page** and add the content mentioned in Step 4 directly. 
     2. Using the Web Content Viewer portlet, select the content to render.
     3. Click **OK**.
 ![Page with Web Content](../developing_managing_content/_img/page-with-web-content.png)
