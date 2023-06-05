@@ -21,7 +21,7 @@ Use wikis to share community content on a variety of subjects pertinent to your 
 -   **[Installed portlets](intr_por.md)**  
 Learn about the portlets that are provided with HCL.
 -   **[Comments in WCM](comments_wcm.md)**  
-Starting with version 95_CF213 the product contains a new solution for the ability for users to leave comments for WCM. We envision comments to be used in Intranet scenarios or in controlled settings allowing external comments.
+Starting from CF213, the product contains a new solution enabling users to leave comments for WCM. These comments can be used in Intranet scenarios or in controlled settings allowing external comments.
 -   **[Renditions](../../../manage_content/wcm_authoring/renditions/index.md)**  
 Renditions are different versions of an image component or element. Renditions can be thumbnails or smaller versions of an image formatted for mobile devices.
 -   **[Video start and end points](../../../manage_content/wcm_authoring/renditions/rend_cue_points.md)**  
