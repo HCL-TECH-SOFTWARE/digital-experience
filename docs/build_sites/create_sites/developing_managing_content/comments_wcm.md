@@ -57,12 +57,13 @@ Note:
 ## Adding Custom Plugin
 
 1. To use the custom plugin, add it to **Libraries > Web Content > Presentation Templates > Article Presentation**.
-2. In the Presentation Template Options, click the Insert Tag button to add the custom plugin.
-3. In Insert Tag window, select a tag type as **Plugin Component**, select a plugin type as **Content** and select plugin to reference as **NewCommentRenderPlugin**. Click OK button after selecting all the values.
+2. In the **Presentation Template Options**, click the **Insert Tag** button to add the custom plugin.
+3. In **Insert Tag** window, select a tag type as **Plugin Component**, select a plugin type as **Content** and select plugin to reference as **NewCommentRenderPlugin**. Click **OK** after selecting all the values.
 ![Insert a Tag](../developing_managing_content/_img/insert-a-tag.png)
-4. The plugin tag for custom plugin already added on the Article Presentation body. Click Save and Close button to save changes.
+4. The plugin tag for custom plugin already added on the Article Presentation body. Click **Save and Close** to save changes.
 ![Plugin Tag](../developing_managing_content/_img/plugin-tag.png)
-Note: We can specify our own library for commentsLibrary field to store comments.
+!!!note
+    We can specify our own library for commentsLibrary field to store comments.
 5. Setup and View Comments UI in page. 
     1. Create Page and add above content directly
     2. Using the Web Content Viewer portlet, select the content to render
