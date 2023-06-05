@@ -4,7 +4,7 @@ title: Comments in WCM
 
 # Comments in WCM
 
-Starting with version 95_CF213 the product contains a new solution for the ability for users to leave comments for WCM.
+Starting from CF213, the product contains a new solution for the ability for users to leave comments for Web Content Manager (WCM).
 We envision comments to be used in Intranet scenarios or in controlled settings allowing external comments.
 
 This article describes how to enable and configure or disable the solution.
