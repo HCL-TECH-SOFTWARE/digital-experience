@@ -2,8 +2,8 @@
 
 The results from a query can be exported to a CSV file. The query request requires two things to invoke the CSV export:
 
-1. The request Accept header must be set to application/octet-stream
-2. The request mime-type parameter must be set to text/csv
+1. The request Accept header must be set to application/octet-stream.
+2. The request mime-type parameter must be set to text/csv.
 
 For example:
 
@@ -25,7 +25,7 @@ ea4dacb7-df97-467f-a9d8-b6fc15377d78,"SiteAreaName","SiteAreaTitle",Site Area,DR
 
 ## CSV export file contents
 
-The CSV file normally consists of three rows of comments, one row of headers, and then the results rows for all items found matching the query.
+The CSV file consists of three rows of comments, one row of headers, and then rows of results of all items found matching the query.
 
 ### Comment rows
 
