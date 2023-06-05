@@ -48,11 +48,6 @@ For security purposes, if you need to limit the delete comments option to a spec
 
 **user-group** can be any user group such as managers, admins, editors, etc.
 
-Take note of the following:
-
--   Only users with manager level access inside the user group can delete comments
-
-
 ![Adding Admin User Group Configuration in WAS Console](../developing_managing_content/_img/comments-admin-group.png)
 
 ## Adding Custom Plugin
@@ -68,7 +63,7 @@ Take note of the following:
 5. The plugin tag for custom plugin is added on the Article Presentation body. Click **Save and Close** to save changes.
 ![Plugin Tag](../developing_managing_content/_img/plugin-tag.png)
 !!!note
-    We can specify our own library for commentsLibrary field to store comments.
+    You can specify your own library to store comments in the commentsLibrary field.
 6. Set up and view the Comments UI on the page. 
     1. Click **Create Page** and add the content created in Step 5. 
     2. Using the Web Content Viewer portlet, select the content to render.
