@@ -93,7 +93,7 @@ Similar to Core, you can configure the Config Wizard admin credentials from the 
 If the default file-based user registry is used for the Config Wizard profile, changes of the credentials in the helm values or custom secret are applied automatically by a `helm upgrade`. This changes the Config Wizard admin user and also applies the configured credentials for the Config Wizard login and the [`dxConnectUsername` and `dxConnectPassword` for connections of DXClient to dxconnect](../../../../../../extend_dx/development_tools/dxclient/index.md). 
 
 !!! important
-    If the Websphere primary admin user was at any time changed manually and not through the helm values, the values for `configWizardUser` and `configWizardPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterwards, the helm values can be used to change the credentials.
+    If the Websphere primary admin user was, at any time, changed manually and not through the helm values, the values for `configWizardUser` and `configWizardPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterwards, the helm values can be used to change the credentials.
 
 If an LDAP is configured for Config Wizard, the security credentials need to be manually set to the credentials of the administrator user from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
 
