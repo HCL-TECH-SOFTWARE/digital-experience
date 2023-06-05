@@ -13,9 +13,10 @@ This page describes how to enable and configure or disable the solution.
 
 WCM Comments is a feature that allows customers to enhance their presentation template by adding in a plugin for commenting. The actual comments are also stored in WCM and can be managed like regular content. You can choose which library is being used for storing the comments.
 
-Only authorized users can view, edit, and delete the comments (user access permission ![user access permission](https://pages.git.cwp.pnp-hcl.com/CWPDoc/dx-mkdocs/in-progress/deployment/manage/security/people/authorization/controlling_access/wcm_security/wcm_cms_access/wcm_security_items/) to the library the comments are stored in).
+Only authorized users can view, edit, and delete the comments ([user access permission](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authorization/controlling_access/managing_users_groups/) to the library the comments are stored in).
 
 The actions available for a user are dependent on their role:
+
 - The **User** role or higher is required to see the comments.
 - The **Contributor** role or higher is required to create comments.
 - The **Manager** role or higher is required to delete comments. In addition to the Manager role, you can configure a specific group solely for deleting comments.
