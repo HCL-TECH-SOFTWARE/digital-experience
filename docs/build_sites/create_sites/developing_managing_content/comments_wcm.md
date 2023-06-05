@@ -74,7 +74,7 @@ Take note of the following:
     2. Using the Web Content Viewer portlet, select the content to render.
     3. Click **OK**.
 ![Page with Web Content](../developing_managing_content/_img/page-with-web-content.png)
-7. After setting up the comments UI on the page, you can now add, reply, like/unlike, and delete comments. You can also view the total comments count on the content item.
+After setting up the comments UI on the page, you can now add, reply, like/unlike, and delete comments. You can also view the total comments count on the content item.
 ![WCM Comments UI](../developing_managing_content/_img/wcm-comments-ui.png)
 
 ## Limitations
