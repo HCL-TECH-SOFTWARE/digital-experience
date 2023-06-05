@@ -66,19 +66,19 @@ Note:
     We can specify our own library for commentsLibrary field to store comments.
 5. Setup and View Comments UI in page. 
     1. Create Page and add above content directly
-    2. Using the Web Content Viewer portlet, select the content to render
-    3. Click OK after selecting content.
+    2. Using the Web Content Viewer portlet, select the content to render.
+    3. Click **OK**.
 ![Page with Web Content](../developing_managing_content/_img/page-with-web-content.png)
-6. After setting up comments UI in page, you can now add, reply, like/unlike, and delete comments. You can also view total comments count on the content item.
+6. After setting up the comments UI on the page, you can now add, reply, like/unlike, and delete comments. You can also view the total comments count on the content item.
 ![WCM Comments UI](../developing_managing_content/_img/wcm-comments-ui.png)
 
 ## Limitations
 
-1. Nested replies to comments are not supported yet
-2. Posting/replying of long comments not yet supported
-3. Localized date not yet properly rendered
-4. Comments can not be rendered outside of WCM
+1. Nested replies to comments are yet supported.
+2. Posting and replying of long comments are not yet supported.
+3. Localized date is not yet properly rendered.
+4. Comments cannot be rendered outside of WCM.
 
 ## Update global "Article" presentation template
 
-If you want to do a replacement of the OOB components that are shipped, please see [Adding the sample web content libraries in the authoring portlet](https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries/)
+If you want to perform a replacement of the OOB components that are shipped, see [Adding the sample web content libraries in the authoring portlet](https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries/).
