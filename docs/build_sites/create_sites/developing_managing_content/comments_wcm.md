@@ -59,26 +59,30 @@ Take note of the following:
 
 1. To use the custom plugin, add it to **Libraries > Web Content > Presentation Templates > Article Presentation**.
 2. In the **Presentation Template Options**, click the **Insert Tag** button to add the custom plugin.
-3. In **Insert Tag** window, select a tag type as **Plugin Component**, select a plugin type as **Content** and select plugin to reference as **NewCommentRenderPlugin**. Click **OK** after selecting all the values.
+3. In the **Insert Tag** window, select the following values:
+    - In **Select a tag type** field, select **Plugin Component**.
+    - In **Select a plugin type** field, select **Content**.
+    - In **Select plugin to reference** field, select **NewCommentRenderPlugin**. 
 ![Insert a Tag](../developing_managing_content/_img/insert-a-tag.png)
-4. The plugin tag for custom plugin already added on the Article Presentation body. Click **Save and Close** to save changes.
+4. Click **OK** after selecting all the values.
+5. The plugin tag for custom plugin is added on the Article Presentation body. Click **Save and Close** to save changes.
 ![Plugin Tag](../developing_managing_content/_img/plugin-tag.png)
 !!!note
     We can specify our own library for commentsLibrary field to store comments.
-5. Set up and view the Comments UI in page. 
+6. Set up and view the Comments UI on the page. 
     1. Click **Create Page** and add the content mentioned in Step 4 directly. 
     2. Using the Web Content Viewer portlet, select the content to render.
     3. Click **OK**.
 ![Page with Web Content](../developing_managing_content/_img/page-with-web-content.png)
-6. After setting up the comments UI on the page, you can now add, reply, like/unlike, and delete comments. You can also view the total comments count on the content item.
+7. After setting up the comments UI on the page, you can now add, reply, like/unlike, and delete comments. You can also view the total comments count on the content item.
 ![WCM Comments UI](../developing_managing_content/_img/wcm-comments-ui.png)
 
 ## Limitations
 
-1. Nested replies to comments are yet supported.
-2. Posting and replying are limited to 500 characters. 
-3. Localized date is not yet properly rendered.
-4. Comments cannot be rendered outside of WCM.
+- Nested replies to comments are yet supported.
+- Posting and replying are limited to 500 characters. 
+- Localized date is not yet properly rendered.
+- Comments cannot be rendered outside of WCM.
 
 ## Update global "Article" presentation template
 
