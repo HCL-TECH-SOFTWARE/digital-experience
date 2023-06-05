@@ -24,6 +24,13 @@ This check will give the result of `Soft Links` and `Hard Links` creation capabi
 #### Random Read/Write Checks
 In this check, `IOPS` (Input/Output Operations per second) will be measured for the file system. This check is  essential to evaluate the performance of the file system and prints the result on the logs after comparing the actual measured `IOPS` with the threshold value. For the `IOPS` threshold value, refer to [threshold value](#threshold-values).
 
+#### Storage Space Check
+In this check, the `Storage Capacity` will be measured for the mounted volumes. This check is essential to evaluate that the system still have a healthy amount of space. 
+This check computes the total consumed space against the total allocated space for that specific volume mount, the resulting percentage consumed is then check against the [threshold value](#threshold-values) and the result is printed in the logs
+
+##### Core Profile Check
+This check is specific to `core` pod and `profile` mounted volume only. This checks the number of old profile in the volume. This also checks if the system still has healthy amount of space left for upgrade taking into account the size of the most recent profile version plus a headroom value. 
+
 #### Threshold Values
 The threshold values for `prereqs-checker` are used as a benchmark to evaluate the disk latency and random RW (read/write) efficiency of a file system. These values will be compared to the actual test results  of [disk latency (ms)](#latency-check-for-io) and [random read/write (IOPS)](#random-readwrite-checks). From there the check can evaluate if the file system pass or fail the test.
 
@@ -34,6 +41,8 @@ The threshold values for `prereqs-checker` are used as a benchmark to evaluate t
 -   `3 ms` - concluded threshold value for latency check.
 -   `1800 IOPS` - concluded threshold value for random read check.
 -   `600 IOPS` - concluded threshold value for random write check.
+-   `80%` - concluded threshold value for storage space consumed.
+-   `500 MiB` - concluded amount of headroom for core profile check. 
 
 ## Prereqs Checker configuration options
 
