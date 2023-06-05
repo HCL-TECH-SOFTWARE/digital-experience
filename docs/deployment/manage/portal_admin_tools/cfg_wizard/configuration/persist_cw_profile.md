@@ -7,7 +7,7 @@ Starting with CF213 the profile of the Config Wizard is persisted on the same pe
 Config Wizard is reusing the `/opt/HCL/profiles` directory of Core. A single directory is created for the Config Wizard profile called `cw_prof`. It is symbolically linked to `/opt/HCL/AppServer/profiles/cw_profile`.
 
 !!!note
-    With this change, this would require additional an space of approximately ~110MiB.
+    With this change, this would require additional an space of approximately *110MiB*.
 
 ### Backward Compatibility
 
