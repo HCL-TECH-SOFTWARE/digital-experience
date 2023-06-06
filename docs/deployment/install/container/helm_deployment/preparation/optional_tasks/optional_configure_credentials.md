@@ -13,19 +13,19 @@ security:
     # Credentials used for IBM WebSphere Application Server administrative access.
     # The credentials defined in these values define the WebSphere Application Server's primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
-    # - If a LDAP is used, the WebSphere Application Server admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
+    # - If an LDAP is used, the WebSphere Application Server admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
     wasUser: "wpsadmin"
     wasPassword: "wpsadmin"
     # Credentials used for HCL Digital Experience Core administrative access.
     # The credentials defined in these values define the HCL Digital Experience Core administrative user. The user gets created if necessary and/or the password is set to the current value.
-    # - If a LDAP is used, the HCL Digital Experience Core admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wpsUser and wpsPassword need to be manually updated accordingly.
+    # - If an LDAP is used, the HCL Digital Experience Core admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wpsUser and wpsPassword need to be manually updated accordingly.
     wpsUser: "wpsadmin"
     wpsPassword: "wpsadmin"
     # Credentials used for Config Wizard administrative access. This only takes effect when "configuration.core.tuning.configWizard" is enabled.
     # The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # This will also map the user as the user for Config Wizard and dxconnect (for dxclient)
     # - If the Config Wizard admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for configWizardUser and configWizardPassword.
-    # - If a LDAP is used, the the Config Wizard admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for configWizardUser and configWizardPassword need to be manually updated accordingly.
+    # - If an LDAP is used, the the Config Wizard admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for configWizardUser and configWizardPassword need to be manually updated accordingly.
     configWizardUser: "wpsadmin"
     configWizardPassword: "wpsadmin"
   # Security configuration for Digital Asset Management
@@ -47,7 +47,7 @@ security:
     # Credentials used for IBM WebSphere Application Server administrative access.
     # The credentials defined in these values define the WebSphere Application Server's primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
-    # - If a LDAP is used, the WebSphere Application Server admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
+    # - If an LDAP is used, the WebSphere Application Server admin user has never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
     wasUser: "wpsadmin"
     wasPassword: "wpsadmin"
 ```
