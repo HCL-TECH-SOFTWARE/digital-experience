@@ -263,6 +263,9 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
+    -   HCL DX 9.5 CF213 release: **V1.22.0
+        -   [LiveSync](../dxclient/dxclient_artifact_types/livesync.md)
+
     -   HCL DX 9.5 CF211 release: **V1.20.0
         -   [Deploy and Undeploy Applications](../dxclient/dxclient_artifact_types/deployapplication.md)
 
@@ -592,7 +595,7 @@ Use the `dx-core-configuration-reports` command to get a summary of the configur
 ```bash
 dxclient dx-core-configuration-reports [OPTIONS]
 ```
-<!----
+
 Use this command to sync WebDAV themes in server and then watch for succeeding changes which will immediately reflect in the WebDAV Server:
 
 ```bash
@@ -604,7 +607,7 @@ Use this command to download the theme files in WebDAV Server in preparation for
 ```bash
 dxclient livesync pull-theme [options]
 ```
----->
+
 
 ## DXClient command line help
 
