@@ -22,7 +22,7 @@ This check measures the `Latency` of the file system and evaluate it's efficienc
 This check will give the result of `Soft Links` and `Hard Links` creation capabilities on the file system.
 
 #### Random Read/Write Checks
-In this check, `IOPS` (Input/Output Operations per second) will be measured for the file system. This check is essential to evaluate the performance of the file system and prints the result on the logs after comparing the actual measured `IOPS` with the threshold value. For the `IOPS` threshold value, refer to [threshold value](#threshold-values).
+In this check, `IOPS` (Input/Output Operations per second) is measured for the file system. This check is essential to evaluate the performance of the file system and prints the result on the logs after comparing the actual measured `IOPS` with the threshold value. For the `IOPS` threshold value, refer to [threshold value](#threshold-values).
 
 #### Storage Space Check
 In this check, the `Storage Capacity` will be measured for the mounted volumes. This check is essential to evaluate that the system still have a healthy amount of space. 
