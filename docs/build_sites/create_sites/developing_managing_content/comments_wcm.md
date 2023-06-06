@@ -63,7 +63,7 @@ For security purposes, if you need to limit the delete comments option to a spec
 5. The plugin tag for custom plugin is added on the Article Presentation body. Click **Save and Close** to save changes.
 ![Plugin Tag](../developing_managing_content/_img/plugin-tag.png)
 !!!note
-    You can specify your own library to store comments in the commentsLibrary field.
+    You can specify the library you want to use for storing comments in the commentsLibrary field.
 6. Set up and view the Comments UI on the page. 
     1. Click **Create Page** and add the content created in Step 5. 
     2. Using the Web Content Viewer portlet, select the content to render.
