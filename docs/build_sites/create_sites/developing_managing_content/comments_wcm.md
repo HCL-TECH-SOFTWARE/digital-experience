@@ -31,7 +31,7 @@ To make the comments plugin visible in the plugin component tag which should be 
 - Value: true
 - Type: String
 
-!!!note
+!!!important
     After adding the configuration, a JVM restart is required.
 
 ![Enable comments plugin in WAS Server](../developing_managing_content/_img/enable-comment-plugin.png)
