@@ -1,8 +1,8 @@
 ---
-title: AI analyzer API for content
+title: Using AI Analyzer API for content
 ---
 
-# AI analyzer API for content
+# Using AI Analyzer API for content
 
 Starting from CF213, a new WCM REST v2 API is available for sentimental analysis of content, keyword extraction from content, and auto summarization of content element.
 
