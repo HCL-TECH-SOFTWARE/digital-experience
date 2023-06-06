@@ -25,7 +25,7 @@ This check will give the result of `Soft Links` and `Hard Links` creation capabi
 In this check, `IOPS` (Input/Output Operations per second) is measured for the file system. This check is essential to evaluate the performance of the file system and prints the result on the logs after comparing the actual measured `IOPS` with the threshold value. For the `IOPS` threshold value, refer to [threshold value](#threshold-values).
 
 #### Storage Space Check
-In this check, the `Storage Capacity` will be measured for the mounted volumes. This check is essential to evaluate that the system still have a healthy amount of space. 
+In this check, the `Storage Capacity` is measured for the mounted volumes. This check is essential to evaluate that the system still has a healthy amount of space. 
 This check computes the total consumed space against the total allocated space for that specific volume mount, the resulting percentage consumed is then check against the [threshold value](#threshold-values) and the result is printed in the logs
 
 ##### Core Profile Check
