@@ -608,7 +608,6 @@ Use this command to download the theme files in WebDAV Server in preparation for
 dxclient livesync pull-theme [options]
 ```
 
-
 ## DXClient command line help
 
 The following commands show the Help documents for DXClient command usage.

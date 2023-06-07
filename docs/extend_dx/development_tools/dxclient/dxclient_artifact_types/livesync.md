@@ -79,7 +79,6 @@ This command lets you sync your theme on the server. Then, it'll watch for succe
     -themePath <value>
     ```
 
-
     !!! note "Important"
         While _Theme Title_ can include any characters, _Theme System Name_ can include only the following characters: a-z, A-Z, 0-9, spaces, and - _ . ! ( ) ,
         Invalid characters in the title are converted to underscore "_" in the system name by default.
