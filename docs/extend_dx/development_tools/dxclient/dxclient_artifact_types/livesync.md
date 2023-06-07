@@ -3,11 +3,11 @@
 This topic provides information about syncing WebDAV based theme files from local-to-server and server-to-local in real time. It watches the file system for changes in the background.
 
 !!! note
-    We recommend using the node version of DXClient while working with LiveSync.
+    We recommend using the node version of DXClient while working with livesync.
 
 ## LiveSync Push Theme
 
-This command will sync your WebDAV based theme files into DX Server. Then, it will watch for succeeding changes within the given `themePath` and immediately reflect the changes in the DX Server.
+This command will sync your WebDAV based theme files into DX Server. Then, it will watch for succeeding changes within the given `themePath` and immediately reflect the changes in the DX server.
 
 
 -   **Command description**
@@ -31,7 +31,7 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
 -   **Required files**
 
     1. WebDAV based theme files in local.
-    2. Registered Theme in Server.
+    2. Registered Theme in server.
 
 -   **Common Command options**
 
@@ -118,7 +118,7 @@ logs/
 
 ## LiveSync Pull Theme
 
-This command is used to sync a theme from a DX WebDAV based theme on a remote server to a local folder.​
+This command is used to sync a theme from a DX WebDAV based theme on a remote server to a local folder.
 
 -   **Command description**
 
@@ -142,7 +142,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 -   **Required files**
 
     1. A local folder where all the WebDAV based theme files will be placed after downloading.
-    2. Registered WebDAV based Theme in Server.
+    2. Registered WebDAV based Theme in server.
 
 -   **Common Command options**
 
@@ -217,9 +217,9 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 ### Limitations & Troubleshooting
 
 1. This command does not register or unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) or [Undeploy Themes](./themes.md#undeploy-theme) commands.
-2. LiveSync Push Theme is currently only intended for 1 developer working on 1 theme. Concurrent usage of this command or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), is not supported.
+2. LiveSync Push Theme is currently only intended for one developer working on one theme. Concurrent usage of this command or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), is not supported.
 3. Conflict Detection and Resolutions are not implemented.
-4. Do not trigger the LiveSync commands inside the target local theme path. Always provide the absolute or relative path as input for `-themePath`.
+4. Do not trigger the livesync commands inside the target local theme path. Always provide the absolute or relative path as input for `-themePath`.
 5. Case-Sensitivity for file and folder naming are not supported.
 6. In any case, if the real-time sync of Theme during the push command gets disrupted, disconnect and reconnect again.
 7. It is not recommended to use livesync on production server.
