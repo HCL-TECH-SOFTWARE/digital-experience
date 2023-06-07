@@ -7,7 +7,7 @@ This topic provides information about syncing WebDAV based theme files from loca
 
 ## LiveSync Push Theme
 
-This command lets you sync your theme on the server. Then, it'll watch for succeeding changes within the given `themePath` and immediately reflect them in the Server.
+This command will sync your WebDAV based theme files into DX Server. Then, it will watch for succeeding changes within the given `themePath` and immediately reflect the changes in the DX Server.
 
 
 -   **Command description**
@@ -218,7 +218,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 
 1. This command does not register or unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) or [Undeploy Themes](./themes.md#undeploy-theme) commands.
 2. LiveSync Push Theme is currently only intended for 1 developer working on 1 theme. Concurrent usage of this command or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), is not supported.
-3. Conflict Detection and Resolutions are not possible.
+3. Conflict Detection and Resolutions are not implemented.
 4. Do not trigger the LiveSync commands inside the target local theme path. Always provide the absolute or relative path as input for `-themePath`.
 5. Case-Sensitivity for file and folder naming are not supported.
 6. In any case, if the real-time sync of Theme during the push command gets disrupted, disconnect and reconnect again.
