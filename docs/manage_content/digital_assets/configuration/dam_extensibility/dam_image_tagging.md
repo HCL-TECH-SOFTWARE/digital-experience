@@ -125,6 +125,8 @@ Body
 "[{\"keyword\":\"string\",\"confidencePercentage\":\"string\"}]"
 ```
 
+!!! note
+    To check the limitations of Google vision, please refer to this link [Limitations](../../limitations/index.md).
 ## Additional usage information for the extension capability
 
 1.	When a DAM image is uploaded to a Collection, keywords are generated if the plugin for keyword auto-creation is enabled (In this case, to the Google Vision API and image tagging service).
