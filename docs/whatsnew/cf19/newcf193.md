@@ -12,7 +12,7 @@ You can access the latest software requirements and updates that support HCL Dig
 
 Beginning with the HCL Digital Experience 9.5 Container Update CF193 release, enablement is provided to present friendly URLs with locale specific definitions when multi-lingual page versions are requested. This enablement can also improve SEO results when users search for language-specific DX page topics.
 
-See the [Enabling presentation of locales in friendly URLs](https://help.hcltechsw.com/digital-experience/8.5/admin-system/enabling_presentation_of_locales_in_friendly_urls.html){:target="_blank"}<!-- (../admin-system/enabling_presentation_of_locales_in_friendly_urls.md) --> topic for more information.
+See the [Enabling presentation of locales in friendly URLs](../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/enabling_presentation_of_locales_in_friendly_urls.md) topic for more information.
 
 ## Theme Editor Portlet
 
