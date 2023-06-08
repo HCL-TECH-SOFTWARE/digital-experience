@@ -1,0 +1,4 @@
+nav:
+    - index.md
+    - Install Content Reporting: install_content_reporting.md
+    - Enable or Disable in Virtual Portals: configure_cr_virtual_portals.md
