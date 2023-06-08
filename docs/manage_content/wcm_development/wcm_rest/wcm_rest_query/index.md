@@ -6,5 +6,6 @@ The REST service for Web Content Manager comes with a defined set of query param
 Defined queries are stored queries that can be run and updated as required.
 -   **[Query parameters](wcm_rest_adhoc.md)**  
 The following parameters can be used with queries.
-
+-   **[CSV file export for results](wcm_rest_csv_export.md)**  
+The results from a query can be exported to a CSV file.
 
