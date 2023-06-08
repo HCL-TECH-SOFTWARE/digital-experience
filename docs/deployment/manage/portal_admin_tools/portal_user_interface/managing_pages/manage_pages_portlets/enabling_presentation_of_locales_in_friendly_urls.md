@@ -25,7 +25,7 @@ Use the configuration task or manual steps to enable presentation of language sp
 2. Replace the list defined in friendly-locale-list with the locales you would like to support.
 The following example lists the German, English, and Spanish locales (`“dn,en,es”`) to be supported:
 
-```ConfigEngine.bat|sh enable-friendly-locale-urls -Dfriendly-locale-list="de,en,es" -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+    ```ConfigEngine.bat|sh enable-friendly-locale-urls -Dfriendly-locale-list="de,en,es" -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
 
 ### Manual enablement
 
@@ -34,7 +34,7 @@ The following example lists the German, English, and Spanish locales (`“dn,en,
     - `friendly-locale-enabled=true`
     - `friendly-locale-list=de,es`
 
-Adjust the `friendly-locale-list` as desired.
+    Adjust the `friendly-locale-list` as desired.
 
 2. Restart the HCL Portal server.
 
@@ -49,7 +49,7 @@ Use the configuration task or manual steps to disable the process to manage pres
 
 1. Run the following configuration task on your primary HCL Digital Experience node, and restart the other JVMs:
 
-```ConfigEngine.bat|sh disable-friendly-locale-urls -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+    ```ConfigEngine.bat|sh disable-friendly-locale-urls -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
 
 2. Restart the HCL Portal server.
 
