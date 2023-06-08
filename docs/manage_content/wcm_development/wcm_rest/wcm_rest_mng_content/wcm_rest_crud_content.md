@@ -654,6 +654,9 @@ mycontenthandler/!ut/p/digest!PQo5Yhy68oeppWcEz2sddA/wcmrest/Content/b7b8b3fb-8f
 
 A content item can be updated by sending a PUT request to the following URI with an Atom entry that specifies the fields on the item that need to be changed.
 
+!!! note
+    The `name` field is required. If the name is not included in the script, the "name must be entered" error appears. This is applicable from CF181 to CF200.
+
 ```
 /Content/item-uuid
 ```
