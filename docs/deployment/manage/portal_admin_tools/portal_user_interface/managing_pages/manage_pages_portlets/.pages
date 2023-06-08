@@ -4,5 +4,6 @@ nav:
     - Pages and page types - derived and hidden pages: page_pagestypes
     - mp_select_pages.md
     - mp_friendly_url.md
+    - enabling_presentation_of_locales_in_friendly_urls.md
     - csa2r_cfgtsk_rfrshpglyt.md
     - Customizing pages: customizing_pages
