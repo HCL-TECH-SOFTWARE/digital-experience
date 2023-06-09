@@ -16,4 +16,4 @@ The following limitations exist in HCL DAM:
 -   Editing functions in DAM are limited to images with a pixel count of up to `268402689` (`~268 Megapixels`).
 -  When migrating from CF204 or below to CF208 or above, ensure you have the mime type image/webp added to your allowed media types via [API](../../../extend_dx/apis/hcl_experience_api/openapi_example_API_calls.md#add-a-new-mime-type-in-dam). If not, upgrade to CF205 and then upgrade to any version of CF208 or above.
 - Image tagging in DAM by **Google Vision** is limited to images with a pixel count of up to `75 Megapixels` and an image size of up to `40 MB`.
-- If you are uploading multiple large size images simultaneously and if the mime types of those images are configured for Keyword generation, memory limit for google vision pod can be increased to avoid any Out-of-memory issues that could possibly occur.
+- If you are uploading multiple large-sized images simultaneously and if the mime types of those images are configured for Keyword generation, you can increase the memory limit for the google vision pod to avoid any Out-of-memory issues that can occur.
