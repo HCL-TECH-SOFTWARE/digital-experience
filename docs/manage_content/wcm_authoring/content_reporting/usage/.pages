@@ -2,4 +2,4 @@ nav:
     - index.md
     - Generate Content Report: generate_content_report.md
     - Export Report: export_content_report.md
-    - Update Content: update_content_report.md
+    - Bulk Update: bulk_update_report.md
