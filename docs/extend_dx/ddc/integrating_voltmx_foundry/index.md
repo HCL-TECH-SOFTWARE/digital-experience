@@ -8,7 +8,7 @@ Ensure that the your Volt MX Foundry application is configured correctly accordi
 
 To learn how to manage your sites and applications as a business user, refer to the HCLSoftware U course [DX Integration with HCL Volt MX for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D747).
 
-Refer to the HCLSoftware U course [DX Integration with HCL Volt MX for Developers](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1458) to learn further customization for integration, as a developer.
+To learn further customization for integration as a developer, refer to the HCLSoftware U course [DX Integration with HCL Volt MX for Developers](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1458).
 
 ## Creating a mapping for the DDC plug-in for the list-rendering profile
 
