@@ -126,7 +126,8 @@ Body
 ```
 
 !!! note
-    Image size and resolution that are uploaded to Google vision has limitations. More details are available in this [Link](../../limitations/index.md).
+    Image size and resolution that are uploaded to Google vision have limitations. For more information, refer to [Limitations](../../limitations/index.md).
+
 ## Additional usage information for the extension capability
 
 1.	When a DAM image is uploaded to a Collection, keywords are generated if the plugin for keyword auto-creation is enabled (In this case, to the Google Vision API and image tagging service).
