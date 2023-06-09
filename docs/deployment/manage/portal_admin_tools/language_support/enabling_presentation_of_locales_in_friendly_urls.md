@@ -4,7 +4,7 @@ Beginning with HCL DX Container Update CF193 and higher, enablement is provided 
 
 This new enablement improves capability for site managers to deliver language specific friendly URLs without URL specific encoding efforts.
 
-Follow the guidance below to enable locales in the prefix of the HCL DX page URL contexts, for example, `/wps/portal/es/page1/page11` or `/wps/portal/fr/page1/page11`, when a language specific version is requested. The enablement will support friendly and non-friendly URLs, and those supported with the [HCL Web Content Manager Multilingual Solution](../../../../../../manage_content/wcm_authoring/multi_lingual/index.md).
+Follow the guidance below to enable locales in the prefix of the HCL DX page URL contexts, for example, `/wps/portal/es/page1/page11` or `/wps/portal/fr/page1/page11`, when a language specific version is requested. The enablement will support friendly and non-friendly URLs, and those supported with the [HCL Web Content Manager Multilingual Solution](../../../../manage_content/wcm_authoring/multi_lingual/index.md).
 
 This enablement is not supported or executed during presentation of portlet resources such as portlets, REST API calls, or sites presented via Web Application Bridge.
 
@@ -81,4 +81,4 @@ It also works in the context of the Web Content Management Multi-Lingual Solutio
 
 - When generating a Virtual Portal or DX page at the root level, a State Decoding check is not performed, to avoid conflicts with the defined URLs. The virtual Portal creation cannot not succeed; specifically, the page creation would proceed but the page cannot be accessed without the URL (i.e. having a locale of de and creating a root page of de, the URL to access the page would be `/wps/portal/de/de`, assuming a default context root).
 
-- In the [Web Content Management Authoring portlet](../../../../../../manage_content/wcm_authoring/authoring_portlet/index.md), the Generate button and the according widgets are not translated if friendly locales or a locale in the state is used (known issue).
+- In the [Web Content Management Authoring portlet](../../../../manage_content/wcm_authoring/authoring_portlet/index.md), the Generate button and the according widgets are not translated if friendly locales or a locale in the state is used (known issue).
