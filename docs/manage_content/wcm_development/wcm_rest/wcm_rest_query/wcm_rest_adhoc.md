@@ -192,9 +192,9 @@ The existing search query API is extended and two new parameters are added. See 
     </feed>
     
     ```
-## Adding Workflow date fields to the REST API search query results
+## Adding Workflow date fields and link to the REST API search query results
 
-You can include the date fields associated with the workflow of a requested item by specifying the `options=workflow` URL parameter. Only the date fields that have been set to a valid value are returned. This option is ignored for items that do not have a workflow. For example:
+You can include the date fields associated with the workflow of a requested item by specifying the `options=workflow` URL parameter. Only the date fields that have been set to a valid value are returned. Also a link will be added to the workflow. This option is ignored for items that do not have a workflow. For example:
 
     ```
 
@@ -209,7 +209,9 @@ You can include the date fields associated with the workflow of a requested item
             <wcm:generalDateOne>1776-07-04T04:00:00.000Z</wcm:generalDateOne>
             <wcm:generalDateTwo>2023-05-31T17:00:00.000Z</wcm:generalDateTwo>
         </wcm:workflow>
-    …
+        …
+        <link rel="workflow" href="/wps/mycontenthandler/!ut/p/digest!eTdEthwoNryfHPt1e_NrWQ/wcmrest/Workflow/8e97997c-af7a-4aba-88c2-128f0f57c4f8" xml:lang="en" label="Workflow"/>
+        …
     </entry>
 
     ```
