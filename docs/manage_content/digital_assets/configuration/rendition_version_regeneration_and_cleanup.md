@@ -17,7 +17,7 @@ All of these heartbeats run on a configured interval. Heartbeat intervals and Th
 configuration:
     # Digital asset management configurations
     digitalAssetManagement:
-      # Enable or disable the heartbeats (validationHeartBeat, renditionOrVersionHeartbeat, cleanUpHeartBeat, orphanDataAndFileCleanupHeartBeat)
+      # Enable or disable the heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat)
       enableCleanUpOrRenditionVersionHeartbeats: true
       # Interval to run Validation heartbeat
       validationHeartBeatIntervalTimeInMinutes: 10
