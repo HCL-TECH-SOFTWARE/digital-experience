@@ -20,7 +20,7 @@ configuration:
       # Enable or disable the heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat)
       enableCleanUpOrRenditionVersionHeartbeats: true
       # Interval to run Validation heartbeat
-      validationHeartBeatIntervalTimeInMinutes: 10
+      validationHeartbeatIntervalTimeInMinutes: 10
       # Interval to run Rendition or Version generation heartbeat
       renditionOrVersionHeartbeatIntervalTimeInMinutes: 60
       # Interval to run clean up heartbeat
@@ -46,5 +46,6 @@ configuration:
     From cf213, some variable names are changed in order to achieve consistent variable naming. Variables changed are listed below.
     
     1. enableCleanUpOrRenditionVersionHeartbeats
-    2. cleanUpHeartBeatIntervalTimeInMinutes
-    3. orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes
+    2. validationHeartbeatIntervalTimeInMinutes
+    3. cleanUpHeartBeatIntervalTimeInMinutes
+    4. orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes
