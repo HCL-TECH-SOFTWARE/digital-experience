@@ -41,3 +41,10 @@ configuration:
 
 !!! note 
     enableCleanUpOrRenditionVersionHeartbeats is `false` by default. To enable all four heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat), set enableCleanUpOrRenditionVersionHeartbeats to `true`.
+
+!!! Note
+    From cf213, some variable names are in order to achieve consistent variable naming. List of variable changed are listed below
+    
+    1. enableCleanUpOrRenditionVersionHeartbeats
+    2. cleanUpHeartBeatIntervalTimeInMinutes
+    3. orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes
