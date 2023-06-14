@@ -18,15 +18,15 @@ configuration:
     # Digital asset management configurations
     digitalAssetManagement:
       # Enable or disable the heartbeats (validationHeartBeat, renditionOrVersionHeartbeat, cleanUpHeartBeat, orphanDataAndFileCleanupHeartBeat)
-      enableCleanUpOrRenditionVersionHeartBeats: true
+      enableCleanUpOrRenditionVersionHeartbeats: true
       # Interval to run Validation heartbeat
       validationHeartBeatIntervalTimeInMinutes: 10
       # Interval to run Rendition or Version generation heartbeat
       renditionOrVersionHeartbeatIntervalTimeInMinutes: 60
       # Interval to run clean up heartbeat
-      cleanUpHeartBeatIntervalTimeInMinutes: 1440
+      cleanUpHeartbeatIntervalTimeInMinutes: 1440
       # Interval to run orphan data and file cleanup heartbeat
-      orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes: 1440
+      orphanDataAndFileCleanupHeartbeatIntervalTimeInMinutes: 1440
       # A time period based on creation time, after which asset can be validated
       mediaCreationThresholdTimeInMinutes: 1440
       # A time period based on last scan time, after which a valid asset can be re-validated
@@ -40,4 +40,4 @@ configuration:
 ```
 
 !!! note 
-    enableCleanUpOrRenditionVersionHeartBeats is `false` by default. To enable all four heartbearts (validationHeartBeat, renditionOrVersionHeartbeat, cleanUpHeartBeat, orphanDataAndFileCleanupHeartBeat), set enableCleanUpOrRenditionVersionHeartBeats to `true`.
+    enableCleanUpOrRenditionVersionHeartbeats is `false` by default. To enable all four heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat), set enableCleanUpOrRenditionVersionHeartbeats to `true`.
