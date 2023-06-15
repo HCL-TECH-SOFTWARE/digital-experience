@@ -87,6 +87,9 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 |  |  |  |  |  |  |
 | **Overall** |  |  |  | **8200m** | **16512Mi** |
 
+!!!important
+    For the recommended disk storage per pervasiveVolume, refer to the `values.yaml` file. Note that the required size increases with every core upgrade from one cumulative fix to another. It is recommended that you clean up your previous profiles after confirming that the new profile is working. 
+
 !!!note
     Remember that the overall sums for CPU and memory include all components of HCL DX. 
     In most cases, you will only want to deploy a subset of all components, therefore the minimal system requirements will decrease accordingly.
