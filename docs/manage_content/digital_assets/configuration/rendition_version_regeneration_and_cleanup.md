@@ -39,13 +39,12 @@ configuration:
       maxValidationProcessingLimit: 100
 ```
 
-!!! note 
+!!!note 
     enableCleanUpOrRenditionVersionHeartbeats is `false` by default. To enable all four heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat), set enableCleanUpOrRenditionVersionHeartbeats to `true`.
 
-!!! Note
-    From cf213, some variable names are changed in order to achieve consistent variable naming. Variables changed are listed below.
-    
-    1. enableCleanUpOrRenditionVersionHeartbeats
-    2. validationHeartbeatIntervalTimeInMinutes
-    3. cleanUpHeartBeatIntervalTimeInMinutes
-    4. orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes
+Starting from CF213, the following variable names are changed for consistency in variable naming: 
+
+    - enableCleanUpOrRenditionVersionHeartbeats
+    - validationHeartbeatIntervalTimeInMinutes
+    - cleanUpHeartBeatIntervalTimeInMinutes
+    - orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes
