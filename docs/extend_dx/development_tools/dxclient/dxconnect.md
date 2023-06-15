@@ -57,7 +57,17 @@ To re-install DXConnect, use the command below:
 
 ## Accessing the Configuration Wizard admin console in a container environment
 
-Access the ConfigWizard admin console in a container environment from your local system. The ConfigWizard admin console opens to the TCP port number 10203, navigate to the following URL to open the ConfigWizard admin console: [https://localhost:10203/ibm/console](https://localhost:10203/ibm/console).
+Access the ConfigWizard admin console in a container environment from your local system. The ConfigWizard admin console opens to the TCP port number 10203, navigate to the following URL to open the ConfigWizard admin console: 
+
+In localhost:
+```
+https://localhost:10203/ibm/console
+```
+
+In Kube Environments:
+```
+https://YOUR_KUBE_ENV_NAME.com:10203/ibm/console
+```
 
 ???+ info "Related information"
     - [DXClient](../dxclient/index.md)
