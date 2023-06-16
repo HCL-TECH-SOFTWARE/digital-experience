@@ -78,7 +78,7 @@ This topic provides information to apply container scaling capabilities, and how
 -   **[Digital Asset Management persistence architecture](dam_persistence_architecture.md)**  
 This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.
 -   **[Web content AI analysis](wcm_content_ai_analysis.md)**  
-When we enable AI analysis feature for a WCM Content, we can do sentimental analysis, keyword extraction, and auto summarization for a content element.
+This topic describes how to use the AI analysis feature for WCM Content to analyze sentiments, keyword extraction, and auto summarization.
 
 
 <!--- ??? info "Related information"
