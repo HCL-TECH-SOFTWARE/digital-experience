@@ -14,7 +14,7 @@ Content managers can trigger bulk updates to update all queried items' expiratio
 
     ![](../../../../assets/HCL_Content_Reporting_Landing_Page.png)
 
-2. Generate a report on items you want to update. See [Generate Content Report](../installation/generate_content_report.md) for further instructions.
+2. Generate a report on items you want to update. See [Generate Content Report](../usage/generate_content_report.md) for further instructions.
 
 3. When you have already generated a report. The **Update** button will appear in the application header. Click the **Update** button. A dialog box will appear.
 

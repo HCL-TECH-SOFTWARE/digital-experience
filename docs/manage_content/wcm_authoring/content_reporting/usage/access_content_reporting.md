@@ -23,7 +23,7 @@ Follow the instructions below to access HCL Digital Experience 9.5 Content Repor
 
 The HCL Content Reporting UI has the following components:
 
-![](../../../../assets/HCL_Content_Reporting-Full-View.png)
+![](../../../../assets/HCL_Content_Reporting_Full_View.png)
 
 -   **Main header** - This contains the HCL Content Reporting **Update button** to update expiry date for search results, **Export button** to export the search results into a CSV file., Link for pending update actions **Updates** and total number of results found (gives informational feature and quality information) as **19 results found**.
 -   **Search Criteria** - This sections contains information of all the search criterias for searching performed.
@@ -31,7 +31,7 @@ The HCL Content Reporting UI has the following components:
 *Status*, *Created on*, *Last modified on*, *Created by* and , *Location*.
 -   **View Criteria** - **View Criteria** to open the top drawer and display the applied search criteria. which contains **search criteria options**, **search action buttons** and , **Add Criteria** sections as showns in below image.
 
-    ![](../../../../assets/HCL_Content_Reporting-Criteria-Options.png)
+    ![](../../../../assets/HCL_Content_Reporting_Criteria_Options.png)
 
 -   **Search criteria options** - Search has been broken down into search criteria options to allow for a more flexible mix of search parameters.
 e.g. Searching without defining a expiry date will simply search through all items. The respective dynamic fields of each criteria will be displayed upon selection. Content admin can perform content searching by any or all of these search criterias. which includes:
@@ -45,7 +45,7 @@ e.g. Searching without defining a expiry date will simply search through all ite
     -   **Item type** - This criteria will search for any of the types included. All solo/parent and sub types are searchable.
     In case of user input of both a main item type and one or more of its sub types, (e.g. Component + Date + Image), the system should only fulfill the search of the sub-types. In other words, the most specific search criteria of the sub-type will be searched for since searching for the main item type will nullify the specific search. Below is the list of item types and their sub types.
 
-        ![](../../../../assets/HCL_Content_Reporting-Item_Types-Options.png)
+        ![](../../../../assets/HCL_Content_Reporting_Item_Types_Options.png)
 
     -   **Phrase** - This criteria will search for phrase, only one phrase can be searched per criteria line.
 
