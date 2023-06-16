@@ -2,6 +2,7 @@
 
 The following limitations exist in HCL Content Reporting:
 
+-   Content Reporting we cannot cherry pick items we want to use in the bulk update for HCL DX 9.5 Container Update CF213.
 -   Content Reporting bulk updates don't have  project scope (HCL Digital Experience Projects) capabilities in HCL DX 9.5 Container Update CF213.
 -   Content Reporting bulk updates only support updating the expiration date of items in HCL DX 9.5 Container Update CF213.
 -   Content Reporting bulk updates will only be applied to content items, site areas, authoring templates, components, categories, and items with edit access. Items assigned to a workflow will also be included.
