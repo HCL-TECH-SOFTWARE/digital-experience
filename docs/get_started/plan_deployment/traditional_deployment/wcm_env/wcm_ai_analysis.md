@@ -55,7 +55,7 @@ Once config engine task is successfully ran, validate that all the required conf
 
 ## Custom Configurations for AI Analysis
 
-If you like to customize some of the Configurations while doing AI Analysis, you need to Login to WAS console for customizing any of the below mentioned custom properties in WCM Config Service (Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties)
+If you like to customize some of the AI analysis related Configurations, you need to Login to WAS console for customizing any of the below mentioned custom properties in WCM Config Service (Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties)
 
 ### Common configurations for any AI Analysis Provider
 

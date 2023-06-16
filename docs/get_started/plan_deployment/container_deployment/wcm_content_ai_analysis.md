@@ -1,6 +1,6 @@
 # WCM Content AI Analysis
 
-This topic describes how we can enable AI analysis for a WCM Content. This also mentions details on how we can configure, which content AI provider(XAI or OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and later.
+This topic describes how we can enable AI analysis for a WCM Content in Kubernetes Deployment. This also mentions details on how we can configure, which content AI provider(XAI or OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and later.
 
 ## Content AI Providers Overview
 
@@ -87,7 +87,7 @@ For disbaling AI analysis for content set ```enabled``` as ```false``` inside th
 
 ## Custom Configurations for AI Analysis
 
-If you like to customize some of the Configurations while doing AI Analysis, you need to Login to WAS console for customizing any of the below mentioned custom properties in WCM Config Service (Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties)
+If you like to customize some of the AI analysis related Configurations, you need to Login to WAS console for customizing any of the below mentioned custom properties in WCM Config Service (Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties)
 
 ### Common configurations for any AI Analysis Provider
 
