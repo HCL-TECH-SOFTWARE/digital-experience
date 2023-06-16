@@ -56,13 +56,6 @@ Once config engine task is successfully ran, validate that all the required conf
 ## Custom Configurations for AI Analysis
 
 If you like to customize some of the AI analysis related Configurations, you need to Login to WAS console for customizing any of the below mentioned custom properties in WCM Config Service (Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties)
-
-### Common configurations for any AI Analysis Provider
-
-```ai.ssl.enabled```: If it is ```true``` we need to have SSL configured for HTTPS communication with ```XAI``` or ```OPEN_AI``` depending on the provider being used. Default will be ```false```.
-### XAI specific custom configurations
-
-1. ```xai.api.summary.method```: Currently possible value is ```extractive``` which does extractive summarization. In future, we are planning to support ```abstractive``` which does abstractive summarization.
 ### OpenAI ChatGPT specific custom configurations
 
 1. ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. However, we can override the model by overriding this property.
