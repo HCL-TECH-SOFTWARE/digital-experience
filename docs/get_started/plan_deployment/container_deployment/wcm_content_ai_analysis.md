@@ -97,8 +97,8 @@ If you like to customize some of the AI analysis related Configurations, you nee
 1. ```xai.api.summary.method```: Currently possible value is ```extractive``` which does extractive summarization. In future, we are planning to support ```abstractive``` which does abstractive summarization.
 ### OpenAI ChatGPT specific custom configurations
 
-1. ```openai.api.model```: Currently supported AI model is ```text-davinci-003```. However, we can override the model by overriding this property.
-2. ```openai.api.maxTokens``` : Set any positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response.
-3. ```openai.api.temparature``` : Set any positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text, with higher values producing more diverse and random output and lower values producing more focused and deterministic output.
+1. ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. However, we can override the model by overriding this property.
+2. ```OPENAI_MAX_TOKENS``` : Set any positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response.
+3. ```OPENAI_TEMPERATURE``` : Set any positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text, with higher values producing more diverse and random output and lower values producing more focused and deterministic output.
 
 Once Content AI analysis is enabled in DX deployment you can start using [WCM REST V2 AI Analysis API](../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for calling AI Analyzer API's of Content AI Provider you have configured.
