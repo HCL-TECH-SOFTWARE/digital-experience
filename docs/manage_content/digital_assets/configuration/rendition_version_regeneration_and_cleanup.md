@@ -48,3 +48,5 @@ Starting from CF213, the following variable names are changed for consistency in
     - validationHeartbeatIntervalTimeInMinutes
     - cleanUpHeartBeatIntervalTimeInMinutes
     - orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes
+
+    In case if these variables are used in custom values yaml file, ensure to update them accordingly.
