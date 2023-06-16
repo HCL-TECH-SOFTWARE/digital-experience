@@ -77,6 +77,8 @@ This topic covers details the configuration structure in the HCL Digital Experie
 This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.html) for more information on these services.
 -   **[Digital Asset Management persistence architecture](dam_persistence_architecture.md)**  
 This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.
+-   **[Web content AI analysis](wcm_content_ai_analysis.md)**  
+When we enable AI analysis feature for a WCM Content, we can do sentimental analysis, keyword extraction, and auto summarization for a content element.
 
 
 <!--- ??? info "Related information"

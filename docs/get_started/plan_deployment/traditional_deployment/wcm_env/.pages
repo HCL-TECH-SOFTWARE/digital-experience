@@ -5,4 +5,5 @@ nav:
     - wcm_cms_server_authoring.md
     - wcm_cms_server_uat.md
     - wcm_cms_server_delivery.md
+    - wcm_ai_analysis.md
     - ...
