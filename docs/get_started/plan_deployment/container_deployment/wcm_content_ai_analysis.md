@@ -16,7 +16,6 @@ This topic describes how we can enable AI analysis for a WCM Content. This also 
 - OpenAI is the company behind ChatGPT. 
 - OpenAI is an AI research and deployment company. Our mission is to ensure that artificial general intelligence benefits all of humanity. There are lots of articles available describing the history and various features provided. 
 - Chatgpt provides API access via API key that you receive after signing up for it. After signing up at https://platform.openai.com/playground a personal account with limited access can be created. The playground can used to experiment with the API as well. What is somewhat special about the API is that it accepts natural language commands just like the chatgpt chatbot.
-
 ## Enabling AI Analysis in Helm Chart
 
 The `content-ai` configurations are available in the Helm Chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `contentAI`.
@@ -85,3 +84,21 @@ configuration:
 ```
 
 For disbaling AI analysis for content set ```enabled``` as ```false``` inside the contentAI section
+
+## Custom Configurations for AI Analysis
+
+If you like to customize some of the Configurations while doing AI Analysis, you need to Login to WAS console for customizing any of the below mentioned custom properties in WCM Config Service (Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties)
+
+### Common configurations for any AI Analysis Provider
+
+```ai.ssl.enabled```: If it is ```true``` we need to have SSL configured for HTTPS communication with ```XAI``` or ```OPEN_AI``` depending on the provider being used. Default will be ```false```.
+### XAI specific custom configurations
+
+1. ```xai.api.summary.method```: Currently possible value is ```extractive``` which does extractive summarization. In future, we are planning to support ```abstractive``` which does abstractive summarization.
+### OpenAI ChatGPT specific custom configurations
+
+1. ```openai.api.model```: Currently supported AI model is ```text-davinci-003```. However, we can override the model by overriding this property.
+2. ```openai.api.maxTokens``` : Set any positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response.
+3. ```openai.api.temparature``` : Set any positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text, with higher values producing more diverse and random output and lower values producing more focused and deterministic output.
+
+Once Content AI analysis is enabled in DX deployment you can start using [WCM REST V2 AI Analysis API](../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for calling AI Analyzer API's of Content AI Provider you have configured.

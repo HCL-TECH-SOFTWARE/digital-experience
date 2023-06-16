@@ -40,3 +40,7 @@ Once you access the WCM REST V2 API explorer, you can also access the following 
 - If the value of the request parameter selected is **summary**, extractive summarization is done during analysis by default. Currently, abstractive summarization is not supported.
 
 For more information on the API request and response details, refer to ```/contents/analysis``` API with method type as ```POST``` in the Swagger REST API documentation at ```http or https://host:port/dx/api/wcm/v2/explorer/```.
+
+!!! note
+
+    Before you call Content AI analyzer API's of any Content AI Provider, you need to configure them in your DX deployment. Instructions for enabling AI Analysis for Kubernetes deployment is available at [Web content AI analysis in Kubernetes Deployment](../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and instructions for enabling AI Analysis for DX on-premise deployment is available at [Web content AI analysis in on-premise deployment](../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
