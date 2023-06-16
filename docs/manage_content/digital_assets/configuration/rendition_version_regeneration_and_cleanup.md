@@ -42,11 +42,9 @@ configuration:
 !!!note 
     enableCleanUpOrRenditionVersionHeartbeats is `false` by default. To enable all four heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat), set enableCleanUpOrRenditionVersionHeartbeats to `true`.
 
-Starting from CF213, the following variable names are changed for consistency in variable naming: 
+Starting from CF213, the following variable names are changed for consistency in variable naming. If these variables are used in a custom `values.yaml` file, make sure to update them accordingly.
 
     - enableCleanUpOrRenditionVersionHeartbeats
     - validationHeartbeatIntervalTimeInMinutes
     - cleanUpHeartBeatIntervalTimeInMinutes
     - orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes
-
-If these variables are used in a custom `values.yaml` file, make sure to update them accordingly.
