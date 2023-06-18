@@ -1,6 +1,6 @@
 # WCM Content AI Analysis
 
-This topic describes how you can enable AI analysis for a WCM Content in Kubernetes Deployment. This also mentions details on how you can configure, which content AI provider(XAI or OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and later.
+This topic describes how to enable AI analysis for a WCM Content in Kubernetes Deployment. This also mentions details on how to configure, which content AI provider(XAI or OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and later.
 
 ## Content AI Providers Overview
 
@@ -15,7 +15,7 @@ This topic describes how you can enable AI analysis for a WCM Content in Kuberne
 
 - OpenAI is the company behind ChatGPT. 
 - OpenAI is an AI research and deployment company. Our mission is to ensure that artificial general intelligence benefits all of humanity. There are lots of articles available describing the history and various features provided. 
-- Chatgpt provides API access via API key that you receive after signing up for it. After signing up at https://platform.openai.com/playground a personal account with limited access can be created. The playground can used to experiment with the API as well. What is somewhat special about the API is that it accepts natural language commands just like the chatgpt chatbot.
+- Chatgpt provides API access via API key that are received after signing up for it. After signing up at https://platform.openai.com/playground a personal account with limited access can be created. The playground can used to experiment with the API as well. What is somewhat special about the API is that it accepts natural language commands just like the chatgpt chatbot.
 ## Enabling AI Analysis in Helm Chart
 
 The `content-ai` configurations are available in the Helm Chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `contentAI`.
@@ -87,11 +87,11 @@ For disbaling AI analysis for content set ```enabled``` as ```false``` inside th
 
 ## Custom Configurations for AI Analysis
 
-If you like to customize some of the AI analysis related Configurations, you need to Login to WAS console for customizing any of the below mentioned custom properties in WCM Config Service (Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties)
+To customize AI analysis related Configurations, Login to WAS console for customizing any of the below mentioned custom properties in WCM Config Service (Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties)
 ### OpenAI ChatGPT specific custom configurations
 
-1. ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. However, you can override the model by overriding this property.
+1. ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. However, the model can be overidden by overriding this property.
 2. ```OPENAI_MAX_TOKENS``` : Set any positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response.
 3. ```OPENAI_TEMPERATURE``` : Set any positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text, with higher values producing more diverse and random output and lower values producing more focused and deterministic output.
 
-Once Content AI analysis is enabled in DX deployment you can start using [WCM REST V2 AI Analysis API](../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for calling AI Analyzer API's of Content AI Provider you have configured.
+Once Content AI analysis is enabled in DX deployment, use [WCM REST V2 AI Analysis API](../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for calling AI Analyzer API's of configured Content AI Provider.
