@@ -1,6 +1,6 @@
 # WCM Content AI Analysis
 
-This topic describes how we can enable AI analysis for a WCM Content in the traditional on-premise deployment. This also mentions details on how we can configure, which content AI provider(XAI or OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and later.
+This topic describes how you can enable AI analysis for a WCM Content in the traditional on-premise deployment. This also mentions details on how we can configure, which content AI provider(XAI or OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and later.
 
 ## Content AI Providers Overview
 
@@ -19,7 +19,7 @@ This topic describes how we can enable AI analysis for a WCM Content in the trad
 
 ## Config Engine Task for enabling Content AI analysis
 
-In order to enable content AI analysis, we need to connect to DX Core and run the below specified config engine task.
+In order to enable content AI analysis, you need to connect to DX Core and run the below specified config engine task.
 
 ```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=XAI -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
 
@@ -58,7 +58,7 @@ Once config engine task is successfully ran, validate that all the required conf
 If you like to customize some of the AI analysis related Configurations, you need to Login to WAS console for customizing any of the below mentioned custom properties in WCM Config Service (Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties)
 ### OpenAI ChatGPT specific custom configurations
 
-1. ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. However, we can override the model by overriding this property.
+1. ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. However, you can override the model by overriding this property.
 2. ```OPENAI_MAX_TOKENS``` : Set any positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response.
 3. ```OPENAI_TEMPERATURE``` : Set any positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text, with higher values producing more diverse and random output and lower values producing more focused and deterministic output.
 
