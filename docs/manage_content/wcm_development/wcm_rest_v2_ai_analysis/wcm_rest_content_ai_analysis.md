@@ -25,7 +25,7 @@ http or https://host:port/dx/api/wcm/v2/explorer/
 ### How to use REST with AI analyzer API for content
 #### Request Details
 
-Once you access the WCM REST V2 API explorer, you can also access the following AI analyzer API endpoint.
+Using WCM REST V2 API explorer, access the following AI analyzer API endpoint.
 
 -   POST request to:
 
@@ -43,4 +43,4 @@ For more information on the API request and response details, refer to ```/conte
 
 !!! note
 
-    Before you call Content AI analyzer API's of any Content AI Provider, you need to configure them in your DX deployment. Instructions for enabling AI Analysis for Kubernetes deployment is available at [Web content AI analysis in Kubernetes Deployment](../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and instructions for enabling AI Analysis for DX on-premise deployment is available at [Web content AI analysis in on-premise deployment](../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
+    Before calling Content AI analyzer API's of any Content AI Provider, configure them in your DX deployment. Instructions for enabling AI Analysis for Kubernetes deployment is available at [Web content AI analysis in Kubernetes Deployment](../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and instructions for enabling AI Analysis for DX on-premise deployment is available at [Web content AI analysis in on-premise deployment](../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
