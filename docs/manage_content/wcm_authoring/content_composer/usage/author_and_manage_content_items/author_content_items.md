@@ -175,6 +175,7 @@ Follow the steps to create a new content and add an AI-assisted and generated de
 4.  Click the 'Generate' button in the Description field. The generated description will be based on the content provided in the content element. The generated description will replace any existing description, if present.
 
     ![](../../../../../assets/HCL_Content_Composer_Content_GenerateDescription_ClickGenerate.png)
+    ![](../../../../../assets/HCL_Content_Composer_Content_GenerateDescription_GeneratedDescription.png)
 
 5.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and will redirect you to the new content's location in the Content Composer dashboard.
 
@@ -197,9 +198,14 @@ Follow the steps to create a new content and get AI-assisted sentiment analysis 
 
     ![](../../../../../assets/HCL_Content_Composer_Content_SentimentAnalysis_CompleteContent.png)
 
-4.  Click the 'Analyze Sentiment' icon in the text element/s. A sentiment analysis result will be returned based on the analysis of the content of the text element. This sentiment analysis result is represented by an icon on the text field. Click the icon to see more details about the sentiment analysis result.
+4.  Click the 'Analyze Sentiment' icon in the text element/s. A sentiment analysis result will be returned based on the analysis of the content of the text element. This sentiment analysis result is represented by an icon on the text field.
 
     ![](../../../../../assets/HCL_Content_Composer_Content_SentimentAnalysis_AnalyzeSentiment.png)
+    ![](../../../../../assets/HCL_Content_Composer_Content_SentimentAnalysis_SentimentResult.png)
+
+5.  Click the sentiment result icon to see more details about the sentiment analysis result.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_SentimentAnalysis_SentimentPopover.png)
 
 5.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and will redirect you to the new content's location in the Content Composer dashboard.
 

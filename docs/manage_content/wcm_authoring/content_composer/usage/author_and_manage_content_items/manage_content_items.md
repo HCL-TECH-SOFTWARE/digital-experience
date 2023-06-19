@@ -74,6 +74,10 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
     ![Sentiment analysis](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_SentimentAnalysis.png)
 
+    When in **Read Only** mode, sentiment analysis is still enabled.
+
+    ![Sentiment analysis read only](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_SentimentAnalysisReadOnly.png)
+
 3.  Click the **Save** button or the drop-down to **Save and Close** in the upper right of the interface to save your completed content edits.
 
 ## Move Content item
