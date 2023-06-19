@@ -10,12 +10,15 @@ This topic describes how to enable AI analysis for a WCM Content in Kubernetes D
 - XAI works to identify machine learning use cases and collaborate with teams across the HCL portfolio​
 - XAI team is focused on delivering high value ML-based capabilities that address existing visions​
 - XAI accelerate development through model & skill reusability
+- XAI is free of charge for HCL DX customers - an API key can be obtained by opening a support ticket with HCL Software
 
 ### OpenAI ChatGPT Overview
 
 - OpenAI is the company behind ChatGPT. 
-- OpenAI is an AI research and deployment company. Our mission is to ensure that artificial general intelligence benefits all of humanity. There are lots of articles available describing the history and various features provided. 
-- Chatgpt provides API access via API key that are received after signing up for it. After signing up at https://platform.openai.com/playground a personal account with limited access can be created. The playground can used to experiment with the API as well. What is somewhat special about the API is that it accepts natural language commands just like the chatgpt chatbot.
+- OpenAI is an AI research and deployment company. There are lots of articles available describing the history and various features provided. 
+- Chatgpt provides API access via API key that are received after signing up for it. After signing up at https://platform.openai.com/playground a personal account with limited access or corporate account can be created. The playground can used to experiment with the API as well. What is somewhat special about the API is that it accepts natural language commands just like the chatgpt chatbot.
+- For privacy and API availability and other conditions see the OpenAI website or contact the OpenAI team.
+
 ## Enabling AI Analysis in Helm Chart
 
 The `content-ai` configurations are available in the Helm Chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `contentAI`.
