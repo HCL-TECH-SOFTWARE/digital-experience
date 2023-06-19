@@ -4,7 +4,7 @@ This section details how to use the bulk update to update the expiration date of
 
 ## Prerequisite
 
-Content Reporting should be installed and configured to HCL Digital Experience 9.5 release update CF213 or higher. See instructions to install to supported container environments to the [Install HCL Digital Experience 9.5 Content Reporting](../installation/install_content_reporting.md) topic.
+Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. See instructions to install to supported container environments to the [Install HCL Digital Experience 9.5 Content Reporting](../installation/install_content_reporting.md) topic.
 
 ## Bulk Update
 
@@ -16,11 +16,11 @@ Content managers can trigger bulk updates to update all queried items' expiratio
 
 2. Generate a report on items you want to update. See [Generate Content Report](../usage/generate_content_report.md) for further instructions.
 
-3. When you have already generated a report. The **Update** button will appear in the application header. Click the **Update** button. A dialog box will appear.
+3. When you have already generated a report, the **Update** button will appear in the application header if there are results. Click the **Update** button. A dialog box will appear.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Button.png)
 
-3. On the dialog box, we have three options: **Action**, **Property**, and **Change to**. For this release, **Action** and **Property** will only have one option, which is **Update** and **Expiry date**, respectively. For **Change to**, we have a date picker. Enter the date for the expiry date on the selected items. After entering the date, the **Update** button will be enabled. If you click the **Update** button, a confirmation dialog will appear.
+3. On the dialog box, we have three options: **Action**, **Property**, and **Change to**. For CF213, **Action** and **Property** will only have one option, which is **Update** and **Expiry date**, respectively. For **Change to**, we have a date picker. Enter the date for the expiry date on the selected items. After entering the date, the **Update** button will be enabled. If you click the **Update** button, a confirmation dialog will appear.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Dialog.png)
 
@@ -39,11 +39,11 @@ Content managers can trigger bulk updates to update all queried items' expiratio
 
 ## Track Bulk Updates and View Bulk Update Results
 
-There are two ways to track the bulk update: the first is the snackbar mentioned above, and the other  is the **Updates** page.
+There are two ways to track the bulk update: the first is the snackbar mentioned above, and the other is the **Updates** page.
 
 ### Snackbar
 
-1. The snackbar that appear when a bulk update is triggered will track up to five the bulk update process. 
+1. The snackbar that appears when a bulk update is triggered will track up to five bulk update processes.
 
     This is the snackbar for the ongoing process
     ![](../../../../assets/HCL_Content_Reporting_Snackbar_In_Progress.png)
@@ -57,11 +57,11 @@ There are two ways to track the bulk update: the first is the snackbar mentioned
     This is the snackbar if all items failed to update.
     ![](../../../../assets/HCL_Content_Reporting_Snackbar_Error.png)
 
-2. On the snackbar, there is an option to view the items that have been processed only when the bulk update process is completed. Click **View Item(s)** to check the details of each item that has been processed; a dialog box for the reports should appear.
+2. On the snackbar, there is an option to view the items that have been processed only when the bulk update process is completed. Click **View item(s)** to check the details of each item that has been processed; a dialog box for the reports should appear.
 
     ![](../../../../assets/HCL_Content_Reporting_Snackbar_View_Item.png)
 
-3. On the dialog box, on the header, we can see the total number of items was successfully updated and the number of failed items. On the alert part, we can see the number of failed items. We have five columns on the table inside the body of the dialog box, and they are as follows:
+3. On the dialog box, in the header, we can see the total number of items that was successfully updated and the number of failed items. On the alert part, we can see the number of failed items. We have five columns on the table inside the body of the dialog box, and they are as follows:
 
     - **Title**: This column shows the title of the item we processed.
     - **Item type**: This column shows the type of item we processed.
@@ -73,13 +73,13 @@ There are two ways to track the bulk update: the first is the snackbar mentioned
    
 ### Updates Page
 
-1. We can access the **Updates** page via the button on the application header; upon clicking the **Updates** button, it will redirect you to the **Updates** page. The **Updates** button also contains the total bulk update triggered.
+1. We can access the **Updates** page via the button on the application header; upon clicking the **Updates** button, it will redirect you to the **Updates** page. The **Updates** button also contains the total number of bulk update operations triggered.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
 
 2. On the updates page, we see a table that contains the bulk updates that were triggered. We have four columns, which are as follows:
 
-    - **Update**: This column tells if the bulk update is ongoing or completed; once complete, we will have a summary of items that are in process. We will know how many items were successfully updated and how many failed. This column also contains a button to show the report dialog to check the details of each item that has been processed.
+    - **Update**: This column tells if the bulk update is ongoing or completed; once complete, we will have a summary of items that are processed. We will know how many items were successfully updated and how many failed. This column also contains a button to show the report dialog to check the details of each item that has been processed.
     - **Action**: This column shows actions that were taken on the bulk update.
     - **Requested by**: This column shows who triggered this bulk update process.
     - **Updated on**: This column shows when the bulk update was triggered.
@@ -88,11 +88,11 @@ There are two ways to track the bulk update: the first is the snackbar mentioned
 
     We have a *back button* on the app header to return to the landing page of Content Reporting.
 
-3. On the table, in the **Update** column, there is a button that will appear when hovered when a bulk update is **completed**. This button will show ss dialog to check the details of each item that has been processed.
+3. On the table, in the **Update** column, there is a button that will appear upon hover when a bulk update is **completed**. This button will show a dialog to check the details of each item that has been processed.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_View_Report_Button.png)
 
-3. On the dialog box, on the header, we can see the total number of items was successfully updated and the number of failed items. On the alert part, we can see the number of failed items. We have five columns on the table inside the body of the dialog box, and they are as follows:
+3. On the dialog box, in the header, we can see the total number of items that was successfully updated and the number of failed items. On the alert part, we can see the number of failed items. We have five columns on the table inside the body of the dialog box, and they are as follows:
 
     - **Title**: This column shows the title of the item we processed.
     - **Item type**: This column shows the type of item we processed.
