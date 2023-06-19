@@ -2,11 +2,13 @@
 
 This section provides the steps on how to manage content items using the HCL Content Composer.
 
-## Prerequisite
+## Prerequisite {#prerequisite}
 
 Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../../installation/install_config_cc_dam.md) topic.
 
 Content Composer is accessible from the Practitioner Studio interface (after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment).
+
+To utilize AI-assistance features for sentimental analysis of content, keyword extraction from content, and auto summarization of content element in Content Composer, follow these steps for [Deploying the AI analyzer for content](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/get_started/plan_deployment/container_deployment/wcm_cnotent_ai_analysis).
 
 ## View Content overview
 
@@ -37,13 +39,42 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 2.  Select **Web Content** menu option to access the HCL Digital Experience 9.5 Content Composer interface.
 
-3.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**Image**) is obtained from **Web Content > Content > Articles** site area location. Select **Open Content**.
+3.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**HCL Article**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
 
-    ![Opening the content item](../../../../../assets/Open_Content_Item_HCL_Content_Composer.png)
+    ![Editing the content item](../../../../../assets/HCL_Content_Composer_Edit_Content_WebContentInterface.png)
 
-4.  The content item editor interface is set in **Read Only** mode by default. Click the selector to switch the interface to **Edit Mode** to edit the selected content.
+4.  Click the **Save** button or the drop-down to **Save and Close** in the upper right of the interface to save your completed content edits.
 
-5.  Click the **Save** button or the drop-down to **Save and Close** in the upper right of the interface to save your completed content edits.
+## Edit Content item with AI-assisance
+
+!!! note "Using AI-assisted content generation in Content Composer"
+    Refer to the [Prerequisite](#prerequisite) section on how to setup and enable AI-assistance features
+
+1.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**HCL Article with AI-assisance**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
+
+    ![Editing the content item](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_WebContentInterface.png)
+
+2. You can use the AI-assisted content generation features when editing content items:
+
+    ### Auto-summarization of content element
+
+    Click the 'Generate' button in the Description field. The generated description will be based on the content provided in the content element. The generated description will replace any existing description, if present.
+
+    ![Generate summary](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_GenerateDescription.png)
+
+    ### Keyword extraction from content
+
+    Click the 'Generate' button in the Keywords field. The extracted keywords will be based on the content provided in the content item. The AI-generated keywords will not overwrite the existing keywords but will append to it.
+
+    ![Generate keywords](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_GenerateKeywords.png)
+
+    ### Sentiment analysis of content
+
+    Click the 'Analyze Sentiment' icon in the text element/s. A sentiment analysis result will be returned based on the analysis of the content of the text element. This sentiment analysis result is represented by an icon on the text field. Click the icon to see more details about the sentiment analysis result.
+
+    ![Sentiment analysis](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_SentimentAnalysis.png)
+
+3.  Click the **Save** button or the drop-down to **Save and Close** in the upper right of the interface to save your completed content edits.
 
 ## Move Content item
 

@@ -1,12 +1,14 @@
 # Author Content Items
 
-This section provides the steps on how to author a web content item using HCL Content Composer.
+This section provides the steps on how to author a web content item using HCL Content Composer TEST.
 
-## Prerequisite
+## Prerequisite {#prerequisite}
 
 Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../../installation/install_config_cc_dam.md) topic.
 
 Content Composer is accessible from the Practitioner Studio interface (after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment).
+
+To utilize AI-assistance features for sentimental analysis of content, keyword extraction from content, and auto summarization of content element in Content Composer, follow these steps for [Deploying the AI analyzer for content](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/get_started/plan_deployment/container_deployment/wcm_cnotent_ai_analysis).
 
 ## Create new content with Content Composer
 
@@ -117,12 +119,19 @@ Follow the steps to create a new content and add keywords from the Dashboard vie
 
     ![](../../../../../assets/HCL_Content_Composer_Content_Add_Keywords.png)
 
-5. If you want to remove a keyword, just click the 'x' button of the keyword you want to delete as shown below.
+5. You can also automatically extract keywords from the content item using AI-assisted keyword generation. Simply click the 'Generate' button. The extracted keywords will be based on the content provided in the content item. The AI-generated keywords will not overwrite the existing keywords but will append to it.
+
+    !!! note "Using AI-assisted keyword extraction"
+        Refer to the [Prerequisite](#prerequisite) section on how to setup and enable AI-assistance features
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_Generate_Keywords.png)
+
+6. If you want to remove a keyword, just click the 'x' button of the keyword you want to delete as shown below.
 
     ![](../../../../../assets/HCL_Content_Composer_Content_Remove_Keyword.png)
 
-6.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
-7.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and keywords and will redirect you to the new content's location in the Content Composer dashboard.
+7.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
+8.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and keywords and will redirect you to the new content's location in the Content Composer dashboard.
 
 
 ## Create new content with default keywords
@@ -143,6 +152,57 @@ Follow the steps to create a new content with auto-populated keywords from the D
 
 4.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
 5.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and will redirect you to the new content's location in the Content Composer dashboard.
+
+## Create new content and add AI-assisted summarization of content element
+
+!!! note "Using AI-assisted summarization of content element"
+    Refer to the [Prerequisite](#prerequisite) section on how to setup and enable AI-assistance features
+
+Follow the steps to create a new content and add an AI-assisted and generated description from the Dashboard view:
+
+1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template, hover to the icon to display checkbox then click it.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_GenerateDescription_Checkbox.png)
+
+2.  Click **Create Content** in the actions bar.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_GenerateDescription_Actionbar.png)
+
+3.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_GenerateDescription_CompleteContent.png)
+
+4.  Click the 'Generate' button in the Description field. The generated description will be based on the content provided in the content element. The generated description will replace any existing description, if present.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_GenerateDescription_ClickGenerate.png)
+
+5.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and will redirect you to the new content's location in the Content Composer dashboard.
+
+## Create new content and get AI-assisted sentiment analysis of text content items
+
+!!! note "Using AI-assisted sentiment analysis of content"
+    Refer to the [Prerequisite](#prerequisite) section on how to setup and enable AI-assistance features
+
+Follow the steps to create a new content and get AI-assisted sentiment analysis on text content items from the Dashboard view:
+
+1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template, hover to the icon to display checkbox then click it.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_SentimentAnalysis_Checkbox.png)
+
+2.  Click **Create Content** in the actions bar.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_SentimentAnalysis_ActionBar.png)
+
+3.  Complete the text field/s (Short Text, Text, and Rich Text) on the **Content** tab, of which the content author will be directed to by default.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_SentimentAnalysis_CompleteContent.png)
+
+4.  Click the 'Analyze Sentiment' icon in the text element/s. A sentiment analysis result will be returned based on the analysis of the content of the text element. This sentiment analysis result is represented by an icon on the text field. Click the icon to see more details about the sentiment analysis result.
+
+    ![](../../../../../assets/HCL_Content_Composer_Content_SentimentAnalysis_AnalyzeSentiment.png)
+
+5.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and will redirect you to the new content's location in the Content Composer dashboard.
+
 
 <!--
 
