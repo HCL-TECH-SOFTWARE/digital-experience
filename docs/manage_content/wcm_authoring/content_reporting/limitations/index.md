@@ -14,6 +14,7 @@ The following limitations exist in HCL Content Reporting:
 -   Content Reporting bulk updates don't have  project scope (HCL Digital Experience Projects) capabilities in HCL DX 9.5 Container Update CF213.
 -   Content Reporting bulk updates only support updating the expiration date of items in HCL DX 9.5 Container Update CF213.
 -   Content Reporting bulk updates will only be applied to content items, site areas, authoring templates, components, categories, and items with edit access. Items assigned to a workflow will also be included.
+-   Content Reporting bulk updates for expiry is date-only, and the default time will be 12:00 a.m.
 -   Content Reporting bulk updates don't track items in real time; instead, we are pulling data every 10 seconds in HCL DX 9.5 Container Update CF213.
 -   Content Reporting Update page doesn't have server-side pagination and sorting support in HCL DX 9.5 Container Update CF213.
 -   Content Reporting Update Report Dialog doesn't have server-side pagination and sorting support in HCL DX 9.5 Container Update CF213.
