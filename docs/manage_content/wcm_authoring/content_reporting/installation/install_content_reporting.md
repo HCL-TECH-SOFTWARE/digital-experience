@@ -1,11 +1,11 @@
 # Installing and Deploying Content Reporting
 
-This document contains technical desing on how we can install and deploy Content Reporting react application in DX.
+This document contains technical design on how we can install and deploy Content Reporting react application in DX.
 
-## Packaging, Installing and Deploying design
+## Packaging, Installing, and Deploying design
 Application page would contain an instance of react integration portlet and it will be configured to point to the external node Webserver where the app is running as a container.
 
-In Content Reporting, there is content-reporting portlet which is an instance of the react integration portlet and it is configured to point where the static files that the app can be loaded from. Additionally, it can be enabled and disabled by using the Config Engine tasks where enable tasks would deploy and configures the portlet and then deploys the page.
+In Content Reporting, it is an instance of a react integration portlet and it is configured to point where the static files of the app can be loaded from. Additionally, it can be enabled and disabled by using the Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page.
 
 The Content Reporting application is running as an container and in the helm-charts, values.yaml define the value of contentReporting on whether it should be enable or not. In addition to other required parameters. Pass in the URL of where the container is provisioned, so when action-op-deploy-extension-products config engine is called it will call the underlying CE task to enable and disable content reporting.
 
@@ -43,7 +43,7 @@ In the values.yaml, under the configuration, enable contentReporting by setting 
 ## Disabling Content Reporting for on-premise deployment
 1. Open a command line.
 2. Change to the wp_profile-root/ConfigEngine directory.
-3. Run the **enable-content-reporting** config task.
+3. Run the **disable-content-reporting** config task.
 
     -   AIX: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
     -   Linux: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
