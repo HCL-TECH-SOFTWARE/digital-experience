@@ -2,23 +2,19 @@
 
 The following limitations exist in HCL Content Reporting:
 
--   Content Reporting report can be generated only by limited search criteria Expiry date, Authors, Owners, Item type, Words ,and Phrases in HCL DX 9.5 Container Update CF213.
--   Content Reporting multiple selection of content items are not allowed in HCL DX 9.5 Container Update CF213.
--   Content Reporting does not return any result if entering the same date in the From and To dates in Expiry date criteria.
--   Content Reporting Author/Owner cannot be searched by email, job title etc. in HCL DX 9.5 Container Update CF213.
--   Content Reporting Author/Owner cannot be searched per user group category (e.g. Authenticated users, Anonymous users) in HCL DX 9.5 Container Update CF213.
--   Content Reporting can search only one phrase per criteria line in HCL DX 9.5 Container Update CF213.
--   Content Reporting will search the more specific sub-types in case of user input of both a main item type and one or more of its sub types, (e.g. Component + Date + Image) in HCL DX 9.5 Container Update CF213.
--   Content Reporting search table doesn't have sorting support in HCL DX 9.5 Container Update CF213.
--   Content Reporting clicking on individual content of search result doesn't navigate to actual item detail page in HCL DX 9.5 Container Update CF213.
--   Content Reporting cannot cherry pick items from the search results, by checkbox or  row selection, to use in the bulk update for HCL DX 9.5 Container Update CF213.
--   Content Reporting bulk updates don't have project scope (HCL Digital Experience Projects) capabilities in HCL DX 9.5 Container Update CF213.
--   Content Reporting bulk updates only support updating the expiration date of items in HCL DX 9.5 Container Update CF213.
--   Content Reporting bulk updates will only be applied to content items, site areas, authoring templates, components, categories, and items with edit access. Items assigned to a workflow will also be included.
+-   Content Reporting report can be generated only by limited search criteria Expiry date, Authors, Owners, Item type, Words ,and Phrases.
+-   Selecting a subset of items in the report for export or update is not allowed.
+-   No results will be returned if the same date is used as the From and To dates for the Expiry date criteria.
+-   Content Reporting Author/Owner cannot be searched by email, job title etc.
+-   Content Reporting Author/Owner cannot be searched per user group category (e.g. Authenticated users, Anonymous users).
+-   Content Reporting search table doesn't have sorting support.
+-   Content Reporting clicking on individual content of search result doesn't navigate to actual item detail page.
+-   Content Reporting bulk updates don't have project scope (HCL Digital Experience Projects) capabilities.
+-   Content Reporting bulk updates only support updating the expiration date of items.
+-   Updates can only be applied in bulk to content items, site areas, authoring templates, components, categories, and items with edit access.
+-   Only the expiry date can by updated in bulk at the moment. Items that are not assigned a workflow will be excluded from the updates.
 -   Content Reporting bulk updates for expiry is date-only, and the default time will be 12:00 a.m.
--   Content Reporting bulk updates don't track items in real time; instead, we are pulling data every 10 seconds in HCL DX 9.5 Container Update CF213.
--   Content Reporting Updates page doesn't have server-side pagination and sorting support in HCL DX 9.5 Container Update CF213.
--   Content Reporting Update Report Dialog doesn't have server-side pagination and sorting support in HCL DX 9.5 Container Update CF213.
+-   The status of bulk update requests is not tracked in real-time; instead, the status is updated every 10 seconds.
 
 The following issues to be aware of in HCL Content Reporting:
 

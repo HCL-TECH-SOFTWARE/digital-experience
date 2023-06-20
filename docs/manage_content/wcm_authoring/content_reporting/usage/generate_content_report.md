@@ -4,7 +4,7 @@ This section details how to genearte content report in HCL Content Reporting.
 
 ## Prerequisite
 
-Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. See instructions to install to supported container environments to the [Install HCL Digital Experience 9.5 Content Reporting](../installation/install_content_reporting.md) topic.
+Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. See instructions to install to supported container environments to the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
 ## Generating a Report
 

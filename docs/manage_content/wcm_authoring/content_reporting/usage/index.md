@@ -1,4 +1,4 @@
-# Managing Content
+# Content Reporting Usage -
 
 Access, author, and manage content and content templates using HCL Content Composer. Users can also manage workflow approvals of content and content templates using HCL Content Composer.
 

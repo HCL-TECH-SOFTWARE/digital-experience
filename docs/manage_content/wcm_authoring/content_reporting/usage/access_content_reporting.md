@@ -3,7 +3,7 @@ This section provides the steps on how to access HCL Content Reporting portlet a
 
 ## Prerequisite
 
-Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. See instructions to install to supported container environments to the [Install HCL Digital Experience 9.5 Content Reporting](../installation/install_content_reporting.md) topic.
+Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. See instructions to install to supported container environments to the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
 Content Reporting is accessible from the Practitioner Studio interface (after image configuration to your HCL Digital Experience 9.5 CF213 and higher deployment).
 
