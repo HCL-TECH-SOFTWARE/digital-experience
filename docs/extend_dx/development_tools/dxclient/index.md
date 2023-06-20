@@ -6,9 +6,6 @@ DXClient can take artifacts developed locally and deploy them to HCL DX servers 
 
 DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
 
-!!! important
-    The DXClient version is mostly forward and backward compatible with the DX CF versions. However, in some cases, it might not work as expected if the CF versions are different. Make sure that the CF versions of both DXClient and DX Core are the same in your installation.
-
 DXClient comes with two deployment options:
 
 1. The default deployment option is the DXClient container package. DXClient is packaged as a container that can be run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. See the [DXClient installation](#installing-dxclient-using-the-container-package) for more details.
@@ -262,6 +259,9 @@ In addition, the package includes scripts for all operating systems that make it
 Successful installation of the DXClient tool can be checked by using the "`dxclient -V`" command, which should show the version of the DXClient tool installed.
 
 Once installed, commands can be executed using the DXClient tool to perform CI/CD actions on HCL DX 9.5 servers.
+
+!!! important
+    The DXClient version is mostly forward and backward compatible with the DX CF versions. However, in some cases, it might not work as expected if the CF versions are different. Make sure that the CF versions of both DXClient and DX Core are the same in your installation.
 
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
