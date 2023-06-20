@@ -181,12 +181,12 @@ Follow the steps to create a new content and add an AI-assisted and generated de
 
 5.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and will redirect you to the new content's location in the Content Composer dashboard.
 
-## Create new content and get AI-assisted sentiment analysis of text content items
+## Create new content and get AI-assisted sentiment analysis of text elements
 
 !!! note "Using AI-assisted sentiment analysis of content"
     Refer to the [Prerequisite](#prerequisite) section on how to setup and enable AI-assistance features
 
-Follow the steps to create a new content and get AI-assisted sentiment analysis on text content items from the Dashboard view:
+Follow the steps to create a new content and get AI-assisted sentiment analysis on text elements from the Dashboard view:
 
 1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template, hover to the icon to display checkbox then click it.
 
