@@ -7,7 +7,7 @@ DXClient can take artifacts developed locally and deploy them to HCL DX servers 
 DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
 
 !!! important
-    DXClient version is mostly forward and backward compatible with the DX CF versions, however in some cases, it might not work as expected if the CF versions are different. Hence, make sure that the CF versions of both DXClient and DX Core are the same in your installation.
+    The DXClient version is mostly forward and backward compatible with the DX CF versions. However, in some cases, it might not work as expected if the CF versions are different. Make sure that the CF versions of both DXClient and DX Core are the same in your installation.
 
 DXClient comes with two deployment options:
 
