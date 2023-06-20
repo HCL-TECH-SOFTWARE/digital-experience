@@ -84,7 +84,7 @@ There are two ways to track the bulk update: the first is the snackbar mentioned
 
 2. On the updates page, we see a table that contains the bulk updates that were triggered. We have four columns, which are as follows:
 
-    - **Update**: This column tells if the bulk update is ongoing or completed; once complete, we will have a summary of items that are processed. We will know how many items were successfully updated and how many failed. This column also contains a button to show the report dialog to check the details of each item that has been processed.
+    - **Update**: This column tells us if the bulk update is ongoing or completed; once complete, we will have a summary of items that have been processed. We will know how many items were successfully updated and how many failed. This column also contains a button to show the report dialog to check the details of each item that has been processed.
     - **Action**: This column shows actions that were taken on the bulk update.
     - **Requested by**: This column shows who triggered this bulk update process.
     - **Updated on**: This column shows when the bulk update was triggered.
