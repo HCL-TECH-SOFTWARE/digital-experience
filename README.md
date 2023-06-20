@@ -15,7 +15,7 @@ Perform the following steps to install mkdocs and clone the git repository to up
 
 - Follow the [MkDocs Installation guide](https://www.mkdocs.org/user-guide/installation/) to install [`MkDocs`](https://www.mkdocs.org/) and `pip`
 - Install the following `mkdocs` plugins:  
-  - `pip install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mike`
+  - `pip install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin`
 - Clone the [digital-experience repository](https://github.com/HCL-TECH-SOFTWARE/digital-experience)
 - Update the markdown files in the `docs` folder
 - Verify the changes by building the project locally [mkdocs serve](https://www.mkdocs.org/getting-started/#creating-a-new-project)

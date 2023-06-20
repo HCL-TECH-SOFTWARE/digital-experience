@@ -18,4 +18,4 @@ This section provides a high-level overview of the architecture and the steps to
 - They export and analyze the report to craft a plan for updating content.
 - They update the items in the report in bulk.
 
-**[Limitations](../content_reporting/limitations/index.md)**
+**[Limitations](../content_reporting/limitations/index.md)** List of limitations that currently exist in HCL Content Reporting.
