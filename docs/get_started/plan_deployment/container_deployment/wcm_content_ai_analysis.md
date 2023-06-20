@@ -53,7 +53,7 @@ security:
 ```
 
 !!!important
-  Once AI analysis is enabled, it is mandatory that the administrator specify the content AI provider's API key in ```contentAIProviderAPIKey``` property. 
+  Once AI analysis is enabled, it is mandatory for the administrator to specify the content AI provider's API key in ```contentAIProviderAPIKey``` property. 
 
   If a custom secret is used instead of an API key directly in the `values.yaml` file, then the custom secret must be created using the content AI provider's API key. You must then reference the secret name in ```customContentAISecret``` property and you can leave the ```contentAIProviderAPIKey``` blank. 
 
