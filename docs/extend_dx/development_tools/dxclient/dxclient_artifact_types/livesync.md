@@ -220,7 +220,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 2. While multiple developers can use LiveSync on the same server, each developer has to use a unique theme. In other words, LiveSync Push Theme is currently only intended for one developer working on a single theme. Concurrent usage of this command on the same theme or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), or WebDav, is not supported.
 3. Sequential usage of LiveSync on a single theme with different client operating systems (i.e., Windows and Mac) is not supported.
 4. Conflict detection and resolutions are not implemented.
-5. Do not trigger the livesync commands from within the target local theme path. Always provide the absolute or relative path as input for `-themePath`.
+5. Do not trigger the livesync commands from within the target local theme path.
 6. Case-Sensitivity for file and folder naming are not supported.
 7. In any case, if the real-time sync of theme during the push command gets disrupted, disconnect and reconnect again.
 8. It is not recommended to use LiveSync on a production server.
