@@ -66,13 +66,12 @@ There are two ways to track the bulk update: the first is the snackbar mentioned
 
     ![](../../../../assets/HCL_Content_Reporting_Snackbar_View_Item.png)
 
-3. On the dialog box, in the header, we can see the total number of items that was successfully updated and the number of failed items. On the alert part, we can see the number of failed items. We have five columns on the table inside the body of the dialog box, and they are as follows:
+3. On the dialog box, in the header, we can see the total number of items that was successfully updated and the number of failed items. On the alert part, we can see the number of failed items. We have four columns on the table inside the body of the dialog box, and they are as follows:
 
     - **Title**: This column shows the title of the item we processed.
     - **Item type**: This column shows the type of item we processed.
-    - **Update Status**: This column tells whether the item was successfully updated (denoted as "OK") or failed to update (denoted as "Failed").
-    - **Error**: This column tells why the item failed to update; if blank, it means the item was successfully updated.
-    - **Created by**: This column shows who triggered this bulk update process.
+    - **Update Status**: This column tells whether the item was successfully updated (denoted as "OK") or error message when the item failed to update.
+    - **Created by**: This column shows the creator of this item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
    
@@ -97,12 +96,11 @@ There are two ways to track the bulk update: the first is the snackbar mentioned
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_View_Report_Button.png)
 
-3. On the dialog box, in the header, we can see the total number of items that was successfully updated and the number of failed items. On the alert part, we can see the number of failed items. We have five columns on the table inside the body of the dialog box, and they are as follows:
+3. On the dialog box, in the header, we can see the total number of items that was successfully updated and the number of failed items. On the alert part, we can see the number of failed items. We have four columns on the table inside the body of the dialog box, and they are as follows:
 
     - **Title**: This column shows the title of the item we processed.
     - **Item type**: This column shows the type of item we processed.
-    - **Update Status**: This column tells whether the item was successfully updated (denoted as "OK") or failed to update (denoted as "Failed").
-    - **Error**: This column tells why the item failed to update; if blank, it means the item was successfully updated.
-    - **Created by**: This column shows who triggered this bulk update process.
+    - **Update Status**: This column tells whether the item was successfully updated (denoted as "OK") or error message when the item failed to update.
+    - **Created by**: This column shows the creator of this item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
