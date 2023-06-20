@@ -10,7 +10,7 @@ Explainable artificial intelligence (XAI) is a machine learning team in HCL Soft
 
 ### OpenAI ChatGPT Overview
 
-OpenAI is the AI research and deployment company behind ChatGPT. When you sign up with ChatGPT, it provides API access via an API key. After signing up at https://platform.openai.com/playground, you can create a personal account with limited access or a corporate account. The playground can be used to experiment with the API as well. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
+OpenAI is the AI research and deployment company behind ChatGPT. When you sign up with ChatGPT, it provides API access via an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground), you can create a personal account with limited access or a corporate account. The playground can be used to experiment with the API as well. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
 
 For privacy and API availability and other conditions, see the OpenAI website or contact the OpenAI team.
 
