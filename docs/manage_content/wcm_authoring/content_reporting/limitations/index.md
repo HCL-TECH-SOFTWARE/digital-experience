@@ -9,6 +9,7 @@ The following limitations exist in HCL Content Reporting:
 -   Content Reporting Author/Owner cannot be searched per user group category (e.g. Authenticated users, Anonymous users).
 -   Content Reporting search table doesn't have sorting support.
 -   Content Reporting clicking on individual content of search result doesn't navigate to actual item detail page.
+-   Content Reporting bulk updates were tested to work with 5000 items.
 -   Content Reporting bulk updates don't have project scope (HCL Digital Experience Projects) capabilities.
 -   Content Reporting bulk updates only support updating the expiration date of items.
 -   Updates can only be applied in bulk to content items, site areas, authoring templates, components, categories, and items with edit access.
