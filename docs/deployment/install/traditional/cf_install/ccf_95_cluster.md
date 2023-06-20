@@ -260,7 +260,7 @@ Start with the step *Stopping IP traffic* then choose one method that is availab
 -   If you are using IP sprayers for load balancing to the cluster members, reconfigure the IP sprayers to stop routing new requests to the Portal cluster member\(s\) on this node.
 -   If you are using the Web server plug-in for load balancing, perform the following steps below to stop traffic to the node.
 
-To stop traffic to the nods:
+To stop traffic to the nodes:
 
 1.  In the Deployment Manager administrative console, click **Servers > Clusters* > WebSphere application server clusters > (cluster_name) > Cluster members** to obtain a view of the collection of cluster members.
 2.  Locate the cluster member you are upgrading and change the value in the Configured weight column to zero.
