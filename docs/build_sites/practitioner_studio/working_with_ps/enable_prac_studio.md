@@ -11,9 +11,9 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
 2. Change to the wp\_profile-root/ConfigEngine directory.
 3. Run the **enable-v95-UI-features** config task.
 
-    -   AIX: `./ConfigEngine.sh **enable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
-    -   Linux: `./ConfigEngine.sh **enable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
-    -   Windows: `ConfigEngine.bat **enable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
+    -   AIX: `./ConfigEngine.sh enable-v95-UI-features -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
+    -   Linux: `./ConfigEngine.sh enable-v95-UI-features -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
+    -   Windows: `ConfigEngine.bat enable-v95-UI-features -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
     !!! note 
         Any actions taken when using the **Preview As User** feature in DAM and CC shows the site as the original user, not the one that you are using to preview.
 
@@ -24,9 +24,9 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
 2. Change to the wp\_profile-root/ConfigEngine directory.
 3. Run the **enable-v95-UI-features-virtual-portal** config task.
 
-    -   AIX: `./ConfigEngine.sh **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
-    -   Linux: `./ConfigEngine.sh **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
-    -   Windows: `ConfigEngine.bat **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
+    -   AIX: `./ConfigEngine.sh enable-v95-UI-features-virtual-portal -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -DVirtualPortalContext=`
+    -   Linux: `./ConfigEngine.sh enable-v95-UI-features-virtual-portal -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -DVirtualPortalContext=`
+    -   Windows: `ConfigEngine.bat enable-v95-UI-features-virtual-portal -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -DVirtualPortalContext=`
 
     !!! note
         -   To configure the virtual Portal Manager so that Practitioner Studio is deployed for the newly created virtual portals, see [How to configure Practitioner Studio](../../practitioner_studio/working_with_ps/config_prac_studio.md).
