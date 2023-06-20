@@ -47,12 +47,12 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 4.  Click the **Save** button or the drop-down to **Save and Close** in the upper right of the interface to save your completed content edits.
 
-## Edit Content item with AI-assisance
+## Edit Content item with AI-assistance
 
 !!! note "Using AI-assisted content generation in Content Composer"
     Refer to the [Prerequisite](#prerequisite) section on how to setup and enable AI-assistance features
 
-1.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**HCL Article with AI-assisance**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
+1.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**HCL Article with AI-assistance**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
 
     ![Editing the content item](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_WebContentInterface.png)
 
