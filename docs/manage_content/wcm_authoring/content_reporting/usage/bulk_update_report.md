@@ -20,7 +20,7 @@ Content managers can trigger bulk updates to update all queried items' expiratio
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Button.png)
 
-3. On the dialog box, we have three options: **Action**, **Property**, and **Change to**. For CF213, **Action** and **Property** will only have one option, which is **Update** and **Expiry date**, respectively. For **Change to**, we have a date picker. Enter the date for the expiry date on the selected items. After entering the date, the **Update** button will be enabled. If you click the **Update** button, a confirmation dialog will appear.
+4. On the dialog box, we have three options: **Action**, **Property**, and **Change to**. For CF213, **Action** and **Property** will only have one option, which is **Update** and **Expiry date**, respectively. For **Change to**, we have a date picker. Enter the date for the expiry date on the selected items. After entering the date, the **Update** button will be enabled. If you click the **Update** button, a confirmation dialog will appear.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Dialog.png)
 
@@ -29,11 +29,16 @@ Content managers can trigger bulk updates to update all queried items' expiratio
     !!!note
         Bulk updates for expiry dates will only be applied to content items, site areas, authoring templates, components, categories, and items with edit access. Items assigned to a workflow will also be included.
 
-4. On the confirmation dialog, check the number of items you want to update and if you entered the correct expiration date. If you already verified the values, you can now click the **Update** button; otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
+5. On the confirmation dialog, check the number of items you want to update and if you entered the correct expiration date. If you already verified the values, you can now click the **Update** button; otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog.png)
 
-5. When a bulk update is triggered, a snackbar should appear. The snackbar can tell if the bulk update is still *ongoing* or *completed*. For the ongoing process, it shows how many items have already been processed and the total number of items. For the completed process, it will tell how many items ware successfully updated and how many items failed to update.
+    !!!note
+        If there are no items for update because their type is not supported for bulk updates or they do not have a workflow assigned to them, then **Update** button would be disable.
+
+        ![](../../../../assets/HCL_Content_Reporting_Update_Disable.png)
+
+6. When a bulk update is triggered, a snackbar should appear. The snackbar can tell if the bulk update is still *ongoing* or *completed*. For the ongoing process, it shows how many items have already been processed and the total number of items. For the completed process, it will tell how many items ware successfully updated and how many items failed to update.
 
     ![](../../../../assets/HCL_Content_Reporting_Bulk_Update_Snackbar.png)
 
