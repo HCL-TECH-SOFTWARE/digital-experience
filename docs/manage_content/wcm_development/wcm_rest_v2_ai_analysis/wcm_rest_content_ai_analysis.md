@@ -35,7 +35,7 @@ Using WCM REST V2 API explorer, access the following AI analyzer API endpoint.
 ### Current API capabilities and limitations
 
 - Only Content Elements are used for AI analysis. 
-- Only those Components within the elements data array are used for AI analysis. The components for which AI analysis will be done are Text Element Components (such as Plain Text, Short Text and Rich Text) and HTML Components.
+- Only those components within the elements data array are used for AI analysis. These components are Text Element Components (for example, Plain Text, Short Text, and Rich Text) and HTML Components.
 - Other fields in the parent level such as description, name, and title of content are not used for AI analysis.
 - If the value of the request parameter selected is **summary**, extractive summarization is done during analysis by default. Currently, abstractive summarization is not supported.
 
@@ -43,4 +43,4 @@ For more information on the API request and response details, refer to ```/conte
 
 !!! note
 
-    Before calling Content AI analyzer API's of any Content AI Provider, configure them in your DX deployment. Instructions for enabling AI Analysis for Kubernetes deployment is available at [Web content AI analysis in Kubernetes Deployment](../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and instructions for enabling AI Analysis for DX on-premise deployment is available at [Web content AI analysis in on-premise deployment](../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
+    Before calling the Content AI analyzer API of any Content AI Provider, configure them in your DX deployment. For instructions on how to enable AI Analysis for Kubernetes deployment, see [Web content AI analysis in Kubernetes Deployment](../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md). For instructions on how to enable AI Analysis for DX on-premise deployment, see [Web content AI analysis in on-premise deployment](../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md).
