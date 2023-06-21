@@ -2,7 +2,7 @@
 
 This section provides the steps on how to author a web content item using HCL Content Composer.
 
-## Prerequisite {#prerequisite}
+## Prerequisites {#prerequisite}
 
 Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../../installation/install_config_cc_dam.md) topic.
 
@@ -128,7 +128,7 @@ Follow the steps to create a new content and add keywords from the Dashboard vie
     You can automatically extract keywords from the content item using AI-assisted keyword generation. Click the **Generate** button. The extracted keywords are based on the content provided in the content item. The AI-generated keywords will not overwrite the existing keywords but will append to it.
 
     !!! note "Using AI-assisted keyword extraction"
-        Refer to the [Prerequisite](#prerequisite) section for instructions on configuring AI-assistance features.
+        Refer to the [Prerequisites](#prerequisite) section for instructions on configuring AI-assistance features.
 
     ![](../../../../../assets/HCL_Content_Composer_Content_Generate_Keywords.png)
 
@@ -162,7 +162,7 @@ Follow the steps to create a new content with auto-populated keywords from the D
 ## Creating new content and adding AI-assisted summarization of content element
 
 !!! note "Using AI-assisted summarization of content element"
-    Refer to the [Prerequisite](#prerequisite) section for instructions on configuring AI-assistance features.
+    Refer to the [Prerequisites](#prerequisite) section for instructions on configuring AI-assistance features.
 
 Follow the steps to create new content and add an AI-assisted and generated description from the Dashboard view:
 
@@ -188,7 +188,7 @@ Follow the steps to create new content and add an AI-assisted and generated desc
 ## Creating new content and getting AI-assisted sentiment analysis of text elements
 
 !!! note "Using AI-assisted sentiment analysis of content"
-    Refer to the [Prerequisite](#prerequisite) section for instructions on configuring AI-assistance features.
+    Refer to the [Prerequisites](#prerequisite) section for instructions on configuring AI-assistance features.
 
 Follow the steps to create a new content and get AI-assisted sentiment analysis on text elements from the Dashboard view:
 
