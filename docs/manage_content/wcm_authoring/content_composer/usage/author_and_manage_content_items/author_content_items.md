@@ -12,8 +12,8 @@ For instructions on how to use the AI-assistance features, see [Web Content Mana
 
 Before you can use AI-assistance features for sentimental analysis of content, keyword extraction from content, and auto summarization of content element in Content Composer, refer to the following steps to enable AI Analysis:
 
-    - [Web content AI analysis in Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) for Kubernetes deployment
-    - [Web content AI analysis in on-premise deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) for DX on-premise deployment
+    - [Web content AI analysis for Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md)
+    - [Web content AI analysis for on-premise deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) 
 
 ## Creating new content with Content Composer
 
