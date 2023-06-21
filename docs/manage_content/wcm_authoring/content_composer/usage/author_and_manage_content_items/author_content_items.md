@@ -8,12 +8,12 @@ Content Composer should be installed and configured to HCL Digital Experience 9.
 
 Content Composer is accessible from the Practitioner Studio interface (after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment).
 
-For instructions on how to use the AI-assistance features, see [Web Content Manager REST V2 APIs for AI content analysis](../../../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md). 
-
 Before you can use AI-assistance features for sentimental analysis of content, keyword extraction from content, and auto summarization of content element in Content Composer, refer to the following steps to enable AI Analysis:
 
     - [Web content AI analysis for Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md)
-    - [Web content AI analysis for on-premise deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) 
+    - [Web content AI analysis for on-premise deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
+    
+For instructions on how to use the AI-assistance features, see [Web Content Manager REST V2 APIs for AI content analysis](../../../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md).
 
 ## Creating new content with Content Composer
 
