@@ -78,13 +78,14 @@ The following parameters can be used with queries.
         -   `author`
         -   `owner`
 
-        **Note:** The `author` and `owner` queries can be used as "OR" queries if the request URL parameter `option=search-any` is used. For example if a query specifies:
+        !!!note
+            The `author` and `owner` queries can be used as "OR" queries if the request URL parameter `option=search-any` is used. For example, if a query specifies:
 
-        ```
-        ?author=user1&author=user2&option=search-any
-        ```
+            ```
+            ?author=user1&author=user2&option=search-any
+            ```
 
-        then all of the items that have user1 or user2 as their author will be returned in the results. If the option parameter was not used, then only items that have both user1 and user2 as the author would be returned.
+            then all items that have user1 or user2 as their author are returned in the results. If the option parameter is not used, then only items that have both user1 and user2 as the author are returned.
 
     -   **Sort values**
 
