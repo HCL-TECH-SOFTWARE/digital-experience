@@ -13,7 +13,7 @@ Testing environments can be as simple or as complex as a test environment used t
 -   **[Web content delivery environments](wcm_cms_server_delivery.md)**  
 If you have a HCL Web Content Manager only license, you can deliver your website without using HCL Digital Experience features.
 -   **[Web content AI analysis](wcm_ai_analysis.md)**  
-This topic describes how to use the AI analysis feature for WCM Content to do sentimental analysis, keyword extraction, and auto summarization for a content element.
+This topic describes how to configure the AI analysis feature for WCM Content in the traditional on-premise deployment.
 
 
 ???+ info "Related information" 
