@@ -34,7 +34,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 4.  User can also add a preview image of the content file. In **Edit Mode**, user can select **Show hidden content** and **Upload using file browser** or **HCL DAM** the preview image file.
 
-5.  If done, select **Save** to save your settings and create your new content template, or **Save and Close**, which will create your new content template with the saved settings and will redirect you to the new content template's location in the Content Composer Dashboard.
+5.  When done, select **Save** to save your settings and create your new content. You can also select **Save and Close** to create your new content with the saved settings and keywords. The **Save and Close** option redirects you to the new content's location in the Content Composer dashboard.
 
 ## Editing Content item
 
@@ -55,7 +55,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 !!! note "Using AI-assisted content generation in Content Composer"
     Refer to the [Prerequisites](#prerequisite) section for instructions on configuring AI-assistance features.
 
-1.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**HCL Article with AI-assistance**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
+1.  From the Content Composer interface, navigate through the preset folders and access the content item you wish to edit. In this example, the content item example (**HCL Article with AI-assistance**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
 
     ![Editing the content item](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_WebContentInterface.png)
 
@@ -63,7 +63,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
     - **Auto-summarization of content element**
 
-        Click the **Generate' button in the Description field. The generated description is be based on the content provided in the content element. The generated description replaces any existing description, if present.
+        Click the **Generate** button in the Description field. The generated description is be based on the content provided in the content element. The generated description replaces any existing description, if present.
 
         ![Generate summary](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_GenerateDescription.png)
 
