@@ -25,7 +25,7 @@ http or https://host:port/dx/api/wcm/v2/explorer/
 ### How to use REST with AI analyzer API for content
 #### Request Details
 
-Using WCM REST V2 API explorer, access the following AI analyzer API endpoint.
+Using the WCM REST V2 API explorer, access the following AI analyzer API endpoint.
 
 -   POST request to:
 
