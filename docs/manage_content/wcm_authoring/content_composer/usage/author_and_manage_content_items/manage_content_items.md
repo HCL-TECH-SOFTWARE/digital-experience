@@ -53,7 +53,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 ## Editing Content item with AI-assistance
 
 !!! note "Using AI-assisted content generation in Content Composer"
-    Refer to the [Prerequisite](#prerequisite) section for instructions on configuring AI-assistance features.
+    Refer to the [Prerequisites](#prerequisite) section for instructions on configuring AI-assistance features.
 
 1.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**HCL Article with AI-assistance**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
 
