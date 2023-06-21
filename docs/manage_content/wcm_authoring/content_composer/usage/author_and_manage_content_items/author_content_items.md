@@ -107,7 +107,7 @@ The **Dashboard** view allows users to perform the following content authoring a
 
 ## Creating new content and adding/removing keywords
 
-Follow the steps to create a new content and add keywords from the Dashboard view:
+Follow the steps to create new content and add keywords from the Dashboard view:
 
 1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template, hover to the icon to display checkbox then click it.
 
@@ -121,11 +121,11 @@ Follow the steps to create a new content and add keywords from the Dashboard vie
 
     ![](../../../../../assets/HCL_Content_Composer_Properties_Tab.png)
 
-4.  Add a keyword by inputting in the Keywords Field shown below. You can also add multiple keywords by adding a delimeter (,) in between the keywords.
+4.  Add a keyword by inputting in the **Keywords** field shown below. You can also add multiple keywords by adding a delimeter (,) in between the keywords.
 
     ![](../../../../../assets/HCL_Content_Composer_Content_Add_Keywords.png)
 
-    You can automatically extract keywords from the content item using AI-assisted keyword generation. Click the **Generate** button. The extracted keywords are based on the content provided in the content item. The AI-generated keywords will not overwrite the existing keywords but will append to it.
+    You can automatically extract keywords from the content item using AI-assisted keyword generation by clicking the **Generate** button. The extracted keywords are based on the content provided in the content item. The AI-generated keywords will not overwrite the existing keywords but they will append to it.
 
     !!! note "Using AI-assisted keyword extraction"
         Refer to the [Prerequisites](#prerequisite) section for instructions on configuring AI-assistance features.
@@ -142,7 +142,7 @@ Follow the steps to create a new content and add keywords from the Dashboard vie
 
 ## Creating new content with default keywords
 
-Follow the steps to create a new content with auto-populated keywords from the Dashboard view:
+Follow the steps to create new content with auto-populated keywords from the Dashboard view:
 
 1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template with Default Content Keywords, hover to the icon to display checkbox then click it.
    
@@ -178,7 +178,7 @@ Follow the steps to create new content and add an AI-assisted and generated desc
 
     ![](../../../../../assets/HCL_Content_Composer_Content_GenerateDescription_CompleteContent.png)
 
-4.  Click the **Generate** button in the Description field. The generated description is based on the content provided in the content element. The generated description replaces any existing description, if present.
+4.  Click the **Generate** button in the **Description** field. The generated description is based on the content provided in the content element. The generated description replaces any existing description, if present.
 
     ![](../../../../../assets/HCL_Content_Composer_Content_GenerateDescription_ClickGenerate.png)
     ![](../../../../../assets/HCL_Content_Composer_Content_GenerateDescription_GeneratedDescription.png)
@@ -190,7 +190,7 @@ Follow the steps to create new content and add an AI-assisted and generated desc
 !!! note "Using AI-assisted sentiment analysis of content"
     Refer to the [Prerequisites](#prerequisite) section for instructions on configuring AI-assistance features.
 
-Follow the steps to create a new content and get AI-assisted sentiment analysis on text elements from the Dashboard view:
+Follow the steps to create new content and get AI-assisted sentiment analysis on text elements from the Dashboard view:
 
 1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template, hover to the icon to display checkbox then click it.
 
