@@ -1,18 +1,21 @@
-# Manage Content Items
+# Managing Content Items
 
 This section provides the steps on how to manage content items using the HCL Content Composer.
 
-## Prerequisite {#prerequisite}
+## Prerequisites {#prerequisite}
 
 Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../../installation/install_config_cc_dam.md) topic.
 
 Content Composer is accessible from the Practitioner Studio interface (after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment).
 
-Instructions on how to use the AI-assistance features are available at [Web Content Manager REST V2 APIs for AI content analysis](../../../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md). 
+Before you can use AI-assistance features for sentimental analysis of content, keyword extraction from content, and auto summarization of content element in Content Composer, refer to the following steps to enable AI Analysis:
 
-To utilize AI-assistance features for sentimental analysis of content, keyword extraction from content, and auto summarization of content element in Content Composer, follow the steps for enabling AI Analysis for Kubernetes deployment at [Web content AI analysis in Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md). Instructions for enabling AI Analysis for DX on-premise deployment is available at [Web content AI analysis in on-premise deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
+    - [Web content AI analysis for Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md)
+    - [Web content AI analysis for on-premise deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
+    
+For instructions on how to use the AI-assistance features, see [Web Content Manager REST V2 APIs for AI content analysis](../../../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md). 
 
-## View Content overview
+## Viewing Content overview
 
 Content users can view a light preview of uploaded content and more using HCL Content Composer.
 
@@ -33,7 +36,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 5.  If done, select **Save** to save your settings and create your new content template, or **Save and Close**, which will create your new content template with the saved settings and will redirect you to the new content template's location in the Content Composer Dashboard.
 
-## Edit Content item
+## Editing Content item
 
 1.  Log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio navigator.
 
@@ -41,16 +44,16 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 2.  Select **Web Content** menu option to access the HCL Digital Experience 9.5 Content Composer interface.
 
-3.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**HCL Article**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
+3.  From the Content Composer interface, navigate through the preset folders and access the content item you want to edit. In this example, the content item example (**HCL Article**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
 
     ![Editing the content item](../../../../../assets/HCL_Content_Composer_Edit_Content_WebContentInterface.png)
 
 4.  Click the **Save** button or the drop-down to **Save and Close** in the upper right of the interface to save your completed content edits.
 
-## Edit Content item with AI-assistance
+## Editing Content item with AI-assistance
 
 !!! note "Using AI-assisted content generation in Content Composer"
-    Refer to the [Prerequisite](#prerequisite) section on how to setup and enable AI-assistance features
+    Refer to the [Prerequisite](#prerequisite) section for instructions on configuring AI-assistance features.
 
 1.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**HCL Article with AI-assistance**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
 
@@ -58,31 +61,31 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 2. You can use the AI-assisted content generation features when editing content items:
 
-    ### Auto-summarization of content element
+    - **Auto-summarization of content element**
 
-    Click the 'Generate' button in the Description field. The generated description will be based on the content provided in the content element. The generated description will replace any existing description, if present.
+        Click the **Generate' button in the Description field. The generated description is be based on the content provided in the content element. The generated description replaces any existing description, if present.
 
-    ![Generate summary](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_GenerateDescription.png)
+        ![Generate summary](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_GenerateDescription.png)
 
-    ### Keyword extraction from content
+    - **Keyword extraction from content**
 
-    Click the 'Generate' button in the Keywords field. The extracted keywords will be based on the content provided in the content item. The AI-generated keywords will not overwrite the existing keywords but will append to it.
+        Click the **Generate** button in the Keywords field. The extracted keywords are based on the content provided in the content item. The AI-generated keywords will not overwrite the existing keywords but will append to it.
 
-    ![Generate keywords](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_GenerateKeywords.png)
+        ![Generate keywords](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_GenerateKeywords.png)
 
-    ### Sentiment analysis of content
+    - **Sentiment analysis of content**
 
-    Click the 'Analyze Sentiment' icon in the text element/s. A sentiment analysis result will be returned based on the analysis of the content of the text element. This sentiment analysis result is represented by an icon on the text field. Click the icon to see more details about the sentiment analysis result.
+        Click the **Analyze Sentiment** icon located in the lower right corner of the text element. A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon on the **Body** field. Click the icon to see more details about the sentiment analysis result.
 
-    ![Sentiment analysis](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_SentimentAnalysis.png)
+        ![Sentiment analysis](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_SentimentAnalysis.png)
 
-    When in **Read Only** mode, sentiment analysis is still enabled.
+        When in **Read Only** mode, sentiment analysis is still enabled.
 
-    ![Sentiment analysis read only](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_SentimentAnalysisReadOnly.png)
+        ![Sentiment analysis read only](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_SentimentAnalysisReadOnly.png)
 
 3.  Click the **Save** button or the drop-down to **Save and Close** in the upper right of the interface to save your completed content edits.
 
-## Move Content item
+## Moving Content item
 
 Content users can move a content item to another site area location.
 
@@ -94,7 +97,7 @@ Content users can move a content item to another site area location.
 
     ![Select a site area location and click Move](../../../../../assets/Select_Site_Area_to_Move_Content_to_HCL_Content_Composer.png)
 
-## Copy Content item
+## Copying Content item
 
 Content users can copy a content item to another site area location.
 
@@ -107,7 +110,7 @@ Content users can copy a content item to another site area location.
     ![Select a site area location and click Copy](../../../../../assets/Select_Site_Area_to_Copy_Content_to_HCL_Content_Composer.png)
 
 
-## Rename Content item when there is conflict during move or copy
+## Renaming Content item when there is conflict during move or copy
 
 Content users can rename a content item during moving or copying when there is another content with the same name in the selected site area location.
 
@@ -123,7 +126,7 @@ Content users can rename a content item during moving or copying when there is a
 
     ![Select Content Item to Move/Copy](../../../../../assets/save-content-item-to-new-location.png)
 
-## Add Comments
+## Adding Comments
 
 !!!note
     Content authors can only add comments if they have already added a workflow in the Content.
@@ -147,7 +150,7 @@ Content users can rename a content item during moving or copying when there is a
 Please note that other content authors can also add comments in the newly-created content.
 
 
-## View and filter a Content's workflow comments
+## Viewing and filtering a Content's workflow comments
 
 Content authors will be able to view and filter comments in HCL Content Composer once content has been moved through workflow stages and **Enter comment on approval** is enabled.
 
@@ -169,7 +172,7 @@ Content authors will be able to view and filter comments in HCL Content Composer
 
     ![](../../../../../images/Filter%20selected%20Content's%20comments-2.png)
 
-## Save updates of a Content item as a new Content item
+## Saving updates of a Content item as a new Content item
 
 Content authors can save the updates of a content item as a new content item in the current location or in a different location.
 
