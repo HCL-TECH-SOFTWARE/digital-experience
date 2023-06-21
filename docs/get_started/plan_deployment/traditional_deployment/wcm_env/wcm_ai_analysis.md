@@ -39,6 +39,7 @@ To enable content AI analysis:
     4. Verify that the Credential Vault with the Vault slot Name  ```ai.auth``` is configured using the AI content provider's API key by going to **Administration > Security > Credential Vault > Manage System Vault Slot**.
 
         ![](../wcm_env/_img/AI_Provider_APIKey_Vault.png)
+        
 ## Config Engine Task for disabling Content AI analysis
 
 To disable content AI analysis:
@@ -53,6 +54,8 @@ To disable content AI analysis:
     2. Verify that the ```AI_CLASS``` configuration property is deleted from WCM Config Service.
     3. Log in to the DX Portal.
     4. Verify that the Credential Vault with the Vault slot Name  ```ai.auth``` is deleted.
+
+
 ## Custom Configurations for AI Analysis
 
 If AI analysis-related configurations needs customization, log in to WAS console for customizing any of the custom properties in WCM Config Service (**Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**).
