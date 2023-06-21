@@ -75,7 +75,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
     - **Sentiment analysis of content**
 
-        Click the **Analyze Sentiment** icon located in the lower right corner of the text element. A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon on the **Body** field. Click the icon to see more details about the sentiment analysis result.
+        Click the **Analyze Sentiment** icon located in the lower right corner of the text element. A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon in the **Body** field. Click the icon to see more details about the sentiment analysis result.
 
         ![Sentiment analysis](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_SentimentAnalysis.png)
 
