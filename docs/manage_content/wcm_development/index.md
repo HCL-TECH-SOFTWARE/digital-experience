@@ -13,4 +13,3 @@ Additionally, developers can extend the capability of HCL DX. Some information a
 
 This information is primarily aimed at developers who either want to integrate web content or web content capabilities into their applications, or who want to extend HCL DX.
 
-## More Information
