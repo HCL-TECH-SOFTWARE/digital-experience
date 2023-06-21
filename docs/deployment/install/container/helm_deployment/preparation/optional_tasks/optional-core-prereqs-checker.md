@@ -28,8 +28,17 @@ In this check, `IOPS` (Input/Output Operations per second) is measured for the f
 In this check, the `Storage Capacity` is measured for the mounted volumes. This check is essential to evaluate that the system still has a healthy amount of space. 
 This check computes the total consumed space against the total allocated space for that specific volume mount. The resulting percentage consumed is then verified against the [threshold value](#threshold-values) and the result is printed on the logs.
 
-##### Core Profile Check
-This check is specific to `core` pod and `profile` mounted volume only. This verifies the number of old profile in the volume and the result is compared to the [threshold value](#threshold-values). This also checks if the system still has a healthy amount of space left for upgrade, taking into account the size of the most recent profile version plus a headroom value. 
+#### Core Profile Check
+This check is specific to `core` pod and `profiles` mounted volume only. This verifies the number of old profile in the volume and the result is compared to the [threshold value](#threshold-values). This also checks if the system still has a healthy amount of space left for upgrade, taking into account the size of the most recent profile version plus a headroom value. 
+
+Since prereqs checker is being run automatically, you can check the logs of the prereqs-checker container and evaluate if it's possible to upgrade.
+
+
+_Prereqs Checker Container Logs_
+```console
+
+```
+
 
 #### Threshold Values
 The threshold values for `prereqs-checker` are used as a benchmark to evaluate the disk latency and random RW (read/write) efficiency of a file system. These values will be compared to the actual test results  of [disk latency (ms)](#latency-check-for-io) and [random read/write (IOPS)](#random-readwrite-checks). From there the check can evaluate if the file system pass or fail the test.

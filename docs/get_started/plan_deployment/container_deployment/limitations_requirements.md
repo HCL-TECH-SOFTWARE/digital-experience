@@ -104,6 +104,7 @@ For these checks, one separate sidecar container is deployed with the main appli
 
 The main objective of the Prereqs Checker is to know if the specified prerequisites are met and to inform users the result in the logs, that is, if the checks have passed or failed. It can also be used to check basic information about the file system of the mounted volumes which helps track the issues related to the file systems.
 
+Starting CF213, [Core Profile Check](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker/#core-profile-check) is also introduced to check if the file system has the minimum capacity for upgrade. You can print the logs of Prereqs Checker and see if the Core Profile Check passed or failed. 
 
 
 <!--
