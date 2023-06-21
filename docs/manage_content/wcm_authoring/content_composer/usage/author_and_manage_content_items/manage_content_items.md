@@ -10,8 +10,8 @@ Content Composer is accessible from the Practitioner Studio interface (after ima
 
 Before you can use AI-assistance features for sentimental analysis of content, keyword extraction from content, and auto summarization of content element in Content Composer, refer to the following steps to enable AI Analysis:
 
-    - [Web content AI analysis for Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md)
-    - [Web content AI analysis for on-premise deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
+- [Web content AI analysis for Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md)
+- [Web content AI analysis for on-premise deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
     
 For instructions on how to use the AI-assistance features, see [Web Content Manager REST V2 APIs for AI content analysis](../../../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md). 
 
@@ -50,7 +50,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 4.  Click the **Save** button or the drop-down to **Save and Close** in the upper right of the interface to save your completed content edits.
 
-## Editing Content item with AI-assistance
+## Editing Content item with AI-assistance features
 
 !!! note "Using AI-assisted content generation in Content Composer"
     Refer to the [Prerequisites](#prerequisite) section for instructions on configuring AI-assistance features.
@@ -63,7 +63,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
     - **Auto-summarization of content element**
 
-        Click the **Generate** button in the Description field. The generated description is be based on the content provided in the content element. The generated description replaces any existing description, if present.
+        Click the **Generate** button in the **Description** field. The generated description is be based on the content provided in the content element. The generated description replaces any existing description, if present.
 
         ![Generate summary](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_GenerateDescription.png)
 
