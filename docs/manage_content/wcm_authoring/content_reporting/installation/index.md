@@ -3,13 +3,7 @@
 This document contains instructions on how to install and deploy the Content Reporting application.
 
 ## Packaging, Installing, and Deploying design
-Application page would contain an instance of react integration portlet and it will be configured to point to the external node Webserver where the app is running in a portlet.
-
-In Content Reporting, it is an instance of a react integration portlet and it is configured to point where the static files of the app can be loaded from. Additionally, it can be enabled and disabled by using the Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page.
-
-The Content Reporting application is running in a portlet. In the helm-charts, values.yaml define the value of contentReporting on whether it should be enable or not. In addition to other required parameters. Pass in the URL of where the container is provisioned, so when action-op-deploy-extension-products config engine is called it will call the underlying CE task to enable and disable content reporting.
-
-Since we are already deploying it in core so we should always deploy content-reporting -> build-output portlet/war regardless whether it's container or without container and always use that URL instead of having different behaviors between kube and on-prem. Additionally with this approach, we will have same behavior and also reduced complexity of running Content Reporting as container.
+Content Reporting is an instance of a react integration portlet and it is configured to point to where the static files of the app can be loaded from. Additionally, it can be enabled and disabled by using the Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page. In the helm-charts, values.yaml define the value of contentReporting on whether it should be enabled or not.
 
 # How to enable and disable Content Reporting
 This section describes how to enable and disable Content Reporting.

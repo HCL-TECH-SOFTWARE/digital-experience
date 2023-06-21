@@ -42,10 +42,8 @@ e.g. Searching without defining a expiry date will simply search through all ite
 
     -   **Author** - This criteria will search for items that are authored by provided author/authors in author criteria.
 
-    -   **Item type** - This criteria will search for any of the types included. All solo/parent and sub types are searchable.
-    In case of user input of both a main item type and one or more of its sub types, (e.g. All Components + Date + Image), the system should only fulfill the search of the sub-types. In other words, the most specific search criteria of the sub-type will be searched for since searching for the main item type will nullify the specific search. Below is the list of item types and their sub types.
-
-        ![](../../../../assets/HCL_Content_Reporting_Item_Types_Options.png)
+    -   **Item type** - This criteria will search for any of the types included.
+    In case of user input of both a grouped type (e.g. All Authoring Templates) and one or more of its sub types (e.g. Content Template), the system should only fulfill the search of the sub-types. In other words, the most specific search criteria of the sub-type will be searched for since searching for the grouped item type will nullify the specific search. Below is the list of item types and their sub types.
 
     -   **Phrase** - This criteria will search for phrase, only one phrase can be searched per criteria line.
 
