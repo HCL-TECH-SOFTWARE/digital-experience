@@ -5,4 +5,5 @@ nav:
     - application_architecture.md
     - dam_persistence_architecture.md
     - persistent_volumes.md
+    - wcm_content_ai_analysis.md
     

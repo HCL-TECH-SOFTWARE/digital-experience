@@ -12,6 +12,8 @@ An authoring environment is used to create and manage web content and is used by
 Testing environments can be as simple or as complex as a test environment used to test content, theme, application changes, and the delivery environment performance.
 -   **[Web content delivery environments](wcm_cms_server_delivery.md)**  
 If you have a HCL Web Content Manager only license, you can deliver your website without using HCL Digital Experience features.
+-   **[Web content AI analysis](wcm_ai_analysis.md)**  
+This topic describes how to configure the AI analysis feature for WCM Content in the traditional on-premise deployment.
 
 
 ???+ info "Related information" 
