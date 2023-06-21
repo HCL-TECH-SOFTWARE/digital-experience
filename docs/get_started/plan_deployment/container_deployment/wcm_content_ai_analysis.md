@@ -80,7 +80,7 @@ For disbaling AI analysis for content, set ```enabled``` as ```false``` inside t
 
 ## Custom Configurations for AI Analysis
 
-To customize AI analysis-related configurations, log in to WAS console for customizing any of custom properties in the WCM Config Service (**Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**).
+To customize AI analysis-related configurations, log in to WAS console for customizing any of the custom properties in the WCM Config Service (**Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**).
 
 ### OpenAI ChatGPT specific custom configurations
 
