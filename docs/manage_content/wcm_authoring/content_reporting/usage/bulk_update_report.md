@@ -15,7 +15,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Landing_Page.png)
 
-2. Generate a report on items you want to update. See [Generate Content Report](../usage/generate_content_report.md) for instructions.
+2. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
 3. After you have generated a report and if there are results, the **Update** button appears in the application header. Click the **Update** button. A dialog box appears.
 
@@ -43,7 +43,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Bulk_Update_Snackbar.png)
 
-## Tracking Bulk Updates and view Bulk Update results
+## Tracking Bulk Updates and viewing Bulk Update results
 
 There are two ways to track the bulk update: the first is the snackbar described above, and the other is the **Updates** page.
 
