@@ -43,7 +43,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Bulk_Update_Snackbar.png)
 
-## Track Bulk Updates and View Bulk Update Results
+## Tracking Bulk Updates and view Bulk Update results
 
 There are two ways to track the bulk update: the first is the snackbar described above, and the other is the **Updates** page.
 
@@ -76,7 +76,7 @@ There are two ways to track the bulk update: the first is the snackbar described
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
    
-### Updates Page
+### Using the Updates Page
 
 1. We can access the **Updates** page through the button on the application header. Clicking the **Updates** button directs you to the **Updates** page. The **Updates** button also contains the total number of bulk update operations triggered.
 
