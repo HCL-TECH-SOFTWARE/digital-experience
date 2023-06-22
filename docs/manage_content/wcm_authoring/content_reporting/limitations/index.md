@@ -12,7 +12,7 @@ The following limitations exist in HCL Content Reporting:
         - Words
         - Phrases
 -   Selecting a subset of items in the report for export or update is not allowed.
--   For the Expiry date criteria, no results are returned if the same date is used in the **From date** and **To date** fields. 
+-   For the Expiry date criteria, no results are returned if the same date is used in the **From** and **To** fields. 
 -   The Content Reporting search table does not have sorting capabilities.
 -   Content Reporting clicking on individual content of search result does nit navigate to the item detail page.
 -   Content Reporting bulk updates were tested to work with 5000 items.
