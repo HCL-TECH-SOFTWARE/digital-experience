@@ -1,6 +1,6 @@
 # HCL Content Reporting
 
-The Content Reporting application allows Content Managers to generate reports and make updates on the reported items in bulk. (e.g. track and change expiry dates, replace images or words present in multiple content items).
+The Content Reporting application allows content managers to generate reports and make updates on the reported items in bulk. (e.g. track and change expiry dates, replace images or words present in multiple content items).
 
 Content reporting is for, but not limited to, the following sample use cases:
 
