@@ -481,43 +481,13 @@ If you are installing the CF on an empty portal then extra steps are required to
 
 5. If you modified the permissions on the PortalServer home directory tree to install the cumulative fix as non-root, restore the original permissions.
 
-6. If using Web Content Manager and have installed any official extensions (such as the WCM Multilingual Solution(MLS) or WCM Social Media Publisher (SMP)), then run the following task to update them.
+6. If you have set up a remote search server or document conversion server for use with HCL Portal 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. Refer to the [HCL Portal 8.5 Combined cumulative fix instructions: Remote search](ccf_95_remote_search.md) for the details of applying a cumulative fix to the remote server.
 
--   Linux:
+7. Clear the browser cache.
 
-    ```
-    <profile_root>/ConfigEngine/ConfigEngine.sh action-update-wcm-extensions -DWasPassword=<password> -DPortalAdminPwd=<password>
-    ```
+8. Go to [HCL Software Support](https://support.hcltechsw.com/csm) page for Recommended Updates for HCL Portal and HCL Web Content Manager Version 8.5 to review and apply any recommended Fixes.
 
--   Windows:
-
-    ```
-    <profile_root>\ConfigEngine\ConfigEngine.bat action-update-wcm-extensions -DWasPassword=<password> -DPortalAdminPwd=<password>
-    ```
-
-
-The task can be run even if you are not sure if you had the extensions enabled. If you want to check if they were enabled the following tasks can be used:
-
--   For MLS, use:
-
-    ```
-    ConfigEngine.sh|bat action-is-wcm-mls-enabled
-    ```
-
--   For SMP, use:
-
-    ```
-    ConfigEngine.sh|bat action-is-wcm-smp-enabled
-    ```
-
-
-7. If you have set up a remote search server or document conversion server for use with HCL Portal 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. Refer to the [HCL Portal 8.5 Combined cumulative fix instructions: Remote search](ccf_95_remote_search.md) for the details of applying a cumulative fix to the remote server.
-
-8. Clear the browser cache.
-
-9. Go to [HCL Software Support](https://support.hcltechsw.com/csm) page for Recommended Updates for HCL Portal and HCL Web Content Manager Version 8.5 to review and apply any recommended Fixes.
-
-10. Prior to CF07, it was recommended to set the DB2 database configuration parameter `"dft_queryopt"` to a value of 2 as this was tested to provide the best balance of query optimization time and query execution time for the SQL produced by the JCR. For CF07 or later, this recommendation has been changed to use a value of 5 in conjunction with the testing and changes made to the JCR and JCR schema. This setting is NOT updated automatically within your JCR Database Domain configuration as part of the CF07 (or later) upgrade. This can be done manually by customers by executing the following SQL against the JCR Domain Database:
+9. Prior to CF07, it was recommended to set the DB2 database configuration parameter `"dft_queryopt"` to a value of 2 as this was tested to provide the best balance of query optimization time and query execution time for the SQL produced by the JCR. For CF07 or later, this recommendation has been changed to use a value of 5 in conjunction with the testing and changes made to the JCR and JCR schema. This setting is NOT updated automatically within your JCR Database Domain configuration as part of the CF07 (or later) upgrade. This can be done manually by customers by executing the following SQL against the JCR Domain Database:
 
 ```
 db2 update db cfg for JCRDBNAME using DFT_QUERYOPT 5
@@ -741,37 +711,9 @@ Use the following commands to roll back all profiles. These steps must be repeat
     3.  Restart the web server.
 4.  If you previously customized any configuration files in the wp_profile_root/PortalServer/config directory, check to see if rolling back the cumulative fix affected those files by restoring a version of the files that was saved when the cumulative fix was originally installed. If it did affect the files, you must perform the same customization on the restored version of each file.
 5.  If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using HCL Web Content Manager), any other portlets, or any other Portal enterprise applications, if these were customized prior to rolling back the cumulative fix.
-6.  If using HCL Web Content Manager and have installed any official extensions (such as the WCM Multilingual Solution (MLS) or WCM Social Media Publisher (SMP)), then run the following task to update them.
-
-    -   Linux:
-
-        ```
-        (profile_root)/ConfigEngine/ConfigEngine.sh action-update-wcm-extensions -DWasPassword=(password) -DPortalAdminPwd=(password)
-        ```
-
-    -   Windows:
-
-        ```
-        (profile_root)\ConfigEngine\ConfigEngine.bat action-update-wcm-extensions -DWasPassword=(password) -DPortalAdminPwd=(password)
-        ```
-
-    The task can be run even if you are not sure if you had the extensions enabled. If you want to check if they were enabled the following tasks can be used:
-
-    -   For MLS, use:
-
-        ```
-        ConfigEngine.sh|bat action-is-wcm-mls-enabled
-        ```
-
-    -   For SMP, use:
-
-        ```
-        ConfigEngine.sh|bat action-is-wcm-smp-enabled
-        ```
-
-7.  For rollback to CF03 or earlier level only: If the Brightcove integration was enabled, remove the old Brightcove plugins, then configure HCL Portal to add the new Brightcove plugins.
-8.  For rollback to CF03 or earlier level only: If using Rich Media Edition, remove the Rich Media Edition plugin, restart the Portal Server, then configure HCL Portal to add the Rich Media Edition plugins.
-9.  If you have set up a remote search server or document conversion server for use with HCL Portal 8.5, then whenever you roll back a cumulative fix to the portal server, you should also roll back the corresponding cumulative fix to the remote server.
-10. Clear the browser cache.
+6.  For rollback to CF03 or earlier level only: If the Brightcove integration was enabled, remove the old Brightcove plugins, then configure HCL Portal to add the new Brightcove plugins.
+7.  For rollback to CF03 or earlier level only: If using Rich Media Edition, remove the Rich Media Edition plugin, restart the Portal Server, then configure HCL Portal to add the Rich Media Edition plugins.
+8.  If you have set up a remote search server or document conversion server for use with HCL Portal 8.5, then whenever you roll back a cumulative fix to the portal server, you should also roll back the corresponding cumulative fix to the remote server.
+9. Clear the browser cache.
 
 

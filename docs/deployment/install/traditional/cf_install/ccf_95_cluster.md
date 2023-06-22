@@ -719,29 +719,10 @@ If you are installing the CF on an empty portal then extra steps are required to
 3.  If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using Web Content Manager), any other portlets, or any other Portal enterprise applications, if these were customized prior to installing the cumulative fix.
 4.  If you have set up a remote search server or document conversion server for use with HCL Portal Version 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. Refer to the *HCL Portal Version 8.5 combined cumulative fix instructions: remote search* for the details of applying a cumulative fix to the remote server.
 5.  Go and log in to [HCL Software Support](https://support.hcltechsw.com/csm) to find documentation to see if Configuration Changes and Options introduced in HCL Digital Experience Version 8.5 Combined Cumulative Fixes applies to your environment.
-6.  If using HCL Web Content Manager and have installed any official extensions (such as the WCM Multilingual Solution (MLS) or WCM Social Media Publisher (SMP) then run the following task to update them. This task needs to be run for primary and additional nodes:
-
-    -   Linux:
-
-        ```
-        <profile_root>/ConfigEngine/ConfigEngine.sh action-update-wcm-extensions -DWasPassword=<password> -DPortalAdminPwd=<password>
-        ```
-
-    -   Windows:
-
-        ```
-        <profile_root>\ConfigEngine\ConfigEngine.bat action-update-wcm-extensions -DWasPassword=<password> -DPortalAdminPwd=<password>
-        ```
-
-    The task can be run even if you are not sure if you had the extensions enabled. If you want to check if they were enabled the following tasks can be used:
-
-    -   For MLS, use: `ConfigEngine.sh|bat action-is-wcm-mls-enabled`
-    -   For SMP, use: `ConfigEngine.sh|bat action-is-wcm-smp-enabled`
-
-7.  If you brought down the entire cluster to perform the upgrade (not maintaining 24 x 7 on a single cluster), and the automatic plug-in generation and propagation are disabled on your web server Plug-in properties, you will need to manually generate and/or propagate the `plugin-cfg.xml` file to the Web servers.
-8.  Clear the browser cache.
-9.  Please go to *Recommended Updates for HCL Digital Experience* to review and apply any recommended fixes.
-10. Prior to CF07, it was recommended to set the DB2 database configuration parameter "dft_queryopt" to a value of 2 as this was tested to provide the best balance of query optimization time and query execution time for the SQL produced by the JCR. For CF07 or later, this recommendation has been changed to use a value of 5 in conjunction with the testing and changes made to the JCR and JCR schema. This setting is NOT updated automatically within your JCR Database Domain configuration as part of the CF07 (or later) upgrade. This can be done manually by customers by executing the following SQL against the JCR Domain Database:
+6.  If you brought down the entire cluster to perform the upgrade (not maintaining 24 x 7 on a single cluster), and the automatic plug-in generation and propagation are disabled on your web server Plug-in properties, you will need to manually generate and/or propagate the `plugin-cfg.xml` file to the Web servers.
+7.  Clear the browser cache.
+8.  Please go to *Recommended Updates for HCL Digital Experience* to review and apply any recommended fixes.
+9. Prior to CF07, it was recommended to set the DB2 database configuration parameter "dft_queryopt" to a value of 2 as this was tested to provide the best balance of query optimization time and query execution time for the SQL produced by the JCR. For CF07 or later, this recommendation has been changed to use a value of 5 in conjunction with the testing and changes made to the JCR and JCR schema. This setting is NOT updated automatically within your JCR Database Domain configuration as part of the CF07 (or later) upgrade. This can be done manually by customers by executing the following SQL against the JCR Domain Database:
 
     ```
     db2 update db cfg for JCRDBNAME using DFT_QUERYOPT 5
@@ -1142,35 +1123,16 @@ Use the following commands to roll back all profiles. These steps must be repeat
     -   Select all node agents where automatic synchronization has been re-enabled and click **Restart**.
 2.  If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using HCL Web Content Manager), any other portlets, or any other Portal enterprise applications, if these were customized prior to rolling back the cumulative fix.
 3.  If you have set up a remote search server or document conversion server for use with HCL Portal Version 8.5, then whenever you roll back a cumulative fix to the portal server, you should also roll back the corresponding cumulative fix to the remote server. Refer to the *HCL Portal Version 8.5 combined cumulative fix instructions: remote search* for the details of rolling back a cumulative fix to the remote server.
-4.  If using HCL Web Content Manager and have installed any official extensions (such as the WCM Multilingual Solution (MLS) or WCM Social Media Publisher (SMP)), then run the following task to update them. This task needs to be run for primary and additional nodes.
-
-    -   Linux:
-
-        ```
-        <profile_root>/ConfigEngine/ConfigEngine.sh action-update-wcm-extensions -DWasPassword=<password> -DPortalAdminPwd=<password>
-        ```
-
-    -   Windows:
-
-        ```
-        <profile_root>\ConfigEngine\ConfigEngine.bat action-update-wcm-extensions -DWasPassword=<password> -DPortalAdminPwd=<password>
-        ```
-
-    The task can be run even if you are not sure if you had the extensions enabled. If you want to check if they were enabled the following tasks can be used.
-
-    -   For MLS, use: `ConfigEngine.sh|bat action-is-wcm-mls-enabled`
-    -   For SMP, use: `ConfigEngine.sh|bat action-is-wcm-smp-enabled`
-
-5.  For rollback to CF03 or earlier level only: If the Brightcove integration was enabled perform the following steps:
+4.  For rollback to CF03 or earlier level only: If the Brightcove integration was enabled perform the following steps:
     -   Uninstall the old Brightcove plugins.
     -   Install the new Brightcove plugins by following the install steps in the *Configuring* topic section to use Brightcove.
     
-6.  For rollback to CF03 or earlier level only: If using Rich Media Edition, perform the following steps:
+5.  For rollback to CF03 or earlier level only: If using Rich Media Edition, perform the following steps:
     -   Uninstall the Rich Media Edition plugins.
     -   Restart Portal Server.
     -   Reinstall the Rich Media Edition plugins.
 
-7.  If you brought down the entire cluster to perform the rollback \(not maintaining 24 x 7 on a single cluster\), and the automatic plug-in generation and propagation are disabled on your web server Plug-in properties, you will need to manually generate and/or propagate the `plugin-cfg.xml` file to the web servers.
-8.  Clear the browser cache.
+6.  If you brought down the entire cluster to perform the rollback \(not maintaining 24 x 7 on a single cluster\), and the automatic plug-in generation and propagation are disabled on your web server Plug-in properties, you will need to manually generate and/or propagate the `plugin-cfg.xml` file to the web servers.
+7.  Clear the browser cache.
 
 
