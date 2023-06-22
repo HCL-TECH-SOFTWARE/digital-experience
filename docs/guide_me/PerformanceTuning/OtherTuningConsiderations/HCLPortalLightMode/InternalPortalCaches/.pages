@@ -1,0 +1,11 @@
+title: Internal Portal Caches
+nav:
+    - index.md
+    - General Information.md
+    - CacheConfigurationProperties.md
+    - CacheUsagePatterns.md
+    - FirstLevelCaches.md
+    - CombinerCaches.md
+    - BasePortalCacheInstances
+    - WCMCacheInstances.md
+    - ExampleScenarios.md
