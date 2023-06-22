@@ -1,5 +1,5 @@
 # Access content reporting portlet
-This section provides the steps on how to access HCL Content Reporting portlet and use it to search by different criteria, update expiry date, and export search results.
+This section provides the steps on how to access the HCL Content Reporting portlet and use it to generate a report based on different criteria, export the report, and update the expiry date of the items in the report.
 
 ## Prerequisite
 
@@ -25,32 +25,42 @@ The HCL Content Reporting UI has the following components:
 
 ![](../../../../assets/HCL_Content_Reporting_Full_View.png)
 
--   **Main header** - This contains the HCL Content Reporting **Update button** to update expiry date for search results, **Export button** to export the search results into a CSV file, Link for pending update actions **Updates** and total number of results found (gives informational feature and quality information) as **19 results found**.
--   **Search Criteria** - This section contains information of all the search criteria for searching performed.
--   **Search results table** - This table contains search results in table format and all the search result items arranged in categorized column like - *Title*, *Type*,
-*Status*, *Expires on*, *Created on*, *Last modified on*, *Created by*, and *Location*.
--   **View Criteria** - **View Criteria** to open the top drawer and display the applied search criteria. which contains **search criteria options**, **search action buttons** and , **Add Criteria** sections as showns in below image.
+-   **Main header** - This contains the HCL Content Reporting **Update button** to update the expiry date of the reported items, **Export button** to export the search results into a CSV file, Link for pending update actions **Updates** and the total number of results found.
+-   **Search Criteria** - **Search Criteria** - This section contains information on all the criteria used to search for items to populate the report.
+-   **Report table** - This table contains the reported items in table format. The table is sorted by the items' *Title* and then by the date they were *Last Modified*.
+-   **View Criteria** - Click on **View Criteria** to open the top drawer and display the criteria used for populating the report. The criteria can be set there and the generation of the report can be run from there as well.
 
     ![](../../../../assets/HCL_Content_Reporting_Criteria_Options.png)
 
--   **Search criteria options** - Search has been broken down into search criteria options to allow for a more flexible mix of search parameters.
-e.g. Searching without defining a expiry date will simply search through all items. The respective dynamic fields of each criteria will be displayed upon selection. Content admin can perform content searching by any or all of these search criterias. which includes:
+-   **Criteria** - There are 5 criteria that can be used in different combinations as the basis to generate a report.
+e.g. The respective dynamic fields of each criterion will be displayed upon selection. A report can be generated based on any or all of these criteria. which includes:
 
-    -   **Expiry date** - This criteria will search for items that are expiring from **From date** to **To date**. Filling up both dates isn't mandatory and only one is needed to proceed. Entering only the From date will search items from that date onwards. Entering only the To date will search items expiring on or before that date.
+    -   **Expiry date** - Through this criterion, the report can be scoped to include items based on their assigned expiry date. The expiry date has two date fields namely, **From date** and **To date**. The generated report will only include items that have an expiry date that is within the dates entered in the input fields. The date range is interpreted to be open ended when one of the input fields are left open.
 
-    -   **Owner** - This criteria will search for items that are owned by provided owner/owners in owner criteria.
+    !!! warning "Invalid date range"
+        Using an invalid date range (e.g. from a future date to a past date) will cause the generated report to be empty.
 
-    -   **Author** - This criteria will search for items that are authored by provided author/authors in author criteria.
+    -   **Owner** - Through this criterion, the report can be scoped to include items based on their owners. Multiple users can be set in this criterion and the generated report will include an item if any of those users is its owner or one of its owners.
 
-    -   **Item type** - This criteria will search for any of the types included.
-    In case of user input of both a grouped type (e.g. All Authoring Templates) and one or more of its sub types (e.g. Content Template), the system should only fulfill the search of the sub-types. In other words, the most specific search criteria of the sub-type will be searched for since searching for the grouped item type will nullify the specific search. Below is the list of item types and their sub types.
+    !!! info "User suggestions"
+        Typing in the input field will suggest users whose distinguished name (cn) matches the input. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria.
 
-    -   **Phrase** - This criteria will search for phrase, only one phrase can be searched per criteria line.
+    -   **Author** - Through this criterion, the report can be scoped to include items based on their authors. Multiple users can be set in this criterion and the generated report will include an item if any of those users is its author or one of its authors.
 
-    -   **Word** - This criteria will search for words within attributes such as titles, description, name, and keywords.
+    !!! info "User suggestions"
+        Typing in the input field will suggest users whose distinguished name (cn) matches the input. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria.
 
-  -  **Add Criteria** - Adding another criteria line by clicking +Add button.
+    -   **Item type** - Through this criterion, the report can be scoped to include items based on their included types.
 
-  -  **Search action buttons** - Proceed with the search by clicking the Search button. Clear fields by clicking the Clear button. Close search criteria drawer by clicking cancel button.
+    !!! info "User suggestions"
+        In case of user input of both a grouped type (e.g. All Authoring Templates) and one or more of its sub types (e.g. Content Template), the system should only fulfill the search of the sub-types. In other words, the most specific search criteria of the sub-type will be searched for since searching for the grouped item type will nullify the specific search.
+
+    -   **Phrase** - Through this criterion, the report can be scoped to include items based on their included phrase. Only one phrase can be searched per criteria line.
+
+    -   **Word** - Through this criterion, the report can be scoped to include items based on their inclusion of words within attributes such as titles, description, name, and keywords.
+
+  -  **Add Criteria** - Adding another criteria line by clicking +Add button. Only one instance of each option can be added at a time.
+
+  -  **Action buttons** - Proceed with the search by clicking the Search button. Clear fields by clicking the Clear button. Close search criteria drawer by clicking cancel button.
 
 

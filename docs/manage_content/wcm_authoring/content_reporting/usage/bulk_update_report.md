@@ -1,6 +1,6 @@
 # Content Reporting Bulk Update
 
-This section details how to use the bulk update to update the expiration date of content items in HCL Content Reporting.
+This section details how to update the expiration date of content items in a report generated through HCL Content Reporting.
 
 ## Prerequisite
 
@@ -27,7 +27,7 @@ Content managers can trigger bulk updates to update all queried items' expiratio
     We also have **Cancel** and **Clear** options in the dialog box. **Cancel** will close the dialog box, and **Clear** will remove all selected options from the dialog box.
 
     !!!note
-        Bulk updates for expiry dates will only be applied to content items, site areas, authoring templates, components, categories, and items with edit access. Items assigned to a workflow will also be included.
+        Bulk updates for expiry dates will only be applied to content items, site areas, authoring templates, components, categories, and items with edit access. Only items assigned with a workflow will be included.
 
 5. On the confirmation dialog, check the number of items you want to update and if you entered the correct expiration date. If you already verified the values, you can now click the **Update** button; otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
 

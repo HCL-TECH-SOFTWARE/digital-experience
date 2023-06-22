@@ -7,8 +7,6 @@ The following limitations exist in HCL Content Reporting:
 -   Content Reporting report can be generated only by limited search criteria Expiry date, Authors, Owners, Item type, Words ,and Phrases.
 -   Selecting a subset of items in the report for export or update is not allowed.
 -   No results will be returned if the same date is used as the From and To dates for the Expiry date criteria.
--   Content Reporting Author/Owner cannot be searched by email, job title etc.
--   Content Reporting Author/Owner cannot be searched per user group category (e.g. Authenticated users, Anonymous users).
 -   Content Reporting search table doesn't have sorting support.
 -   Content Reporting clicking on individual content of search result doesn't navigate to actual item detail page.
 -   Content Reporting bulk updates were tested to work with 5000 items.
