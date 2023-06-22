@@ -1,25 +1,25 @@
-# Content Reporting export report
+# Using the Content Reporting Export feature
 
-This section details how to use the export feature to export generated report in HCL Content Reporting.
+This section provides steps on how to export the generated report in HCL Content Reporting.
 
 ## Prerequisite
 
-Content Reporting should be installed and configured to HCL Digital Experience 9.5 release update CF213 or higher. See instructions to install to supported container environments to the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+Content Reporting should be installed and configured to HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing supported container environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
-## Export Report
+## Exporting reports
 
-Content managers can trigger export report to export generated report.
+Content managers can export generated reports in HCL Content Reporting.
 
-1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**, then select **Content Reporting** from the Practitioner Studio navigator.
+1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**. Select **Content Reporting** from the Practitioner Studio navigator.
 
     ![](../../../../assets/HCL_Content_Reporting_Landing_Page.png)
 
-2. Generate a report on searchitems you want to export. See [Generate Content Report](../usage/generate_content_report.md) for further instructions.
+2. Generate a report on the items you want to export. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
-3. When you have already generated a report. The **Export** button will appear in the application header. Click the **Export** button and progress snack bar will be shown in the bottom right.
+3. After generating a report, the **Export** button appears in the application header. Click the **Export** button. The snackbar showing the export progress appears in the lower right corner. 
 
     ![](../../../../assets/HCL_Content_Reporting_Export_Options.png)
 
-3. After successfull exporting user can find and check downloaded csv file.
+4. When exporting is successful, you can find and check downloaded CSV file in your local.
 
     ![](../../../../assets/HCL_Content_Reporting_Export_Result.png)
