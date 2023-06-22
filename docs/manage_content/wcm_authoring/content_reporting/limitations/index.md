@@ -2,6 +2,8 @@
 
 The following limitations exist in HCL Content Reporting:
 
+-   Users need Editor access to generate a query.
+-   Users need to run JCR textsearch to use content reporting.
 -   Content Reporting report can be generated only by limited search criteria Expiry date, Authors, Owners, Item type, Words ,and Phrases.
 -   Selecting a subset of items in the report for export or update is not allowed.
 -   No results will be returned if the same date is used as the From and To dates for the Expiry date criteria.
@@ -16,6 +18,7 @@ The following limitations exist in HCL Content Reporting:
 -   Only the expiry date can by updated in bulk at the moment. Items that are not assigned a workflow will be excluded from the updates.
 -   Content Reporting bulk updates for expiry is date-only, and the default time will be 12:00 a.m.
 -   The status of bulk update requests is not tracked in real-time; instead, the status is updated every 10 seconds.
+-   The CSV export function uses Blob storage in the browser, if a very large CSV export is attempted, a user may run into an out of memory conditions with the browser that prevents the large file from successfully downloading.
 
 The following issues to be aware of in HCL Content Reporting:
 

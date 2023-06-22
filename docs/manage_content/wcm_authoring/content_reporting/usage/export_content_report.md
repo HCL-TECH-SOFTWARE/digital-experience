@@ -16,6 +16,10 @@ Content managers can trigger export report to export generated report.
 
 2. Generate a report on searchitems you want to export. See [Generate Content Report](../usage/generate_content_report.md) for further instructions.
 
-3. When you have already generated a report. The **Export** button will appear in the application header. Click the **Export** button.
+3. When you have already generated a report. The **Export** button will appear in the application header. Click the **Export** button and progress snack bar will be shown in the bottom right.
 
     ![](../../../../assets/HCL_Content_Reporting_Export_Options.png)
+
+3. After successfull exporting user can find and check downloaded csv file.
+
+    ![](../../../../assets/HCL_Content_Reporting_Export_Result.png)
