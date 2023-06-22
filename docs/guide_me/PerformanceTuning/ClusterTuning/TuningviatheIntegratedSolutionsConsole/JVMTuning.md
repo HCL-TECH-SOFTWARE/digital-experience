@@ -1,0 +1,3 @@
+# JVM Tuning
+
+The JVM heap size is increased to accommodate the large number of supported users when using memoryto- memory session replication. With in-memory sessions, the initial and maximum heap size are set to 6,144MB (versus 3,584MB with a single node). The nursery size was increased to 2048MB (versus 1024MB with a single node). If not using in-memory sessions, the base Portal JVM settings can be used.

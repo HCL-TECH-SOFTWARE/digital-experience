@@ -1,0 +1,11 @@
+title: Tuning via the Integrated Solutions Console
+nav:
+    - JVMHeapSizes.md
+    - WebContainerThreadPoolSize.md
+    - DataSourcePoolSizes.md
+    - WCMObjectCache.md
+    - CacheManagerService.md
+    - AccessControlDataManagementService.md
+    - WCMConfigurationService.md
+    - JCRTextSearch.md
+    - PublicPageInvalidation.md
