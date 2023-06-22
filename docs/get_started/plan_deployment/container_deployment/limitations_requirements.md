@@ -92,7 +92,6 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 !!!note
     Remember that the overall sums for CPU and memory include all components of HCL DX. 
-
     In most cases, you will only want to deploy a subset of all components, therefore the minimal system requirements will decrease accordingly.
 
 ## Prereqs Checker For DX Deployment
