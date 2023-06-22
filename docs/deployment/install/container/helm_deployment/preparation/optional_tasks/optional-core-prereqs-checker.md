@@ -33,12 +33,20 @@ This check is specific to `core` pod and `profiles` mounted volume only. This ve
 
 Since prereqs checker is being run automatically, you can check the logs of the prereqs-checker container and evaluate if it's possible to upgrade.
 
-
 _Prereqs Checker Container Logs_
 ```console
-
+[2023-06-22 07:47:05]: == Available storage space check for /mnt/prereqs-checks-volumes/profiles/ ==
+[2023-06-22 07:47:05]: Test passed for storage space check...
+[2023-06-22 07:47:05]: Used 1.63 GiB / 10.00 GiB (16.28%) usage is lower than threshold value: 80%
+[2023-06-22 07:47:05]: == Old profiles check for /mnt/prereqs-checks-volumes/profiles/ ==
+[2023-06-22 07:47:05]: Test passed for the core profile check
+[2023-06-22 07:47:05]: There are: 1 profile(s) in the directory which is less than the threshold value: 5.
+[2023-06-22 07:47:05]: ConfigWizard Profile Size: 116.10 MiB
+[2023-06-22 07:47:05]: Latest Profile Size: (95_CF213): 1.52 GiB
+[2023-06-22 07:47:05]: 8.37 GiB of available space is more than the threshold 2.00 GiB for upgrade.
 ```
 
+You can also run the checks [manually](#how-to-manually-trigger-the-checks) if you need the most recent run. 
 
 #### Threshold Values
 The threshold values for `prereqs-checker` are used as a benchmark to evaluate the disk latency and random RW (read/write) efficiency of a file system. These values will be compared to the actual test results  of [disk latency (ms)](#latency-check-for-io) and [random read/write (IOPS)](#random-readwrite-checks). From there the check can evaluate if the file system pass or fail the test.
