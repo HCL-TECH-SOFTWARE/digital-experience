@@ -1,4 +1,4 @@
-# Access content reporting portlet
+# Accessing the Content Reporting portlet
 This section provides the steps on how to access the HCL Content Reporting portlet and use it to generate a report based on different criteria, export the report, and update the expiry date of the items in the report.
 
 ## Prerequisite
@@ -7,7 +7,7 @@ Content Reporting should be installed and configured in HCL Digital Experience 9
 
 After image configuration in your HCL Digital Experience 9.5 CF213 and higher deployment, Content Reporting is accessible from the Practitioner Studio interface.
 
-## Access Content Reporting
+## Accessing Content Reporting
 
 Follow the instructions below to access HCL Digital Experience 9.5 Content Reporting from the Practitioner Studio.
 
