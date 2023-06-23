@@ -1,5 +1,5 @@
 # Accessing the Content Reporting portlet
-This section provides the steps on how to access the HCL Content Reporting portlet and use it to generate a report based on different criteria, export the report, and update the expiry date of the items in the report.
+This section provides the steps on how to access the HCL Content Reporting portlet and details how each report criterion is interpreted.
 
 ## Prerequisite
 
