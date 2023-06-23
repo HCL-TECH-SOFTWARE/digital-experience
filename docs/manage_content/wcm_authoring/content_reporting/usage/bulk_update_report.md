@@ -97,7 +97,7 @@ There are two ways to track the bulk update: through the snackbar and through th
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_View_Report_Button.png)
 
-3. In the header of the dialog box, the number of updated items and the number of failed items are displayed. The alert message shows you the number of failed items. There are four columns on the table inside the body of the dialog box:
+4. In the header of the dialog box, the number of updated items and the number of failed items are displayed. The alert message shows you the number of failed items. There are four columns on the table inside the body of the dialog box:
 
     - **Title**: This column shows the title of the item processed.
     - **Item type**: This column shows the type of item processed.
