@@ -112,7 +112,7 @@ See example result:
 
 Follow the steps below to enable uploading an SVG file in DAM API:
 
-1. In **POSTMAN**, log in to Ring API via:
+1. In any REST API Client tool, log in to Ring API via:
 
     `POST - https://<domain>/dx/api/core/v1/auth/login`
 
