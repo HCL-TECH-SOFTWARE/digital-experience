@@ -6,6 +6,9 @@ This section details how to genearte content report in HCL Content Reporting.
 
 Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic. An Editor access is required to generate a query.
 
+!!! note
+    A JCR textsearch has to be set up correctly and a first run should be done. Then the user will get back valid search results. Please refer to [Setting up a JCR search collection](https://opensource.hcltechsw.com/digital-experience/CF212/build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/).
+
 ## Generating a report
 
 A report is a list of items that matches a set or combined sets of criteria. Content managers generate reports of content items that they are planning to analyze or update. They have a set of criteria that the content items have to match. In this feature, content managers can combine the required criteria into a single report to get the list of items that need updating.

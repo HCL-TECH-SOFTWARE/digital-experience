@@ -2,7 +2,6 @@
 
 Take note of the following limitations when using HCL Content Reporting:
 
--   A JCR textsearch has to be set up correctly and a first run should be done. Then the user will get back valid search results.
 -   Selecting a subset of items in the report for export or update is not allowed.
 -   For the Expiry date criteria, no results are returned if the same date is used in the **From** and **To** fields. 
 -   There is no option to sort the report table.
