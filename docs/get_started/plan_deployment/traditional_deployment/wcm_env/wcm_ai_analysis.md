@@ -24,7 +24,7 @@ To enable content AI analysis:
 2. Validate that all the required configurations are added.
 
     1. Log in to WAS console.
-    2. Verify that the ```AI_CLASS``` configuration property is added in WCM Config Service by going to **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**. Possible values for ```AI_CLASS``` is:
+    2. Verify that the ```AI_CLASS``` configuration property is added in WCM Config Service by going to **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**. Possible value for ```AI_CLASS``` is:
         - ```com.hcl.workplace.wcm.restv2.ai.ChatGPTAnalyzerService``` (if ```ContentAIProvider``` value is set as ```OPEN_AI```)
 
         ![](../wcm_env/_img/AI_Provider_Class.png)
