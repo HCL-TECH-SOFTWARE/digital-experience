@@ -38,7 +38,7 @@ In the `values.yaml` file, under configuration, enable contentReporting by setti
     ```
 
 !!!note
-    Enabling contentReporting runs the **enable-content-reporting** config engine task under the covers. **enable-content-reporting** can also be manually executed by logging in to the core pod.
+    Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. **enable-content-reporting** can also be manually executed by logging in to the core pod.
 
 ## Disabling Content Reporting for on-premise deployment
 
@@ -62,4 +62,4 @@ In the `values.yaml` file, under the configuration, disable contentReporting by 
     ```
     
 !!!note
-    Disabling contentReporting runs the **disable-content-reporting** config engine task under the covers. **disable-content-reporting** can also be manually executed by logging in to the core pod. 
+    Disabling contentReporting runs the **disable-content-reporting** config engine task in the background. **disable-content-reporting** can also be manually executed by logging in to the core pod. 
