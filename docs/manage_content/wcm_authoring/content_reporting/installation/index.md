@@ -9,6 +9,9 @@ Content Reporting is an instance of a react integration portlet and it is config
 ## Enabling and disabling Content Reporting
 This section describes how to enable and disable Content Reporting.
 
+!!! note
+    Before enabling Content Reporting, it is required that Practitioner Studio is enabled. For more information on how to enable Practiotioner Studio, please refer to [How to enable Practitioner Studio | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/practitioner_studio/enable_prac_studio.html).
+
 ### Enabling Content Reporting for on-premise deployment
 
 1. Open a command line.

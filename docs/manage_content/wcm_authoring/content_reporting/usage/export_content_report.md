@@ -4,7 +4,7 @@ This section provides steps on how to export the generated report in HCL Content
 
 ## Prerequisite
 
-Content Reporting should be installed and configured to HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing supported container environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
 ## Exporting reports
 
@@ -20,6 +20,6 @@ Content managers can export generated reports in HCL Content Reporting.
 
     ![](../../../../assets/HCL_Content_Reporting_Export_Options.png)
 
-4. When exporting is successful, you can find and check downloaded CSV file in your local.
+4. When exporting is successful, you can find and check downloaded CSV file in your local filesystem.
 
     ![](../../../../assets/HCL_Content_Reporting_Export_Result.png)

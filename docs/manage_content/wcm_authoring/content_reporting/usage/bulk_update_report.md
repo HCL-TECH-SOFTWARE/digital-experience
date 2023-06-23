@@ -1,10 +1,10 @@
-# Content Reporting Bulk Update
+# Using the Content Reporting Bulk Update feature
 
 This section provides steps on how to update the expiration date of content items in a report generated through HCL Content Reporting.
 
 ## Prerequisite
 
-Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing supported container environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
 
 ## Using the Bulk Update feature
