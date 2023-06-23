@@ -7,6 +7,6 @@ This section provides steps on how to generate content reports through HCL Conte
 -   **[Using the Content Reporting Export feature](../usage/export_content_report.md)**  
 This section provides the steps on how to export a content report.
 -   **[Using the Content Reporting Bulk Update feature](./usage/bulk_update_report.md/)**  
-This section provides the steps on how to use Content Reporting to allows content managers to update contents in bulk. They can update expiry dates, replace specific words and keywords, authors, and so on in multiple items.
+This section provides the steps on how to use Content Reporting to allow content managers to update contents in bulk. They can update expiry dates, replace specific words and keywords, authors, and so on in multiple items.
 
 
