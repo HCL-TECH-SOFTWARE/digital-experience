@@ -11,17 +11,17 @@ Content Reporting should be installed and configured in HCL Digital Experience 9
 
 Content managers can trigger bulk updates to update the expiration dates of all queried items.
 
-1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**. Select **Content Reporting** from the Practitioner Studio navigator.
+1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**. Select **Content Reporting** from the Practitioner Studio navigator. The following image shows the Content Reporting landing page. 
 
     ![](../../../../assets/HCL_Content_Reporting_Landing_Page.png)
 
 2. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
-3. After you have generated a report and if there are results, the **Update** button appears in the application header. Click the **Update** button. A dialog box appears.
+3. After you have generated a report and if there are results, the **Update** button appears in the application header. Click the **Update** button.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Button.png)
 
-4. On the dialog box, there are three options: **Action**, **Property**, and **Change to**. For CF213, the **Action** and **Property** have only one option, which is **Update** and **Expiry date**, respectively. In the **Change to** field, enter the expiry date on the selected items. After entering the date, the **Update** button is enabled. When you click the **Update** button, a confirmation dialog appears.
+4. In the **Update items** box, there are three options: **Action**, **Property**, and **Change to**. For CF213, the **Action** and **Property** fields each has one option: **Update** and **Expiry date**, respectively. In the **Change to** field, enter the expiry date of the selected items. After entering the date, the **Update** button is enabled. Click the **Update** button. 
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Dialog.png)
 
@@ -30,7 +30,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
     !!!note
         Bulk updates for expiry dates are only applied to content items, site areas, authoring templates, components, categories, and items with edit access. Only items assigned with a workflow are included.
 
-5. On the confirmation dialog, verify the number of items you want to update and if you entered the correct expiration date. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
+5. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and if you entered the correct expiration date. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog.png)
 
@@ -39,15 +39,15 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
         ![](../../../../assets/HCL_Content_Reporting_Update_Disable.png)
 
-6. When a bulk update is triggered, a snackbar appear in the lower right corner of the screen. The snackbar displays the status of the bulk update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process has been completed, it shows how many items were successfully updated and how many items were not.
+6. When a bulk update is triggered, a snackbar appear in the lower right corner of the screen. The snackbar displays the status of the update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process has been completed, it shows how many items were successfully updated and how many items were not.
 
     ![](../../../../assets/HCL_Content_Reporting_Bulk_Update_Snackbar.png)
 
 ## Tracking Bulk Updates and viewing Bulk Update results
 
-There are two ways to track the bulk update: the first is the snackbar described above, and the other is the **Updates** page.
+There are two ways to track the bulk update: through the snackbar and through the **Updates** page.
 
-### Snackbar
+### Using the snackbar
 
 1. The snackbar that appears when a bulk update is triggered tracks up to five bulk update processes.
 
@@ -71,20 +71,20 @@ There are two ways to track the bulk update: the first is the snackbar described
 
     - **Title**: This column shows the title of the item processed.
     - **Item type**: This column shows the type of item processed.
-    - **Update Status**: This column tells whether the item was successfully updated (denoted as "OK") or an error message if the item was not updated.
-    - **Created by**: This column shows the creator of this item.
+    - **Update Status**: This column tells whether the item was successfully updated (shown as **OK**) or not (an error message is shown).
+    - **Created by**: This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
    
-### Using the Updates Page
+### Using the Updates page
 
-1. We can access the **Updates** page through the button on the application header. Clicking the **Updates** button directs you to the **Updates** page. The **Updates** button also contains the total number of bulk update operations triggered.
+1. You can access the **Updates** page through the button on the application header. Clicking the **Updates** button directs you to the **Updates** page. The **Updates** button also contains the total number of bulk update operations triggered.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
 
-2. On the Updates page, there is a table that contains the bulk updates that were triggered. This table has four columns, which are as follows:
+2. On the **Updates** page, there is a table showing the bulk updates that were triggered. This table has four columns:
 
-    - **Update**: This column tells whether the bulk update is ongoing or completed. Once complete, there is a summary of items that have been processed. This summary how many items were successfully updated and how many failed. This column also contains a button to show the report dialog to check the details of each item that has been processed.
+    - **Update**: This column indicates whether the bulk update is ongoing or completed. Once complete, there is a summary of items that have been processed. This summary shows how many items were updated and how many failed. This column also contains a button to show the report dialog to check the details of each item that has been processed.
     - **Action**: This column shows actions that were taken on the bulk update.
     - **Requested by**: This column shows who triggered the bulk update process.
     - **Updated on**: This column shows when the bulk update was triggered.
@@ -93,15 +93,15 @@ There are two ways to track the bulk update: the first is the snackbar described
 
     There is a *back button* on the app header to return to the landing page of Content Reporting.
 
-3. On the table, in the **Update** column, there is a button that appears when you hover over a row whose bulk update has been completed. Clicking this button shows a dialog to check the details of each item that has been processed.
+3. On the table, in the **Update** column, there is a button that appears when you hover over a row whose bulk update has been completed. Click this button to show a dialog to check the details of each item that has been processed.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_View_Report_Button.png)
 
-3. On the dialog box, in the header, we can see the total number of items that was updated and the number of failed items. The alert message shows you the number of failed items. There are four columns on the table inside the body of the dialog box:
+3. In the header of the dialog box, the number of updated items and the number of failed items are displayed. The alert message shows you the number of failed items. There are four columns on the table inside the body of the dialog box:
 
-    - **Title**: This column shows the title of the item we processed.
-    - **Item type**: This column shows the type of item we processed.
-    - **Update Status**: This column tells whether the item was successfully updated (denoted as "OK") or an error message if the item was not updated.
-    - **Created by**: This column shows the creator of this item.
+    - **Title**: This column shows the title of the item processed.
+    - **Item type**: This column shows the type of item processed.
+    - **Update Status**: This column tells whether the item was successfully updated (shown as **OK**) or not (an error message is shown).
+    - **Created by**: This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
