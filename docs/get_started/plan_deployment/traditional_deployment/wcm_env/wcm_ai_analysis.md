@@ -1,13 +1,8 @@
 # WCM Content AI Analysis
 
-This topic describes how to enable AI analysis for a WCM Content in the traditional on-premise deployment. This also discusses steps on how to configure a content AI provider (for example, XAI or OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
+This topic describes how to enable AI analysis for a WCM Content in the traditional on-premise deployment. This also discusses steps on how to configure a content AI provider (for example, OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
 
 ## Content AI Providers Overview
-
-### XAI Overview
-
-Explainable artificial intelligence (XAI) is a machine learning team in HCL Software. It identifies machine learning use cases and collaborates with teams across the HCL portfolio. The XAI team is focused on delivering high value maching learning-based capabilities that address existing visions. XAI accelerates development through model and skill reusability. It is free of charge for HCL DX customers; you can obtain an API key by opening a support ticket with HCL Software.
-
 ### OpenAI ChatGPT Overview
 
 OpenAI is the AI research and deployment company behind ChatGPT. When you sign up with ChatGPT, it provides API access via an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground), you can create a personal account with limited access or a corporate account. The playground can be used to experiment with the API as well. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
@@ -20,18 +15,17 @@ To enable content AI analysis:
 
 1. Connect to DX Core and run the following specified config engine task.
 
-    ```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=XAI -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+    ```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=OPEN_AI -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
 
     !!!note
-        - Possible values for ```ContentAIProvider``` parameter are ```XAI``` or ```OPEN_AI```.
+        - Possible value for ```ContentAIProvider``` parameter is ```OPEN_AI```.
         - Depending on the ContentAIProvider, set the correct API key of the respective provider in the ```ContentAIProviderAPIKey``` parameter.
 
 2. Validate that all the required configurations are added.
 
     1. Log in to WAS console.
-    2. Verify that the ```AI_CLASS``` configuration property is added in WCM Config Service by going to **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**. Possible values for ```AI_CLASS``` are:
-        - ```com.hcl.workplace.wcm.restv2.ai.ChatGPTAnalyzerService``` (if ```ContentAIProvider``` value is set as ```OPEN_AI```) 
-        - ```com.hcl.workplace.wcm.restv2.ai.XAIAnalyzerService``` (if ```ContentAIProvider``` value is set as ```XAI```)
+    2. Verify that the ```AI_CLASS``` configuration property is added in WCM Config Service by going to **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**. Possible value for ```AI_CLASS``` is:
+        - ```com.hcl.workplace.wcm.restv2.ai.ChatGPTAnalyzerService``` (if ```ContentAIProvider``` value is set as ```OPEN_AI```)
 
         ![](../wcm_env/_img/AI_Provider_Class.png)
 
