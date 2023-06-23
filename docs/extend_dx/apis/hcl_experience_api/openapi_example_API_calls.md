@@ -163,7 +163,7 @@ Follow the steps below to enable uploading an SVG file in DAM API:
 
 Refer to the following steps to enable uploading an SVG file in DAM API:
 
-1. Using any API Tool, log in to Ring API via:
+1. In any REST API Client Tool, log in to Ring API via:
 
     `POST - https://<domain>/dx/api/core/v1/auth/login`
 
