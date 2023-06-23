@@ -23,7 +23,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 3.  Select the **Expiry date** criterion from the dropdown. Two date input fields appear: **From** and **To**
     ![](../../../../assets/HCL_Content_Reporting_Search_By_Expiry.png)
 
-4.  Click the calender icon in the **From** or **To** field to display the calendar. Select the **From** date and the **To** date from calendar and the click **Search**.
+4.  Click the calendar icon in the **From** or **To** field to display the calendar. Select the **From** date and the **To** date from calendar and the click **Search**.
     ![](../../../../assets/HCL_Content_Reporting_Select_Date.png)
 
     !!!note
