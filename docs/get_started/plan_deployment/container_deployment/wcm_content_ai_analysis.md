@@ -28,7 +28,7 @@ configuration:
       provider: ""
 ```
 
-For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. Possible value for the provider is ```OPEN_AI```.
+For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. A possible value for the provider is ```OPEN_AI```.
 
 
 ### Configuring Custom Secret or API Key of Content AI Provider
