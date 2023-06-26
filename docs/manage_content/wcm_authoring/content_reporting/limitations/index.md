@@ -13,6 +13,7 @@ Take note of the following limitations when using HCL Content Reporting:
 -   Content Reporting bulk updates for expiry is date-only, and the default time is 12:00 a.m.
 -   The status of bulk update requests is not tracked in real-time; the status is updated every 10 seconds.
 -   The CSV export function uses the browser's blob storage. If a large CSV export is attempted, users might encounter out-of-memory errors with the browser. This prevents the successful download of any large file.
+-   Content Reporting is not supported in Hebrew or Arabic at this point. It is supported in other supported languages, but it is not currently translated.
 
 Note that the following pages do not support server-side pages, which might cause an unstable UI when processing large amounts of data.
 
