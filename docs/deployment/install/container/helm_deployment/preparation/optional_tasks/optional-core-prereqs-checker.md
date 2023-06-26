@@ -29,7 +29,7 @@ In this check, the `Storage Capacity` is measured for the mounted volumes. This 
 This check computes the total consumed space against the total allocated space for that specific volume mount. The resulting percentage consumed is then verified against the [threshold value](#threshold-values) and the result is printed on the logs.
 
 #### Core Profile Check
-This check is specific to `core` pod and `profiles` mounted volume only. This verifies the number of old profile in the volume and the result is compared to the [threshold value](#threshold-values). This also checks if the system still has a healthy amount of space left for upgrade, taking into account the size of the most recent profile version plus a headroom value. 
+This check is specific to `core` pod and the `profiles` mounted volume only. This verifies the number of old profiles in the volume and the result is compared to the [threshold value](#threshold-values). This also checks if the system still has a healthy amount of space left for an upgrade, taking into account the size of the most recent profile version plus a headroom value. 
 
 Since prereqs checker is being run automatically, you can check the logs of the prereqs-checker container and evaluate if it's possible to upgrade.
 
