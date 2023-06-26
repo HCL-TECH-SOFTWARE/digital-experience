@@ -17,17 +17,16 @@ Extract leap helm charts
 Update the `deploy-values.yaml` leap name, tags and repository name in leap directory PATH
 
 ```
-    sed -i.bck 's'\''LEAP_IMAGE_NAME'\''dx-build-output/leap'\''g' deploy-values.yaml
-    sed -i.bck 's'\''LEAP_IMAGE_TAG'\''v1.0.0_20230620-1954_Leap_v0.5.0.33_pjs_develop'\''g' deploy-values.yaml
-    sed -i.bck 's'\''REPOSITORY_NAME'\''quintana-docker.artifactory.cwp.pnp-hcl.com'\''g' deploy-values.yaml
-    sed -i.bck 's'\''LEAP_SERVICE_TYPE'\''ClusterIP'\''g' deploy-values.yaml
-
+    sed -i.bck 's'\''LEAP_IMAGE_NAME'\''dx-build-output/leap'\''g' ./leap/deploy-values.yaml
+    sed -i.bck 's'\''LEAP_IMAGE_TAG'\''v1.0.0_20230620-1954_Leap_v0.5.0.33_pjs_develop'\''g' ./leap/deploy-values.yaml
+    sed -i.bck 's'\''REPOSITORY_NAME'\''quintana-docker.artifactory.cwp.pnp-hcl.com'\''g' ./leap/deploy-values.yaml
+    sed -i.bck 's'\''LEAP_SERVICE_TYPE'\''ClusterIP'\''g' ./leap/deploy-values.yaml
 ```
 
 Helm Upgrade
 
 ```
-    helm install -n dxns leap-deployment ./hcl-leap-deployment -f ./deploy-values.yaml
+    helm install -n dxns leap-deployment ./hcl-leap-deployment -f ./leap/deploy-values.yaml
 ```
 
 
@@ -42,22 +41,22 @@ networking:
 Do Helm Upgrade
 
 ```
-helm -n dxns upgrade -f hcl-dx-deployment/values.yaml -f ./install-deploy-values.yaml dx-deployment ./hcl-dx-deployment
+    helm -n dxns upgrade -f hcl-dx-deployment/values.yaml -f ./install-deploy-values.yaml dx-deployment ./hcl-dx-deployment
 ```
 
 Update `ingress/nginx-ingress-dx-and-leap-route.yaml` yaml (make sure it matches the environment)
 
 ```
-sed -i.bck 's'\''HOST_PLACEHOLDER'\''environment.com'\''g' ./native-kube/artifacts/ingress/nginx-ingress-dx-and-leap-route.yaml
+sed -i.bck 's'\''HOST_PLACEHOLDER'\''native-kube-dx-leap.team-q-dev.com'\''g' ./artifacts/ingress/nginx-ingress-dx-and-leap-route.yaml
 ```
 
 Install Ingress
 
 ```
-    helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace -f ./nginx-ingress-dx-and-leap-route.yaml
+    native-kube]$ helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace -f ./artifacts/ingress/nginx-ingress-dx-and-leap-route.yaml
 ```
 kube apply for nginx
 
 ```
-    kubectl apply -f ~/native-kube/deploy/nginx-ingress-dx-and-leap-route.yaml -n dxns
+    kubectl apply -f ./artifacts/ingress/nginx-ingress-dx-and-leap-route.yaml -n dxns
 ```
