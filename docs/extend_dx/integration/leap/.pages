@@ -1,0 +1,7 @@
+title: HCL Leap
+nav:
+    - index.md
+    - Configuration: configuration
+    - Installation: installation
+    - Example: example   
+
