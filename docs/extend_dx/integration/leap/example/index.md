@@ -2,6 +2,17 @@
 
 Integrate the HCL Leap with existing DX environment.
 
+PV 
+```
+```
+Ingress yaml
+```
+```
+
+Deploy value
+```
+```
+
 Download the leap helm charts using Curl 
 
 ```
@@ -32,7 +43,7 @@ Helm Upgrade
 
 Change Haproxy ServiceType from LoadBalancer to ClusterIp and Set Haproxy SSL to False
  
-```
+```yaml
 networking:
   haproxy:
     serviceType: ClusterIP

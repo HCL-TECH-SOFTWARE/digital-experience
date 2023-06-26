@@ -4,6 +4,6 @@ The following is a configuration of the integration of HCL Leap with the existin
 
 1. Change Haproxy ServiceType from LoadBalancer to ClusterIp and Set Haproxy SSL to False 
 
-2. Update the `deploy-values.yaml` leap name, tags and repository name in leap directory PATH
+3. configuree route for ingress 
 
  
