@@ -14,7 +14,8 @@ For privacy and API availability and other conditions, see the [OpenAI](https://
 The `content-ai` configurations are available in the Helm Chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `contentAI`.
 
 The administrator can enable AI analysis for content in the `configuration` section of the ```core``` as shown in the following example.
-!!!NOTE
+
+!!!note
     When upgrading from older CF versions (for example, CF212) to CF213 or higher to enable AI analysis, the following configuration can be done during `helm upgrade`.
 
 ```yaml
