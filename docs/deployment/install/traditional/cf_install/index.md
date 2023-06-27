@@ -6,7 +6,7 @@ Applying the cumulative fix is a multi-step process. You must first update the p
 
 Likewise, to roll back a fix, you must first use IBM Installation Manager to restore the older product files and then use ConfigEngine to apply the rollback to each profile.
 
-Refer to [Installing the HCL Digital Experience software](../../../../deployment/install/traditional/installing_dx/index.md) for more information how to install according to your operating system.
+Refer to [Installing the HCL Digital Experience software](../../../../deployment/install/traditional/installing_dx/index.md) for more information on how to install according to your operating system.
 
 ## About Version 9.5 Cumulative Fixes
 
@@ -32,6 +32,10 @@ These instructions can be applied on an HCL Digital Experience system running ei
 9.  Ephox EditLive! has been removed effective in Version 8.5 CF14 and is no longer supported. This change follows the steps taken above in Version 8.5 CF11 to deprecate Ephox EditLive! and replace it with Textbox.io as the new advanced rich text editor for HCL Web Content Manager. Customers that have manually installed and configured EditLive! as a Third Party editor option can continue to use EditLive! but will no longer be able to receive support and updates via HCL. Also effective with Version 8.5 CF14, the Textbox.io supports the applicable [web browsers/levels](https://docs.ephox.com/IBMWCMTB/System-requirements_23593146.html).
 10. CF16 for Portal Versions 8.5 and 9.0 contain security fix PH01459 for CVE-2018-1736. It introduces a configurable white list for external hosts, which are allowed as redirects via the CategoryProfileUpdater Module. Server relative redirects are continuously working. Redirects to external hosts not specified in the white list are blocked. The white list is enabled per default, and needs to be filled in with appropriate values, if this functionality is used in your installation. For inquiries, go to [HCL Software Support](https://support.hcltechsw.com/csm) page.
 11. CF16 for Portal Versions 8.5 and 9.0 changes the behavior of Cumulative Fix installation related to out of the box resources to address CVE-2018-1420. Prior to CF16, access control settings of out of the box resources were reset to their out of the box access control settings, overriding potential customizations. This has been changed such that the Cumulative Fix installation leaves the access control settings at their current values. A side effect of this change is, that out of the box resources introduced in a Cumulative Fix after the initial version of Portal Version 8.5 or Version 9.0 will not receive any access control settings, if CF16 or later is installed on top of a CF level prior to introduction of an out of the box resource. In such a case the resource will not have any access control configured, and will have to be set manually to your security requirements. See the HCL Digital Experience 8.5 documentation on [how to manage the access control](../../../../deployment/manage/security/people/authorization/controlling_access/sec_ac_adm.md) and get an overview of [initial access control settings](../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/init_acc_cntl_set.md).
+
+## HCLSoftware U learning materials
+
+Refer to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=1461) for more information on how to upgrade your container based HCL Digital Experience deployment to the latest Cumulative Fix.
 
 ???+ info "Related information"
     -   [HCL Digital Experience 9.5 Overview](../../../../get_started/product_overview/index.md#hcl-digital-experience-overview)
