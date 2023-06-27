@@ -47,6 +47,7 @@ Change Haproxy ServiceType from LoadBalancer to ClusterIp and Set Haproxy SSL to
 networking:
   haproxy:
     serviceType: ClusterIP
+    ssl: false
 ```    
 
 Do Helm Upgrade
@@ -64,7 +65,7 @@ sed -i.bck 's'\''HOST_PLACEHOLDER'\''native-kube-dx-leap.team-q-dev.com'\''g' ./
 Install Ingress
 
 ```
-    native-kube]$ helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace -f ./artifacts/ingress/nginx-ingress-dx-and-leap-route.yaml
+    helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace -f ./artifacts/ingress/nginx-ingress-dx-and-leap-route.yaml
 ```
 kube apply for nginx
 
