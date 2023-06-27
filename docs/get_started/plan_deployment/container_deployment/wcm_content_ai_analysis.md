@@ -15,6 +15,9 @@ The `content-ai` configurations are available in the Helm Chart [values.yaml](..
 
 The administrator can enable AI analysis for content in the `configuration` section of the ```core``` as shown in the following example.
 
+!!!note
+    When upgrading from older CF versions (for example, CF212) to CF213 or higher to enable AI analysis, the following configuration can be done during `helm upgrade`.
+
 ```yaml
 # Application configuration
 configuration:
