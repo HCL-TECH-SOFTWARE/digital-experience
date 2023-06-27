@@ -6,13 +6,11 @@ The following is an installation step of HCL Leap with the existing DX environme
 
 2. [Customized deployment](https://help.hcltechsw.com/Leap/9.3.2/openliberty_customized_deploy.html)
 
-3. Update the `values.yaml` to set leap image name, tags and repository name
+3. Install the Leap helm chart in existing DX environment with same namespace
 
-4. Install the Leap helm chart in existing DX environment with same namespace
+4. [Configure Ingress For DX Deployment](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress/?h=ingress)
 
-5. [Configure Ingress For DX Deployment](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress/?h=ingress)
-
-6. Update the route for ingress to point to leap service
+5. Update the route for ingress to point to leap service
 ```yaml
 
         - path: /apps
@@ -23,3 +21,4 @@ The following is an installation step of HCL Leap with the existing DX environme
               port:
                 number: 9080
 ```
+6. [Completing the post-deployment tasks](https://help.hcltechsw.com/Leap/9.3.2/in_setting_up_environment.html)
