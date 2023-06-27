@@ -2,7 +2,7 @@
 
 ## Introduction of Prereqs Checker:
 
-The "Prereqs Checker" is a tool that runs a number of checks to confirm if the prerequisites for various components are met.  
+The Prereqs Checker is a tool that runs a number of checks to confirm if the prerequisites for various components are met.  
 
 You can get the result of these checks from the container logs of the `prereqs-checker` container in the pod where Prereqs Checker is installed [(more info)](#how-to-manually-trigger-the-checks)  
 
@@ -28,8 +28,32 @@ In this check, `IOPS` (Input/Output Operations per second) is measured for the f
 In this check, the `Storage Capacity` is measured for the mounted volumes. This check is essential to evaluate that the system still has a healthy amount of space. 
 This check computes the total consumed space against the total allocated space for that specific volume mount. The resulting percentage consumed is then verified against the [threshold value](#threshold-values) and the result is printed on the logs.
 
-##### Core Profile Check
-This check is specific to `core` pod and `profile` mounted volume only. This verifies the number of old profile in the volume and the result is compared to the [threshold value](#threshold-values). This also checks if the system still has a healthy amount of space left for upgrade, taking into account the size of the most recent profile version plus a headroom value. 
+#### Core Profile Check
+This check is specific to `core` pod and the `profiles` mounted volume only. This verifies the number of old profiles in the volume and the result is compared to the [threshold value](#threshold-values). This also checks if the system still has a healthy amount of space left for an upgrade, taking into account the size of the most recent profile version plus a headroom value. 
+
+Because the Prereqs Checker is run automatically, you can check the logs of the prereqs-checker container and evaluate if it is possible to upgrade.
+
+_Prereqs Checker Container Logs (Checks Passing)_
+```console
+[2023-06-22 07:47:05]: == Old profiles check for /mnt/prereqs-checks-volumes/profiles/ ==
+[2023-06-22 07:47:05]: Test passed for the core profile check
+[2023-06-22 07:47:05]: There are: 1 profile(s) in the directory which is less than the threshold value: 5.
+[2023-06-22 07:47:05]: ConfigWizard Profile Size: 116.10 MiB
+[2023-06-22 07:47:05]: Latest Profile Size: (95_CF213): 1.52 GiB
+[2023-06-22 07:47:05]: 8.37 GiB of available space is more than the threshold 2.00 GiB for upgrade.
+```
+
+_Prereqs Checker Container Logs (Checks Failing)_
+```console
+[2023-06-22 08:08:41]: == Old profiles check for /mnt/prereqs-checks-volumes/profiles/ ==
+[2023-06-22 08:08:41]: Test failed for the core profile check
+[2023-06-22 08:08:41]: There are: 6 profile(s) in the directory which is more than the threshold value: 5. You might want to clean the old profile.
+[2023-06-22 08:08:41]: ConfigWizard Profile Size: 116.18 MiB
+[2023-06-22 08:08:41]: Latest Profile Size: (95_CF213): 1.52 GiB
+[2023-06-22 08:08:41]: 811.50 MiB of available space is less than the threshold 2.00 GiB for upgrade. Upgrading will break things.
+```
+
+You can also run the checks [manually](#how-to-manually-trigger-the-checks) if you need the most recent run. 
 
 #### Threshold Values
 The threshold values for `prereqs-checker` are used as a benchmark to evaluate the disk latency and random RW (read/write) efficiency of a file system. These values will be compared to the actual test results  of [disk latency (ms)](#latency-check-for-io) and [random read/write (IOPS)](#random-readwrite-checks). From there the check can evaluate if the file system pass or fail the test.

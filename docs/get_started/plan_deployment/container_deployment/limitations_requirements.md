@@ -88,7 +88,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 | **Overall** |  |  |  | **8200m** | **16512Mi** |
 
 !!!important
-    For the recommended disk storage per PersistentVolume, refer to the `values.yaml` file. The relevant values can be found in the `volumes` section of the `values.yaml file` in the `requests.storage` parameter of each Volume. Note that the required size increases with every core upgrade from one cumulative fix to another. It is recommended that you clean up your previous profiles after confirming that the new profile is working.
+    For the recommended disk storage per PersistentVolume, refer to the `values.yaml` file. The relevant values can be found in the `volumes` section of the `values.yaml file` in the `requests.storage` parameter of each Volume. Note that the required size increases with every core upgrade from one cumulative fix to another. It is recommended that you clean up your previous profiles after confirming that the new profile is working. See related [Core Profile Check](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker/#core-profile-check) and [Storage Space Check](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker/#storage-space-check).
 
 !!!note
     Remember that the overall sums for CPU and memory include all components of HCL DX. 
@@ -104,6 +104,7 @@ For these checks, one separate sidecar container is deployed with the main appli
 
 The main objective of the Prereqs Checker is to know if the specified prerequisites are met and to inform users the result in the logs, that is, if the checks have passed or failed. It can also be used to check basic information about the file system of the mounted volumes which helps track the issues related to the file systems.
 
+Starting CF213, [Core Profile Check](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker/#core-profile-check) is introduced to check if the file system has the minimum storage capacity available for upgrade. You can [print the logs](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker/#how-to-manually-trigger-the-checks) of Prereqs Checker to see if the check passed or failed. It is recommended that you clean up previous profile if the check failed before upgrading.
 
 
 <!--
