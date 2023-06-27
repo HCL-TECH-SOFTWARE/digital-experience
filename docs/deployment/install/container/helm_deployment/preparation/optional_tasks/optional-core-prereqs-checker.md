@@ -2,7 +2,7 @@
 
 ## Introduction of Prereqs Checker:
 
-The "Prereqs Checker" is a tool that runs a number of checks to confirm if the prerequisites for various components are met.  
+The Prereqs Checker is a tool that runs a number of checks to confirm if the prerequisites for various components are met.  
 
 You can get the result of these checks from the container logs of the `prereqs-checker` container in the pod where Prereqs Checker is installed [(more info)](#how-to-manually-trigger-the-checks)  
 
@@ -31,7 +31,7 @@ This check computes the total consumed space against the total allocated space f
 #### Core Profile Check
 This check is specific to `core` pod and the `profiles` mounted volume only. This verifies the number of old profiles in the volume and the result is compared to the [threshold value](#threshold-values). This also checks if the system still has a healthy amount of space left for an upgrade, taking into account the size of the most recent profile version plus a headroom value. 
 
-Since prereqs checker is being run automatically, you can check the logs of the prereqs-checker container and evaluate if it's possible to upgrade.
+Because the Prereqs Checker is run automatically, you can check the logs of the prereqs-checker container and evaluate if it is possible to upgrade.
 
 _Prereqs Checker Container Logs (Checks Passing)_
 ```console
