@@ -31,7 +31,7 @@ configuration:
 For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. A possible value for the provider is ```OPEN_AI```.
 
 !!!NOTE
-    For upgrading from older CF versions(e.g. CF212) to CF213 or higher for enabling AI analysis, above configuration can be during `helm upgrade`.
+    When upgrading from older CF versions (for example, CF212) to CF213 or higher to enable AI analysis, the following configuration can be done during `helm upgrade`.
 
 
 ### Configuring Custom Secret or API Key of Content AI Provider
