@@ -35,7 +35,7 @@ These instructions can be applied on an HCL Digital Experience system running ei
 
 ## HCLSoftware U learning materials
 
-Refer to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=1461) for more information on how to upgrade your container based HCL Digital Experience deployment to the latest Cumulative Fix.
+Refer to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=1461) for more information on how to upgrade your container-based HCL Digital Experience deployment to the latest Cumulative Fix.
 
 ???+ info "Related information"
     -   [HCL Digital Experience 9.5 Overview](../../../../get_started/product_overview/index.md#hcl-digital-experience-overview)
