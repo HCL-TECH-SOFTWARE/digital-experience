@@ -308,7 +308,7 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
     To register:
 
     ```
-    dxclient manage-dam-staging register-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -dxWASUsername <dxWASUsername> -dxWASPassword <dxWASPassword> -targetServerWASUsername <targetServerWASUsername> -targetHostname <targetHostname> -targetServerWASPassword <targetServerWASPassword> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword>
+    dxclient manage-dam-staging register-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -dxWASUsername <dxWASUsername> -dxWASPassword <dxWASPassword> -targetServerWASUsername <targetServerWASUsername> -targetHostname <targetHostname> -targetServerWASPassword <targetServerWASPassword> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword> -interval <interval>
     ```
 
     !!! example
@@ -329,6 +329,134 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
         dxclient manage-dam-staging deregister-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId d7e5e014-12a0-4dc5-a5d7-971fd4fa86f3
         ```
 
+## Update secrets for DAM staging
+
+Use the `manage-dam-staging update-secrets` command to update secrets of the publisher & subscriber for DAM staging.
+
+-   **Command description**
+
+    You can update the secrets of a publisher & subscriber for DAM staging with the following command:
+
+    ```
+    dxclient manage-dam-staging update-secrets
+    ```
+
+-   **Help command**
+
+    The following command shows the help information for `manage-dam-staging update-secrets` command usage:
+
+    ```
+    dxclient manage-dam-staging update-secrets -h
+
+-   **Command options**
+
+    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
+
+    ```
+    -dxProtocol <value>
+    ```
+
+    Use this attribute to specify the host name of the DX server of the publisher
+    (default: "")
+
+    ```
+    -hostname <value>
+    ```
+
+    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -dxPort <value>
+    ```
+
+    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
+
+    ```
+    -dxUsername <value> 
+    ```
+
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: "")
+
+    ```
+    -dxPassword <value>
+    ```
+
+    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -damAPIPort <value>
+    ```
+
+    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -ringAPIPort <value>
+    ```
+
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -damAPIVersion <value>
+    ```
+
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -ringAPIVersion <value>
+    ```
+
+    Use this attribute to specify the host name of the target environment of the subscriber:
+
+    ```
+    -targetHostname <value>
+    ```
+
+    Use this attribute to specify the Username of the DX WAS server of the publisher(default: ""):
+    
+    ```
+    -dxWASUsername <value>
+    ```
+
+    Use this attribute to specify the Password of the DX WAS server of the publisher(default: ""):
+    
+    ```
+    -dxWASPassword <value>
+
+    Use this attribute to specify the Username of the DX WAS server of the subscriber (default: ""):
+    
+    ```
+    -targetServerWASUsername <value>
+    ```
+
+    Use this attribute to specify the Password of the DX WAS server of the subscriber (default: ""):
+    
+    ```
+    -targetServerWASPassword <value>
+    ```
+
+    Use this attribute to specify the Username of the DX Core server of the subscriber (default: ""):
+    
+    ```
+    -targetServerUsername <value>
+    ```
+
+    Use this attribute to specify the Password of the DX Core server of the subscriber (default: ""):
+    
+    ```
+    -targetServerPassword <value>
+    ```
+
+-   **Commands:**
+
+    ```
+    dxclient manage-dam-staging update-secrets -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -dxWASUsername <dxWASUsername> -dxWASPassword <dxWASPassword> -targetServerWASUsername <targetServerWASUsername> -targetHostname <targetHostname> -targetServerWASPassword <targetServerWASPassword> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword>
+    ```
+
+    !!! example
+
+        ```
+        dxclient manage-dam-staging update-secrets -dxProtocol https -hostname native-kube-pub5.team-q-dev.com -dxPort 443 -dxUsername wpsadmin -dxPassword wpsadmin -dxWASUsername wpsadmin -dxWASPassword wpsadmin -targetServerWASUsername wpsadmin -targetServerWASPassword wpsadmin2 -targetServerUsername wpsadmin -targetServerPassword wpsadmin2 -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-sub5.team-q-dev.com
+        ```
 
 ## Get all subscribers details for DAM staging
 
