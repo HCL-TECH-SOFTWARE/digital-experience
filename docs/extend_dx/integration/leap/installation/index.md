@@ -10,8 +10,7 @@ Before performing the steps, HCL Leap must already be installed and properly set
 2. Add a second ingress resource for Leap or you can just extend the existing DX Ingress
 
 3. Point the ingress resource to the path Leap is configured at, this depends on the context route of the Leap Deployment.
-
-Example:
+For example,
 ```yaml
         - path: /apps
           pathType: Prefix
