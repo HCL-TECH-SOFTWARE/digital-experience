@@ -266,6 +266,7 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
     
     ```
     -dxWASPassword <value>
+    ```
 
     Use this attribute to specify the Username of the DX WAS server of the subscriber (default: ""):
     
@@ -347,6 +348,7 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
 
     ```
     dxclient manage-dam-staging update-secrets -h
+    ```
 
 -   **Command options**
 
@@ -421,6 +423,7 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
     
     ```
     -dxWASPassword <value>
+    ```
 
     Use this attribute to specify the Username of the DX WAS server of the subscriber (default: ""):
     
