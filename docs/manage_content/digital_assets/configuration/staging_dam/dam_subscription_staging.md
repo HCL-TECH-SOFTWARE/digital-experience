@@ -256,6 +256,41 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
     -targetHostname <value>
     ```
 
+    Use this attribute to specify the Username of the DX WAS server of the publisher(default: ""):
+    
+    ```
+    -dxWASUsername <value>
+    ```
+
+    Use this attribute to specify the Password of the DX WAS server of the publisher(default: ""):
+    
+    ```
+    -dxWASPassword <value>
+
+    Use this attribute to specify the Username of the DX WAS server of the subscriber (default: ""):
+    
+    ```
+    -targetServerWASUsername <value>
+    ```
+
+    Use this attribute to specify the Password of the DX WAS server of the subscriber (default: ""):
+    
+    ```
+    -targetServerWASPassword <value>
+    ```
+
+    Use this attribute to specify the Username of the DX Core server of the subscriber (default: ""):
+    
+    ```
+    -targetServerUsername <value>
+    ```
+
+    Use this attribute to specify the Password of the DX Core server of the subscriber (default: ""):
+    
+    ```
+    -targetServerPassword <value>
+    ```
+
     Use this attribute to specify the subscriber ID of the target environment of the subscriber:
 
     ```
@@ -273,13 +308,13 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
     To register:
 
     ```
-    dxclient manage-dam-staging register-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -subscriberId <subscriberId>
+    dxclient manage-dam-staging register-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -dxWASUsername <dxWASUsername> -dxWASPassword <dxWASPassword> -targetServerWASUsername <targetServerWASUsername> -targetHostname <targetHostname> -targetServerWASPassword <targetServerWASPassword> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword>
     ```
 
     !!! example
 
         ```
-        dxclient manage-dam-staging register-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com -interval 2
+        dxclient manage-dam-staging register-dam-subscriber -dxProtocol https -hostname native-kube-pub5.team-q-dev.com -dxPort 443 -dxUsername wpsadmin -dxPassword wpsadmin -dxWASUsername wpsadmin -dxWASPassword wpsadmin -targetServerWASUsername wpsadmin -targetServerWASPassword wpsadmin2 -targetServerUsername wpsadmin -targetServerPassword wpsadmin2 -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-sub5.team-q-dev.com -interval 2
         ```
 
     To deregister:
