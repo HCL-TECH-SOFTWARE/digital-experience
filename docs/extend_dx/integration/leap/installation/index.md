@@ -1,18 +1,17 @@
-# Installation HCL Leap deployment with an existing DX environment
+# Integration with HCL Leap
 
-The following is an installation step of HCL Leap with the existing DX environment.
+The following are high-level steps for Installing HCL Leap with an existing DX Deployment.
+Please see [HCL Leap product documentation](https://help.hcltechsw.com/Leap/9.3.2/index.html) for detailed instructions. 
 
-1. [Deploying to a Container (Kubernetes) Platform - Open Liberty](https://help.hcltechsw.com/Leap/9.3.2/deploy_container_kubernetes_openliberty.html )
+Before performing the steps, HCL Leap must already be installed and properly setup. This steps also assumes that [post-deployment tasks](https://help.hcltechsw.com/Leap/9.3.2/in_setting_up_environment.html) are also done. For more information see: [Deploying to a Container (Kubernetes) Platform - Open Liberty](https://help.hcltechsw.com/Leap/9.3.2/deploy_container_kubernetes_openliberty.html )
 
-2. [Customized deployment](https://help.hcltechsw.com/Leap/9.3.2/openliberty_customized_deploy.html)
+1. If you are already using an [ingress for DX](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress/?h=ingress) you can **extend** that ingress for Leap
 
-3. Install the Leap helm chart in existing DX environment with same namespace
+2. Add a second ingress resource for Leap or you can just extend the existing DX Ingress
 
-4. [Configure Ingress For DX Deployment](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress/?h=ingress)
-
-5. Update the route for ingress to point to leap service
+3. Point the ingress resource to the path Leap is configured at, this depends on the context route of the Leap Deployment.
+Example:
 ```yaml
-
         - path: /apps
           pathType: Prefix
           backend:
@@ -21,4 +20,3 @@ The following is an installation step of HCL Leap with the existing DX environme
               port:
                 number: 9080
 ```
-6. [Completing the post-deployment tasks](https://help.hcltechsw.com/Leap/9.3.2/in_setting_up_environment.html)
