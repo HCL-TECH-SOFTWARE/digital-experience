@@ -28,6 +28,9 @@ This section describes how to enable and disable Content Reporting.
     !!! important
         For the **contentreporting.static.ui.url** parameter value, a slash is required in the end.
 
+    !!! note
+        If using a webserver, it is required to [map the ContentReporting application to it](https://www.ibm.com/docs/en/was/9.0.5?topic=files-mapping-modules-servers) in addition to the Digital Experience server or cluster, regenerate and propagate the plugin-cfg.xml file.
+
 
 ### Enabling Content Reporting - Helm processes for DX deployments on Kubernetes
 
@@ -40,7 +43,7 @@ In the `values.yaml` file, under configuration, enable contentReporting by setti
         enabled: true
     ```
 
-!!!note
+!!! note
     Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. **enable-content-reporting** can also be manually executed by logging in to the core pod.
 
 ## Disabling Content Reporting for on-premise deployment
@@ -64,5 +67,5 @@ In the `values.yaml` file, under the configuration, disable contentReporting by 
         enabled: false
     ```
     
-!!!note
+!!! note
     Disabling contentReporting runs the **disable-content-reporting** config engine task in the background. **disable-content-reporting** can also be manually executed by logging in to the core pod. 
