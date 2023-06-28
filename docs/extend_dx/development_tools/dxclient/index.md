@@ -349,8 +349,8 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
 ## Some generic points to note
     
-1. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary.
-2. The maximum input file size allowed in DXClient is 256 MB currently. This limitation will be addressed in one of the future releases.
+1. The attribute `-dxConnectHostname` has been deprecated and removed and must be replaced with `-hostname` wherever necessary since CF202.
+2. Uptil CF212, the maximum input file size allowed in DXClient was 256 MB. This limitation has been addressed in later releases. As of CF213, there is no default file size set but user could set it through the DXC_ConfigSettings property. Refer [DXC_ConfigSettings](dxconnect.md#resource-environment-provider-property-for-dxconnect) 
 
 ## Configuring DXClient
 

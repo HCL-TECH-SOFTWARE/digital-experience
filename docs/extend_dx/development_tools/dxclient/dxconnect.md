@@ -30,10 +30,7 @@ To install DXConnect, use the command below:
 ./ConfigEngine.sh install-dxconnect-application
 ```
 
-This task not only installs the DXConnect application, but it also creates the "DXC\_ConfigSettings" WAS Resource Environment Provider and creates `DXCONNECT_MAX_FILE_SIZE_MB` custom property in that REP. 
-
-!!!note
-    `DXCONNECT_MAX_FILE_SIZE_MB` property indicates the maximum file size that is allowed per request. It's **default value is zero**, which means that there are no limits defined, and any file size is acceptable. You can change this by going to [Configuration Wizard](#accessing-the-configuration-wizard-admin-console-in-a-container-environment) > Resources > Resource Environment > Resource Environment Provider > DXC_ConfigSettings > Custom Properties and setting up the `DXCONNECT_MAX_FILE_SIZE_MB` property to the desired value.
+This task not only installs the DXConnect application, but it also creates the "DXC\_ConfigSettings" WAS Resource Environment Provider and creates [`DXCONNECT_MAX_FILE_SIZE_MB`](#resource-environment-provider-property-for-dxconnect) custom property in that REP. 
 
 
 To remove DXConnect, use the command below:
@@ -54,6 +51,15 @@ To re-install DXConnect, use the command below:
     To verify if DXConnect is installed on a given HCL DX Server 9.5 with CF19 or later, navigate to the **Configuration Wizard** Admin console and then under **Enterprise Applications**. The `dxconnect` application appears on the console as shown in the example below. For more information on accessing and working with the Configuration Wizard, refer to [Accessing the Configuration Wizard](../../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md) topics.
 
     ![DXConnect installation](../../../images/HCL_DXConnect_installation.png)
+
+## Resource Environment Provider property for DXConnect
+
+The DXConnect Installation task not only installs the DXConnect application, but it also creates the "DXC\_ConfigSettings" WAS Resource Environment Provider and creates `DXCONNECT_MAX_FILE_SIZE_MB` custom property in that REP. 
+
+`DXCONNECT_MAX_FILE_SIZE_MB` property indicates the maximum file size that is allowed per request. It's **default value is zero**, which means that there are no limits defined, and any file size is acceptable. You can change this by going to [Configuration Wizard](#accessing-the-configuration-wizard-admin-console-in-a-container-environment) > Resources > Resource Environment > Resource Environment Provider > DXC_ConfigSettings > Custom Properties and setting up the `DXCONNECT_MAX_FILE_SIZE_MB` property to the desired value.
+
+!!!note
+`DXCONNECT_MAX_MEMORY_SIZE_MB` property has been removed since CF213.
 
 ## Accessing the Configuration Wizard admin console in a container environment
 
