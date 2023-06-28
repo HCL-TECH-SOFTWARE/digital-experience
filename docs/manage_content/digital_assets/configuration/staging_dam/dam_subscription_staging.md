@@ -314,7 +314,7 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
     !!! example
 
         ```
-        dxclient manage-dam-staging register-dam-subscriber -dxProtocol https -hostname native-kube-pub5.team-q-dev.com -dxPort 443 -dxUsername wpsadmin -dxPassword wpsadmin -dxWASUsername wpsadmin -dxWASPassword wpsadmin -targetServerWASUsername wpsadmin -targetServerWASPassword wpsadmin2 -targetServerUsername wpsadmin -targetServerPassword wpsadmin2 -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-sub5.team-q-dev.com -interval 2
+        dxclient manage-dam-staging register-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -dxWASUsername xxxx -dxWASPassword xxxx -targetServerWASUsername xxxx -targetServerWASPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com -interval 2
         ```
 
     To deregister:
@@ -455,7 +455,7 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
     !!! example
 
         ```
-        dxclient manage-dam-staging update-secrets -dxProtocol https -hostname native-kube-pub5.team-q-dev.com -dxPort 443 -dxUsername wpsadmin -dxPassword wpsadmin -dxWASUsername wpsadmin -dxWASPassword wpsadmin -targetServerWASUsername wpsadmin -targetServerWASPassword wpsadmin2 -targetServerUsername wpsadmin -targetServerPassword wpsadmin2 -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-sub5.team-q-dev.com
+        dxclient manage-dam-staging update-secrets -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -dxWASUsername xxxx -dxWASPassword xxxx -targetServerWASUsername xxxx -targetServerWASPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com
         ```
 
 ## Get all subscribers details for DAM staging
