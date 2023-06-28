@@ -116,6 +116,7 @@ The `wcm-library-import` command is used to import the WCM libraries from the so
 
 !!! note
     CF206 onwards, we are supporting the `zip/tag.gz` file formats to export and import WCM libraries.
+    CF213 onwards, the limitation to upload not more than 256MB has been addressed. Please refer [DXC_ConfigSettings](dxconnect.md#resource-environment-provider-property-for-dxconnect) for more details.
 
 !!! important 
     In the Kubernetes environment, timeout will happen after 60 seconds.
