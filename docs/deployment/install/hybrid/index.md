@@ -31,4 +31,7 @@ The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topi
 
     -   **Step 3: Proceed to configuration instructions** listed in this topic: [Helm deployment configuration](../../../deployment/install/container/helm_deployment/helm_install_commands.md).
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=1461).
 
