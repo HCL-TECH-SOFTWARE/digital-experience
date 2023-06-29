@@ -17,7 +17,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     ![](../../../../assets/HCL_Content_Reporting_Landing_Page.png)
 
-2.  Close sidebar. On the **Search Criteria** section, select a criteria to generate a report of matching contents.
+2.  Close the sidebar. On the **Search Criteria** section, select the appropriate criteria to generate a report of matching contents.
     ![](../../../../assets/HCL_Content_Reporting_Criteria_Dropdown.png)
 
     !!!note
@@ -31,7 +31,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
         ![](../../../../assets/HCL_Content_Reporting_Search_By_Expiry.png)
 
-        Click the calender icon in the **From** or **To** field to display the calendar. Select the **From** date and the **To** date from calendar and the click **Search**.
+        Click the calender icon in the **From** or **To** field to display the calendar. Select the **From** date and the **To** date from calendar and click **Search**.
         
         ![](../../../../assets/HCL_Content_Reporting_Select_Date.png)
 
@@ -40,19 +40,19 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     - **Owner**
 
-        Selecting the **Owner** criteria adds the **User** field, a typeahead input field where you can select the owners of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
+        Selecting the **Owner** criterion adds the **User** field, a typeahead input field where you can select the owners of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
         
         ![](../../../../assets/HCL_Content_Reporting_Owner_Criteria.png)
     
     - **Author**
 
-        Selecting the **Author** criteria adds the **User** field, a typeahead input field where you can select the authors of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
+        Selecting the **Author** criterion adds the **User** field, a typeahead input field where you can select the authors of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
         
         ![](../../../../assets/HCL_Content_Reporting_Author_Criteria.png)
 
     - **Item type**
 
-        Selecting the **Item type** criteria adds the **Item** field, a multi-select dropdown input field where you can select the item type of the items you want included in your report. 
+        Selecting the **Item type** criterion adds the **Item** field, a multi-select dropdown input field where you can select the item type of the items you want included in your report. 
         
         ![](../../../../assets/HCL_Content_Reporting_Item_Type_Criteria.png)
 
@@ -62,18 +62,18 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     - **Phrase**
 
-        Selecting the **Phrase** criteria adds the **Phrase** field, a text input field where you can enter a phrase that would match the items you want included in your report. Enter a phrase (for example, *Sample Article*) in the **Phrase** field. Only one phrase can be searched per criteria line. 
+        Selecting the **Phrase** criterion adds the **Phrase** field, a text input field where you can enter a phrase that would match the items you want included in your report. Enter a phrase (for example, *Sample Article*) in the **Phrase** field. Only one phrase can be searched per criteria line. 
         
         ![](../../../../assets/HCL_Content_Reporting_Phrase_Select.png)
 
     - **Word**
 
-        Selecting the **Word** criteria adds the **Words** field, a text input field where you can enter words that would match the items you want included in your report. Enter a few words (for example, *wps*, *test*) in the **Words** field. This searches for words within attributes such as titles, description, name, and keywords.
+        Selecting the **Word** criterion adds the **Words** field, a text input field where you can enter words that would match the items you want included in your report. Enter a few words (for example, *wps*, *test*) in the **Words** field. This searches for words within attributes such as titles, description, name, and keywords.
         
         ![](../../../../assets/HCL_Content_Reporting_Words_Select.png)
 
     !!!note
-        After you select a criteria, it will not be available for selection again in the **Criteria** dropdown menu. 
+        After you select a criterion, it will not be available for selection again in the **Criteria** dropdown menu. 
 
 3. After you have selected the search criteria, click **Search**.
 
@@ -82,15 +82,17 @@ A report is a list of items that matches a set or combined sets of criteria. Con
     On the top right corner, the **View Criteria** opens the top drawer and displays the applied search criteria.
 
     ![](../../../../assets/HCL_Content_Reporting_Search_Results.png)
+    
+### Other actions available
 
-4. (Optional) To add more criteria to your search, click **View Criteria**. Click the **Add** button to add another search criteria.
+- To add more criteria to your search, click **View Criteria**. Click the **Add** button to add another search criteria.
     
     ![](../../../../assets/HCL_Content_Reporting_Add_Criteria_Button_Dropdown.png)
 
-5. (Optional) To remove already added search criteria, click the **Remove** button. Clicking the **Remove** button removes the criteria and makes it available in the **Criteria** dropdown menu again.
+- To remove already added search criteria, click the **Remove** button. Clicking the **Remove** button removes the criterion and makes it available in the **Criteria** dropdown menu again.
     
     ![](../../../../assets/HCL_Content_Reporting_Remove_Criteria.png)
 
-6. (Optional) To remove multiple selected criteria, click the **Clear** button.
+- To remove multiple selected criteria, click the **Clear** button.
     
     ![](../../../../assets/HCL_Content_Reporting_Clear_Criteria_Options.png)
