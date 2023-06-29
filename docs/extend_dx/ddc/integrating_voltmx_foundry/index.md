@@ -17,14 +17,12 @@ This section describes how to define the set of attributes available in the bean
 For more information, see [Technical concepts | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/social/plrf_tech_concepts.html).
 
 The following API end point and response are used to create this sample document:
-    
-    Sample API end point for **GET**
 
-    ![](../../../assets/Volt_MX_Sample_Endpoint.png "VOLTMX Sample API Endpoint.")
+- Sample API end point for **GET**
+  ![](../../../assets/Volt_MX_Sample_Endpoint.png "VOLTMX Sample API Endpoint.")
 
-    Sample API end point for **POST**
-
-    ![](../../../assets/Volt_MX_Sample_POST_Endpoint.png "VOLTMX Sample POST API Endpoint.")
+- Sample API end point for **POST**
+  ![](../../../assets/Volt_MX_Sample_POST_Endpoint.png "VOLTMX Sample POST API Endpoint.")
 
 ### Creating the list-rendering profile
 
