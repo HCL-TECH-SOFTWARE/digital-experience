@@ -88,7 +88,7 @@ There are two ways to track the bulk update: through the snackbar and through th
     - **Action**: This column shows actions that were taken on the bulk update.
     - **Requested by**: This column shows who triggered the bulk update process.
     - **Updated on**: This column shows when the bulk update was triggered.
-    - **Polling ID**:
+    - **Polling ID**: This column shows a unique identifier for the bulk process.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Page.png)
 
