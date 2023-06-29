@@ -10,13 +10,13 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager – Comments plugin
 - Web Content Manager – Content Reporting
-- - Content Composer – AI-assisted content analysis
 - DxClient – LiveSync
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 9.5 Container Version**
 
 - Persisting CW Profile
+- Content Composer – AI-assisted content analysis
 - Container Deployment – New checks in Prereqs checker
 
 ## Digital Experience 8.5 and 9.0 Versions
@@ -41,14 +41,6 @@ The following features and updates are available to customers installing HCL Dig
 
 === "On-Premises"
     Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center – Content reporting for additional information.
-    
-### Content Composer – AI-assisted content analysis
-
-=== "Containers"
-    AI-assisted content analysis is a new optional feature that can accelerate content tagging and sentiment insights for content authors. A WCM API plugin is available to enable, using [OpenAI ChatGPT](https://openai.com/blog/chatgpt) (subscribed to separately) as an example. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and [Traditional](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) platforms, and Content Composer – [Managing Content Items](../../manage_content/index.md) and [Authoring Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#creating-new-content-and-getting-ai-assisted-sentiment-analysis-of-text-elements) for more information.
-
-=== "On-Premises"
-    AI-assisted content analysis is a new optional feature that can accelerate content tagging and sentiment insights for content authors. A WCM API plugin is available to enable, using [OpenAI ChatGPT](https://openai.com/blog/chatgpt) (subscribed to separately) as an example. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and [Traditional](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) platforms, and Content Composer – [Managing Content Items](../../manage_content/index.md) and [Authoring Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#creating-new-content-and-getting-ai-assisted-sentiment-analysis-of-text-elements) for more information.
 
 ### DxClient - LiveSync
 
@@ -65,11 +57,15 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Implemented Persistence of cw_profile which allows advanced configuration of the Config Wizard profile to be persisted through restarts. See [Persisting CW Profile](../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md) for more information.
 
+### Content Composer – AI-assisted content analysis
+
+=== "Containers"
+    AI-assisted content analysis is a new optional feature that can accelerate content tagging and sentiment insights for content authors. A WCM API plugin is available to enable this feature, using [OpenAI ChatGPT](https://openai.com/blog/chatgpt) (subscribed to separately) as an example. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and [Traditional](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) platforms, and Content Composer – [Managing Content Items](../../manage_content/index.md) and [Authoring Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#creating-new-content-and-getting-ai-assisted-sentiment-analysis-of-text-elements) for more information.
 
 ### Container Deployment – New checks in Prereqs Checker 
 
 === "Containers"
-    The Prereqs Checker is a tool that can execute a number of checks on the target Deployment environment to ensure system and storage requirements are met for software deployment and upgrades to the latest Container Update release. Two new checks are added: Storage Space Check and Core Profile Check. For more information, see the help topic [Configure Prereqs Checker For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md#checks-implemented-in-prereqs-checker).
+    The Prereqs Checker is a tool that executes a number of checks on the target deployment environment to ensure system and storage requirements are met. Two new checks are added: Storage Space Check and Core Profile Check. For more information, see the help topic [Configure Prereqs Checker For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md#checks-implemented-in-prereqs-checker).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
