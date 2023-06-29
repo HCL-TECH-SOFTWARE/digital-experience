@@ -21,12 +21,13 @@ A report is a list of items that matches a set or combined sets of criteria. Con
     ![](../../../../assets/HCL_Content_Reporting_Criteria_Dropdown.png)
 
     !!!note
-        The dynamic fields of each criteria are displayed upon selection. You can perform content searching by any or all of these search criteria.
+        The dynamic fields of each criterion are displayed upon selection. You can generate a content report by any or all of these search criteria.
 
     In the **Criteria** dropdown, you can select any of the following:
 
     - **Expiry date**
-        When you select the **Expiry date** criteria, two date input fields appear: **From** and **To**.
+
+        When you select the **Expiry date** criterion, two date input fields appear: **From** and **To**.
 
         ![](../../../../assets/HCL_Content_Reporting_Search_By_Expiry.png)
 
@@ -35,19 +36,22 @@ A report is a list of items that matches a set or combined sets of criteria. Con
         ![](../../../../assets/HCL_Content_Reporting_Select_Date.png)
 
         !!!note
-            Filling up both date fields is not mandatory and only one is needed to proceed. Entering only the **From** date searches items from that date onwards. Entering only the **To** date searches items on and before that date. Entering the same date in the **From** and **To** dates searches items in that one specific date.
+            Filling up both date fields is not mandatory and only one is needed to proceed. Entering only the **From** date searches items from that date onwards. Entering only the **To** date searches items on and before that date.
 
     - **Owner**
+
         Selecting the **Owner** criteria adds a the **User** field, a typeahead input field where you can select the owners of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
         
         ![](../../../../assets/HCL_Content_Reporting_Owner_Criteria.png)
     
     - **Author**
+
         Selecting the **Author** criteria adds the **User** field, a typeahead input field where you can select the authors of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
         
         ![](../../../../assets/HCL_Content_Reporting_Author_Criteria.png)
 
     - **Item type**
+
         Selecting the **Item type** criteria adds the **Item** field, a multi-select dropdown input field where you can select the item type of the items you want included in your report. 
         
         ![](../../../../assets/HCL_Content_Reporting_Item_Type_Criteria.png)
@@ -57,11 +61,13 @@ A report is a list of items that matches a set or combined sets of criteria. Con
         ![](../../../../assets/HCL_Content_Reporting_Item_Type_Select.png)
 
     - **Phrase**
+
         Selecting the **Phrase** criteria adds the **Phrase** field, a text input field where you can enter a phrase that would match the items you want included in your report. Enter a phrase (for example, *Sample Article*) in the **Phrase** field. Only one phrase can be searched per criteria line. 
         
         ![](../../../../assets/HCL_Content_Reporting_Phrase_Select.png)
 
     - **Word**
+
         Selecting the **Word** criteria adds the **Words** field, a text input field where you can enter words that would match the items you want included in your report. Enter a few words (for example, *wps*, *test*) in the **Words** field. This searches for words within attributes such as titles, description, name, and keywords.
         
         ![](../../../../assets/HCL_Content_Reporting_Words_Select.png)

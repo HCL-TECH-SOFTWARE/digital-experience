@@ -29,7 +29,7 @@ This section describes how to enable and disable Content Reporting.
         For the **contentreporting.static.ui.url** parameter value, a slash is required in the end.
 
     !!! note
-        If using a webserver, it is required to [map the ContentReporting application to it](https://www.ibm.com/docs/en/was/9.0.5?topic=files-mapping-modules-servers) in addition to the Digital Experience server or cluster, regenerate and propagate the plugin-cfg.xml file.
+        If using a webserver, it is required to [map the Content Reporting application to it](https://www.ibm.com/docs/en/was/9.0.5?topic=files-mapping-modules-servers) in addition to the Digital Experience server or cluster, regenerate and propagate the plugin-cfg.xml file.
 
 
 ### Enabling Content Reporting - Helm processes for DX deployments on Kubernetes
