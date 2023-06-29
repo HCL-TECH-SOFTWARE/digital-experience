@@ -58,8 +58,8 @@ The HCL Content Reporting UI has the following components:
 
     -   **Word** - Through this criterion, the report can be scoped to include items based on their inclusion of words within attributes such as titles, description, name, and keywords.
 
+    ![](../../../../assets/HCL_Content_Reporting_Action_Buttons.png)
+
   -  **Add Criteria** - This adds another criteria line by clicking **+ Add**. Only one instance of each option can be added at a time.
 
   -  **Action buttons** - Proceed with the search by clicking the **Search** button. Clear fields by clicking the **Clear** button. Close search criteria drawer by clicking the **Cancel** button.
-
-
