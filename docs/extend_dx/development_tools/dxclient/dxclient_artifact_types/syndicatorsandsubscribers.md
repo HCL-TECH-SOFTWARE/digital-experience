@@ -389,10 +389,6 @@ The `create-syndication-relation` command is used to create the syndication rela
     -mode <mode> -syndicatorVaultSlotName <syndicatorVaultSlotName> -dxContextRoot <dxContextRoot> -virtualPortalContext <virtualPortalContext>
     ```
 
-
-!!! note 
-    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
-
 ???+ Info "Related information"
     - [How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_syndication.html)
 

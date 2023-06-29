@@ -29,3 +29,7 @@ To enable log tracing in DXConnect you will need to access ConfigWizard admin co
 
 ???+ info "Related information"
     -   [DXClient](../dxclient/index.md)
+
+## Troubleshooting for some known Issues.
+
+1. In case of failure in running tasks due timeout issues in kubernetes environment, change the load balancer time out setting from 60 seconds to as per your requirement.
