@@ -249,9 +249,6 @@ The values that are passed through the command line override the default values.
 dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -xmlFile <xml-file-with-path> -enableBackup true -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX core server profile>
 ```
 
-!!! note
-    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
-
 
 ???+ info "Related information"
     - [DXClient](../index.md)

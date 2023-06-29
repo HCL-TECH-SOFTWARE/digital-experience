@@ -214,7 +214,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     dxclient livesync pull-theme -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -themePath <themePath> -themeName <themeSystemName>
     ```
 
-### Limitations & Troubleshooting
+## Limitations & Troubleshooting
 
 1. This command does not register or unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) or [Undeploy Themes](./themes.md#undeploy-theme) commands.
 2. While multiple developers can use LiveSync on the same server, each developer has to use a unique theme. In other words, LiveSync Push Theme is currently only intended for one developer working on a single theme. Concurrent usage of this command on the same theme or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), or WebDav, is not supported.
@@ -224,3 +224,4 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 6. Case-Sensitivity for file and folder naming are not supported.
 7. In any case, if the real-time sync of theme during the push command gets disrupted, disconnect and reconnect again.
 8. It is not recommended to use LiveSync on a production server.
+9. LiveSync is not supported currently in scaled DX environment set-up.
