@@ -91,7 +91,7 @@ There are two ways to track the bulk update: through the snackbar and through th
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Page.png)
 
-    There is a *back button* on the app header to return to the landing page of Content Reporting.
+    To return to the Content Reporting landing page, click the back button found on the upper left corner of the Updates page.
 
 3. On the table, in the **Update** column, there is a button that appears when you hover over a row whose bulk update has been completed. Click this button to show a dialog to check the details of each item that has been processed.
 
