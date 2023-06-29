@@ -16,7 +16,7 @@ Content managers can export generated reports in HCL Content Reporting.
 
 2. Generate a report on the items you want to export. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
-3. After generating a report, the **Export** button appears in the application header. Click the **Export** button. The snackbar showing the export progress appears in the lower right corner. 
+3. After generating a report, the **Export** button appears in the application header. Click the **Export** button. The snackbar showing the export progress appears in the bottom right corner.
 
     ![](../../../../assets/HCL_Content_Reporting_Export_Options.png)
 

@@ -28,7 +28,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
     There are also **Cancel** and **Clear** buttons in the dialog box. Click **Cancel** to close the dialog box. Click **Clear** to remove all selected options.
 
     !!!note
-        Bulk updates for expiry dates are only applied to content items, site areas, authoring templates, components, categories, and items with edit access. Only items assigned with a workflow are included.
+        Bulk updates for expiry dates are only be applied to content items, site areas, authoring templates, components, categories, and items with edit access. Only items with a workflow will be included.
 
 5. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and if you entered the correct expiration date. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
 
@@ -67,7 +67,7 @@ There are two ways to track the bulk update: through the snackbar and through th
 
     ![](../../../../assets/HCL_Content_Reporting_Snackbar_View_Item.png)
 
-3. On the dialog box, in the header, you can see the total number of items that was successfully updated and the number of failed items. The alert message shows you the number of failed items. There are four columns on the table inside the body of the dialog box:
+3. On the dialog box, in the header, you can see the total number of items that was successfully updated and the number of failed items. The alert message shows you the number of failed items below header. There are four columns on the table inside the body of the dialog box:
 
     - **Title**: This column shows the title of the item processed.
     - **Item type**: This column shows the type of item processed.
@@ -82,12 +82,13 @@ There are two ways to track the bulk update: through the snackbar and through th
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
 
-2. On the **Updates** page, there is a table showing the bulk updates that were triggered. This table has four columns:
+2. On the **Updates** page, there is a table showing the bulk updates that were triggered. This table has five columns:
 
     - **Update**: This column indicates whether the bulk update is ongoing or completed. Once complete, there is a summary of items that have been processed. This summary shows how many items were updated and how many failed. This column also contains a button to show the report dialog to check the details of each item that has been processed.
     - **Action**: This column shows actions that were taken on the bulk update.
     - **Requested by**: This column shows who triggered the bulk update process.
     - **Updated on**: This column shows when the bulk update was triggered.
+    - **Polling ID**:
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Page.png)
 
