@@ -40,7 +40,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     - **Owner**
 
-        Selecting the **Owner** criteria adds a the **User** field, a typeahead input field where you can select the owners of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
+        Selecting the **Owner** criteria adds the **User** field, a typeahead input field where you can select the owners of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
         
         ![](../../../../assets/HCL_Content_Reporting_Owner_Criteria.png)
     
