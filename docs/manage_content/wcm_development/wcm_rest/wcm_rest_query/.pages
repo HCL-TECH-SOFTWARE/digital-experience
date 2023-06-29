@@ -3,5 +3,6 @@ nav:
     - index.md
     - wcm_rest_defined.md
     - wcm_rest_adhoc.md
+    - wcm_rest_csv_export.md
 
 

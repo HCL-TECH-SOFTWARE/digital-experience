@@ -203,6 +203,7 @@ The existing search query API is extended and two new parameters are added. See 
     </feed>
     
     ```
+
 ## Adding Workflow date fields and link to the REST API search query results
 
 You can include the date fields associated with the workflow of a requested item by specifying the `options=workflow` URL parameter. Only the date fields that have been set to a valid value are returned. A link is also added to the workflow. This option is ignored for items that do not have a workflow. For example:
