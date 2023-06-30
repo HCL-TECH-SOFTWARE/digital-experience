@@ -59,6 +59,9 @@ A report is a list of items that matches a set or combined sets of criteria. Con
         Select one or more item types from the **Item** dropdown list.
 
         ![](../../../../assets/HCL_Content_Reporting_Item_Type_Select.png)
+        
+        !!!note
+            In case you select both a grouped item type (for example, *All Authoring Templates*) and one or more of its sub-types (for example, *Content Template*), the system only fulfills the search for the sub-types. The most specific search criteria of the sub-type is recognized because searching for the grouped item type nullifies the specific search.
 
     - **Phrase**
 
