@@ -37,6 +37,9 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
         !!!note
             Filling up both date fields is not mandatory and only one is needed to proceed. Entering only the **From** date searches items from that date onwards. Entering only the **To** date searches items on and before that date.
+            
+        !!!important "Invalid date range"
+            Using an invalid date range (for example, from a future date to a past date) causes the generated report to be empty.
 
     - **Owner**
 
@@ -72,6 +75,9 @@ A report is a list of items that matches a set or combined sets of criteria. Con
     - **Word**
 
         Selecting the **Word** criterion adds the **Words** field, a multiple text input field where you can enter words that would match the items you want included in your report. Enter a few words (for example, *wps*, *test*) in the **Words** field. This searches for words within attributes such as titles, description, name, and keywords.
+        
+        !!!note
+            Any of the words entered will be searched. All words entered do not have to be present in an item.
         
         ![](../../../../assets/HCL_Content_Reporting_Words_Select.png)
 
