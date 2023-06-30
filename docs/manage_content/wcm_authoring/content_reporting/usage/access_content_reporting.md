@@ -32,34 +32,14 @@ The HCL Content Reporting UI has the following components:
 
     ![](../../../../assets/HCL_Content_Reporting_Criteria_Options.png)
 
--   **Criteria** - There are five criteria that can be used in different combinations as the basis to generate a report. The dynamic fields of each criterion will be displayed upon selection. A report can be generated based on any or all of the following criteria:
+-   **Criteria** - There are six criteria that can be used in different combinations as the basis to generate a report. The dynamic fields of each criterion will be displayed upon selection. A report can be generated based on any or all of the following criteria:
 
-    -   **Expiry date** - With this criterion, the report can be scoped to include items based on their assigned expiry date. The expiry date has two date fields: **From date** and **To date**. The generated report will include items that have an expiry date that is within the dates entered in the input fields. The date range is interpreted to be open ended when one of the input fields are left open.
-
-        !!! important "Invalid date range"
-            Using an invalid date range (for example, from a future date to a past date) will cause the generated report to be empty.
-
-    -   **Owner** - With this criterion, the report can be scoped to include items based on their owners. Multiple users can be selected for this criterion. The generated report will include an item if any of the selected users is its owner or one of its owners.
-
-        !!!note
-            Typing in the input field will suggest users whose distinguished name (cn) matches the input. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria.
-
-    -   **Author** - With this criterion, the report can be scoped to include items based on their authors. Multiple users can be selected for this criterion. The generated report will include an item if any of those users is its author or one of its authors.
-
-        !!!note
-            Typing in the input field will suggest users whose distinguished name (cn) matches the input. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria.
-
-    -   **Item type** - With this criterion, the report can be scoped to include items based on their included types. Multiple item types can be selected for this criterion.
-
-        !!!note
-            In case you select both a grouped item type (for example, All Authoring Templates) and one or more of its sub-types (for example, Content Template), the system only fulfills the search for the sub-types. The most specific search criteria of the sub-type is recognized because searching for the grouped item type nullifies the specific search.
-
-    -   **Phrase** - Through this criterion, the report can be scoped to include items based on their included phrase. Only one phrase can be searched per criteria line.
-
-    -   **Word** - Through this criterion, the report can be scoped to include items based on their inclusion of words within attributes such as titles, description, name, and keywords.
-
-        !!!note
-            Any of the words entered will be searched and it doesn't have to be all of them present in an item.
+    - **Expiry date**
+    - **Owner**
+    - **Author**
+    - **Item type**
+    - **Phrase**
+    - **Word**
 
     ![](../../../../assets/HCL_Content_Reporting_Action_Buttons.png)
 
