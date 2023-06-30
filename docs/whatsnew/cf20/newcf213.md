@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager – Comments plugin
 - Web Content Manager – Content Reporting
+- Web Content Manager REST API v2 - AI Analysis API
 - Workflow date fields in REST API search query results
 - Export of REST query results to CSV
 - DxClient – LiveSync
@@ -39,6 +40,14 @@ The following features and updates are available to customers installing HCL Dig
 
 === "On-Premises"
     Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center – Content reporting for additional information.
+
+### Web Content Manager REST API v2 - AI Analysis API
+
+=== "Containers"
+    The Web Content Manager REST V2 AI Analyzer APIs can be used to do sentimental analysis, keyword extraction, and auto summarization for a content element. See the Help Center topics [WCM Content AI Analysis](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) and [AI analyzer API for content](../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for more information.
+
+=== "On-Premises"
+    The Web Content Manager REST V2 AI Analyzer APIs can be used to do sentimental analysis, keyword extraction, and auto summarization for a content element. See the Help Center topics [WCM Content AI Analysis](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) and [AI analyzer API for content](../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for more information.
 
 ### Workflow date fields in REST API search query results
 
