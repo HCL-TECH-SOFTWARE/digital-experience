@@ -332,11 +332,11 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
 
 ## Update secrets for DAM staging
 
-Use the `manage-dam-staging update-secrets` command to update secrets of the publisher & subscriber for DAM staging.
+Use the `manage-dam-staging update-secrets` command to update secrets of the publisher and subscriber for DAM staging.
 
 -   **Command description**
 
-    You can update the secrets of a publisher & subscriber for DAM staging with the following command:
+    You can update the secrets of a publisher and subscriber for DAM staging with the following command:
 
     ```
     dxclient manage-dam-staging update-secrets
@@ -352,14 +352,13 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
 
 -   **Command options**
 
-    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
+    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: ""):
 
     ```
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the host name of the DX server of the publisher
-    (default: "")
+    Use this attribute to specify the host name of the DX server of the publisher (default: ""):
 
     ```
     -hostname <value>
@@ -371,13 +370,13 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
     -dxPort <value>
     ```
 
-    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
+    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: ""):
 
     ```
     -dxUsername <value> 
     ```
 
-    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: "")
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: ""):
 
     ```
     -dxPassword <value>
