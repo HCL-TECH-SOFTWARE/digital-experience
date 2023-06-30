@@ -1,7 +1,7 @@
 title: Traditional Deployment
 nav:
     - index.md
-    - install_upgrade_plan_supported_paths.md
+    - install_upgrade_plan_supported_paths
     - Prepare the prerequisite software: install_prereq_software
     - Install HCL Digital Experience: installing_dx
     - Apply Combined Cumulative Fix: cf_install
