@@ -25,9 +25,9 @@ The HCL Content Reporting UI has the following components:
 
 ![](../../../../assets/HCL_Content_Reporting_Full_View.png)
 
--   **Main header** - This section contains the **Update** button to update the expiry date of the reported items, the **Export** to export the search results into a CSV file, a link for pending update actions and the total number of results found (for example, Updates 42).
--   **Search Criteria** This section displays all the criteria used to search for items to populate the report.
--   **Report table** - This table contains the reported items in table format. The table is sorted by title and by the date the items were last modified.
+-   **Main header** - This section contains the **Update** button to update the expiry date of the reported items, the **Export** to export the search results into a CSV file, a link for completed and pending update actions and the total number of results found.
+-   **Search Criteria** This section displays a preview of all the criteria used to search for items to populate the report.
+-   **Report table** - This table contains the reported items in table format. The table, by default, is sorted by title and by the date the items were last modified.
 -   **View Criteria** - Click **View Criteria** to open the top drawer and display the criteria used for populating the report. You can set the criteria and generate a report in this drawer as well.
 
     ![](../../../../assets/HCL_Content_Reporting_Criteria_Options.png)
@@ -49,7 +49,7 @@ The HCL Content Reporting UI has the following components:
         !!!note
             Typing in the input field will suggest users whose distinguished name (cn) matches the input. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria.
 
-    -   **Item type** - With this criterion, the report can be scoped to include items based on their included types.
+    -   **Item type** - With this criterion, the report can be scoped to include items based on their included types. Multiple item types can be selected for this criterion.
 
         !!!note
             In case you select both a grouped item type (for example, All Authoring Templates) and one or more of its sub-types (for example, Content Template), the system only fulfills the search for the sub-types. The most specific search criteria of the sub-type is recognized because searching for the grouped item type nullifies the specific search.
@@ -57,6 +57,9 @@ The HCL Content Reporting UI has the following components:
     -   **Phrase** - Through this criterion, the report can be scoped to include items based on their included phrase. Only one phrase can be searched per criteria line.
 
     -   **Word** - Through this criterion, the report can be scoped to include items based on their inclusion of words within attributes such as titles, description, name, and keywords.
+
+        !!!note
+            Any of the words entered will be searched and it doesn't have to be all of them present in an item.
 
     ![](../../../../assets/HCL_Content_Reporting_Action_Buttons.png)
 

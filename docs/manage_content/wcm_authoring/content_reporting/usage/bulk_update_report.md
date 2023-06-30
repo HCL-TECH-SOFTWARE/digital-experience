@@ -21,7 +21,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Button.png)
 
-4. In the **Update items** box, there are three options: **Action**, **Property**, and **Change to**. For CF213, the **Action** and **Property** fields each has one option: **Update** and **Expiry date**, respectively. In the **Change to** field, enter the expiry date of the selected items. After entering the date, the **Update** button is enabled. Click the **Update** button. 
+4. In the **Update items** box, there are three options: **Action**, **Property**, and **Change to**. For CF213, the **Action** and **Property** fields each has one option: **Update** and **Expiry date**, respectively. In the **Change to** field, enter the new expiry date of the selected items. After entering the date, the **Update** button is enabled. Click the **Update** button.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Dialog.png)
 
@@ -39,7 +39,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
         ![](../../../../assets/HCL_Content_Reporting_Update_Disable.png)
 
-6. When a bulk update is triggered, a snackbar will appear in the lower right corner of the screen. The snackbar displays the status of the update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process has been completed, it shows how many items were successfully updated and how many items were not.
+6. When a bulk update is triggered, a snackbar will appear in the bottom right corner of the screen. The snackbar displays the status of the update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process has been completed, it shows how many items were successfully updated and how many items were not.
 
     ![](../../../../assets/HCL_Content_Reporting_Bulk_Update_Snackbar.png)
 
@@ -63,11 +63,11 @@ There are two ways to track the bulk update: through the snackbar and through th
     This is the snackbar if all items were not updated.
     ![](../../../../assets/HCL_Content_Reporting_Snackbar_Error.png)
 
-2. On the snackbar, there is an option to view the items that have been processed only when the bulk update process is completed. Click **View item(s)** to check the details of each item that has been processed. A dialog box for the reports should appear.
+2. On the snackbar, there is an option to view the items that have been processed only when the bulk update process is completed. Click **View items** to check the details of each item that has been processed. A dialog box for the reports should appear.
 
     ![](../../../../assets/HCL_Content_Reporting_Snackbar_View_Item.png)
 
-3. In the header of the dialog box, you can see the total number of items that was successfully updated and the number of failed items. The alert message shows you the number of failed items below header. There are four columns on the table inside the body of the dialog box:
+3. In the header of the dialog box, you can see the total number of items that was successfully updated and the number of failed items. The alert message shows you the number of failed items in the header. There are four columns on the table inside the body of the dialog box:
 
     - **Title**: This column shows the title of the item processed.
     - **Item type**: This column shows the type of item processed.
@@ -94,7 +94,7 @@ There are two ways to track the bulk update: through the snackbar and through th
 
     To return to the Content Reporting landing page, click the back button found on the upper left corner of the Updates page.
 
-3. On the table, in the **Update** column, there is a button that appears when you hover over a row whose bulk update has been completed. Click this button to show a dialog to check the details of each item that has been processed.
+3. On the table, a view action button will display on hover over a row of an already completed bulk update. Clicking this button will display the dialog for the list of items processed, and their details.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_View_Report_Button.png)
 

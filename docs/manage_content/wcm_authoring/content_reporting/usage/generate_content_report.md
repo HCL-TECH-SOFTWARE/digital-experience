@@ -1,6 +1,6 @@
 # Generating a content report
 
-This section details how to genearte content report in HCL Content Reporting.
+This section details how to generate content report in HCL Content Reporting.
 
 ## Prerequisite
 
@@ -52,11 +52,11 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     - **Item type**
 
-        Selecting the **Item type** criterion adds the **Item** field, a multi-select dropdown input field where you can select the item type of the items you want included in your report. 
+        Selecting the **Item type** criterion adds the **Item** field, a multi-select dropdown input field where you can select the item type of the items you want included in your report. You can also type in the input field to get an auto-suggested list of matching item types.
         
         ![](../../../../assets/HCL_Content_Reporting_Item_Type_Criteria.png)
 
-        Select one or more item types from the **Item** dropdown list. You can also type in the input field to get an auto-suggested list of matching item types.
+        Select one or more item types from the **Item** dropdown list.
 
         ![](../../../../assets/HCL_Content_Reporting_Item_Type_Select.png)
 
@@ -68,7 +68,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     - **Word**
 
-        Selecting the **Word** criterion adds the **Words** field, a text input field where you can enter words that would match the items you want included in your report. Enter a few words (for example, *wps*, *test*) in the **Words** field. This searches for words within attributes such as titles, description, name, and keywords.
+        Selecting the **Word** criterion adds the **Words** field, a multiple text input field where you can enter words that would match the items you want included in your report. Enter a few words (for example, *wps*, *test*) in the **Words** field. This searches for words within attributes such as titles, description, name, and keywords.
         
         ![](../../../../assets/HCL_Content_Reporting_Words_Select.png)
 
