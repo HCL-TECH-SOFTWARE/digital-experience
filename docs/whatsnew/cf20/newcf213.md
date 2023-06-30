@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager – Comments plugin
 - Web Content Manager – Content Reporting
+- Web Content Manager REST API v2 - AI Analysis API
 - Workflow date fields in REST API search query results
 - Export of REST query results to CSV
 - DxClient – LiveSync
