@@ -3,7 +3,7 @@
 Integrate the power of HCL Leap with DX environment.
 
 !!!note
-    HCL Digital Experience 9.5 CF212 and later is fully compatible with leap 9.3.2
+    This guide only applies for Kube deployments of both DX and Leap. HCL Digital Experience 9.5 CF212 and later is fully compatible with leap 9.3.2 
     
 
 !!!note
