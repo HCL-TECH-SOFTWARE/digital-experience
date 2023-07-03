@@ -25,7 +25,7 @@ Take note of the following limitations when using HCL Content Reporting:
 
 ## Supported languages
 
--   Content Reporting is not supported in Hebrew or Arabic at this point. It is supported in other supported languages, but it is not currently translated.
+-   The Content reporting UI is not compatible with other languages. When right-to-left languages are used, the UI is not displayed properly.
 
 ## User interface
 

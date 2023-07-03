@@ -44,7 +44,7 @@ In the `values.yaml` file, under configuration, enable contentReporting by setti
     ```
 
 !!! note
-    Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. **enable-content-reporting** can also be manually executed by logging in to the core pod.
+    Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. The **enable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks, please refer to [Running DX Core configuration tasks](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/manage/container_configuration/run_core_config_engine/).
 
 ## Disabling Content Reporting for on-premise deployment
 
@@ -68,4 +68,4 @@ In the `values.yaml` file, under the configuration, disable contentReporting by 
     ```
     
 !!! note
-    Disabling contentReporting runs the **disable-content-reporting** config engine task in the background. **disable-content-reporting** can also be manually executed by logging in to the core pod. 
+    Disabling contentReporting runs the **disable-content-reporting** config engine task in the background. The **disable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks, please refer to [Running DX Core configuration tasks](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/manage/container_configuration/run_core_config_engine/).
