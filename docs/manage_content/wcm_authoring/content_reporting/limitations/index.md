@@ -25,7 +25,7 @@ Take note of the following limitations when using HCL Content Reporting:
 
 ## Supported languages
 
--   The Content reporting UI is in English and it is not yet translated to other languages.
+-   The Content Reporting UI is in English and it is not yet translated to other languages.
 
 ## User interface
 
