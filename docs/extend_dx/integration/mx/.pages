@@ -1,0 +1,6 @@
+title: HCL MX Foundry
+nav:
+  - index.md
+  - Installation: installation
+  - Configuration: configuration
+  - Example: example

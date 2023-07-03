@@ -2,6 +2,7 @@ title: Integrate Applications
 nav:
     - index.md
     - Integrate HCL Connections: connections
+    - Integrate HCL MX Foundry: mx
     - Integrate IBM MobileFirst: ibm_mobilefirst
     - Unified Task List Portlet: unified_task_list
     - Web Application Bridge: wab
