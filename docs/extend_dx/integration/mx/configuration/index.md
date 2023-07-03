@@ -6,7 +6,8 @@ HCL Digital Experience allows for the use of an [optional Ingress](../../../../d
 
 1. Setup the Ingress for HCL Digital Experience according to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md).
 2. Configure HCL MX Foundry to use the existing Ingress controller. The following example values for HCL MX Foundry configure the Ingress to use an SSL connection using the provided custom certificates. 
-     - The certificate in `customCert` must match the certificate used for the Ingress configuration of HCL Digital Experience
+     - The certificate in `customCert` must match the certificate used for the Ingress configuration of HCL Digital Experience. The `cer` and `key` file must be located in the `apps/certs` directory of the MX Helm chart.
+     - The `class` in this configuration refers to the class name of the deployed Ingress controller.
      - The `serverDomainName` must match the hostname that the Ingress is available at
     ```yaml
     ingress:
