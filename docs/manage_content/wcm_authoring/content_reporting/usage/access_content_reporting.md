@@ -10,10 +10,10 @@ After image configuration in your HCL Digital Experience 9.5 CF213 and higher de
 !!! note
     User must have **User** and **Editor** access for following resources to access Content Reporting. Refer to [Working with resource permissions](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/) for more information.
 
-    - **Content reporting page** -  Click the **Administration menu** icon. Then, click **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content** > **Content Reporting** > Click Assign Access icon to set User and Editor role.
-    - **Content reporting portlet** - Click the **Administration menu** icon. Then, click **Security** > **Resource Permissions** > **Portlets** > ** Content Reporting portlet** > Click Assign Access icon to set User and Editor role.
-    - **WCM_REST_SERVICES** - Click the **Administration menu** icon. Then, click **Security** > **Resource Permissions** > **Virtual Resources** > **WCM REST SERVICE** > Click Assign Access icon to set User and Editor role.
-    - **WCM libraries** - Click the **Web Content menu**. Then, click **Web Content Libraries** > Click Assign Access icon to set User and Editor role for the library selected.
+    - **Content reporting page** -  Click the **Administration menu** icon. Then, click **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content** > **Content Reporting** > Click Assign Access icon to set User role.
+    - **Content reporting portlet** - Click the **Administration menu** icon. Then, click **Security** > **Resource Permissions** > **Portlets** > ** Content Reporting portlet** > Click Assign Access icon to set User role.
+    - **WCM_REST_SERVICES** - Click the **Administration menu** icon. Then, click **Security** > **Resource Permissions** > **Virtual Resources** > **WCM REST SERVICE** > Click Assign Access icon to set Editor role.
+    - **WCM libraries and items** - Click the **Web Content menu**. Then, click **Web Content Libraries** > Click the Assign Access icon to set the User or Editor role for any library as needed. A user needs at least User access to an item for that item to be included in a report they generate. A user needs at least Editor access to an item for a bulk update process they request can successfully update that item.
 
 ## Accessing Content Reporting
 
