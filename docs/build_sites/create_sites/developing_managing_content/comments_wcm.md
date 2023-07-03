@@ -77,7 +77,7 @@ After setting up the comments UI on the page, you can now add, reply, like/unlik
 - Nested replies to comments are yet supported.
 - Posting and replying are limited to 500 characters. 
 - Localized date is not yet properly rendered.
-- Comments cannot be rendered outside of WCM.
+- Rendering Comments outside the WCM rendering process - like from REST or a custom Servlet or JSP via the java WCM API - is not supported yet.
 
 ## Update global "Article" presentation template
 
