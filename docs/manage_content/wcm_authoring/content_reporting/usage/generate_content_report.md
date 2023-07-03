@@ -36,7 +36,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
         ![](../../../../assets/HCL_Content_Reporting_Select_Date.png)
 
         !!!note
-            Filling up both date fields is not mandatory and only one is needed to proceed. Entering only the **From** date searches items from that date onwards. Entering only the **To** date searches items on and before that date.
+            Filling up both date fields is not mandatory and only one is needed to proceed. Entering only the **From** date searches items that expire from that date onwards. Entering only the **To** date searches items that expire on or before that date.
             
         !!!important "Invalid date range"
             Using an invalid date range (for example, from a future date to a past date) causes the generated report to be empty.

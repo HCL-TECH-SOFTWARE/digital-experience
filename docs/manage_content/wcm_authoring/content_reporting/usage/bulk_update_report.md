@@ -28,7 +28,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
     There are also **Cancel** and **Clear** buttons in the dialog box. Click **Cancel** to close the dialog box. Click **Clear** to remove all selected options.
 
     !!!note
-        Bulk updates for expiry dates are only be applied to content items, site areas, authoring templates, components, categories, and items with edit access. Only items with a workflow will be included.
+        Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow will be included.
 
 5. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and if you entered the correct expiration date. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
 

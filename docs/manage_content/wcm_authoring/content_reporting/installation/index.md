@@ -35,7 +35,7 @@ This section describes how to enable and disable Content Reporting.
 
 ### Enabling Content Reporting - Helm processes for DX deployments on Kubernetes
 
-In the `values.yaml` file, under configuration, enable contentReporting by setting the enable flag to `true`:
+In the `values.yaml` file, under configuration, enable contentReporting by setting the `enabled` flag to `true`:
 
     ```
     # Content Reporting configurations
@@ -57,7 +57,7 @@ In the `values.yaml` file, under configuration, enable contentReporting by setti
 
 ### Disabling Content Reporting - Helm processes for DX deployments on Kubernetes
 
-In the `values.yaml` file, under the configuration, disable contentReporting by setting the enable flag to `false`:
+In the `values.yaml` file, under the configuration, disable contentReporting by setting the `enabled` flag to `false`:
 
     ```
     # Content Reporting configurations

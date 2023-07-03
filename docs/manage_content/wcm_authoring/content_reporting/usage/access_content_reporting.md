@@ -33,7 +33,7 @@ The HCL Content Reporting UI has the following components:
 
 ![](../../../../assets/HCL_Content_Reporting_Full_View.png)
 
--   **Main header** - This section contains the **Update** button to update the expiry date of the reported items, the **Export** to export the search results into a CSV file, a link for completed and pending update actions and the total number of results found.
+-   **Main header** - This section contains the **Update** button to update the expiry date of the reported items, the **Export** to export the search results into a CSV file, a link for viewing completed and pending update actions and the total number of results found.
 -   **Search Criteria** This section displays a preview of all the criteria used to search for items to populate the report.
 -   **Report table** - This table contains the reported items in table format. The table, by default, is sorted by title and by the date the items were last modified.
 -   **View Criteria** - Click **View Criteria** to open the top drawer and display the criteria used for populating the report. You can set the criteria and generate a report in this drawer as well.
