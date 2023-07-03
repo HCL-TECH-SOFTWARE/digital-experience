@@ -239,9 +239,9 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 
 Before proceeding, HCL highly recommends that you take a backup of your system. Please review the following links for further details.
 
-- Documentation resource: [Backup and restore](../../../manage/backup_restore/index.md)
+    - Documentation resource: [Backup and restore](../../../manage/backup_restore/index.md)
 
-- Documentation resource: [How to backup HCL Portal [Video]](https://www.youtube.com/watch?v=3cjA9IUMJow)
+    - Documentation resource: [How to backup HCL Portal [Video]](https://www.youtube.com/watch?v=3cjA9IUMJow)
 
 1. Open IBM Installation Manager (IIM) and under File > Preferences > Repositories, add the following repository as shown in the image below: ![](../../../../images/Add_Portal_85_CF17_repository_config.png)
 
