@@ -53,6 +53,9 @@ A report is a list of items that matches a set or combined sets of criteria. Con
         
         ![](../../../../assets/HCL_Content_Reporting_Author_Criteria.png)
 
+        !!!note
+            Typing in the **Author** and **Owner** input field will suggest users whose distinguished name (cn) matches the input. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria.
+
     - **Item type**
 
         Selecting the **Item type** criterion adds the **Item** field, a multi-select dropdown input field where you can select the item type of the items you want included in your report. You can also type in the input field to get an auto-suggested list of matching item types.
