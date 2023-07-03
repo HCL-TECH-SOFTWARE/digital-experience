@@ -1,15 +1,8 @@
 # HCL Leap deployment with an existing DX environment
 
-Integrate the power of HCL Leap with DX environment.
+Please follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Leap.
 
-!!!note
-    This guide only applies for Kube deployments of both DX and Leap. HCL Digital Experience 9.5 CF213 and later is fully compatible with leap 9.3.2 
-    
+-   **[Install HCL Digital Experience and HCL Leap using Helm](../leap/installation/)**  
 
-!!!note
-    The following steps and resources are for **Kubernetes deployments** of DX and Leap only.
-
--   **[Installation](../leap/installation/)**  
-
--   **[Configuration](../leap/configuration/)**  
+-   **[HCL Leap configuration for the integration with HCL Digital Experience](../leap/configuration/)**  
 
