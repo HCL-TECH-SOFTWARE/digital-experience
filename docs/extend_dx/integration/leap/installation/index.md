@@ -1,4 +1,4 @@
-# Installation with HCL Leap
+# Installing HCL Leap to integrate with HCL Digital Experience
 
 !!! note
     This guide only applies for HCL Digital Experience 9.5 Container Deployments in combination with HCL Leap Helm installations.

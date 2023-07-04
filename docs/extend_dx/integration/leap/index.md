@@ -1,4 +1,4 @@
-# HCL Leap deployment with an existing DX environment
+# Configure HCL Digital Experience to work with HCL Leap
 
 Please follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Leap.
 

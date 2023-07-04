@@ -1,4 +1,4 @@
-# Configure HCL Leap deployment with an existing DX environment
+# HCL Leap configuration for the integration with HCL Digital Experience
 
 The following is a configuration of the integration of HCL Leap with the existing DX environment.
 
