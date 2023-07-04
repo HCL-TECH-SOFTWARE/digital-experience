@@ -4,20 +4,21 @@ This document contains instructions on how to install and deploy the Content Rep
 
 ## Packaging, installing, and deploying design
 
-Content Reporting is an instance of a react integration portlet and it is configured to point to where the static files of the app can be loaded from. Additionally, it can be enabled and disabled by using the Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page. You can also enable contentReporting in the values.yaml file. For more information, see [Prepare Configuration](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/?h=helm+chart#the-default-hcl-dx-95-container-valuesyaml-file).
+Content Reporting is an instance of a react integration portlet configured to point to where the static files of the app can be loaded from. It can be enabled and disabled by using Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page. You can also enable contentReporting in the `values.yaml` file. For more information, see [Prepare Configuration](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/?h=helm+chart#the-default-hcl-dx-95-container-valuesyaml-file).
 
 ## Enabling and disabling Content Reporting
+
 This section describes how to enable and disable Content Reporting.
 
 !!! note
-    Before enabling Content Reporting, it is required that Practitioner Studio is enabled. For more information on how to enable Practiotioner Studio, please refer to [How to enable Practitioner Studio | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/practitioner_studio/enable_prac_studio.html). After enabling Content Reporting, it can then be used with other themes.
+    Before enabling Content Reporting, it is required to enable Practitioner Studio. For more information on how to enable Practiotioner Studio, refer to [How to enable Practitioner Studio | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/practitioner_studio/enable_prac_studio.html). After enabling Content Reporting, it can then be used with other themes.
 
 ### Enabling Content Reporting for on-premise deployment
 
 !!! note
-    Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. The **enable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks, please refer to [Running DX Core configuration tasks](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/manage/container_configuration/run_core_config_engine/).
+    Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. The **enable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks, see [Running DX Core configuration tasks](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/manage/container_configuration/run_core_config_engine/).
 
-- Run the **enable-content-reporting** config task.
+To enable Content Reporting for on-premise deployment, run the **enable-content-reporting** config task.
 
     !!! note
         It is not required to stop or restart the Portal when running these configuration tasks.
@@ -49,7 +50,7 @@ In the `values.yaml` file, under configuration, enable contentReporting by setti
 !!! note
     Disabling contentReporting runs the **disable-content-reporting** config engine task in the background. The **disable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks, please refer to [Running DX Core configuration tasks](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/manage/container_configuration/run_core_config_engine/).
 
-- Run the **disable-content-reporting** config task.
+To disable Content Reporting for on-premise deployment, run the **disable-content-reporting** config task.
 
     -   AIX: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
     -   Linux: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
