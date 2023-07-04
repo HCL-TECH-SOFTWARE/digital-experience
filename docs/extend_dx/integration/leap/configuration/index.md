@@ -2,13 +2,19 @@
 
 The following is a configuration of the integration of HCL Leap with the existing DX environment.
 
+## Configuration for HCL Leap
+
 1. Update the custom values file to set Leap image name, tags and repository name. The procedure is very similar to the instructions in the [Prepare Configuration page for DX](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/). The value options for Leap are documented [in the Leap documentation](https://help.hcltechsw.com/Leap/9.3.2/deploy_container_kubernetes_openliberty.html)
 
-2. If you are already using an [ingress for DX](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress/) you can **extend** that ingress for Leap
+## Configure Ingress for HCL Digital Experience and HCL Leap
 
-3. Add a second ingress resource for Leap or you can just extend the existing DX Ingress
+HCL Digital Experience allows for the use of an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md). While this is not required to run HCL Digital Experience, when configured it can be reused by HCL Leap to handle the routing for both products and make them available on the same host.
 
-4. Point the ingress resource to the path at which Leap is configured; this depends on the context route of the Leap deployment.
+1. Setup the Ingress for HCL Digital Experience according to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md).
+
+2. Add a second ingress resource for Leap or you can just extend the existing DX Ingress.
+
+3. Point the ingress resource to the path at which Leap is configured; this depends on the context route of the Leap deployment.
 For example,
 ```yaml
 apiVersion: networking.k8s.io/v1
