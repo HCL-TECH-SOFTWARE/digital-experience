@@ -52,7 +52,10 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
     - HCL-Portal-95_Enable_SETUP-04.zip
 
     !!! note 
-        The zip files above contain all the software required to install Portal 9.5 including Installation Manager, WebSphere Application Server, Portal CF17, etc.
+        The zip files above contain all the software required to install:
+        -  Portal 9.5 including Installation Manager, 
+        - WebSphere Application Server, 
+        - Portal CF17, etc.
 
 
 ## Preparing the files for install
@@ -110,7 +113,7 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 9. Select CF17 package. ![](../../../../images/Select_CF17_package_9.png)
 
     !!! reminder
-        You will need to stop Portal Server/ConfigWizard to be able to proceed.
+        You must stop Portal Server/ConfigWizard to proceed.
 
     Select **Next**.
 
