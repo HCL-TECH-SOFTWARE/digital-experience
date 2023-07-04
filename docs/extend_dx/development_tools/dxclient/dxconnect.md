@@ -59,7 +59,7 @@ The DXConnect Installation task not only installs the DXConnect application, but
 `DXCONNECT_MAX_FILE_SIZE_MB` property indicates the maximum file size that is allowed per request. It's **default value is zero**, which means that there are no limits defined, and any file size is acceptable. You can change this by going to [Configuration Wizard](#accessing-the-configuration-wizard-admin-console-in-a-container-environment) > Resources > Resource Environment > Resource Environment Provider > DXC_ConfigSettings > Custom Properties and setting up the `DXCONNECT_MAX_FILE_SIZE_MB` property to the desired value.
 
 !!!note
-`DXCONNECT_MAX_MEMORY_SIZE_MB` property has been removed since CF213.
+    `DXCONNECT_MAX_MEMORY_SIZE_MB` property has been removed since CF213.
 
 ## Accessing the Configuration Wizard admin console in a container environment
 
