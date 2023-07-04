@@ -39,7 +39,7 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
 
     In this example, we will use HCL Portal Enable v9.5 Multiplatform.
 
-3. Click on the HCL Portal Enable v9.5 Multiplatform package.
+3. Click on the **HCL Portal Enable v9.5 Multiplatform** package.
 
 4. On the package page, you will see a long list of parts/components. But you only need to download the following four (4) files:
 
@@ -61,7 +61,7 @@ Once you have the parts downloaded, create a parent folder wherein the files are
 
 Extract the .zip files to the created parent folder. Once all four (4) files are extracted, you should have a folder called SETUP under your parent folder as shown below: ![](../../../../images/extract_Portal_files_setup_9.png)
 
-Navigate to the SETUP folder, there should be a Product folder that holds the files and repositories for WAS 9.0.x, JDK 8.0.x, Portal 8.5.0.0, CF17 for Portal 8.5, Portal 9.5, and iFix PI59896. ![](../../../../images/Portal_95_new_user_files_installation_9.png)
+Navigate to the **SETUP** folder, there should be a Product folder that holds the files and repositories for WAS 9.0.x, JDK 8.0.x, Portal 8.5.0.0, CF17 for Portal 8.5, Portal 9.5, and iFix PI59896. ![](../../../../images/Portal_95_new_user_files_installation_9.png)
 
 ## Use Installation Manager to upgrade HCL Portal 9.0 to CF17 or a later CF
 
@@ -89,20 +89,21 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
     `stopServer.bat server1`
 
 6. Enter ConfigWizard credentials when prompted.
+
     Before proceeding, HCL highly recommends that you take a backup of your system. Please review the following links for further details.
 
     - Documentation resource: [Backup and restore](../../../manage/backup_restore/index.md)
 
     - Documentation resource: [How to backup HCL Portal [Video]](https://www.youtube.com/watch?v=3cjA9IUMJow)
 
-7. Open IBM Installation Manager (IIM) and under File > Preferences > Repositories, add the following repository as shown in the image below: ![](../../../../images/Add_Portal_85_CF17_repository_config_9.png)
+7. Open **IBM Installation Manager (IIM)** and under File > Preferences > Repositories, add the following repository as shown in the image below: ![](../../../../images/Add_Portal_85_CF17_repository_config_9.png)
 
     !!! reminder
         Remove the previous repository entries.
     
     Select **OK**.
 
-8. Within IIM, select Update icon, then select the Portal package. ![](../../../../images/Select_update_and_Portal_package_9.png)
+8. Within IIM, select **Update** icon, then select the Portal package. ![](../../../../images/Select_update_and_Portal_package_9.png)
 
     Select **Next**.
 
@@ -123,7 +124,7 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 
 **At this point ONLY the Portal binaries have been updated to CF17**. The IIM only manages the binaries so we will need to run a Portal script to upgrade the profile.
 
-### Update the profile
+### Updating the profile
 
 1. Ensure the HCL Portal and HCL Web Content Manager server is stopped on the profile you intend to upgrade.
 
@@ -133,7 +134,7 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 
     Windows: `<profile_root>\PortalServer\bin\applyCF.bat -DPortalAdminPwd=<password> -DWasPassword=<password>`
 
-Lastly, validate if the server has been updated to CF17 and all is well. Log in and check the about HCL Portal and see if it says CF17.
+Validate if the server has been updated to CF17. Log in and check the about HCL Portal and see if it says CF17.
 
 ## Use Installation Manager to upgrade HCL Portal 9.0 to HCL Portal 9.5
 
@@ -187,7 +188,7 @@ This completes the upgrade to HCL Portal 9.5 standalone.
 
 WebSphere Application Server 9.0.5 is only supported on HCL Digital Experience 9.5. You should first upgrade to HCL Portal 9.5 before you migrate to IBM WebSphere Application Server 9.0.5.
 
-Refer to Migrating an HCL Digital Experience cluster to IBM WAS 9.0.5 to proceed with the migration process.
+Refer to [Migrating an HCL Digital Experience cluster to IBM WAS 9.0.5](https://help.hcltechsw.com/digital-experience/9.5/was/ug_wasclus95.html) to proceed with the migration process.
 
 ## Install the latest supported version of IBM WebSphere SDK Java Technology
 

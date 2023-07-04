@@ -63,7 +63,7 @@ Once you have the parts downloaded, create a parent folder wherein the files are
 
 Extract the .zip files to the created parent folder. Once all four (4) files are extracted, you should have a folder called SETUP under your parent folder as shown below: ![](../../../../images/extract_Portal_files_setup_85.png)
 
-Navigate to the SETUP folder, there should be a Product folder that holds the files and repositories for WAS 9.0.x, JDK 8.0.x, Portal 8.5.0.0, CF17 for Portal 8.5, Portal 9.5, and iFix PI59896. ![](../../../../images/Portal_95_new_user_files_installation_85.png)
+Navigate to the **SETUP** folder, there should be a Product folder that holds the files and repositories for WAS 9.0.x, JDK 8.0.x, Portal 8.5.0.0, CF17 for Portal 8.5, Portal 9.5, and iFix PI59896. ![](../../../../images/Portal_95_new_user_files_installation_85.png)
 
 ## Use Installation Manager to upgrade HCL Portal 8.5 to CF17 or a later CF
 
@@ -98,15 +98,14 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 
     - Documentation resource: [How to backup HCL Portal [Video]](https://www.youtube.com/watch?v=3cjA9IUMJow)
 
-7. Open IBM Installation Manager (IIM) and under **File > Preferences > Repositories**, add the following repository as shown in the image below:
-![](../../../../images/Add_Portal_85_CF17_repository_config_85.png)
+7. Open **IBM Installation Manager (IIM)** and under **File > Preferences > Repositories**, add the following repository as shown in the image below: ![](../../../../images/Add_Portal_85_CF17_repository_config_85.png)
 
     !!! Reminder
         Remove the previous repository entries.
 
     Select **OK**.
 
-8. Within IIM, select Update icon, then select the Portal package. ![](../../../../images/Select_update_and_Portal_package_85.png)
+8. Within IIM, select **Update** icon, then select the Portal package. ![](../../../../images/Select_update_and_Portal_package_85.png)
 
     Select **Next**.
 
@@ -127,7 +126,7 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 
 **At this point ONLY the Portal binaries have been updated to CF17**. The IIM only manages the binaries so we will need to run a Portal script to upgrade the profile.
 
-### Update the Profile
+### Updating the Profile
 
 1. Ensure the HCL Portal and HCL Web Content Manager server is stopped on the profile you intend to upgrade.
 
@@ -137,7 +136,7 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 
     - Windows: `<profile_root>\PortalServer\bin\applyCF.bat -DPortalAdminPwd=<password> -DWasPassword=<password>`
 
-Lastly, validate if the server has been updated to CF17 and all is well. Log in and check the about HCL Portal and see if it says CF17.
+Validate if the server has been updated to CF17. Log in and check the about HCL Portal and see if it says CF17.
 
 ## Use Installation Manager to upgrade HCL Portal 8.5 to HCL Portal 9.5
 
@@ -160,23 +159,23 @@ Make sure the server is stopped before doing the following steps:
     ![](../../../../images/Add_HCL_Portal_95_repositories_IIM_85.png)
 
     !!! reminder
-        Remove the previous repository
+        Remove the previous repository.
 
     Select OK.
 
-2. Within IIM, select Install option. Select both packages. ![](../../../../images/Select_Install_option_IIM_both_packages_85.png)
+2. Within IIM, select **Install** option. Select both packages. ![](../../../../images/Select_Install_option_IIM_both_packages_85.png)
 
     Select **Next**.
 
 3. Accept terms of licensing agreement. Then select **Next**.
 
-4. Use existing Portal 8.5 package. ![](../../../../images/Use_existing_Portal_85_package_IIM_85.png)
+4. Use existing **Portal 8.5** package. ![](../../../../images/Use_existing_Portal_85_package_IIM_85.png)
 
     Select **Next**.
 
-5. Enter Admin user id and password for WebSphere Application Server and Portal Server. Then select **Next**.
+5. Enter **Admin** user id and password for WebSphere Application Server and Portal Server. Then select **Next**.
 
-6. Review Summary. Select Install. ![](../../../../images/Review_Summary_Select_install_95_85.png)
+6. Review Summary. Select **Install**. ![](../../../../images/Review_Summary_Select_install_95_85.png)
 
     !!! note
         During the install, a series of ConfigEngine tasks will be run to upgrade Portal 9.0 to 9.5 so upgrading the profile after is not required.
@@ -193,7 +192,7 @@ This completes the upgrade to HCL Portal 9.5 standalone.
 
 WebSphere Application Server 9.0.5 is only supported on HCL Digital Experience 9.5. You must first upgrade to HCL Portal 9.5 before you migrate to IBM WebSphere Application Server 9.0.5.
 
-Refer to Migrating an HCL Digital Experience cluster to IBM WAS 9.0.5 to proceed with the migration process.
+Refer to [Migrating an HCL Digital Experience cluster](https://help.hcltechsw.com/digital-experience/9.5/was/ug_wasclus95.html) to IBM WAS 9.0.5 to proceed with the migration process.
 
 ## Install the latest supported version of IBM WebSphere SDK Java Technology
 
