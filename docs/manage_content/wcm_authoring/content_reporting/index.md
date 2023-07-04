@@ -5,7 +5,7 @@ The Content Reporting application allows content managers to generate reports an
 Content reporting is for, but not limited to, the following sample use cases:
 
 -  For tracking expiring items and making a plan for updating them.
--  For exporting to CSV to:
+-  For exporting generated reports to CSV to:
     -  transform the report into graphs or charts.
     -  analyze the data in the report through other tools in combination with other sources of data.
 
