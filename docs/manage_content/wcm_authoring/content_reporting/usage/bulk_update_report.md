@@ -71,7 +71,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     - **Title** - This column shows the title of the item processed.
     - **Item type** - This column shows the type of item processed.
-    - **Update Status** - This column tells whether the item was successfully updated (shown as **OK**) or not (an error message is shown).
+    - **Update Status** - This column tells whether the item was successfully updated (shown as **OK**) or not (an error message containing why the update failed is displayed).
     - **Created by** - This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
@@ -102,7 +102,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     - **Title** - This column shows the title of the item processed.
     - **Item type** - This column shows the type of item processed.
-    - **Update Status** - This column tells whether the item was successfully updated (shown as **OK**) or not (an error message is shown).
+    - **Update Status** - This column tells whether the item was successfully updated (shown as **OK**) or not (an error message containing why the update failed is displayed).
     - **Created by** - This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
