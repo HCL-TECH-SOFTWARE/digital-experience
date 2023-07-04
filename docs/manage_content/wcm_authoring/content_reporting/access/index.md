@@ -8,7 +8,7 @@ Content Reporting should be installed and configured in HCL Digital Experience 9
 After image configuration in your HCL Digital Experience 9.5 CF213 and higher deployment, Content Reporting is accessible from the Practitioner Studio interface.
 
 !!! note
-    You must have **User** and **Editor** access for the following resources to access Content Reporting. Refer to [Working with resource permissions](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/) for more information.
+    You must have **User** and **Editor** access for the following resources to access Content Reporting. Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
 
     - **Content reporting page** -  Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content** > **Content Reporting** > Click the **Assign Access** icon to set User role.
     - **Content reporting portlet** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Portlets** > ** Content Reporting portlet** > Click **Assign Access** icon to set User role.
