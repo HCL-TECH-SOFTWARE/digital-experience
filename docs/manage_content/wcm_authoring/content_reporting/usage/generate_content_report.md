@@ -1,13 +1,12 @@
 # Generating a content report
 
-This section details how to generate content report in HCL Content Reporting.
+This section details how to generate a content report in HCL Content Reporting.
 
-## Prerequisite
+## Prerequisites
 
-Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+- Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
-!!! note
-    Configure a JCR text search to get valid search results. Refer to [Setting up a JCR search collection](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md) for more information.
+- Configure a JCR text search to get valid search results. Refer to [Setting up a JCR search collection](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md) for more information.
 
 ## Generating a report
 
@@ -31,7 +30,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
         ![](../../../../assets/HCL_Content_Reporting_Search_By_Expiry.png)
 
-        Click the calender icon in the **From** or **To** field to display the calendar. Select the **From** date and the **To** date from calendar and click **Search**.
+        Click the calender icon in the **From** or **To** fields to display the calendar. Select the **From** date and the **To** date from calendar and click **Search**.
         
         ![](../../../../assets/HCL_Content_Reporting_Select_Date.png)
 
@@ -43,18 +42,17 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     - **Owner**
 
-        Selecting the **Owner** criterion adds the **User** field, a typeahead input field where you can select the owners of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
+        Selecting the **Owner** criterion adds the **User** field, a typeahead input field where you can select the owners of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria. A checkmark appears to the left of the selected user to indicate that it has been selected. 
         
         ![](../../../../assets/HCL_Content_Reporting_Owner_Criteria.png)
     
     - **Author**
 
-        Selecting the **Author** criterion adds the **User** field, a typeahead input field where you can select the authors of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Select the users from auto-suggested options. A checkmark appears to the left of the selected user to indicate that it has been selected. 
+        Selecting the **Author** criterion adds the **User** field, a typeahead input field where you can select the authors of the items you want included in your report. The list of matched users is displayed as auto-suggested options according to the input value as you type. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria. A checkmark appears to the left of the selected user to indicate that it has been selected. 
         
         ![](../../../../assets/HCL_Content_Reporting_Author_Criteria.png)
 
-        !!!note
-            Typing in the **Author** and **Owner** input field will suggest users whose distinguished name (cn) matches the input. Only the suggested users are considered valid inputs. At least one of the suggested users must be selected to finish setting up the criteria.
+        
 
     - **Item type**
 
@@ -97,7 +95,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
     
 ### Other actions available
 
-- To add more criteria to your search, click **View Criteria**. Click the **Add** button to add another search criteria.
+- To add more criteria to your search, click **View Criteria**. Click the **+ Add** button to add another search criteria.
     
     ![](../../../../assets/HCL_Content_Reporting_Add_Criteria_Button_Dropdown.png)
 
