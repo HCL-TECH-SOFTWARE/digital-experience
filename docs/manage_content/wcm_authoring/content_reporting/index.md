@@ -14,6 +14,9 @@ Refer to the following pages for more information:
 - **[Install HCL Content Reporting components](../content_reporting/installation/index.md)**
     This section provides a high-level overview of the architecture and the steps to install, enable, and update HCL Content Reporting.
 
+- **[Access HCL Content Reporting](../content_reporting/access/index.md)**
+    This section provides the steps on how to access the HCL Content Reporting portlet and details how each report criterion is interpreted.
+
 - **[Usage of HCL Content Reporting](../content_reporting/usage/index.md)**
     Create and export reports on content items using HCL Content Reporting. Users can also update the reported content items in bulk.
 

@@ -11,9 +11,7 @@ Content Reporting should be installed and configured in HCL Digital Experience 9
 
 Content managers can trigger bulk updates to update the expiration dates of all queried items.
 
-1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**. Select **Content Reporting** from the Practitioner Studio navigator. The following image shows the Content Reporting landing page. 
-
-    ![](../../../../assets/HCL_Content_Reporting_Landing_Page.png)
+1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**. Select **Content Reporting** from the Practitioner Studio navigator. The following image shows the Content Reporting landing page.
 
 2. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 

@@ -1,4 +1,4 @@
-# Using the Content Reporting Export feature
+# Exporting generated reports to CSV
 
 This section provides steps on how to export the generated report to a CSV file in HCL Content Reporting.
 
@@ -11,8 +11,6 @@ Content Reporting should be installed and configured in HCL Digital Experience 9
 Content managers can export generated reports in HCL Content Reporting.
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**. Select **Content Reporting** from the Practitioner Studio navigator.
-
-    ![](../../../../assets/HCL_Content_Reporting_Landing_Page.png)
 
 2. Generate a report on the items you want to export. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
