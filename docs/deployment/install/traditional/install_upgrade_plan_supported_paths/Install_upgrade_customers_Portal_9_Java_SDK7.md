@@ -20,9 +20,9 @@ Product software can be obtained from the [HCL Software Licensing Portal](https:
 
 Additional guidance is available here: [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878).
 
-1. Sign into the HCL Software Licensing Portal.
+1. Sign in to the HCL Software Licensing Portal.
 
-2. Identify the Portal 9.5 offering you wish to install.
+2. Identify the Portal 9.5 offering you want to install.
 
     !!! note 
         There are several different Portal 9.5 offerings. Your license determines which offerings you will see listed as available to download.
@@ -123,7 +123,7 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 
 **At this point ONLY the Portal binaries have been updated to CF17**. The IIM only manages the binaries so we will need to run a Portal script to upgrade the profile.
 
-**Then, update the profile**
+### Update the profile
 
 1. Ensure the HCL Portal and HCL Web Content Manager server is stopped on the profile you intend to upgrade.
 
@@ -154,7 +154,7 @@ Make sure the server is stopped before doing the following steps:
     - Server Offering: needs Server repo ![](../../../../images/Add_HCL_Portal_95_repositories_IIM_9.png)
 
     !!! reminder
-        Remove the previous repository
+        Remove the previous repository.
     
     Select **OK**.
 
