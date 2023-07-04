@@ -17,6 +17,7 @@ This section contains more detailed information as follows:
 * [Site Manager](./inline_editing/index.md)
 * [Authoring Portlet](./authoring_portlet/index.md)
 * [Content Composer](./content_composer/index.md)
+* [Content Reporting](./content_reporting/index.md)
 * [Document Conversion Services](./dcs/index.md)
 * [Multi-lingual Content](./multi_lingual/index.md)
 * [Web Content Integrator](./wci/index.md)
