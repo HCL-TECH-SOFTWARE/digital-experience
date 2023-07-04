@@ -11,14 +11,14 @@ Content reporting is for, but not limited to, the following sample use cases:
 
 Refer to the following pages for more information:
 
-- **[Install HCL Content Reporting components](../content_reporting/installation/index.md)**
-    This section provides a high-level overview of the architecture and the steps to install, enable, and update HCL Content Reporting.
+- **[Install HCL Content Reporting components](../content_reporting/installation/index.md)**<br>
+This section provides a high-level overview of the architecture and the steps to install, enable, and update HCL Content Reporting.
 
-- **[Access HCL Content Reporting](../content_reporting/access/index.md)**
-    This section provides the steps on how to access the HCL Content Reporting portlet and details how each report criterion is interpreted.
+- **[Access HCL Content Reporting](../content_reporting/access/index.md)**<br>
+This section provides the steps on how to access the HCL Content Reporting portlet and details how each report criterion is interpreted.
 
-- **[Usage of HCL Content Reporting](../content_reporting/usage/index.md)**
-    Create and export reports on content items using HCL Content Reporting. Users can also update the reported content items in bulk.
+- **[Usage of HCL Content Reporting](../content_reporting/usage/index.md)**<br>
+Create and export reports on content items using HCL Content Reporting. Users can also update the reported content items in bulk.
 
-- **[Limitations](../content_reporting/limitations/index.md)** 
-    This section lists the current limitations when using HCL Content Reporting.
+- **[Limitations](../content_reporting/limitations/index.md)**<br>
+This section lists the current limitations when using HCL Content Reporting.
