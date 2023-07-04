@@ -53,8 +53,11 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
 
     !!! note 
         The zip files above contain all the software required to install:
-        -  Portal 9.5 including Installation Manager, 
-        - WebSphere Application Server, 
+
+        -  Portal 9.5 including Installation Manager
+
+        - WebSphere Application Server
+        
         - Portal CF17, etc.
 
 
