@@ -43,7 +43,7 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
 
 3. Click on the HCL Portal Enable v9.5 Multiplatform package.
 
-4. On the package page, you will see a long list of parts/components. But you only need to download the following four (4) files:
+4. On the package page, you will see a long list of parts/components but you only need to download the following four files:
 
     - HCL-Portal-95_Enable_SETUP-01.zip
 
@@ -130,7 +130,7 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 
 13. Select **Update**.
 
-**At this point ONLY the Portal binaries have been updated to CF17**. The IIM only manages the binaries so we will need to run a Portal script to upgrade the profile.
+**At this point, only the Portal binaries have been updated to CF17**. The IIM only manages the binaries so we will need to run a Portal script to upgrade the profile.
 
 ### Updating the Profile
 
@@ -150,7 +150,7 @@ Make sure the server is stopped before doing the following steps:
 
 1. Add the HCL Portal 9.5 repositories to IIM.
 
-    In this case, we are using the Enable offering so need the following repo: Server and Enable.
+    In this case, we are using the Enable offering so you need the following repo: Server and Enable.
 
     For the other offerings, this is what you need for each:
 
@@ -167,9 +167,9 @@ Make sure the server is stopped before doing the following steps:
     !!! reminder
         Remove the previous repository.
 
-    Select OK.
+    Select **OK**.
 
-2. Within IIM, select **Install** option. Select both packages. ![](../../../../images/Select_Install_option_IIM_both_packages_85.png)
+2. Within IIM, select the **Install** option. Select both packages. ![](../../../../images/Select_Install_option_IIM_both_packages_85.png)
 
     Select **Next**.
 
@@ -184,13 +184,11 @@ Make sure the server is stopped before doing the following steps:
 6. Review Summary. Select **Install**. ![](../../../../images/Review_Summary_Select_install_95_85.png)
 
     !!! note
-        During the install, a series of ConfigEngine tasks will be run to upgrade Portal 9.0 to 9.5 so upgrading the profile after is not required.
+        During the installation, a series of ConfigEngine tasks are run to upgrade Portal 9.0 to 9.5 so upgrading the profile after is not required.
 
-7. When the installation is finished, you should now be able to verify that you can access your Portal in an internet browser by navigating to: 
+7. When the installation is finished, you should now be able to verify that you can access your Portal in an internet browser by navigating to: http://myportal.hcl.com:10039/wps/portal.
 
-    - http://myportal.hcl.com:10039/wps/portal.
-
-    - Check the About WebSphere Portal portlet to make sure it says 9.5.
+    Check the About WebSphere Portal portlet to make sure it says 9.5.
 
 This completes the upgrade to HCL Portal 9.5 standalone.
 
