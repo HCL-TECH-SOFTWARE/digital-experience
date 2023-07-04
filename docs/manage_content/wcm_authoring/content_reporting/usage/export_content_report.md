@@ -1,6 +1,6 @@
 # Using the Content Reporting Export feature
 
-This section provides steps on how to export the generated report in HCL Content Reporting.
+This section provides steps on how to export the generated report to a CSV file in HCL Content Reporting.
 
 ## Prerequisite
 
