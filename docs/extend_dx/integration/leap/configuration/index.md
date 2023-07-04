@@ -8,7 +8,7 @@ The following is a configuration of the integration of HCL Leap with the existin
 
 3. Add a second ingress resource for Leap or you can just extend the existing DX Ingress
 
-4. Point the ingress resource to the path Leap is configured at, this depends on the context route of the Leap Deployment.
+4. Point the ingress resource to the path at which Leap is configured; this depends on the context route of the Leap deployment.
 For example,
 ```yaml
 apiVersion: networking.k8s.io/v1
