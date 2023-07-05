@@ -83,6 +83,8 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Digital Experience 8.5 and 9.0 Versions
 
+### End of Support Announced for Digital Experience v8.5 and 9
+
 === "On-Premises"
     On June 30, 2023, HCL Software announced end of support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. HCL Digital Experience 9.5 adds support for deployment to Kubernetes container environments, in addition to on-premises supported Operating system platforms, Practitioner Studio centralized management user interfaces, enhanced content authoring interfaces, integrated Digital Asset Management to store and include rich media assets, new OpenAPI-compliant REST APIs and more, so that business users, developers, and administrators can manage DX tasks better. For more information, refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
