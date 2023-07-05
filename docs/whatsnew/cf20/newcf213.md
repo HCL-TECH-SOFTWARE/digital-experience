@@ -36,10 +36,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager – Content Reporting
 
 === "Containers"
-    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center – Content reporting for additional information.
+    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
 
 === "On-Premises"
-    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center – Content reporting for additional information.
+    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
 
 ### Web Content Manager REST API v2 - AI Analysis API
 
@@ -102,7 +102,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Content Composer – AI-assisted content analysis
 
 === "Containers"
-    AI-assisted content analysis is a new optional feature that can accelerate content tagging and sentiment insights for content authors. A WCM API plugin is available to enable this feature, using [OpenAI ChatGPT](https://openai.com/blog/chatgpt) (subscribed to separately) as an example. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) deployment, and Content Composer – [Managing Content Items](../../manage_content/index.md) and [Authoring Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#creating-new-content-and-getting-ai-assisted-sentiment-analysis-of-text-elements) for more information.
+    AI-assisted content analysis is a new optional feature that can accelerate content tagging and sentiment insights for content authors. A WCM API plugin is available to enable this feature, using [OpenAI ChatGPT](https://openai.com/blog/chatgpt) (subscribed to separately) as an example. See the topic WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) deployment, and Content Composer topics [Managing Content Items](../../manage_content/index.md) and [Authoring Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#creating-new-content-and-getting-ai-assisted-sentiment-analysis-of-text-elements) for more information.
 
 ### Container Deployment – New checks in Prereqs Checker 
 
