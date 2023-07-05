@@ -9,7 +9,7 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager REST API v2 - AI Analysis API
 - Workflow date fields in REST API search query results
 - Export of REST query results to CSV
-- DxClient – LiveSync
+- DXClient – LiveSync
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -65,7 +65,7 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     You can export REST query results into a CSV file. See the Help Center topic [CSV Export of REST query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_csv_export.md) for more information.
 
-### DxClient - LiveSync
+### DXClient - LiveSync
 
 === "Containers"
     You can include the date fields associated with the workflow of a requested item. See the Help Center topic [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md) for additional information.
