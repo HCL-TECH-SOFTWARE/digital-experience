@@ -9,7 +9,7 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager REST API v2 - AI Analysis API
 - Workflow date fields in REST API search query results
 - Export of REST query results to CSV
-- DxClient – LiveSync
+- DXClient – LiveSync
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -65,7 +65,7 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     You can export REST query results into a CSV file. See the Help Center topic [CSV Export of REST query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_csv_export.md) for more information.
 
-### DxClient - LiveSync
+### DXClient - LiveSync
 
 === "Containers"
     You can include the date fields associated with the workflow of a requested item. See the Help Center topic [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md) for additional information.
@@ -82,6 +82,8 @@ The following features and updates are available to customers installing HCL Dig
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## Digital Experience 8.5 and 9.0 Versions
+
+### End of Support Announced for Digital Experience v8.5 and 9
 
 === "On-Premises"
     On June 30, 2023, HCL Software announced end of support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. HCL Digital Experience 9.5 adds support for deployment to Kubernetes container environments, in addition to on-premises supported Operating system platforms, Practitioner Studio centralized management user interfaces, enhanced content authoring interfaces, integrated Digital Asset Management to store and include rich media assets, new OpenAPI-compliant REST APIs and more, so that business users, developers, and administrators can manage DX tasks better. For more information, refer to the [Deprecated features](../deprecated_features.md) page for more information.
