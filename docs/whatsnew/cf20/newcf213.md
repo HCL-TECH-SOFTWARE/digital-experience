@@ -68,7 +68,7 @@ The following features and updates are available to customers installing HCL Dig
 ### DXClient - LiveSync
 
 === "Containers"
-    You can include the date fields associated with the workflow of a requested item. See the Help Center topic [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md) for additional information.
+    A new DXClient artifact called LiveSync supports the ability to synchronize WebDAV-based theme files from local machine to server, and server-to-local in real time. This process watches the file system for changes in the background. See the Help Center topic [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md) for additional information.
 
 === "On-Premises"
     A new DXClient artifact called LiveSync supports the ability to synchronize WebDAV-based theme files from local machine to server, and server-to-local in real time. This process watches the file system for changes in the background. See the Help Center topic [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md) for additional information.
