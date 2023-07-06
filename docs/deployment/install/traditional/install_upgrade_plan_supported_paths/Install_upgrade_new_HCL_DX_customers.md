@@ -339,3 +339,8 @@ Make sure the server is stopped before doing the following steps:
     - Check the About WebSphere Portal portlet to make sure it says 9.5.
 
 This completes the upgrade to HCL Portal 9.5 standalone.
+
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=1461).
