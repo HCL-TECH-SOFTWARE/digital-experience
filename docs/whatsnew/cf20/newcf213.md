@@ -39,13 +39,13 @@ The following features and updates are available to customers installing HCL Dig
     Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
 
     !!!note
-        This feature is available in both 9.5 container and on-premise deployments only.
+        This feature is available in 9.5 container and 9.5 on-premise deployments only.
 
 === "On-Premises"
     Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
 
     !!!note
-        This feature is available in both 9.5 container and on-premise deployments only.
+        This feature is available in 9.5 container and 9.5 on-premise deployments only.
 
 ### Web Content Manager REST API v2 - AI Analysis API
 
