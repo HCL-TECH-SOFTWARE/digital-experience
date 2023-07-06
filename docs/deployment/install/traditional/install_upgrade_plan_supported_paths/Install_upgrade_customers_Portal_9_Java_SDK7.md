@@ -203,3 +203,8 @@ Starting with HCL Digital Experience Combined fix pack 12, you can change your S
 - Documentation resource: For [Linux: Upgrading the SDK](../installing_dx/linux/sdk_upgrade-linux.md)
 
 - Documentation resource: For [Windows: Upgrading the SDK](../installing_dx/windows/sdk_upgrade-windows.md)
+
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=1461).
