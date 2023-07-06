@@ -5,7 +5,6 @@ The following features and updates are available to customers installing HCL Dig
 **All  Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Web Content Manager – Comments plugin
-- Web Content Manager – Content Reporting
 - Web Content Manager REST API v2 - AI Analysis API
 - Workflow date fields in REST API search query results
 - Export of REST query results to CSV
@@ -16,12 +15,13 @@ The following features and updates are available to customers installing HCL Dig
 
 - End of Support Announced for Digital Experience v8.5 and 9
 
-**Digital Experience 9.5 Container Version**
+**Digital Experience 9.5 Version**
 
 - Persisting CW Profile
 - Config Wizard credentials in helm chart
 - Content Composer – AI-assisted content analysis
 - Container Deployment – New checks in Prereqs checker
+- Web Content Manager – Content Reporting
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -33,19 +33,6 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     WCM Comments is a feature that allows content authors and site designers to enhance their presentation template and result by configuring a new plugin that enables comments. WCM Comments can drive team-based improvements in site presentations to target audiences. The comments are also stored in WCM and can be managed as content. See the Help Center topic [Comments in WCM](../../build_sites/create_sites/developing_managing_content/comments_wcm.md) for more information.
 
-### Web Content Manager – Content Reporting
-
-=== "Containers"
-    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
-
-    !!!note
-        This feature is available in 9.5 container and 9.5 on-premise deployments only.
-
-=== "On-Premises"
-    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
-
-    !!!note
-        This feature is available in 9.5 container and 9.5 on-premise deployments only.
 
 ### Web Content Manager REST API v2 - AI Analysis API
 
@@ -94,7 +81,7 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     On June 30, 2023, HCL Software announced end of support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. HCL Digital Experience 9.5 adds support for deployment to Kubernetes container environments, in addition to on-premises supported Operating system platforms, Practitioner Studio centralized management user interfaces, enhanced content authoring interfaces, integrated Digital Asset Management to store and include rich media assets, new OpenAPI-compliant REST APIs and more, so that business users, developers, and administrators can manage DX tasks better. For more information, refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
-## Digital Experience 9.5 Container Version
+## Digital Experience 9.5 Version
 
 ### Persisting CW Profile
 
@@ -116,6 +103,15 @@ The following features and updates are available to customers installing HCL Dig
 
 === "Containers"
     The Prereqs Checker is a tool that executes a number of checks on the target deployment environment to ensure system and storage requirements are met. Two new checks are added: Storage Space Check and Core Profile Check. For more information, see the help topic [Configure Prereqs Checker For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md#checks-implemented-in-prereqs-checker).
+
+### Web Content Manager – Content Reporting
+
+=== "Containers"
+    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
+
+
+=== "On-Premises"
+    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
