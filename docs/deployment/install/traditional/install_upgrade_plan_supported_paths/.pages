@@ -2,3 +2,5 @@ title: Supported installation and upgrade paths
 nav:
     - index.md
     - Install_upgrade_new_HCL_DX_customers.md
+    - Install_upgrade_customers_Portal_85_Java_SDK7.md
+    - Install_upgrade_customers_Portal_9_Java_SDK7.md

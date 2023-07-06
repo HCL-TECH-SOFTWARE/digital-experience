@@ -20,14 +20,15 @@ Product software can be obtained from the [HCL Software Licensing Portal](https:
 
 Additional guidance is available here: [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878).
 
-1. Sign into the HCL Software Licensing Portal.
+1. Sign in to the HCL Software Licensing Portal.
 
-2. Identify the Portal 9.5 offering you wish to install.
+2. Identify the Portal 9.5 offering you want to install.
 
     !!! note 
         There are several different Portal 9.5 offerings. Your license determines which offerings you will see listed as available to download.
 
     Example package names for the different Portal 9.5 offerings are:
+
     - HCL Portal Express v9.5 Multiplatform
 
     - HCL Portal Server v9.5 MP
@@ -38,9 +39,9 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
 
     In this example, we will use HCL Portal Enable v9.5 Multiplatform.
 
-3. Click on the HCL Portal Enable v9.5 Multiplatform package.
+3. Click on the **HCL Portal Enable v9.5 Multiplatform** package.
 
-4. On the package page, you will see a long list of parts/components. But you only need to download the following four (4) files:
+4. On the package page, you will see a long list of parts/components but you only need to download the following four files:
 
     - HCL-Portal-95_Enable_SETUP-01.zip
 
@@ -51,16 +52,22 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
     - HCL-Portal-95_Enable_SETUP-04.zip
 
     !!! note 
-        The zip files above contain all the software required to install Portal 9.5 including Installation Manager, WebSphere Application Server, Portal CF17, etc.
+        The zip files above contain all the software required to install:
+
+        -  Portal 9.5 including Installation Manager
+
+        - WebSphere Application Server
+        
+        - Portal CF17, etc.
 
 ### Preparing the files for install
 
-- Once you have the parts downloaded, create a parent folder wherein the files are to be extracted. You can name it as portal95binaries as shown in the example below:
+1. Once you have the parts downloaded, create a parent folder wherein the files are to be extracted. You can name it as portal95binaries as shown in the example below:
     ![Rename portal binary files](../../../../images/rename_Portal_binary_files.png)
 
-- Extract the .zip files to the created parent folder. Once all four (4) files are extracted, you should have a folder called SETUP under your parent folder as shown below: ![](../../../../images/extract_Portal_files_setup.png)
+2. Extract the .zip files to the created parent folder. Once all four (4) files are extracted, you should have a folder called SETUP under your parent folder as shown below: ![](../../../../images/extract_Portal_files_setup.png)
 
-- Navigate to the SETUP folder, there should be a Product folder that holds the files and repositories for WAS 9.0.x, JDK 8.0.x, Portal 8.5.0.0, CF17 for Portal 8.5, Portal 9.5, and iFix PI59896. ![](../../../../images/Portal_95_new_user_files_installation.png)
+3. Navigate to the **SETUP** folder, there should be a Product folder that holds the files and repositories for WAS 9.0.x, JDK 8.0.x, Portal 8.5.0.0, CF17 for Portal 8.5, Portal 9.5, and iFix PI59896. ![](../../../../images/Portal_95_new_user_files_installation.png)
 
 ## Installing HCL Digital Experience 8.5 with IBM WebSphere Application Server ND Version 9.0.5 and JDK Version 8 using the IBM Installation Manager
 
@@ -127,7 +134,7 @@ To install IIM, navigate to `C:\Users\Administrator\Downloads\portal95Binaries\S
 
 Within that folder, there are multiple IIM binaries for their relevant operating systems.
 
-For this guide, we will be installing onto a Windows 2012 R2 system so will need to navigate the win64 folder. ![](../../../../images/win64.png)
+For this guide, install a Windows 2012 R2 system and navigate to the win64 folder. ![](../../../../images/win64.png)
 
 From here, run the install.exe file.
 
@@ -153,7 +160,7 @@ This is a temporary step while Portal environment is being built up to the final
 
 1. Open IBM Installation Manager (IIM) and under **File > Preferences > Repositories** and select the **Add Repository** button. ![](../../../../images/Add_repository_Install_IMM.png)
 
-2. In the next IIM Window, we need to navigate to the repository.config file. Navigate to portal95Binaries\SETUP\products\WASND905 and select the file as shown in the next image: ![](../../../../images/navigatee_repository_config_file_install_IIM.png)
+2. In the next IIM Window, we need to navigate to the repository.config file. Navigate to **portal95Binaries\SETUP\products\WASND905** and select the file as shown in the next image: ![](../../../../images/navigatee_repository_config_file_install_IIM.png)
 
     Continue adding the following repositories noted below: ![](../../../../images/add_repositories_install_IIM.png)
 
@@ -239,9 +246,9 @@ We will need to stop the Portal Server and ConfigWizard to allow us to proceed w
 
 Before proceeding, HCL highly recommends that you take a backup of your system. Please review the following links for further details.
 
-- Documentation resource: [Backup and restore](../../../manage/backup_restore/index.md)
+    - Documentation resource: [Backup and restore](../../../manage/backup_restore/index.md)
 
-- Documentation resource: [How to backup HCL Portal [Video]](https://www.youtube.com/watch?v=3cjA9IUMJow)
+    - Documentation resource: [How to backup HCL Portal [Video]](https://www.youtube.com/watch?v=3cjA9IUMJow)
 
 1. Open IBM Installation Manager (IIM) and under File > Preferences > Repositories, add the following repository as shown in the image below: ![](../../../../images/Add_Portal_85_CF17_repository_config.png)
 
@@ -250,14 +257,14 @@ Before proceeding, HCL highly recommends that you take a backup of your system. 
 
     Select **OK**.
 
-2. Within IIM, select Update icon, then select the Portal package. ![](../../../../images/Select_update_and_Portal_package.png)
+2. Within IIM, select **Update** icon, then select the Portal package. ![](../../../../images/Select_update_and_Portal_package.png)
 
     Select **Next**.
 
 3. Select CF17 package. ![](../../../../images/Select_CF17_package.png)
 
     !!! Reminder 
-        You will need to stop Portal Server/ConfigWizard to be able to proceed.
+        You must stop Portal Server/ConfigWizard to proceed.
 
     Select **Next**.
 
@@ -265,13 +272,13 @@ Before proceeding, HCL highly recommends that you take a backup of your system. 
 
 5. Accept terms of licensing agreement. Then select **Next**.
 
-6. Review Features that are going to be installed. Select **Next**.
+6. Review **Features** that are going to be installed. Select **Next**.
 
 7. Select **Update**.
 
-**At this point ONLY the Portal binaries have been updated to CF17**. The IIM only manages the binaries so we will need to run a Portal script to upgrade the profile.
+**At this point, only the Portal binaries have been updated to CF17**. The IIM only manages the binaries so we will need to run a Portal script to upgrade the profile.
 
-**Next, update the profile**
+### Updating the profile
 
 - Ensure the HCL Portal and HCL Web Content Manager server is stopped on the profile you intend to upgrade.
 
@@ -281,7 +288,7 @@ Before proceeding, HCL highly recommends that you take a backup of your system. 
 
     - Windows: <profile_root>\PortalServer\bin\applyCF.bat -DPortalAdminPwd=<password> -DWasPassword=<password>
 
-Lastly, validate if the server has been updated to CF17 and all is well. Log in and check the about HCL Portal and see if it says CF17.
+Validate if the server has been updated to CF17. Log in and check the about HCL Portal and see if it says CF17.
 
 ## Install HCL Digital Experience 9.5 using IBM Installation Manager
 
@@ -289,7 +296,7 @@ Make sure the server is stopped before doing the following steps:
 
 1. Add the HCL Portal 9.5 repositories to IIM.
 
-    In this case, we are using the Enable offering so need the following repo: Server and Enable.
+    In this case, we are using the Enable offering so you need the following repo: Server and Enable.
 
     For the other offerings, this is what you need for each:
     
@@ -304,11 +311,11 @@ Make sure the server is stopped before doing the following steps:
     ![](../../../../images/Add_HCL_Portal_95_repositories_IIM.png)
 
     !!! Reminder
-        Remove the previous repository
+        Remove the previous repository.
 
     Select **OK**.
 
-2. Within IIM, select **Install** option. Select both packages. ![](../../../../images/Select_Install_option_IIM_both_packages.png)
+2. Within IIM, select the **Install** option. Select both packages. ![](../../../../images/Select_Install_option_IIM_both_packages.png)
 
     Select **Next**.
 
@@ -323,7 +330,7 @@ Make sure the server is stopped before doing the following steps:
 6. Review Summary. Select **Install**. ![](../../../../images/Review_Summary_Select_install_95.png)
 
     !!! note
-        During the install, a series of ConfigEngine tasks will be run to upgrade Portal 8.5 to 9.5 so upgrading the profile after is not required.
+        During the installation, a series of ConfigEngine tasks are run to upgrade Portal 8.5 to 9.5 so upgrading the profile after is not required.
 
 7. When the installation is finished, you should now be able to verify that you can access your Portal in an internet browser by navigating to: 
 
