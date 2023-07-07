@@ -17,11 +17,15 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
+- Web Content Manager – Content Reporting
+
+**Digital Experience 9.5 Container Version**
+
 - Persisting CW Profile
 - Config Wizard credentials in helm chart
 - Content Composer – AI-assisted content analysis
 - Container Deployment – New checks in Prereqs checker
-- Web Content Manager – Content Reporting
+
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -83,6 +87,17 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Digital Experience 9.5 Version
 
+### Web Content Manager – Content Reporting
+
+=== "Containers"
+    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
+
+
+=== "On-Premises"
+    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
+
+## Digital Experience 9.5 Container Version
+
 ### Persisting CW Profile
 
 === "Containers"
@@ -104,14 +119,6 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     The Prereqs Checker is a tool that executes a number of checks on the target deployment environment to ensure system and storage requirements are met. Two new checks are added: Storage Space Check and Core Profile Check. For more information, see the help topic [Configure Prereqs Checker For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md#checks-implemented-in-prereqs-checker).
 
-### Web Content Manager – Content Reporting
-
-=== "Containers"
-    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
-
-
-=== "On-Premises"
-    Content Reporting is a new capability that can be configured in Practitioner Studio. The Content Reporting feature enables content authors to search content libraries according to criteria, optionally update specified metadata or terms, and export content results to a CSV format for additional evaluations. See the Help Center topic [Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md) for additional information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
