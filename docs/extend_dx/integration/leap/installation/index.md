@@ -14,8 +14,7 @@ For the deployment and installation of DX, please refer to the [Deploy Container
 
 ## Deploy HCL Leap using Helm
 
-The following are high-level steps for Installing HCL Leap with an existing DX Deployment.
-Please see [HCL Leap product documentation](https://help.hcltechsw.com/Leap/9.3.2/deploy_container_kubernetes_openliberty.html) for detailed instructions.
+Please refer to the [Deploying to a Container (Kubernetes) Platform - Open Liberty](https://help.hcltechsw.com/Leap/9.3.2/deploy_container_kubernetes_openliberty.html) section of the HCL Leap product documentation.
 
 ???+ info "Post deployment tasks"
     - You should now be able to access Leap through `https://<your-domain>/apps`. It's is recommended that you do the [post-deployment tasks](https://help.hcltechsw.com/Leap/9.3.2/in_setting_up_environment.html)

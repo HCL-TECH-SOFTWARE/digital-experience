@@ -8,7 +8,7 @@ The following is a configuration of the integration of HCL Leap with the existin
 
 ## Configure Ingress for HCL Digital Experience and HCL Leap
 
-HCL Digital Experience allows for the use of an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md). While this is not required to run HCL Digital Experience, when configured it can be reused by HCL Leap to handle the routing for both products and make them available on the same host.
+HCL Digital Experience allows for the use of an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md). While this is not required to run HCL Digital Experience, when configured it can be reused by HCL Leap to handle the routing for both products making them available using the same host name and certificate.
 
 1. Setup the Ingress for HCL Digital Experience according to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md).
 
