@@ -1,6 +1,7 @@
 title: How to manage web content items by using REST
 nav:
     - index.md
+    - wcm_rest_virtual_portal.md
     - wcm_rest_crud_libraries.md
     - wcm_rest_crud_content.md
     - wcm_rest_crud_component.md
