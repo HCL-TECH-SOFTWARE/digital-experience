@@ -39,3 +39,4 @@ spec:
               port:
                 number: 9080
 ```
+4. After applying the configuration, both HCL Digital Experience and HCL Leap should be accessible using the provided hostname
