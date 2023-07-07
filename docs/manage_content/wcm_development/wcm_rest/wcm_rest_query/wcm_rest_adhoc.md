@@ -228,5 +228,55 @@ You can include the date fields associated with the workflow of a requested item
 
     ```
 
+## Adding item path information to the REST API search query results
 
+The parent path of a requested item can be included by specifying the `options=item-path` URL parameter. For example:
+
+```
+
+HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&options=item-path
+
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm">
+    ...
+    <wcm:path>
+        <wcm:pathElement>
+            <wcm:title xml:lang="en">TestLibrary986182</wcm:title>
+            <wcm:name>testlibrary986182</wcm:name>
+            <wcm:link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!wT3bMC74Icsxn9xtTg_Fkw/wcmrest/Library/7cd8c331-59b7-4b3a-bfe9-9a57c44f67eb?locale=en&amp;locale=ltr" xml:lang="en" label="Read"/>
+        </wcm:pathElement>
+    </wcm:path>
+…
+</entry>
+   
+```
+
+The `options=item-path` URL parameter omits the parent preset folder that can be seen in the navigation breadcrumb trail of WCM Authoring when inspecting an item in a library. In the above example of a SiteArea, the Content folder is omitted and only the parent Library information is returned. To include the parent preset folder, use `options=item-path-full` as the URL parameter instead. For example:
+
+```
+
+HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&options=item-path-full
+
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm">
+    ...
+    <wcm:path>
+        <wcm:pathElement>
+            <wcm:title xml:lang="en">TestLibrary986182</wcm:title>
+            <wcm:name>testlibrary986182</wcm:name>
+            <wcm:link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!wT3bMC74Icsxn9xtTg_Fkw/wcmrest/Library/7cd8c331-59b7-4b3a-bfe9-9a57c44f67eb?locale=en&amp;locale=ltr" xml:lang="en" label="Read"/>
+        </wcm:pathElement>
+        <wcm:pathElement>
+            <wcm:title xml:lang="en">Content</wcm:title>
+            <wcm:name>Content</wcm:name>
+            <wcm:link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!wT3bMC74Icsxn9xtTg_Fkw/wcmrest/Folder/aec6c2b4-59be-4486-a8f6-77ad483f8ae9?locale=en&amp;locale=ltr" xml:lang="en" label="Read"/>
+        </wcm:pathElement>
+    </wcm:path>
+…
+</entry>
+   
+```
+
+!!!note
+The `options=item-path-full` only works with the query API.
 
