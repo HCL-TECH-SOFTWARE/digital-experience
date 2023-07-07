@@ -13,12 +13,12 @@ This section describes how to enable and disable Content Reporting.
 !!! note
     Before enabling Content Reporting, it is required to enable Practitioner Studio. For more information on how to enable Practiotioner Studio, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md). After enabling Content Reporting, it can then be used with other themes.
 
-### Enabling Content Reporting for on-premise deployment
+### Enabling Content Reporting for traditional deployment
 
 !!! note
     Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. The **enable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
-To enable Content Reporting for on-premise deployment, run the **enable-content-reporting** config task.
+To enable Content Reporting for traditional deployment, run the **enable-content-reporting** config task.
 
 !!! note
     It is not required to stop or restart the Portal when running these configuration tasks.
@@ -45,12 +45,12 @@ contentReporting:
     enabled: true
 ```
 
-### Disabling Content Reporting for on-premise deployment
+### Disabling Content Reporting for traditional deployment
 
 !!! note
     Disabling contentReporting runs the **disable-content-reporting** config engine task in the background. The **disable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks, please refer to [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
-To disable Content Reporting for on-premise deployment, run the **disable-content-reporting** config task.
+To disable Content Reporting for traditional deployment, run the **disable-content-reporting** config task.
 
 -   AIX: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 -   Linux: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
