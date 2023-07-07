@@ -22,7 +22,10 @@ http or https://host:port/dx/api/wcm/v2/explorer/
     https://localhost:10039/dx/api/wcm/v2/explorer/
     ```
 
+For more information about the WCM REST V2 API Explorer, see [HCL Experience API](../../../extend_dx/apis/hcl_experience_api/index.md).
+
 ### How to use REST with AI analyzer API for content
+
 #### Request Details
 
 Using the WCM REST V2 API explorer, access the following AI analyzer API endpoint.
