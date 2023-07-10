@@ -1,8 +1,11 @@
 # WCM Content AI Analysis
 
-This topic describes how to enable AI analysis for a WCM Content in Kubernetes Deployment. This also discusses steps on how to configure a content AI provider (for example, OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
+This topic describes how to enable AI analysis for a WCM Content in Kubernetes Deployment. This also discusses steps on how to configure a content AI provider (for example, XAI, OpenAI ChatGPT or Custom AI Implementation) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
 
 ## Content AI Providers Overview
+### XAI Overview
+
+Explainable artificial intelligence (XAI) is a machine learning team in HCL Software. It identifies machine learning use cases and collaborates with teams across the HCL portfolio. The XAI team is focused on delivering high value maching learning-based capabilities that address existing visions. XAI accelerates development through model and skill reusability. It is free of charge for HCL DX customers; you can obtain an API key by opening a support ticket with HCL Software.
 ### OpenAI ChatGPT Overview
 
 OpenAI is the AI research and deployment company behind ChatGPT. When you sign up with ChatGPT, it provides API access via an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground), you can create a personal account with limited access or a corporate account. The playground can be used to experiment with the API as well. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
@@ -31,7 +34,7 @@ configuration:
       provider: ""
 ```
 
-For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. A possible value for the provider is ```OPEN_AI```.
+For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. Possible values for the provider are ```XAI```, ```OPEN_AI``` or ```CUSTOM```.
 
 ### Configuring AI Class for Custom Content AI Provider
 
