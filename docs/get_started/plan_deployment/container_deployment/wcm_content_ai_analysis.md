@@ -33,6 +33,49 @@ configuration:
 
 For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. A possible value for the provider is ```OPEN_AI```.
 
+### Configuring AI Class for Custom Content AI Provider
+
+For using Custom Content AI Provider, the administrator should follow the below steps.
+
+1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface, create the jar file and put the jar file in the server and restart JVM.
+
+Below is the sample Custom Content AI Provider class, which can be used to call Custom AI services for AI analysis. 
+
+```
+package com.ai.sample;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.hcl.workplace.wcm.restv2.ai.IAIGeneration;
+import com.ibm.workplace.wcm.rest.exception.AIGenerationException;
+
+public class CustomerAI implements IAIGeneration {
+
+	@Override
+	public String generateSummary(List<String> values) throws AIGenerationException {
+		// Call the custom AI Service to get the custom AI generated summary
+		return "AIAnalysisSummary";
+	}
+
+	@Override
+	public List<String> generateKeywords(List<String> values) throws AIGenerationException {
+		// Call the custom AI Service to get the custom AI generated keywords
+		List<String> keyWordList = new ArrayList<String>();
+		keyWordList.add("keyword1");
+		return keyWordList;
+	}
+
+	@Override
+	public Sentiment generateSentiment(List<String> values) throws AIGenerationException {
+		// Call the custom AI Service to get the custom AI generated sentiment
+		return Sentiment.POSITIVE;
+	}
+
+}
+
+```
+
+2. Configure the Content AI Provider class in the helm chart and run ```helm upgrade```.
 
 ### Configuring Custom Secret or API Key of Content AI Provider
 

@@ -15,10 +15,11 @@ To enable content AI analysis:
 
 1. Connect to DX Core and run the following specified config engine task.
 
-    ```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=OPEN_AI -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+    ```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=OPEN_AI -DContentAIProviderClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
 
     !!!note
-        - Possible value for ```ContentAIProvider``` parameter is ```OPEN_AI```.
+        - Possible value for ```ContentAIProvider``` parameter is ```OPEN_AI```, ```XAI``` or ```CUSTOM```.
+        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the Custom Content AI Provider implementation class in the ```ContentAIProviderClassName``` parameter. Ex: ```com.ai.sample.CustomerAI```. Refer to [Implementing Custom Content AI Provider Class](#Implementing-Custom-Content-AI-Provider-Class) to know about, how to implement Custom Content AI Provider class.
         - Depending on the ContentAIProvider, set the correct API key of the respective provider in the ```ContentAIProviderAPIKey``` parameter.
 
 2. Validate that all the required configurations are added.
@@ -33,7 +34,53 @@ To enable content AI analysis:
     4. Verify that the Credential Vault with the Vault slot Name  ```ai.auth``` is configured using the AI content provider's API key by going to **Administration > Security > Credential Vault > Manage System Vault Slot**.
 
         ![](../wcm_env/_img/AI_Provider_APIKey_Vault.png)
-        
+
+### Implementing Custom Content AI Provider Class
+
+For using Custom Content AI Provider, the administrator should follow the below steps.
+
+1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface, create the jar file and put the jar file in the server and restart JVM.
+
+Below is the sample Custom Content AI Provider class, which can be used to call Custom AI services for AI analysis. 
+
+```
+package com.ai.sample;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.hcl.workplace.wcm.restv2.ai.IAIGeneration;
+import com.ibm.workplace.wcm.rest.exception.AIGenerationException;
+
+public class CustomerAI implements IAIGeneration {
+
+	@Override
+	public String generateSummary(List<String> values) throws AIGenerationException {
+		// Call the custom AI Service to get the custom AI generated summary
+		return "AIAnalysisSummary";
+	}
+
+	@Override
+	public List<String> generateKeywords(List<String> values) throws AIGenerationException {
+		// Call the custom AI Service to get the custom AI generated keywords
+		List<String> keyWordList = new ArrayList<String>();
+		keyWordList.add("keyword1");
+		return keyWordList;
+	}
+
+	@Override
+	public Sentiment generateSentiment(List<String> values) throws AIGenerationException {
+		// Call the custom AI Service to get the custom AI generated sentiment
+		return Sentiment.POSITIVE;
+	}
+
+}
+
+```
+
+2. Run the following config engine task.
+
+```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=OPEN_AI -DContentAIProviderClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+
 ## Config Engine Task for disabling Content AI analysis
 
 To disable content AI analysis:
