@@ -2,10 +2,6 @@
 
 The following is a configuration of the integration of HCL Leap with the existing DX environment.
 
-## Configuration for HCL Leap
-
-1. Update the custom values file to set Leap image name, tags and repository name. The procedure is very similar to the instructions in the [Prepare Configuration page for DX](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/). The value options for Leap are documented [in the Leap documentation](https://help.hcltechsw.com/Leap/9.3.2/deploy_container_kubernetes_openliberty.html)
-
 ## Configure Ingress for HCL Digital Experience and HCL Leap
 
 HCL Digital Experience allows for the use of an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md). While this is not required to run HCL Digital Experience, when configured it can be reused by HCL Leap to handle the routing for both products making them available using the same host name and certificate.
