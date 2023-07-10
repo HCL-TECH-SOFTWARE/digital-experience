@@ -19,7 +19,7 @@ To enable content AI analysis:
 
     !!!note
         - Possible value for ```ContentAIProvider``` parameter is ```OPEN_AI```, ```XAI``` or ```CUSTOM```.
-        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the Custom Content AI Provider implementation class in the ```ContentAIProviderClassName``` parameter. Ex: ```com.ai.sample.CustomerAI```. Refer to [Implementing Custom Content AI Provider Class](#Implementing-Custom-Content-AI-Provider-Class) to know about, how to implement Custom Content AI Provider class.
+        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the Custom Content AI Provider implementation class in the ```ContentAIProviderClassName``` parameter. Ex: ```com.ai.sample.CustomerAI```. Refer to [Implementing Custom Content AI Provider Class](./wcm_ai_analysis.md#implementing-custom-content-ai-provider-class) to know about, how to implement Custom Content AI Provider class.
         - Depending on the ContentAIProvider, set the correct API key of the respective provider in the ```ContentAIProviderAPIKey``` parameter.
 
 2. Validate that all the required configurations are added.
