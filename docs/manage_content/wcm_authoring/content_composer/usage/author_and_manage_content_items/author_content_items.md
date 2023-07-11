@@ -76,7 +76,7 @@ Follow the steps to create a new content template with auto-populated location f
 
     ![](../../../../../assets/HCL_Content_Composer_create_content_auto_locate.png)
 
-3.  The location will auto-populate to the selected Site Area as shown below.
+3.  The location will auto-populate to the selected Location as shown below.
 
     ![](../../../../../assets/HCL_Content_Composer_auto_locate_new_content.png)
 

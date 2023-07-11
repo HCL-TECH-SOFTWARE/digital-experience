@@ -15,7 +15,7 @@ Content Composer is accessible from the Practitioner Studio interface (after ima
     ![](../../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
 
 2.  Select **Web Content** menu option to access the HCL Digital Experience 9.5 Content Composer user interface.
-3.  Access the content item you wish to delete. In this example, the content item example is obtained from **Content Composer > Web Content > Web Content Templates** site area location.
+3.  Access the content item you wish to delete. In this example, the content item example is obtained from **Content Composer > Web Content > Web Content Templates** location.
 
     ![](../../../../../assets/opening_content_template_hcl_cc.png "Opening the content item")
 
