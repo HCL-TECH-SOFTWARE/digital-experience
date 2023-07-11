@@ -4,7 +4,7 @@ title: Using the AI analyzer API for content
 
 # Using the AI analyzer API for content
 
-Starting from CF213, a new [WCM REST v2 API](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/#tag/AI-Analyzer-Rest) is available for sentimental analysis of content, keyword extraction from content, and auto summarization of content element.
+Starting from CF213, a new [WCM REST v2 API](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/#tag/AI-Analyzer-Rest) is available for sentiment analysis of content, keyword extraction from content, and auto summarization of content element.
 
 ## WCM REST V2 API explorer
 
