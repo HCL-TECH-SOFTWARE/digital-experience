@@ -31,9 +31,11 @@ configuration:
     # Settings for content AI 
     contentAI:
       # Configures if content AI is enabled/disabled
-      enabled: false
-      # Settings for checking content AI provider. When contentAI enabled is true, provider will be used.
-      provider: ""
+      enabled: true
+      # Settings for checking content AI provider. When enabled is true, provider will be used 
+      # and possible values are ```XAI```, ```OPEN_AI``` or ```CUSTOM```
+      provider: "CUSTOM"
+      className: "com.ai.sample.CustomerAI"
 ```
 
 For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. Possible values for the provider are ```XAI```, ```OPEN_AI``` or ```CUSTOM```.
