@@ -118,7 +118,7 @@ Content users can rename a content item during moving or copying when there is a
 
     ![Save as content item during moving conflict](../../../../../assets/save-as-content-item-during-copy-conflict.png)
 
-2.  Click **See All Location** under **Location** to change the preferred location to move or copy the content item. A location selector appears where you can select the site area or portal page you want to save the content to.
+2.  Click **See All Locations** under **Location** to change the preferred location to move or copy the content item. A location selector appears where you can select the site area or portal page you want to save the content to.
 
     ![Select a location and click Move/Copy](../../../../../assets/select-site-area-to-move-content-during-copy-conflict.png)
 
