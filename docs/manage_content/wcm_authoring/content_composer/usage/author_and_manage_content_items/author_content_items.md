@@ -35,7 +35,7 @@ Follow the steps below to create new content with the HCL Digital Experience 9.5
 
     ![Select template for the new content item](../../../../../assets/Complete_new_content_fields_HCL_Content_Composer.png)
 
-5.  In **Select Location**, select the site location to present the content when completed and ready for publication. Using the same new content example, the **Web Content / Articles** location is selected.
+5.  In **Select Location**, select the location(site area or portal page) to present the content when completed and ready for publication. Using the same new content example, the **Web Content / Articles** location is selected.
 
     ![Select location for new content](../../../../../assets/Select_location_new_content_HCL_Content_Composer.png)
 
@@ -71,7 +71,7 @@ Users can also create new content via the Search Results view.
 
 Follow the steps to create a new content template with auto-populated location from the Dashboard view:
 
-1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, select a Site Area.
+1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, select a Location.
 2.  Click **Create** then select **Content**.
 
     ![](../../../../../assets/HCL_Content_Composer_create_content_auto_locate.png)
