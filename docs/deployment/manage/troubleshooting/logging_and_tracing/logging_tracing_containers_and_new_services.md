@@ -1,6 +1,6 @@
 # Logging and tracing for containers and new services
 
-In CF200, a new mechanism is introduced for configuring log settings at runtime (without pod restarts) in Helm-based DX deployments. Log levels and trace strings are set in your custom-values.yaml file. [Configure and Access Logs](https://opensource.hcltechsw.com/digital-experience/CF212/deployment/manage/container_configuration/troubleshooting/configure_access_helm_logs) gives more detail on how to configure logging in Helm amd how to access Kubernetes container logs. 
+In CF200, a new mechanism is introduced for configuring log settings at runtime (without pod restarts) in Helm-based DX deployments. Log levels and trace strings are set in your custom-values.yaml file. [Configure and Access Logs](../../container_configuration/troubleshooting/configure_access_helm_logs) gives more detail on how to configure logging in Helm amd how to access Kubernetes container logs. 
 
 Prerequisite: Install and configure Content Composer and Digital Asset Management to your HCL Digital Experience deployment.
 
