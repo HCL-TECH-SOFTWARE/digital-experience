@@ -280,3 +280,61 @@ HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&options=item-path
 !!!note
 The `options=item-path-full` only works with the query API.
 
+## Adding more detailed information to the REST API search query results
+
+Several other fields of a requested item can be included by specifying the `options=details` URL parameter. These include: the user that created the item and the creation date, if the item is a favorite, if the item is locked, and an access control link gets added to the links section.
+For example:
+
+```
+
+HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&options=details
+
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm">
+    ...
+    <wcm:created>2023-07-11T18:11:24.122Z</wcm:created>
+    <wcm:creator>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/um/users/profiles/Z9eAeNHD4JSK6KHOGJM8CGPO6MMG62JP0JM4CMHP2MMS6JPC63JT663CGJRG623</uri>
+        <name>wpsadmin</name>
+        <type>USER</type>
+    </wcm:creator>…
+    <link rel="access-control" href="/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/ac/access:oid:Z6QReDe33CEJH96M9C2MMOC4RD6MMG64BPIJM8CM1E6MMCCGHC2JS47K9D0JQG6I1" xml:lang="en" label="Access Control"/>
+    <category scheme="wcmrest:favorite" term="false" xml:lang="en"/>
+    <category scheme="wcmrest:locked" term="false" label=""/>
+</entry>
+   
+```
+
+To also include the list of owners of an item along with all the other details listed above, use `options=details-full` as the URL parameter instead. For example:
+
+```
+
+HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&options=details-full
+
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm">
+    ...
+    <wcm:owner>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/um/users/profiles/Z9eAeNHD4JSK6KHOGJM8CGPO6MMG62JP0JM4CMHP2MMS6JPC63JT663CGJRG623</uri>
+        <name>wpsadmin</name>
+        <type>USER</type>
+    </wcm:owner>
+    <wcm:created>2023-07-11T18:11:24.122Z</wcm:created>
+    <wcm:creator>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/um/users/profiles/Z9eAeNHD4JSK6KHOGJM8CGPO6MMG62JP0JM4CMHP2MMS6JPC63JT663CGJRG623</uri>
+        <name>wpsadmin</name>
+        <type>USER</type>
+    </wcm:creator>…
+    <link rel="access-control" href="/wps/mycontenthandler/!ut/p/digest!kYNqh-e3k_yWjknyeEtGBA/ac/access:oid:Z6QReDe33CEJH96M9C2MMOC4RD6MMG64BPIJM8CM1E6MMCCGHC2JS47K9D0JQG6I1" xml:lang="en" label="Access Control"/>
+    <category scheme="wcmrest:favorite" term="false" xml:lang="en"/>
+    <category scheme="wcmrest:locked" term="false" label=""/>
+…
+</entry>
+   
+```
+
+!!!note
+The `options=details-full` only works with the query API.
