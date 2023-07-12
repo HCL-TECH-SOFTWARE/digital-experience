@@ -1,7 +1,7 @@
 # Installing HCL MX Foundry to integrate with HCL Digital Experience
 
 !!! note
-    This guide only applies for HCL Digital Experience 9.5 Container Deployments in combination with HCL Volt MX Foundry Helm installations.
+    This guide only applies to HCL Digital Experience 9.5 Container Deployments in combination with HCL Volt MX Foundry Helm installations.
     The currently supported version combination is:
 
       - HCL Digital Experience CF213
