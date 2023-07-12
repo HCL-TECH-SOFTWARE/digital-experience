@@ -1,6 +1,6 @@
 # DAM schemas
 
-This topic contains the commands that administrators can use to get a list of all DAM schemas or delete inactive [Digital Asset Management](../../../../../get_started/product_overview/asset_management.md) (DAM) schemas from persistence.
+This topic contains the commands that administrators can use to get a list of all DAM schemas or delete inactive [Digital Asset Management](../../../../get_started/product_overview/asset_management.md) (DAM) schemas from persistence.
 
 ## Listing DAM schemas
 
