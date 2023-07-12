@@ -30,12 +30,8 @@ To install DXConnect, use the command below:
 ./ConfigEngine.sh install-dxconnect-application
 ```
 
-This task not only installs the DXConnect application, but it also creates the "DXC\_ConfigSettings" WAS Resource Environment Provider and creates two custom properties in that REP:
+This task not only installs the DXConnect application, but it also creates the "DXC\_ConfigSettings" WAS Resource Environment Provider and creates [`DXCONNECT_MAX_FILE_SIZE_MB`](#resource-environment-provider-property-for-dxconnect) custom property in that REP. 
 
-```bash
-DXCONNECT_MAX_MEMORY_SIZE_MB
-DXCONNECT_MAX_FILE_SIZE_MB
-```
 
 To remove DXConnect, use the command below:
 
@@ -56,9 +52,28 @@ To re-install DXConnect, use the command below:
 
     ![DXConnect installation](../../../images/HCL_DXConnect_installation.png)
 
+## Resource Environment Provider property for DXConnect
+
+The DXConnect Installation task not only installs the DXConnect application, but it also creates the "DXC\_ConfigSettings" WAS Resource Environment Provider and creates `DXCONNECT_MAX_FILE_SIZE_MB` custom property in that REP. 
+
+`DXCONNECT_MAX_FILE_SIZE_MB` property indicates the maximum file size that is allowed per request. It's **default value is zero**, which means that there are no limits defined, and any file size is acceptable. You can change this by going to [Configuration Wizard](#accessing-the-configuration-wizard-admin-console-in-a-container-environment) > Resources > Resource Environment > Resource Environment Provider > DXC_ConfigSettings > Custom Properties and setting up the `DXCONNECT_MAX_FILE_SIZE_MB` property to the desired value.
+
+!!!note
+    `DXCONNECT_MAX_MEMORY_SIZE_MB` property has been removed since CF213.
+
 ## Accessing the Configuration Wizard admin console in a container environment
 
-You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html).
+Access the ConfigWizard admin console in a container environment from your local system. The ConfigWizard admin console opens to the TCP port number 10203, navigate to the following URL to open the ConfigWizard admin console: 
+
+In localhost:
+```
+https://localhost:10203/ibm/console
+```
+
+In Kube Environments:
+```
+https://YOUR_KUBE_ENV_NAME.com:10203/ibm/console
+```
 
 ???+ info "Related information"
     - [DXClient](../dxclient/index.md)

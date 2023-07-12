@@ -20,3 +20,7 @@ The HCL Digital Experience containers are launched by running a runtime instance
     
 3.  Once you have completed a Digital Experience 9.5 Container deployment, to update the DX 9.5 container images to the latest Container Update releases, follow steps outlined in the Container Maintenance Help Center topic in this section.
     -   Documentation resource: [Maintenance](https://help.hcltechsw.com/digital-experience/9.5/containerization/maintenance.html){:target="_blank"}
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/courses/lesson/?id=1461).

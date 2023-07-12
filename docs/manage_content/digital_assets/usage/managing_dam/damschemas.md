@@ -1,6 +1,6 @@
 # DAM schemas
 
-This topic contains the commands that administrators can use to get a list of all DAM schemas or delete inactive [Digital Asset Management](../../../../../get_started/product_overview/asset_management.md) (DAM) schemas from persistence.
+This topic contains the commands that administrators can use to get a list of all DAM schemas or delete inactive [Digital Asset Management](../../../../get_started/product_overview/asset_management.md) (DAM) schemas from persistence.
 
 ## Listing DAM schemas
 
@@ -178,9 +178,6 @@ Use the delete-dam-schema command to delete the inactive DAM schema.
     dxclient delete-dam-schema -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -ringAPIVersion <ringAPIVersion> -damAPIVersion <damAPIVersion> -schemaVersion <schemaVersion>
     ```
 
-
-!!! note 
-    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 
 

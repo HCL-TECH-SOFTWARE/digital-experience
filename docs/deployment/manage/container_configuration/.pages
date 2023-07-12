@@ -7,6 +7,7 @@ nav:
     - container_scaling.md
     - container_staging.md
     - deploy_container_artifact_updates.md
+    - deploy_custom_code_in_openShift.md
     - troubleshooting
     - monitoring
     - volume_resizing.md

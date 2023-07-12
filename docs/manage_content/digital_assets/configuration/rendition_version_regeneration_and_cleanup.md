@@ -17,16 +17,16 @@ All of these heartbeats run on a configured interval. Heartbeat intervals and Th
 configuration:
     # Digital asset management configurations
     digitalAssetManagement:
-      # Enable or disable the heartbeats (validationHeartBeat, renditionOrVersionHeartbeat, cleanUpHeartBeat, orphanDataAndFileCleanupHeartBeat)
-      enableCleanUpOrRenditionVersionHeartBeats: true
+      # Enable or disable the heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat)
+      enableCleanUpOrRenditionVersionHeartbeats: true
       # Interval to run Validation heartbeat
-      validationHeartBeatIntervalTimeInMinutes: 10
+      validationHeartbeatIntervalTimeInMinutes: 10
       # Interval to run Rendition or Version generation heartbeat
       renditionOrVersionHeartbeatIntervalTimeInMinutes: 60
       # Interval to run clean up heartbeat
-      cleanUpHeartBeatIntervalTimeInMinutes: 1440
+      cleanUpHeartbeatIntervalTimeInMinutes: 1440
       # Interval to run orphan data and file cleanup heartbeat
-      orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes: 1440
+      orphanDataAndFileCleanupHeartbeatIntervalTimeInMinutes: 1440
       # A time period based on creation time, after which asset can be validated
       mediaCreationThresholdTimeInMinutes: 1440
       # A time period based on last scan time, after which a valid asset can be re-validated
@@ -39,5 +39,12 @@ configuration:
       maxValidationProcessingLimit: 100
 ```
 
-!!! note 
-    enableCleanUpOrRenditionVersionHeartBeats is `false` by default. To enable all four heartbearts (validationHeartBeat, renditionOrVersionHeartbeat, cleanUpHeartBeat, orphanDataAndFileCleanupHeartBeat), set enableCleanUpOrRenditionVersionHeartBeats to `true`.
+!!!note 
+    enableCleanUpOrRenditionVersionHeartbeats is `false` by default. To enable all four heartbeats (validationHeartbeat, renditionOrVersionHeartbeat, cleanUpHeartbeat, orphanDataAndFileCleanupHeartbeat), set enableCleanUpOrRenditionVersionHeartbeats to `true`.
+
+Starting from CF213, the following variable names are changed for consistency in variable naming. If these variables are used in a custom `values.yaml` file, make sure to update them accordingly.
+
+    - enableCleanUpOrRenditionVersionHeartbeats
+    - validationHeartbeatIntervalTimeInMinutes
+    - cleanUpHeartBeatIntervalTimeInMinutes
+    - orphanDataAndFileCleanupHeartBeatIntervalTimeInMinutes

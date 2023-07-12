@@ -433,14 +433,9 @@ Log files from command execution can be found in the logs directory of the DXCli
 dxclient restore-scriptapplication -wcmContentID <wcm-content-id> -versionName <version-name> -restoreAsPublished <restore-as-published>
 ```
 
-!!!note
-    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 
 ???+ info "Related information"
     - [DXClient](../index.md)
 
-
-<!--- ???Info "**Parent topic:"
-**[DXClient Artifact Types](../containerization/dxclientartifacts.md) -->
 

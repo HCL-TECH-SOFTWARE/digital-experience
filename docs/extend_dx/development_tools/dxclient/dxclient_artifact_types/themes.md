@@ -360,10 +360,6 @@ Users can restore the theme by using the backup files.
     dxclient undeploy-theme -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -xmlFile <xml-file-with-path> -applicationName <application name> -themeName <theme-name> -enableBackup <enable-backup> -dxProfileName <Profile name of the DX core server profile> 
     ```
 
-!!! note
-    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
-
-
 ???+ Info "Related information"
     - [DXClient](../index.md)
 

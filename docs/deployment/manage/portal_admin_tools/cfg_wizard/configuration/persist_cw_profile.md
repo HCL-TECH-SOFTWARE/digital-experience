@@ -1,31 +1,23 @@
-# Persisting CW Profile
+# Persisted Config Wizard Profile
+
+Starting from CF213, the profile of the Config Wizard in Helm deployments is persisted on the same persistent volume as the Core profile. This allows advanced configuration of the Config Wizard profile that are persisted through restarts.
 
 ## Volume mount points
 
-The [persistent volumes](../../../../../get_started/plan_deployment/container_deployment/persistent_volumes.md) used by the DX Core pod are mounted in profile \(WebSphere Application Server profiles for the WebSphere\_Portal application server, shared between pods\): /opt/HCL/profiles.
+Config Wizard is reusing the `/opt/HCL/profiles` directory of Core. A single directory is created for the Config Wizard profile called `cw_prof`. It is symbolically linked to `/opt/HCL/AppServer/profiles/cw_profile`.
 
-## Additional Information about profile directories
+### Backward Compatibility
 
-The profile persistent volume \(and thus, the /opt/HCL/profiles directory\) contains a directory per container version, named:
+For deployments prior to CF213 that have not persisted the Config Wizard profile, the file-based user registry of Core was shared with Config Wizard, so the same users and credentials could be used for both. When upgrading from such a CF version, the file-based user registry of Core is duplicated and copied into the Config Wizard profile. This is to make sure all users and groups are still available for Config Wizard in the same way as before the upgrade.
 
-```
-cw_prof_< product-version >_< container-version >
-```
+After this initial migration, the two profiles have separated user registries and can be managed independently.
 
-for example, `cw_prof_95_CF210`. During the Core container startup process, the latest version directory is symbolically linked from /opt/HCL/cw\_profile.
+!!!note
+    Upgrading to CF213 would require additional space of approximately *120MiB* to persist the Config Wizard Profile. 
 
-## Core container Version-to-Version upgrade
+## Core container upgrade
 
 When a new version \(tag\) of the DX 9.5 Core container is specified in your [custom values YAML file](../../../../install/container/helm_deployment/preparation/index.md) and you run `helm upgrade`, Kubernetes recycles all the pods in your Core stateful set one by one. It starts with the highest numbered pod and works downwards, only recycling the next pod when the current pod reports that it is "ready".
 
-Whenever a Core container is started, it compares its container version with the latest profile version. If they do not match, perform an [Update](../../../../install/container/helm_deployment/update_helm_deployment.md) using the process set out below:
-
-![Core_container_Version-to-Version_upgrade](../../../../../images/cw_profile_version-to-version_upgrade.png)
-
-   1.  Kubernetes recycles the highest numbered pod, supplying the new DX 9.5 Container image.
-   2.  Highest numbered pod creates a new profile directory on the shared volume for the new version \(named as described above\) with contents copied from the previous version profile directory.
-   3.  Pod switches its symbolic link for /opt/HCL/cw\_profile to the new directory.
-   4.  Pod performs the actual upgrade \("`applyCF`"\) and, when this is complete, is declared "ready" to Kubernetes.
-   5.  Kubernetes recycles the next highest numbered pod.
-   6.  Pod determines that a profile directory is already populated for the new HCL DX 9.5 container image version, and so, links to that as normal; and onwards.
-   7.  Steps 5 and 6 are repeated until there are no further pods using the old image.
+-   When upgrading to a newer CF version (first time creation of the persisted `cw_prof` and the installed version does not contain the persisted Config Wizard profile), the user registry of wp_profile is copied to cw_profile. This ensures that if the user registry is modified on the older deployment, it is also migrated to the new deployment. 
+-   On any further deployments, the existing persisted profile will be symbolically linked to the Config Wizard profile.

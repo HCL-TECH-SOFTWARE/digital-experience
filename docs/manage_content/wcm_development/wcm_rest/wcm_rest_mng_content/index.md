@@ -2,6 +2,8 @@
 
 You can use the Web Content Manager REST Service to create, read, update, and delete the following item types.
 
+-   **[How to use REST on virtual portals](wcm_rest_virtual_portal.md)**  
+You can use the Web Content Manager REST service to create, read, update, query locale information, and delete libraries.
 -   **[How to use REST with libraries](wcm_rest_crud_libraries.md)**  
 You can use the Web Content Manager REST service to create, read, update, query locale information, and delete libraries.
 -   **[How to use REST with content items](wcm_rest_crud_content.md)**  
