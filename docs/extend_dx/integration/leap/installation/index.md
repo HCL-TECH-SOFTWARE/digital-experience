@@ -7,7 +7,7 @@
       - HCL Digital Experience CF213
       - HCL Leap 9.3.2 
       
-HCL Digital Experience (DX) can be integrated with HCL Leap. Both products can be installed in the same Kubernetes cluster using same Kubernetes namespace. Common parts of the deployments can be reused which is described [in the Configuration section](../configuration/index.md).
+HCL Digital Experience (DX) can be integrated with HCL Leap. Both products can be installed in the same Kubernetes cluster using the same Kubernetes namespace. Common parts of the deployments can be reused which is described [in the Configuration section](../configuration/index.md).
 
 ## Deploy HCL Digital Experience using Helm
 
