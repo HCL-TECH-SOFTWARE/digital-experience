@@ -1,9 +1,0 @@
-title: Tuning via the Integrated Solutions Console
-nav:
-    - index.md
-    - JVM_Tuning
-    - Session_timeout.md
-    - WebContainerThreadPoolSize.md
-    - DataSourceTuning.md
-    - SecurityRelatedFields.md
-    - Internationalization_Service_Tuning

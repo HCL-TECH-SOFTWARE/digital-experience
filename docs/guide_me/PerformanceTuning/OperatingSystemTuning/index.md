@@ -1,3 +1,0 @@
-# Operating System Tuning
-
-In any high-load environment, the operating system must be closely monitored to ensure that its performance is acceptable and consistent. The settings mentioned below are not necessarily optimal for all environments. Rather they are mentioned to highlight that OS tuning needs to be managed in the performance environment as part of any bottleneck resolution process, as well as show the changes we made to achieve sufficient Portal throughput.
