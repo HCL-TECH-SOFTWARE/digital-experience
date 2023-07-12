@@ -1,5 +1,0 @@
-title: IHS as a Caching Proxy
-nav:
-    - index.md
-    - EnablingCachinginIHS.md
-    - AddingCacheHeadersinIHS.md
