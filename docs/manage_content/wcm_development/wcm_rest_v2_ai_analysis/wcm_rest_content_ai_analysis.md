@@ -4,7 +4,7 @@ title: Using the AI analyzer API for content
 
 # Using the AI analyzer API for content
 
-Starting from CF213, a new WCM REST v2 API is available for sentimental analysis of content, keyword extraction from content, and auto summarization of content element.
+Starting from CF213, a new [WCM REST v2 API](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/#tag/AI-Analyzer-Rest) is available for sentiment analysis of content, keyword extraction from content, and auto summarization of content element.
 
 ## WCM REST V2 API explorer
 
@@ -22,7 +22,10 @@ http or https://host:port/dx/api/wcm/v2/explorer/
     https://localhost:10039/dx/api/wcm/v2/explorer/
     ```
 
+For more information about the WCM REST V2 API Explorer, see [HCL Experience API](../../../extend_dx/apis/hcl_experience_api/index.md).
+
 ### How to use REST with AI analyzer API for content
+
 #### Request Details
 
 Using the WCM REST V2 API explorer, access the following AI analyzer API endpoint.
@@ -43,4 +46,4 @@ For more information on the API request and response details, refer to ```/conte
 
 !!! note
 
-    Before calling the Content AI analyzer API of any Content AI Provider, configure them in your DX deployment. For instructions on how to enable AI Analysis for Kubernetes deployment, see [Web content AI analysis in Kubernetes Deployment](../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md). For instructions on how to enable AI Analysis for DX on-premise deployment, see [Web content AI analysis in on-premise deployment](../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md).
+    Before calling the Content AI analyzer API of any Content AI Provider, configure them in your DX deployment. For instructions on how to enable AI Analysis for Kubernetes deployment, see [Web content AI analysis in Kubernetes Deployment](../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md). For instructions on how to enable AI Analysis for DX traditional deployment, see [Web content AI analysis in traditional deployment](../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md).

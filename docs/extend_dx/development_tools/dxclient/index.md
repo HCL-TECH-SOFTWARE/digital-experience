@@ -311,7 +311,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Specify the context root for exporting and importing personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
 
     -   HCL DX 9.5 CF198 release: **V1.7.0
-        -   [List DAM schemas](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md)
+        -   [List DAM schemas](../../../manage_content/digital_assets/usage/managing_dam/damschemas.md)
         -   [Personalization export and import rules](../dxclient/dxclient_artifact_types/personalization.md)
         -   [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
         -   [Manage virtual portals](../dxclient/dxclient_artifact_types/virtualportals.md)
@@ -322,7 +322,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Deploy application](../dxclient/dxclient_artifact_types/deployapplication.md)
         -   [manage get-syndication report](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
         -   [Restart Core](../dxclient/dxclient_artifact_types/dxcoreserver.md)
-        -   [Delete DAM schema](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md)
+        -   [Delete DAM schema](../../../manage_content/digital_assets/usage/managing_dam/damschemas.md)
     
     -   HCL DX 9.5 CF196 release: **V1.5.0
         -   [Shared library](../dxclient/dxclient_artifact_types/sharedlibrary.md)
@@ -518,13 +518,13 @@ Use the following command to execute the [shared-library action](../dxclient/dxc
 dxclient  shared-library [options]
 ```
 
-Use the following command to execute the delete [DAM schema action](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md):
+Use the following command to execute the delete [DAM schema action](../../../manage_content/digital_assets/usage/managing_dam/damschemas.md):
 
 ```bash
 dxclient delete-dam-schema [options]
 ```
 
-Use the following command to list all [DAM schemas present](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md):
+Use the following command to list all [DAM schemas present](../../../manage_content/digital_assets/usage/managing_dam/damschemas.md):
 
 ```bash
 dxclient list-dam-schemas  [options]

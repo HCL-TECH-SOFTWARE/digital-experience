@@ -1,4 +1,4 @@
-# Deploying Custom Code in OpenShift | HCL Digital Experience
+# Deploying Custom Code in OpenShift
 
 This section outlines deploying custom code to HCL Digital Experience in OpenShift.
 

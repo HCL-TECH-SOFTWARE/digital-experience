@@ -7,3 +7,4 @@ nav:
     - adlangflt.md
     - Using the language switcher: supporting_new_language
     - enabling_presentation_of_locales_in_friendly_urls.md
+    - Supporting_language.md
