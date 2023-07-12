@@ -8,9 +8,7 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
 
 1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md).
 
-2. Add a second Ingress resource for Leap or extend the existing DX Ingress.
-
-3. Point the Ingress resource to the path at which Leap is configured; this depends on the context route of the Leap deployment.
+2. Add a second Ingress resource for Leap or extend the existing DX Ingress. Point the Ingress resource to the path at which Leap is configured; this depends on the context route of the Leap deployment.
 For example,
 ```yaml
 apiVersion: networking.k8s.io/v1
