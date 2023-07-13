@@ -1,7 +1,0 @@
-title: Other Portal Tuning
-nav:
-    - ReducingRedirects.md
-    - Personalization.md
-    - Portal8.0and8.5ThemeProfiles.md
-    - DisableJCRTextSearch.md
-    - FederatedLDAP.md
