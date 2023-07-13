@@ -278,11 +278,18 @@ HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&options=item-path
 ```
 
 !!!note
-The `options=item-path-full` only works with the query API.
+    The `options=item-path-full` only works with the query API.
 
 ## Adding more detailed information to the REST API search query results
 
-Several other fields of a requested item can be included by specifying the `options=details` URL parameter. These include: the user that created the item and the creation date, if the item is a favorite, if the item is locked, and an access control link gets added to the links section.
+Several other fields of a requested item can be included by specifying the `options=details` URL parameter. These include: 
+    
+    - the user who created the item
+    - the creation date
+    - if the item is a favorite
+    - if the item is locked
+    - an access control link that gets added to the links section
+
 For example:
 
 ```
@@ -337,4 +344,4 @@ HTTP 1.1 GET /wps/mycontenthandler/wcmrest/query?type=SiteArea&options=details-f
 ```
 
 !!!note
-The `options=details-full` only works with the query API.
+    The `options=details-full` only works with the query API.
