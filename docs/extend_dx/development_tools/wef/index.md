@@ -79,7 +79,7 @@ For more information abou the latest HCL Web Experience Factory updates, refer t
     !!!note
         In case you face any issues, refer to this topic for debugging guidance: [https://wiki.eclipse.org/Eclipse.ini](https://wiki.eclipse.org/Eclipse.ini)
 
-7. Launch the eclipse executable file under the Eclipse folder in the respective platforms. Navigate to **Window > Preferences > Java > Installed JREs Add** and set the JRE path if it is not mapped already. This should allow Linked Java Objects to compile and work correctly.
+7. Launch the executable eclipse file under the Eclipse folder in the respective platforms. Navigate to **Window > Preferences > Java > Installed JREs Add** and set the JRE path if it is not mapped already. This should allow Linked Java Objects to compile and work correctly.
 
 8. After initial deployment, go to **Window > Open Perspective > Web Experience Factory** to change the IDE perspective.
 
