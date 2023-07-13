@@ -19,7 +19,7 @@ For instructions on how to use the AI-assistance features, see [Web Content Mana
 
 Content users can view a light preview of uploaded content and more using HCL Content Composer.
 
-1.  Access the content item you wish to edit. In this example, the content item example above (**Image**) is obtained from **Web Content > Content > Articles** site area location. Select **Open Content**.
+1.  Access the content item you want to edit. In this example, the content item example above (**Image**) is obtained from **Web Content > Content > Articles** site area location. Select **Open Content**.
 
 2.  On the content item editor interface, select the **More** drop down as shown below and select **Overview**.
 
@@ -55,7 +55,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 !!! note "Using AI-assisted content generation in Content Composer"
     Refer to the [Prerequisites](#prerequisite) section for instructions on configuring AI-assistance features.
 
-1.  From the Content Composer interface, navigate through the preset folders and access the content item you wish to edit. In this example, the content item example (**HCL Article with AI-assistance**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
+1.  From the Content Composer interface, navigate through the preset folders and access the content item you want to edit. In this example, the content item example (**HCL Article with AI-assistance**) is obtained from **Web Content > Content > Articles** site area location. Select **Edit**.
 
     ![Editing the content item](../../../../../assets/HCL_Content_Composer_Edit_Content_WithAIAssistance_WebContentInterface.png)
 
@@ -89,11 +89,11 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 Content users can move a content item to another location.
 
-1. Access the content item you wish to move. In this example, the content item example below \(**Image**\) is obtained from **Web Content \> Content \> Articles** location. Click the icon to select the content item. After doing so, click the **Move** icon on the header. 
+1. Access the content item you want to move. In this example, the content item in the following example is obtained from **Web Content > Content > Articles** location. Click the icon to select the content item. After selecting the content item, click the **Move** icon on the header. 
 
     ![Select Content Item to Move](../../../../../assets/Select_Content_Item_to_Move_HCL_Content_Composer.png)
 
-2. A location selector should appear on the screen. Pick the location (site area or portal page) to move the content to. After selecting, click the **Move** button to finalize moving of the content item.
+2. A location selector appears. Pick the location (site area or portal page) to move the content to. After selecting, click the **Move** button to move the content item.
 
     ![Select a location and click Move](../../../../../assets/Select_Site_Area_to_Move_Content_to_HCL_Content_Composer.png)
 
@@ -101,11 +101,11 @@ Content users can move a content item to another location.
 
 Content users can copy a content item to another location.
 
-1. Go to the content item you want to copy. In the example below, the content item is obtained from **Web Content > Content > Articles** location. Click the icon to select the content item and then click the **Copy** icon on the header. 
+1. Go to the content item you want to copy. In the following example, the content item is obtained from **Web Content > Content > Articles** location. Click the icon to select the content item and then click the **Copy** icon on the header. 
 
     ![Select Content Item to Copy](../../../../../assets/Select_Content_Item_to_Copy_HCL_Content_Composer.png)
 
-2. A location selector appears. Select the location (site area or portal page) you want to copy the content to. After selecting, click the **Copy** button to finalize copying of the content item.
+2. A location selector appears. Select the location (site area or portal page) you want to copy the content to. After selecting, click the **Copy** button to copy the content item.
 
     ![Select a location and click Copy](../../../../../assets/Select_Site_Area_to_Copy_Content_to_HCL_Content_Composer.png)
 
