@@ -65,10 +65,10 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
     -dxPassword <value>
     ```
 
-    Use this attribute to allow users to overwrite files on the local system or server without being prompted for `OVERWRITE-SERVER` or `OVERWRITE-LOCAL` confirmation:
+    Disable Prompt - Disables the confirmation prompt for overwriting local and server files. Bypasses the prompt and immediately proceeds on (Pushing | Pulling) theme files.:
 
     ```shell
-    -o, --allow-overwrite
+    -disablePrompt, --disable-prompt
     ```
 
 -   **Required options for LiveSync Push Theme**
