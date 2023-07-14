@@ -65,10 +65,10 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
     -dxPassword <value>
     ```
 
-    Disable Prompt - Disables the confirmation prompt for overwriting local and server files. Bypasses the prompt and immediately proceeds on (Pushing | Pulling) theme files.:
+    Disable Prompt - Disables the confirmation prompt for overwriting local and server files. Bypasses the prompt and immediately proceeds on pushing or pulling theme files.:
 
     ```shell
-    -disablePrompt, --disable-prompt
+    -disablePrompt, --disable-prompt <value>
     ```
 
 -   **Required options for LiveSync Push Theme**
@@ -180,6 +180,12 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 
     ```shell
     -dxPassword <value>
+    ```
+
+    Disable Prompt - Disables the confirmation prompt for overwriting local and server files. Bypasses the prompt and immediately proceeds on pushing or pulling theme files.:
+
+    ```shell
+    -disablePrompt, --disable-prompt <value>
     ```
 
 -   **Required options for LiveSync Pull Theme**
