@@ -34,8 +34,8 @@ Traces can be set for different durations:
     Traces can be set for a temporary period by using the administration portlet **Enable Tracing** or the WebSphere® Integrated Solutions Console. To set traces by using the portlet, complete the following steps:
 
     1.  Log in as the administrator.
-    2.  Click the **Administration menu** icon. Then, click **Portal Analysis > Enable Tracing**. The Enable Tracing portlet displays.
-    3.  Click **Site Administration > Advanced Administration > Portal Analysis > Enable Tracing**. The Enable Tracing portlet displays.
+    2.  Click the **Administration menu** icon. Then, click **Tracing: Gather data about the site**. The Enable Tracing portlet displays.
+    3.  Click **Site Administration > Advanced Administration > Tracing: Gather data about the site**. The Enable Tracing portlet displays.
     4.  Type the required trace string into the field **Append these trace settings:** For example, this string can be `com.ibm.wps.command.credentialvault.*=finest`
     5.  Click the **Add** icon. **Enable Tracing** updates the **Current trace settings** field.
     **Note:** Restarting HCL Portal removes traces that were set by using the Enable Tracing Administration portlet.
