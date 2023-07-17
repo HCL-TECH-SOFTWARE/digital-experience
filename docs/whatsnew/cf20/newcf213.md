@@ -41,10 +41,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager REST API v2 - AI Analysis API
 
 === "Containers"
-    The Web Content Manager REST V2 AI Analyzer APIs can be used to do sentimental analysis, keyword extraction, and auto summarization for a content element. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) deployment and [AI analyzer API for content](../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for more information.
+    The Web Content Manager REST V2 AI Analyzer APIs can be used to do sentiment analysis, keyword extraction, and auto summarization for a content element. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) deployment and [AI analyzer API for content](../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for more information.
 
 === "On-Premises"
-    The Web Content Manager REST V2 AI Analyzer APIs can be used to do sentimental analysis, keyword extraction, and auto summarization for a content element. See the Help Center topics WCM Content Analysis enablement for [Traditional](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) deployment and [AI analyzer API for content](../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for more information.
+    The Web Content Manager REST V2 AI Analyzer APIs can be used to do sentiment analysis, keyword extraction, and auto summarization for a content element. See the Help Center topics WCM Content Analysis enablement for [Traditional](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) deployment and [AI analyzer API for content](../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) for more information.
 
 ### Workflow date fields in REST API search query results
 
