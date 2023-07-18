@@ -182,7 +182,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     -dxPassword <value>
     ```
 
-    Disable Prompt - Disables the confirmation prompt for overwriting local and server files. Bypasses the prompt and immediately proceeds on pulling theme files.:
+    Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds on pulling theme files.
 
     ```shell
     -disablePrompt, --disablePrompt <value>
