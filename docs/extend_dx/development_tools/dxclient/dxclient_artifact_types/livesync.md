@@ -236,4 +236,4 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 6. Case-Sensitivity for file and folder naming are not supported.
 7. In any case, if the real-time sync of theme during the push command gets disrupted, disconnect and reconnect again.
 8. It is not recommended to use LiveSync on a production server.
-9. LiveSync is not supported currently in scaled DX environment set-up.
+9. LiveSync is currently not supported in a scaled DX environment setup.
