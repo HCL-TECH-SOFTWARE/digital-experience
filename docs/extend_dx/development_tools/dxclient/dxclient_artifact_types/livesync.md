@@ -65,7 +65,7 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
     -dxPassword <value>
     ```
 
-    Disable Prompt - Disables the confirmation prompt for overwriting local and server files. Bypasses the prompt and immediately proceeds on pushing theme files.:
+    Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds on pushing theme files.
 
     ```shell
     -disablePrompt, --disablePrompt <value>
