@@ -74,28 +74,32 @@ logging:
 
 ## Log configuration string format
 
-Log configuration strings \(the values set in the `level` properties of the custom-values.yaml\) use the following common format, where multiple trace settings for the same application are separated by commas:
+Log configuration strings (the values set in the `level` properties of the custom-values.yaml) use the following common format, where multiple trace settings for the same application are in the form of a list:
 
 ```
-<component>:<pattern>=<log-level>,<component>:<pattern>=<log-level>
+- "<component>:<pattern>=<log-level>"
+- "<component>:<pattern>=<log-level>"
 ```
 
--   `component` - represents a subsystem of the application and must be from a limited list per application \(see the following examples\).
--   `pattern` - describes the specific component area to log \(for example, a Java package\).
--   `log-level` - defines the granularity at which logging is enabled \(see later for permitted levels\).
+-   `component` - represents a subsystem of the application and must be from a limited list per application (see the following examples).
+-   `pattern` - describes the specific component area to log (for example, a Java package).
+-   `log-level` - defines the granularity at which logging is enabled (see later for permitted levels).
 
-The exact format of `pattern` depends on the configured application. The appropriate values are provided by HCL Support, if you are asked to enable tracing as part of a case. Some examples of log configuration strings for different DX applications are given as follows:
+The exact format of `pattern` depends on the configured application. The appropriate values are provided by HCL Support, if you are asked to enable tracing as part of a case. You can use wildcards for the `pattern` section of the log string. Some examples of log configuration strings for different DX applications are given as follows:
 
 **DX Core example**:
 
 ```
-wp_profile:com.hcl.App=info,wp_profile:com.hcl.util.Data=finest
+- "wp_profile:com.hcl.App=info"
+- "wp_profile:com.hcl.util.Data=finest"
 ```
 
 **Digital Asset Management example**:
 
 ```
-api:server-v1:dist=info,worker:server-v1:dist=info,api:server-v1:dist:server=debug
+- "api:server-v1:dist=info"
+- "worker:server-v1:dist=info"
+- "api:server-v1:dist:server=debug"
 ```
 
 ## Supported application and component names
@@ -145,6 +149,7 @@ This retrieves the log for a single sidecar container, which corresponds to a si
 
 !!!note
     The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see [Configure Core sidecar logging](../../../install/container/helm_deployment/preparation/optional_tasks/optional_core_sidecar_log.md).
+    Setting the trace strings when logged into the PortalServer or in the WAS console is supported. For more information, see [System event logging](../../../manage/troubleshooting/logging_and_tracing/adsyslog.md).
 
 By default, two sidecar containers are launched with Core:
 
