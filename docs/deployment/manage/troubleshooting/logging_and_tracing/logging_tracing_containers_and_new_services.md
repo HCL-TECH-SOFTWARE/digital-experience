@@ -82,7 +82,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 Once a trace string is added or removed in the Tracing portlet, the Digital Experience platform page containing the **Tracing portlet** application must be refreshed in the browser.
 
 !!!note
-    The content above is only for Client Side logging and the logs can be viewed in the browser console using the developer tools
+    The procedure for enabling tracing for the current HCL Digital Experience 9.5 session is only for Client Side logging. You can view the logs in the browser console using developer tools.
     The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
 
 !!!important
