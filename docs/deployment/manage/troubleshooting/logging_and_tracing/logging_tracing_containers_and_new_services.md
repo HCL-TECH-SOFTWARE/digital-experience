@@ -69,7 +69,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 ## Enable tracing just for the current HCL Digital Experience 9.5 session
 
 1.  Click the **Administration** menu icon. Then, click **Tracing: Gather data about the site**.
-2.  Enter any of the following values in the **Append these trace settings** field,
+2.  Enter any of the following values in the **Append these trace settings** field.
 
     For example, to trace all events, enter the following value:
 
