@@ -35,7 +35,7 @@ Follow the steps below to create new content with the HCL Digital Experience 9.5
 
     ![Select template for the new content item](../../../../../assets/Complete_new_content_fields_HCL_Content_Composer.png)
 
-5.  In **Select Location**, select the location(site area or portal page) to present the content when completed and ready for publication. Using the same new content example, the **Web Content / Articles** location is selected.
+5.  In **Select Location**, select the location (site area or portal page) to present the content when completed and ready for publication. Using the same new content example, the **Web Content / Articles** location is selected.
 
     ![Select location for new content](../../../../../assets/Select_location_new_content_HCL_Content_Composer.png)
 
@@ -57,7 +57,7 @@ Follow the steps below to create new content with the HCL Digital Experience 9.5
 
 Users can also create new content via the Search Results view.
 
-1.  From the HCL Digital Experience 9.5 Content Composer user interface, enter a search term in the search box located in the upper right corner as shown in the example below:
+1.  From the HCL Digital Experience 9.5 Content Composer user interface, enter a search term in the search box located in the upper right corner as shown in the following example:
 
     ![Search content in Content Composer](../../../../../assets/Search_content_HCL_Content_Composer.png)
 
@@ -76,12 +76,12 @@ Follow the steps to create a new content template with auto-populated location f
 
     ![](../../../../../assets/HCL_Content_Composer_create_content_auto_locate.png)
 
-3.  The location will auto-populate to the selected Location as shown below.
+    The location auto-populates to the selected Location as shown in the following example.
 
     ![](../../../../../assets/HCL_Content_Composer_auto_locate_new_content.png)
 
-4.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
-5.  When done, select **Save** to save your settings and create your new content. You can also select **Save and Close** to create your new content with the saved settings and keywords. The **Save and Close** option redirects you to the new content's location in the Content Composer dashboard.
+3.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
+4.  When done, select **Save** to save your settings and create your new content. You can also select **Save and Close** to create your new content with the saved settings and keywords. The **Save and Close** option redirects you to the new content's location in the Content Composer dashboard.
 
 ## Content authoring actions in Search Results view
 
