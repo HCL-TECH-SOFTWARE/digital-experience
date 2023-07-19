@@ -85,7 +85,7 @@ Log configuration strings (the values set in the `level` properties of the custo
 -   `pattern` - describes the specific component area to log (for example, a Java package).
 -   `log-level` - defines the granularity at which logging is enabled (see later for permitted levels).
 
-The exact format of `pattern` depends on the configured application. The appropriate values are provided by HCL Support, if you are asked to enable tracing as part of a case. Wildcards are allowed for the `pattern` section of the log string. Some examples of log configuration strings for different DX applications are given as follows:
+The exact format of `pattern` depends on the configured application. The appropriate values are provided by HCL Support, if you are asked to enable tracing as part of a case. You can use wildcards for the `pattern` section of the log string. Some examples of log configuration strings for different DX applications are given as follows:
 
 **DX Core example**:
 
