@@ -149,7 +149,7 @@ This retrieves the log for a single sidecar container, which corresponds to a si
 
 !!!note
     The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see [Configure Core sidecar logging](../../../install/container/helm_deployment/preparation/optional_tasks/optional_core_sidecar_log.md).
-    Setting the trace strings when logged into the PortalServer or in the WAS console is still/also supported. see [System event logging](../../../manage/troubleshooting/logging_and_tracing/adsyslog.md)
+    Setting the trace strings when logged into the PortalServer or in the WAS console is supported. For more information, see [System event logging](../../../manage/troubleshooting/logging_and_tracing/adsyslog.md).
 
 By default, two sidecar containers are launched with Core:
 
