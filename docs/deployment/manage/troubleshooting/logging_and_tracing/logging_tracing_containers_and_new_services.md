@@ -47,7 +47,13 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 
     If you need detailed trace output of Content Composer or Digital Asset Management to troubleshoot a problem, follow these steps in the succeeding sections.
 
-## Permanently enable tracing
+
+!!!note
+    The following tracing configurations for enabling tracing only apply to client-side logging.
+    The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
+
+
+## Enabling tracing permanently
 
 1.  Start WebSphere Application Server.
 2.  Open the WebSphere Integrated Solutions Console.
@@ -66,7 +72,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 7.  Save the changes.
 8.  Restart HCL Digital Experience 9.5 container session.
 
-## Enable tracing just for the current HCL Digital Experience 9.5 session
+## Enabling tracing for the current HCL Digital Experience 9.5 session
 
 1.  Click the **Administration** menu icon. Then, click **Tracing: Gather data about the site**.
 2.  Enter any of the following values in the **Append these trace settings** field.
@@ -81,9 +87,12 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 
 Once a trace string is added or removed in the Tracing portlet, the Digital Experience platform page containing the **Tracing portlet** application must be refreshed in the browser.
 
-!!!note
-    The procedure for enabling tracing for the current HCL Digital Experience 9.5 session is only for Client Side logging. You can view the logs in the browser console using developer tools.
-    The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
+
+## View Logs in Browser Console using developer tools
+You can view the client logs using the Developer Tools in the web browser. The following image shows an example on how to view the logs of Content Composer.
+
+![View Logs in Web Browser ](../../../../images/View_logs_in_console.png)
+
 
 !!!important
     WebSphere Application Server consolidates the trace strings list by removing strings that are logically contained within others. For example, if you have a string `x.y.z.*=all` in the list, it disappears when you add `x.y.*=all`
