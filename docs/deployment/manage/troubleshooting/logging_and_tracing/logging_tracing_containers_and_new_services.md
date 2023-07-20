@@ -47,6 +47,12 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 
     If you need detailed trace output of Content Composer or Digital Asset Management to troubleshoot a problem, follow these steps in the succeeding sections.
 
+
+!!!note
+    The following tracing configurations only apply to client-side logging.
+    The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
+
+
 ## Permanently enable tracing
 
 1.  Start WebSphere Application Server.
@@ -80,11 +86,6 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 
 
 Once a trace string is added or removed in the Tracing portlet, the Digital Experience platform page containing the **Tracing portlet** application must be refreshed in the browser.
-
-
-!!!note
-    The following tracing configurations only apply to client-side logging.
-    The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
 
 
 ## View Logs in Browser Console using developer tools
