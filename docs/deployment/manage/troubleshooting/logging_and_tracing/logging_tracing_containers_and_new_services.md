@@ -49,7 +49,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 
 
 !!!note
-    The following tracing configurations only apply to client-side logging.
+    The following tracing configurations for enabling tracing only apply to client-side logging.
     The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
 
 
