@@ -84,7 +84,7 @@ Once a trace string is added or removed in the Tracing portlet, the Digital Expe
 ## View Logs in Browser Console using developer tools
 The client logs can be viewed using the Developer Tools in the web browser. The below image shows an example to view logs of Content Composer.
 
-![View and edit media asset keywords](../../../../images/View_logs_in_console.png)
+![View Logs in Web Browser ](../../../../images/View_logs_in_console.png)
 
 
 !!!note
