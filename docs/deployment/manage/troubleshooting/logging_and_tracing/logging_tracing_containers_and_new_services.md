@@ -88,7 +88,7 @@ The client logs can be viewed using the Developer Tools in the web browser. The 
 
 
 !!!note
-    The procedure for enabling tracing for the current HCL Digital Experience 9.5 session is only for Client Side logging.
+    The tracing configurations listed above do only apply for client side logging.
     The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
 
 !!!important
