@@ -53,7 +53,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
     The Warning **The configured trace state included the following specifications that do not match any loggers currently registered in the server: ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' Ignore this message if the trace specifications ''hcl.logging.content-ui.*=all:hcl.logging.medialibrary.*=all'' are valid.** can be ignored.
 
 
-## Permanently enable tracing
+## Enabling tracing permanently
 
 1.  Start WebSphere Application Server.
 2.  Open the WebSphere Integrated Solutions Console.
@@ -72,7 +72,7 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 7.  Save the changes.
 8.  Restart HCL Digital Experience 9.5 container session.
 
-## Enable tracing just for the current HCL Digital Experience 9.5 session
+## Enabling tracing for the current HCL Digital Experience 9.5 session
 
 1.  Click the **Administration** menu icon. Then, click **Tracing: Gather data about the site**.
 2.  Enter any of the following values in the **Append these trace settings** field.
