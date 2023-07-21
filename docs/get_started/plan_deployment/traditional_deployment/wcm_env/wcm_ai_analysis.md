@@ -20,12 +20,12 @@ To enable content AI analysis:
 
 1. Connect to DX Core and run the following specified config engine task.
 
-    ```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DContentAIProviderClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+    ```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DCustomAIClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
 
     !!!note
         - Possible values for ```ContentAIProvider``` parameter are ```OPEN_AI```, ```XAI``` or ```CUSTOM```.
-        - If ```ContentAIProvider``` value is set as ```OPEN_AI``` or ```XAI```, value set for the parameter ```ContentAIProviderClassName``` will be ignored.
-        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the Custom Content AI Provider implementation class in the parameter```ContentAIProviderClassName```. Ex: ```com.ai.sample.CustomerAI```. Refer to [Implementing Custom Content AI Provider Class](./wcm_ai_analysis.md#implementing-custom-content-ai-provider-class) to know about, how to implement Custom Content AI Provider class.
+        - If ```ContentAIProvider``` value is set as ```OPEN_AI``` or ```XAI```, value set for the parameter ```CustomAIClassName``` will be ignored.
+        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the Custom Content AI Provider implementation class in the parameter```CustomAIClassName```. Ex: ```com.ai.sample.CustomerAI```. Refer to [Implementing Custom Content AI Provider Class](./wcm_ai_analysis.md#implementing-custom-content-ai-provider-class) to know about, how to implement Custom Content AI Provider class.
         - Depending on the ContentAIProvider, set the correct API key of the respective provider in the ```ContentAIProviderAPIKey``` parameter.
 
 2. Validate that all the required configurations are added.
@@ -34,7 +34,7 @@ To enable content AI analysis:
     2. Verify that the ```AI_CLASS``` configuration property is added in WCM Config Service by going to **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**. Possible values for ```AI_CLASS``` are:
         - ```com.hcl.workplace.wcm.restv2.ai.ChatGPTAnalyzerService``` (if ```ContentAIProvider``` value is set as ```OPEN_AI```) 
         - ```com.hcl.workplace.wcm.restv2.ai.XAIAnalyzerService``` (if ```ContentAIProvider``` value is set as ```XAI```)
-        - Value set in parameter```ContentAIProviderClassName``` (if ```ContentAIProvider``` value is set as ```CUSTOM```)
+        - Value set in parameter```CustomAIClassName``` (if ```ContentAIProvider``` value is set as ```CUSTOM```)
 
         ![](../wcm_env/_img/AI_Provider_Class.png)
 
@@ -87,7 +87,7 @@ public class CustomerAI implements IAIGeneration {
 
 2. Run the following config engine task.
 
-```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DContentAIProviderClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DCustomAIClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
 
 ## Config Engine Task for disabling Content AI analysis
 
