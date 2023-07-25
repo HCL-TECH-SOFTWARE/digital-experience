@@ -54,6 +54,8 @@ security:
 
     If a custom secret is used instead of an API key directly in the `values.yaml` file, then the custom secret must be created using the content AI provider's API key. You must then reference the secret name in ```customContentAISecret``` property and you can leave the ```contentAIProviderAPIKey``` blank. 
 
+For more information, see [Guidelines for Configuring Credentials from Secrets](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md#guidelines-for-configuring-credentials-from-secrets).
+
 ## Disabling AI Analysis in Helm Chart
 
 The `content-ai` configurations are available in the Helm Chart [values.yaml](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md) file as `contentAI`.
