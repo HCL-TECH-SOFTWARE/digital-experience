@@ -256,7 +256,8 @@ This topic describes the commands that are used to create, update, delete, and r
         ```
         dxclient resource-env-provider import-properties -dxProfileName <dxProfileName> -filePath <filePath>
         ```
-
+!!! note
+    A server restart is needed for the changes to take full effect. Please see the [restart commands]('../dxcoreserver.md') suitable for your deployment type. 
 
 ???+ info "Related information"
     - [DXClient](../index.md)
