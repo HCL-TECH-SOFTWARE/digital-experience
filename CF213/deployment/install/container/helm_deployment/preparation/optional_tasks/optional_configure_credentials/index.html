@@ -1552,6 +1552,12 @@ Secrets can also be created using a secret yaml manifest. </p>
 <td>Core</td>
 </tr>
 <tr>
+<td>Core Content AI Secret</td>
+<td><code>security.core.customContentAISecret</code></td>
+<td><code>apiKey</code></td>
+<td>Core</td>
+</tr>
+<tr>
 <td>DAM Plugin Google Vision Credential secret</td>
 <td><code>security.damPluginGoogleVision.customDamGoogleVisionSecret</code></td>
 <td><code>authenticationKey</code> <br> <code>apiKey</code></td>
@@ -1688,6 +1694,18 @@ Secrets can also be created using a secret yaml manifest. </p>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-core-ltpa-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
+</code></pre></div></p>
+<p><strong>Core Content AI Secret</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1&quot;</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Required attribute</span>
+<span class="w">  </span><span class="nt">apiKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;apiKey&gt;</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-core-content-ai-secret</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace&gt;</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opaque&quot;</span>
 </code></pre></div></p>
@@ -1835,7 +1853,7 @@ Secrets can also be created using a secret yaml manifest. </p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2023</span>
       
     
   </small>

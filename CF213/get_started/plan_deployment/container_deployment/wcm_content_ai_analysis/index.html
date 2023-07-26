@@ -1076,9 +1076,9 @@
 <span class="w">    </span><span class="c1"># Settings for content AI </span>
 <span class="w">    </span><span class="nt">contentAI</span><span class="p">:</span>
 <span class="w">      </span><span class="c1"># Configures if content AI is enabled/disabled</span>
-<span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">      </span><span class="c1"># Settings for checking content AI provider. When contentAI enabled is true, provider will be used.</span>
-<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;OPEN_AI&quot;</span>
 </code></pre></div>
 <p>For enabling AI analysis for content, set <code>enabled</code> as <code>true</code> inside the contentAI section. It is mandatory to specify the content AI provider to be used in the <code>provider</code> property. A possible value for the provider is <code>OPEN_AI</code>.</p>
 <h3 id="configuring-custom-secret-or-api-key-of-content-ai-provider">Configuring Custom Secret or API Key of Content AI Provider</h3>
@@ -1091,13 +1091,14 @@
 <span class="w">    </span><span class="c1"># API key for AI Provider</span>
 <span class="w">    </span><span class="nt">contentAIProviderAPIKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 <span class="w">    </span><span class="c1"># Provide a secret name that will be used to set AI API Keys</span>
-<span class="w">    </span><span class="nt">customContentAISecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="nt">customContentAISecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sample-core-content-ai-secret&quot;</span>
 </code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Once AI analysis is enabled, it is mandatory for the administrator to specify the content AI provider's API key in <code>contentAIProviderAPIKey</code> property. </p>
 <p>If a custom secret is used instead of an API key directly in the <code>values.yaml</code> file, then the custom secret must be created using the content AI provider's API key. You must then reference the secret name in <code>customContentAISecret</code> property and you can leave the <code>contentAIProviderAPIKey</code> blank. </p>
 </div>
+<p>For more information, see <a href="../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials/#guidelines-for-configuring-credentials-from-secrets">Guidelines for Configuring Credentials from Secrets</a>.</p>
 <h2 id="disabling-ai-analysis-in-helm-chart">Disabling AI Analysis in Helm Chart</h2>
 <p>The <code>content-ai</code> configurations are available in the Helm Chart <a href="../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/">values.yaml</a> file as <code>contentAI</code>.</p>
 <p>The administrator can disable AI analysis for content in the <code>configuration</code> section of the <code>core</code> as shown in the following example.</p>
@@ -1112,9 +1113,9 @@
 <span class="w">      </span><span class="c1"># Settings for checking content AI provider. When contentAI enabled is true, provider will be used.</span>
 <span class="w">      </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
 </code></pre></div>
-<p>For disbaling AI analysis for content, set <code>enabled</code> as <code>false</code> inside the contentAI section.</p>
+<p>For disbaling AI analysis for content, set <code>enabled</code> as <code>false</code> inside the contentAI section. Specifying the provider is not required to disable AI analysis.</p>
 <h2 id="custom-configurations-for-ai-analysis">Custom Configurations for AI Analysis</h2>
-<p>To customize AI analysis-related configurations, log in to WAS console for customizing any of the custom properties in the WCM Config Service (<strong>Resource &gt; Resource Environment &gt; Resource Environment Providers &gt; WCM_WCMConfigService &gt; Custom Properties</strong>).</p>
+<p>To customize AI analysis-related configurations, log in to WAS console for customizing any of the custom properties in the WCM Config Service (<strong>Resource &gt; Resource Environment &gt; Resource Environment Providers &gt; WCM_WCMConfigService &gt; Custom Properties</strong>).</p>
 <h3 id="openai-chatgpt-specific-custom-configurations">OpenAI ChatGPT specific custom configurations</h3>
 <ol>
 <li><code>OPENAI_MODEL</code>: Currently supported AI model is <code>text-davinci-003</code>. However, the model can be overidden by overriding this property.</li>
@@ -1128,7 +1129,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2023</span>
       
     
   </small>
