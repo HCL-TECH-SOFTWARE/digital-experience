@@ -1,5 +1,5 @@
 # MacOS: Configuring a developer mode environment
 
-While WebSphere does not support to run natively on MacOS and therefore you cannot run DX either natively you can run DX in Docker on MacOS. To turn on developer mode you can follow the Linux instructions to enable and disable developer mode.
+WebSphere is not supported to run natively on MacOS. Therefore, you also cannot run DX natively on this operating system. However, you can run DX in Docker on MacOS. To enable developer mode, follow the instructions in [Linux: Configuring a developer mode environment](cfg_dev_mode-Linux.md).
 
 For developing portlets and other applications, the IBM JDK 8 is required. This can be installed through the IBM Installation Manager. If you are running a non-intel processor such as M1 or M2, it is recommended that you use the Rosetta emulation to use the regular IBM JDK.
