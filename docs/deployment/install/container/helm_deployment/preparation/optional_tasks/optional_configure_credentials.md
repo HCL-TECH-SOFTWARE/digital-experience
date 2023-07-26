@@ -194,6 +194,7 @@ Here's a list of the required credential attributes for each application:
 | Core Config Wizard Credential secret | `security.core.customConfigWizardSecret` | `username`  <br> `password` | Core (Config Wizard) |
 | Core LDAP Credential secret | `configuration.core.ldap.customLdapSecret` | `bindUser` <br> `bindPassword` | Core |
 | Core LTPA Credential secret | `configuration.core.ltpa.customLtpaSecret` | `ltpa.version` <br> `ltpa.realm` <br> `ltpa.desKey` <br> `ltpa.privateKey` <br> `ltpa.publicKey` <br> `ltpa.password` | Core |
+| Core Content AI Secret | `security.core.customContentAISecret` | `apiKey` | Core |
 | DAM Plugin Google Vision Credential secret | `security.damPluginGoogleVision.customDamGoogleVisionSecret` | `authenticationKey` <br> `apiKey` | DAM Google Vision |
 | DAM Plugin Kaltura Credential secret | `security.damPluginKaltura.customDamKalturaSecret` | `authenticationKey` <br> `secretKey` | DAM Kaltura |
 | Persistence Connection Pool Credential secret | `security.persistence.customConnectionPoolSecret` | `username` <br> `password` | Persistence |
@@ -289,6 +290,20 @@ data:
 metadata:
   labels:
   name: sample-core-ltpa-secret
+  namespace: <namespace>
+type: "Opaque"
+```
+
+**Core Content AI Secret**
+```yaml
+apiVersion: "v1"
+kind: "Secret"
+data:
+  # Required attribute
+  apiKey: <apiKey>
+metadata:
+  labels:
+  name: sample-core-content-ai-secret
   namespace: <namespace>
 type: "Opaque"
 ```
