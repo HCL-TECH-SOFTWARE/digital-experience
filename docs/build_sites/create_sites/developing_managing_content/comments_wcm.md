@@ -76,7 +76,9 @@ This section gives an overview about the page component shipped as a part of CF2
 
 ### Overview on Custom Page Component for WCM Comments
 
-Starting from CF214, the default WCM Comments library is shipped with a new page component, additional authoring template that uses newly added presentation template for rendering the WCM comments HTML markup component inside the newly added page component.
+Starting from CF214, the default WCM Comments library is shipped with a new custom page component, additional authoring template that uses newly added presentation template for rendering the WCM comments HTML markup component inside the newly added page component.
+
+This section gives an overview on the components related to the newly shipped page component.
 
 #### Authoring Template of Page Component
 
@@ -128,19 +130,28 @@ After setting up the page component with comments UI on the page, add, reply, li
 ![Insert a Tag](../developing_managing_content/_img/insert_tag_helper_content_map_page_component.png)
 4. Click **OK** after selecting all the values.
 ![Content mapping to Page Component](../developing_managing_content/_img/content_refer_to_page_component_in_rich_text.png)
-5. Save the content.
-6. Once WCM Comments UI is rendered, provide the actual content uuid to the component.
-7. After setting up the comments UI on the rich text editor, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
+5. Save the content to enable the commenting feature for that particular content and after setting up the comments UI on the rich text editor, this content can be added to any page.
+6. Once WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and current content UUID similar to the steps mentioned in the previous section.
+7. After following the above configuration steps, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
 
 ### Configuring WCM comments in Script Application
 
-1. On the Site manager > Application > Script Application (add to page)
-2. Edit > Actions (top right of the page) > Insert WCM Tag then select our page component (WCM Comments 1.0/Page Component)
-3. Pop-up- Tag type : Content- Context: Selected- Content reference: New Comments content under WCM Comments 1.0/Page Component
-4. Ok then Save
+1. In the Edit mode, Open the Site manager and navigate to Applications tab > Script Application and add it to the page
+![Add Script Application to Page](../developing_managing_content/_img/script_application.png)
+2. Edit > Actions (top right of the page) > Insert WCM Tag which opens **Insert Tag** helper window
+then select our page component (WCM Comments 1.0/Page Component)
+![Insert WCM Tag](../developing_managing_content/_img/insert_wcm_tag.png)
+3. In the **Insert Tag** helper window, select the following values:
+    - In **Select a tag type** field, select **Content**.
+    - In **Context** field, select **Selected**.
+    - In **Content Reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
+![Insert a Tag](../developing_managing_content/_img/insert_tag_helper_content_map_page_component.png)
+4. Click **OK** after selecting all the values.
 5. Save (Top right)
-6. Close the script app modal
-7. Provide the actual content uuid to the component
+![Preview Comments and Save](../developing_managing_content/_img/comments_preview.png)
+6. Close the Script Applications Editor Window
+7. Once WCM Comments UI is rendered in the script application added to the page, specify the library name to be used for storing the comments in and current content UUID similar to the steps mentioned in the previous section.
+8. After following the above configuration steps, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
 
 ### Configuring WCM comments in Custom Portlet
 
