@@ -68,7 +68,7 @@ For security purposes, if you need to limit the delete comments option to a spec
 After setting up the comments UI on the page, you can now add, reply, like/unlike, and delete comments. You can also view the total comments count on the content item.
 ![WCM Comments UI](../developing_managing_content/_img/wcm-comments-ui.png)
 
-## Render Presentation Template of content in external components
+## Render WCM comments in external components
 
 Starting from CF214, WCM comments can be rendered in the external components like Page Components, Rich Text, Custom Portlets or Script applications etc. In this case, enabling and configuring Custom Plugin Component for WCM comments as described in the previous section is not required.
 
@@ -84,7 +84,7 @@ This section gives an overview on the components related to the newly shipped pa
 
 ![Authoring Template of Page Component](../developing_managing_content/_img/authoring_template_page_component.png)
 
-#### Authoring Template of Page Component
+#### Presentation Template of Page Component
 
 ![Presentation Template of Page Component](../developing_managing_content/_img/presentation_template_page_component.png)
 
@@ -92,7 +92,7 @@ This section gives an overview on the components related to the newly shipped pa
 
 ![WCM comments HTML markup component](../developing_managing_content/_img/html_markup_component_of_comments.png)
 
-#### New Page Component
+#### Newly added Custom Page Component
 
 ![New Page Component](../developing_managing_content/_img/new_page_component.png)
 
@@ -105,13 +105,9 @@ The new page component is available in the site manager under "Page Components T
 ### Rendering and Configuring New Page Component having WCM comments HTML markup component on the Page
 
 1. Open the site manager in the edit mode and add the newly shipped page component mentioned above to any page where comments functionality needs to be enabled. Once page component is added to the page, WCM comments UI will be visible. 
-
 2. Specify the library name to be used for storing the comments in the below text field.
-
 ![Library Name for Comments](../developing_managing_content/_img/library_name_for_storing_comments.png)
-
 3. Specify the content UUID to which comments need to be added in the below text field.
-
 ![Content UUID for Comments](../developing_managing_content/_img/content_uuid_mapping_to_comments.png)
 
 After setting up the page component with comments UI on the page, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
@@ -119,9 +115,7 @@ After setting up the page component with comments UI on the page, add, reply, li
 ### Rendering and Configuring WCM comments HTML markup component in Rich Text Editor
 
 1. Navgate to the content to which WCM comments feature needs to be available and edit the content. Now, add New Page Component having WCM comments HTML markup component to Rich Text Editor
-
 ![Add New Page Component having WCM comments HTML markup component to Rich Text Editor](../developing_managing_content/_img/add_new_page_component_to_rich_text_editor.png)
-
 2. In the **Rich Text Editor**, click the **Insert Tag** button to add the WCM tag.
 3. In the **Insert Tag** helper window, select the following values:
     - In **Select a tag type** field, select **Content**.
@@ -176,5 +170,10 @@ The actions available for a user depend on their role:
 
 If you want to perform a replacement of the OOB components that are shipped, see [Adding the sample web content libraries in the authoring portlet](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries.md).
 
+## Cleanup orphaned comments data stored in the comment's library.​
 
+Starting from CF214, a new API is available for soft deleting all the comments data that do not have mapping with actual content
 
+{{host}}/{{WpsContextRoot}}/mycontenthandler/wcmrest/deleteComments?libraries=Web Content&libraries=Demo Library​
+
+Leverages existing feature for purging WCM deleted content: https://opensource.hcltechsw.com/digital-experience/CF212/manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted/?h=purge
