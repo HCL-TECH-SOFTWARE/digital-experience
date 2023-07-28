@@ -97,13 +97,15 @@ security:
     # API key for AI Provider
     contentAIProviderAPIKey: ""
     # Provide a secret name that will be used to set AI API Keys
-    customContentAISecret: ""
+    customContentAISecret: "sample-core-content-ai-secret"
 ```
 
 !!!important
     Once AI analysis is enabled, it is mandatory for the administrator to specify the content AI provider's API key in ```contentAIProviderAPIKey``` property. 
 
     If a custom secret is used instead of an API key directly in the `values.yaml` file, then the custom secret must be created using the content AI provider's API key. You must then reference the secret name in ```customContentAISecret``` property and you can leave the ```contentAIProviderAPIKey``` blank. 
+
+For more information, see [Guidelines for Configuring Credentials from Secrets](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md#guidelines-for-configuring-credentials-from-secrets).
 
 ## Disabling AI Analysis in Helm Chart
 
@@ -124,7 +126,7 @@ configuration:
       provider: ""
 ```
 
-For disbaling AI analysis for content, set ```enabled``` as ```false``` inside the contentAI section.
+For disbaling AI analysis for content, set ```enabled``` as ```false``` inside the contentAI section. Specifying the provider is not required to disable AI analysis.
 
 ## Custom Configurations for AI Analysis
 

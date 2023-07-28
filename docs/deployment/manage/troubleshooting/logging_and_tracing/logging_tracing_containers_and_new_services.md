@@ -88,8 +88,8 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 Once a trace string is added or removed in the Tracing portlet, the Digital Experience platform page containing the **Tracing portlet** application must be refreshed in the browser.
 
 
-## View Logs in Browser Console using developer tools
-You can view the client logs using the Developer Tools in the web browser. The following image shows an example on how to view the logs of Content Composer.
+## Viewing logs in the browser console using developer tools
+You can view the client logs using the developer tools in the web browser. The following image shows an example on how to view the logs of Content Composer.
 
 ![View Logs in Web Browser ](../../../../images/View_logs_in_console.png)
 
