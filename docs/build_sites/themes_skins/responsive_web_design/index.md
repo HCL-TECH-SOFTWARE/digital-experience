@@ -4,7 +4,7 @@ Responsive Web Design provides content parity between mobile devices and desktop
 
 
 -   **[Mobile navigation](rwd_add_navphone.md)**  
-The HCL Digital Experience 8.5 ready-to-use theme provides two new responsive page navigation designs for mobile devices. One is aimed at smartphones, while the other is designed for tablets. The user agent for a device is parsed to determine which navigation to render on the portal page.
+The HCL Digital Experience theme, Portal 8.5, provides two new responsive page navigation designs for mobile devices. One is aimed at smartphones, while the other is designed for tablets. The user agent for a device is parsed to determine which navigation to render on the portal page.
 -   **[Standard portal pages and mobile devices](rwd_legacypages.md)**  
 HCL Digital Experience has two types of pages, Standard Portal Pages and Static Pages. Static pages use HTML templates to organize layout containers and controls, and are used as the default page type since version 7.0. Standard Portal pages use table-based layouts.
 -   **[Relative width CSS classes for theme layouts](../responsive_web_design/relative_width_css_classes/index.md)**  
