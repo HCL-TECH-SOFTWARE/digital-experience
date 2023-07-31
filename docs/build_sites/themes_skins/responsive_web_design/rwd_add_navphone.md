@@ -1,6 +1,6 @@
 # Mobile navigation
 
-The HCL Digital Experience 8.5 ready-to-use theme provides two new responsive page navigation designs for mobile devices. One is aimed at smartphones, while the other is designed for tablets. The user agent for a device is parsed to determine which navigation to render on the portal page.
+The HCL Digital Experience theme, Portal 8.5, provides two new responsive page navigation designs for mobile devices. One is aimed at smartphones, while the other is designed for tablets. The user agent for a device is parsed to determine which navigation to render on the portal page.
 
 ## Smartphone navigation design
 
@@ -29,17 +29,17 @@ The mobile navigation markup for both smartphone and tablet is created by the mo
 The navigation on mobile devices is rendered by the mobileNavigation.jsp file. Therefore, the primary, secondary, breadcrumb, and side navigation that is used on the desktop do not produce any output for a mobile device. The navigation is rendered for mobile, but is hidden when the page loads. On a tablet, the arrow button in the banner can be tapped to reveal the navigation. On a smartphone, the user can scroll up to see the first-level navigation pages. Since smartphones have little real estate, site designers might want to hide certain first-level pages, such as Administration, for these devices. Add the `com.ibm.portal.mobile.Hidden` metadata to the page to hide certain first-level pages. By default, the Administration, Application, and Tag Center pages are hidden.
 
 !!! note
-   If the expanded navigation for your Portal site ends up being long on a smartphone, it is possible part of the navigation can get cut off. This cut off happens because a maximum height is required to be set on the navigation in order for the CSS3 animations to work correctly. If your navigation does not fit into this maximum height, it can be adjusted by editing the mobilenav.css file of your custom theme in WebDAV at dav:fs-type1/themes/myCustomTheme/css/. Look for the following style declaration, increase the max-height, and save.
+      If the expanded navigation for your Portal site ends up being long on a smartphone, it is possible part of the navigation can get cut off. This cut off happens because a maximum height is required to be set on the navigation in order for the CSS3 animations to work correctly. If your navigation does not fit into this maximum height, it can be adjusted by editing the mobilenav.css file of your custom theme in WebDAV at dav:fs-type1/themes/myCustomTheme/css/. Look for the following style declaration, increase the max-height, and save.
 
-```
-.wpthemeMobileNav ul.wpthemeExpandNav {
-   /* navigation lists */
-   max-height: 100em;
-}
-```
+      ```
+      .wpthemeMobileNav ul.wpthemeExpandNav {
+         /* navigation lists */
+         max-height: 100em;
+      }
+      ```
 
 
 ???+ info "Related information"
-   - [Working with dynamic content spots](../customizing_theme/dynamic_content_spots/working_with_dcs/index.md)
-   - [Customizing navigation](../customizing_theme/cust_nav/)
+      - [Working with dynamic content spots](../customizing_theme/dynamic_content_spots/working_with_dcs/index.md)
+      - [Customizing navigation](../customizing_theme/cust_nav/)
 

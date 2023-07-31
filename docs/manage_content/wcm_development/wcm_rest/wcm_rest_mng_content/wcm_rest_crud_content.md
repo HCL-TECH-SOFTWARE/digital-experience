@@ -663,17 +663,39 @@ A content item can be updated by sending a PUT request to the following URI with
 
 For example:
 
+
 -   **PUT**
 
-    ```
-    HTTP/1.1 PUT
-    http://host:port/wps/mycontenthandler/wcmrest/Content/abae799b-4cca-47ae-aad8-b3d8204deefb
-    Content-Type: application/atom+xml
-    <atom:entry xmlns:atom="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
-        <wcm:name>Updated Content Name</wcm:name>
-        <atom:title>Updated Content Title</atom:title>
-    </atom:entry>
-    ```
+    XML body
+
+        
+        HTTP/1.1 PUT
+        http://host:port/wps/mycontenthandler/wcmrest/Content/abae799b-4cca-47ae-aad8-b3d8204deefb
+        Content-Type: application/atom+xml
+        <atom:entry xmlns:atom="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
+            <wcm:name>Updated Content Name</wcm:name>
+            <atom:title>Updated Content Title</atom:title>
+        </atom:entry>
+      
+
+    JSON body
+
+        
+
+        HTTP/1.1 PUT
+        http://host:port/wps/mycontenthandler/wcmrest/Content/abae799b-4cca-47ae-aad8-b3d8204deefb
+        Content-Type: application/json
+        {
+            "entry" : 
+            {
+                "name" : "Updated Content Name",
+                "title" : {
+                    "lang" : "en",
+                    "value" : "Updated Content Title"
+                }
+            }
+        }
+       
 
 -   **Response:**
 
