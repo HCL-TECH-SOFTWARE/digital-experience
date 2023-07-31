@@ -133,18 +133,15 @@ After setting up the page component with comments UI on the page, add, reply, li
     - Click on **Source** button in the **Rich Text Editor**
     - Remove **<p dir="ltr" style="margin: 0px;"></p>** from the last line of the body 
     - Enclose Content tag which you added as a part of Step 3, inside the div blocks exactly as mentioned below ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```
+6. Save the content to enable the commenting feature for that particular content and after setting up the comments UI on the rich text editor, this content can be added to any page.
+7. Once WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and current content UUID similar to the steps mentioned in the previous section.
+8. After following the above configuration steps, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
 
 Status on Step 4:
 ![Content mapping to Page Component](../developing_managing_content/_img/content_refer_to_page_component_in_rich_text.png)
 
 Status after Step 5:
 ![Rich Text Limitation](../developing_managing_content/_img/wcm_comments_richtext_limitation.png)
-
-5. Save the content to enable the commenting feature for that particular content and after setting up the comments UI on the rich text editor, this content can be added to any page.
-6. Once WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and current content UUID similar to the steps mentioned in the previous section.
-7. After following the above configuration steps, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
-
-
 
 ### Configuring WCM comments in Script Application
 
