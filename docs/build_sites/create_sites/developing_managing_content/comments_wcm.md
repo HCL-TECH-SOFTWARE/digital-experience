@@ -128,16 +128,16 @@ After setting up the page component with comments UI on the page, add, reply, li
     - In **Context** field, select **Selected**.
     - In **Content Reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
 ![Insert a Tag](../developing_managing_content/_img/insert_tag_helper_content_map_page_component.png)
-4. Click **OK** after selecting all the values.
+4. Click **OK** after selecting all the values. 
+5. Currently, we have some CSS alignment issue as limtation while rendering comments inside Rich Text. To avoid it, follow the below instruction.
+    - Click on **Source** button in the **Rich Text Editor**
+    - Remove **<p dir="ltr" style="margin: 0px;"></p>** from the last line of the body 
+    - Enclose Content tag which you added as a part of Step 3, inside the div blocks exactly as mentioned below ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```
+
+Status on Step 4:
 ![Content mapping to Page Component](../developing_managing_content/_img/content_refer_to_page_component_in_rich_text.png)
 
-Currently, we have some CSS alignment issue as limtation while rendering comments inside Rich Text. To avoid it, follow the below instruction.
-
-  - Click on **Source** button in the **Rich Text Editor**
-  - Remove **<p dir="ltr" style="margin: 0px;"></p>** from the last line of the body 
-  - Enclose Content tag which you added as a part of Step 3, inside the div blocks exactly as mentioned below.
-   ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```
-
+Status after Step 5:
 ![Rich Text Limitation](../developing_managing_content/_img/wcm_comments_richtext_limitation.png)
 
 5. Save the content to enable the commenting feature for that particular content and after setting up the comments UI on the rich text editor, this content can be added to any page.
