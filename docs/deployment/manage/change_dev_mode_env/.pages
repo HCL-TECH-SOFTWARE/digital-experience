@@ -3,4 +3,5 @@ nav:
     - index.md
     - cfg_dev_mode-AIX.md
     - cfg_dev_mode-Linux.md
+    - cfg_dev_mode-MacOS.md
     - cfg_dev_mode-Windows.md
