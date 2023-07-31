@@ -25,7 +25,7 @@ This task modifies the following components:
 
 3.  Change to the wp_profile_root/ConfigEngine directory.
 
-4.  Run the `ConfigEngine.bat optimize-derby-database./ConfigEngine.sh optimize-derby-databaseConfigEngine.sh optimize-derby-database` task to improve the performance of your Derby database.
+4.  Run the `ConfigEngine.bat optimize-derby-database` task to improve the performance of your Derby database.
 
     !!!important
         This task is appropriate only in a demonstration or development environment that is not configured to use Web Content Manager. You can also run the optimize-derby-database task after large data changes in the database.
