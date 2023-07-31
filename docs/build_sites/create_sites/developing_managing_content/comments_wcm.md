@@ -70,9 +70,9 @@ After setting up the comments UI on the page, you can now add, reply, like/unlik
 
 ## Render WCM comments in external components
 
-Starting from CF214, WCM comments can be rendered in the external components like Page Components, Rich Text, Custom Portlets or Script applications etc. In this case, enabling and configuring Custom Plugin Component for WCM comments as described in the previous section is not required.
+Starting from CF214, WCM comments can be rendered in the external components like Page Components, Rich Text or Script applications etc. In this case, enabling and configuring Custom Plugin Component for WCM comments as described in the previous section is not required.
 
-This section gives an overview about the page component shipped as a part of CF214 and also describes how to configure WCM comments in the external components like Rich Text Editor, Script Application and Custom Portlet.
+This section gives an overview about the page component shipped as a part of CF214 and also describes how to configure WCM comments in the external components like Rich Text Editor and Script Application.
 
 ### Overview on Custom Page Component for WCM Comments
 
@@ -98,9 +98,15 @@ This section gives an overview on the components related to the newly shipped pa
 
 #### Page Component accessible in Site Manager
 
-The new page component is available in the site manager under "Page Components Tab"
+Only admin users can view the new page component mentioned above in the site manager under "Page Components Tab"
 
 ![Page Component accessible in Site Manager](../developing_managing_content/_img/page_component_in_site_manager.png)
+
+#### Showing and Hiding Comments Page Component in Site Manager
+
+For showing comments page component in Site Manager, we need to add a keyword with the value ```ibm.portal.toolbar.NewContent``` for Keywords property under the Profile section. Removing the keyword will hide the comments page component from Site Manager.
+
+![Enabling and Disabling Comments page component in Site Manager](../developing_managing_content/_img/profile_keyword_for_enabling_comments_pagecomponent.png)
 
 ### Rendering and Configuring New Page Component having WCM comments HTML markup component on the Page
 
@@ -124,9 +130,21 @@ After setting up the page component with comments UI on the page, add, reply, li
 ![Insert a Tag](../developing_managing_content/_img/insert_tag_helper_content_map_page_component.png)
 4. Click **OK** after selecting all the values.
 ![Content mapping to Page Component](../developing_managing_content/_img/content_refer_to_page_component_in_rich_text.png)
+
+Currently, we have some CSS alignment issue as limtation while rendering comments inside Rich Text. To avoid it, follow the below instruction.
+
+  - Click on **Source** button in the **Rich Text Editor**
+  - Remove **<p dir="ltr" style="margin: 0px;"></p>** from the last line of the body 
+  - Enclose Content tag which you added as a part of Step 3, inside the div blocks exactly as mentioned below.
+   ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```
+
+![Rich Text Limitation](../developing_managing_content/_img/wcm_comments_richtext_limitation.png)
+
 5. Save the content to enable the commenting feature for that particular content and after setting up the comments UI on the rich text editor, this content can be added to any page.
 6. Once WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and current content UUID similar to the steps mentioned in the previous section.
 7. After following the above configuration steps, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
+
+
 
 ### Configuring WCM comments in Script Application
 
@@ -147,12 +165,9 @@ then select our page component (WCM Comments 1.0/Page Component)
 7. Once WCM Comments UI is rendered in the script application added to the page, specify the library name to be used for storing the comments in and current content UUID similar to the steps mentioned in the previous section.
 8. After following the above configuration steps, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
 
-### Configuring WCM comments in Custom Portlet
-
-
 ## Access Roles and Permissions for WCM Comments
 
-Only authorized users can view, edit, and delete the comments in the library where the comments are stored. For more information, see [Managing users and groups](../../../deployment/manage/security/people/authorization/controlling_access/managing_users_groups/index.md). 
+Only authorized users can view, edit, and delete the comments in the library where the comments are stored. Also, the users should have atleast view access to WCM content library. For more information, see [Managing users and groups](../../../deployment/manage/security/people/authorization/controlling_access/managing_users_groups/index.md). 
 
 The actions available for a user depend on their role:
 
@@ -172,8 +187,30 @@ If you want to perform a replacement of the OOB components that are shipped, see
 
 ## Cleanup orphaned comments data stored in the comment's library.​
 
-Starting from CF214, a new API is available for soft deleting all the comments data that do not have mapping with actual content
+Starting from CF214, a new API is available for soft deleting all the comments data that do not have mapping with actual content.
+
+Pass all the library names that contain the orphaned comments data, in libraries query paramater. Note that the orphaned comment data will be inside ```Comments``` site area of each of the library that is being passed.  
+
+![Comments Library with Orphaned Comments](../developing_managing_content/_img/comments_library_orphaned_comments.png)
+
+Sample request is as follows:
 
 {{host}}/{{WpsContextRoot}}/mycontenthandler/wcmrest/deleteComments?libraries=Web Content&libraries=Demo Library​
+
+Sample Response body is as follows: 
+
+```
+{
+    "deletedCommentsStatus": {
+        "deletedCommentsList": [
+            "3346bd13-dfef-456c-bb94-ff4f829f626e",
+            "e04e2e4f-2ec2-4d7a-b22d-e502eb1a80bc"
+        ]
+    }
+}
+```
+
+![Delete Orphaned Comments of the libraries](../developing_managing_content/_img/delete_comments_api.png)
+
 
 Leverages existing feature for purging WCM deleted content: https://opensource.hcltechsw.com/digital-experience/CF212/manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted/?h=purge
