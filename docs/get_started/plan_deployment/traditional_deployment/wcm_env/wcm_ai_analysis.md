@@ -47,7 +47,7 @@ To enable content AI analysis:
 
 For using Custom Content AI Provider, the administrator should follow the below steps.
 
-1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface, create the jar file and put the jar file in the server and restart JVM.
+1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface, create the jar file and put the jar file either at custom shared library or if in containers to ```/opt/HCL/wp_profile/PortalServer/sharedLibrary``` in the server and restart JVM.
 
 Below is the sample Custom Content AI Provider class, which can be used to call Custom AI services for AI analysis. 
 
