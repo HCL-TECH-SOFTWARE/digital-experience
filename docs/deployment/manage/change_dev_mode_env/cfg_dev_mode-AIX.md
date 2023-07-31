@@ -17,6 +17,8 @@ This task modifies the following components:
     !!!note
         To add applications to the white list, modify the /PortalServer/config/StartupPerformance/wp.base_TargetMapExclList.propertieswp_profile_root\\PortalServer\\config\\StartupPerformance\\wp.base_TargetMapExclList.properties file. Add a line such as App_name, where App_name is the name of the application. Log on to the WebSphere® Integrated Solutions Console and go to **Applications > Application Types > WebSphere enterprise applications** to get a list of available applications.
 
+## Enabling developer mode
+
 1.  Open a command prompt.
 
 2.  Stop the HCL Portal server. Go to [Starting and stopping servers, deployment managers, and node agents](../stopstart.md) for information.
@@ -30,17 +32,31 @@ This task modifies the following components:
 
 5.  Start the HCL Portal server.
 
-6.  Run the `ConfigEngine.bat enable-develop-mode-startup-performance -DWasPassword=password./ConfigEngine.sh enable-develop-mode-startup-performance -DWasPassword=passwordConfigEngine.sh enable-develop-mode-startup-performance -DWasPassword=password` tasks. Then, stop and restart the HCL Portal server to propagate your change.
+6.  Run the following command to enable developer mode: 
+
+    `./ConfigEngine.sh enable-develop-mode-startup-performance -DWasPassword=password`
 
 7.  Prepare the remote web server for your developer mode.
+    
+    After ConfigEngine tasks are completed, regenerate the Web-Server plugin in the Integrated solutions console and propagate the new updated plugin to your HTTP-Servers.
 
-    Run the `ConfigEngine.bat disable-develop-mode-startup-performance -DWasPassword=password./ConfigEngine.sh disable-develop-mode-startup-performance -DWasPassword=passwordConfigEngine.sh disable-develop-mode-startup-performance -DWasPassword=password` task to revert to a production server. Then, stop and restart the HCL Digital Experience server to propagate your change.
+## Disabling developer mode
+
+1. To disable developer mode, run the following command:
+    
+    `./ConfigEngine.sh disable-develop-mode-startup-performance -DWasPassword=password`
 
     !!!note
-        You can run the `disable-develop-mode-startup-performance` task for the following scenarios:
+        You can disable developer mode in the following scenarios:
+        
+        -   When you are done developing your portal and portlets   
+        -   If the development settings are not adequate for a special development situation
+        -   When you cannot re-create a problem on the development server
 
--   When you are done developing your portal and portlets.
--   If the development settings are not adequate for a special development situation.
--   When you cannot re-create a problem on the development server.
+2. Regenerate the Web-Server plugin in the Integrated solutions console and propagate the new updated plugin to your HTTP-Servers.
+    
+    
+    
+
 
 
