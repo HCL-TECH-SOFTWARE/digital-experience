@@ -33,7 +33,7 @@ configuration:
       # Configures if content AI is enabled/disabled
       enabled: true
       # Settings for checking content AI provider. When enabled is true, provider will be used 
-      # and possible values are ```XAI```, ```OPEN_AI``` or ```CUSTOM```
+      # and possible values are 'XAI', 'OPEN_AI' or 'CUSTOM'
       provider: "CUSTOM"
       className: "com.ai.sample.CustomerAI"
 ```
@@ -44,7 +44,7 @@ For enabling AI analysis for content, set ```enabled``` as ```true``` inside the
 
 For using Custom Content AI Provider, the administrator should follow the below steps.
 
-1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface, create the jar file and put the jar file in the server and restart JVM.
+1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface, create the jar file and put the jar file either at custom shared library or if in containers to ```/opt/HCL/wp_profile/PortalServer/sharedLibrary``` in the server and restart JVM.
 
 Below is the sample Custom Content AI Provider class, which can be used to call Custom AI services for AI analysis. 
 
