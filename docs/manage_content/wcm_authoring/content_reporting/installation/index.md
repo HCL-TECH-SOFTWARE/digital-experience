@@ -1,24 +1,27 @@
 # Installing and Deploying Content Reporting
 
-This document contains instructions on how to install and deploy the Content Reporting application.
+This document contains instructions on how to install and deploy the Content Reporting application manually. Beginning with HCL DX 9.5 CF214, Content Reporting is installed and deployed by default as part of the CF update process.
 
 ## Packaging, installing, and deploying design
 
-Content Reporting is an instance of a react integration portlet configured to point to where the static files of the app can be loaded from. It can be enabled and disabled by using Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page. You can also enable contentReporting in the `values.yaml` file. For more information, see [Prepare Configuration](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#the-default-hcl-dx-95-container-valuesyaml-file).
+Content Reporting is an instance of a react integration portlet configured to point to where the static files of the app can be loaded from. It can be enabled and disabled by using Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page.
 
 ## Enabling and disabling Content Reporting
 
-This section describes how to enable and disable Content Reporting.
+This section describes how to enable and disable Content Reporting manually.
+
+!!! note
+    Beginning with HCL DX 9.5 CF214, Content Reporting is installed and deployed as part of the CF update process, so the below **enable-content-reporting** will be automatically executed during the CF update process; however, you can still manually enable it by running the **enable-content-reporting** config task, if Content Reporting was disabled previously.
 
 !!! note
     Before enabling Content Reporting, it is required to enable Practitioner Studio. For more information on how to enable Practiotioner Studio, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md). After enabling Content Reporting, it can then be used with other themes.
 
-### Enabling Content Reporting for traditional deployment
+### Enabling Content Reporting
 
 !!! note
-    Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. The **enable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
+    Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. The **enable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks on container deployments, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
-To enable Content Reporting for traditional deployment, run the **enable-content-reporting** config task.
+To enable Content Reporting, run the **enable-content-reporting** config task.
 
 !!! note
     It is not required to stop or restart the Portal when running these configuration tasks.
@@ -33,36 +36,16 @@ To enable Content Reporting for traditional deployment, run the **enable-content
 !!! note
         If using a webserver, it is required to [map the Content Reporting application to the server](https://www.ibm.com/docs/en/was/9.0.5?topic=files-mapping-modules-servers) in addition to the Digital Experience server or cluster. Regenerate and propagate the plugin-cfg.xml file.
 
-
-### Enabling Content Reporting - Helm processes for DX deployments on Kubernetes
-
-In the `values.yaml` file, under configuration, enable contentReporting by setting the `enabled` flag to `true`:
-
-```
-# Content Reporting configurations
-contentReporting:
-    # Enable or disable Content Reporting
-    enabled: true
-```
-
 ### Disabling Content Reporting for traditional deployment
 
 !!! note
-    Disabling contentReporting runs the **disable-content-reporting** config engine task in the background. The **disable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks, please refer to [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
+    Disabling contentReporting runs the **disable-content-reporting** config engine task in the background. The **disable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks on container deployments, please refer to [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
-To disable Content Reporting for traditional deployment, run the **disable-content-reporting** config task.
+To disable Content Reporting, run the **disable-content-reporting** config task.
 
 -   AIX: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 -   Linux: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 -   Windows: `ConfigEngine.bat disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 
-### Disabling Content Reporting - Helm processes for DX deployments on Kubernetes
-
-In the `values.yaml` file, under the configuration, disable contentReporting by setting the `enabled` flag to `false`:
-
-```
-# Content Reporting configurations
-contentReporting:
-    # Enable or disable Content Reporting
-    enabled: false
-```
+!!! note
+    Once Content Reporting is disabled by running the **disable-content-reporting** config task, Content Reporting page will be removed. To enable Content Reporting again, the **enable-content-reporting** config task will need to be executed manually.
