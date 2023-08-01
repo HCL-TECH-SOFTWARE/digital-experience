@@ -9,7 +9,7 @@ These comments can be used in Intranet scenarios or in controlled settings allow
 
 ## WCM Comments as Custom Plugin Component
 
-Starting from CF213, WCM Comments can be enabled as Custom Plugin Component for a WCM content which can be rendered on page and Web Content Viewer​ Portlet.
+Starting from CF213, WCM Comments can be enabled as Custom Plugin Component for a WCM content. WCM Comments can be rendered on page and on the Web Content Viewer​ Portlet.
 
 This section describes how to enable, configure, and disable the WCM commenting solution as as Custom Plugin Component for a WCM content.
 
@@ -98,13 +98,13 @@ This section provides an overview of the components related to the newly shipped
 
 #### Page Component accessible in Site Manager
 
-While on Edit mode, by opening the Site manager and navigating to **Applications tab > Page Components**, only administrators can view the new page component mentioned above.
+Use the Site Manager on Edit mode. Go to **Applications > Page Components**. Only administrators can view the new custom page component.
 
 ![Page Component accessible in Site Manager](../developing_managing_content/_img/page_component_in_site_manager.png)
 
 #### Showing and Hiding Comments Page Component in Site Manager
 
-To show the Comments page component in Site Manager, go to the **Profile** section and in the **Keywords** property, add a keyword with the value ```ibm.portal.toolbar.NewContent```. Removing the keyword hides the Comments page component from Site Manager
+To show the Comments page component in Site Manager, go to the **Profile** section. In the **Keywords** property, enter ```ibm.portal.toolbar.NewContent```. Removing the keyword hides the Comments page component in the Site Manager.
 
 ![Enabling and Disabling Comments page component in Site Manager](../developing_managing_content/_img/profile_keyword_for_enabling_comments_pagecomponent.png)
 
@@ -143,7 +143,7 @@ After configuring the WCM comments HTML markup component in the Rich Text Editor
 
 ### Configuring WCM comments in Script Application
 
-1. While on Edit mode, open the Site manager and navigate to **Applications tab > Script Application**. Add it to the page.
+1. Use the Site Manager on Edit mode. Go to **Applications > Page Components**. Click the **+** button to add it to the page.
 ![Add Script Application to Page](../developing_managing_content/_img/script_application.png)
 2. Click **Edit > Actions > Insert WCM Tag**. The **Insert a Tag** window appears.
 ![Insert WCM Tag](../developing_managing_content/_img/insert_wcm_tag.png)
