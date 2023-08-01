@@ -145,7 +145,6 @@ After configuring the WCM comments HTML markup component in Rich Text Editor, ac
 1. While on Edit mode, open the Site manager and navigate to **Applications tab > Script Application**. Add it to the page.
 ![Add Script Application to Page](../developing_managing_content/_img/script_application.png)
 2. Click **Edit > Actions > Insert WCM Tag**. The **Insert a Tag** window appears.
-then select our page component (WCM Comments 1.0/Page Component)
 ![Insert WCM Tag](../developing_managing_content/_img/insert_wcm_tag.png)
 3. In the **Insert a Tag** window, select the following values:
     - In **Select a tag type** field, select **Content**.
