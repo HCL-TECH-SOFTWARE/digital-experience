@@ -68,17 +68,17 @@ For security purposes, if you need to limit the delete comments option to a spec
 After setting up the comments UI on the page, you can now add, reply, like/unlike, and delete comments. You can also view the total comments count on the content item.
 ![WCM Comments UI](../developing_managing_content/_img/wcm-comments-ui.png)
 
-## Render WCM comments in external components
+## Rendering WCM comments in external components
 
-Starting from CF214, WCM comments can be rendered in external components like Page Components, Rich Text or Script applications etc. For these scenarios, enabling and configuring Custom Plugin Component for WCM comments as described in the previous section is not required.
+Starting from CF214, WCM comments can be rendered in external components such as Page Components and Rich Text or Script applications. For these scenarios, enabling and configuring Custom Plugin Component for WCM comments as described in the ![WCM Comments as Custom Plugin Component](#wcm-comments-as-custom-plugin-component) is not required.
 
-This section gives an overview about the page component shipped as a part of CF214 and also describes how to configure WCM comments in the external components like Rich Text Editor and Script Application.
+This section provides an overview on the page component shipped as a part of CF214. It also describes how to configure WCM comments in external components such as Rich Text Editor and Script Application.
 
 ### Overview on Custom Page Component for WCM Comments
 
-Starting from CF214, the default WCM Comments library is shipped with a new custom page component, additional authoring template that uses newly added presentation template for rendering the WCM comments HTML markup component inside the newly added page component.
+Starting from CF214, the default WCM Comments library is shipped with a new custom page component and an additional authoring template that uses a new presentation template for rendering the WCM comments HTML markup component inside the new page component.
 
-This section gives an overview on the components related to the newly shipped page component.
+This section provides overview on the components related to the newly shipped page component. You can see the different components in the following images.
 
 #### Authoring Template of Page Component
 
@@ -98,52 +98,54 @@ This section gives an overview on the components related to the newly shipped pa
 
 #### Page Component accessible in Site Manager
 
-Only admin users can view the new page component mentioned above in the site manager under "Page Components Tab"
+While on Edit mode, by opening the Site manager and navigating to **Applications tab > Page Components**, only administrators can view the new page component mentioned above.
 
 ![Page Component accessible in Site Manager](../developing_managing_content/_img/page_component_in_site_manager.png)
 
 #### Showing and Hiding Comments Page Component in Site Manager
 
-For showing comments page component in Site Manager, we need to add a keyword with the value ```ibm.portal.toolbar.NewContent``` for Keywords property under the Profile section. Removing the keyword will hide the comments page component from Site Manager.
+To show the Comments page component in Site Manager, go to the **Profile** section and in the **Keywords** property, add a keyword with the value ```ibm.portal.toolbar.NewContent```. Removing the keyword hides the Comments page component from Site Manager
 
 ![Enabling and Disabling Comments page component in Site Manager](../developing_managing_content/_img/profile_keyword_for_enabling_comments_pagecomponent.png)
 
-### Rendering and Configuring New Page Component having WCM comments HTML markup component on the Page
+### Rendering and configuring new page component to have WCM comments HTML markup component on the page
 
-1. Open the site manager in the edit mode and add the newly shipped page component mentioned above to any page where comments functionality needs to be enabled. Once page component is added to the page, WCM comments UI will be visible. 
-2. Specify the library name to be used for storing the comments in the below text field.
+1. Open the Site Manager in the edit mode.
+2. Add the newly shipped page component to any page where the comments functionality needs to be enabled. After adding the page component to the page, the WCM comments UI should be visible. 
+3. In the **Library Name** field, specify the library name to be used for storing the comments.
 ![Library Name for Comments](../developing_managing_content/_img/library_name_for_storing_comments.png)
-3. Specify the content UUID to which comments need to be added in the below text field.
+4. In the **Content uuid** field, specify the content UUID to which comments need to be added.
 ![Content UUID for Comments](../developing_managing_content/_img/content_uuid_mapping_to_comments.png)
 
-After setting up the page component with comments UI on the page, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
+After setting up the page component with comments UI on the page, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. 
 
-### Rendering and Configuring WCM comments HTML markup component in Rich Text Editor
+### Rendering and configuring WCM comments HTML markup component in Rich Text Editor
 
-1. Navgate to the content to which WCM comments feature needs to be available and edit the content. Now, add New Page Component having WCM comments HTML markup component to Rich Text Editor
+1. Navigate to the content to which WCM comments feature needs to be available and edit the content.
+2. Add the new page component to have the WCM comments HTML markup component in the Rich Text Editor.
 ![Add New Page Component having WCM comments HTML markup component to Rich Text Editor](../developing_managing_content/_img/add_new_page_component_to_rich_text_editor.png)
-2. In the **Rich Text Editor**, click the **Insert Tag** button to add the WCM tag.
-3. In the **Insert Tag** helper window, select the following values:
+3. In the **Rich Text Editor**, click the **Insert Tag** button to add the WCM tag.
+4. In the **Insert a Tag** window, select the following values:
     - In **Select a tag type** field, select **Content**.
-    - In **Context** field, select **Selected**.
-    - In **Content Reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
+    - In **Select item context** field, select **Selected**.
+    - In **Select the content item to reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
 ![Insert a Tag](../developing_managing_content/_img/insert_tag_helper_content_map_page_component.png)
-4. Click **OK** after selecting all the values. 
+5. Click **OK** after selecting all the values. 
 ![Content mapping to Page Component](../developing_managing_content/_img/content_refer_to_page_component_in_rich_text.png)
-5. Currently, we have some CSS alignment issue as limtation while rendering comments inside Rich Text. To avoid it, follow the below instruction.
-    - Click on **Source** button in the **Rich Text Editor**
-    - Remove **<p dir="ltr" style="margin: 0px;"></p>** from the last line of the body 
-    - Enclose Content tag which you added as a part of Step 3, inside the div blocks exactly as mentioned below ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```
+6. Currently, there is a CSS alignment issue while rendering comments inside Rich Text. To avoid it, refer to the following steps:
+    a. Click the **Source** button in the **Rich Text Editor**.
+    b. Remove **<p dir="ltr" style="margin: 0px;"></p>** from the last line of the body. 
+    c. Enclose the Content tag you added as a part of Step 4 inside the div blocks exactly as how it appears in the following example: ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```.
 ![Rich Text Limitation](../developing_managing_content/_img/wcm_comments_richtext_limitation.png)
-6. Save the content to enable the commenting feature for that particular content and after setting up the comments UI on the rich text editor, this content can be added to any page.
-7. Once WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and current content UUID similar to the steps mentioned in the previous section.
-8. After following the above configuration steps, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
+7. Save the content to enable the commenting feature for that particular content. After setting up the comments UI on the rich text editor, this content can be added to any page.
+8. After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and the current content UUID. Refer to [Rendering and Configuring New Page Component having WCM comments HTML markup component on the Page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
+After configuring the WCM comments HTML markup component in Rich Text Editor, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.
 
 ### Configuring WCM comments in Script Application
 
-1. In the Edit mode, Open the Site manager and navigate to Applications tab > Script Application and add it to the page
+1. While on Edit mode, open the Site manager and navigate to **Applications tab > Script Application**. Add it to the page.
 ![Add Script Application to Page](../developing_managing_content/_img/script_application.png)
-2. Edit > Actions (top right of the page) > Insert WCM Tag which opens **Insert Tag** helper window
+2. Click **Edit > Actions > Insert WCM Tag**. The **Insert a Tag** window appears.
 then select our page component (WCM Comments 1.0/Page Component)
 ![Insert WCM Tag](../developing_managing_content/_img/insert_wcm_tag.png)
 3. In the **Insert Tag** helper window, select the following values:
