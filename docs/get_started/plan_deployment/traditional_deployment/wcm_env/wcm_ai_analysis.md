@@ -3,7 +3,7 @@
 This topic describes how to enable AI analysis for a WCM Content in the traditional on-premise deployment. This also discusses steps on how to configure a content AI provider to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
 
 !!!note
-         OpenAI ChatGPT is the supported content AI provider from CF213 and higher. Other content AI providers such as XAI and custom AI implementation are supported from CF214 and higher.
+	OpenAI ChatGPT is the supported content AI provider from CF213 and higher. Other content AI providers such as XAI and custom AI implementation are supported from CF214 and higher.
 
 ## Content AI Providers Overview
 ### XAI Overview
@@ -24,9 +24,9 @@ To enable content AI analysis:
     ```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DCustomAIClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
 
     !!!note
-        - Possible values for ```ContentAIProvider``` parameter are ```OPEN_AI```, ```XAI``` or ```CUSTOM```.
+        - Possible values for ```ContentAIProvider``` parameter are ```OPEN_AI```, ```XAI```, or ```CUSTOM```.
         - If ```ContentAIProvider``` value is set as ```OPEN_AI``` or ```XAI```, the value set for the parameter ```CustomAIClassName``` is ignored.
-        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the Custom Content AI Provider implementation class in the parameter```CustomAIClassName```. For example, ```com.ai.sample.CustomerAI```. Refer to [Configuring AI Class for Custom Content AI Provider](./wcm_ai_analysis.md#configuring-ai-class-for-custom-content-ai-provider) for more information on how to implement a custom content AI provider class.
+        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the custom content AI provider implementation class in the parameter ```CustomAIClassName```. For example, ```com.ai.sample.CustomerAI```. Refer to [Configuring AI Class for Custom Content AI Provider](./wcm_ai_analysis.md#configuring-ai-class-for-custom-content-ai-provider) for more information on how to implement a custom content AI provider class.
         - Depending on the ```ContentAIProvider```, set the correct API key of the respective provider in the ```ContentAIProviderAPIKey``` parameter.
 
 2. Validate that all the required configurations are added.
@@ -49,9 +49,9 @@ To enable content AI analysis:
 Only administrators can configure an AI class to use a custom content AI provider.
 
 1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface.
-   a. Create the JAR file.
-   b. Put the JAR file either at a custom-shared library or in ```/opt/HCL/wp_profile/PortalServer/sharedLibrary```.
-   c. Restart JVM.
+	a. Create the JAR file.
+	b. Put the JAR file either at a custom-shared library or in ```/opt/HCL/wp_profile/PortalServer/sharedLibrary```.
+	c. Restart JVM.
 
 The following example of a Custom Content AI Provider class can be used to call Custom AI services for AI analysis.
 
