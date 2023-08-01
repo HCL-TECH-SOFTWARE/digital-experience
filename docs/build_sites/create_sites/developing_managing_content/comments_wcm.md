@@ -182,7 +182,7 @@ If you want to perform a replacement of the OOB components that are shipped, see
 
 ## Cleaning up orphaned comments data stored in the library
 
-Starting from CF214, a new API is available for soft deleting all the comments that are no longer mapped to content (for example, if the content was deleted).
+Starting from CF214, a new API is available for soft deleting all the comments that are no longer mapped to content (for example, if the content was deleted). When you soft delete, it marks a comment as no longer active without deleting it from the database.
 
 In the libraries query parameter, pass all the library names containing the orphaned comments data. 
 The API finds all comments based on the authoring template and site area ```Comments``` of each of the defined libraries and soft deletes them. 
