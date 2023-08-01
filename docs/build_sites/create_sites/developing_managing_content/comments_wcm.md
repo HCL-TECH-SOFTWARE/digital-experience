@@ -122,23 +122,22 @@ After setting up the page component with comments UI on the page, actions such a
 ### Rendering and configuring WCM comments HTML markup component in Rich Text Editor
 
 1. Navigate to the content to which WCM comments feature needs to be available and edit the content.
-2. Add the new page component to have the WCM comments HTML markup component in the Rich Text Editor.
 ![Add New Page Component having WCM comments HTML markup component to Rich Text Editor](../developing_managing_content/_img/add_new_page_component_to_rich_text_editor.png)
-3. In the **Rich Text Editor**, click the **Insert Tag** button to add the WCM tag.
-4. In the **Insert a Tag** window, select the following values:
+2. In the **Rich Text Editor**, click the **Insert Tag** button to add the WCM tag.
+3. In the **Insert a Tag** window, select the following values:
     - In **Select a tag type** field, select **Content**.
     - In **Select item context** field, select **Selected**.
     - In **Select the content item to reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
 ![Insert a Tag](../developing_managing_content/_img/insert_tag_helper_content_map_page_component.png)
-5. Click **OK** after selecting all the values. 
+4. Click **OK** after selecting all the values. 
 ![Content mapping to Page Component](../developing_managing_content/_img/content_refer_to_page_component_in_rich_text.png)
-6. Currently, there is a CSS alignment issue while rendering comments inside Rich Text. To avoid it, refer to the following steps:
+5. Currently, there is a CSS alignment issue while rendering comments inside Rich Text. To avoid it, refer to the following steps:
     a. Click the **Source** button in the **Rich Text Editor**.
     b. Remove **<p dir="ltr" style="margin: 0px;"></p>** from the last line of the body. 
     c. Enclose the Content tag you added as a part of Step 4 inside the div blocks exactly as how it appears in the following example: ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```.
 ![Rich Text Limitation](../developing_managing_content/_img/wcm_comments_richtext_limitation.png)
-7. Save the content to enable the commenting feature for that particular content. After setting up the comments UI on the rich text editor, this content can be added to any page.
-8. After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and the current content UUID. Refer to [Rendering and Configuring New Page Component having WCM comments HTML markup component on the Page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
+6. Save the content to enable the commenting feature for that particular content. After setting up the comments UI on the rich text editor, this content can be added to any page.
+7. After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and the current content UUID. Refer to [Rendering and Configuring New Page Component having WCM comments HTML markup component on the Page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
 After configuring the WCM comments HTML markup component in Rich Text Editor, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.
 
 ### Configuring WCM comments in Script Application
