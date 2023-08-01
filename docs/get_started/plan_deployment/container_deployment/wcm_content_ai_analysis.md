@@ -3,7 +3,7 @@
 This topic describes how to enable AI analysis for a WCM Content in Kubernetes Deployment. This also discusses steps on how to configure a content AI provider to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
 
 !!!note
-         OpenAI ChatGPT is the supported content AI provider from CF213 and higher.  Other content AI providers such as XAI and custom AI implementation are supported from CF214 and higher.
+	OpenAI ChatGPT is the supported content AI provider from CF213 and higher. Other content AI providers such as XAI and custom AI implementation are supported from CF214 and higher.
 
 ## Content AI Providers Overview
 ### XAI Overview
@@ -46,9 +46,9 @@ For enabling AI analysis for content, set ```enabled``` as ```true``` inside the
 Only administrators can configure an AI class to use a custom content AI provider.
 
 1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface.
-   a. Create the JAR file.
-   b. Put the JAR file either at a custom-shared library or in ```/opt/HCL/wp_profile/PortalServer/sharedLibrary```.
-   c. Restart JVM.
+	a. Create the JAR file.
+	b. Put the JAR file either at a custom-shared library or in ```/opt/HCL/wp_profile/PortalServer/sharedLibrary```.
+	c. Restart JVM.
 
 The following example of a Custom Content AI Provider class can be used to call Custom AI services for AI analysis. 
 
