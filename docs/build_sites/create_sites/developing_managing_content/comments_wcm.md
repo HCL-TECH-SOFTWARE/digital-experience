@@ -148,21 +148,21 @@ After configuring the WCM comments HTML markup component in Rich Text Editor, ac
 2. Click **Edit > Actions > Insert WCM Tag**. The **Insert a Tag** window appears.
 then select our page component (WCM Comments 1.0/Page Component)
 ![Insert WCM Tag](../developing_managing_content/_img/insert_wcm_tag.png)
-3. In the **Insert Tag** helper window, select the following values:
+3. In the **Insert a Tag** window, select the following values:
     - In **Select a tag type** field, select **Content**.
-    - In **Context** field, select **Selected**.
-    - In **Content Reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
+    - In **Select item context** field, select **Selected**.
+    - In **Select the content item to reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
 ![Insert a Tag](../developing_managing_content/_img/insert_tag_helper_content_map_page_component.png)
 4. Click **OK** after selecting all the values.
-5. Save (Top right)
+5. Click **Save**.
 ![Preview Comments and Save](../developing_managing_content/_img/comments_preview.png)
-6. Close the Script Applications Editor Window
-7. Once WCM Comments UI is rendered in the script application added to the page, specify the library name to be used for storing the comments in and current content UUID similar to the steps mentioned in the previous section.
-8. After following the above configuration steps, add, reply, like/unlike, and delete comments operations can be done. Also the total comments count on the content item can be viewed. 
+6. Close the **Script Application Editor** window.
+7. After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and the current content UUID. Refer to [Rendering and Configuring New Page Component having WCM comments HTML markup component on the Page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
+8. After configuring WCM comments in a Script Application, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. 
 
 ## Access Roles and Permissions for WCM Comments
 
-Only authorized users can view, edit, and delete the comments in the library where the comments are stored. Also, the users should have atleast view access to WCM content library. For more information, see [Managing users and groups](../../../deployment/manage/security/people/authorization/controlling_access/managing_users_groups/index.md). 
+Only authorized users can view, edit, and delete the comments in the library where the comments are stored. It is required to have at least a **View** access to the WCM content library. For more information, see [Managing users and groups](../../../deployment/manage/security/people/authorization/controlling_access/managing_users_groups/index.md). 
 
 The actions available for a user depend on their role:
 
@@ -180,20 +180,20 @@ The actions available for a user depend on their role:
 
 If you want to perform a replacement of the OOB components that are shipped, see [Adding the sample web content libraries in the authoring portlet](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries.md).
 
-## Cleanup orphaned comments data stored in the comment's library.​
+## Cleaning up orphaned comments data stored in the library
 
-Starting from CF214, a new API is available for soft deleting all the comments that are no longer mapped to content (e.g. if the content was deleted).
+Starting from CF214, a new API is available for soft deleting all the comments that are no longer mapped to content (for example, if the content was deleted).
 
-Pass all the library names that contain the orphaned comments data, in the libraries query parameter. 
-The API will find all comments based on the authoring template and site area ```Comments``` of each of the defined libraries and soft delete them.  
+In the libraries query parameter, pass all the library names containing the orphaned comments data. 
+The API finds all comments based on the authoring template and site area ```Comments``` of each of the defined libraries and soft deletes them. 
 
 ![Comments Library with Orphaned Comments](../developing_managing_content/_img/comments_library_orphaned_comments.png)
 
-Sample request is as follows:
+The following is a sample request:
 
 {{host}}/{{WpsContextRoot}}/mycontenthandler/wcmrest/deleteComments?libraries=Web Content&libraries=Demo Library​
 
-Sample Response body is as follows: 
+The following is a sample response body: 
 
 ```
 {
@@ -209,4 +209,4 @@ Sample Response body is as follows:
 ![Delete Orphaned Comments of the libraries](../developing_managing_content/_img/delete_comments_api.png)
 
 
-For purging the deleted comments, leverage the existing feature for purging WCM deleted content: https://opensource.hcltechsw.com/digital-experience/CF212/manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted/?h=purge
+For purging deleted comments, refer to [How to use REST with Web Content Manager to Purge Deleted Content Items](../../manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted.md).
