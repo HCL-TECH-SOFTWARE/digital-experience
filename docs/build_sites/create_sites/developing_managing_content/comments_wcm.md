@@ -74,7 +74,7 @@ Starting from CF214, WCM comments can be rendered in external components such as
 
 This section provides an overview of the page component shipped as part of CF214. It also describes how to configure WCM comments in external components such as Rich Text Editor and Script Application.
 
-### Overview on Custom Page Component for WCM Comments
+### Custom Page Component for WCM Comments
 
 Starting from CF214, the default WCM Comments library is shipped with a new custom page component and an additional authoring template that uses a new presentation template. This presentation template is for rendering the WCM comments HTML markup component inside the new page component.
 
