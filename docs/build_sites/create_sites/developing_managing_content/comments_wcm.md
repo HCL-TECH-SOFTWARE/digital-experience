@@ -70,7 +70,7 @@ After setting up the comments UI on the page, you can now add, reply, like/unlik
 
 ## Render WCM comments in external components
 
-Starting from CF214, WCM comments can be rendered in the external components like Page Components, Rich Text or Script applications etc. In this case, enabling and configuring Custom Plugin Component for WCM comments as described in the previous section is not required.
+Starting from CF214, WCM comments can be rendered in external components like Page Components, Rich Text or Script applications etc. For these scenarios, enabling and configuring Custom Plugin Component for WCM comments as described in the previous section is not required.
 
 This section gives an overview about the page component shipped as a part of CF214 and also describes how to configure WCM comments in the external components like Rich Text Editor and Script Application.
 
@@ -180,9 +180,10 @@ If you want to perform a replacement of the OOB components that are shipped, see
 
 ## Cleanup orphaned comments data stored in the comment's library.​
 
-Starting from CF214, a new API is available for soft deleting all the comments data that do not have mapping with actual content.
+Starting from CF214, a new API is available for soft deleting all the comments that are no longer mapped to content (e.g. if the content was deleted).
 
-Pass all the library names that contain the orphaned comments data, in libraries query paramater. Note that the orphaned comment data will be inside ```Comments``` site area of each of the library that is being passed.  
+Pass all the library names that contain the orphaned comments data, in the libraries query parameter. 
+The API will find all comments based on the authoring template and site area ```Comments``` of each of the defined libraries and soft delete them.  
 
 ![Comments Library with Orphaned Comments](../developing_managing_content/_img/comments_library_orphaned_comments.png)
 
@@ -206,4 +207,4 @@ Sample Response body is as follows:
 ![Delete Orphaned Comments of the libraries](../developing_managing_content/_img/delete_comments_api.png)
 
 
-Leverages existing feature for purging WCM deleted content: https://opensource.hcltechsw.com/digital-experience/CF212/manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted/?h=purge
+For purging the deleted comments, leverage the existing feature for purging WCM deleted content: https://opensource.hcltechsw.com/digital-experience/CF212/manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted/?h=purge
