@@ -4,8 +4,7 @@ title: Comments in WCM
 
 # Comments in WCM
 
-Starting from CF213, the product contains a new solution that allows users to leave comments for Web Content Manager (WCM).
-These comments can be used in Intranet scenarios or in controlled settings allowing external comments. 
+Starting from CF213, the product contains a new solution that allows users to leave comments for Web Content Manager (WCM). These comments can be used in Intranet scenarios or in controlled settings allowing external comments. 
 
 ## WCM Comments as Custom Plugin Component
 
@@ -72,7 +71,7 @@ After setting up the comments UI on the page, you can now add, reply, like/unlik
 
 Starting from CF214, WCM comments can be rendered in external components such as Page Components and Rich Text, Script applications or Custom Portlet. For these scenarios, enabling and configuring Custom Plugin Component for WCM comments as described in the [WCM Comments as Custom Plugin Component](#wcm-comments-as-custom-plugin-component) are not required.
 
-This section provides an overview of the page component shipped as part of CF214. It also describes how to configure WCM comments in external components such as Rich Text Editor, Script Application and Custom Portlet.
+This section provides an overview of the page component shipped as part of CF214. It also describes how to configure WCM comments in external components such as Rich Text Editor, Script Application, and Custom Portlet.
 
 ### Custom Page Component for WCM Comments
 
