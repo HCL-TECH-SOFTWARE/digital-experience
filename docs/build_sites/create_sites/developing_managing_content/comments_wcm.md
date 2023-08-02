@@ -136,7 +136,7 @@ After setting up the page component with comments UI on the page, actions such a
     c. Enclose the Content tag you added as a part of Step 4 inside the div blocks exactly as how it appears in the following example: ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```.
 ![Rich Text Limitation](../developing_managing_content/_img/wcm_comments_richtext_limitation.png)
 6. Save the content to enable the commenting feature for that particular content. After setting up the comments UI on the rich text editor, this content can be added to any page.
-7. After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and the current content UUID. Refer to [Rendering and configuring new page component to have WCM comments HTML markup component on the page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
+7. After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments and the current content UUID. Refer to [Rendering and configuring new page component to have WCM comments HTML markup component on the page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
 
 After configuring the WCM comments HTML markup component in the Rich Text Editor, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.
 
@@ -155,7 +155,7 @@ After configuring the WCM comments HTML markup component in the Rich Text Editor
 5. Click **Save**.
 ![Preview Comments and Save](../developing_managing_content/_img/comments_preview.png)
 6. Close the **Script Application Editor** window.
-7. After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments in and the current content UUID. Refer to [Rendering and configuring new page component to have WCM comments HTML markup component on the page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
+7. After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments and the current content UUID. Refer to [Rendering and configuring new page component to have WCM comments HTML markup component on the page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
 
 After configuring WCM comments in a Script Application, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. 
 
@@ -182,7 +182,7 @@ After configuring WCM comments in a Script Application, actions such as add, rep
 5. Copy the ```/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld``` file from the DX core container into the path ```/WEB-INF/tld``` and then build the war file. For more information, see [Building war file](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#build-the-war-file-deployment-artifact).
 6. Deploy the portlet. For more information, see [Deploy the portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#deployupdate-or-undeploy-the-portlet-using-dxclient-optional).
 7. Add custom DX Portlet to the page. For more information, see [Testing Custom DX Portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#test-the-generated-portlet-optional).
-8. After the WCM Comments UI is rendered for the custom DX Portlet, specify the library name to be used for storing the comments in and the current content UUID. Refer to [Rendering and configuring new page component to have WCM comments HTML markup component on the page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
+8. After the WCM Comments UI is rendered for the custom DX Portlet, specify the library name to be used for storing the comments and the current content UUID. Refer to [Rendering and configuring new page component to have WCM comments HTML markup component on the page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
 
 After configuring WCM comments in a custom DX Portlet, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.
 
