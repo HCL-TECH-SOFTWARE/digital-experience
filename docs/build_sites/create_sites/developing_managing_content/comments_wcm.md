@@ -176,7 +176,9 @@ After configuring WCM comments in a Script Application, actions such as add, rep
         Content Rendering Failed
     </wcm:content>
     ```
-For more information, see **[Web Content Manager JSP tags](../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags.md).**
+    
+    For more information, see [Web Content Manager JSP tags](../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags.md).
+
 5. Copy the ```/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld``` file from the DX core container into the path ```/WEB-INF/tld``` and then build the war file. For more information, see [Building war file](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#build-the-war-file-deployment-artifact).
 6. Deploy the portlet. For more information, see [Deploy the portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#deployupdate-or-undeploy-the-portlet-using-dxclient-optional).
 7. Add custom DX Portlet to the page. For more information, see [Testing Custom DX Portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#test-the-generated-portlet-optional).
