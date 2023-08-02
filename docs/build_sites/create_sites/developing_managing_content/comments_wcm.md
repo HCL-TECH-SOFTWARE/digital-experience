@@ -48,22 +48,31 @@ For security purposes, if you need to limit the delete comments option to a spec
 ### Adding Custom Plugin
 
 1. To use the custom plugin, add it to **Libraries > Web Content > Presentation Templates > Article Presentation**.
+
 2. In the **Presentation Template Options**, click the **Insert Tag** button to add the custom plugin.
+
 3. In the **Insert Tag** window, select the following values:
     - In **Select a tag type** field, select **Plugin Component**.
     - In **Select a plugin type** field, select **Content**.
     - In **Select plugin to reference** field, select **NewCommentRenderPlugin**. 
-![Insert a Tag](../developing_managing_content/_img/insert-a-tag.png)
+    ![Insert a Tag](../developing_managing_content/_img/insert-a-tag.png)
+
 4. Click **OK** after selecting all the values.
+
 5. The plugin tag for custom plugin is added on the Article Presentation body. Click **Save and Close** to save changes.
-![Plugin Tag](../developing_managing_content/_img/plugin-tag.png)
-!!!note
-    You can specify the library you want to use for storing comments in the commentsLibrary field.
+
+    ![Plugin Tag](../developing_managing_content/_img/plugin-tag.png)
+
+    !!!note
+        You can specify the library you want to use for storing comments in the commentsLibrary field.
+
 6. Set up and view the Comments UI on the page. 
     1. Click **Create Page** and add the content created in Step 5. 
     2. Using the Web Content Viewer portlet, select the content to render.
     3. Click **OK**.
-![Page with Web Content](../developing_managing_content/_img/page-with-web-content.png)
+    
+    ![Page with Web Content](../developing_managing_content/_img/page-with-web-content.png)
+
 After setting up the comments UI on the page, you can now add, reply, like/unlike, and delete comments. You can also view the total comments count on the content item.
 ![WCM Comments UI](../developing_managing_content/_img/wcm-comments-ui.png)
 
@@ -122,20 +131,27 @@ After setting up the page component with comments UI on the page, actions such a
 
 1. Go to the content to which the WCM comments feature needs to be available. Edit the content.
 ![Add New Page Component having WCM comments HTML markup component to Rich Text Editor](../developing_managing_content/_img/add_new_page_component_to_rich_text_editor.png)
+
 2. In the **Rich Text Editor**, click the **Insert Tag** button to add the WCM tag.
+
 3. In the **Insert a Tag** window, select the following values:
     - In **Select a tag type** field, select **Content**.
     - In **Select item context** field, select **Selected**.
     - In **Select the content item to reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
-![Insert a Tag](../developing_managing_content/_img/insert_tag_helper_content_map_page_component.png)
+
+    ![Insert a Tag](../developing_managing_content/_img/insert_tag_helper_content_map_page_component.png)
+
 4. Click **OK** after selecting all the values. 
 ![Content mapping to Page Component](../developing_managing_content/_img/content_refer_to_page_component_in_rich_text.png)
+
 5. Currently, there is a CSS alignment issue while rendering comments inside Rich Text. To avoid it, refer to the following steps:
-    a. Click the **Source** button in the **Rich Text Editor**.
-    b. Remove **<p dir="ltr" style="margin: 0px;"></p>** from the last line of the body. 
-    c. Enclose the Content tag you added as a part of Step 4 inside the div blocks exactly as how it appears in the following example: ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```.
+    1. Click the **Source** button in the **Rich Text Editor**.
+    2. Remove **<p dir="ltr" style="margin: 0px;"></p>** from the last line of the body. 
+    3. Enclose the Content tag you added as a part of Step 4 inside the div blocks exactly as how it appears in the following example: ```</div><div>[Content context="selected" uuid="dab6a312-06ad-45b1-a9f9-4bf583749d24"]</div><div>```.
 ![Rich Text Limitation](../developing_managing_content/_img/wcm_comments_richtext_limitation.png)
+
 6. Save the content to enable the commenting feature for that particular content. After setting up the comments UI on the rich text editor, this content can be added to any page.
+
 7. After the WCM Comments UI is rendered for the content on the page, specify the library name to be used for storing the comments and the current content UUID. Refer to [Rendering and configuring new page component to have WCM comments HTML markup component on the page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for instructions.
 
 After configuring the WCM comments HTML markup component in the Rich Text Editor, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.
@@ -159,7 +175,7 @@ After configuring the WCM comments HTML markup component in the Rich Text Editor
 
 After configuring WCM comments in a Script Application, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. 
 
-### Configuring WCM comments in custom DX Portlet
+### Configuring WCM comments in a custom DX Portlet
 
 1. Create the custom DX Portlet. For more information, see [Creating Custom DX Portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype).
 2. Go to the custom DX Portlet you created.
@@ -216,11 +232,12 @@ The API finds all comments based on the authoring template and site area ```Comm
 
 ![Comments Library with Orphaned Comments](../developing_managing_content/_img/comments_library_orphaned_comments.png)
 
-Sample request:
+
+**Sample request:**
 
 {{host}}/{{WpsContextRoot}}/mycontenthandler/wcmrest/deleteComments?libraries=Web Content&libraries=Demo Library​
 
-Sample response body: 
+**Sample response body:**
 
 ```
 {
@@ -236,4 +253,4 @@ Sample response body:
 ![Delete Orphaned Comments of the libraries](../developing_managing_content/_img/delete_comments_api.png)
 
 
-For purging deleted comments, refer to [How to use REST with Web Content Manager to Purge Deleted Content Items](../../manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted.md).
+For purging deleted comments, refer to [How to use REST with Web Content Manager to Purge Deleted Content Items](../../../manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted.md).
