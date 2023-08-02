@@ -49,49 +49,51 @@ To enable content AI analysis:
 Only administrators can configure an AI class to use a custom content AI provider.
 
 1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface.
-	a. Create the JAR file.
-	b. Put the JAR file either at a custom-shared library or in ```/opt/HCL/wp_profile/PortalServer/sharedLibrary```.
-	c. Restart JVM.
 
-The following example of a Custom Content AI Provider class can be used to call Custom AI services for AI analysis.
+	1. Create the JAR file.
 
-```
-package com.ai.sample;
+	2. Put the JAR file either at a custom-shared library or in ```/opt/HCL/wp_profile/PortalServer/sharedLibrary```.
 
-import java.util.ArrayList;
-import java.util.List;
-import com.hcl.workplace.wcm.restv2.ai.IAIGeneration;
-import com.ibm.workplace.wcm.rest.exception.AIGenerationException;
+	3. Restart JVM.
 
-public class CustomerAI implements IAIGeneration {
+	The following example of a Custom Content AI Provider class can be used to call Custom AI services for AI analysis.
 
-	@Override
-	public String generateSummary(List<String> values) throws AIGenerationException {
-		// Call the custom AI Service to get the custom AI generated summary
-		return "AIAnalysisSummary";
+	```
+	package com.ai.sample;
+
+	import java.util.ArrayList;
+	import java.util.List;
+	import com.hcl.workplace.wcm.restv2.ai.IAIGeneration;
+	import com.ibm.workplace.wcm.rest.exception.AIGenerationException;
+
+	public class CustomerAI implements IAIGeneration {
+
+		@Override
+		public String generateSummary(List<String> values) throws AIGenerationException {
+			// Call the custom AI Service to get the custom AI generated summary
+			return "AIAnalysisSummary";
+		}
+
+		@Override
+		public List<String> generateKeywords(List<String> values) throws AIGenerationException {
+			// Call the custom AI Service to get the custom AI generated keywords
+			List<String> keyWordList = new ArrayList<String>();
+			keyWordList.add("keyword1");
+			return keyWordList;
+		}
+
+		@Override
+		public Sentiment generateSentiment(List<String> values) throws AIGenerationException {
+			// Call the custom AI Service to get the custom AI generated sentiment
+			return Sentiment.POSITIVE;
+		}
+
 	}
-
-	@Override
-	public List<String> generateKeywords(List<String> values) throws AIGenerationException {
-		// Call the custom AI Service to get the custom AI generated keywords
-		List<String> keyWordList = new ArrayList<String>();
-		keyWordList.add("keyword1");
-		return keyWordList;
-	}
-
-	@Override
-	public Sentiment generateSentiment(List<String> values) throws AIGenerationException {
-		// Call the custom AI Service to get the custom AI generated sentiment
-		return Sentiment.POSITIVE;
-	}
-
-}
-
-```
+	```
 
 2. Run the following config engine task.
 
-```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DCustomAIClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+	```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DCustomAIClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
 
 ## Config Engine Task for disabling Content AI analysis
 
