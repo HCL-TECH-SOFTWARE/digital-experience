@@ -162,8 +162,8 @@ After configuring WCM comments in a Script Application, actions such as add, rep
 ### Configuring WCM comments in custom DX Portlet
 
 1. Create the custom DX Portlet. For more information, see [Creating Custom DX Portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype).
-2. Navigate inside the created custom DX Portlet.
-3. Navigate into the folder that contains view files inside the created custom DX Portlet. For this example, navigate into ```src/main/webapp/_JSPDemoPortlet/jsp/html/```.
+2. Go to the custom DX Portlet you created.
+3. Go to the folder that contains the view files inside the created custom DX Portlet. In this example, navigate to: ```src/main/webapp/_JSPDemoPortlet/jsp/html/```.
    ![WCM JSP Tags in View Files of Custom Portlet](../developing_managing_content/_img/wcm_jsp_tag_custom_portlet.png)
 4. Configure the below piece of code in any of the view files where comments feature needs to be enabled.
     ```
@@ -179,10 +179,11 @@ After configuring WCM comments in a Script Application, actions such as add, rep
     
     For more information, see [Web Content Manager JSP tags](../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags.md).
 
-5. Copy the ```/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld``` file from the DX core container into the path ```/WEB-INF/tld``` and then build the war file. For more information, see [Building war file](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#build-the-war-file-deployment-artifact).
-6. Deploy the portlet. For more information, see [Deploy the portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#deployupdate-or-undeploy-the-portlet-using-dxclient-optional).
-7. Add custom DX Portlet to the page. For more information, see [Testing Custom DX Portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#test-the-generated-portlet-optional).
-8. After the WCM Comments UI is rendered for the custom DX Portlet, specify the library name to be used for storing the comments and the current content UUID. Refer to [Rendering and configuring new page component to have WCM comments HTML markup component on the page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
+5. Copy the ```/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld``` file from the DX core container into the path ```/WEB-INF/tld```.
+6. Build the WAR file. See [Build the WAR file](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#build-the-war-file-deployment-artifact) for instructions.
+7. Deploy the portlet. For instructions, refer to [Deploy the portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#deployupdate-or-undeploy-the-portlet-using-dxclient-optional).
+8. Add the custom DX Portlet to the page. For more information, see [Testing Custom DX Portlet](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype#test-the-generated-portlet-optional).
+9. After the WCM Comments UI is rendered for the custom DX Portlet, specify the library name to be used for storing the comments in and the current content UUID. Refer to [Rendering and configuring new page component to have WCM comments HTML markup component on the page](#rendering-and-configuring-new-page-component-to-have-wcm-comments-html-markup-component-on-the-page) for more information.
 
 After configuring WCM comments in a custom DX Portlet, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.
 
