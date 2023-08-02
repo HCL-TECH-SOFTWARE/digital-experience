@@ -165,7 +165,7 @@ After configuring WCM comments in a Script Application, actions such as add, rep
 2. Go to the custom DX Portlet you created.
 3. Go to the folder that contains the view files inside the created custom DX Portlet. In this example, navigate to: ```src/main/webapp/_JSPDemoPortlet/jsp/html/```.
    ![WCM JSP Tags in View Files of Custom Portlet](../developing_managing_content/_img/wcm_jsp_tag_custom_portlet.png)
-4. Configure the below piece of code in any of the view files where comments feature needs to be enabled.
+4. Add the below piece of code in any of the view files where comments feature needs to be enabled.
     ```
     <%@ taglib uri="/WEB-INF/tld/wcm.tld" prefix="wcm"%>
     <wcm:initworkspace>login fail</wcm:initworkspace>
