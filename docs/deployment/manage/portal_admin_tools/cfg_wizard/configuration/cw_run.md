@@ -29,7 +29,7 @@ Click **Back** and **Next** to move back or forward in the Configuration Wizard.
 
 ## Accessing the Configuration Wizard admin console in a container deployment
 
-To access the Configuration Wizard admin console in a container deployment, you can directly enable it [in the custom values of the Helm deployment](../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#configuration-wizard-configuration). The Configuration Wizard admin console is exposed on the TCP port number 10203. Navigate to the following URL to open the Configuration Wizard admin console: `https://<your-deployment-url>:10203/ibm/console`.
+To access the Configuration Wizard admin console in a container deployment, you can directly enable it [in the custom values of the Helm deployment](../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#configuration-wizard-configuration). The Configuration Wizard admin console is exposed on the TCP port number 10202. Navigate to the following URL to open the Configuration Wizard admin console: `https://<your-deployment-url>:10202/hcl/wizard`.
 
 ???+ info "Related information"  
     -   [Setting up a stand-alone server](../../../../../deployment/manage/config_standalone.md)
