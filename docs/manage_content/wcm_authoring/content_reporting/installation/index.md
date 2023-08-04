@@ -11,7 +11,7 @@ Content Reporting is an instance of a react integration portlet configured to po
 This section describes how to enable and disable Content Reporting manually.
 
 !!! note
-    Beginning with HCL Digital Experience 9.5 CF214, Content Reporting is installed and deployed as part of the CF update process. In this CF version, the **enable-content-reporting** config task is automatically executed. However, you can still manually enable Content Reporting by running the **enable-content-reporting** config task, if the feature was disabled previously.
+    Beginning with HCL Digital Experience 9.5 CF214, Content Reporting is installed and deployed as part of the CF update process. In this CF version, the **enable-content-reporting** config task is automatically executed. However, you can still manually enable Content Reporting by running the **enable-content-reporting** config task if the feature was disabled previously.
 
 !!! important
     Before enabling Content Reporting, it is required to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md). After enabling Content Reporting, it can then be used with other themes.
