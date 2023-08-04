@@ -19,7 +19,7 @@ This section describes how to enable and disable Content Reporting manually.
 ### Enabling Content Reporting
 
 !!! note
-    Enabling contentReporting runs the **enable-content-reporting** config engine task in the background. The **enable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks on container deployments, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
+    For more information on how to run the ConfigEngine tasks on container deployments, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
 To enable Content Reporting, run the **enable-content-reporting** config task.
 
@@ -39,7 +39,7 @@ To enable Content Reporting, run the **enable-content-reporting** config task.
 ### Disabling Content Reporting for traditional deployment
 
 !!! note
-    Disabling contentReporting runs the **disable-content-reporting** config engine task in the background. The **disable-content-reporting** config engine task can also be manually executed. For more information on how to run manual Core configuration tasks on container deployments, please refer to [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
+    For more information on how to run the ConfigEngine tasks on container deployments, please refer to [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
 To disable Content Reporting, run the **disable-content-reporting** config task.
 
