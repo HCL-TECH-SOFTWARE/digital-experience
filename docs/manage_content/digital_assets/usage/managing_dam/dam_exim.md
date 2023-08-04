@@ -83,7 +83,7 @@ The export command is used to export the DAM assets in the file system to defaul
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify a location **store/folder_name/** that is different from the default location to export the DAM assets. The default location "export" is **store/outputFiles/dam-export-assets/**:
+    Use this attribute to specify a location **store/folder_name/** that is different from the default location to export the DAM assets. The value of exportPath should be either an absolute or relative folder path. The default location "export" is **store/outputFiles/dam-export-assets/**:
 
     ```
     -exportPath <value>
@@ -96,7 +96,8 @@ The export command is used to export the DAM assets in the file system to defaul
     ```
 
     !!! note 
-        Optional parameters are `exportPath` and `exportBinary`.
+        Optional parameters are `exportPath` and `exportBinary`.<br>
+        If the exportPath value is not a relative or full path, the output will be placed in the container and wiped out once the command execution is complete - for example,`-exportPath 20230706`
 
     !!! example
 
