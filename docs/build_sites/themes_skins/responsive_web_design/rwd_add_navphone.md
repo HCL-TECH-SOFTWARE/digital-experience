@@ -12,14 +12,26 @@ The HCL Digital Experience theme, Portal 8.5, provides two new responsive page n
 
 ## Tablet navigation design
 
-![Welcome page displayed on a tablet.](../../../images/rwd_tablet_welcome.jpg)
+- Tap the navigation button to show the navigation for your portal.
 
-1.  Tap the navigation button to show the navigation for your portal.
-2.  Tap this link to return to your portal home page.
-3.  Tap the arrow button to show the navigation.
-4.  Tap the name of the page to open a specific page.
-5.  Tap the arrow near the page name to display the child pages for that page.
+      ![Navigation button](../../../images/DX_mobile_nav_1.png)
 
+      A sidebar opens containing the pages available. 
+      
+      - Tap the name of the page to open a specific page.
+      - Tap the arrow near the page name to display its child pages.
+
+      ![Navigation sidebar](../../../images/DX_mobile_nav_2.png)
+
+-  Tap the arrow button on the upper right corner to display the top navigation.
+
+      Two tabs are displayed: **Home** and **Search Center**.
+
+      - Tap **Home** to return to your portal home page.
+      - Tap **Search Center** to go to the Search Center. 
+
+      ![Top navigation](../../../images/DX_mobile_nav_3.png)
+      
 You can have the navigation and portal navigation open individually or at the same time without affecting the functionality of the portal.
 
 ## Mobile navigation markup
