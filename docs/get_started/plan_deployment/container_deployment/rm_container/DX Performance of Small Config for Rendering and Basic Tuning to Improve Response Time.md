@@ -13,7 +13,7 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 
 | Concurrent users     | Existing WCM pages | Existing DAM Content |
 | -------------------- | ------------------ | -------------------- |
-| Small – 1000 users   | 20                 | 1k                   |
+| Small – 1000 users   | 20                 | 2k                   |
 | Medium – 10000 users | 200                | 10k                  |
 | Large – 100000 users | 2000               | 50-100k              |
 
