@@ -197,20 +197,20 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 - Results overview
 
 
-| AWS/Native-Kube                            | Test-6                                                       | Test-7 (after tuning - core, ring api, haproxy)                     | % Imrovement |
+| AWS/Native-Kube                            | Test-6                                                       | Test-7 (after tuning - core, ring api, haproxy)                     | % Improvement|
 | ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------- | ------------ |
 | Test Time                                  | July 21st IST 12:30 am - 1:30 am                             | July 27th IST 14:08 pm - 15:12 pm                                   |              |
 | Total samples                              | 66959                                                        | 918415                                                              |              |
 | Concurent Users                            | 600(WCM=240+DAM=180+PNP=180)                                 | 600(WCM=240+DAM=180+PNP=180)                                        |              |
 | Total Throughput (transactions/sec)        | 110.3                                                        | 238.18                                                              | 115.94       |
-| Total Avg response time (in milli seconds) | 4671                                                         | 994.89                                                              | 78.70        |
+|**Total Avg response time (milli seconds)** | **4671**                                                     | **994.89**                                                            | **78.70**    |
 | CPU Usage                                  | 25%                                                          | 52.36%                                                              |              |
 | Memory Usage                               | 56%                                                          | 62.23%                                                              |              |
 | Disk Read IO                               |                                                              | 0 B/s                                                               |              |
 | Disk Write IO                              |                                                              | 13.65 io/s                                                          |              |
 | DAM EventLoop lag (in milli seconds)       |                                                              | 16.14                                                               |              |
-| Ring EventLoop lag (in milli seconds)      | 450                                                          | 5.19                                                                | 98.85        |
-| Error                                      | 4.87%                                                        | 0                                                                   |              |
+| **Ring EventLoop lag (in milli seconds)**  | **450**                                                      | **5.19**                                                             | 98.85        |
+| **Error**                                  | **4.87%**                                                    | **0**                                                               |              |
 | TimeDuration                               | 3600                                                         | 3850                                                                |              |
 |                                            | Top 5 request samples (avg respone time in ms)               | Top 5 request samples (avg respone time in ms)                      |              |
 |                                            | Get video - mp4 1.1 mb custom url - curlmp41.1mb.    (25044) | Get video - mp4 15mb - idmp415mb (6253.29)                          |              |
@@ -246,15 +246,15 @@ Below are the tuned helm values.
 | Component                 | cpu(m) | memory(Mi) | cpu(m) | memory(Mi) |
 | ------------------------- | ------ | ---------- | ------ | ---------- |
 | contentComposer           | 100    | 128        | 100    | 128        |
-| core                      | 3000   | 5000       | 3000   | 5000       |
+| **core**                  |**3000**| **5000**   |**3000**| **5000**   |
 | digitalAssetManagement    | 500    | 1536       | 500    | 1536       |
 | imageProcessor            | 200    | 2048       | 200    | 2048       |
 | openLdap                  | 200    | 768        | 200    | 768        |
 | persistenceNode           | 500    | 1024       | 500    | 1024       |
 | persistenceConnectionPool | 500    | 512        | 500    | 512        |
-| ringApi                   | 500    | 512        | 500    | 512        |
+| **ringApi**               | **500**| **512**    | **500**| **512**    |
 | runtimeController         | 100    | 256        | 100    | 256        |
-| haproxy                   | 700    | 1024       | 700    | 1024       |
+| **haproxy**               | **700**| **1024**   | **700**| **1024**   |
 | licenseManager            | 100    | 300        | 100    | 300        |
 | Total                     | 6400   | 13108      | 6400   | 13108      |
 
