@@ -1,6 +1,6 @@
 # Installing and Deploying Content Reporting
 
-This document contains instructions on how to install and deploy the Content Reporting application manually. Beginning with HCL DX 9.5 CF214, Content Reporting is installed and deployed by default as part of the CF update process.
+This document contains instructions on how to install and deploy the Content Reporting application manually. Note that beginning with HCL Digital Experience 9.5 CF214, Content Reporting is installed and deployed by default as part of the CF update process.
 
 ## Packaging, installing, and deploying design
 
@@ -11,10 +11,10 @@ Content Reporting is an instance of a react integration portlet configured to po
 This section describes how to enable and disable Content Reporting manually.
 
 !!! note
-    Beginning with HCL DX 9.5 CF214, Content Reporting is installed and deployed as part of the CF update process, so the below **enable-content-reporting** will be automatically executed during the CF update process; however, you can still manually enable it by running the **enable-content-reporting** config task, if Content Reporting was disabled previously.
+    Beginning with HCL DX 9.5 CF214, Content Reporting is installed and deployed as part of the CF update process. The following **enable-content-reporting** config task is automatically executed. However, you can still manually enable Content Reporting by running the **enable-content-reporting** config task, if the feature was disabled previously.
 
-!!! note
-    Before enabling Content Reporting, it is required to enable Practitioner Studio. For more information on how to enable Practiotioner Studio, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md). After enabling Content Reporting, it can then be used with other themes.
+!!! important
+    Before enabling Content Reporting, it is required to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md). After enabling Content Reporting, it can then be used with other themes.
 
 ### Enabling Content Reporting
 
@@ -48,4 +48,4 @@ To disable Content Reporting, run the **disable-content-reporting** config task.
 -   Windows: `ConfigEngine.bat disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 
 !!! note
-    Once Content Reporting is disabled by running the **disable-content-reporting** config task, Content Reporting page will be removed. To enable Content Reporting again, the **enable-content-reporting** config task will need to be executed manually.
+    After Content Reporting is disabled by running the **disable-content-reporting** config task, Content Reporting page is removed. To enable Content Reporting again, the **enable-content-reporting** config task must be executed manually.
