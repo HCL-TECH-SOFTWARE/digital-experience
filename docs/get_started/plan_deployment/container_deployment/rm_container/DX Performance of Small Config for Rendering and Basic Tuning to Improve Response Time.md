@@ -1,6 +1,6 @@
 ---
 id: DX_Rendering_Sizing_Small_Configuration_Results
-title: DX Performance of Small config for Rendering and basic tuning to improve response time
+title: DX Performance of Small Config for Rendering and Basic Tuning to Improve Response Time
 ---
 
 ## DX Rendering Sizing Performance Tests overview
