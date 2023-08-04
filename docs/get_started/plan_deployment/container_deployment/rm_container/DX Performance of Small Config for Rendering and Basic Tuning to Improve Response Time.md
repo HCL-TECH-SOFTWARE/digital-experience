@@ -25,36 +25,37 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 
 [Small Configuration]  - [c5.2xlarge] 
 
-![image](/../../images/Header-1-AWS.png)
+![](../../../../images/Header-1-AWS.png)
 
-![image](/docs/assets/C5.2xlarge.png)
+![](../../../../images/C5.2xlarge.png)
+
 
 - Processor details
 
-![image](/docs/assets/Processor_Info_Native-Kube.png)
+![](../../../../images/Processor_Info_Native-Kube.png)
 
 - Volume details
 
-![image](/docs/assets/AWS-Native-Kube-Volume-Info.png)
+![](../../../../images/AWS-Native-Kube-Volume-Info.png)
 
 
 ### DB2 instance
 
 - Remote DB2 - [t3a.large]
 
-![image](/docs/assets/Header-2-AWS.png)
+![](../../../../images/Header-2-AWS.png)
 
-![image](/docs/assets/t3a.large.png)
+![](../../../../images/t3a.large.png)
 
 
 - Processor details
 
-![image](/docs/assets/Processor_Info_RemoteDB2.png)
+![](../../../../images/Processor_Info_RemoteDB2.png)
 
 
 - Volume details
 
-![image](/docs/assets/Remote-DB2-Volume-Info.png)
+![](../../../../images/Remote-DB2-Volume-Info.png)
 
 
 ### JMeter agents
@@ -62,24 +63,24 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 - JMeter instance - [t2.xlarge]
 - We have AWS/JMeter agents distributed set up. One master and two slaves to execute the tests.
 
-![image](/docs/assets/Header-3-AWS.png)
+![](../../../../images/Header-3-AWS.png)
 
-![image](/docs/assets/t2.xlarge.png)
+![](../../../../images/t2.xlarge.png)
 
 
 - Processor details
 
-![image](/docs/assets/Processor_Info_JMeterAgent.png)
+![](../../../../images/Processor_Info_JMeterAgent.png)
 
 
 - Network details
 
-![image](/docs/assets/JMeter_Agent_Network_Details.png)
+![](../../../../images/JMeter_Agent_Network_Details.png)
 
 
 - Volume details
 
-![image](/docs/assets/JMeter-Agent-Volume-Info.png)
+![](../../../../images/JMeter-Agent-Volume-Info.png)
 
 
 
@@ -162,7 +163,7 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 
 
 ## Pods in native-kube deployment are 1:1 in small config
-- ![image](/Team-Q/internal-doc/static/assets/DX-Sizing/DX-Rendering-Small/small-config-pods.png)
+- ![](../../../../images/small-config-pods.png)
 
 ### Result Summary
 
