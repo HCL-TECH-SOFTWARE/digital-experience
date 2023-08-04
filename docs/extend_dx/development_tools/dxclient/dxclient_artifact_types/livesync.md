@@ -5,8 +5,8 @@ This topic provides information about syncing WebDAV based theme files from loca
 !!! note
     We recommend using the node version of DXClient while working with livesync.
 
-!!! note "Livesync is now supported in DX Environment Setups"
-    As of CF214, Livesync is now supported in scaled DX environment setups.
+!!! note "Livesync now supported in DX Environment Setups"
+    Starting from CF214, Livesync is now supported in scaled DX environment setups.
 
 ## LiveSync Push Theme
 
@@ -68,7 +68,7 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
+    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):
 
     ```shell
     -contenthandlerPath <value>
@@ -88,8 +88,8 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
     -themeName <value>
     ```
 
-    !!! note "Difference between Theme System Name vs. Theme Title"
-        **_Theme System Name_** can include only the following characters: `a-z`, `A-Z`, `0-9`, `spaces`, and `- _ . ! ( ) ,` Invalid characters in the title are converted to underscore "\_" in the system name by default. On the other hand, **_Theme Title_** can include any characters.
+    !!! note "Difference between Theme System Name and Theme Title"
+        The **_Theme System Name_** can only have the following characters: `a-z`, `A-Z`, `0-9`, `spaces`, and `- _ . ! ( ) ,`. Invalid characters in the title are converted to underscore "\_" in the system name by default. The **_Theme Title_** can include any characters.
       
         ![theme-title-vs-theme-system-name](../../../../images/theme-title-vs-theme-system-name.png){: style="height:350px;"}
 
@@ -184,7 +184,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
+    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):
 
     ```shell
     -contenthandlerPath <value>
@@ -204,7 +204,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     -themeName <value>
     ```
 
-    If `themeName` option is not provided, a list of WebDAV themes will show that lets user to pick which themes they would like to pull.
+    If `themeName` option is not provided, a list of WebDAV themes is dislayed. This list lets the user pick which themes they want to pull.
 
     ```shell
     $ dxclient livesync pull-theme -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -themePath <themePath>
@@ -219,11 +219,11 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     ```
 
     !!! note "Difference between Theme System Name vs. Theme Title"
-        **_Theme System Name_** can include only the following characters: `a-z`, `A-Z`, `0-9`, `spaces`, and `- _ . ! ( ) ,` Invalid characters in the title are converted to underscore "\_" in the system name by default. On the other hand, **_Theme Title_** can include any characters.
+        The **_Theme System Name_** can only have the following characters: `a-z`, `A-Z`, `0-9`, `spaces`, and `- _ . ! ( ) ,`. Invalid characters in the title are converted to underscore "\_" in the system name by default. The **_Theme Title_** can include any characters.
       
         ![theme-title-vs-theme-system-name](../../../../images/theme-title-vs-theme-system-name.png){: style="height:350px;"}
 
-    Use this attribute to specify the theme folder path where DX theme static files will be placed. It accepts a folder path:
+    Use this attribute to specify the theme folder path where DX theme static files should be placed. This attribute accepts a folder path:
 
     ```shell
     -themePath <value>
