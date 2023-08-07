@@ -5,6 +5,9 @@ This topic provides information about syncing WebDAV based theme files from loca
 !!! note
     We recommend using the node version of DXClient while working with livesync.
 
+!!! note "Livesync now supported in DX Environment Setups"
+    Starting from CF214, Livesync is now supported in scaled DX environment setups.
+
 ## LiveSync Push Theme
 
 This command will sync your WebDAV based theme files into DX Server. Then, it will watch for succeeding changes within the given `themePath` and immediately reflect the changes in the DX server.
@@ -65,6 +68,12 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
     -dxPassword <value>
     ```
 
+    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):
+
+    ```shell
+    -contenthandlerPath <value>
+    ```
+
     Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pushing theme files.
 
     ```shell
@@ -79,29 +88,22 @@ This command will sync your WebDAV based theme files into DX Server. Then, it wi
     -themeName <value>
     ```
 
+    !!! note "Difference between Theme System Name and Theme Title"
+        The **_Theme System Name_** can only have the following characters: `a-z`, `A-Z`, `0-9`, `spaces`, and `- _ . ! ( ) ,`. Invalid characters in the title are converted to underscore "\_" in the system name by default. The **_Theme Title_** can include any characters.
+      
+        ![theme-title-vs-theme-system-name](../../../../images/theme-title-vs-theme-system-name.png){: style="height:350px;"}
+
     Use this attribute to specify the theme folder path that contains all static WebDAV based files to be pushed into DX theme, it accepts the folder path of the WebDAV based theme folder:
 
     ```shell
     -themePath <value>
     ```
 
-    !!! note "Important"
-        While _Theme Title_ can include any characters, _Theme System Name_ can include only the following characters: a-z, A-Z, 0-9, spaces, and - _ . ! ( ) ,
-        Invalid characters in the title are converted to underscore "_" in the system name by default.
-       
-        ![theme-title-vs-theme-system-name](../../../../images/theme-title-vs-theme-system-name.png)
-
     !!! warning
         1. Avoid using `~` `!` `()` `'` and `*` special characters when naming files and folders.
         2. If you have a theme title name with special characters, those are automatically converted to underscores (`_`) by the server (for example, `来源folder` is translated to `__folder`). For the theme name, use the Theme System Name, the one with `_` like `__folder` in the following example.
 
         ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
-
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
-
-    ```shell
-    -contenthandlerPath <value>
-    ```
 
 !!! example
 
@@ -182,13 +184,19 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     -dxPassword <value>
     ```
 
+    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler):
+
+    ```shell
+    -contenthandlerPath <value>
+    ```
+
     Use the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files. This bypasses the prompt and immediately proceeds to pulling theme files.
 
     ```shell
     -disablePrompt, --disablePrompt <value>
     ```
 
--   **Required options for LiveSync Pull Theme**
+-   **Required option for LiveSync Pull Theme**
 
     Use this attribute to specify the Theme System Name of the theme created under the DX server:
 
@@ -196,29 +204,36 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     -themeName <value>
     ```
 
-    Use this attribute to specify the theme folder path where DX theme static files will be placed. It accepts a folder path:
+    If `themeName` option is not provided, a list of WebDAV themes is dislayed. This list lets the user pick which themes they want to pull.
+
+    ```shell
+    $ dxclient livesync pull-theme -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -themePath <themePath>
+    2023-08-03 18:18:55 : Extracting themes list from xml
+    2023-08-03 18:18:55 : Please select a Theme name
+    (x) My Theme
+    ( ) Portal8.5
+    ( ) PractitionerStudio
+    ( ) Simple
+    ( ) ThemeDevSite
+    ( ) Toolbar8.5
+    ```
+
+    !!! note "Difference between Theme System Name vs. Theme Title"
+        The **_Theme System Name_** can only have the following characters: `a-z`, `A-Z`, `0-9`, `spaces`, and `- _ . ! ( ) ,`. Invalid characters in the title are converted to underscore "\_" in the system name by default. The **_Theme Title_** can include any characters.
+      
+        ![theme-title-vs-theme-system-name](../../../../images/theme-title-vs-theme-system-name.png){: style="height:350px;"}
+
+    Use this attribute to specify the theme folder path where DX theme static files should be placed. This attribute accepts a folder path:
 
     ```shell
     -themePath <value>
     ```
 
-    !!! note "Important"
-        While _Theme Title_ can include any characters, _Theme System Name_ can include only the following characters: a-z, A-Z, 0-9, spaces, and - _ . ! ( ) ,
-        Invalid characters in the title are converted to underscore "_" in the system name by default.
-      
-        ![theme-title-vs-theme-system-name](../../../../images/theme-title-vs-theme-system-name.png)
-
-    !!!warning
+    !!! warning
         1. Avoid using `~` `!` `()` `'` and `*` special characters when naming files and folders.
         2. If you have a theme title name with special characters, those are automatically converted to underscores (`_`) by the server (for example, `来源folder` is translated to `__folder`). For the theme name, use the Theme System Name, the one with `_` like `__folder` in the following example.
 
         ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
-
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
-
-    ```shell
-    -contenthandlerPath <value>
-    ```
 
 !!! example
 
@@ -236,4 +251,3 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
 6. Case-Sensitivity for file and folder naming are not supported.
 7. In any case, if the real-time sync of theme during the push command gets disrupted, disconnect and reconnect again.
 8. It is not recommended to use LiveSync on a production server.
-9. LiveSync is currently not supported in a scaled DX environment setup.
