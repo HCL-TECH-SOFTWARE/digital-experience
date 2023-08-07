@@ -52,7 +52,17 @@ security:
     wasPassword: "wpsadmin"
 ```
 
-## File-based user registry
+## Registry Types
+
+
+### LDAP
+
+If a [LDAP is configured](./optional_configure_apps.md#supported-ldap-configuration) in the helm values under `configuration.core.ldap`, the core security credentials need to be manually set to the credentials of the administrator user(s) from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
+
+Please refer to the [Updating user ID and passwords](../../../../../manage/security/people/authentication/updating_userid_pwd/index.md) topic for additional information on how to manually change credentials.
+
+
+### File-based user registry
 
 If no LDAP is configured in the helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for Core and Remote Search that are specified in the `custom-values.yaml` are applied to the file-based registry. This means that any changes to the values are automatically reflected in the administrator user accounts for Websphere and DX.
 
@@ -62,18 +72,6 @@ If no LDAP is configured in the helm values, HCL Digital Experience is configure
 | `wasPassword` | Sets the password of the `wasUser` to this value. |
 | `wpsUser` | Creates a user with this name if it does not exist already. Then makes that user a HCL Digital Experience administrator. |
 | `wpsPassword` | Sets the password of the `wpsUser` to this value. |
-
-!!! important
-    If the Websphere primary admin user was, at any time, changed manually and not through the helm values, the values for `wasUser` and `wasPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterwards, the helm values can be used to change the credentials.
-
-!!! important
-    Do not change the admin credentials during the update of the DX deployment to a later version. Always set the current credentials in the `custom-values.yaml` before upgrading.
-
-## LDAP
-
-If a [LDAP is configured](./optional_configure_apps.md#supported-ldap-configuration) in the helm values under `configuration.core.ldap`, the core security credentials need to be manually set to the credentials of the administrator user(s) from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
-
-Please refer to the [Updating user ID and passwords](../../../../../manage/security/people/authentication/updating_userid_pwd/index.md) topic for additional information on how to manually change credentials.
 
 
 ### Core security credentials
@@ -91,11 +89,16 @@ The following only takes effect when [Config Wizard is enabled](./optional_confi
 Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the helm chart. 
 
 
-# Updating Credentials
+## Updating Credentials
 
 If the Websphere primary admin user was, at any time, changed manually and not through the helm values, the values for `configWizardUser` and `configWizardPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterward, the helm values can be used to change the credentials.
 
 If an LDAP is configured for Config Wizard, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the helm chart. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
+
+
+!!! important
+    Do not change the admin credentials during the update of the DX deployment to a later version. Always set the current credentials in the `custom-values.yaml` before upgrading.
+
 
 ## Configuring Credentials from Secrets
 
