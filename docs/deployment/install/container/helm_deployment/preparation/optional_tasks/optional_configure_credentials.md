@@ -89,9 +89,10 @@ If the Websphere primary admin user was, at any time, changed manually and not t
 
 If an LDAP is configured for Config Wizard, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the helm chart. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
 
+## Upgrading
 
-!!! important
-    Do not change the admin credentials during the update of the DX deployment to a later version. Always set the current credentials in the `custom-values.yaml` before upgrading.
+For CF212 and below upgrading to CF213 and beyond, **do not** change the admin credentials during the upgrade. Always set the current credentials in the `custom-values.yaml` before upgrading.
+
 
 
 ## Configuring Credentials from Secrets
