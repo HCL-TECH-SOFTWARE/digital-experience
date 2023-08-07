@@ -4,7 +4,7 @@ This document contains instructions on how to install and deploy the Content Rep
 
 ## Packaging, installing, and deploying design
 
-Content Reporting is an instance of a react integration portlet configured to point to where the static files of the app can be loaded from. It can be enabled and disabled by using Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page.
+Content Reporting is an instance of a react integration portlet configured to point to where the static files of the app can be loaded from. It can be enabled and disabled by using ConfigEngine tasks. The enable task would deploy, configure the portlet, then deploy the page.
 
 ## Enabling and disabling Content Reporting
 
@@ -18,13 +18,7 @@ This section describes how to enable and disable Content Reporting manually.
 
 ### Enabling Content Reporting
 
-!!! note
-    For more information on how to run the ConfigEngine tasks on container deployments, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
-
-To enable Content Reporting, run the **enable-content-reporting** config task.
-
-!!! note
-    It is not required to stop or restart the Portal when running these configuration tasks.
+To enable Content Reporting, run the **enable-content-reporting** config task. It is not required to stop or restart the Portal when running these configuration tasks.
 
 -   AIX: `./ConfigEngine.sh enable-content-reporting -Dcontentreporting.static.ui.url="/dx/ui/content-reporting/" -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 -   Linux: `./ConfigEngine.sh enable-content-reporting -Dcontentreporting.static.ui.url="/dx/ui/content-reporting/" -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
@@ -32,20 +26,22 @@ To enable Content Reporting, run the **enable-content-reporting** config task.
     
 !!! important
         For the **contentreporting.static.ui.url** parameter value, a slash is required in the end.
+        
+For information on how to run the ConfigEngine tasks on container deployments, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
 !!! note
         If using a webserver, it is required to [map the Content Reporting application to the server](https://www.ibm.com/docs/en/was/9.0.5?topic=files-mapping-modules-servers) in addition to the Digital Experience server or cluster. Regenerate and propagate the plugin-cfg.xml file.
 
-### Disabling Content Reporting for traditional deployment
 
-!!! note
-    For more information on how to run the ConfigEngine tasks on container deployments, please refer to [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
+### Disabling Content Reporting for traditional deployment
 
 To disable Content Reporting, run the **disable-content-reporting** config task.
 
 -   AIX: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 -   Linux: `./ConfigEngine.sh disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 -   Windows: `ConfigEngine.bat disable-content-reporting -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
+
+For information on how to run the ConfigEngine tasks on container deployments, refer to [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
 !!! note
     After Content Reporting is disabled by running the **disable-content-reporting** config task, the Content Reporting page is removed. To enable Content Reporting again, the **enable-content-reporting** config task must be executed manually.
