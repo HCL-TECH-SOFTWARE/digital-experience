@@ -91,7 +91,8 @@ If an LDAP is configured for Config Wizard, you must manually set the security c
 
 ## Upgrading
 
-For CF212 and below upgrading to CF213 and beyond, **do not** change the admin credentials during the upgrade. Always set the current credentials in the `custom-values.yaml` before upgrading.
+For CF212 and below upgrading to CF213 and beyond:
+- If the `wpsadmin` credentials has been changed for Core, the new password must be set as the new `configWizardPassword` as well. This is due to [persisted ConfigWizard Profile](../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md)
 
 
 
