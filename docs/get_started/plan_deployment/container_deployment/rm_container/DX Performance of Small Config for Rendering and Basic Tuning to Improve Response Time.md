@@ -5,9 +5,9 @@ title: DX Performance of Small Config for Rendering and Basic Tuning to Improve 
 
 ## DX Rendering Sizing Performance Tests overview
 
-As part of DX performance tests one of our goals is DX Sizing. DX Sizing means exactly to identify the K8s environment of DX small, medium and large configurations, where user can work comfortably. We will also present the important KPIs in small, medium and large configurations like no of concurrent users, average response time, throughput etc.
+As part of DX performance tests one of our goals is DX Sizing. The aim of DX Sizing is to identify the K8s environment of DX small, medium and large configurations, where user can work reliably. We will also present the important KPIs in small, medium and large configurations like number of concurrent users, average response time, throughput etc. Finally, we will show how adjustments to the pod configuration can make dramatic improvements in the responsiveness of the system.
 
-In this sizing work, we started with rendering scenarios of WCM, Portlets and DAM with rendering set up enabled in AWS/Native-Kube. We are using Apache JMeter tool for our performance tests.
+In this sizing work, we started with rendering scenarios of WCM, Portlets and DAM with a rendering setup enabled in AWS/Native-Kube. We are using Apache JMeter tool for our performance tests.
 
 ## Customer Rendering Scenario details
 
@@ -20,8 +20,8 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 ## Environment
 
 ### AWS/Native Kube
-- In AWS/Native Kube we started with the minimal EC2 instance
-- We are using remote DB2 instance for our tests
+- In AWS/Native Kube we started with the minimal EC2 instance.
+- We are using remote DB2 instance for our tests.
 
 [Small Configuration]  - [c5.2xlarge] 
 
@@ -61,7 +61,7 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 ### JMeter agents
 
 - JMeter instance - [t2.xlarge]
-- We have AWS/JMeter agents distributed set up. One master and two slaves to execute the tests.
+- We use a distributed AWS/JMeter agents setup consisting of one master and two slaves to execute the tests.
 
 ![](../../../../images/Header-3-AWS.png)
 
@@ -87,14 +87,14 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 
 ## Authoring Details for small config in rendering sizing
 
-- As we have to do rendering tests, obviously we need to do authoring first.  Below are details of WCM, DAM and portlets authoring.
+- As we have to do rendering tests, obviously we need to populate the setups first.  Below are the details of WCM, DAM and portlets authoring.
 
 
 ## WCM Default Test Data - 20 pages
 
 ### WCM test data characteristics
 
-- The default test data has a WCM design library called "PerformanceTestDesign" and five content libraries named "PerformanceTestContent01" through to "PerformanceTestContent05".
+- The default test data has a WCM design library called "PerformanceTestDesign" and five content libraries named "PerformanceTestContent01" to "PerformanceTestContent05".
 - Each content library contains four levels of site areas, with four site areas per level. Only the 256 "leaf" site areas contain content.
 
 - Each leaf site area contains ten content items, for a total of 12,800 content items across the libraries.
@@ -107,7 +107,7 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 
 - There are twenty test portal pages created under the label "PerformanceTest". Each has a friendly URL of the form "<context-root>/perf/page-xx".
 
-- Each page contains six WCM viewer portlets that show content below one of the twenty top level site areas. Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01", pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02" etc.
+- Each page contains six WCM Viewer portlets that show content below one of the twenty top level site areas. Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01", and pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02" etc.
 
 - Four of the portlets on each page show single content items. For page 01 these would be the first content items in site areas "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01" and "SA01.04.01.01" respectively. Other pages follow the same pattern.
 
@@ -115,11 +115,11 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 
 - The final portlet on each page shows a menu of items and is both scoped to the top-level site area and also selects only those items profiled with the "MENU" keyword.
 
-- Total 99999 users added to openLDAP as authenticated users.
+- A total of 99999 users added to openLDAP as authenticated users.
 
 ## DAM Default Test Data - 2.5k assets
 
-- 2.5 K assets are uploaded which includes images(136kb, .jpg), documents(199kb, .docx), videos(1.1mb, .mp4) to preheat. After preheating with 2.5k assets we then upload 15 assets and render those assets for 1 hour.
+- 2.5 K assets are uploaded which includes images(136kb, .jpg), documents(199kb, .docx), videos(1.1mb, .mp4) to preheat. After preheating with 2.5k assets, we then upload 15 assets and render those assets for 1 hour.
 
 - Details of 15 assets uploaded for rendering 
 - We have total of 19 urls of which three are custom urls, eight are uuid urls, eight are friendly urls combinations of original, tablet, smartphone and desktop renditions.
@@ -130,13 +130,13 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 | Video    | mp4/webm      | 5 mb, 199kb,200kb , 2 mb,199kb            |
 | Document | docx/xlsx/pptx| mp4- 1mb, 15mb, 100mb, webm- 2 mb         |
 
-- Note : For DAM we have now only anonymous rendering no authenticated. We will plan it for our future work.
+- Note : For DAM we have only anonymous rendering. 
 
 
 ## Pages and Portlets Default Test Data - 8 pages
 
- Total eight pages with portlets that are most used by customers, Authoring and Rendering was done by giving access to both Anonymous and Authenticated Users (same users added in openLDAP for WCM rendering). All authenticated users are of the role User.
- As part of Authoring we added pages and portlets manually. Below are the details of porlets authoring in every page.
+ There are a total of eight pages with portlets that are commonly used by customers, Authoring and Rendering was done by giving access to both Anonymous and Authenticated Users (same users added in openLDAP for WCM rendering). All authenticated users are of the role User.
+ As part of Authoring we added pages and portlets manually. Below are the details of portlets authoring in every page.
 
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
@@ -167,13 +167,13 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 
 ### Result Summary
 
-- Following were stages in which the performance test has been conducted starting with default kube configuration.
+- The following stages were conducted starting with default kube configuration.
 
 ** Stage 1 **
 
 - DX combined run executed with default minimal deployments as mentioned in below helm values. 
-- Till 500 users load no issues seen. 
-- Errors are seen at 600 users load. Total Error is around ~5%.
+- There were no issues seen with up to a 500 user load. 
+- Errors are seen at a 600 users load. This total Error is around ~5%.
 
 
 ## stage-1 Helm Values
@@ -225,18 +225,18 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 
 - For 600 users load observed http response code - 503 service unavailable errors in the test.
 
-- All errors are from WCM and Pages&Portlets not from DAM.
+- All errors are from WCM and Pages&Portlets, not from DAM.
 
-- Total Average response time increasing exponentially with vload.
+- Total Average response time increases exponentially with vload.
 
-- Event loop lag for Ring API pod is also on higher end (~400 ms for 500 user load)
+- Event loop lag for Ring API pod is also on the higher end (~400 ms for 500 user load).
 
-- No pods restarts
+- No pods restarts were observed.
 
 
 ** Stage 2 **
 
-From stage-1 observations, we started tuning core, ring api and ha proxy pods limts one by one to see if no errors during 600 users load.
+From stage-1 observations, we started the tuning of core, ring api and ha proxy pods limits one by one to see if no errors occurred during a 600 users load.
 
 Below are the tuned helm values.
 
@@ -311,8 +311,8 @@ Below are the tuned helm values.
 
 *Observations:*
 
-- No errors observed and no pods restarts during the test
+- No errors observed and no pods restarts during the test.
 
 - Total average response time, total throughput and Event loop lag for Ring API pod improved significantly.
 
-- Top 5 requests with higher response time are from DAM rendering and WCM inital page request
+- Top 5 requests with higher response time are from DAM rendering and WCM inital page request.
