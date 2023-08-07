@@ -8,12 +8,20 @@ Content Reporting should be installed and configured in HCL Digital Experience 9
 After image configuration in your HCL Digital Experience 9.5 CF213 and higher deployment, Content Reporting is accessible from the Practitioner Studio interface.
 
 !!! note
-    You must have **User** and **Editor** access for the following resources to access Content Reporting. Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
+    You must have **User** or **Editor** access for the following resources to access Content Reporting. The **User** role has a limited feature access (Report generation, bulk update and export of reports are not allowed, only the update operations are able to view). However, The **Editor** role has no feature limitations.​ Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
 
     - **Content reporting page** -  Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content** > **Content Reporting** > Click the **Assign Access** icon to set User role.
     - **Content reporting portlet** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Portlets** > ** Content Reporting portlet** > Click **Assign Access** icon to set User role.
     - **WCM_REST_SERVICES** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Virtual Resources** > **WCM REST SERVICE** > Click **Assign Access** icon to set Editor role.
     - **WCM libraries and items** - Click the **Web Content menu**. Go to **Web Content Libraries** > Click the **Assign Access** icon to set the User or Editor role for any library as needed. A user needs at least **User** access to an item for that item to be included in a report they generate. A user needs at least **Editor** access to an item for to be successfully updated during a bulk update.
+
+    | Features              | User              | Editor             |
+    | ----------------------| ----------------  | -------------------|
+    | `Report generation`   | :material-close:  | :material-check:   |
+    | `Bulk update`         | :material-close:  | :material-check:   |
+    | `Export`              | :material-close:  | :material-check:   |
+    | `Updates`             | :material-check:  | :material-check:   |
+
 
 ## Accessing Content Reporting
 
