@@ -1,5 +1,6 @@
-/* General Styles */
+/* General CNX Styles */
 /* General flexbox styles */
+
 
 .section-flexbox-row {
     color: var(--md-primary-bg-color);
@@ -59,10 +60,6 @@
     color: white;
 }
 
-/* Hide the mkdocs tabbed menu */
-/* .md-main {
-    display: none;
-} */
 
 .body-text {
     font-size: 16px;
@@ -90,6 +87,9 @@
     border-color: var(--md-accent-fg-color)
 }
 
+.md-main {
+	display: none;
+}
 
 
 /* Section by section styles */
@@ -102,12 +102,22 @@
     background-position: left bottom;
     background-size: cover;
     height: 20rem;
+	min-height: 50vh;
 }
+
+/*Style for Video clip insertion*/
+/*
+.dx-hero__image {
+    width: 100%;
+    height: 100%;
+	
+  }
+
 
 .dx-hero__content {
     width: 40%;
     min-width: 520px;
-}
+} */
 
 .dx-hero__content h3 {
     color: white;
@@ -126,13 +136,96 @@
 
 .dx-hero__content {
     width: 40%;
+    min-width: 520px;
+
+}
+
+
+.section {
+	width: 100%;
+
+}
+
+.container {
+	width:100%;
+	display: block;
+	margin:auto;
+}
+	
+.content-section {
+
+   float: left;
+   width:50%;
+   color: white;
+   min-width:520px;
+   
+}
+
+.content-section a {
+	color: lightgreen;
+}
+
+.video-section {
+	float: right;
+	width: 40%; 
+	height: auto;
+	margin-top: 85px;
+}
+
+.video-section iframe {
+	width:100%;
+}
+
+@media screen and (max-width: 768px) {
+	.section-flexbox-row {
+    color: var(--md-primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 30rem;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+	
+}
+
+.container {
+	width:100%;
+	display: block;
+	margin:auto;
+}
+	
+.content-section {
+
+   float: none;
+   width:100%;
+   color: white;
+   min-width:120px;
+   justify-content: center;
+}
+
+.content-section a {
+	color: lightgreen;
+}
+
+.video-section {
+	float: none;
+	width: 100%; 
+	height: auto;
+	margin-top: 85px;
+}
+
+.video-section iframe {
+	width:100%;
+}
+
 }
 
 /* Designed For You Styles */
 
 .section-designedforyou {
     color: black;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/dx-teams-abstract-dots.jpeg);
+    background: url(../images/dx-teams-abstract-dots.jpeg);
     background-position: left bottom;
     background-size: cover;
     height: auto;
@@ -215,11 +308,13 @@
     text-align: center;
     font-size: 28px;
 }
+
 .persona-developer{
     width: 200px;
     height: 200px;
 
     background: url(../images/francesca.jpeg);
+
     background-size: 200px;
     border-radius: 100px;
 
@@ -234,6 +329,7 @@
     height: 200px;
 
     background: url(../images/camille.jpeg);
+
     background-size: 200px;
     border-radius: 100px;
 
@@ -277,6 +373,11 @@
 .academy-hero__image img {
     width: 495px;
     height: 326px;
+}
+
+.dx-academy-logo img {
+    width: 189px;
+    height: 30px;
 }
 
 .academy-hero__content {
@@ -425,6 +526,10 @@
     .section-academy {
         height: auto;
     }
-
+ /*Remove white space before footer*/
+    .md-main {
+        display: none;
+    }
+	
 }
 
