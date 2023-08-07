@@ -97,7 +97,7 @@ The export command is used to export the DAM assets in the file system to defaul
 
     !!! note 
         Optional parameters are `exportPath` and `exportBinary`.<br>
-        If the exportPath value is not a relative or full path, the output will be placed in the container and will not persist once the command execution is complete - for example,`-exportPath outputFileDirectory`
+        If the exportPath value is not a relative or full path, the output will be placed in the container and will not persist after the command execution is complete. For example,`-exportPath outputFileDirectory`.
 
     !!! example
 
