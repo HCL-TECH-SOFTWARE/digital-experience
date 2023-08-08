@@ -54,27 +54,27 @@ security:
 
 
 ## Core security credentials
-The security credentials defined in the `security` section of the helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
+The security credentials defined in the `security` section of the Helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
 
 ## Remote Search security credentials
-Same as Core, when Remote Search is enabled, WAS admin credentials can be configured from the helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
+Same as Core, when Remote Search is enabled, WAS admin credentials can be configured from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
 
 
 ## Config Wizard security credentials
 The following only takes effect when [Config Wizard is enabled](./optional_configure_apps.md#configuration-wizard-configuration).
 
-Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
+Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
  
 
 ## Registry Types
 
 ### LDAP
-If [LDAP is configured](./optional_configure_apps.md#supported-ldap-configuration) in the helm values under `configuration.core.ldap`, the core security credentials need to be manually set to the credentials of the administrator user(s) from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
+If [LDAP is configured](./optional_configure_apps.md#supported-ldap-configuration) in the Helm values under `configuration.core.ldap`, the core security credentials need to be manually set to the credentials of the administrator user(s) from LDAP and kept up to date manually in the helm chart if the users are changed in the LDAP. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
 
 Please refer to the [Updating user ID and passwords](../../../../../manage/security/people/authentication/updating_userid_pwd/index.md) topic for additional information on how to manually change credentials.
 
 ### File-based user registry
-If no LDAP is configured in the helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for Core and Remote Search that are specified in the `custom-values.yaml` are applied to the file-based registry. This means that any changes to the values are automatically reflected in the administrator user accounts for Websphere and DX.
+If no LDAP is configured in the Helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for Core and Remote Search that are specified in the `custom-values.yaml` are applied to the file-based registry. This means that any changes to the values are automatically reflected in the administrator user accounts for Websphere and DX.
 
 | Value | Effect |
 | --- | --- |
@@ -85,9 +85,9 @@ If no LDAP is configured in the helm values, HCL Digital Experience is configure
 
 ## Updating Credentials
 
-If the Websphere primary admin user was, at any time, changed manually and not through the helm values, the values for `configWizardUser` and `configWizardPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterward, the helm values can be used to change the credentials.
+If the Websphere primary admin user was, at any time, changed manually and not through the Helm values, the values for `configWizardUser` and `configWizardPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterward, the helm values can be used to change the credentials.
 
-If an LDAP is configured for Config Wizard, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the helm chart. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
+If an LDAP is configured for Config Wizard, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
 
 ## Upgrading
 
@@ -125,7 +125,7 @@ security:
 ```
 
 !!! important
-    Only one method of configuring credentials can be applied at once. Either configure it by using secrets or using the credentials in the helm `custom-values.yaml`, unused credential values should be explicitly set to **empty/null**.
+    Only one method of configuring credentials can be applied at once. Either configure it by using secrets or using the credentials in the Helm `custom-values.yaml`, unused credential values should be explicitly set to **empty/null**.
 
 !!! important
     A Helm upgrade is required in order for the new credentials values to reflect inside the containers.
@@ -177,11 +177,11 @@ type: "Opaque"
 Once the secret is created inside the cluster, you can now reference them in their respective custom secret fields inside the `custom-values.yaml` under `security` section. See this [example](./optional_configure_credentials.md#configuring-credentials-from-secrets) for reference.
 
 !!! note
-    For Core LTPA AND LDAP you can reference your secrets under `configuration.core` section of the helm values.
+    For Core LTPA AND LDAP you can reference your secrets under `configuration.core` section of the Helm values.
 
 #### 3. Check the Required Attributes in Secrets
 
-There are multiple credentials being used in HCL Digital Experience 9.5. Each application has different required attributes for their credential. If you intend to use a secret to configure credentials for a specific application, always check the data attributes of the secret that you will be using in order for the helm chart to map those values and be passed/cascaded accordingly to each application.
+There are multiple credentials being used in HCL Digital Experience 9.5. Each application has different required attributes for their credential. If you intend to use a secret to configure credentials for a specific application, always check the data attributes of the secret that you will be using in order for the Helm chart to map those values and be passed/cascaded accordingly to each application.
 
 !!! note
     Helm validates the inputs and the deployment will not be applied if required attributes are not set properly in the custom secrets.
