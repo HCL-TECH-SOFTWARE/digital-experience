@@ -85,14 +85,14 @@ If no LDAP is configured in the Helm values, HCL Digital Experience is configure
 
 ## Updating Credentials
 
-If the Websphere primary admin user was, at any time, changed manually and not through the Helm values, the values for `configWizardUser` and `configWizardPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterward, the helm values can be used to change the credentials.
+If the Websphere primary admin user was, at any time, changed manually and not through the Helm values, the values for `configWizardUser` and `configWizardPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterward, the Helm values can be used to change the credentials.
 
-If an LDAP is configured for Config Wizard, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the helm values will not cause any changes to the LDAP users.
+If an LDAP is configured for Config Wizard, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the Helm values will not cause any changes to the LDAP users.
 
 ## Upgrading
 
 For CF212 and below upgrading to CF213 and beyond:
-- If the primary admin credentials have been changed for Core, the new credentials must also be set as the ConfigWizard credentials in your `custom-values.yaml`. This means that `configWizardUser` and `configWizardPassword` under `security.core` need to be updated to the current primary credentials **once**, followed by a Helm upgrade. After the Helm upgrade credentials can now be updated if needed, separately from the Core. 
+- If the primary admin credentials have been changed for Core, the new credentials must also be set as the ConfigWizard credentials in your `custom-values.yaml` prior to upgrading to (CF213 and beyond). This means that `configWizardUser` and `configWizardPassword` under `security.core` need to be updated to the current primary credentials **once**, followed by a Helm upgrade. After the Helm upgrade credentials can now be updated if needed, separately from the Core. 
 
 General Upgrade Recommendations:
 - Ensure that the current credentials are set properly in the Helm Values. See [Updating Credentials](#updating-credentials) to ensure that the credentials are properly set in the Helm before doing the upgrade.
