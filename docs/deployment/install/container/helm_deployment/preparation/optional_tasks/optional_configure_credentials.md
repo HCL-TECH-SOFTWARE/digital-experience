@@ -92,7 +92,7 @@ If an LDAP is configured for Config Wizard, you must manually set the security c
 ## Upgrading
 
 For CF212 and below upgrading to CF213 and beyond:
-- If the primary admin credentials have been changed for Core, the new credentials must also be set as the ConfigWizard credentials in your `custom-values.yaml` prior to upgrading to (CF213 and beyond). This means that `configWizardUser` and `configWizardPassword` under `security.core` need to be updated to the current primary credentials **once**, followed by a Helm upgrade. After the Helm upgrade credentials can now be updated if needed, separately from the Core. 
+- If the primary admin credentials have been changed for Core, the new credentials must also be set as the ConfigWizard credentials in your `custom-values`.yaml` before upgrading to (CF213 and beyond). This means that `configWizardUser` and `configWizardPassword` under `security.core` needs to be updated to the current primary credentials **once**, followed by a Helm upgrade. After the Helm upgrade credentials can now be updated if needed, separately from the Core. 
 
 General Upgrade Recommendations:
 - Ensure that the current credentials are set properly in the Helm Values. See [Updating Credentials](#updating-credentials) to ensure that the credentials are properly set in the Helm before doing the upgrade.
