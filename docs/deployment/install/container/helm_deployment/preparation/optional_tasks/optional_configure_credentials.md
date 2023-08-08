@@ -74,7 +74,7 @@ If [LDAP is configured](./optional_configure_apps.md#supported-ldap-configuratio
 Please refer to the [Updating user ID and passwords](../../../../../manage/security/people/authentication/updating_userid_pwd/index.md) topic for additional information on how to manually change credentials.
 
 ### File-based user registry
-If no LDAP is configured in the Helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for Core and Remote Search that are specified in the `custom-values.yaml` are applied to the file-based registry. This means that any changes to the values are automatically reflected in the administrator user accounts for Websphere and DX.
+If no LDAP is configured in the Helm values, HCL Digital Experience is configured with a default file-based user repository. In this case, the security credentials for Core, ConfigWizard and Remote Search that are specified in the `custom-values.yaml` are applied to the file-based registry. This means that any changes to the values are automatically reflected in the administrator user accounts for Websphere and DX.
 
 | Value | Effect |
 | --- | --- |
