@@ -92,12 +92,11 @@ If an LDAP is configured for Config Wizard, you must manually set the security c
 ## Upgrading
 
 For CF212 and below upgrading to CF213 and beyond:
-- If the `wpsadmin` credentials has been changed for Core, the new password must be set as the new `configWizardPassword` as well. This is due to [persisted ConfigWizard Profile](../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md)
+- If the primary admin credentials have been changed for Core, the new credentials must be set as the ConfigWizard credentials. The `configWizardUsername` and `configWizardPassword` needs to be set to the current primary credentials **once** followed by a Helm upgrade. Afrerwards, credentials can now be updated if needed, separately from core. 
 - 
 
 General Upgrade Recommendations:
 - Ensure that the current credentials are set properly in the Helm Values. See [Updating Credentials](#updating-credentials) to ensure that the credentials are properly set in the Helm before doign the upgrade.
-
 
 ## Configuring Credentials from Secrets
 
