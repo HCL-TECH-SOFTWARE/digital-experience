@@ -11,7 +11,7 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 
 ## Conclusion
 
-The intention of this initial performance guidance was to understand how the ratios of key pod limits can dramatically improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods.
+The intention of this initial performance guidance is to understand how the ratios of key pod limits can dramatically improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods.
 
 
 - Changes to the pod limits for below Pods **DRAMATICALLY** improve the responsiveness of the setup and as well led to the ability to handle more users.
@@ -22,18 +22,20 @@ The intention of this initial performance guidance was to understand how the rat
 | ringApi  | 1                      | ringApi   | ringApi         | 500m                            | 512Mi                              |
 | haproxy  | 1                      | haproxy   | haproxy         | 700m                            | 1024Mi                             |
 
+- These modification led to better Response Time and Throughput by 50 %. Detailed data for same given in below sections.
+
 ## Customer Rendering Scenario details
 
 | Concurrent users     | Existing WCM pages | Existing DAM Content |
 | -------------------- | ------------------ | -------------------- |
-| Small – 1000 users   | 20                 | 2k                   |
+| Small  –  1000 users | 20                 | 2k                   |
 | Medium – 10000 users | 200                | 10k                  |
-| Large – 100000 users | 2000               | 50-100k              |
+| Large  –100000 users | 2000               | 50-100k              |
 
 ## Environment
 
 ### AWS/Native Kube
-- In AWS/Native Kube we started with the minimal EC2 instance.
+- In AWS/Native Kube we started with the minimal EC2 instance with single Node.
 - We are using remote DB2 instance for our tests.
 
 [Small Configuration]  - [c5.2xlarge] 
@@ -210,21 +212,21 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 - Results overview
 
 
-| AWS/Native-Kube                            | Test-6                                                       | Test-7 (after tuning - core, ring api, haproxy)                     | % Change |
-| ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------- | ------------ |
-| Test Time                                  | July 21st IST 12:30 am - 1:30 am                             | July 27th IST 14:08 pm - 15:12 pm                                   |              |
-| Total samples                              | 66959                                                        | 918415                                                              |              |
-| Concurent Users                            | 600(WCM=240+DAM=180+PNP=180)                                 | 600(WCM=240+DAM=180+PNP=180)                                        |              |
-| Total Throughput (transactions/sec)        | 110.3                                                        | 238.18                                                              | 115.94       |
-|**Total Avg response time (milli seconds)** | **4671**                                                     | **994.89**                                                            | **78.70**    |
-| CPU Usage                                  | 25%                                                          | 52.36%                                                              |              |
-| Memory Usage                               | 56%                                                          | 62.23%                                                              |              |
-| Disk Read IO                               |                                                              | 0 B/s                                                               |              |
-| Disk Write IO                              |                                                              | 13.65 io/s                                                          |              |
-| DAM EventLoop lag (in milli seconds)       |                                                              | 16.14                                                               |              |
-| **Ring EventLoop lag (in milli seconds)**  | **450**                                                      | **5.19**                                                             | **98.85**        |
-| **Error**                                  | **4.87%**                                                    | **0**                                                               |              |
-| TimeDuration                               | 3600                                                         | 3850                                                                |              |
+| AWS/Native-Kube                            | Test-6                                                       | Test-7 (after tuning - core, ring api, haproxy)                     |
+| ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------- |
+| Test Time                                  | July 21st IST 12:30 am - 1:30 am                             | July 27th IST 14:08 pm - 15:12 pm                                   |
+| Total samples                              | 66959                                                        | 918415                                                              |
+| Concurent Users                            | 600(WCM=240+DAM=180+PNP=180)                                 | 600(WCM=240+DAM=180+PNP=180)                                        |
+| Total Throughput (transactions/sec)        | **110.3**                                                    | **238.18**                                                          |
+| Total Avg response time (in milli seconds) | **4671**                                                     | **994.89**                                                          |
+| CPU Usage                                  | 25%                                                          | 52.36%                                                              |
+| Memory Usage                               | 56%                                                          | 62.23%                                                              |
+| Disk Read IO                               |                                                              | 0 B/s                                                               |
+| Disk Write IO                              |                                                              | 13.65 io/s                                                          |
+| DAM EventLoop lag (in milli seconds)       |                                                              | 16.14                                                               |
+| Ring EventLoop lag (in milli seconds)      | **450**                                                      | **5.19**                                                            |
+| Error                                      | 4.87%                                                        | 0                                                                   |
+| TimeDuration                               | 3600                                                         | 3850                                                                |
 |                                            | Top 5 request samples (avg respone time in ms)               | Top 5 request samples (avg respone time in ms)                      |              |
 |                                            | Get video - mp4 1.1 mb custom url - curlmp41.1mb.    (25044) | Get video - mp4 15mb - idmp415mb (6253.29)                          |              |
 |                                            | Get image - jpeg 155 kb custom url - curljpg155kb   (23851)  | Get video - mp4 1.1 mb custom url - curlmp41.1mb (5512.89)          |              |
@@ -274,21 +276,21 @@ Below are the tuned helm values.
 
 - Results overview
 
-| AWS/Native-Kube                            | Test-6                                                       | Test-11 (after tuning - core, ring api, haproxy)            | % Change |
-| ------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------- |
-| Test Time                                  | July 21st IST 12:30 am - 1:30 am                             | July 28th IST 12:12 pm to 13:17 pm                          |               |
-| Total samples                              | 66959                                                        | 692505                                                      |               |
-| Concurent Users                            | 600(WCM=240+DAM=180+PNP=180)                                 | 600(WCM=240+DAM=180+PNP=180)                                |               |
-| Total Throughput (transactions/sec)        | 110.3                                                        | 179.63 ± 16.59                                              | 62.85         |
-| Total Avg response time (in milli seconds) | 4671                                                         | 2063.32 ± 308.33                                            | 55.82         |
-| CPU Usage                                  | 25%                                                          | 39.72%                                                      |               |
-| Memory Usage                               | 56%                                                          | 61.70%                                                      |               |
-| Disk Read IO                               |                                                              | 0 io/s                                                      |               |
-| Disk Write IO                              |                                                              | 13.04 io/s                                                  |               |
-| DAM EventLoop lag (in milli seconds)       |                                                              | 16.1                                                        |               |
-| Ring EventLoop lag (in milli seconds)      | 450                                                          | 4.57                                                        | 98.98         |
-| Error                                      | 4.87%                                                        | 0                                                           |               |
-| TimeDuration                               | 3600                                                         | 3850                                                        |               |
+| AWS/Native-Kube                            | Test-6                                                       | Test-11 (after tuning - core, ring api, haproxy)            |
+| ------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------- |
+| Test Time                                  | July 21st IST 12:30 am - 1:30 am                             | July 28th IST 12:12 pm to 13:17 pm                          |
+| Total samples                              | 66959                                                        | 692505                                                      |
+| Concurent Users                            | 600(WCM=240+DAM=180+PNP=180)                                 | 600(WCM=240+DAM=180+PNP=180)                                |
+| Total Throughput (transactions/sec)        | 110.3                                                        | 179.63 ± 16.59                                              |
+| Total Avg response time (in milli seconds) | 4671                                                         | 2063.32 ± 308.33                                            |
+| CPU Usage                                  | 25%                                                          | 39.72%                                                      |
+| Memory Usage                               | 56%                                                          | 61.70%                                                      |
+| Disk Read IO                               |                                                              | 0 io/s                                                      |
+| Disk Write IO                              |                                                              | 13.04 io/s                                                  |
+| DAM EventLoop lag (in milli seconds)       |                                                              | 16.1                                                        |
+| Ring EventLoop lag (in milli seconds)      | 450                                                          | 4.57                                                        |
+| Error                                      | 4.87%                                                        | 0                                                           |
+| TimeDuration                               | 3600                                                         | 3850                                                        |
 |                                            | Top 5 request samples (avg respone time in ms)               | Top 5 request samples (avg respone time in ms)              |               |
 |                                            | Get video - mp4 1.1 mb custom url - curlmp41.1mb.    (25044) | Initial Page Request (11235.13)                             |               |
 |                                            | Get image - jpeg 155 kb custom url - curljpg155kb   (23851)  | Get video - mp4 1.1 mb custom url - curlmp41.1mb (6791.20)  |               |
