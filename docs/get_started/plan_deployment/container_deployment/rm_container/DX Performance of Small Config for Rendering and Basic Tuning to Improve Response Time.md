@@ -9,6 +9,19 @@ As part of DX performance tests one of our goals is DX Sizing. The aim of DX Siz
 
 In this sizing work, we started with rendering scenarios of WCM, Portlets and DAM with a rendering setup enabled in AWS/Native-Kube. We are using Apache JMeter tool for our performance tests.
 
+## Conclusion
+
+The intention of this initial performance guidance was to understand how the ratios of key pod limits can dramatically improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods.
+
+
+- Changes to the pod limits for below Pods **DRAMATICALLY** improve the responsiveness of the setup and as well led to the ability to handle more users.
+
+| Pod Name | Minimum Number of Pods | Container | Container Image | Container CPU Request and Limit | Container Memory Request and Limit |
+| -------- | ---------------------- | --------- | --------------- | ------------------------------- | ---------------------------------- |
+| core     | 1                      | core      | core            | 3000m                           | 5000Mi                             |
+| ringApi  | 1                      | ringApi   | ringApi         | 500m                            | 512Mi                              |
+| haproxy  | 1                      | haproxy   | haproxy         | 700m                            | 1024Mi                             |
+
 ## Customer Rendering Scenario details
 
 | Concurrent users     | Existing WCM pages | Existing DAM Content |
@@ -87,7 +100,7 @@ In this sizing work, we started with rendering scenarios of WCM, Portlets and DA
 
 ## Authoring Details for small config in rendering sizing
 
-- As we have to do rendering tests, obviously we need to populate the setups first.  Below are the details of WCM, DAM and portlets authoring.
+- As we have to do rendering tests, obviously we need to populate the setups first.  Below are the details of WCM, DAM and Portlets authoring.
 
 
 ## WCM Default Test Data - 20 pages
@@ -197,7 +210,7 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 - Results overview
 
 
-| AWS/Native-Kube                            | Test-6                                                       | Test-7 (after tuning - core, ring api, haproxy)                     | % Improvement|
+| AWS/Native-Kube                            | Test-6                                                       | Test-7 (after tuning - core, ring api, haproxy)                     | % Change |
 | ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------- | ------------ |
 | Test Time                                  | July 21st IST 12:30 am - 1:30 am                             | July 27th IST 14:08 pm - 15:12 pm                                   |              |
 | Total samples                              | 66959                                                        | 918415                                                              |              |
@@ -209,7 +222,7 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 | Disk Read IO                               |                                                              | 0 B/s                                                               |              |
 | Disk Write IO                              |                                                              | 13.65 io/s                                                          |              |
 | DAM EventLoop lag (in milli seconds)       |                                                              | 16.14                                                               |              |
-| **Ring EventLoop lag (in milli seconds)**  | **450**                                                      | **5.19**                                                             | 98.85        |
+| **Ring EventLoop lag (in milli seconds)**  | **450**                                                      | **5.19**                                                             | **98.85**        |
 | **Error**                                  | **4.87%**                                                    | **0**                                                               |              |
 | TimeDuration                               | 3600                                                         | 3850                                                                |              |
 |                                            | Top 5 request samples (avg respone time in ms)               | Top 5 request samples (avg respone time in ms)                      |              |
@@ -261,7 +274,7 @@ Below are the tuned helm values.
 
 - Results overview
 
-| AWS/Native-Kube                            | Test-6                                                       | Test-11 (after tuning - core, ring api, haproxy)            | % Improvement |
+| AWS/Native-Kube                            | Test-6                                                       | Test-11 (after tuning - core, ring api, haproxy)            | % Change |
 | ------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------- |
 | Test Time                                  | July 21st IST 12:30 am - 1:30 am                             | July 28th IST 12:12 pm to 13:17 pm                          |               |
 | Total samples                              | 66959                                                        | 692505                                                      |               |
@@ -290,8 +303,8 @@ Below are the tuned helm values.
 | Test Time                                  | July 27th IST 19:58 pm to 20:58 pm                           |
 | Total samples                              | 610496                                                       |
 | Concurent Users                            | 1000(WCM=400+DAM=300+PNP=300)                                |
-| Total Throughput (transactions/sec)        | 169.19 ± 0.68                                                |
-| Total Avg response time (in milli seconds) | 5578.84 ± 32.01                                              |
+| Total Throughput (transactions/sec)        | **169.19 ± 0.68**                                            |
+| Total Avg response time (in milli seconds) | **5578.84 ± 32.01**                                          |
 | CPU Usage                                  | 39%                                                          |
 | Memory Usage                               | 64%                                                          |
 | Disk Read IO                               | 0 io/s                                                       |
