@@ -3,7 +3,7 @@ This section provides steps on how to access the HCL Content Reporting portlet a
 
 ## Prerequisite
 
-Starting from HCL Digital Experience 9.5 CF214, Content Reporting is installed and deployed by default as part of the CF update process. However, for CF213, Content Reporting must be installed and configured. For instructions on installing Content Reporting manually on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+Starting from HCL Digital Experience 9.5 CF214, Content Reporting is installed and deployed by default as part of the CF update process. However, for CF213, Content Reporting must be installed and configured. For instructions on installing Content Reporting manually on supported environments, see the [Installing HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
 After image configuration in your HCL Digital Experience 9.5 CF213 deployment, Content Reporting is accessible from the Practitioner Studio interface.
 
