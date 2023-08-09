@@ -29,10 +29,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager REST API v2 - AI Analysis API supports more content AI providers
 
 === "Containers"
-    The Web Content Manager REST V2 AI Analyzer APIs supports the use of explainable artificial intelligence (XAI) and other custom content AI providers. For instructions on how to configure, see the Help Center topic WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) deployment.
+    The Web Content Manager REST V2 AI Analyzer APIs supports the use of custom content AI providers. For instructions on how to configure, see the Help Center topic WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) deployment.
 
 === "On-Premises"
-    The Web Content Manager REST V2 AI Analyzer APIs supports the use of explainable artificial intelligence (XAI) and other custom content AI providers. For instructions on how to configure, see the Help Center topic WCM Content Analysis enablement for [Traditional](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) deployment.
+    The Web Content Manager REST V2 AI Analyzer APIs supports the use of custom content AI providers. For instructions on how to configure, see the Help Center topic WCM Content Analysis enablement for [Traditional](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) deployment.
 
 ### New guidance for configuring developer mode for MacOS
 
@@ -59,5 +59,5 @@ The following features and updates are available to customers installing HCL Dig
 ### Content Composer – AI-assisted content analysis supports more content AI providers
 
 === "Containers"
-    The AI-assisted content analysis feature now supports the use of explainable artificial intelligence (XAI) and other custom content AI providers. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and [hybrid](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) platforms for more information.
+    The AI-assisted content analysis feature now supports the use of custom content AI providers. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and [hybrid](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) platforms for more information.
 
