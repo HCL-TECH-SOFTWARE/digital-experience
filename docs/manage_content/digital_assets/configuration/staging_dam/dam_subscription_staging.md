@@ -8,7 +8,7 @@ This topic contains the commands that administrators can use to configure the st
         WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in some details. To learn more about differences have a look at the following table.
 | Aspect                               | WCM                                  | DAM                                                        |
 | -------------------------------------|--------------------------------------|------------------------------------------------------------|
-| `Credentials for authentication` |Authentication via credentials Vault slot. |The credentials given during registration are stored as kube secrets and used for file transfer authentication and authorization from publisher to subscriber. The runtimecontroller api stores portal user credentials as kube secret, and WAS credentials are used to authenticate the runtimecontroller api. For more information, see [Configure WAS Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).|
+| `Credentials for authentication` |Authentication via credentials Vault slot. |The credentials given during registration are stored as kube secrets and used for file transfer authentication and authorization from publisher to subscriber. The runtime-controller API stores portal user credentials as kube secret and WAS credentials are used to authenticate the runtime-controller API. For more information, see [Configure WAS Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).|
 | `Configuration syndication` |WCM syndication can be configured via UI or REST API one time. Sync can be triggered via REST API or UI.|Subscriber can be configured by dxclient.|
 | `Syndication ordering` |One-way or two-way syndication is possible, with one or many subscriber's resource. |DAM staging only supports one-way syndication.|
 | `Different user repository support per environment` |Supported via member fixer in WCM|Not supported by DAM at this time |Not supported by DAM at this time.|
@@ -41,18 +41,16 @@ configuration:
 ### Configure LDAP
 
 **DAM staging supports different LDAP for publisher and subscriber**: <br>
-DAM staging will work with the environment with a different LDAP. The LDAP user should have portal admin rights, which can be utilised for stage registration.
+DAM staging will work with environments that use a different LDAP. LDAP user with portal admin rights can be used for stage registration.
 
 ### Credentials used during staging
 
 **Registration and file transfer:** <br>
-Currently, the user transfers files between the primary server and the subscriber in the DX deployment. The portal admin user should be used for staging registration, and credentials will be saved as kube secrets. The user in the secret on the transferring server and the subscriber can be same or different.
+The portal admin user credentials should be used for staging registration and these credentials will be stored as kube secrets. The user credentials in the secret on the transferring server and the subscriber can be same or different.
 The credentials used in the registration are used for authentication and authorization during DXClient registration, as well as for transferring files during staging.
 
-**To update new secret for staging**:<br>
+**To update staging secret**:<br>
 The `manage-dam-staging update-secrets` command can be used to update the publisher and subscriber staging secrets.
-There is only one secret. The secret is used to store the portal admin credentials used by the DX in its internal process. You cannot add a separate secret for staging. The values can be updated through helm update command. However, when you update the credentials in secret, you also change the portal primary admin. The new user specified in secret will be the new primary portal admin. For more information, see [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).
-
 
 ## Manage DAM staging
 
