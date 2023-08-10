@@ -102,7 +102,7 @@
     background-position: left bottom;
     background-size: cover;
     height: 20rem;
-	min-height: 50vh;
+	min-height: auto;
 }
 
 /*Style for Video clip insertion*/
