@@ -78,10 +78,15 @@ If no LDAP is configured in the Helm values, HCL Digital Experience is configure
 
 | Value | Effect |
 | --- | --- |
-| `wasUser` | Creates a user with this name if it does not exist already. Then makes that user the Websphere primary admin user. |
-| `wasPassword` | Sets the password of the `wasUser` to this value. |
-| `wpsUser` | Creates a user with this name if it does not exist already. Then makes that user a HCL Digital Experience administrator. |
-| `wpsPassword` | Sets the password of the `wpsUser` to this value. |
+| `security.core.wasUser` | Creates a user with this name if it does not exist already. Then makes that user the Websphere primary admin user. |
+| `security.core.wasPassword` | Sets the password of the `wasUser` to this value. |
+| `security.core.wpsUser` | Creates a user with this name if it does not exist already. Then makes that user a HCL Digital Experience administrator. |
+| `security.core.wpsPassword` | Sets the password of the `wpsUser` to this value. |
+| `security.core.configWizardUser` | Creates a user with this name if it does not exist already. | 
+| `security.core.configWizardPassword` | Sets the password of the `configWizardUser` to this value. |
+| `security.remoteSearch.wasUser` | Creates a user with this name if it does not exist already. Then make that user the Websphere primary admin user for Remote Search. |
+| `security.remoteSearch.wasPassword` | Sets the password of the Remote Search `wasUser` to this value. |
+
 
 ## Updating Credentials
 
