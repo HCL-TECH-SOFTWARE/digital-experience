@@ -5,7 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All  Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Web Content Manager - Rendering WCM comments in external components
-- Web Content Manager REST API v2 - AI Analysis API supports more content AI providers
+- Web Content Manager REST API v2 - AI Analysis API supports custom content AI providers
 - New guidance for configuring developer mode for MacOS
 
 **Digital Experience 9.5 Version**
@@ -14,7 +14,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Content Composer – AI-assisted content analysis supports more content AI providers
+- Content Composer – AI-assisted content analysis supports custom content AI providers
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -26,7 +26,7 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     WCM comments can be rendered in external components such as Page Components and Rich Text, Script applications or Custom Portlet. You can also now soft delete orphaned WCM comments data stored in the library. See the Help Center topic [Comments in WCM](../../build_sites/create_sites/developing_managing_content/comments_wcm.md) for more information. 
 
-### Web Content Manager REST API v2 - AI Analysis API supports more content AI providers
+### Web Content Manager REST API v2 - AI Analysis API supports custom content AI providers
 
 === "Containers"
     The Web Content Manager REST V2 AI Analyzer APIs supports the use of custom content AI providers. For instructions on how to configure, see the Help Center topic WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) deployment.
@@ -56,7 +56,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Digital Experience 9.5 Container Version
 
-### Content Composer – AI-assisted content analysis supports more content AI providers
+### Content Composer – AI-assisted content analysis supports custom content AI providers
 
 === "Containers"
     The AI-assisted content analysis feature now supports the use of custom content AI providers. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and [hybrid](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) platforms for more information.
