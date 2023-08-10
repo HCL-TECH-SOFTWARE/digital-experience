@@ -111,7 +111,7 @@ security:
     # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
     # - If an LDAP is used, the the WebSphere Application Server admin user is never applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
 
-    # - If you are using a seret to configure credentials, you must leave the default credentials string empty 
+    # - If you are using a secret to configure credentials, you must leave the default credentials string empty 
     # - If both default credential and secret name are filled it will block the chart from being deployed.
     wasUser: ""
     wasPassword: ""
