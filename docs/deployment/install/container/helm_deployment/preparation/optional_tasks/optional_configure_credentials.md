@@ -93,9 +93,9 @@ If no LDAP is configured in the Helm values, HCL Digital Experience is configure
 
 ## Updating Credentials
 
-If the Websphere primary admin user was, at any time, changed manually and not through the Helm values, the values for `configWizardUser` and `configWizardPassword` or the credentials in the custom secret must be set to the current credentials once and a `helm upgrade` with those values must be executed. Afterward, the Helm values can be used to change the credentials.
+If the user credentials were, at any time, changed manually and not through the Helm values, the values for Core, ConfigWizard and Remote Search credentials in Helm must be updated (See the above table for reference). If you are using the [custom secret](#guidelines-for-configuring-credentials-from-secrets), the credentials in the secret must also be set to the current credentials. Then, a `helm` upgrade` with those values must be executed. Afterward, the Helm values can be used to change the credentials.
 
-If an LDAP is configured for Config Wizard, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the Helm values will not cause any changes to the LDAP users.
+If an LDAP is configured as the user registry, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the Helm values will not cause any changes to the LDAP users.
 
 ## Upgrading
 
