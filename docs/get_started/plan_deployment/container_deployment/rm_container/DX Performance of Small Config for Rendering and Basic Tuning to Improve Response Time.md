@@ -250,7 +250,7 @@ The following stages were conducted starting with default kube configuration.
 
 #### Stage 2
 
-From stage-1 observations, limits of core, ring API, and HA proxy pods were tuned one by one to see if no errors occurred during a user load of 600..
+From stage-1 observations, limits of core, ring API, and HA proxy pods were tuned one by one to see if no errors occurred during a user load of 600.
 
 See the following section for the tuned helm values.
 
