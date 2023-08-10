@@ -3,9 +3,11 @@ id: DX_Rendering_Sizing_Small_Configuration_Results
 title: Performance Sizing Guidance for Rendering with a Small Configuration
 ---
 
+# Performance Sizing Guidance for Rendering with a Small Configuration
+
 ## DX Rendering Sizing Performance Tests overview
 
-DX Sizing is one of the goals of DX performance tests. DX Sizing aims to identify the reliable K8s environment for DX small, medium, and large configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) in small, medium, and large configurations. This topic also discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system..
+DX Sizing is one of the goals of DX performance tests. DX Sizing aims to identify the reliable K8s environment for DX small, medium, and large configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) in small, medium, and large configurations. This topic also discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system.
 
 This sizing work started with rendering scenarios of WCM, Portlets, and DAM with a rendering setup enabled in AWS/Native-Kube. The Apache JMeter tool was used for performance tests.
 
@@ -153,7 +155,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 There are a total of eight pages with portlets that are commonly used by customers. Authoring and rendering were done by giving access to both Anonymous and Authenticated Users. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
  
-As part of authoring, pages and portlets were added manually.The following list shows the details of portlets of authoring in every page:
+As part of authoring, pages and portlets were added manually. The following list shows the details of portlets of authoring in every page:
 
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
