@@ -134,7 +134,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 ## DAM Default Test Data - 2,500 assets
 
-- 2,500 assets were uploaded.These includes images (136kb, .jpg), documents (199kb, .docx), videos (1.1mb, .mp4) to preheat. After preheating with 2,500 assets, 15 assets were uploaded and rendered for one hour.
+- 2,500 assets were uploaded. These include images (136kb, .jpg), documents (199kb, .docx), and videos (1.1mb, .mp4) to preheat. After preheating with 2,500 assets, 15 assets were uploaded and rendered for one hour.
 
 - Details of 15 assets were uploaded for rendering.
       
