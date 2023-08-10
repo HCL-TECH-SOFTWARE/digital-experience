@@ -128,16 +128,16 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 - Another portlet on each page shows a navigator of site areas and content items below the same top-level area.
 
-- The final portlet on each page shows a menu of items and is both scoped to the top-level site area and also selects only those items profiled with the "MENU" keyword.
+- The final portlet on each page shows a menu of items and is scoped to the top-level site area.It also selects only those items profiled with the "MENU" keyword.
 
-- A total of 99999 users added to openLDAP as authenticated users.
+- A total of 99999 users were added to openLDAP as authenticated users.
 
 ## DAM Default Test Data - 2.5k assets
 
-- 2.5 K assets are uploaded which includes images(136kb, .jpg), documents(199kb, .docx), videos(1.1mb, .mp4) to preheat. After preheating with 2.5k assets, we then upload 15 assets and render those assets for 1 hour.
+- 2500 assets were uploaded.These includes images (136kb, .jpg), documents (199kb, .docx), videos (1.1mb, .mp4) to preheat. After preheating with 2500 assets, 15 assets were uploaded and rendered for one hour.
 
 - Details of 15 assets uploaded for rendering 
-- We have total of 19 urls of which three are custom urls, eight are uuid urls, eight are friendly urls combinations of original, tablet, smartphone and desktop renditions.
+- There are 19 URLs in total, three of which are custom URLs, eight are uuid URLs, and eight are friendly URLs which are combinations of original, tablet, smartphone, and desktop renditions.
 
 | Asset    | Type          | Size                                      |
 | -------- | ------------- |-----------------------------------------  |
@@ -145,13 +145,13 @@ This initial performance guidance aims to understand how the ratios of key pod l
 | Video    | mp4/webm      | 5 mb, 199kb,200kb , 2 mb,199kb            |
 | Document | docx/xlsx/pptx| mp4- 1mb, 15mb, 100mb, webm- 2 mb         |
 
-- Note : For DAM we have only anonymous rendering. 
-
+!!!note
+      For DAM, only anonymous rendering is available.
 
 ## Pages and Portlets Default Test Data - 8 pages
 
- There are a total of eight pages with portlets that are commonly used by customers, Authoring and Rendering was done by giving access to both Anonymous and Authenticated Users (same users added in openLDAP for WCM rendering). All authenticated users are of the role User.
- As part of Authoring we added pages and portlets manually. Below are the details of portlets authoring in every page.
+ There are a total of eight pages with portlets that are commonly used by customers, Authoring and rendering were done by giving access to both Anonymous and Authenticated Users.The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
+ As part of authoring, pages and portlets were added The following list shows the details of portlets of authoring in every page:
 
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
@@ -162,15 +162,15 @@ This initial performance guidance aims to understand how the ratios of key pod l
 - Page 7 - Script Application portlet --> Added JavaScript Functions, Date and Time object examples
 - Page 8 - Added all above 7 portlets in this page
 
-Once we complete authoring steps, then we have anonymous portal user and authenticated users (added to openLDAP) to render the pages. Every page request is /GET API call (Example - /wps/portal/portletsperf/page1) and we have response assertion in sampler to validate the content html in response body. 
+After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request is /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in sampler to validate the content html in response body. 
 
-### Combined DX rendering of WCM, DAM and Pages and Portlets
+### Combined DX rendering of WCM, DAM, and Pages and Portlets
 
-We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for rendering sizing. As mentioned in our sizing approach below are details of load distribution.
+For rendering sizing, all rendering JMeter scripts of WCM, DAM and Pages and Portlets are combined. See the following section for details of load distribution.
 
 ## Load Distribution
 
-- We are giving following Load Distribution 
+
 
     - WCM             - 40 %
     - DAM             - 30 %
@@ -178,17 +178,17 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 
 
 ## Pods in native-kube deployment are 1:1 in small config
-- ![](../../../../images/small-config-pods.png)
+![](../../../../images/small-config-pods.png)
 
-### Result Summary
+### Results Summary
 
-- The following stages were conducted starting with default kube configuration.
+The following stages were conducted starting with default kube configuration.
 
-** Stage 1 **
+**Stage 1**
 
-- DX combined run executed with default minimal deployments as mentioned in below helm values. 
-- There were no issues seen with up to a 500 user load. 
-- Errors are seen at a 600 users load. This total Error is around ~5%.
+- DX combined run executed with default minimal deployments as mentioned in the following helm values. 
+- No issues found with a user load of up to 500. 
+- Errors are seen at a 600 user load. This total error is around five percent.
 
 
 ## stage-1 Helm Values
@@ -209,7 +209,7 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 | Total                     | 4500   | 11224      | 6500   | 13272      |
 
 
-- Results overview
+- **Results Overview**
 
 
 | AWS/Native-Kube                            | Test-6                                                       | Test-7 (after tuning - core, ring api, haproxy)                     |
@@ -227,7 +227,7 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 | Ring EventLoop lag (in milli seconds)      | **450**                                                      | **5.19**                                                            |
 | Error                                      | 4.87%                                                        | 0                                                                   |
 | TimeDuration                               | 3600                                                         | 3850                                                                |
-|                                            | Top 5 request samples (avg respone time in ms)               | Top 5 request samples (avg respone time in ms)                      |              |
+|                                            | Top 5 request samples (avg response time in ms)              | Top 5 request samples (avg response time in ms)                      |              |
 |                                            | Get video - mp4 1.1 mb custom url - curlmp41.1mb.    (25044) | Get video - mp4 15mb - idmp415mb (6253.29)                          |              |
 |                                            | Get image - jpeg 155 kb custom url - curljpg155kb   (23851)  | Get video - mp4 1.1 mb custom url - curlmp41.1mb (5512.89)          |              |
 |                                            | Get video - mp4 15mb - idmp415mb -      (23620)              | Get doc - pdf - 5mb - friendly url - Desktop - furlpdf5mb (5296.89) |              |
@@ -238,9 +238,9 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 
 *Observations:*
 
-- For 600 users load observed http response code - 503 service unavailable errors in the test.
+- For a user load of 600, there is an http response code - 503 service unavailable errors in the test.
 
-- All errors are from WCM and Pages&Portlets, not from DAM.
+- All errors are from WCM and Pages and Portlets, not from DAM.
 
 - Total Average response time increases exponentially with vload.
 
@@ -249,7 +249,7 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 - No pods restarts were observed.
 
 
-** Stage 2 **
+**Stage 2**
 
 From stage-1 observations, we started the tuning of core, ring api and ha proxy pods limits one by one to see if no errors occurred during a 600 users load.
 
@@ -291,7 +291,7 @@ See the following section for the tuned helm values.
 | Ring EventLoop lag (in milli seconds)      | 450                                                          | 4.57                                                        |
 | Error                                      | 4.87%                                                        | 0                                                           |
 | TimeDuration                               | 3600                                                         | 3850                                                        |
-|                                            | Top 5 request samples (avg respone time in ms)               | Top 5 request samples (avg respone time in ms)              |               |
+|                                            | Top 5 request samples (avg response time in ms)              | Top 5 request samples (avg response time in ms)              |               |
 |                                            | Get video - mp4 1.1 mb custom url - curlmp41.1mb.    (25044) | Initial Page Request (11235.13)                             |               |
 |                                            | Get image - jpeg 155 kb custom url - curljpg155kb   (23851)  | Get video - mp4 1.1 mb custom url - curlmp41.1mb (6791.20)  |               |
 |                                            | Get video - mp4 15mb - idmp415mb -      (23620)              | Get image - jpeg 155 kb custom url - curljpg155kb (6123.23) |               |
