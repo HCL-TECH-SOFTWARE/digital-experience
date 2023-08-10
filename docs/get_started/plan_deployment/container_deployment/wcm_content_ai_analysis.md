@@ -5,7 +5,7 @@ This topic describes how to enable AI analysis for a WCM Content in Kubernetes D
 !!!note
 	OpenAI ChatGPT is the supported content AI provider from CF213 and higher. Custom AI implementation is supported from CF214 and higher.
 
-## Content AI Providers Overview
+## Content AI Provider Overview
 
 ### OpenAI ChatGPT Overview
 
