@@ -98,9 +98,7 @@ If the user credentials were, at any time, changed manually and not through the 
 If an LDAP is configured as the user registry, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the Helm values will not cause any changes to the LDAP users.
 
 ## Upgrading
-
-General Upgrade Recommendations:
-- Ensure that the current credentials are set properly in the Helm Values. See [Updating Credentials](#updating-credentials) to ensure that the credentials are properly set in the Helm before doing the upgrade.
+Ensure that the current credentials are [set properly](#updating-credentials) in the Helm Values before doing the upgrade.
 
 ## Configuring Credentials from Secrets
 
