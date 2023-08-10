@@ -35,7 +35,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 ## Environment
 
 ### AWS/Native Kube
-- In AWS/Native Kube, the test started with the minimal EC2 instance with single Node.
+- In AWS/Native Kube, the test started with the minimal EC2 instance with a single Node.
 - The tests used a remote DB2 instance.
 
 [Small Configuration]  - [c5.2xlarge] 
@@ -102,7 +102,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 ## Authoring Details for small config in rendering sizing
 
-- To perform rendering tests, the systems must be set up first.This section provides details of WCM, DAM, and Portlets authoring..
+- To perform rendering tests, the systems must be set up first. This section provides details of WCM, DAM, and Portlets authoring..
 
 
 ## WCM Default Test Data - 20 pages
@@ -122,21 +122,22 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 - There are 20 test portal pages created under the label "PerformanceTest". Each has a friendly URL in the form "<context-root>/perf/page-xx".
 
-- Each page contains six WCM Viewer portlets that show content below one of the twenty top-level site areas.For example, Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01", and pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02" etc.
+- Each page contains six WCM Viewer portlets that show content below one of the twenty top-level site areas. For example, Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01", and pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02" etc.
 
 - Four of the portlets on each page show single content items. For page 01, these are the first content items in site areas "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01", and "SA01.04.01.01" respectively. Other pages follow the same pattern.
 
 - Another portlet on each page shows a navigator of site areas and content items below the same top-level area.
 
-- The final portlet on each page shows a menu of items and is scoped to the top-level site area.It also selects only those items profiled with the "MENU" keyword.
+- The final portlet on each page shows a menu of items and is scoped to the top-level site area. It also selects only those items profiled with the "MENU" keyword.
 
 - A total of 99999 users were added to openLDAP as authenticated users.
 
-## DAM Default Test Data - 2.5k assets
+## DAM Default Test Data - 2,500 assets
 
-- 2500 assets were uploaded.These includes images (136kb, .jpg), documents (199kb, .docx), videos (1.1mb, .mp4) to preheat. After preheating with 2500 assets, 15 assets were uploaded and rendered for one hour.
+- 2,500 assets were uploaded.These includes images (136kb, .jpg), documents (199kb, .docx), videos (1.1mb, .mp4) to preheat. After preheating with 2,500 assets, 15 assets were uploaded and rendered for one hour.
 
-- Details of 15 assets uploaded for rendering 
+- Details of 15 assets were uploaded for rendering.
+      
 - There are 19 URLs in total, three of which are custom URLs, eight are uuid URLs, and eight are friendly URLs which are combinations of original, tablet, smartphone, and desktop renditions.
 
 | Asset    | Type          | Size                                      |
@@ -150,8 +151,9 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 ## Pages and Portlets Default Test Data - 8 pages
 
- There are a total of eight pages with portlets that are commonly used by customers, Authoring and rendering were done by giving access to both Anonymous and Authenticated Users.The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
- As part of authoring, pages and portlets were added The following list shows the details of portlets of authoring in every page:
+There are a total of eight pages with portlets that are commonly used by customers. Authoring and rendering were done by giving access to both Anonymous and Authenticated Users. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
+ 
+As part of authoring, pages and portlets were added The following list shows the details of portlets of authoring in every page:
 
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
@@ -166,16 +168,13 @@ After completing the authoring steps, the anonymous portal user and authenticate
 
 ### Combined DX rendering of WCM, DAM, and Pages and Portlets
 
-For rendering sizing, all rendering JMeter scripts of WCM, DAM and Pages and Portlets are combined. See the following section for details of load distribution.
+For rendering sizing, all rendering JMeter scripts of WCM, DAM, and Pages and Portlets are combined. See the following section for details of load distribution.
 
-## Load Distribution
+**Load Distribution**
 
-
-
-    - WCM             - 40 %
-    - DAM             - 30 %
-    - Pages&Portlets  - 30 %
-
+- WCM - 40 %
+- DAM - 30 %
+- Pages and Portlets - 30 %
 
 ## Pods in native-kube deployment are 1:1 in small config
 ![](../../../../images/small-config-pods.png)
@@ -184,14 +183,14 @@ For rendering sizing, all rendering JMeter scripts of WCM, DAM and Pages and Por
 
 The following stages were conducted starting with default kube configuration.
 
-**Stage 1**
+#### Stage 1
 
 - DX combined run executed with default minimal deployments as mentioned in the following helm values. 
 - No issues found with a user load of up to 500. 
 - Errors are seen at a 600 user load. This total error is around five percent.
 
 
-## stage-1 Helm Values
+##### stage-1 Helm Values
                                  Requests                 Limits        
 | Component                 | cpu(m) | memory(Mi) | cpu(m) | memory(Mi) |
 | ------------------------- | ------ | ---------- | ------ | ---------- |
@@ -209,7 +208,7 @@ The following stages were conducted starting with default kube configuration.
 | Total                     | 4500   | 11224      | 6500   | 13272      |
 
 
-- **Results Overview**
+##### Results Overview
 
 
 | AWS/Native-Kube                            | Test-6                                                       | Test-7 (after tuning - core, ring api, haproxy)                     |
@@ -236,9 +235,9 @@ The following stages were conducted starting with default kube configuration.
 
 
 
-*Observations:*
+##### Observations
 
-- For a user load of 600, there is an http response code - 503 service unavailable errors in the test.
+- For a user load of 600, there is an http response code - 503 service unavailable errors in test.
 
 - All errors are from WCM and Pages and Portlets, not from DAM.
 
@@ -249,14 +248,14 @@ The following stages were conducted starting with default kube configuration.
 - No pods restarts were observed.
 
 
-**Stage 2**
+#### Stage 2
 
 From stage-1 observations, we started the tuning of core, ring api and ha proxy pods limits one by one to see if no errors occurred during a 600 users load.
 
 See the following section for the tuned helm values.
 
 
-## stage-2 Helm Values
+##### stage-2 Helm Values
                                  Requests                 Limits        
 | Component                 | cpu(m) | memory(Mi) | cpu(m) | memory(Mi) |
 | ------------------------- | ------ | ---------- | ------ | ---------- |
@@ -274,7 +273,7 @@ See the following section for the tuned helm values.
 | Total                     | 6400   | 13108      | 6400   | 13108      |
 
 
-- **Results Overview**
+##### Results Overview
 
 | AWS/Native-Kube                            | Test-6                                                       | Test-11 (after tuning - core, ring api, haproxy)            |
 | ------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -324,7 +323,7 @@ See the following section for the tuned helm values.
 
 
 
-*Observations:*
+##### Observations
 
 - No errors observed and no pods restarted during the test.
 
