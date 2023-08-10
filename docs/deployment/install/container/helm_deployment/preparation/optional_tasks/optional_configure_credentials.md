@@ -63,6 +63,9 @@ Same as Core, when Remote Search is enabled, WAS admin credentials can be config
 ## Config Wizard security credentials
 The following only takes effect when [Config Wizard is enabled](./optional_configure_apps.md#configuration-wizard-configuration).
 
+For CF212 and below upgrading to CF213 and beyond:
+- If the primary admin credentials have been changed for Core, the new credentials must also be set as the Config Wizard credentials in your `custom-values.yaml` before upgrading to (CF213 and beyond). This means that `configWizardUser` and `configWizardPassword` under `security.core` needs to be updated to the current primary credentials **once**, followed by a Helm upgrade. After the Helm upgrade, Config Wizard credentials can now be updated if needed, separately from the Core. For more information see: [Persisted Config Wizard Profile](../../../../../manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md).
+
 Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
  
 
@@ -95,9 +98,6 @@ If the Websphere primary admin user was, at any time, changed manually and not t
 If an LDAP is configured for Config Wizard, you must manually set the security credentials to the credentials of the administrator user from LDAP. If the users are changed in the LDAP, you must manually update the security credentials in the Helm chart. The credentials are used in several startup and configuration scripts. Changes in the Helm values will not cause any changes to the LDAP users.
 
 ## Upgrading
-
-For CF212 and below upgrading to CF213 and beyond:
-- If the primary admin credentials have been changed for Core, the new credentials must also be set as the Config Wizard credentials in your `custom-values.yaml` before upgrading to (CF213 and beyond). This means that `configWizardUser` and `configWizardPassword` under `security.core` needs to be updated to the current primary credentials **once**, followed by a Helm upgrade. After the Helm upgrade, Config Wizard credentials can now be updated if needed, separately from the Core. For more information see: [Persisted Config Wizard Profile](../../../../../manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md).
 
 General Upgrade Recommendations:
 - Ensure that the current credentials are set properly in the Helm Values. See [Updating Credentials](#updating-credentials) to ensure that the credentials are properly set in the Helm before doing the upgrade.
