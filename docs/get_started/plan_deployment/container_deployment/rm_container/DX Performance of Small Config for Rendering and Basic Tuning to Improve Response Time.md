@@ -104,7 +104,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 ## Authoring Details for small config in rendering sizing
 
-- To perform rendering tests, the systems must be set up first. This section provides details of WCM, DAM, and Portlets authoring..
+- To perform rendering tests, the systems must be set up first. This section provides details of WCM, DAM, and Portlets authoring.
 
 
 ## WCM Default Test Data - 20 pages
