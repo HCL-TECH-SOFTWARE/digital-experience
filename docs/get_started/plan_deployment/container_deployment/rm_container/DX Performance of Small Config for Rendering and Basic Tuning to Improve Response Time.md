@@ -5,7 +5,7 @@ title: Performance Sizing Guidance for Rendering with a Small Configuration
 
 ## DX Rendering Sizing Performance Tests overview
 
-DX Sizing is one of the goals of DX performance tests. DX Sizing aims to identify the K8s environment of DX small, medium, and large configurations where users can work reliably. This topic presents the important KPIs in small, medium, and large configurations such as number of concurrent users, average response time, and throughput. This topic also discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system.
+DX Sizing is one of the goals of DX performance tests. DX Sizing aims to identify the reliable K8s environment for DX small, medium, and large configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) in small, medium, and large configurations. This topic also discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system..
 
 This sizing work started with rendering scenarios of WCM, Portlets, and DAM with a rendering setup enabled in AWS/Native-Kube. The Apache JMeter tool was used for performance tests.
 
@@ -153,7 +153,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 There are a total of eight pages with portlets that are commonly used by customers. Authoring and rendering were done by giving access to both Anonymous and Authenticated Users. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
  
-As part of authoring, pages and portlets were added The following list shows the details of portlets of authoring in every page:
+As part of authoring, pages and portlets were added manually.The following list shows the details of portlets of authoring in every page:
 
 - Page 1 - 2 Articles
 - Page 2 - 2 Rich text
@@ -164,7 +164,7 @@ As part of authoring, pages and portlets were added The following list shows the
 - Page 7 - Script Application portlet --> Added JavaScript Functions, Date and Time object examples
 - Page 8 - Added all above 7 portlets in this page
 
-After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request is /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in sampler to validate the content html in response body. 
+After completing the authoring steps, the anonymous portal user and authenticated users (added to openLDAP) must render the pages. Every page request uses /GET API call (for example, /wps/portal/portletsperf/page1) and there is a response assertion in sampler to validate the content html in response body. 
 
 ### Combined DX rendering of WCM, DAM, and Pages and Portlets
 
@@ -250,7 +250,7 @@ The following stages were conducted starting with default kube configuration.
 
 #### Stage 2
 
-From stage-1 observations, we started the tuning of core, ring api and ha proxy pods limits one by one to see if no errors occurred during a 600 users load.
+From stage-1 observations, limits of core, ring API, and HA proxy pods were tuned one by one to see if no errors occurred during a user load of 600..
 
 See the following section for the tuned helm values.
 
