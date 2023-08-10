@@ -5,16 +5,16 @@ title: Performance Sizing Guidance for Rendering with a Small Configuration
 
 ## DX Rendering Sizing Performance Tests overview
 
-As part of DX performance tests one of our goals is DX Sizing. The aim of DX Sizing is to identify the K8s environment of DX small, medium and large configurations, where user can work reliably. We will also present the important KPIs in small, medium and large configurations like number of concurrent users, average response time, throughput etc. Finally, we will show how adjustments to the pod configuration can make dramatic improvements in the responsiveness of the system.
+DX Sizing is one of the goals of DX performance tests. DX Sizing aims to identify the K8s environment of DX small, medium, and large configurations where users can work reliably. This topic presents the important KPIs in small, medium, and large configurations such as number of concurrent users, average response time, and throughput. This topic also discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system.
 
-In this sizing work, we started with rendering scenarios of WCM, Portlets and DAM with a rendering setup enabled in AWS/Native-Kube. We are using Apache JMeter tool for our performance tests.
+This sizing work started with rendering scenarios of WCM, Portlets, and DAM with a rendering setup enabled in AWS/Native-Kube. The Apache JMeter tool was used for performance tests.
 
 ## Conclusion
 
-The intention of this initial performance guidance is to understand how the ratios of key pod limits can dramatically improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods.
+This initial performance guidance aims to understand how the ratios of key pod limits can improve the rendering response time in a simple single pod system. This is an important step before attempting to illustrate the impact of scaling of pods.
 
 
-- Changes to the pod limits for below Pods **DRAMATICALLY** improve the responsiveness of the setup and as well led to the ability to handle more users.
+- Changes to the pod limits for the following Pods significantly improve the responsiveness of the setup and enables the system to handle more users.
 
 | Pod Name | Minimum Number of Pods | Container | Container Image | Container CPU Request and Limit | Container Memory Request and Limit |
 | -------- | ---------------------- | --------- | --------------- | ------------------------------- | ---------------------------------- |
@@ -22,21 +22,21 @@ The intention of this initial performance guidance is to understand how the rati
 | ringApi  | 1                      | ringApi   | ringApi         | 500m                            | 512Mi                              |
 | haproxy  | 1                      | haproxy   | haproxy         | 700m                            | 1024Mi                             |
 
-- These modification led to better Response Time and Throughput by 50 %. Detailed data for same given in below sections.
+- These modifications resulted to better Response Time and Throughput by 50 percent. Detailed data are shown in the next sections.
 
 ## Customer Rendering Scenario details
 
-| Concurrent users     | Existing WCM pages | Existing DAM Content |
-| -------------------- | ------------------ | -------------------- |
-| Small  –  1000 users | 20                 | 2k                   |
-| Medium – 10000 users | 200                | 10k                  |
-| Large  –100000 users | 2000               | 50-100k              |
+| Concurrent users      | Existing WCM pages | Existing DAM Content |
+| --------------------  | ------------------ | -------------------- |
+| Small  – 1000 users   | 20                 | 2k                   |
+| Medium – 10000 users  | 200                | 10k                  |
+| Large  – 100000 users | 2000               | 50-100k              |
 
 ## Environment
 
 ### AWS/Native Kube
-- In AWS/Native Kube we started with the minimal EC2 instance with single Node.
-- We are using remote DB2 instance for our tests.
+- In AWS/Native Kube, the test started with the minimal EC2 instance with single Node.
+- The tests used a remote DB2 instance.
 
 [Small Configuration]  - [c5.2xlarge] 
 
@@ -76,7 +76,7 @@ The intention of this initial performance guidance is to understand how the rati
 ### JMeter agents
 
 - JMeter instance - [t2.xlarge]
-- We use a distributed AWS/JMeter agents setup consisting of one master and two slaves to execute the tests.
+- To execute the tests, a distributed AWS/JMeter agents setup consisting of one master and two slaves was used.
 
 ![](../../../../images/Header-3-AWS.png)
 
@@ -102,7 +102,7 @@ The intention of this initial performance guidance is to understand how the rati
 
 ## Authoring Details for small config in rendering sizing
 
-- As we have to do rendering tests, obviously we need to populate the setups first.  Below are the details of WCM, DAM and Portlets authoring.
+- To perform rendering tests, the systems must be set up first.This section provides details of WCM, DAM, and Portlets authoring..
 
 
 ## WCM Default Test Data - 20 pages
@@ -114,17 +114,17 @@ The intention of this initial performance guidance is to understand how the rati
 
 - Each leaf site area contains ten content items, for a total of 12,800 content items across the libraries.
 
-- Half of the content items are visible to "Anonymous" and "All Authenticated" users
+- Half of the content items are visible to "Anonymous" and "All Authenticated" users.
 
 - The other half are visible only to members of ten groups per content item. These ten groups are spread out among the 500 groups assumed to exist in the test LDAP (and assumed to be called "Group0000" through "Group0499").
 
 - Half of the content items (spread evenly over each type described above) are profiled with the keyword "MENU".
 
-- There are twenty test portal pages created under the label "PerformanceTest". Each has a friendly URL of the form "<context-root>/perf/page-xx".
+- There are 20 test portal pages created under the label "PerformanceTest". Each has a friendly URL in the form "<context-root>/perf/page-xx".
 
-- Each page contains six WCM Viewer portlets that show content below one of the twenty top level site areas. Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01", and pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02" etc.
+- Each page contains six WCM Viewer portlets that show content below one of the twenty top-level site areas.For example, Pages 01 to 04 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent01", and pages 05 to 08 show content from site areas "SA01" through "SA04" in library "PerformanceTestContent02" etc.
 
-- Four of the portlets on each page show single content items. For page 01 these would be the first content items in site areas "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01" and "SA01.04.01.01" respectively. Other pages follow the same pattern.
+- Four of the portlets on each page show single content items. For page 01, these are the first content items in site areas "SA01.01.01.01", "SA01.02.01.01", "SA01.03.01.01", and "SA01.04.01.01" respectively. Other pages follow the same pattern.
 
 - Another portlet on each page shows a navigator of site areas and content items below the same top-level area.
 
@@ -253,7 +253,7 @@ We combine all rendering JMeter scripts of WCM, DAM and Pages and Portlets for r
 
 From stage-1 observations, we started the tuning of core, ring api and ha proxy pods limits one by one to see if no errors occurred during a 600 users load.
 
-Below are the tuned helm values.
+See the following section for the tuned helm values.
 
 
 ## stage-2 Helm Values
@@ -274,7 +274,7 @@ Below are the tuned helm values.
 | Total                     | 6400   | 13108      | 6400   | 13108      |
 
 
-- Results overview
+- **Results Overview**
 
 | AWS/Native-Kube                            | Test-6                                                       | Test-11 (after tuning - core, ring api, haproxy)            |
 | ------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -326,8 +326,8 @@ Below are the tuned helm values.
 
 *Observations:*
 
-- No errors observed and no pods restarts during the test.
+- No errors observed and no pods restarted during the test.
 
-- Total average response time, total throughput and Event loop lag for Ring API pod improved significantly.
+- Total average response time, total throughput, and Event loop lag for Ring API pod improved significantly.
 
-- Top 5 requests with higher response time are from DAM rendering and WCM inital page request.
+- Top five requests with higher response time are from DAM rendering and WCM inital page request.
