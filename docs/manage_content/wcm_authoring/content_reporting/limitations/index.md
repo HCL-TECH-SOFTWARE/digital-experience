@@ -5,7 +5,7 @@ Take note of the following limitations when using HCL Content Reporting:
 ## Generating a report
 
 - For the **Expiry date** criteria, no results are returned if the same date is used in the **From** and **To** fields.
-- For the **Word** criteria, dash (-) is considered as a delimiter for splitting the word. For example, if the user performs a search for AT-Product-Item, then results are returned for three different words: AT, Product, Item.
+- For the **Word** criteria, a dash (-) is considered a delimiter for splitting the text entered. For example, if the user searches for "AT-Product-Item", results are returned for three different words: AT, Product, and Item.
 - After generating a report, there is no option to sort the report table.
 
 ## Using the Bulk Updates feature
