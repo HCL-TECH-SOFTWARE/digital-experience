@@ -22,6 +22,9 @@ The DAM staging framework allows you to stage your DAM content from an authoring
 -   Set the cycle length (default: 2 minutes, maximum: 24 hours) for periodic sync.
 -   Register a subscriber with a publisher.
 
+    !!! note
+        A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same DNS in both publisher and subscriber's Lightweight Directory Access Protocol (LDAP).
+
 ### Configure staging hostname
 The hostname configuration for the DAM staging publisher and subscriber must be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details must be specified.
 
