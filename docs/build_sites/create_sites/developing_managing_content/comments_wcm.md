@@ -206,11 +206,11 @@ After configuring WCM comments in a custom DX Portlet, actions such as add, repl
 ### Configuring WCM comments in a theme
 
 1. Create a new Site Area inside a WCM content library where new page component with pre-populated content UUID is to be created.
-2. Create a new copy of a page component which is created as a part of ![Custom Page Component for WCM Comments](../developing_managing_content/comments_wcm.md#custom-page-component-for-wcm-comments), inside the created site area and pre-populate with content UUID for which comments needs to rendered.
+2. Create a new copy of a page component which is created as a part of [Custom Page Component for WCM Comments](#custom-page-component-for-wcm-comments), inside the created site area and pre-populate with content UUID for which comments needs to rendered.
 ![Copy of new page component with content UUID](../developing_managing_content/_img/copy_new_page_component_with_contentuuid.png)
 3. Add the following piece of code in any of the view files of a theme (Ex: default85) where the comments feature should be enabled. In this example, navigate to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots/``` and open the ```footer.jsp``` view file.
 ![WCM JSP Tags in a Theme View File](../developing_managing_content/_img/wcm_jsp_tag_theme.png)
-4. Enable the comments for the new page component with pre-populated content UUID in the ```footer.jsp``` view file.
+4. Add the following piece of code in the ```footer.jsp``` view file to enable the comments for the new page component with pre-populated content UUID.
     ```
     <%@ taglib uri="/WEB-INF/tld/wcm.tld" prefix="wcm"%>
     <wcm:initworkspace>login fail</wcm:initworkspace>
