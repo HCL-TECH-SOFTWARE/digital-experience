@@ -7,7 +7,7 @@ title: Performance Sizing Guidance for Rendering with a Small Configuration
 
 ## DX Rendering Sizing Performance Tests overview
 
-DX Sizing is one of the goals of DX performance tests. DX Sizing aims to identify the reliable K8s environment for DX small, medium, and large configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) in small, medium, and large configurations. This topic also discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system.
+DX Sizing is one of the goals of DX performance tests. DX Sizing aims to identify the reliable K8s environment for DX small, medium, and large configurations. This topic presents the important KPIs (for example, number of concurrent users, average response time, and throughput) in small configurations. A similar approach will be applied for medium and large configurations. This topic also discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system.
 
 This sizing work started with rendering scenarios of WCM, Portlets, and DAM with a rendering setup enabled in AWS/Native-Kube. The Apache JMeter tool was used for performance tests.
 
