@@ -153,7 +153,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 ## Pages and Portlets Default Test Data - 8 pages
 
-There are a total of eight pages with portlets that are commonly used by customers. Authoring and rendering were done by giving access to both Anonymous and Authenticated Users. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
+There is a total of eight pages with portlets that are commonly used by customers. Authoring and rendering were done by giving access to both Anonymous and Authenticated Users. The same users were added in openLDAP for WCM rendering. All authenticated users are assigned the User role.
  
 As part of authoring, pages and portlets were added manually. The following list shows the details of portlets of authoring in every page:
 
@@ -189,7 +189,7 @@ The following stages were conducted starting with default kube configuration.
 
 - DX combined run executed with default minimal deployments as mentioned in the following helm values. 
 - No issues found with a user load of up to 500. 
-- Errors are seen at a 600 user load. This total error is around five percent.
+- Errors are seen at a user load of 600. This total error is around five percent.
 
 
 ##### stage-1 Helm Values
@@ -245,9 +245,9 @@ The following stages were conducted starting with default kube configuration.
 
 - Total Average response time increases exponentially with vload.
 
-- Event loop lag for Ring API pod is also on the higher end (~400 ms for 500 user load).
+- Event loop lag for Ring API pod is also on the higher end (~400 ms for a user load of 500).
 
-- No pods restarts were observed.
+- No pod restarts observed.
 
 
 #### Stage 2
