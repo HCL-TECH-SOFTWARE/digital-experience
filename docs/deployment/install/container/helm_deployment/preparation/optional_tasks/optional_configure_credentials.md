@@ -54,10 +54,10 @@ security:
 
 
 ## Core security credentials
-The security credentials defined in the `security` section of the Helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
+The security credentials defined in the `security` section of the Helm values are necessary to pass the user credentials to the IBM Websphere Application Server and HCL Digital Experience Core startup scripts. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types).
 
 ## Remote Search security credentials
-Same as Core, when Remote Search is enabled, WAS admin credentials can be configured from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
+Same as Core, when Remote Search is enabled, WAS admin credentials can be configured from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types).
 
 
 ## Config Wizard security credentials
@@ -66,7 +66,7 @@ The following only takes effect when [Config Wizard is enabled](./optional_confi
 For CF212 and below upgrading to CF213 and beyond:
 - If the primary admin credentials have been changed for Core, the new credentials must also be set as the Config Wizard credentials in your `custom-values.yaml` before upgrading to (CF213 and beyond). This means that `configWizardUser` and `configWizardPassword` under `security.core` needs to be updated to the current **Core** primary credentials **once**, followed by a Helm upgrade. After the Helm upgrade, Config Wizard credentials can now be updated if needed, separately from the Core. For more information see: [Persisted Config Wizard Profile](../../../../../manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md).
 
-Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types)
+Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types).
  
 
 ## Registry Types
