@@ -7,6 +7,8 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager - Rendering WCM comments in external components
 - Web Content Manager REST API v2 - AI Analysis API supports custom content AI providers
 - New guidance for configuring developer mode for MacOS
+- Web Content Manager - Parameters for item-path-full and details-full options
+- DXClient - Theme List feature for LiveSync and Disable Prompt attribute
 
 **Digital Experience 9.5 Version**
 
@@ -15,6 +17,12 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Content Composer – AI-assisted content analysis supports custom content AI providers
+- Content Composer - Create content in Managed Pages
+- Updated version of Amazon RDS with Oracle in the System requirements page
+- New guidance for performance sizing for rendering with a small configuration
+- DX Cloud Native 9.5.1 offering includes limited Volt Foundry entitlements
+- Support for DAM staging on different users for subscribers and publishers
+- Scaffolding framework for picker plugins and Picker Basic Version
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -42,6 +50,16 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     Instructions on how to change to a developer mode environment is now available. See the Help Center topic [MacOS: Configuring a developer mode environment](../../deployment/manage/change_dev_mode_env/cfg_dev_mode-MacOS.md) for more information.
 
+### Web Content Manager - Parameters for item-path-full and details-full options
+
+[Adding item path information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-item-path-information-to-the-rest-api-search-query-results)
+
+[Adding more detailed information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-more-detailed-information-to-the-rest-api-search-query-results)
+
+### DXClient - Theme List feature for LiveSync and Disable Prompt attribute
+
+[LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md)
+
 ## Digital Experience 9.5 Version
 
 ### Web Content Manager - Content Reporting enabled by default
@@ -61,3 +79,24 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     The AI-assisted content analysis feature now supports the use of custom content AI providers. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and [hybrid](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) platforms for more information.
 
+### Content Composer - Create content in Managed Pages
+[Managing Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md)
+
+[Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md)
+
+### Updated version of Amazon RDS with Oracle in the System requirements page
+(doc in progress)
+
+### New guidance for performance sizing for rendering with a small configuration
+
+=== "Containers"
+    Results of DX Sizing Tests for rendering with a small configuration are now available. This guidance presents the important KPIs and discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system. For more information, see the topic [Performance Sizing Guidance for Rendering with a Small Configuration](../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md).
+
+### DX Cloud Native 9.5.1 offering includes limited Volt Foundry entitlements
+(no doc yet)
+
+###  Support for DAM staging on different users for subscribers and publishers
+(doc in progress)
+
+### Scaffolding framework for picker plugins and Picker Basic Version
+(doc in progress)
