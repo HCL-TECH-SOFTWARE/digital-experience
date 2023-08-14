@@ -11,14 +11,11 @@ DX Picker is an instance of a react integration portlet configured to point to w
 This section describes how to enable and disable DX Picker.
 
 !!! important
-    Before enabling DX Picker, it is required to have Digital Asset Management (DAM) installed and enabled. For more information on DAM, refer to [Digital Asset Management](../../digital_assets/index.md)
+    Before enabling DX Picker, it is required to have Digital Asset Management (DAM) installed and enabled. For more information on DAM, refer to [Digital Asset Management](../../digital_assets/index.md).
 
 ### Enabling DX Picker for traditional deployment
 
-To enable DX Picker for traditional deployment, run the **enable-dx-picker** config task.
-
-!!! note
-    It is not required to stop or restart the Portal when running these configuration tasks.
+To enable DX Picker for traditional deployment, run the **enable-dx-picker** config task. It is not required to stop or restart the Portal when running these configuration tasks.
 
 -   AIX, Linux: `./ConfigEngine.sh enable-dx-picker -Ddxpicker.static.ui.url="/dx/ui/picker/static" -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 -   Windows: `ConfigEngine.bat enable-dx-picker -Ddxpicker.static.ui.url="/dx/ui/picker/static" -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
@@ -35,7 +32,7 @@ dxPicker:
 ```
 
 !!! note
-    Enabling DX Picker runs the **enable-dx-picker** config engine task in the background. The **enable-dx-picker** config engine task can also be manually executed. [See above](#enabling-dx-picker-for-traditional-deployment). For more information on how to run manual Core configuration tasks, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
+    Enabling DX Picker runs the **enable-dx-picker** config engine task in the background. The **enable-dx-picker** config engine task can also be manually executed. See [Enabling DX Picker for traditional deployment](#enabling-dx-picker-for-traditional-deployment) for more information. For steps on how to run manual Core configuration tasks, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
 
 ### Disabling DX Picker for traditional deployment
 
@@ -56,4 +53,4 @@ dxPicker:
 ```
 
 !!! note
-    Disabling DX Picker runs the **disable-dx-picker** config engine task in the background. The **disable-dx-picker** config engine task can also be manually executed. [See above](#enabling-dx-picker-for-traditional-deployment). For more information on how to run manual Core configuration tasks, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
+    Disabling DX Picker runs the **disable-dx-picker** config engine task in the background. The **disable-dx-picker** config engine task can also be manually executed. See [Disabling DX Picker for traditional deployment](#disabling-dx-picker-for-traditional-deployment) for more information. For steps on how to run manual Core configuration tasks, see [Running DX Core configuration tasks](../../../../deployment/manage/container_configuration/run_core_config_engine.md).
