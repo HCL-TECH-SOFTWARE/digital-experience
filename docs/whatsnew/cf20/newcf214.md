@@ -9,6 +9,7 @@ The following features and updates are available to customers installing HCL Dig
 - New guidance for configuring developer mode for MacOS
 - Web Content Manager - Parameters for item-path-full and details-full options
 - DXClient - Theme List feature for LiveSync and Disable Prompt attribute
+- Updated PZN UI
 
 **Digital Experience 9.5 Version**
 
@@ -59,6 +60,9 @@ The following features and updates are available to customers installing HCL Dig
 ### DXClient - Theme List feature for LiveSync and Disable Prompt attribute
 
 [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md)
+
+### Updated PZN UI
+(no doc yet)
 
 ## Digital Experience 9.5 Version
 
