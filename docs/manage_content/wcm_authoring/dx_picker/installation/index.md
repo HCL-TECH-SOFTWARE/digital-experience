@@ -1,6 +1,6 @@
 # Installing and Deploying DX Picker
 
-This document contains instructions on how to install and deploy DX Picker.
+This document contains instructions on how to install and deploy DX Picker. DX Picker must be installed and configured in HCL Digital Experience 9.5 release update CF214 or higher.
 
 ## Packaging, installing, and deploying design
 
