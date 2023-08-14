@@ -1,9 +1,9 @@
-# Access DX Picker
+# Accessing DX Picker
 This section provides steps on how to access the DX Picker in a custom web application.
 
 ## Prerequisite
 
-DX Picker should be installed and configured in HCL Digital Experience 9.5 release update CF214 or higher. For instructions on installing DX Picker on supported environments, see the [DX Picker Installation](../installation/index.md) topic.
+DX Picker must be installed and configured in HCL Digital Experience 9.5 release update CF214 or higher. For instructions on installing DX Picker on supported environments, see the [DX Picker Installation](../installation/index.md) topic.
 
 !!! important
     To prevent CORS issue and be able to access DX Picker in a custom web application, it is required to add the host of the custom web application in the list of origins of the RingAPI service.
@@ -19,7 +19,7 @@ DX Picker should be installed and configured in HCL Digital Experience 9.5 relea
 !!! note
     You must have **User** access to use DX Picker.
 
-In order to use the DX Picker, you need to have the DX Picker Web Component imported in your HTML page.
+To use the DX Picker, you must have the DX Picker Web Component imported in your HTML page.
 
 1.  Add the DX Picker script as one of the dependencies in your HTML page.
 
@@ -47,9 +47,10 @@ In order to use the DX Picker, you need to have the DX Picker Web Component impo
       </html>
     ```
 
-3.  Open DX Picker by setting the `open` attribute of the picker to true.
+3.  Open DX Picker by setting the `open` attribute of the picker to `true`.
 
     One of the ways you can achieve this is assigning an id to the `dx-picker` tag and adding an onclick handler    a button that sets the `open` attribute to true
+    
     ```html
       <html>
         <head>
@@ -77,11 +78,11 @@ In order to use the DX Picker, you need to have the DX Picker Web Component impo
 
 ### Picker Events
 
-Interacting with the DX Picker will trigger events which can be access through by listening on the `message` event. The following are the current events available in the DX Picker.
+Interacting with the DX Picker triggers events which can be access through by listening on the `message` event. The following are the current events available in the DX Picker:
 
-- `HCL-DX-PICKER-SELECT` - Will be triggered when selecting an item.
+- `HCL-DX-PICKER-SELECT` - Triggered when selecting an item.
 
-    This event will contain the following object
+    This event contains the following object:
 
     ```json
     {
@@ -99,9 +100,9 @@ Interacting with the DX Picker will trigger events which can be access through b
       ]
     }
     ```
-- `HCL-DX-PICKER-CLOSE` - Will be triggered when the Cancel button is clicked.
+- `HCL-DX-PICKER-CLOSE` - Triggered when the Cancel button is clicked.
 
-    This event will contain the following object
+    This event contain the following object:
 
     ```json
     {
