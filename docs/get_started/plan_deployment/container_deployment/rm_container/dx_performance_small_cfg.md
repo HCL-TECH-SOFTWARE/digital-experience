@@ -37,7 +37,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 ## Environment
 
 ### AWS/Native Kube
-- EC2 instance running a "bare metal" kubernetes platform (a choice of vanilla kube, microk8s or minikube) with the DX images installed and configured.
+- EC2 instance running native kubernetes platform with the DX images installed and configured.
 - In AWS/Native Kube, the test started with the minimal EC2 instance with a single Node.
 - The tests used a remote DB2 instance.
 
