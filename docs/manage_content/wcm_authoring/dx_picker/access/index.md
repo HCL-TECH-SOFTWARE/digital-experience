@@ -17,7 +17,7 @@ DX Picker must be installed and configured in HCL Digital Experience 9.5 release
 ## Accessing DX Picker
 
 !!! note
-    You must have **User** access to use DX Picker.
+    You must have **User** access to use DX Picker. Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
 
 To use the DX Picker, you must have the DX Picker Web Component imported in your HTML page.
 
@@ -49,7 +49,7 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
 
 3.  Open DX Picker by setting the `open` attribute of the picker to `true`.
 
-    One of the ways you can achieve this is assigning an id to the `dx-picker` tag and adding an onclick handler    a button that sets the `open` attribute to true
+    You can assign an id to the `dx-picker` tag and add an onclick handler button that sets the `open` attribute to `true`.
     
     ```html
       <html>
@@ -78,7 +78,27 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
 
 ### Picker Events
 
-Interacting with the DX Picker triggers events which can be access through by listening on the `message` event. The following are the current events available in the DX Picker:
+Interacting with the DX Picker triggers events which can be accessed by listening to the `message` event and inspecting the `data` object. 
+
+```js
+window.addEventListener('message', (event) => {
+  const eventData = event.data;
+  /*
+   * event.data object will have the following structure:
+   *
+   * {
+   *    type: <PICKER_EVENT>,
+   *    detail: {
+   *      <data included in the event>
+   *    }
+   *  }
+   *
+   */
+})
+
+```
+
+The following are the current events available in the DX Picker:
 
 - `HCL-DX-PICKER-SELECT` - Triggered when selecting an item.
 
@@ -86,26 +106,33 @@ Interacting with the DX Picker triggers events which can be access through by li
 
     ```json
     {
-      source: 'dam',
-      items: [
-        {
-          "id": string,
-          "name": string,
-          "size": string,
-          "path": string,
-          "thumbnail": string,
-          "assertType": string,
-          "mediaType": string
-        }
-      ]
+      "type": "HCL-DX-PICKER-SELECT",
+      "detail": {
+        "source": "dam",
+        "items": [
+          {
+            "id": string,
+            "name": string,
+            "size": string,
+            "path": string,
+            "thumbnail": string,
+            "assertType": string,
+            "mediaType": string
+          }
+        ]
+      }
     }
     ```
+
 - `HCL-DX-PICKER-CLOSE` - Triggered when the Cancel button is clicked.
 
     This event contain the following object:
 
     ```json
     {
-      "close": boolean;
+      "type": "HCL-DX-PICKER-CLOSE",
+      "detail": {
+        "close": boolean;
+      }
     }
     ```
