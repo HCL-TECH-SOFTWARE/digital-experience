@@ -37,6 +37,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 ## Environment
 
 ### AWS/Native Kube
+- EC2 instance running a "bare metal" kubernetes platform (a choice of vanilla kube, microk8s or minikube) with the DX images installed and configured.
 - In AWS/Native Kube, the test started with the minimal EC2 instance with a single Node.
 - The tests used a remote DB2 instance.
 
@@ -274,6 +275,13 @@ See the following section for the tuned helm values.
 | licenseManager            | 100    | 300        | 100    | 300        |
 | Total                     | 6400   | 13108      | 6400   | 13108      |
 
+Please follow the steps to see the small-config-values.yaml in hcl-dx-deployment helm chart
+
+- Download the helm chart from flexnet or harbor
+
+- Unpack the tgz ( hcl-dx-deployment-XXX.tgz )
+
+- In the unpacked folder small-config-values.yaml can be seen in this structure hcl-dx-deployment/value-samples/small-config-values.yaml
 
 ##### Results Overview
 
