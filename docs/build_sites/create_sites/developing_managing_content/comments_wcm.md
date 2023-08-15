@@ -205,10 +205,13 @@ After configuring WCM comments in a custom DX Portlet, actions such as add, repl
 
 ### Configuring WCM comments in a theme
 
-1. Create a new Site Area inside a WCM content library where new page component with pre-populated content UUID is to be created.
+1. Create a new Site Area inside a WCM content library where a copy of the comments page component with the pre-populated library name and content uuid would be stored.
+![Create a new Site Area inside a WCM content library #1](../developing_managing_content/_img/create-a-new-site-area-1.png)
+
+![Create a new Site Area inside a WCM content library #2](../developing_managing_content/_img/create-a-new-site-area-2.png)
 2. Create a new copy of a page component which is created as a part of [Custom Page Component for WCM Comments](#custom-page-component-for-wcm-comments), inside the created site area and pre-populate with content UUID for which comments needs to rendered.
 ![Copy of new page component with content UUID](../developing_managing_content/_img/copy_new_page_component_with_contentuuid.png)
-3. Add the following piece of code in any of the view files of a theme (Ex: default85) where the comments feature should be enabled. In this example, navigate to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots/``` and open the ```footer.jsp``` view file.
+3. Add the highlighted piece of codes from the screenshot below to any of the view files of a theme (Ex: default85) where the comments feature should be enabled. In this example, navigate to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots/``` and open the ```footer.jsp``` view file.
 ![WCM JSP Tags in a Theme View File](../developing_managing_content/_img/wcm_jsp_tag_theme.png)
 4. Add the following piece of code in the ```footer.jsp``` view file to enable the comments for the new page component with pre-populated content UUID.
     ```
@@ -222,10 +225,10 @@ After configuring WCM comments in a custom DX Portlet, actions such as add, repl
     </wcm:content>
     ```
      For more information, see [Web Content Manager JSP tags](../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags.md).
-5. Copy the ```/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld``` file from the DX core container into the tld path of the theme under interest. In this example, copy the tld file to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/WEB-INF/tld```.
+5. Copy the ```/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld``` file from the DX core container into the tld path of the theme to update. In this example, copy the tld file to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/WEB-INF/tld```.
 
 
-After configuring WCM comments in a theme, In this example, ```footer.jsp```, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.
+After configuring WCM comments in a theme, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. In the following example, WCM comments is configured in ```footer.jsp```:
 ![WCM Comments in Footer Theme](../developing_managing_content/_img/wcm_comments_in_footer_theme.png)
 
 
@@ -244,7 +247,7 @@ The actions available for a user depend on their role:
 - Nested replies to comments are yet supported.
 - Posting and replying are limited to 500 characters. 
 - Rendering Comments outside the WCM rendering process (for example, from REST or a custom Servlet or JSP via the java WCM API) is not yet supported.
-- HTML tags will not be rendered in the comments. If HTML tags are present, it will skip HTML tags that were added as comment.
+- HTML tags are not rendered in the comments. If HTML tags are present, the system skips HTML tags that are added in a comment.
 
 ## Update global "Article" presentation template
 
