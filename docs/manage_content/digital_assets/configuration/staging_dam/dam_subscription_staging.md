@@ -49,7 +49,7 @@ DAM staging works with environments that use a different LDAP. An LDAP user wit
 ### Credentials used during staging
 
 **Registration and file transfer:** <br>
-The portal admin user credentials should be used for staging registration and these credentials will be stored as kube secrets. The user credentials in the secret on the transferring server and the subscriber can be same or different.
+You must use the portal admin user credentials for staging registration. These credentials are then stored as kube secrets. The user credentials in the secret on the transferring server and the subscriber can be same or different.
 The credentials used in the registration are used for authentication and authorization during DXClient registration, as well as for transferring files during staging.
 
 **To update staging secret**:<br>
