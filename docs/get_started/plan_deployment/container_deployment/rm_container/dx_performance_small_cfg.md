@@ -47,7 +47,7 @@ To see the small-config-values.yaml file in the hcl-dx-deployment helm chart, re
 ## Environment
 
 ### AWS/Native Kube
-- EC2 instance running native kubernetes platform with the DX images installed and configured.
+- EC2 instance is running on a native kubernetes platform with the DX images installed and configured.
 - In AWS/Native Kube, the test started with the minimal EC2 instance with a single Node.
 - The tests used a remote DB2 instance.
 
