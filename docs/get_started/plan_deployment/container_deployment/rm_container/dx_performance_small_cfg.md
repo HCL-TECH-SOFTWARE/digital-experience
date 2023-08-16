@@ -26,6 +26,16 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 - These modifications resulted to better Response Time and Throughput by 50 percent. Detailed data are shown in the next sections.
 
+## DX small config helm values in hcl-dx-deployment
+
+Please follow the steps to see the small-config-values.yaml in hcl-dx-deployment helm chart
+
+- Download the helm chart from flexnet or harbor
+
+- Unpack the tgz ( hcl-dx-deployment-XXX.tgz )
+
+- In the unpacked folder small-config-values.yaml can be seen in this structure hcl-dx-deployment/value-samples/small-config-values.yaml
+
 ## Customer Rendering Scenario details
 
 | Concurrent users      | Existing WCM pages | Existing DAM Content |
@@ -275,13 +285,6 @@ See the following section for the tuned helm values.
 | licenseManager            | 100    | 300        | 100    | 300        |
 | Total                     | 6400   | 13108      | 6400   | 13108      |
 
-Please follow the steps to see the small-config-values.yaml in hcl-dx-deployment helm chart
-
-- Download the helm chart from flexnet or harbor
-
-- Unpack the tgz ( hcl-dx-deployment-XXX.tgz )
-
-- In the unpacked folder small-config-values.yaml can be seen in this structure hcl-dx-deployment/value-samples/small-config-values.yaml
 
 ##### Results Overview
 
