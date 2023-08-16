@@ -96,8 +96,9 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Results of DX Sizing Tests for rendering with a small configuration are now available. This guidance presents the important KPIs and discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system. For more information, see the topic [Performance Sizing Guidance for Rendering with a Small Configuration](../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md).
 
-### DX Cloud Native 9.5.1 offering includes limited Volt Foundry entitlements
-(no doc yet)
+### HCL Digital Experience Cloud Native 9.5 Offering
+
+[HCL Volt MX](https://www.hcl-software.com/volt-mx) Foundry on premises components supporting K8s Helm deployments are now available with the [HCL Digital Experience Cloud Native 9.5 offering](https://blog.hcltechsw.com/digital-experience/simplified-pricing-more-value-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/). Learn how to greatly simplify backend integrations and present the results to DX target audiences through DX web site pages. See the Help Center topic [Digital Experience Cloud Native 9.5 Offering](../../get_started/product_overview/offerings.md) for more information.  
 
 ###  Support for DAM staging on different users for subscribers and publishers
 (doc in progress)
