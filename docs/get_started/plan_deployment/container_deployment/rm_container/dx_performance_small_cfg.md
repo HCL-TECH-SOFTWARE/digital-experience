@@ -28,13 +28,13 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 ## DX small config helm values in hcl-dx-deployment
 
-Please follow the steps to see the small-config-values.yaml in hcl-dx-deployment helm chart
+To see the small-config-values.yaml file in the hcl-dx-deployment helm chart, refer to the following steps:
 
-- Download the helm chart from flexnet or harbor
+1. Download the helm chart from FlexNet or Harbor.
 
-- Unpack the tgz ( hcl-dx-deployment-XXX.tgz )
+2. Unpack the TGZ file (hcl-dx-deployment-XXX.tgz).
 
-- In the unpacked folder small-config-values.yaml can be seen in this structure hcl-dx-deployment/value-samples/small-config-values.yaml
+3. In the unpacked folder, navigate to this structure to go to the small-config-values.yaml: hcl-dx-deployment/value-samples/small-config-values.yaml.
 
 ## Customer Rendering Scenario details
 
