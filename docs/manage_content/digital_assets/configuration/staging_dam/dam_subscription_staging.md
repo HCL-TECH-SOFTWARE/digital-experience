@@ -23,7 +23,7 @@ The DAM staging framework allows you to stage your DAM content from an authoring
 -   Register a subscriber with a publisher.
 
     !!! note
-        A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same distinguished names (e.g. uid=wpsadmin,o=hcl.com) in both publisher and subscriber's Lightweight Directory Access Protocol (LDAP) or other user registry.
+        A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same distinguished names (for example, uid=wpsadmin,o=hcl.com) in both publisher's and subscriber's Lightweight Directory Access Protocol (LDAP) or other user registry.
 
 ### Configure staging hostname
 The hostname configuration for the DAM staging publisher and subscriber must be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details must be specified.
