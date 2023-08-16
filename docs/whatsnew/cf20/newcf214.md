@@ -98,7 +98,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ### HCL Digital Experience Cloud Native 9.5 Offering
 
-[HCL Volt MX](https://www.hcl-software.com/volt-mx) Foundry on premises components supporting K8s Helm deployments are now available with the [HCL Digital Experience Cloud Native 9.5 offering](https://blog.hcltechsw.com/digital-experience/simplified-pricing-more-value-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/). Learn how to greatly simplify backend integrations and present the results to DX target audiences through DX web site pages. See the Help Center topic [Digital Experience Cloud Native 9.5 Offering](../../get_started/product_overview/offerings.md) for more information.  
+[HCL Volt MX](https://www.hcl-software.com/volt-mx) Foundry on-premises components supporting K8s Helm deployments are now available with the [HCL Digital Experience Cloud Native 9.5 offering](https://blog.hcltechsw.com/digital-experience/simplified-pricing-more-value-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/). Learn how to simplify backend integrations and present the results to DX target audiences through DX web site pages. See the Help Center topic [Digital Experience Cloud Native 9.5 Offering](../../get_started/product_overview/offerings.md) for more information.  
 
 ###  Support for DAM staging on different users for subscribers and publishers
 (doc in progress)
