@@ -44,7 +44,7 @@ configuration:
 ### Configure LDAP
 
 **DAM staging supports different LDAP for publisher and subscriber**: <br>
-DAM staging will work with environments that use a different LDAP. LDAP user with portal admin rights can be used for stage registration.
+DAM staging works with environments that use a different LDAP. An LDAP user with portal admin rights can be used for stage registration.
 
 ### Credentials used during staging
 
