@@ -64,7 +64,7 @@ Same as Core, when Remote Search is enabled, WAS admin credentials can be config
 The following only takes effect when [Config Wizard is enabled](./optional_configure_apps.md#configuration-wizard-configuration).
 
 For CF212 and below upgrading to CF213 and beyond:
-- Before upgrading, the `configWizardUser` and `configWizardPassword` under `security.core` needs to be updated to the current **wpsadmin** credentials **once**, followed by a Helm upgrade. After the Helm upgrade, Config Wizard credentials can now be updated if needed, separately from the Core. For more information see: [Persisted Config Wizard Profile](../../../../../manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md).
+- Before upgrading to CF213 or higher, the `configWizardUser` and `configWizardPassword` under `security.core` need to be updated to the current credentials of the **wpsadmin** user in the file based user registry of Core **once**, followed by a Helm upgrade. After the Helm upgrade, Config Wizard credentials can now be updated if needed, separately from the Core. This is necessary as the file based user registry of Core is copied to and reused by Config Wizard. For more information see: [Persisted Config Wizard Profile](../../../../../manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md).
 
 Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types).
  
