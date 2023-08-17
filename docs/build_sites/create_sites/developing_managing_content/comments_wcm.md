@@ -212,13 +212,13 @@ After configuring WCM comments in a custom DX Portlet, actions such as add, repl
 
 2. In the created site area, create a new copy of a page component which is created in [Custom Page Component for WCM Comments](#custom-page-component-for-wcm-comments).
 
-3. Obtain the content UUID for which comments should be rendered from the content properties as in the following screenshot.
+3. In the **Properties** tab, copy the content UUID for which comments should be rendered. 
 ![Content UUID](../developing_managing_content/_img/contentuuid.png)
 
-4. Edit the page component and enter the content UUID and save the page component. 
+4. Edit the page component and enter the content UUID. Save the page component. 
 ![Copy of new page component with content UUID](../developing_managing_content/_img/copy_new_page_component_with_contentuuid.png)
 
-5. Add the highlighted code snippet in the following screenshot to any of the view files of a theme (for example, default85) where the comments feature should be enabled. In this example, navigate to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots/``` and open the ```footer.jsp``` view file.
+5. Add the highlighted code snippets in the following screenshot to any of the view files of a theme (for example, default85) where the comments feature should be enabled. In this example, navigate to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots/``` and open the ```footer.jsp``` view file.
 ![WCM JSP Tags in a Theme View File](../developing_managing_content/_img/wcm_jsp_tag_theme.png)
 
 6. Add the following code snippet in the ```footer.jsp``` view file to enable the comments for the new page component with pre-populated content UUID.
