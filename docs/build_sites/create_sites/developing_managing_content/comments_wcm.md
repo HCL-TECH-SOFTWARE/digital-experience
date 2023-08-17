@@ -249,7 +249,7 @@ The actions available for a user depend on their role:
 
 ## Limitations
 
-- Nested replies to comments are yet supported.
+- Nested replies to comments are not yet supported.
 - Posting and replying are limited to 500 characters. 
 - Rendering Comments outside the WCM rendering process (for example, from REST or a custom Servlet or JSP via the java WCM API) is not yet supported.
 - HTML tags are not rendered in the comments. If HTML tags are present, the system skips HTML tags that are added in a comment.
