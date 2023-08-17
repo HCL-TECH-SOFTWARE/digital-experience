@@ -72,7 +72,12 @@ The following features and updates are available to customers installing HCL Dig
     Livesync is now supported in scaled DX environment setups. New attributes are also added: the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files, and the attribute to specify the path to the contenthandler servlet on the DX server. For more information, see the topic [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
 
 ### Updated PZN UI
-(no doc yet)
+
+=== "Containers"
+    The user interface (UI) for Personalization is restyled. For more information about this feature, see the [product overview](../../get_started/product_overview/personalization.md) and the topic[Personalization](../../manage_content/pzn/personalization/index.md).
+
+=== "On-Premises"
+    The user interface (UI) for Personalization is restyled. For more information about this feature, see the [product overview](../../get_started/product_overview/personalization.md) and the topic[Personalization](../../manage_content/pzn/personalization/index.md).
 
 ### Guidance for setting up OpenID Connect (OIDC) based authentication
 (no doc yet)
