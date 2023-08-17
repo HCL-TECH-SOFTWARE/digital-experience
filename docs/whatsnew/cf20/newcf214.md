@@ -58,16 +58,24 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager - Parameters for item-path-full and details-full options
 
 === "Containers"
-    New parameters `options=item-path` and `options=details` are available to add more information to REST API search query results. See the topics [Adding item path information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-item-path-information-to-the-rest-api-search-query-results) and [Adding more detailed information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-more-detailed-information-to-the-rest-api-search-query-results) for more information. 
+    New parameters `options=item-path` and `options=details` are now available to add more information to REST API search query results. See [Adding item path information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-item-path-information-to-the-rest-api-search-query-results) and [Adding more detailed information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-more-detailed-information-to-the-rest-api-search-query-results) for more information. 
+
+=== "On-Premises"
+    New parameters `options=item-path` and `options=details` are now available to add more information to REST API search query results. See [Adding item path information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-item-path-information-to-the-rest-api-search-query-results) and [Adding more detailed information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-more-detailed-information-to-the-rest-api-search-query-results) for more information. 
 
 ### DXClient - Theme List feature for LiveSync and Disable Prompt attribute
 
-[LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md)
+=== "Containers"
+    Livesync is now supported in scaled DX environment setups. New attributes are also added: the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files, and the attribute to specify the path to the contenthandler servlet on the DX server. For more information, see the topic [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
+
+=== "On-Premises"
+    Livesync is now supported in scaled DX environment setups. New attributes are also added: the Disable Prompt attribute to disable the confirmation prompt for overwriting local and server files, and the attribute to specify the path to the contenthandler servlet on the DX server. For more information, see the topic [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
 
 ### Updated PZN UI
 (no doc yet)
 
 ### Guidance for setting up OpenID Connect (OIDC) based authentication
+(no doc yet)
 
 ## Digital Experience 9.5 Version
 
@@ -89,9 +97,9 @@ The following features and updates are available to customers installing HCL Dig
     The AI-assisted content analysis feature now supports the use of custom content AI providers. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and [hybrid](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) platforms for more information.
 
 ### Content Composer - Create content in Managed Pages
-[Managing Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md)
 
-[Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md)
+=== "Containers"
+    The topics [Managing Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md) and [Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md) have been updated to replace instances of "site area" with "location". The location can either be a site area or a page.
 
 ### Updated version of Amazon RDS with Oracle in the System requirements page
 === "Containers"
@@ -118,7 +126,6 @@ The following features and updates are available to customers installing HCL Dig
 ### HCL Volt MX Foundry components supporting K8s Helm deployments are now available
 
 [HCL Volt MX](https://www.hcl-software.com/volt-mx) Foundry on-premises components supporting K8s Helm deployments are now available with the [HCL Digital Experience Cloud Native 9.5 offering](https://blog.hcltechsw.com/digital-experience/simplified-pricing-more-value-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/). Learn how to simplify backend integrations and present the results to DX target audiences through DX web site pages. See the Help Center topic [Digital Experience Cloud Native 9.5 Offering](../../get_started/product_overview/offerings.md) for more information.  
-
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
