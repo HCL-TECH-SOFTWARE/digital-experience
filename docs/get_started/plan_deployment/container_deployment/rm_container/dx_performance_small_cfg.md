@@ -26,6 +26,16 @@ This initial performance guidance aims to understand how the ratios of key pod l
 
 - These modifications resulted to better Response Time and Throughput by 50 percent. Detailed data are shown in the next sections.
 
+## DX small config helm values in hcl-dx-deployment
+
+To see the small-config-values.yaml file in the hcl-dx-deployment helm chart, refer to the following steps:
+
+1. Download the helm chart from FlexNet or Harbor.
+
+2. Unpack the TGZ file (hcl-dx-deployment-XXX.tgz).
+
+3. In the unpacked folder, navigate to this structure to go to the small-config-values.yaml: hcl-dx-deployment/value-samples/small-config-values.yaml.
+
 ## Customer Rendering Scenario details
 
 | Concurrent users      | Existing WCM pages | Existing DAM Content |
@@ -37,6 +47,7 @@ This initial performance guidance aims to understand how the ratios of key pod l
 ## Environment
 
 ### AWS/Native Kube
+- EC2 instance is running on a native kubernetes platform with the DX images installed and configured.
 - In AWS/Native Kube, the test started with the minimal EC2 instance with a single Node.
 - The tests used a remote DB2 instance.
 
