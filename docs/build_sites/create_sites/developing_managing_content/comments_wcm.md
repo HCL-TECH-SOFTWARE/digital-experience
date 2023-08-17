@@ -206,17 +206,18 @@ After configuring WCM comments in a custom DX Portlet, actions such as add, repl
 ### Configuring WCM comments in a theme
 
 1. Create a new Site Area inside a WCM content library where you want to store a copy of the comments page component with the pre-populated library name and content UUID.
-![Create a new Site Area inside a WCM content library #1](../developing_managing_content/_img/create-a-new-site-area-1.png)
 
-![Create a new Site Area inside a WCM content library #2](../developing_managing_content/_img/create-a-new-site-area-2.png)
+    ![Create a new Site Area inside a WCM content library #1](../developing_managing_content/_img/create-a-new-site-area-1.png)
+
+    ![Create a new Site Area inside a WCM content library #2](../developing_managing_content/_img/create-a-new-site-area-2.png)
 
 2. In the created site area, create a new copy of a page component which is created in [Custom Page Component for WCM Comments](#custom-page-component-for-wcm-comments).
 
 3. In the **Properties** tab, copy the content UUID for which comments should be rendered. 
-![Content UUID](../developing_managing_content/_img/contentuuid.png)
+    ![Content UUID](../developing_managing_content/_img/contentuuid.png)
 
 4. Edit the page component and enter the content UUID. 
-![Copy of new page component with content UUID](../developing_managing_content/_img/copy_new_page_component_with_contentuuid.png)
+    ![Copy of new page component with content UUID](../developing_managing_content/_img/copy_new_page_component_with_contentuuid.png)
 
 5. Save the page component. 
 
