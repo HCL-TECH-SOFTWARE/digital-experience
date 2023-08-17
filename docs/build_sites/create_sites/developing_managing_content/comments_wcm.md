@@ -210,13 +210,15 @@ After configuring WCM comments in a custom DX Portlet, actions such as add, repl
 
 ![Create a new Site Area inside a WCM content library #2](../developing_managing_content/_img/create-a-new-site-area-2.png)
 
-2. Create a new copy of a page component which is created as a part of [Custom Page Component for WCM Comments](#custom-page-component-for-wcm-comments), inside the created site area and pre-populate with content UUID for which comments needs to rendered.
+2. In the created site area, create a new copy of a page component which is created in [Custom Page Component for WCM Comments](#custom-page-component-for-wcm-comments).
 ![Copy of new page component with content UUID](../developing_managing_content/_img/copy_new_page_component_with_contentuuid.png)
 
-3. Add the highlighted piece of codes from the following screenshot to any of the view files of a theme (for example, default85) where the comments feature should be enabled. In this example, navigate to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots/``` and open the ```footer.jsp``` view file.
+3. Edit the page component and pre-populate it with content UUID for which comments needs to rendered.
+
+4. Add the highlighted code snippet in the following screenshot to any of the view files of a theme (for example, default85) where the comments feature should be enabled. In this example, navigate to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots/``` and open the ```footer.jsp``` view file.
 ![WCM JSP Tags in a Theme View File](../developing_managing_content/_img/wcm_jsp_tag_theme.png)
 
-4. Add the following piece of code in the ```footer.jsp``` view file to enable the comments for the new page component with pre-populated content UUID.
+5. Add the following code snippet in the ```footer.jsp``` view file to enable the comments for the new page component with pre-populated content UUID.
 
     ```
     <%@ taglib uri="/WEB-INF/tld/wcm.tld" prefix="wcm"%>
@@ -230,7 +232,7 @@ After configuring WCM comments in a custom DX Portlet, actions such as add, repl
     ```
      For more information, see [Web Content Manager JSP tags](../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags.md).
      
-5. Copy the ```/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld``` file from the DX core container into the TLD path of the theme to update. In this example, copy the TLD file to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/WEB-INF/tld```.
+6. Copy the ```/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld``` file from the DX core container into the TLD path of the theme to update. In this example, copy the TLD file to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/WEB-INF/tld```.
 
 
 After configuring WCM comments in a theme, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. In the following example, WCM comments is configured in ```footer.jsp```:
