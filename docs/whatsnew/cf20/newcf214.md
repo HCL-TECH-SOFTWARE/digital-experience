@@ -74,10 +74,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Updated PZN UI
 
 === "Containers"
-    The user interface (UI) for Personalization is restyled. For more information about this feature, see the [product overview](../../get_started/product_overview/personalization.md) and the topic[Personalization](../../manage_content/pzn/personalization/index.md).
+    The user interface (UI) for Personalization is restyled. For more information about this feature, see the [product overview](../../get_started/product_overview/personalization.md) and the topic [Personalization](../../manage_content/pzn/personalization/index.md).
 
 === "On-Premises"
-    The user interface (UI) for Personalization is restyled. For more information about this feature, see the [product overview](../../get_started/product_overview/personalization.md) and the topic[Personalization](../../manage_content/pzn/personalization/index.md).
+    The user interface (UI) for Personalization is restyled. For more information about this feature, see the [product overview](../../get_started/product_overview/personalization.md) and the topic [Personalization](../../manage_content/pzn/personalization/index.md).
 
 ### Guidance for setting up OpenID Connect (OIDC) based authentication
 (no doc yet)
