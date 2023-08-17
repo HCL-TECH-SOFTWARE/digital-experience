@@ -10,3 +10,4 @@ nav:
     - Enabling HTTP Basic Authentication for simple clients: basic_auth
     - Updating user ID and passwords: updating_userid_pwd
     - Integrating Transient Users with OpenID Connect: integrate_oid
+    - Set_up_OIDC_for_DX.md
