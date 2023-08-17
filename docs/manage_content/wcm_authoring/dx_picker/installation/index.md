@@ -11,7 +11,7 @@ DX Picker is an instance of a react integration portlet configured to point to w
 This section describes how to enable and disable DX Picker.
 
 !!! important
-    Before enabling DX Picker, it is required to have Digital Asset Management (DAM) installed and enabled. For more information on DAM, refer to [Digital Asset Management](../../digital_assets/index.md).
+    Before enabling DX Picker, it is required to have Digital Asset Management (DAM) installed and enabled. For more information on DAM, refer to [Digital Asset Management](../../../digital_assets/index.md).
 
 ### Enabling DX Picker for traditional deployment
 
