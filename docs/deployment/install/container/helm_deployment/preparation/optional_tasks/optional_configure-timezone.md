@@ -2,9 +2,9 @@
 
 ## Helm Chart Value
 
-By default, time zone of all containers in the Helm-based DX deployment is in **UTC**. 
+By default, the timezone of all containers in the Helm-based DX deployment is **UTC**. 
 
-You can configure this by updating the `incubator.containerTimezone` field in the custom values file.
+You can configure this by updating the `configuration.containerTimezone` field in the custom values file.
 
 Before applying the changes make sure you understand the implication of updating the timezone in all the applications. 
 
@@ -13,9 +13,9 @@ Before applying the changes make sure you understand the implication of updating
 
 See [supported input types](#supported-input-types) for examples of valid timezone formats.
 
-For example to use **GMT/BST** you need to set the `incubator.containerTimezone` to `Europe/London`
+For example, to use **GMT/BST** you need to set the `configuration.containerTimezone` to `Europe/London`
 ```yaml
-incubator:
+configuration:
   containerTimezone: "Europe/London"
 ```
 
@@ -24,24 +24,23 @@ And then apply the changes using the following command:
 `helm upgrade -n <namespace> -f <custom-values.yaml> <prefix> <chart>`
 
 
-If you wish to go back to the **UTC**, you can just pass an empty string to the `incubator.containerTimezone` field.
+If you wish to go back to the **UTC**, you can just pass an empty string to the `configuration.containerTimezone` field.
 
 !!! note
-    If you passed an invalid time zone, the time zone would default back to **UTC**.
+    If you passed an invalid timezone, the timezone would default back to **UTC**.
 
 ## Effects
 
-Changing the `incubator.containerTimezone` value in custom values file changes the time zone for **all** containers.
+Changing the `configuration.containerTimezone` value in the custom values file changes the timezone for **all** containers.
 
 This also means that the application running inside the containers is also affected by this change.
-
-Effects of changing the time zone depends on the application, but some examples are:
+The effects of changing the timezone depend on the application, but some examples are:
 
 - [`TZ` environment variable](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html) is set for all containers. 
 - Timestamps of files inside the container reflect the set timezone.
-- CRON Jobs of Prereqs Checker follow the new time zone.
+- CRON Jobs of Prereqs Checker follow the new timezone.
   For more information, see the [Prereqs Checker Documentation](../optional-core-prereqs-checker/?h=prereqs#automatic-running-of-checks).
-- Timestamps of the logs are currently partially affected depending on each application's logging framework. Some of the logs adapt the timezone of the container, while others always log UTC timestamps.
+- Timestamps of the logs are currently partially affected depending on each application's logging framework. Some of the logs adapt to the timezone of the container, while others always log UTC timestamps.
 
 ## Uniform log timestamps
 
