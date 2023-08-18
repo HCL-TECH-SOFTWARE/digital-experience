@@ -77,10 +77,10 @@ security:
     configWizardPassword: "<your wpsadmin password in the file-based user registry of Core >"
 ```
 
-Alternatively the username `wpsadmin` and the correct password can be set in a custom secret and referenced as `customConfigWizardSecret`.
+Alternatively, you can set the username `wpsadmin` and the correct password in a custom secret and reference them as `customConfigWizardSecret`.
 
 !!! note
-    When the values are not set correctly during the upgrade, you will see the following error message in the logs:
+    When the values are not set correctly during the upgrade, the following error message appears in the logs:
     > Neither the new nor previous Config Wizard Admin credentials in the Kubernetes secrets are valid. Please supply the correct credentials and restart.
 
     Please follow the steps above to resolve the error for the initial startup.
