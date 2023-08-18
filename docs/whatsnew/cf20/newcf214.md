@@ -118,7 +118,7 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     The AI-assisted content analysis feature now supports the use of custom content AI providers. See the Help Center topics WCM Content Analysis enablement for [Kubernetes](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md) and [hybrid](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) platforms for more information.
 
-### Content Composer - Create content in Managed Pages
+### Content Composer – Create content in Managed Pages
 
 === "Containers"
     The topics [Managing Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md) and [Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md) have been updated to replace instances of "site area" with "location". The location can either be a site area or a page.
