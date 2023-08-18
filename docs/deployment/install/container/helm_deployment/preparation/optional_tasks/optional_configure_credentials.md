@@ -63,7 +63,7 @@ Same as Core, when Remote Search is enabled, WAS admin credentials can be config
 ## Config Wizard security credentials
 The following only takes effect when [Config Wizard is enabled](./optional_configure_apps.md#configuration-wizard-configuration).
 
-For CF212 and below upgrading to CF213 and beyond:
+### For CF212 and below upgrading to CF213 and beyond:
 
 - When upgrading to CF213 or higher, the `configWizardUser` and `configWizardPassword` under `security.core` in your `custom-values.yaml` file must be updated to the current credentials of the `wpsadmin` user in the file-based user registry of Core **once**, followed by a Helm upgrade. This is required because the file-based user registry of Core is copied to and reused by Config Wizard and Config Wizard is initially using `wpsadmin` as the primary admin user. For more information see: [Persisted Config Wizard Profile](../../../../../manage/portal_admin_tools/cfg_wizard/configuration/persist_cw_profile.md).
 - After the Helm upgrade, the Config Wizard credentials can now be updated if needed, separately from the Core. 
@@ -83,7 +83,7 @@ Alternatively, you can set the username `wpsadmin` and the correct password in a
     When the values are not set correctly during the upgrade, the following error message appears in the logs:
     > Neither the new nor previous Config Wizard Admin credentials in the Kubernetes secrets are valid. Please supply the correct credentials and restart.
 
-    Please follow the steps above to resolve the error for the initial startup.
+    Please follow [the steps above](#for-cf212-and-below-upgrading-to-cf213-and-beyond) to resolve the error for the initial startup.
 
 Similar to Core and Remote Search, you can configure the Config Wizard admin credentials from the Helm chart. The behavior slightly differs depending on the user registry that is configured for HCL Digital Experience. See [Registry Types](#registry-types).
  
