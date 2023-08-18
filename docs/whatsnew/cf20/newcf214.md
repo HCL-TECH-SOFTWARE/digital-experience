@@ -4,6 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All  Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- Updated version of Amazon RDS with Oracle in System Requirements
 - Web Content Manager - Rendering WCM comments in themes and external components
 - Web Content Manager REST API v2 - AI Analysis API supports custom content AI providers
 - New guidance for configuring developer mode for MacOS
@@ -21,7 +22,6 @@ The following features and updates are available to customers installing HCL Dig
 
 - Content Composer – AI-assisted content analysis supports custom content AI providers
 - Content Composer - Create content in Managed Pages
-- Updated version of Amazon RDS with Oracle in System Requirements
 - New guidance for performance sizing for rendering with a small configuration
 - Support for DAM staging on different users for subscribers and publishers
 - Scaffolding framework for picker plugins and Picker Basic Version
@@ -31,6 +31,14 @@ The following features and updates are available to customers installing HCL Dig
 - HCL Volt MX Foundry components supporting K8s Helm deployments are now available
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
+
+### Updated version of Amazon RDS with Oracle in System Requirements 
+
+=== "Containers"
+    Oracle Database Standard and Enterprise Edition 21c and Oracle on Amazon Relational Database Service are added as supported databases in the System requirements. See the topic [Databases](../../get_started/system_requirements/kubernetes/databases.md) for more information.
+
+=== "On-Premises"
+    Oracle Database Standard and Enterprise Edition 21c and Oracle on Amazon Relational Database Service are added as supported databases in the System requirements. See the topic [Databases](../../get_started/system_requirements/kubernetes/databases.md) for more information.
 
 ### Web Content Manager - Rendering WCM comments in themes and external components
 
@@ -114,11 +122,6 @@ The following features and updates are available to customers installing HCL Dig
 
 === "Containers"
     The topics [Managing Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md) and [Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md) have been updated to replace instances of "site area" with "location". The location can either be a site area or a page.
-
-### Updated version of Amazon RDS with Oracle in System Requirements 
-
-=== "Containers"
-    Oracle Database Standard and Enterprise Edition 21c and Oracle on Amazon Relational Database Service are added as supported databases in the System requirements. See the topic [Databases](../../get_started/system_requirements/kubernetes/databases.md) for more information.
 
 ### New guidance for performance sizing for rendering with a small configuration
 
