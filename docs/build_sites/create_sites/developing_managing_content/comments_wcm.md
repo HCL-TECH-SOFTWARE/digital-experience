@@ -203,6 +203,47 @@ After configuring WCM comments in a Script Application, actions such as add, rep
 
 After configuring WCM comments in a custom DX Portlet, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed.
 
+### Configuring WCM comments in a theme
+
+1. Create a new Site Area inside a WCM content library where you want to store a copy of the comments page component with the pre-populated library name and content UUID.
+
+    ![Create a new Site Area inside a WCM content library #1](../developing_managing_content/_img/create-a-new-site-area-1.png)
+
+    ![Create a new Site Area inside a WCM content library #2](../developing_managing_content/_img/create-a-new-site-area-2.png)
+
+2. In the created site area, create a new copy of a page component which is created in [Custom Page Component for WCM Comments](#custom-page-component-for-wcm-comments).
+
+3. In the **Properties** tab, copy the content UUID for which comments should be rendered. 
+    ![Content UUID](../developing_managing_content/_img/contentuuid.png)
+
+4. Edit the page component and enter the content UUID. 
+    ![Copy of new page component with content UUID](../developing_managing_content/_img/copy_new_page_component_with_contentuuid.png)
+
+5. Save the page component. 
+
+6. Add the highlighted code snippets in the following screenshot to any of the view files of a theme (for example, default85) where the comments feature should be enabled. In this example, navigate to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots/``` and open the ```footer.jsp``` view file.
+![WCM JSP Tags in a Theme View File](../developing_managing_content/_img/wcm_jsp_tag_theme.png)
+
+7. Add the following code snippet in the ```footer.jsp``` view file to enable the comments for the new page component with pre-populated content UUID.
+
+    ```
+    <%@ taglib uri="/WEB-INF/tld/wcm.tld" prefix="wcm"%>
+    <wcm:initworkspace>login fail</wcm:initworkspace>
+    <wcm:setExplicitContext path="Custom Library/Custom Comments/Copy of New Comments" >
+        Setting Explicit Context Failed
+    </wcm:setExplicitContext>
+    <wcm:content>
+        Content Rendering Failed
+    </wcm:content>
+    ```
+     For more information, see [Web Content Manager JSP tags](../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags.md).
+     
+8. Copy the ```/wcm.ear/wcm-inplaceEdit.war/WEB-INF/tld/wcm.tld``` file from the DX core container into the TLD path of the theme to update. In this example, copy the TLD file to ```/opt/HCL/PortalServer/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/WEB-INF/tld```.
+
+
+After configuring WCM comments in a theme, actions such as add, reply, like/unlike, and delete comments can be done. The total comments count on the content item can also be viewed. In the following example, WCM comments is configured in ```footer.jsp```:
+![WCM Comments in Footer Theme](../developing_managing_content/_img/wcm_comments_in_footer_theme.png)
+
 ## Access Roles and Permissions for WCM Comments
 
 Only authorized users can view, edit, and delete the comments in the library where the comments are stored. It is required to have at least a **View** access to the WCM content library. For more information, see [Managing users and groups](../../../deployment/manage/security/people/authorization/controlling_access/managing_users_groups/index.md). 
@@ -215,9 +256,10 @@ The actions available for a user depend on their role:
 
 ## Limitations
 
-- Nested replies to comments are yet supported.
+- Nested replies to comments are not yet supported.
 - Posting and replying are limited to 500 characters. 
 - Rendering Comments outside the WCM rendering process (for example, from REST or a custom Servlet or JSP via the java WCM API) is not yet supported.
+- HTML tags are not rendered in the comments. If HTML tags are present, the system skips HTML tags that are added in a comment.
 
 ## Update global "Article" presentation template
 

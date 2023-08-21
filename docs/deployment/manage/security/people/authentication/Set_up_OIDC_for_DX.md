@@ -1,14 +1,12 @@
-# Set up OIDC for HCL Digital Experience
+
+# Setting up OIDC for HCL Digital Experience
 
 
-!!! note
-    - Set login property to mail > does this influence wpsadmin login? Do we need to provide alternatives? (OIDC Identity token claims?)
-
-    - What about Virtual Portals? (Where to put extended configuration details)
 
 ## Configure OIDC Authentication for DX
 
-The following steps will configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP), such as Keycloak. This means that DX will be turned into a relying party (RP) towards your IdP and leverage and trust it for authentication assertions.
+The following steps configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP), such as Keycloak. This means that DX is turned into a relying party (RP) towards your IdP and the IdP is trusted for authentication assertions.
+
 
 ### What is this about?
 
@@ -16,7 +14,9 @@ An increasing number of enterprises are leveraging IdPs to manage the identities
 
 OpenID Connect (OIDC) serves as a modern authentication and authorization protocol designed to enhance digital security and user experience, particularly in the realm of identity and access management (IAM). Operating as an extension of the OAuth 2.0 framework, OIDC merges the strengths of OAuth's access delegation capabilities with identity verification, resulting in a comprehensive solution.
 
-At its core, OIDC streamlines the process of confirming user identities and authorizing their access to digital resources. It achieves this through the establishment of a trust relationship between the Identity Provider and the relying party (a web application or service, such as HCL Digital Experience). Users initiate the process by presenting their credentials to the IdP, which validates their identity. Subsequently, the IdP issues tokens, including the ID token, which acts as proof of authentication, and the access token, granting access to protected resources. This allows supporting capabilities like Single Sign-On (SSO) across multiple applications, prolonged and uninterrupted user sessions, and enabling seamless collaboration across organizations while maintaining a secure identity exchange with granular control over data sharing. The protocol's flexibility accommodates diverse use cases, from mobile applications to single-page web apps.
+
+At its core, OIDC streamlines the process of confirming user identities and authorizing their access to digital resources. It achieves this through the establishment of a trust relationship between the Identity Provider and the relying party (a web application or service, such as HCL Digital Experience). Users initiate the process by presenting their credentials to the IdP, which validates their identity. Subsequently, the IdP issues tokens, including the ID token which acts as proof of authentication, and the access token which grants access to protected resources. This allows supporting capabilities like Single Sign-On (SSO) across multiple applications, prolonged and uninterrupted user sessions, and enabling seamless collaboration across organizations while maintaining a secure identity exchange with granular control over data sharing. The protocol's flexibility accommodates diverse use cases, from mobile applications to single-page web apps.
+
 
 HCL DX and HCL Digital Solutions (DS) products as a whole recognize the benefits of and requirements to OIDC and thus support it. The following document provides an initial set of instructions to get started and enable HCL DX for it.
 
@@ -26,7 +26,8 @@ If you are interested in the transient users functionality as part of OIDC, plea
 
 ### Overview of required configuration tasks
 
-On a high level, the following tasks will be executed to establish this configuration:
+
+On a high level, the following tasks must be executed to establish this configuration:
 
 - Install the OIDC RP Trust Association Interceptor (TAI) for WebSphere.
 
@@ -48,19 +49,25 @@ On a high level, the following tasks will be executed to establish this configur
 
 Please be aware that configuring OIDC as the authentication protocol has certain implications to how features behave and have to be used or configured. Some of those implications are:
 
-- A WebSphere administrative user / wpsadmin (or similar users) configured within WAS file registry will not be known to OIDC providers and can't leverage the OIDC flow. Such users have to leverage alternate means of logging in.
 
-- The outlined steps will still require the WebSphere server to have a federation to the same user directory set up in order to resolve users. There is an option for [Integrating with Transient Users with OpenID Connect](../authentication/integrate_oid/index.md). This is subject to be elaborated on as part of this documentation in a later iteration.
+- A WebSphere administrative user / wpsadmin (or similar users) configured within WAS file registry will not be known to OIDC providers and cannot leverage the OIDC flow. Such users have to leverage alternate means of logging in.
 
-- Creating users or allowing them to sign-up through DX might be hindered due to the user management being relocated to the IdP as the primary orchestrator.
+- The outlined steps will still require the WebSphere server to have a federation to the same user directory set up in order to resolve users. There is an option for [Integrating with Transient Users with OpenID Connect](../authentication/integrate_oid/index.md). 
 
-### Additional notes to keep in mind on the below tasks
+<!-----This is subject to be elaborated on as part of this documentation in a later iteration.-->
+
+- Creating users or allowing them to sign-up through DX might be blocked due to the user management being relocated to the IdP as the primary orchestrator.
+
+### Additional information
+
 
 Although these tasks will generally work, we are using references for how a configuration might look like in various places. In some cases, there are additional configuration options that alter the values to input or require steps to be conducted slightly differently. The following assumptions have been made:
 
 - There is only one hostname in use (this might differ e.g., if you are using Virtual Portals).
 
-- The default context root /wps/portal (and /wps/myportal) are being used, with myportal being the secured URL.
+
+- The default context root /wps/portal (and /wps/myportal) are being used, with `myportal` being the secured URL.
+
 
 - The login property to identify users is the mail attribute.
 
@@ -68,14 +75,16 @@ Although these tasks will generally work, we are using references for how a conf
 
 - An IdP is set up and configured. Required details like the client id or secrets are available to configure during the below tasks.
 
-- A Keycloak service (specifically, the HCL DS branded Keycloak version) is being used as the IdP (The OIDC layer will look mostly the same with any other IdP but can't be guaranteed due to the extensive landscape of providers).
+
+- A Keycloak service (specifically, the HCL DS branded Keycloak version) is being used as the IdP (The OIDC layer will look mostly the same with any other IdP but cannot be guaranteed due to the extensive landscape of providers).
 
 !!! note
-    As an additional note to the above point on the used HCL DS branded Keycloak service, there are a couple of steps that have to be conducted to set up the OIDC layer on the IdP side. This includes e.g. the setup of a realm, client, user federation and custom claims. The document [Configure Keycloak for DX](https://pages.git.cwp.pnp-hcl.com/CWPdoc/common-documentation/hcl-authentication-service/integration/ds-integration/dx-keycloak-configuration) provides details steps on setting up all necessary parts. If you are using a different IdP, this might still be relevant to confirm you are setting the OIDC layer up in a way that will work with DX.
+    As an additional note to the above point on the used HCL DS branded Keycloak service, there are a couple of steps that have to be conducted to set up the OIDC layer on the IdP side. This includes the setup of a realm, client, user federation, and custom claims. The document [Configure Keycloak for DX](https://pages.git.cwp.pnp-hcl.com/CWPdoc/common-documentation/hcl-authentication-service/integration/ds-integration/dx-keycloak-configuration) provides details steps on setting up all necessary parts. If you are using a different IdP, this might still be relevant to confirm you are setting the OIDC layer up in a way that will work with DX.
 
 ## Install the OIDCRP TAI
 
-- Install the OIDC RP Trust Association Interceptor (TAI). For more details, see here: [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
+1. Install the OIDC RP Trust Association Interceptor (TAI). For more details, see here: [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
+
 
 ```
 kubectl exec -it dx-deployment-core-0 bash -n dxns
@@ -89,13 +98,14 @@ Password: wpsadmin
 ADMA5013I: Application WebSphereOIDCRP installed successfully.
 
 ```
-- Open websphere console and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP > Manage modules**.
 
-- Select available module and click “Apply” then “OK”. ![](../../../../../images/OIDCRP_WAS_SERVER_MAPPING.png)
+2. Open websphere console and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP > Manage modules**.
+
+3. Select available module and click “Apply” then “OK”. ![](../../../../../images/OIDCRP_WAS_SERVER_MAPPING.png)
 
 ### Restart the server / DX core to apply all changes
 
-Restart the server (i.e., the DX core JVM) do load the newly installed OIDC RP TAI. This is required for the next configuration steps. Restarting the server can be done in various ways, e.g. through the ConfigEngine:
+Restart the server (i.e., the DX core JVM) to load the newly installed OIDC RP TAI. This is required for the next configuration steps. Restarting the server can be done in various ways, e.g. through the ConfigEngine:
 
 ```
 Restart the server / DX core to apply all changes
@@ -196,7 +206,8 @@ In the WAS console, navigate to **Resources > Resource Environment > Resource En
 
 ## Configure DX VMM to match OIDC identities
 
-### Set the login property to mail
+
+### Setting the login property to mail
 
 First, set the login property to `mail` to match the identity attribute coming in from your IdP. To do this,
 
@@ -305,14 +316,14 @@ Update the unique name of the new IdP specific login page so that pages referrin
 
 ## Test the OIDC login flow
 
-- Log out or open a private browser and navigate to `https://<HOSTNAME>/wps/portal`.
 
-- Click `Log in` button/link.
+1. Log out or open a private browser and navigate to `https://<HOSTNAME>/wps/portal`.
 
-- This should forward to the IdP instance login view.
+2. Click **Log in**.
+   This directs you to the IdP instance login view.
 
-- Log in with user `jjones1:password`.
+3. Log in with user `jjones1:password`.
 
-- You will be forwarded to DX and logged in as user jjones1
+4. You are directed to DX and logged in as user `jjones1`.
 
-- Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and confirm the displayed user is `jjones1`.
+5. Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and confirm the displayed user is `jjones1`.
