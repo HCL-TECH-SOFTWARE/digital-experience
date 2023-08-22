@@ -19,7 +19,7 @@ However, others \(such as database migration\) are performed using a Config Engi
     ```
 
 2.  Run the config engine command using the `containerConfigEngine.sh` wrapper script.
-    This script tells the Kubernetes probes that a Configuration task is in progress:
+    This script pauses the Kubernetes probes when a Configuration task is in progress. This prevents any unintended restarts of the Pod:
 
     On the Core pod, use the following command to run the config engine command
 
