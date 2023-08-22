@@ -40,7 +40,7 @@ However, others \(such as database migration\) are performed using a Config Engi
 
     To do this, you can run the following command: 
     ```
-    kubectl rollout restart sts <deployment-name>-core
+    kubectl -n <namespace> rollout restart sts <deployment-name>-core
     ```
 
     Or you can execute the [DXClient `restart-core-pods` command](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods).
