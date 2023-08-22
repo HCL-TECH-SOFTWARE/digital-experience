@@ -14,7 +14,7 @@ At its core, OIDC streamlines the process of confirming user identities and auth
 
 HCL DX and HCL Digital Solutions (DS) products as a whole recognize the benefits of and requirements to OIDC and thus support it. The following document provides an initial set of instructions to get started and enable HCL DX for it.
 
-HCL DX in particular has a vast set of capabilities relating to authentication, such as [custom authentication filters](../../../config_portal_behavior/auth_filters/index.md), [transient users](https://pages.git.cwp.pnp-hcl.com/CWPdoc/common-documentation/hcl-authentication-service/integration/ds-integration/(https://opensource.hcltechsw.com/digital-experience/CF213/deployment/manage/security/people/authentication/integrate_oid/), [step-up authentication](../authentication/stepup_auth/enabling_stepup_auth/stepup_auth_prop.md), a customizable login UI through portlets and more. Some of those capabilities require additional steps or are by design incompatible with standard OIDC-based authentication and access flows and may not work out of the box. This documentation will be updated and extended with additional configuration steps and strategies to get them working or clearly outline their limitations.
+HCL DX in particular has a vast set of capabilities relating to authentication, such as [custom authentication filters](../../../config_portal_behavior/auth_filters/index.md), [transient users](../authentication/integrate_oid/index.md), [step-up authentication](../authentication/stepup_auth/enabling_stepup_auth/stepup_auth_prop.md), a customizable login UI through portlets and more. Some of those capabilities require additional steps or are by design incompatible with standard OIDC-based authentication and access flows and may not work out of the box. This documentation will be updated and extended with additional configuration steps and strategies to get them working or clearly outline their limitations.
 
 If you are interested in the transient users functionality as part of OIDC, refer to the documentation [Integrating with Transient Users with OpenID Connect](../authentication/integrate_oid/index.md).
 
@@ -112,7 +112,7 @@ The interceptor can be configured in the IBM WebSphere Application Server Integr
     `com.ibm.ws.security.oidc.client.RelyingParty`.
 
 !!! note
-    If the interceptor already exists, just click on it to access the configuration properties instead of creating it again.
+    If the interceptor already exists, click on it to access the configuration properties instead of creating it again.
 
 2. Add the following custom properties:
 
@@ -181,9 +181,9 @@ In the IBM WebSphere Application Server Integrated Solutions Console, navigate t
 
 ## Updating the DX Logout flow for OIDC
 
-In the IBM WebSphere Application Server Integrated Solutions Console, navigate to **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**.
+1. In the IBM WebSphere Application Server Integrated Solutions Console, navigate to **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**.
 
-- Add or update the following properties:
+2. Add or update the following properties:
 
 |Name	|Value|
 |------|------|
@@ -191,7 +191,7 @@ In the IBM WebSphere Application Server Integrated Solutions Console, navigate t
 |redirect.logout.ssl	|true|
 |redirect.logout.url	|https://<HOSTNAME>/auth/realms/hcl/protocol/openid-connect/logout?post_logout_redirect_uri=https://<HOSTNAME>/wps/portal&client_id=hcl-dx-oidc-client|
 
-- To continue the changes, click **Save** link.
+3. To continue the changes, click **Save**.
 
 ## Configuring DX VMM to match OIDC identities
 
