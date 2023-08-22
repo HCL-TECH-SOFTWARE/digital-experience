@@ -49,7 +49,7 @@ However, others \(such as database migration\) are performed using a Config Engi
     kubectl rollout restart sts <deployment-name>-core
     ```
 
-    Or you can execute the [DXClient `restart-core-pods`command](../../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods).
+    Or you can execute the [DXClient `restart-core-pods`command](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods).
 
     !!!note
         To reduce the impact on availability, it is recommended that you wait for a pod to be ready again before running the command for the next pod.
