@@ -7,11 +7,11 @@ The following features and updates are available to customers installing HCL Dig
 - Updated version of Amazon RDS with Oracle in System Requirements
 - Web Content Manager - Rendering WCM comments in themes and external components
 - Web Content Manager REST API v2 - AI Analysis API supports custom content AI providers
-- New guidance for configuring developer mode for MacOS
+- New documentation for configuring developer mode for MacOS
 - Web Content Manager - Parameters for item-path-full and details-full options
 - DXClient - Theme List feature for LiveSync and Disable Prompt attribute
 - Updated Personalization UI
-- Guidance for setting up OpenID Connect (OIDC) based authentication
+- New documentation for setting up OIDC in HCL DX
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 9.5 Version**
@@ -56,7 +56,7 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     The Web Content Manager REST V2 AI Analyzer APIs supports the use of custom content AI providers. For instructions on how to configure, see the Help Center topic WCM Content Analysis enablement for [Traditional](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md) deployment.
 
-### New guidance for configuring developer mode for MacOS
+### New documentation for configuring developer mode for MacOS
 
 === "Containers"
     Instructions on how to change to a developer mode environment is now available. See the Help Center topic [MacOS: Configuring a developer mode environment](../../deployment/manage/change_dev_mode_env/cfg_dev_mode-MacOS.md) for more information. 
@@ -88,8 +88,13 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     The user interface (UI) for Personalization is restyled. For more information about this feature, see the [product overview](../../get_started/product_overview/personalization.md) and the topic [Personalization](../../manage_content/pzn/personalization/index.md).
 
-### Guidance for setting up OpenID Connect (OIDC) based authentication
-(no doc yet)
+### New documentation for setting up OIDC in HCL DX
+
+=== "Containers"
+    New guidance on how to configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP) is available. For more information, see the topic [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
+
+=== "On-Premises"
+    New guidance on how to configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP) is available. For more information, see the topic [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
