@@ -65,7 +65,7 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
 - An IdP is set up and configured. Required details like the client id or secrets are available to configure during the tasks in this document.
 
-- A Keycloak service (specifically, the HCL DS branded Keycloak version) is used as the IdP. The OIDC layer looks mostly the same with any other IdP but this is not guaranteed due to the extensive landscape of providers.
+- A [Keycloak](https://www.keycloak.org/) is used as the IdP. The OIDC layer looks mostly the same with any other IdP but this is not guaranteed due to the extensive landscape of providers.
 
 !!! note
     There are a couple of steps that have to be conducted to set up the OIDC layer on the IdP side. This includes setting up a realm, client, user federation, and custom claims. The document [Configure Keycloak for DX](https://pages.git.cwp.pnp-hcl.com/CWPdoc/common-documentation/hcl-authentication-service/integration/ds-integration/dx-keycloak-configuration) provides steps on setting up all necessary parts. If you are using a different IdP, this might still be relevant to confirm you are setting the OIDC layer up in a way that works with DX.
