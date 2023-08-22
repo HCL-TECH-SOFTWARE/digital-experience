@@ -11,7 +11,7 @@ In the Configuration Wizard, you answer questions about the environment that you
 
     You can trigger the restart through any of the following:
     
-    - [DXClient `restart-core-pods`command](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods)
+    - [DXClient `restart-core-pods`command](../../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods)
     
     - `kubectl` command: `kubectl -n <namespace> rollout restart statefulset <release-name>-core`
 
