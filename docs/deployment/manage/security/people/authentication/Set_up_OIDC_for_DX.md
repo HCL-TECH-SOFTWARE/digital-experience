@@ -143,7 +143,7 @@ The interceptor can be configured in the WAS console under **Security > Global S
 !!! note
     Make sure to replace the <HOSTNAME> and <CLIENT_SECRET> placeholders with your respective details. The client secret is available through your IdP client configuration. Also, ensure other properties match your environment configuration. For example, the path filter matches your DX context, the OIDC URLs match your IdP endpoint structure, and the right client id is used.
 
-3. Click **Apply** and **OK**. To continue the changes, click **Save** link directly to the master configuration in the alert message.
+3. Click **Apply** and **OK**. To continue the changes, click **Save** directly to the master configuration in the alert message.
 
 ## Updating WAS security properties
 
@@ -159,7 +159,7 @@ Some custom properties have to be updated to match the OIDC TAI config and its e
 |com.ibm.websphere.security.customSSOCookieName	|LtpaToken2|
 |com.ibm.websphere.security.disableGetTokenFromMBean	|false|
 
-2. To continue the changes, click **Save**.
+3. To continue the changes, click **Save**.
 
 ## Adding the hostname/server certificate to the WAS trust store
 
@@ -258,7 +258,7 @@ To properly invoke the OIDC flow, make sure that the login link pushes you to th
 
 First, detach the existing login option by changing its unique name:
 
-1. Navigate to the portal site `https://<HOSTNAME>/wps/portal` and log in as the admin user (wpsadmin:wpsadmin)
+1. Navigate to the portal site `https://<HOSTNAME>/wps/portal` and log in as the admin user (wpsadmin:wpsadmin).
 
 2. Click the **home icon** dropdown to open the applications menu and click **Administration**.
 
@@ -278,7 +278,7 @@ Create the new login option that maps to `/wps/myportal`. This action will be se
 
 2. Click **Content Root** page and click **Home** page.
 
-3. Click **New URL** button.
+3. Click the **New URL** button.
 
 4. Set **Title** to `Login-IdP`.
 
