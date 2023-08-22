@@ -88,7 +88,7 @@ ADMA5013I: Application WebSphereOIDCRP installed successfully.
 
 ```
 
-2. Open websphere console and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP > Manage modules**.
+2. Open IBM WebSphere Application Server Integrated Solutions Console and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP > Manage modules**.
 
 3. Select available module and click “Apply” then “OK”. ![](../../../../../images/OIDCRP_WAS_SERVER_MAPPING.png)
 
@@ -105,7 +105,7 @@ kubectl exec -it dx-deployment-core-0 bash -n dxns
 
 The following configuration allows the OIDC TAI to contextualize which requests should be intercepted and how to treat them. In particular, this configuration is tightly connected to the IdP realm and client configuration.
 
-The interceptor can be configured in the WAS console under **Security > Global Security > Web and SIP security > Trust association > Interceptors**.
+The interceptor can be configured in the IBM WebSphere Application Server Integrated Solutions Console under **Security > Global Security > Web and SIP security > Trust association > Interceptors**.
 
 1. Click **New..** button to create a new interceptor with the **Interceptor class name**.
 
@@ -165,7 +165,7 @@ Some custom properties have to be updated to match the OIDC TAI config and its e
 
 In order to allow internal HTTPS communication with your IdP, you must add the hostname (FQDN) to the WebSphere trust store.
 
-In the WAS console, navigate to **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer Certificates > Retrieve from port**.
+In the IBM WebSphere Application Server Integrated Solutions Console, navigate to **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer Certificates > Retrieve from port**.
 
 3. Set the following properties:
 
@@ -181,7 +181,7 @@ In the WAS console, navigate to **Security > SSL certificate and key management 
 
 ## Updating the DX Logout flow for OIDC
 
-In the WAS console, navigate to **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**.
+In the IBM WebSphere Application Server Integrated Solutions Console, navigate to **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**.
 
 - Add or update the following properties:
 
@@ -199,7 +199,7 @@ In the WAS console, navigate to **Resources > Resource Environment > Resource En
 
 First, set the login property to `mail` to match the identity attribute coming in from your IdP. To do this,
 
-1. Go to the WAS console.
+1. Go to the IBM WebSphere Application Server Integrated Solutions Console.
 
 2. Navigate to **Security > Global security > User account repository > Configure... > <LDAP_ID>**
 
