@@ -15,7 +15,7 @@ However, others \(such as database migration\) are performed using a Config Engi
     The following example instructions use pod ‘0’ as it should always be available:
 
     ```
-    kubectl exec -it -n <namespace> dx-deployment-core-0 -c core -- /bin/bash
+    kubectl exec -it -n <namespace> <deployment-name>-core-0 -c core -- /bin/bash
     ```
 
 2.  Run the config engine command using the `containerConfigEngine.sh` wrapper script.
@@ -37,12 +37,21 @@ However, others \(such as database migration\) are performed using a Config Engi
 3.  \(Optional\) Restart other Core pods.
 
     If you have multiple Core pods running, and if the configuration task you just performed requires a server restart, you should now restart all the Core pods other than the one on which you ran the task.
-
     To do this, run the following command for each other Core pod. For example, if you have Core pods `dx-deployment-core-0`, `dx-deployment-core-1`, and `dx-deployment-core-2` and performed the configuration task on pod 0, then run the following command below for pods `dx-deployment-core-1` and `dx-deployment-core-2`:
 
     ```
     kubectl delete pod -n <namespace> <pod-name>
     ```
 
+    Another option is to do the rollout restart command:
+
+    ```
+    kubectl rollout restart sts <deployment-name>-core
+    ```
+
+    Or you can execute the [DXClient `restart-core-pods`command](../../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods).
+
     !!!note
         To reduce the impact on availability, it is recommended that you wait for a pod to be ready again before running the command for the next pod.
+
+    
