@@ -5,8 +5,10 @@ nav:
     - Setting up custom user repositories: customer_user_repo
     - External security managers: external_sec_mgmt
     - Security authentication considerations: sec_auth_consideration
+    - Set_up_OIDC_for_DX.md
     - wcm_secure_int_tai_auth.md
     - Enabling step-up authentication and/or the Remember me cookie: stepup_auth
     - Enabling HTTP Basic Authentication for simple clients: basic_auth
     - Updating user ID and passwords: updating_userid_pwd
     - Integrating Transient Users with OpenID Connect: integrate_oid
+
