@@ -13,7 +13,7 @@ Along with the release of HCL Digital Experience CF205, HCL has released an upda
 
 2. Previous releases of Web Experience Factory compiled the applications with Java 1.6/1.7 SDKs. HCL Web Experience Factory 8.5.1 is compiled using a Java 1.8 SDK.
 
-3. Previous releases of Web Experience Factory contained a default IBM WebSphere Liberty Version 6 server and IBM JDK 6. HCL Web Experience Factory 8.5.1 does not contain a default application server or JDK. HCL Web Experience Factory 8.5.1 is compatible with any Version 8 JDK or Java server to deploy applications locally. **It is compatible with HCL DX 8.5, 9.0, and 9.5 (CF205 or later) servers**.
+3. Previous releases of Web Experience Factory contained a default IBM WebSphere Liberty Version 6 server and IBM JDK 6. HCL Web Experience Factory 8.5.1 does not contain a default application server or JDK. HCL Web Experience Factory 8.5.1 is compatible with any Version 8 JDK or Java server to deploy applications locally. **It is compatible with HCL DX 8.5, 9.0 and 9.5 (CF205 or later) running servers.**
 
 4. HCL Web Experience Factory 8.5.1 is pre-installed in an Eclipse IDE. Use of the IBM Rational Application Developer IDE is not supported with this HCL WEF 8.5.1 release.
 
@@ -68,7 +68,7 @@ For more information abou the latest HCL Web Experience Factory updates, refer t
 
         ![Update eclipse.ini file](../wef/_img/Update_eclipse.ini.png)
 
-    -   For Linux Platforms: Navigate to `WEF-8.5.1/linux/eclipse`.  Add the following as shown below:
+    -   For Linux Platforms: Navigate to `WEF-8.5.1/linux/eclipse`. Add the following as shown below:
 
         ```
         Copied to clipboard-vm jre8-path/bin
@@ -79,8 +79,7 @@ For more information abou the latest HCL Web Experience Factory updates, refer t
     !!!note
         In case you face any issues, refer to this topic for debugging guidance: [https://wiki.eclipse.org/Eclipse.ini](https://wiki.eclipse.org/Eclipse.ini)
 
-7. Launch the `eclipse.ini` file using the executable file under the Eclipse folder in the respective platforms.
-Navigate to **Window > Preferences > Java > Installed JREs Add** and set the JRE path if it is not mapped already. This should allow Linked Java Objects to compile and work correctly.
+7. Launch the executable eclipse file under the Eclipse folder in the respective platforms. Navigate to **Window > Preferences > Java > Installed JREs Add** and set the JRE path if it is not mapped already. This should allow Linked Java Objects to compile and work correctly.
 
 8. After initial deployment, go to **Window > Open Perspective > Web Experience Factory** to change the IDE perspective.
 

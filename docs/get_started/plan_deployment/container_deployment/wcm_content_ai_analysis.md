@@ -1,8 +1,12 @@
 # WCM Content AI Analysis
 
-This topic describes how to enable AI analysis for a WCM Content in Kubernetes Deployment. This also discusses steps on how to configure a content AI provider (for example, OpenAI ChatGPT) to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
+This topic describes how to enable AI analysis for a WCM Content in Kubernetes Deployment. This also discusses steps on how to configure a content AI provider to be used for AI analysis. The AI analysis for a WCM Content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
 
-## Content AI Providers Overview
+!!!note
+	OpenAI ChatGPT is the supported content AI provider from CF213 and higher. Custom AI implementation is supported from CF214 and higher.
+
+## Content AI Provider Overview
+
 ### OpenAI ChatGPT Overview
 
 OpenAI is the AI research and deployment company behind ChatGPT. When you sign up with ChatGPT, it provides API access via an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground), you can create a personal account with limited access or a corporate account. The playground can be used to experiment with the API as well. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
@@ -27,11 +31,62 @@ configuration:
     contentAI:
       # Configures if content AI is enabled/disabled
       enabled: true
-      # Settings for checking content AI provider. When contentAI enabled is true, provider will be used.
-      provider: "OPEN_AI"
+      # Settings for checking content AI provider. When enabled is true, provider will be used 
+      # and possible values are 'OPEN_AI' or 'CUSTOM'
+      provider: "CUSTOM"
+      className: "com.ai.sample.CustomerAI"
 ```
 
-For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. A possible value for the provider is ```OPEN_AI```.
+For enabling AI analysis for content, set ```enabled``` as ```true``` inside the contentAI section. It is mandatory to specify the content AI provider to be used in the ```provider``` property. Possible values for the provider are ```OPEN_AI``` or ```CUSTOM```.
+
+### Configuring AI Class for Custom Content AI Provider
+
+Only administrators can configure an AI class to use a custom content AI provider.
+
+1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface.
+
+    1. Create the JAR file.
+
+	  2. Put the JAR file either at a custom-shared library or in ```/opt/HCL/wp_profile/PortalServer/sharedLibrary```.
+
+	  3. Restart JVM.
+
+    The following example of a Custom Content AI Provider class can be used to call Custom AI services for AI analysis. 
+
+    ```
+    package com.ai.sample;
+
+    import java.util.ArrayList;
+    import java.util.List;
+    import com.hcl.workplace.wcm.restv2.ai.IAIGeneration;
+    import com.ibm.workplace.wcm.rest.exception.AIGenerationException;
+
+    public class CustomerAI implements IAIGeneration {
+
+      @Override
+      public String generateSummary(List<String> values) throws AIGenerationException {
+        // Call the custom AI Service to get the custom AI generated summary
+        return "AIAnalysisSummary";
+      }
+
+      @Override
+      public List<String> generateKeywords(List<String> values) throws AIGenerationException {
+        // Call the custom AI Service to get the custom AI generated keywords
+        List<String> keyWordList = new ArrayList<String>();
+        keyWordList.add("keyword1");
+        return keyWordList;
+      }
+
+      @Override
+      public Sentiment generateSentiment(List<String> values) throws AIGenerationException {
+        // Call the custom AI Service to get the custom AI generated sentiment
+        return Sentiment.POSITIVE;
+      }
+
+    }
+    ```
+
+2. Configure the Content AI Provider class in the helm chart and run ```helm upgrade```.
 
 ### Configuring Custom Secret or API Key of Content AI Provider
 

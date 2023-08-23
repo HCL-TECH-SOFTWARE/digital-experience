@@ -19,7 +19,9 @@
 |Oracle Database 12.2.0.1.0 Enterprise Edition|12.2.0.1.0|12.2.0.1.0 and later maintenance|9.5|Full|No|
 |Oracle Database 12.2.0.2 Enterprise Edition|12.2.0.2|12.2.0.2 and later maintenance|9.5|Full|No|
 |Oracle Database 19c|19c|19c and later maintenance|9.5|Full|No|
+|Oracle Database Standard and Enterprise Edition 21c|21c|21c and later maintenance|9.5|Full|No|
 |Oracle on Amazon Relational Database Service|12.2.0.1.0|12.2.0.1.0 and later maintenance|9.5|Full|No|
+|Oracle on Amazon Relational Database Service|21c|21c and later maintenance|9.5|Full|No|
 
 \* Apache Derby is not supported in a product environment.
 

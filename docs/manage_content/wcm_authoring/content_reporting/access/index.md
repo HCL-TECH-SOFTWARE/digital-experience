@@ -3,17 +3,25 @@ This section provides steps on how to access the HCL Content Reporting portlet a
 
 ## Prerequisite
 
-Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+Starting from HCL Digital Experience 9.5 CF214, Content Reporting is installed and deployed by default as part of the CF update process. However, for CF213, Content Reporting must be installed and configured. For instructions on installing Content Reporting manually on supported environments, see the [Installing HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
-After image configuration in your HCL Digital Experience 9.5 CF213 and higher deployment, Content Reporting is accessible from the Practitioner Studio interface.
+After image configuration in your HCL Digital Experience 9.5 CF213 deployment, Content Reporting is accessible from the Practitioner Studio interface.
 
 !!! note
-    You must have **User** and **Editor** access for the following resources to access Content Reporting. Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
+    You must have **User** or **Editor** access to the following resources to use Content Reporting. The **User** role does not have access to generating a report, updating in bulk, and exporting of generated reports; this role can only view the Updates page containing bulk update history. The **Editor** role has no feature limitations.​ Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
 
     - **Content reporting page** -  Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Pages** > **Content Root** > **Practitioner Studio** > **Web Content** > **Content Reporting** > Click the **Assign Access** icon to set User role.
     - **Content reporting portlet** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Portlets** > ** Content Reporting portlet** > Click **Assign Access** icon to set User role.
     - **WCM_REST_SERVICES** - Click the **Administration menu** icon. Go to **Security** > **Resource Permissions** > **Virtual Resources** > **WCM REST SERVICE** > Click **Assign Access** icon to set Editor role.
     - **WCM libraries and items** - Click the **Web Content menu**. Go to **Web Content Libraries** > Click the **Assign Access** icon to set the User or Editor role for any library as needed. A user needs at least **User** access to an item for that item to be included in a report they generate. A user needs at least **Editor** access to an item for to be successfully updated during a bulk update.
+
+    | Features              | User              | Editor             |
+    | ----------------------| ----------------  | -------------------|
+    | `Report generation`   | :material-close:  | :material-check:   |
+    | `Bulk update`         | :material-close:  | :material-check:   |
+    | `Export`              | :material-close:  | :material-check:   |
+    | `Updates`             | :material-check:  | :material-check:   |
+
 
 ## Accessing Content Reporting
 

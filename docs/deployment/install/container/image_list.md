@@ -6,6 +6,51 @@ You can obtain the HCL DX 9.5 container update releases may be obtained from you
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo){:target="_blank"}
 
+## HCL DX 9.5 CF214
+
+If you are deploying the HCL DX 9.5 CF214 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF214 DXClient files
+
+```shell
+hcl-dxclient-image-v95_CF214_20230814-1528.zip
+hcl-dxclient-v95_CF214_20230814-1528.zip
+```
+
+### hcl-dx-kubernetes-v95-CF214.zip
+
+```shell
+HCL DX notices V9.5 CF214.txt
+hcl-dx-content-composer-image-v1.27.0_20230814-1508.tar.gz
+hcl-dx-core-image-v95_CF214_20230814-1518.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20230814-1510.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20230814-1510.tar.gz
+hcl-dx-deployment-v2.22.0_20230815-1742.tgz
+hcl-dx-digital-asset-manager-image-v1.26.0_20230814-1526.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20230814-1524.zip
+hcl-dx-haproxy-image-v1.10.0_20230814-1519.tar.gz
+hcl-dx-image-processor-image-v1.27.0_20230814-1520.tar.gz
+hcl-dx-license-manager-image-v95_CF214_20230814-1514.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20230814-1515.tar.gz
+hcl-dx-openldap-image-v1.2.0_20230814-1513.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.27.0_20230814-1521.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.25.0_20230814-1521.tar.gz
+hcl-dx-persistence-node-image-v1.17_20230814-1522.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20230814-1516.tar.gz
+hcl-dx-remote-search-image-v95_CF214_20230814-1518.tar.gz
+hcl-dx-ringapi-image-v1.27.0_20230814-1525.tar.gz
+hcl-dx-runtime-controller-image-v95_CF214_20230814-1517.tar.gz
+```
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF214_Express_Update|HCL-DX-CF214_Express_Update.zip|
+|HCL-DX-CF214_RemoteSearch_Update|HCL-DX-CF214_RemoteSearch_Update.zip|
+|HCL-DX-CF214_Server_Update|HCL-DX-CF214_Server_Update.zip|
+
+
 ## HCL DX 9.5 CF213
 
 If you are deploying the HCL DX 9.5 CF213 Container update release, the package name and images are as follows.

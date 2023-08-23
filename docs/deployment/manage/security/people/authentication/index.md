@@ -19,4 +19,6 @@ HCL Portal provides an HTTP Basic Authentication Trust Association Interceptor t
 -   **[Updating user ID and passwords](../authentication/updating_userid_pwd)**  
 HCL Digital Experience and IBM® WebSphere® Application Server use some accounts from the registry (for example, the LDAP server) including administrative and bind IDs for authenticated access to databases and LDAP severs respectively, as well as the HCL Portal and WebSphere Application Server administrative IDs. 
 -   **[Integrating with Transient Users with OpenID Connect](../authentication/integrate_oid)**  
-The following information explores integrating HCL Digital Experience™ (DX) with two OIDC services, [Auth0](https://auth0.com/docs/authenticate/protocols/openid-connect-protocol) and [Google](https://developers.google.com/identity/protocols/oauth2/openid-connect).
+This page explores integrating HCL Digital Experience™ (DX) with two OIDC services, [Auth0](https://auth0.com/docs/authenticate/protocols/openid-connect-protocol) and [Google](https://developers.google.com/identity/protocols/oauth2/openid-connect).
+- **[Setting up OIDC for HCL Digital Experience](../authentication/Set_up_OIDC_for_DX.md)**
+This page helps you configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP), such as Keycloak. This means that DX is turned into a relying party (RP) towards your IdP and the IdP is trusted for authentication assertions.

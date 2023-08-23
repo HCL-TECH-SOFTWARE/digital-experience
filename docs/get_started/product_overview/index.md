@@ -36,6 +36,8 @@ It is trusted by governments and companies around the world to deliver mission-c
 
 These solutions integrate web content with applications and business processes, to support diverse user populations. HCL DX provides features to enable the composition of these experiences and to manage who sees what. It is built on a robust architecture that can scale to cope with high demand. [Learn more about HCL DX architecture here](../architecture_overview).
 
+For an overview of HCL Digital Experience, see [Getting Started with HCL Digital Experience](../../guide_me/tutorials/gettingstartedwithDX.md).
+
 ## Who is HCL DX for?
 
 HCL DX is aimed at teams of people responsible for delivering digital experiences for their organizations. These teams work together to produce and manage the complex digital experiences of the kinds outlined above. Many HCL DX customers are in regulated industries such as government, banking, financial services, insurance and healthcare.
