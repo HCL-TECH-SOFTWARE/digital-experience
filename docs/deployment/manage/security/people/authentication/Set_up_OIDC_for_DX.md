@@ -73,18 +73,18 @@ Use this procedure as a general reference and make adjustments to accommodate th
 1. Install the OIDC RP Trust Association Interceptor (TAI). For more details, refer to [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
 
 
-```
-kubectl exec -it dx-deployment-core-0 bash -n dxns
+    ```
+    kubectl exec -it dx-deployment-core-0 bash -n dxns
 
-cd /opt/HCL/AppServer/bin
-./wsadmin.sh -f installOIDCRP.py install dockerNode WebSphere_Portal
-Username: wpsadmin
-Password: wpsadmin
+    cd /opt/HCL/AppServer/bin
+    ./wsadmin.sh -f installOIDCRP.py install dockerNode WebSphere_Portal
+    Username: wpsadmin
+    Password: wpsadmin
 
-...
-ADMA5013I: Application WebSphereOIDCRP installed successfully.
+    ...
+    ADMA5013I: Application WebSphereOIDCRP installed successfully.
 
-```
+    ```
 
 2. Open IBM WebSphere Application Server Integrated Solutions Console and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP > Manage modules**.
 
@@ -109,37 +109,37 @@ The interceptor can be configured in the IBM WebSphere Application Server Integr
 
     `com.ibm.ws.security.oidc.client.RelyingParty`.
 
-!!! note
-    If the interceptor already exists, click on it to access the configuration properties instead of creating it again.
+    !!! note
+        If the interceptor already exists, click on it to access the configuration properties instead of creating it again.
 
 2. Add the following custom properties:
 
-|Name|Value|
-|-----|---|
-|provider_1.identifier|	hcl|
-|provider_1.clientId	|hcl-dx-oidc-client|
-|provider_1.clientSecret|	<CLIENT_SECRET>|
-|provider_1.authorizeEndpointUrl	|https://<HOSTNAME>/realms/hcl/protocol/openid-connect/auth|
-|provider_1.tokenEndpointUrl	|https://<HOSTNAME>/realms/hcl/protocol/openid-connect/token|
-|provider_1.interceptedPathFilter|	/wps/myportal|
-|provider_1.excludedPathFilter|	/ibm/console,/ibm/console.*|
-|provider_1.issuerIdentifier	|https://<HOSTNAME>/realms/hcl|
-|provider_1.signatureAlgorithm	|RS256|
-|provider_1.jwkEndpointUrl	|https://<HOSTNAME>/realms/hcl/protocol/openid-connect/certs|
-|provider_1.userIdentifier	|email|
-|provider_1.userDefaultIdentifierFirst	|false|
-|provider_1.scope	|openid|
-|provider_1.signVerifyAlias	|hcl-dx-oidc-client|
-|provider_1.useJwtFromRequest	|IfPresent|
-|provider_1.createSession	|true|
-|provider_1.verifyIssuerInIat	|true|
-|provider_1.audiences	|ALL_AUDIENCES|
-|provider_1.setLtpaCookie	|true|
-|provider_1.callbackServletContext	|/oidcclient|
-|provider_1.mapIdentityToRegistryUser	|true|
+    |Name|Value|
+    |-----|---|
+    |provider_1.identifier|	hcl|
+    |provider_1.clientId	|hcl-dx-oidc-client|
+    |provider_1.clientSecret|	<CLIENT_SECRET>|
+    |provider_1.authorizeEndpointUrl	|https://<HOSTNAME>/realms/hcl/protocol/openid-connect/auth|
+    |provider_1.tokenEndpointUrl	|https://<HOSTNAME>/realms/hcl/protocol/openid-connect/token|
+    |provider_1.interceptedPathFilter|	/wps/myportal|
+    |provider_1.excludedPathFilter|	/ibm/console,/ibm/console.*|
+    |provider_1.issuerIdentifier	|https://<HOSTNAME>/realms/hcl|
+    |provider_1.signatureAlgorithm	|RS256|
+    |provider_1.jwkEndpointUrl	|https://<HOSTNAME>/realms/hcl/protocol/openid-connect/certs|
+    |provider_1.userIdentifier	|email|
+    |provider_1.userDefaultIdentifierFirst	|false|
+    |provider_1.scope	|openid|
+    |provider_1.signVerifyAlias	|hcl-dx-oidc-client|
+    |provider_1.useJwtFromRequest	|IfPresent|
+    |provider_1.createSession	|true|
+    |provider_1.verifyIssuerInIat	|true|
+    |provider_1.audiences	|ALL_AUDIENCES|
+    |provider_1.setLtpaCookie	|true|
+    |provider_1.callbackServletContext	|/oidcclient|
+    |provider_1.mapIdentityToRegistryUser	|true|
 
-!!! note
-    Make sure to replace the <HOSTNAME> and <CLIENT_SECRET> placeholders with your respective details. The client secret is available through your IdP client configuration. Also, ensure other properties match your environment configuration. For example, the path filter matches your DX context, the OIDC URLs match your IdP endpoint structure, and the right client id is used.
+    !!! note
+        Make sure to replace the <HOSTNAME> and <CLIENT_SECRET> placeholders with your respective details. The client secret is available through your IdP client configuration. Also, ensure other properties match your environment configuration. For example, the path filter matches your DX context, the OIDC URLs match your IdP endpoint structure, and the right client id is used.
 
 3. Click **Apply** and **OK**. To continue the changes, click **Save** directly to the master configuration in the alert message.
 
@@ -151,11 +151,11 @@ Some custom properties have to be updated to match the OIDC TAI config and its e
 
 2. Add or update the following properties:
 
-|Name|Value|
-|-----|----|
-|com.ibm.websphere.security.customLTPA2CookieName	|LtpaToken|
-|com.ibm.websphere.security.customSSOCookieName	|LtpaToken2|
-|com.ibm.websphere.security.disableGetTokenFromMBean	|false|
+    |Name|Value|
+    |-----|----|
+    |com.ibm.websphere.security.customLTPA2CookieName	|LtpaToken|
+    |com.ibm.websphere.security.customSSOCookieName	|LtpaToken2|
+    |com.ibm.websphere.security.disableGetTokenFromMBean	|false|
 
 3. To continue the changes, click **Save**.
 
@@ -163,19 +163,19 @@ Some custom properties have to be updated to match the OIDC TAI config and its e
 
 In order to allow internal HTTPS communication with your IdP, you must add the hostname (FQDN) to the WebSphere trust store.
 
-In the IBM WebSphere Application Server Integrated Solutions Console, navigate to **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer Certificates > Retrieve from port**.
+1. In the IBM WebSphere Application Server Integrated Solutions Console, navigate to **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer Certificates > Retrieve from port**.
 
-3. Set the following properties:
+2. Set the following properties:
 
-|Name|	Value|
-|-----|------|
-|Host	|hostname (FQDN)|
-|Port	|443|
-|Alias	|hcl-idp (Note: same as provided in above interceptor property)|
+    |Name|	Value|
+    |-----|------|
+    |Host	|hostname (FQDN)|
+    |Port	|443|
+    |Alias	|hcl-idp (Note: same as provided in above interceptor property)|
 
-4. Click **Retrieve signer information**. This loads the certificate details.
+3. Click **Retrieve signer information**. This loads the certificate details.
 
-5. Click **OK**, and **Save** to the master configuration.
+4. Click **OK**, and **Save** to the master configuration.
 
 ## Updating the DX Logout flow for OIDC
 
@@ -183,11 +183,11 @@ In the IBM WebSphere Application Server Integrated Solutions Console, navigate t
 
 2. Add or update the following properties:
 
-|Name	|Value|
-|------|------|
-|redirect.logout	|true|
-|redirect.logout.ssl	|true|
-|redirect.logout.url	|https://<HOSTNAME>/auth/realms/hcl/protocol/openid-connect/logout?post_logout_redirect_uri=https://<HOSTNAME>/wps/portal&client_id=hcl-dx-oidc-client|
+    |Name	|Value|
+    |------|------|
+    |redirect.logout	|true|
+    |redirect.logout.ssl	|true|
+    |redirect.logout.url	|https://<HOSTNAME>/auth/realms/hcl/protocol/openid-connect/logout?post_logout_redirect_uri=https://<HOSTNAME>/wps/portal&client_id=hcl-dx-oidc-client|
 
 3. To continue the changes, click **Save**.
 
@@ -203,37 +203,37 @@ First, set the login property to `mail` to match the identity attribute coming i
 
 3. Set the field for **Federated repository properties for login** to `mail`.
 
-3. Then, click **OK** and **Save** to the master configuration.
+4. Then, click **OK** and **Save** to the master configuration.
 
 ### Updating IBM WebSphere Application Server sub-component Virtual Member Manager (VMM) to map user attributes
 
 1. After setting the login property to `mail`, this change must be worked into the WAS wimconfig.xml as well. 
 
-!!! note 
-    This requires a manual update of the file, make sure to back the file up as this might otherwise corrupt your instance.
+    !!! note 
+        This requires a manual update of the file, make sure to back the file up as this might otherwise corrupt your instance.
 
-```
-kubectl exec -it dx-deployment-core-0 bash -n dxns
+    ```
+    kubectl exec -it dx-deployment-core-0 bash -n dxns
 
-cd /opt/HCL/wp_profile/config/cells/dockerCell/wim/config/
-# Create a backup
-cp wimconfig.xml wimconfig.xml.backup
+    cd /opt/HCL/wp_profile/config/cells/dockerCell/wim/config/
+    # Create a backup
+    cp wimconfig.xml wimconfig.xml.backup
 
-# Start editing the wimconfig.xml
-vi wimconfig.xml
+    # Start editing the wimconfig.xml
+    vi wimconfig.xml
 
-```
+    ```
 
 2. From here, find the `userSecurityNameMapping` config attribute in the realmConfiguration and change the value of property `propertyForOutput` to `uniqueName` as outlined below:
 
-```
+    ```
 
-# before
-<config:userSecurityNameMapping propertyForInput="principalName" propertyForOutput="principalName"/>
+    # before
+    <config:userSecurityNameMapping propertyForInput="principalName" propertyForOutput="principalName"/>
 
-# after
-<config:userSecurityNameMapping propertyForInput="principalName" propertyForOutput="uniqueName"/>
-```
+    # after
+    <config:userSecurityNameMapping propertyForInput="principalName" propertyForOutput="uniqueName"/>
+    ```
 
 3. Make sure to save the changes.
 
@@ -314,4 +314,4 @@ Update the unique name of the new IdP specific login page so that pages referrin
 3. Log in with user `jjones1:password`.
     You are directed to DX and logged in as user `jjones1`.
 
-5. Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and confirm the displayed user is `jjones1`.
+4. Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and confirm the displayed user is `jjones1`.
