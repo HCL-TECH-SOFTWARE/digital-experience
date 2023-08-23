@@ -21,4 +21,4 @@ HCL Digital Experience and IBM® WebSphere® Application Server use some account
 -   **[Integrating with Transient Users with OpenID Connect](../authentication/integrate_oid)**  
 This page explores integrating HCL Digital Experience™ (DX) with two OIDC services, [Auth0](https://auth0.com/docs/authenticate/protocols/openid-connect-protocol) and [Google](https://developers.google.com/identity/protocols/oauth2/openid-connect).
 - **[Setting up OIDC for HCL Digital Experience](../authentication/Set_up_OIDC_for_DX.md)**
-This page helps you to configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP), such as Keycloak. This means that DX is turned into a relying party (RP) towards your IdP and the IdP is trusted for authentication assertions.
+This page helps you configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP), such as Keycloak. This means that DX is turned into a relying party (RP) towards your IdP and the IdP is trusted for authentication assertions.
