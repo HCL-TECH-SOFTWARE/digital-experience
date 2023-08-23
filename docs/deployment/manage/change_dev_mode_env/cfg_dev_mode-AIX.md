@@ -15,7 +15,9 @@ This task modifies the following components:
     Portlets and web applications are activated on first access and not at the startup. However, some of the portlets and applications are required at startup. Create a white list, which contains the list of applications, that are required at startup.
 
     !!!note
-        To add applications to the white list, modify the /PortalServer/config/StartupPerformance/wp.base_TargetMapExclList.propertieswp_profile_root\\PortalServer\\config\\StartupPerformance\\wp.base_TargetMapExclList.properties file. Add a line such as App_name, where App_name is the name of the application. Log on to the WebSphere® Integrated Solutions Console and go to **Applications > Application Types > WebSphere enterprise applications** to get a list of available applications.
+        To add applications to the white list, modify the <_wp_profile_root>_/PortalServer/config/StartupPerformance/wp.base_TargetMapExclList.properties file. Add a line such as App_name, where App_name is the name of the application. Log on to the WebSphere® Integrated Solutions Console and go to **Applications > Application Types > WebSphere enterprise applications** to get a list of available applications.
+
+## Enabling developer mode
 
 1.  Open a command prompt.
 
@@ -23,24 +25,38 @@ This task modifies the following components:
 
 3.  Change to the wp_profile_root/ConfigEnginewp_profile_root\\ConfigEngine directory.
 
-4.  Run the `ConfigEngine.bat optimize-derby-database./ConfigEngine.sh optimize-derby-databaseConfigEngine.sh optimize-derby-database` task to improve the performance of your Derby database.
+4.  Run the `./ConfigEngine.sh optimize-derby-database` task to improve the performance of your Derby database.
 
     !!!important
         This task is appropriate only in a demonstration or development environment that is not configured to use Web Content Manager. You can also run the optimize-derby-database task after large data changes in the database.
 
 5.  Start the HCL Portal server.
 
-6.  Run the `ConfigEngine.bat enable-develop-mode-startup-performance -DWasPassword=password./ConfigEngine.sh enable-develop-mode-startup-performance -DWasPassword=passwordConfigEngine.sh enable-develop-mode-startup-performance -DWasPassword=password` tasks. Then, stop and restart the HCL Portal server to propagate your change.
+6.  Run the following command to enable developer mode: 
+
+    `./ConfigEngine.sh enable-develop-mode-startup-performance -DWasPassword=password`
 
 7.  Prepare the remote web server for your developer mode.
+    
+    After ConfigEngine tasks are completed, regenerate the Web-Server plugin in the Integrated solutions console and propagate the new updated plugin to your HTTP-Servers.
 
-    Run the `ConfigEngine.bat disable-develop-mode-startup-performance -DWasPassword=password./ConfigEngine.sh disable-develop-mode-startup-performance -DWasPassword=passwordConfigEngine.sh disable-develop-mode-startup-performance -DWasPassword=password` task to revert to a production server. Then, stop and restart the HCL Digital Experience server to propagate your change.
+## Disabling developer mode
+
+1. To disable developer mode, run the following command:
+    
+    `./ConfigEngine.sh disable-develop-mode-startup-performance -DWasPassword=password`
 
     !!!note
-        You can run the `disable-develop-mode-startup-performance` task for the following scenarios:
+        You can disable developer mode in the following scenarios:
+        
+        -   When you are done developing your portal and portlets   
+        -   If the development settings are not adequate for a special development situation
+        -   When you cannot re-create a problem on the development server
 
--   When you are done developing your portal and portlets.
--   If the development settings are not adequate for a special development situation.
--   When you cannot re-create a problem on the development server.
+2. Regenerate the Web-Server plugin in the Integrated solutions console and propagate the new updated plugin to your HTTP-Servers.
+    
+    
+    
+
 
 

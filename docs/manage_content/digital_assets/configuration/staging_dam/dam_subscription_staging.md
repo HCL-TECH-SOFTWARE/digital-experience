@@ -8,7 +8,7 @@ This topic contains the commands that administrators can use to configure the st
         WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in some details. To learn more about differences have a look at the following table.
 | Aspect                               | WCM                                  | DAM                                                        |
 | -------------------------------------|--------------------------------------|------------------------------------------------------------|
-| `Credentials for authentication` |Authentication via credentials Vault slot. |The helm secret needs to be the primary portal admin user used for deployment of the DX environment. The user in the secret on the publisher and the subscriber must be the same. The credentials used in the registration are only used for authentication and authorisation during the DXClient registration steps. They are not used for transferring files during staging. The new user specified in secret will be the new primary portal admin. For more information, see [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).|
+| `Credentials for authentication` |Authentication via credentials Vault slot. |The credentials given during registration are stored as kube secrets and used for file transfer authentication and authorization from publisher to subscriber. The runtime-controller API stores portal user credentials as kube secret and WAS credentials are used to authenticate the runtime-controller API. For more information, see [Configure WAS Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).|
 | `Configuration syndication` |WCM syndication can be configured via UI or REST API one time. Sync can be triggered via REST API or UI.|Subscriber can be configured by dxclient.|
 | `Syndication ordering` |One-way or two-way syndication is possible, with one or many subscriber's resource. |DAM staging only supports one-way syndication.|
 | `Different user repository support per environment` |Supported via member fixer in WCM|Not supported by DAM at this time |Not supported by DAM at this time.|
@@ -23,7 +23,7 @@ The DAM staging framework allows you to stage your DAM content from an authoring
 -   Register a subscriber with a publisher.
 
     !!! note
-        A subscriber must be registered with a publisher. Access rights from DAM staging assets are not transferred for subscribers that do not share the same Lightweight Directory Access Protocol \(LDAP\).
+        A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same distinguished names (for example, uid=wpsadmin,o=hcl.com) in both publisher's and subscriber's Lightweight Directory Access Protocol (LDAP) or other user registry.
 
 ### Configure staging hostname
 The hostname configuration for the DAM staging publisher and subscriber must be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details must be specified.
@@ -43,21 +43,17 @@ configuration:
 
 ### Configure LDAP
 
-**Both environments should share the same LDAP**: <br>
-It is recommended that both environments used for DAM staging share the same LDAP. This is to address the current limitation of the dxclient DAM Staging.
-It should still work with the environment with a different LDAP. However, every value should be the same between the LDAPs (for example, DNs, username, passwords). Make sure that both LDAPs have matching values.
+**DAM staging supports different LDAP for publisher and subscriber**: <br>
+DAM staging works with environments that use a different LDAP. An LDAP user with portal admin rights can be used for stage registration.
 
 ### Credentials used during staging
 
 **Registration and file transfer:** <br>
-Currently, the user transfers files between the primary server and the subscriber in the DX deployment. The secret needs to be the primary portal admin user used for deployment of the DX environment. The user in the secret on the transferring server and the subscriber must be the same.
-The credentials used in the registration are only used for authentication and authorization during the DXClient registration steps. They are not used for transferring files during staging.
+You must use the portal admin user credentials for staging registration. These credentials are then stored as kube secrets. The user credentials in the secret on the transferring server and the subscriber can be same or different.
+The credentials used in the registration are used for authentication and authorization during DXClient registration and for transferring files during staging.
 
-**To update new secret for staging**:<br>
-There is only one secret. The secret is used to store the portal admin credentials used by the DX in its internal process. You cannot add a separate secret for staging. The values can be updated through helm update command. However, when you update the credentials in secret, you also change the portal primary admin. The new user specified in secret will be the new primary portal admin. For more information, see [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).
-
-
-![Use separate Digital Asset Management and staging between HCL DX environments](../../../../images/new_dam_staging_options.png)
+**To update staging secret**:<br>
+The `manage-dam-staging update-secrets` command can be used to update the publisher and subscriber staging secrets.
 
 ## Manage DAM staging
 

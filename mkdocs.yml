@@ -24,8 +24,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.png
-  extra_css: 
-
+  
   # Static files
   static_templates:
     - 404.html
@@ -55,19 +54,9 @@ extra:
       link: https://github.com/HCL-TECH-SOFTWARE
   version:
     provider: mike
-  analytics:
-    provider: google
-    property: UA-169645537-2
-  consent:
-    title: Cookie consent
-    description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
-    actions:
-      - accept
-      - manage
+  analytics: 
+    provider: custom
+    property: G-7LF0XY95M1
 
 # Repository
 repo_url: https://github.com/HCL-TECH-SOFTWARE/digital-experience
@@ -76,7 +65,7 @@ edit_uri: edit/main/docs
 
 # Customization
 extra_css:
-  - assets/stylesheets/dx_style.css
+  - assets/stylesheets/style.css
 
 plugins:
   - awesome-pages
