@@ -67,8 +67,6 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
 - [Keycloak](https://www.keycloak.org/) is used as the IdP. The OIDC layer looks mostly the same with any other IdP but this is not guaranteed due to the extensive landscape of providers.
 
-!!! note
-    There are a couple of steps that have to be conducted to set up the OIDC layer on the IdP side. This includes setting up a realm, client, user federation, and custom claims. The document [Configure Keycloak for DX](https://pages.git.cwp.pnp-hcl.com/CWPdoc/common-documentation/hcl-authentication-service/integration/ds-integration/dx-keycloak-configuration) provides steps on setting up all necessary parts. If you are using a different IdP, this might still be relevant to confirm you are setting the OIDC layer up in a way that works with DX.
 
 ## Installing the OIDCRP TAI
 
@@ -209,7 +207,7 @@ First, set the login property to `mail` to match the identity attribute coming i
 
 ### Updating IBM WebSphere Application Server sub-component Virtual Member Manager (VMM) to map user attributes
 
-1. After setting the login property to `mail`, this change must be worked into the WAS vmmconfig.xml as well. 
+1. After setting the login property to `mail`, this change must be worked into the WAS wimconfig.xml as well. 
 
 !!! note 
     This requires a manual update of the file, make sure to back the file up as this might otherwise corrupt your instance.
