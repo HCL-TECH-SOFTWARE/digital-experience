@@ -50,7 +50,7 @@ make install
 cd ~
 
 # Install mkdocs
-pip3 install mkdocs-material mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin pytz
+pip3 install mkdocs-material==9.1.21 mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin pytz
 
 # Chmod private key for Git Access
 chmod -R 600 /root/.ssh/id_rsa
