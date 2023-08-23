@@ -6,3 +6,4 @@ Follow the installation and configuration steps to integrate HCL Digital Experie
 
 -   **[HCL Leap configuration for the integration with HCL Digital Experience](../leap/configuration/)**  
 
+-   **[Test the integration using example integrations](../leap/example/)**  
