@@ -25,7 +25,7 @@ However, others \(such as database migration\) are performed using a Config Engi
 
     Follow the instructions for the particular configuration task that you need to perform. See [DB Transfer Config Engine task](https://help.hcltechsw.com/digital-experience/9.5/config/cw_db_transfer-db2.html)<!-- (../config/cw_db_transfer-db2.md) --> for an example.
     ```
-    /opt/HCL/profiles/wp_profile/ConfigEngine/containerConfigEngine.sh <Config Engine Task Command>
+    /opt/HCL/wp_profile/ConfigEngine/containerConfigEngine.sh <Config Engine Task Command>
     ```
 
     After the Config Engine task is completed, you can now close the shell on the Core pod:
