@@ -8,17 +8,17 @@ In this example, you can integrate data from HCL Leap on your HCL Digital Experi
 
 ## Process to integrate HCL Leap with HCL Digital Experience
 
-Web Application Bridge uses reverse proxy technology to integrate web-based content providers (i.e. HCL Leap) with HCL Digital Experience. Administrators must first create the content providers profiles, policies, and web dock applications. Further details are available in [Web Application Bridge](https://opensource.hcltechsw.com/digital-experience/CF213/extend_dx/integration/wab/wab/)
+Web Application Bridge uses reverse proxy technology to integrate web-based content providers (i.e. HCL Leap) with HCL Digital Experience. Administrators must first create the content providers profiles, policies, and web dock applications. Further details are available in [Web Application Bridge](../../wab/wab/index.md/)
 
 1. Create Content Provider Profiles:
-   Details to create content provider profiles, policies, connections etc can be found in [Content provider profile](https://opensource.hcltechsw.com/digital-experience/CF213/extend_dx/integration/wab/wab/h_wab_provider/), [Content provider profile policy](https://opensource.hcltechsw.com/digital-experience/CF213/extend_dx/integration/wab/wab/h_wab_policy/), [Content provider policy requests and responses](https://opensource.hcltechsw.com/digital-experience/CF213/extend_dx/integration/wab/wab/h_wab_response/), [Content provider policy single sign-on](https://opensource.hcltechsw.com/digital-experience/CF213/extend_dx/integration/wab/wab/h_wab_auth/)
+   Details to create content provider profiles, policies, connections etc can be found in [Content provider profile](../../wab/wab/h_wab_provider), [Content provider profile policy](../../wab/wab/h_wab_policy), [Content provider policy requests and responses](../../wab/wab/h_wab_response), [Content provider policy single sign-on](../../wab/wab/h_wab_auth)
    
-   Within **Profile Host** set **Unique profile title** as `Leap CPP` and enter **Hostname or IP address** as `https://native-kube-alina-leap.team-q-dev.com:443` which is the newly created native kube instance containing Leap and **Save** the content provider profile
+   Within **Profile Host** you can set **Unique profile title** as a significant title of your choosing, for example `Leap CPP` and enter **Hostname or IP address** as `https://<your-domain>:443` which is the newly created native kube instance containing Leap and **Save** the content provider profile
 
 2. Create Web Dock Applications: 
-   Details to create web dock applications can be found in [Web Dock application](https://opensource.hcltechsw.com/digital-experience/CF213/extend_dx/integration/wab/wab/h_wab_dock/)
+   Details to create web dock applications can be found in [Web Dock application](../../wab/wab/h_wab_dock.md)
    
-   Add **Unique web dock application title** as `Leap`, within the **Content provider profile** dropdown select the newly created profile `Leap CPP` and add the **Resource path** as `/apps` and **Save** the web dock application.
+   Add **Unique web dock application title** for example `Leap` (make sure title is meaningful which describes the Web Dock portlet to add to the page), within the **Content provider profile** dropdown select the newly created profile `Leap CPP` and add the **Resource path** as `/apps` and **Save** the web dock application.
 
 3. Adding the Web Doc Application created to the DX Page:
    1. Enable **Edit mode** and Create a **Child Page** within Woodburn Studio via the site toolbar.
