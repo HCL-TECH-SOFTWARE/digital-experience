@@ -13,7 +13,7 @@ Web Application Bridge uses reverse proxy technology to integrate web-based cont
 1. Create Content Provider Profiles:
    Details to create content provider profiles, policies, connections etc can be found in [Content provider profile](../../wab/wab/h_wab_provider), [Content provider profile policy](../../wab/wab/h_wab_policy), [Content provider policy requests and responses](../../wab/wab/h_wab_response), [Content provider policy single sign-on](../../wab/wab/h_wab_auth)
    
-   Within **Profile Host** you can set **Unique profile title** as a significant title of your choosing, for example `Leap CPP` and enter **Hostname or IP address** as `https://<your-domain>:443` which is the newly created native kube instance containing Leap and **Save** the content provider profile
+   Within **Profile Host** you can set **Unique profile title** as a significant title of your choosing, for example `Leap CPP` and enter **Hostname or IP address** as ``http://hostname:port/apps/`` which is a deploymeent containing the Leap environment and **Save** the content provider profile
 
 2. Create Web Dock Applications: 
    Details to create web dock applications can be found in [Web Dock application](../../wab/wab/h_wab_dock.md)
