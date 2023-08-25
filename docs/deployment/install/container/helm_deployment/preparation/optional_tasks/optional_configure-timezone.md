@@ -24,7 +24,7 @@ And then apply the changes using the following command:
 `helm upgrade -n <namespace> -f <custom-values.yaml> <prefix> <chart>`
 
 
-If you wish to go back to the **UTC**, you can just pass an empty string to the `configuration.containerTimezone` field.
+If you want to go back to the **UTC**, you can pass an empty string to the `configuration.containerTimezone` field.
 
 !!! note
     If you passed an invalid timezone, the timezone would default back to **UTC**.
