@@ -1,12 +1,5 @@
 # Installing HCL Leap to integrate with HCL Digital Experience
 
-!!! note
-    This guide only applies to HCL Digital Experience 9.5 Container Deployments in combination with HCL Leap Helm installations.
-    The currently supported version combination is:
-
-      - HCL Digital Experience CF213
-      - HCL Leap 9.3.2 
-      
 HCL Digital Experience (DX) can be integrated with HCL Leap. Both products can be installed in the same Kubernetes cluster using the same Kubernetes namespace. Common parts of the deployments can be reused which is described [in the Configuration section](../configuration/index.md).
 
 ## Deploy HCL Digital Experience using Helm
