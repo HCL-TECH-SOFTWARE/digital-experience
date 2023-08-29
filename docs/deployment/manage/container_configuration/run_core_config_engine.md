@@ -51,14 +51,11 @@ If you need to pause the Kubernetes probes without running a Configuration Task,
 
 After opening a shell on a DX Core Pod [(See above)](#running-core-config-engine-tasks):
 1. Create the semaphore file. This should pause the Kubernetes probes. 
-
 ```
 touch /opt/app/configInProgress
 ```
 
-
 2. To resume the Kubernetes probes, remove the semaphore file. 
-
 ```
 rm -f /opt/app/configInProgress
 ```
