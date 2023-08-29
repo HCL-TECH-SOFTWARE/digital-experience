@@ -2,7 +2,7 @@
 
 This topic provides details covering the PersistentVolumes \(PVs\) and related operations considerations in storing data for DX 9.5 stateful applications.
 
-Digital Experience 9.5 container-based stateful applicationsrequire PersistentVolumes \(PVs\) to store their data. Refer to the [Deploy DX 9.5 applications to container platforms using Helm](application_architecture.md) topic for a description of the DX 9.5 Applications details.
+Digital Experience 9.5 container-based stateful applications require PersistentVolumes \(PVs\) to store their data. Refer to the [Deploy DX 9.5 applications to container platforms using Helm](application_architecture.md) topic for a description of the DX 9.5 Applications details.
 
 As Kubernetes Pods do not have their own persistent file storage, the use of PVs is a must. For more information on PVs, consult the [Kubernetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
