@@ -49,7 +49,7 @@ However, other tasks such as database migration are performed using a Config Eng
 ## Pausing Probes
 If you need to pause the Kubernetes probes without running a Configuration Task, you can do the steps below.
 
-After opening a shell on a DX Core Pod [(See above)]('#running-core-config-engine-tasks'):
+After opening a shell on a DX Core Pod [(See above)](#running-core-config-engine-tasks):
 1. Create the semaphore file. This should pause the Kubernetes probes. 
 
 ```
