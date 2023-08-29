@@ -58,7 +58,7 @@ If you have to pause the Kubernetes probes without running a Configuration Task,
     kubectl exec -it -n <namespace> <deployment-name>-core-0 -c core -- /bin/bash
     ```
 
-2. Create the semaphore file. This should pause the Kubernetes probes. 
+2. Create the semaphore file. This pauses the Kubernetes probes. 
     ```
     touch /opt/app/configInProgress
     ```
