@@ -24,10 +24,11 @@ To implement the example, an existing [Volt MX Iris Web Application](https://ope
 1. Create Content Provider Profiles.
 
     For information on how to create content provider profiles, policies, and connections, refer to the following:
-    - [Content provider profile](../../wab/wab/h_wab_provider)
-    - [Content provider profile policy](../../wab/wab/h_wab_policy)
-    - [Content provider policy requests and responses](../../wab/wab/h_wab_response)
-    - [Content provider policy single sign-on](../../wab/wab/h_wab_auth)
+
+      - [Content provider profile](../../wab/wab/h_wab_provider)
+      - [Content provider profile policy](../../wab/wab/h_wab_policy)
+      - [Content provider policy requests and responses](../../wab/wab/h_wab_response)
+      - [Content provider policy single sign-on](../../wab/wab/h_wab_auth)
     
    1. In the **Profile Host**, you can set a **Unique profile title** (for example, `MX Iris Content Provider Profile`).
    2. For the **Hostname or IP address**, enter `http://hostname:port/` which is the host (and port, if required) of the MX environment. 
