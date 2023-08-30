@@ -24,11 +24,13 @@ Web Application Bridge uses reverse proxy technology to integrate web-based cont
       - [Content provider profile policy](../../wab/wab/h_wab_policy)
       - [Content provider policy requests and responses](../../wab/wab/h_wab_response)
       - [Content provider policy single sign-on](../../wab/wab/h_wab_auth)
-    
-    1. In the **Profile Host**, you can set a **Unique profile title** (for example `Leap Content Provider Profile`).
-    2. For the **Hostname or IP address**, enter `http://hostname:port/` which is the host (and port, if required) of the Leap environment. 
+
+    Follow these steps to create the profile:
+
+      1. In the **Profile Host**, you can set a **Unique profile title** (for example `Leap Content Provider Profile`).
+      2. For the **Hostname or IP address**, enter `http://hostname:port/` which is the host (and port, if required) of the Leap environment. 
         If the Leap deployment is deployed in the same Kubernetes cluster as HCL Digital Experience, the [Kubernetes Service DNS name](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records) can be used here to only access the application through the Web Application Bridge proxy. 
-    3. **Save** the content provider profile.
+      3. **Save** the content provider profile.
 
 2. Create Web Dock Applications. 
 

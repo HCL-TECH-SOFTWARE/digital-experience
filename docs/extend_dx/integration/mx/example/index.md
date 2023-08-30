@@ -28,12 +28,13 @@ To implement the example, an existing [Volt MX Iris Web Application](https://ope
       - [Content provider profile](../../wab/wab/h_wab_provider)
       - [Content provider profile policy](../../wab/wab/h_wab_policy)
       - [Content provider policy requests and responses](../../wab/wab/h_wab_response)
-      - [Content provider policy single sign-on](../../wab/wab/h_wab_auth)
-    
-   1. In the **Profile Host**, you can set a **Unique profile title** (for example, `MX Iris Content Provider Profile`).
-   2. For the **Hostname or IP address**, enter `http://hostname:port/` which is the host (and port, if required) of the MX environment. 
-    If the MX deployment is deployed in the same Kubernetes cluster as HCL Digital Experience, the [Kubernetes Service DNS name](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records) can be used here to only access the application through the Web Application Bridge proxy. 
-   3. **Save** the content provider profile.
+      - [Content provider policy single sign-on](../../wab/wab/h_wab_auth)  
+
+    Follow these steps to create the profile:
+
+      1. In the **Profile Host**, you can set a **Unique profile title** (for example, `MX Iris Content Provider Profile`).
+      2. For the **Hostname or IP address**, enter `http://hostname:port/` which is the host (and port, if required) of the MX environment. If the MX deployment is deployed in the same Kubernetes cluster as HCL Digital Experience, the [Kubernetes Service DNS name](https://kubernetes.io/docs/concepts/  services-networking/dns-pod-service/#a-aaaa-records) can be used here to only access the application through the Web Application Bridge proxy. 
+      3. **Save** the content provider profile.
 
 2. Create Web Dock Applications.
     For information on how to create web dock applications, refer to [Web Dock application](../../wab/wab/h_wab_dock.md).
