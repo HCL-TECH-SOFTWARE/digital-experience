@@ -42,7 +42,8 @@ Web Application Bridge uses reverse proxy technology to integrate web-based cont
     4. **Save** the web dock application.
 
 3. Add the created Web Dock Application to the DX Page.
-    1. Enable **Edit mode** on the DX page you want to include Leap on or create a new page by clicking on the 3 lines on the right of the Web Dock Application.
+    1. Enable **Edit mode** on the DX page you want to include Leap on or create a new page.
+        To create a new page, click the menu icon on the right of the Web Dock Application to open the Context menu. You can create either a child or a sibling page. 
     2. Click the plus icon on the left navigation panel to **Add page components and applications** to the page. In the navigation panel, go to the **Applications** tab and search for the newly created web dock application (in this case, `Leap`).
     3. Click the **Add To Page** button.
 
