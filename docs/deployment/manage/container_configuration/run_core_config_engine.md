@@ -45,3 +45,25 @@ However, other tasks such as database migration are performed using a Config Eng
     ```
 
     Or you can execute the [DXClient `restart-core-pods` command](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods).
+
+## Pausing Probes
+
+If you have to pause the Kubernetes probes without running a Configuration Task, refer to the following steps.
+
+1.  Open a shell on a DX Core pod.
+
+    The following example instructions use pod ‘0’ as it should always be available:
+
+    ```
+    kubectl exec -it -n <namespace> <deployment-name>-core-0 -c core -- /bin/bash
+    ```
+
+2. Create the semaphore file. This pauses the Kubernetes probes. 
+    ```
+    touch /opt/app/configInProgress
+    ```
+
+3. To resume the Kubernetes probes, remove the semaphore file. 
+    ```
+    rm -f /opt/app/configInProgress
+    ```
