@@ -29,7 +29,7 @@ To implement the example, an existing [Volt MX Iris Web Application](https://ope
     - [Content provider policy requests and responses](../../wab/wab/h_wab_response)
     - [Content provider policy single sign-on](../../wab/wab/h_wab_auth)
     
-   1. In the **Profile Host*, you can set a **Unique profile title** (for example, `MX Iris Content Provider Profile`).
+   1. In the **Profile Host**, you can set a **Unique profile title** (for example, `MX Iris Content Provider Profile`).
    2. For the **Hostname or IP address**, enter `http://hostname:port/` which is the host (and port, if required) of the MX environment. 
     If the MX deployment is deployed in the same Kubernetes cluster as HCL Digital Experience, the [Kubernetes Service DNS name](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records) can be used here to only access the application through the Web Application Bridge proxy. 
    3. **Save** the content provider profile.
@@ -43,7 +43,7 @@ To implement the example, an existing [Volt MX Iris Web Application](https://ope
     4. **Save** the web dock application.
 
 3. Add the created Web Dock Application to the DX Page.
-    1. Enable **Edit mode** on the DX page you want to include the Iris application on or create a new page. 
+    1. Enable **Edit mode** on the DX page you want to include the Iris application on or create a new page by clicking on the 3 lines on the right of the Web Dock Application.
     2. Click the plus icon on the left navigation panel to **Add page components and applications** to the page. In the navigation panel, go to the **Applications** tab and search for the newly created web dock application (in this case, `MX Iris`).
     3. Click the **Add To Page** button.
 
