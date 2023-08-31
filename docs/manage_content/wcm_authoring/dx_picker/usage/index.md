@@ -4,7 +4,7 @@ This section details the basic usage of the HCL DX Picker.
 
 ## Prerequisite
 
-DX Picker must installed and configured in HCL Digital Experience 9.5 release update CF214 or higher. For instructions on installing DX Picker on supported environments, see the [DX Picker Installation](../installation/index.md) topic.
+DX Picker must be installed and configured in HCL Digital Experience 9.5 release update CF214 or higher. For instructions on installing DX Picker on supported environments, see the [DX Picker Installation](../installation/index.md) topic.
 
 ## Using DX Picker
 
