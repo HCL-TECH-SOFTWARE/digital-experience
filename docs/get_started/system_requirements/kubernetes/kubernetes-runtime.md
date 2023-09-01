@@ -40,9 +40,9 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 |CF Level|Kubernetes versions|
 |--------------|-----------------|
+|CF214| Kubernetes 1.27<br/>Kubernetes 1.26<br/>Kubernetes 1.25<br/>Kubernetes 1.24<br/>Kubernetes 1.23<br/>|
 |CF213| Kubernetes 1.27<br/>Kubernetes 1.26<br/>Kubernetes 1.25<br/>Kubernetes 1.24<br/>Kubernetes 1.23<br/>|
 |CF212| Kubernetes 1.25<br/>Kubernetes 1.24<br/>Kubernetes 1.23<br/>Kubernetes 1.22<br/>|
-|CF211| Kubernetes 1.25<br/>Kubernetes 1.24<br/>Kubernetes 1.23<br/>Kubernetes 1.22<br/>|
 
 
 !!! attention "__*__ CF203 limited support statement"
