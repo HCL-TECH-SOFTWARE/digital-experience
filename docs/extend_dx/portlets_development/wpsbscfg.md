@@ -42,7 +42,7 @@ public class HelloWorld extends GenericPortlet {
 
 Compile your Java source files. Before you compile your Java source, set the class path for the compiler to find the JAR files for any portlet packages that your portlet uses by running the following command:
 
--   AIX® and Linux™: `./setupcmdLine.sh`
+-   AIX® and Linux™: `. setupCmdLine.sh`
 -   Windows™: setupcmdLine.bat
 
 The following JAR files must be set in the class path to compile portlets:
