@@ -1,6 +1,6 @@
 # Web Content Manager Find Rendering and Script Portlet References
 
-This API allows you to find all references to an item identified by its UUID - either a DAM UIID for an asset or a WCM UUID for a WCM item.
+This API allows you to find all references to an item identified by its UUID, either by a DAM UUID for an asset or a WCM UUID for a WCM item.
 
 ## Special Considerations
 
