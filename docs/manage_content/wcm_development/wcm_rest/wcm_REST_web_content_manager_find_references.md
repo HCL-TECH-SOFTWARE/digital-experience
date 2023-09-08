@@ -50,7 +50,7 @@ Currently, the API does not support finding draft references in projects.
 
 -   **Optional Query Parameters**
 
-    ?options=item-path - if specified the path details (parents) are listed.
+    ?options=item-path - If specified, the path details (parents) are listed.
     ?options=details - additional details like access-control link.
     ?mime-type=application/json - return JSON
 
