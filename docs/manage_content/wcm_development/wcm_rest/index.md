@@ -23,7 +23,7 @@ The Web Content Manager Syndication REST APIs let you control syndication proces
 -   **[Web Content Manager Find Rendering and Script Portlet References](wcm_REST_web_content_manager_find_rendering_script_portlet_references.md)**  
 This API allows you to find any page that has a WCM Rendering or Script portlet on it referencing the given WCM content UUID.
 -   **[Web Content Manager Find References to DAM and WCM Artifacts](wcm_REST_web_content_manager_find_references.md)**  
-This API allows you to find all references to an item identified by its UUID - either a DAM UUID for an asset or a WCM UUID for a WCM item.
+This API allows you to find all references to an item identified by its UUID, either by a DAM UUID for an asset or a WCM UUID for a WCM item.
 -   **[Support for library components in content and authoring templates](library_component_support.md)**  
  DX supports an image or file element in a content or authoring template to point to an existing library component. The API is added to retrieve the references to library components from content and authoring templates and to update/add these references.
 -   **[Reference material for the Web Content Manager REST service](../wcm_rest/wcm_rest_referencematerial/index.md)**  
