@@ -51,8 +51,8 @@ Currently, the API does not support finding draft references in projects.
 -   **Optional Query Parameters**
 
     ?options=item-path - If specified, the path details (parents) are listed.
-    ?options=details - additional details like access-control link.
-    ?mime-type=application/json - return JSON
+    ?options=details - If specified, additional details like the access-control link are listed.
+    ?mime-type=application/json - If specified, the response is returned in JSON instead of ATOM/XML.
 
 -   **Return Body**
 
