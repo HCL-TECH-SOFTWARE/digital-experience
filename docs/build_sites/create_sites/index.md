@@ -15,9 +15,9 @@ There are multiple ways to create and manage content including using the site to
 Before content authors can create content you must prepare your site to be ready for content creation, including preparing the site toolbar, enabling inline editing, and creating templates.
 -   **[Developing and managing content](../create_sites/developing_managing_content/index.md)**  
 Use these tools and processes to develop and manage your website.
--   **[Delivering web content](../create_sites/)**  
+-   **[Delivering web content](../create_sites/index.md)**  
  The type of delivery method you use to deliver web content to your viewers depend on the type of content that is being delivered, and the type of viewers your website is intended for.
--   **[URL Addressability](../url_addressing)** 
+-   **[URL Addressability](url_addressing/index.md)** 
  URLs control how you access different sites, pages, components and content that make up your site. There are various configuration options to tailor
  URLs to your needs and achieve a good Search Engine Optimization.
 -   **[Social rendering](../../build_sites/social_rendering/index.md)**  

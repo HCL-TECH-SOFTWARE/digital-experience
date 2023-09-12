@@ -24,11 +24,11 @@ Typically the authenticated URL is different than the URL for anonymous access t
 ## Virtual Portals
 Virtual portals can be of benefit if you want to serve multiple user groups by separate virtual portals for different purposes, but still want to keep your environment simple and limited to a single HCL Portal installation. Virtual portals allow a large extent of scoping and separating portal resources, user groups, and administration.
 Virtual Portals can be addressed either with a context root or a hostname (to avoid the context root in the URL).
-For more details see: [Virtual Portal URLs](../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
+For more details see: [Virtual Portal URLs](../../virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
 
 ## Removing State
 DX state URLs have a complex structure and include a large compressed and encoded XML Navigation State document. The stream of random characters in a DX Site URL is the Navigation State document. Full function depends on correctly maintaining this Navigation State document during all the operations a user might do in Portal. The state can be removed for different use cases to get a cleaner URL.
-For more details see: [Changing your site URL](../../../deployment/manage/siteurl_cfg.md)
+For more details see: [Changing your site URL](../../../deployment/manage/siteurl_cfg/index.md)
 
 ## Friendly Names
 Friendly URLs have human-readable strings in the URL that describe the path to a Portal page. 
@@ -40,7 +40,7 @@ For more details see: [Vanity URLs](../../../manage_content/wcm_delivery/vanity_
 
 ## Friendly Content URLs
 Instead of having a different page for each piece of content the same page and content viewers can be leveraged to address a large set of different content and still maintain friendly URLs.
-For more details see: [Friendly Web Content Viewer URLs](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer.md)
+For more details see: [Friendly Web Content Viewer URLs](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/index.md)
 
 ## Project URLs
 Projects are reflected in the URL when working on an active project.
@@ -50,7 +50,7 @@ For more details see: [Friendly Web Content Viewer URLs](../../../manage_content
 ## Web Content Manager resources
 WCM Content, components, Site Areas or other artifacts can be addressed via the REST API (headless) or via the WCM Servlet.
 For more details on servlet rendering see: [Access web content by using a servlet](../../../manage_content/wcm_delivery/wcm_config_delivery_servlet.md)
-For more details on the REST API see: [Friendly Web Content Viewer URLs](../../../manage_content/wcm_development/wcm_rest.md)
+For more details on the REST API see: [Friendly Web Content Viewer URLs](../../../manage_content/wcm_development/wcm_rest/index.md)
 Leveraging the API explorer to discover the WCM REST API: [URLs for API Access](../../../get_started/product_overview/api_access.md)
 
 ## DAM resources
