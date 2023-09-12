@@ -18,7 +18,7 @@ Use this roadmap if you are an organization with the following requirements:
 
 The topology includes a network load balancer to direct incoming traffic to the farm. Each stand-alone server has a database for JCR and Release domains. The JCR and Release domain cannot be shared between portal servers in a farm. However, the Community, Customization, LikeMinds, and Feedback portal database domains can be shared. The share portal database domains are depicted on a common database server.
 
-![Farm topology depicts a network load balancer directing incoming traffic to a farm of four stand-alone portal servers](../../../../../../images/Farm.jpg)
+![Farm topology depicts a network load balancer directing incoming traffic to a farm of four stand-alone portal servers](../../../../../../images/Farm.png)
 
 ## Preparing for the installation process
 
