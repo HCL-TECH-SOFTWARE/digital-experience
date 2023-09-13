@@ -18,7 +18,7 @@ Use these tools and processes to develop and manage your website.
 -   **[Delivering web content](../create_sites/index.md)**  
  The type of delivery method you use to deliver web content to your viewers depend on the type of content that is being delivered, and the type of viewers your website is intended for.
 -   **[URL Addressability](url_addressing/index.md)** 
- URLs control how you access different sites, pages, components and content that make up your site. There are various configuration options to tailor
+ URLs control how you access different sites, pages, components, and content that make up your site. There are various configuration options to tailor
  URLs to your needs and achieve a good Search Engine Optimization.
 -   **[Social rendering](../../build_sites/social_rendering/index.md)**  
 HCL Digital Experience page editors can use social rendering to feature social data that is hosted on a remote HCL Connections server in the context of portal pages.
