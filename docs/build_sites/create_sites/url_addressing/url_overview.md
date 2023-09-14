@@ -33,7 +33,7 @@ The default URL for a site is `https://mydxsample.hcl.com:443/wps/portal/[virtua
 
 ## Authentication
 
-Typically, the authenticated URL is different from the URL for anonymous access. This allows better caching and higher security. For the default sample URL `https://mydxsample.hcl.com:443/wps/portal/[virtual-portal-context]/rootpage/childpage/[content]/[state]?query-params#anchor`, instead of `/portal`, the authenticated URL contains `/myportal`. This can be customized. Note that while the anonymous URL context can be completely removed, an authenticated URL context is required.
+Typically, the authenticated URL is different from the URL for anonymous access. This allows better caching and higher security. Using the default sample URL `https://mydxsample.hcl.com:443/wps/portal/[virtual-portal-context]/rootpage/childpage/[content]/[state]?query-params#anchor`, instead of `/portal`, the authenticated URL contains `/myportal`. This can be customized. Note that while the anonymous URL context can be completely removed, an authenticated URL context is required.
 
 ## Virtual Portals
 
