@@ -63,7 +63,7 @@ Instead of having a different page for each piece of content, the same page and 
 
 ## Project URLs
 
-Projects are reflected in the URL when working on an active project. For more information, see [Friendly Web Content Viewer URLs](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_projectapi.md).
+Projects are reflected in the URL when working on an active project. For more information, see [Project URL generation](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_projectapi.md).
 
 # Other artifacts in DX
 
