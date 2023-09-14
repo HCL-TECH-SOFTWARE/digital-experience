@@ -95,6 +95,7 @@ DX provides a rich set of REST APIs that also bring API explorers along to explo
 
 Underlying HCL DX is the IBM WebSphere Application Server, a powerful J2EE server. The features of a J2EE server for addressing resources can also be leveraged (for example, when deploying a theme EAR file, the resource URLs can be chosen within the realm of the J2EE specifications).
 
-## Other resources
-
-There are more resources beyond what is mentioned in this document like for instance Personalization Rules, Web Application bridge, Ajax proxy (outbound connections) or others and they allow to have different URLs - check out the product documentation for more details on those.
+???+ info "Related information"
+    - Personalization Rules
+    - Web Application bridge
+    - Outbound HTTP connection
