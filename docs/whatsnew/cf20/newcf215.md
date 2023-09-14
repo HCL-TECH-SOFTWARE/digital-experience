@@ -10,3 +10,8 @@ The following features and updates are available to customers installing HCL Dig
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+
+## Find DAM Staging mismatch between publisher and subscriber
+
+=== "Containers"
+    DAM staging supports identifying difference between a publisher and a subscriber environment. For more information, see the topic [DAM Staging mismatch](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
