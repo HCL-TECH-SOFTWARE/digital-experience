@@ -22,7 +22,7 @@ Know how to generate URLs as a developer in code.
 -   **[Generating WCM URLs](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/wcm_dev_writing-links.md)**  
 Know how to generate WCM URLs as a developer in code.
 -   **[URLs for API Access](../../../get_started/product_overview/api_access.md)**  
-Know how to access the API explorers for the different Experience APIs.
+Know how to access the API explorers for different Experience APIs.
 
 
 
