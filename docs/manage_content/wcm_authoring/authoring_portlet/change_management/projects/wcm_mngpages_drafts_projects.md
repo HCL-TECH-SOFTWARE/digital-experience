@@ -6,7 +6,7 @@ The page structure is replicated in the site structure of a web content library.
 
 The following changes inside of the scope of a project to a page managed with Web Content Manager result in a draft that is not visible on the published site and is only visible within the project:
 
--   Any action that is run by using the toolbar, such as adding content to page, changing the page style, or changing the page layout.
+-   Any action that is run by using the [Site Manager](../../../inline_editing/index.md), such as adding content to page, changing the page style, or changing the page layout.
 -   Changing the access control that is granted to a page.
 -   Changing the page properties.
 -   Creating a child page.
