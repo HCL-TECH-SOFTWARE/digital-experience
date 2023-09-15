@@ -13,9 +13,9 @@ You define the access of a user or group for a library to determine who has acce
 |Administrator|Users and groups that are assigned to these roles can:<br> - view items in a rendering portlet or servlet-rendered website that they are assigned at least user access to.<br> - view libraries that they are assigned contributor access to in an authoring portlet.<br> - access the "My Items" and "All Items" views in an authoring portlet for libraries that they are assigned at least contributor access to.<br> - all actions in the authoring portlet and Content Composer for library item types that they are assigned administrator access to.|
 | Security Administrator<br> - Privileged User<br> - Markup Editor|These roles have no access to Web Content Manager items.|
 
-**HCL Portal Administrators:**
+**DX Administrators:**
 
-HCL Portal Administrators automatically have Administrator access to all item-types.
+Digital Experience (DX) Administrators automatically have Administrator access to all item-types.
 
 **All Items view:**
 
