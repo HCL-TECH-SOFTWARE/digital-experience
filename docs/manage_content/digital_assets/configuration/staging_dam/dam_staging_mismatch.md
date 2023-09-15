@@ -1,19 +1,16 @@
 # DAM Staging mismatch
 
-DAM Staging helps to Sync items between the publisher and subscriber. During the sync, if there are failures which leads to un-even assets between environments, it is difficult to find the differences between the environments. A new feature is introduced in [Digital Asset Management](../../index.md) (DAM) which allows you to find the difference between the environments and view them in a detailed report.
-
+DAM Staging helps to Sync items between the publisher and subscriber. During the sync, if there are any failures, it leads to un-even assets between environments. It is difficult to find the differences between the environments by browsing through. A new feature is introduced in [Digital Asset Management](../../index.md) (DAM) which allows you to find the difference between the environments and view them in a detailed report.
 
 ## Steps involved to find the DAM Staging mismatch
 
-DX Client commands introduced to trigger the staging mismatch and also download the report.
-
-Following are the steps the user should follow:
+DX Client commands introduced to trigger the staging mismatch and download the report. Following are the steps the user should follow:
 
 - Find the subscriber ID against which the mismatch needs to be checked. The existing DX Client command can be used to see the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
-- Trigger the mismatch between the publisher and subscriber using the [Find staging mismatch](#find-staging-mismatch) command. The hostname will be the publisher host name and the subscriber ID can be found using the step above.
-- Once the mismatch is triggered, we can verify the status of the mismatch operation by checking resync_status field response (FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging) command.
-- Once the status is changed to FIND_MISMATCH_COMPLETED, we can [Download the report](#download-mismatch-report) via DX Client using the command below
-- If the report is not generated due to un-availability of data, it implies the both publisher and subsriber are in Sync. If not, the report should contain the detailed information of mismatches found.
+- Trigger the action to find the mismatch between the publisher and subscriber using the [Find staging mismatch](#find-staging-mismatch) command. The hostname will be the publisher host name and the subscriber ID can be found using the step above.
+- Once the mismatch is triggered, we can verify the status of the mismatch operation by checking resyncStatus field response (FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging) command.
+- Once the status is changed to FIND_MISMATCH_COMPLETED, we can [Download the report](#download-mismatch-report) via DX Client. If the status in not FIND_MISMATCH_COMPLETED, still you will be allowed to download the report. But the report will not be accurate.
+- If the report is not generated due to un-availability of data, it implies that both the publisher and subscriber are in Sync. If not, the report should contain the detailed information of mismatches found.
   
 ### Find staging mismatch
 
@@ -91,13 +88,11 @@ Use the `manage-dam-staging find-staging-mismatch` command to trigger staging mi
     -ringAPIVersion <value>
     ```
 
-    Use this attribute to specify the host name of the target environment of the subscriber:
+    Use this attribute to specify the subscriber ID against which the find mismatch needs to be triggered:
     
     ```
     -subscriberId <value>
     ```
-
-    Use this attribute to specify the subscriber ID against which the mismatch needs to be triggered:
 
 -   **Commands:**
 
@@ -108,12 +103,12 @@ Use the `manage-dam-staging find-staging-mismatch` command to trigger staging mi
     !!! example
 
         ```
-        dxclient manage-dam-staging find-staging-mismatch -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
+        dxclient manage-dam-staging find-staging-mismatch -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
         ```
 
 ### Download mismatch report
 
-Use the `manage-dam-staging get-staging-mismatch-report` command to download the staging mismatch report 
+Use the `manage-dam-staging get-staging-mismatch-report` command to download the staging mismatch report
 
 -   **Command description**
 
@@ -187,7 +182,33 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     -ringAPIVersion <value>
     ```
 
-    Use this attribute to specify the host name of the target environment of the subscriber:
+    Use this attribute to specify the subscriber ID against which the mismatch is found:
+    
+    ```
+    -subscriberId <value>
+    ```
+
+    Use this attribute to specify the record type (default: ""). The Other possible values are CREATE, UPDATE, DELETE:
+    
+    ```
+    -recordType <value>
+    ```
+
+    Use this attribute to specify the record action (default: ""). The Other possible values are COLLECTION, MEDIA_ITEM, RENDITION, VERSION, FAVORITE, KEYWORD, COLLECTION_MEDIA_RELATION, CUSTOM_URL, MEDIA_TYPE, MEDIA_TYPE_GROUP, RESOURCE, PERMISSION:
+
+     ```
+    -recordAction <value>
+    ```
+
+    Use this attribute to specify a location **store/folder_name/** that is different from the default location to download report. The default location "report" is **store/outputFiles/**:
+
+     ```
+    -reportPath <value>
+    ```
+
+    !!! note 
+        Optional parameters are `recordType`, `recordAction` and `reportPath`.
+
 
 -   **Commands:**
 
@@ -198,13 +219,16 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     !!! example
 
         ```
-        dxclient manage-dam-staging find-staging-mismatch -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
+        dxclient manage-dam-staging find-staging-mismatch -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
 
-### Notes
+### Configurations
 
-As a pre-requisite,
+- [Find staging mismatch](#find-staging-mismatch) compares tables between both publisher and subscriber. The `maxRecordsToCompare` value under `configuration.digitalAssetManagement` in Helm charts is the number of records picked up to compare at a single iteration. This can be tuned for better performance.
+### Limitations
 
-- There should be already a publisher and a subscriber setup in place.
-- The dx client host should be publisher
-- The single point of truth will be always a publisher
+- The single point of truth will be always a publisher. Hence report will read from the publisher point of view.
+- Finding mismatch will be specific to subscriber (Whereas download can be done for all or specific to subscriber as well)
+- If the data is modified or deleted after the find staging mismatch is completed, then the report will not contain the up to date information.
+- Find mismatch will not be able to detect items that are being staged currently and hence that could also be a part of mismatch report.
+- Download report will be always in fixed CSV format
