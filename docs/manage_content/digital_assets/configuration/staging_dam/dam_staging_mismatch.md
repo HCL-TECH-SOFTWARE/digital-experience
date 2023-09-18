@@ -8,8 +8,8 @@ To trigger the staging mismatch and download the report, refer to the following 
 
 1. Find the subscriber ID against which the mismatch needs to be checked. The existing DX Client command can be used to see the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
 2. Trigger the action to find the mismatch between the publisher and subscriber by using the [Find staging mismatch](#find-staging-mismatch) command. 
-    - Use the publisher host name as the hostname. 
-    - Retrieve the subscriber ID by following Step 1. 
+    - For the hostname attribute, use the publisher host name. 
+    - For the subscriber ID attribute, retrieve the subscriber ID by following Step 1. 
    
 3. Verify the status of the mismatch operation. Check the resyncStatus field response (for example, FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging) command.
 4. After the status is changed to FIND_MISMATCH_COMPLETED, [download the report](#download-mismatch-report) using DXClient. 
@@ -59,7 +59,7 @@ Use the `manage-dam-staging find-staging-mismatch` command to trigger staging mi
     -dxPort <value>
     ```
 
-    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: ""):
+    Use this attribute to specify the username that is required for authenticating with the DX server of the publisher (default: ""):
 
     ```
     -dxUsername <value> 
@@ -195,26 +195,26 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     -subscriberId <value>
     ```
 
-    Use this attribute to specify the record type (default: ""). The Other possible values are CREATE, UPDATE, DELETE:
+    Use this attribute to specify the record type (default: ""). Other possible values are CREATE, UPDATE, and DELETE:
     
     ```
     -recordType <value>
     ```
 
-    Use this attribute to specify the record action (default: ""). The Other possible values are COLLECTION, MEDIA_ITEM, RENDITION, VERSION, FAVORITE, KEYWORD, COLLECTION_MEDIA_RELATION, CUSTOM_URL, MEDIA_TYPE, MEDIA_TYPE_GROUP, RESOURCE, PERMISSION:
+    Use this attribute to specify the record action (default: ""). Other possible values are COLLECTION, MEDIA_ITEM, RENDITION, VERSION, FAVORITE, KEYWORD, COLLECTION_MEDIA_RELATION, CUSTOM_URL, MEDIA_TYPE, MEDIA_TYPE_GROUP, RESOURCE, and PERMISSION:
 
      ```
     -recordAction <value>
     ```
 
-    Use this attribute to specify a location **store/folder_name/** that is different from the default location to download report. The default location "report" is **store/outputFiles/**:
+    Use this attribute to specify a location **store/folder_name/** that is different from the default location where the report is downloaded. The default location is **store/outputFiles/**:
 
      ```
     -reportPath <value>
     ```
 
     !!! note 
-        Optional parameters are `recordType`, `recordAction` and `reportPath`.
+        `recordType`, `recordAction`, and `reportPath` are optional parameters.
 
 
 -   **Commands:**
@@ -229,13 +229,14 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
         dxclient manage-dam-staging find-staging-mismatch -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
 
-### Configurations
+### Configuration
 
 - [Find staging mismatch](#find-staging-mismatch) compares tables between both publisher and subscriber. The `maxRecordsToCompare` value under `configuration.digitalAssetManagement` in Helm charts is the number of records picked up to compare at a single iteration. This can be tuned for better performance.
+
 ### Limitations
 
-- The single point of truth will be always a publisher. Hence report will read from the publisher point of view.
+- The single point of truth is always the publisher. The report is read from the publisher's point of view.
 - Finding mismatch will be specific to subscriber (Whereas download can be done for all or specific to subscriber as well)
-- If the data is modified or deleted after the find staging mismatch is completed, then the report will not contain the up to date information.
-- Find mismatch will not be able to detect items that are being staged currently and hence that could also be a part of mismatch report.
-- Download report will be always in fixed CSV format
+- If the data is modified or deleted after the find staging mismatch process is completed, then the report will not contain accurate information.
+- When identifying discrepancies, the system cannot detect items that are currently being staged. These items can be a part of the mismatch report.
+- Reports are downloaded as CSVW files.
