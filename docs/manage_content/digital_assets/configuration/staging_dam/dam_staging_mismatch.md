@@ -1,20 +1,27 @@
 # DAM Staging mismatch
 
-DAM Staging helps to Sync items between the publisher and subscriber. During the sync, if there are any failures, it leads to un-even assets between environments. It is difficult to find the differences between the environments by browsing through. A new feature is introduced in [Digital Asset Management](../../index.md) (DAM) which allows you to find the difference between the environments and view them in a detailed report.
+DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the differences between environments just by browsing through them. A new feature is introduced in [Digital Asset Management](../../index.md) (DAM) which helps you find the difference between the environments and view them in a detailed report.
 
-## Steps involved to find the DAM Staging mismatch
+## Finding the DAM Staging mismatch
 
-DX Client commands introduced to trigger the staging mismatch and download the report. Following are the steps the user should follow:
+To trigger the staging mismatch and download the report, refer to the following steps:
 
-- Find the subscriber ID against which the mismatch needs to be checked. The existing DX Client command can be used to see the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
-- Trigger the action to find the mismatch between the publisher and subscriber using the [Find staging mismatch](#find-staging-mismatch) command. The hostname will be the publisher host name and the subscriber ID can be found using the step above.
-- Once the mismatch is triggered, we can verify the status of the mismatch operation by checking resyncStatus field response (FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging) command.
-- Once the status is changed to FIND_MISMATCH_COMPLETED, we can [Download the report](#download-mismatch-report) via DX Client. If the status in not FIND_MISMATCH_COMPLETED, still you will be allowed to download the report. But the report will not be accurate.
-- If the report is not generated due to un-availability of data, it implies that both the publisher and subscriber are in Sync. If not, the report should contain the detailed information of mismatches found.
+1. Find the subscriber ID against which the mismatch needs to be checked. The existing DX Client command can be used to see the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
+2. Trigger the action to find the mismatch between the publisher and subscriber by using the [Find staging mismatch](#find-staging-mismatch) command. 
+    - Use the publisher host name as the hostname. 
+    - Retrieve the subscriber ID by following Step 1. 
+   
+3. Verify the status of the mismatch operation. Check the resyncStatus field response (for example, FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging) command.
+4. After the status is changed to FIND_MISMATCH_COMPLETED, [download the report](#download-mismatch-report) using DXClient. 
+
+    !!!note
+      If the status in not FIND_MISMATCH_COMPLETED, you can still download the report but it is not accurate.
+      
+If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
   
-### Find staging mismatch
+### Commands to trigger staging mismatch
 
-Use the `manage-dam-staging find-staging-mismatch` command to trigger staging mismatch between the publisher and subscriber
+Use the `manage-dam-staging find-staging-mismatch` command to trigger staging mismatch between the publisher and subscriber.
 
 -   **Command description**
 
