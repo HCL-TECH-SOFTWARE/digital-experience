@@ -9,7 +9,9 @@ To trigger the staging mismatch process and download the report, refer to the fo
 1. Find the subscriber ID against which the mismatch needs to be checked. The existing DX Client command can be used to see the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
 2. Trigger the action to find the differences between the publisher and subscriber by using the [Find staging mismatch](#find-staging-mismatch) command. 
     - For the **hostname** attribute, use the publisher host name. 
-    - For the **subscriber ID** attribute, retrieve the subscriber ID by following Step 1. 
+     - For the subscriber ID attribute, retrieve the subscriber ID by following Step 1. 
+    !!!note
+           You can run the action to find any discrepancies between a publisher and more than one subscriber.
    
 3. Verify the status of the mismatch operation. Check the resyncStatus field response (for example, FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging) command.
 4. After the status is changed to FIND_MISMATCH_COMPLETED, [download the report](#download-mismatch-report) using DXClient. 
