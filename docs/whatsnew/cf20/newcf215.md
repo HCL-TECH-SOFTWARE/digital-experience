@@ -14,7 +14,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Finding the DAM Staging mismatch between publisher and subscriber
 
 === "Containers"
-    DAM staging supports identifying the difference between a publisher and a subscriber environment. For more information, see the topic [DAM Staging mismatch](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
+    DAM staging supports identifying the discrepancies between a publisher and a subscriber environment. For more information, see the topic [DAM Staging mismatch](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 

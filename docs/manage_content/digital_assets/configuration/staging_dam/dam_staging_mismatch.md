@@ -1,6 +1,6 @@
-# DAM Staging mismatch
+# DAM Staging Mismatch
 
-DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the discrepancies between environments just by browsing through them. A new feature is introduced in [Digital Asset Management](../../index.md) (DAM) which helps you find the discrepancies between the environments and view them in a detailed report.
+DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the discrepancies between environments just by browsing through them. A new feature called DAM Staging Mismatch is introduced in [Digital Asset Management](../../index.md) (DAM) to help you find the discrepancies between the environments and view them in a detailed report.
 
 ## Finding the DAM Staging mismatch
 
@@ -235,8 +235,8 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
 
 ### Limitations
 
-- The single point of truth is always the publisher. The report is read from the publisher's point of view.
-- Finding mismatch will be specific to subscriber (Whereas download can be done for all or specific to subscriber as well)
+- The single point of truth is always the publisher. The report is read from the publisher's point of view and the details about the mismatch are stored in the publisher environment.
+- When you trigger the action to find discrepancies against more than one subscriber, the details stored in the publisher contain information about all subscribers. When generating the report, you can choose to download the details specific to one subscriber only or you can download the report containing all information for all subscribers selected. 
 - If the data is modified or deleted after the find staging mismatch process is completed, then the report will not contain accurate information.
 - When identifying discrepancies, the system cannot detect items that are currently being staged. These items can be a part of the mismatch report.
 - Reports are downloaded as CSVW files.
