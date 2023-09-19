@@ -206,13 +206,13 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
 
     Use this attribute to specify the record action (default: ""). Other possible values are COLLECTION, MEDIA_ITEM, RENDITION, VERSION, FAVORITE, KEYWORD, COLLECTION_MEDIA_RELATION, CUSTOM_URL, MEDIA_TYPE, MEDIA_TYPE_GROUP, RESOURCE, and PERMISSION:
 
-     ```
+    ```
     -recordAction <value>
     ```
 
     Use this attribute to specify a location **store/folder_name/** that is different from the default location where the report is downloaded. The default location is **store/outputFiles/**:
 
-     ```
+    ```
     -reportPath <value>
     ```
 
@@ -229,7 +229,7 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     !!! example
 
         ```
-        dxclient manage-dam-staging find-staging-mismatch -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
+        dxclient manage-dam-staging get-staging-mismatch-report -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
 
 ### Configuration
@@ -243,3 +243,10 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
 - If the data is modified or deleted after the find staging mismatch process is completed, then the report will not contain accurate information.
 - When identifying discrepancies, the system cannot detect items that are currently being staged. These items can be a part of the mismatch report.
 - Reports are downloaded as CSVW files.
+
+    !!!note
+           In case if your values yaml or custom-values yaml file contains the below entries, ensure that they are removed. These values might be found under `configuration` of `digitalAssetManagement` section in `incubator`.
+           ```
+           enableStagingCleanupHeartbeats
+           findStagingMismatchHeartbeatIntervalTimeInMinutes
+           ```
