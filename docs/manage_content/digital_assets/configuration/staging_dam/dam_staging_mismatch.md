@@ -1,15 +1,15 @@
 # DAM Staging mismatch
 
-DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the differences between environments just by browsing through them. A new feature is introduced in [Digital Asset Management](../../index.md) (DAM) which helps you find the difference between the environments and view them in a detailed report.
+DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the discrepancies between environments just by browsing through them. A new feature is introduced in [Digital Asset Management](../../index.md) (DAM) which helps you find the discrepancies between the environments and view them in a detailed report.
 
 ## Finding the DAM Staging mismatch
 
-To trigger the staging mismatch and download the report, refer to the following steps:
+To trigger the staging mismatch process and download the report, refer to the following steps:
 
 1. Find the subscriber ID against which the mismatch needs to be checked. The existing DX Client command can be used to see the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
-2. Trigger the action to find the mismatch between the publisher and subscriber by using the [Find staging mismatch](#find-staging-mismatch) command. 
-    - For the hostname attribute, use the publisher host name. 
-    - For the subscriber ID attribute, retrieve the subscriber ID by following Step 1. 
+2. Trigger the action to find the differences between the publisher and subscriber by using the [Find staging mismatch](#find-staging-mismatch) command. 
+    - For the **hostname** attribute, use the publisher host name. 
+    - For the **subscriber ID** attribute, retrieve the subscriber ID by following Step 1. 
    
 3. Verify the status of the mismatch operation. Check the resyncStatus field response (for example, FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging) command.
 4. After the status is changed to FIND_MISMATCH_COMPLETED, [download the report](#download-mismatch-report) using DXClient. 
