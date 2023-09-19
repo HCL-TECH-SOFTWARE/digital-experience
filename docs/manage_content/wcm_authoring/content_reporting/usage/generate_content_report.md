@@ -93,6 +93,12 @@ A report is a list of items that matches a set or combined sets of criteria. Con
     
 ### Other actions available
 
+- To sort the search results, hover on the column header of the field, with which you want to sort. The initial default sort is by Title field ascending. You should see an Arrow Up \(or Down\) icon button appear upon hover of another field and a tooltip explaining that this icon button is used to sort. After clicking this Arrow icon button, the results should get sorted accordingly. This icon button will remain visible to indicate the last sort used.
+    
+    ![](../../../../assets/HCL_Content_Reporting_Search_Results_PreSort.png)
+
+    ![](../../../../assets/HCL_Content_Reporting_Search_Results_PostSort.png)
+
 - To add more criteria to your search, click **View Criteria**. Click the **+ Add** button to add another search criteria.
     
     ![](../../../../assets/HCL_Content_Reporting_Add_Criteria_Button_Dropdown.png)
