@@ -18,7 +18,7 @@ To trigger the staging mismatch process and download the report, refer to the fo
 4. After the status is changed to FIND_MISMATCH_COMPLETED, [download the report](#download-mismatch-report) using DXClient. 
 
     !!!note
-      If the status in not FIND_MISMATCH_COMPLETED, you can still download the report but it is not accurate.
+      If the status is not FIND_MISMATCH_COMPLETED, you can still download the report but it is not accurate.
       
 If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
   
@@ -118,7 +118,7 @@ Use the `manage-dam-staging find-staging-mismatch` command to trigger staging mi
 
 ### Download mismatch report
 
-Use the `manage-dam-staging get-staging-mismatch-report` command to download the staging mismatch report
+Use the `manage-dam-staging get-staging-mismatch-report` command to download the staging mismatch report.
 
 -   **Command description**
 
@@ -239,10 +239,10 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
 ### Limitations
 
 - The single point of truth is always the publisher. The report is read from the publisher's point of view and the details about the mismatch are stored in the publisher environment.
-- When find discrepancies against more than one subscriber, the details stored in the publisher contain information about all subscribers. When generating the report, you can choose to download the details specific to one subscriber only or you can download the report containing all information for all subscribers selected. 
+- When the system finds discrepancies against more than one subscriber, the details stored in the publisher contain information about all subscribers. When generating the report, you can choose to download the details specific to one subscriber only or you can download the report containing all information for all subscribers selected. 
 - If the data is modified or deleted after the find staging mismatch process is completed, then the report will not contain accurate information.
 - When identifying discrepancies, the system cannot detect items that are currently being staged. These items can be a part of the mismatch report.
-- Reports are downloaded as CSVW files.
+- Reports are downloaded as CSV files.
 
     !!!note
            In case if your values yaml or custom-values yaml file contains the below entries, ensure that they are removed. These values might be found under `configuration` of `digitalAssetManagement` section in `incubator`.
