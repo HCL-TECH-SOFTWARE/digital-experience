@@ -11,7 +11,7 @@ To trigger the staging mismatch process and download the report, refer to the fo
     - For the **hostname** attribute, use the publisher host name. 
      - For the subscriber ID attribute, retrieve the subscriber ID by following Step 1. 
     !!!note
-           You can run the action to find any discrepancies between a publisher and more than one subscriber.
+           You can find discrepancies between a publisher and more than one subscriber. However, you can only run the action against one subscriber at a time. 
    
 3. Verify the status of the mismatch operation. Check the resyncStatus field response (for example, FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging) command.
 4. After the status is changed to FIND_MISMATCH_COMPLETED, [download the report](#download-mismatch-report) using DXClient. 
@@ -238,7 +238,7 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
 ### Limitations
 
 - The single point of truth is always the publisher. The report is read from the publisher's point of view and the details about the mismatch are stored in the publisher environment.
-- When you trigger the action to find discrepancies against more than one subscriber, the details stored in the publisher contain information about all subscribers. When generating the report, you can choose to download the details specific to one subscriber only or you can download the report containing all information for all subscribers selected. 
+- When find discrepancies against more than one subscriber, the details stored in the publisher contain information about all subscribers. When generating the report, you can choose to download the details specific to one subscriber only or you can download the report containing all information for all subscribers selected. 
 - If the data is modified or deleted after the find staging mismatch process is completed, then the report will not contain accurate information.
 - When identifying discrepancies, the system cannot detect items that are currently being staged. These items can be a part of the mismatch report.
 - Reports are downloaded as CSVW files.
