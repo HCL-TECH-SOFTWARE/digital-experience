@@ -245,7 +245,8 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
 - Reports are downloaded as CSV files.
 
     !!!note
-           In case if your values yaml or custom-values yaml file contains the below entries, ensure that they are removed. These values might be found under `configuration` of `digitalAssetManagement` section in `incubator`.
+           If your `values.yaml` or `custom-values.yaml` file contains the following entries, remove them. The following values can be found under `configuration` of the `digitalAssetManagement` section in `incubator`.
+           
            ```
            enableStagingCleanupHeartbeats
            findStagingMismatchHeartbeatIntervalTimeInMinutes
