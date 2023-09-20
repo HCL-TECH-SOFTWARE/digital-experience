@@ -198,13 +198,13 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     -subscriberId <value>
     ```
 
-    Use this attribute to specify the record type (default: ""). Other possible values are CREATE, UPDATE, and DELETE:
+    Use this attribute to specify the record type (default: ""). Other possible values are COLLECTION, MEDIA_ITEM, RENDITION, VERSION, FAVORITE, KEYWORD, COLLECTION_MEDIA_RELATION, CUSTOM_URL, MEDIA_TYPE, MEDIA_TYPE_GROUP, RESOURCE, and PERMISSION:
     
     ```
     -recordType <value>
     ```
 
-    Use this attribute to specify the record action (default: ""). Other possible values are COLLECTION, MEDIA_ITEM, RENDITION, VERSION, FAVORITE, KEYWORD, COLLECTION_MEDIA_RELATION, CUSTOM_URL, MEDIA_TYPE, MEDIA_TYPE_GROUP, RESOURCE, and PERMISSION:
+    Use this attribute to specify the record action (default: ""). Other possible values are CREATE, UPDATE, and DELETE:
 
     ```
     -recordAction <value>
