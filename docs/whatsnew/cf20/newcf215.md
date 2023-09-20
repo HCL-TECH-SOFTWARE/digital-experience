@@ -18,7 +18,7 @@ The following features and updates are available to customers installing HCL Dig
 - Updated documentation for using the Semaphore wrapper for ConfigEngine tasks 
 - DX Picker - Updated installation instructions for hybrid deployments
 - Web Content Manager Find Rendering and Script Portlet References
-
+- Finding the DAM Staging mismatch between publisher and subscriber
 
 ## All  Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -76,7 +76,12 @@ The following features and updates are available to customers installing HCL Dig
 ==="Containers"
     New documentation about the [Web Content Manager Find Rendering and Script Portlet References AP](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available. 
 
+### Finding the DAM Staging mismatch between publisher and subscriber
+
+=== "Containers"
+    DAM staging supports identifying the discrepancies between a publisher and a subscriber environment. For more information, see the topic [DAM Staging mismatch](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+
