@@ -122,6 +122,50 @@ If you copied an asset to the same collection, a dialogue box to rename the asse
 
 5. Click **View Location** to navigate inside the collection.
 
+## Moving a media asset
+
+This feature helps the user to quickly move an media asset from one collection to another.
+
+!!! note 
+    Moving an asset location can break its links if it is referenced in WCM or any external references. To update the Link, manual re-linking is necessary.
+
+1. Click the **more menu** option of the asset. This allows you to view options such as Properties, Preview, Copy Link, Download, Copy, Move, Rename and Delete.
+
+2. Click **Move**.
+A dialogue box appears that shows the list of collections. You can search for a specific collection. You can also navigate inside a collection of a sub collection is present. 
+
+3. Select a collection you want to copy the asset to and click **Check for references and move**..
+
+4. The confirmation dialogue appears when the asset is referenced in WCM.
+
+5. Select a collection you want to copy the asset to and click **MO**.
+If an asset with same name exists in the target collection, a dialogue box to rename the asset appears. 
+
+6. Click **View Location** to navigate inside the collection.
+
+## Renaming a media asset
+
+This feature allows the user to modify the name of a media asset.
+
+!!! note 
+    Renaming an asset name will break existing references to the asset name in WCM or any external content. To update the asset name, manual re-linking is necessary.
+
+1. Click the **more menu** option of the asset. This allows you to view options such as Properties, Preview, Copy Link, Download, Copy, Move, Rename and Delete.
+
+2. Click **Rename**.
+A dialogue box apears for renaming asset. 
+
+3. Media edit page, the media name input box is present in the inspector panel for renaming asset 
+
+### Configuration for enabling the asset rename and move feature
+The asset move and renaming feature can be enabled or disabled through the helm. By default, this feature is enabled.
+
+```yaml
+configuration:
+  digitalAssetManagement:
+    enableAssetMoveRename: true
+```
+
 ## Changing duplicate asset names using DAM
 
 If an asset happens to have the same name with another asset in a collection, a notification is displayed in the **Information** panel.
