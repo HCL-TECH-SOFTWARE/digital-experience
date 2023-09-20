@@ -1,4 +1,5 @@
 # Accessing the Content Reporting portlet
+
 This section provides steps on how to access the HCL Content Reporting portlet and details on how each report criterion is interpreted.
 
 ## Prerequisite
