@@ -6,7 +6,7 @@ This section provides the steps on how to manage media assets and view configura
 
 HCL DAM CF181 or higher should be installed and configured to the HCL Digital Experience 9.5 Container Release update, following these instructions in the [Install the HCL Digital Experience 9.5 Container components](../../index.md) topic.
 
-## View supported file formats
+## Viewing supported file formats
 
 Follow these steps to view a list of file formats supported by HCL Digital Experience 9.5 DAM.
 
@@ -60,7 +60,7 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |.ppt|application/vnd.ms-powerpoint|
 |.pdf|application/pdf|
 
-## Play a video in DAM
+## Playing a video in DAM
 
 Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if the Kaltura plugin is configured and enabled\):
 
@@ -83,7 +83,7 @@ Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if 
 
 For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md#ul_zhl_vxq_qnb).
 
-## Download a media asset source, version, or rendition
+## Downloading a media asset source, version, or rendition
 
 Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, version, or rendition:
 
@@ -108,56 +108,66 @@ Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including
 
 ## Copying a media asset
 
-This feature helps the user to quickly transfer a media asset from one collection to another.
+Refer to the following steps if you want to copy a media asset from one collection to another.
 
-1. Click the **more menu** option of the asset. This allows you to view options such as Properties, Preview, Copy Link, Download, Copy, and Delete.
+1. Click the **more menu** option of the asset. 
+
+    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, and **Delete**.
 
 2. Click **Copy**.
-A dialogue box appears that shows the list of collections. You can search for a specific collection. You can also navigate inside a collection of a sub collection is present. 
 
-3. Check the **Add new keywords to existing** box if you want newly generated keywords to be added to existing keywords. This is available only when Plugin is enabled.
+    A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection if a subcollection is present. 
+
+3. (Optional) Check the **Add new keywords to existing** box if you want newly generated keywords to be added to existing keywords. This is available only when Plugin is enabled.
 
 4. Select a collection you want to copy the asset to and click **Copy**.
-If you copied an asset to the same collection, a dialogue box to rename the asset appears. 
+
+    If you copied an asset to the same collection, a dialogue box to rename the asset appears. 
 
 5. Click **View Location** to navigate inside the collection.
 
 ## Moving a media asset
 
-This feature helps the user to quickly move an media asset from one collection to another.
+Refer to the following steps if you want to move a media asset from one collection to another.
 
 !!! note 
-    Moving an asset location can break its links if it is referenced in WCM or any external references. To update the Link, manual re-linking is necessary.
+    Moving an asset location can break its links if it is referenced in WCM or any external references. To update the link, manual relinking is necessary.
 
-1. Click the **more menu** option of the asset. This allows you to view options such as Properties, Preview, Copy Link, Download, Copy, Move, Rename and Delete.
+1. Click the **more menu** option of the asset. This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
 
 2. Click **Move**.
-A dialogue box appears that shows the list of collections. You can search for a specific collection. You can also navigate inside a collection of a sub collection is present. 
 
-3. Select a collection you want to copy the asset to and click **Check for references and move**..
+    A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection if a subcollection is present. 
 
-4. The confirmation dialogue appears when the asset is referenced in WCM.
+3. Select the collection you want to copy the asset to and click **Check for references and move**.
 
-5. Select a collection you want to copy the asset to and click **MO**.
-If an asset with same name exists in the target collection, a dialogue box to rename the asset appears. 
+    The confirmation dialogue appears when the asset is referenced in WCM.
 
-6. Click **View Location** to navigate inside the collection.
+4. Select the collection you want to copy the asset to and click **MO**.
+
+    If an asset with same name exists in the target collection, a dialogue box to rename the asset appears. 
+
+5. Click **View Location** to navigate inside the collection.
 
 ## Renaming a media asset
 
-This feature allows the user to modify the name of a media asset.
+Refer to the following steps to modify the name of a media asset.
 
 !!! note 
-    Renaming an asset name will break existing references to the asset name in WCM or any external content. To update the asset name, manual re-linking is necessary.
+    Renaming an asset name will break existing references to the asset name in WCM or any external content. To update the asset name, manual relinking is necessary.
 
-1. Click the **more menu** option of the asset. This allows you to view options such as Properties, Preview, Copy Link, Download, Copy, Move, Rename and Delete.
+1. Click the **more menu** option of the asset. 
+
+    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Delete**.
 
 2. Click **Rename**.
-A dialogue box apears for renaming asset. 
+
+    A dialogue box apears for renaming the media asset. 
 
 3. Media edit page, the media name input box is present in the inspector panel for renaming asset 
 
 ### Configuration for enabling the asset rename and move feature
+
 The asset move and renaming feature can be enabled or disabled through the helm. By default, this feature is enabled.
 
 ```yaml
