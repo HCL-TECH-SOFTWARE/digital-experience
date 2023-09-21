@@ -25,24 +25,27 @@ The following features and updates are available to customers installing HCL Dig
 
 ### Sample integrations of HCL Leap
 
-==="Containers"
+=== "Containers"
     A new document containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [](../../extend_dx/integration/leap/example/index.md) for more information.
 
-==="On-Premises"
+=== "On-Premises"
     A new document containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [](../../extend_dx/integration/leap/example/index.md) for more information.
 
 ### Sample integrations of HCL Volt MX Foundry and Iris
 
-==="Containers"
+=== "Containers"
     A new example on how to integrating an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
 
-==="Containers"
+=== "On-Premises"
     A new example on how to integrating an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
 
 ### New documentation for URLs in DX
 
-==="Containers"
+=== "Containers"
     New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs have been added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md) for more information. 
+
+=== "On-Premises"
+    New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs have been added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md) for more information.
 
 
 ## Digital Experience 9.5 Version
@@ -69,12 +72,12 @@ The following features and updates are available to customers installing HCL Dig
 
 ## DX Picker - Updated installation instructions for hybrid and Kubernetes deployments
 
-==="Containers"
+=== "Containers"
     Steps on how to install DX Picker for hybrid deployments have been added. Instructions for Kubernetes deployments have also been updated. See the Help Center topic [Installing and Deploying DX Picker](../../manage_content/wcm_authoring/dx_picker/installation/index.md) for more information. 
 
 ## Web Content Manager REST API - Web Content Manager Find References to DAM and WCM Artifacts
 
-==="Containers"
+=== "Containers"
     New documentation about the [Web Content Manager Find Rendering and Script Portlet References AP](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available. 
 
 ### Digital Asset Management - Finding the DAM Staging mismatch between publisher and subscriber
