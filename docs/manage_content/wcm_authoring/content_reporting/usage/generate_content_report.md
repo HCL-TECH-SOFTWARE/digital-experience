@@ -85,7 +85,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
 3. After you have selected the search criteria, click **Search**.
 
-    The system displays a set of search results that fit the selected criteria. The total number of results is shown at the top (for example, *10 results found*). The number of matching results helps the user make more informed query reformulations. The applied search criteria information is also displayed at the **Search Criteria** bar (for example, *Expiry date: To 07/13/2023;*).
+    The system displays a set of search results that fit the selected criteria. The total number of results is shown at the top (for example, *15 results found*). The number of matching results helps the user make more informed query reformulations. The applied search criteria information is also displayed at the **Search Criteria** bar (for example, *Expiry date: To 07/13/2023;*).
 
     On the top right corner, the **View Criteria** opens the top drawer and displays the applied search criteria.
 
