@@ -112,7 +112,7 @@ Refer to the following steps if you want to copy a media asset from one collecti
 
 1. Click the **more menu** option of the asset. 
 
-    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, and **Delete**.
+    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
 
 2. Click **Copy**.
 
@@ -139,13 +139,9 @@ Refer to the following steps if you want to move a media asset from one collecti
 
     A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection if a subcollection is present. 
 
-3. Select the collection you want to copy the asset to and click **Check for references and move**.
+3. Select the collection in which you want to move the item and click. **Check for references and move**.
 
-    The confirmation dialogue appears when the asset is referenced in WCM.
-
-4. Select the collection you want to copy the asset to and click **MO**.
-
-    If an asset with same name exists in the target collection, a dialogue box to rename the asset appears. 
+    The confirmation dialogue appears when the asset is referenced in WCM. If an asset with same name exists in the target collection, a dialogue box to rename the asset appears. 
 
 5. Click **View Location** to navigate inside the collection.
 
@@ -164,7 +160,7 @@ Refer to the following steps to modify the name of a media asset.
 
     A dialogue box apears for renaming the media asset. 
 
-3. Media edit page, the media name input box is present in the inspector panel for renaming asset 
+3. During media editing, a new name input box was added to the properties panel, along with a title and description field, to enable asset renaming.
 
 ### Configuration for enabling the asset rename and move feature
 
