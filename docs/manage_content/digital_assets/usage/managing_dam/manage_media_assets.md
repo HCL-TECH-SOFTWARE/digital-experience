@@ -133,15 +133,17 @@ Refer to the following steps if you want to move a media asset from one collecti
 !!! note 
     Moving an asset location can break its links if it is referenced in WCM or any external references. To update the link, manual relinking is necessary.
 
-1. Click the **more menu** option of the asset. This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+1. Click the **more menu** option of the asset. 
+
+    This displays more options such as **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
 
 2. Click **Move**.
 
     A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection if a subcollection is present. 
 
-3. Select the collection in which you want to move the item and click. **Check for references and move**.
+3. Select the collection in which you want to move the item and click **Check for references and move**.
 
-    The confirmation dialogue appears when the asset is referenced in WCM. If an asset with same name exists in the target collection, a dialogue box to rename the asset appears. 
+    The confirmation dialogue appears if the asset is referenced in WCM. If an asset with same name exists in the target collection, a dialogue box to rename the asset appears. 
 
 5. Click **View Location** to navigate inside the collection.
 
