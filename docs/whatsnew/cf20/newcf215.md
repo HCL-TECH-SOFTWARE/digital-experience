@@ -27,10 +27,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Sample integrations of HCL Leap
 
 === "Containers"
-    A new document presenting configuration instructions to display HCL Leap apps in Digital Experience site pages containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
 
 === "On-Premises"
-    A new document presenting configuration instructions to display HCL Leap apps in Digital Experience site pages containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
 
 ### Sample integrations of HCL Volt MX Foundry and Iris
 
