@@ -161,8 +161,10 @@ Refer to the following steps to modify the name of a media asset.
 2. Click **Rename**.
 
     A dialogue box apears for renaming the media asset. 
+    
+3. In the **Rename** dialogue box, enter the new name of the media asset. Click **Save**. 
 
-3. During media editing, a new name input box was added to the properties panel, along with a title and description field, to enable asset renaming.
+Another way to modify the name of a media asset is to edit the asset by clicking the **Pencil** icon. Go to **Properties**. You can edit the **Name** of the media asset in this panel, along with the **Title** and **Description**. Click **Save**.
 
 ### Configuration for enabling the asset rename and move feature
 
