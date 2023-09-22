@@ -16,9 +16,9 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Updated documentation for configuring timezone
-- Updated documentation for using the Semaphore wrapper for ConfigEngine tasks 
-- DX Picker - Updated installation instructions for hybrid deployments
-- Web Content Manager Find Rendering and Script Portlet References
+- Updated documentation for running DX Core configuration tasks
+- DX Picker - Updated installation instructions for hybrid and Kubernetes deployments
+- Web Content Manager REST API - Web Content Manager Find References to DAM and WCM Artifacts
 - Digital Asset Management - Finding the DAM Staging mismatch between publisher and subscriber
 - Digital Asset Management - Moving and renaming media assets
 
