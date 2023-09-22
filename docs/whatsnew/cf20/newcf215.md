@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Sample integrations of HCL Leap
 - Sample integrations of HCL Volt MX Foundry and Iris
 - New documentation for URLs in DX
+- Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 9.5 Version**
 
@@ -26,18 +27,18 @@ The following features and updates are available to customers installing HCL Dig
 ### Sample integrations of HCL Leap
 
 === "Containers"
-    A new document containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
 
 === "On-Premises"
-    A new document containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
 
 ### Sample integrations of HCL Volt MX Foundry and Iris
 
 === "Containers"
-    A new example on how to integrating an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new example on how to integrating an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/mx/example/index.md) for more information.
 
 === "On-Premises"
-    A new example on how to integrating an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new example on how to integrating an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/mx/example/index.md) for more information.
 
 ### New documentation for URLs in DX
 
@@ -47,6 +48,13 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs have been added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md) for more information.
 
+### Notice of deprecation of Textbox.io Rich Text Editor
+
+=== "Containers"
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+
+=== "On-Premises"
+    The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
 ## Digital Experience 9.5 Version
 
@@ -88,7 +96,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Digital Asset Management - Moving and renaming media assets
 
 === "Containers"
-    DX 9.5 Container Update CF215 adds capability to move media assets from one DAM Collection to another, along with associated keywords, and includes an option to save the copied asset under a new name if naming conflicts occur. See the Help Center topic [Digital Asset Management - Manage Media] for more information.
+    DX 9.5 Container Update CF215 adds capability to move media assets from one DAM Collection to another, along with associated keywords, and includes an option to save the copied asset under a new name if naming conflicts occur. There is also a new option to modify the name of media assets. See the Help Center topic [Digital Asset Management - Manage Media](../../manage_content/digital_assets/usage/managing_dam/manage_media_assets.md) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
