@@ -44,7 +44,7 @@ The HCL Content Reporting UI has the following components:
 
 -   **Main header** - This section contains the total number of results found, a link for viewing completed and pending update actions, the **Update** button to update the expiry date of the reported items, and the **Export** button to export the search results into a CSV file.
 -   **Search Criteria** - This section displays a preview of all the criteria used to search for items to populate the report.
--   **Report table** - This table contains the reported items in table format. The table, by default, is sorted by title and by the date the items were last modified.
+-   **Report table** - This table contains the reported items in table format. By default, the table is arranged by title in alphabetical order. You can also sort the items in the report by **Name**, by **Last modified on**, by **Owners**, or by **Authors**. When you change your sorting preference, it is applied even when you search with other criteria, at least until the user reloads the page.
 -   **View Criteria** - Click **View Criteria** to open the top drawer and display the criteria used for populating the report. You can set the criteria and generate a report in this drawer as well.
 
     ![](../../../../assets/HCL_Content_Reporting_Criteria_Options.png)
