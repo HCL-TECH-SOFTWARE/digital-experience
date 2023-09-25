@@ -4,6 +4,7 @@ nav:
     - Integrate HCL Connections: connections
     - Integrate HCL MX Foundry: mx
     - Integrate HCL Leap: leap
-    - Integrate IBM MobileFirst: ibm_mobilefirst
     - Unified Task List Portlet: unified_task_list
     - Web Application Bridge: wab
+    - Integrate IBM MobileFirst: ibm_mobilefirst
+    - Application Integration: fea_ai
