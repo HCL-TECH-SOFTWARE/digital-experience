@@ -40,7 +40,7 @@ This version of HCL Digital Experience together with included authoring tools:
 
 -	Supports customization of display attributes such as color, contrast, and font size.
 
--	Allows to communicate all information independently of color.
+-	Communicates all information independently of color.
 
 -	Supports the attachment of alternative input and output devices.
 
