@@ -27,26 +27,26 @@ The following features and updates are available to customers installing HCL Dig
 ### Sample integrations of HCL Leap
 
 === "Containers"
-    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
 
 === "On-Premises"
-    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages containing sample integrations of HCL Leap with Digital Experience is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
 
 ### Sample integrations of HCL Volt MX Foundry and Iris
 
 === "Containers"
-    A new example on how to integrating an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/mx/example/index.md) for more information.
+    An example on how to integrate an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/mx/example/index.md) for more information.
 
 === "On-Premises"
-    A new example on how to integrating an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/mx/example/index.md) for more information.
+    An example on how to integrate an HCL Volt MX Iris application into HCL Digital Experience pages is now available. See the Help Center topic [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../../extend_dx/integration/mx/example/index.md) for more information.
 
 ### New documentation for URLs in DX
 
 === "Containers"
-    New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs have been added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md) for more information. 
+    New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs is added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md). 
 
 === "On-Premises"
-    New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs have been added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md) for more information.
+    New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs is added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -86,12 +86,12 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager REST API - Web Content Manager Find References to DAM and WCM Artifacts
 
 === "Containers"
-    New documentation about the [Web Content Manager Find Rendering and Script Portlet References AP](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available. 
+    A new document about the [Web Content Manager Find Rendering and Script Portlet References API](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available. 
 
 ### Digital Asset Management - Finding the DAM Staging mismatch between publisher and subscriber
 
 === "Containers"
-    DAM staging supports identifying the discrepancies between a publisher and a subscriber environment. For more information, see the topic [DAM Staging mismatch](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
+    DAM staging supports identifying the discrepancies between a publisher and a subscriber environment. For more information, see the Help Center topic [DAM Staging mismatch](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
 
 ### Digital Asset Management - Moving and renaming media assets
 
