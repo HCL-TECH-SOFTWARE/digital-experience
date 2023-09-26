@@ -113,6 +113,29 @@ The XML hierarchy that is found under the portal section in the XML request file
 
 Depending on the content of an XML request, these resources can be created, modified, deleted or exported. An XML request can contain any number of such resource definitions. It can therefore create hundreds of new resources in one step or modify only a single configuration setting of one existing resource.
 
+## Request Types
+
+XMLAccess allows to specify special processing parameters as part of the request tag like e.g.:
+
+```
+<request
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="PortalConfig_8.0.0.xsd"
+    type="update"
+    create-oids="true">
+```
+
+More information on these can be found in the table below:
+
+|XML element|Description|
+|-----------|-----------|
+|create-oids|If true, this turns on ID generating mode, where object IDs from the input XML are not stored to the database, but new object IDs are generated instead. Default is false.|
+|require-defined-oids|If true resources need to have defined object IDs. In contrast to create-oids IDs are never created dynamically. Default is false.|
+|export-users|If true, a full export of the portal will also include the complete user repository. Default is false. The members of a group can be suppressed, if you specify 'no-member'.|
+|export-release|If true, a full export of the portal will only include public resources. The resulting xml file is intended to be processed by the ReleaseBuilder tool. Default is false.|
+|cleanup-users|If 'invalid', users that are deleted from an external directory will be exported such that they can be deleted in a next step. If 'obsolete', External Users that have no application role assignment will be exported such that they can be deleted in a next step. Default is 'none'.|
+|dam-collections|If true, DAM Collections access control is exported.|
+
 
 ???+ info "Related information"  
     -   [Portal administration tools](../../../../extend_dx/development_tools/index.md)
