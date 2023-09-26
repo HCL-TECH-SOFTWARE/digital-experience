@@ -5,6 +5,6 @@ nav:
     - Integrate HCL MX Foundry: mx
     - Integrate HCL Leap: leap
     - Unified Task List Portlet: unified_task_list
-    - Web Application Bridge: wab/index.md
+    - Web Application Bridge: wab
     - Java Connector Architecture: fea_ai
     - Integrate IBM MobileFirst: ibm_mobilefirst
