@@ -1,4 +1,4 @@
-# Web Application Bridge
+# Integrating with web applications
 
 The Web Application Bridge uses reverse proxy technology to integrate web-based content providers, such as the Microsoft SharePoint server, with HCL Digital Experience. Administrators must first define the virtual web applications or content providers. A lightweight iFrame portlet renders the content from the backend applications. Users can then access the iFrame on a page without requiring direct network access to the backend application. A special engine maps Uniform Resource Identifier (URIs) on the iFrame portlet to real URIs from the content providers.
 
