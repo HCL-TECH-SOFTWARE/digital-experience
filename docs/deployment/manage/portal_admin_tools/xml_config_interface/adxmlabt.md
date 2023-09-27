@@ -125,7 +125,7 @@ With XMLAccess, you can specify special processing parameters as part of the req
     create-oids="true">
 ```
 
-More information on these can be found in the table below:
+For information on the XML elements, refer to the following table:
 
 |XML element|Description|
 |-----------|-----------|
