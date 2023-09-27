@@ -14,7 +14,5 @@ HCL Digital Experience contains an instance of the Dojo Toolkit, a JavaScript li
 The Web Developer toolkit for HCL Digital Experience provides the ability to sync themes, content, and script portlets (also known as Script Applications).
 -   **[Extending DX class path](ext_wp_classpath/ext_wp_classpath.md)**  
 There are several options to add the general code that is not part of an EAR or WAR files.
--   **[Digital Data Connector](../ddc/index.md)**  
-You can use the Digital Data Connector (DDC) for HCL Portal framework to integrate data from external data sources on your portal pages by using HCL Web Content Manager presentation components.
 -   **[Reference documents](reference_docs/reference_docs.md)**  
 Reference copy of API, SPI, Javadoc, and more, for HCL Digital Experience 8.5 and 9.0.

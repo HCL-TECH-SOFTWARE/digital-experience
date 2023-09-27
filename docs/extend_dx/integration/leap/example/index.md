@@ -1,12 +1,12 @@
 # Sample integrations of HCL Leap with HCL Digital Experience
 
-This section provides an overview of the possibilities offered by the integration of HCL Leap and HCL Digital Experience.
+This section provides an overview of the possibilities offered by the integration of HCL Leap and HCL Digital Experience. Follow the [Installation](../installation/index.md) and [Configuration](../configuration/index.md) steps before following the example guide.
 
 ## Showing HCL Leap data on HCL Digital Experience pages 
 
-In this example, you can integrate data from HCL Leap to your HCL Digital Experience pages using the Digital Data Connector. Follow the [Installation](../installation/index.md) and [Configuration](../configuration/index.md) steps before following the example guide.
+In this example, you can integrate data from HCL Leap to your HCL Digital Experience pages using the Digital Data Connector.
 
-## Integrating HCL Leap with HCL Digital Experience
+### Integrating HCL Leap with HCL Digital Experience
 
 Web Application Bridge uses reverse proxy technology to integrate web-based content providers such as HCL Leap with HCL Digital Experience. Administrators must first create the content providers profiles, policies, and web dock applications. More details are available in [Web Application Bridge](../../wab/index.md).
 
@@ -48,3 +48,7 @@ Web Application Bridge uses reverse proxy technology to integrate web-based cont
     3. Click the **Add To Page** button.
 
 The HCL Leap Page should be visible within the HCL Digital Experience page.
+
+### Using the embedded JavaScript API to integrate HCL Leap
+
+Another option to integrate HCL Leap applications with HCL DX is to use the embedded JavaScript API. For instructions, refer to [Embedding API](https://help.hcltechsw.com/Leap/9.3/ref_embedding_api.html) in the HCL Leap documentation.
