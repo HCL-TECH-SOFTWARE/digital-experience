@@ -3,9 +3,8 @@
 To create a simple portlet, you must write the portlet code, compile Java source, create the JAR file, write the portlet descriptors, set up the WAR file directory structure, and package and deploy the portlets.
 
 Alternatively you can use a maven achetype to create a portlet instance and build and package it with maven and deploy with xmlaccess via dxclient or xmlaccess tools. For maven based portlet achetypes see:
-[Maven Portlet Development Utilities](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities)
-Or: 
-[Model View Controller Portlet sample with PAA format](https://openntf.org/main.nsf/project.xsp?r=project/WebSphere%20Portal%20Portlet%20Samples/summary)
+- [Maven Portlet Development Utilities](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities)
+- [Model View Controller Portlet sample with PAA format](https://openntf.org/main.nsf/project.xsp?r=project/WebSphere%20Portal%20Portlet%20Samples/summary)
 
 Before you begin developing portlets, set up an environment that makes the tasks of writing, compiling, and testing portlets easier. Rational® Application Developer includes a test environment that you can use to run and debug your portlets without having to manually deploy them to the server. You can set up the run time environment for debugging portlets on the local development machine or on a remote server. Refer to the documentation for Rational Application Developer for complete setup instructions.
 Rational Application Developer provides wizards to help you build, test, and deploy portlets using all of the APIs and related classes and interfaces available in the portlet run time environment. You can also build portlets using your own development environment and tools. If you are not using wizards to develop portlets, the following topics describe the mechanics of building a simple portlet.
