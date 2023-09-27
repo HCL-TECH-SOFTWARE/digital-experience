@@ -1,12 +1,12 @@
 title: Extend DX
 nav:
     - index.md
-    - Script Applications: script_application
-    - Portlet Development: portlets_development
-    - Development Tools: development_tools
     - Integrating Applications: integration
+    - Development Tools: development_tools
+    - Script Applications: script_application
     - Digital Data Connector: ddc
+    - Portlet Development: portlets_development
     - Screen Flow Manager: screenflow
-    - Using Portal Application Archive: paa
+    - Portal Application Archive: paa
     - apis
 
