@@ -132,7 +132,7 @@ For information on the XML elements, refer to the following table:
 |create-oids|If `true`, this turns on ID generating mode where object IDs from the input XML are not stored to the database, but new object IDs are generated instead. By default, this is set to `false`.|
 |require-defined-oids|If `true`, resources must have defined object IDs. In contrast to create-oids, IDs are not created dynamically. By default, this is set to `false`.|
 |export-users|If `true`, a full export of the portal also includes the complete user repository. By default, this is set to `false`. The members of a group can be suppressed if you specify `no-member`.|
-|export-release|If true, a full export of the portal will only include public resources. The resulting xml file is intended to be processed by the ReleaseBuilder tool. Default is false.|
+|export-release|If `true`, a full export of the portal only includes public resources. The resulting xml file is intended to be processed by the ReleaseBuilder tool. By default, this is set to `false`.|
 |cleanup-users|If 'invalid', users that are deleted from an external directory will be exported such that they can be deleted in a next step. If 'obsolete', External Users that have no application role assignment will be exported such that they can be deleted in a next step. Default is 'none'.|
 |dam-collections|If true, DAM Collections access control is exported.|
 
