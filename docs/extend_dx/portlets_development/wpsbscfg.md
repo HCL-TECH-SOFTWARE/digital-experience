@@ -2,7 +2,7 @@
 
 To create a simple portlet, you must write the portlet code, compile Java source, create the JAR file, write the portlet descriptors, set up the WAR file directory structure, and package and deploy the portlets.
 
-Alternatively you can use a maven achetype to create a portlet instance and build and package it with maven and deploy with xmlaccess via dxclient or xmlaccess tools. For maven based portlet achetypes see:
+Alternatively, you can use a Maven archetype to create a portlet instance. After creation, build and package it with Maven and deploy with XMLAccess using DXClient or XMLAccess tools. For Maven-based portlet archetypes, refer to the following resources:
 - [Maven Portlet Development Utilities](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities)
 - [Model View Controller Portlet sample with PAA format](https://openntf.org/main.nsf/project.xsp?r=project/WebSphere%20Portal%20Portlet%20Samples/summary)
 
