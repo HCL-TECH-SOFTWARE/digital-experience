@@ -115,7 +115,7 @@ Depending on the content of an XML request, these resources can be created, modi
 
 ## Request Types
 
-XMLAccess allows to specify special processing parameters as part of the request tag like e.g.:
+With XMLAccess, you can specify special processing parameters as part of the request tag. For example:
 
 ```
 <request
