@@ -4,10 +4,10 @@
     This guide only applies to HCL Digital Experience 9.5 Container Deployments in combination with HCL Leap Helm installations.
     The currently supported version combination is:
 
-      - At least HCL Digital Experience CF213
+      - HCL Digital Experience CF213 and later versions
       - HCL Leap 9.3.2
 
-    Note that the specified HCL Leap version is the tested version. Using higher versions will most probably work but it is not guaranteed.
+    Note that the specified HCL Leap version is the tested version. Using later versions will most probably work but it is not guaranteed.
 
 Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Leap.
 
