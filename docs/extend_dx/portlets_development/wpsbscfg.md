@@ -2,13 +2,18 @@
 
 To create a simple portlet, you must write the portlet code, compile Java source, create the JAR file, write the portlet descriptors, set up the WAR file directory structure, and package and deploy the portlets.
 
-Before you begin developing portlets, set up an environment that makes the tasks of writing, compiling, and testing portlets easier. Rational® Application Developer includes a test environment that you can use to run and debug your portlets without having to manually deploy them to the server. You can set up the run time environment for debugging portlets on the local development machine or on a remote server. Refer to the documentation for Rational Application Developer for complete setup instructions.
+Alternatively, you can use a Maven archetype to create a portlet instance. After creation, build and package it with Maven and deploy with XMLAccess using DXClient or XMLAccess tools. For Maven-based portlet archetypes, refer to the following resources:
+- [Maven Portlet Development Utilities](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities)
+- [Model View Controller Portlet sample with PAA format](https://openntf.org/main.nsf/project.xsp?r=project/WebSphere%20Portal%20Portlet%20Samples/summary)
 
+Before you begin developing portlets, set up an environment that makes the tasks of writing, compiling, and testing portlets easier. Rational® Application Developer includes a test environment that you can use to run and debug your portlets without having to manually deploy them to the server. You can set up the run time environment for debugging portlets on the local development machine or on a remote server. Refer to the documentation for [Rational Application Developer](https://www.ibm.com/docs/en/radfws) for complete setup instructions.
 Rational Application Developer provides wizards to help you build, test, and deploy portlets using all of the APIs and related classes and interfaces available in the portlet run time environment. You can also build portlets using your own development environment and tools. If you are not using wizards to develop portlets, the following topics describe the mechanics of building a simple portlet.
+
+You can use an editor of your choice like the Eclipse IDE or Visual Studio Code and deploy to DX via dxclient tooling. DX can either run in docker or in Kubernetes or as a traditional install.
 
 ## Writing the portlet code
 
-The Hello World portlet provides an introduction to writing your first portlet. The portlet is provided along with the source in the HCL Portlet Samples package, which is available from the portlet catalog by searching for `navcode 1WP10017Z`. See [Sample portlets](jsrsamp.md) for more information. Hello World provides the fewest methods that are required for a portlet. It uses the portlet response object to write simple output directly to the portal page.
+The Hello World portlet described in this article provides an introduction to writing your first portlet. Hello World provides the fewest methods that are required for a portlet. It uses the portlet response object to write simple output directly to the portal page.
 
 ```xmp
 
@@ -57,7 +62,7 @@ The following JAR files must be set in the class path to compile portlets:
 
     These files are in the directory PortalServer_root/doc/compile.
 
--   **HCL DX portlets**
+-   **HCL DX portlets (IBM API portlets)**
 
     |JAR file|Purpose|
     |--------|-------|
@@ -215,11 +220,7 @@ Before you package your portlet, the class files and resources must be arranged 
 
 To deploy a portlet and run it on the server, it must be packaged in the form of a Web application ARchive or WAR file. The WAR file format contains the Java classes and resources that make up one or more portlets in a portlet application. The resources can be images, JSP files, writing the portlet descriptions, and property files that contain translated message text. Packaging portlet classes, resources, and descriptive information in a single file makes distribution and deployment of portlets easier.
 
--   Documentation resource: [Writing the portlet descriptions: HCL Portal 8.0 Product Documentation](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074915)
-
 HCL DX includes an administrative portlet for installing, uninstalling, and updating portlets. Portlets that are contained in WAR files have the advantage of being dynamically downloaded and installed. The portal administrator can download a WAR file from the Internet and then use the portal administration interface to install the portlet to HCL DX. After installation, the portlet is ready for use and does not require the server to be restarted. To package your portlet in a WAR file, you can use the JAR file utility to package the portlet into a WAR file.
-
--   Documentation source: [Packaging the portlet into a WAR file: HCL Portal 8.0 Product Documentation](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074915)
 
 !!!note
     Because Windows limits the maximum path length to 260 characters, the name of the WAR file must be fewer than 25 characters. On a portal server running on Windows, installing a WAR file with a name that is more than 25 characters results in an error.
@@ -259,7 +260,7 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
         
         ```
 
-    After the WAR file is created, it can be installed to HCL DX as described in [Portal administration portlets](../../deployment/manage//portal_admin_tools/portal_admin_portlets/index.md).
+    After the WAR file is created, it can be installed to HCL DX as described in [Portal administration portlets](../../deployment/manage/portal_admin_tools/portal_admin_portlets/index.md).
 
 -   **Preparing the portlet application for installation**
 
@@ -316,3 +317,7 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
 
 
 
+???+ info "Related information"
+    - [Standard portlet API](../portlets_development/standard_portlet_api/index.md)
+    - [Portlet Development Reference](../portlets_development/portlet_dev_ref/index.md)
+    - [About the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/adxmlabt.md)
