@@ -1,4 +1,4 @@
-# Web Content Manager Find Rendering and Script Portlet References
+# Web Content Manager Find References From WCM Artifacts
 
 This API allows you to find all references to an item identified by its UUID, either by a DAM UUID for an asset or a WCM UUID for a WCM item.
 
@@ -10,7 +10,7 @@ The API is specific per virtual Portal.
 
 Currently, the API does not support finding draft references in projects.
 
-## Using the Web Content Manager Find Rendering and Script Portlet References API
+## Using the Web Content Manager Find References From WCM Artifacts
 
 -   **Endpoint**
 
