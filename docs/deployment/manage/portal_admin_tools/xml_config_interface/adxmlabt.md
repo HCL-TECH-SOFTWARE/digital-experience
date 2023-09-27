@@ -129,7 +129,7 @@ For information on the XML elements, refer to the following table:
 
 |XML element|Description|
 |-----------|-----------|
-|create-oids|If true, this turns on ID generating mode, where object IDs from the input XML are not stored to the database, but new object IDs are generated instead. Default is false.|
+|create-oids|If `true`, this turns on ID generating mode where object IDs from the input XML are not stored to the database, but new object IDs are generated instead. By default, this is set to `false`.|
 |require-defined-oids|If true resources need to have defined object IDs. In contrast to create-oids IDs are never created dynamically. Default is false.|
 |export-users|If true, a full export of the portal will also include the complete user repository. Default is false. The members of a group can be suppressed, if you specify 'no-member'.|
 |export-release|If true, a full export of the portal will only include public resources. The resulting xml file is intended to be processed by the ReleaseBuilder tool. Default is false.|
