@@ -18,11 +18,11 @@ To trigger the staging mismatch process and download the report, refer to the fo
 4. After the status is changed to FIND_MISMATCH_COMPLETED, [download the report](#download-mismatch-report) using DXClient. 
 
     !!!note
-      If the status is not FIND_MISMATCH_COMPLETED, you can still download the report but it is not accurate.
+           If the status is not FIND_MISMATCH_COMPLETED, you can still download the report but it is not accurate.
       
 If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
   
-### Commands to trigger staging mismatch
+### Commands to trigger the identification of staging mismatches
 
 Use the `manage-dam-staging find-staging-mismatch` command to trigger staging mismatch between the publisher and subscriber.
 
