@@ -19,8 +19,8 @@ In a Hybrid Deployment, you need to run the config engine commands in order to e
 
 To enable DX Picker for hybrid deployment, run the **enable-dx-picker** command. 
 
--   AIX, Linux: `./ConfigEngine.sh enable-dx-picker -Ddxpicker.static.ui.url="https://<DX_HOSTNAME>/dx/ui/picker/static" -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
--   Windows: `ConfigEngine.bat enable-dx-picker -Ddxpicker.static.ui.url="https://<DX_HOSTNAME>/dx/ui/picker/static" -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
+-   AIX, Linux: `./ConfigEngine.sh enable-dx-picker -Ddxpicker.static.ui.url=https://<DX_HOSTNAME>/dx/ui/picker/static -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
+-   Windows: `ConfigEngine.bat enable-dx-picker -Ddxpicker.static.ui.url=https://<DX_HOSTNAME>/dx/ui/picker/static -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 
 To disable DX Picker for traditional deployment, run the **disable-dx-picker** command.
 
