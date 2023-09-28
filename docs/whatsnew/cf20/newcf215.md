@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Sample integrations of HCL Leap
 - Sample integrations of HCL Volt MX Foundry and Iris
 - New documentation for URLs in DX
+- Web Content Manager REST API - Web Content Manager Find References from WCM Artifacts
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 9.5 Version**
@@ -18,7 +19,6 @@ The following features and updates are available to customers installing HCL Dig
 - Updated documentation for configuring timezone
 - Updated documentation for running DX Core configuration tasks
 - DX Picker - Updated installation instructions for hybrid and Kubernetes deployments
-- Web Content Manager REST API - Web Content Manager Find References to DAM and WCM Artifacts
 - Digital Asset Management - Finding the DAM Staging mismatch between publisher and subscriber
 - Digital Asset Management - Moving and renaming media assets
 
@@ -47,6 +47,14 @@ The following features and updates are available to customers installing HCL Dig
 
 === "On-Premises"
     New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs is added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md).
+
+### Web Content Manager REST API - Web Content Manager Find References from WCM Artifacts
+
+=== "Containers"
+    A new document about the [Web Content Manager Find References from WCM Artifacts](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available. 
+
+=== "On-Premises"
+    A new document about the [Web Content Manager Find References from WCM Artifacts](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available. 
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -83,10 +91,6 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Steps on how to install DX Picker for hybrid deployments have been added. Instructions for Kubernetes deployments have also been updated. See the Help Center topic [Installing and Deploying DX Picker](../../manage_content/wcm_authoring/dx_picker/installation/index.md) for more information. 
 
-### Web Content Manager REST API - Web Content Manager Find References to DAM and WCM Artifacts
-
-=== "Containers"
-    A new document about the [Web Content Manager Find Rendering and Script Portlet References API](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available. 
 
 ### Digital Asset Management - Finding the DAM Staging mismatch between publisher and subscriber
 

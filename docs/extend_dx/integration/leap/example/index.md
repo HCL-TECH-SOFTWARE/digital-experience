@@ -4,9 +4,19 @@ This section provides an overview of the possibilities offered by the integratio
 
 ## Showing HCL Leap data on HCL Digital Experience pages 
 
-In this example, you can integrate data from HCL Leap to your HCL Digital Experience pages using the Digital Data Connector.
+In this example, you can integrate data from HCL Leap to your HCL Digital Experience pages using the Digital Data Connector. For more information, see [Digital Data Connector](../../../ddc/index.md).
 
-### Integrating HCL Leap with HCL Digital Experience
+## Integrating the HCL Leap application in HCL Digital Experience
+
+There are several ways to integrate HCL Leap applications into HCL Digital Experience.
+
+### Integrating HCL Leap applications using the embedded JavaScript API
+
+There is an option to integrate HCL Leap applications with HCL DX by using the embedded JavaScript API. For instructions, refer to [Embedding API](https://help.hcltechsw.com/Leap/9.3/ref_embedding_api.html) in the HCL Leap documentation.
+
+With this method, you can use a Content Template to allow a business user to select the application and form ID. These details are then used in a Presentation Template with the JavaScript API to call the right Leap application and form.
+
+### Integrating HCL Leap applications with Web Application Bridge
 
 Web Application Bridge uses reverse proxy technology to integrate web-based content providers such as HCL Leap with HCL Digital Experience. Administrators must first create the content providers profiles, policies, and web dock applications. More details are available in [Web Application Bridge](../../wab/index.md).
 
@@ -49,6 +59,3 @@ Web Application Bridge uses reverse proxy technology to integrate web-based cont
 
 The HCL Leap Page should be visible within the HCL Digital Experience page.
 
-### Using the embedded JavaScript API to integrate HCL Leap
-
-Another option to integrate HCL Leap applications with HCL DX is to use the embedded JavaScript API. For instructions, refer to [Embedding API](https://help.hcltechsw.com/Leap/9.3/ref_embedding_api.html) in the HCL Leap documentation.
