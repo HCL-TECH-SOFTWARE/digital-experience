@@ -7,7 +7,7 @@ DAM Staging helps in syncing items between the publisher and subscriber. If ther
 To trigger the staging mismatch process and download the report, refer to the following steps:
 
 1. Find the subscriber ID against which the mismatch needs to be checked. The existing DX Client command can be used to see the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
-2. Trigger the action to find the differences between the publisher and subscriber by using the [Find staging mismatch](#find-staging-mismatch) command. 
+2. Trigger the action to find the differences between the publisher and subscriber by using the [Find staging mismatch](#commands-to-trigger-the-identification-of-staging-mismatches) command. 
     - For the **hostname** attribute, use the publisher host name. 
     - For the subscriber ID attribute, retrieve the subscriber ID by following Step 1. 
     
