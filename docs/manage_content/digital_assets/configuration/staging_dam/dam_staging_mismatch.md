@@ -186,7 +186,7 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version is v1):
 
     ```
     -ringAPIVersion <value>
