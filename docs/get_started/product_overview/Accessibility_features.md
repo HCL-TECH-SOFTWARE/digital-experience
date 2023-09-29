@@ -4,7 +4,7 @@ Accessibility features help users who have a physical disability, such as restri
 
 HCL Digital Experience offerings use the W3C Standard to ensure compliance to US Section 508 and Web Content Accessibility Guidelines (WCAG) 2.1. The best accessibility experience is provided by using the newest release of the browser and the newest release of the screen reader. For more information, see the following URLs:
 
--	[Section 508 Standards for Electronic and Information Technology](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards/)
+-	[Section 508 Standards for Electronic and Information Technology](https://www.access-board.gov/ict/)
 
 -	[Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/)     
 
