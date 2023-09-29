@@ -52,7 +52,7 @@ Integrate the power of HCL Connections with HCL Digital Experience. Choose the d
 
 HCL Digital Experience can be integrated with HCL MX Foundry. Both products can be installed in the same Kubernetes cluster using one Kubernetes namespace per product. 
 
-## HCL Leap
+### HCL Leap
 
 HCL Digital Experience can be integrated with HCL Leap. Both products can be installed in the same Kubernetes cluster using the same Kubernetes namespace.
 
