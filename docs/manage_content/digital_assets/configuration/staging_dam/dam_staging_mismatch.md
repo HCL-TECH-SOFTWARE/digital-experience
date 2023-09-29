@@ -6,7 +6,7 @@ DAM Staging helps in syncing items between the publisher and subscriber. If ther
 
 To trigger the staging mismatch process and download the report, refer to the following steps:
 
-1. Find the subscriber ID against which the mismatch needs to be checked. The existing DX Client command can be used to see the [List of subscribers](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
+1. Find the subscriber ID against which the mismatch needs to be checked. For the existing DX Client commands that you can use to see subscriber details, refer to [Get all subscribers details for DAM staging](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
 2. Trigger the action to find the differences between the publisher and subscriber by using the [Find staging mismatch](#commands-to-trigger-the-identification-of-staging-mismatches) command. 
     - For the **hostname** attribute, use the publisher host name. 
     - For the subscriber ID attribute, retrieve the subscriber ID by following Step 1. 
@@ -180,13 +180,13 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version is v1):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version is v1):
 
     ```
     -ringAPIVersion <value>
