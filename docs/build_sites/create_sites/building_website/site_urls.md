@@ -39,7 +39,8 @@ For users to find specific content in your website, you can provide friendly URL
 
     Friendly URLs have human-readable strings in the URL that describe the path to a Portal page. These human-readable strings correspond to the Friendly URL Names that are associated with the pages or labels. In addition, there might also be Friendly Content Path tokens in the URL. The Friendly Content Path tokens are human-readable strings that describe the site area path to Web Content Management library associated with the page.
 
-    **Note:** A friendly URL might also include an encoded Navigational State document. If it does not, it is a Stateless Friendly URL. There is a programming API specifically for working with Friendly URLs.
+    !!! note
+        A friendly URL might also include an encoded Navigational State document. If it does not, it is a Stateless Friendly URL. There is a programming API specifically for working with Friendly URLs.
 
 -   **Vanity URLs**
 
