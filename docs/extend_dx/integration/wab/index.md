@@ -27,4 +27,6 @@ The troubleshooting information is useful for planning and implementing your Web
 
 ???+ info "Related information"
     - [Providing short vanity URLs](../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md)
+    - [Sample integrations of HCL Leap with HCL Digital Experience](../leap/example/index.md)
+    - [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../mx/example/index.md)
 

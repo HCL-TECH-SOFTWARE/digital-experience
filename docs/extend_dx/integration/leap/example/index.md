@@ -59,3 +59,9 @@ Web Application Bridge uses reverse proxy technology to integrate web-based cont
 
 The HCL Leap Page should be visible within the HCL Digital Experience page.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on the development aspects of web content management, go to [Web Content](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D414). To try it out yourself, refer to [Web Content Developer Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_for_Beginners.pdf) and corresponding [Web Content Developer Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_Lab_Resources.zip).
+
+For an introduction and a demo on how to use the Digital Data Connector, go to [Digital Data Connector](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1451). To try it out yourself, refer to [Digital Data Connector for Beginners Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Digital_Data_Connector_for_Beginners.pdf) and corresponding [Digital Data Connector for Beginners Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Digital_Data_Connector_Lab_Resources.zip).
+
