@@ -2,7 +2,7 @@
 
 This section provides an overview of the possibilities offered by the integration of HCL Leap and HCL Digital Experience. Follow the [Installation](../installation/index.md) and [Configuration](../configuration/index.md) steps before following the example guide.
 
-## Integrating HCL Leap data on HCL Digital Experience pages 
+## Showing HCL Leap data on HCL Digital Experience pages 
 
 In this example, you can integrate data from HCL Leap to your HCL Digital Experience pages using the Digital Data Connector. For more information, see [Digital Data Connector](../../../ddc/index.md).
 
