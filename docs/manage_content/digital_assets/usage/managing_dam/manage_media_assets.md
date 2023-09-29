@@ -141,6 +141,8 @@ Refer to the following steps if you want to move a media asset from one collecti
 
     A dialogue box appears that shows the list of collections. You can search for a specific collection or you can also navigate inside a collection if a subcollection is present. 
 
+    ![Move a media asset](../../../../images/Move_Media_Asset.png)
+
 3. Select the collection in which you want to move the item and click **Check for references and move**.
 
     The confirmation dialogue appears if the asset is referenced in WCM. If an asset with same name exists in the target collection, a dialogue box to rename the asset appears. 
@@ -160,7 +162,9 @@ Refer to the following steps to modify the name of a media asset.
 
 2. Click **Rename**.
 
-    A dialogue box apears for renaming the media asset. 
+    A dialogue box appears for renaming the media asset. 
+
+    ![Rename a media asset](../../../../images/Rename_Media_Asset.png)
     
 3. In the **Rename** dialogue box, enter the new name of the media asset. Click **Save**. 
 
