@@ -7,5 +7,6 @@ This section contains the commands for working with Digital Asset Management (DA
     -   [DAM Schemas](../../../../../manage_content/digital_assets/usage/managing_dam/damschemas.md)
     -   [DAM Assets Export and Import (EXIM)](../../../../../manage_content/digital_assets/usage/managing_dam/dam_exim.md)
     -   [Staging DAM to rendering environments](../../../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
+    -   [DAM Staging Mismatch](../../../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md)
 
 
