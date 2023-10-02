@@ -1,7 +1,7 @@
 title: Web Application Bridge
 nav:
     - index.md
-    - Web Application Bridge: wab
+    - wab
     - wab_alogin.md
     - wab_multi.md
     - trouble_wab.md
