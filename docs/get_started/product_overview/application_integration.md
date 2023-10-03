@@ -42,15 +42,15 @@ HCL DX provides [Digital Data Connector (DDC)](../../extend_dx/ddc/index.md), a 
 
 The power of Digital Data Connector is that you can use all the HCL DX content management facilities for managing your external data visualizations. This includes content syndication, version handling, workflow, and targeting. Since the presentation is managed via content management, changes to data display can be easily managed without needing development skills, and controlled via the content management workflows.
 
-Digital Data Connector is extensible and can be used in conjunction with HCL MX Foundry to gain access to a wide range of back-end services.
+Digital Data Connector is extensible and can be used in conjunction with HCL Volt MX Foundry to gain access to a wide range of back-end services.
 
 ### HCL Connections
 
 Integrate the power of HCL Connections with HCL Digital Experience. Choose the deployment type for your organization and follow the installation and configuration steps to integrate HCL Connections with HCL DX.
 
-### HCL MX Foundry
+### HCL Volt MX Foundry
 
-HCL Digital Experience can be integrated with HCL MX Foundry. Both products can be installed in the same Kubernetes cluster using one Kubernetes namespace per product. 
+HCL Digital Experience can be integrated with HCL Volt MX Foundry. Both products can be installed in the same Kubernetes cluster using one Kubernetes namespace per product. 
 
 ### HCL Leap
 
