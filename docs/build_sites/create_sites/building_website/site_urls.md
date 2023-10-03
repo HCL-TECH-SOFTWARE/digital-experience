@@ -65,4 +65,5 @@ URL mappings were deprecated starting with HCL Portal Version 8.5. Instead, you 
 
 ???+ info "Related information"
     -   [URL generation in HCL Portal](../../../extend_dx/apis/url_generation/index.md)
+    -   [URL Addressability](../url_addressing/index.md)
 

@@ -86,13 +86,13 @@ Use the `manage-dam-staging find-staging-mismatch` command to trigger staging mi
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version is v1):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version is v1):
 
     ```
     -ringAPIVersion <value>

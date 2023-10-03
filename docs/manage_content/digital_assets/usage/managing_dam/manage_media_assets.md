@@ -154,7 +154,7 @@ Refer to the following steps if you want to move a media asset from one collecti
 Refer to the following steps to modify the name of a media asset.
 
 !!! note 
-    Renaming an asset name will break existing references to the asset name in WCM or any external content. To update the asset name, manual relinking is necessary.
+    Renaming an asset name breaks existing references to the asset name in WCM or any external content. To update the asset name, manual relinking is necessary.
 
 1. Click the **more menu** option of the asset. 
 
