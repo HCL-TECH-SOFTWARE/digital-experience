@@ -71,5 +71,6 @@ URLs encode navigational state information about HCL Portal (for example, the us
 
 ???+ info "Related information"
     - [Vanity URLs](../../../manage_content/wcm_delivery/vanity_url/index.md)
+    - [URL Addressability](../../../build_sites/create_sites/url_addressing/index.md)
 
 <!--  - [URLs](../site/site_urls.md)-->
