@@ -39,6 +39,8 @@ The default URL for a site is `https://mydxsample.hcl.com:443/wps/portal/[virtua
 
 Typically, the authenticated URL is different from the URL for anonymous access. This allows better caching and higher security. Using the default sample URL `https://mydxsample.hcl.com:443/wps/portal/[virtual-portal-context]/rootpage/childpage/[content]/[state]?query-params#anchor`, instead of `/portal`, the authenticated URL contains `/myportal`. This can be customized. Note that while the anonymous URL context can be completely removed, an authenticated URL context is required.
 
+For more information, see [Properties File: wkplc_comp.properties](../../../deployment/manage/cfg_property_files/wkplc_comp-dita.md)
+
 ## Generating Portal URLs
 
 Generating Portal URLs correctly is one of the most important tasks in programming an HCL Portal based application. There are several programming tools and techniques available for generating HCL Portal URLs in custom code.
@@ -63,7 +65,7 @@ For more information, see [Changing your site URL](../../../deployment/manage/si
 
 Friendly URLs have human-readable strings in the URL that describe the path to a Portal page. 
 
-For more information, see [Portal URLs](../building_website/site_urls.md).
+For more information, see [Portal URLs](../adding_pages_content_more/editing_page_settings/toolbar_friendlyurl.md).
 
 ### Vanity URLs
 
@@ -125,7 +127,7 @@ Underlying HCL DX is the IBM WebSphere Application Server, a powerful J2EE serve
 ???+ info "Related information"
     - [Personalization Rules](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/personalization.md)
 
-    - [Web Application bridge](../../../extend_dx/integration/wab/wab/index.md)
+    - [Web Application Bridge](../../../extend_dx/integration/wab/wab/index.md)
     
     - [Outbound HTTP connection](../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/index.md)
 
