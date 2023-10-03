@@ -4,8 +4,8 @@ HCL Digital Experience offers multiple methods and services to integrate with ma
 
 -   **[HCL Connections](connections/index.md)**  
 Integrate HCL Connections with HCL Digital Experience.
--   **[HCL MX Foundry](mx/index.md)**  
-Integrate HCL MX Foundry with HCL Digital Experience.
+-   **[HCL Volt MX Foundry](mx/index.md)**  
+Integrate HCL Volt MX Foundry with HCL Digital Experience.
 -   **[HCL Leap](leap/index.md)**  
 Integrate HCL Leap with HCL Digital Experience.
 -   **[Unified Task List](unified_task_list/index.md)**  
