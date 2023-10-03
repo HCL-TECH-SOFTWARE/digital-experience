@@ -1,8 +1,10 @@
-# Configure HCL Portal to work with HCL Connections
+# Integrating HCL Connections with HCL Digital Experience
 
-Integrate the power of HCL Connections with HCL Portal application.
+HCL Connections brings social networking to the enterprise and helps you to communicate, collaborate, and build strong relationships with others. Stay connected from the office or your mobile device. HCL Connections consists of the following applications: Activities, Blogs, Bookmarks, Communities, Files, Forums, Home page, Metrics, Profiles, and Wikis. 
 
-Choose the deployment type for your organization and follow the installation and configuration steps to integrate HCL Connections with HCL Portal.
+Integrate the power of HCL Connections with HCL Digital Experience.
+
+Choose the deployment type for your organization and follow the installation and configuration steps to integrate HCL Connections with HCL DX.
 
 -   **[Configure HCL Connections on-premise](../connections/configuration/cfg_portal_with_cnx/connections_onpremise/index.md)**<br>
 Bring the power of HCL Connections to your portal applications.
@@ -18,3 +20,6 @@ Test the configuration of the application-specific Ajax proxy to manage authenti
 Depending on your deployment, follow these steps to optimize the HCL Connections portlets.
 -   **[Addressing HCL Connections content from a portlet](../connections/configuration/cfg_portal_with_cnx/connections_poc/index.md)**  
 Use custom URIs to identify, access, and display HCL Connections in a portlet.
+
+???+ info "Related information"
+    - [Social rendering](../../../build_sites/social_rendering/index.md)
