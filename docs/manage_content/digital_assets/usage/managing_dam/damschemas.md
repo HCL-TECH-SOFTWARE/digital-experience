@@ -36,7 +36,7 @@ The list-dam-schemas command is used to list all the DAM schemas.
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the server (e.g. for Kubernetes Environment dxPort is 443):
+    Use this attribute to specify the port on which to connect to the server (e.g. for Kubernetes Environment, dxPort is 443):
 
     ```
     -dxPort <value>
@@ -54,25 +54,25 @@ The list-dam-schemas command is used to list all the DAM schemas.
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the port number of the DAM server (e.g. for Kubernetes Environment default port is 443):
+    Use this attribute to specify the port number of the DAM server (e.g. for Kubernetes Environment, default port is 443):
 
     ```
     -damAPIPort <value>
     ```
 
-    Use this attribute to specify the port number of the DX Core API server (e.g. for Kubernetes Environment default port is 443):
+    Use this attribute to specify the port number of the DX Core API server (e.g. for Kubernetes Environment, default port is 443):
 
     ```
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API Version number of DAM (e.g. for Kubernetes Environment default port is 443):
+    Use this attribute to specify the API Version number of DAM (e.g. for Kubernetes Environment, default version is v1): 
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API Version number of DX Core (e.g. for Kubernetes Environment default port is 443):
+    Use this attribute to specify the API Version number of DX Core (e.g. for Kubernetes Environment, default version is v1):
 
     ```
     -ringAPIVersion <value>
@@ -121,7 +121,7 @@ Use the delete-dam-schema command to delete the inactive DAM schema.
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the server (e.g. for Kubernetes Environment dxPort is 443):
+    Use this attribute to specify the port on which to connect to the server (e.g. for Kubernetes Environment, dxPort is 443):
 
     ```
     -dxPort <value>
@@ -139,31 +139,31 @@ Use the delete-dam-schema command to delete the inactive DAM schema.
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the port number of the DAM server (e.g. for Kubernetes Environment default port is 443):
+    Use this attribute to specify the port number of the DAM server (e.g. for Kubernetes Environment, default port is 443):
 
     ```
     -damAPIPort <value>
     ```
 
-    Use this attribute to specify the port number of the DX Core API server (e.g. for Kubernetes Environment default port is 443):
+    Use this attribute to specify the port number of the DX Core API server (e.g. for Kubernetes Environment, default port is 443):
 
     ```
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API Version number of DAM (e.g. for Kubernetes Environment default port is 443):
+    Use this attribute to specify the API Version number of DAM (e.g. for Kubernetes Environment, default version is v1):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API Version number of DX Core (e.g. for Kubernetes Environment default port is 443):
+    Use this attribute to specify the API Version number of DX Core (e.g. for Kubernetes Environment, default version is v1):
 
     ```
     -ringAPIVersion <value>
     ```
 
-    Use this attribute to specify the DAM Schema Version (e.g. for Kubernetes Environment default port is 443):
+    Use this attribute to specify the DAM Schema Version (e.g. for Kubernetes Environment, default port is 443):
 
     ```
     -schemaVersion <value>
