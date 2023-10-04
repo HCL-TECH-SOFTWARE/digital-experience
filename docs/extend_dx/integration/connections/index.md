@@ -1,8 +1,6 @@
 # Integrating HCL Connections with HCL Digital Experience
 
-HCL Connections brings social networking to the enterprise and helps you to communicate, collaborate, and build strong relationships with others. Stay connected from the office or your mobile device. HCL Connections consists of the following applications: Activities, Blogs, Bookmarks, Communities, Files, Forums, Home page, Metrics, Profiles, and Wikis. 
-
-Integrate the power of HCL Connections with HCL Digital Experience.
+HCL Connections brings social networking to the enterprise and helps you to communicate, collaborate, and build strong relationships with others. Stay connected from the office or your mobile device. HCL Connections consists of the following applications: Activities, Blogs, Bookmarks, Communities, Files, Forums, Home page, Metrics, Profiles, and Wikis. For more information, see the [HCL Connections documentation](https://help.hcltechsw.com/connections/welcome/index.html). 
 
 Choose the deployment type for your organization and follow the installation and configuration steps to integrate HCL Connections with HCL DX.
 
