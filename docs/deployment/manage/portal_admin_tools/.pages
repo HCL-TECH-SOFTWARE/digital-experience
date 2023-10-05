@@ -6,5 +6,6 @@ nav:
     - XML configuration interface: xml_config_interface
     - Portal Scripting Interface: portal_scripting_interface
     - Configuration Wizard: cfg_wizard
+    - WebSphereIntegratedSolutionsConsole.md
     - Updates using ReleaseBuilder: releasebuilder
     - Language support: language_support
