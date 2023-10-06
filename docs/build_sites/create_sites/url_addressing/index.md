@@ -63,7 +63,7 @@ For more information, see [Changing your site URL](../../../deployment/manage/si
 
 #### Friendly Action URLs
 
-New with version 215 and later: Action URLs can be configured to be friendly.
+New with version 216 and later: Action URLs can be configured to be friendly.
 While DX allows for friendly URLs, actions in portlets still trigger state information, making the URLs unfriendly. The main reason is for bookmarkability, caching.
 Sample friendly URL: http://localhost:10039/wps/myportal/Home/portlet1
 Sample URL after action: http://localhost:10039/wps/myportal/Home/unfriendly/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziAxwtPA3cgw2MLZ3cDQzMHD3CvN2d_Y0MvM31w8EKDFCAo4FTkJGTsYGBu7-RfhTp-pFNIk4_HgVR-I0P14_CogTVB4TMKMgNDY0wyHQEAEtOCvU!/p0/IZ7_PA8I0GS039BG006AHVKGCO20S4=CZ6_PA8I0GS039BG006AHVKGCO20K7=LAtx3bXcr9g6G_9FFNzVJLrplxI0xbgzLlX5VqJmm77IT6cSS0g=/#Z7_PA8I0GS039BG006AHVKGCO20S4
