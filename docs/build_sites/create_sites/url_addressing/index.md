@@ -61,6 +61,29 @@ DX state URLs have a complex structure and include a large compressed and encode
 
 For more information, see [Changing your site URL](../../../deployment/manage/siteurl_cfg/index.md).
 
+#### Friendly Action URLs
+
+New with version 215 and later: Action URLs can be configured to be friendly.
+While DX allows for friendly URLs, actions in portlets still trigger state information, making the URLs unfriendly. The main reason is for bookmarkability, caching.
+Sample friendly URL: http://localhost:10039/wps/myportal/Home/portlet1
+Sample URL after action: http://localhost:10039/wps/myportal/Home/unfriendly/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziAxwtPA3cgw2MLZ3cDQzMHD3CvN2d_Y0MvM31w8EKDFCAo4FTkJGTsYGBu7-RfhTp-pFNIk4_HgVR-I0P14_CogTVB4TMKMgNDY0wyHQEAEtOCvU!/p0/IZ7_PA8I0GS039BG006AHVKGCO20S4=CZ6_PA8I0GS039BG006AHVKGCO20K7=LAtx3bXcr9g6G_9FFNzVJLrplxI0xbgzLlX5VqJmm77IT6cSS0g=/#Z7_PA8I0GS039BG006AHVKGCO20S4
+
+A new configuration option was added, allowing to redirect after action execution to a friendly URL. When enabling the feature, it is assumed the session or other means are used to store the information about the view to show.
+The configuration can be set via a feature flag as portlet meta data – this can be configured per portlet.
+The feature is only active if friendly URLs are enabled and theme is enabled for friendly URLs.
+
+To enable set:
+friendly.action.redirect=true
+
+![Configure friendly action URLs](../../../images/EnableFriendlyActionURLs.png)
+
+No restart is required.
+
+To disable:
+Remove friendly.action.redirect=true or set friendly.action.redirect=false
+
+No restart is required.
+
 ### Friendly Names
 
 Friendly URLs have human-readable strings in the URL that describe the path to a Portal page. 
