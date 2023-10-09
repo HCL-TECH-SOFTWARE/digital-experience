@@ -9,3 +9,6 @@ For the deployment and installation of DX, refer to the [Deploy Container Platfo
 ## Deploy HCL Volt MX Foundry using Helm
 
 For the deployment and installation of MX Foundry, refer to [HCL Volt MX Documentation: Installation Guide for Volt MX Foundry Containers Helm Installation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Introduction.html).
+
+!!! important
+    HCL DX customers with entitlements to the [HCL Digital Experience Cloud Native 9.5 offering](../../../../get_started/product_overview/offerings.md) can download Volt Foundry entitlements in their Flexnet entitlement to DX Cloud Native 9.5.1, and may disregard instructions to obtain Volt Foundry entitlements in HCL Volt MX 9.5 Flexnet offerings. 
