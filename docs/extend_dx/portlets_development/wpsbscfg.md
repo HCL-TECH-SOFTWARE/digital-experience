@@ -174,6 +174,9 @@ The following samples can be packaged with the Hello World portlet.
 
     The standard portlet descriptor is defined by an XML schema and does not require a DTD.
 
+    !!!important
+        It is required to either specify an objectID for the portlet or set the `create-oids="true"` property to prevent the deployment from failing. For more information, see [Symbolic object IDs and ID generating mode](../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/objectid_xml_script/adxmlref_symbl_obj_id.md).
+
 
 ## Setting up the WAR file directory structure
 
