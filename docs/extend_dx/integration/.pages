@@ -3,7 +3,7 @@ nav:
     - index.md
     - Integrate HCL Connections: connections
     - Integrate HCL Leap: leap
-    - Integrate HCL MX Foundry: mx
+    - Integrate HCL Volt MX Foundry: mx
     - Unified Task List Portlet: unified_task_list
     - Web Application Bridge: wab
     - Java Connector Architecture: fea_ai
