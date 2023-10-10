@@ -38,6 +38,7 @@ For a WSRP Producer, security configuration is optional. A WSRP Consumer must us
 
     -   For a Consumer portal, you must define a security configuration that is compatible with the security configuration of the Producer portal from which you consume WSRP services. This configuration must include all the appropriate security aspects.
     -   On the Consumer portal, the consumed portlets behave like local portlets. Therefore, you can configure Portal Access Control for the remote portlets on the Consumer portal the in same way as for local portlets. If you use Web Services Security, do not make the affected remote portlets available to anonymous users on the Consumer portal. Instead, configure Portal Access Control to make the affected remote portlets available to authenticated users only.
+
 -   **For portals that work as both a Producer and a Consumer portal:**
 
     -   If you use your portal as both a Producer and a Consumer portal, the security configurations for both these roles are independent of each other.
@@ -48,7 +49,7 @@ For more detailed information about Portal Access Control, read the sections abo
 ???+ info "Related information"
     - [Configuring Portal Access Control for a WSRP Producer portal](../portal_wsrp_producer/securing_wsrp_prod_portal/wsrpt_prod_sec_pac.md)
     - [Managing Access Control](../../../../../deployment/manage/security/people/authorization/controlling_access/sec_ac_adm.md)
-    - [WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
+    - [WebSphere Application Server product documentation version 8.5](https://www.ibm.com/products/websphere-application-server)
     - [Updating a WSRP Producer](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_producer.md)
     - [Updating a WSRP Consumer](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_consumer.md)
 
