@@ -76,11 +76,19 @@ A new configuration option is available where you can redirect a URL after actio
 !!!note
     The feature is only active if friendly URLs are enabled and theme is enabled for friendly URLs.
 
-To enable this feature, set `friendly.action.redirect=true`.
+To enable this feature:
+
+1. Go to the **Manage Portlets** page.
+2. In the **New Preference** field, enter **friendly.action.redirect**.
+3. In the **New value** field, enter **true**.
+4. Click **Add**.
 
 ![Configure friendly action URLs](../../../images/EnableFriendlyActionURLs.png)
 
-To disable this feature, remove `friendly.action.redirect=true` or set `friendly.action.redirect=false`.
+To disable this feature, you can perform any of the following actions:
+
+- Delete the **friendly.action.redirect** preference with the **true** value.
+- Edit the value of the **friendly.action.redirect** preference to **false**. 
 
 No restart is required for both enabling and disabling this feature. 
 
