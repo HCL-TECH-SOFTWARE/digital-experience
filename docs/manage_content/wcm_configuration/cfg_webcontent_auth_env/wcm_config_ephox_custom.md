@@ -204,6 +204,8 @@ As of CF208, the TinyMCE editor is enabled out of the box.
 
 2.  Restart the WebSphere_Portal server.
 
+<!--
+
 ## Using a custom EditLive! editor toolbar
 
 !!! note
@@ -246,4 +248,5 @@ As of CF208, the TinyMCE editor is enabled out of the box.
 
 -   Documentation resource: [Newly unsupported features and themes for HCL Digital Experience 8.5 and 9.0](../../../whatsnew/unsupported_features.md)
 
+-->
 
