@@ -52,3 +52,42 @@ For the Collection:
 For the Asset:
 
   ![](../../../../assets/HCL_DX_Picker_Asset_Properties.png)
+
+### Previewing an asset
+
+Clicking on the eye icon next to the name of an asset will open the image in Preview mode.
+
+!!! note
+    The Preview mode can also be access inside the Properties panel.
+
+  ![](../../../../assets/HCL_DX_Picker_Asset_Preview_Button.png)
+
+The following can be done inside Preview mode:
+
+  ![](../../../../assets/HCL_DX_Picker_Asset_Preview_Component.png)
+
+1. **View image renditions**
+
+    Users can select via a dropdown which rendition of the image they want to view.
+
+    !!! note
+        For more information on renditions, refer to [Renditions](../../renditions/index.md).
+
+2. **Download image**
+
+    Clicking the download icon will allow the users to download the previewed image.
+
+    !!! important
+        Renditions will not be part of the download, only the source image will be downloaded.
+
+3. **Select image**
+
+    Users can also trigger the selection of an asset when in Preview mode.
+
+4. **Navigate between assets**
+
+    Users can click the previous and next button to navigate other assets inside a collection.
+
+5. **Image zoom in/out**
+
+    Clicking on the zoom in/out button allows the user to inspect the image precisely.
