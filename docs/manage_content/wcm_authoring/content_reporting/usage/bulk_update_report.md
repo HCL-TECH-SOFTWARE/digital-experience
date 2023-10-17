@@ -45,7 +45,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
 You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results): through the snackbar or through the **Updates** page.
 
-## Using the Content Reporting Bulk Update Update Owners/Authors feature
+## Using the Content Reporting Bulk Update Owners/Authors feature
 
 Content managers can trigger bulk updates to update the owners and/or authors of all queried items. This section provides steps on how to update the owners or authors of content items in a report generated through HCL Content Reporting.
 
