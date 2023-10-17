@@ -1,6 +1,6 @@
-# DAM Staging Mismatch
+# DAM Staging mismatch and Resync
 
-DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the discrepancies between environments just by browsing through them. A new feature called DAM Staging Mismatch is introduced in [Digital Asset Management](../../index.md) (DAM) to help you find the discrepancies between the environments and view them in a detailed report.
+DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the discrepancies between environments just by browsing through them. A new feature called DAM Staging Mismatch and resync is introduced in [Digital Asset Management](../../index.md) (DAM) which helps to find the discrepancies between the environments, view them in a detailed report and perform resync.
 
 ## Finding the DAM Staging mismatch
 
@@ -21,8 +21,15 @@ To trigger the staging mismatch process and download the report, refer to the fo
            If the status is not FIND_MISMATCH_COMPLETED, you can still download the report but it is not accurate.
       
 If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
-  
-### Commands to trigger the identification of staging mismatches
+
+5. An additional action delete staging mismatch created to delete mismatch information for subscribers from database, if want to re run the process.
+
+    !!!note
+           You can delete the available mismatch information between a publisher and all subscribers at once. Moreover, you can also run the action against one subscriber at a time.
+
+## Commands to trigger the identification of staging mismatches
+
+### Find Staging mismatch
 
 Use the `manage-dam-staging find-staging-mismatch` command to trigger staging mismatch between the publisher and subscriber.
 
@@ -232,9 +239,221 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
         dxclient manage-dam-staging get-staging-mismatch-report -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
 
-### Configuration
+### Delete staging mismatch
+
+Use the `manage-dam-staging delete-staging-mismatch` command to delete staging mismatch logs
+
+-   **Command description**
+
+    You can delete the staging mismatch found with the following command:
+
+    ```
+    dxclient manage-dam-staging delete-staging-mismatch
+    ```
+
+-   **Help command**
+
+    The following command shows the help information for `manage-dam-staging delete-staging-mismatch` command usage:
+
+    ```
+    dxclient manage-dam-staging delete-staging-mismatch -h
+    ```
+
+-   **Command options**
+
+    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: ""):
+
+    ```
+    -dxProtocol <value>
+    ```
+
+    Use this attribute to specify the host name of the DX server of the publisher (default: ""):
+
+    ```
+    -hostname <value>
+    ```
+
+    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -dxPort <value>
+    ```
+
+    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: ""):
+
+    ```
+    -dxUsername <value> 
+    ```
+
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: ""):
+
+    ```
+    -dxPassword <value>
+    ```
+
+    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -damAPIPort <value>
+    ```
+
+    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -ringAPIPort <value>
+    ```
+
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -damAPIVersion <value>
+    ```
+
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -ringAPIVersion <value>
+    ```
+
+    Use this attribute to specify the subscriber ID for which the mismatch needs to be deleted:
+    
+    ```
+    -subscriberId <value>
+    ```
+
+-   **Commands:**
+
+    ```
+    dxclient manage-dam-staging delete-staging-mismatch -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -subscriberId <subscriberId>
+    ```
+
+    !!! example
+
+        ```
+        dxclient manage-dam-staging delete-staging-mismatch -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
+        ```
+
+## Resync the DAM Staging environments
+
+To trigger the DAM staging resync, refer to the following steps:
+
+1. Find the subscriber ID against which the resync needs to be done. The existing DX Client command can be used to see subscriber details, refer to [Get all subscribers details for DAM staging](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
+2. Trigger the action to start re-sync between the publisher and subscriber using the [Resync DAM Staging environments](#resync-dam-staging-environments) command.
+    - For the **hostname** attribute, use the publisher host name. 
+    - For the subscriber ID attribute, retrieve the subscriber ID by following Step 1.
+3. Verify the status of resync operation. Check resyncStatus field response (for example, RESYNC_TRIGGER_START, RESYNC_TRIGGER_COMPLETED, RESYNC_TRIGGER_FAILED) by executing the command in [Get all subscribers details for DAM staging](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
+4. After the status is changed to RESYNC_TRIGGER_COMPLETED, it implies operations got created to perform the resync.
+
+    !!!note
+           status RESYNC_TRIGGER_COMPLETED only implies that resync operations got created, as operations are asynchronous, system will take time to be in sync.
+
+### Resync DAM Staging environments
+
+Use the `manage-dam-staging start staging resync` command to trigger DAM staging resync between the publisher and subscriber
+
+-   **Command description**
+
+    You can trigger the staging resync between the publisher and the subscriber with the following command:
+
+    ```
+    dxclient manage-dam-staging start staging resync
+    ```
+
+-   **Help command**
+
+    The following command shows the help information for `manage-dam-staging start staging resync` command usage:
+
+    ```
+    dxclient manage-dam-staging start staging resync -h
+    ```
+
+-   **Command options**
+
+    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: ""):
+
+    ```
+    -dxProtocol <value>
+    ```
+
+    Use this attribute to specify the host name of the DX server of the publisher (default: ""):
+
+    ```
+    -hostname <value>
+    ```
+
+    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -dxPort <value>
+    ```
+
+    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: ""):
+
+    ```
+    -dxUsername <value> 
+    ```
+
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: ""):
+
+    ```
+    -dxPassword <value>
+    ```
+
+    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -damAPIPort <value>
+    ```
+
+    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -ringAPIPort <value>
+    ```
+
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -damAPIVersion <value>
+    ```
+
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -ringAPIVersion <value>
+    ```
+
+    Use this attribute to specify the subscriber ID against which the find mismatch needs to be triggered:
+    
+    ```
+    -subscriberId <value>
+    ```
+
+-   **Commands:**
+
+    ```
+    dxclient manage-dam-staging start staging resync -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -subscriberId <subscriberId>
+    ```
+
+    !!! example
+
+        ```
+        dxclient manage-dam-staging start staging resync -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
+        ```
+
+## Verification
+
+At the subscriber environment,If there are operations that are in "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, then it implies that  some operations are not completed yet, we should wait till all operation either get completed or failed. the existing DAM API endpoint can be checked [GET All DAM Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). If there are no operation present with the above status mention in 1. then we can begin to verify the resync.
+
+### Verify the Resync
+
+1. Perform the Find Mismatch [Find staging mismatch](#finding-the-dam-staging-mismatch).
+2. If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync.
+
+### Configurations
 
 - [Find staging mismatch](#find-staging-mismatch) compares tables between both publisher and subscriber. The `maxRecordsToCompare` value under `configuration.digitalAssetManagement` in Helm charts is the number of records picked up to compare at a single iteration. This can be tuned for better performance.
+
 
 ### Limitations
 
@@ -251,3 +470,4 @@ Use the `manage-dam-staging get-staging-mismatch-report` command to download the
            enableStagingCleanupHeartbeats
            findStagingMismatchHeartbeatIntervalTimeInMinutes
            ```
+- Performing Resync is not supported for Two-way staging (A scenario where 2 environments being publisher and subscriber for each other).
