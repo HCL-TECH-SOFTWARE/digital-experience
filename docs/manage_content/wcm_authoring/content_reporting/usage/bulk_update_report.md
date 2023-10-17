@@ -45,7 +45,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
 You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results): through the snackbar or through the **Updates** page.
 
-## Using the Content Reporting Bulk Update Update Owners/Authors feature
+## Using the Content Reporting Bulk Update Owners/Authors feature
 
 Content managers can trigger bulk updates to update the owners and/or authors of all queried items. This section provides steps on how to update the owners or authors of content items in a report generated through HCL Content Reporting.
 
@@ -53,13 +53,13 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Button_OwnersAuthors.png)
 
-2. In the **Update items** box, there are three options: **Property**, **Action**, and **User**.  In the **Property** field, choose the property to be updated, either **Author** or **Owner**. In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. In the **User** field, type the name of the user to be involved in the action.  After completing the fields. Click the **Update** button.
+2. In the **Update items** box, there are three options: **Property**, **Action**, and **User**.  In the **Property** field, choose the property to be updated, either **Author** or **Owner**. In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. In the **User** field, type the name of the user to be involved in the selected action.  This field is a type-ahead input field that will display a list of suggested users according to the input.  Only suggested users are considered valid. After completing the fields. Click the **Update** button.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Items_OwnersAuthors.png)
 
     !!!note
         For the **Replace** action there are two fields for the user(s) involved in the action: **Add User** and **Remove User**. Complete as appropriate.
-        ![Alt text](update_items_ReplaceOwnersAuthors.png)
+        ![](../../../../assets/HCL_Content_Reporting_Update_Items_ReplaceOwnersAuthors.png)
 
 3. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and that you entered the correct user information. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
 
@@ -70,7 +70,7 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results): through the snackbar or through the **Updates** page.
 
 !!!note
-    To date adding up to 100 users and updating up to 7000 items have been tested successfully.
+    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions and items to which you have edit access.  To date adding up to 100 users and updating up to 7000 items have been tested successfully.
 
 ## Tracking Bulk Updates and viewing Bulk Update results
 
