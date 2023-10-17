@@ -449,7 +449,7 @@ Use the `manage-dam-staging start staging resync` command to trigger DAM staging
 
 ## Verification
 
-At the subscriber environment, If there are any operations that are in "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, then it implies that  some operations are not completed yet and we should wait till all operations either gets completed or failed. the existing DAM API endpoint can be checked [GET All DAM Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). If there are no operation present with the above status mention in 1. then we can begin to verify the resync.
+At the subscriber environment, If there are any operations that are in "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, then it implies that  some operations are not completed yet and we should wait till all operations either gets completed or failed. The existing DAM API endpoint can be checked in [GET All DAM Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). If there are no operation present with the above status mentioned in step 1, then we can begin to verify the resync.
 
 ### Verify the Resync
 
