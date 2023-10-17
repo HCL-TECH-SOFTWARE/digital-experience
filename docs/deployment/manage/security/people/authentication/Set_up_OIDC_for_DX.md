@@ -86,6 +86,13 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
     ```
 
+    For non-Kubernetes, use the following:
+    ```
+    <profile_path>/bin/wsadmin.sh|bat installOIDCRP.py install <node-name> WebSphere_Portal -user <admin-userid> -password <admin-password>
+    ```
+    
+    In a cluster, adjust the cellName and cluster accordingly.
+
 2. Open IBM WebSphere Application Server Integrated Solutions Console and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP > Manage modules**.
 
 3. Select available module and click “Apply” then “OK”. ![](../../../../../images/OIDCRP_WAS_SERVER_MAPPING.png)
@@ -96,7 +103,13 @@ Restart the server (that is, the DX core JVM) to load the newly installed OIDC R
 
 ```
 kubectl exec -it dx-deployment-core-0 bash -n dxns
-/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh stop-portal-server
+/opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh stop-portal-server -user <admin-userid> -password <admin-password>
+```
+
+For non-Kubernetes, use the following for all Portal JVMs:
+```
+<profile_path>/bin/stopServer.sh|bat WebSphere_Portal -user <admin-userid> -password <admin-password>
+<profile_path>/bin/startServer.sh|bat WebSphere_Portal -user <admin-userid> -password <admin-password>
 ```
 
 ## Configuring the OIDC RP TAI against your IdP
@@ -223,6 +236,11 @@ First, set the login property to `mail` to match the identity attribute coming i
     vi wimconfig.xml
 
     ```
+    
+    For non-Kubernetes:
+    
+    If non-clustered or standalone, go to the Deployment Manager and edit the file `<profile_path>/config/cells/<cell-name>/wim/config/wimconfig.xml`.
+ 
 
 2. From here, find the `userSecurityNameMapping` config attribute in the realmConfiguration and change the value of property `propertyForOutput` to `uniqueName` as outlined below:
 
@@ -245,6 +263,15 @@ Finally, restart the DX environment (specifically, the DX core JVM) for the chan
 kubectl exec -it dx-deployment-core-0 bash -n dxns
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh stop-portal-server
 ```
+
+Refer to the following steps for non-Kubernetes:
+    
+- If clustered, access the Deployment Manager. Sync all nodes and restart the Deployment Manager, node agent, and Portal JVMs.
+- If standalone, use the following:
+    ```
+    <profile_path>/bin/stopServer.sh|bat WebSphere_Portal -user <admin-userid> -password <admin-password>
+    <profile_path>/bin/startServer.sh|bat WebSphere_Portal -user <admin-userid> -password <admin-password>
+    ```
 
 The restart takes a few minutes to complete.
 
