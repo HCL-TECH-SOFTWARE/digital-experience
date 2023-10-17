@@ -1,6 +1,8 @@
 # DAM Staging mismatch and Resync
 
-DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the discrepancies between environments just by browsing through them. A new feature called DAM Staging Mismatch and resync is introduced in [Digital Asset Management](../../index.md) (DAM) which helps to find the discrepancies between the environments, view them in a detailed report and perform resync.
+DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the discrepancies between environments just by browsing through them. A new feature called DAM Staging Mismatch and resync is introduced in [Digital Asset Management](../../index.md) (DAM) which helps to find the discrepancies between the environments, view them in a detailed report and perform resync to ensure the subscriber is in sync with the publisher.
+
+ During this mismatch find and resync process, it is a good practice to ensure no authoring happens on the publisher end.
 
 ## Finding the DAM Staging mismatch
 
@@ -22,10 +24,10 @@ To trigger the staging mismatch process and download the report, refer to the fo
       
 If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
 
-5. An additional action delete staging mismatch created to delete mismatch information for subscribers from database, if want to re run the process.
+5. An additional action delete staging mismatch created to delete mismatch information for subscribers from database, if want to rerun the process.
 
     !!!note
-           You can delete the available mismatch information between a publisher and all subscribers at once. Moreover, you can also run the action against one subscriber at a time.
+           You can delete all the mismatch information or choose to delete only for the specific subscriber ID.
 
 ## Commands to trigger the identification of staging mismatches
 
@@ -315,7 +317,7 @@ Use the `manage-dam-staging delete-staging-mismatch` command to delete staging m
     -ringAPIVersion <value>
     ```
 
-    Use this attribute to specify the subscriber ID for which the mismatch needs to be deleted:
+    Use this attribute to specify the subscriber ID for which the mismatch needs to be deleted. If this field is not passed, then all the mismatch information will be deleted:
     
     ```
     -subscriberId <value>
@@ -335,6 +337,8 @@ Use the `manage-dam-staging delete-staging-mismatch` command to delete staging m
 
 ## Resync the DAM Staging environments
 
+Resync of DAM Staging environments will eventually ensure the subscriber environment is in in sync with the publisher.
+
 To trigger the DAM staging resync, refer to the following steps:
 
 1. Find the subscriber ID against which the resync needs to be done. The existing DX Client command can be used to see subscriber details, refer to [Get all subscribers details for DAM staging](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
@@ -342,11 +346,13 @@ To trigger the DAM staging resync, refer to the following steps:
     - For the **hostname** attribute, use the publisher host name. 
     - For the subscriber ID attribute, retrieve the subscriber ID by following Step 1.
 3. Verify the status of resync operation. Check resyncStatus field response (for example, RESYNC_TRIGGER_START, RESYNC_TRIGGER_COMPLETED, RESYNC_TRIGGER_FAILED) by executing the command in [Get all subscribers details for DAM staging](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging).
-4. After the status is changed to RESYNC_TRIGGER_COMPLETED, it implies operations got created to perform the resync.
+4. After the status is changed to RESYNC_TRIGGER_COMPLETED, it implies the background operations to perform the resync are created.
 
     !!!note
            status RESYNC_TRIGGER_COMPLETED only implies that resync operations got created, as operations are asynchronous, system will take time to be in sync.
 
+5. View the subscriber operations API to check if there are any operations still in progress. More details are available in [this link](#verification)
+   
 ### Resync DAM Staging environments
 
 Use the `manage-dam-staging start staging resync` command to trigger DAM staging resync between the publisher and subscriber
@@ -443,7 +449,7 @@ Use the `manage-dam-staging start staging resync` command to trigger DAM staging
 
 ## Verification
 
-At the subscriber environment,If there are operations that are in "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, then it implies that  some operations are not completed yet, we should wait till all operation either get completed or failed. the existing DAM API endpoint can be checked [GET All DAM Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). If there are no operation present with the above status mention in 1. then we can begin to verify the resync.
+At the subscriber environment, If there are any operations that are in "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, then it implies that  some operations are not completed yet and we should wait till all operations either gets completed or failed. the existing DAM API endpoint can be checked [GET All DAM Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). If there are no operation present with the above status mention in 1. then we can begin to verify the resync.
 
 ### Verify the Resync
 
