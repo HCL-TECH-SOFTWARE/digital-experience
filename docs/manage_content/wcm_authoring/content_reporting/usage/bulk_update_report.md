@@ -14,6 +14,8 @@ Beginning with HCL Digital Experience 9.5 release update CF214, Content Reportin
 
 2. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
+3. [Export the report](./export_content_report.html) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-update-ownersauthors-feature)
+
 ## Using the Content Reporting Bulk Update UpdateExpiry feature
 
 Content managers can trigger bulk updates to update the expiration dates of all queried items. This section provides steps on how to update the expiration date of content items in a report generated through HCL Content Reporting.
