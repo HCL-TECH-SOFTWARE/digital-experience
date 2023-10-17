@@ -7,3 +7,21 @@ The `WebSphere® Integrated Solutions Console` allows you to view and modify con
 Alternatively, you can use configuration command line tools like wsadmin instead if the changes need to be scripted. 
 
 For more information, go to [IBM WebSphere® Integrated Solutions Console](https://www.ibm.com/docs/en/was/9.0.5). 
+
+## Default URLs
+
+During the configuration process, you might need to following URLs to access different administration user interfaces.
+
+Use the following default URLs to access HCL the WebSphere® Integrated Solutions Console and the Configuration Wizard:
+
+-   **WebSphere® Integrated Solutions Console**
+
+    http://yourserver:10038/ibm/console
+
+    http://yourserver:10041/ibm/console
+
+-   **Configuration Wizard**
+
+    http://yourserver:10200/ibm/wizard
+
+    http://yourserver:10202/ibm/wizard
