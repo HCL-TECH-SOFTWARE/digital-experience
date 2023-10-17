@@ -429,7 +429,7 @@ Use the `manage-dam-staging start staging resync` command to trigger DAM staging
     -ringAPIVersion <value>
     ```
 
-    Use this attribute to specify the subscriber ID against which the find mismatch needs to be triggered:
+    Use this attribute to specify the subscriber ID against which the resync needs to be done:
     
     ```
     -subscriberId <value>
