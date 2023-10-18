@@ -99,6 +99,18 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     ![](../../../../assets/HCL_Content_Reporting_Search_Results_PostSort.png)
 
+- To paginate the search results, input the page and/or number of rows per page you want from the footer.
+    
+    ![](../../../../assets/HCL_Content_Reporting_Search_Results_Pagination.png)
+
+- To change the number of rows per page of the search results, select from the options in the dropdown for rows per page.
+    
+    ![](../../../../assets/HCL_Content_Reporting_Search_Results_Pagination_PageSize.png)
+
+- To change the current page of the search results, select from the options in the dropdown for page number.
+    
+    ![](../../../../assets/HCL_Content_Reporting_Search_Results_Pagination_Page.png)
+
 - To add more criteria to your search, click **View Criteria**. Click the **+ Add** button to add another search criteria.
     
     ![](../../../../assets/HCL_Content_Reporting_Add_Criteria_Button_Dropdown.png)

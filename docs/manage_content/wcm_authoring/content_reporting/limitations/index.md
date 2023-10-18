@@ -27,10 +27,6 @@ Take note of the following limitations when using HCL Content Reporting:
 -   The CSV export function uses the browser's blob storage. If a large CSV export is attempted, users might encounter out-of-memory errors with the browser. This prevents the successful download of any large file.
 -   Selecting a subset of items in the report for export is not allowed.
 
-## Supported languages
-
--   The Content Reporting UI is in English and it is not yet translated to other languages.
-
 ## User interface
 
 Note that the following pages do not support server-side pages, which might cause an unstable UI when processing large amounts of data.
