@@ -6,7 +6,7 @@ Take note of the following limitations when using HCL Content Reporting:
 
 - For the **Expiry date** criteria, no results are returned if the same date is used in the **From** and **To** fields.
 - For the **Word** criteria, a dash (-) is considered a delimiter for splitting the text entered. For example, if you search for "AT-Product-Item", results are returned for three different words: AT, Product, and Item.
-- After generating a report, there is no option to sort using certain fields such as **Location**, **Status**, **Type**, and **Expires on**.
+- After generating a report, there is no option to sort using certain fields such as **Location**, **Status**, **Type**, **Expires on**, and **Owners**.
 
 ## Using the Bulk Updates feature
 
@@ -15,9 +15,10 @@ Take note of the following limitations when using HCL Content Reporting:
 -   Only the following actions are currently available:
     - Update the expiration date of content items
     - Add, Remove, and Replace owners and authors of content items
--   Updates can only be applied in bulk to content items, site areas, authoring templates, components, categories, and items with Edit access.
--   Items that are not assigned a workflow are excluded from the updates.
+-   When updating expiration dates, updates can only be applied in bulk to content items, site areas, authoring templates, components, categories, and items with Edit access.
+-   When updating expiration dates, items that are not assigned a workflow are excluded from the updates.
 -   When updating expiration dates, you can only select a date and the default time is 12:00 a.m.
+-   When updating owners or authors, updates cannot be applied in bulk to Libraries.
 -   The status of bulk update requests is not tracked in real-time; the status is updated every 10 seconds.
 -   Selecting a subset of items in the report for update is not allowed.
 
