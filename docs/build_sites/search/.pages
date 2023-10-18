@@ -19,6 +19,6 @@ nav:
     - Remote search service: remotesearch
     - Configuring search in a cluster: cfg_search_cluster
     - Configuring search in a portal farm: cfg_search_farm
-    - Configur_search_in_portlet.md
+    - Configure_search_in_portlet.md
     - advp_tsk_cgf_srchcoll.md
     - Search REST API specification: search-rest-api
