@@ -12,7 +12,9 @@ Take note of the following limitations when using HCL Content Reporting:
 
 -   The bulk updates feature has been tested to work with a maximum of 5000 items. Working with items more than this amount might lead to performance issues.
 -   The bulk updates feature does not have project scope (HCL Digital Experience Projects) capabilities.
--   You can only update the expiration date of items.
+-   Only the following actions are currently available:
+    - Update the expiration date of content items
+    - Add, Remove, and Replace owners and authors of content items
 -   Updates can only be applied in bulk to content items, site areas, authoring templates, components, categories, and items with Edit access.
 -   Items that are not assigned a workflow are excluded from the updates.
 -   When updating expiration dates, you can only select a date and the default time is 12:00 a.m.

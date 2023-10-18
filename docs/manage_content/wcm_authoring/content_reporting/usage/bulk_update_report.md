@@ -77,7 +77,7 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page.
 
 !!!note
-    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
+    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
 
 ## Tracking Bulk Updates and viewing Bulk Update results
 
