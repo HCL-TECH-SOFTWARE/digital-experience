@@ -27,7 +27,7 @@ To trigger the staging mismatch process and download the report, refer to the fo
 If you want to rerun the process, an additional action to [delete the created staging mismatch](#delete-staging-mismatch) is now available. This deletes the mismatch information for subscribers from the database.
 
     !!!note
-           You can delete all the generated mismatch information or choose to delete only for a specific [subscriber ID](#L320).
+           You can delete all the generated mismatch information or choose to delete only for a specific subscriber ID.
 
 ## Commands to trigger the identification of staging mismatches
 
@@ -476,4 +476,4 @@ In the subscriber environment, if there are any operations that are in "TODO", "
            enableStagingCleanupHeartbeats
            findStagingMismatchHeartbeatIntervalTimeInMinutes
            ```
-- Performing a resync is not supported for two-way staging (Two-way staging refers to a scenario where two environments are publisher and subscriber to each other).
+- Performing a resync is not supported for two-way staging (for example, a scenario where two environments are each other's publisher and subscriber).
