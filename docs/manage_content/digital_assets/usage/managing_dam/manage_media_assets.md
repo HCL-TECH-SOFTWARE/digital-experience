@@ -132,7 +132,7 @@ Refer to the following steps if you want to move a media asset from one collecti
 
 !!! note 
     Moving an asset location can break its links if it is referenced in WCM or any external references. To update the link, manual relinking is necessary. 
-    To view the asset references, go to Properties and then to the Insights section.
+    To view the asset references, go to **Properties > Insights**.
 
 1. Click the **more menu** option of the asset. 
 
