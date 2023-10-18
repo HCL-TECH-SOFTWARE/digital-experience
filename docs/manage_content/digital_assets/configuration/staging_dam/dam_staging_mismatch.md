@@ -24,10 +24,10 @@ To trigger the staging mismatch process and download the report, refer to the fo
       
    If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
 
-5. An additional action delete staging mismatch created to delete mismatch information for subscribers from database, if want to rerun the process.
+If you want to rerun the process, an additional action to [delete the created staging mismatch](#delete-staging-mismatch) is now available. This deletes the mismatch information for subscribers from the database.
 
     !!!note
-           You can delete all the mismatch information or choose to delete only for the specific subscriber ID.
+           You can delete all the generated mismatch information or choose to delete only for a specific [subscriber ID](#L320).
 
 ## Commands to trigger the identification of staging mismatches
 
@@ -305,13 +305,13 @@ Use the `manage-dam-staging delete-staging-mismatch` command to delete staging m
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version is v1):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version is v1):
 
     ```
     -ringAPIVersion <value>
@@ -417,13 +417,13 @@ Use the `manage-dam-staging start staging resync` command to trigger DAM staging
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version is v1):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default port for any Kubernetes environment is 443):
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version is v1):
 
     ```
     -ringAPIVersion <value>
@@ -449,7 +449,7 @@ Use the `manage-dam-staging start staging resync` command to trigger DAM staging
 
 ## Verification
 
-In the subscriber environment, if there are any operations that are in "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, then it means that these operations are yet complete. You must wait until all operations either complete or fail. The existing DAM API endpoint can be checked in [GET All DAM Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). If no operation is present with the above status mentioned in step 1, then you can verify the resync.
+In the subscriber environment, if there are any operations that are in "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, then it means that these operations are yet complete. You must wait until all operations either complete or fail. The existing DAM API endpoint can be checked in [GET All DAM Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). If no operation is present with the above status, then you can verify the resync.
 
 ### Verify the Resync
 
@@ -476,4 +476,4 @@ In the subscriber environment, if there are any operations that are in "TODO", "
            enableStagingCleanupHeartbeats
            findStagingMismatchHeartbeatIntervalTimeInMinutes
            ```
-- Performing a resync is not supported for two-way staging (for example, a scenario where two environments are each other's publisher and subscriber.
+- Performing a resync is not supported for two-way staging (Two-way staging refers to a scenario where two environments are publisher and subscriber to each other).
