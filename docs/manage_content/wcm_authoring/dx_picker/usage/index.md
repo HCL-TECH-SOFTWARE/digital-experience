@@ -55,40 +55,39 @@ For the Asset:
 
 ### Previewing an asset
 
-Click on the eye icon next to the asset name, to open the image in Preview mode.
+To open the image in Preview mode, click the eye icon next to the asset name.
 
 !!! note
-    The Preview mode can also be access inside the Properties panel.
+    You can also access the Preview mode using the Properties panel.
 
   ![](../../../../assets/HCL_DX_Picker_Asset_Preview_Button.png)
 
-The following can be done inside Preview mode:
+The following actions can be done when in Preview mode:
 
   ![](../../../../assets/HCL_DX_Picker_Asset_Preview_Component.png)
 
-1. **View image renditions**
+1. View image renditions.
 
-    Users can select via a dropdown which rendition of the image they want to view.
-    Click on the dropdown and select the rendition of the image you want to view.
+    To choose the rendition of the image you want to view, click the dropown menu and select the specific rendition.
 
-    !!! note
-        For more information on renditions, refer to [Renditions](../../renditions/index.md).
+    
+    For more information on renditions, refer to [Renditions](../../renditions/index.md).
 
-2. **Download image**
+2. Download an image.
 
-    Click on the download icon, to download the previewed image.
+    To download the previewed image, click the download icon.
 
-    !!! important
-        Renditions will not be part of the download, only the source image will be downloaded.
+    !!!note
+        Only the source image is downloaded. Renditions are not included when downloading images.
 
-3. **Select image**
+3. Select an image. 
 
-    Users can trigger the selection of an asset, when in Preview mode.
+    To select an asset, click the **Select** button. 
 
-4. **Navigate between assets**
+4. Navigate between assets.
 
-    Click on the previous and next button, to navigate other assets inside a collection.
+    To navigate other assets inside a collection, click the previous and next buttons.  
 
-5. **Image zoom in/out**
+5. Zoom in and out of an image.
 
-    Click on the zoom in/out button, to inspect the image precisely.
+    To inspect the image, click the zoom in and zoom out buttons. 
