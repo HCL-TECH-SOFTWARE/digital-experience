@@ -1,6 +1,6 @@
-# DAM Staging mismatch and Resync
+# DAM Staging Mismatch and Resync
 
-DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the discrepancies between environments just by browsing through them. A new feature called DAM Staging Mismatch and resync is introduced in [Digital Asset Management](../../index.md) (DAM) which helps to find the discrepancies between the environments, view them in a detailed report and perform resync to ensure the subscriber is in sync with the publisher.
+DAM Staging helps in syncing items between the publisher and subscriber. If there are any failures during the sync, the sync results to uneven assets between environments. This makes it difficult to find the discrepancies between environments just by browsing through them. A new feature called DAM Staging Mismatch and Resync is introduced in [Digital Asset Management](../../index.md) (DAM) which helps to find the discrepancies between the environments, view them in a detailed report, and perform resync to ensure the subscriber is in sync with the publisher.
 
  During this mismatch find and resync process, it is a good practice to ensure no authoring happens on the publisher end.
 
@@ -22,7 +22,7 @@ To trigger the staging mismatch process and download the report, refer to the fo
     !!!note
            If the status is not FIND_MISMATCH_COMPLETED, you can still download the report but it is not accurate.
       
-If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
+   If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
 
 5. An additional action delete staging mismatch created to delete mismatch information for subscribers from database, if want to rerun the process.
 
