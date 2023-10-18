@@ -1,10 +1,17 @@
 # Content Reporting Bulk Update
 
-Currently Content Reporting Bulk Update supports the following actions: update expiration date, add an owner or author, remove an owner or author, and replace an owner or author. These actions can be executed on content items returned in a report generated through HCL Content Reporting search.
+Currently Content Reporting Bulk Update supports the following actions: 
+
+- Update expiration date
+- Add an owner or author
+- Remove an owner or author
+- Replace an owner or author
+
+These actions can be executed on content items returned in a report generated through HCL Content Reporting search.
 
 ## Prerequisite
 
-Beginning with HCL Digital Experience 9.5 release update CF214, Content Reporting is enabled by default.  For HCL Digital Experience 9.5 release update CF213, Content Reporting should be installed and configured. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+Beginning with HCL Digital Experience 9.5 release update CF214, Content Reporting is enabled by default. For HCL Digital Experience 9.5 release update CF213, Content Reporting should be installed and configured. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
 ## Using the Content Reporting Bulk Update feature
 
@@ -14,7 +21,7 @@ Beginning with HCL Digital Experience 9.5 release update CF214, Content Reportin
 
 2. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
-3. [Export the report](./export_content_report.html) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-update-ownersauthors-feature)
+3. [Export the report](./export_content_report.html) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-update-ownersauthors-feature).
 
 ## Using the Content Reporting Bulk Update UpdateExpiry feature
 
@@ -25,14 +32,14 @@ Content managers can trigger bulk updates to update the expiration dates of all 
     ![](../../../../assets/HCL_Content_Reporting_Update_Button.png)
 
 
-2. In the **Update items** box, there are two options: **Property**, and **Change to**.  In the **Property** field, choose **Expiry date**. In the **Change to** field, enter the new expiry date of the selected items. After entering the date, the **Update** button is enabled. Click the **Update** button.
+2. In the **Update items** dialog box, there are two options: **Property**, and **Change to**.  In the **Property** field, choose **Expiry date**. In the **Change to** field, enter the new expiry date of the selected items. After entering the date, the **Update** button is enabled. Click the **Update** button.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Items_UpdateExpiry.png)
 
     There are also **Cancel** and **Clear** buttons in the dialog box. Click **Cancel** to close the dialog box. Click **Clear** to remove all selected options.
 
     !!!note
-        For CF213, there are three fields: **Action**, **Property**, and **Change to**.  The **Action** and **Property** fields each have one option: **Update** and **Expiry date** respectively.  Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
+        For CF213, there are three fields: **Action**, **Property**, and **Change to**. The **Action** and **Property** fields each have one option: **Update** and **Expiry date** respectively.  Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
 
 3. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and if you entered the correct expiration date. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
 
@@ -43,7 +50,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
         ![](../../../../assets/HCL_Content_Reporting_Update_Disable.png)
 
-You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results): through the snackbar or through the **Updates** page.
+You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page.
 
 ## Using the Content Reporting Bulk Update Owners/Authors feature
 
@@ -53,12 +60,12 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Button_OwnersAuthors.png)
 
-2. In the **Update items** box, there are three options: **Property**, **Action**, and **User**.  In the **Property** field, choose the property to be updated, either **Author** or **Owner**. In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. In the **User** field, type the name of the user to be involved in the selected action.  This field is a type-ahead input field that will display a list of suggested users according to the input.  Only suggested users are considered valid. After completing the fields. Click the **Update** button.
+2. In the **Update items** dialog box, there are three options: **Property**, **Action**, and **User**. In the **Property** field, select the property to be updated, either **Author** or **Owner**. In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. In the **User** field, enter the name of the user to be involved in the selected action. This field is a type-ahead input field that displays a list of suggested users according to the input. Only suggested users are considered valid. After filling out all the fields, click the **Update** button.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Items_OwnersAuthors.png)
 
     !!!note
-        For the **Replace** action there are two fields for the user(s) involved in the action: **Add User** and **Remove User**. Complete as appropriate.
+        For the **Replace** action, there are two fields for the users involved in the action: **Add User** and **Remove User**. In the **Add User** field, enter the name of the user you want to add. In the **Remove User** field, enter the name of the user you want to replace with the name you added in the **Add User** field. 
         ![](../../../../assets/HCL_Content_Reporting_Update_Items_ReplaceOwnersAuthors.png)
 
 3. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and that you entered the correct user information. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
@@ -67,10 +74,10 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
     There are also **Cancel** and **Clear** buttons in the dialog box. Click **Cancel** to close the dialog box. Click **Clear** to remove all selected options.
 
-You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results): through the snackbar or through the **Updates** page.
+You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page.
 
 !!!note
-    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions and items to which you have edit access.  To date adding up to 100 users and updating up to 7000 items have been tested successfully.
+    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
 
 ## Tracking Bulk Updates and viewing Bulk Update results
 
