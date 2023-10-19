@@ -1,4 +1,4 @@
-# Configuring search in a portlets
+# Configuring search in portlets
 
 In this section, you can configure the search and filter the portlets by defining a portlet property setting.
 
