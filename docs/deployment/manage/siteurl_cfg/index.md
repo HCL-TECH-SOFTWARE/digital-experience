@@ -7,3 +7,6 @@ The instructions that you follow in this section depend on whether you changed y
 ## Limitation
 
 If you removed the context root, the HCLWeb Content Manager Commerce Integration linking and editing function does not work.
+
+???+ info "Related information"
+    - [URL Addressability](../../../build_sites/create_sites/url_addressing/index.md)
