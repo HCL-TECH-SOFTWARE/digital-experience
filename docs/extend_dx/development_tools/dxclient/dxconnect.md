@@ -77,3 +77,6 @@ https://YOUR_KUBE_ENV_NAME.com:10203/ibm/console
 
 ???+ info "Related information"
     - [DXClient](../dxclient/index.md)
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
+

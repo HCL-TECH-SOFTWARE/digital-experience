@@ -154,7 +154,8 @@ The following information describes virtual resources. The resources listed migh
     Users can update and modify the portal theme.
 
 
--   **[Role blocks for resources](../resources/sec_blockroles.md)**  
-Role blocks prevent inheritance and propagation through the resource hierarchy. This topic describes role blocks and provides examples of how role blocks affect resources.
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
 
 
