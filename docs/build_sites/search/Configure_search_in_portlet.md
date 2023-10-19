@@ -1,8 +1,6 @@
-# Configure Search in a Portlets on Pages
+# Configuring search in a portlets
 
 In this section, you can configure the search and filter the portlets by defining a portlet property setting.
-
-## Portlets
 
 The “INCLUDE_IN_SEARCH_INDEX” is a portlet property setting with the following available values:
 
@@ -12,10 +10,9 @@ The “INCLUDE_IN_SEARCH_INDEX” is a portlet property setting with the followi
 ![Managed Pages](../../images/Portlets_on_Pages.png)
 
 !!! note
-    The WCM Web Content Viewer portlet is set to “INCLUDE_IN_SEARCH_INDEX=false". The reason is that in the past not having had this filter option, this had accounted for duplicate result list entries - one from processing the portlet with the default content, the second coming from WCM library which delivered the default content item once again.
+    - The WCM Web Content Viewer portlet is set to “INCLUDE_IN_SEARCH_INDEX=false". The reason is that in the past not having had this filter option, this had accounted for duplicate result list entries - one from processing the portlet with the default content, the second coming from WCM library which delivered the default content item once again.
 
-!!! note 
-    If the portlet property is neglected (this is the default), that portlet will be indexed by the search engine.
+    - If the portlet property is neglected (this is the default), that portlet will be indexed by the search engine.
 
 !!! important
     This property is only applicable to portlets and not available for Portal pages. If none of the portlets on a Portal page will get indexed, then that page will not appear in any search result.
