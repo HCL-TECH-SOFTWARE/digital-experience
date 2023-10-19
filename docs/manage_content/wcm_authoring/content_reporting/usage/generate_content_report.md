@@ -103,7 +103,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
     
     ![](../../../../assets/HCL_Content_Reporting_Search_Results_Pagination.png)
 
-- To change the number of rows per page of the search results, select from the options in the dropdown for rows per page.
+- To change the number of rows per page of the search results, select from the options in the **Show rows:** dropdown menu.
     
     ![](../../../../assets/HCL_Content_Reporting_Search_Results_Pagination_PageSize.png)
 
