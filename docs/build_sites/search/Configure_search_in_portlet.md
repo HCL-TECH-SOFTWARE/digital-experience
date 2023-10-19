@@ -10,12 +10,12 @@ The “INCLUDE_IN_SEARCH_INDEX” is a portlet property setting with the followi
 ![Managed Pages](../../images/Portlets_on_Pages.png)
 
 !!! note
-    - The WCM Web Content Viewer portlet is set to “INCLUDE_IN_SEARCH_INDEX=false". The reason is that in the past not having had this filter option, this had accounted for duplicate result list entries - one from processing the portlet with the default content, the second coming from WCM library which delivered the default content item once again.
+    - The WCM Web Content Viewer portlet is set to “INCLUDE_IN_SEARCH_INDEX=false". This is because in the past, this filter option is not available and this accounted for duplicate result list entries -- one from processing the portlet with the default content, the second coming from WCM library which delivered the default content item again.
 
-    - If the portlet property is neglected (this is the default), that portlet will be indexed by the search engine.
+    - By default, the portlet property is neglected. This means that the portlet is indexed by the search engine.
 
 !!! important
-    This property is only applicable to portlets and not available for Portal pages. If none of the portlets on a Portal page will get indexed, then that page will not appear in any search result.
+    This property is only applicable to portlets and not available for Portal pages. If none of the portlets on a Portal page are    indexed, then that page will not appear in any search result.
 
 
 For more information, refer to https://www.ibm.com/support/pages/apar/PH00477.
