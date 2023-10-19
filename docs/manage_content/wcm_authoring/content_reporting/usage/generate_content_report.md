@@ -99,7 +99,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
     ![](../../../../assets/HCL_Content_Reporting_Search_Results_PostSort.png)
 
-- To paginate the search results, input the page and/or number of rows per page you want from the footer.
+- To paginate the search results, enter the page and/or number of rows per page you want from the footer.
     
     ![](../../../../assets/HCL_Content_Reporting_Search_Results_Pagination.png)
 
