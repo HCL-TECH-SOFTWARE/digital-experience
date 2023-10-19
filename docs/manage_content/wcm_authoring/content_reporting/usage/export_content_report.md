@@ -18,6 +18,6 @@ Content managers can export generated reports in HCL Content Reporting.
 
     ![](../../../../assets/HCL_Content_Reporting_Export_Options.png)
 
-4. When exporting is successful, you can find and check downloaded CSV file in your local filesystem where you chose to have it saved. The dialog you see may vary depending on your browser or device.
+4. When exporting is successful, you can find and check downloaded CSV file in your local filesystem where you saved it. The dialog box you see may vary depending on your browser or device.
 
     ![](../../../../assets/HCL_Content_Reporting_Export_Result.png)
