@@ -94,4 +94,5 @@ self: /collections/collection-one/items/car.jpg/renditions/Desktop.
     - [Manage collections](../../../manage_content/digital_assets/usage/managing_dam/manage_collections.md)
     - [Set unique custom URL for a media asset](../../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_set_unique_custom_URL_media_asset.md)
     - [Manage media assets](../../../manage_content/digital_assets/usage/managing_dam/manage_media_assets.md)
+    - [URL Addressability](../../../build_sites/create_sites/url_addressing/index.md)
     
