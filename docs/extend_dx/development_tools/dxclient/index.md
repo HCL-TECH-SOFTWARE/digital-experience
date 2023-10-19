@@ -262,9 +262,13 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
 !!! important
     The DXClient version is mostly forward and backward compatible with the DX CF versions. However, in some cases, it might not work as expected if the CF versions are different. Make sure that the CF versions of both DXClient and DX Core are the same in your installation.
+    You may use "`dxclient version-compat`" to check version compatibility between DX Core and DXClient.
 
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
+
+    -   HCL DX 9.5 CF216 release: **V1.25.0
+        -   Show version compatibility details between DX Core and DXClient.
 
     -   HCL DX 9.5 CF214 release: **V1.23.0
         -   Lists all themes during Pull theme if themeName is not provided.
@@ -617,6 +621,12 @@ Use this command to download the theme files in WebDAV Server in preparation for
 
 ```bash
 dxclient livesync pull-theme [options]
+```
+
+Use this command to show version compatibility details between DX Core and DXClient [`version-compat`](../dxclient/dxclient_artifact_types/versionCompat.md):
+
+```bash
+dxclient version-compat [options]
 ```
 
 ## DXClient command line help
