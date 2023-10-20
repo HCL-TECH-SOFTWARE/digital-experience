@@ -2,7 +2,7 @@ title: Development Tools
 nav:
     - index.md
     - DXClient: dxclient
-    - HCL DX Extensions: dx-extensions
+    - HCL DX Extensions: hcl_dx_extensions
     - Web Experience Factory: wef
     - WSRP services: wsrp
     - Dojo Support: dojo

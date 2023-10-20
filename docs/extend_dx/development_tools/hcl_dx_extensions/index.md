@@ -9,7 +9,7 @@ For v1.0.0 of this tool, we will cover real time sync of WebDAV based DX themes 
 Before installing the extension, ensure the following pre-requisites are met:
 
    - VS Code 1.80.0 or higher
-   - [DXClient 1.24.0 or higher](https://opensource.hcltechsw.com/digital-experience/CF214/extend_dx/development_tools/dxclient/)
+   - [DXClient 1.23.0 or higher](https://opensource.hcltechsw.com/digital-experience/CF214/extend_dx/development_tools/dxclient/)
 
 ## Installation
 
