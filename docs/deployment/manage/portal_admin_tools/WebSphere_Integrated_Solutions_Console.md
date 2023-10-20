@@ -1,7 +1,7 @@
 # WebSphere® Integrated Solutions Console
 
 
-The WebSphere® Integrated Solutions Console allows you to view and modify configuration related to the underlying J2EE functionality of HCL Digital Experience. The WebSphere® Integrated Solutions Console is also called IBM Console, WAS console, WAS Admin Console, or Websphere AdminConsole. Learn how to access the [WebSphere® Integrated Solutions Console](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=console-starting-logging-off-administrative). Below you will find the default URLs you may use.
+The WebSphere® Integrated Solutions Console allows you to view and modify configuration related to the underlying J2EE functionality of HCL Digital Experience. The WebSphere® Integrated Solutions Console is also called IBM Console, WAS console, WAS Admin Console, or Websphere AdminConsole. Learn how to access the [WebSphere® Integrated Solutions Console](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=console-starting-logging-off-administrative). You can find the default URLs you can use in the following subsection.
 
 Alternatively, you can use configuration command line tools like wsadmin instead if the changes need to be scripted. 
 

@@ -12,7 +12,7 @@ It is possible to control which origins can work with an instance of HCL Digital
 
 Reference the existing documentation on the HCL Support Site – Technote that presents these steps, for the current supported deployment pattern: [DX CORS Headers](https://support.hcltechsw.com/csm?sys_kb_id=3aa0a5ae1b492098a2f48661cd4bcb9c&id=kb_article_view&sysparm_rank=1&sysparm_tsqueryId=24d8f7471b9ba81c534c4159cc4bcb76)
 
-This enhancement, available with HCL DX 9.5 Container Update CF195 and higher enables the configuration to be set inside the WP ConfigService [IBM WebSphere Application Server resource environment provider](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=settings-resource-environment-entry). The change requires a restart of HCL DX Core. 
+This enhancement, available with HCL DX 9.5 Container Update CF195 and higher, enables the configuration to be set inside the WP ConfigService [IBM WebSphere Application Server resource environment provider](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=settings-resource-environment-entry). The change requires a restart of HCL DX Core. 
 
 ## Sample
 
