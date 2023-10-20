@@ -48,4 +48,8 @@ The MovePage.xml example shows you how to move a page to another node.
 
 ???+ info "Related information" 
     -   [Supporting a new language](../../../../portal_admin_tools/language_support/supporting_new_language/index.md)
+    - [WebSphere® Integrated Solutions Console](../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
+
+
 
