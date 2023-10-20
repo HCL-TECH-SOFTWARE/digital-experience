@@ -65,4 +65,5 @@ HCL Digital Experience provides some configuration tasks. You can use these task
     - [URL generation in HCL Portal](../../../extend_dx/apis/url_generation/index.md)
     - [Changing the theme logo](../../.././build_sites/themes_skins/customizing_theme/theme_logo/index.md)
     - [Administering managed pages](../../wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/index.md)
+    - [URL Addressability](../../../build_sites/create_sites/url_addressing/index.md)
 

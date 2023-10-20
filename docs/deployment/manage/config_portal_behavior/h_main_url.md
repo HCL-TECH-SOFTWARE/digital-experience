@@ -14,4 +14,5 @@ The given URLs are arranged in a hierarchical tree of **contexts**. The users ca
 
 ???+ info "Related information" 
     -   [Searching](../../../build_sites/portal_settings/manage_custom_unique_names/h_search_admin_portlets.md)
+    - [URL Addressability](../../../build_sites/create_sites/url_addressing/index.md)
 

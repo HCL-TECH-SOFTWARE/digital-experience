@@ -27,3 +27,6 @@ The following optional query parameters can be used with the friendly URLs:
 The URLs will be formed as follows:
 
 `/assets/{collection name/unique id}/{asset name/unique id}?binary={true/false}&rendition={rendition type}&version={version id}`
+
+???+ info "Related information"
+    - [URL Addressability](../../../build_sites/create_sites/url_addressing/index.md)

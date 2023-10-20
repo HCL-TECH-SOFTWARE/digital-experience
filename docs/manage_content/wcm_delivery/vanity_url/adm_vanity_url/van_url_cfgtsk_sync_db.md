@@ -57,4 +57,5 @@ For example, if the JCR database on the Web Content Manager side is restored, bu
     - [Troubleshooting pages](../../../../build_sites/create_sites/website_building_blocks/pages/wcm_mngpages_trouble.md)
     - [Creating the initial release](../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_cir.md)
     - [Migration: Enabling managed pages](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_t_enable_mngpages.md)
+    - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)
 
