@@ -48,9 +48,11 @@ Remove the URL generation filter if you previously installed it. For information
 
 You can configure themes to display only short URLs without state information. You can configure pages that use that theme to display friendly URLs.
 
-**Related information**  
-[About friendly URLs for web content](../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_workfriendly.md)<br>
-[Friendly URL for web content example](../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_friendlyexample.md)<br>
-[Example 2: Generate a friendly URL for web content](../../../../../manage_content/wcm_development/wcm_custom_plugin/wcm_dev_api_urlgen/wcm_urlgen_xmp2/index.md)<br>
-[Using friendly URLs](../../../../manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
+
+???+ info "Related information"
+    - [URL Addressability](../../../../../build_sites/create_sites/url_addressing/index.md)
+    - [About friendly URLs for web content](../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_workfriendly.md)
+    - [Friendly URL for web content example](../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_friendlyexample.md)
+    - [Example 2: Generate a friendly URL for web content](../../../../../manage_content/wcm_development/wcm_custom_plugin/wcm_dev_api_urlgen/wcm_urlgen_xmp2/index.md)
+    - [Using friendly URLs](../../../../manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
 

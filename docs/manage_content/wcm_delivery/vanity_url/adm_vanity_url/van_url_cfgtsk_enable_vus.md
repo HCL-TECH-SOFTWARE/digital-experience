@@ -50,4 +50,5 @@ If vanity URL support is not enabled and a user tries to access a vanity URL, th
     - [How vanity URLs work](../van_url_work.md)
     - [Enabling managed pages](../../../wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md)
     - [Migration: Enabling managed pages](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_t_enable_mngpages.md)
+    - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)
 

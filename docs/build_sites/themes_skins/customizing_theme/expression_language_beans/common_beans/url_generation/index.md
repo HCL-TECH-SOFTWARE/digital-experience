@@ -274,4 +274,7 @@ Attributes:
 
     Returns: String; the generated URL as a string.
 
+???+ info "Related information"
+    - [URL Addressability](../../../../../create_sites/url_addressing/index.md)
+
 
