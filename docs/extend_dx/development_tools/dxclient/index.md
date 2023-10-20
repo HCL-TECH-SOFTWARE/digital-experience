@@ -266,6 +266,11 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
+    -   HCL DX 9.5 CF214 release: **V1.23.0
+        -   Lists all themes during Pull theme if themeName is not provided.
+        -   Livesync is now supported in scaled DX environment setups.
+        -   [LiveSync Improvements](../dxclient/dxclient_artifact_types/livesync.md)
+
     -   HCL DX 9.5 CF213 release: **V1.22.0
         -   [LiveSync](../dxclient/dxclient_artifact_types/livesync.md)
 
