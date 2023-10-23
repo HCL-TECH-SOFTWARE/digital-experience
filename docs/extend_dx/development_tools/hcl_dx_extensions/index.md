@@ -1,12 +1,12 @@
 # HCL DX Extensions
 
-The HCL DX extension for Visual Studio Code Editor provides User Interface experience for DX developers during the development life cycle. This will help boost DX developers efficiency by enabling them to do shorter coding cycles between local editing events to server rendering and validation.
+The HCL DX extension for Visual Studio Code (VS Code) Editor provides User Interface experience for DX developers during the development life cycle. This will help boost DX developers efficiency by enabling them to do shorter coding cycles between local editing events to server rendering and validation.
 
 For v1.0.0 of this tool, we will cover real time sync of WebDAV based DX themes between local and server environments.
 
-## Pre-requisites
+## Prerequisites
 
-Before installing the extension, ensure the following pre-requisites are met:
+Before installing the extension, make sure the following prerequisites are met:
 
 - VS Code 1.80.0 or higher
 - [DXClient 1.23.0 or higher](https://opensource.hcltechsw.com/digital-experience/CF214/extend_dx/development_tools/dxclient/)
@@ -17,18 +17,18 @@ Install the HCL DX extension by clicking the Install link on this page, or insta
 
 Alternatively, you can perform an offline installation by following below steps:
 
-* Download the extension via Download Extension link under Resources section.
-* Install and open Visual Studio Code.
-* Press Ctrl+Shift+X or Cmd+Shift+X to open the Extensions pane.
-* Click More Actions… (on the top right in Extensions pane) > Install from VSIX…
-* Find hcl-dx-extensions-<x.x.x>.vsix on your local file system and click Install.
-* Restart VS Code to activate the extension.
+1. Download the extension via Download Extension link under Resources section.
+2. Install and open Visual Studio Code.
+3. Press **Ctrl+Shift+X** (for Windows) or **Cmd+Shift+X** (for MacOS) to open the Extensions pane.
+4. On the top right of the Extensions pane, click **More Actions… > Install from VSIX…**.
+5. Find the hcl-dx-extensions-<x.x.x>.vsix on your local file system and click **Install**.
+6. Restart VS Code to activate the extension.
 
-Once you install the HCL DX extension, a DX icon is visible on the VS Code side bar.
+After installing the HCL DX extension, a DX icon is visible on the VS Code sidebar.
 
 ## Settings
 
-Go to Settings > User > Extensions > HCL DX Extensions Configuration. Set the below configuration arguments.
+Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set the below configuration arguments:
 
 * `hclDxExtensions.dxProtocol`: Protocol of the DX Core server
 * `hclDxExtensions.hostname`: Host name of the DX Core server
@@ -36,9 +36,9 @@ Go to Settings > User > Extensions > HCL DX Extensions Configuration. Set the be
 * `hclDxExtensions.dxUsername`: Username of the DX Core server
 * `hclDxExtensions.dxPassword`: Password of the DX Core server
 * `hclDxExtensions.contenthandlerPath`: Alternate path for the portal context root or the content handler servlet
-* `hclDxExtensions.themesPath`: The parent folder of your Themes. (Example: /path/to/Themes)
-* `hclDxExtensions.executablePath`: Optional. The directory of dxclient executable. (Example: /path/to/dxclient/bin)
-* `hclDxExtensions.dxclientType`: The type of dxclient executable. (Required when the "Executable Path" setting is provided.)
+* `hclDxExtensions.themesPath`: The parent folder of your Themes (for example, /path/to/Themes)
+* `hclDxExtensions.executablePath`: (Optional) The directory of dxclient executable (for example, /path/to/dxclient/bin)
+* `hclDxExtensions.dxclientType`: The type of DxClient executable (required when the "Executable Path" setting is provided)
 
 ## Features
 
