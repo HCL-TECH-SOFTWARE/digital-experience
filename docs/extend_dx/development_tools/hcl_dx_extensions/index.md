@@ -8,8 +8,8 @@ For v1.0.0 of this tool, we will cover real time sync of WebDAV based DX themes 
 
 Before installing the extension, ensure the following pre-requisites are met:
 
-   - VS Code 1.80.0 or higher
-   - [DXClient 1.23.0 or higher](https://opensource.hcltechsw.com/digital-experience/CF214/extend_dx/development_tools/dxclient/)
+- VS Code 1.80.0 or higher
+- [DXClient 1.23.0 or higher](https://opensource.hcltechsw.com/digital-experience/CF214/extend_dx/development_tools/dxclient/)
 
 ## Installation
 
@@ -17,12 +17,12 @@ Install the HCL DX extension by clicking the Install link on this page, or insta
 
 Alternatively, you can perform an offline installation by following below steps:
 
-   * Download the extension via Download Extension link under Resources section.
-   * Install and open Visual Studio Code.
-   * Press Ctrl+Shift+X or Cmd+Shift+X to open the Extensions pane.
-   * Click More Actions… (on the top right in Extensions pane) > Install from VSIX…
-   * Find hcl-dx-extensions-<x.x.x>.vsix on your local file system and click Install.
-   * Restart VS Code to activate the extension.
+* Download the extension via Download Extension link under Resources section.
+* Install and open Visual Studio Code.
+* Press Ctrl+Shift+X or Cmd+Shift+X to open the Extensions pane.
+* Click More Actions… (on the top right in Extensions pane) > Install from VSIX…
+* Find hcl-dx-extensions-<x.x.x>.vsix on your local file system and click Install.
+* Restart VS Code to activate the extension.
 
 Once you install the HCL DX extension, a DX icon is visible on the VS Code side bar.
 
@@ -43,8 +43,7 @@ Go to Settings > User > Extensions > HCL DX Extensions Configuration. Set the be
 
 ## Features
 
-1. A separate panel/badge in the Activity Bar.
-2. Use Explorer view to do the development changes (Create, Update or Delete of Files/Folders).
+1. A separate panel/badge in the Activity Bar that contains the Themes View.
 
 ### Themes View
 
@@ -57,18 +56,34 @@ Go to Settings > User > Extensions > HCL DX Extensions Configuration. Set the be
 2. General Features
 
     1. **Pull New Theme**
-        * This will provide the user selection from list of all themes in the connected DX server. The user may choose one to pull. It will trigger download of all files under the theme to a folder named with the chosen theme name under `themesPath`. If the theme name does not exist in local, a new folder will be created.
-    2. **Refresh**
-        * This will refresh the listed themes under the `themesPath`.
+        
+        This will provide the user selection from list of all themes in the connected DX server. The user may choose one to pull. It will trigger download of all files under the theme to a folder named with the chosen theme name under `themesPath`. If the theme name does not exist in local, a new folder will be created.
 
-3. For the features available for each listed theme -
+        ![Pull New Theme](../../../images/hcl-dx-extensions-pull-new-theme.gif)
+
+    2. **Refresh**
+        
+        This will refresh the listed themes under the `themesPath`.
+
+3. For the features available for each listed theme:
 
     1. **Pull Theme**
-        * This will trigger DXClient Livesync Pull Theme using the chosen theme to download theme files to the folder named after it under `themesPath`.
+        
+        This will trigger DXClient Livesync Pull Theme using the chosen theme to download theme files to the folder named after it under `themesPath`.
+
+        ![Pull Existing Theme](../../../images/hcl-dx-extensions-pull-existing-theme.gif)
+    
     2. **Push Theme**
-        * This will trigger DXClient Livesync Push Theme for this particular theme. It starts a watching process for the files under that folder and push the subsequent changes into the server.
+        
+        This will trigger DXClient Livesync Push Theme for this particular theme. It starts a watching process for the files under that folder and push the subsequent changes into the server.
+
+        ![Pushing Theme](../../../images/hcl-dx-extensions-pushing.gif)
+
+        ![Watching Theme](../../../images/hcl-dx-extensions-watching.gif)
+
     3. **Stop Pushing Theme**
-        * This will terminate the watching process if there is one for this particular theme.
+        
+        This will terminate the watching process if there is one for this particular theme.
 
 ## Limitations
 
