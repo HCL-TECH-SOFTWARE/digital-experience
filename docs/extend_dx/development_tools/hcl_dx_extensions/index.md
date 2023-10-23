@@ -36,10 +36,9 @@ Go to Settings > User > Extensions > HCL DX Extensions Configuration. Set the be
 * `hclDxExtensions.dxUsername`: Username of the DX Core server
 * `hclDxExtensions.dxPassword`: Password of the DX Core server
 * `hclDxExtensions.contenthandlerPath`: Alternate path for the portal context root or the content handler servlet
-* `hclDxExtensions.themesPath`: The path in local where the themes can be loaded.
-* `hclDxExtensions.executablePath`: The path of dxclient executable. (Optional)
-* `hclDxExtensions.dxclientType`: The type of dxclient executable. (Required when the executable path is used.)
-
+* `hclDxExtensions.themesPath`: The parent folder of your Themes. (Example: /path/to/Themes)
+* `hclDxExtensions.executablePath`: Optional. The directory of dxclient executable. (Example: /path/to/dxclient/bin)
+* `hclDxExtensions.dxclientType`: The type of dxclient executable. (Required when the "Executable Path" setting is provided.)
 
 ## Features
 
