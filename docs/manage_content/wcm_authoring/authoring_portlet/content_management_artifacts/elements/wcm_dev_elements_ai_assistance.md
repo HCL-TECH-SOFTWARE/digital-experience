@@ -26,7 +26,7 @@ Before you can use AI-assistance features for sentiment analysis of content, key
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_ShowHiddenFields.png)
 
-3. Click the **More** button in the toolbar, then click **AI Generate Description**. The extracted keywords are based on the content provided in the content item. The AI-generated keywords will not overwrite the existing keywords but they will append to it.
+3. Click the **More** button in the toolbar, then click **AI Generate Keywords**. The extracted keywords are based on the content provided in the content item. The AI-generated keywords will not overwrite the existing keywords but they will append to it.
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_Toolbar.png)
 
