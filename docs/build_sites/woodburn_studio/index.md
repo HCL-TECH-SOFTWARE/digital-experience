@@ -19,7 +19,7 @@ You can deploy, configure, and disable Woodburn Studio the same way you deploy P
 !!! note
     Upon initial deployment, the HCL Digital Experience search indexes are not yet built. Therefore, search will not yield results for pages and content in the Woodburn Studio demonstration site until the search indexing services have run the first time. This will automatically occur with 24 hours of the initial deployment of DX.
 
-However, one can immediately force the indexer to run manually from the **Search Collections** screen in **Administration** \> **Search** \> **Search Collections** from the Practitioner Studio interface:
+However, one can immediately force the indexer to run manually from the **Search Collections** screen in **Administration** > **Search** > **Search Collections** from the Practitioner Studio interface:
 
 1.  From your HCL Digital Experience 9.5 Practitioner Studio interface, click Administration from the navigation menu.
 2.  Click **Search**, then **Search Collections**.
