@@ -37,7 +37,7 @@ dxclient version-compat [command] [options]
 	-dxConnectPassword <value>
 	```
 	
-	Use this attribute to specify the port number of the cw_profile (for Kubernetes Environment, dxConnectPort is 443)
+	Use this attribute to specify the port number of the cw_profile (for Kubernetes Environment, dxConnectPort is 443):
 	
 	```
 	-dxConnectPort <value>
