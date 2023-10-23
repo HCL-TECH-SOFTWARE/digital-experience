@@ -16,4 +16,4 @@ For additional information on previous updates to the [HCL Digital Experience Cl
 -   HCL Digital Experience Cloud Native 9.5 is available with cloud-friendly subscription pricing according to the user session consumption required to support production DX deployments. This approach supports graduated tier pricing, providing lower costs at each tier as quantities increase. To learn more about monitoring User Session consumption in Digital Experience deployments, see the [Integrate Google Analytics with HCL Digital Experience](../../build_sites/site_analytics/google_analytics/index.md) topic.
 -   For more information about HCL Digital Experience Cloud Native 9.5 offering terms, see the [HCL Software License Agreements](https://www.hcltechsw.com/resources/license-agreements) web site, under the HCL Digital Experience product categories.
 
-For additional information about HCL Digital Experience solutions, visit: [HCL Digital Experience](https://www.hcltechsw.com/dx) website. 
+For additional information about HCL Digital Experience solutions, visit the [HCL Digital Experience](https://www.hcltechsw.com/dx) website. 
