@@ -103,7 +103,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
     
     ![](../../../../assets/HCL_Content_Reporting_Search_Results_Pagination_PageSize.png)
 
-- To change the current page of the search results, select from the options in the **Page:** dropdown menu. You can also click the buttons beside the dropdown menu to go to the first page, previous page, next page, and last page.
+- To change the current page of the search results, select from the options in the **Page:** dropdown menu. You can also click the buttons beside the dropdown menu to go to the first page, previous page, next page, and last page of the results. 
     
     ![](../../../../assets/HCL_Content_Reporting_Search_Results_Pagination_Page.png)
 
