@@ -20,5 +20,5 @@ The workflow section is only visible on item types that are enabled to use a wor
 Specify the access control settings for the current item to designate which users have access to an item and their level of access. The access section is common to all item forms.
 7.  [Specifying the location of a content item](wcm_dev_content_location.md)  
 When you first create a content item, you are required to specify the location of the item if the location is not defined in the authoring template.
-8. [AI assistance for descriptions, keyword generation, and sentiments analysis in a content item](../elements/wcm_dev_elements_ai_assistance.md)  
+8. [AI assistance for descriptions, keyword generation, and sentiment analysis in a content item](../elements/wcm_dev_elements_ai_assistance.md)  
 Automatically generate descriptions and keywords, and get sentiment analysis on the contents of the elements in your content item.
