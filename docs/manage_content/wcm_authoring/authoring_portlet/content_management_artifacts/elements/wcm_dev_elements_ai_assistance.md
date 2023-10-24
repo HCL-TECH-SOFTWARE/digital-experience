@@ -1,4 +1,4 @@
-# AI assistance for descriptions, keyword generation and sentiments analysis in a content item
+# AI assistance for descriptions, keyword generation and sentiment analysis in a content item
 
 This section provides the steps on how to use AI assistance in generating descriptions, keywords, and getting sentiment analysis on content elements.
 
@@ -9,7 +9,7 @@ Before you can use AI-assistance features for sentiment analysis of content, key
 
 ## Using AI-assisted summarization of content element
 
-1. Fill in at least one text field in the **Content** tab of the content item.
+1. Fill in at least one text field (rich text, text, or short text) in the **Content** tab of the content item.
 
 2. Click the **More** button in the toolbar, then click **AI Generate Summary**. The generated description is based on the content provided in the content element. The generated description replaces any existing description, if present.
 
@@ -20,7 +20,7 @@ Before you can use AI-assistance features for sentiment analysis of content, key
 
 ## Using AI-assisted keyword extraction on content elements
 
-1. Fill in at least one text field in the **Content** tab of the content item.
+1. Fill in at least one text field (rich text, text, or short text) in the **Content** tab of the content item.
 
 2. Click the **Show Hidden Fields** button in the toolbar.
 
@@ -38,7 +38,7 @@ Before you can use AI-assistance features for sentiment analysis of content, key
 
 ## Using AI-assisted sentiment analysis of content element
 
-1. Fill in any of text elements of the content item.
+1. Fill in any of text elements (rich text, text, or short text) of the content item.
 
 2. Click the **Analyze Sentiment** icon located in the lower right corner of the text element. A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon on the **Body** field.
 
