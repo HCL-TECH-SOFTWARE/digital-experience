@@ -11,7 +11,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 ## Using AI-assisted summarization of content element
 
-1. Fill in at least one text field (rich text, text, or short text) in the **Content** tab of the content item.
+1. Fill in at least one text element (rich text, text, or short text) in the **Content** tab of the content item.
 
 2. Click the **More** button in the toolbar, then click **AI Generate Summary**. The generated description is based on the content provided in the content element. The generated description replaces any existing description, if present.
 
