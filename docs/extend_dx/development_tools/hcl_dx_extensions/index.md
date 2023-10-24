@@ -1,8 +1,8 @@
-# HCL DX Extensions
+# HCL DX Extensions for Visual Studio Code
 
-The HCL DX extension for Visual Studio Code (VS Code) Editor provides User Interface experience for DX developers during the development life cycle. This will help boost DX developers efficiency by enabling them to do shorter coding cycles between local editing events to server rendering and validation.
+The HCL DX Extensions feature for Visual Studio Code Editor provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation.
 
-For v1.0.0 of this tool, we will cover real time sync of WebDAV based DX themes between local and server environments.
+For v1.0.0, real time sync of WebDAV-based DX themes between local and server environments is supported.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set th
 
 1. A separate panel/badge in the Activity Bar that contains the Themes View.
 
-### Themes View
+## Using the Themes View
 
 1. Click on the DX badge > If there are no listed or available themes , there will be the **"Set Themes Path"** button which will open a select folder dialog box to set the path where all the themes will be loaded.
 
@@ -52,41 +52,41 @@ Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set th
 
         All first-level folders under the given `themesPath` are considered a theme.
 
-2. General Features
+### General features
 
-    1. **Pull New Theme**
+    - **Pull New Theme**
         
-        This will provide the user selection from list of all themes in the connected DX server. The user may choose one to pull. It will trigger download of all files under the theme to a folder named with the chosen theme name under `themesPath`. If the theme name does not exist in local, a new folder will be created.
+        This provides users with a list of all themes in the connected DX server and you can choose which one to pull. The Pull New Theme action downloads all files under the theme to a folder named with the chosen theme name under `themesPath`. If the theme name does not exist in the local computer, a new folder is created.
 
         ![Pull New Theme](../../../images/hcl-dx-extensions-pull-new-theme.gif)
 
-    2. **Refresh**
+    - **Refresh**
         
-        This will refresh the listed themes under the `themesPath`.
+        This refreshes the listed themes under the `themesPath`.
 
-3. For the features available for each listed theme:
+### Features available for each listed theme
 
-    1. **Pull Theme**
+    - **Pull Theme**
         
-        This will trigger DXClient Livesync Pull Theme using the chosen theme to download theme files to the folder named after it under `themesPath`.
+        This initiates the DXClient Livesync Pull Theme action, utilizing the selected theme to download theme files to the corresponding folder under `themesPath`. 
 
         ![Pull Existing Theme](../../../images/hcl-dx-extensions-pull-existing-theme.gif)
     
-    2. **Push Theme**
+    - **Push Theme**
         
-        This will trigger DXClient Livesync Push Theme for this particular theme. It starts a watching process for the files under that folder and push the subsequent changes into the server.
+        This triggers the DXClient Livesync Push Theme for the selected theme. It starts a watching process for the files under that folder and pushes the subsequent changes into the server.
 
         ![Pushing Theme](../../../images/hcl-dx-extensions-pushing.gif)
 
         ![Watching Theme](../../../images/hcl-dx-extensions-watching.gif)
 
-    3. **Stop Pushing Theme**
+    - **Stop Pushing Theme**
         
         This will terminate the watching process if there is one for this particular theme.
 
-## Limitations
+## Limitation
 
-1. The HCL DX Extensions is supported with non-English versions of VS Code, but is only available in English and is not translated.
+- The HCL DX Extensions feature is supported in non-English versions of VS Code, but it is only available in English and is not translated.
 
 ## Guidelines & Best Practices
 
