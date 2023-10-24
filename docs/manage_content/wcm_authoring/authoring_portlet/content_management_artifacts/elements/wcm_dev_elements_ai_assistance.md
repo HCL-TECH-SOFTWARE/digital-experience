@@ -18,7 +18,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Description_Toolbar.png)
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Description_GeneratedDescription.png)
 
-3. When done, select **Save** or other **Save** options to save your updates.
+3. Select **Save** or other **Save** options to save your updates.
 
 ## Using AI-assisted keyword extraction on content elements
 
@@ -36,7 +36,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_GeneratedKeywords.png)
 
-5. When done, select **Save** or other **Save** options to save your updates.
+5. Select **Save** or other **Save** options to save your updates.
 
 ## Using AI-assisted sentiment analysis of content element
 
