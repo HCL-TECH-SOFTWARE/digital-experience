@@ -1,6 +1,6 @@
 # HCL DX Extensions for Visual Studio Code
 
-The HCL DX Extensions feature for Visual Studio Code Editor provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation.
+The HCL DX Extensions feature for Visual Studio Code (VS Code) Editor provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation.
 
 For v1.0.0, real time sync of WebDAV-based DX themes between local and server environments is supported.
 
