@@ -139,7 +139,7 @@ To customize AI analysis-related configurations, log in to WAS console for custo
 
 ### OpenAI ChatGPT specific custom configurations
 
-1. ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. Starting CF216, the AI model is switched to ```gpt-3.5-turbo``` due to OpenAI discontinuing support for ```text-davinci-003``` starting in January 2024. However, the model can be overridden by overriding this property. 
+1. ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. Starting CF216, the AI model is switched to ```gpt-3.5-turbo``` due to OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. However, the model can be overridden by overriding this property. 
 2. ```OPENAI_MAX_TOKENS```: Set any positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. For ```gpt-3.5-turbo```, the maximum value is 4096. It specifies the maximum number of tokens that the model can output in its response.
 3. ```OPENAI_TEMPERATURE```: Set any positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text, with higher values producing more diverse and random output and lower values producing more focused and deterministic output.
 
