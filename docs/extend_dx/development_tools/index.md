@@ -5,7 +5,7 @@ Learn more about the developer tools and features of HCL Portal, including HCL W
 -   **[DXClient](dxclient/index.md)**  
 DXClient is a command line tool featuring a single, unified interface to all HCL DX automation and CI/CD-related tasks.
 -   **[HCL DX Extensions](hcl_dx_extensions/index.md)**  
-The HCL DX extension for Visual Studio Code Editor provides User Interface experience for DX developers during the development life cycle. This will help boost DX developers efficiency by enabling them to do shorter coding cycles between local editing events to server rendering and validation.
+The HCL DX Extensions feature for Visual Studio Code Editor provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation.
 -   **[Web Experience Factory](wef/index.md)**  
 HCL Web Experience Factory (WEF) creates applications with rich, interactive digital experiences for delivery on desktop browsers, smartphones, tablets, and other channels.
 -   **[Web Services for Remote Portlets services](wsrp/index.md)**  
