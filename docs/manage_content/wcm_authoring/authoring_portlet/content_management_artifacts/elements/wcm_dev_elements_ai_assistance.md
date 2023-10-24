@@ -22,7 +22,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 ## Using AI-assisted keyword extraction on content elements
 
-1. Fill in at least one text field (rich text, text, or short text) in the **Content** tab of the content item.
+1. Fill in at least one text element (rich text, text, or short text) in the **Content** tab of the content item.
 
 2. Click the **Show Hidden Fields** button in the toolbar.
 
