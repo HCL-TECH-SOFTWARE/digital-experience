@@ -9,7 +9,11 @@ For v1.0.0, real time sync of WebDAV-based DX themes between local and server en
 Before installing the extension, make sure the following prerequisites are met:
 
 - VS Code 1.80.0 or higher
-- [DXClient 1.23.0 or higher](https://opensource.hcltechsw.com/digital-experience/CF214/extend_dx/development_tools/dxclient/)
+- [DXClient 1.23.0 or higher](../dxclient/index.md)
+    
+    !!! note
+        
+        It is recommended to use the node version of DXClient tool for better performance of the extension.
 
 ## Installation
 
@@ -17,7 +21,7 @@ Install the HCL DX extension by clicking the Install link on this page, or insta
 
 Alternatively, you can perform an offline installation by following below steps:
 
-1. Download the extension via Download Extension link under Resources section.
+1. Download the extension by going to the VSCode marketplace and click the "Download Extension" link under "Resources".
 2. Install and open Visual Studio Code.
 3. Press **Ctrl+Shift+X** (for Windows) or **Cmd+Shift+X** (for MacOS) to open the Extensions pane.
 4. On the top right of the Extensions pane, click **More Actions… > Install from VSIX…**.
@@ -40,54 +44,46 @@ Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set th
 * `hclDxExtensions.executablePath`: (Optional) The directory of dxclient executable (for example, /path/to/dxclient/bin)
 * `hclDxExtensions.dxclientType`: The type of DxClient executable (required when the "Executable Path" setting is provided)
 
-## Features
-
-1. A separate panel/badge in the Activity Bar that contains the Themes View.
-
 ## Using the Themes View
 
-1. Click on the DX badge > If there are no listed or available themes , there will be the **"Set Themes Path"** button which will open a select folder dialog box to set the path where all the themes will be loaded.
+To go to the Themes view, click the DX Icon on the Activity Bar on the right. If there are no listed or available themes , the **Set Themes Path** button is displayed. Clicking this button opens a Select Folder dialog box where you can set the path where all themes will be loaded.
 
-    !!! note
+!!! note
 
-        All first-level folders under the given `themesPath` are considered a theme.
+    All first-level folders under the given `themesPath` are considered a theme.
 
 ### General features
 
-    - **Pull New Theme**
-        
-        This provides users with a list of all themes in the connected DX server and you can choose which one to pull. The Pull New Theme action downloads all files under the theme to a folder named with the chosen theme name under `themesPath`. If the theme name does not exist in the local computer, a new folder is created.
+- **Pull New Theme**
+    
+    This provides users with a list of all themes in the connected DX server and you can choose which one to pull. The Pull New Theme action downloads all files under the theme to a folder named with the chosen theme name under `themesPath`. If the theme name does not exist in the local computer, a new folder is created.
 
-        ![Pull New Theme](../../../images/hcl-dx-extensions-pull-new-theme.gif)
+    ![Pull New Theme](../../../images/hcl-dx-extensions-pull-new-theme.gif)
 
-    - **Refresh**
-        
-        This refreshes the listed themes under the `themesPath`.
+- **Refresh**
+    
+    This refreshes the listed themes under the `themesPath`.
 
 ### Features available for each listed theme
 
-    - **Pull Theme**
-        
-        This initiates the DXClient Livesync Pull Theme action, utilizing the selected theme to download theme files to the corresponding folder under `themesPath`. 
-
-        ![Pull Existing Theme](../../../images/hcl-dx-extensions-pull-existing-theme.gif)
+- **Pull Theme**
     
-    - **Push Theme**
-        
-        This triggers the DXClient Livesync Push Theme for the selected theme. It starts a watching process for the files under that folder and pushes the subsequent changes into the server.
+    This initiates the DXClient Livesync Pull Theme action, utilizing the selected theme to download theme files to the corresponding folder under `themesPath`. 
 
-        ![Pushing Theme](../../../images/hcl-dx-extensions-pushing.gif)
+    ![Pull Existing Theme](../../../images/hcl-dx-extensions-pull-existing-theme.gif)
 
-        ![Watching Theme](../../../images/hcl-dx-extensions-watching.gif)
+- **Push Theme**
+    
+    This triggers the DXClient Livesync Push Theme for the selected theme. It starts a watching process for the files under that folder and pushes the subsequent changes into the server.
 
-    - **Stop Pushing Theme**
-        
-        This will terminate the watching process if there is one for this particular theme.
+    ![Pushing Theme](../../../images/hcl-dx-extensions-pushing.gif)
+
+    ![Watching Theme](../../../images/hcl-dx-extensions-watching.gif)
+
+- **Stop Pushing Theme**
+    
+    This terminates the watching process if there is an existing process for this particular theme.
 
 ## Limitation
 
 - The HCL DX Extensions feature is supported in non-English versions of VS Code, but it is only available in English and is not translated.
-
-## Guidelines & Best Practices
-
-1. Recommend to use node version of DXClient tool for better performance of the extension.
