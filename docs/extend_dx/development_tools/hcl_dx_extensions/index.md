@@ -46,7 +46,7 @@ Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set th
 
 ## Using the Themes View
 
-To go to the Themes view, click the DX Icon on the Activity Bar on the right. If there are no listed or available themes , the **Set Themes Path** button is displayed. Clicking this button opens a Select Folder dialog box where you can set the path where all themes will be loaded.
+To go to the Themes view, click the DX Icon on the Activity Bar on the right. If there are no listed or available themes, the **Set Themes Path** button is displayed. Clicking this button opens a **Select Folder** dialog box where you can set the path where all themes will be loaded.
 
 !!! note
 
