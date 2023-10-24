@@ -202,7 +202,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     -themeName <value>
     ```
 
-    Starting from CF214, if the `themeName` option is not provided, a list of WebDAV themes is displayed and you can select a theme to pull into your local.
+    Starting from CF214, if `themeName` option is not provided, a list of WebDAV themes are dislayed and user can select a theme to pull into their local.
 
     ```shell
     $ dxclient livesync pull-theme -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -themePath <themePath>

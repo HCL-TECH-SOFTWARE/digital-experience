@@ -96,4 +96,8 @@ The out-of-the-box \(OOB\) Content Security Policy \(CSP\) resource environment 
 
 4.  Restart the server.
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
+
 
