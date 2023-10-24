@@ -1,8 +1,10 @@
-# AI assistance for descriptions, keyword generation and sentiment analysis in a content item
+# AI assistance for descriptions, keyword generation, and sentiments analysis in a content item
 
-This section provides the steps on how to use AI assistance in generating descriptions, keywords, and getting sentiment analysis on content elements.
+This section provides the steps on how to use AI assistance for generating descriptions, keywords, and getting sentiment analysis on content elements.
 
-Before you can use AI-assistance features for sentiment analysis of content, keyword extraction from content, and auto summarization of content element, refer to the following steps to enable AI Analysis:
+## Prerequisite
+
+Before you can use AI-assisted features for sentiment analysis of content, keyword extraction from content, and auto summarization of content element, refer to the following steps to enable AI Analysis:
 
 - [Web content AI analysis for Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md)
 - [Web content AI analysis for traditional deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
@@ -16,7 +18,7 @@ Before you can use AI-assistance features for sentiment analysis of content, key
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Description_Toolbar.png)
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Description_GeneratedDescription.png)
 
-3. When done, select **Save** or other **Save** options to save your updates.
+3. Select **Save** or other **Save** options to save your updates.
 
 ## Using AI-assisted keyword extraction on content elements
 
@@ -34,7 +36,7 @@ Before you can use AI-assistance features for sentiment analysis of content, key
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_GeneratedKeywords.png)
 
-5. When done, select **Save** or other **Save** options to save your updates.
+5. Select **Save** or other **Save** options to save your updates.
 
 ## Using AI-assisted sentiment analysis of content element
 
