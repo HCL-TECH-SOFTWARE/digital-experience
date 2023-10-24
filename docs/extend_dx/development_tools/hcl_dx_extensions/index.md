@@ -82,7 +82,7 @@ To go to the Themes view, click the DX Icon on the Activity Bar on the right. If
 
 - **Stop Pushing Theme**
     
-    This terminates the watching process if there is an existing process for this particular theme.
+    This terminates the watching process for the theme if Push Theme has been initiated.
 
 ## Limitation
 
