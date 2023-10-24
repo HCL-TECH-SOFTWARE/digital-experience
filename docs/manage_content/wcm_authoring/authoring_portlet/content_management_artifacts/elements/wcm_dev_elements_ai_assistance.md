@@ -5,22 +5,22 @@ This section provides the steps on how to use AI assistance in generating descri
 Before you can use AI-assistance features for sentiment analysis of content, keyword extraction from content, and auto summarization of content element, refer to the following steps to enable AI Analysis:
 
 - [Web content AI analysis for Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md)
-- [Web content AI analysis for on-premise deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
+- [Web content AI analysis for traditional deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
 
 ## Using AI-assisted summarization of content element
 
-1. Complete the required field/s in the **Content** tab of the content item.
+1. Fill in at least one text field in the **Content** tab of the content item.
 
 2. Click the **More** button in the toolbar, then click **AI Generate Summary**. The generated description is based on the content provided in the content element. The generated description replaces any existing description, if present.
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Description_Toolbar.png)
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Description_GeneratedDescription.png)
 
-3. When done, select **Save** to save your settings and create your new content. You can also select **Save and Close** to create your new content with the saved settings and keywords.
+3. When done, select **Save** or other **Save** options to save your updates.
 
 ## Using AI-assisted keyword extraction on content elements
 
-1. Complete the required field/s in the **Content** tab of the content item.
+1. Fill in at least one text field in the **Content** tab of the content item.
 
 2. Click the **Show Hidden Fields** button in the toolbar.
 
@@ -34,11 +34,11 @@ Before you can use AI-assistance features for sentiment analysis of content, key
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_GeneratedKeywords.png)
 
-5. When done, select **Save** to save your settings and create your new content. You can also select **Save and Close** to create your new content with the saved settings and keywords.
+5. When done, select **Save** or other **Save** options to save your updates.
 
 ## Using AI-assisted sentiment analysis of content element
 
-1. Complete the required text field/s in the **Content** tab of the content item.
+1. Fill in any of text elements of the content item.
 
 2. Click the **Analyze Sentiment** icon located in the lower right corner of the text element. A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon on the **Body** field.
 
@@ -48,5 +48,3 @@ Before you can use AI-assistance features for sentiment analysis of content, key
 3. Click the sentiment result icon to see more details about the result.
 
     ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_SentimentPopover.png)
-
-4. When done, select **Save** to save your settings and create your new content. You can also select **Save and Close** to create your new content with the saved settings and keywords.
