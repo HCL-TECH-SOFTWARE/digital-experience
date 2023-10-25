@@ -248,7 +248,7 @@ The License Manager component communicates with the local license server to vali
 3. Import the generated SSL certificate for the local license manager to the Kubernetes secret manually. As mentioned above, use 'license-secret' as secret name. Below is an example command in a namespace dxns and where hostname.certs is the filename:
 
     ```
-    kubectl create secret generic license-secret --from-file=license-secret=hostname.certs -n dxns
+    kubectl create secret generic license-secret --from-file=hostname.certs -n dxns
     ```
 
 4. You may need to run a Helm upgrade (update)? and restart the DX license manager pod.
