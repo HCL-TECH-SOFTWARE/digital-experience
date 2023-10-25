@@ -16,10 +16,12 @@ The Configuration Wizard supports adding additional nodes to a horizontal cluste
 
 1.  Select the roadmap that is most like the configuration that you need to configure.
 
-2.  Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
+2.  Access the Configuration Wizard. Go to [Configuration Wizard](../portal_admin_tools/cfg_wizard/index.md).
 
     !!!note
-        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
+        - If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted.
+        
+        - Go to https://your_server/hcl/wizard for a Kubernetes deployment or http://your_server:10200/ibm/wizard for a traditional deployment.
 
     !!!note "Restriction"
         There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
