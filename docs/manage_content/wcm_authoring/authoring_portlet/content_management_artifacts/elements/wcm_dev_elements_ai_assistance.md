@@ -11,7 +11,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 ## Using AI-assisted summarization of content element
 
-1. Fill in at least one text element (rich text, text, or short text) in the **Content** tab of the content item.
+1. Fill in at least one text element (for example, rich text, text, or short text) in the **Content** tab of the content item.
 
 2. Click the **More** button in the toolbar, then click **AI Generate Summary**. The generated description is based on the content provided in the content element. The generated description replaces any existing description, if present.
 
@@ -22,7 +22,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 ## Using AI-assisted keyword extraction on content elements
 
-1. Fill in at least one text element (rich text, text, or short text) in the **Content** tab of the content item.
+1. Fill in at least one text element (for example, rich text, text, or short text) in the **Content** tab of the content item.
 
 2. Click the **Show Hidden Fields** button in the toolbar.
 
@@ -32,7 +32,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_Toolbar.png)
 
-4. Click on the **Properties** tab then expand the **Profile** section to view the extracted keywords.
+4. Click the **Properties** tab then expand the **Profile** section to view the extracted keywords.
 
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_GeneratedKeywords.png)
 
@@ -40,7 +40,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 ## Using AI-assisted sentiment analysis of content element
 
-1. Fill in any of text elements (rich text, text, or short text) of the content item.
+1. Fill in any of text elements (for example, rich text, text, or short text) of the content item.
 
 2. Click the **Analyze Sentiment** icon located in the lower right corner of the text element. A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon on the **Body** field.
 
