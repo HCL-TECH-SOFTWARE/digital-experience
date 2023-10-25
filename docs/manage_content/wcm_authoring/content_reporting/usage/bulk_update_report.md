@@ -21,7 +21,7 @@ Beginning with HCL Digital Experience 9.5 release update CF214, Content Reportin
 
 2. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
-3. [Export the report](./export_content_report.html) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-update-ownersauthors-feature).
+3. [Export the report](./export_content_report) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-ownersauthors-feature).
 
 ## Using the Content Reporting Bulk Update UpdateExpiry feature
 

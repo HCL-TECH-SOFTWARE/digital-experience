@@ -3,8 +3,8 @@
 This topic provides information about syncing WebDAV based theme files from local-to-server and server-to-local in real time. It watches the file system for changes in the background.
 
 !!! notes
-    - We recommend using the node version of DXClient while working with livesync.
-    - Starting from CF214, Livesync is now supported in scaled DX environment setups.
+    - It is recommended that you use the node version of the DXClient while working with LiveSync.
+    - Starting from CF214, LiveSync is supported in scaled DX environment setups.
 
 ## LiveSync Push Theme
 
