@@ -259,7 +259,7 @@ The License Manager component communicates with the local license server to vali
 
 ## Results
 
-Ensure that your connection to the local Flexnet license manager (server)? is successful by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.
+Ensure that your connection to the local Flexnet license server is successful by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.
 
 Use `kubectl` logs for the license manager pod. For example, in a namespace `dxns`, execute the following command:
 
