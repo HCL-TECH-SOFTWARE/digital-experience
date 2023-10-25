@@ -198,3 +198,5 @@ You can install remote search service by using manual steps instead of the IBM I
 If you originally installed the remote service by using manual steps, then you must use manual steps to upgrade it after you apply the Combined Cumulative Fix on the portal server. 
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

@@ -164,4 +164,4 @@ Follow these steps to export and import a web content library. The server that t
     - [Deploying the initial release](../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_deploy.md)
     - [Deploying the differential release](../../../../deployment/manage/staging_to_production/creating_deploying_diff_release/dep_deploy_diff.md)
     - [Portal administration tools](../../../../deployment/manage/portal_admin_tools/index.md)
-
+    - [WebSphere® Integrated Solutions Console](../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

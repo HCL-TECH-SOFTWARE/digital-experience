@@ -60,3 +60,4 @@ Various installation and configuration tasks require you to start and stop IBM W
     -   [Enabling and disabling impersonation](../manage/security/people/authorization/users_and_groups/impersonation/impers_enable_disable.md)
     -   [Managing Single sign-on settings in your cluster](../manage/config_cluster/managing_cluster/manage_sso.md)
     -   [System event logging](../manage/troubleshooting/logging_and_tracing/adsyslog.md)
+    - [WebSphere® Integrated Solutions Console](portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

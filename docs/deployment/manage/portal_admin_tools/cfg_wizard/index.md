@@ -17,3 +17,6 @@ In the Configuration Wizard, you answer questions about the environment that you
 
 
 **Video**: [HCL Portal - How to Access ConfigWizard](https://www.youtube.com/watch?v=YAEO78T7coM&feature=youtu.be)
+
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../WebSphere_Integrated_Solutions_Console.md)

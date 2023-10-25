@@ -31,3 +31,6 @@ To verify inside HCL Digital Experience:
       There must be no warning icon in the uploaded module.
 
    ![Module Status](../../images/18PSReactModule.png)
+
+???+ info "Related information"
+   - [WebSphere® Integrated Solutions Console](../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

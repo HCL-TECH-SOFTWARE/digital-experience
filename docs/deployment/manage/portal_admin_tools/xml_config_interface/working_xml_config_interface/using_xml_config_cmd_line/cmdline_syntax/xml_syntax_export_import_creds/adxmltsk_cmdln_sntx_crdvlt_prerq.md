@@ -24,5 +24,8 @@ Proceed as follows:
 
 6.  Restart the portal server.
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
 
 

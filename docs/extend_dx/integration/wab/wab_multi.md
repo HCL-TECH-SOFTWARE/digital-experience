@@ -58,3 +58,5 @@ Complete the following steps to remove this enhancement:
 8.  Restart the WebSphere\_Portal server.
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

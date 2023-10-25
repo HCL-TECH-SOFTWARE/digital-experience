@@ -204,6 +204,11 @@ As of CF208, the TinyMCE editor is enabled out of the box.
 
 2.  Restart the WebSphere_Portal server.
 
+
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
+
 <!--
 
 ## Using a custom EditLive! editor toolbar
