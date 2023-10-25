@@ -76,3 +76,5 @@ The following table lists the configuration services:
 There is a number of other Web Content Manager configuration services. The Web Content Manager properties files are located in the `wp_profile_root/PortalServer/wcm/shared/app/config/wcmservices` directory.
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

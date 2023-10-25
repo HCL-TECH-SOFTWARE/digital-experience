@@ -20,3 +20,6 @@ Increasing the `total transaction lifetime timeout` setting might not always be 
 |Downloadable files|Another alternative to creating web content with large amounts of HTML or rich text is to provide information on your website in the form of downloadable files. These files can be stored as file resource elements.|
 
 
+
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
