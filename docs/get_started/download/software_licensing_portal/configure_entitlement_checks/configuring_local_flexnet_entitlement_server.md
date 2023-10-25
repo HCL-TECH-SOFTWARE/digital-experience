@@ -251,7 +251,11 @@ The License Manager component communicates with the local license server to vali
     kubectl create secret generic license-secret --from-file=hostname.certs -n dxns
     ```
 
-4. You may need to run a Helm upgrade (update)? and restart the DX license manager pod.
+4.  Run a Helm upgrade and restart the DX license manager pod.
+
+    ```
+    helm upgrade -n dxns -f current.yaml dx-deployment install-hcl-dx-deployment
+    ```
 
 ## Results
 
