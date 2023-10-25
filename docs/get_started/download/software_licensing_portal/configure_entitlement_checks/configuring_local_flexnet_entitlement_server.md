@@ -86,9 +86,9 @@ A local Flexnet entitlement server can itself also be configured to function wit
 
         Where:
 
-        -   <license server hostname> is the host name of the local license server.
+        -   `<license server hostname>` is the host name of the local license server.
 
-        -   <port> is the configured port number for the local license service.
+        -   `<port>` is the configured port number for the local license service.
 
     2.  Extract the **hostids** value from the local license server.
         
@@ -99,9 +99,9 @@ A local Flexnet entitlement server can itself also be configured to function wit
         ```
         Where:
 
-        -   <token value> is the token.
-        -   <license server hostname> is the hostname of the local license server.
-        -   <port> is the configured port number for the local license service.
+        -   `<token value>` is the token.
+        -   `<license server hostname>` is the hostname of the local license server.
+        -   `<port>` is the configured port number for the local license service.
 
         The value that you are looking for is the 12-character **hostids** value. For example,
 
@@ -162,10 +162,10 @@ A local Flexnet entitlement server can itself also be configured to function wit
         ```
 
         Where:
-        -   <token value> is the token.
-        -   <Bin File Name.bin> is the capability response file.
-        -   <license server hostname> is the hostname of the local license server.
-        -   <port> is the configured port number for the local license service.
+        -   `<token value>` is the token.
+        -   `<Bin File Name.bin>` is the capability response file.
+        -   `<license server hostname>` is the hostname of the local license server.
+        -   `<port>` is the configured port number for the local license service.
 
         The expected HTTP response is:
         
