@@ -23,6 +23,18 @@ The Script Application has the following advantages:
 
 **Video**: [Start building your first HCL Digital Experience Script Application in minutes](https://hclsw.co/dx-scriptapp-webinar)
 
+-   **[Build applications with the Script Application](build_app_with_script_application/index.md)**  
+You can take any existing web page, pick out individual parts, and enter them into corresponding tabs in the Script Application Editor.
+-   **[DXClient](../../extend_dx/development_tools/dxclient/index.md)**  
+DXClient is a command line tool featuring a single, unified interface to all HCL DX automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes.
+-   **[Script Application Security Overview](script_application_security/index.md)**  
+The default security configuration of the Script Application places limits on which portal users and groups can access the editor and import features.
+-   **[Tutorial](../../guide_me/tutorials/scriptapps/index.md)**  
+This section contains step-by-step instructions to bundle and deploy Script Applications. 
+-   **[Limitations](limitations.md)**  
+Learn about limitations to the Script Application.
+-   **[Troubleshooting](troubleshooting.md)**  
+This section provides solutions that can help you solve issues with Script Applications.
 
 ## HCLSoftware U learning materials
 
