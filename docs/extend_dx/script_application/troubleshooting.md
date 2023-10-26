@@ -4,7 +4,7 @@ title: Troubleshooting
 
 # Script Application Troubleshooting
 
-The following solutions can help you solve troubleshooting issues.
+This section provides solutions that can help you solve issues with Script Applications.
 
 - **Preview does not render changes.**
 

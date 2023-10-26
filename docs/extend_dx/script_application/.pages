@@ -2,8 +2,8 @@ title: Script Applications
 nav:
     - index.md
     - build_app_with_script_application
-    - DXClient CLI: ../extend_dx/development_tools/dxclient/
+    - DXClient CLI: ../extend_dx/development_tools/dxclient/index.html
     - script_application_security
-    - Tutorial: ../guide_me/tutorials/scriptapps/
+    - Tutorial: ../guide_me/tutorials/scriptapps/index.html
     - limitations.md
     - troubleshooting.md
