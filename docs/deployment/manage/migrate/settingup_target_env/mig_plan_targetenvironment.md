@@ -20,5 +20,6 @@ There are other considerations to keep in mind around the user IDs and passwords
     -   [Replacing the HCL Digital Experience administrator user ID](../../security/people/authentication/updating_userid_pwd/portalid.md)
     -   [Replacing the WebSphere Application Server administrator user ID](../../security/people/authentication/updating_userid_pwd/rep_was_id.md)
     -   [Planning to install HCL Digital Experience](../../../../get_started/plan_deployment/traditional_deployment/index.md)
+    -   [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 
 
