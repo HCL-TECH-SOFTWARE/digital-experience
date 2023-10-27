@@ -24,3 +24,16 @@ Use the following default URLs to access the HCL WebSphere® Integrated Solution
     http://yourserver:10200/ibm/wizard
 
     http://yourserver:10202/ibm/wizard
+
+- Kube: https://<host>:443/ibm/console
+
+- Docker: https://<host>:10041/ibm/console
+
+- Docker Compose: https://<host>:443/ibm/console or https://<host>:10041/ibm/console
+
+- Default Standalone Local: https://<host>:10041/ibm/console
+
+- Cluster: Can be freely configured. Sample ports are 9443 or 9041.
+
+!!! note
+    Customer can choose **Local install** and **Cluster differ** based on the environment.

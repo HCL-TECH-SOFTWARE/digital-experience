@@ -15,6 +15,18 @@ In the Configuration Wizard, you answer questions about the environment that you
     
     - `kubectl` command: `kubectl -n <namespace> rollout restart statefulset <release-name>-core`
 
+## Default URLs
+
+To access different administration user interfaces during the configuration process, you can use default URLs if needed.
+
+Use the following default URLs to access the Configuration Wizard:
+
+-   **Configuration Wizard**
+
+    http://yourserver:10200/ibm/wizard
+
+    http://yourserver:10202/ibm/wizard
+    
 
 **Video**: [HCL Portal - How to Access ConfigWizard](https://www.youtube.com/watch?v=YAEO78T7coM&feature=youtu.be)
 
