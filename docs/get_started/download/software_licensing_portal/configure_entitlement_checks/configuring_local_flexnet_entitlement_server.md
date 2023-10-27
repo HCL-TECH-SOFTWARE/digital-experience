@@ -86,9 +86,9 @@ A local Flexnet entitlement server can itself also be configured to function wit
 
         Where:
 
-        -   <license server hostname> is the host name of the local license server.
+        -   `<license server hostname>` is the host name of the local license server.
 
-        -   <port> is the configured port number for the local license service.
+        -   `<port>` is the configured port number for the local license service.
 
     2.  Extract the **hostids** value from the local license server.
         
@@ -99,9 +99,9 @@ A local Flexnet entitlement server can itself also be configured to function wit
         ```
         Where:
 
-        -   <token value> is the token.
-        -   <license server hostname> is the hostname of the local license server.
-        -   <port> is the configured port number for the local license service.
+        -   `<token value>` is the token.
+        -   `<license server hostname>` is the hostname of the local license server.
+        -   `<port>` is the configured port number for the local license service.
 
         The value that you are looking for is the 12-character **hostids** value. For example,
 
@@ -162,10 +162,10 @@ A local Flexnet entitlement server can itself also be configured to function wit
         ```
 
         Where:
-        -   <token value> is the token.
-        -   <Bin File Name.bin> is the capability response file.
-        -   <license server hostname> is the hostname of the local license server.
-        -   <port> is the configured port number for the local license service.
+        -   `<token value>` is the token.
+        -   `<Bin File Name.bin>` is the capability response file.
+        -   `<license server hostname>` is the hostname of the local license server.
+        -   `<port>` is the configured port number for the local license service.
 
         The expected HTTP response is:
         
@@ -248,14 +248,18 @@ The License Manager component communicates with the local license server to vali
 3. Import the generated SSL certificate for the local license manager to the Kubernetes secret manually. As mentioned above, use 'license-secret' as secret name. Below is an example command in a namespace dxns and where hostname.certs is the filename:
 
     ```
-    kubectl create secret generic license-secret --from-file=license-secret=hostname.certs -n dxns
+    kubectl create secret generic license-secret --from-file=hostname.certs -n dxns
     ```
 
-4. You may need to run a Helm upgrade (update)? and restart the DX license manager pod.
+4.  Run a Helm upgrade and restart the DX license manager pod.
+
+    ```
+    helm upgrade -n dxns -f current.yaml dx-deployment install-hcl-dx-deployment
+    ```
 
 ## Results
 
-Ensure that your connection to the local Flexnet license manager (server)? is successful by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.
+Ensure that your connection to the local Flexnet license server is successful by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.
 
 Use `kubectl` logs for the license manager pod. For example, in a namespace `dxns`, execute the following command:
 

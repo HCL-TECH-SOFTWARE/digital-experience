@@ -43,4 +43,4 @@ To set up the junction to use the Basic Authentication header to identify the We
 
 ???+ info "Related information"
     - [WebSEAL Administration Guide](https://www.ibm.com/docs/en/SSPREK_7.0.0/com.ibm.isam.doc_80/ameb_webseal_admin_pdf.pdf)
-
+    - [WebSphere® Integrated Solutions Console](../../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

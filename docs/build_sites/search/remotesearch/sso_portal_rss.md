@@ -104,3 +104,5 @@ For more details about exporting the LTPA token, refer to the WebSphere Applicat
 If you work with EJB on a secure server, you must set the search user ID. For details about how to do this step, refer to [Setting the search user ID](srtsttusrid.md).
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

@@ -75,4 +75,4 @@ Before updating the settings for large file handling, review the following consi
 
 ???+ info "Related information"
     - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

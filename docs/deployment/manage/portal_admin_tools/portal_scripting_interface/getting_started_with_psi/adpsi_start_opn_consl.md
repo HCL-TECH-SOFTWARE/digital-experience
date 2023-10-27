@@ -10,7 +10,8 @@ To start the Portal Scripting Interface from a console window, use the procedure
 
     `wpscript.sh|bat`.
 
-    **Note:** You must indicate that you want to enter the commands in Jython as follows: `-lang jython`. If you prefer to use the JACL Syntax, you can type `-lang jacl`.
+    !!! note 
+        You must indicate that you want to enter the commands in Jython as follows: `-lang jython`. If you prefer to use the JACL Syntax, you can type `-lang jacl`.
 
     1.  Type the command as follows: `./wpscript.sh -lang jython`.
 
@@ -29,5 +30,5 @@ To start the Portal Scripting Interface from a console window, use the procedure
 
 3.  You can now enter Portal Scripting commands as required. You can also use all the available WebSphere Application Server `wsadmin` commands.
 
-
-
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

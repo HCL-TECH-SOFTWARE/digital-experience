@@ -53,10 +53,10 @@ Perform the following steps to change the administrator password:
 
 
 
-Additionally, you should also change the password in the wkplc.properties file, located in the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+Additionally, you should also change the password in the wkplc.properties file, located in the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md)/ConfigEngine/properties directory.
 
 
 ???+ info "Related information"
     - [Applying fix packs to your portal](../../../../manage_portal_using_iim/apply_fixpacks.md)
-
+     - [WebSphere® Integrated Solutions Console](../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 
