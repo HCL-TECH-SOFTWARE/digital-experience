@@ -74,7 +74,7 @@ To go to the Themes view, click the DX Icon on the Activity Bar on the right. If
 
 - **Push Theme**
 
-    This triggers the [DXClient Livesync Push Theme](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-theme) for the selected theme. It starts a watching process for the files under that folder and pushes the subsequent changes into the server. This will push the theme to the server but not register it.
+    This triggers the [DXClient Livesync Push Theme](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-theme) for the selected theme. It starts a watching process for the files under that folder and pushes the subsequent changes into the server. This action pushes the theme to the server but it does not register the new theme.
 
     ![Pushing Theme](../../../images/hcl-dx-extensions-pushing.gif)
 
@@ -84,11 +84,11 @@ To go to the Themes view, click the DX Icon on the Activity Bar on the right. If
 
     This terminates the watching process for the theme if Push Theme has been initiated.
 
-## Limitation
+## Limitations
 
-1 The HCL DX Extensions feature is supported in non-English versions of VS Code, but it is only available in English and is not translated.
-2. The container-based version of DXClient does not support concurrent usage of DX Extension tasks like pull and push.
-3. The Push Theme feature does not register a new theme in the server.
+- The HCL DX Extensions feature is supported in non-English versions of VS Code, but it is only available in English and is not translated.
+- The container-based version of DXClient does not support concurrent usage of DX Extension tasks like pull and push.
+- The Push Theme feature does not register a new theme in the server.
 
 ## Guidelines & Best Practices
 
