@@ -8,7 +8,7 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
 2.  Click **Administration**.
 
-3.  In the navigation tree, click **Access** \> **Resource Permissions**.
+3.  Go to **Security > Resource Permissions**.
 
     1.  Click **Pages** on the **Select Resource Type** view.
 
@@ -30,7 +30,7 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
     10. Repeat this process for each necessary page.
 
-4.  Open portal administration and click **Portal Content** \> **Web Content Libraries**.
+4.  In the navigation tree, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the Site Builder Template Library.
 
@@ -46,7 +46,7 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
     7.  Click **Apply** and **Done**.
 
-5.  In the navigation tree, click **Portal Content** \> **Web Content Libraries**.
+5.  In the navigation tree, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the library that the users and groups need to use as the source for initial content and supporting assets for their new sites and sections.
 
@@ -64,7 +64,7 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
     8.  Repeat this process for all necessary libraries.
 
-6.  In the navigation tree, click **Portal Content** \> **Web Content Libraries**.
+6.  In the navigation tree, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the library that the users and groups need to use as the existing content library for their new sites and sections.
 
@@ -82,7 +82,7 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
     8.  Repeat this process for all necessary libraries.
 
-7.  In the navigation tree, click **Portlet Management** \> **Portlets**.
+7.  In the navigation tree, go to **Administration > Applications > Portlets**.
 
     1.  Search for **Site Builder**.
 

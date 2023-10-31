@@ -15,7 +15,7 @@ If they have to import and export site and section templates, administrators mus
 
 1.  Log in to the portal as an administrator.
 
-2.  In the administration toolbar, click **Access** \> **Resource Permissions**.
+2.  In the Practitioner Studio, go to **Administration > Security > Resource Permissions**.
 
     1.  Click **Pages** on the **Select Resource Type** view.
 
@@ -39,9 +39,11 @@ If they have to import and export site and section templates, administrators mus
 
 ## Assigning User access for Web Content Libraries
 
+### Assigning the Administrator role
+
 1.  Log in to the portal as an administrator.
 
-2.  In the administration toolbar, click **Portal Content** \> **Web Content Libraries**.
+2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the Site Builder Template Library.
 
@@ -57,7 +59,11 @@ If they have to import and export site and section templates, administrators mus
 
     7.  Click **Apply** and **Done**.
 
-3.  Open portal administration and click **Portal Content** \> **Web Content Libraries**.
+### Assigning the Contributor role
+
+1.  Log in to the portal as an administrator.
+
+2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the library that the users and groups need to use as the source for initial content and supporting assets for their new sites and sections.
 
@@ -75,7 +81,11 @@ If they have to import and export site and section templates, administrators mus
 
     8.  Repeat this process for all necessary libraries.
 
-4.  In the administration toolbar, click **Portal Content** \> **Web Content Libraries**.
+### Assigning the Editor role
+
+1.  Log in to the portal as an administrator.
+
+2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the library that the users and groups need to use as the existing content library for their new sites and sections.
 
@@ -99,7 +109,7 @@ If the Site Builder administrators are required to import and export site and se
 
 1.  Log in to the portal as an administrator.
 
-2.  In the administration toolbar, click **Access** \> **Resource Permissions**.
+2.  In the Practitioner Studio, go to **Administration > Security > Resource Permissions**.
 
 3. Click **Virtual Resources**.
 
@@ -119,7 +129,7 @@ If the Site Builder administrators are required to import and export site and se
 
     2.  Click **Virtual Resources**.
 
-10. Click **XML ACCESS**.
+6. Click **XML ACCESS**.
 
     1.  Click the **Assign Access** icon.
 
@@ -129,7 +139,7 @@ If the Site Builder administrators are required to import and export site and se
 
     4.  Click **OK**.
 
-11. Click **XML ACCESS**.
+7. Click **XML ACCESS**.
 
     1.  Click **Apply**.
 
@@ -139,7 +149,7 @@ If the Site Builder administrators are required to import and export site and se
 
 1.  Log in to the portal as an administrator.
 
-2. In the administration toolbar, click **Portlet Management** \> **Portlets**.
+2. In the Practitioner Studio, go to **Administration > Applications > Portlets**.
 
 3. Search for the Site Builder portlet.
 
