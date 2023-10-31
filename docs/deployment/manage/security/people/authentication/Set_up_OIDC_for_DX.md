@@ -342,3 +342,7 @@ Update the unique name of the new IdP specific login page so that pages referrin
     You are directed to DX and logged in as user `jjones1`.
 
 4. Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and confirm the displayed user is `jjones1`.
+
+## Reference
+
+For more information, refer to the open source repository [hclds-keycloak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). This repository contains Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. The goal of this repository is to provide a hands-on experience with common strategies, configurations, and solutions related to integrating IdPs using the OIDC authentication protocol.
