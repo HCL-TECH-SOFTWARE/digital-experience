@@ -89,7 +89,3 @@ To go to the Themes view, click the DX Icon on the Activity Bar on the right. If
 - The HCL DX Extensions feature is supported in non-English versions of VS Code, but it is only available in English and is not translated.
 - The container-based version of DXClient does not support concurrent usage of DX Extension tasks like pull and push.
 - The Push Theme feature does not register a new theme in the server.
-
-## Guidelines & Best Practices
-
-1. Recommend to use node version of DXClient tool for better performance of the extension.
