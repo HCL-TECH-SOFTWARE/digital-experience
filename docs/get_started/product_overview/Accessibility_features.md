@@ -26,13 +26,13 @@ HCL Digital Experience offerings include the following products:
 
 -	HCL Digital Experience Cloud Native v9.5
 
-This version of HCL Digital Experience together with included authoring tools: 
+This version of HCL Digital Experience with included authoring tools: 
 
--	Supports installation through a command-line interface known as console mode. It is the accessible equivalent of installing by using the graphical user interface.
+-	Supports installation through a command-line interface called console mode. It is the accessible equivalent of installing by using the graphical user interface.
 
 -	Supports interfaces commonly used by screen readers and screen magnifiers (Windows only).
 
--	Supports use of screen-reader software and digital speech synthesizers to hear what is displayed on the screen.
+-	Supports use of screen-reader software and digital speech synthesizers that describe what is displayed on the screen.
 
 -	Can be operated with only the keyboard.
 
@@ -52,9 +52,9 @@ This version of HCL Digital Experience together with included authoring tools:
 
 -	Provides documentation in an accessible format.
 
-To create and publish content, users can use the [HCL Web Content Manager authoring portlet](../../build_sites/create_sites/authoring_tools/site_auth_portlet.md). For more information, see [Authoring portlet accessibility features](../../manage_content/wcm_authoring/authoring_portlet/accessibility.md). HCL DX content authors and developers users can also create and publish content or applications by using local accessible editors and the Script Application command line option. For more information, read [Script Application Limitations](../../extend_dx/script_application/limitations.md). For supported browsers, refer to the [HCL Digital Experience System Requirements](../system_requirements/index.md).
+To create and publish content, users can use the [HCL Web Content Manager authoring portlet](../../build_sites/create_sites/authoring_tools/site_auth_portlet.md). For more information, see [Authoring portlet accessibility features](../../manage_content/wcm_authoring/authoring_portlet/accessibility.md). HCL DX content authors and developers users can also create and publish content or applications by using local accessible editors and the Script Application command-line option. For more information, read [Script Application Limitations](../../extend_dx/script_application/limitations.md). For supported browsers, refer to the [HCL Digital Experience System Requirements](../system_requirements/index.md).
 
-## HCL Digital Experience Help Center Documentation Accessibility 
+## HCL Digital Experience Help Center documentation accessibility 
 
 The [HCL Digital Experience Help Center](../product_overview/index.md) documentation includes the following features to aid accessibility:
 
