@@ -6,7 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Friendly Action URLs
 - Web Content Manager - AI assistance for descriptions, keyword generation, and sentiment analysis
-- Updated documentation for setting up OIDC in HCL DX for traditional architecture
+- Updated documentation for setting up OIDC in HCL DX
 - DXClient - Version compatibility
 - HCL DX Extensions for Visual Studio Code
 - Notice of deprecation of Textbox.io Rich Text Editor
@@ -21,17 +21,47 @@ The following features and updates are available to customers installing HCL Dig
 - Content Composer – Updated custom configurations for Open AI 
 - DX Picker - Preview an asset
 
-## All  Digital Experience Versions (8.5, 9.0, 9.5)
+## All Digital Experience Versions (8.5, 9.0, 9.5)
 
 ### Friendly Action URLs
 
+=== "Containers"
+    While DX allows for [friendly URLs](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/index.md), actions in portlets still trigger state information for bookmarkability and caching. A new configuration option is available where you can redirect a URL after action execution to a friendly URL. For more information, see [Friendly Action URLs](../../build_sites/create_sites/url_addressing/index.md#friendly-action-urls).
+
+=== "On-Premises"
+    While DX allows for [friendly URLs](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/index.md), actions in portlets still trigger state information for bookmarkability and caching. A new configuration option is available where you can redirect a URL after action execution to a friendly URL. For more information, see [Friendly Action URLs](../../build_sites/create_sites/url_addressing/index.md#friendly-action-urls).
+
 ### Web Content Manager - AI assistance for descriptions, keyword generation, and sentiment analysis
 
-### Updated documentation for setting up OIDC in HCL DX for traditional architecture
+=== "Containers"
+    AI-assisted summarization, keyword extraction, and sentiment analysis of content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions, keyword generation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+
+=== "On-Premises"
+    AI-assisted summarization, keyword extraction, and sentiment analysis of content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions, keyword generation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+
+### Updated documentation for setting up OIDC in HCL DX
+
+=== "Containers"
+    Instructions for setting up OIDC has been updated to include a reference to the open source repository [hclds-keyclak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). In this repository, you can find Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. For more information, see [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md)
+
+=== "On-Premises"
+    Instructions for setting up OIDC has been updated and a reference to the open source repository [hclds-keyclak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). In this repository, you can find Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. Steps for traditional architecture have also been added in the documentation. For more information, see [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
 
 ### DXClient - Version compatibility
 
+=== "Containers"
+    You can use the version compatibility command to check the version details of DX Core and DXClient. For more information, see the Help Center topic [Version Compatibility ](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/versionCompat.md).
+
+=== "On-Premises"
+    You can use the version compatibility command to check the version details of DX Core and DXClient. For more information, see the Help Center topic [Version Compatibility ](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/versionCompat.md).
+
 ### HCL DX Extensions for Visual Studio Code
+
+=== "Containers"
+    The HCL DX Extensions feature for Visual Studio Code provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation. For more information, see the Help Center topic [HCL DX Extensions for Visual Studio Code](../../extend_dx/development_tools/hcl_dx_extensions/index.md).
+
+=== "On-Premises"
+    The HCL DX Extensions feature for Visual Studio Code provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation. For more information, see the Help Center topic [HCL DX Extensions for Visual Studio Code](../../extend_dx/development_tools/hcl_dx_extensions/index.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -44,6 +74,12 @@ The following features and updates are available to customers installing HCL Dig
 ## Digital Experience 9.5 Version
 
 ### Web Content Manager - Updates on the Content Reporting Bulk Updates feature
+
+=== "Containers"
+    Starting CF216, you can update the expiration date and add, remove, or replace an owner or author using the Bulk Updates feature. See the Help Center topic [Accessing the Content Reporting portlet](../../manage_content/wcm_authoring/content_reporting/usage/bulk_update_report.md) for additional information.
+
+=== "On-Premises"
+    Starting CF216, you can update the expiration date and add, remove, or replace an owner or author using the Bulk Updates feature. See the Help Center topic [Accessing the Content Reporting portlet](../../manage_content/wcm_authoring/content_reporting/usage/bulk_update_report.md) for additional information.
 
 ## Digital Experience 9.5 Container Version
 
