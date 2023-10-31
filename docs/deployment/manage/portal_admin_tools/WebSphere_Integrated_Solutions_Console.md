@@ -36,4 +36,4 @@ Use the following default URLs to access the HCL WebSphere® Integrated Solution
 - Cluster: Can be freely configured. Sample ports are 9443 or 9041.
 
 !!! note
-    Customer can choose **Local install** and **Cluster differ** based on the environment.
+    You can choose **Local install** and **Cluster differ** based on the environment.
