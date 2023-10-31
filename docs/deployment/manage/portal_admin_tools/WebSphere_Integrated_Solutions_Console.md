@@ -17,13 +17,13 @@ Use the following default URLs to access the HCL WebSphere® Integrated Solution
 
     http://yourserver:10038/ibm/console
 
-    http://yourserver:10041/ibm/console
+    https://yourserver:10041/ibm/console
 
 -   **Configuration Wizard**
 
     http://yourserver:10200/ibm/wizard
 
-    http://yourserver:10202/ibm/wizard
+    https://yourserver:10202/ibm/wizard
 
 - Kube: https://<host>:443/ibm/console
 
