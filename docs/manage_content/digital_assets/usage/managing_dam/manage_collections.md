@@ -149,3 +149,34 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Delete**.
 2. A pop-up message displays to confirm your action. Once a collection is deleted, you can no longer retrieve it, including the media assets, renditions, and versions you have used as your web content.
 3. Click **Delete** to proceed with deleting the collection.
+
+## Moving a collection
+
+Refer to the following steps if you want to move a collection from one location to another.
+
+!!! note 
+    Permissions/Access restrictions of the collection and its contents will align with the permissions of the destination location.
+
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Move**.
+
+2. A dialogue box appears that shows the list of collections. You can search for a specific collection, or you can also navigate inside a collection if a subcollection is present.
+
+    If the user does not have edit access for the collection, that row will be disabled.
+
+3. If you want to move the collection to root level (represented by the home icon in the breadcrumb), the **move here** button will be enabled by Deafult. So that user can move the collection to root level.
+
+4. Select the collection in which you want to move and click **move here**.
+
+    If a collection with the same name exists in the target collection, a dialogue box to rename the collection appears.
+
+5. Click **View Location** to navigate inside the collection.
+
+### Configuration for enabling the collection move feature
+
+The collection move feature can be enabled or disabled through the helm. By default, this feature is enabled.
+
+```yaml
+configuration:
+  digitalAssetManagement:
+    enableCollectionMove: true
+```
