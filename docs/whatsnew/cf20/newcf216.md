@@ -31,13 +31,13 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     While DX allows for [friendly URLs](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/index.md), actions in portlets still trigger state information for bookmarkability and caching. A new configuration option is available where you can redirect a URL after action execution to a friendly URL. For more information, see [Friendly Action URLs](../../build_sites/create_sites/url_addressing/index.md#friendly-action-urls).
 
-### Web Content Manager - AI assistance for descriptions, keyword generation, and sentiment analysis
+### Web Content Manager - AI assistance for descriptions and keyword generation
 
 === "Containers"
-    AI-assisted summarization, keyword extraction, and sentiment analysis of content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions, keyword generation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+    AI-assisted summarization and keyword extraction of content elements are now available. For more information, see the Help Center topic [AI assistance for description and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 === "On-Premises"
-    AI-assisted summarization, keyword extraction, and sentiment analysis of content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions, keyword generation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+    AI-assisted summarization and keyword extraction of content elements are now available. For more information, see the Help Center topic [AI assistance for description and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 ### Updated documentation for setting up OIDC in HCL DX
 
