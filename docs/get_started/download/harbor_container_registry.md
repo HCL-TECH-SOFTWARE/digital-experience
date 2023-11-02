@@ -12,9 +12,40 @@ Beginning with HCL Digital Experience 9.5 Container Update CF205, the [Docker im
     
 Harbor is an open-source Container Image and Helm Chart registry.  It can be accessed through the  CLI tools, such as Docker and HELM, using a CLI Secret. For more information about Harbor capabilities, refer to the Harbor documentation at [https://goharbor.io](https://goharbor.io){:target="_blank"}.
 
-Follow the procedures below to access and deploy the components of HCL DX 9.5 Container Update CF205 or later releases from the HCL Harbor repository. 
+Follow the procedures below to access and deploy the components of HCL DX 9.5 Container Update CF205 or later releases from the HCL Harbor repository.
 
-## Configure the HCL Harbor Helm repository to your DX 9.5 Kubernetes Deployment
+!!! note
+
+    From the CF216 release, the Harbor repository is updated with an OCI-based registry. Meaning, all the helm chart command is updated with OCI compliant. However, the older versions of the helm chart will continue to be used with the older approach. On this page, both approaches are described.
+
+## OCI based registry
+It is important to notice that, Helm Charts pushed and managed via OCI are not part of the `Helm Charts` category anymore in Harbor. So the `Helm Charts` section does not reflect the newer version of helm charts which are pushed via OCI commands. OCI assets such as container images and helm charts are now in the same category, both listed as an OCI repository.
+
+### Pull helm charts via OCI commands
+
+These commands are different than the older approach. It required a login at the first step and then execute the pull command.
+
+```sh
+helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET_> https://hclcr.io/
+```
+Then execute the OCI-based pull command.
+
+```sh
+helm pull oci://hclcr.io/dx/hcl-dx-deployment --version <HELM_CHART_VERSION_NUMBER>
+```
+After running this command, you can check if the Helm Chart has been downloaded to your local machine:
+
+```sh
+# List directory content to check successful pull
+ls -lah 
+
+# total 8868
+# -rw-r--r--. 1 user user  136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz
+```
+
+
+## Non-OCI based registry, older approach
+### Configure the HCL Harbor Helm repository to your DX 9.5 Kubernetes Deployment
 
 As an alternative to downloading the DX 9.5 Helm Charts from the Docker components from your HCL DX offering entitlements in the HCL Software License Portal, you can also directly use the HCL Harbor Helm repository with Helm from Container Update CF205 and later releases.
 
