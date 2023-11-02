@@ -1,10 +1,10 @@
-# AI assistance for descriptions, keyword generation, and sentiment analysis in a content item
+# AI assistance for description and keyword generation in a content item
 
-This section provides the steps on how to use AI assistance for generating descriptions, keywords, and getting sentiment analysis on content elements.
+This section provides the steps on how to use AI assistance for generating description and keywords on content elements.
 
 ## Prerequisite
 
-Before you can use AI-assisted features for sentiment analysis of content, keyword extraction from content, and auto summarization of content element, refer to the following steps to enable AI Analysis:
+Before you can use AI-assisted features for keyword extraction from content and auto summarization of content element, refer to the following steps to enable AI Analysis:
 
 - [Web content AI analysis for Kubernetes Deployment](../../../../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md)
 - [Web content AI analysis for traditional deployment](../../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md)
@@ -37,16 +37,3 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
     ![](../../../../../assets/HCL_Authoring_Portlet_Generate_Keywords_GeneratedKeywords.png)
 
 5. Select **Save** or other **Save** options to save your updates.
-
-## Using AI-assisted sentiment analysis of content element
-
-1. Fill in any of text elements (for example, rich text, text, or short text) of the content item.
-
-2. Click the **Analyze Sentiment** icon located in the lower right corner of the text element. A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon on the **Body** field.
-
-    ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_AnalyzeSentiment.png)
-    ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_SentimentResult.png)
-
-3. Click the sentiment result icon to see more details about the result.
-
-    ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_SentimentPopover.png)
