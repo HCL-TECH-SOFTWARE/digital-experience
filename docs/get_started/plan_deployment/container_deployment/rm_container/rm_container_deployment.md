@@ -1,17 +1,17 @@
-# HCL Digital Experience 9.5 Roadmap: Container deployment
+# HCL Digital Experience 9.5 roadmap: Container deployment
 
 This roadmap outlines the HCL Digital Experience deployment on Docker and supported Kubernetes platforms such as, Red Hat OpenShift, Amazon Elastic Kubernetes Service (EKS), and Microsoft Azure Kubernetes Service (AKS).
 
 
-## Who should use this roadmap
+## Audience
 
-HCL Digital Experience can be deployed to run on the Docker platform or as a fully container-based functioning deployment on Red Hat OpenShift and Amazon Elastic Kubernetes Service (EKS), and, as of 9.5 CF182, Microsoft Azure Kubernetes Service \(AKS\). Users can take advantage of these deployment models and can have an HCL Digital Experience 9.5 deployment operational in Docker or supported Kubernetes environment in minutes.
+HCL Digital Experience can be deployed to run on the Docker platform or as a fully container-based functioning deployment on Red Hat OpenShift and Amazon Elastic Kubernetes Service, and, with the release of V9.5 CF182, Microsoft Azure Kubernetes Service. Users can take advantage of these deployment models and can have an HCL Digital Experience 9.5 deployment work in Docker or supported Kubernetes environment in minutes.
 
-Use this approach if you are an organization with the following requirements:
+Use this approach if your organization has the following interests and plans:
 
--   An organization interested to deploy on Docker or supported Kubernetes platforms
--   An organization that needs to make fault-tolerant systems
--   An organization that needs to use services such as orchestration and auto-scaling to scale applications
+-   Interests in deploying on Docker or supported Kubernetes platforms
+-   Plans to make fault-tolerant systems
+-   Plans to use services such as orchestration and auto-scaling to scale applications
 
 ## HCL Digital Experience 9.5 package contents
 
@@ -19,7 +19,7 @@ The HCL Digital Experience 9.5 image files, available through the HCL DX 9.5 Con
 
 Refer to the [HCL Digital Experience 9.5 Container Deployment](index.md) topic for additional guidance, including the latest HCL DX 9.5 image file listings, deployment, staging, maintenance, and customization guides.
 
-<!--- 
+<!-- 
 **Related information**  
 
 
@@ -29,5 +29,5 @@ Refer to the [HCL Digital Experience 9.5 Container Deployment](index.md) topic f
 
 [Digital Experience on containerized platforms](../containerization/deployment.md)
 
-[Docker image deployment](../containerization/docker_image_deployment.md) --->
+[Docker image deployment](../containerization/docker_image_deployment.md) -->
 
