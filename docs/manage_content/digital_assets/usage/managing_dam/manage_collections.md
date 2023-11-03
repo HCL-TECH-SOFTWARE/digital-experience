@@ -162,7 +162,7 @@ Refer to the following steps if you want to move a collection from one location 
     A dialogue box appears that shows the list of collections. You can search for a specific collection, or you can also navigate inside a collection if a subcollection is present.
 
     !!!note
-        If the user does not have edit access for the collection, that collection row is disabled in the dialogue.
+        If the user does not have edit access for the collection, the row for that collection is disabled in the dialogue.
 
 2. To move the collection, there are two options depending on the target location:
 
