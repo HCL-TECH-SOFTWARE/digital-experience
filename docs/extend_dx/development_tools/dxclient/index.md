@@ -273,7 +273,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Delete staging mismatch](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#delete-staging-mismatch)
 
     -   HCL DX 9.5 CF215 release: **V1.24.0
-        -   [Find staging mismatch](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#download-mismatch-report) 
+        -   [Find staging mismatch](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md) 
         -   [Download mismatch report]((../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#download-mismatch-report)
          
     -   HCL DX 9.5 CF214 release: **V1.23.0
