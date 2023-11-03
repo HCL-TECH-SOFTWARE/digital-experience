@@ -174,7 +174,7 @@ Refer to the following steps if you want to move a collection from one location 
 
 3. Click **View Location** to navigate inside the collection.
 
-### Configuration for enabling the collection move feature
+### Configuration for enabling the Move Collection feature
 
 The collection move feature can be enabled or disabled through the helm. By default, this feature is enabled.
 
