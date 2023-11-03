@@ -448,7 +448,7 @@ Use the `manage-dam-staging start-staging-resync` command to trigger DAM staging
         dxclient manage-dam-staging start-staging-resync -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
         ```
 
-## Verifying if enviroments are in sync
+## Verifying if environments are in sync
 
 In the subscriber environment, if there are any operations in "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, it means that these operations are not yet complete. You must wait until all operations either complete or fail before verifying the resync. The existing DAM API endpoint can be checked in [GET All DAM Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). If no operation is tagged with "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, you can verify the resync.
 
@@ -477,5 +477,5 @@ To verify if both the environments are in sync, perform the following steps.
            enableStagingCleanupHeartbeats
            findStagingMismatchHeartbeatIntervalTimeInMinutes
            ```
-- Performing a resync is not supported for two-way staging (for example, a scenario where two environments are each other's publisher and subscriber). Performing resync on these environments will lead to undesirable results such collections or assets deletion. 
+- Performing a resync is not supported for two-way staging (for example, a scenario where two environments are each other's publisher and subscriber). Performing resync on these environments will lead to loss of collections or assets from both the environments.
 - If the [Find staging mismatch](#find-staging-mismatch) status is in FIND_MISMATCH_START or FIND_MISMATCH_FAILED for more than 30 minutes, it could be because of the excessive amount of data to process. This can also be verified through the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). Search for triggerFunction `findStagingMismatch`. If the status field in the API response is FAILED with retryCounter value greater than 0, it means that the process is failed because of the large amount of data to process. In this scenario, it is advised to deregister and register the subscriber again to allow staging to sync the data between publisher and subscriber. 
