@@ -2,11 +2,20 @@
 
 HCL Digital Experience administrators can use Site Builder to create sites or add sections to existing site from the available templates.
 
+Administrators must have the following access rights:
+
+- Editor access to the Content Root page where they want to create new sites
+- Administrator rights to the Site Build Template library
+- Editor rights to existing content library for their new sites and sections
+- Editor access to the Site Builder portlet
+
+If they have to import and export site and section templates, administrators must have edit access to the portal and xmlaccess virtual resources.
+
+## Assigning User access for anchor pages
+
 1.  Log in to the portal as an administrator.
 
-**Assign User access for anchor pages**
-
-2.  In the administration toolbar, click **Access** \> **Resource Permissions**.
+2.  In the Practitioner Studio, go to **Administration > Security > Resource Permissions**.
 
     1.  Click **Pages** on the **Select Resource Type** view.
 
@@ -28,9 +37,13 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
     10. Repeat this process for all necessary pages.
 
-**Assign User access for Web Content Libraries**
+## Assigning User access for Web Content Libraries
 
-3.  In the administration toolbar, click **Portal Content** \> **Web Content Libraries**.
+### Assigning the Administrator role
+
+1.  Log in to the portal as an administrator.
+
+2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the Site Builder Template Library.
 
@@ -46,7 +59,11 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
     7.  Click **Apply** and **Done**.
 
-4.  Open portal administration and click **Portal Content** \> **Web Content Libraries**.
+### Assigning the Contributor role
+
+1.  Log in to the portal as an administrator.
+
+2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the library that the users and groups need to use as the source for initial content and supporting assets for their new sites and sections.
 
@@ -64,7 +81,11 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
     8.  Repeat this process for all necessary libraries.
 
-5.  In the administration toolbar, click **Portal Content** \> **Web Content Libraries**.
+### Assigning the Editor role
+
+1.  Log in to the portal as an administrator.
+
+2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the library that the users and groups need to use as the existing content library for their new sites and sections.
 
@@ -82,15 +103,17 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
     8.  Repeat this process for all necessary libraries.
 
-**Assign role access**
+## Assigning role access
 
 If the Site Builder administrators are required to import and export site and section templates, the following access roles must be set.
 
-6.  In the administration toolbar, click **Access** \> **Resource Permissions**.
+1.  Log in to the portal as an administrator.
 
-7. Click **Virtual Resources**.
+2.  In the Practitioner Studio, go to **Administration > Security > Resource Permissions**.
 
-8. Click **PORTAL**.
+3. Click **Virtual Resources**.
+
+4. Click **PORTAL**.
 
     1.  Click the **Assign Access** icon.
 
@@ -100,13 +123,13 @@ If the Site Builder administrators are required to import and export site and se
 
     4.  Click **OK**.
 
-9. Click **PORTAL**.
+5. Click **PORTAL**.
 
     1.  Click **Apply**.
 
     2.  Click **Virtual Resources**.
 
-10. Click **XML ACCESS**.
+6. Click **XML ACCESS**.
 
     1.  Click the **Assign Access** icon.
 
@@ -116,25 +139,27 @@ If the Site Builder administrators are required to import and export site and se
 
     4.  Click **OK**.
 
-11. Click **XML ACCESS**.
+7. Click **XML ACCESS**.
 
     1.  Click **Apply**.
 
     2.  Click **Virtual Resources**.
 
-**Assign administrator access to the Site Builder portlet**
+## Assign administrator access to the Site Builder portlet
 
-12. In the administration toolbar, click **Portlet Management** \> **Portlets**.
+1.  Log in to the portal as an administrator.
 
-13. Search for the Site Builder portlet.
+2. In the Practitioner Studio, go to **Administration > Applications > Portlets**.
 
-14. Click the **Access** icon.
+3. Search for the Site Builder portlet.
 
-15. For the Administrator role, click the **Edit Role** icon.
+4. Click the **Access** icon.
 
-16. Add the users and groups you want to add as Site Builder Administrators.
+5. For the Administrator role, click the **Edit Role** icon.
 
-17. Click **OK**.
+6. Add the users and groups you want to add as Site Builder Administrators.
+
+7. Click **OK**.
 
 
 

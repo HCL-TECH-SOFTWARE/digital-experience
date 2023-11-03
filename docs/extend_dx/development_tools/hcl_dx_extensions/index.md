@@ -10,9 +10,9 @@ Before installing the extension, make sure the following prerequisites are met:
 
 - VS Code 1.80.0 or higher
 - [DXClient 1.23.0 or higher](../dxclient/index.md)
-    
+
     !!! note
-        
+
         It is recommended to use the node version of DXClient tool for better performance of the extension.
 
 ## Installation
@@ -34,15 +34,15 @@ After installing the HCL DX extension, a DX icon is visible on the VS Code sideb
 
 Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set the below configuration arguments:
 
-* `hclDxExtensions.dxProtocol`: Protocol of the DX Core server
-* `hclDxExtensions.hostname`: Host name of the DX Core server
-* `hclDxExtensions.dxPort`: Port number of the DX Core server, for any Kubernetes Environment default is 443
-* `hclDxExtensions.dxUsername`: Username of the DX Core server
-* `hclDxExtensions.dxPassword`: Password of the DX Core server
-* `hclDxExtensions.contenthandlerPath`: Alternate path for the portal context root or the content handler servlet
-* `hclDxExtensions.themesPath`: The parent folder of your Themes (for example, /path/to/Themes)
-* `hclDxExtensions.executablePath`: (Optional) The directory of dxclient executable (for example, /path/to/dxclient/bin)
-* `hclDxExtensions.dxclientType`: The type of DxClient executable (required when the "Executable Path" setting is provided)
+- `hclDxExtensions.dxProtocol`: Protocol of the DX Core server
+- `hclDxExtensions.hostname`: Host name of the DX Core server
+- `hclDxExtensions.dxPort`: Port number of the DX Core server, for any Kubernetes Environment default is 443
+- `hclDxExtensions.dxUsername`: Username of the DX Core server
+- `hclDxExtensions.dxPassword`: Password of the DX Core server
+- `hclDxExtensions.contenthandlerPath`: Alternate path for the portal context root or the content handler servlet
+- `hclDxExtensions.themesPath`: The parent folder of your Themes (for example, /path/to/Themes)
+- `hclDxExtensions.executablePath`: (Optional) The directory of dxclient executable (for example, /path/to/dxclient/bin)
+- `hclDxExtensions.dxclientType`: The type of DxClient executable (required when the "Executable Path" setting is provided)
 
 ## Using the Themes View
 
@@ -55,35 +55,37 @@ To go to the Themes view, click the DX Icon on the Activity Bar on the right. If
 ### General features
 
 - **Pull New Theme**
-    
+
     This provides users with a list of all themes in the connected DX server and you can choose which one to pull. The Pull New Theme action downloads all files under the theme to a folder named with the chosen theme name under `themesPath`. If the theme name does not exist in the local computer, a new folder is created.
 
     ![Pull New Theme](../../../images/hcl-dx-extensions-pull-new-theme.gif)
 
 - **Refresh**
-    
+
     This refreshes the listed themes under the `themesPath`.
 
 ### Features available for each listed theme
 
 - **Pull Theme**
-    
-    This initiates the DXClient Livesync Pull Theme action, utilizing the selected theme to download theme files to the corresponding folder under `themesPath`. 
+
+    This initiates the [DXClient Livesync Pull Theme](../dxclient/dxclient_artifact_types/livesync.md#livesync-pull-theme) action, utilizing the selected theme to download theme files to the corresponding folder under `themesPath`.
 
     ![Pull Existing Theme](../../../images/hcl-dx-extensions-pull-existing-theme.gif)
 
 - **Push Theme**
-    
-    This triggers the DXClient Livesync Push Theme for the selected theme. It starts a watching process for the files under that folder and pushes the subsequent changes into the server.
+
+    This triggers the [DXClient Livesync Push Theme](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-theme) for the selected theme. It starts a watching process for the files under that folder and pushes the subsequent changes into the server. This action pushes the theme to the server but it does not register the new theme.
 
     ![Pushing Theme](../../../images/hcl-dx-extensions-pushing.gif)
 
     ![Watching Theme](../../../images/hcl-dx-extensions-watching.gif)
 
 - **Stop Pushing Theme**
-    
+
     This terminates the watching process for the theme if Push Theme has been initiated.
 
-## Limitation
+## Limitations
 
 - The HCL DX Extensions feature is supported in non-English versions of VS Code, but it is only available in English and is not translated.
+- The container-based version of DXClient does not support concurrent usage of DX Extension tasks like pull and push.
+- The Push Theme feature does not register a new theme in the server.
