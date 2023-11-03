@@ -21,4 +21,4 @@ Specify the access control settings for the current item to designate which user
 7.  [Specifying the location of a content item](wcm_dev_content_location.md)  
 When you first create a content item, you are required to specify the location of the item if the location is not defined in the authoring template.
 8. [AI assistance for description and keyword generation in a content item](../elements/wcm_dev_elements_ai_assistance.md)  
-Automatically generate descriptions and keywords on the contents of the elements in your content item.
+Automatically generate descriptions and keywords for the contents of the elements in your content item.
