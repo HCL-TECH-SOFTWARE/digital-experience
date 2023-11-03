@@ -83,7 +83,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Digital Experience 9.5 Container Version
 
-### Digital Asset Management - Resync the DAM Staging environments
+### Digital Asset Management - Resyncing the DAM Staging environments
 
 === "Containers"
     DAM staging supports resyncing of identified the discrepancies between a publisher and a subscriber environment. For more information, see the Help Center topic [DAM Staging mismatch](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
@@ -93,10 +93,15 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     The OpenAI model is switched to ```gpt-3.5-turbo``` because of OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. For more information, see [OpenAI ChatGPT custom configurations](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
 
-### DX Picker - Preview an asset
+### DX Picker - Previewing an asset
 
 === "Containers"
     With DX Picker, you can now open an image in Preview mode. When in Preview mode, you can view image renditions, download or select an image, navigate between assets, and zoom in and out of an image. For more information, see [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage/index.md).
+
+### Digital Asset Management - Moving a collection 
+
+=== "Containers"
+    DX 9.5 Container Update CF216 adds capability to move a collection to a new location, either to another collection or to the root level. This includes an option to save the collection under a new name if naming conflicts occur. 
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
