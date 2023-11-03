@@ -170,7 +170,7 @@ Refer to the following steps if you want to move a collection from one location 
 
         If a collection with the same name exists in the target collection, a dialogue box to rename the collection appears.
 
-    - If you want to move the collection to root level (represented by the home icon), the **move here** button is enabled by default so that users can move the collection to the root level.
+    - If you want to move the collection to root level, do not select any collection in the dialogue box. Just click the **Move here** button to move the collection to the root level.
 
 3. Click **View Location** to navigate inside the collection.
 
