@@ -176,7 +176,7 @@ Refer to the following steps if you want to move a collection from one location 
 
 ### Configuration for enabling the Move Collection feature
 
-The collection move feature can be enabled or disabled through the helm. By default, this feature is enabled.
+The Move Collection feature can be enabled or disabled through the helm. By default, this feature is enabled.
 
 ```yaml
 configuration:
