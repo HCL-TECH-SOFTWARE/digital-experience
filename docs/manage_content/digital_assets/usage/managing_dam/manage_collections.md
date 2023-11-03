@@ -155,7 +155,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 Refer to the following steps if you want to move a collection from one location to another.
 
 !!! note 
-    Permissions/Access restrictions of the collection and its contents will align with the permissions of the destination location if moved to another collection, and the permissions will align with the source if the collection is moved to root.
+    If a collection is moved to another collection, permissions and access restrictions of the collection and its contents align with the permissions of the destination location. If the collection is moved to the root level, the permissions align with the source permissions. 
 
 1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Move**.
 
