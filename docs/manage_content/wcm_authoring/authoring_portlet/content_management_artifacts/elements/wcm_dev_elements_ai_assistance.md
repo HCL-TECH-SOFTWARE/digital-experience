@@ -1,6 +1,6 @@
 # AI assistance for description and keyword generation in a content item
 
-This section provides the steps on how to use AI assistance for generating description and keywords on content elements.
+This section provides the steps on how to use AI assistance for generating description and keywords from content elements.
 
 ## Prerequisite
 
