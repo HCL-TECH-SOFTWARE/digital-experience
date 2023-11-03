@@ -159,17 +159,20 @@ Refer to the following steps if you want to move a collection from one location 
 
 1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Move**.
 
-2. A dialogue box appears that shows the list of collections. You can search for a specific collection, or you can also navigate inside a collection if a subcollection is present.
+    A dialogue box appears that shows the list of collections. You can search for a specific collection, or you can also navigate inside a collection if a subcollection is present.
 
-    If the user does not have edit access for the collection, that row will be disabled.
+    !!!note
+        If the user does not have edit access for the collection, that row is disabled.
 
-3. If you want to move the collection to root level (represented by the home icon in the breadcrumb), the **move here** button will be enabled by Deafult. So that user can move the collection to root level.
+2. To move the collection, there are two options depending on the new location:
 
-4. Select the collection in which you want to move and click **move here**.
+    - Select the target collection where you want to move the collection and click **move here**.
 
-    If a collection with the same name exists in the target collection, a dialogue box to rename the collection appears.
+        If a collection with the same name exists in the target collection, a dialogue box to rename the collection appears.
 
-5. Click **View Location** to navigate inside the collection.
+    - If you want to move the collection to root level (represented by the home icon), the **move here** button is enabled by default so that users can move the collection to the root level.
+
+3. Click **View Location** to navigate inside the collection.
 
 ### Configuration for enabling the collection move feature
 
