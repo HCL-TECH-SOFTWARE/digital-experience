@@ -30,7 +30,7 @@ If you want to rerun the process, an additional action to [delete the created st
            You can delete all the generated mismatch information or choose to delete only for a specific subscriber ID.
 
 
-## Resync the DAM Staging environments
+## Resyncing DAM Staging environments
 
 Resyncing of DAM Staging environments ensures the subscriber environment is in in sync with the publisher.
 
@@ -448,11 +448,11 @@ Use the `manage-dam-staging start-staging-resync` command to trigger DAM staging
         dxclient manage-dam-staging start-staging-resync -dxProtocol https -hostname dam-staging-publisher.domain.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId 8c72ef60-e8d4-425d-903a-232bb8726222
         ```
 
-## Verification
+## Verifying if enviroments are in sync
 
 In the subscriber environment, if there are any operations in "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, it means that these operations are not yet complete. You must wait until all operations either complete or fail before verifying the resync. The existing DAM API endpoint can be checked in [GET All DAM Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). If no operation is tagged with "TODO", "PROCESSING", "SUCCESS", "READ", "RETRY", "WAIT" or "PENDING" status, you can verify the resync.
 
-In order to verify if both the environments are in sync, perform the below steps.
+To verify if both the environments are in sync, perform the following steps.
 
 1. Trigger the DAM staging mismatch process. For more information, see [Find staging mismatch](#finding-the-dam-staging-mismatch).
 2. If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync.
@@ -477,5 +477,5 @@ In order to verify if both the environments are in sync, perform the below steps
            enableStagingCleanupHeartbeats
            findStagingMismatchHeartbeatIntervalTimeInMinutes
            ```
-- Performing a resync is not supported for two-way staging (for example, a scenario where two environments are each other's publisher and subscriber). Performing resync on these environments, will lead to undesirable results such collections or assets deletion. 
-- If [Find staging mismatch](#find-staging-mismatch) status is in FIND_MISMATCH_START or FIND_MISMATCH_FAILED for more than 30 minutes, it could be due to excessive amount of data to process. This can also be verified through the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). Search for triggerFunction `findStagingMismatch`. If the status field in the API response is FAILED with retryCounter value greater than 0, then it indicates that the process is failed as there are more data to process. In the above scenario, its advised to de-register and re-register the subscriber once again to allow staging to sync the data between publisher and subscriber. 
+- Performing a resync is not supported for two-way staging (for example, a scenario where two environments are each other's publisher and subscriber). Performing resync on these environments will lead to undesirable results such collections or assets deletion. 
+- If the [Find staging mismatch](#find-staging-mismatch) status is in FIND_MISMATCH_START or FIND_MISMATCH_FAILED for more than 30 minutes, it could be because of the excessive amount of data to process. This can also be verified through the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find). Search for triggerFunction `findStagingMismatch`. If the status field in the API response is FAILED with retryCounter value greater than 0, it means that the process is failed because of the large amount of data to process. In this scenario, it is advised to deregister and register the subscriber again to allow staging to sync the data between publisher and subscriber. 
