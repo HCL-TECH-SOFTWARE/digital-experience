@@ -166,7 +166,7 @@ Refer to the following steps if you want to move a collection from one location 
 
 2. To move the collection, there are two options depending on the target location:
 
-    - Select the target collection where you want to move the collection and click **move here**.
+    - Select the target collection where you want to move the collection and click **Move here**.
 
         If a collection with the same name exists in the target collection, a dialogue box to rename the collection appears.
 
