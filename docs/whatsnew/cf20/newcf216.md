@@ -19,7 +19,6 @@ The following features and updates are available to customers installing HCL Dig
 
 - OCI-based registry for Harbor repository
 - Digital Asset Management - Resync DAM Staging environments
-- Content Composer – Updated custom configurations for Open AI 
 - DX Picker - Preview an asset
 - Digital Asset Management - Moving a collection 
 
