@@ -38,7 +38,7 @@ The following features and updates are available to customers installing HCL Dig
     AI-assisted summarization and keyword extraction from content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 === "On-Premises"
-    AI-assisted summarization and keyword extraction of content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+    AI-assisted summarization and keyword extraction from content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 ### Web Content Manager REST API v2 - Updated custom configurations for Open AI 
 
