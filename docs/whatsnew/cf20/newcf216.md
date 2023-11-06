@@ -5,7 +5,8 @@ The following features and updates are available to customers installing HCL Dig
 **All  Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Friendly Action URLs
-- Web Content Manager - AI assistance for descriptions, keyword generation, and sentiment analysis
+- Web Content Manager - AI assistance for descriptions and keyword generation
+- Web Content Manager REST API v2 - Updated custom configurations for Open AI
 - Updated documentation for setting up OIDC in HCL DX
 - DXClient - Version compatibility
 - HCL DX Extensions for Visual Studio Code
@@ -32,13 +33,21 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     While DX allows for [friendly URLs](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/index.md), actions in portlets still trigger state information for bookmarkability and caching. A new configuration option is available where you can redirect a URL after action execution to a friendly URL. For more information, see [Friendly Action URLs](../../build_sites/create_sites/url_addressing/index.md#friendly-action-urls).
 
-### Web Content Manager - AI assistance for descriptions, keyword generation, and sentiment analysis
+### Web Content Manager - AI assistance for descriptions and keyword generation
 
 === "Containers"
-    AI-assisted summarization, keyword extraction, and sentiment analysis of content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions, keyword generation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+    AI-assisted summarization and keyword extraction from content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 === "On-Premises"
-    AI-assisted summarization, keyword extraction, and sentiment analysis of content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions, keyword generation, and sentiment analysis in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+    AI-assisted summarization and keyword extraction from content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+
+### Web Content Manager REST API v2 - Updated custom configurations for Open AI 
+
+=== "Containers"
+    The OpenAI model is switched to ```gpt-3.5-turbo``` because of OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. For more information, see [OpenAI ChatGPT custom configurations](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
+
+=== "On-Premises"
+    The OpenAI model is switched to ```gpt-3.5-turbo``` because of OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. For more information, see [OpenAI ChatGPT custom configurations](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md#openai-chatgpt-specific-custom-configurations).    
 
 ### Updated documentation for setting up OIDC in HCL DX
 
