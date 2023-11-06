@@ -11,7 +11,7 @@ Administrators must have the following access rights:
 
 If they have to import and export site and section templates, administrators must have edit access to the portal and xmlaccess virtual resources.
 
-## Assigning User access for anchor pages
+## Assigning User access to Content Root pages
 
 1.  Log in to the portal as an administrator.
 
@@ -39,7 +39,7 @@ If they have to import and export site and section templates, administrators mus
 
 ## Assigning User access for Web Content Libraries
 
-### Assigning the Administrator role
+### Assigning Administrator rights to the Site Build Template library
 
 1.  Log in to the portal as an administrator.
 
@@ -59,7 +59,7 @@ If they have to import and export site and section templates, administrators mus
 
     7.  Click **Apply** and **Done**.
 
-### Assigning the Contributor role
+### Assigning Contributor rights to an existing content library for new sites and sections
 
 1.  Log in to the portal as an administrator.
 
@@ -81,7 +81,7 @@ If they have to import and export site and section templates, administrators mus
 
     8.  Repeat this process for all necessary libraries.
 
-### Assigning the Editor role
+### Assigning Editor rights to an existing content library for new sites and sections
 
 1.  Log in to the portal as an administrator.
 
@@ -103,7 +103,7 @@ If they have to import and export site and section templates, administrators mus
 
     8.  Repeat this process for all necessary libraries.
 
-## Assigning role access
+## Assigning role access to the Site Builder portlet
 
 If the Site Builder administrators are required to import and export site and section templates, the following access roles must be set.
 
@@ -145,7 +145,7 @@ If the Site Builder administrators are required to import and export site and se
 
     2.  Click **Virtual Resources**.
 
-## Assign administrator access to the Site Builder portlet
+## Assigning Administrator access to the Site Builder portlet
 
 1.  Log in to the portal as an administrator.
 
