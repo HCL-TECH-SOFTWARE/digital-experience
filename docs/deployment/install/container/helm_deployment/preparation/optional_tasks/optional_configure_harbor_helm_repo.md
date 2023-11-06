@@ -23,7 +23,7 @@ These commands are different from the previous approach with the non-OCI-based r
 ```sh
 helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET_> https://hclcr.io/
 ```
-Then execute the OCI-based pull command.
+After logging in, execute the OCI-based pull command:
 
 ```sh
 helm pull oci://hclcr.io/dx/hcl-dx-deployment --version <HELM_CHART_VERSION_NUMBER>
