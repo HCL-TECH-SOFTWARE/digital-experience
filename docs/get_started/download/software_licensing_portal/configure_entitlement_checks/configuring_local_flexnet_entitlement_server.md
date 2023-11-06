@@ -200,12 +200,15 @@ The License Manager component communicates with the local license server to vali
     ```
     # License Certificate secret used for Local license server
     licenseCertSecret: "license-secret"
-    - name: "LOCAL_LICENSE_SERVER_CERT"
-            valueFrom:
+    ```
+
+    ```
+      - name: "LOCAL_LICENSE_SERVER_CERT"
+              valueFrom:
                 secretKeyRef:
-                name: "{{ .Values.networking.licenseCertSecret }}"
-                key: "license-secret"
-                optional: true
+                  name: "{{ .Values.networking.licenseCertSecret }}"
+                  key: "license-secret"
+                  optional: true
     ```
 
 2. As detailed in the [HCL Digital Experience Cloud Native 9.5 entitlement checks](index.md) topic, you need to configure the following items to your DX 9.5 Container Update CF207 or later Helm chart according to the DX Cloud Native 9.5 entitlement(s) (Tier 1 – 7) you are entitled to and have mapped to your Local License Server instance:
