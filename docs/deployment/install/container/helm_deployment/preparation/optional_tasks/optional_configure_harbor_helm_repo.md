@@ -10,7 +10,7 @@ Harbor is an open-source Container Image and Helm Chart registry.  It can be acc
 
 !!! note
 
-    As of the CF216 release, the Harbor repository is updated with an OCI-based registry. The helm chart command is updated to be OCI compliant. However, the older versions of the helm chart will continue to be used with the older approach. On this page, both approaches are described.
+    As of the CF216 release, the Harbor repository is updated with an OCI-based registry. The Helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart are still utilized in the non-OCI approach. On this page, both approaches are described.
 
 ## OCI-based registry
 
