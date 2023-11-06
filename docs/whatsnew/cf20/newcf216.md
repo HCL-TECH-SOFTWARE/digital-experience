@@ -96,7 +96,7 @@ The following features and updates are available to customers installing HCL Dig
 ### OCI-based registry for Harbor repository
 
 === "Containers"
-    Starting CF216, the Harbor repository is updated with an OCI-based registry. The helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart will still be utilized in the non-OCI approach. For more information, see the Help Center topics []() and []().
+    Starting CF216, the Harbor repository is updated with an OCI-based registry and the helm chart command is updated to be OCI-compliant. Instructions on how to pull helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
 
 ### Digital Asset Management - Resyncing the DAM Staging environments
 
