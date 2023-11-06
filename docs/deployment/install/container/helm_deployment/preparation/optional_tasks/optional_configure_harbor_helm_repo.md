@@ -38,7 +38,9 @@ ls -lah
 # -rw-r--r--. 1 user user  136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz
 ```
 
-## Non-OCI based registry, older approach
+## Non-OCI-based registry
+
+This section describes the previous non-OCI approach where older versions of the Helm chart are still used. 
 
 ### Adding HCL Harbor Helm repository
 
