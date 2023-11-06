@@ -18,7 +18,7 @@ Note that Helm Charts pushed and managed through OCI are not part of the `Helm C
 
 ### Pull helm charts via OCI commands
 
-These commands are different than the older approach. It now requires an inital login before executing the pull command.
+These commands are different from the previous approach with the non-OCI-based registry. It now requires an initial login before executing the pull command:
 
 ```sh
 helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET_> https://hclcr.io/
