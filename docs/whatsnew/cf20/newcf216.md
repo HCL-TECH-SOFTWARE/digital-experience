@@ -52,7 +52,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Updated documentation for setting up OIDC in HCL DX
 
 === "Containers"
-    Instructions for setting up OIDC has been updated to include a reference to the open source repository [hclds-keyclak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). In this repository, you can find Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. For more information, see [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md)
+    Instructions for setting up OIDC has been updated to include a reference to the open source repository [hclds-keyclak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). In this repository, you can find Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. For more information, see [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
 
 === "On-Premises"
     Instructions for setting up OIDC has been updated and a reference to the open source repository [hclds-keyclak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). In this repository, you can find Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. Steps for traditional architecture have also been added in the documentation. For more information, see [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
