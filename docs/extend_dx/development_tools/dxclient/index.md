@@ -269,7 +269,13 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
     -   HCL DX 9.5 CF216 release: **V1.25.0
         -   Shows version compatibility details between DX Core and DXClient.
+        -   [Resync DAM Staging environments](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md)
+        -   [Delete staging mismatch](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#delete-staging-mismatch)
 
+    -   HCL DX 9.5 CF215 release: **V1.24.0
+        -   [Find staging mismatch](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md) 
+        -   [Download mismatch report]((../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#download-mismatch-report)
+         
     -   HCL DX 9.5 CF214 release: **V1.23.0
         -   Lists all themes during Pull theme if themeName is not provided.
         -   Livesync is supported in scaled DX environment setups.
