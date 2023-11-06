@@ -18,7 +18,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- OCI-based registry for Harbor repository
+- OCI-based registry for Harbor Helm chart repository
 - Digital Asset Management - Resync DAM Staging environments
 - DX Picker - Preview an asset
 - Digital Asset Management - Moving a collection 
@@ -93,7 +93,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Digital Experience 9.5 Container Version
 
-### OCI-based registry for Harbor repository
+### OCI-based registry for Harbor Helm chart repository
 
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the helm chart command is updated to be OCI-compliant. Instructions on how to pull helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
