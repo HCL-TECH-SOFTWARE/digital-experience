@@ -18,25 +18,29 @@ Note that Helm Charts pushed and managed through OCI are not part of the `Helm C
 
 ### Pulling helm charts via OCI commands
 
-These commands are different from the previous approach with the non-OCI-based registry. It now requires an initial login before executing the pull command:
+These commands are different from the previous approach with the non-OCI-based registry. It now requires an initial login before executing the pull command.
 
-```sh
-helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET_> https://hclcr.io/
-```
-After logging in, execute the OCI-based pull command:
+1. Log in to the Helm registry using the following command: 
 
-```sh
-helm pull oci://hclcr.io/dx/hcl-dx-deployment --version <HELM_CHART_VERSION_NUMBER>
-```
-After running the pull command, you can check if the Helm Chart has been downloaded to your local machine:
+    ```sh
+    helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET_> https://hclcr.io/
+    ```
+    
+2. After logging in, execute the OCI-based pull command:
 
-```sh
-# List directory content to check successful pull
-ls -lah 
+    ```sh
+    helm pull oci://hclcr.io/dx/hcl-dx-deployment --version <HELM_CHART_VERSION_NUMBER>
+    ```
+    
+3. After running the pull command, you can check if the Helm Chart has been downloaded to your local machine:
 
-# total 8868
-# -rw-r--r--. 1 user user  136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz
-```
+    ```sh
+    # List directory content to check successful pull
+    ls -lah 
+
+    # total 8868
+    # -rw-r--r--. 1 user user  136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz
+    ```
 
 ## Non-OCI-based registry
 
