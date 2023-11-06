@@ -51,7 +51,7 @@ This section describes the previous non-OCI approach where older versions of the
 
 As an alternative to downloading the DX 9.5 Helm Charts from the Docker components from your HCL DX offering entitlements in the HCL Software License Portal, you can also directly use the HCL Harbor Helm repository with Helm from Container Update CF205 and later releases.
 
-### Adding the HCL Harbor Helm repository
+#### Adding the HCL Harbor Helm repository
 
 To add the HCL Harbor Helm repository to your Helm configuration, you can use the following command:
 
@@ -70,7 +70,7 @@ After adding the repository to your Helm deployment, you should see the followin
 "hcl-dx" has been added to your repositories
 ```
 
-### Listing available Helm Chart versions
+#### Listing available Helm Chart versions
 
 To verify that your Helm configuration works to connect and to see which [HCL DX 9.5 Container Update CF application versions](../../deployment/install/container/image_list.md) are available from the HCL Harbor repository, you can use the following command:
 
@@ -94,7 +94,7 @@ Your Helm configuration is now capable of using HCL DX 9.5 Helm Charts directly 
 !!! note
     Applying the method to pull DX 9.5 Container Update images directly from the HCL Harbor container registry requires every cluster node to be able to access the HCL Harbor container registry. To leverage this feature, you will have to configure an `ImagePullSecret` with your HCL Harbor credentials. For instructions, see [Configure deployment to use the HCL Harbor container registry](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_imagepullsecrets.md#configure-deployment-to-use-the-hcl-harbor-container-registry).
 
-### Pulling Helm Chart for deployment
+#### Pulling Helm Chart for deployment
 
 To use the HCL Digital Experience v9.5 Helm Chart from the HCL Harbor Helm repository, we recommend you pull it via Helm to your local machine. Using this method, you can work in the same manner as the manually downloaded method.
 
