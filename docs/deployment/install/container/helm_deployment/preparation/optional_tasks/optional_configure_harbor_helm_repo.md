@@ -14,7 +14,7 @@ Harbor is an open-source Container Image and Helm Chart registry.  It can be acc
 
 ## OCI-based registry
 
-It is important to notice that Helm Charts pushed and managed via OCI are not part of the `Helm Charts` category anymore in Harbor. So the `Helm Charts` section does not reflect the newer version of helm charts which are pushed via OCI commands. OCI assets such as container images and helm charts are now in the same category and both are listed as an OCI repository.
+Note that Helm Charts pushed and managed through OCI are not part of the `Helm Charts` category in Harbor anymore. Therefore, the `Helm Charts` section does not reflect the newer version of helm charts which are pushed using OCI commands. OCI assets such as container images and helm charts are now in the same category and both are listed as an OCI repository.
 
 ### Pull helm charts via OCI commands
 
