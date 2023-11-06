@@ -12,7 +12,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF205, the [Docker im
     
 Harbor is an open-source Container Image and Helm Chart registry.  It can be accessed through the  CLI tools, such as Docker and HELM, using a CLI Secret. For more information about Harbor capabilities, refer to the Harbor documentation at [https://goharbor.io](https://goharbor.io){:target="_blank"}.
 
-Follow the procedures below to access and deploy the components of HCL DX 9.5 Container Update CF205 or later releases from the HCL Harbor repository.
+Refer to the following procedures to access and deploy the components of HCL DX 9.5 Container Update CF205 or later releases from the HCL Harbor repository.
 
 !!! note
 
