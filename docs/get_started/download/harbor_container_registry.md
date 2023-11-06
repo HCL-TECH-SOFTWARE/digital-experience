@@ -16,7 +16,7 @@ Refer to the following procedures to access and deploy the components of HCL DX 
 
 !!! note
 
-    As of the CF216 release, the Harbor repository is updated with an OCI-based registry. The helm chart command is updated to be OCI compliant. However, the older versions of the helm chart will continue to be used with the older approach. On this page, both approaches are described.
+    As of the CF216 release, the Harbor repository is updated with an OCI-based registry. The Helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart are still utilized in the non-OCI approach. On this page, both approaches are described.
 
 ## OCI based registry
 It is important to notice that Helm Charts pushed and managed via OCI are not part of the `Helm Charts` category anymore in Harbor. So the `Helm Charts` section does not reflect the newer version of helm charts which are pushed via OCI commands. OCI assets such as container images and helm charts are now in the same category and both are listed as an OCI repository.
