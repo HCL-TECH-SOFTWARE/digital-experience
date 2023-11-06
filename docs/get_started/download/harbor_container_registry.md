@@ -21,7 +21,7 @@ Refer to the following procedures to access and deploy the components of HCL DX 
 ## OCI based registry
 Note that Helm Charts pushed and managed through OCI are not part of the `Helm Charts` category in Harbor anymore. Therefore, the `Helm Charts` section does not reflect the newer version of helm charts which are pushed using OCI commands. OCI assets such as container images and helm charts are now in the same category and both are listed as an OCI repository.
 
-### Pull helm charts via OCI commands
+### Pulling helm charts via OCI commands
 
 These commands are different than the older approach. It now requires an inital login before executing the pull command.
 
