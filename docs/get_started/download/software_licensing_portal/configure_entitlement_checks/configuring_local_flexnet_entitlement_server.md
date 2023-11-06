@@ -202,15 +202,6 @@ The License Manager component communicates with the local license server to vali
     licenseCertSecret: "license-secret"
     ```
 
-    ```
-      - name: "LOCAL_LICENSE_SERVER_CERT"
-              valueFrom:
-                secretKeyRef:
-                  name: "{{ .Values.networking.licenseCertSecret }}"
-                  key: "license-secret"
-                  optional: true
-    ```
-
 2. As detailed in the [HCL Digital Experience Cloud Native 9.5 entitlement checks](index.md) topic, you need to configure the following items to your DX 9.5 Container Update CF207 or later Helm chart according to the DX Cloud Native 9.5 entitlement(s) (Tier 1 – 7) you are entitled to and have mapped to your Local License Server instance:
 
     1. `productionEnvironment:true` - Configure this variable to true if this deployment will be used to support a Production deployment. See the [HCL Digital Experience Cloud Native v9.5 license document](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) for the definitions of production and non-production deployments.
