@@ -37,7 +37,9 @@ Creators must have the following access rights:
 
     10. Repeat this process for each necessary page.
 
-## Assigning Contributor rights to the Site Build Template library
+## Assigning User access for Web Content Libraries
+
+### Assigning Contributor rights to the Site Build Template library
 
 1.  Log in to the portal as an administrator.
 
@@ -57,7 +59,7 @@ Creators must have the following access rights:
 
     7.  Click **Apply** and **Done**.
 
-## Assigning Contributor rights to an existing content library for new sites and sections
+### Assigning Contributor rights to an existing content library for new sites and sections
 
 1.  Log in to the portal as an administrator.
 
@@ -79,7 +81,7 @@ Creators must have the following access rights:
 
     8.  Repeat this process for all necessary libraries.
 
-## Assigning Editor rights to an existing content library for new sites and sections
+### Assigning Editor rights to an existing content library for new sites and sections
 
 1.   Log in to the portal as an administrator.
 

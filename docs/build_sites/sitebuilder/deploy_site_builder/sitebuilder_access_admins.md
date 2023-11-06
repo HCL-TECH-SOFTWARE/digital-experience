@@ -71,7 +71,7 @@ If they have to import and export site and section templates, administrators mus
 
     3.  For the Contributor role, click the **Edit Role** icon.
 
-    4.  Add the users and groups you want to add as Site Builder administrators.
+    4.  Add the users and groups you want to add as Site Builder contributors.
 
     5.  Click **OK**.
 
@@ -93,7 +93,7 @@ If they have to import and export site and section templates, administrators mus
 
     3.  For the Editor role, click the **Edit Role** icon.
 
-    4.  Add the users and groups you want to add as Site Builder administrators.
+    4.  Add the users and groups you want to add as Site Builder editors.
 
     5.  Click **OK**.
 
