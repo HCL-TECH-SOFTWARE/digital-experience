@@ -33,7 +33,7 @@ After logging in, execute the OCI-based pull command:.
 ```sh
 helm pull oci://hclcr.io/dx/hcl-dx-deployment --version <HELM_CHART_VERSION_NUMBER>
 ```
-After running this command, you can check if the Helm Chart has been downloaded to your local machine:
+After running the pull command, you can check if the Helm Chart has been downloaded to your local machine:
 
 ```sh
 # List directory content to check successful pull
