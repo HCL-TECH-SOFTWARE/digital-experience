@@ -1,19 +1,19 @@
 # HCL Web Content Manager (WCM) environments
 
-Reviewing the Web Content Manager environments help you understand what happens in each environment and how you might want to set up your physical servers.
+Reviewing the Web Content Manager environments helps you understand what happens in each environment and how you might set up your physical servers.
 
-Each server or cluster in your web content system requires a separate data repository, but they would usually share LDAP. An HCL Web Content Manager system can be deployed in isolation or in parallel with an HCL Digital Experience system.
+Each server or cluster in your web content system requires a separate data repository. However, they typically share LDAP. An HCL Web Content Manager system can be deployed in isolation or in parallel with an HCL Digital Experience system.
 
 -   **[Web content system overview](wcm_system_overview.md)**  
-The type of web content system you deploy is determined by the size of your web content system, the type of website, and the number of users that create content, or view your web content.
+The size of your web content system, the type of website, and the number of users that create content or view your web content determine the type of web content system you deploy.
 -   **[Web content authoring environments](wcm_cms_server_authoring.md)**  
-An authoring environment is used to create and manage web content and is used by your content authors and website designers.
+An authoring environment is used to create and manage web content and your content authors and website designers use this environment to complete their work.
 -   **[Web content testing environments](wcm_cms_server_uat.md)**  
-Testing environments can be as simple or as complex as a test environment used to test content, theme, application changes, and the delivery environment performance.
+Testing environments can be simple or complex for testing content, themes, application changes, and delivery environment performance.
 -   **[Web content delivery environments](wcm_cms_server_delivery.md)**  
-If you have a HCL Web Content Manager only license, you can deliver your website without using HCL Digital Experience features.
+If you have only an HCL Web Content Manager license, you can deliver your website without by using HCL Digital Experience features.
 -   **[Web content AI analysis](wcm_ai_analysis.md)**  
-This topic describes how to configure the AI analysis feature for WCM Content in the traditional on-premise deployment.
+Learn how to configure the AI analysis feature for WCM Content in a traditional, on-premise deployment.
 
 
 ???+ info "Related information" 
