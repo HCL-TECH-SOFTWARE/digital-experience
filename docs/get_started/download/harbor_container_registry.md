@@ -44,7 +44,9 @@ ls -lah
 ```
 
 
-## Non-OCI based registry, older approach
+## Non-OCI-based registry
+
+This section describes the previous non-OCI approach where older versions of the Helm chart are still used. 
 ### Configure the HCL Harbor Helm repository to your DX 9.5 Kubernetes Deployment
 
 As an alternative to downloading the DX 9.5 Helm Charts from the Docker components from your HCL DX offering entitlements in the HCL Software License Portal, you can also directly use the HCL Harbor Helm repository with Helm from Container Update CF205 and later releases.
