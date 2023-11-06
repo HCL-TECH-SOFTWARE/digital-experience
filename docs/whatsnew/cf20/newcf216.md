@@ -5,7 +5,8 @@ The following features and updates are available to customers installing HCL Dig
 **All  Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Friendly Action URLs
-- Web Content Manager - AI assistance for descriptions, keyword generation, and sentiment analysis
+- Web Content Manager - AI assistance for descriptions and keyword generation
+- Web Content Manager REST API v2 - Updated custom configurations for Open AI
 - Updated documentation for setting up OIDC in HCL DX
 - DXClient - Version compatibility
 - HCL DX Extensions for Visual Studio Code
@@ -17,9 +18,10 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- OCI-based registry for Harbor repository
 - Digital Asset Management - Resync DAM Staging environments
-- Content Composer – Updated custom configurations for Open AI 
 - DX Picker - Preview an asset
+- Digital Asset Management - Moving a collection 
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
@@ -34,10 +36,18 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager - AI assistance for descriptions and keyword generation
 
 === "Containers"
-    AI-assisted summarization and keyword extraction from content elements are now available. For more information, see the Help Center topic [AI assistance for description and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+    AI-assisted summarization and keyword extraction from content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 === "On-Premises"
-    AI-assisted summarization and keyword extraction from content elements are now available. For more information, see the Help Center topic [AI assistance for description and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+    AI-assisted summarization and keyword extraction from content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+
+### Web Content Manager REST API v2 - Updated custom configurations for Open AI 
+
+=== "Containers"
+    The OpenAI model is switched to ```gpt-3.5-turbo``` because of OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. For more information, see [OpenAI ChatGPT custom configurations](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
+
+=== "On-Premises"
+    The OpenAI model is switched to ```gpt-3.5-turbo``` because of OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. For more information, see [OpenAI ChatGPT custom configurations](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md#openai-chatgpt-specific-custom-configurations).    
 
 ### Updated documentation for setting up OIDC in HCL DX
 
@@ -83,20 +93,25 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Digital Experience 9.5 Container Version
 
-### Digital Asset Management - Resync the DAM Staging environments
+### OCI-based registry for Harbor repository
+
+=== "Containers"
+    Starting CF216, the Harbor repository is updated with an OCI-based registry. The helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart will still be utilized in the non-OCI approach. For more information, see the Help Center topics []() and []().
+
+### Digital Asset Management - Resyncing the DAM Staging environments
 
 === "Containers"
     DAM staging supports resyncing of identified the discrepancies between a publisher and a subscriber environment. For more information, see the Help Center topic [DAM Staging mismatch](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
 
-### Content Composer – Updated custom configurations for Open AI 
-
-=== "Containers"
-    The OpenAI model is switched to ```gpt-3.5-turbo``` because of OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. For more information, see [OpenAI ChatGPT custom configurations](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
-
-### DX Picker - Preview an asset
+### DX Picker - Previewing an asset
 
 === "Containers"
     With DX Picker, you can now open an image in Preview mode. When in Preview mode, you can view image renditions, download or select an image, navigate between assets, and zoom in and out of an image. For more information, see [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage/index.md).
+
+### Digital Asset Management - Moving a collection 
+
+=== "Containers"
+    DX 9.5 Container Update CF216 adds capability to move a collection to a new location, either to another collection or to the root level. This includes an option to save the collection under a new name if naming conflicts occur. For more information, see [Moving a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#moving-a-collection).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
