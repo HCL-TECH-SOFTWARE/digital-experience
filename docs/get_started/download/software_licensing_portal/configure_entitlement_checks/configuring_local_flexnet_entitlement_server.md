@@ -239,7 +239,7 @@ The License Manager component communicates with the local license server to vali
 
     6. `licenseManagerPassword` – Configure this variable with the password associated with the user name of the administrator to manage your Local License Server defined in the previous step.
 
-3. Import the generated SSL certificate for the local license server to the Kubernetes secret manually. As mentioned above, use the default secret name 'license-secret' or change the `licenseCertSecret` in the custom values according to your secret name. The key name in the secret must be set to `license-secret`:
+3. Manually import the generated SSL certificate for the local license server to the Kubernetes secret. As mentioned in Step 1, use the default secret name 'license-secret' or change the `licenseCertSecret` in the custom values according to your secret name. The key name in the secret must be set to `license-secret`:
 
     ```
     kubectl -n <namespace> create secret generic license-secret --from-file=license-secret=hostname.certs 
