@@ -124,6 +124,11 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     DX 9.5 Container Update CF216 adds capability to move a collection to a new location, either to another collection or to the root level. This includes an option to save the collection under a new name if naming conflicts occur. For more information, see [Moving a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#moving-a-collection).
 
+### Digital Asset Management - Extend the trust store
+
+=== "Containers"
+    DX 9.5 Container Update CF216 adds capability to add additional certificate authorities into the trust store. This enables support for custom plugins running with self signed certificates. For more information, see [Add additional CA to the DAM trust store](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-dam-custom-cert.md).
+
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
