@@ -10,7 +10,7 @@ The Digital Asset Management leverages basic Node.JS functionality to extend the
 
 ## adding the PEM file as a secret
 
-To have your deployment and DAM to use the certificate, you must store it in the Kubernetes or OpenShift cluster as a secret.
+To have your deployment and DAM to use the certificate, you must store it in the Kubernetes cluster as a secret.
 
 The secret can be created using the following commands:
 
