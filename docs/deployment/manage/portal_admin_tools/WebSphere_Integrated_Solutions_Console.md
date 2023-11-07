@@ -27,9 +27,9 @@ Use the following default URLs to access the HCL WebSphere® Integrated Solution
 
 -   **Configuration Wizard**
 
-    http://yourserver:10200/ibm/wizard
+    - http://yourserver:10200/ibm/wizard
 
-    https://yourserver:10202/ibm/wizard
+    - https://yourserver:10202/ibm/wizard
 
 !!! note
     You can choose different ports for **Local install** and **Cluster** in your environment.
