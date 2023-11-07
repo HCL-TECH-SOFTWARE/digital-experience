@@ -2,7 +2,7 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF216 on supported platforms:
 
-**All  Digital Experience Versions (8.5, 9.0, 9.5)**
+**All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Friendly Action URLs
 - Web Content Manager - AI assistance for descriptions and keyword generation
@@ -11,6 +11,10 @@ The following features and updates are available to customers installing HCL Dig
 - DXClient - Version compatibility
 - HCL DX Extensions for Visual Studio Code
 - Notice of deprecation of Textbox.io Rich Text Editor
+
+**Digital Experience 8.5 and 9.0 Versions**
+
+- End of Support Announced for Digital Experience v8.5 and 9
 
 **Digital Experience 9.5 Version**
 
@@ -80,6 +84,13 @@ The following features and updates are available to customers installing HCL Dig
 
 === "On-Premises"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+
+## Digital Experience 8.5 and 9.0 Versions
+
+### End of Support Announced for Digital Experience v8.5 and 9
+
+=== "On-Premises"
+    On June 30, 2023, HCL Software announced end of support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
 ## Digital Experience 9.5 Version
 

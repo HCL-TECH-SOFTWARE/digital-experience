@@ -43,3 +43,8 @@ Use the version compatibility command to check the version details of DX Core an
 	```
 	-dxConnectPort <value>
 	```
+
+!!!example
+	```
+	dxclient version-compat -dxConnectUsername <dxUsername> -dxConnectPassword <dxPassword> -dxConnectPort <dxPort> -dxConnectProtocol <dxProtocol> -hostname <hostname>
+	```
