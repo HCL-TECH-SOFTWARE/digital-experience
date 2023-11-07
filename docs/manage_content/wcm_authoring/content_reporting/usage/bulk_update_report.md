@@ -148,3 +148,5 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     - **Created by** - This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
+
+    !!!note If the user that kicked off the bulk update operation doesn't have required access to update the specified item then those specific items will fail to update with an error message `Unauthorized access`.
