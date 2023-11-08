@@ -1,6 +1,6 @@
 # Add additional CA to the DAM trust store
 
-Implement a custom plugin for the [Digital Asset Management extensibility](../../../../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md) is by default limited to publicly trusted certificates. If the plugin is signed with a self signed or otherwise untrusted CA, the trust store of DAM can be extended.
+Implement a custom plugin for the [Digital Asset Management extensibility](../../../../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md) is by default limited to publicly trusted certificates. If the plugin is signed with a self-signed or otherwise untrusted certificate authority (CA), the trust store of DAM can be extended.
 
 ## Prerequisites
 The Digital Asset Management leverages basic Node.JS functionality to extend the trust store by using the [NODE_EXTRA_CA_CERTS](https://nodejs.org/api/cli.html#node_extra_ca_certsfile) flag. Therefore the certificate of one or multiple CAs must be aggregated into one single file in the `pem` format.
