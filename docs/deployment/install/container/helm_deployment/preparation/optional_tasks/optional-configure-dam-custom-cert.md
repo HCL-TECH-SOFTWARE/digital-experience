@@ -1,12 +1,9 @@
-# Add additional CA to the DAM trust store
+# Adding additional CA to the DAM trust store
 
-Implement a custom plugin for the [Digital Asset Management extensibility](../../../../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md) is by default limited to publicly trusted certificates. If the plugin is signed with a self-signed or otherwise untrusted certificate authority (CA), the trust store of DAM can be extended.
+Implementing a custom plugin for the [Digital Asset Management extensibility](../../../../../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md) is by default limited to publicly trusted certificates. If the plugin is signed with a self-signed or otherwise untrusted certificate authority (CA), the trust store of DAM can be extended.
 
 ## Prerequisites
-The Digital Asset Management leverages basic Node.JS functionality to extend the trust store by using the [NODE_EXTRA_CA_CERTS](https://nodejs.org/api/cli.html#node_extra_ca_certsfile) flag. Therefore the certificate of one or multiple CAs must be aggregated into one single file in the `pem` format.
-
-!!! note
-    The pem file needs to be named `customCACert.pem`
+The Digital Asset Management leverages basic Node.JS functionality to extend the trust store by using the [NODE_EXTRA_CA_CERTS](https://nodejs.org/api/cli.html#node_extra_ca_certsfile) flag. Therefore the certificate file used for the next steps must be one single file in the `pem` format with all necessary CAs aggregated into.
 
 ## Adding the PEM file as a secret
 
@@ -15,20 +12,20 @@ To have your deployment and DAM to use the certificate, you must store it in the
 The secret can be created using the following commands:
 
 !!! note
-    The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `custom-ca-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`). However the pem file needs to be named `customCACert.pem`
+    The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `custom-ca-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`). However the key name must be set to `customCACert.pem` in the command below like [`--from-file=key=source`](https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/#use-source-files).
 
 ```
-# Create secret with the name "custom-ca-cert"
+# Create secret with the name "custom-ca-cert" and the key "customCACert.pem"
 # Secret will be created in the namespace "digital-experience"
 
-kubectl create secret generic custom-ca-cert --from-file=./customCACert.pem -n digital-experience 
+kubectl create secret generic custom-ca-cert --from-file=customCACert.pem=./customCACert.pem -n digital-experience
 ```
 
-## Configure secret in deployment
+## Configuring secret in deployment
 
-You need to make sure that the reference to the secret is set up correctly in your `custom-values.yaml` file. Otherwise, Digital Asset Management will not be able to trust the additional certificates.
+Make sure that the reference to the secret is set up correctly in your `custom-values.yaml` file. Otherwise, Digital Asset Management will not be able to trust the additional certificates.
 
-You can set the name of the certificate used with the following syntax. By default no secret is set:
+You can set the name of the certificate used with the following syntax. By default, no secret is set:
 
 ```yaml
 # Networking specific configuration
