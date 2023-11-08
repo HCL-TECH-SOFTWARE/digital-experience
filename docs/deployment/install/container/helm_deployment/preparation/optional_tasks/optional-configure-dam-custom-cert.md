@@ -8,7 +8,7 @@ The Digital Asset Management leverages basic Node.JS functionality to extend the
 !!! note
     The pem file needs to be named `customCACert.pem`
 
-## adding the PEM file as a secret
+## Adding the PEM file as a secret
 
 To have your deployment and DAM to use the certificate, you must store it in the Kubernetes cluster as a secret.
 
