@@ -6,12 +6,13 @@ Administrators must have the following access rights:
 
 - Editor access to the Content Root page where they want to create new sites
 - Administrator rights to the Site Build Template library
-- Editor rights to existing content library for their new sites and sections
+- Contributor rights to source content library for their new sites and sections
+- Editor rights to target content library for their new sites and sections
 - Editor access to the Site Builder portlet
 
 If they have to import and export site and section templates, administrators must have edit access to the portal and xmlaccess virtual resources.
 
-## Assigning User access to Content Root pages
+## Assigning User Editor access to Content Root pages
 
 1.  Log in to the portal as an administrator.
 
@@ -59,7 +60,7 @@ If they have to import and export site and section templates, administrators mus
 
     7.  Click **Apply** and **Done**.
 
-### Assigning Contributor rights to an existing content library for new sites and sections
+### Assigning Contributor rights to the source content library for new sites and sections
 
 1.  Log in to the portal as an administrator.
 
@@ -160,6 +161,8 @@ If the Site Builder administrators are required to import and export site and se
 6. Add the users and groups you want to add as Site Builder Administrators.
 
 7. Click **OK**.
+
+
 
 
 
