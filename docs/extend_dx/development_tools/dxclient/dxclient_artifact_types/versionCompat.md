@@ -8,7 +8,7 @@ Use the version compatibility command to check the version details of DX Core an
 	Use the following command to show version compatibility details between DX Core and DXClient:
 
 	```
-	dxclient version-compat [command] [options]
+	dxclient version-compat
 	
 	```
 
