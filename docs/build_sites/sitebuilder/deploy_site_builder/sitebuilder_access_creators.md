@@ -8,7 +8,8 @@ Creators must have the following access rights:
 
 - Creator access to the Content Root page where they want to create new sites
 - Contributor rights to the Site Build Template library
-- Contributor and Editor rights to existing content library for their new sites and sections
+- Contributor rights to source content library for their new sites and sections
+- Editor rights to target content library for their new sites and sections
 - Administrator access to the Site Builder portlet
 
 ## Assigning User access to Content Root pages
@@ -59,7 +60,7 @@ Creators must have the following access rights:
 
     7.  Click **Apply** and **Done**.
 
-### Assigning Contributor rights to an existing content library for new sites and sections
+### Assigning Contributor rights to the source content library for new sites and sections
 
 1.  Log in to the portal as an administrator.
 
