@@ -46,7 +46,7 @@ Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set th
 
 See the following sample configuration:
 
-![Sample DX Extensions configuration](../../../images/DX_extensions_configuration.png)
+![Sample DX Extensions configuration](../../../images/dx_extensions_config.png)
 
 ## Using the Themes View
 
