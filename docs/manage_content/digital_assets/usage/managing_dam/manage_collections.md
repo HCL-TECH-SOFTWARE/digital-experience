@@ -72,7 +72,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
     ![Open view options](../../../../images/dam_collections_open_view_as.png)
 
     - **View as** - Lists options to view media assets or collections.
-        -  *Grid** - Shows media assets in an equal-sized thumbnail view. This is the default display view.
+        - **Grid** - Shows media assets in an equal-sized thumbnail view. This is the default display view.
         - **List**- Shows media assets in a standard list. Use this view to access a media asset when you can recognize the asset by its attributes, such as its file name.
     - **Sort by** - Lists options to sort media assets or collections:
         - **Date**
@@ -157,7 +157,9 @@ Refer to the following steps if you want to move a collection from one location 
 !!! note 
     If a collection is moved to another collection, permissions and access restrictions of the collection and its contents align with the permissions of the destination location. If the collection is moved to the root level, the permissions align with the source permissions. 
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Move**.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Move collection**.
+
+    ![Move collection option](../../../../images/Move_collection_option.png)
 
     A dialog box appears that shows the list of collections. You can search for a specific collection, or you can also navigate inside a collection if a subcollection is present.
 
