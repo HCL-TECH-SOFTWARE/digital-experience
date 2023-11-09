@@ -32,7 +32,7 @@ After installing the HCL DX extension, a DX icon is visible on the VS Code sideb
 
 ## Settings
 
-Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set the below configuration arguments:
+Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set the following configuration arguments:
 
 - `hclDxExtensions.dxProtocol`: Protocol of the DX Core server
 - `hclDxExtensions.hostname`: Host name of the DX Core server
@@ -43,6 +43,10 @@ Go to **Settings > User > Extensions > HCL DX Extensions Configuration**. Set th
 - `hclDxExtensions.themesPath`: The parent folder of your Themes (for example, /path/to/Themes)
 - `hclDxExtensions.executablePath`: (Optional) The directory of dxclient executable (for example, /path/to/dxclient/bin)
 - `hclDxExtensions.dxclientType`: The type of DxClient executable (required when the "Executable Path" setting is provided)
+
+See the following sample configuration:
+
+![Sample DX Extensions configuration](../../../images/dx_extensions_config.png)
 
 ## Using the Themes View
 

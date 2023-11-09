@@ -92,7 +92,7 @@ To use the HCL Digital Experience Helm Chart from the HCL Harbor Helm repository
 To do so, run the following command with the correct Helm Chart version:
 
 ```sh
-# Use Helm Pull with the version you want to deploy (example uses 2.7.1, please fill in your desired version)
+# Use Helm Pull with the version you want to deploy (example uses 2.7.1, please enter your desired version)
 helm pull hcl-dx/hcl-dx-deployment --version 2.7.1
 ```
 
