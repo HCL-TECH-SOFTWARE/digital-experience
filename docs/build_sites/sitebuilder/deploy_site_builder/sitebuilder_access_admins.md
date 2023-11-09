@@ -6,7 +6,8 @@ Administrators must have the following access rights:
 
 - Administrator access to the Content Root page where they want to create new sites
 - Administrator rights to the Site Build Template library
-- Editor rights to existing content library for their new sites and sections
+- Contributor rights to source content library for their new sites and sections
+- Editor rights to target content library for their new sites and sections
 - Editor access to the Site Builder portlet
 
 If they have to import and export site and section templates, administrators must have edit access to the portal and xmlaccess virtual resources.
