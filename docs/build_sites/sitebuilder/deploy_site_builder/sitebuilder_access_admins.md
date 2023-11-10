@@ -104,7 +104,24 @@ If they have to import and export site and section templates, administrators mus
 
     8.  Repeat this process for all necessary libraries.
 
-## Assigning role access to the Site Builder portlet
+
+## Assigning Administrator access to the Site Builder portlet
+
+1.  Log in to the portal as an administrator.
+
+2. In the Practitioner Studio, go to **Administration > Applications > Portlets**.
+
+3. Search for the Site Builder portlet.
+
+4. Click the **Access** icon.
+
+5. For the Administrator role, click the **Edit Role** icon.
+
+6. Add the users and groups you want to add as Site Builder Administrators.
+
+7. Click **OK**.
+
+## (Optional) Assigning role access to the Site Builder portlet
 
 If the Site Builder administrators are required to import and export site and section templates, the following access roles must be set.
 
@@ -145,22 +162,6 @@ If the Site Builder administrators are required to import and export site and se
     1.  Click **Apply**.
 
     2.  Click **Virtual Resources**.
-
-## Assigning Administrator access to the Site Builder portlet
-
-1.  Log in to the portal as an administrator.
-
-2. In the Practitioner Studio, go to **Administration > Applications > Portlets**.
-
-3. Search for the Site Builder portlet.
-
-4. Click the **Access** icon.
-
-5. For the Administrator role, click the **Edit Role** icon.
-
-6. Add the users and groups you want to add as Site Builder Administrators.
-
-7. Click **OK**.
 
 
 
