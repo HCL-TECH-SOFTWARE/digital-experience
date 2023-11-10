@@ -23,9 +23,9 @@ Use the following default URLs to access the Configuration Wizard:
 
 -   **Configuration Wizard**
 
-    http://yourserver:10200/ibm/wizard
+    - https://yourserver:10200/hcl/wizard
 
-    https://yourserver:10202/ibm/wizard
+    - https://yourserver:10202/ibm/wizard
     
 
 **Video**: [HCL Portal - How to Access ConfigWizard](https://www.youtube.com/watch?v=YAEO78T7coM&feature=youtu.be)
