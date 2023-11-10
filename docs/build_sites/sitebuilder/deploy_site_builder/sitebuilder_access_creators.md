@@ -12,7 +12,7 @@ Creators must have the following access rights:
 - Editor rights to target content library for their new sites and sections
 - Administrator access to the Site Builder portlet
 
-## Assigning User access to Content Root pages
+## Assigning creators User access to Content Root pages
 
 1.  Log in to the portal as an administrator.
 
@@ -38,7 +38,7 @@ Creators must have the following access rights:
 
     10. Repeat this process for each necessary page.
 
-## Assigning User access for Web Content Libraries
+## Assigning creators User access for Web Content Libraries
 
 ### Assigning Contributor rights to the Site Build Template library
 
@@ -104,7 +104,7 @@ Creators must have the following access rights:
 
     8.  Repeat this process for all necessary libraries.
 
-## Assigning Administrator access to the Site Builder portlet
+## Assigning creators Administrator access to the Site Builder portlet
 
 1.  Log in to the portal as an administrator.
 
