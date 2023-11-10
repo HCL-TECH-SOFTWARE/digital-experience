@@ -1,6 +1,6 @@
 # Script Applications
 
-This section contains instructions to deploy Script Applications. 
+This section contains instructions to bundle and deploy Script Applications. 
 
 The tutorials cover DX pages with single and multiple applications, and show how to package common libraries as DX theme modules. We have provided sample code leveraging React, WebPack and Gradle to do this. The content covers deploying the Script Application as a whole including its dependencies, and also deploying common libraries  as one DX module and how to exclude them from the packaging and deployment of each application.
 
