@@ -12,7 +12,7 @@ Administrators must have the following access rights:
 
 If they have to import and export site and section templates, administrators must have edit access to the portal and xmlaccess virtual resources.
 
-## Assigning User Editor access to Content Root pages
+## Assigning User access to Content Root pages
 
 1.  Log in to the portal as an administrator.
 
@@ -82,13 +82,13 @@ If they have to import and export site and section templates, administrators mus
 
     8.  Repeat this process for all necessary libraries.
 
-### Assigning Editor rights to an existing content library for new sites and sections
+### Assigning Editor rights to an existing target content library for new sites and sections
 
 1.  Log in to the portal as an administrator.
 
 2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
-    1.  Browse to the library that the users and groups need to use as the existing content library for their new sites and sections.
+    1.  Browse to the library that the users and groups need to use as the target content library for their new sites and sections.
 
     2.  Click the **Set Permissions** icon.
 
@@ -121,7 +121,7 @@ If they have to import and export site and section templates, administrators mus
 
 7. Click **OK**.
 
-## (Optional) Assigning role access to the Site Builder portlet
+## (Optional) Assigning User access to Portal and XMLAccess Virtual Resources
 
 If the Site Builder administrators are required to import and export site and section templates, the following access roles must be set.
 
