@@ -19,12 +19,12 @@ Before installing the extension, make sure the following prerequisites are met:
 
 Install the HCL DX extension by clicking the Install link on this page, or install from the Extensions tab in Visual Studio Code.
 
-Alternatively, you can perform an offline installation by following below steps:
+Alternatively, you can perform an offline installation using the following steps:
 
-1. Download the extension by going to the VSCode marketplace and click the "Download Extension" link under "Resources".
+1. Download the extension by going to the VSCode marketplace and click the **Download Extension** link under **Resources**.
 2. Install and open Visual Studio Code.
 3. Press **Ctrl+Shift+X** (for Windows) or **Cmd+Shift+X** (for MacOS) to open the Extensions pane.
-4. On the top right of the Extensions pane, click **More Actions… > Install from VSIX…**.
+4. On the upper right corner of the Extensions pane, click **More Actions… > Install from VSIX…**.
 5. Find the hcl-dx-extensions-<x.x.x>.vsix on your local file system and click **Install**.
 6. Restart VS Code to activate the extension.
 
