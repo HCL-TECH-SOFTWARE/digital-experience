@@ -6,8 +6,8 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
 Creators must have the following access rights:
 
-- Creator access to the Content Root page where they want to create new sites
-- Contributor rights to the Site Build Template library
+- User access to the Content Root page where they want to create new sites
+- Contributor access to the Site Build Template library
 - Contributor rights to source content library for their new sites and sections
 - Editor rights to target content library for their new sites and sections
 - Administrator access to the Site Builder portlet
@@ -38,7 +38,7 @@ Creators must have the following access rights:
 
     10. Repeat this process for each necessary page.
 
-## Assigning creators User access for Web Content Libraries
+## Assigning creators Editor access for Web Content Libraries
 
 ### Assigning Contributor rights to the Site Build Template library
 
