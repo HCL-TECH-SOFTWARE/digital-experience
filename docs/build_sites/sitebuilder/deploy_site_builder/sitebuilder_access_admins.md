@@ -4,11 +4,11 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
 Administrators must have the following access rights:
 
-- Editor access to the Content Root page where they want to create new sites
-- Administrator rights to the Site Build Template library
+- User access to the Content Root page where they want to create new sites
+- Administrator access to the Site Build Template library
 - Contributor rights to source content library for their new sites and sections
 - Editor rights to target content library for their new sites and sections
-- Editor access to the Site Builder portlet
+- Administrator rights to the Site Builder portlet
 
 If they have to import and export site and section templates, administrators must have edit access to the PORTAL and XML ACCESS virtual resources.
 
