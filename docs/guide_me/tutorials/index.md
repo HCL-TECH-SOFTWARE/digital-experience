@@ -14,4 +14,4 @@ This guide describes a comprehensive procedure to successfully Register and Acce
 This section contains instructions to bundle and deploy Script Applications.
 
 - **[Portlet Development Utilities and Page creation samples on HCL GitHub](Portletdevelopmentutilitiesandpagecreationsamples.md)**
-This section provides information on how to access the Portlet Development Utilities to automate creating pages and pages from templates. You also have option to deploy through DXClient.
+This section provides information on how to access the Portlet Development Utilities to automate creating pages and pages from templates. Developer also have option to deploy through DXClient.

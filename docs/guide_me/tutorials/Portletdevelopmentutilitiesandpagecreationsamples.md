@@ -1,6 +1,6 @@
 # Portlet development utilities and page creation samples on HCL GitHub
 
-Developers can access a new repository of Portlet Development Utilities to automate creating pages, pages from templates and option to deploy through DXClient. And use the DX Java API and custom maven archetype to create a new JSR286 portlet. 
+With the samples provided on the [HCL Github repositories](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities), developers can access a new repository of Portlet Development Utilities to automate creating pages and pages from templates. Developer also have option to deploy through DXClient. The git repository also contain samples using the DX Java API as a custom maven archetype to create a new JSR286 portlet that can also been deployed using DXClient.
 
 For more information, refer:
 
