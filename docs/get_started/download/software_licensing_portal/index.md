@@ -18,7 +18,7 @@ HCL Digital Experience software is available through several product offerings a
 
 HCL Digital Experience Cloud Native 9.5, Digital Experience Manager, HCL Portal, HCL Portal Express, HCL Web Content Manager, HCL Portal Enable, HCL Portal Extend, HCL Customer Experience Suite, HCL Employee Experience Suite, IBM WebSphere Application Server Network Deployment, IBM DB2 Universal Database Workgroup Server Edition, HCL Connections, and HCL Leap.
 
-Additional HCL Digital Experience product offering and license details may be found at the [HCL Software Product License site](https://www.hcltechsw.com/wps/portal/guide_me/license-agreements){:target="_blank"}.
+Additional HCL Digital Experience product offering and license details may be found at the [HCL Software Product License site](https://www.hcl-software.com/resources/license-agreements){:target="_blank"}.
 
 ## Installation paths
 
