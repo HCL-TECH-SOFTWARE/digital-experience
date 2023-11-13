@@ -6,11 +6,11 @@ title: Software Licensing Portal
 
 New and existing users need to register at the HCL Software License Portal and download their entitled HCL Digital Experience package(s).
 
-Co-packaged software is identified in HCL Digital Experience 9.5 Download documents available in your entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
+Co-packaged software is identified in HCL Digital Experience 9.5 Download documents available in your entitlements on the [HCL Software License and Download Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344).
 
 ## Getting the software
 
-Product software can be accessed from the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. For additional guidance, refer to the [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){:target="_blank"} and watch the video tutorial on [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
+Product software can be accessed from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For additional guidance, refer to the [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){:target="_blank"} and watch the video tutorial on [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
 
 Beginning with HCL Digital Experience V9.5 Container Update 205 the [Docker images](../../../deployment/install/docker/index.md) for deployment to Kubernetes environments can be optionally accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. For more information, see Access and Deploy DX 9.5 Docker components from HCL Harbor (add hyperlink to new page) for more information. 
 
@@ -32,7 +32,7 @@ Users can also test the new HCL Digital Experience API Docker image and run it. 
 
 ## Fresh full installation
 
-For a fresh full installation, follow the installation path using the components below which may be found in the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release) (FlexNet) with HCL Digital Experience software packages:
+For a fresh full installation, follow the installation path using the components below which may be found in the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) (FlexNet) with HCL Digital Experience software packages:
 
 1.  IBM® Installation Manager.
 2.  IBM WebSphere® Application Server 9.0.5.
