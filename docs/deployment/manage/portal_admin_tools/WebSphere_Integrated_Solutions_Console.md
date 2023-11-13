@@ -25,11 +25,6 @@ Use the following default URLs to access the HCL WebSphere® Integrated Solution
 
     - **Cluster**: Can be freely configured. Sample ports are 9443 or 9041
 
--   **Configuration Wizard**
-
-    - https://yourserver:10200/hcl/wizard
-
-    - https://yourserver:10202/ibm/wizard
 
 !!! note
     You can choose different ports for **Local install** and **Cluster** in your environment.

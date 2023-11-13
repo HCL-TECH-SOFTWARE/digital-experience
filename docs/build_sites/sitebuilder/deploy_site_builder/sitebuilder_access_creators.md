@@ -6,13 +6,13 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
 Creators must have the following access rights:
 
-- Creator access to the Content Root page where they want to create new sites
-- Contributor rights to the Site Build Template library
+- User access to the Content Root page where they want to create new sites
+- Contributor access to the Site Build Template library
 - Contributor rights to source content library for their new sites and sections
 - Editor rights to target content library for their new sites and sections
 - Administrator access to the Site Builder portlet
 
-## Assigning User access to Content Root pages
+## Assigning creators User access to Content Root pages
 
 1.  Log in to the portal as an administrator.
 
@@ -38,7 +38,7 @@ Creators must have the following access rights:
 
     10. Repeat this process for each necessary page.
 
-## Assigning User access for Web Content Libraries
+## Assigning creators Editor access for Web Content Libraries
 
 ### Assigning Contributor rights to the Site Build Template library
 
@@ -82,13 +82,13 @@ Creators must have the following access rights:
 
     8.  Repeat this process for all necessary libraries.
 
-### Assigning Editor rights to an existing content library for new sites and sections
+### Assigning Editor rights to an existing target content library for new sites and sections
 
 1.   Log in to the portal as an administrator.
 
 2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
-    1.  Browse to the library that the users and groups need to use as the existing content library for their new sites and sections.
+    1.  Browse to the library that the users and groups need to use as the target content library for their new sites and sections.
 
     2.  Click the **Set Permissions** icon.
 
@@ -104,7 +104,7 @@ Creators must have the following access rights:
 
     8.  Repeat this process for all necessary libraries.
 
-## Assigning Administrator access to the Site Builder portlet
+## Assigning creators Administrator access to the Site Builder portlet
 
 1.  Log in to the portal as an administrator.
 
