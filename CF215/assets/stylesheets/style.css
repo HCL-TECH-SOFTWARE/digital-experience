@@ -123,8 +123,9 @@ text-align: center;
 
 }
 
-.md-banner__inner {
-    color: white;
+
+.md-banner--warning {
+    background: var(--md-typeset-mark-color) !important;
 }
 
 /*Alignment is done for language selector for desktop view*/
