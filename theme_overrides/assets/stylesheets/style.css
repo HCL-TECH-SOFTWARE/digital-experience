@@ -127,6 +127,10 @@ text-align: center;
     color: white;
 }
 
+.md-banner--warning {
+    background: var(--md-typeset-mark-color) !important;
+}
+
 /*Alignment is done for language selector for desktop view*/
 
 @media screen and (min-width: 800px) {
