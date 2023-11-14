@@ -14,4 +14,5 @@ This guide describes a comprehensive procedure to successfully Register and Acce
 This section contains instructions to bundle and deploy Script Applications.
 
 - **[Portlet Development Utilities and Page creation samples on HCL GitHub](Portletdevelopmentutilitiesandpagecreationsamples.md)**
-This section provides information and samples to build custom Java Portlets using maven archetype and samples to automate creating pages and pages from templates. Developers also will be shown up in how to use DXClient to deploy those resources.
+    
+    This section provides information and samples to build custom Java Portlets using maven archetype and samples to automate creating pages and pages from templates. Developers also will be shown up in how to use DXClient to deploy those resources.

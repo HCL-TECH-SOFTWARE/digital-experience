@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Friendly Action URLs
 - Web Content Manager - AI assistance for descriptions and keyword generation
+- Web Content Manager - AI sample to integrate with Google Vertex
 - Web Content Manager REST API v2 - Updated custom configurations for Open AI
 - Updated documentation for setting up OIDC in HCL DX
 - DXClient - Version compatibility
@@ -45,6 +46,14 @@ The following features and updates are available to customers installing HCL Dig
 
 === "On-Premises"
     AI-assisted summarization and keyword extraction from content elements are now available. For more information, see the Help Center topic [AI assistance for descriptions and keyword generation in a content item](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+
+### Web Content Manager - AI sample to integrate with Google Vertex
+
+=== "Containers"
+    New sample to integrate [Google Vertext AI](https://cloud.google.com/vertex-ai) services with WCM Author services is available on the HCL Software Github repository. For more information, see [hcl-dx-google-vertex-sample](https://github.com/HCL-TECH-SOFTWARE/dx-google-vertex-sample).
+
+=== "On-Premises"
+    New sample to integrate [Google Vertext AI](https://cloud.google.com/vertex-ai) services with WCM Author services is available on the HCL Software Github repository. For more information, see [hcl-dx-google-vertex-sample](https://github.com/HCL-TECH-SOFTWARE/dx-google-vertex-sample).
 
 ### Web Content Manager REST API v2 - Updated custom configurations for Open AI 
 
