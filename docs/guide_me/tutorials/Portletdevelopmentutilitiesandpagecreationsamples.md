@@ -6,3 +6,6 @@ For more information, refer to the following resources:
 
 - [HCL Github repositories](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities)
 - [DX JSP Portlet Archetype](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities/tree/main/hcl_dx_jsp_demoportlet_archetype)
+
+???+ info "Related information"
+    - [Developing portlets](../../extend_dx/portlets_development/index.md)
