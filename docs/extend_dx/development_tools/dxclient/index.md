@@ -277,8 +277,8 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Download mismatch report](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#download-mismatch-report)
          
     -   HCL DX 9.5 CF214 release: **V1.23.0
-        -   Lists all themes during Pull theme if themeName is not provided.
-        -   Livesync is supported in scaled DX environment setups.
+        -   Lists all WebDAV themes when you pull themes and themeName is not provided.
+        -   LiveSync is supported in scaled DX environment setups.
         -   [LiveSync Improvements](../dxclient/dxclient_artifact_types/livesync.md)
 
     -   HCL DX 9.5 CF213 release: **V1.22.0

@@ -10,7 +10,6 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager REST API v2 - Updated custom configurations for Open AI
 - Updated documentation for setting up OIDC in HCL DX
 - DXClient - Version compatibility
-- HCL DX Extensions for Visual Studio Code
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -79,13 +78,14 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     You can use the version compatibility command to check the version details of DX Core and DXClient. For more information, see the Help Center topic [Version Compatibility](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/versionCompat.md).
 
+<!---
 ### HCL DX Extensions for Visual Studio Code
 
 === "Containers"
     The HCL DX Extensions feature for Visual Studio Code provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation. For more information, see the Help Center topic [HCL DX Extensions for Visual Studio Code](../../extend_dx/development_tools/hcl_dx_extensions/index.md).
 
 === "On-Premises"
-    The HCL DX Extensions feature for Visual Studio Code provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation. For more information, see the Help Center topic [HCL DX Extensions for Visual Studio Code](../../extend_dx/development_tools/hcl_dx_extensions/index.md).
+    The HCL DX Extensions feature for Visual Studio Code provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation. For more information, see the Help Center topic [HCL DX Extensions for Visual Studio Code](../../extend_dx/development_tools/hcl_dx_extensions/index.md).   --->
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
