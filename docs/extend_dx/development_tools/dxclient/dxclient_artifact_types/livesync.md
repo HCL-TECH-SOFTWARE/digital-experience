@@ -6,7 +6,9 @@ This topic provides information about syncing WebDAV based theme files from loca
     We recommend using the node version of DXClient while working with livesync.
 
 !!! note "Livesync now supported in DX Environment Setups"
-    Starting from CF214, Livesync is now supported in scaled DX environment setups.
+    - It is recommended that you use the node version of the DXClient while working with LiveSync.
+
+    - Starting from CF214, LiveSync is supported in scaled DX environment setups.
 
 ## LiveSync Push Theme
 
@@ -204,7 +206,8 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     -themeName <value>
     ```
 
-    Starting from CF214, if the `themeName` option is not provided, a list of WebDAV themes is displayed and you can select a theme to pull into your local.
+   Starting from CF214, if `themeName` option is not provided, a list of WebDAV themes is displayed and you can select a theme to pull into their local.
+
 
     ```shell
     $ dxclient livesync pull-theme -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -themePath <themePath>
