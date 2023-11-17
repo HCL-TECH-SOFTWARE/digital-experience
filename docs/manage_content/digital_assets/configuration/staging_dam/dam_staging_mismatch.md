@@ -16,7 +16,8 @@ To trigger the staging mismatch process and download the report, refer to the fo
     !!!note
            You can find discrepancies between a publisher and more than one subscriber. However, you can only run the action against one subscriber at a time. 
    
-3. Verify the status of the mismatch operation. Check the resyncStatus field response (for example, FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the command in [Get all subscribers details for DAM staging](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging). If the status is FIND_MISMATCH_START, the find mismatch operation is still in progress. If the status is  FIND_MISMATCH_COMPLETED or FIND_MISMATCH_FAILED, the find mismatch operation is finished.
+3. Verify the status of the mismatch operation. Check the resyncStatus field response (for example, FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the command in [Get all subscribers details for DAM staging](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging). If the status is FIND_MISMATCH_START, the find mismatch operation is still in progress. If the status is FIND_MISMATCH_COMPLETED or FIND_MISMATCH_FAILED, the find mismatch operation is finished.
+
 4. After the status is changed to FIND_MISMATCH_COMPLETED, [download the report](#download-mismatch-report) using DXClient. 
 
     !!!note
@@ -40,7 +41,7 @@ To trigger the DAM staging resync, refer to the following steps:
 2. Trigger the action to start the resync between the publisher and subscriber by using the [Staging Resync](#staging-resync) command.
     - For the **hostname** attribute, use the publisher host name. 
     - For the **subscriber ID** attribute, retrieve the subscriber ID by following Step 1.
-3. Verify the status of the resync operation. Check resyncStatus field response (for example, RESYNC_TRIGGER_START, RESYNC_TRIGGER_COMPLETED, RESYNC_TRIGGER_FAILED) by executing the command in [Get all subscribers details for DAM staging](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging). If the status is RESYNC_TRIGGER_START, the resync process is still in progress. If the status is RESYNC_TRIGGER_COMPLETED or RESYNC_TRIGGER_FAILED, the find resync process is finished. 
+3. Verify the status of the resync operation. Check resyncStatus field response (for example, RESYNC_TRIGGER_START, RESYNC_TRIGGER_COMPLETED, RESYNC_TRIGGER_FAILED) by executing the command in [Get all subscribers details for DAM staging](dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging). If the status is RESYNC_TRIGGER_START, the resync process is still in progress. If the status is RESYNC_TRIGGER_COMPLETED or RESYNC_TRIGGER_FAILED, the resync process is finished. 
 4. After the status is changed to RESYNC_TRIGGER_COMPLETED, it means that the background operations to perform the resync are created.
 
     !!!note
