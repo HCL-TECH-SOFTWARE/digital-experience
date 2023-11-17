@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/install/container/operator-migration/helm_operator_core_migration/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -1288,11 +1288,10 @@ dx.replicas: 0
 <p>If you want to enable the Operator-based deployment Core pod again, set the values of the <code>dxctl</code> property file to values greater than zero and apply the changes using the <code>dxctl</code> tool.</p>
 <h2 id="restore-your-back-up-to-the-helm-based-deployment">Restore your back up to the Helm-based deployment</h2>
 <div class="admonition important">
-<p class="admonition-title">Important<ul>
-<li>Ensure to note the <a href="../../../../../get_started/plan_deployment/container_deployment/limitations_requirements/">Containerization requirements and limitations</a>.</li>
-<li>For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.</li>
-</ul>
-</p>
+<p class="admonition-title">Important</p>
+<pre><code>- Ensure to note the [Containerization requirements and limitations](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
+- For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.
+</code></pre>
 </div>
 <h3 id="ensure-correct-state">Ensure correct state</h3>
 <p>Ensure that the Helm-based deployment is in the correct state before restoring a backup.</p>

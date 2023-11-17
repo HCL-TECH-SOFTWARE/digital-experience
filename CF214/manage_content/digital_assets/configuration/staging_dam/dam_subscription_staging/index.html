@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -1240,8 +1240,9 @@
 <p>This topic contains the commands that administrators can use to configure the staging of <a href="../../../">Digital Asset Management</a> (DAM) content. This allows you to manage subscriber registration or configure periodic sync.</p>
 <h2 id="differences-between-dam-staging-and-wcm-syndication">Differences between DAM staging and WCM syndication</h2>
 <div class="admonition note">
-<p class="admonition-title">Note<p>WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in some details. To learn more about differences have a look at the following table.</p>
-</p>
+<p class="admonition-title">Note</p>
+<pre><code>WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in some details. To learn more about differences have a look at the following table.
+</code></pre>
 </div>
 <table>
 <thead>
@@ -1290,8 +1291,9 @@
 <h3 id="configure-staging-hostname">Configure staging hostname</h3>
 <p>The hostname configuration for the DAM staging publisher and subscriber must be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details must be specified.</p>
 <div class="admonition note">
-<p class="admonition-title">Note<p>In values.yaml, the host, port, and ssl settings can be configured under <code>networking.addon.digitalAssetManagement.staging</code>.</p>
-</p>
+<p class="admonition-title">Note</p>
+<pre><code>In values.yaml, the host, port, and ssl settings can be configured under `networking.addon.digitalAssetManagement.staging`.
+</code></pre>
 </div>
 <h3 id="configure-ltpa-token-refresh-time">Configure LTPA Token Refresh Time</h3>
 <p>LTPA token stored in cache refreshes every <code>5 minutes</code> by default.<code>ltpaTokenRefreshTimeInMinutes</code> can be configured in <code>values.yaml</code> under the <code>configurations</code> section of <code>digitalAssetManagement</code>.</p>
@@ -1609,16 +1611,18 @@ The <code>manage-dam-staging update-secrets</code> command can be used to update
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Note<p>Media assets and collections are not staged from publisher to subscriber if the media assets or collections exist with the same name and have a different unique id on the publisher and the subscriber servers.</p>
-<p>The following list enumerates the scenarios where items are not staged from publisher to subscriber:</p>
-<ul>
-<li>Collection - When there is a same collection name on the same level, but a unique name in the entire set of collections</li>
-<li>Media - When there is a same file name in the same collection </li>
-<li>Rendition - When there is a same custom URL in the entire set</li>
-<li>Version - When the version is for a rendition (for example, v1, v2, v3)</li>
-</ul>
-<p>If items are not staged to the subscriber, you can find the respective log messages in the DAM logs of the subscriber.</p>
-</p>
+<p class="admonition-title">Note</p>
+<pre><code>Media assets and collections are not staged from publisher to subscriber if the media assets or collections exist with the same name and have a different unique id on the publisher and the subscriber servers.
+
+The following list enumerates the scenarios where items are not staged from publisher to subscriber:
+
+- Collection - When there is a same collection name on the same level, but a unique name in the entire set of collections
+- Media - When there is a same file name in the same collection 
+- Rendition - When there is a same custom URL in the entire set
+- Version - When the version is for a rendition (for example, v1, v2, v3)
+
+If items are not staged to the subscriber, you can find the respective log messages in the DAM logs of the subscriber.
+</code></pre>
 </div>
 <h2 id="using-wcm-with-dam-staging">Using WCM with DAM staging</h2>
 <p>The typical setup involves a WCM staging/authoring server connected to DAM staging/authoring, and a separate WCM rendering connected to DAM rendering (there could be multiple WCM rendering/DAM rendering environments, for example, a Blue/Green setup).</p>

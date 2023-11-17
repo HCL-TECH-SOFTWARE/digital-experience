@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -1338,7 +1338,14 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Livesync now supported in DX Environment Setups</p>
-<p>Starting from CF214, Livesync is now supported in scaled DX environment setups.</p>
+<ul>
+<li>
+<p>It is recommended that you use the node version of the DXClient while working with LiveSync.</p>
+</li>
+<li>
+<p>Starting from CF214, LiveSync is supported in scaled DX environment setups.</p>
+</li>
+</ul>
 </div>
 <h2 id="livesync-push-theme">LiveSync Push Theme</h2>
 <p>This command will sync your WebDAV based theme files into DX Server. Then, it will watch for succeeding changes within the given <code>themePath</code> and immediately reflect the changes in the DX server.</p>
@@ -1476,35 +1483,38 @@ logs/
 <p>Use this attribute to specify the Theme System Name of the theme created under the DX server:</p>
 <div class="highlight"><pre><span></span><code>-themeName<span class="w"> </span>&lt;value&gt;
 </code></pre></div>
-<p>If <code>themeName</code> option is not provided, a list of WebDAV themes is dislayed. This list lets the user pick which themes they want to pull.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>dxclient<span class="w"> </span>livesync<span class="w"> </span>pull-theme<span class="w"> </span>-dxUsername<span class="w"> </span>&lt;dxUsername&gt;<span class="w"> </span>-dxPassword<span class="w"> </span>&lt;dxPassword&gt;<span class="w"> </span>-dxPort<span class="w"> </span>&lt;dxPort&gt;<span class="w"> </span>-dxProtocol<span class="w"> </span>&lt;dxProtocol&gt;<span class="w"> </span>-hostname<span class="w"> </span>&lt;hostname&gt;<span class="w"> </span>-contenthandlerPath<span class="w"> </span>&lt;contenthandlerPath&gt;<span class="w"> </span>-themePath<span class="w"> </span>&lt;themePath&gt;
-<span class="m">2023</span>-08-03<span class="w"> </span><span class="m">18</span>:18:55<span class="w"> </span>:<span class="w"> </span>Extracting<span class="w"> </span>themes<span class="w"> </span>list<span class="w"> </span>from<span class="w"> </span>xml
-<span class="m">2023</span>-08-03<span class="w"> </span><span class="m">18</span>:18:55<span class="w"> </span>:<span class="w"> </span>Please<span class="w"> </span><span class="k">select</span><span class="w"> </span>a<span class="w"> </span>Theme<span class="w"> </span>name
-<span class="o">(</span>x<span class="o">)</span><span class="w"> </span>My<span class="w"> </span>Theme
-<span class="o">(</span><span class="w"> </span><span class="o">)</span><span class="w"> </span>Portal8.5
-<span class="o">(</span><span class="w"> </span><span class="o">)</span><span class="w"> </span>PractitionerStudio
-<span class="o">(</span><span class="w"> </span><span class="o">)</span><span class="w"> </span>Simple
-<span class="o">(</span><span class="w"> </span><span class="o">)</span><span class="w"> </span>ThemeDevSite
-<span class="o">(</span><span class="w"> </span><span class="o">)</span><span class="w"> </span>Toolbar8.5
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Difference between Theme System Name vs. Theme Title</p>
-<p>The <strong><em>Theme System Name</em></strong> can only have the following characters: <code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>spaces</code>, and <code>- _ . ! ( ) ,</code>. Invalid characters in the title are converted to underscore "_" in the system name by default. The <strong><em>Theme Title</em></strong> can include any characters.</p>
-<p><img alt="theme-title-vs-theme-system-name" src="../../../../../images/theme-title-vs-theme-system-name.png" style="height:350px;" /></p>
-</div>
-<p>Use this attribute to specify the theme folder path where DX theme static files should be placed. This attribute accepts a folder path:</p>
-<div class="highlight"><pre><span></span><code>-themePath<span class="w"> </span>&lt;value&gt;
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<ol>
-<li>Avoid using <code>~</code> <code>!</code> <code>()</code> <code>'</code> and <code>*</code> special characters when naming files and folders.</li>
-<li>If you have a theme title name with special characters, those are automatically converted to underscores (<code>_</code>) by the server (for example, <code>来源folder</code> is translated to <code>__folder</code>). For the theme name, use the Theme System Name, the one with <code>_</code> like <code>__folder</code> in the following example.</li>
-</ol>
-<p><img alt="livesync proper theme name" src="../../../../../images/livesync_themename.png" style="height:450px" /></p>
-</div>
 </li>
 </ul>
+<p>Starting from CF214, if <code>themeName</code> option is not provided, a list of WebDAV themes is displayed and you can select a theme to pull into their local.</p>
+<pre><code>```shell
+$ dxclient livesync pull-theme -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxPort &lt;dxPort&gt; -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -themePath &lt;themePath&gt;
+2023-08-03 18:18:55 : Extracting themes list from xml
+2023-08-03 18:18:55 : Please select a Theme name
+(x) My Theme
+( ) Portal8.5
+( ) PractitionerStudio
+( ) Simple
+( ) ThemeDevSite
+( ) Toolbar8.5
+```
+
+!!! note "Difference between Theme System Name vs. Theme Title"
+    The **_Theme System Name_** can only have the following characters: `a-z`, `A-Z`, `0-9`, `spaces`, and `- _ . ! ( ) ,`. Invalid characters in the title are converted to underscore "\_" in the system name by default. The **_Theme Title_** can include any characters.
+
+    ![theme-title-vs-theme-system-name](../../../../images/theme-title-vs-theme-system-name.png){: style="height:350px;"}
+
+Use this attribute to specify the theme folder path where DX theme static files should be placed. This attribute accepts a folder path:
+
+```shell
+-themePath &lt;value&gt;
+```
+
+!!! warning
+    1. Avoid using `~` `!` `()` `'` and `*` special characters when naming files and folders.
+    2. If you have a theme title name with special characters, those are automatically converted to underscores (`_`) by the server (for example, `来源folder` is translated to `__folder`). For the theme name, use the Theme System Name, the one with `_` like `__folder` in the following example.
+
+    ![livesync proper theme name](../../../../images/livesync_themename.png){: style="height:450px"}
+</code></pre>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code>dxclient livesync pull-theme -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxPort &lt;dxPort&gt; -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -contenthandlerPath &lt;contenthandlerPath&gt; -themePath &lt;themePath&gt; -themeName &lt;themeSystemName&gt;
@@ -1527,7 +1537,7 @@ logs/
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2023</span>
       
     
   </small>

@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/script_application/build_app_with_script_application/script_app_editor/import-apps/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -1102,14 +1102,16 @@
 <h1 id="importing-script-applications">Importing Script Applications</h1>
 <p>Add the Script Application to a page. Then, import an application.</p>
 <div class="admonition note">
-<p class="admonition-title">Note<p>If you add the Script Application to pages for which you selected the Lightweight profile, you cannot start the portal dialog to use the Edit and Import features. Script Application instances that you created and edited on pages with profiles other than the Lightweight profile or elsewhere can be added to Lightweight profile pages from the Script Applications for runtime use.</p>
-</p>
+<p class="admonition-title">Note</p>
+<pre><code>If you add the Script Application to pages for which you selected the Lightweight profile, you cannot start the portal dialog to use the Edit and Import features. Script Application instances that you created and edited on pages with profiles other than the Lightweight profile or elsewhere can be added to Lightweight profile pages from the Script Applications for runtime use.
+</code></pre>
 </div>
 <p>You can import files from your file system or from another portlet. To import from your file system, you must add your files in a .zip format.</p>
 <p>The compressed archive file that you select to import can include .css, .js, and .html files. If there is more than one .html file, you must select the default file when you are prompted. If you choose to import files from another portlet, the system makes copies of the files. If there are multiple .html elements or file components, then you must select the main .html file.</p>
 <div class="admonition note">
-<p class="admonition-title">Note<p>The main .html file must be at the root of the imported application. The JavaScript and images must be in subfolders with relative references from the main .html file.</p>
-</p>
+<p class="admonition-title">Note</p>
+<pre><code>The main .html file must be at the root of the imported application. The JavaScript and images must be in subfolders with relative references from the main .html file.
+</code></pre>
 </div>
 <p>When you import a .zip file or copy files from another portlet, the files are stored as HCL Web Content Manager elements. Elements that are already associated with the Script Application are overwritten.</p>
 <p>You can add only the following Web Content Manager tags to the main .html file. They do not work if they are included in the .js files.</p>

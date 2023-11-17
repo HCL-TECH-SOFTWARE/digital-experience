@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/portlets_development/web2_ui/live_text/w2_smtg_ref_wire/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -1345,11 +1345,10 @@
 </tbody>
 </table>
 <div class="admonition note">
-<p class="admonition-title">Notes<ol>
-<li>You can write portlets that support both methods; any portlet action declared in a cooperative portlet WSDL that defines an input parameter is available as a target for both click-to-action and portlet wiring. For sources, you can add a preference that lets the administrator control whether click-to-action live text should be emitted, as demonstrated by the cooperative portlet JSR shipping example.</li>
-<li>You can also combine both methods: a target action that is triggered by click-to-action can have wires attached that will propagate to other portlet actions on the server within the same request. consequently, a single click-to-action menu selection can trigger multiple portlet actions on the server.</li>
-</ol>
-</p>
+<p class="admonition-title">Notes</p>
+<pre><code>1.  You can write portlets that support both methods; any portlet action declared in a cooperative portlet WSDL that defines an input parameter is available as a target for both click-to-action and portlet wiring. For sources, you can add a preference that lets the administrator control whether click-to-action live text should be emitted, as demonstrated by the cooperative portlet JSR shipping example.
+2.  You can also combine both methods: a target action that is triggered by click-to-action can have wires attached that will propagate to other portlet actions on the server within the same request. consequently, a single click-to-action menu selection can trigger multiple portlet actions on the server.
+</code></pre>
 </div>
 <details class="info" open="open">
 <summary>Related information</summary>

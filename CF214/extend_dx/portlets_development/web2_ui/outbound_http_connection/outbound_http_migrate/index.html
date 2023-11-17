@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/portlets_development/web2_ui/outbound_http_connection/outbound_http_migrate/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -1410,13 +1410,13 @@
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Important<p>In previous HCL Portal versions, the proxy-config.xml file held the configuration of the Ajax proxy. Changes that you make to this file became effective when you restarted the web module. In contrast, the outbound HTTP connection infrastructure makes only the necessary updates to the proxy-config.xml file. Changes to this file do not become effective until one of the following events occur:</p>
-<ul>
-<li>For global or customized global configuration settings: The outbound HTTP connection service is started for the first time after the portal upgrade.</li>
-<li>For application-specific proxy configurations: The web module that contains the proxy-config.xml is deployed.</li>
-<li>One of the portal configuration tasks <code>create-outbound-http-connection-config</code> or <code>update-outbound-http-connection-config</code> is started.</li>
-</ul>
-</p>
+<p class="admonition-title">Important</p>
+<pre><code>In previous HCL Portal versions, the proxy-config.xml file held the configuration of the Ajax proxy. Changes that you make to this file became effective when you restarted the web module. In contrast, the outbound HTTP connection infrastructure makes only the necessary updates to the proxy-config.xml file. Changes to this file do not become effective until one of the following events occur:
+
+-   For global or customized global configuration settings: The outbound HTTP connection service is started for the first time after the portal upgrade.
+-   For application-specific proxy configurations: The web module that contains the proxy-config.xml is deployed.
+-   One of the portal configuration tasks `create-outbound-http-connection-config` or `update-outbound-http-connection-config` is started.
+</code></pre>
 </div>
 <details class="info" open="open">
 <summary>Related information</summary>

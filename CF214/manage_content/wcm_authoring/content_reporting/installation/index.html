@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm_authoring/content_reporting/installation/">
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -1212,13 +1212,15 @@
 <li>Windows: <code>ConfigEngine.bat enable-content-reporting -Dcontentreporting.static.ui.url="/dx/ui/content-reporting/" -DWasPassword=&lt;WAS admin password&gt; -DPortalAdminPwd=&lt;Portal admin password&gt;</code></li>
 </ul>
 <div class="admonition important">
-<p class="admonition-title">Important<p>For the <strong>contentreporting.static.ui.url</strong> parameter value, a slash is required in the end.</p>
-</p>
+<p class="admonition-title">Important</p>
+<pre><code>For the **contentreporting.static.ui.url** parameter value, a slash is required in the end.
+</code></pre>
 </div>
 <p>For information on how to run the ConfigEngine tasks on container deployments, see <a href="../../../../deployment/manage/container_configuration/run_core_config_engine/">Running DX Core configuration tasks</a>.</p>
 <div class="admonition note">
-<p class="admonition-title">Note<p>If using a webserver, it is required to <a href="https://www.ibm.com/docs/en/was/9.0.5?topic=files-mapping-modules-servers">map the Content Reporting application to the server</a> in addition to the Digital Experience server or cluster. Regenerate and propagate the plugin-cfg.xml file.</p>
-</p>
+<p class="admonition-title">Note</p>
+<pre><code>If using a webserver, it is required to [map the Content Reporting application to the server](https://www.ibm.com/docs/en/was/9.0.5?topic=files-mapping-modules-servers) in addition to the Digital Experience server or cluster. Regenerate and propagate the plugin-cfg.xml file.
+</code></pre>
 </div>
 <h3 id="disabling-content-reporting-for-traditional-deployment">Disabling Content Reporting for traditional deployment</h3>
 <p>To disable Content Reporting, run the <strong>disable-content-reporting</strong> config task.</p>

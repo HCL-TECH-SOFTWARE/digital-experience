@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/container_configuration/">
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
     
     
       
@@ -1429,8 +1429,9 @@
 <p><strong>Direct Configuration changes in Kubernetes or OpenShift</strong></p>
 <p>For development and testing, sometimes it is useful to directly adjust configuration in ConfigMaps via Kubernetes (for example, <code>kubectl edit cm</code>) or OpenShift commands. In that case, the runtime controller is to notice that there has been a change to a ConfigMap and calculates the checksum for the Pod specification of the affected application. Kubernetes or OpenShift thens proceed to roll out the new configuration. This is the same processing methodology applies as when using Helm upgrade definitions.</p>
 <div class="admonition note">
-<p class="admonition-title">Note<p>It is recommended that administrators use Helm upgrade for configuration changes, as the DX 9.5 Helm chart contains logic to calculate certain values. If you choose to edit ConfigMaps directly in the Kubernetes or OpenShift console, do note that running a Helm upgrade overwrites the settings you inserted directly/manually in your deployment. It is recommended to apply configuration changes directly on an as-needed basis and only for development and testing purposes. Please also ensure that the <strong>keys</strong> used inside the ConfigMap are ordered <strong>alphabetically</strong>.</p>
-</p>
+<p class="admonition-title">Note</p>
+<pre><code>It is recommended that administrators use Helm upgrade for configuration changes, as the DX 9.5 Helm chart contains logic to calculate certain values. If you choose to edit ConfigMaps directly in the Kubernetes or OpenShift console, do note that running a Helm upgrade overwrites the settings you inserted directly/manually in your deployment. It is recommended to apply configuration changes directly on an as-needed basis and only for development and testing purposes. Please also ensure that the **keys** used inside the ConfigMap are ordered **alphabetically**.
+</code></pre>
 </div>
 <h2 id="list-of-hcl-dx-95-configmaps">List of HCL DX 9.5 ConfigMaps</h2>
 <table>
