@@ -2,6 +2,7 @@
 
 Learn about the tasks that you perform when you use your portal to provide WSRP services as a WSRP Producer portal.
 
+<!----------
 1.  [How to access the Producer WSDL](wsrpr_prod_wsdl.md)  
 As a Producer you must provide the URL for the Producer WSDL service description document to the Consumer.
 2.  [Securing a WSRP Producer portal](../portal_wsrp_producer/securing_wsrp_prod_portal/index.md)  
@@ -13,6 +14,6 @@ After you prepared your portal as a Producer portal, you can provide your portle
 5.  [Exporting customized WSRP portlet instances by using the XML configuration interface](wsrpr_prod_xmlxp_custplt.md)  
 If consumed portlets are customized on the Consumers portal, then the Producer can export the customized instances of those portlets by using the XML configuration interface.
 6.  [Changing the WSRP Producer context root](wsrpt_chg_prod_uri.md)  
-The context root for the WSRP Producer references the context root for the WSRP Producer facade servlet. This context root is the entry point for all WSRP protocol traffic, and you can change the context root as required to support your environment. This customization is optional.
+The context root for the WSRP Producer references the context root for the WSRP Producer facade servlet. This context root is the entry point for all WSRP protocol traffic, and you can change the context root as required to support your environment. This customization is optional. ---->
 
 

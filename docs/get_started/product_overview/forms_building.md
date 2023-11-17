@@ -14,7 +14,7 @@ HCL DX provides the HCL LEAP product to allows business users to create and depl
 
 HCL Leap lets non-technical users easily create sophisticated web applications for data collection and process automation. Applications are designed without writing code through a simple drag and drop interface. More technical users can extend the application further by including custom JavaScript actions, for example. Styles can be modified through CSS, functions added as HTML fragments and JavaScript can be used with the software’s comprehensive API and events.
 
-Integrate data from existing systems to pre-populate fields and feed back-end systems with information you collect. HCL LEAP's service architecture lets you define connections with most back-end services, including services created using HCL MX Foundry.
+Integrate data from existing systems to pre-populate fields and feed back-end systems with information you collect. HCL LEAP's service architecture lets you define connections with most back-end services, including services created using HCL Volt MX Foundry.
 
 When you deploy your application HCL Leap automatically creates its runtime which includes forms, database, reports, charts, API, rules, notifications, security, and workflow.
 
