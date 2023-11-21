@@ -1,0 +1,2924 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A next-gen documentation site for HCL Digital Experience.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/pzn/pzn_apis/pzn_rest_API_explorer/pzn_rules_api/">
+      
+      <link rel="icon" href="../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Personalization rules APIs - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#personalization-rules-apis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://academy.hcltechsw.com" target="_blank">Software Academy</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../.."> 
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Personalization rules APIs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../get_started/product_overview/" class="md-tabs__link">
+        Get Started
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../whatsnew/cf20/newcf216/" class="md-tabs__link">
+        What's New
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../deployment/" class="md-tabs__link">
+        Deploy DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../build_sites/" class="md-tabs__link">
+        Build Sites
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../" class="md-tabs__link md-tabs__link--active">
+        Manage Content
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../extend_dx/" class="md-tabs__link">
+        Extend DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../guide_me/tutorials/" class="md-tabs__link">
+        Guide Me
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../.." class="md-nav__link">
+    Home
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../../../get_started/product_overview/"
+    class="md-nav__link"
+  >
+    Get Started
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../../../whatsnew/cf20/newcf216/"
+    class="md-nav__link"
+  >
+    What's New
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../../deployment/" class="md-nav__link">
+    Deploy DX
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../../build_sites/" class="md-nav__link">
+    Build Sites
+  </a>
+</li>
+  
+    
+      
+      
+                 
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6"
+    type="checkbox"
+    id="__nav_6"
+    checked
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../">Manage Content</a>
+
+     
+    <label for="__nav_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Manage Content"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_6">
+      <span class="md-nav__icon md-icon"></span>
+      Manage Content
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_2"
+    type="checkbox"
+    id="__nav_6_2"
+    
+  />
+                                 
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../wcm_authoring/">Author Web Content</a>
+
+     
+    <label for="__nav_6_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_3"
+    type="checkbox"
+    id="__nav_6_3"
+    
+  />
+                                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../wcm_delivery/">Deliver Web Content</a>
+
+     
+    <label for="__nav_6_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_4"
+    type="checkbox"
+    id="__nav_6_4"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../wcm_configuration/">Configure Web Content Manager</a>
+
+     
+    <label for="__nav_6_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_5"
+    type="checkbox"
+    id="__nav_6_5"
+    
+  />
+                                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../wcm_development/">Extend Web Content Manager</a>
+
+     
+    <label for="__nav_6_5">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_6"
+    type="checkbox"
+    id="__nav_6_6"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../digital_assets/">Digital Asset Management</a>
+
+     
+    <label for="__nav_6_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_7"
+    type="checkbox"
+    id="__nav_6_7"
+    
+  />
+               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../../design_studio/">Design studio</a>
+
+     
+  </div>
+    
+</li>
+
+   
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8"
+    type="checkbox"
+    id="__nav_6_8"
+    checked
+  />
+                                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../">Personalization</a>
+
+     
+    <label for="__nav_6_8">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Personalization"
+    data-md-level="2"
+  >
+    <label class="md-nav__title" for="__nav_6_8">
+      <span class="md-nav__icon md-icon"></span>
+      Personalization
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+                
+<li class="md-nav__item">
+  <a href="../../../pzn_intro/" class="md-nav__link">
+    Targeted content and Portal Personalization
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_3"
+    type="checkbox"
+    id="__nav_6_8_3"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../personalization/">Personalization</a>
+
+     
+    <label for="__nav_6_8_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../../pzn_how_site_personalized/" class="md-nav__link">
+    How a site is personalized
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_5"
+    type="checkbox"
+    id="__nav_6_8_5"
+    
+  />
+                                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../pzn_terms/">Personalization terms</a>
+
+     
+    <label for="__nav_6_8_5">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../../pzn_portlets/" class="md-nav__link">
+    The Personalization interface
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_7"
+    type="checkbox"
+    id="__nav_6_8_7"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../publishing_pzn_rules/">Publishing personalization rules</a>
+
+     
+    <label for="__nav_6_8_7">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../../pzn_wcm_rescoll/" class="md-nav__link">
+    The Web Content resource collection
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../../pzn_usr_rescoll/" class="md-nav__link">
+    The Portal User resource collection
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_10"
+    type="checkbox"
+    id="__nav_6_8_10"
+    
+  />
+                                                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../pzn_portlet/">Developing a personalized portlet</a>
+
+     
+    <label for="__nav_6_8_10">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_11"
+    type="checkbox"
+    id="__nav_6_8_11"
+    
+  />
+                                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../pzn_programming_ref/">Personalization programming reference</a>
+
+     
+    <label for="__nav_6_8_11">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_12"
+    type="checkbox"
+    id="__nav_6_8_12"
+    checked
+  />
+                 
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../">Personalization APIs</a>
+
+     
+    <label for="__nav_6_8_12">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Personalization APIs"
+    data-md-level="3"
+  >
+    <label class="md-nav__title" for="__nav_6_8_12">
+      <span class="md-nav__icon md-icon"></span>
+      Personalization APIs
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_12_2"
+    type="checkbox"
+    id="__nav_6_8_12_2"
+    checked
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../">Personalization REST API explorer</a>
+
+     
+    <label for="__nav_6_8_12_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Personalization REST API explorer"
+    data-md-level="4"
+  >
+    <label class="md-nav__title" for="__nav_6_8_12_2">
+      <span class="md-nav__icon md-icon"></span>
+      Personalization REST API explorer
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_12_2_2"
+    type="checkbox"
+    id="__nav_6_8_12_2_2"
+    checked
+  />
+                       
+  <div class="md-nav__link md-nav__link--index md-nav__link--active">
+    <a href="./">Personalization rules APIs</a>
+
+     
+    <label for="__nav_6_8_12_2_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Personalization rules APIs"
+    data-md-level="5"
+  >
+    <label class="md-nav__title" for="__nav_6_8_12_2_2">
+      <span class="md-nav__icon md-icon"></span>
+      Personalization rules APIs
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+                
+<li class="md-nav__item">
+  <a href="rules_api_contents_details/" class="md-nav__link">
+    Personalization rules REST API content details
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="pzn_embedded_select_action_rule/" class="md-nav__link">
+    Personalization Embedded WCM Select Action Rule
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="api_display_formats_attribute_properties/" class="md-nav__link">
+    References for display formats of attribute properties defined to Personalization APIs and examples
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="trigerring_pzn_rules_anonymously/" class="md-nav__link">
+    Triggering Personalization rules anonymously
+  </a>
+</li>
+    
+    </ul>
+  </nav>
+  
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../dev_pzn_folders_api/" class="md-nav__link">
+    Personalization folder APIs
+  </a>
+</li>
+    
+    </ul>
+  </nav>
+  
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_13"
+    type="checkbox"
+    id="__nav_6_8_13"
+    
+  />
+                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../../pzn_unica_integration/">Personalization-Unica Integration</a>
+
+     
+    <label for="__nav_6_8_13">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="../../../pzn_stage_prod/" class="md-nav__link">
+    Staging Personalization rules to production
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../../pzn_enable_logging_runtime_server/" class="md-nav__link">
+    Enable logging
+  </a>
+</li>
+    
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6_8_16"
+    type="checkbox"
+    id="__nav_6_8_16"
+    
+  />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+  <div class="md-nav__link md-nav__link--index">
+    <a href="../../../deprecated/classes_apis_for_custom_listeners/pzn_classes_apis_custom_listeners/"> Deprecated </a>
+    <label for="__nav_6_8_16">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+  </div>
+
+      
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+ 
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../../../extend_dx/" class="md-nav__link">
+    Extend DX
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../../../guide_me/tutorials/"
+    class="md-nav__link"
+  >
+    Guide Me
+  </a>
+</li>
+  
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#personalization-rules-api-endpoints" class="md-nav__link">
+    Personalization rules API endpoints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-list-of-personalization-rules" class="md-nav__link">
+    GET list of Personalization rules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-personalization-rule-id-details" class="md-nav__link">
+    GET Personalization rule-id details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invoke-post-the-personalization-id-rule" class="md-nav__link">
+    Invoke (POST) the Personalization ID rule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-post-a-new-personalization-rule" class="md-nav__link">
+    Create (POST) a new Personalization rule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-put-an-existing-personalization-rule" class="md-nav__link">
+    Update (PUT) an existing Personalization rule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-dynamic-properties" class="md-nav__link">
+    GET dynamic properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-put-dynamic-properties" class="md-nav__link">
+    Update (PUT) dynamic properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-personalization-rule-using-rule-id" class="md-nav__link">
+    DELETE Personalization rule using rule-id
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/manage_content/pzn/pzn_apis/pzn_rest_API_explorer/pzn_rules_api/index.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="personalization-rules-apis">Personalization rules APIs</h1>
+<p>The Personalization rules REST APIs provide access to personalization rules capabilities using REST services.</p>
+<p>For more information on HCL Digital Experience Personalization Rules, refer to the <a href="https://help.hcltechsw.com/digital-experience/8.5/pzn/pzn_overview.html">Personalization</a> Help Center topic.</p>
+<h2 id="personalization-rules-api-endpoints">Personalization rules API endpoints</h2>
+<p>As of HCL Digital Experience CF and Container Update CF202 and later releases, the following REST APIs are developed:</p>
+<ol>
+<li>GET list of Personalization rules</li>
+<li>GET Personalization rule-id details</li>
+<li>API to invoke (POST) the Personalization rule</li>
+<li>Create (POST) a new Personalization rule-id</li>
+<li>Update (PUT) an existing Personalization rule</li>
+<li>GET dynamic properties</li>
+<li>Update (PUT) dynamic properties</li>
+<li>DELETE Personalization rule-id</li>
+</ol>
+<p>For more details on the Personalization <code>contents</code> attributes, please refer to the <em>Personalization REST API <code>contents</code> details</em> section below.</p>
+<h2 id="get-list-of-personalization-rules">GET list of Personalization rules</h2>
+<p>This API is used to obtain a list of Personalization rules defined to the Personalization workspace.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>Pagination of the list results is supported.</p>
+<ul>
+<li>
+<p><strong>GET request format:</strong></p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules?limit=30&amp;offset=0&amp;ruleType=Visibility%20Rule
+</code></pre></div>
+</li>
+<li>
+<p><strong>Steps to execute the API:</strong></p>
+<ol>
+<li>Login to your Digital Experience solution.</li>
+<li>The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.</li>
+<li>Add the limit parameter, which defines the number of results that will be returned in the pagination parameter.</li>
+<li>Add the offset, which defines the pagination parameter and the starting point from which results will be returned.</li>
+<li>
+<p>Add the <code>ruleType</code>, which is the parameter to filter rules based on the Personalization rule type.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>As of HCL DX Container Update and CF200, Personalization <a href="https://help.hcltechsw.com/digital-experience/8.5/pzn/pzn_visibility.html">Visibility rules</a> and Profiler rule are supported.</p>
+</li>
+</ol>
+<p>For example:</p>
+<p><img alt="Get list of Personalization Rules REST API" src="../../../../../images/get_list_pzn_rules_api.png" /></p>
+</li>
+<li>
+<p><strong>Response structure details:</strong></p>
+<p>The response structure will get the list of all the Visibility and Profiler rules details. The example below shows the response for one Personalization rule:</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;offset&quot;: 0,
+  &quot;limit&quot;: 30,
+  &quot;total&quot;: 2,
+  &quot;items&quot;: [
+    {
+      &quot;id&quot;: &quot;c32d5c01-94b2-4470-abe8-e64b5d66b273&quot;,
+      &quot;description&quot;: &quot;Description for this Visibility rule.&quot;,
+      &quot;title&quot;: &quot;Visibility Rule Example&quot;,
+      &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
+      &quot;contents&quot;: {
+        &quot;visibility&quot;: &quot;show&quot;,
+        &quot;otherwise&quot;: &quot;hide&quot;,
+        &quot;conditions&quot;: {
+          &quot;and&quot;: [
+            {
+              &quot;operator&quot;: &quot;is&quot;,
+              &quot;attributeName&quot;: &quot;date&quot;,
+              &quot;attributeType&quot;: &quot;Date&quot;,
+              &quot;value&quot;: [
+                &quot;2022-02-14&quot;
+              ]
+            }
+          ]
+        },
+        &quot;caseInsensitive&quot;: false
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-18T07:07:43.043Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-18T07:07:43.043Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+    },
+    {
+      &quot;id&quot;: &quot;1ed429e5-80a2-4bbc-97d8-adcbaebb85ce&quot;,
+      &quot;description&quot;: &quot;Description for this Profiler rule.&quot;,
+      &quot;title&quot;: &quot;Profiler Rule Example&quot;,
+      &quot;ruleType&quot;: &quot;Profiler&quot;,
+      &quot;contents&quot;: {
+        &quot;profiles&quot;: [
+          {
+            &quot;profileName&quot;: &quot;Profile1&quot;,
+            &quot;conditions&quot;: {
+              &quot;and&quot;: [
+                {
+                  &quot;operator&quot;: &quot;is&quot;,
+                  &quot;attributeName&quot;: &quot;date&quot;,
+                  &quot;attributeType&quot;: &quot;Date&quot;,
+                  &quot;value&quot;: [
+                    &quot;2022-12-01&quot;
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        &quot;otherwiseProfile&quot;: &quot;Profile2&quot;,
+        &quot;caseInsensitive&quot;: false,
+        &quot;stopFirstProfile&quot;: true
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+    }
+  ]
+}
+</code></pre></div>
+<p><strong>Example 1</strong></p>
+<p>List of rules created in the Personalization interface:</p>
+<p><img alt="List of rules in the Personalization workspace" src="../../../../../images/workspaceRule.png" /></p>
+<p>In the example API response structure below, the list of Visibility and Profiler rules available in the Workspace interface is presented:</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;offset&quot;: 0,
+  &quot;limit&quot;: 30,
+  &quot;total&quot;: 2,
+  &quot;items&quot;: [
+    {
+      &quot;id&quot;: &quot;c32d5c01-94b2-4470-abe8-e64b5d66b273&quot;,
+      &quot;description&quot;: &quot;Description for this Workspace Visibility rule.&quot;,
+      &quot;title&quot;: &quot;Workspace Visibility Rule&quot;,
+      &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
+      &quot;contents&quot;: {
+        &quot;visibility&quot;: &quot;show&quot;,
+        &quot;otherwise&quot;: &quot;hide&quot;,
+        &quot;conditions&quot;: {
+          &quot;and&quot;: [
+            {
+              &quot;operator&quot;: &quot;is&quot;,
+              &quot;attributeName&quot;: &quot;date&quot;,
+              &quot;attributeType&quot;: &quot;Date&quot;,
+              &quot;value&quot;: [
+                &quot;2021-11-18&quot;
+              ]
+            }
+          ]
+        },
+        &quot;caseInsensitive&quot;: false
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-18T07:07:43.043Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-18T07:07:43.043Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+    },
+    {
+      &quot;id&quot;: &quot;1ed429e5-80a2-4bbc-97d8-adcbaebb85ce&quot;,
+      &quot;description&quot;: &quot;Description for this Workspace Profiler rule.&quot;,
+      &quot;title&quot;: &quot;Workspace Profiler Rule&quot;,
+      &quot;ruleType&quot;: &quot;Profiler&quot;,
+      &quot;contents&quot;: {
+        &quot;profiles&quot;: [
+          {
+            &quot;profileName&quot;: &quot;Profile1&quot;,
+            &quot;conditions&quot;: {
+              &quot;and&quot;: [
+                {
+                  &quot;operator&quot;: &quot;is&quot;,
+                  &quot;attributeName&quot;: &quot;date&quot;,
+                  &quot;attributeType&quot;: &quot;Date&quot;,
+                  &quot;value&quot;: [
+                    &quot;2022-02-21&quot;
+                  ]
+                }
+              ]
+            }
+          },
+        ],
+        &quot;otherwiseProfile&quot;: &quot;Profile2&quot;,
+        &quot;caseInsensitive&quot;: false,
+        &quot;stopFirstProfile&quot;: true
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+    }
+  ]
+}
+</code></pre></div>
+<p><strong>Example 2</strong></p>
+<p>List of Personalization rules in the Personalization interface:</p>
+<p><img alt="List of Personalization rules in the Personalization interface" src="../../../../../images/folderRule.png" /></p>
+<p>In the example API response structure below, the list of Visibility and Profiler rules available in the Folder created under the Workspace interface is presented:</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;offset&quot;: 0,
+  &quot;limit&quot;: 30,
+  &quot;total&quot;: 2,
+  &quot;items&quot;: [
+    {
+      &quot;id&quot;: &quot;8687069e-2dfa-423f-b9fa-5d42c37ff817&quot;,
+      &quot;description&quot;: &quot;Description for this Folder Visibility rule.&quot;,
+      &quot;title&quot;: &quot;Folder Visibility Rule&quot;,
+      &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
+      &quot;contents&quot;: {
+        &quot;visibility&quot;: &quot;show&quot;,
+        &quot;otherwise&quot;: &quot;hide&quot;,
+        &quot;conditions&quot;: {
+          &quot;and&quot;: [
+            {
+              &quot;operator&quot;: &quot;is&quot;,
+              &quot;attributeName&quot;: &quot;AcceptLanguage&quot;,
+              &quot;attributeType&quot;: &quot;BrowserCapability&quot;,
+              &quot;value&quot;: [
+                &quot;English&quot;
+              ]
+            }
+          ]
+        },
+        &quot;caseInsensitive&quot;: false
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-18T07:28:55.549Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-18T07:28:55.549Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;ee99433c-82d2-46eb-b48b-90cc234e57e2&quot;
+    },
+    {
+      &quot;id&quot;: &quot;ecfa60df-a85e-493f-b902-3d91bd8da1bb&quot;,
+      &quot;description&quot;: &quot;Description for this Folder Profiler rule.&quot;,
+      &quot;title&quot;: &quot;Folder Profiler Rule&quot;,
+      &quot;ruleType&quot;: &quot;Profiler&quot;,
+      &quot;contents&quot;: {
+        &quot;profiles&quot;: [
+          {
+            &quot;profileName&quot;: &quot;Profile1&quot;,
+            &quot;conditions&quot;: {
+              &quot;and&quot;: [
+                {
+                  &quot;operator&quot;: &quot;is&quot;,
+                  &quot;attributeName&quot;: &quot;date&quot;,
+                  &quot;attributeType&quot;: &quot;Date&quot;,
+                  &quot;value&quot;: [
+                    &quot;2022-04-03&quot;
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            &quot;profileName&quot;: &quot;Profile2&quot;,
+            &quot;conditions&quot;: {
+              &quot;and&quot;: [
+                {
+                  &quot;operator&quot;: &quot;is&quot;,
+                  &quot;attributeName&quot;: &quot;city&quot;,
+                  &quot;attributeType&quot;: &quot;wpsUser&quot;,
+                  &quot;value&quot;: [
+                    &quot;Bengaluru&quot;
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        &quot;otherwiseProfile&quot;: &quot;Profile3&quot;,
+        &quot;caseInsensitive&quot;: false,
+        &quot;stopFirstProfile&quot;: true
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;ee99433c-82d2-46eb-b48b-90cc234e57e2&quot;
+    }
+  ]
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Combined Response Structure:</strong></p>
+<p>The following example shows how to execute the Get Personalization Rules List REST API to return the total list of rules available through the Personalization interface Workspace and Folder.</p>
+<p><code>parentId</code> is the main attribute to use to find the difference between the rules available in the <code>Workspace</code> and <code>Folder</code>:</p>
+<ul>
+<li>
+<p><code>Workspace parentId</code> always starts with a hyphen ("-").</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>&quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+</code></pre></div>
+</li>
+<li>
+<p><code>Folder parentId</code> always starts without a hyphen ("-").</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>&quot;parentId&quot;: &quot;ee99433c-82d2-46eb-b48b-90cc234e57e2&quot;
+</code></pre></div>
+</li>
+</ul>
+<p>Refer to the following API response structure:</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;offset&quot;: 0,
+  &quot;limit&quot;: 30,
+  &quot;total&quot;: 4,
+  &quot;items&quot;: [
+    {
+      &quot;id&quot;: &quot;c32d5c01-94b2-4470-abe8-e64b5d66b273&quot;,
+      &quot;description&quot;: &quot;Description for this Workspace Visibility rule.&quot;,
+      &quot;title&quot;: &quot;Workspace Visibility Rule&quot;,
+      &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
+      &quot;contents&quot;: {
+        &quot;visibility&quot;: &quot;show&quot;,
+        &quot;otherwise&quot;: &quot;hide&quot;,
+        &quot;conditions&quot;: {
+          &quot;and&quot;: [
+            {
+              &quot;operator&quot;: &quot;is&quot;,
+              &quot;attributeName&quot;: &quot;date&quot;,
+              &quot;attributeType&quot;: &quot;Date&quot;,
+              &quot;value&quot;: [
+                &quot;2021-11-18&quot;
+              ]
+            }
+          ]
+        },
+        &quot;caseInsensitive&quot;: false
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-18T07:07:43.043Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-18T07:07:43.043Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+    },
+    {
+      &quot;id&quot;: &quot;1ed429e5-80a2-4bbc-97d8-adcbaebb85ce&quot;,
+      &quot;description&quot;: &quot;Description for this Workspace Profiler rule.&quot;,
+      &quot;title&quot;: &quot;Workspace Profiler Rule&quot;,
+      &quot;ruleType&quot;: &quot;Profiler&quot;,
+      &quot;contents&quot;: {
+        &quot;profiles&quot;: [
+          {
+            &quot;profileName&quot;: &quot;Profile1&quot;,
+            &quot;conditions&quot;: {
+              &quot;and&quot;: [
+                {
+                  &quot;operator&quot;: &quot;is&quot;,
+                  &quot;attributeName&quot;: &quot;date&quot;,
+                  &quot;attributeType&quot;: &quot;Date&quot;,
+                  &quot;value&quot;: [
+                    &quot;2022-02-21&quot;
+                  ]
+                }
+              ]
+            }
+          },
+        ],
+        &quot;otherwiseProfile&quot;: &quot;Profile2&quot;,
+        &quot;caseInsensitive&quot;: false,
+        &quot;stopFirstProfile&quot;: true
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+    },
+    {
+      &quot;id&quot;: &quot;8687069e-2dfa-423f-b9fa-5d42c37ff817&quot;,
+      &quot;description&quot;: &quot;Description for this Folder Visibility rule.&quot;,
+      &quot;title&quot;: &quot;Folder Visibility Rule&quot;,
+      &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
+      &quot;contents&quot;: {
+        &quot;visibility&quot;: &quot;show&quot;,
+        &quot;otherwise&quot;: &quot;hide&quot;,
+        &quot;conditions&quot;: {
+          &quot;and&quot;: [
+            {
+              &quot;operator&quot;: &quot;is&quot;,
+              &quot;attributeName&quot;: &quot;AcceptLanguage&quot;,
+              &quot;attributeType&quot;: &quot;BrowserCapability&quot;,
+              &quot;value&quot;: [
+                &quot;English&quot;
+              ]
+            }
+          ]
+        },
+        &quot;caseInsensitive&quot;: false
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-18T07:28:55.549Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-18T07:28:55.549Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;ee99433c-82d2-46eb-b48b-90cc234e57e2&quot;
+    },
+    {
+      &quot;id&quot;: &quot;ecfa60df-a85e-493f-b902-3d91bd8da1bb&quot;,
+      &quot;description&quot;: &quot;Description for this Folder Profiler rule.&quot;,
+      &quot;title&quot;: &quot;Folder Profiler Rule&quot;,
+      &quot;ruleType&quot;: &quot;Profiler&quot;,
+      &quot;contents&quot;: {
+        &quot;profiles&quot;: [
+          {
+            &quot;profileName&quot;: &quot;Profile1&quot;,
+            &quot;conditions&quot;: {
+              &quot;and&quot;: [
+                {
+                  &quot;operator&quot;: &quot;is&quot;,
+                  &quot;attributeName&quot;: &quot;date&quot;,
+                  &quot;attributeType&quot;: &quot;Date&quot;,
+                  &quot;value&quot;: [
+                    &quot;2022-04-03&quot;
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            &quot;profileName&quot;: &quot;Profile2&quot;,
+            &quot;conditions&quot;: {
+              &quot;and&quot;: [
+                {
+                  &quot;operator&quot;: &quot;is&quot;,
+                  &quot;attributeName&quot;: &quot;city&quot;,
+                  &quot;attributeType&quot;: &quot;wpsUser&quot;,
+                  &quot;value&quot;: [
+                    &quot;Bengaluru&quot;
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        &quot;otherwiseProfile&quot;: &quot;Profile3&quot;,
+        &quot;caseInsensitive&quot;: false,
+        &quot;stopFirstProfile&quot;: true
+      },
+      &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;created&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+      &quot;lastModified&quot;: &quot;2021-11-29T07:33:31.613Z&quot;,
+      &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+      &quot;parentId&quot;: &quot;ee99433c-82d2-46eb-b48b-90cc234e57e2&quot;
+    }
+  ]
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Success and Error Messages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>This code is returned when the list of Personalization rules are successfully returned.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>This code is returned if the input parameters are missing or invalid. <br>   -   Limit is a decimal value. <br>  -   Offset is a decimal value. <br>  -   Rule type is not one among the allowed rule types.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>This code is returned when the <code>LtpaToken</code> is invalid or expired.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>This code is returned when user access is restricted.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>This code is returned when the <code>?URL</code> can’t be accessed.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>This code is returned when an internal server error occurs.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="get-personalization-rule-id-details">GET Personalization rule-id details</h2>
+<p>This API is used to get individual Personalization Rule ID details.</p>
+<ul>
+<li>
+<p><strong>GET Request format:</strong></p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/d3548bd9-fcf5-49c4-a926-09b6c03d1fbf
+</code></pre></div>
+</li>
+<li>
+<p><strong>Steps to execute the API:</strong></p>
+<ol>
+<li>Login to your Digital Experience solution.</li>
+<li>The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.</li>
+<li>Obtain the Get Personalization Rule ID details using the REST API <code>GET all</code> command, as shown in the following example:
+<img alt="Get Personalization Rule ID details" src="../../../../../images/GetSS.png" /></li>
+</ol>
+</li>
+<li>
+<p><strong>Response structure details:</strong></p>
+<p>When the GET request is executed by providing the rule-id, the response gets the rule details.</p>
+<p>In the example response structure details below, it shows results for <code>rule-id</code>, <code>rule-description</code>, <code>rule-title</code>, <code>rule-Type</code>, and <code>rule-contents</code>:</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;id&quot;: &quot;ce285ec1-af9e-485b-8911-ab454946a104&quot;,
+  &quot;description&quot;: &quot;This is Test rule.&quot;,
+  &quot;title&quot;: &quot;TestRule&quot;,
+  &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
+  &quot;contents&quot;:
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Success and Error Messages:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>This code is returned when the rules details are obtained successfully.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>This code is returned when the <code>LtpaToken</code> is invalid or expired.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>This code is returned when access is restricted for user.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>This code is returned when the Rule UUID is not found or invalid.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>This code is returned when an internal server error occurs.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="invoke-post-the-personalization-id-rule">Invoke (POST) the Personalization ID rule</h2>
+<p>This API is used to invoke a Personalization rule using rule-id.</p>
+<ul>
+<li>
+<p><strong>POST request format:</strong></p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}/invoke
+</code></pre></div>
+</li>
+<li>
+<p><strong>POST Personalization ID invoke example:</strong></p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/d3548bd9-fcf5-49c4-a926-09b6c03d1fbf/invoke
+</code></pre></div>
+</li>
+<li>
+<p><strong>Steps to execute the API:</strong></p>
+<ol>
+<li>Login to your Digital Experience solution.</li>
+<li>The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.</li>
+<li>Invoke the Personalization rule as shown in the example below:
+<img alt="API to invoke the Personalization ID rule" src="../../../../../images/PostSS.png" /></li>
+</ol>
+</li>
+<li>
+<p><strong>Response Structure for Visibility rule:</strong></p>
+<p>The response structure presents the details of <code>ruleId</code>, <code>title</code>, <code>ruleType</code> and <code>result</code>, as shown below:</p>
+<p><img alt="API to invoke the Personalization ID rule response structure" src="../../../../../images/pzn_id_invoke_rule_response_structure.png" /></p>
+<p>For example, the image below shows the use of the API to create a <strong>Visibility Rule ruleType</strong> called <code>TestRule</code> with a condition that the <code>current date</code> is November 16, 2021, and when executed, the <code>result</code> shows as <code>Show</code>:</p>
+<p><img alt="API to invoke the Personalization ID rule Example 1" src="../../../../../images/pzn_id_invoke_rule_response_structure_example_1.png" /></p>
+<p>When you modify the rule condition of the example from the current date (November 16, 2021) to a different date (November 17, 2021), and when executed, the <code>result</code> shows as <code>Hide</code>, the response structure is shown as follows:</p>
+<p><img alt="API to invoke the Personalization ID rule Example 2" src="../../../../../images/pzn_id_invoke_rule_response_structure_example_2.png" /></p>
+</li>
+<li>
+<p><strong>Response Structure for Profiler:</strong></p>
+<p>The response structure presents the details of <code>ruleID</code>, <code>title</code>, <code>ruleType</code>, and <code>result</code>, as shown below:</p>
+<p><img alt="Invoke Profile rule" src="../../../../../images/Invoke_Profile_rule.png" /></p>
+<p>For example, the image below shows the use of the API to create a <strong>Profiler ruleType</strong> called <code>Profile User Example</code> with a condition that assumes <code>current Weekday</code> is Tuesday, and when executed, the <code>result</code> shows as an array as <code>Profile 2</code>, the response structure is as follows:</p>
+<p><img alt="Profile User Rule example" src="../../../../../images/Profile_User_Rule_Example.png" /></p>
+<p>When you modify the rule to satisfy conditions for multiple profiles and on execution, the result shows in an array as <code>Profile 1</code> and <code>Profile 2</code>, the response structure is as follows:</p>
+<p><img alt="Multiple profiles" src="../../../../../images/Multiple_profiles.png" /></p>
+<p>When you modify the rule to satisfy conditions for multiple profiles, but request to get first profile that satisfies the condition and on execution, the result shows in an array as <code>Profile 1</code>, the response structure is as follows:</p>
+<p><img alt="" src="../../../../../images/Multiple_profiles_Profile1.png" /></p>
+<p>When you modify the rule to not satisfy any condition and on execution, the <code>result</code> shows in an array as <code>Profile 3</code>, the response structure is as follows:</p>
+<p><img alt="" src="../../../../../images/Multiple_profiles_Profile3.png" /></p>
+<p>When you modify the rule to not satisfy any condition, but you removed the profile otherwise and on execution, the <code>result</code> shows an empty array as <code>[]</code>, the response structure is as follows:</p>
+<p><img alt="" src="../../../../../images/Multiple_Profiles_emptyarray_removed.png" /></p>
+</li>
+<li>
+<p><strong>Success and Error Messages:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>This code is returned when the API is executed with rule result successfully.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>This code is returned when the <code>LtpaToken</code> is invalid or expired.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>This code is returned access is restricted for users.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>This code is returned when the Rule UUID is not found or invalid.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>This code is returned when internal server error occurs.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="create-post-a-new-personalization-rule">Create (POST) a new Personalization rule</h2>
+<p>This API is used to create a new Personalization rule.</p>
+<ul>
+<li>
+<p><strong>POST request format:</strong></p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules
+</code></pre></div>
+</li>
+<li>
+<p><strong>Sample request payload for creating a new Visibility rule:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;title&quot;: &quot;Visibility Rule Example&quot;,
+  &quot;description&quot;: &quot;Visibility Rule Description&quot;,
+  &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
+  &quot;contents&quot;: {
+    &quot;visibility&quot;: &quot;show&quot;,
+    &quot;otherwise&quot;: &quot;hide&quot;,
+    &quot;conditions&quot;: {
+      &quot;and&quot;: [
+        {
+          &quot;attributeType&quot;: &quot;Date&quot;,
+          &quot;attributeName&quot;: &quot;day&quot;,
+          &quot;operator&quot;: &quot;is between&quot;,
+          &quot;value&quot;: [
+            25,
+            31
+          ]
+        },
+        {
+          &quot;or&quot;: [
+            {
+              &quot;attributeType&quot;: &quot;Date&quot;,
+              &quot;attributeName&quot;: &quot;weekday&quot;,
+              &quot;operator&quot;: &quot;is not&quot;,
+              &quot;value&quot;: [
+                &quot;Monday&quot;
+              ]
+            },
+            {
+              &quot;attributeType&quot;: &quot;Date&quot;,
+              &quot;attributeName&quot;: &quot;month&quot;,
+              &quot;operator&quot;: &quot;is&quot;,
+              &quot;value&quot;: [
+                &quot;December&quot;
+              ]
+            },
+          ]
+        }
+      ]
+    },
+    &quot;caseInsensitive&quot;: false
+  },
+  &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Sample request payload for creating a new Profiler rule:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;description&quot;: &quot;Profiler Rule&quot;,
+    &quot;title&quot;: &quot;Profiler Rule 1&quot;,
+    &quot;ruleType&quot;: &quot;Profiler&quot;,
+    &quot;contents&quot;: {
+        &quot;profiles&quot;: [
+            {
+                &quot;profileName&quot;: &quot;Profile1&quot;,
+                &quot;conditions&quot;: {
+                    &quot;and&quot;: [
+                        {
+                            &quot;attributeType&quot;: &quot;Date&quot;,
+                            &quot;attributeName&quot;: &quot;year&quot;,
+                            &quot;operator&quot;: &quot;is not&quot;,
+                            &quot;value&quot;: [
+                              2021
+                            ]
+                        }
+                    ]
+                },
+                &quot;caseInsensitive&quot;: false
+            }
+        ],
+        &quot;otherwiseProfile&quot;: null,
+        &quot;caseInsensitive&quot;: false,
+        &quot;stopFirstProfile&quot;: false
+    },
+    &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Steps to execute the API:</strong></p>
+<ol>
+<li>Login to your Digital Experience solution.</li>
+<li>The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.</li>
+<li>(<strong>Required</strong>) Provide the <code>title</code> and <code>ruleType</code> of the new Personalization rule.</li>
+<li>(<strong>Optional</strong>) Provide the description and <code>caseInsensitive</code> of the mew Personalization rule.​</li>
+<li>(<strong>Optional</strong>) Provide the <code>parentId</code> in the location where we want to create the new Personalization rule in. By default, it will create in Workspace. Refer to the section below on how to get the <code>parentId</code>.</li>
+<li>
+<p>Provide the contents of the rule. Refer to <em>Personalization API contents details</em> below for a detailed explanation of contents and its conditions.</p>
+<p>For example:</p>
+<p><img alt="Create Profiler rule API" src="../../../../../images/Create-profiler-rule-API.png" /></p>
+</li>
+</ol>
+<p>Steps to get the <code>ResourceId</code>:</p>
+<ol>
+<li>Login to HCL Digital Experience.</li>
+<li>Go to <a href="../../../pzn_portlets/">Personalization Navigator</a>.</li>
+<li>
+<p>Select the resource and document information as shown below.</p>
+<p><img alt="Get resource id" src="../../../../../images/get-resource-id.png" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Success and Error Messages:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>This code is returned when the Personalization rule is created successfully.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>This bad request error code is returned when input parameters are invalid or missing.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>This code is returned when the <code>LtpaToken</code> is invalid or expired.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>This code is returned when access is restricted for users.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>This code is returned when you are trying to create a Personalization rule with an already existing title.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>This code is returned when internal server error occurs.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="update-put-an-existing-personalization-rule">Update (PUT) an existing Personalization rule</h2>
+<p>This API is used to update an existing Personalization rule.</p>
+<ul>
+<li>
+<p><strong>PUT request format:</strong></p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/5bd89b0d-f024-4de2-a991-976315e917be
+</code></pre></div>
+</li>
+<li>
+<p><strong>Steps to execute the API:</strong></p>
+<ol>
+<li>Login to your Digital Experience solution.</li>
+<li>The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.</li>
+<li>Provide the <code>Rule-id</code> of the Personalization rule that is to be updated.</li>
+<li>Select the desired <code>ruleType</code> in example request body for reference.</li>
+<li>Provide the key value pairs of the rule which you want to update in the request body.</li>
+</ol>
+</li>
+<li>
+<p><strong>Sample request payload for updating a Visibility rule:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;description&quot;: &quot;Visibility Rule&quot;,
+  &quot;title&quot;: &quot;Visibility Rule 1&quot;,
+  &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
+  &quot;contents&quot;: {
+    &quot;visibility&quot;: &quot;show&quot;,
+    &quot;conditions&quot;: {
+      &quot;and&quot;: [
+        {
+          &quot;attributeType&quot;: &quot;Date&quot;,
+          &quot;attributeName&quot;: &quot;year&quot;,
+          &quot;operator&quot;: &quot;is not&quot;,
+          &quot;value&quot;: [
+            2021
+          ]
+        }
+      ]
+    },
+    &quot;caseInsensitive&quot;: true,
+    &quot;otherwise&quot;: &quot;hide&quot;
+  },
+  &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+}
+</code></pre></div>
+<p>Screenshot for reference for Visibility rule:</p>
+<p><img alt="Update Personalization rule API" src="../../../../../images/Update-rule-API.png" /></p>
+</li>
+<li>
+<p><strong>Response structure details for Visibility rule:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;id&quot;: &quot;d5cf10d8-f167-48f8-abc2-28b5f088714d&quot;,
+  &quot;description&quot;: &quot;Visibility Rule&quot;,
+  &quot;title&quot;: &quot;Visibility Rule 1&quot;,
+  &quot;ruleType&quot;: &quot;Visibility Rule&quot;,
+  &quot;contents&quot;: {
+    &quot;visibility&quot;: &quot;show&quot;,
+    &quot;otherwise&quot;: &quot;hide&quot;,
+    &quot;conditions&quot;: {
+      &quot;and&quot;: [
+        {
+          &quot;operator&quot;: &quot;is not&quot;,
+          &quot;attributeName&quot;: &quot;year&quot;,
+          &quot;attributeType&quot;: &quot;Date&quot;,
+          &quot;value&quot;: [
+            2021
+          ]
+        }
+      ]
+    },
+    &quot;caseInsensitive&quot;: true
+  },
+  &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+  &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+  &quot;created&quot;: &quot;2022-03-09T12:53:53.157Z&quot;,
+  &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+  &quot;lastModified&quot;: &quot;2022-03-10T03:32:27.205Z&quot;,
+  &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+  &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+}
+parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Sample request payload for updating a Profiler rule:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;description&quot;: &quot;Profiler rule updated&quot;,
+  &quot;title&quot;: &quot;Profiler Update&quot;,
+  &quot;ruleType&quot;: &quot;Profiler&quot;,
+  &quot;contents&quot;: {
+    &quot;profiles&quot;: [
+      {
+        &quot;profileName&quot;: &quot;Profile1&quot;,
+        &quot;conditions&quot;: {
+          &quot;and&quot;: [
+            {
+              &quot;attributeType&quot;: &quot;Date&quot;,
+              &quot;attributeName&quot;: &quot;day&quot;,
+              &quot;operator&quot;: &quot;is&quot;,
+              &quot;value&quot;: [
+                20
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    &quot;otherwiseProfile&quot;: &quot;Profile2&quot;,
+    &quot;caseInsensitive&quot;: true,
+    &quot;stopFirstProfile&quot;: true
+  },
+  &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+}
+</code></pre></div>
+<p>Screenshot for reference for Visibility rule:</p>
+<p><img alt="Update Profiler rule API" src="../../../../../images/Update-profiler-rule-API.png" /></p>
+</li>
+<li>
+<p><strong>Response structure details for Profiler rule:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;id&quot;: &quot;a0631df2-67b9-474c-b678-c904f80a02dd&quot;,
+  &quot;description&quot;: &quot;Profiler rule updated&quot;,
+  &quot;title&quot;: &quot;Profiler Update&quot;,
+  &quot;ruleType&quot;: &quot;Profiler&quot;,
+  &quot;contents&quot;: {
+    &quot;profiles&quot;: [
+      {
+        &quot;profileName&quot;: &quot;Profile1&quot;,
+        &quot;conditions&quot;: {
+          &quot;and&quot;: [
+            {
+              &quot;operator&quot;: &quot;is&quot;,
+              &quot;attributeName&quot;: &quot;day&quot;,
+              &quot;attributeType&quot;: &quot;Date&quot;,
+              &quot;value&quot;: [
+                20
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    &quot;otherwiseProfile&quot;: &quot;Profile2&quot;,
+    &quot;caseInsensitive&quot;: true,
+    &quot;stopFirstProfile&quot;: true
+  },
+  &quot;authors&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+  &quot;creator&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+  &quot;created&quot;: &quot;2022-04-11T07:51:13.506Z&quot;,
+  &quot;publishedOnDate&quot;: &quot;1970-01-01T00:00:00.001Z&quot;,
+  &quot;lastModified&quot;: &quot;2022-04-11T07:52:57.335Z&quot;,
+  &quot;lastModifier&quot;: &quot;uid=wpsadmin,o=defaultWIMFileBasedRealm&quot;,
+  &quot;parentId&quot;: &quot;_6QR_0048AAQUGF0A1T2A_18L&quot;
+}
+</code></pre></div>
+<p>Steps to get the <code>ResourceId</code>:</p>
+<ol>
+<li>Login to HCL Digital Experience.</li>
+<li>Go to <a href="../../../pzn_portlets/">Personalization Navigator</a>.</li>
+<li>
+<p>Select the resource and document information as shown below.</p>
+<p><img alt="Get resource id" src="../../../../../images/get-resource-id.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>Updating a ruleType is restricted.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Success and Error Messages:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>This code is returned when the Personalization rule is updated successfully.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>This bad request error code is returned when input parameters are invalid or missing.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>This code is returned when the <code>LtpaToken</code> is invalid or expired.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>This code is returned when access is restricted for users.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>This code is returned when you are trying to update a Personalization rule with an already existing title.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>This code is returned when internal server error occurs.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="get-dynamic-properties">GET dynamic properties</h2>
+<p>This API endpoint is used to get dynamic properties from all resource types.</p>
+<p>Each dynamic property is represented as an object in each resource type, which includes the property name (i.e. <code>attr1</code>) and its <code>displayName</code> and <code>propertyType</code>.</p>
+<ul>
+<li>
+<p><strong>GET Request format</strong></p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/dynamic-properties
+</code></pre></div>
+</li>
+<li>
+<p><strong>Sample request payload</strong></p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;attr1&quot;: {
+    &quot;displayName&quot;: &quot;attr1&quot;,
+    &quot;propertyType&quot;: &quot;Text&quot;
+  }
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Steps to execute the API:</strong></p>
+<ol>
+<li>Login to your Digital Experience solution.</li>
+<li>The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.</li>
+<li>Get the dynamic properties for a selected resource type using the REST API <code>GET all</code> command.
+For example, the dynamic properties added in one of the resource type <code>Action Count</code> looks like this:</li>
+</ol>
+<p><img alt="PZN Get Action Count dynamic properties" src="../../../../../images/pzn-get-action-count-dynamic-properties.png" /></p>
+<p>To get the dynamic properties of the resource type <code>Action Count</code>, the list of properties is returned in the specific resource type as an object:</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;attr2&quot;: {
+    &quot;displayName&quot;: &quot;attr2&quot;,
+    &quot;propertyType&quot;: &quot;Number&quot;
+  },
+  &quot;attr1&quot;: {
+    &quot;displayName&quot;: &quot;attr1&quot;,
+    &quot;propertyType&quot;: &quot;Text&quot;
+  },
+  &quot;attr3&quot;: {
+    &quot;displayName&quot;: &quot;attr3&quot;,
+    &quot;propertyType&quot;: &quot;Date&quot;
+  }
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Response structure details:</strong></p>
+<p>Response for the GET all dynamic properties call, which lists all the properties created under each resource type, is shown below:</p>
+<ul>
+<li>Different types of resource types for dynamic properties comprise of <code>Action Count</code>, <code>User</code>, <code>Category Count</code>, <code>Request</code>, <code>Shared Data</code>, <code>Portlet Attributes</code>, <code>Render Parameter</code> and <code>Session</code>.</li>
+<li>Different types of allowed property types for dynamic properties comprise of <code>Text</code>, <code>Date</code>, <code>Time</code>, <code>Timestamp</code>, <code>Number</code>, <code>Decimal Number</code>, <code>Boolean</code>, <code>List</code>, <code>Person</code>, and <code>Group</code>.
+<div class="highlight"><pre><span></span><code>{
+  &quot;Action Count&quot;: {
+    &quot;attr2&quot;: {
+      &quot;displayName&quot;: &quot;attr2&quot;,
+      &quot;propertyType&quot;: &quot;Number&quot;
+    },
+    &quot;attr1&quot;: {
+      &quot;displayName&quot;: &quot;attr1&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;attr3&quot;: {
+      &quot;displayName&quot;: &quot;attr3&quot;,
+      &quot;propertyType&quot;: &quot;Date&quot;
+    }
+  },
+  &quot;User&quot;: {
+    &quot;givenName&quot;: {
+      &quot;displayName&quot;: &quot;givenName&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;pinCode&quot;: {
+      &quot;displayName&quot;: &quot;pinCode&quot;,
+      &quot;propertyType&quot;: &quot;Number&quot;
+    },
+    &quot;officeAddress&quot;: {
+      &quot;displayName&quot;: &quot;officeAddress&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    }
+  },
+  &quot;Category Count&quot;: {
+    &quot;attr2&quot;: {
+      &quot;displayName&quot;: &quot;attr2&quot;,
+      &quot;propertyType&quot;: &quot;Number&quot;
+    },
+    &quot;attr1&quot;: {
+      &quot;displayName&quot;: &quot;attr1&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;attr3&quot;: {
+      &quot;displayName&quot;: &quot;attr3&quot;,
+      &quot;propertyType&quot;: &quot;Time&quot;
+    }
+  },
+  &quot;Request&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    }
+  },
+  &quot;Shared Data&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    }
+  },
+  &quot;Portlet Attributes&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    }
+  },
+  &quot;Render Parameter&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;dateProp&quot;: {
+      &quot;displayName&quot;: &quot;dateProp&quot;,
+      &quot;propertyType&quot;: &quot;Date&quot;
+    },
+    &quot;timeprop&quot;: {
+      &quot;displayName&quot;: &quot;timeprop&quot;,
+      &quot;propertyType&quot;: &quot;Time&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    },
+    &quot;timestampprop&quot;: {
+      &quot;displayName&quot;: &quot;timestampprop&quot;,
+      &quot;propertyType&quot;: &quot;Timestamp&quot;
+    }
+  },
+  &quot;Session&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    }
+  }
+}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Success and Error Messages:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>This code is returned when the list of dynamic properties is obtained successfully</td>
+</tr>
+<tr>
+<td>401</td>
+<td>This code is returned when the <code>LtpaToken</code> is invalid or expired.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>This code is returned access is restricted for users.</td>
+</tr>
+<tr>
+<td>409</td>
+<td>This code is returned when the dynamic property you are trying to update already has an existing property.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>This code is returned when internal server error occurs.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="update-put-dynamic-properties">Update (PUT) dynamic properties</h2>
+<p>This API endpoint is used to update dynamic properties for all resource types.</p>
+<p>You can update the property object, which includes property name (i.e. <code>attr1</code>) and its <code>displayName</code> and <code>propertyType</code> in the request payload, along with the ones received from your GET request.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p><code>displayName</code> and <code>propertyType</code> is mandatory for each dynamic property.</p>
+<ul>
+<li>
+<p><strong>PUT request format:</strong></p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/dynamic-properties
+</code></pre></div>
+</li>
+<li>
+<p><strong>Sample request payload:</strong></p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;Action Count&quot;: {
+    &quot;attr2&quot;: {
+      &quot;displayName&quot;: &quot;attr2&quot;,
+      &quot;propertyType&quot;: &quot;Number&quot;
+    },
+    &quot;attr1&quot;: {
+      &quot;displayName&quot;: &quot;attr1&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;attr3&quot;: {
+      &quot;displayName&quot;: &quot;attr3&quot;,
+      &quot;propertyType&quot;: &quot;Date&quot;
+    }
+  }
+  ... other resource types
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Steps to execute the API:</strong></p>
+<ol>
+<li>Login to your Digital Experience solution.</li>
+<li>The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.</li>
+<li>Add or remove dynamic properties from the payload as mentioned in the example above.</li>
+<li><strong>Response structure details:</strong></li>
+</ol>
+<p>Response structure is the same with the response structure for a GET all dynamic properties API call, which lists all the properties created under each resource type:</p>
+<ul>
+<li>Different types of resource types for dynamic properties comprise of <code>Action Count</code>, <code>User</code>, <code>Category Count</code>, <code>Request</code>, <code>Shared Data</code>, <code>Portlet Attributes</code>, <code>Render Parameter</code>, and <code>Session</code>.</li>
+<li>Different types of allowed property types for dynamic properties comprise of <code>Text</code>, <code>Date</code>, <code>Time</code>, <code>Timestamp</code>, <code>Number</code>, <code>Decimal Number</code>, <code>Boolean</code>, <code>List</code>, <code>Person</code>, and <code>Group</code>.
+<div class="highlight"><pre><span></span><code>{
+  &quot;Action Count&quot;: {
+    &quot;attr2&quot;: {
+      &quot;displayName&quot;: &quot;attr2&quot;,
+      &quot;propertyType&quot;: &quot;Number&quot;
+    },
+    &quot;attr1&quot;: {
+      &quot;displayName&quot;: &quot;attr1&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;attr3&quot;: {
+      &quot;displayName&quot;: &quot;attr3&quot;,
+      &quot;propertyType&quot;: &quot;Date&quot;
+    }
+  },
+  &quot;User&quot;: {
+    &quot;givenName&quot;: {
+      &quot;displayName&quot;: &quot;givenName&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;pinCode&quot;: {
+      &quot;displayName&quot;: &quot;pinCode&quot;,
+      &quot;propertyType&quot;: &quot;Number&quot;
+    },
+    &quot;officeAddress&quot;: {
+      &quot;displayName&quot;: &quot;officeAddress&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    }
+  },
+  &quot;Category Count&quot;: {
+    &quot;attr2&quot;: {
+      &quot;displayName&quot;: &quot;attr2&quot;,
+      &quot;propertyType&quot;: &quot;Number&quot;
+    },
+    &quot;attr1&quot;: {
+      &quot;displayName&quot;: &quot;attr1&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;attr3&quot;: {
+      &quot;displayName&quot;: &quot;attr3&quot;,
+      &quot;propertyType&quot;: &quot;Time&quot;
+    }
+  },
+  &quot;Request&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    }
+  },
+  &quot;Shared Data&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    }
+  },
+  &quot;Portlet Attributes&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    }
+  },
+  &quot;Render Parameter&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;dateProp&quot;: {
+      &quot;displayName&quot;: &quot;dateProp&quot;,
+      &quot;propertyType&quot;: &quot;Date&quot;
+    },
+    &quot;timeprop&quot;: {
+      &quot;displayName&quot;: &quot;timeprop&quot;,
+      &quot;propertyType&quot;: &quot;Time&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    },
+    &quot;timestampprop&quot;: {
+      &quot;displayName&quot;: &quot;timestampprop&quot;,
+      &quot;propertyType&quot;: &quot;Timestamp&quot;
+    }
+  },
+  &quot;Session&quot;: {
+    &quot;listprop&quot;: {
+      &quot;displayName&quot;: &quot;listprop&quot;,
+      &quot;propertyType&quot;: &quot;List&quot;
+    },
+    &quot;textprop2&quot;: {
+      &quot;displayName&quot;: &quot;textprop2&quot;,
+      &quot;propertyType&quot;: &quot;Text&quot;
+    },
+    &quot;booleanProp&quot;: {
+      &quot;displayName&quot;: &quot;booleanProp&quot;,
+      &quot;propertyType&quot;: &quot;Boolean&quot;
+    },
+    &quot;decNumberProp&quot;: {
+      &quot;displayName&quot;: &quot;decNumberProp&quot;,
+      &quot;propertyType&quot;: &quot;Decimal Number&quot;
+    }
+  }
+}
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Success and Error Messages for GET Personalization Rule ID dynamic properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>This code is returned when the list of dynamic properties is obtained successfully.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>This code is returned when the <code>LtpaToken</code> is invalid or expired.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>This code is returned access is restricted for users.</td>
+</tr>
+<tr>
+<td>409</td>
+<td>This code is returned when the dynamic property you are trying to update already has an existing property.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>This code is returned when internal server error occurs.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="delete-personalization-rule-using-rule-id">DELETE Personalization rule using rule-id</h2>
+<p>The following example shows how to use this API is to delete a Personalization rule using <code>rule-id</code>.</p>
+<ul>
+<li>
+<p><strong>DELETE request format:</strong></p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/{rule-id}
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>https://localhost:10039/wps/mycontenthandler/pzn-rest/rules/a7f72eb5-fffa-4bbb-955e-7dd0a9c9c88f
+</code></pre></div>
+</li>
+<li>
+<p><strong>Steps to execute the API:</strong></p>
+<ol>
+<li>Login to your Digital Experience solution.</li>
+<li>The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.</li>
+<li>Provide the <code>rule-id</code> of the rule you wish to delete.
+For example:</li>
+</ol>
+<p><img alt="Delete Personalization rule API" src="../../../../../images/Delete-rule-API.png" /></p>
+</li>
+<li>
+<p><strong>Response Structure Details:</strong></p>
+<p>The response structure is a success message that says the rule with the provided ID is deleted successfully, just like in this example shown below:</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;message&quot;: rule with id: 880bb281-bb82-489c-a220-56104f0f638d deleted successfully
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Success and Error Messages:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>This code is returned when the Personalization rule is deleted successfully.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>This code is returned when the <code>LtpaToken</code> is invalid or expired.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>This code is returned access is restricted for users.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>This code is returned when the Rule UUID is not found or invalid.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>This code is returned when internal server error occurs.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong><a href="rules_api_contents_details/">Personalization rules REST API content details</a></strong><br />
+The following topic provides details about DX <a href="../../../personalization/">Personalization</a> rules REST API content.</p>
+</li>
+<li><strong><a href="api_display_formats_attribute_properties/">References for display formats of attribute properties defined to Personalization APIs and examples</a></strong><br />
+The following topic provides additional details about the conditions and response structures for various attributes defined in the examples to execute API calls presenting different attributes of DX <a href="../../../personalization/">Personalization</a> services.</li>
+<li><strong><a href="trigerring_pzn_rules_anonymously/">Triggering Personalization rules anonymously</a></strong><br />
+The Personalization rules REST APIs can be triggered anonymously.</li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 14, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Personalization REST API explorer" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Personalization REST API explorer
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="rules_api_contents_details/" class="md-footer__link md-footer__link--next" aria-label="Next: Personalization rules REST API content details" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Personalization rules REST API content details
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest", "navigation.prune"], "search": "../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
