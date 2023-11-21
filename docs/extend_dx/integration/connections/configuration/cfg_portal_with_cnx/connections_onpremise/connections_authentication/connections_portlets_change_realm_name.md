@@ -52,3 +52,6 @@ When you configure HCL Connections portlets to use single sign-on, you might nee
 
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+

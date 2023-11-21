@@ -21,4 +21,5 @@ You can configure how the portal behaves if a user tries to access an undefined 
 
 ???+ info "Related information"
     - [Syndication and staging](../../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)
+    - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)
 

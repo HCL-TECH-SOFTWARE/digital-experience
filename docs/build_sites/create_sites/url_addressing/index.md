@@ -61,6 +61,37 @@ DX state URLs have a complex structure and include a large compressed and encode
 
 For more information, see [Changing your site URL](../../../deployment/manage/siteurl_cfg/index.md).
 
+#### Friendly Action URLs
+
+Starting from CF216, you can configure action URLs to be friendly.
+
+While DX allows for [friendly URLs](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/index.md), actions in portlets still trigger state information for bookmarkability and caching, therefore making the URLs unfriendly. See the following examples: 
+
+- Sample friendly URL: `http://localhost:10039/wps/myportal/Home/portlet1`
+
+- Sample URL after action: `http://localhost:10039/wps/myportal/Home/unfriendly/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziAxwtPA3cgw2MLZ3cDQzMHD3CvN2d_Y0MvM31w8EKDFCAo4FTkJGTsYGBu7-RfhTp-pFNIk4_HgVR-I0P14_CogTVB4TMKMgNDY0wyHQEAEtOCvU!/p0/IZ7_PA8I0GS039BG006AHVKGCO20S4=CZ6_PA8I0GS039BG006AHVKGCO20K7=LAtx3bXcr9g6G_9FFNzVJLrplxI0xbgzLlX5VqJmm77IT6cSS0g=/#Z7_PA8I0GS039BG006AHVKGCO20S4`
+
+A new configuration option is available where you can redirect a URL after action execution to a friendly URL. When enabling this feature, it is assumed the session or other means are used to store the information about the view to show. You can set up the configuration using a feature flag as portlet metadata. This can be configured per portlet.
+
+!!!note
+    The feature is only active if friendly URLs are enabled and theme is enabled for friendly URLs.
+
+To enable this feature:
+
+1. Go to the **Manage Portlets** page.
+2. In the **New Preference** field, enter **friendly.action.redirect**.
+3. In the **New value** field, enter **true**.
+4. Click **Add**.
+
+![Configure friendly action URLs](../../../images/EnableFriendlyActionURLs.png)
+
+To disable this feature, you can perform any of the following actions:
+
+- Delete the **friendly.action.redirect** preference with the **true** value.
+- Edit the value of the **friendly.action.redirect** preference to **false**. 
+
+No restart is required for both enabling and disabling this feature. 
+
 ### Friendly Names
 
 Friendly URLs have human-readable strings in the URL that describe the path to a Portal page. 

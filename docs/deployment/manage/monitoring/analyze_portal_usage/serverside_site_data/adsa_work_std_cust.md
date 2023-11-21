@@ -176,4 +176,5 @@ The following example shows how the URL-encoded representation of the custom bus
 Firefox/2.0.0.18" "JSESSIONID=0000JwIm04xm7btVLwzCj9Qo-uj:-1"
 ```
 
-
+???+ info "Related information"
+  - [WebSphere® Integrated Solutions Console](../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

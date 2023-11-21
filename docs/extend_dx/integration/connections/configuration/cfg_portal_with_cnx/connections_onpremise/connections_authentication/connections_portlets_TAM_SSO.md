@@ -89,3 +89,6 @@ Follow these steps to configure single sign-on.
         -   lc3-default-acl is the access control list \(ACL\) that you defined. For example, `acl attach /WebSEAL/tam.example.com-default/activities example-default-acl`. In this case, the command is `acl attach /WebSEAL/tam.example.com-default/PORTAL_VHOST_JCT example-default-acl`.
 
 
+
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

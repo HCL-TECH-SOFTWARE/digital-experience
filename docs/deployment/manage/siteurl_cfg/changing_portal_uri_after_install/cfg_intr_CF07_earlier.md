@@ -271,4 +271,7 @@ rd
 
 13. Resynchronize the nodes and restart the cluster.
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
 

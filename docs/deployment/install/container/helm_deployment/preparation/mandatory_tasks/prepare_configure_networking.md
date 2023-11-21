@@ -83,7 +83,7 @@ networking:
 
 Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
 
-Setting the add-on host is required for all hybrid deployments. Given the default use of relative hostnames, you must set an absolute FQDN for hybrid deployments. API calls must still point to one absolute hostname to avoid authentication issues when making requests. With that, it is not supported to configure your HCL DX environment to support multiple hostnames if you are running a hybrid deployment. See [Hybrid Deployment Installation](../../../../../../../deployment/install/hybrid) for more details.
+Setting the add-on host is required for all hybrid deployments. Given the default use of relative hostnames, you must set an absolute FQDN for hybrid deployments. API calls must still point to one absolute hostname to avoid authentication issues when making requests. With that, it is not supported to configure your HCL DX environment to support multiple hostnames if you are running a hybrid deployment. See [Hybrid Deployment Installation](../../../../hybrid/index.md) for more details.
 
 ## Configure HAProxy certificate
 

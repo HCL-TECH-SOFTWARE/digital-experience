@@ -36,5 +36,5 @@ Complete the following steps to add the cookie.ignore.regex parameter to the por
 
 10. Restart the WebSphere_Portal server.
 
-
-
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

@@ -59,3 +59,6 @@ Check all of your libraries for explicit role assignments. You can run the optim
     -   Windows™: `xmlaccess.bat -user userID -password password -in filename.xml -out /tmp/name_of_report.xml`ml`
 
 11. Remove the `accessControlConfig.enablePropagationBlockDeletion` and `accessControlConfig.enablePrivatePageOptimization` parameters previously configured. The parameters do not impact runtime operations because they are only used by the WCM PAC Optimizer tool. You can choose to keep the parameters if you plan to run the tool in the future on the same Portal environment.
+
+???+ info "Related information"
+     - [WebSphere® Integrated Solutions Console](../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
