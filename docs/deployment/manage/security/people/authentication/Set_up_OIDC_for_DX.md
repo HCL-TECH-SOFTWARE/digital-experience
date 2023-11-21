@@ -216,7 +216,7 @@ First, set the login property to `mail` to match the identity attribute coming i
 
 3. Set the field for **Federated repository properties for login** to `mail`.
 
-3. Then, click **OK** and **Save** to the master configuration.
+4. Then, click **OK** and **Save** to the master configuration.
 
 ### Updating IBM WebSphere Application Server sub-component Virtual Member Manager (VMM) to map user attributes
 

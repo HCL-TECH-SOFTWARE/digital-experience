@@ -2,8 +2,6 @@
 
 Website creators can use Site Builder to create sites or sections of a site based on the Site Builder templates installed on the HCL Portal server.
 
-Assign all website creators the Contributor role for the Site Builder Template library and allow them to create their own content libraries.
-
 Creators must have the following access rights:
 
 - User access to the Content Root page where they want to create new sites
