@@ -2,7 +2,8 @@
 
 This topic provides information about syncing WebDAV based theme files from local-to-server and server-to-local in real time. It watches the file system for changes in the background.
 
-!!! notes
+
+!!! note
     - It is recommended that you use the node version of the DXClient while working with LiveSync.
     - Starting from CF214, LiveSync is supported in scaled DX environment setups.
 
@@ -201,6 +202,7 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     ```shell
     -themeName <value>
     ```
+
 
     Starting from CF214, if `themeName` option is not provided, a list of WebDAV themes is displayed and you can select a theme to pull into their local.
 
