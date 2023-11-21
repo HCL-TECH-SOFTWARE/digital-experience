@@ -296,3 +296,7 @@ The API finds all comments based on the authoring template and site area ```Comm
 
 
 For purging deleted comments, refer to [How to use REST with Web Content Manager to Purge Deleted Content Items](../../../manage_content/wcm_development/wcm_rest/wcm_rest_deleted_content/wcm_rest_crud_purge_deleted.md).
+
+
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

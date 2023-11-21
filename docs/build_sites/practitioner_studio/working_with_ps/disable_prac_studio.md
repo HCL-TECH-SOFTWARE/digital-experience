@@ -9,18 +9,18 @@ This section outlines how to disable Practitioner Studio and Woodburn Studio in 
 
 1.  Open a command line.
 2.  Change to the wp\_profile-root/ConfigEngine directory.
-3.  Run the **disable-v95-UI-features** config task.
-    -   AIX: `./ConfigEngine.sh **disable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
-    -   Linux: `./ConfigEngine.sh **disable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
-    -   Windows: `ConfigEngine.bat **disable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
+3.  Run the disable-v95-UI-features config task.
+    -   AIX: `./ConfigEngine.sh disable-v95-UI-features -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
+    -   Linux: `./ConfigEngine.sh disable-v95-UI-features -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
+    -   Windows: `ConfigEngine.bat disable-v95-UI-features -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
 
 ## Disabling Practitioner Studio and Woodburn Studio in a virtual portal
 
 1.  Open a command line.
 2.  Change to the wp\_profile-root/ConfigEngine directory.
-3.  Run the **disable-v95-UI-features-virtual-portal** config task.
-    -   AIX: `./ConfigEngine.sh **disable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
-    -   Linux: `./ConfigEngine.sh **disable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
-    -   Windows: `ConfigEngine.bat **disable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
+3.  Run the disable-v95-UI-features-virtual-portal config task.
+    -   AIX: `./ConfigEngine.sh disable-v95-UI-features-virtual-portal -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -DVirtualPortalContext=`
+    -   Linux: `./ConfigEngine.sh disable-v95-UI-features-virtual-portal -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -DVirtualPortalContext=`
+    -   Windows: `ConfigEngine.bat disable-v95-UI-features-virtual-portal -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -DVirtualPortalContext=`
 
 

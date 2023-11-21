@@ -82,3 +82,6 @@ It also works in the context of the Web Content Management Multi-Lingual Solutio
 - When generating a Virtual Portal or DX page at the root level, a State Decoding check is not performed, to avoid conflicts with the defined URLs. The virtual Portal creation cannot not succeed; specifically, the page creation would proceed but the page cannot be accessed without the URL (i.e. having a locale of de and creating a root page of de, the URL to access the page would be `/wps/portal/de/de`, assuming a default context root).
 
 - In the [Web Content Management Authoring portlet](../../../../manage_content/wcm_authoring/authoring_portlet/index.md), the Generate button and the according widgets are not translated if friendly locales or a locale in the state is used (known issue).
+
+???+ info "Related information"
+    - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)

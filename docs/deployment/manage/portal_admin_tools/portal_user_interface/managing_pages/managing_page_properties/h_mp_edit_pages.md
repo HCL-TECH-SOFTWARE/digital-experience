@@ -38,4 +38,5 @@ To edit a page, label, or URL, do the following steps:
 
 ???+ info "Related information"  
     -   [Configuring the validation of friendly URLs for web content](../../../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
+    - [URL Addressability](../../../../../../build_sites/create_sites/url_addressing/index.md)
 

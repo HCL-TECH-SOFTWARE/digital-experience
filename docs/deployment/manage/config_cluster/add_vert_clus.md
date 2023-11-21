@@ -126,3 +126,4 @@ You can add vertical cluster members to share the workload demands of your clust
 
 ???+ info "Related information"
     -   [Setting up a cluster](../config_cluster/index.md)
+    - [WebSphere® Integrated Solutions Console](../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

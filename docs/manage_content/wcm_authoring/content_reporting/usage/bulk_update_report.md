@@ -1,34 +1,49 @@
-# Using the Content Reporting Bulk Update feature
+# Content Reporting Bulk Update
 
-This section provides steps on how to update the expiration date of content items in a report generated through HCL Content Reporting.
+Currently Content Reporting Bulk Update supports the following actions: 
+
+- Update expiration date
+- Add an owner or author
+- Remove an owner or author
+- Replace an owner or author
+
+These actions can be executed on content items returned in a report generated through HCL Content Reporting search.
 
 ## Prerequisite
 
-Content Reporting should be installed and configured in HCL Digital Experience 9.5 release update CF213 or higher. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+Beginning with HCL Digital Experience 9.5 release update CF214, Content Reporting is enabled by default. For HCL Digital Experience 9.5 release update CF213, Content Reporting should be installed and configured. For instructions on installing Content Reporting on supported environments, see the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
+To update items in bulk, you must have edit access to the content items selected. If you kick off the bulk update operation without having the required access to the items, the update will fail with the error message `Unauthorized access`. 
 
-## Using the Bulk Update feature
-
-Content managers can trigger bulk updates to update the expiration dates of all queried items.
+## Using the Content Reporting Bulk Update feature
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**. Select **Content Reporting** from the Practitioner Studio navigator. The following image shows the Content Reporting landing page.
 
+    ![](../../../../assets/HCL_Content_Reporting_Landing_Page.png)
+
 2. Generate a report on items you want to update. See [Generating a content report](../usage/generate_content_report.md) for instructions.
 
-3. After you have generated a report and if there are results, the **Update** button appears in the application header. Click the **Update** button.
+3. [Export the report](./export_content_report) or execute one of the following supported bulk update operations: [UpdateExpiry](#using-the-content-reporting-bulk-update-updateexpiry-feature) or [Update Owners/Authors](#using-the-content-reporting-bulk-update-ownersauthors-feature).
+
+## Using the Content Reporting Bulk Update UpdateExpiry feature
+
+Content managers can trigger bulk updates to update the expiration dates of all queried items. This section provides steps on how to update the expiration date of content items in a report generated through HCL Content Reporting.
+
+1. After you have generated a report and if there are results, the **Update** button appears in the application header. Click the **Update** button.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Button.png)
 
-4. In the **Update items** box, there are three options: **Action**, **Property**, and **Change to**. For CF213, the **Action** and **Property** fields each has one option: **Update** and **Expiry date**, respectively. In the **Change to** field, enter the new expiry date of the selected items. After entering the date, the **Update** button is enabled. Click the **Update** button.
 
-    ![](../../../../assets/HCL_Content_Reporting_Update_Dialog.png)
+2. In the **Update items** dialog box, there are two options: **Property**, and **Change to**.  In the **Property** field, choose **Expiry date**. In the **Change to** field, enter the new expiry date of the selected items. After entering the date, the **Update** button is enabled. Click the **Update** button.
+
+    ![](../../../../assets/HCL_Content_Reporting_Update_Items_UpdateExpiry.png)
 
     There are also **Cancel** and **Clear** buttons in the dialog box. Click **Cancel** to close the dialog box. Click **Clear** to remove all selected options.
 
     !!!note
-        Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
+        For CF213, there are three fields: **Action**, **Property**, and **Change to**. The **Action** and **Property** fields each have one option: **Update** and **Expiry date** respectively. Bulk updates for expiry dates can only be applied to content items, site areas, authoring templates, components, categories, and items to which you have edit access. Only items with a workflow are included.
 
-5. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and if you entered the correct expiration date. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
+3. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and if you entered the correct expiration date. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog.png)
 
@@ -37,11 +52,42 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
         ![](../../../../assets/HCL_Content_Reporting_Update_Disable.png)
 
-6. When a bulk update is triggered, a snackbar appears in the bottom right corner of the screen. The snackbar displays the status of the update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process has been completed, it shows how many items were updated and how many items were not.
+You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page.
 
-    ![](../../../../assets/HCL_Content_Reporting_Bulk_Update_Snackbar.png)
+## Using the Content Reporting Bulk Update Owners/Authors feature
+
+Content managers can trigger bulk updates to update the owners and/or authors of all queried items. This section provides steps on how to update the owners or authors of content items in a report generated through HCL Content Reporting.
+
+1. After you have generated a report and if there are results, the **Update** button appears in the application header. Click the **Update** button.
+
+    ![](../../../../assets/HCL_Content_Reporting_Update_Button_OwnersAuthors.png)
+
+2. In the **Update items** dialog box, there are three options: **Property**, **Action**, and **User**. In the **Property** field, select the property to be updated, either **Author** or **Owner**. In the **Action** field, select the action to be taken on the selected items, either **Add**, **Remove**, or **Replace**. In the **User** field, enter the name of the user to be involved in the selected action. This field is a type-ahead input field that displays a list of suggested users according to the input. Only suggested users are considered valid. After filling out all the fields, click the **Update** button.
+
+    ![](../../../../assets/HCL_Content_Reporting_Update_Items_OwnersAuthors.png)
+
+    !!!note
+        For the **Replace** action, there are two fields for the users involved in the action: **Add User** and **Remove User**. In the **Add User** field, enter the name of the user you want to add. In the **Remove User** field, enter the name of the user you want to replace with the name you added in the **Add User** field. 
+        ![](../../../../assets/HCL_Content_Reporting_Update_Items_ReplaceOwnersAuthors.png)
+
+3. After clicking the **Update** button, a confirmation dialog appears. Verify the number of items you want to update and that you entered the correct user information. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
+
+    ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_OwnersAuthors.png)
+
+    There are also **Cancel** and **Clear** buttons in the dialog box. Click **Cancel** to close the dialog box. Click **Clear** to remove all selected options.
+
+You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page.
+
+!!!note
+    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
 
 ## Tracking Bulk Updates and viewing Bulk Update results
+
+When a bulk update is triggered, a snackbar appears in the bottom right corner of the screen. The snackbar displays the status of the update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process has been completed, it shows how many items were updated and how many items were not.
+
+
+![](../../../../assets/HCL_Content_Reporting_Bulk_Update_Snackbar.png)
+
 
 There are two ways to track the bulk update: through the snackbar and through the **Updates** page.
 

@@ -72,5 +72,5 @@ For example, the `CSIV2_SSL_SERVERAUTH_LISTENER_ADDRESS` value is not listed.
 3. Restart the HCL Portal server.  
 
 ???+ info "Related information"
-	-	[Starting and stopping servers, deployment managers, and node agents](../manage/stopstart.md)
-
+	- [Starting and stopping servers, deployment managers, and node agents](../manage/stopstart.md)
+	- [WebSphere® Integrated Solutions Console](../manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

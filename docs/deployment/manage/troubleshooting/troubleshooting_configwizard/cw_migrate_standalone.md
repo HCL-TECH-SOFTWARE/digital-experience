@@ -181,6 +181,7 @@ When you run this step, the sub task that is named `action-deploy-portlets-apply
 -   `EJPPH0048W`: The synchronization mode of all nodes in the portal cluster is not consistently set. The portlet application PA_ContactList will not be started in the Application Server. Manual synchronization is assumed for all nodes. Manually start the application after all nodes were synchronized.
 -   `EJPXA0067E`: The following configuration data is needed to create a content-node resource: content-parentref.
 
-**Related information**  
-[Migrate a stand-alone server](../../migrate/migrate_using_cfgwizard/cw_migrate_stand_alone.md)<br>
-[Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+???+ info "Related information"
+    - [Migrate a stand-alone server](../../migrate/migrate_using_cfgwizard/cw_migrate_stand_alone.md)
+    - [Accessing the Configuration Wizard](../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

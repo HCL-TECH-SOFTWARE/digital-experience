@@ -15,5 +15,27 @@ In the Configuration Wizard, you answer questions about the environment that you
     
     - `kubectl` command: `kubectl -n <namespace> rollout restart statefulset <release-name>-core`
 
+## Default URLs
+
+To access different administration user interfaces during the configuration process, you can use default URLs if needed.
+
+Use the following default URLs to access the Configuration Wizard:
+
+-   **Configuration Wizard**
+
+    - Kube: https://yourserver:443/hcl/wizard
+
+    - Docker: https://yourserver:10200/hcl/wizard
+
+    - Default Standalone Local: https://yourserver:10200/hcl/wizard
+
+    - Cluster: Can be freely configured. Default is https://yourserver:10200/hcl/wizard
+
+!!! note 
+    Older CFs still use ibm/wizard and not /hcl/wizard context root.
+    
 
 **Video**: [HCL Portal - How to Access ConfigWizard](https://www.youtube.com/watch?v=YAEO78T7coM&feature=youtu.be)
+
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../WebSphere_Integrated_Solutions_Console.md)

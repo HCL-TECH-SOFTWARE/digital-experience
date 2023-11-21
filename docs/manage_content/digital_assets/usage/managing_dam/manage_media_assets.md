@@ -81,7 +81,7 @@ Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if 
 
 ![Warning message for sync in progress](../../../../images/dam_warning_message_for_in_progress.png)
 
-For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md#ul_zhl_vxq_qnb).
+For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md).
 
 ## Downloading a media asset source, version, or rendition
 
@@ -131,7 +131,8 @@ Refer to the following steps if you want to copy a media asset from one collecti
 Refer to the following steps if you want to move a media asset from one collection to another.
 
 !!! note 
-    Moving an asset location can break its links if it is referenced in WCM or any external references. To update the link, manual relinking is necessary.
+    Moving an asset location can break its links if it is referenced in WCM or any external references. To update the link, manual relinking is necessary. 
+    To view the asset references, go to **Properties > Insights**.
 
 1. Click the **more menu** option of the asset. 
 
@@ -199,3 +200,6 @@ You can can copy the friendly URL and API URL of an asset from the URLs section 
 ## HCL Digital Experience Solution Feedback
 
 HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
+
+???+ info "Related information"
+    - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)

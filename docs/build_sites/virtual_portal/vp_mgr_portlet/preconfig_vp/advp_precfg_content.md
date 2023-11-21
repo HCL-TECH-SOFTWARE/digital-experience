@@ -73,4 +73,5 @@ Depending on the functionality that you want to make available, more content is 
     - [Using the Virtual Portal Manager administration portlet](../../vp_mgr_portlet/advp_vpmgr_use.md)
     - [Filling a virtual portal with content](../../adm_vp_task/vp_adm_task/advp_tsk_fill_content.md)
     - [Migration: Virtual portals](../../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_vp.md)
+    - [WebSphere® Integrated Solutions Console](../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

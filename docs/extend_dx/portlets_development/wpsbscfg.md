@@ -324,3 +324,5 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
     - [Standard portlet API](../portlets_development/standard_portlet_api/index.md)
     - [Portlet Development Reference](../portlets_development/portlet_dev_ref/index.md)
     - [About the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/adxmlabt.md)
+    - [Portlet development utilities and page creation samples on HCL GitHub](../../guide_me/tutorials/Portletdevelopmentutilitiesandpagecreationsamples.md)
+
