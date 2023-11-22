@@ -24,7 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - OCI-based registry for Harbor Helm chart repository
 - Digital Asset Management - Resync DAM Staging environments
-- DX Picker - Preview an asset
+- DX Picker - Previewing an asset
 - Digital Asset Management - Moving a collection 
 - Digital Asset Management - Extending the trust store
 
