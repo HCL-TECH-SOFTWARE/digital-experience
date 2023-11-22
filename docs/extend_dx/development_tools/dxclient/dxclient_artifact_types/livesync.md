@@ -5,8 +5,8 @@ This topic provides information about syncing WebDAV based theme files from loca
 
 !!! note
     - It is recommended that you use the node version of the DXClient while working with LiveSync.
-    - Starting from CF214, LiveSync is supported in scaled DX environment setups.
-    - Starting from CF217, all LiveSync commands can now be triggered from within the target local theme path.
+    - Starting CF214, LiveSync is supported in scaled DX environment setups.
+    - Starting CF217, all LiveSync commands can be triggered from within the target local theme path.
 
 ## LiveSync Push Theme
 
