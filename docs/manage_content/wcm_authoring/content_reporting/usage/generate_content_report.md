@@ -85,13 +85,19 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
 3. After you have selected the search criteria, click **Search**.
 
-    The system displays a set of search results that fit the selected criteria. The total number of results is shown at the top (for example, *10 results found*). The number of matching results helps the user make more informed query reformulations. The applied search criteria information is also displayed at the **Search Criteria** bar (for example, *Expiry date: To 07/13/2023;*).
+    The system displays a set of search results that fit the selected criteria. The total number of results is shown at the top (for example, *15 results found*). The number of matching results helps the user make more informed query reformulations. The applied search criteria information is also displayed at the **Search Criteria** bar (for example, *Expiry date: To 07/13/2023;*).
 
     On the top right corner, the **View Criteria** opens the top drawer and displays the applied search criteria.
 
     ![](../../../../assets/HCL_Content_Reporting_Search_Results.png)
     
 ### Other actions available
+
+- To sort the search results, hover over the column header of the field with which you want to sort. An Arrow icon appears with a tooltip indicating that this icon is used to sort the results. Click the Arrow icon to sort the search results according to your preference. This icon remains visible to indicate the last sort used.
+    
+    ![](../../../../assets/HCL_Content_Reporting_Search_Results_PreSort.png)
+
+    ![](../../../../assets/HCL_Content_Reporting_Search_Results_PostSort.png)
 
 - To add more criteria to your search, click **View Criteria**. Click the **+ Add** button to add another search criteria.
     

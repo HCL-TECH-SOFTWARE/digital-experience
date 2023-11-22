@@ -113,6 +113,29 @@ The XML hierarchy that is found under the portal section in the XML request file
 
 Depending on the content of an XML request, these resources can be created, modified, deleted or exported. An XML request can contain any number of such resource definitions. It can therefore create hundreds of new resources in one step or modify only a single configuration setting of one existing resource.
 
+## Request Types
+
+With XMLAccess, you can specify special processing parameters as part of the request tag. For example:
+
+```
+<request
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="PortalConfig_8.0.0.xsd"
+    type="update"
+    create-oids="true">
+```
+
+For information on the XML elements, refer to the following table:
+
+|XML element|Description|
+|-----------|-----------|
+|create-oids|If `true`, this turns on ID generating mode where object IDs from the input XML are not stored to the database, but new object IDs are generated instead. By default, this is set to `false`.|
+|require-defined-oids|If `true`, resources must have defined object IDs. In contrast to create-oids, IDs are not created dynamically. By default, this is set to `false`.|
+|export-users|If `true`, a full export of the portal also includes the complete user repository. By default, this is set to `false`. The members of a group can be suppressed if you specify `no-member`.|
+|export-release|If `true`, a full export of the portal only includes public resources. The resulting xml file is intended to be processed by the ReleaseBuilder tool. By default, this is set to `false`.|
+|cleanup-users|If `invalid`, deleted users from an external directory are exported and then deleted in a next step. If `obsolete`, external users that have no application role assignment are exported and then deleted in a next step. By default, this is set to `none`.|
+|dam-collections|If `true`, DAM Collections access control is exported.|
+
 
 ???+ info "Related information"  
     -   [Portal administration tools](../../../../extend_dx/development_tools/index.md)

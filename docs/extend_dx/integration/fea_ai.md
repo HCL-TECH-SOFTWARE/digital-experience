@@ -1,4 +1,4 @@
-# Application integration
+# Java Connector Architecture 
 
 A portal provides access to content, data, and services that are located throughout the enterprise. These services include predefined connectors and portlets, and tools for creating additional connectors and portlets.
 
