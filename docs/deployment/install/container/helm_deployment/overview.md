@@ -12,7 +12,7 @@ Older versions of HCL DX shipped with an operator instead of helm charts, and sh
 flowchart TD
   accTitle: Steps in DX Helm installation.
   accDescr: Flowchart showing the mandatory and optional steps in DX Helm installation.
-  
+
   A([Start])
   B[Get access to helm charts and images];
   C[/Mandatory or Optional Tasks/];
@@ -21,7 +21,7 @@ flowchart TD
   F[Setup Persistent Volumes];
   G[Configure Networking];
   H[Configure Certificate];
-  I[Move on to optional tasks];
+  I[Optional tasks];
   J[Install DX]
 
   A --> B;
