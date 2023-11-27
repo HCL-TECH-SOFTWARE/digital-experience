@@ -1,6 +1,6 @@
 # Load images
 
-This section presents how to load the DX 9.5 Container Update CF196 or later images into your container image repository, tag them to fit your repository structure, and push them to your repository, so that all Nodes in your Kubernetes or OpenShift cluster can deploy HCL Digital Experience 9.5 Pods.
+This section presents how to load the HCL DX 9.5 images into your container image repository, tag them to fit your repository structure, and push them to your repository, so that all Nodes in your Kubernetes or OpenShift cluster can deploy HCL Digital Experience 9.5 Pods.
 
 To use HCL Digital Experience 9.5 in your Kubernetes or OpenShift cluster, you have to make the container images available to all nodes of your cluster. Usually this is done by providing them through a container image repository.
 
