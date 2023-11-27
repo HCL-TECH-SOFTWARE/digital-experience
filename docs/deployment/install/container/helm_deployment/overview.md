@@ -8,6 +8,47 @@ Older versions of HCL DX shipped with an operator instead of helm charts, and sh
 
 **Before you begin:** Refer to the latest HCL DX 9.5 Update image files list given in the [Container image list](../image_list.md) topic.
 
+``` mermaid
+flowchart TD
+  accTitle: Steps in DX Helm installation.
+  accDescr: Flowchart showing the mandatory and optional steps in DX Helm installation.
+  
+  A([Start])
+  B[Get access to helm charts and images];
+  C[/Mandatory or Optional Tasks/];
+  D[Prepare Namespace];
+  E[Setup Custom Configuration];
+  F[Setup Persistent Volumes];
+  G[Configure Networking];
+  H[Configure Certificate];
+  I[Move on to optional tasks];
+  J[Install DX]
+
+  A --> B;
+  B --> C;
+  C --> |Mandatory| D;
+  D --> E;
+  E --> F;
+  F --> G;
+  G --> H;
+  H --> J;
+  C ----> |Optional| I;
+  I --> J;
+
+  click D "../preparation/mandatory_tasks/prepare_namespace/"
+  click E "../preparation/mandatory_tasks/prepare_configuration/"
+  click F "../preparation/mandatory_tasks/prepare_persistent_volume_claims/"
+  click G "../preparation/mandatory_tasks/prepare_configure_networking/"
+  click H "../preparation/mandatory_tasks/prepare_ingress_certificate/"
+  click I "../preparation/optional_tasks/optional_internal_networking/"
+  click J "../helm_install_commands/"
+
+
+
+
+
+``` 
+
 Refer to the following videos and guides for more information:
 
 -   [Deploy HCL DX 9.5 using Helm](https://www.youtube.com/watch?v=pFKpMImqOQE){:target="_blank"}
