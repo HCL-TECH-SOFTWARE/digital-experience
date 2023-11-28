@@ -1,5 +1,9 @@
 # Deploy Using Helm
-    
+
+!!!important "Read this first"
+    * [Kubernetes deployment](../../../../../get_started/plan_deployment/container_deployment/index.md) for an understanding of the capabilities, deployment structures, configuration and scaling options available for HCL DX 9.5 CF196 and later deployments.
+    * [Containerization requirements and limitations](../../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
+
 HCL DX V9.5 is designed to run on any Certified Kubernetes platform with some conditions. See the [system requirements for Kubernetes platforms](../../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) for more information.
 
 This section provides administrators with instructions to deploy HCL Digital Experience to supported Kubernetes platforms. This includes preparation, installation, and uninstallation of the deployments using Helm.

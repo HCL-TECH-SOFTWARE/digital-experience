@@ -8,6 +8,7 @@ This section outlines mandatory and optional tasks that need to be done before i
 
 This includes preparing your cluster to have proper access to application container images, creating a custom configuration file that fits your deployment needs and configuring network and application settings to allow your HCL Digital Experience deployment to work properly.
 
+- **[Get the code](./get_the_code/configure_harbor_helm_repo.md)** 
 - **[Mandatory Tasks](./mandatory_tasks/prepare_namespace.md)**
 - **[Optional Tasks](./optional_tasks/optional_internal_networking.md)**
 
