@@ -69,8 +69,10 @@ The site manager user interface can be customized by adding additional functiona
 You can control the visibility of the site toolbar and single toolbar tabs per virtual portal by using Portal Access Control.
 -   **[Removing the site toolbar on a production server](wcm_mngpages_disabletool.md)**  
 The site toolbar provides access to editing features for managed pages, including adding and editing pages and web content. Although essential for an authoring server, it is recommended that you disable the site toolbar on a delivery server. You can disable the toolbar for an entire portal or for specific virtual portals.
+-   **[Deleting pages and their contents](delete_page_and_contents.md)**  
+Beginning with CF205, a new feature is added that allows you to delete the page as well as the content that is referenced by the WCM rendering portlets on the page.
 -   **[Disabling the language switcher](wcm_mngpages_disable_lang_switch.md)**  
-The language switcher allows you to switch from any of the supported languages. This feature is available only for authenticated portal users. --->
+The language switcher allows you to switch from any of the supported languages. This feature is available only for authenticated portal users.
 
 
 ???+ info "Related information"
