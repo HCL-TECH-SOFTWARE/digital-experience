@@ -2,12 +2,12 @@
 
 To use a container image registry that has access restrictions and requires credentials, you need to leverage `ImagePullSecrets` in your deployment. Refer to the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/) for additional information on this topic.
 
-In addition, reference your Cloud Provider documentation on how to create `ImagePullSecrets`.
-
-!!! note
-    Ensure that the `ImagePullSecret` has been created in the same namespace that your DX deployment is installed to.
+You can use this method to have your helm deployment directly access either the HCL container registry or your own container registry.
 
 ## Configure deployment to use ImagePullSecrets
+
+!!! tip
+    Ensure that you create the `ImagePullSecret` in the same namespace that your DX deployment is installed to.
 
 In order for the HCL Digital Experience 9.5 deployment to leverage `ImagePullSecrets` you need to adjust your `custom-values.yaml` file to include the following syntax:
 
@@ -30,7 +30,7 @@ All pods created now have that secret configured for pulling DX container images
 
 ## Configure deployment to use the HCL Harbor container registry
 
-From CF205 onwards, it is possible to pull images directly from the HCL Harbor container registry. This requires every cluster node to be able to access the HCL Harbor container registry.
+It is possible to pull images directly from the HCL Harbor container registry. This requires every cluster node to be able to access the HCL Harbor container registry.
 
 If you want to leverage this feature, you will have to configure an ImagePullSecret with your HCL Harbor credentials.
 
@@ -57,6 +57,7 @@ Inside your `custom-values.yaml` you can now adjust the ImagePullSecret to the s
 ```yaml
 # Image related configuration
 images:
+  repository: "hclcr.io"  
   # Image pull secrets used for accessing the repository
   imagePullSecrets:
     - name: "dx-harbor"
