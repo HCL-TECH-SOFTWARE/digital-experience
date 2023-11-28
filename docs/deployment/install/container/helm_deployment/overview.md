@@ -14,7 +14,8 @@ flowchart TD
   accDescr: Flowchart showing the mandatory and optional steps in DX Helm installation.
 
   A([Start])
-  B[Get access to helm charts and images];
+  B1[Configure Helm Repository];
+  B2[Load the Images];
   C[/Mandatory or Optional Tasks/];
   D[Prepare Namespace];
   E[Setup Custom Configuration];
@@ -24,8 +25,9 @@ flowchart TD
   I[Optional tasks];
   J[Install DX]
 
-  A --> B;
-  B --> C;
+  A --> B1;
+  B1 --> B2;
+  B2 --> C;
   C --> |Mandatory| D;
   D --> E;
   E --> F;
@@ -35,6 +37,8 @@ flowchart TD
   C ----> |Optional| I;
   I --> J;
 
+  click B1 "../preparation/get_the_code/configure_harbor_helm_repo/"
+  click B2 "../preparation/get_the_code/prepare_load_images/"
   click D "../preparation/mandatory_tasks/prepare_namespace/"
   click E "../preparation/mandatory_tasks/prepare_configuration/"
   click F "../preparation/mandatory_tasks/prepare_persistent_volume_claims/"
