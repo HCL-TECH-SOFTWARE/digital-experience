@@ -10,9 +10,9 @@ Co-packaged software is identified in HCL Digital Experience 9.5 Download docume
 
 ## Getting the software
 
-Product software can be accessed from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For additional guidance, refer to the [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){:target="_blank"} and watch the video tutorial on [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
+Product software can be accessed from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For additional guidance, refer to the [Step-by-step guide on downloading HCL Digital Experience products](../../../guide_me/tutorials/access-software/register-for-access.md){:target="_blank"} and watch the video tutorial on [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
 
-Beginning with HCL Digital Experience V9.5 Container Update 205 the [Docker images](../../../deployment/install/docker/index.md) for deployment to Kubernetes environments can be optionally accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. For more information, see Access and Deploy DX 9.5 Docker components from HCL Harbor (add hyperlink to new page) for more information. 
+HCL Digital Experience V9.5  for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 releases. For more information, see [Access and Deploy DX 9.5 Docker components from HCL Harbor](../harbor_container_registry.md) for more information. 
 
 HCL Digital Experience software is available through several product offerings and associated software licenses. Depending on the product offering that you purchased, your product might include some or all of the following HCL Digital Experience and related programs:
 
@@ -51,14 +51,14 @@ Afterwards, users start the IBM Installation Manager, then configure the 9.5 rep
 
 -   Documentation resource: [Apply Combined Cumulative Fix](../../../deployment/install/traditional/cf_install/index.md)
 
-## Deployment of HCL Digital Experience to Docker and supported Kubernetes platforms
+## Deployment of HCL Digital Experience to Kubernetes platforms
 
 The following is the installation path from an existing HCL Digital Experience 8.5 or 9.0 system:
 
 1.  Download the following HCL Digital Experience 9.5 container image file:
     -   HCL Digital Experience Docker container
-2.  Follow the [documentation here](../../../deployment/install/docker/docker_image_deployment.md) to deploy to Docker or supported Kubernetes platforms.
-3.  Stage the content to the new environment to move from an existing system to HCL Digital Experience on Docker or supported Kubernetes platforms.
+2.  Follow the [documentation here](../../../deployment/install/container/index.md) to deploy to a supported Kubernetes platforms.
+3.  Stage the content to the new environment to move from an existing system to HCL Digital Experience on a Kubernetes platforms.
 
 ## Configure HCL Digital Experience Cloud Native 9.5 Entitlement checks
 Beginning with [HCL Digital Experience 9.5 Container Update CF207](../../../whatsnew/cf20/newcf207.md), you must specify certain entitlement check parameters within your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks with the HCL Software Licensing and Delivery Portal (Flexnet). See the Help Center topic [HCL Digital Experience Cloud Native 9.5 entitlement checks](../software_licensing_portal/configure_entitlement_checks/index.md) for more information.
