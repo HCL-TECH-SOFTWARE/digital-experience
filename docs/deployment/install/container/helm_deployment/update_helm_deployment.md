@@ -1,4 +1,4 @@
-# Upgrade the Helm Deployment to the Latest Version
+# Upgrade Helm Deployment
 
 This section describes how to update the configuration of an HCL Digital Experience 9.5 CF196 or later deployment to Kubernetes or OpenShift installed using Helm.
 
@@ -14,7 +14,7 @@ The recommended approach for configuration changes is to update the custom-valu
 
 After making the needed changes to your custom-values.yaml file, use the following command:
 
-```
+``` sh
 # Helm upgrade command
 helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
 ```
