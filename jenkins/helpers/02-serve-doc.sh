@@ -26,10 +26,12 @@ chmod +x ./configure
 make -j 2
 make install
 
+git config --system --add safe.directory '*' # For all users and all repositories
+
 cd ~
 
 # Install mkdocs
-pip3 install mkdocs-material mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin mkdocs-macros-plugin
+pip3 install mkdocs-material==9.1.21 mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin pytz
 
 cd /docs
 
