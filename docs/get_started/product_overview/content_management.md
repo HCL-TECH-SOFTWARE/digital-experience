@@ -13,7 +13,7 @@ HCL DX provides a fully-featured, multi-platform web content-management solution
 
 HCL DX separates the content from the presentation layer. Content authors enter information in authoring templates. The authoring template is then associated with a presentation template. The presentation template defines how the content is rendered and presented to site visitors. As a result, you can rapidly change the look and feel of your content without editing the same elements repeatedly.
 
-The following example of a content template show how you can drag and configure all elements as part of content.
+The following example of a content template shows how you can drag and configure all elements as part of content.
 ![Overview - CMS](assets/overview-cms.png)
 
 ## Headless content access
