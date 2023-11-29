@@ -4,8 +4,6 @@ To use a container image registry that has access restrictions and requires cred
 
 You can use this method to have your helm deployment directly access either the HCL container registry or your own container registry.
 
-## Configure deployment to use ImagePullSecrets
-
 !!! tip
     Ensure that you create the `ImagePullSecret` in the same namespace that your DX deployment is installed to.
 
@@ -28,7 +26,7 @@ images:
 
 All pods created now have that secret configured for pulling DX container images.
 
-## Configure deployment to use the HCL Harbor container registry
+## Configuring deployment to use the HCL Harbor container registry
 
 It is possible to pull images directly from the HCL Harbor container registry. This requires every cluster node to be able to access the HCL Harbor container registry.
 

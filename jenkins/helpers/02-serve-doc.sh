@@ -31,7 +31,7 @@ git config --system --add safe.directory '*' # For all users and all repositorie
 cd ~
 
 # Install mkdocs
-pip3 install mkdocs-material==9.1.21 mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin pytz
+pip3 install -r /docs/requirements.txt
 
 cd /docs
 
