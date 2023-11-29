@@ -1,4 +1,4 @@
-# Load images
+# Loading images
 
 This section presents how to load the HCL DX 9.5 images into your container image repository, tag them to fit your repository structure, and push them to your repository, so that all Nodes in your Kubernetes cluster can deploy HCL Digital Experience 9.5 Pods.
 
@@ -15,27 +15,27 @@ It is assumed that you have a repository configured and running, and is technica
  
 You can either directly pull the HCL DX images from the HCL Harbor container image registry, or download the HCL Digital Experience 9.5 package, unpack it locally and load the images into your container registry. In both cases, you can load the images to your own container registry for others in your organization to access.
 
-### Configure the Helm chart image pull secret
+### Configuring the Helm chart image pull secret
 
 It is possible to have your Kubernetes deployment pull images directly from a container registry. This requires all of your cluster nodes to be able to reach the container registry.
 
 Ensure that you have configured your deployment to authenticate to the container registry, as described in [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md).
 
 !!! tip
-    If you configure your deployment to use the HCL Harbor container registry you do not need to retrieve, re-tag and push the images manually. This is very handy for quick deployments or if you do not have a local container image registry. The steps to do this are described in the [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md#configure-deployment-to-use-the-hcl-harbor-container-registry) page.
+    If you configure your deployment to use the HCL Harbor container registry you do not need to retrieve, re-tag and push the images manually. This is useful for quick deployments or if you do not have a local container image registry. The steps to do this are described in the [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md#configure-deployment-to-use-the-hcl-harbor-container-registry) page.
 
-### Pull directly from Harbor container registry
+### Pulling directly from Harbor container registry
 
-To access the harbor container registry, you need to log in with docker. This can easily be done using the following command:
+To access the harbor container registry, you need to log in with docker. To log in, use the following command:
 
 ``` sh
 docker login hclcr.io
 # Enter your harbor username and CLI secret to login
 ```
 
-You can obtain the CLI secret from harbor by navigating to your `User Profile` in [HCL Harbor](https://hclcr.io). You can copy it from the field called `CLI secret`.
+You can obtain the CLI secret from harbor by navigating to your `User Profile` in [HCL Harbor](https://hclcr.io). You can copy it from the `CLI secret` field.
 
-After a successful login, you will see the message:
+After a successful login, the following message appears:
 
 ```text
     Login Succeeded
@@ -44,13 +44,13 @@ After a successful login, you will see the message:
 You can now pull images from the Harbor container registry.
 
 
-### From HCL Digital Experience 9.5 package
+### From the HCL Digital Experience 9.5 package
 
 The HCL Digital Experience 9.5 Container Update packages are provided in a compressed .zip file, that can easily be unzipped using a utility of your choice. Refer to the latest [Container file listing](../../../image_list.md) topic for a list of the files contained in the .zip archive.
 
 Unzip the archive. 
 
-To load the individual image files, you may use the following command, replacing the name of each image you would like to load. You will have to run this command multiple times to load all images.
+To load the individual image files, use the following command, replacing the name of each image you want to load. You have to run this command multiple times to load all images.
 
 ```sh
 # Command to load container image into local repository
@@ -58,7 +58,7 @@ To load the individual image files, you may use the following command, replacing
 docker load < hcl-dx-core-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
 ```
 
-If you want to load all DX 9.5 CFxxx image files via one command, you may use the following command:
+If you want to load all DX 9.5 CFxxx image files via one command, use the following command:
 
 ```sh
 # Command to load all images at once
@@ -90,16 +90,16 @@ hcl/dx/ringapi                                v1.8.0_20210514-1709              
 ```
 
 
-## Load Images to Your Own Repository
+## Loading Images to Your Own Repository
 
-### Re-tag images
+### Re-tagging images
 
 If you are using a Kubernetes cluster that is not configured to operate on your local machine, you may need to push the HCL Digital Experience 9.5 container images to a remote repository.
 
 To do so, you need to re-tag the images to point to your remote repository.
 
 !!!warning
-    Do not change the version tags of the DX 9.5 images, as they are used for uniquely identifying which versions of DX applications are running in your cluster.
+    Do not change the version tags of the DX 9.5 images, because they are used for uniquely identifying which versions of DX applications are running in your cluster.
 
 You may re-tag any image using the following command:
 
@@ -155,7 +155,7 @@ my/test/repository/hcl/dx/ringapi                             v1.8.0_20210514-17
 
 ```
 
-### Push to repository
+### Pushing to repository
 
 You may use the following command to push the container images to your repository:
 
@@ -166,7 +166,7 @@ You may use the following command to push the container images to your repositor
 docker push my/test/repository/dx/core:v95_CF195_20210514-1708
 ```
 
-If you want to push all your locally processed images, you may use the following command:
+If you want to push all your locally processed images, use the following command:
 
 ```sh
 # Command to push all HCL Digital Experience images to a remote repository
@@ -180,7 +180,7 @@ docker images $REMOTE_REPO_PREFIX/dx/* | awk -F ' ' '{system("docker push " $1 "
 
 After running this command, Docker goes ahead and pushes the images to your remote repository. After the push, the container images are now ready for use by your Kubernetes cluster.
 
-### Adjust deployment configuration
+### Adjusting deployment configuration
 
 After you have successfully prepared all DX 9.5 images, you need to configure the images inside your custom-values.yaml.
 
