@@ -111,7 +111,7 @@ The DX Core application will perform certain actions during its regular startup 
 In order to start the DX Core JVM in maintenance mode, you will need to perform the following actions:
 
 !!!important
-    Make sure you are selecting the right profile that matches your currently installed / active version
+    Make sure you are selecting the right profile that matches your currently installed / active version in the following commands.
 
 ```sh
 # Connect into the running container
