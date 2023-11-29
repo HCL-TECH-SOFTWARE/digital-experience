@@ -1,4 +1,4 @@
-# Load images
+# Loading images
 
 This section presents how to load the HCL DX 9.5 images into your container image repository, tag them to fit your repository structure, and push them to your repository, so that all Nodes in your Kubernetes cluster can deploy HCL Digital Experience 9.5 Pods.
 
@@ -58,7 +58,7 @@ To load the individual image files, you may use the following command, replacing
 docker load < hcl-dx-core-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
 ```
 
-If you want to load all DX 9.5 CFxxx image files via one command, you may use the following command:
+If you want to load all DX 9.5 CFxxx image files via one command, use the following command:
 
 ```sh
 # Command to load all images at once
@@ -99,7 +99,7 @@ If you are using a Kubernetes cluster that is not configured to operate on your 
 To do so, you need to re-tag the images to point to your remote repository.
 
 !!!warning
-    Do not change the version tags of the DX 9.5 images, as they are used for uniquely identifying which versions of DX applications are running in your cluster.
+    Do not change the version tags of the DX 9.5 images, because they are used for uniquely identifying which versions of DX applications are running in your cluster.
 
 You may re-tag any image using the following command:
 
@@ -166,7 +166,7 @@ You may use the following command to push the container images to your repositor
 docker push my/test/repository/dx/core:v95_CF195_20210514-1708
 ```
 
-If you want to push all your locally processed images, you may use the following command:
+If you want to push all your locally processed images, use the following command:
 
 ```sh
 # Command to push all HCL Digital Experience images to a remote repository
