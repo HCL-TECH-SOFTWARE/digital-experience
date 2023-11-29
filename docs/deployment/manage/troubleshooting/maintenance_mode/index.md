@@ -56,7 +56,7 @@ You then need to apply the changes by using `helm upgrade`:
 ```sh
 # Using helm upgrade to apply the changes
 # Adjust release name, reference to the helm charts and path to your custom-values.yaml accordingly
-helm upgrade -n NAMESPACE dx-deployment -f custom-values.yaml ./hcl-dx-deployment.tgz
+helm upgrade -n <namespace> <release-name> -f custom-values.yaml ./hcl-dx-deployment.tgz
 ```
 
 After running the helm command, you will see an explicit mention of your maintenance mode changes in the command response:
@@ -64,7 +64,7 @@ After running the helm command, you will see an explicit mention of your mainten
 ```sh
 # Using helm upgrade to apply the changes
 # Adjust release name, reference to the helm charts and path to your custom-values.yaml accordingly
-helm upgrade -n NAMESPACE dx-deployment -f custom-values.yaml ./hcl-dx-deployment.tgz
+helm upgrade -n <namespace> <release-name> -f custom-values.yaml ./hcl-dx-deployment.tgz
 
 # Release "dx-deployment" has been upgraded. Happy Helming!
 # NAME: dx-deployment
@@ -85,7 +85,7 @@ If you check the logs of the affected application, you will also notice a messag
 ```sh
 # Checking the logs of a Pod using kubectl
 # Please adjust namespace and pod name to match your deployment
-kubectl logs -n dxns dx-deployment-core-0 -c core
+kubectl logs -n <namespace> <release-name>-core-0 -c core
 
 # Deployment type is: helm
 # Maintenance mode is: true
@@ -102,7 +102,7 @@ In case you need to delete a Pod that is still in a broken state, though you hav
 # Delete the corresponding Pod using kubectl
 # Please adjust namespace and pod name to match your deployment
 
-kubectl delete pod -n NAMESPACE dx-deployment-core-0
+kubectl delete pod -n <namespace> <release-name>-core-0
 ```
 
 ## Usage with DX Core
@@ -110,10 +110,13 @@ kubectl delete pod -n NAMESPACE dx-deployment-core-0
 The DX Core application will perform certain actions during its regular startup routine, that will not be executed when maintenance mode is enabled.
 In order to start the DX Core JVM in maintenance mode, you will need to perform the following actions:
 
+!!!important
+    Make sure you are selecting the right profile that matches your currently installed / active version
+
 ```sh
 # Connect into the running container
 # Please adjust namespace and pod name to match your deployment
-kubectl exec -it -n NAMESPACE dx-deployment-core-0 -c core -- /bin/bash
+kubectl exec -it -n <namespace> <release-name>-core-0 -c core -- /bin/bash
 
 # Navigate to the profiles directory that is stored within the mounted persistent volume
 cd /opt/HCL/profiles
