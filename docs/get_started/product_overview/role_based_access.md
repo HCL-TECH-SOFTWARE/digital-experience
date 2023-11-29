@@ -6,7 +6,7 @@ tags:
 hide: tags
 ---
 
-# Role based access control
+# Role-based access control
 
 HCL DX has rich features for controlling what users can see and do in the experiences you create with the product. This control ranges from simple access control for websites to granular control on content items.
 
