@@ -57,8 +57,8 @@ The following is the installation path from an existing HCL Digital Experience 8
 
 1.  Download the following HCL Digital Experience 9.5 container image file:
     -   HCL Digital Experience Docker container
-2.  Follow the [documentation here](../../../deployment/install/container/index.md) to deploy to a supported Kubernetes platforms.
-3.  Stage the content to the new environment to move from an existing system to HCL Digital Experience on a Kubernetes platforms.
+2.  Follow the [documentation here](../../../deployment/install/container/index.md) to deploy to supported Kubernetes platforms.
+3.  Stage the content to the new environment to move from an existing system to HCL Digital Experience on Kubernetes platforms.
 
 ## Configure HCL Digital Experience Cloud Native 9.5 Entitlement checks
 Beginning with [HCL Digital Experience 9.5 Container Update CF207](../../../whatsnew/cf20/newcf207.md), you must specify certain entitlement check parameters within your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks with the HCL Software Licensing and Delivery Portal (Flexnet). See the Help Center topic [HCL Digital Experience Cloud Native 9.5 entitlement checks](../software_licensing_portal/configure_entitlement_checks/index.md) for more information.
