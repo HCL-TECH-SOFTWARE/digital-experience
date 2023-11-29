@@ -1,6 +1,6 @@
 # Security scenarios
 
-If you plan to set up a clustered environment, you consider must follow one of two two security scenarios.
+If you plan to set up a clustered environment, you consider must follow one of two security scenarios.
 
 ## Default security delivered with the product
 
