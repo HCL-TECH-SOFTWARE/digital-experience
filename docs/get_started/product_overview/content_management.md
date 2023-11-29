@@ -18,7 +18,7 @@ The following example of a content template shows how you can drag and configure
 
 ## Headless content access
 
-The team can access content headlessly, by using the [WCM REST APIs](api_access.md). With this API, users can integreate content stored in HCL DX with applications created outside the platform, for example, a mobile application built with HCL MX, a commerce site built with HCL Commerce, or a standalone React application.
+The team can access content headlessly by using the [WCM REST APIs](api_access.md). With this API, users can integreate content stored in HCL DX with applications created outside the platform, for example, a mobile application built with HCL MX, a commerce site built with HCL Commerce, or a standalone React application.
 
 ## Standalone and inline content editors
 
