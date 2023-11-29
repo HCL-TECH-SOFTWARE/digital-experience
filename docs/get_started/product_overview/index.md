@@ -36,7 +36,7 @@ It is trusted by governments and companies around the world to deliver mission-c
 
 These solutions integrate web content with applications and business processes to support diverse user populations. HCL DX provides features to enable the composition of these experiences and to manage who sees what. It is built on a robust architecture that can scale to handle high demand. [Learn more about HCL DX architecture here](../architecture_overview).
 
-For an overview of HCL Digital Experience, see [Getting Started with HCL Digital Experience](../../guide_me/tutorials/gettingstartedwithDX.md).<!--This topic is called an overview. Perhaps change this link text to this: For more information about HCL Digital Experience functions, see...-->
+For more information about HCL Digital Experience functions, see [Getting Started with HCL Digital Experience](../../guide_me/tutorials/gettingstartedwithDX.md).<!--This topic is called an overview. Perhaps change this link text to this: For more information about HCL Digital Experience functions, see...-->
 
 ## Who is HCL DX for?
 
@@ -50,9 +50,9 @@ To enable the use cases and users mentioned earlier, HCL DX provides the followi
 
 * With [**Application integration**](application_integration.md) and [**API Access**](api_access.md), you can build a digital experience that integrates functionality from multiple back-end systems simultaneously.
 * With [**Content management**](content_management.md) and [**asset management**](asset_management.md), you can manage the web content and digital assets you need to serve your users.
-* With [**Site building**](site_building.md) you can combine applications with content into the customized and personalized experience your organization demands, combined with [**Role Based Access Control**](role_based_access.md) to tailor what your users see.
+* With [**Site building**](site_building.md), you can combine applications with content into the customized and personalized experience your organization demands, combined with [**Role Based Access Control**](role_based_access.md) to tailor what your users see.
 * With [**Personalization**](personalization.md), you can tailor the digital experience to serve diverse user populations from a single platform.
-* With [**Forms building**](forms_building.md) non-technical users can quickly build data capture applications.
+* With [**Forms building**](forms_building.md), non-technical users can quickly build data capture applications.
 
 You can read more about the platform's architecture and technical capabilities in the [Architecture overview](../architecture_overview/index.md) section.
 
