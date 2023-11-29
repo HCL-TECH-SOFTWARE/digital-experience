@@ -10,5 +10,5 @@ HCL Digital Experience 9.5 can be deployed for non-production purposes using [Do
 
 1. Download the Docker images for the HCL DX 9.5 version you want to deploy. See [Software Download](../../get_started/download/index.md) for more information.
 
-2. Find the HCL DX 9.5 Docker Compose scripts, installation and configuration instructions for non-production use have been published as-is in Github.com in the [DX Docker Compose](https://github.com/HCL-TECH-SOFTWARE/dx-docker-compose) repository. Further instructions about how to use the DX Docker Compose scripts can be found there.
+2. Find the HCL DX 9.5 Docker Compose scripts, along with installation and configuration instructions for non-production use, which are published as-is in Github.com in the [DX Docker Compose](https://github.com/HCL-TECH-SOFTWARE/dx-docker-compose) repository. Further instructions about how to use the DX Docker Compose scripts can be found in the same repository.
  
