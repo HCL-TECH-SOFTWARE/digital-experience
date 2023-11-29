@@ -6,7 +6,7 @@ tags:
 hide: tags
 ---
 
-# Digital asset management (DAM)
+# Digital Asset Management (DAM)
 
 HCL DX provides integrated digital asset management services, which are targeted at managing web-ready digital assets such as images or videos for use in content and sites built with HCL DX.
 
