@@ -29,7 +29,7 @@ make install
 cd ~
 
 # Install mkdocs
-pip3 install mkdocs-material mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin mkdocs-macros-plugin
+pip3 install -r /docs/requirements.txt
 
 cd /docs
 
