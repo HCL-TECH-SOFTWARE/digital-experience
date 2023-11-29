@@ -56,9 +56,3 @@ flowchart TD
 
 
 ``` 
-
-Refer to the following videos and guides for more information:
-
--   [Deploy HCL DX 9.5 using Helm](https://www.youtube.com/watch?v=pFKpMImqOQE){:target="_blank"}
--   [Update HCL DX 9.5  to a later version using Helm](https://www.youtube.com/watch?v=TwZuNOeWdT4){:target="_blank"}
--   [DX CF197 on Azure AKS using the Helm Chart](https://support.hcltechsw.com/sys_attachment.do?sys_id=876b1adf1bb97490a67e9759bc4bcb03){:target="_blank"}.
