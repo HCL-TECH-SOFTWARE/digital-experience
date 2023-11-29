@@ -36,7 +36,7 @@ Portlets developed by using the JSR 168 or JSR 286 specifications can be hosted 
 
 Web Application Bridge provides organizations with flexibility to integrate existing web applications. The capability provides a proxied web environment that enables presentation of external web content without requiring URL redirection or content introspection. This technology facilitates integrating with existing web applications and dynamically presenting content through HCL DX.
 
-### Digital data connector
+### Digital Data Connector
 
 HCL DX provides [Digital Data Connector (DDC)](../../extend_dx/ddc/index.md), a framework for integrating live data from external data sources with your pages through [Web Content Manager](content_management.md) presentation components. You can use DDC to integrate product data from HCL Commerce or enterprise social network information from HCL Connections.
 
