@@ -4,8 +4,6 @@ To use a container image registry that has access restrictions and requires cred
 
 You can use this method to have your helm deployment directly access either the HCL container registry or your own container registry.
 
-## Configuring deployment to use ImagePullSecrets
-
 !!! tip
     Ensure that you create the `ImagePullSecret` in the same namespace that your DX deployment is installed to.
 

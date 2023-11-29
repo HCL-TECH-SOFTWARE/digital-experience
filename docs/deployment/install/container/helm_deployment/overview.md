@@ -1,5 +1,9 @@
 # Deploy Using Helm
-    
+
+!!!important "Read this first"
+    * [Kubernetes deployment](../../../../../get_started/plan_deployment/container_deployment/index.md) for an understanding of the capabilities, deployment structures, configuration and scaling options available for HCL DX 9.5 CF196 and later deployments.
+    * [Containerization requirements and limitations](../../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
+
 HCL DX V9.5 is designed to run on any Certified Kubernetes platform with some conditions. See the [system requirements for Kubernetes platforms](../../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) for more information.
 
 This section provides administrators with instructions to deploy HCL Digital Experience to supported Kubernetes platforms. This includes preparation, installation, and uninstallation of the deployments using Helm.
@@ -14,7 +18,8 @@ flowchart TD
   accDescr: Flowchart showing the mandatory and optional steps in DX Helm installation.
 
   A([Start])
-  B[Get access to helm charts and images];
+  B1[Configure Helm Repository];
+  B2[Load the Images];
   C[/Mandatory or Optional Tasks/];
   D[Prepare Namespace];
   E[Setup Custom Configuration];
@@ -24,8 +29,9 @@ flowchart TD
   I[Optional tasks];
   J[Install DX]
 
-  A --> B;
-  B --> C;
+  A --> B1;
+  B1 --> B2;
+  B2 --> C;
   C --> |Mandatory| D;
   D --> E;
   E --> F;
@@ -35,6 +41,8 @@ flowchart TD
   C ----> |Optional| I;
   I --> J;
 
+  click B1 "../preparation/get_the_code/configure_harbor_helm_repo/"
+  click B2 "../preparation/get_the_code/prepare_load_images/"
   click D "../preparation/mandatory_tasks/prepare_namespace/"
   click E "../preparation/mandatory_tasks/prepare_configuration/"
   click F "../preparation/mandatory_tasks/prepare_persistent_volume_claims/"
@@ -48,9 +56,3 @@ flowchart TD
 
 
 ``` 
-
-Refer to the following videos and guides for more information:
-
--   [Deploy HCL DX 9.5 using Helm](https://www.youtube.com/watch?v=pFKpMImqOQE){:target="_blank"}
--   [Update HCL DX 9.5  to a later version using Helm](https://www.youtube.com/watch?v=TwZuNOeWdT4){:target="_blank"}
--   [DX CF197 on Azure AKS using the Helm Chart](https://support.hcltechsw.com/sys_attachment.do?sys_id=876b1adf1bb97490a67e9759bc4bcb03){:target="_blank"}.
