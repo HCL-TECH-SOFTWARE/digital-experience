@@ -1163,8 +1163,3 @@ hcl-dx-cloud-operator-image-v95_CF18_xxxxxxxx-xxxx.tar.gz
 hcl-dx-cloud-scripts-v95_CF18_xxxxxxxx-xxxx.zip
 hcl-dx-ambassador-image-xxxx.tar.gz
 ```
-
-- See the following sections for additional information:
-  - [Docker image deployment](../docker/docker_image_deployment.md)
-  - [System requirements](../../../get_started/system_requirements/index.md)
-  - [Customizing the container deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/customizing_container_deployment.html){:target="_blank"}
