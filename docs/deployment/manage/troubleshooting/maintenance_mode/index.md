@@ -1,29 +1,27 @@
 # Maintenance Mode
 
-The HCL Digital Experience Helm Charts provide the capability to start application containers in a maintenance mode.
-
-This can be useful to debug issues that occur during the containers lifecycle, especially during the startup phase.
+The HCL Digital Experience Helm Charts provide the capability to start application containers in a maintenance mode. This can be useful to debug issues that occur during the containers lifecycle, especially during the startup phase.
 
 ## Effects
 
-The applications that have maintenance mode enabled will see the following effects:
+The applications with maintenance mode enabled experience the following effects:
 
-- The application containers of the Pods will remain `ready` and `live` at all time, independently of the actual application status
-- The startup routine of the application is skipped, the container will not execute its main entrypoint routines
-- The application itself is not started, resulting in the container to be basically idle until manual intervention
+- The application containers within the Pods always remain 'ready' and 'live,' regardless of the actual application status.
+- The startup routine of the application is skipped, and the container does not not execute its main entrypoint routines.
+- The application itself is not started, resulting in the container to be idle until manual intervention.
 
-These effects ensure that:
+These effects in the applications ensure that:
 
-- Kubernetes will always allow for traffic routing into the affected application containers, since the `ready` probe is always true
-- Kubernetes will not restart Pods due to containers not being `live`
+- Kubernetes always allows for traffic routing into the affected application containers because the `ready` probe is always true.
+- Kubernetes does not restart Pods due to containers not being `live`.
 
-The affected application will not start without manual intervention. Be aware that enabling maintenance mode will impact application availability for end-users.
+The affected application does not start without manual intervention. Enabling maintenance mode impacts application availability for end-users.
 
-Please be aware that depending applications will be affected too, since they will not be able to communicate with the application in maintenance mode until you either manually start it or turn off maintenance mode again.
+Note that depending applications are affected too, because they cannot communicate with the application in maintenance mode until you either manually start it or turn off maintenance mode again.
 
 ## Configuration
 
-In your `custom-values.yaml` you can define the state of the maintenance mode on a per application basis. This allows you to limit the scope of your actions.
+In your `custom-values.yaml`, you can define the state of the maintenance mode on a per application basis. This allows you to limit the scope of your actions.
 
 Adjust the `maintenanceMode` section accordingly.
 
@@ -59,7 +57,7 @@ You then need to apply the changes by using `helm upgrade`:
 helm upgrade -n <namespace> <release-name> -f custom-values.yaml ./hcl-dx-deployment.tgz
 ```
 
-After running the helm command, you will see an explicit mention of your maintenance mode changes in the command response:
+After running the helm command, an explicit mention of your maintenance mode changes appears in the command response:
 
 ```sh
 # Using helm upgrade to apply the changes
@@ -80,7 +78,7 @@ helm upgrade -n <namespace> <release-name> -f custom-values.yaml ./hcl-dx-deploy
 # ATTENTION: Maintenance mode is enabled for Pods: Core
 ```
 
-If you check the logs of the affected application, you will also notice a message regarding the maintenance mode:
+If you check the logs of the affected application, there is also a message regarding the maintenance mode:
 
 ```sh
 # Checking the logs of a Pod using kubectl
@@ -93,10 +91,9 @@ kubectl logs -n <namespace> <release-name>-core-0 -c core
 # Maintenance mode is enabled. This mode solely starts the container without any processes within it.
 ```
 
-If you come from a state where the application that you want to set into maintenance mode is in a unhealthy state already, you may need to delete the corresponding Pod for the changes to take effect.  
-This is due to the fact that Kubernetes will not apply a new configuration to Pods of a StatefulSet until the previous configuration has successfully started.
+If you come from a state where the application that you want to set into maintenance mode is in an unhealthy state, you may need to delete the corresponding Pod for the changes to take effect. This is because Kubernetes does not apply a new configuration to Pods of a StatefulSet until the previous configuration has successfully started.
 
-In case you need to delete a Pod that is still in a broken state, though you have enabled the maintenance mode, you can use the following command as reference:
+In case you need to delete a Pod that is still in a broken state even though you have enabled the maintenance mode, use the following command as reference:
 
 ```sh
 # Delete the corresponding Pod using kubectl
@@ -107,11 +104,11 @@ kubectl delete pod -n <namespace> <release-name>-core-0
 
 ## Usage with DX Core
 
-The DX Core application will perform certain actions during its regular startup routine, that will not be executed when maintenance mode is enabled.
-In order to start the DX Core JVM in maintenance mode, you will need to perform the following actions:
+The DX Core application performs certain actions during its regular startup routine. These actions are not executed when maintenance mode is enabled.
+In order to start the DX Core JVM in maintenance mode, you must perform the following actions:
 
 !!!important
-    Make sure you are selecting the right profile that matches your currently installed / active version in the following commands.
+    Make sure you are selecting the right profile that matches the currently installed version in the following commands.
 
 ```sh
 # Connect into the running container
@@ -142,4 +139,4 @@ ln -s /opt/HCL/profiles/prof_95_CF217/ /opt/HCL/wp_profile
 # ADMU3000I: Server WebSphere_Portal open for e-business; process id is 2233
 ```
 
-Please be aware that if the container is restarted by Kubernetes, this symlink will disappear.
+Note that if the container is restarted by Kubernetes, this symlink disappears.
