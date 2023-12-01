@@ -5,9 +5,9 @@ Use the following steps to share the DAM repository between multiple HCL Digital
 Prerequisites:
 
 - Configure single sign-on \(SSO\) between the HCL Digital Experience 9.5 deployments that shares the Digital Asset Management media assets. See [Configure SSO for Digital Asset Management](../configure_dam_sso.md) topic.
-- Ensure the [Cross Origin Resource Sharing \(CORS\)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS){:target="_blank"} property is configured in the values yaml as follows:
+- Ensure the [Cross Origin Resource Sharing \(CORS\)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS){:target="_blank"} property is configured in the values.yaml as follows:
 
-    1. Add the target host name in `networking` in values yaml for Core:
+    1. Add the target host name in `networking` in values.yaml for Core:
 
         ```yaml
             networking:
@@ -15,7 +15,7 @@ Prerequisites:
                 host: "<loadbalancer Target url>"
         ```
 
-    2. Add the target host name in `networking` in values yaml for Digital asset management:
+    2. Add the target host name in `networking` in values.yaml for Digital asset management:
 
         ```yaml
             networking:
