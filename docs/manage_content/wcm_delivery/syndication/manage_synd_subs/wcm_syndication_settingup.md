@@ -49,6 +49,8 @@ What can and cannot be syndicated:
 -   If you add a library to a syndicator after the initial syndication, you must click **Rebuild** to force the new library to be syndicated immediately.
 -   If you are creating a two-way syndication relationship, you must use a consistent syndication strategy. For example, if you syndicate "All items", then both syndication relationships must be syndicating "All items".
 
+[]()
+
 1.  Ensure both the subscriber and syndicator are running and that they can access each other over a network.
 
 2.  On your subscriber server, log in to HCL Digital Experience.
@@ -83,7 +85,7 @@ What can and cannot be syndicated:
         ```
 
     !!! note
-        For syndication to work in HTTPs, you have to import the SSL certificates between syndicator and subscriber servers.
+        For syndication to work in HTTPs, you have to import the SSL certificates between syndicator and subscriber servers. Refer to [Syndicate the source and target environments](../../../../deployment/manage/container_configuration/container_staging#syndicate-the-source-and-target-environments) for more information.
 
     -   **Once the syndication pair has been created, you must edit the syndicator. The Subscriber URL field needs to be modified to look like this:**
 
