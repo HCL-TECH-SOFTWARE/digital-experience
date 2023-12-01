@@ -10,6 +10,7 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager REST API v2 - Updated custom configurations for Open AI
 - Updated documentation for setting up OIDC in HCL DX
 - DXClient - Version compatibility
+- HCL DX Extensions for Visual Studio Code
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -65,10 +66,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Updated documentation for setting up OIDC in HCL DX
 
 === "Containers"
-    Instructions for setting up OIDC has been updated to include a reference to the open source repository [hclds-keyclak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). In this repository, you can find Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. For more information, see [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
+    Instructions for setting up OIDC has been updated to include a reference to the open source repository [hclds-keycloak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). In this repository, you can find Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. For more information, see [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
 
 === "On-Premises"
-    Instructions for setting up OIDC has been updated and a reference to the open source repository [hclds-keyclak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). In this repository, you can find Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. Steps for traditional architecture have also been added in the documentation. For more information, see [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
+    Instructions for setting up OIDC has been updated and a reference to the open source repository [hclds-keycloak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). In this repository, you can find Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. Steps for traditional architecture have also been added in the documentation. For more information, see [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
 
 ### DXClient - Version compatibility
 
@@ -78,14 +79,13 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     You can use the version compatibility command to check the version details of DX Core and DXClient. For more information, see the Help Center topic [Version Compatibility](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/versionCompat.md).
 
-<!---
 ### HCL DX Extensions for Visual Studio Code
 
 === "Containers"
     The HCL DX Extensions feature for Visual Studio Code provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation. For more information, see the Help Center topic [HCL DX Extensions for Visual Studio Code](../../extend_dx/development_tools/hcl_dx_extensions/index.md).
 
 === "On-Premises"
-    The HCL DX Extensions feature for Visual Studio Code provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation. For more information, see the Help Center topic [HCL DX Extensions for Visual Studio Code](../../extend_dx/development_tools/hcl_dx_extensions/index.md).   --->
+    The HCL DX Extensions feature for Visual Studio Code provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation. For more information, see the Help Center topic [HCL DX Extensions for Visual Studio Code](../../extend_dx/development_tools/hcl_dx_extensions/index.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -117,7 +117,7 @@ The following features and updates are available to customers installing HCL Dig
 ### OCI-based registry for Harbor Helm chart repository
 
 === "Containers"
-    Starting CF216, the Harbor repository is updated with an OCI-based registry and the helm chart command is updated to be OCI-compliant. Instructions on how to pull helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
+    Starting CF216, the Harbor repository is updated with an OCI-based registry and the helm chart command is updated to be OCI-compliant. Instructions on how to pull helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
 
 ### Digital Asset Management - Resyncing the DAM Staging environments
 
