@@ -20,7 +20,7 @@ Note that this solution is not related to the existing comments for blogs/wikis 
 
 ### Enabling the comments plugin in WAS Console 
 
-To make the comments plugin visible in the plugin component tag which should be added to presentation template, you must first add the configuraton in WAS Console. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Enter the following details:
+To make the comments plugin visible in the plugin component tag which should be added to presentation template, you must first add the configuration in WAS Console. In WAS Console, go to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Enter the following details:
 
 - Name: enable.comment.plugin
 - Value: true
@@ -264,6 +264,19 @@ The actions available for a user depend on their role:
 ## Update global "Article" presentation template
 
 If you want to perform a replacement of the OOB components that are shipped, see [Adding the sample web content libraries in the authoring portlet](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/creating_contentsamples/wcm_delivery_ctsamples_libraries.md).
+
+## CSRF protection for adding and deleting comments
+
+Starting CF217, you can enable CSRF tokens to be utilized when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. Note that a request without a valid CSRF token will fail.
+
+To enable CSRF tokens, go to the WAS Console and navigate to to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Enter the following details:
+
+- Name: wcm.csrf.comments.enabled
+- Value: true
+- Type: String
+
+!!!important
+    After adding the configuration, a JVM restart is required.
 
 ## Cleaning up orphaned comments data stored in the library
 
