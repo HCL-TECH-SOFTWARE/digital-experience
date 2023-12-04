@@ -7,3 +7,4 @@ nav:
     - message_codes.md
     - wcm_support_tools.md
     - Browser behavior and scenarios: browser_behavior_scenarios
+    - Maintenance mode: maintenance_mode
