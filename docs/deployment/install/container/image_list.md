@@ -1,8 +1,8 @@
 # Container and Supported OS File listings 
 
-This section presents the latest available HCL Digital Experience (DX) 9.5 Container images available.
+This section presents the latest available HCL Digital Experience (DX) 9.5 Container images.
 
-You can obtain the HCL DX 9.5 container update releases may be obtained from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}, in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry, and the **HCL_DX_9.5_Container_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
+You can obtain the HCL DX 9.5 container update releases from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}, in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry, and the **HCL_DX_9.5_Container_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo){:target="_blank"}
 
@@ -48,9 +48,8 @@ hcl-dx-runtime-controller-image-v95_CF216_20231114-2129.tar.gz
 |File name| Folder name|
 |---------|------------|
 |HCL-DX-CF216_Express_Update|HCL-DX-CF216_Express_Update.zip|
-|HCL-DX-CF265_RemoteSearch_Update|HCL-DX-CF216_RemoteSearch_Update.zip|
+|HCL-DX-CF216_RemoteSearch_Update|HCL-DX-CF216_RemoteSearch_Update.zip|
 |HCL-DX-CF216_Server_Update|HCL-DX-CF216_Server_Update.zip|
-|HCL-DX-CF216-Kubernetes_Update|hcl-dx-kubernetes-v95-CF216.zip|
 
 
 ## HCL DX 9.5 CF215
