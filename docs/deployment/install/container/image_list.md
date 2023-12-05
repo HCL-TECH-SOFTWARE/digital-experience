@@ -46,9 +46,8 @@ hcl-dx-runtime-controller-image-v95_CF216_20231114-2129.tar.gz
 |File name| Folder name|
 |---------|------------|
 |HCL-DX-CF216_Express_Update|HCL-DX-CF216_Express_Update.zip|
-|HCL-DX-CF265_RemoteSearch_Update|HCL-DX-CF216_RemoteSearch_Update.zip|
+|HCL-DX-CF216_RemoteSearch_Update|HCL-DX-CF216_RemoteSearch_Update.zip|
 |HCL-DX-CF216_Server_Update|HCL-DX-CF216_Server_Update.zip|
-|HCL-DX-CF216-Kubernetes_Update|hcl-dx-kubernetes-v95-CF216.zip|
 
 
 ## HCL DX 9.5 CF215
