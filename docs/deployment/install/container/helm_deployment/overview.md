@@ -1,8 +1,8 @@
-# Deploy Using Helm
+# Deploying using Helm
 
-!!!important "Read this first"
-    * [Kubernetes deployment](../../../../../get_started/plan_deployment/container_deployment/index.md) for an understanding of the capabilities, deployment structures, configuration and scaling options available for HCL DX 9.5 CF196 and later deployments.
-    * [Containerization requirements and limitations](../../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
+!!!important "Before deployment, see the following resources first."
+    * [Kubernetes deployment](../../../../get_started/plan_deployment/container_deployment/index.md) for an understanding of the capabilities, deployment structures, configuration and scaling options available for HCL DX 9.5 CF196 and later deployments.
+    * [Containerization requirements and limitations](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
 
 HCL DX V9.5 is designed to run on any Certified Kubernetes platform with some conditions. See the [system requirements for Kubernetes platforms](../../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) for more information.
 
@@ -10,7 +10,7 @@ This section provides administrators with instructions to deploy HCL Digital Exp
 
 Older versions of HCL DX shipped with an operator instead of helm charts, and shipped Ambassador for use as an ingress controller. These have been removed is CF 200 and CF 202 respectively. Please refer to documentation of prior product versions for [Operator](https://opensource.hcltechsw.com/digital-experience/CF216/deployment/install/container/operator-migration/operator_migration_preparation/) and [Ambassador](https://opensource.hcltechsw.com/digital-experience/CF216/deployment/install/container/haproxy-migration/haproxy-introduction/) migration steps. 
 
-**Before you begin:** Refer to the latest HCL DX 9.5 Update image files list given in the [Container image list](../image_list.md) topic.
+**Before you begin:** Refer to the latest HCL DX 9.5 Update image files list provided in the [Container image list](../image_list.md) topic.
 
 ``` mermaid
 flowchart TD

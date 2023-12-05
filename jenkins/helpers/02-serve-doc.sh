@@ -26,6 +26,8 @@ chmod +x ./configure
 make -j 2
 make install
 
+git config --system --add safe.directory '*' # For all users and all repositories
+
 cd ~
 
 # Install mkdocs
