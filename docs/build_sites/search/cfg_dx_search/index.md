@@ -11,6 +11,8 @@ The following image outlines the steps to set up and configure DX Search based o
 ```mermaid
 
 flowchart TB
+  accTitle: Steps in DX Helm installation.
+  accDescr: Flowchart showing the mandatory and optional steps in DX Helm installation.
   node_1(["Start"])
   node_2{{"DX Search required?"}}
   node_4{{"Portal cluster?"}}
