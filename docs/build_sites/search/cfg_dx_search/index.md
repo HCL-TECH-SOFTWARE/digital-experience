@@ -14,7 +14,6 @@ flowchart TB
   node_1(["Start"])
   node_2{{"DX Search required?"}}
   node_4{{"Portal cluster?"}}
-  node_5(["Done"])
   node_6(["Start with Default Search Collection"])
   node_7(["Install #amp; Configure Remote Search Service"])
   node_8{{"Process documents such as PDFs?"}}
@@ -28,22 +27,21 @@ flowchart TB
   node_1 --> node_14
   node_2 --"No"--> node_11
   node_2 --"Yes"--> node_4
-  node_4 --"No"--> node_6
-  node_6 --> node_5
-  node_6 --"Alternatively"--> node_9
+  node_6 -. "Optionally" .-> node_9
   node_4 --"Yes"--> node_7
+  node_4 --"No"--> node_6
   node_7 --> node_8
   node_8 --"No"--> node_9
   node_8 --"Yes"--> node_10
   node_10 --> node_11
-  node_11 --> node_5
   node_9 --> node_12
   node_12 --> node_13
-  node_13 --> node_5
   node_14 --"Yes"--> node_13
-  node_14 --"No"--> node_5
 
-  style node_4 fill:#f9f,stroke:#333,stroke-width:1px
+  style node_2 fill:#BFC6FF, color:#fff
+  style node_4 fill:#BFC6FF, color:#fff
+  style node_8 fill:#BFC6FF, color:#fff
+  style node_14 fill:#BFC6FF, color:#fff
 
 ```
 
