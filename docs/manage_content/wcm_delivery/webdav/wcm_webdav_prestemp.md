@@ -8,22 +8,25 @@ All presentation templates for a library are listed under the `presentationTempl
  libraries
    - wcm.library.my_library
        - presentationTemplates
-          template1.html
-          myTemplate.html
+          template1
+          myTemplate
           - meta-data
-              - wcm.presentationTemplate.template1.html
+              - wcm.presentationTemplate.template1
                     access-control-system.xml
                     access-control-user.xml
                     meta-data.xml		
-              - wcm.presentationTemplate.myTemplate.html
+              - wcm.presentationTemplate.myTemplate
                     access-control-system.xml
                     access-control-user.xml
                     meta-data.xml		
               access-control.xml
-          - template1.html_files
+          - template1_files
               nested_image.jpg
-          - myTemplate.html_files
+          - myTemplate_files
 ```
+
+    !!! important
+        Note: Even though the presentation templates do not necessarily end in html they are containing html content and can be edited as html.
 
 1.  To create presentation templates for your library, drag one or more files into the `presentationTemplates` folder.
 
@@ -34,21 +37,21 @@ All presentation templates for a library are listed under the `presentationTempl
 
     **Deleting presentation templates:** To delete a presentation template delete the corresponding file. If the presentation template is being referenced by another item, such as a site area, it cannot be deleted until you have first removed the corresponding references by using the authoring portlet.
 
-    **Updating presentation templates:** To update an existing presentation template, you can replace the corresponding file in the WebDAV tree with a new file that has the same name. For example, you can place `myTemplate.html` into the `presentationTemplates` folder, replacing the `myTemplate.html` file that is already there, and the presentation template will automatically be updated with the new file's content. If you place a file with a different name, a new template with that name is created.
+    **Updating presentation templates:** To update an existing presentation template, you can replace the corresponding file in the WebDAV tree with a new file that has the same name. For example, you can place `myTemplate` into the `presentationTemplates` folder, replacing the `myTemplate` file that is already there, and the presentation template will automatically be updated with the new file's content. If you place a file with a different name, a new template with that name is created.
 
 2.  Create any nested image components for your presentation template by adding the image files to the `template\_name_files` folder for your template.
 
-    For example, if your template is `template1.html`, you would add the image files to the `template1.html_files` folder.
+    For example, if your template is `template1`, you would add the image files to the `template1_files` folder.
 
     !!! note
         When you add an image to the nested components folder, a temporary image is created initially, and the image is only permanently added to the list of nested components when a reference to that image is added to the presentation template's HTML code. This is done to prevent orphaned components within the presentation template.
 
 3.  If you have added a nested image component, update the presentation template's HTML code to reference the component according to the relative WebDAV path to the component.
 
-    For example, to reference a nested image component, you would update the `template1.html` file with the following code:
+    For example, to reference a nested image component, you would update the `template1` file with the following code:
 
     ```
-    <img src="./template1.html_files/nestedImage.jpg" border="0" title="my nested image"/>
+    <img src="./template1_files/nestedImage.jpg" border="0" title="my nested image"/>
     ```
 
     To reference a standard image component, you would use HTML code similar to the following example:
