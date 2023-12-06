@@ -11,37 +11,39 @@ The following image outlines the steps to set up and configure DX Search based o
 ```mermaid
 
 flowchart TB
+  accTitle: Steps in DX Helm installation.
+  accDescr: Flowchart showing the mandatory and optional steps in DX Helm installation.
   node_1(["Start"])
-  node_2{"DX Search required?"}
-  node_3(["Delete Default Search Collection and Local Search Service"])
-  node_4{"Portal cluster?"}
-  node_5(["Done"])
+  node_2{{"DX Search required?"}}
+  node_4{{"Portal cluster?"}}
   node_6(["Start with Default Search Collection"])
   node_7(["Install #amp; Configure Remote Search Service"])
-  node_8{"Process documents such as PDFs?"}
+  node_8{{"Process documents such as PDFs?"}}
   node_9(["Create Search Collection"])
   node_10(["Install #amp; Configure Remote Document Conversion Services"])
   node_11(["Delete Default Search Collection and Local Search Service"])
   node_12(["Create Content Sources (Crawlers)"])
   node_13(["Create JCR Collection and Content Source"])
-  node_14{"Web Content Management Authoring Search?"}
+  node_14{{"Web Content Management Authoring Search?"}}
   node_1 --> node_2
-  node_2 --"No"--> node_3
+  node_1 --> node_14
+  node_2 --"No"--> node_11
   node_2 --"Yes"--> node_4
-  node_3 --> node_5
-  node_4 --"No"--> node_6
-  node_6 --> node_5
-  node_6 --"Alternatively"--> node_9
+  node_6 -. "Optionally" .-> node_9
   node_4 --"Yes"--> node_7
+  node_4 --"No"--> node_6
   node_7 --> node_8
   node_8 --"No"--> node_9
   node_8 --"Yes"--> node_10
-  node_10 --- node_11
-  node_9 --- node_12
-  node_12 --- node_13
-  node_13 --> node_5
+  node_10 --> node_11
+  node_9 --> node_12
+  node_12 --> node_13
   node_14 --"Yes"--> node_13
-  node_14 --"No"--> node_5
+
+  style node_2 fill:#BFC6FF, color:#fff
+  style node_4 fill:#BFC6FF, color:#fff
+  style node_8 fill:#BFC6FF, color:#fff
+  style node_14 fill:#BFC6FF, color:#fff
 
 ```
 
