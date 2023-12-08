@@ -26,7 +26,7 @@ All presentation templates for a library are listed under the `presentationTempl
 ```
 
     !!! important
-        Note: Even though the presentation templates do not necessarily end in html they are containing html content and can be edited as html.
+        The presentation templates html content can be edited even if they do not have html extension.
 
 1.  To create presentation templates for your library, drag one or more files into the `presentationTemplates` folder.
 
