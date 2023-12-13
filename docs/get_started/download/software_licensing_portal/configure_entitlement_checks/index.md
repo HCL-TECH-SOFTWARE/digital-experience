@@ -127,7 +127,7 @@ Ensure that your entitlement checks are succeeding by viewing your HCL DX 9.5 C
 Use kubectl logs for the license manager pod. For example in a namespace dxns, execute the following command: 
 
 ```
-kubectl logs pod/<release-name>-license-manager-0 -n <namespace>
+kubectl logs pod/dx-deployment-license-manager-0 -n dxns
 ```
 
 See the HCL Digital Experience Cloud Native 9.5 entitlement check scenarios for success and error messages and how to manage in the [HCL Digital Experience Cloud Native 9.5 entitlement check scenarios](entitlement_checks_scenarios.md) topic. 
