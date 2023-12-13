@@ -47,30 +47,30 @@ Follow the configuration steps outlined in the Procedure section below before yo
 
 4. These properties need to be configured to your entitlements to the applicable **DX Cloud Native 9.5 Tier 1 – 7 offering parts** that you have previously mapped to your HCL Software server devices defined in the HCL Software License Portal.  See the [Pre-requisites](#before-you-begin) section above for instructions.
 
-    ```
-    # License Manager Configuration
-    Controls which application is deployed and configured
+    ```yaml
+    # License Manager Configuration Controls which application is deployed and configured
     applications:
-    # License Manager
-    # If using the HCL DX 9.5 Cloud Native Tier 1 – 7 software and licensing you are required to set this to true.
-    # The License Manager service manages the license requirements for your DX deployment.
-    licenseManager: <boolean>
-    # License Manager Configuration
-    licenseManager:
-        # Configures if this environment is a production environment. 
-        # For non production environments user sessions are not counted but the license 
-        # must still be validated.
-        productionEnvironment: true
-        # Flexnet License Server ID
-        licenseServerId: "LICENSE_SERVER_ID"
-        # Flexnet License Server URL
-        licenseServerUri: "LICENSE_SERVER_URI"
-        # Flexnet License Server's Configured Features
-        licenseFeatureNameWithVersion: "LICENSE_SERVER_FEATURE_WITH_VERSION"
-        # Flexnet License Username
-        licenseManagerUser: "LICENSE_USERNAME"
-        # Flexnet License Password
-        licenseManagerPassword: "LICENSE_PASSWORD"
+      # License Manager
+      # If using the HCL DX 9.5 Cloud Native Tier 1 – 7 software and licensing you are required to set this to true.
+      # The License Manager service manages the license requirements for your DX deployment.
+      licenseManager: <boolean>
+    configuration:
+      # License Manager Configuration
+      licenseManager:
+          # Configures if this environment is a production environment. 
+          # For non production environments user sessions are not counted but the license 
+          # must still be validated.
+          productionEnvironment: true
+          # Flexnet License Server ID
+          licenseServerId: "LICENSE_SERVER_ID"
+          # Flexnet License Server URL
+          licenseServerUri: "LICENSE_SERVER_URI"
+          # Flexnet License Server's Configured Features
+          licenseFeatureNameWithVersion: "LICENSE_SERVER_FEATURE_WITH_VERSION"
+          # Flexnet License Username
+          licenseManagerUser: "LICENSE_USERNAME"
+          # Flexnet License Password
+          licenseManagerPassword: "LICENSE_PASSWORD"
 
     ```
 
@@ -98,7 +98,8 @@ Follow the configuration steps outlined in the Procedure section below before yo
 
 Example values configured to an HCL DX Cloud Native 9.5 deployment Helm chart are provided below:  
 
-```
+```yaml
+configuration:
 # License Manager Configuration
   licenseManager:
     # Configures if flexnet license checking is enabled
