@@ -156,7 +156,7 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../../../../../../.."> 
+  <a href="../../../../../../../latest/deployment/manage/monitoring/analyze_portal_usage/session_usage_capture/dx_license_manager/"> 
     <strong>Click here to go to latest.</strong>
   </a>
 
@@ -1352,6 +1352,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#helm-chart-configurations-from-cf204-to-cf206-for-license-manager-application" class="md-nav__link">
+    Helm chart configurations from CF204 to CF206 for License Manager application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helm-chart-configurations-from-cf207-for-license-manager-application" class="md-nav__link">
+    Helm Chart Configurations from CF207 for License Manager application
+  </a>
+  
+    <nav class="md-nav" aria-label="Helm Chart Configurations from CF207 for License Manager application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-for-currently-available-configuration" class="md-nav__link">
+    Example for currently available configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helm-chart-configurations-from-cf208-for-license-manager-application" class="md-nav__link">
+    Helm Chart Configurations from CF208 for License Manager application
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1376,25 +1418,27 @@
 <h1 id="dx-license-manager">DX License Manager</h1>
 <p>This section documents on notification to customers regarding what settings to use for the Cumulative Fixes related to the DX License Manager, in what releases you should not deploy it, from when you should deploy this container and also settings that you need to use for non-production and production environment.</p>
 <p>From DX 9.5 Container Update 204 through 206 releases, new configurations are introduced for later deployment and should not be enabled with these releases. Instructions to do so will be provided at a future date. </p>
-<p>## Helm chart configurations from CF204 to CF206 for License Manager application</p>
+<h2 id="helm-chart-configurations-from-cf204-to-cf206-for-license-manager-application">Helm chart configurations from CF204 to CF206 for License Manager application</h2>
 <p>In custom-values.yaml, we have configuration for License Manager application in many sections. For CF204 until CF206, you should not deploy this application and so, only configuration which you need to verify is related to application deployment flag which is mentioned below.</p>
 <p>To verify if the License Manager application is NOT enabled:</p>
 <div class="highlight"><pre><span></span><code>applications:
   # Deploys License Manager
   licenseManager: false
 </code></pre></div>
-<p>## Helm Chart Configurations from CF207 for License Manager application</p>
+<h2 id="helm-chart-configurations-from-cf207-for-license-manager-application">Helm Chart Configurations from CF207 for License Manager application</h2>
 <p>The Helm chart provides License Manager configurations in <code>applications</code> section and image <code>tags</code> and <code>names</code> sections. It also provides <code>licenseManager</code> section under the <code>configuration</code>, <code>security</code>, <code>volumes</code> and <code>resources</code> section.</p>
-<p>### Example for currently available configuration</p>
+<h3 id="example-for-currently-available-configuration">Example for currently available configuration</h3>
 <p>You can use the following syntax in your <code>custom-values.yaml</code> file to adjust the License Manager settings:</p>
 <p><strong>Enable License Manager Deployment</strong></p>
 <div class="highlight"><pre><span></span><code>applications:
   # Deploys License Manager
   licenseManager: true
 </code></pre></div>
-<p>!!! note
-     Starting from HCL Digital Experience 9.5 CF207, it is mandatory to enable deployment of License Manager application with <code>licenseManager: true</code>.</p>
-<p>## Helm Chart Configurations from CF208 for License Manager application</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Starting from HCL Digital Experience 9.5 CF207, it is mandatory to enable deployment of License Manager application with <code>licenseManager: true</code>.</p>
+</div>
+<h2 id="helm-chart-configurations-from-cf208-for-license-manager-application">Helm Chart Configurations from CF208 for License Manager application</h2>
 <p>Starting HCL Digital Experience 9.5 CF208, additional configuration to support local license manager is defined in helm chart.</p>
 
   <hr>
@@ -1402,7 +1446,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2023</span>
       
     
   </small>

@@ -156,7 +156,7 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../../../../.."> 
+  <a href="../../../../../latest/get_started/download/software_licensing_portal/configure_entitlement_checks/"> 
     <strong>Click here to go to latest.</strong>
   </a>
 
@@ -947,29 +947,29 @@
 </li>
 <li>
 <p>These properties need to be configured to your entitlements to the applicable <strong>DX Cloud Native 9.5 Tier 1 – 7 offering parts</strong> that you have previously mapped to your HCL Software server devices defined in the HCL Software License Portal.  See the <a href="#before-you-begin">Pre-requisites</a> section above for instructions.</p>
-<div class="highlight"><pre><span></span><code># License Manager Configuration
-Controls which application is deployed and configured
-applications:
-# License Manager
-# If using the HCL DX 9.5 Cloud Native Tier 1 – 7 software and licensing you are required to set this to true.
-# The License Manager service manages the license requirements for your DX deployment.
-licenseManager: &lt;boolean&gt;
-# License Manager Configuration
-licenseManager:
-    # Configures if this environment is a production environment. 
-    # For non production environments user sessions are not counted but the license 
-    # must still be validated.
-    productionEnvironment: true
-    # Flexnet License Server ID
-    licenseServerId: &quot;LICENSE_SERVER_ID&quot;
-    # Flexnet License Server URL
-    licenseServerUri: &quot;LICENSE_SERVER_URI&quot;
-    # Flexnet License Server&#39;s Configured Features
-    licenseFeatureNameWithVersion: &quot;LICENSE_SERVER_FEATURE_WITH_VERSION&quot;
-    # Flexnet License Username
-    licenseManagerUser: &quot;LICENSE_USERNAME&quot;
-    # Flexnet License Password
-    licenseManagerPassword: &quot;LICENSE_PASSWORD&quot;
+<div class="highlight"><pre><span></span><code><span class="c1"># License Manager Configuration Controls which application is deployed and configured</span>
+<span class="nt">applications</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># License Manager</span>
+<span class="w">  </span><span class="c1"># If using the HCL DX 9.5 Cloud Native Tier 1 – 7 software and licensing you are required to set this to true.</span>
+<span class="w">  </span><span class="c1"># The License Manager service manages the license requirements for your DX deployment.</span>
+<span class="w">  </span><span class="nt">licenseManager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;boolean&gt;</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># License Manager Configuration</span>
+<span class="w">  </span><span class="nt">licenseManager</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Configures if this environment is a production environment. </span>
+<span class="w">      </span><span class="c1"># For non production environments user sessions are not counted but the license </span>
+<span class="w">      </span><span class="c1"># must still be validated.</span>
+<span class="w">      </span><span class="nt">productionEnvironment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="c1"># Flexnet License Server ID</span>
+<span class="w">      </span><span class="nt">licenseServerId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LICENSE_SERVER_ID&quot;</span>
+<span class="w">      </span><span class="c1"># Flexnet License Server URL</span>
+<span class="w">      </span><span class="nt">licenseServerUri</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LICENSE_SERVER_URI&quot;</span>
+<span class="w">      </span><span class="c1"># Flexnet License Server&#39;s Configured Features</span>
+<span class="w">      </span><span class="nt">licenseFeatureNameWithVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LICENSE_SERVER_FEATURE_WITH_VERSION&quot;</span>
+<span class="w">      </span><span class="c1"># Flexnet License Username</span>
+<span class="w">      </span><span class="nt">licenseManagerUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LICENSE_USERNAME&quot;</span>
+<span class="w">      </span><span class="c1"># Flexnet License Password</span>
+<span class="w">      </span><span class="nt">licenseManagerPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LICENSE_PASSWORD&quot;</span>
 </code></pre></div>
 <p>Using entitlements and device properties you have defined via the mapping process,you will configure those properties to your Helm chart to validate the entitlement period for your software. Once completed, your DX 9.5 Container Update 207 and higher deployments will verify the entitlement period is valid for your <a href="../../../product_overview/offerings/#hcl-digital-experience-cloud-native">HCL Digital Experience Cloud Native 9.5 Tier 1 – 7</a> subscription entitlement(s).</p>
 </li>
@@ -1033,20 +1033,21 @@ licenseManager:
 </tbody>
 </table>
 <p>Example values configured to an HCL DX Cloud Native 9.5 deployment Helm chart are provided below:  </p>
-<div class="highlight"><pre><span></span><code># License Manager Configuration
-  licenseManager:
-    # Configures if flexnet license checking is enabled
-    productionEnvironment: true
-    # Flexnet License Server ID
-    licenseServerId: &quot;Q8A6YCZ3A4GH&quot;
-    # Flexnet License Server URL
-    licenseServerUri: &quot;https://hclsoftware.compliance.flexnetoperations.com&quot;
-    # Flexnet License Server&#39;s Configured Features
-    licenseFeatureNameWithVersion: &quot;DXPN_CloudNative_Tier1_500K@9.5&quot;
-    # Flexnet License Username
-    licenseManagerUser: &quot;admin&quot;
-    # Flexnet License Password
-    licenseManagerPassword: &quot;mypassword&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="c1"># License Manager Configuration</span>
+<span class="w">  </span><span class="nt">licenseManager</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Configures if flexnet license checking is enabled</span>
+<span class="w">    </span><span class="nt">productionEnvironment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="c1"># Flexnet License Server ID</span>
+<span class="w">    </span><span class="nt">licenseServerId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Q8A6YCZ3A4GH&quot;</span>
+<span class="w">    </span><span class="c1"># Flexnet License Server URL</span>
+<span class="w">    </span><span class="nt">licenseServerUri</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://hclsoftware.compliance.flexnetoperations.com&quot;</span>
+<span class="w">    </span><span class="c1"># Flexnet License Server&#39;s Configured Features</span>
+<span class="w">    </span><span class="nt">licenseFeatureNameWithVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;DXPN_CloudNative_Tier1_500K@9.5&quot;</span>
+<span class="w">    </span><span class="c1"># Flexnet License Username</span>
+<span class="w">    </span><span class="nt">licenseManagerUser</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;admin&quot;</span>
+<span class="w">    </span><span class="c1"># Flexnet License Password</span>
+<span class="w">    </span><span class="nt">licenseManagerPassword</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mypassword&quot;</span>
 </code></pre></div>
 <div class="admonition reminder">
 <p class="admonition-title">Reminder</p>
@@ -1056,7 +1057,7 @@ licenseManager:
 <p>Your HCL Digital Experience Cloud Native 9.5 environments have been configured for entitlement checks that will validate your deployment software remains in the purchased timeframe. </p>
 <p>Ensure that your entitlement checks are succeeding by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.</p>
 <p>Use kubectl logs for the license manager pod. For example in a namespace dxns, execute the following command: </p>
-<div class="highlight"><pre><span></span><code>kubectl logs pod/dx-deployment-license-manager-0 -n dxns
+<div class="highlight"><pre><span></span><code>kubectl logs pod/&lt;release-name&gt;-license-manager-0 -n &lt;namespace&gt;
 </code></pre></div>
 <p>See the HCL Digital Experience Cloud Native 9.5 entitlement check scenarios for success and error messages and how to manage in the <a href="entitlement_checks_scenarios/">HCL Digital Experience Cloud Native 9.5 entitlement check scenarios</a> topic. </p>
 <p>Entitlement checking to ensure the entitlement period for the DX Cloud Native 9.5 part is valid for the purchased term will be initiated at deployment start, upgrade, or configuration change processes. Entitlement checking will also occur once per day for active deployments. </p>
@@ -1067,7 +1068,7 @@ licenseManager:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 13, 2023</span>
       
     
   </small>
