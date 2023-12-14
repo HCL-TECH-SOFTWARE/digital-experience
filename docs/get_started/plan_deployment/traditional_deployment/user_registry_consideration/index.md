@@ -24,6 +24,9 @@ If you are using a federated repository, you must plan where you want to store n
 -   If HCL Domino is one of your user registries in a multiple registry configurations and shares a realm with another user registry, ensure that the groups are stored in a hierarchical format in the Domino Directory, not the default flat-naming structure. For example, the flat-naming convention is cn=groupName and the hierarchical format is cn=groupName,o=root.
 -   A user must exist in a user registry and not in the property extension configuration. Otherwise, the user cannot be a member of the realm.
 <!-- The following bullet points start a new list. Please tell readers what the list is and how the entries "hang" together -->
+
+For more information about user registry, see the following topics:
+
 -   **[User registry options](plan_ureg_ov.md)**  
 HCL Digital Experience provides various security configuration tasks. In previous versions, one task was available and error recovery was uncertain. Also in previous version, you were unable to expand your user registry to meet growing business needs. HCL DX 9.5 and later offer multiple tasks and you can fine-tune your system to meet your business needs.
 -   **[Virtual Member Manager integration](plan_vmm_int.md)**  
