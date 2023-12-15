@@ -11,7 +11,7 @@ For more information, refer to the detailed system requirements for [traditional
 
 ![Containerization Architecture Overview](../../images/HCL-DX-deployment-diagram-Kubernetes.png)
 
-One component, DX Core, is common to both deployment options. DX Core contains several functions, which were originally available for traditional deployments. Those functions applicable to both traditional and container-based deployments.
+One component, DX Core, is common to both deployment options. DX Core contains several functions, which were originally available for traditional deployments. These functions are applicable to both traditional and container-based deployments.
 
 In addition to the DX Core features, several container-specific features are available only for the container-based deployments.
 
