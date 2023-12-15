@@ -137,7 +137,7 @@ For disbaling AI analysis for content, set ```enabled``` as ```false``` inside t
 
 ## Custom configurations for AI analysis
 
-To customize AI analysis-related configurations, log in to the WAS <!-- Do you mean WebSphere Application Server here? Don't abbreviate other company's product names. --> console for customizing any of the custom properties in the WCM config service. Click **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**.
+To customize AI analysis-related configurations, log in to the WebSphere Application Server console for customizing any of the custom properties in the WCM config service. Click **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**.
 
 ### OpenAI ChatGPT specific custom configurations
 
