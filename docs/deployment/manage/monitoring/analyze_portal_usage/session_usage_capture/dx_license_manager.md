@@ -67,46 +67,61 @@ openssl pkcs8 -topk8 -inform PEM -outform PEM -in portal_private_key.pem -out po
 ```
 ### Upload Public Key
 
-The public key must be uploaded to your License Server using the provided “flexnetlsadmin” command line tool. This tool requires Java 1.8 to run and requires that the License Server’s Admin password is set. Follow the instructions in the “Introduction to the HCL License Server” document to set the Admin password. Run the “flexnetlsadmin” tool as follows:
+The public key must be uploaded to your License Server using the provided command line tool. Follow the instructions in the “Introduction as follows:
+
+Get the token from Flextnet using authorize endpoint:
+
+```CURL
+curl --location 'https:// hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK/authorize' \
+--header 'Content-Type: application/json' \
+--data-raw '{"password":"XXXXXXX","user":"XXXXXXX"}'
 
 ```
-flexnetlsadmin.bat -server https://[license server host]/api/1.0/instances/[license server ID] -authorize admin [license sever admin password] -uploadPublicKey [local path to public key (in DER format)]
+Response from authorize endpoint:
+
+```JSON
+{
+    "expires": "2023-12-19T05:39:28.850Z",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMjg3Nzk2OCwiZXhwIjoxNzAyOTY0MzY4LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjRmOWRjMGFkLWQ1MGMtNGZhZi05YmE0LTc0N2ZmMjJjODQ0MiJ9.mvuXXJNfew-WzJ7CX8Y8yH339zX3SNpaX79jMTu-shanE8nHPfZRA240EAsVO64nMxFAPyr_8gP7JOLRQ2XOeA"
+}
 ```
 
-For example:
+Upload the public key to the Flexnet server:
 
+```CURL
+curl --location 'https:// hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK/rest_licensing_keys' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMTk0NTY5NCwiZXhwIjoxNzAyMDMyMDk0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjI0MjRiOTgwLWY2ZDEtNGViYi04NWQ5LTI3YmQzMTJmYzIwZiJ9.JR0fnMZyyMY4wwPtE9kMWD2kvbxLgBplq2X-wgmYpe7COFW-5IVvdLmdaRvb0AydSKHf3DKPDGVrd2dubr9Lbw' \
+--header 'Content-Type: application/octet-stream' \
+--data '@/Flexnet-release/portal_public_key.der'
 ```
-flexnetlsadmin.bat -server https:// hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK - authorize admin adminpwd -uploadPublicKey C:\temp\portal_public_key.der
+Response from Flexnet server:
 
-```
+```JSON
+{
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuJvCAbsz0dpNXZqsjqsL29p313tvMpV0QjIDT03traV3v4UnUuIrIYmYPerzQJsVzoKZHU0IYA9FZTLXP4uJMPTwNJhDVtbki5Fbx4h9U2c7h78QCFne07kdtAeBh0keReFklpj7CJbOi4RhqSX6uaZ/gBOg+RMT6/q9Oxkry31WvqISNWlAXmyfNQTo/GMUe4dKpbETOHlBXnqrqPw+EqlrJDiJSr/TIfLokm8qFLSzBwYahhi6L0gnLmnuEPPfkxFwhjaSjdb336dVGzkRc1AsS9L0TDTtQBzUxkL6cIW+EzxXOyWnT2ekcFMripuyXBG80UkhXKTVpRwj/nXeXQIDAQAB"
+}
 
-If you experience SSL issues when using the “flexnetlsadmin” tool, try one of the following:
-
-i. Upgrade the JVM which is being used to run the “flexnetlsadmin” tool
-ii. Import the certificate of https://hclsoftware.compliance.flexnetoperations.com into
-the JVM’s trust store
-iii. Run the “flexnetlsadmin” tool with the -noCertCheck flag (not recommended)
-
-### Confirm Entitlement Mapping
-
-Invoke the following command to confirm that you have mapped entitlements to your license server instance:
-
-instance:
-```
-flexnetlsadmin.bat -server https://[license server host]/api/1.0/instances/[license server ID] -authorize admin [license sever admin password] -licenses -verbose
-```
-For example:
-```
-flexnetlsadmin.bat -server https://hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK - authorize admin adminpwd -licenses -verbose
 ```
 
  **Helm Chart Configuration to enable private key in License Manager Deployment**
+ 
+Create your secret using a private Key:
+
+ ```kubectl
+ kubectl create secret generic <secret name> --from-file=privateKey=myKey.pem -n <namespace>
+ ```
+Reference the secret in helm values yaml:
 
  ```
  security:
    licenseManager:
-     privateKeySecret: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktnd2dnU2tBZ0VBQW9JQkFRRGd2akRBaUxLSj
+     customFlexnetLicenseManagerPrivateKeySecret: <secret name>
  ```
+
+!!! note
+     Multiple instances running with the same entitlement and license server all instances need to either:
+     1. All instances use the same private key
+     2. All instances not have configured a private key
 
 **Revoke of public key from Flexnet**
 
@@ -114,7 +129,7 @@ If you need to revoke the public key from Flexnet for any reason, you can follow
 (Note that the https://jwt.io website also provides a graphical tool that can be used to achieve the same result as a programmatic method.)  
 
 ```
-curl --location --request DELETE 'https://hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK/rest_licensing_keys' \
+curl --location --request DELETE 'https:// hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK/rest_licensing_keys' \
 --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMTk0NTY5NCwiZXhwIjoxNzAyMDMyMDk0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjI0MjRiOTgwLWY2ZDEtNGViYi04NWQ5LTI3YmQzMTJmYzIwZiJ9.JR0fnMZyyMY4wwPtE9kMWD2kvbxLgBplq2X-wgmYpe7COFW-6cuybnmkplkssdspooweds'
 
 ```
