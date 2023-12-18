@@ -52,7 +52,7 @@ To implement the example, an existing [Volt MX Web Application](https://opensour
 
 The HCL Volt MX Foundry application should be visible within the HCL Digital Experience page.
 
-## HCLSoftware U Learning Materials
+## HCLSoftware U learning materials
 
 For an introduction and a demo on how to integrate DX with HCL Volt MX as a business user, go to [DX Integration with HCL Volt MX for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D747). To try it out yourself, refer to [DX Integration with
 HCL Volt MX for Business Users Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_Integration_with_HCL_Volt_MX_for_Business_Users.pdf).
