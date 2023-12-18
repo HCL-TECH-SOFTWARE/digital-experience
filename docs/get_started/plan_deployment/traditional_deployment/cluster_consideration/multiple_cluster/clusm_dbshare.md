@@ -10,10 +10,10 @@ When you configure multiple clusters in the same IBM® WebSphere® Application S
 <!-- What is this list? A list needs a complete introduction. -->
 - Based on your configuration, determine which database domains you want to share with other clusters in the same cell \(multiple cluster environment\).
 
-!!! important
-JCR domains and release domains cannot be shared among different clusters or servers. Each distinct cluster or server in your environment must use a separate JCR domain and a separate release domain. For example, <!-- You need to guide the reader into what you expect the reader to understand from the example. It's unclear to me. -->:
+    !!! important
+    JCR domains and release domains cannot be shared among different clusters or servers. Each distinct cluster or server in your environment must use a separate JCR domain and a separate release domain. For example, <!-- You need to     guide the reader into what you expect the reader to understand from the example. It's unclear to me. -->:
 
-|Development server|Authoring cluster|Staging server|Delivery cluster|
+    |Development server|Authoring cluster|Staging server|Delivery cluster|
     |------------------|-----------------|--------------|----------------|
     |JCR domain 1|JCR domain 2|JCR domain 3|JCR Domain 4|
     |Release domain 1|Release domain 2|Release domain 3|Release domain 4|
