@@ -45,7 +45,7 @@ To implement the example, an existing [Volt MX Web Application](https://opensour
     4. **Save** the web dock application.
 
 3. Add the created Web Dock Application to the DX Page.
-    1. Enable **Edit mode** on the DX page i which you want to include the MX Foundry application or create a new page.
+    1. Enable **Edit mode** on the DX page where you want to include the MX Foundry application or create a new page.
         To create a new page, click the menu icon on the right of the Web Dock Application to open the Context menu. You can create either a child or a sibling page. 
     2. Click the plus icon on the left navigation panel to **Add page components and applications** to the page. In the navigation panel, go to the **Applications** tab and search for the newly created web dock application (in this case, `MX Foundry Application`).
     3. Click the **Add To Page** button.
