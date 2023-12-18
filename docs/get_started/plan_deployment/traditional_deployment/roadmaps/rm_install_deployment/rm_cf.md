@@ -15,7 +15,7 @@ Use this roadmap to learn more about the following information:
 
 Use this roadmap if either of these situations applies to your environment:
 
--   You installed HCL Digital Experience for the first time and  want to apply a Fix or the latest CF.
+-   You installed HCL Digital Experience for the first time and want to apply a Fix or the latest CF.
 -   You require a high-level view of which features or improvements are ready to use by default after you apply the latest CF and which features need additional configuration.
 
 ## Delivering updates
