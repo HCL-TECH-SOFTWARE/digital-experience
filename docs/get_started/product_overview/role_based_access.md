@@ -16,7 +16,7 @@ HCL DX provides a framework for managing authorizations to resources hosted in a
 
 Access can be controlled to pages, individual applications, content libraries, content items, asset collections and many other artifacts on the platform. Access is, by default, hierarchical, meaning that access granted to a parent resource also applies to its child resources.
 
-HCL DX provides a framework called "step up authentication," the platform uses to manage multiple levels of authentication. For example, most of a site might be secured by using simple user-name and password authentication but sensitive areas might require additional credentials.
+HCL DX provides a framework called "step up authentication," which the platform uses to manage multiple levels of authentication. For example, most of a site might be secured by using simple user-name and password authentication but sensitive areas might require additional credentials.
 
 ## User directory integration
 
