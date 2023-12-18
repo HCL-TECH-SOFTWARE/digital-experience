@@ -56,7 +56,7 @@ See the following points about this change:
 -   CF196 and later releases apply to HCL DX 8.5, 9.0, and 9.5 on-premises deployments.
 -   Customers can update directly to the latest CF release without installing multiple individual CFs \(for example, 8.5 CF17 to 8.5 CF196).
 
-## Learning about this CF
+## Learning about CFs
 
 Some CFs focus on fixing known issues that are identified by APARs. Other CFs focus on new features.
 
