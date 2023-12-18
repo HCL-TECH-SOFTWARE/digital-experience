@@ -2,7 +2,7 @@
 
 With multiple profiles you can work with multiple, independently configured portal instances that run on the same installation.
 
-Starting with Portal Version 7, you can create extra profiles in addition to the default profile. Extra proviles are useful in the following scenarios:
+Starting with Portal Version 7, you can create extra profiles in addition to the default profile. Extra profiles are useful in the following scenarios:
 
 -   Reuse a single installation for multiple, independent portal instances, such as for various test or development efforts.
 -   Recover from a configuration problem by deleting the current profile and re-creating it without reinstalling the product.
