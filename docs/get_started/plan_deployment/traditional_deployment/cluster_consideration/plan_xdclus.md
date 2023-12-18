@@ -3,14 +3,14 @@
 You can create a dynamic cluster to run HCL Portal.
 
 1. Install HCL Digital Experience.
-1. Start the Configuration wizard.
-1. Select **Set Up a Cluster**.
-1. Run the tasks associated with that option.
-1. Choose **dynamic** as the type of cluster to create.
+2. Start the Configuration wizard.
+3. Select **Set Up a Cluster**.
+4. Run the tasks associated with that option.
+5. Choose **dynamic** as the type of cluster to create.
 
-The OnDemand Router \(ODR\) component provides capabilities such as workload balancing, prioritization, health monitoring, and dynamic operations for dynamic clusters. You can configure an ODR to provide multicluster routing, including dynamic clusters that are in remote cells and routing to other servers. The ODR can serve as a replacement for the HTTP server plug-in but in many configurations both components are used. The HTTP server might be in the DMZ to serve static content and to provide an entry point to the private network where the ODR is.
+The OnDemand Router (ODR) component provides capabilities such as workload balancing, prioritization, health monitoring, and dynamic operations for dynamic clusters. You can configure an ODR to provide multicluster routing, including dynamic clusters that are in remote cells and routing to other servers. The ODR can serve as a replacement for the HTTP server plug-in but in many configurations both components are used. The HTTP server might be in the DMZ to serve static content and to provide an entry point to the private network where the ODR is.
 
-Review the following considerations before you configure the  \(ODR\) to route traffic to HCL Portal clusters:
+Review the following considerations before you configure the  (ODR) to route traffic to HCL Portal clusters:
 
 -   Internal users can send requests directly to the ODR instead of  through a front-end web server. When you send direct requests, you must configure the ODR to append a via header to the HTTP requests. Set the value of the ODR custom property `http.compliance.via` to `true`. See the **On-demand router settings** link in the Related section for information.
 
