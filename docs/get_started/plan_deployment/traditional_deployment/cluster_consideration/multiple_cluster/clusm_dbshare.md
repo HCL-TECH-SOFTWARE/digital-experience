@@ -11,12 +11,12 @@ When you configure multiple clusters in the same IBM® WebSphere® Application S
 - Based on your configuration, determine which database domains you want to share with other clusters in the same cell \(multiple cluster environment\).
 
     !!! important
-    JCR domains and release domains cannot be shared among different clusters or servers. Each distinct cluster or server in your environment must use a separate JCR domain and a separate release domain. For example, <!-- You need to     guide the reader into what you expect the reader to understand from the example. It's unclear to me. -->:
+        JCR domains and release domains cannot be shared among different clusters or servers. Each distinct cluster or server in your environment must use a separate JCR domain and a separate release domain. Refer to the examples in the following table. <!-- You need to     guide the reader into what you expect the reader to understand from the example. It's unclear to me. -->:
 
-    |Development server|Authoring cluster|Staging server|Delivery cluster|
-    |------------------|-----------------|--------------|----------------|
-    |JCR domain 1|JCR domain 2|JCR domain 3|JCR Domain 4|
-    |Release domain 1|Release domain 2|Release domain 3|Release domain 4|
+        |Development server|Authoring cluster|Staging server|Delivery cluster|
+        |------------------|-----------------|--------------|----------------|
+        |JCR domain 1|JCR domain 2|JCR domain 3|JCR Domain 4|
+        |Release domain 1|Release domain 2|Release domain 3|Release domain 4|
 
 -   Assign the data source names according to what databases are shared among the clusters and what databases are unique in a cluster. A single data source cannot be used for multiple domains if the domains are a mixture of shared and non-shared data sources.
 -   Maintain the same number of data sources with identical names when enterprise applications are shared among all clusters in the same cell. The data source bindings in the applications can be resolved on every cluster.
