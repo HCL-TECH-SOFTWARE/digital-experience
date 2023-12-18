@@ -1,6 +1,6 @@
 # Multiple-profile support
 
-With multiple profiles you can work with multiple, independently configured portal instances that run on the same installation.
+With multiple profiles, you can work with multiple, independently configured portal instances that run on the same installation.
 
 Starting with Portal Version 7, you can create extra profiles in addition to the default profile. Extra profiles are useful in the following scenarios:
 
