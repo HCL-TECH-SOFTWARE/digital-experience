@@ -20,7 +20,7 @@ You can generate the following profile types:
 
 -   **management.portal.augment**
 
-    You create this profile by augmenting a standard Deployment Manager profile. The resulting profile holds a deployment manager that is prepared to use with a portal. You can used the portal to federate the other portal profiles immediately without requiring additional manual steps. Because the deployment manager is often on different hardware, you can move this augmentation template to another installation and run it there.
+    You create this profile by augmenting a standard Deployment Manager profile. The resulting profile holds a deployment manager that is prepared to use with a portal. You can use the portal to federate the other portal profiles immediately without requiring additional manual steps. Because the deployment manager is often on different hardware, you can move this augmentation template to another installation and run it there.
 
 
 ## Search collection and multiple profiles
