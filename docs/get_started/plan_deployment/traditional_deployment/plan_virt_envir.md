@@ -1,6 +1,6 @@
 # Virtual environment overview
 
-Use virtualized <!-- Do you mean "virtual"? They're related but not synonymous --> environments to meet your business needs like production server consolidation, centralized management, or dynamic test environments.
+Use virtual <!-- Do you mean "virtual"? They're related but not synonymous -->environments to meet your business needs like production server consolidation, centralized management, or dynamic test environments.
 
 You must consider special issues when you run HCL Portal in a virtual environment. Virtual machines work best when you use them to consolidate test and development servers, where multiple virtual machines can share physical machine resources. The virtual machines can even "overcommit" those resources by calculating at any given time that not all system resources are required. However, this situation does not mean that virtual machines cannot be used for production delivery.
 
