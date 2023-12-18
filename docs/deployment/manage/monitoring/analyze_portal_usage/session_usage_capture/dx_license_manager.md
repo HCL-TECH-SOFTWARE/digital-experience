@@ -44,7 +44,7 @@ Starting HCL Digital Experience 9.5 CF208, additional configuration to support l
 Secure communication between HCL DX and the HCL License Server (cloud or local) involves signed content using a public/private keypair. You will need to generate and distribute this keypair. HCL DX will sign licensing requests with the private key and the License Server will verify signatures with the corresponding public key.
 
 !!! note
-     Just to clarify, it is important to note that we expect customer to upload the corresponding public key to Flexnet beforehand. However, in case the customer doesn't provide a private key, our system is designed to generate these keys automatically and upload the public key without any action required from the customer.
+     The License Manager expect the public key to be uploaded to Flexnet beforehand and the private key to be passed as a secret in the Helm values. However, in case the private key is not provided, our system is designed to generate these keys automatically and upload the public key without any action required.
 
 ### Generate Public/Private Keypair
 
