@@ -30,7 +30,7 @@ If you are primarily thinking about your content outside of a specific presentat
 
 However, many people create content in the context of a specific website. In that case, HCL DX provides inline editing capabilities that are integrated with the websites built on the platform. With this approach, content authors can browse to the relevant page in the [site manager](site_building.md) and edit the content in the context of the page where it is displayed.
 
-These two modes of content editing are not mutually exclusive. Because on content item might be presented in multiple ways, changes to the source are reflected wherever it is presented.
+These two modes of content editing are not mutually exclusive. Because a content item might be presented in multiple ways, changes to the source are reflected wherever it is presented.
 
 ## External data and content
 
