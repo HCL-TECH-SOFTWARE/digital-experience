@@ -14,12 +14,12 @@ Proceed as follows:
 
     4.  Edit the **SearchAdminUser** alias.
 
-    5.  Update the user ID and/or password to match your HCL Portal administrator information.
+    5.  Update the user ID and/or password to match your HCL DX administrator information.
 
 2.  To make sure that the changed administrator user ID takes effect, use one of the following two options:
 
     -   Change the administrator user ID and the password by using the Manage Search administration portlet.
     -   Delete the default portal search services and collections. After a portal restart as by the next step, the portal recreates these search services and collections.
     
-3.  Restart the HCL Portal servers.
+3.  Restart the HCL DX servers.
 

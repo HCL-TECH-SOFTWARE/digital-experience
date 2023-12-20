@@ -12,7 +12,7 @@ You can edit an existing markup type and its locale-specific settings.
 -   **[Activating or deactivating a markup](h_markups_activate.md)**  
 You can manage which of the markup languages in your portal are activated.
 -   **[Displaying information about a markup](h_markups_display_info.md)**  
-You can see detailed information about all of the markups defined to HCL Portal, including the properties defined for each markup.
+You can see detailed information about all of the markups defined to HCL DX, including the properties defined for each markup.
 -   **[Deleting a markup](h_markups_delete.md)**  
 You can remove markup languages that you are no longer using. 
 

@@ -21,8 +21,8 @@ You can limit the visibility of the toolbar, Site Manager, and action bar to adm
 6.  Click **OK**.
 
 7.  Click the name of the page to return to the menu.
-
-8.  If they are not already cleared, clear the **Allow Propagation** and **Allow Inheritance** check boxes for the Privileged User role.
+     
+     If they are not already cleared, clear the **Allow Propagation** and **Allow Inheritance** check boxes for the Privileged User role.
 
 9.  Click **Apply**.
 

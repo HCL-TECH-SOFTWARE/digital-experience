@@ -5,7 +5,7 @@ title: Adding applications to your page
 
 Applications are reusable portlets that you can add to a page to show content items in different formats. Applications can also enable the completion of a task, such as viewing external search results or adding someone to your Sametime list. Applications display on the page where you add them and do not display in site manager nor in content explorer.
 
-Like page components, some applications can be used to display pre-filled content and information, such as the About HCL Portal application. Other applications contain pre-filled content that enables the completion of a task. For instance, the Add to Sametime List application lets a user add another user to their unique Sametime list, while the Vanity URL Portlet application lets a content author update the vanity URL for a page. Available applications can vary, depending on your level of access. Your administrator can also add and delete applications as needed.
+Like page components, some applications can be used to display pre-filled content and information, such as the About HCL DX application. Other applications contain pre-filled content that enables the completion of a task. For instance, the Add to Sametime List application lets a user add another user to their unique Sametime list, while the Vanity URL Portlet application lets a content author update the vanity URL for a page. Available applications can vary, depending on your level of access. Your administrator can also add and delete applications as needed.
 
 1.  Turn on **Edit Mode** from the action bar. Site manager opens automatically.
 

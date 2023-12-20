@@ -18,6 +18,7 @@ To include the security information when you export or import the search collect
 
     -   The target file names and directory locations to which you export the collections. For example, C:\\ibm\\wp\_profile\\PortalServer\\collections.
     -   The following configuration data of the collections: location, name, description, and language for each collection.
+    
 3.  Create the search collections on the target portal. This task creates the empty shell for the search collection. Complete the following data entry fields and select the following options according to the data that you documented:
 
     -   Location of Collection: Specify the new collection location.

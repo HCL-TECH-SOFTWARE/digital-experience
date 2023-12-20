@@ -1,10 +1,10 @@
 # Customizing the Applications palette
 
-HCL Portal includes ready to use portlets that you can browse through in the site toolbar. To ease browsing through this set of portlets, HCL Portal supports assigning portlets to one or more categories. As the site administrator, you can create, delete, and modify categories and assign portlets to them.
+HCL DX includes ready to use portlets that you can browse through in the site toolbar. To ease browsing through this set of portlets, HCL DX supports assigning portlets to one or more categories. As the site administrator, you can create, delete, and modify categories and assign portlets to them.
 
 ## Application categories
 
-In HCL Portal, categories are represented as labels or external URLs and can be managed with the Manage Pages portlet. All categories are in the category root label that is identifiable by the unique name com.ibm.portal.toolbar.applications.category.label.root, which is a label in the hidden pages label.
+In HCL DX, categories are represented as labels or external URLs and can be managed with the Manage Pages portlet. All categories are in the category root label that is identifiable by the unique name com.ibm.portal.toolbar.applications.category.label.root, which is a label in the hidden pages label.
 
 Categories are shown by the toolbar’s Applications palette where categories appear with said localized title.
 
