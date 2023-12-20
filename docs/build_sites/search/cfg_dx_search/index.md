@@ -1,6 +1,6 @@
 # Search Quickstarter Guide for HCL Digital Experience
 
-Visitors to your website expect a search function. The same is true for an HCL DX site - end users expect to see a **Search** box located somewhere at the top of a DX page to find relevant information fast. As an administrator or engineer, which technology should you use to power search? There are many options, including HCL DX's own search service (DX Search), or a third party search technology. This section focuses on what steps must be accomplished to set up and configure DX Search.
+Visitors to your website expect a search function. The same is true for an HCL Digital Experience (DX) site - end users expect to see a **Search** box located somewhere at the top of a DX page to find relevant information fast. As an administrator or engineer, which technology should you use to power search? There are many options, including HCL DX's own search service (DX Search), or a third party search technology. This section focuses on what steps must be accomplished to set up and configure DX Search.
 
 Note that this document should be sufficient to get started with DX search, but supplemental resources may be required if you plan to set up DX Remote search.
 

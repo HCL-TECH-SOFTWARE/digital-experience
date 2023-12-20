@@ -24,7 +24,7 @@ From the **Manage Search** page, you can view and work with the following search
 
 ## Search Services
 
-From Search Services, you can view and manage the HCL Digital Experience search services. Search Services represent separate instances of the search engine that is provided and can be used for searching content by using the Search Center. When you create a search collection, you must select a search service so that users can request searches on that collection. A search service can be used for searching multiple search collections. You can set parameters to configure a search service that sets up separate instances of search services with different configurations. You can also set up multiple portal search services and distribute the search load over several nodes. The following Search Service is provided by default:
+From Search Services, you can view and manage the HCL Digital Experience (DX) search services. Search Services represent separate instances of the search engine that is provided and can be used for searching content by using the Search Center. When you create a search collection, you must select a search service so that users can request searches on that collection. A search service can be used for searching multiple search collections. You can set parameters to configure a search service that sets up separate instances of search services with different configurations. You can also set up multiple portal search services and distribute the search load over several nodes. The following Search Service is provided by default:
 
 -   **Portal Search Service**
 

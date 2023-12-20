@@ -4,7 +4,7 @@ You can export search collections from a source portal and import them into a ta
 
 Before you export a collection, make sure that the user who is running the portal application process has write access to the target directory location. Otherwise, you might get an error message, such as File not found.
 
-To include the security information when you export or import the search collection, add the WS\_KEY parameter to the search service that contains the source or target search collection. For more information, see *Exporting and importing search collections* in HCL Digital Experience Product Documentation.
+To include the security information when you export or import the search collection, add the WS\_KEY parameter to the search service that contains the source or target search collection. For more information, see *Exporting and importing search collections* in HCL Digital Experience (DX) Product Documentation.
 
 !!! note
     If you do not include the security information when you export or import a search collection, you must manually add the user name and password to each content source after you import the search collection into the target portal.
@@ -18,7 +18,7 @@ To include the security information when you export or import the search collect
 
     -   The target file names and directory locations to which you export the collections. For example, C:\\ibm\\wp\_profile\\PortalServer\\collections.
     -   The following configuration data of the collections: location, name, description, and language for each collection.
-    
+
 3.  Create the search collections on the target portal. This task creates the empty shell for the search collection. Complete the following data entry fields and select the following options according to the data that you documented:
 
     -   Location of Collection: Specify the new collection location.

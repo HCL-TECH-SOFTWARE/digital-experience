@@ -9,7 +9,7 @@ Site toolbar customization includes the following options:
 -   Adding content
 -   Adding applications
 
-The HCL DX 8.5 site toolbar is built with portal pages and portlets. The available toolbar tabs are implemented as portal pages, which are content labels or content pages, that are grouped under the toolbar content root. All content pages and content labels that are children of the toolbar content root show up in the toolbar navigation as toolbar tabs.
+The HCL Digital Experience (DX) 8.5 site toolbar is built with portal pages and portlets. The available toolbar tabs are implemented as portal pages, which are content labels or content pages, that are grouped under the toolbar content root. All content pages and content labels that are children of the toolbar content root show up in the toolbar navigation as toolbar tabs.
 
 By default, the toolbar content root has the unique name ibm.portal.toolbar.ContentRoot and can be found under the hidden pages root unique name ibm.portal.HiddenPages.
 

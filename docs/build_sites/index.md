@@ -33,7 +33,7 @@ Tagging and rating feature supports collaboration and interaction between users 
 
 
 ## [Virtual Portal](../build_sites/virtual_portal/index.md)
-Virtual portals can be of benefit if you want to serve multiple user groups by separate virtual portals for different purposes, but still want to keep your environment simple and limited to a single HCL DX installation. Virtual portals allow a large extent of scoping and separating portal resources, user groups, and administration.
+Virtual portals can be of benefit if you want to serve multiple user groups by separate virtual portals for different purposes, but still want to keep your environment simple and limited to a single HCL HCL Digital Experience (DX) installation. Virtual portals allow a large extent of scoping and separating portal resources, user groups, and administration.
 
 
 ## [Mobile](../build_sites/mobile/index.md)

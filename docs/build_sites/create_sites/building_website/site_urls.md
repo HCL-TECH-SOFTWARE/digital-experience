@@ -6,7 +6,7 @@ title: URLs
 
 
 
-Portal URLs do not look like plain HTTP server URLs over a simple file system. Portal URLs have a complex structure and include a large compressed and encoded XML Navigation State document. The stream of random characters in a Portal URL is the Navigation State document. Full Portal function depends on correctly maintaining this Navigation State document during all the operations a user might do in Portal. Forcing Portal URLs to look like plain HTTP server URLs over a simple file system structure cripples the function of HCL DX.
+Portal URLs do not look like plain HTTP server URLs over a simple file system. Portal URLs have a complex structure and include a large compressed and encoded XML Navigation State document. The stream of random characters in a Portal URL is the Navigation State document. Full Portal function depends on correctly maintaining this Navigation State document during all the operations a user might do in Portal. Forcing Portal URLs to look like plain HTTP server URLs over a simple file system structure cripples the function of HCL Digital Experience (DX).
 
 Some of the use cases that must be supported by Portal URLs include the following:
 

@@ -1,7 +1,7 @@
 # Site Content
 
 
-Rich content and elegant user experiences drive the success of websites. Each digital experience consists of many different types of content from many various sources.
+Rich content and elegant user experiences drive the success of websites. Each Digital Experience (DX) consists of many different types of content from many various sources.
 
 In the example wireframe, content is highlighted. Depending on your point of view, all of the information in the page could be considered content. The highlighted article is the most obvious example of content. The content and associated presentation template is rendered through a portlet.
 

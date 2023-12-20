@@ -1,6 +1,6 @@
 # Customizing the Applications palette
 
-HCL DX includes ready to use portlets that you can browse through in the site toolbar. To ease browsing through this set of portlets, HCL DX supports assigning portlets to one or more categories. As the site administrator, you can create, delete, and modify categories and assign portlets to them.
+HCL Digital Experience (DX) includes ready to use portlets that you can browse through in the site toolbar. To ease browsing through this set of portlets, HCL DX supports assigning portlets to one or more categories. As the site administrator, you can create, delete, and modify categories and assign portlets to them.
 
 ## Application categories
 

@@ -30,7 +30,7 @@ Static content is part of every website. In a portal site, static content can be
 -   **[Dynamic content](site_dynamic_content.md)**  
 Dynamic content is generated when a page is rendered and is based on a set of predefined criteria such as the current user, the metadata of the current page. It allows you to deliver content specifically customized for the current user, or to deliver content customized for a campaign or product in your organization.
 -   **[Content as a Service pages](../../../manage_content/wcm_delivery/content_as_a_service/cntnt_serv_pgs.md)**  
-Starting with version 8.5 CF05, HCL Digital Experience introduces the concept of Content as a Service pages. The Content as a Service pages can be used to render content that is managed by your HCL Web Content Manager in different data formats.
+Starting with version 8.5 CF05, HCL Digital Experience (DX) introduces the concept of Content as a Service pages. The Content as a Service pages can be used to render content that is managed by your HCL Web Content Manager in different data formats.
 -   **[URLs](site_urls.md)**  
 Portal URLs do not look like plain HTTP server URLs over a simple file system. Portal URLs have a complex structure and include a large compressed and encoded XML Navigation State document. The stream of random characters in a Portal URL is the Navigation State document. Full Portal function depends on correctly maintaining this Navigation State document during all the operations a user might do in Portal. Forcing Portal URLs to look like plain HTTP server URLs over a simple file system structure cripples the function of HCL DX.
 

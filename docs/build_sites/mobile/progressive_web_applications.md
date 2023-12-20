@@ -6,7 +6,7 @@ Progressive Web Applications \(PWAs\) offer a delivery pattern that can transfor
 
 For additional information please consult [Introduction to Progressive Web Applications](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) at the developer.mozilla.org site.
 
-**Video**: [Progressive Web Applications with HCL Digital Experience 9.5](https://www.youtube.com/watch?v=JP1cWlM1s2k)
+**Video**: [Progressive Web Applications with HCL Digital Experience (DX) 9.5](https://www.youtube.com/watch?v=JP1cWlM1s2k)
 
 ## Progressive Web Application requirements
 

@@ -10,7 +10,7 @@ Use this task to edit existing entries in the client registry when, for example,
 -   **[Deleting a client](h_clients_delete.md)**  
 You can delete unused search clients.
 -   **[Displaying client information](h_clients_display_info.md)**  
-You can display detailed information about all of the clients defined in HCL DX.
+You can display detailed information about all of the clients defined in HCL Digital Experience (DX).
 -   **[Setting the order of the client in the registry](h_clients_set_order.md)**  
 The order in which the client is listed in the registry is important to ensure that the most exact markup is sent to the client.
 -   **[Overriding the default HTML client](h_clients_override.md)**   

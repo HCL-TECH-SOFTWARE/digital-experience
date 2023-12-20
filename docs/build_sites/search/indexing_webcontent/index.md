@@ -1,6 +1,6 @@
 # Indexing web content
 
-To search for web content, your content must first be indexed by the HCL DX search engine. When the content is indexed, you can run searches by using the search center or by using a search component. If you search for documents in the WebSphere Portal search center, be aware that you see search results for published documents only. Unpublished pending changes in a project are not included in the results.
+To search for web content, your content must first be indexed by the HCL Digital Experience (DX) search engine. When the content is indexed, you can run searches by using the search center or by using a search component. If you search for documents in the WebSphere Portal search center, be aware that you see search results for published documents only. Unpublished pending changes in a project are not included in the results.
 
 ## Creating a content source for a site area
 

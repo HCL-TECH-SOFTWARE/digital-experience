@@ -2,7 +2,7 @@
 
 
 
-Learn about the portlets that are provided with HCL Digital Experience.
+Learn about the portlets that are provided with HCL Digital Experience (DX).
 
 You find all portlets that are provided with the portal under the directory `[PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/installableApps`. Portlets that are already deployed by the HCL installation are in the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps` directory.
 

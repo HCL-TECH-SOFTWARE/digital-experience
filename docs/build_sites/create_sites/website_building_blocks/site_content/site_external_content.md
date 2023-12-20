@@ -1,6 +1,6 @@
 # External content
 
-Many capabilities are included to retrieve content from external sources. You can use Web Content Integrator, REST services for HCL Web Content Manager, Digital Data Connector \(DDC\) for HCL DX, specialized portlets, WSRP, and other mechanisms to retrieve and render content from sources outside your digital experience.
+Many capabilities are included to retrieve content from external sources. You can use Web Content Integrator, REST services for HCL Web Content Manager, Digital Data Connector \(DDC\) for HCL Digital Experience (DX), specialized portlets, WSRP, and other mechanisms to retrieve and render content from sources outside your digital experience.
 
 ## IBM® Web Content Integrator
 

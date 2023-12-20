@@ -1,6 +1,6 @@
 # Virtual portals
 
-View information on how you can scope your HCL DX to have multiple virtual portals.
+View information on how you can scope your HCL Digital Experience (DX) to have multiple virtual portals.
 
 Virtual portals can be of benefit if you want to serve multiple user groups by separate virtual portals for different purposes, but still want to keep your environment simple and limited to a single HCL DX installation. Virtual portals allow a large extent of scoping and separating portal resources, user groups, and administration.
 

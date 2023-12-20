@@ -14,7 +14,7 @@ Proceed as follows:
 
     4.  Edit the **SearchAdminUser** alias.
 
-    5.  Update the user ID and/or password to match your HCL DX administrator information.
+    5.  Update the user ID and/or password to match your HCL Digital Experience (DX) administrator information.
 
 2.  To make sure that the changed administrator user ID takes effect, use one of the following two options:
 

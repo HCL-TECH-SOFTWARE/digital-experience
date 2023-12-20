@@ -12,7 +12,7 @@ Search seedlist 1.0 provides several features:
 !!! important
     The syntax of the seedlist URL has changed with seedlist format 1.0. Older search collections that are created by using seedlist format 0.9 cannot be reused or migrated to the new format. Be sure that you index all your content again after you update the Web Content Manager seedlist format from 0.9 to 1.0.
 
-**Software note:** As of fix pack 43 for Web Content Manager, search seedlist 1.0 uses a cache to improve the time that is required to process large content libraries. To ensure that the cache is available, you must install fix pack 10 or later for HCL DX.
+**Software note:** As of fix pack 43 for Web Content Manager, search seedlist 1.0 uses a cache to improve the time that is required to process large content libraries. To ensure that the cache is available, you must install fix pack 10 or later for HCL Digital Experience (DX).
 
 Search seedlist 1.0 can make access control information available in a way that makes pre-filtering of contents possible. Pre-filtering provides the fastest filtering approach because it takes place in the search index level. Another advantage of pre-filtering is that remote secured content sources can be searched from the portal. The filtering mode is defined as part of the search service configuration parameters.
 

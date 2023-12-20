@@ -1,4 +1,4 @@
-# Enabling region identification in HCL DX
+# Enabling region identification in HCL Digital Experience
 
 You can use geographic targeting tools to associate a URL pattern with a specific region. However not all URL patterns are typically supported.
 

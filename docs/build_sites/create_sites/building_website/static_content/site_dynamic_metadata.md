@@ -41,6 +41,6 @@ If you enable the previous settings, the following rewrites occur:
 
     -   **`generator`**
 
-        The name or version of the HCL DX server that is hosting the page.
+        The name or version of the HCL Digital Experience (DX) server that is hosting the page.
 
 
