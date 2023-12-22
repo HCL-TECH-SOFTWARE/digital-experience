@@ -26,7 +26,7 @@ You can change the profile for the theme or a specific page to define the module
 
 1.  Export the theme.
 
-    You can export all themes defined for HCL Portal using the following script, or insert the specific theme object ID you want to export:
+    You can export all themes defined for HCL Digital Experience (DX) using the following script, or insert the specific theme object ID you want to export:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -50,4 +50,4 @@ You can change the profile for the theme or a specific page to define the module
 
 3.  Import the XML file using the command line or **Import XML**.
 
-4.  Restart HCL Portal.
+4.  Restart HCL DX.
