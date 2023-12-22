@@ -9,7 +9,7 @@ Site toolbar customization includes the following options:
 -   Adding content
 -   Adding applications
 
-The HCL Portal 8.5 site toolbar is built with portal pages and portlets. The available toolbar tabs are implemented as portal pages, which are content labels or content pages, that are grouped under the toolbar content root. All content pages and content labels that are children of the toolbar content root show up in the toolbar navigation as toolbar tabs.
+The HCL Digital Experience (DX) 8.5 site toolbar is built with portal pages and portlets. The available toolbar tabs are implemented as portal pages, which are content labels or content pages, that are grouped under the toolbar content root. All content pages and content labels that are children of the toolbar content root show up in the toolbar navigation as toolbar tabs.
 
 By default, the toolbar content root has the unique name ibm.portal.toolbar.ContentRoot and can be found under the hidden pages root unique name ibm.portal.HiddenPages.
 
@@ -58,7 +58,7 @@ The More menu is a public extension point that you can use to plug in your own m
 -   **[Customizing the Page Component palette](../prep_site_toolbar/customizing_page_cmpnt_palette/index.md)**  
 The Page Component palette, which is accessed from the site toolbar, contains the content items a content author can add to a page. This was known as the Content palette prior to CF08.
 -   **[Customizing the Applications palette](../prep_site_toolbar/customizing_applications_palette/index.md)**  
-HCL Portal includes ready to use portlets that you can browse through in the site toolbar. To ease browsing through this set of portlets, HCL Portal supports assigning portlets to one or more categories. As the site administrator, you can create, delete, and modify categories and assign portlets to them.
+HCL DX includes ready to use portlets that you can browse through in the site toolbar. To ease browsing through this set of portlets, HCL DX supports assigning portlets to one or more categories. As the site administrator, you can create, delete, and modify categories and assign portlets to them.
 -   **[Customizing page creation and page editing options](../prep_site_toolbar/customizing_page_creation_editing/index.md)**  
 When content authors edit a page, they can choose layouts and styles. As an administrator, you can customize these page editing options. If you are on Combined Cumulative Fix 8 or later, you can also customize page creation for your content authors.
 -   **[Customizing toolbar layouts](layout_toolbar_customization.md)**  
