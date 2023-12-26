@@ -39,7 +39,7 @@ applications:
 
 Starting HCL Digital Experience 9.5 CF208, additional configuration to support local license manager is defined in helm chart.
 
-***Secure License Server Configuration***
+## Secure License Server Configuration from CF217 for License Manager application
 
 Secure communication between HCL DX and the HCL License Server (cloud or local) involves signed content using a public/private keypair. You will need to generate and distribute this keypair. HCL DX will sign licensing requests with the private key and the License Server will verify signatures with the corresponding public key.
 
@@ -69,7 +69,7 @@ openssl pkcs8 -topk8 -inform PEM -outform PEM -in portal_private_key.pem -out po
 
 The public key must be uploaded to your License Server using the provided command line tool. Follow the instructions in the “Introduction as follows:
 
-Get the token from Flextnet using authorize endpoint:
+Get the Bearer Authentication from Flextnet using authorize endpoint:
 
 ```CURL
 curl --location 'https:// hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK/authorize' \
@@ -90,7 +90,7 @@ Upload the public key to the Flexnet server:
 
 ```CURL
 curl --location 'https:// hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK/rest_licensing_keys' \
---header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMTk0NTY5NCwiZXhwIjoxNzAyMDMyMDk0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjI0MjRiOTgwLWY2ZDEtNGViYi04NWQ5LTI3YmQzMTJmYzIwZiJ9.JR0fnMZyyMY4wwPtE9kMWD2kvbxLgBplq2X-wgmYpe7COFW-5IVvdLmdaRvb0AydSKHf3DKPDGVrd2dubr9Lbw' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMTk0NTY5NCwiZXhwIjoxNzAyMDMyMDk0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEIOPKLVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjI0MjRiOTgwLWY2ZDEtNGViYi04NWQ5LTI3YmQzMTJmYzIwZiJ9.JR0fnMZyyMY4wwPtE9kMWD2kvbxLgBplq2X-wgmYpe7COFW-5IVvdLmdaRvb0AydSKHf3DKPDGVrd2dubr9Lbw' \
 --header 'Content-Type: application/octet-stream' \
 --data '@/Flexnet-release/portal_public_key.der'
 ```
@@ -98,12 +98,12 @@ Response from Flexnet server:
 
 ```JSON
 {
-    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuJvCAbsz0dpNXZqsjqsL29p313tvMpV0QjIDT03traV3v4UnUuIrIYmYPerzQJsVzoKZHU0IYA9FZTLXP4uJMPTwNJhDVtbki5Fbx4h9U2c7h78QCFne07kdtAeBh0keReFklpj7CJbOi4RhqSX6uaZ/gBOg+RMT6/q9Oxkry31WvqISNWlAXmyfNQTo/GMUe4dKpbETOHlBXnqrqPw+EqlrJDiJSr/TIfLokm8qFLSzBwYahhi6L0gnLmnuEPPfkxFwhjaSjdb336dVGzkRc1AsS9L0TDTtQBzUxkL6cIW+EzxXOyWnT2ekcFMripuyXBG80UkhXKTVpRwj/nXeXQIDAQAB"
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAUUUIPHJnjgPOMnbqsjqsL29p313tvMpV0QjIDT03traV3v4UnUuIrIYmYPerzQJsVzoKZHU0IYA9FZTLXP4uJMPTwNJhDVtbki5Fbx4h9U2c7h78QCFne07kdtAeBh0keReFklpj7CJbOi4RhqSX6uaZ/gBOg+RMT6/q9Oxkry31WvqISNWlAXmyfNQTo/GMUe4dKpbEBGPOLKRESHlBXnqrqPw+EqlrJDiJSr/TIfLokm8qFLSzBwYahhi6L0gnLmnuEPPfkxFwhjaSjdb336dVGzkRc1AsS9L0TDTtQBzUxkL6cIW+EzxXOyWnT2ekcFMripuyXBG80UkhXKTVpRwj/nXeXQIDAQAB"
 }
 
 ```
 
- **Helm Chart Configuration to enable private key in License Manager Deployment**
+ ### Helm Chart Configuration to enable private key in License Manager Deployment
  
 Create your secret using a private Key:
 
@@ -125,11 +125,28 @@ Reference the secret in helm values yaml:
 
 **Revoke of public key from Flexnet**
 
-If you need to revoke the public key from Flexnet for any reason, you can follow the steps outlined in their documentation.In order to revoke the public, you will need to provide the JWT token that was used to authenticate the request. Without the token, the revocation process cannot be completed.
-(Note that the https://jwt.io website also provides a graphical tool that can be used to achieve the same result as a programmatic method.)  
+If you ever need to revoke the public key from Flexnet, the steps to do so are outlined in their documentation. To complete the revocation process, you will need to provide the Bearer Authentication token to authenticate the request. It's important to note that without the token, the revocation process cannot be completed.
+
+Get the Bearer Authentication from Flextnet using authorize endpoint:
+
+```CURL
+curl --location 'https:// hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK/authorize' \
+--header 'Content-Type: application/json' \
+--data-raw '{"password":"XXXXXXX","user":"XXXXXXX"}'
 
 ```
+Response from authorize endpoint:
+
+```JSON
+{
+    "expires": "2023-12-19T05:39:28.850Z",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbXXXYYYUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQYUPLFWNUISQACIsImlhdCI6MTcwMjg3Nzk2OCwiZXhwIjoxNzAyOTY0MzY4LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjRmOWRjMGFkLWQ1MGMtNGZhZi05YmE0LTc0N2ZmMjJjODQ0MiJ9.mvuXXJNfew-WzJ7CX8Y8yH339zX3SNpaX79jMTu-shanE8nHPfZRA240EAsVO64nMxFAPyr_8gP7JOLRQ2XOeA"
+}
+```
+Use DELETE endpoint to revoke the public key:
+
+```CRUL
 curl --location --request DELETE 'https:// hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK/rest_licensing_keys' \
---header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMTk0NTY5NCwiZXhwIjoxNzAyMDMyMDk0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjI0MjRiOTgwLWY2ZDEtNGViYi04NWQ5LTI3YmQzMTJmYzIwZiJ9.JR0fnMZyyMY4wwPtE9kMWD2kvbxLgBplq2X-wgmYpe7COFW-6cuybnmkplkssdspooweds'
-
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMzQ5ODg0MywiZXhwIjoxNzAzNTg1MjQzLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjJlYTNjM2U3LWQ3MDEtNDFjMS05NWQ2LWEyOTMzZjBlNTQwNyJ9.u8ZAF4SpBoLucxPA0WaEtcDkuQVT3ZCGx-qAtHYbcZDD%YYBBzqvYWkxN3fTRHjNRKE0idV8bh5Zs75KSvU9A''
 ```
+Expected status 410 Gone
