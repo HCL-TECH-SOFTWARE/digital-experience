@@ -1,10 +1,10 @@
 # Indexing web content
 
-To search for web content, your content must first be indexed by the HCL Portal search engine. When the content is indexed, you can run searches by using the search center or by using a search component. If you search for documents in the WebSphere Portal search center, be aware that you see search results for published documents only. Unpublished pending changes in a project are not included in the results.
+To search for web content, your content must first be indexed by the HCL Digital Experience (DX) search engine. When the content is indexed, you can run searches by using the search center or by using a search component. If you search for documents in the WebSphere Portal search center, be aware that you see search results for published documents only. Unpublished pending changes in a project are not included in the results.
 
 ## Creating a content source for a site area
 
-The HCL Portal search engine defines content sources that index your web content. All the child site areas and content items of the selected site area is included in the index. Related content sources are grouped in a search collection.
+The HCL DX search engine defines content sources that index your web content. All the child site areas and content items of the selected site area is included in the index. Related content sources are grouped in a search collection.
 
 1.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration** \> **Manage Search**.
 2.  Select or create a new collection. The default search collection that is named **WebContentCollection** is provided by default.

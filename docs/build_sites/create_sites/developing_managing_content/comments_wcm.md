@@ -52,6 +52,7 @@ For security purposes, if you need to limit the delete comments option to a spec
 2. In the **Presentation Template Options**, click the **Insert Tag** button to add the custom plugin.
 
 3. In the **Insert Tag** window, select the following values:
+
     - In **Select a tag type** field, select **Plugin Component**.
     - In **Select a plugin type** field, select **Content**.
     - In **Select plugin to reference** field, select **NewCommentRenderPlugin**. 
@@ -67,6 +68,7 @@ For security purposes, if you need to limit the delete comments option to a spec
         You can specify the library you want to use for storing comments in the commentsLibrary field.
 
 6. Set up and view the Comments UI on the page. 
+
     1. Click **Create Page** and add the content created in Step 5. 
     2. Using the Web Content Viewer portlet, select the content to render.
     3. Click **OK**.
@@ -135,6 +137,7 @@ After setting up the page component with comments UI on the page, actions such a
 2. In the **Rich Text Editor**, click the **Insert Tag** button to add the WCM tag.
 
 3. In the **Insert a Tag** window, select the following values:
+
     - In **Select a tag type** field, select **Content**.
     - In **Select item context** field, select **Selected**.
     - In **Select the content item to reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
@@ -162,7 +165,9 @@ After configuring the WCM comments HTML markup component in the Rich Text Editor
 ![Add Script Application to Page](../developing_managing_content/_img/script_application.png)
 2. Click **Edit > Actions > Insert WCM Tag**. The **Insert a Tag** window appears.
 ![Insert WCM Tag](../developing_managing_content/_img/insert_wcm_tag.png)
+
 3. In the **Insert a Tag** window, select the following values:
+
     - In **Select a tag type** field, select **Content**.
     - In **Select item context** field, select **Selected**.
     - In **Select the content item to reference** field, select **New Comments content under WCM Comments 1.0/Page Component**. 
