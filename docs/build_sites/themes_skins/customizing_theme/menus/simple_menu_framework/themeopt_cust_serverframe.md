@@ -20,7 +20,7 @@ where:
     This parameter is optional and is the serialized string-format ObjectID of a portlet window control on the page that is specified by `navID`. This parameter is only necessary for menus that contain portlet-level actions, in other words, `skin menus`. This parameter must be a serialized ObjectID. A custom unique name does not work for the portlet window ID.
 
 
-HCL Portal provides three ready-to-use menu definition files with the Portal 8.5 Optimized Theme:
+HCL Digital Experience (DX) provides three ready-to-use menu definition files with the Portal 8.5 Optimized Theme:
 
 -   pageAction
 -   skinAction
@@ -105,7 +105,7 @@ The following menu item names and values are acceptable values for the type entr
 
 -   **`"type" : "DynamicMenuitem"`**
 
-    Potentially clickable and having an action the `DynamicMenuitem` item has an `id` member whose value is a plug-in name. The menu feed provider uses this ID to retrieve an instance of the named operation, which is then queried for sufficient information to build the menu feed content for this `menuitem`. Several plug-ins are supplied ready-to-use by HCL Portal for use in the default menu definitions, and these can be reused by custom-written menus and themes.
+    Potentially clickable and having an action the `DynamicMenuitem` item has an `id` member whose value is a plug-in name. The menu feed provider uses this ID to retrieve an instance of the named operation, which is then queried for sufficient information to build the menu feed content for this `menuitem`. Several plug-ins are supplied ready-to-use by HCL DX for use in the default menu definitions, and these can be reused by custom-written menus and themes.
 
     This plug-in provides its own indicator of whether it is active, including access control permission for the current user, and provides its own localized title and optionally a description, and an actionHttpMethod value, for the menu feed provider to use when you build the menu for this item. The OperationURI for this operation plug-in becomes the actionUrl in the corresponding menu entry. Other object members are allowed as well, including actionFn, actionHttpMethod, visibilityFn, itemClass, and metadata. A markupID member can be added to create an ID on the html tag for the resulting menu item.
 
@@ -302,11 +302,11 @@ When you are debugging, use the trace string `com.ibm.wps.jsonmenu.*=all` on the
 
 ## Dynamically extended and dynamically constructed menus
 
-Starting with HCL Portal 8.0.0.1, it is possible to have menu items added dynamically to a menu definition file. This feature can be used to extend an existing "static" menu definition file, such as the files that exist in the sample theme within the menuDefinitions folder in WebDAV. It can also be used to dynamically construct a menu without a static menu file that exists at all.
+Starting with HCL DX 8.0.0.1, it is possible to have menu items added dynamically to a menu definition file. This feature can be used to extend an existing "static" menu definition file, such as the files that exist in the sample theme within the menuDefinitions folder in WebDAV. It can also be used to dynamically construct a menu without a static menu file that exists at all.
 
 Recall that in the request URI for a menu, the query parameter starts with `"?uri=menu:menu name"`. This menu name is treated as a file name by the menu framework, and we search for the file in the "base location" for resources for that theme as given by the theme metadata property com.ibm.portal.theme.template.ref. Within the menu definition, an entry of `"type":"ModuleRef"` can reference a theme optimization module, which contains a `menu` contribution, and within that a JSON subcontribution. This JSON subcontribution has a URL, which points to the actual JSON code. The JSON retrieved from that subcontribution URL is substituted into the menu feed in place of the `"type":"ModuleRef"` entry from the file.
 
-Starting with HCL Portal 8.0.0.1, this JSON subcontribution can also be tagged with a `ref-id` qualifier. The value of this qualifier is a String. At the end of processing the menu definition file, the menu framework adds one more step. It searches through all the JSON subcontributions that are found in theme modules from the profile for the current page, where the page is given by the navID parameter on the menu request. If any of the `ref-id` tags from those subcontributions match the requested menu name that is being processed, then the JSON code for those subcontributions is dynamically added to the end of the menu feed, exactly as though there were an entry `"type":"ModuleRef"` that specifically pointed to that module.
+Starting with HCL DX 8.0.0.1, this JSON subcontribution can also be tagged with a `ref-id` qualifier. The value of this qualifier is a String. At the end of processing the menu definition file, the menu framework adds one more step. It searches through all the JSON subcontributions that are found in theme modules from the profile for the current page, where the page is given by the navID parameter on the menu request. If any of the `ref-id` tags from those subcontributions match the requested menu name that is being processed, then the JSON code for those subcontributions is dynamically added to the end of the menu feed, exactly as though there were an entry `"type":"ModuleRef"` that specifically pointed to that module.
 
 This menu framework allows for dynamic extension of the menu contents with new menu items by creating new theme modules, or at least new subcontributions, and updating the profile, rather than having to update the menu definitions files.
 
@@ -318,7 +318,7 @@ For more information about constructing theme optimization modules that include 
 
 ## Controlling the cache lifetime of a JSON menu feed
 
-In HCL Portal version 8.0.0.1 and later, the JSON menu framework accepts one or more WP ConfigService properties of the form `"jsonmenu.cache.time.<menu name>"` where the value is the cache time in seconds. This value must be greater than or equal to 0. A value of `0` indicates that the menu is not cached.
+In HCL DX version 8.0.0.1 and later, the JSON menu framework accepts one or more WP ConfigService properties of the form `"jsonmenu.cache.time.<menu name>"` where the value is the cache time in seconds. This value must be greater than or equal to 0. A value of `0` indicates that the menu is not cached.
 
 The `<menu name>` values from these WP ConfigService settings are matched against the value from the `"?uri=menu:<menu name>"` query parameter on the incoming request for a menu. The comparison of the menu names from the WP ConfigService to the received request for a menu is case-sensitive.
 
