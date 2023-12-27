@@ -8,7 +8,7 @@ Use a pattern to determine an issue within your custom modules. This pattern min
 
 3.  Investigate the logs. If the error is not apparent in the client-side console, then investigating the HCL Digital Experience (DX) system logs is another likely place to track down an issue. These logs display any server-side errors and tracing that is enabled.
 
-    1.  Open the HCL DX logs in the following locations, [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)//logs/HCL DX and HCL Web Content Manager/SystemOut.log and [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/logs/HCL DX and HCL Web Content Manager/SystemErr.log.
+    1.  Open the HCL Portal logs in the following locations, [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)//logs/HCL Portal and HCL Web Content Manager/SystemOut.log and [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/logs/HCL Portal and HCL Web Content Manager/SystemErr.log.
 
     2.  You can enable more tracing through the Enable Tracing portlet in the Administration section of HCL DX. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Enable Tracing**.
 
