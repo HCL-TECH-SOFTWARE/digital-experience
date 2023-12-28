@@ -1,6 +1,6 @@
 # Administering virtual portals
 
-View information to help you scope your HCL Portal to have multiple virtual portals.
+View information to help you scope your HCL Digital Experience to have multiple virtual portals.
 
 !!! note 
     Before you start creating or administering virtual portals, read the information in *Planning for virtual portals*.

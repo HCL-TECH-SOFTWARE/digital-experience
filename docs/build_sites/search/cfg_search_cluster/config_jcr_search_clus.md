@@ -37,7 +37,7 @@ Set up remote search service on the primary node of the cluster. For more inform
 
 12. In a cluster, you must drop the JCRCollections in the default search service and then re-create them in a remote search service, otherwise you receive display errors in your search. Complete the following steps to delete the JCRCollections from the Manage Search portlet:
 
-    1.  Log on to HCL Portal as an administrator.
+    1.  Log on to HCL Digital Experience (DX) as an administrator.
 
     2.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration** \> **Manage Search**.
 
