@@ -24,7 +24,7 @@ For clustered Portal environments, remote search service is required.
 
 Using the default search service for this environment will result to duplicate search collections, data integrity issues with the search collections, a set of identical crawlers hitting the backend servers either too often or at the same time, and, critically, it means DX search administrators must administer each service service separately. Using the remote search service is the recommended path to administering and coordinating DX Search for a clustered environment.
 
-For information on how to install the remote search server, refer to [Remote search service](..remotesearch/index.md). It is recommended to install remote search with the [installation manager](../remotesearch/installrssim.md). You can also install the service [manually](../remotesearch/install_manual/index.md).
+For information on how to install the remote search server, refer to [Remote search service](../remotesearch/index.md). It is recommended to install remote search with the [installation manager](../remotesearch/installrssim.md). You can also install the service [manually](../remotesearch/install_manual/index.md).
 
 There is also a [video guide](https://www.youtube.com/watch?v=WldILSgwvBI) for installing and configuring remote search. 
 
