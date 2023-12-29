@@ -129,7 +129,7 @@ If you ever need to revoke the public key from Flexnet, the steps to do so are o
 
 Get the Bearer Authentication from Flextnet using authorize endpoint:
 
-```CURL
+```sh
 curl --location 'https://hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/<instance ID>/authorize' \
 --header 'Content-Type: application/json' \
 --data-raw '{"password":"XXXXXXX","user":"XXXXXXX"}'
