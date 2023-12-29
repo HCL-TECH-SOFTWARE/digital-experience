@@ -123,7 +123,7 @@ Reference the secret in helm values yaml:
      1. All instances use the same private key
      2. All instances not have configured a private key
 
-**Revoke of public key from Flexnet**
+### Revoke of public key from Flexnet
 
 If you ever need to revoke the public key from Flexnet, the steps to do so are outlined in their documentation. To complete the revocation process, you will need to provide the Bearer Authentication token to authenticate the request. It's important to note that without the token, the revocation process cannot be completed.
 
