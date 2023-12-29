@@ -39,7 +39,7 @@ applications:
 
 Starting HCL Digital Experience 9.5 CF208, additional configuration to support local license manager is defined in helm chart.
 
-## Secure License Server Configuration from CF217 for License Manager application
+## Secure License Server Configuration for License Manager application
 
 Secure communication between HCL DX and the HCL License Server (cloud or local) involves signed content using a public/private keypair. You will need to generate and distribute this keypair. HCL DX will sign licensing requests with the private key and the License Server will verify signatures with the corresponding public key.
 
