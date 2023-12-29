@@ -72,7 +72,7 @@ The public key must be uploaded to your License Server using the provided comman
 Get the Bearer Authentication from Flextnet using authorize endpoint:
 
 ```sh
-curl --location 'https:// hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/ADR234XYHK/authorize' \
+curl --location 'https://hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/<instance ID>/authorize' \
 --header 'Content-Type: application/json' \
 --data-raw '{"password":"XXXXXXX","user":"XXXXXXX"}'
 
