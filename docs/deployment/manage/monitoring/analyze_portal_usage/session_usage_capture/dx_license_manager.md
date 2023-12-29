@@ -112,7 +112,7 @@ Create your secret using a private Key:
  ```
 Reference the secret in helm values yaml:
 
- ```
+ ```yaml
  security:
    licenseManager:
      customFlexnetLicenseManagerPrivateKeySecret: <secret name>
