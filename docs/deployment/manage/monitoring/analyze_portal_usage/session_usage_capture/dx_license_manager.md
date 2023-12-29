@@ -103,12 +103,12 @@ Response from Flexnet server:
 
 ```
 
- ### Helm Chart Configuration to enable private key in License Manager Deployment
+### Helm Chart Configuration to enable private key in License Manager Deployment
  
 Create your secret using a private Key:
 
  ```sh
- kubectl create secret generic <secret name> --from-file=privateKey=myKey.pem -n <namespace>
+ kubectl create secret generic <secret name> --from-file=privateKey=portal_private_key_pkcs8.pem -n <namespace>
  ```
 Reference the secret in helm values yaml:
 
