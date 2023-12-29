@@ -107,7 +107,7 @@ Response from Flexnet server:
  
 Create your secret using a private Key:
 
- ```kubectl
+ ```sh
  kubectl create secret generic <secret name> --from-file=privateKey=myKey.pem -n <namespace>
  ```
 Reference the secret in helm values yaml:
