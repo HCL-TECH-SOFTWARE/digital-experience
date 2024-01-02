@@ -69,7 +69,7 @@ The following list shows the tasks for which you can assign extra access permiss
         -   Assign virtual portal administrator access to the JCR content root node to enable them to create new libraries and view, edit, and delete all existing libraries.
         -   Assign virtual portal administrators contributor access to the JCR content root node to enable them to create new libraries and view, edit, and delete libraries that they created.
     -   You can also assign virtual portal administrators access to libraries they did not create by editing the access settings of individual libraries.
-    Templating sample content is provided by default with HCL Portal. This sample content is available from the Create Content tab of the site toolbar. If you want to use the sample content with a specific virtual portal, you must syndicate the following web content libraries to the virtual portal:
+    Templating sample content is provided by default with HCL Digital Experience. This sample content is available from the Create Content tab of the site toolbar. If you want to use the sample content with a specific virtual portal, you must syndicate the following web content libraries to the virtual portal:
 
     -   `Template Page Content 3.0`
     -   `Web Content Templates 3.0`

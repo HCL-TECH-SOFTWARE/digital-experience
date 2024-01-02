@@ -10,6 +10,7 @@ After you create a theme, you can begin to customize it by adding static content
     -   skins
     -   layout-templates
     -   common-resources
+
 3.  Save the files to your disk.
 
 4.  Add a web module to your existing custom theme.
@@ -85,7 +86,7 @@ After you create a theme, you can begin to customize it by adding static content
 
 6.  Create a whitelist and a blacklist.
 
-    For security reasons, the WAR data source does not serve content until a special context parameter is set. This context parameter defines which files from your web module HCL Portal is able to serve. You can define a whitelist by using a regular expression that matches the files that you want to make available. Then, in a blacklist, you can remove certain entries from the set of files that are available in the whitelist. A blacklist is helpful if you want to serve a folder but not a certain file within that folder. The expressions are case-sensitive. For example, WEB-INF is different than Web-Inf.
+    For security reasons, the WAR data source does not serve content until a special context parameter is set. This context parameter defines which files from your web module HCL Digital Experience is able to serve. You can define a whitelist by using a regular expression that matches the files that you want to make available. Then, in a blacklist, you can remove certain entries from the set of files that are available in the whitelist. A blacklist is helpful if you want to serve a folder but not a certain file within that folder. The expressions are case-sensitive. For example, WEB-INF is different than Web-Inf.
 
     The parameters are set in the web.xml file of the web module that contains the static theme content. In the following example, the context parameter is set to serve all files that are not part of the WEB-INF folder:
 
