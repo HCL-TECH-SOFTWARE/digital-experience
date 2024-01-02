@@ -143,7 +143,7 @@ Refer to [HCL Digital Experience Cloud Native 9.5 Support for Local License Mana
 Secure communication between HCL DX and the HCL License Server (cloud or local) involves signed content using a public/private keypair. HCL DX will sign licensing requests with the private key and the License Server will verify signatures with the corresponding public key.
 
 !!! note
-     The License Manager expect the public key to be uploaded to Flexnet beforehand and the private key to be passed as a secret in the Helm values. However, in case the private key is not provided the default key will be used and uploaded automatically.
+     The License Manager expect the public key to be uploaded to the License Server beforehand and the private key to be passed as a secret in the Helm values. However, in case the private key is not provided the default key will be used and uploaded automatically.
 
 ### Generate Public/Private Keypair
 
