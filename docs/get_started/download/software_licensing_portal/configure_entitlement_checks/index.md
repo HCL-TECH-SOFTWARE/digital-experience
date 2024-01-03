@@ -170,7 +170,7 @@ openssl pkcs8 -topk8 -inform PEM -outform PEM -in portal_private_key.pem -out po
 ```
 ### Uploading Public Key
 
-Upload the public key to your License Server using the provided command line tool. Follow the instructions as described below:
+Refer to the following instructions to upload the public key to your License Server using the provided command line tool. 
 
 Get the Bearer Authentication from Flexnet using authorize endpoint:
 
@@ -222,7 +222,7 @@ Reference the secret in helm values yaml:
  ```
 
 !!! note
-     For multiple instances running with the same entitlement and license server, all instances need to either:
+     For multiple instances running with the same entitlement and license server, all instances must either:
      - Use the same private key
      - Not have configured a private key
 
