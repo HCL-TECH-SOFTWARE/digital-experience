@@ -78,6 +78,6 @@ plugins:
   - tags
   - mike:
       canonical_version: latest
-      alias: redirect
+      alias_type: redirect
   - git-revision-date-localized:
       type: date
