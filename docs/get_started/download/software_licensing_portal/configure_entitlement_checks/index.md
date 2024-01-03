@@ -137,7 +137,7 @@ Entitlement checking to ensure the entitlement period for the DX Cloud Native 9.
 
 Refer to [HCL Digital Experience Cloud Native 9.5 Support for Local License Manager](local_license_server_manager.md) topic for additional configurations needed to enable connectivity to a local license server.
 
-## Secure License Server communication for License Manager application
+## Securing License Server communication for License Manager application
 
 Secure communication between HCL DX and the HCL License Server (cloud or local) involves signed content using a public and private keypair. HCL DX signs licensing requests with the private key and the License Server verifies signatures with the corresponding public key.
 
