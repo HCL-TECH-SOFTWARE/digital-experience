@@ -160,11 +160,9 @@ The following is an example of keypair generation using OpenSSL:
 openssl genrsa -out portal_private_key.pem 2048
 
 #Get the public key. 
-
 openssl rsa -in portal_private_key.pem -pubout -outform DER -out portal_public_key.der
 
 #Convert private key to pkcs8 format to use it with HCL Portal
-
 openssl pkcs8 -topk8 -inform PEM -outform PEM -in portal_private_key.pem -out portal_private_key_pkcs8.pem -nocrypt
 
 ```
