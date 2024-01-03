@@ -13,7 +13,7 @@ For more information about an HCL Connections feature see the topic about Federa
 You configure the custom properties in the Resource Environment Provider for the WP CP Configuration Service for tagging and rating in the WebSphere® Integrated Solutions Console.
 
 !!! note
-    The icons are part of the portal installation. For theHCL Connections features, the custom properties for the icons exist without a predefined path. Unless no icon URL is defined, the icons are loaded directly from HCL Portal.
+    The icons are part of the portal installation. For theHCL Connections features, the custom properties for the icons exist without a predefined path. Unless no icon URL is defined, the icons are loaded directly from HCL Digital Experience (DX).
 
 
 ???+ info "Related information"
