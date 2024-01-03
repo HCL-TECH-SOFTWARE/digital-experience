@@ -222,7 +222,7 @@ Reference the secret in helm values yaml:
  ```
 
 !!! note
-     Multiple instances running with the same entitlement and license server all instances need to either:
+     For multiple instances running with the same entitlement and license server, all instances need to either:
      - Use the same private key
      - Not have configured a private key
 
