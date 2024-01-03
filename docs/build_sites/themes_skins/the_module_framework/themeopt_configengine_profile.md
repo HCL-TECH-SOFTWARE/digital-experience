@@ -20,11 +20,11 @@ Use the following parameters with the create-profile-based-on-template configu
 
 -   **PortalAdminId**
 
-    The HCL Portal administrator user ID.
+    The HCL Digital Experience (DX) administrator user ID.
 
 -   **PortalAdminPwd**
 
-    The HCL Portal administrator password.
+    The HCL DX administrator password.
 
 -   **ThemeUniqueName**
 
@@ -47,7 +47,7 @@ Use the following parameters with the create-profile-based-on-template configu
     Can be true or false. Defines whether the profile in WebDAV should be overwritten if it already exists.
 
 
-Use the following command to create profile with the name profile\_new\_deferred.json in the theme with the unique name ibm.portal.85Theme, which is based on the template that exists on your local hard drive in /opt/WebSphere/profile\_new\_template.json. Once it is created in WebDAV, it has the list of modules from the profile\_deferred.json profile, which already exists. The example assumes that the WebSphere Application Server and HCL Portal credentials are defined in the wkplc.properties file.
+Use the following command to create profile with the name profile\_new\_deferred.json in the theme with the unique name ibm.portal.85Theme, which is based on the template that exists on your local hard drive in /opt/WebSphere/profile\_new\_template.json. Once it is created in WebDAV, it has the list of modules from the profile\_deferred.json profile, which already exists. The example assumes that the WebSphere Application Server and HCL DX credentials are defined in the wkplc.properties file.
 
 ```
 ./ConfigEngine.sh create-profile-based-on-template -DThemeUniqueName=ibm.portal.85Theme -DTemplateProfileFilePath=/opt/WebSphere/profile_new_template.json -DTargetProfileFileName=profile_new_deferred.json -DTemplateModuleListProfileFileName=profile_deferred.json -DOverwriteProfile=true

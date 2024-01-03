@@ -1,6 +1,6 @@
 # Applying alternate styles
 
-You can apply alternate styles to your portal pages using the HCL Portal 8.5 theme that you can apply to your portal pages.
+You can apply alternate styles to your portal pages using the HCL Digital Experience 8.5 theme that you can apply to your portal pages.
 
 1.  Log on to your portal as an administrator and select the page that you want to change the style.
 

@@ -26,7 +26,7 @@ You need to make a unique copy of the dynamic resources for your theme. Make sur
 
 12. Copy the following plugin.xml file into your dynamic resources and drag it into the WEB-INF folder: [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\plugin.xml.
 
-13. Create a whitelist and a blacklist. For security reasons, the WAR data source does not serve content until a special context parameter is set. This context parameter defines which files from your web module HCL Portal is able to serve. You can set your whitelist and blacklist in two ways: in a context parameter in the web.xml of the web application, or in the Resource Environment Provider settings.
+13. Create a whitelist and a blacklist. For security reasons, the WAR data source does not serve content until a special context parameter is set. This context parameter defines which files from your web module HCL Digital Experience is able to serve. You can set your whitelist and blacklist in two ways: in a context parameter in the web.xml of the web application, or in the Resource Environment Provider settings.
 
     -   **In a context parameter in the web.xml of the web application**
 
