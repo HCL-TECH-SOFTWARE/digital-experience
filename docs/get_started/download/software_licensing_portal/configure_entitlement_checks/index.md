@@ -223,7 +223,7 @@ Reference the secret in helm values yaml:
 
 !!! note
      Multiple instances running with the same entitlement and license server all instances need to either:
-     1. All instances use the same private key
+     - Use the same private key
      - Not have configured a private key
 
 ### Revoking of public key from Flexnet
