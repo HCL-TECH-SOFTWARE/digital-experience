@@ -4,9 +4,9 @@ After installing and configuring the remote search service, you must create the 
 
 1. Before deleting the search collection and the local search service, export the configuration of the default search collection. 
 
-  The exported XML file includes all information required for recreating the search collection and its content sources for the remote search service. 
+    The exported XML file includes all information required for recreating the search collection and its content sources for the remote search service. 
 
-  First, export the configuration of the Default Search Collection before deleting the search collection and the local search service. The exported XML file includes all information required for recreating the search collection and its content sources for the remote search service.
+    First, export the configuration of the Default Search Collection before deleting the search collection and the local search service. The exported XML file includes all information required for recreating the search collection and its content sources for the remote search service.
 
 2. Export the JCRCollection1. This is required to enable WCM Authoring search. 
 
