@@ -1,8 +1,8 @@
-# Search Quickstarter Guide for HCL DX
+# Configuring DX Search
 
-Visitors to your website expect a search function. The same is true for an HCL Digital Experience (DX) site - end users expect to see a **Search** box located somewhere at the top of a DX page to find relevant information fast. As an administrator or engineer, which technology should you use to power search? There are many options, including HCL DX's own search service (DX Search), or a third party search technology. This section focuses on what steps must be accomplished to set up and configure DX Search.
+End users of a Digital Experience (DX) site expect to see a **Search** box to find relevant information fast. To provide this functionality to users, administrators and engineers can choose from using DX Search or a third party search technology. This topic provides the steps to set up and configure DX Search, HCL DX's own search service.
 
-Note that this document should be sufficient to get started with DX search, but supplemental resources may be required if you plan to set up DX Remote search.
+Note that this document is sufficient to get started with DX search, but supplemental resources are required if you plan to set up DX Remote search.
 
 ## Decision tree for setting up DX Search
 
@@ -56,6 +56,8 @@ There is a search component available with HCL DX that is free and well-integrat
 If available, you can use a license for a third party search software. Consult the third party provider's documentation on support and integration with HCL DX for further details.
 
 If you opt to not use DX Search, you can remove its configuration and resources. However, still note the disclaimer in [Integrating your own search engine](dx_search_integ_own_search.md) on related to having search available for content authors and editors.
+
+Refer to the following topics for more information:
 
 -   **[Integrating your own search engine](dx_search_integ_own_search.md)**  
 Learn how to integrate your own search engine in the DX Search Service.
