@@ -4,14 +4,13 @@ Refer to the following instructions to set up, configure, and administer a searc
 
 1. If your Portal has multiple nodes, install and configure a remote search service.
 
-2. Create a search collection (search full-text index).
+2. Create a [search collection](portal_environments.md) (search full-text index).
 
-    !!!note
-      If you are using local search, a default ready-to-run search collection is available.
+    If you are using local search, a default, ready-to-run search collection is available.
 
-3. Create content sources by defining crawlers. 
+3. Create content sources by [defining crawlers](recreate_standard_crawlers.md). 
 
-4. Optional steps:
+Optional steps:
 
-  - Modify the search user-interface.
-  - Modify the boosting settings for certain content fields (outside of the scope of this topic).
+- Modify the [search user-interface](modify_dx_search.md).
+- Modify the boosting settings for certain content fields (outside of the scope of this topic).
