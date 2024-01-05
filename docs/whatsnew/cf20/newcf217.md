@@ -4,6 +4,8 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- Web Content Manager - AI assistance for sentiment analysis
+- Web Content Manager REST API v2 - Added APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -12,11 +14,11 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-- 
+- Enabled the Configuration Wizard panels for migration from a previous version
 
 **Digital Experience 9.5 Container Version**
 
-- 
+- Portlet Container on Liberty Beta
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
