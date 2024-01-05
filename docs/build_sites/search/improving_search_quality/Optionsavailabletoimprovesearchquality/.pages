@@ -1,0 +1,7 @@
+title: Options available to improve search quality
+nav:
+    - index.md
+    - ChangedefaultqueryoperatorfromORtoAND.md
+    - HowtoenableAndasdefaultoperator.md
+    - Applyingboostfactorstospecificfieldsmetadata.md
+    - Searchbydateanddateranges.md
