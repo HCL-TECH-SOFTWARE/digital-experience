@@ -52,7 +52,7 @@ Content managers can trigger bulk updates to update the expiration dates of all 
 
         ![](../../../../assets/HCL_Content_Reporting_Update_Disable.png)
 
-You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page.
+You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page. Report will now automatically update upon the completion of a bulk update.
 
 ## Using the Content Reporting Bulk Update Owners/Authors feature
 

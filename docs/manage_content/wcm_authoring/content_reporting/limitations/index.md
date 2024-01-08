@@ -29,8 +29,8 @@ Take note of the following limitations when using HCL Content Reporting:
 
 ## Bookmarking reports
 
--   Use of the Content Reporting URL on a fresh user session will not function; you must first log in before using the Content Reporting URL.
--   Content reporting will fail to maintain the report when changing language using the language switcher on the toolbar.
+-   Use of the Content Reporting bookmark URL on a non-authenticated user will not function; you must first log in before using the Content Reporting bookmark URL.
+-  Content reporting will fail to maintain the report when changing language using the language switcher on the toolbar.
 
 ## User interface
 
