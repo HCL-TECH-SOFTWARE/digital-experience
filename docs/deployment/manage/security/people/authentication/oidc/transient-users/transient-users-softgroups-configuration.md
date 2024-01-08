@@ -78,7 +78,7 @@ When you create a data source, you associate it with a Java Database Connectivit
 
 1. On the summary page review all the values and then click **Finish**
 
-![OIDC_TRANSIENT_SOFTGROUPS_JDBC](./images/OIDC_TRANSIENT_SOFTGROUPS_JDBC.png)
+![OIDC_TRANSIENT_SOFTGROUPS_JDBC](../../../../../../../images/OIDC_TRANSIENT_SOFTGROUPS_JDBC.png)
 
 ## Updating custom properties for JAAS and Softgroups
 
@@ -220,7 +220,7 @@ Once the WAR is deployed, you need to create an Admin page which will allow you 
         Currently a `custom role/group key` as well as `email` from the **OIDC Claim Token** are supported. Using these two attributes softgroup can be created such as **(groups=&lt;group_name&gt;)** or **(email=*@&lt;domain&gt;)** or **(email=&lt;email&gt;)**  
         **eg.** `(groups=group1)` or `(groups=mytestgroup)` or `(email=*@softgroup3.com)` or `(email=test5@softgroup5.com)`  
 
-![OIDC_TRANSIENT_JAAS_SOFTGROUPS_RULE](./images/OIDC_TRANSIENT_JAAS_SOFTGROUPS_RULE.png)
+![OIDC_TRANSIENT_JAAS_SOFTGROUPS_RULE](../../../../../../../images/OIDC_TRANSIENT_JAAS_SOFTGROUPS_RULE.png)
 
 ## Assigning users to groups in your IdP
 

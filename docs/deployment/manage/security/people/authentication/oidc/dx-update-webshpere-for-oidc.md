@@ -33,7 +33,7 @@ On a high level, the following tasks will be executed to establish this configur
 
 1. Select available module and click “Apply” then “OK”.
 
-    ![OIDCRP WAS Server Mapping](../images/OIDCRP_WAS_SERVER_MAPPING.png)
+    ![OIDCRP WAS Server Mapping](../../../../../../images/OIDCRP_WAS_SERVER_MAPPING.png)
 
 ### Restarting the server / DX core to apply all changes
 

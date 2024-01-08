@@ -129,7 +129,7 @@ The import will create the `DX OpenLDAP` in the user federation. As a final step
 Click the **Action** dropdown in the top right corner of the provider and select the “Sync all users” option.
 This should show new users being added to your Keycloak instance.
 
-![Keycloak_HTTPS_SSL_12](../images/Keycloak_HTTPS_SSL_12.png)
+![Keycloak_HTTPS_SSL_12](../../../../../../images/Keycloak_HTTPS_SSL_12.png)
 
 ## Set up Virtual Portals and realms
 
@@ -164,7 +164,7 @@ In addition we will add two more base entries to scope our customer and guest us
 - set the unique distinguished name to `ou=guests,dc=dx,dc=com` and click **OK**
 - repeat the same step and set the unique distinguished name to `ou=customers,dc=dx,dc=com` this time
 
-![WAS Federated Repositories configuration](../images/was-federated-repositories.png)
+![WAS Federated Repositories configuration](../../../../../../images/was-federated-repositories.png)
 
 ### Prepare and create multiple realms within the Virtual Member Manager
 

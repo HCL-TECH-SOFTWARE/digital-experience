@@ -14,7 +14,7 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
 
 2. From the top left dropdown select Create Realm and add new realm name and click Create (for our example we are using oidcdx):
 
-    ![Keycloak_HTTPS_SSL_2](../images/Keycloak_HTTPS_SSL_2.png)
+    ![Keycloak_HTTPS_SSL_2](../../../../../../images/Keycloak_HTTPS_SSL_2.png)
 
 3. Go to the Clients Section and click Create Client, then add the following values and check the right boxes as shown below:
 
@@ -23,11 +23,11 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
 
       Click Next
 
-      ![Keycloak_HTTPS_SSL_3](../images/Keycloak_HTTPS_SSL_3.png)
+      ![Keycloak_HTTPS_SSL_3](../../../../../../images/Keycloak_HTTPS_SSL_3.png)
 
     - Check the Client authentication option and click “Next”.
 
-      ![Keycloak_HTTPS_SSL_4](../images/Keycloak_HTTPS_SSL_4.png)
+      ![Keycloak_HTTPS_SSL_4](../../../../../../images/Keycloak_HTTPS_SSL_4.png)
 
     1. Enter the following Valid redirect URIs and click “Save”:
 
@@ -35,7 +35,7 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
         2. `<HOSTNAME>/oidcclient/keycloak`
         3. `<HOSTNAME>/wps/portal`
 
-        ![Keycloak_HTTPS_SSL_5](../images/Keycloak_HTTPS_SSL_5.png)
+        ![Keycloak_HTTPS_SSL_5](../../../../../../images/Keycloak_HTTPS_SSL_5.png)
 
 4. Create client scope Mapper for realmName: Go to {realm} -> Client scope -> roles -> Add mappers -> By Configuration -> Hardcoded Claim
 
@@ -49,18 +49,18 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
       - Check Add to userinfo
       - Click Save.
 
-    ![Keycloak_HTTPS_SSL_6](../images/Keycloak_HTTPS_SSL_6.png)
+    ![Keycloak_HTTPS_SSL_6](../../../../../../images/Keycloak_HTTPS_SSL_6.png)
 
 5. Add openid client scope (if not available), select Client Scopes -> Create Client
 
     - Name: openid
     - Click “Save”
 
-    ![Keycloak_HTTPS_SSL_7](../images/Keycloak_HTTPS_SSL_7.png)
+    ![Keycloak_HTTPS_SSL_7](../../../../../../images/Keycloak_HTTPS_SSL_7.png)
 
 6. Add openid client scope to client (if not added), select Clients -> dxtest(client name) -> client scopes -> add client scope -> select openid -> Add as default.
 
-    ![Keycloak_HTTPS_SSL_8](../images/Keycloak_HTTPS_SSL_8.png)
+    ![Keycloak_HTTPS_SSL_8](../../../../../../images/Keycloak_HTTPS_SSL_8.png)
 
 ## What's next
 

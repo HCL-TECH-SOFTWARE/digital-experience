@@ -380,7 +380,7 @@ You can download entire code for the above example from [here](https://git.cwp.p
     1. Check your JRE
     1. Click Run
 
-    ![Running maven project](images/DX_JAAS_MODULE_ECLIPSE_RUN.png)
+    ![Running maven project](../../../../../../../images/DX_JAAS_MODULE_ECLIPSE_RUN.png)
 
 1. Once it is complete you will get `dx.jaas.sample.jar` file in `dx.jaas.sample\target\dx.jaas.sample.jar` folder
 
