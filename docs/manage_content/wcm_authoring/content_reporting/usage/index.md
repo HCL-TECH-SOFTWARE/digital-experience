@@ -9,4 +9,4 @@ This section provides the steps on how to export a content report.
 -   **[Using the Content Reporting Bulk Update feature](../usage/bulk_update_report.md)**<br>
 This section provides the steps on how to use Content Reporting to allow content managers to update expiry dates and add, remove, or replace an owner or author in bulk.
 -   **[Bookmarking](./usage/bookmarking_content_report.md/)**  
-This section details how to use the bookmarking feature in HCL Content Reporting.
+This section provides information on how to bookmark generated reports in HCL Content Reporting.
