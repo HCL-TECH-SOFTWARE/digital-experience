@@ -2,7 +2,7 @@
 
 [Google Analytics 4](https://support.google.com/analytics/answer/10089681) (GA4) has replaced Universal Analytics effective July 2023. For more information, refer to the [Google Analytics notice document](https://support.google.com/analytics/answer/11583528?hl=en). 
 
-GA4 provides ways for website owners to collect data on the visitors of their website such as their activities and interactions. With this tool, you can view the resulting web analytics tracking and assess the effectiveness of your Digital Experience (DX) site pages with end user audiences. Refer to the following steps to use GA4 with [HCL Digital Experience](https://www.hcl-software.com/dx).
+GA4 provides ways for website owners to collect data on the visitors of their website such as their activities and interactions. With this tool, you can view the resulting web analytics tracking and assess the effectiveness of your Digital Experience (DX) site pages with end user audiences. Refer to the following steps to use GA4 with [HCL DX](https://www.hcl-software.com/dx).
 
 ## Installing Google Analytics 4
 
@@ -104,7 +104,7 @@ In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google
 
     For a list of Active Site Analytics tags associated with HCL DX site pages that can be tracked by the Google Analytics Aggregator, see the topics [How Active Site Analytics data is represented in the portal](../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/collecting_analytics_data/how_asa_data_is_represented_in_portal/index.md) and [Supported aggregator tags](../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/collecting_analytics_data/how_asa_data_is_represented_in_portal/sa_asa_aggr_tags.md).
  
-6.	Access the HCL Digital Experience site page analytics from the Google Analytics Dashboard [Realtime Report](https://support.google.com/analytics/answer/9271392?sjid=2012704651258872253-NA) to analyze HCL DX site activity. Take note that the Realtime Report is new with GA4. For an overview, see [Overview of Google Analytics reports](https://support.google.com/analytics/answer/9212670?hl=en&ref_topic=12153537,12153943,2986333,&sjid=2012704651258872253-NA&visit_id=638356755288911187-1947930948&rd=1).
+6.	Access the HCL DX site page analytics from the Google Analytics Dashboard [Realtime Report](https://support.google.com/analytics/answer/9271392?sjid=2012704651258872253-NA) to analyze HCL DX site activity. Take note that the Realtime Report is new with GA4. For an overview, see [Overview of Google Analytics reports](https://support.google.com/analytics/answer/9212670?hl=en&ref_topic=12153537,12153943,2986333,&sjid=2012704651258872253-NA&visit_id=638356755288911187-1947930948&rd=1).
     
     After installing and configuring the aggregator to track analytics from specific HCL DX site pages, DX content authors and site owners with access to Google Analytics can view the DX site activity. Site activity is tracked and reflected in Google Analytics Dashboard's [GA4] Real-time reports as an increase in the page views and active users.
 
