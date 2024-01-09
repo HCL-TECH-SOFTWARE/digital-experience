@@ -18,6 +18,6 @@ Refer to the following steps to bookmark a generated report:
 
 3. After generating a report, you can bookmark the page in your browser or copy the URL in the address bar to share the report.
 
-## Automatic Refresh
+## Automatic refresh in reports
 
 Reports automatically reload when you switch tabs and then return to the **Content Reporting** tab.
