@@ -1,4 +1,4 @@
-# Search by date and date ranges
+# Searching by date and date ranges
 
 You can search documents by date and date ranges. The used date formats can be changed by the HCL DX administrator. Dates can be specified by using the format **yyyy-MM-dd**. You can also specify the time as well as the date by using the format **yyyy-MM-dd,hh:mm**. The following examples show which search terms are supported:
 

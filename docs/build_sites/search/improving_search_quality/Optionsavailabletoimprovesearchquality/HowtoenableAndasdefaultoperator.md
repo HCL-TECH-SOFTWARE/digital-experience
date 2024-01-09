@@ -1,6 +1,6 @@
-# How to enable 'And' as default operator
+# Enabling 'AND' as default operator
 
-The change is performed by adding a configuration parameter for the HCL DX search service. Once this parameter is applied it is required to restart the Portal Server and/or remote search service as required.
+Add a configuration parameter for the HCL DX search service and apply the parameter to restart the Portal Server and/or remote search service as required.
 
 The configuration parameters are:
 

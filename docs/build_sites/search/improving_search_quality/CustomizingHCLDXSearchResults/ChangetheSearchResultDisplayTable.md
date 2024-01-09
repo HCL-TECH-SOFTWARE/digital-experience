@@ -4,13 +4,13 @@ To display the search results in different formats, the following files in the D
 
 //Profiles/wp_profile/installedApps/DmgrWPCell/PA_Search_Center.ear/searchCenter.war/js/ibm/portal/search/SearchCenter/xslt/result.xsl
 
-**The `result.xsl` file is used to process the search result atom feed. The default results are presented in standard columns are Relevance, Icon, Title, Person, and Date.**
+The `result.xsl` file is used to process the search result atom feed. The default results that are presented in standard columns are Relevance, Icon, Title, Person, and Date.
 
 [](../../../../images/Change_the_search_result_display_table.png)
 
-The default `result.xsl` controls the display format. To customize the display to suit your organization needs, the display table section inside the `result.xsl `needs to be modified. Use the **Extensible Stylesheet Language** to modify the table section of the `result.xsl`. 
+The default `result.xsl` controls the display format. To customize the display to suit your organization needs, the display table section inside the `result.xsl ` must be modified. Use the **Extensible Stylesheet Language** to modify the table section of the `result.xsl`. 
 
-In this example, only two columns are used in the table. The first column displays the file type and the second column display the title. The snippet of the modified result.xsl is shown below. When the result document is coming from the WCM content, the default icon is shown in the first column. When the result is a file, the first column shows the file extension based on the mime type. The titles for those files are coming from the first part of the summary field and are shown in the second column of the result table.
+In this example, only two columns are used in the table. The first column displays the file type and the second column displays the title. The snippet of the modified result.xsl is shown below. When the result document is coming from the WCM content, the default icon is shown in the first column. When the result is a file, the first column shows the file extension based on the mime type. The titles for those files are from the first part of the summary field and are shown in the second column of the result table.
 
 ```yaml
         <td width="2%">
