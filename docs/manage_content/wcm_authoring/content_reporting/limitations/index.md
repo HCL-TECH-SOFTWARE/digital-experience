@@ -30,7 +30,7 @@ Take note of the following limitations when using HCL Content Reporting:
 ## Bookmarking reports
 
 -  The bookmarked URL from HCL Content Reporting does not function in a non-authenticated user session. You must log in first to your Digital Experience account before you can access the bookmarked URL.
--  When you change the language and then go to a bookmarked report, the system fails to retain the modifications and redirects you to the HCL Content Reporting landing page.
+-  Content reporting will fail to retain the report and will be redirected to the Content Reporting landing page when changing the language using the language switcher on the toolbar.
 
 ## User interface
 

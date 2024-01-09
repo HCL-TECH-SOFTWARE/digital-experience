@@ -4,7 +4,7 @@ Starting CF217, content managers can bookmark reports generated using HCL Conten
 
 ## Prerequisite
 
-Content Reporting should be installed and configured to HCL Digital Experience 9.5 release update CF213 or higher. See instructions to install to supported container environments to the [Install HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
+Beginning with HCL Digital Experience 9.5 release update CF214, Content Reporting is enabled by default. For HCL Digital Experience 9.5 release update CF213, Content Reporting should be installed and configured. For instructions on installing Content Reporting manually on supported environments, see the [Installing HCL Digital Experience 9.5 Content Reporting](../installation/index.md) topic.
 
 ## Bookmarking a report
 
@@ -20,4 +20,4 @@ Refer to the following steps to bookmark a generated report:
 
 ## Automatic Refresh
 
-Reports automatically reload when you switch tabs and then return to the **Content Reports** tab.
+Reports automatically reload when you switch tabs and then return to the **Content Reporting** tab.
