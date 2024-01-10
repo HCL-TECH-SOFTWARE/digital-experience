@@ -1,6 +1,6 @@
 # Applying boost factors to specific fields (metadata)
 
-The relevancy calculation does not account for is the structural information of the content and the informative weight of keywords stored in individual metadata fields. For example if a search term appears in the title of a document, its contribution to the relevance score should be higher than an occurrence of that search term somewhere in a sentence in the body text of that document.
+The relevancy calculation does not account for the structural information of the content and the informative weight of keywords stored in individual metadata fields. For example if a search term appears in the title of a document, its contribution to the relevance score should be higher than an occurrence of that search term somewhere in a sentence in the body text of that document.
 
 ![](../../../../images/Applyingboostfactorstospecificfields_1.png)
 
@@ -10,20 +10,20 @@ A feature is introduced (with HCL DX V8.0.0.1 CF209) which allows administrators
 
 ![](../../../../images/Applyingboostfactorstospecificfields_2.png)
 
-To enabled this field, the following search service configuration parameter is available:
+To enable this field, the following search service configuration parameter is available:
 
 Name: boostingSettings
 
 Value: {"phraseBoost": {"Enabled":"true"}, "fieldBoost": [{"field":"title", "boost": 3.0}, 
 {"field":"description", "boost":3.0}, {"field":"keywords", "boost":2.0}]}
 
-`phraseboost`: not mandatory, could add value – which is language dependent
+`phraseboost`: not mandatory, but could add value (which is language dependent)
 
 `fieldboost`: sample provided for default/commonly found metadata fields
 
-Can also include other metadata fields (with string-based values) 
+This can also include other metadata fields with string-based values.
 
-“boost” should be specified in a range between 1.0 to 10.0, and be used with care (suggested to stay in the range between 1.0 and 3.0).
+`boost` should be specified in a range between 1.0 to 10.0, and be used with care. This value is suggested to stay in the range between 1.0 and 3.0.
 
 Example:
 A user searches for the terms “Editing content in web content management”.

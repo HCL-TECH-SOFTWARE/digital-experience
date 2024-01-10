@@ -8,4 +8,4 @@ There are two ways to configure external searches:
 
 - Define external scopes that allow visitors to directly start external searches from the scope drop-down of the HCL DX search box. The search results display in a new browser window.
 
-- Define an external search engine that contributes results to the Search Center results page. Site visitors see the external search engine results from the Search Center page in the External Results portlet. 
+- Define external search engine that contributes results to the Search Center results page. Site visitors see the external search engine results from the Search Center page in the External Results portlet. 
