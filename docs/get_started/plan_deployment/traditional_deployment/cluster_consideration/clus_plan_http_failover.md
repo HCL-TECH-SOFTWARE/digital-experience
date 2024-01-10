@@ -1,12 +1,12 @@
 # HTTP session failover
-<!-- This topic needs a short description that tells users what information they'll find here. -->
-View the global settings portlet to verify which server is handling user requests for a session.<!-- Why do readers need to verify which server is doing what? Looks like you say the same thing in the second paragraph. Consider deleting the first paragrah. -->
+
+This topic provides information when a failover happens and the failover support available for HCL Digital Experience (DX).
 
 In a clustered environment, all requests for a particular session are directed to the same server instance in the cluster. In other words, after a user establishes a session (for example, by logging in), the user is served by the same server instance during the session.
 
 To verify which server is handling user requests for a session, you can view the global settings portlet. This portlet displays the node name of the server that is handling requests. If one of the servers in the cluster fails, the request is rerouted to another server in the cluster. If distributed sessions support is enabled, the new server can access session data from the database or another server instance.
 
-By default, failover support is available for HCL Portal and any portlets that are installed with the product. To take advantage of failover support with your own developed portlets, you must ensure that your portlets are correctly implemented.
+By default, failover support is available for HCL DX and any portlets that are installed with the product. To take advantage of failover support with your own developed portlets, you must ensure that your portlets are correctly implemented.
 
 Distributed session support must be configured separately in WebSphere® Application Server. Refer to the WebSphere Application Server documentation for information:
 
@@ -15,7 +15,7 @@ Distributed session support must be configured separately in WebSphere® Applica
 
 ## Failover and lost data
 
-Data that is stored in the JVM memory is not managed by the application server or the HCL Portal server because replication might be lost in the case of failover. Even with the distributed session support, users cannot recover any uncommitted information that is not stored in sessions or other replicated data areas. In such cases, users might restart a transaction after a failover occurs. For example, if you are working with a portlet and moved between several screens when a failover occurs, you return to the initial screen. If you are attempting to deploy a portlet when a failover occurs, the deployment might not be successful. Therefore, you must redeploy the portlet. The validity <!-- I'm sure what validity means here. Integrity? Status? How is a user login session valid or invalid? --> of user login sessions is maintained despite node failures with distributed session support enabled.
+Data that is stored in the JVM memory is not managed by the application server or the HCL DX server because replication might be lost in the case of failover. Even with the distributed session support, users cannot recover any uncommitted information that is not stored in sessions or other replicated data areas. In such cases, users might restart a transaction after a failover occurs. For example, if you are working with a portlet and moved between several screens when a failover occurs, you return to the initial screen. If you are attempting to deploy a portlet when a failover occurs, the deployment might not be successful. Therefore, you must redeploy the portlet. The validity <!-- I'm sure what validity means here. Integrity? Status? How is a user login session valid or invalid? --> of user login sessions is maintained despite node failures with distributed session support enabled.
 
 In cases when a portlet does not support failover, a `Portlet unavailable` message is displayed for the portlet after a failover occurs. If a portlet supports partial or incomplete failover, some data that is displayed before the failover might disappear after the failover occurs. The portlet might not work as expected. In such extreme cases, the user must log out and log in to resume normal operation.
 
