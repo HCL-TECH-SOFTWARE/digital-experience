@@ -52,7 +52,7 @@ Complete the following steps to remove Security Access Manager from the HCL Digi
         !!!note
             The systemcred.dn property cannot be removed.
 
-    3.  Remove the accessmanagervault.properties file from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/PortalServer/config/config directory.
+    3.  Remove the accessmanagervault.properties file from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md)/PortalServer/config/config directory.
 
 
         !!!note
@@ -68,10 +68,10 @@ Complete the following steps to remove Security Access Manager from the HCL Digi
 7.  Run the following task to remove the connection to Security Access Manager:
 
 
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
-    -   IBM i: ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
-    -   Windows™: ConfigEngine.bat run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
-    -   z/OS®: ./ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md)/ConfigEngine directory
+    -   IBM i: ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md)/ConfigEngine directory
+    -   Windows™: ConfigEngine.bat run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md)\\ConfigEngine directory
+    -   z/OS®: ./ConfigEngine.sh run-svrssl-unconfig -DWasPassword=password -Dwp.ac.impl.PDAdminPwd=password from the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md)/ConfigEngine directory
 
     **Clustered environments:**
 
@@ -86,4 +86,5 @@ Complete the following steps to remove Security Access Manager from the HCL Digi
 9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../../../../stopstart.md).
 
 
-
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

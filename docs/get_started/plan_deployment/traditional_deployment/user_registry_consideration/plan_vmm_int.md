@@ -18,10 +18,9 @@ The preceding diagram includes the following components:
 
 -   **User registry adapter**
 
-    An implementation of the VMM SPI that enables VMM to connect to a specific repository, whether an LDAP directory, database, files, or other repository. Registry adapters enable communication between HCL Portal and any repository.
+    This adapter is an implementation of the VMM SPI that enables VMM to connect to a specific repository, whether an LDAP directory, database, files, or other repository. Registry adapters enable communication between HCL Portal and any repository.
 
     **Important:** You must create a user registry adapter if you plan to use a custom user registry or repository that HCL Portal does not support as the product is delivered. To create a user registry adapter, implement the wim.Repository interface. Refer to the following topics in the WebSphere® Application Server documentation for information and instructions:
-
     -   *Repository SPI \(System programming interfaces for virtual member manager adapters\)*
     -   *Sample custom adapters for federated repositories examples*
 

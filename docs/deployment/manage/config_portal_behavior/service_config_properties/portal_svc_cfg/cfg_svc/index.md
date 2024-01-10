@@ -536,3 +536,4 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
     -   [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)
     -   [Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_tfimsaml_sso.html)
     -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_perf_tun.html)
+    - [WebSphere® Integrated Solutions Console](../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

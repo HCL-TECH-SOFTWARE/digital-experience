@@ -50,5 +50,6 @@ In a remote search environment, the remote search server must be configured for 
 
     5.  Restart the WebSphere Application Server on which the PSEStandalone is installed.
 
-
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

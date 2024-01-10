@@ -16,5 +16,6 @@ If you proceed with this method of migration for Portal Version 8.0.0.1 on WebSp
 
 
 ???+ info "Related information"  
-    -   [Migration overview](../../../../../../deployment/manage/migrate/mig_over.md)
+    - [Migration overview](../../../../../../deployment/manage/migrate/mig_over.md)
+    - [WebSphere® Integrated Solutions Console](../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

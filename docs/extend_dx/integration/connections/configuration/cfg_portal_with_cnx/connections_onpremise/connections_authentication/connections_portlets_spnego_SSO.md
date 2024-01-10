@@ -120,5 +120,6 @@ Configuring HCL Connections and HCL Portal to share a single deployment manager 
 
     6.  Synchronize the node and restart the deployment manager node. If you cannot manage the Portal node on the WebSphere Application Server Integrated Solutions Console, manually synchronize the node and restart the deployment manager node.
 
-
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

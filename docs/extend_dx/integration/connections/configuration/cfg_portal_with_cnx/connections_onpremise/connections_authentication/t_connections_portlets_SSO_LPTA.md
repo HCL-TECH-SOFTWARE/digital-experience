@@ -53,3 +53,6 @@ To allow SSO between HCL Connections and HCL Portal, complete the following step
 
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
