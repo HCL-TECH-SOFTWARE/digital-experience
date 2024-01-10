@@ -13,8 +13,8 @@ This document provides instruction to adjust the user login flow within DX. When
 On a high level, the following tasks must be executed to establish this configuration:
 
 1. [Detaching the existing login option](#detaching-the-existing-login-option-setting-up-the-admin-login-option)
-1. [Creating the new IdP specific login option](#creating-the-new-idp-specific-login-option)
-1. [Validate everything is working as expected](#testing-the-oidc-login-flow)
+2. [Creating the new IdP specific login option](#creating-the-new-idp-specific-login-option)
+3. [Validate everything is working as expected](#testing-the-oidc-login-flow)
 
 ## Detaching the existing login option, setting up the admin login option
 
