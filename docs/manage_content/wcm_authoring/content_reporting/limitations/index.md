@@ -27,6 +27,11 @@ Take note of the following limitations when using HCL Content Reporting:
 -   The CSV export function uses the browser's blob storage. If a large CSV export is attempted, users might encounter out-of-memory errors with the browser. This prevents the successful download of any large file.
 -   Selecting a subset of items in the report for export is not allowed.
 
+## Bookmarking reports
+
+-  The bookmarked URL from HCL Content Reporting does not function in a non-authenticated user session. You must log in first to your Digital Experience account before you can access the bookmarked URL.
+-   When you go to a bookmarked report and then change the language using the language switcher, the system fails to retain the report and redirects you to the HCL Content Reporting landing page.
+
 ## User interface
 
 Note that the following pages do not support server-side pages, which might cause an unstable UI when processing large amounts of data.
