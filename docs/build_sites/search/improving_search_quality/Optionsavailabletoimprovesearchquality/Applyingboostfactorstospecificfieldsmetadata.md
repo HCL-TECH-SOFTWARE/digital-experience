@@ -1,6 +1,6 @@
 # Applying boost factors to specific fields (metadata)
 
-The relevancy calculation does not account for the structural information of the content and the informative weight of keywords stored in individual metadata fields. For example if a search term appears in the title of a document, its contribution to the relevance score should be higher than an occurrence of that search term somewhere in a sentence in the body text of that document.
+The relevancy calculation does not account for the structural information of the content and the informative weight of keywords stored in individual metadata fields. For example, if a search term appears in the title of a document, its contribution to the relevance score should be higher than an occurrence of that search term somewhere in a sentence in the body text of that document.
 
 ![](../../../../images/Applyingboostfactorstospecificfields_1.png)
 
