@@ -108,6 +108,8 @@ Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including
 
 ## Copying a media asset
 
+When copying a media asset, only the latest version of the source assets is copied.
+
 Refer to the following steps if you want to copy a media asset from one collection to another.
 
 1. Click the **more menu** option of the asset. 
