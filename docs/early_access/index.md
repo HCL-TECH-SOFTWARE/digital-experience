@@ -1,12 +1,12 @@
 # HCL Digital Experience Early Access Program 
 
-## Description
+## Overview
 
 Welcome to the HCL Digital Experience (DX) Early Access Program.
 
 The goal of the HCL DX Early Access Program is for the community of participants to conduct an honest, constructive and thoughtful review and testing of new components introduced for use with the [HCL DX 9.5](https://opensource.hcltechsw.com/digital-experience/latest/) software. 
 
-**HCL DX Early Access Program Milestone 1** includes the following components:
+[HCL DX Early Access Program Milestone 1](eap_milestone_1.md) includes the following component:
 
 - Open Liberty portlet container (for Kubernetes and Docker)
 

@@ -76,63 +76,68 @@ DXClient Tooling (dxclient_vx_xxxxxxxx-xxxx.zip) that are used to support CI/CD 
 * HCL Digital Experience Cloud
 * HCL_Portal_8.5_9.0_9.5_CFs
 
-Click on the download package to select the download file(s).
+Click on the download package to select the download files.
 
-If you only need to download a single file, you can click on the File Name hyperlink to start HTTPS download.
+If you only need to download a single file, click on the **File Name** hyperlink to start the HTTPS download.
 
 ![Select a single file](images/containerupdates.png)
 
 You can download multiple files at the same time. Select the files you want to download and click **Download Selected Files**. If you are doing this for the first time, you are prompted to download and install Download Manager.
 
-!!!important
-    Using Download Manager is not recommended. There are issues encountered with Download Manager and it is recommended to download files individually instead.
+!!!important "Using Download Manager not recommended"
+    There are issues encountered with Download Manager and it is recommended to download files individually instead.
 
 ![Download manager](images/downloadfiles.png)
 
-If you encounter issues with finding a software or downloading files, refer to the [Customer Support FAQ](support-faqs.md) section for support.
+If you encounter issues with finding  software or downloading files, refer to the [Customer Support FAQ](support-faqs.md) section for support.
 
 ## For HCL Business Partners
 
-There are no **Downloads** tab or **Your Downloads** widget in the home page.
-
 Go to the **Quick Links** widget and click **List of Entitlements** to find the product.
+
+You can find the product under **Activation & Entitlements > List Entitlements**.
 
 ![List of entitlements](images/download7.png)
 
-Alternatively, go to **Activation & Entitlements** then click **List Entitlements**.
+Alternatively, go to the **Quick Links** widget and click **List Entitlements** to find the product.
 
 ![List of entitlements navigation](images/download8.png)
 
-If you are looking for a specific product sold to a company, change the Search scope to choose **Sold-to ID** if you know your customer’s HCL ID. If you do not know your customer’s HCL ID, switch to **Sold-to Display name** and type in a keyword from your customer’s company name.
-
+If you are looking for a specific product sold to a company, change the Search scope to choose **Sold-to ID** if you know your customer’s HCL ID. If you do not know your customer’s HCL ID, switch to **Sold-to display name** and type in a keyword from your customer’s company name.
+<!---
 ![Sold-to search](images/download9.png)
-
-You can also search the view by **Product** name as shown in the following image.
+-->
+You can also search the view by **Product** name.
 
 ![Search by product](images/download10.png)
 
-To be able to tell which Download Packages are associated with the Product or the Entitlement, click the **Download Now** button.
+<!--To be able to tell which Download Packages are associated with the Product or the Entitlement, click the **Download Now** button.
 
 ![Download now](images/download11.png)
 
 
 The following is a sample list of Download Packages associated with the selected entitlement.
 
-![List of downloads](images/download12.png)
+![List of downloads](images/download12.png)-->
+
+Go to **Downloads > List Downloads** to view the Download packages associated with the Product or the Entitlement. Select the individual offering from the product list. 
+
+![Download package](images/downloadpackage.png)
 
 From here, select the desired Download Package to look for the individual files and proceed with the Download.
 
-Refer to this section to know more about [DX Download Packages](#package-name-according-to-dx-offering).
-
-If you only need to download a single file, you can click on the File Name hyperlink to start HTTPS download.
+It is recommended to download files individually. To start the HTTPS download, click the hyperlink under the **File Name** column.
 
 ![Select a single file](images/download13.png)
 
-You can download multiple files at the same time by selecting the files you want to download and clicking on **Download Selected Files**. If you are doing this for the first time, you are prompted to download and install Download Manager.
+You can download multiple files at the same time by selecting the files you want to download and clicking **Download Selected Files**. If you are doing this for the first time, you are prompted to download and install Download Manager.
 
-!!!important
-    Using Download Manager is not recommended. There are issues encountered with Download Manager and it is recommended to download files individually instead.
+!!!important "Using Download Manager not recommended"
+    There are issues encountered with Download Manager and it is recommended to download files individually instead.
 
 ![Download manager](images/download14.png)
 
-If you encounter issues with finding a software or downloading files, refer to the [Customer Support FAQ](support-faqs.md) section for support.
+If you encounter issues with finding software or downloading files, refer to the [HCL Customer Support Program Resources site](https://support.hcltechsw.com/csm) for options to get support.
+
+???+ info "Related information"
+    - [Download and Install from the Software Licensing Portal](../../../get_started/download/software_licensing_portal/index.md)
