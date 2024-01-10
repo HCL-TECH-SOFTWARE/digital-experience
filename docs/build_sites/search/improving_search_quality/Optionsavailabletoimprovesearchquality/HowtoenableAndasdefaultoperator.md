@@ -1,8 +1,6 @@
 # Enabling 'AND' as default operator
 
-Add the configuration parameter for the HCL DX search service to change the performance. Apply the parameter and restart the Portal Server and/or remote
-search service as required.
-
+Add the configuration parameter for the HCL DX search service to change the performance. Apply the parameter and restart the Portal Server and/or remote search service as required.
 
 The configuration parameters are:
 
