@@ -4,7 +4,7 @@ In the HCL DX search center, the default search logic for the entry is the “OR
 
 1. Log in to the Remote Search Server.
 
-2. Search for the search collection configuration file and there is one configuration file for each collection. 
+2. Search for the search collection configuration file. There is one configuration file for each collection. 
     
     The file name format is `collection_config_***.xml` where *** is a sequence of generated alphanumeric numbers. The files are in directory /apps/search/config/.
 
