@@ -12,7 +12,7 @@ In the HCL DX search center, the default search logic for the entry is the “OR
 
     <property name="DEFAULT_SEARCH_OPERATOR" value="and"/>
 
-The property should be in the `collectionInfo` tag.
+    The property should be in the `collectionInfo` tag.
 
 4. Save the changes to all configuration files.
 
