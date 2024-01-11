@@ -1,7 +1,7 @@
 # Crawling web content with search seedlists
 
 
-The HCL Digital Experience and Web Content Manager Search supports the use of seedlists to make crawling websites and their metadata more efficient. It also provides content owners with fine-grained control over how content and metadata are crawled.
+The HCL Digital Experience and Web Content Manager Search support the use of seedlists to make crawling websites and their metadata more efficient. The content owners are provided with fine-grained control over how content and metadata are crawled.
 
 When crawling content is generated with HCL Web Content Manager, you can configure the DX platform portal to use seedlist support.
 
