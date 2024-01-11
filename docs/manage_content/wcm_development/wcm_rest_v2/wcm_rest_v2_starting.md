@@ -16,7 +16,7 @@ Starting CF217, the [WCM REST v2 Swagger API Explorer](https://opensource.hcltec
 - Workflow Actions
 - Workflow Operations
 
-[WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) encompasses all search parameters that were available from WCM V1 in the existing Search API of WCM REST V2 Swagger Explorer.
+[WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) encompasses all search parameters that are available from WCM V1 in the existing Search API of WCM REST V2 Swagger Explorer.
 
 For the WCM REST v1 version of the mentioned APIs, refer to **[How to manage web content items by using REST](../wcm_rest/wcm_rest_mng_content/index.md)**.
 
