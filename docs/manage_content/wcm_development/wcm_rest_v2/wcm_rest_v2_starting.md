@@ -4,7 +4,7 @@ title: Getting started with the REST service for Web Content Manager v2
 
 # Getting started with the REST service for Web Content Manager v2
 
-Starting from CF217, [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) has below mentioned list of API additions and modifications.
+Starting CF217, the [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) has new API additions and modifications.
 
 [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces new Wrapper APIs corresponding to the following WCM V1 API functionalities:
 
@@ -16,9 +16,9 @@ Starting from CF217, [WCM REST v2 Swagger API Explorer](https://opensource.hclte
 - Workflow Actions
 - Workflow Operations
 
-[WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) now encompasses all search parameters that were available from WCM V1 in the existing Search API of WCM REST V2 Swagger Explorer.
+[WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) encompasses all search parameters that were available from WCM V1 in the existing Search API of WCM REST V2 Swagger Explorer.
 
-Please refer to more detailed document on **[How to manage web content items by using REST](../wcm_rest/wcm_rest_mng_content/index.md)** for WCM REST v1 version of the above API's.
+For the WCM REST v1 version of the mentioned APIs, refer to **[How to manage web content items by using REST](../wcm_rest/wcm_rest_mng_content/index.md)**.
 
 !!! note
     ```
@@ -27,7 +27,7 @@ Please refer to more detailed document on **[How to manage web content items by 
 
 ## WCM REST V2 API explorer
 
-The WCM REST V2 API explorer allows developers using the Digital Experience WCM REST APIs to explore and test all the WCM V2 APIs. 
+With WCM REST V2 API explorer, developers using the Digital Experience WCM REST APIs can explore and test all the WCM V2 APIs. 
 
 Access the WCM REST V2 API explorer located at:
 
