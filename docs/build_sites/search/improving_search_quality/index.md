@@ -18,6 +18,4 @@ The search quality might get affected for following reasons:
 
 - The content is of poor quality. For example, the title of the document suggests a different type of information compared to what the main text of the document actually reveals. Similar scenario is when the one significant keyword of the title does not appear anywhere else in the text – or it maybe appears only once.
 
-- The relevance score calculated is correct, based on the statistical information provided by the corpus and mapping to the candidates identified for the search result. However, some less important keywords tend to dominate over others. 
-
-For example, a five-word query matches best to a document containing only three of those keywords, but these three have a high number of occurrences within that document.
+- The relevance score calculated is correct, based on the statistical information provided by the corpus and mapping to the candidates identified for the search result. However, some less important keywords tend to dominate over others. For example, a five-word query matches best to a document containing only three of those keywords, but these three have a high number of occurrences within that document.

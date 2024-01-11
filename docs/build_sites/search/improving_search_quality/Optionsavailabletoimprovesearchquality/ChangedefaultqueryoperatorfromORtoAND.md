@@ -1,4 +1,4 @@
-# Information on 'OR' default query operator
+# Using 'OR' default query operator
 
 When a user enters more than one search term, the HCL Digital Experience (DX) search engine applies a logical 'OR' operator by default. For a document to qualify for the search result list, it is enough that only one of those terms is included in a document. However, including two or more words leads to better search results.
 
