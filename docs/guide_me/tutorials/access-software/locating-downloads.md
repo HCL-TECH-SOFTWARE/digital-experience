@@ -93,8 +93,6 @@ If you encounter issues with finding  software or downloading files, refer to th
 
 ## For HCL Business Partners
 
-Go to the **Quick Links** widget and click **List of Entitlements** to find the product.
-
 You can find the product under **Activation & Entitlements > List Entitlements**.
 
 ![List of entitlements](images/download7.png)
@@ -130,12 +128,12 @@ It is recommended to download files individually. To start the HTTPS download, c
 
 ![Select a single file](images/download13.png)
 
-You can download multiple files at the same time by selecting the files you want to download and clicking **Download Selected Files**. If you are doing this for the first time, you are prompted to download and install Download Manager.
+<!--You can download multiple files at the same time by selecting the files you want to download and clicking **Download Selected Files**. If you are doing this for the first time, you are prompted to download and install Download Manager.
 
 !!!important "Using Download Manager not recommended"
     There are issues encountered with Download Manager and it is recommended to download files individually instead.
 
-![Download manager](images/download14.png)
+![Download manager](images/download14.png)-->
 
 If you encounter issues with finding software or downloading files, refer to the [HCL Customer Support Program Resources site](https://support.hcltechsw.com/csm) for options to get support.
 
