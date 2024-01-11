@@ -6,7 +6,7 @@ In the HCL DX search center, the default search logic for the entry is the “OR
 
 2. Search for the search collection configuration file and there is one configuration file for each collection. 
     
-    The configuration file name format is `collection_config_***.xml` where *** is a sequence of generated alphanumeric numbers. The files are placed in directory /apps/search/config/.
+    The file name format is `collection_config_***.xml` where *** is a sequence of generated alphanumeric numbers. The files are in directory /apps/search/config/.
 
 3. Add the following property to the list of properties:
 

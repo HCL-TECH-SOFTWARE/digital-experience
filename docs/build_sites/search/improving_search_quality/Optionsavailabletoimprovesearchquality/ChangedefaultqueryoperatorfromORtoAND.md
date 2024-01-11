@@ -1,4 +1,4 @@
-# Changing default query operator from 'OR' to 'AND'
+# Changing the default query operator from 'OR' to 'AND'
 
 When a user enters more than one search term, the HCL Digital Experience (DX) search engine applies a logical 'OR' operator by default. For a document to qualify for the search result list, it is enough that only one of those terms is included in a document. However, including two or more words leads to better search results.
 
@@ -8,7 +8,7 @@ For context, the user perception is something learned by using a search engine l
 
 ## Enabling 'AND' as default operator
 
-Add the configuration parameter for the HCL DX search service. Apply the parameter and restart the Portal Server and/or remote search service as required.
+To enable the 'AND' query operator, add the configuration parameter for the HCL DX search service. Apply the parameter and restart the Portal Server and/or remote search service as required.
 
 Use the following configuration parameter:
 
