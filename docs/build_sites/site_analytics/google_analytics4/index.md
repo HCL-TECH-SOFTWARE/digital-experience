@@ -41,7 +41,7 @@ In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google
     !!!important
         The theme profile used by the pages must have `wp_analytics` or at least `wp_analy: tics_aggregator`.
 
-    - For HCL DX without Practitioner Studio installed:
+    - For HCL DX without [Practitioner Studio](../../practitioner_studio/index.md) installed:
 
         1. On Site Manager, go to **Page > Page Settings > Page Properties > Advanced**.
 
@@ -49,7 +49,7 @@ In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google
 
         3. Select **Portal User Interface > Manage Pages**.
 
-    - For HCL DX 9.5 with Practitioner Studio installed:
+    - For HCL DX 9.5 with [Practitioner Studio](../../practitioner_studio/index.md) installed:
 
         ![Google Analytics with Practitioner Studio](../../../images/ga4_ps.png)
 
