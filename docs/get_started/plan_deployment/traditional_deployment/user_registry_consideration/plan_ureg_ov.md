@@ -1,6 +1,6 @@
 # User registry options
 
-HCL Digital Experience provides various security configuration tasks. In previous versions, one task was available and error recovery was uncertain. Also in previous version, you were unable to expand your user registry to meet growing business needs. HCL DX 9.5 and later offer multiple tasks and you can fine-tune your system to meet your business needs.
+HCL Digital Experience provides various security configuration tasks. In previous versions, one task was available and error recovery was uncertain. Also in previous versions, you were unable to expand your user registry to meet growing business needs. HCL DX 9.5 and later offer multiple tasks and you can fine-tune your system to meet your business needs.
 
 You have the following general security options to choose from:
 
