@@ -52,5 +52,5 @@ Prerequisites:
 
 ## Limitations
 
-- Establish single sign-on \(SSO\) across HCL Digital Experience 9.5 container deployments that share Digital Asset Management services. Each deployment requires to share the same user and group definitions across all participating environments.
+- Establish single sign-on \(SSO\) across HCL Digital Experience 9.5 container deployments that share Digital Asset Management services. Each deployment is required to share the same user and group definitions across all participating environments.
 - Assign the required access control to Digital Asset Management collections to prevent images used during development and authoring from showing up in production rendering for end users.
