@@ -9,10 +9,10 @@ Prerequisites:
 
     ```
     addon:
-    digitalAssetManagement:
-    corsOrigin: ["<target-loadbalancer-url>"]
-    ringApi:
-    corsOrigin: ["<target-loadbalancer-url>"
+      digitalAssetManagement:
+        corsOrigin: ["<target-loadbalancer-url>"]
+      ringApi:
+        corsOrigin: ["<target-loadbalancer-url>"
     ```
 <!---
     1. Add the target host name in `networking` in values.yaml for Core:
