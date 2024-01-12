@@ -11,6 +11,7 @@ The following features and updates are available to customers installing HCL Dig
 - Site Analytics - Integrating Google Analytics 4
 - DXClient - LiveSync commands can be triggered within the target local theme path
 - Updated list of DX offerings
+- HCL Digital Experience Cloud - Product overview
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -79,6 +80,15 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 === "On-Premises"
     [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) is updated with the latest DX offerings. 
+
+### HCL Digital Experience Cloud native
+
+=== "Containers"
+    [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md) is updated with the latest HCL Digital Experience Cloud native. 
+
+=== "On-Premises"
+    [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md) is updated with the latest HCL Digital Experience Cloud native.
+
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
