@@ -8,11 +8,11 @@ Prerequisites:
 - Ensure the [Cross Origin Resource Sharing \(CORS\)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS){:target="_blank"} property is configured in the deployment config map. Add the following values to your helm chart on the DX installation to deploy DAM. Then run helm upgrade.
 
     ```
-        addon:
+    addon:
     digitalAssetManagement:
-        corsOrigin: ["<target-loadbalancer-url>"]
+    corsOrigin: ["<target-loadbalancer-url>"]
     ringApi:
-        corsOrigin: ["<target-loadbalancer-url>"
+    corsOrigin: ["<target-loadbalancer-url>"
     ```
 <!---
     1. Add the target host name in `networking` in values.yaml for Core:
