@@ -42,11 +42,11 @@ Prerequisites:
 
     1. Go to **Administration** \> **Site Management** \> **Pages** \> **Content Root** \> **Practitioner Studio**.
     2. Find the Digital Asset page and select the Edit \(pencil\) icon to edit the page.
-    3. Select the dropdown on the DAM ReactIntegration portlet and configure this portlet.
+    3. Select the dropdown on the DAM React Integration portlet and configure this portlet.
         ![DAM ReactIntegration Portlet](../../../../images/dam_reactintegration_portlet.png)
-    4. Add the Static UI URL: `https://TARGET_Hostname/dx/ui/dam/static` to the DAM ReactIntegration portlet properties.
+    4. Add the Static UI URL: `https://TARGET_Hostname/dx/ui/dam/static` to the DAM React Integration portlet properties.
     5. Save this configuration.
-    6. Follow the same configuration steps in the target Digital Experience 9.5 container server and place the URL in the target server \(see next step\). Configure the DAM ReactIntegration portlet on the target server using the same steps as outlined.
+    6. Follow the same configuration steps in the target Digital Experience 9.5 container server and place the URL in the target server \(see next step\). Configure the DAM React Integration portlet on the target server using the same steps as outlined.
     7. Ensure you apply the same static UI URL \(`https://TARGET_Hostname/dx/ui/dam/static`\) when defining the portlet properties.
       ![Share Digital Asset Management across multiple HCL DX environments](../../../../images/share_dam_multiple.png)
 
