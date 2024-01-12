@@ -18,6 +18,7 @@ theme:
     - search.share
     - search.suggest
     - navigation.prune
+    - content.code.copy
   custom_dir: theme_overrides/
   icon:
     repo: fontawesome/brands/github
