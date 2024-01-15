@@ -19,4 +19,4 @@ TAIs that allow other custom authentication services to interact with WebSphere 
     - [WebSphere Application Server Library](https://www.ibm.com/docs/en/was)
     - [TAM Trust Association Interceptor (TAI++)](https://developer.ibm.com/product-doclinks/)
     - [Extended Tivoli Access Manager Trust Association Interceptor Plus (ETAI)](https://www.ibm.com/support/pages/node/574293)
-
+    - [WebSphere® Integrated Solutions Console](../../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

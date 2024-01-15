@@ -43,4 +43,5 @@ The syntax for these configuration tasks is as follows:
 
 ???+ info "Related information"
      - [Providing short vanity URLs](../adm_vanity_url/van_url_short.md)
+    - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)
 

@@ -23,4 +23,6 @@ To create a new URL, do the following steps:
 
 5.  Click **OK** to save these settings for the new URL. Click **Cancel** if you want to return to without creating the new URL.
 
+???+ info "Related information"
+    - [URL Addressability](../../../../../../build_sites/create_sites/url_addressing/index.md)
 

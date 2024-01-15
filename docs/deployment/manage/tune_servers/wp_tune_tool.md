@@ -45,6 +45,6 @@ Use the following syntax to run the tune-initial-portal-performance task on vert
 -   Linux™ : `./ConfigEngine.sh tune-initial-portal-performance -DServerName=vertical_cluster_servername -DWasPassword=password -DPortalAdminPwd=password -DTuningPropertiesDirectory=local_dir_path`
 -   Windows: `ConfigEngine.bat tune-initial-portal-performance -DServerName=vertical_cluster_servername -DWasPassword=password -DPortalAdminPwd=password -DTuningPropertiesDirectory=local_dir_path`
 
-???+ info "**Related information**"  
-- [Automatically clearing your cache entry](../../../manage_content/pzn/pzn_programming_ref/resource_cache/pzn_auto_cache.md)
+???+ info "Related information"  
+    - [Automatically clearing your cache entry](../../../manage_content/pzn/pzn_programming_ref/resource_cache/pzn_auto_cache.md)
 

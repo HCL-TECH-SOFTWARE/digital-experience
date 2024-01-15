@@ -76,3 +76,7 @@ Sample successful gradle _ear_ task log:
    ![Upload to WAS](../../images/17WASUpload4.png)
 9. When it is done, click the **Save** link near the bottom.
    ![Upload to WAS](../../images/17WASUpload5.png)
+
+
+???+ info "Related information"
+  - [WebSphere® Integrated Solutions Console](../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

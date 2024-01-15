@@ -158,4 +158,5 @@ The portal administrator collects information about the content provider and its
 ???+ info "Related information"  
     -   [Providing short vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md)
     -   [Apache Module mod_rewrite](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html)
+    - [WebSphere® Integrated Solutions Console](../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

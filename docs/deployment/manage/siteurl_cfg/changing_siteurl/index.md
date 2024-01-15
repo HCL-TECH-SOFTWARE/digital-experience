@@ -42,4 +42,5 @@ http://www.example.com:port/products/
 
 ???+ info "Related information"  
     -   [About friendly URLs for web content](../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_workfriendly.md)
+    - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)
 
