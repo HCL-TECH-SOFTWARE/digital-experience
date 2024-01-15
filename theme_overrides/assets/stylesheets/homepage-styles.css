@@ -135,7 +135,7 @@
 }
 
 .dx-hero__content {
-    width: 40%;
+    width: 80%;
     min-width: 520px;
 
 }
@@ -155,7 +155,7 @@
 .content-section {
 
    float: left;
-   width:80%;
+   width:50%;
    color: white;
    min-width:520px;
    
