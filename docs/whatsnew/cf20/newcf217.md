@@ -35,15 +35,16 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ### Web Content Manager - AI assistance for sentiment analysis
 
-(No doc yet)
+=== "Containers"
+    In addition to keyword extraction and auto summarization, you can perform a sentiment analysis on the contents of the elements in your content item. For more information, see []().
 
 ### Web Content Manager - CSRF option in WCM comments
 
 === "Containers"
-    You can enable CSRF tokens to be utilized when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. For information on how ton enable CSRF tokens, see [CSRF protection for adding and deleting comments](../../build_sites/create_sites/developing_managing_content/comments_wcm.md#csrf-protection-for-adding-and-deleting-comments).
+    You can enable CSRF tokens to be used when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. For information on how ton enable CSRF tokens, see [CSRF protection for adding and deleting comments](../../build_sites/create_sites/developing_managing_content/comments_wcm.md#csrf-protection-for-adding-and-deleting-comments).
 
 === "On-Premises"
-    You can enable CSRF tokens to be utilized when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. For information on how ton enable CSRF tokens, see [CSRF protection for adding and deleting comments](../../build_sites/create_sites/developing_managing_content/comments_wcm.md#csrf-protection-for-adding-and-deleting-comments).
+    You can enable CSRF tokens to be used when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. For information on how ton enable CSRF tokens, see [CSRF protection for adding and deleting comments](../../build_sites/create_sites/developing_managing_content/comments_wcm.md#csrf-protection-for-adding-and-deleting-comments).
 
 ### Web Content Manager REST API v2 - Added Wrapper APIs 
 
@@ -77,7 +78,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "On-Premises"
     [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) is updated with the latest DX offerings. 
 
-### HCL Digital Experience Cloud native
+### HCL Digital Experience Cloud - New offerings
 
 === "Containers"
     [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md) is updated with the latest HCL Digital Experience Cloud offering. 
@@ -123,7 +124,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Open Liberty Portlet Container
 
 === "Containers"
-    HCL DX Early Access Program - Milestone 1 is now available. The goal of the HCL Digital Experience Early Access Program is for the community of participants to conduct review and testing of new components introduced for use with the HCL Digital Experience 9.5 software. For more information, including how to access the software and discuss your feedback with HCL, see [HCL Digital Experience Early Access Program ](../../early_access/index.md)
+    HCL DX Early Access Program - Milestone 1 is now available. The goal of the HCL Digital Experience Early Access Program is for the community of participants to conduct review and testing of new components introduced for use with the HCL Digital Experience 9.5 software. For more information, including how to access the software and discuss your feedback with HCL, see [HCL Digital Experience Early Access Program ](../../early_access/index.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
