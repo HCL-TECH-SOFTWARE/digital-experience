@@ -282,6 +282,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 
     -   HCL DX 9.5 CF210 release: **V1.19.0
         -   Removed parameters deprecated during CF201 & CF202 deployment.
+
         -   Added additional attribute - virtualPortalContext. [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
 
     -   HCL DX 9.5 CF209 release: **V1.18.0

@@ -14,8 +14,8 @@ HCL DX provides a wide range of APIs that cover most scenarios, from headless co
 
 | Name | Description | End point |
 | --- | --- | --- |
-| [**HCL Ring API **](https://HCL-TECH-SOFTWARE.github.io/experience-api-documentation/ring-api) | Presents developer entry points to HCL DX 9.5 core platform capabilities which are divided into two main categories: Authorization APIs and Web Content APIs. | /dx/api/core/v1/explorer |
-| [**HCL Digital Asset Management API **](https://HCL-TECH-SOFTWARE.github.io/experience-api-documentation/dam-api) | Presents developer entry points to the Digital Asset Management features of HCL DX 9.5. | /dx/api/dam/v1/explorer |
+| [**HCL Ring API**](https://HCL-TECH-SOFTWARE.github.io/experience-api-documentation/ring-api) | Presents developer entry points to HCL DX 9.5 core platform capabilities which are divided into two main categories: Authorization APIs and Web Content APIs. | /dx/api/core/v1/explorer |
+| [**HCL Digital Asset Management API**](https://HCL-TECH-SOFTWARE.github.io/experience-api-documentation/dam-api) | Presents developer entry points to the Digital Asset Management features of HCL DX 9.5. | /dx/api/dam/v1/explorer |
 | [**HCL Image Processor API**](https://HCL-TECH-SOFTWARE.github.io/experience-api-documentation/image-processor-api) | Presents developer entry points to the Digital Asset Management Image Processor functions of HCL DX 9.5. | /dx/api/image-processor/v1/explorer |
 | [**HCL Personalization API**](https://HCL-TECH-SOFTWARE.github.io/experience-api-documentation/pzn-api) | Presents developer entry points to the Personalization Rule functions of HCL DX 9.5. | /dx/api/pzn/v1/explorer |
 | [**HCL WCM API**](https://HCL-TECH-SOFTWARE.github.io/experience-api-documentation/wcm-api) | Presents redesigned developer entry points to the Web Content Manager functions of HCL DX 9.5. Intended to facilitate the management of Web content, content-sites, and content-pages. | /dx/api/wcm/v2/explorer |

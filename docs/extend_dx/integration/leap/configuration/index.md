@@ -12,28 +12,28 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
 
   For example,
   
-    ```yaml
-    apiVersion: networking.k8s.io/v1
-    kind: Ingress
-    metadata:
-      name: custom-routes
-    spec:
-        ingressClassName: nginx
-        tls:
-        - secretName: dx-tls-cert
-          hosts:
-            - your-kube-deployment.com
-        rules:
-        - host: your-kube-deployment.com
-          http:
-            paths:
-            - path: /apps
-              pathType: Prefix
-              backend:
-                service:
-                  name: leap-deployment-leap
-                  port:
-                    number: 9080
-    ```
+  ```yaml
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: custom-routes
+  spec:
+      ingressClassName: nginx
+      tls:
+      - secretName: dx-tls-cert
+        hosts:
+          - your-kube-deployment.com
+      rules:
+      - host: your-kube-deployment.com
+        http:
+          paths:
+          - path: /apps
+            pathType: Prefix
+            backend:
+              service:
+                name: leap-deployment-leap
+                port:
+                  number: 9080
+  ```
     
 After applying the configuration, both HCL Digital Experience and HCL Leap can be accessed using the provided hostname.

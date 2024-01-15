@@ -1,4 +1,4 @@
-# Web Application Bridge
+# Using the Web Application Bridge
 
 The Web Application Bridge uses reverse proxy technology to integrate web-based content providers, such as the Microsoft SharePoint server, with HCL Digital Experience.
 

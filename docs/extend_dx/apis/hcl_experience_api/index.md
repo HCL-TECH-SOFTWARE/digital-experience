@@ -4,7 +4,7 @@ This shows developers how to provision, configure, and use the HCL Experience AP
 
 ## Overview
 
-The HCL Experience API is a set of OpenAPI-compliant REST APIs you can use to deploy HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. The HCL Experience API includes REST APIs that serve as a wrapper around previously published HCL Digital Experience HTTP-based APIs.
+The HCL Experience API is a set of REST APIs you can use to work with HCL Digital Experience 9.5. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. The HCL Experience API includes REST APIs that serve as a wrapper around previously published HCL Digital Experience HTTP-based APIs. However, note that not all REST APIs are OpenAPI-compliant.
 
 See the [HCL Digital Experience 8.5 and 9.0 topics](../index.md) for additional information about previously published HCL Digital Experience APIs.
 
