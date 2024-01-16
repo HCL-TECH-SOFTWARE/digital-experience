@@ -261,4 +261,7 @@ This topic describes the commands that are used to create, update, delete, and r
 
 ???+ info "Related information"
     - [DXClient](../index.md)
+    - [WebSphere® Integrated Solutions Console](../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
+
 

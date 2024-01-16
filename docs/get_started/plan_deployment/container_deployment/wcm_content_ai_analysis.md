@@ -5,6 +5,8 @@ You can enable AI analysis for Web Content Management (WCM) content in a Kuberne
 !!!note
 	OpenAI ChatGPT is the supported content AI provider for CF213 and later. Custom AI implementation is supported for CF214 and later.
 
+Starting CF216, the default model is switched to ```gpt-3.5-turbo``` because ```text-davinci-003``` is no longer supported by OpenAI from the beginning of 2024.
+
 ## Content AI provider overview
 
 ### OpenAI ChatGPT overview
@@ -141,8 +143,8 @@ To customize AI analysis-related configurations, log in to the WebSphere Applica
 
 ### OpenAI ChatGPT specific custom configurations
 
-- ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. However, the model can be overidden by overriding this property.
-- ```OPENAI_MAX_TOKENS```: Set any positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response.
-- ```OPENAI_TEMPERATURE```: Set any positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text. Higher values produce more diverse and random output, and lower values produce more focused and deterministic output.
+1. ```OPENAI_MODEL```: Currently supported AI model is ```text-davinci-003```. Starting CF216, the AI model is switched to ```gpt-3.5-turbo``` due to OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. However, the model can be overridden by overriding this property. 
+2. ```OPENAI_MAX_TOKENS```: Set any positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. For ```gpt-3.5-turbo```, the maximum value is 4096. It specifies the maximum number of tokens that the model can output in its response.
+3. ```OPENAI_TEMPERATURE```: Set any positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text, with higher values producing more diverse and random output and lower values producing more focused and deterministic output.
 
-After enabling the content AI analysis in DX deployment, use the [WCM REST V2 AI Analysis API](../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) to call the AI analyzer APIs of the configured content AI provider.
+After enabling the Content AI analysis in DX deployment, use the [WCM REST V2 AI Analysis API](../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) to call the AI Analyzer APIs of the configured Content AI Provider.

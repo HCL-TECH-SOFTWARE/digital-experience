@@ -15,4 +15,6 @@ The HCL Digital Experience installation removes the Simple and Protected GSS-API
 6.  Click **OK** and then click the **Save** link to save changes to the master configuration.
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

@@ -22,4 +22,5 @@ The following high-level steps provide guidance for using the IBM Installation M
 3.  While on the **Features** screen, make sure that **Create a new Portal Server Profile** is not selected.
 4.  Proceed with the remaining instructions to complete the binary installation.
 
-
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

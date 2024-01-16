@@ -3,7 +3,6 @@ site_name: HCL Digital Experience Help Center
 site_url: https://opensource.hcltechsw.com/digital-experience/
 site_description: >-
   A next-gen documentation site for HCL Digital Experience.
-use_directory_urls: false
 
 # Theme Configuration
 theme:

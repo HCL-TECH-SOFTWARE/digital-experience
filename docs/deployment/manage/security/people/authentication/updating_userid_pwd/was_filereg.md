@@ -5,8 +5,7 @@ If you are using the file registry in the federation repository to store passwor
 Complete the following steps to change the WebSphere® Application Server administrator password stored in the file registry:
 
 
-1.  Using a command prompt, change to the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/bin directory.
->>>>>>> feature/DXQ-26605b
+1.  Using a command prompt, change to the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md)/bin directory.
 
 2.  Issue the wsadmin -conntype NONE command and press **Enter**.
 
@@ -39,5 +38,6 @@ Complete the following steps to change the WebSphere® Application Server admini
 
 ???+ info "Related information"
     - [Applying fix packs to your portal](../../../../manage_portal_using_iim/apply_fixpacks.md)
+    - [WebSphere® Integrated Solutions Console](../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 
 

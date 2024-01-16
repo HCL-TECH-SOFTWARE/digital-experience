@@ -298,7 +298,9 @@
     display: block;
 }
 
-
+.md-banner--warning {
+    background: var(--md-typeset-mark-color) !important;
+}
 
 
 .persona-header {
