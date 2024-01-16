@@ -123,7 +123,7 @@ When you are done evaluating the Early Access version of the Liberty Portlet Con
 
 After executing this command, the message `release "lpc-deployment" uninstalled` is displayed.
 
-## Troubleshooting
+### Troubleshooting
 
 If you encounter difficulties with running your applications on the Open Liberty Portlet Container, you can access the logs by either:
 
