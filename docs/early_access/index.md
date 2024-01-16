@@ -24,15 +24,15 @@ Refer to the following topics for more information:
 
 -   **[HCL DX Early Access Program Milestone 1](eap_milestone_1.md)**  
 This topic discusses the Open Liberty Portlet Container, an Early Access Program component.
--   **[Creating reusable assets](eap_limitations_restrictions.md)**  
+-   **[Limitations and restrictions](eap_limitations_restrictions.md)**  
 This topic provides the limitations and restrictions when using the Early Access version. 
--   **[Building the website](download_eap_components.md)**  
+-   **[Downloading HCL DX Early Access Program components](download_eap_components.md)**  
 Download the HCL DX Early Access Program components from your HCL Digital Experience entitlements in the HCL Software License Download Portal.
 -   **[Deploying and configuring Open Liberty Portlet Container](deploy_config_eap.md)**  
 This topic provides instructions on how to deploy, configure, install, uninstall, and troubleshoot issues in Open Liberty Portlet Container. 
 -   **[Sample application to test in your Open Liberty portlet container](sample_application_eap.md)**  
 This topic provides a sample application that you can test with Open Liberty portlet container. 
--   **[Suggested areas for evaluation](evaluation_eap.md)**  
+-   **[Suggested areas for evaluation](evaluation_eap.md)**   
 This topic lists down possible questions when testing the Open Liberty Portlet container with your application.
 
 
