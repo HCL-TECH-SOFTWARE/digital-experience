@@ -12,7 +12,7 @@ Helm is a tool for managing Kubernetes applications and deployments. Helm helps 
 
 In addition to foundation packaging and installation capabilities, you can also use Helm to modify and upgrade existing deployments, if the Helm charts are built to support these actions. Configuration changes and application upgrades can both be managed by using Helm.
 
-For more information about Helm, refer documentation about Helm for Red Hat container platforms:  [Red Hat OpenShift](https://docs.openshift.com/container-platform/4.7/cli_reference/helm_cli/getting-started-with-helm-on-openshift-container-platform.html) and [Kubernetes](https://helm.sh/).
+For more information about Helm, refer to documentation about Helm for Red Hat container platforms:  [Red Hat OpenShift](https://docs.openshift.com/container-platform/4.7/cli_reference/helm_cli/getting-started-with-helm-on-openshift-container-platform.html) and [Kubernetes](https://helm.sh/).
 
 ## Helm chart contents
 
