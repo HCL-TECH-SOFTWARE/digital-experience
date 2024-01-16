@@ -29,7 +29,7 @@ hcl-dx-deployment/
 
 ```
 
--   **templates**: The `templates` directory contains all resource definitions,, for example, services and pods.
+-   **templates**: The `templates` directory contains all resource definitions, for example, services and pods.
 -   **values.yaml**: The `values.yaml` file contains all default values for a deployment. You can customize the deployment by overwriting the default values of the `values.yaml` file.
 -   **values.schema.json**: To validate the values entered for a deployment, the `values.schema.json` file provides a configuration whenever an installation or upgrade is performed with Helm.
 
