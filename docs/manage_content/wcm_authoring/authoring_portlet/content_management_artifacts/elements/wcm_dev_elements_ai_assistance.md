@@ -47,6 +47,7 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
     ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_AnalyzeSentiment.png)
     
     A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon on the **Body** field.
+    
     ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_SentimentResult.png)
 
 3. Click the sentiment result icon to see more details about the result.
