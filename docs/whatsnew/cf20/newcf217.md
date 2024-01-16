@@ -9,8 +9,8 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager REST API v2 - Added Wrapper APIs
 - Site Analytics - Integrating Google Analytics 4
 - DXClient - LiveSync commands can be triggered within the target local theme path
-- Updated list of DX offerings
-- HCL Digital Experience Cloud - New offerings 
+- Updated documentation on locating and downloading DX products
+- HCL Digital Experience Cloud - New offering
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -36,7 +36,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Web Content Manager - AI assistance for sentiment analysis
 
 === "Containers"
-    In addition to keyword extraction and auto summarization, you can perform a sentiment analysis on the contents of the elements in your content item. For more information, see []().
+    In addition to keyword extraction and auto summarization, you can perform a sentiment analysis on the contents of the elements in your content item. For more information, see [](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
 
 ### Web Content Manager - CSRF option in WCM comments
 
@@ -70,13 +70,13 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "On-Premises"
     You can now trigger LiveSync commands from within the target local theme path. For more information, see [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
 
-### Updated list of DX offerings
+### Updated documentation on locating and downloading DX products
 
 === "Containers"
-    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) is updated with the latest DX offerings. 
+    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Monthly Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-monthly-releases) are also updated. 
 
-=== "On-Premises"
-    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) is updated with the latest DX offerings. 
+=== "Containers"
+    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Monthly Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-monthly-releases) are also updated. 
 
 ### HCL Digital Experience Cloud - New offerings
 
