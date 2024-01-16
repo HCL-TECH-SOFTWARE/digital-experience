@@ -1,17 +1,18 @@
 # User registry options
 
-HCL Digital Experience provides various security configuration tasks. In previous versions, one task was available and error recovery was uncertain. Also in previous versions, you were unable to expand your user registry to meet growing business needs. HCL DX 9.5 and later offer multiple tasks and you can fine-tune your system to meet your business needs.
+With HCL Digital Experience, you can complete various security configuration tasks. In previous releases, only one task was available and you might not recover if errors occurred. Also, you were unable to expand your user registry to meet growing business needs. With HCL DX version 9.5 and later, there are multiple tasks and you can fine-tune your system to meet your business needs.
 
-You have the following general security options to choose from:
+
+You can choose from the following general security options:
 
 |Security option|Explanation|
 |---------------|-----------|
-|Federated security|With this option, you can create Virtual Portals with multiple realms. You can also use multiple repositories \(LDAP, database, custom, for example\), and you can add application groups to your system. This option is good if you must merge multiple LDAP servers into one cohesive structure. **Important:** <!-- Use "Attention" notes only when an action has the possibility of damaging hardware or software or causing injury --> If you plan to enable the transient user feature, you must choose the federated user registry configuration. <br>**Important:** You must take special care that there are no duplicate names among the various repositories. For example, if you installed the product with a portal administrator of admin1, then admin1 must not exist on the corporate LDAP server.|
-|Custom security|With this option, you can write a fully controlled WebSphere Security environment. There is a custom user registry and a custom member adapter for Virtual Member Manager \(VMM\). The abilities of this option depend on your implementation.|
+|Federated security|With this option, you can create virtual portals with multiple realms. You can also use multiple repositories \(LDAP, database, custom\), and you can add application groups to your system. This option works well if you must merge multiple LDAP servers into one cohesive structure.<br> **Important:** If you plan to enable the transient user feature, you must choose the federated user registry configuration. <br>**Important:** You must ensure that no duplicate names exist on the various repositories. For example, if you installed the product with a portal administrator of admin1, then admin1 must not exist on the corporate LDAP server.|
+|Custom security|This option provides you with the ability to write a fully controlled WebSphere Security environment. There is a custom user registry and a custom member adapter for Virtual Member Manager \(VMM\). The abilities of this option depend on your implementation.|
 
 ## Federated security
 
-HCL Portal is configured with a default federated repository with a built-in file repository. The federated repository offers you the richest number of options to meet your business needs. You can easily expand your business as your needs grow. For example, your company acquires a new business that has an existing LDAP user registry. You can add that LDAP server to your federated repository. Choose one of the following tasks to enable a production repository:
+HCL Portal is configured with a default federated repository with a built-in file repository. The federated repository offers the richest number of options to meet your business needs. You can easily expand your business as your needs grow. For example, your company acquires a new business that has an existing LDAP user registry. You can add that LDAP server to your federated repository. Choose one of the following tasks to enable a production repository:
 
 |Task|Description|
 |----|-----------|
@@ -34,6 +35,7 @@ After you use your federated repository, you might need to manage your user regi
 |----|-----------|
 |Updating the federated LDAP user registry|Choose this option to update certain parameters such as your bind ID and password to fix issues with your LDAP user registry.|
 |Updating the federated database user registry|Choose this option to update certain parameters such as the data source name, database URL, and database type to fix issues with your database user registry.|
-|Create a realm|Choose this option to create a realm, which is a group of users from one or more user registries that form a coherent group within HCL Portal. Realms facilitate flexible user management with various configuration options. A realm must be mapped to a virtual portal to allow the defined users to log in to the virtual portal. In a federated repository, you can create multiple realms.|
+|Create a realm|Choose this option to create a realm, which is a group of users from one or more user registries that form a coherent group within HCL Portal. Realms provide flexible user management with various configuration options. A realm must be mapped to a virtual portal to allow the defined users to log in to the virtual portal. In a federated repository, you can create multiple realms.|
+
 
 
