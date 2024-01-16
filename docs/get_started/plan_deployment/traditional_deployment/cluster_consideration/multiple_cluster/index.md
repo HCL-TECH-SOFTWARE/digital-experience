@@ -4,11 +4,11 @@ Multiple clusters are sets of servers that are managed together within a single 
 
 IBM® WebSphere® Application Server Network Deployment can manage many application servers and application server clusters within a single administrative domain, or cell. The single cell has the following advantages:
 
--   A single administration user interface \(WebSphere Integrated Solutions Console\)
--   A single administrative scripting client \(wsadmin\).
+-   A single administration user interface (WebSphere Integrated Solutions Console).
+-   A single administrative scripting client (wsadmin).
 -   Shared resources at the cell, node, or server scope.
 -   Replication domains for sharing application data, state information, and caches.
--   Workload management at the web server level provides a single-server identity for all applications hosted across the cell. It enables ease of collaboration between applications while it builds a rich user application experience
+-   Workload management at the web server level provides a single-server identity for all applications hosted across the cell. It enables ease of collaboration between applications while it builds a rich user application experience.
 
 An administrator's goal is to manage as many HCL Portal and portal-based products within the same managed cell as possible. It takes advantage of the administrative and runtime features.
 
