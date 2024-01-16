@@ -42,9 +42,11 @@ Before you can use AI-assisted features for sentiment analysis of content, keywo
 
 1. Fill in any of text elements (for example, rich text, text, or short text) of the content item.
 
-2. Click the **Analyze Sentiment** icon located in the lower right corner of the text element. A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon on the **Body** field.
+2. Click the **Analyze Sentiment** icon located in the lower right corner of the text element. 
 
     ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_AnalyzeSentiment.png)
+    
+    A sentiment analysis result is returned based on the analysis of the content of the text element. The sentiment analysis result is represented by an icon on the **Body** field.
     ![](../../../../../assets/HCL_Authoring_Portlet_SentimentAnalysis_SentimentResult.png)
 
 3. Click the sentiment result icon to see more details about the result.
