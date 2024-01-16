@@ -36,7 +36,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Web Content Manager - AI assistance for sentiment analysis
 
 === "Containers"
-    In addition to keyword extraction and auto summarization, you can perform a sentiment analysis on the contents of the elements in your content item. For more information, see [](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md).
+    In addition to keyword extraction and auto summarization, you can perform a sentiment analysis on the contents of the elements in your content item. For more information, see [Using AI-assisted sentiment analysis of content element](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md#using-ai-assisted-sentiment-analysis-of-content-element).
+
+=== "On-Premises"
+    In addition to keyword extraction and auto summarization, you can perform a sentiment analysis on the contents of the elements in your content item. For more information, see [Using AI-assisted sentiment analysis of content element](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md#using-ai-assisted-sentiment-analysis-of-content-element).
 
 ### Web Content Manager - CSRF option in WCM comments
 
@@ -124,7 +127,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Open Liberty Portlet Container
 
 === "Containers"
-    HCL DX Early Access Program - Milestone 1 is now available. The goal of the HCL Digital Experience Early Access Program is for the community of participants to conduct review and testing of new components introduced for use with the HCL Digital Experience 9.5 software. For more information, including how to access the software and discuss your feedback with HCL, see [HCL Digital Experience Early Access Program ](../../early_access/index.md).
+    **HCL DX Early Access Program - Milestone 1** is now available. The goal of the HCL Digital Experience Early Access Program is for the community of participants to conduct review and testing of new components introduced for use with the HCL Digital Experience 9.5 software. For more information, including how to access the software and discuss your feedback with HCL, see [HCL Digital Experience Early Access Program](../../early_access/index.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
