@@ -1,6 +1,6 @@
 # Web content delivery environments
 
-If you have only an HCL Web Content Manager license, you can deliver your website without using HCL Digital Experience features.
+If you only have an HCL Web Content Manager license, you can deliver your website without using HCL Digital Experience features.
 
 ## Pre-rendered delivery
 
