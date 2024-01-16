@@ -250,7 +250,7 @@ See the following example where '...' represents truncated parameters.
 $ pwd
 /Users/path/to/theme
 
-$ dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Portal8.5SyncTest" ...
+dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Portal8.5SyncTest" ...
 ```
 
 ## Limitations & Troubleshooting
