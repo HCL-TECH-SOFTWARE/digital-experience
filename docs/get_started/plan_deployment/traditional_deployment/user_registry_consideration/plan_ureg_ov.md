@@ -2,7 +2,7 @@
 
 With HCL Digital Experience, you can complete various security configuration tasks. In previous releases, only one task was available and you might not recover if errors occurred. Also, you were unable to expand your user registry to meet growing business needs. With HCL DX version 9.5 and later, there are multiple tasks and you can fine-tune your system to meet your business needs.
 
-You can choose fromt the following general security options:
+You can choose from the following general security options:
 
 |Security option|Explanation|
 |---------------|-----------|
