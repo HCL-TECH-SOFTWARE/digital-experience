@@ -10,7 +10,7 @@ The following features and updates are available to customers installing HCL Dig
 - Site Analytics - Integrating Google Analytics 4
 - DXClient - LiveSync commands can be triggered within the target local theme path
 - Updated documentation on locating and downloading DX products
-- HCL Digital Experience Cloud - New offering
+- HCL Digital Experience Cloud offering
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -81,13 +81,13 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "Containers"
     [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Monthly Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-monthly-releases) are also updated. 
 
-### HCL Digital Experience Cloud - New offerings
+### HCL Digital Experience Cloud offering
 
 === "Containers"
-    [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md) is updated with the latest HCL Digital Experience Cloud offering. 
+    HCL Digital Experience (DX) Cloud is HCL’s SLA-based cloud-native-as-a-service platform. HCL DX Cloud has built-in security and compliance and a managed hosting option for HCL DX 9.5. For more information, see [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md#hcl-dx-cloud).
 
 === "On-Premises"
-    [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md) is updated with the latest HCL Digital Experience Cloud offering.
+    HCL Digital Experience (DX) Cloud is HCL’s SLA-based cloud-native-as-a-service platform. HCL DX Cloud has built-in security and compliance and a managed hosting option for HCL DX 9.5. For more information, see [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md#hcl-dx-cloud).
 
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
