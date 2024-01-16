@@ -1,6 +1,6 @@
 # Multiple cluster planning
 
-Multiple clusters are sets of servers that are managed0 together within a single administrative domain \(or cell\), and participate in workload management.
+Multiple clusters are sets of servers that are managed together within a single administrative domain (or cell), and participate in workload management.
 
 IBM® WebSphere® Application Server Network Deployment can manage many application servers and application server clusters within a single administrative domain, or cell. The single cell has the following advantages:
 
