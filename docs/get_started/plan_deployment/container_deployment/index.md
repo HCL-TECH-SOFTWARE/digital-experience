@@ -8,7 +8,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 Helm is a software package manager that simplifies deployment of applications and services to Red Hat OpenShift and Kubernetes container platforms.
 
-Helm is a tool for managing Kubernetes applications and deployments. With Helm, helps you package all required resource definitions into a single package, called a Helm chart. The Helm charts provide a convenient way to define application deployments with a predefined set of configurable items. Furthermore, Helm charts are written with declarative definitions, applying `yaml` structures and `go` templates. This approach provides administrators with transparency about the operations the Helm chart performs during the DX 9.5 container deployment.
+Helm is a tool for managing Kubernetes applications and deployments. Helm helps you package all required resource definitions into a single package, called a Helm chart. The Helm charts provide a convenient way to define application deployments with a predefined set of configurable items. Furthermore, Helm charts are written with declarative definitions, applying `yaml` structures and `go` templates. This approach provides administrators with transparency about the operations the Helm chart performs during the DX 9.5 container deployment.
 
 In addition to foundation packaging and installation capabilities, you can also use Helm to modify and upgrade existing deployments, if the Helm charts are built to support these actions. Configuration changes and application upgrades can both be managed by using Helm.
 
