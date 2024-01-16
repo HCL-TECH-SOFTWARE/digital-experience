@@ -1,6 +1,6 @@
 # Web content authoring environments
 
-content authors and website designers us an authoring environment to create and manage web content.
+Content authors and website designers use an authoring environment to create and manage web content.
 
 Most HCL Web Content Manager sites must support many content authors. A clustered server solution is the best solution for this scenario.
 
