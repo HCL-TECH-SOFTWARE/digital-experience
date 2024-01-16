@@ -110,7 +110,7 @@ To disable content AI analysis:
 
 ## Custom configurations for AI analysis
 
-If AI analysis-related configurations require customization, log in to the WebSphere Application Server console for customizing any of the custom properties in the WCM Config Service. (Click **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**).
+If AI analysis-related configurations require customization, log in to the WebSphere Application Server console for customizing any of the custom properties in the WCM Config Service. Click **Resource > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom Properties**.
 
 ### OpenAI ChatGPT specific custom configurations
 
