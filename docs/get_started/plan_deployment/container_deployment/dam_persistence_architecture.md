@@ -1,6 +1,6 @@
 # Digital Asset Management persistence
 
-This topic describes the components of the Digital Asset Management \(DAM\) persistence. The updated DAM persistence feature is available with HCL Digital Experience 9.5 Container Update CF198 and later.
+This topic describes the components of the Digital Asset Management (DAM) persistence. The updated DAM persistence feature is available with HCL Digital Experience 9.5 Container Update CF198 and later.
 
 ![Digital Asset Management persistence component architecture](../../../images/dam_persistence_components.png "DAM persistence components")
 
