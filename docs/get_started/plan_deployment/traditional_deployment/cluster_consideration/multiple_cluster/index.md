@@ -44,7 +44,7 @@ Within this concept of scope, an important point is that all enterprise applicat
 
 Typically, when you install an enterprise application that multiple clusters share, the administrator installs the enterprise application archive into the cell's Deployment Manager. Then, it maps the application to the target clusters where it runs. HCL Portal installs several enterprise applications as part of its basic configuration and before any cluster is defined. You must follow special steps to ensure that these infrastructure applications are appropriately shared when multiple clusters are defined in the same cell. And by extension, because they are infrastructure applications, all HCL Portal clusters must be at the same version.
 
-Because portlets are enterprise applications of a special type, it is possible, but not always appropriate, to share portlets among multiple clusters. Many portlets \(for example HCL Portal administration\) are considered part of the infrastructure, and as a result can be shared across multiple clusters. Most user application portlets are specific to certain clusters and are installed as such.
+Because portlets are enterprise applications of a special type, it is possible, but not always appropriate, to share portlets among multiple clusters. Many portlets (for example, HCL Portal administration) are considered part of the infrastructure, and as a result can be shared across multiple clusters. Most user application portlets are specific to certain clusters and are installed as such.
 
 Also, the Java Platform, Enterprise Edition security configuration for the cell is shared by all servers and clusters that are managed in the cell. Therefore, each server and cluster must share an underlying user repository.
 
