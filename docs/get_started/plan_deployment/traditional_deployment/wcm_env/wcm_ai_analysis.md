@@ -1,6 +1,6 @@
 # WCM Content AI Analysis
 
-earn how to configure the AI analysis feature for WCM Content in a traditional, on-premise deployment. You can also learn  steps for configuring a content AI provider to be used for AI analysis. The AI analysis for a WCM Content feature is available in HCL Digital Experience 9.5 Container Update CF213 and later.
+Learn how to configure the AI analysis feature for WCM Content in a traditional, on-premise deployment. You can also learn  steps for configuring a content AI provider to be used for AI analysis. The AI analysis for a WCM Content feature is available in HCL Digital Experience 9.5 Container Update CF213 and later.
 
 !!!note
 	OpenAI ChatGPT is the supported content AI provider in CF213 and later. Custom AI implementation is supported in CF214 and later.
