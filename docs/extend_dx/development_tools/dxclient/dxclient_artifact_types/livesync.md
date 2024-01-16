@@ -247,7 +247,10 @@ Note that LiveSync Pull Theme commands can be triggered from within the target l
 See the following example where '...' represents truncated parameters.
 
 ```shell
-dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Portal8.5SyncTest" ...
+$ pwd
+/Users/path/to/theme
+
+$ dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Portal8.5SyncTest" ...
 ```
 
 ## Limitations & Troubleshooting
