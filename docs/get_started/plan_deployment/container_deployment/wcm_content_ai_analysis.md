@@ -1,6 +1,6 @@
 # WCM Content AI Analysis
 
-You can enable AI analysis for web content management (WCM) content in a Kubernetes deployment. You can also configure a content AI provider to be used for AI analysis. The AI analysis for a WCM content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
+You can enable AI analysis for Web Content Management (WCM) content in a Kubernetes deployment. You can also configure a content AI provider to be used for AI analysis. The AI analysis for a WCM content feature is available from HCL Digital Experience 9.5 Container Update CF213 and higher.
 
 !!!note
 	OpenAI ChatGPT is the supported content AI provider for CF213 and later. Custom AI implementation is supported for CF214 and later.
