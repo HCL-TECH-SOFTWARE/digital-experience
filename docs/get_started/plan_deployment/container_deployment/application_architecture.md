@@ -45,7 +45,7 @@ Content Composer [HCL Content Composer](../../../manage_content/wcm_authoring/co
 
 **Type:** Stateful
 
-Digital Asset Management requires the Ring API be deployed and working to communicate with the DX Core, image processor components to perform image manipulation, and persistence to store its application data. See [Digital Asset Management](../../../manage_content/digital_assets/index.md)
+Digital Asset Management requires the Ring API be deployed and working to communicate with the DX Core, image processor components to perform image manipulation, and persistence to store its application data. See [Digital Asset Management](../../../manage_content/digital_assets/index.md).
 
 ![Digital Asset Management Application Definition](../../../images/Digital%20Asset%20Management%20Application%20Definition.png "Digital Asset Management Application definition")
 
