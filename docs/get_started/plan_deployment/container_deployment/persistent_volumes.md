@@ -11,7 +11,7 @@ You use two types of PersistentVolumes with DX: [`ReadWriteOnce (RWO)` and `Read
 
 ## Core
 
-The DX 9.5 Core application requires multiple PVs of different types and sizes to operate. From an application perspective, three items things that have to persist:
+The DX 9.5 Core application requires multiple PVs of different types and sizes to operate. From an application perspective, there are three items that have to persist:
 
 -   Profiles (RWX) (including `wp_profile` and `cw_profile`)
 -   Logs (RWO)
