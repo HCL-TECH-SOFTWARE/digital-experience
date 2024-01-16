@@ -53,3 +53,5 @@ Use the following default URLs to access HCL Portal, the WebSphere® Integrated 
 If you had any processes from other software in the default port range when the installation started, you might have different port numbers than the defaults.
 
 
+???+ info "Related information"
+    -   [WebSphere® Integrated Solutions Console](../../../../manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

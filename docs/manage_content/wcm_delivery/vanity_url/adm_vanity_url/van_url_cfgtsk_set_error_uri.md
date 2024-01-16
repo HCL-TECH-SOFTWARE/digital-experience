@@ -44,4 +44,8 @@ The configuration task for configuring an error URI for vanity URLs is `set-vani
     The error URI specified in this example redirects the user to the portal home page.
 
 
+???+ info "Related information"
+    - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)
+
+
 

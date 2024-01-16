@@ -12,3 +12,4 @@ You can use the property extension if your LDAP is read-only but you want users 
 If this information cannot be stored in the main repository, for example, the main repository is read-only, a property extension configuration is required.
 
 
+

@@ -24,7 +24,7 @@ Final performance tuning should optimize key metrics such as "page views per sec
 
 The [Optimizing Portal Access Control](./wp_pac_tool.md) section provides guidance on optimizing access control for all Portal artifacts.
 
-???+ info "**Related information**"
-- [HCL DX Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
-- [Performance Tuning Guide for Anonymous Page Access Caching](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075095)
-- [Performance Testing and Analysis Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075607)
+???+ info "Related information"
+    - [HCL DX Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
+    - [Performance Tuning Guide for Anonymous Page Access Caching](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075095)
+    - [Performance Testing and Analysis Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075607)

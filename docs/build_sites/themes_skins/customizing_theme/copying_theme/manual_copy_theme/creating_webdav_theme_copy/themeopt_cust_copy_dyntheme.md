@@ -70,4 +70,8 @@ You need to make a unique copy of the dynamic resources for your theme. Make sur
 
 ???+ info "Related information"
    - [Modify the dynamic resource references for your theme](../creating_webdav_theme_copy/themeopt_cust_copy_modifystatres.md)
+    - [WebSphere® Integrated Solutions Console](../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
+
+
 

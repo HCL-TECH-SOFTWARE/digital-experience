@@ -87,5 +87,6 @@ The automated migration of the HCL Portal profile requires that the Trust Associ
 
 
 ???+ info "Related information"
-    -   [Disabling TAI if disabled previously](../../../../deployment/manage/migrate/next_steps/post_mig_activities/admin_task/mig_post_tai.md)
+    -  [Disabling TAI if disabled previously](../../../../deployment/manage/migrate/next_steps/post_mig_activities/admin_task/mig_post_tai.md)
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

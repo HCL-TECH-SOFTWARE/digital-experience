@@ -53,3 +53,6 @@ To configure the portlets through a system slot:
     The settings on the personalize mode of the portlets overrides the settings in configuration mode. To enable the personalize mode in the portlets, the Portal administrator must do step 1 and enable basic authentication.
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+

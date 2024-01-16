@@ -8,7 +8,7 @@ You can create a realm that combines users from various user registries. For exa
 
 **Remember:** Before you combine multiple user registries, review the registries for the following limitations and correct any issues:
 
--   Distinguished names must be unique for a realm over all registries. For example, if the uid=wpsadmin,o=yourco distinguised name exists in LDAP1, it must not exist in LDAP2, LDAP3, or DB1.
+-   Distinguished names must be unique for a realm over all registries. For example, if the uid=wpsadmin,o=yourco distinguished name exists in LDAP1, it must not exist in LDAP2, LDAP3, or DB1.
 -   The short name, for example, wpsadmin, should be unique for a realm over all registries.
 -   The base distinguished names for all registries that are used within a realm must not overlap. For example, if LDAP1 is c=us,o=yourco, LDAP2 must not be o=yourco.
 -   Do not leave the base entry blank for any of the registries used within a realm.

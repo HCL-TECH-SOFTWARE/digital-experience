@@ -51,4 +51,4 @@ If the portal server is securely protected with SSL, then the remote spell check
 
 ???+ info "Related information"  
     -   [ConfigEngine validation targets](../../manage/siteurl_cfg/changing_siteurl/cfg_validation_targets.md)
-
+    - [WebSphere® Integrated Solutions Console](../../manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
