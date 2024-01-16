@@ -1,6 +1,6 @@
 # Realm support
 
-A realm is a collection of users or groups from one or more branches of your repository tree. Those branches can be part of a single repository, for example an LDAP user registry, or it can be a combination of multiple user registries. A realm is then mapped to a virtual portal to allow the realm's user population to log in to the virtual portal. With this functional, you can define areas within HCL Portal that only a limited set of users can access.
+A realm is a collection of users or groups from one or more branches of your repository tree. Those branches can be part of a single repository, for example an LDAP user registry, or it can be a combination of multiple user registries. A realm is then mapped to a virtual portal to allow the realm's user population to log in to the virtual portal. With this functionality, you can define areas within HCL Portal that only a limited set of users can access.
 
 For example, if you are an international company with employees in Asia, Europe, USA, and Canada, you might have an application or information that applies only to a subset of these employees. You can create a subset of employees and create a virtual portal that contains the application or information for that realm. Users from one realm cannot access another realm unless they are also members of that realm. For example, the wpsadmin user cannot log in to a virtual portal unless the wpsadmin user is a member of the corresponding realm.
 
