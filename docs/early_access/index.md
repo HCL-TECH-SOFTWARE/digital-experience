@@ -14,13 +14,11 @@ The goal of the HCL DX Early Access Program is for the community of participants
 
 ## Get Started with the HCL DX Early Access Program components
 
-To get started, access the Early Access Program section and documentation on the new components, system requirements, and pre-requisite software, and how to obtain the HCL DX Early Access Program components for evaluation.
-
-To get started, access the [Early Access Program Milestone 1](eap_milestone_1.md) topic and documentation on the evaluation component, the Open Source Liberty portlet container, its system requirements, pre-requisite software, and how to obtain the HCL DX Early Access Program - Milestone 1 components for evaluation.
+To get started, go to the [Early Access Program Milestone 1](eap_milestone_1.md) topic and documentation on the Open Source Liberty portlet container, its system requirements, prerequisite software, and how to obtain the HCL DX Early Access Program - Milestone 1 components for evaluation.
 
 ## HCL Digital Experience Early Access Q & A Forum
 
-As always, your input and feedback are crucial to us. Let us know what you think about the new components and features by submitting your feedback in our HCL DX Early Access Q&A forum. Discuss your feedback and questions with the HCL DX product, engineering, support, and services leads. Your input areas may include installation and configuration, performance, usability, and related topics. 
+Your input and feedback are crucial to us. Let us know what you think about the new components and features by submitting your feedback in our HCL DX Early Access Q&A forum. Discuss your feedback and questions with the HCL DX product, engineering, support, and services leads. Your input areas may include installation and configuration, performance, usability, and related topics. 
 
 Refer to the following topics for more information:
 
