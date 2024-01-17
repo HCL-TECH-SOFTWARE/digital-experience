@@ -272,7 +272,7 @@ If you want to perform a replacement of the OOB components that are shipped, see
 
 ## CSRF protection for adding and deleting comments
 
-Starting CF217, you can enable CSRF tokens to be utilized when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. Note that a request without a valid CSRF token will fail.
+Starting CF217, you can enable Cross-Site Request Forgery (CSRF) tokens to be utilized when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. Note that a request without a valid CSRF token will fail.
 
 To enable CSRF tokens, go to the WAS Console and navigate to to **Resources > Resources Environment Providers > WCM_WCMConfigService > Custom properties > New Property**. Enter the following details:
 
