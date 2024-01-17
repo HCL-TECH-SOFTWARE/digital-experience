@@ -2,11 +2,6 @@
 
 This topic provides instructions on how to deploy, configure, install, uninstall, and troubleshoot issues in Open Liberty Portlet Container. 
 
-## Prerequisites
-
-- Deploy the [HCL Digital Experience (DX) 9.5 Container Update CF205 or higher](../deployment/index.md) to a supported Kubernetes platform for non-production use.
-- Download the component image for the [HCL DX Early Access Program](download_eap_components.md).
-
 ## Deploying using Helm
 
 To deploy the Open Liberty Portlet Container using Helm, refer to the following steps:
@@ -39,7 +34,7 @@ Refer to the supplied `values.yaml` file for details on the format.
 
 To install your own standard portlet applications into the Open Liberty Portlet Container for evaluation, there are two main options:
 
-- **Option 1 - Creation of an Enhanced Container Image**
+- **Option 1 - Create an Enhanced Container Image**
 
     1. You can deploy one or more additional portlet applications by creating a simple `Dockerfile` similar to the following:
 
@@ -65,7 +60,7 @@ To install your own standard portlet applications into the Open Liberty Portlet 
             - Altering the configuration of the `enterpriseApplication` element with an ID of `wsrpproducer`
             - Removing the `portletContainer` feature or element
 
-- **Option 2 - Deployment into a Running Container**
+- **Option 2 - Deploy into a Running Container**
 
     Alternatively, you can deploy portlet applications directly into a running container where they are automatically detected and installed by Open Liberty. Note that such deployments do not persist if the Open Liberty Portlet Container pod is restarted.
 
