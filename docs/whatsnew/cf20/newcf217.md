@@ -7,11 +7,10 @@ The following features and updates are available to customers installing HCL Dig
 - Web Content Manager - AI assistance for sentiment analysis
 - Web Content Manager - CSRF option in WCM comments
 - Web Content Manager REST API v2 - Added Wrapper APIs
-- License Manager - Secure License Server communication
 - Site Analytics - Integrating Google Analytics 4
 - DXClient - LiveSync commands can be triggered within the target local theme path
-- Updated list of DX offerings
-- HCL Digital Experience Cloud - Product overview
+- Updated documentation on locating and downloading DX products
+- HCL Digital Experience Cloud offering
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -24,8 +23,11 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Portlet Container on Liberty Beta
+- License Manager - Secure License Server communication
 
+**Digital Experience Early Access Program**
+
+- Open Liberty Portlet Container
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
@@ -33,13 +35,19 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ### Web Content Manager - AI assistance for sentiment analysis
 
+=== "Containers"
+    In addition to keyword extraction and auto summarization, you can perform a sentiment analysis on the contents of the elements in your content item. For more information, see [Using AI-assisted sentiment analysis of content element](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md#using-ai-assisted-sentiment-analysis-of-content-element).
+
+=== "On-Premises"
+    In addition to keyword extraction and auto summarization, you can perform a sentiment analysis on the contents of the elements in your content item. For more information, see [Using AI-assisted sentiment analysis of content element](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/wcm_dev_elements_ai_assistance.md#using-ai-assisted-sentiment-analysis-of-content-element).
+
 ### Web Content Manager - CSRF option in WCM comments
 
 === "Containers"
-    You can enable CSRF tokens to be utilized when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. For information on how ton enable CSRF tokens, see [](../../build_sites/create_sites/developing_managing_content/comments_wcm.md#csrf-protection-for-adding-and-deleting-comments).
+    You can enable CSRF tokens to be used when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. For information on how ton enable CSRF tokens, see [CSRF protection for adding and deleting comments](../../build_sites/create_sites/developing_managing_content/comments_wcm.md#csrf-protection-for-adding-and-deleting-comments).
 
 === "On-Premises"
-    You can enable CSRF tokens to be utilized when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. For information on how ton enable CSRF tokens, see [](../../build_sites/create_sites/developing_managing_content/comments_wcm.md#csrf-protection-for-adding-and-deleting-comments).
+    You can enable CSRF tokens to be used when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. For information on how ton enable CSRF tokens, see [CSRF protection for adding and deleting comments](../../build_sites/create_sites/developing_managing_content/comments_wcm.md#csrf-protection-for-adding-and-deleting-comments).
 
 ### Web Content Manager REST API v2 - Added Wrapper APIs 
 
@@ -48,14 +56,6 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 === "On-Premises"
     [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces new Wrapper APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects. For more information, see [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/index.md).
-
-### License Manager - Secure License Server communication
-
-=== "Containers"
-    Documentation on how to secure communication between HCL DX and the HCL License Server (cloud or local) using a public and private keypair is now available. For more information, see [Securing License Server communication for License Manager application](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md#securing-license-server-communication-for-license-manager-application).
-
-=== "On-Premises"
-    Documentation on how to secure communication between HCL DX and the HCL License Server (cloud or local) using a public and private keypair is now available. For more information, see [Securing License Server communication for License Manager application](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md#securing-license-server-communication-for-license-manager-application).
 
 ### Site Analytics - Integrating Google Analytics 4
 
@@ -73,21 +73,21 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "On-Premises"
     You can now trigger LiveSync commands from within the target local theme path. For more information, see [LiveSync](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md).
 
-### Updated list of DX offerings
+### Updated documentation on locating and downloading DX products
 
 === "Containers"
-    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) is updated with the latest DX offerings. 
-
-=== "On-Premises"
-    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) is updated with the latest DX offerings. 
-
-### HCL Digital Experience Cloud native
+    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Monthly Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-monthly-releases) are also updated. 
 
 === "Containers"
-    [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md) is updated with the latest HCL Digital Experience Cloud native. 
+    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Monthly Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-monthly-releases) are also updated. 
+
+### HCL Digital Experience Cloud offering
+
+=== "Containers"
+    HCL Digital Experience (DX) Cloud is HCL’s SLA-based cloud-native-as-a-service platform. HCL DX Cloud has built-in security and compliance and a managed hosting option for HCL DX 9.5. For more information, see [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md#hcl-dx-cloud).
 
 === "On-Premises"
-    [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md) is updated with the latest HCL Digital Experience Cloud native.
+    HCL Digital Experience (DX) Cloud is HCL’s SLA-based cloud-native-as-a-service platform. HCL DX Cloud has built-in security and compliance and a managed hosting option for HCL DX 9.5. For more information, see [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md#hcl-dx-cloud).
 
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
@@ -117,10 +117,17 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Digital Experience 9.5 Container Version
 
-### Portlet Container on Liberty Beta
+### License Manager - Secure License Server communication
 
 === "Containers"
-    HCL DX Early Access Program Milestone 1 is now available. The goal of the HCL Digital Experience Access Program is for the community of participants to conduct review and testing of new components introduced for use with the HCL Digital Experience 9.5 software. For more information, see [HCL Digital Experience Early Access Program ](../../early_access/index.md).
+    For customers deploying HCL DX Cloud Native 9.5 on Kubernetes for entitlement checking, documentation on how to secure communication between HCL DX Cloud Native 9.5 and the HCL License Server (cloud or local) using a public and private keypair is now available. For more information, see [Securing License Server communication for License Manager application](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md#securing-license-server-communication-for-license-manager-application).
+
+## Digital Experience Early Access Program
+
+### Open Liberty Portlet Container
+
+=== "Containers"
+    **HCL DX Early Access Program - Milestone 1** is now available. The goal of the HCL Digital Experience Early Access Program is for the community of participants to conduct review and testing of new components introduced for use with the HCL Digital Experience 9.5 software. For more information, including how to access the software and discuss your feedback with HCL, see [HCL Digital Experience Early Access Program](../../early_access/index.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 

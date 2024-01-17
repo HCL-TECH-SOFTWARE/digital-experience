@@ -242,6 +242,17 @@ This command is used to sync a theme from a DX WebDAV based theme on a remote se
     dxclient livesync pull-theme -dxUsername <dxUsername> -dxPassword <dxPassword> -dxPort <dxPort> -dxProtocol <dxProtocol> -hostname <hostname> -contenthandlerPath <contenthandlerPath> -themePath <themePath> -themeName <themeSystemName>
     ```
 
+Note that LiveSync Pull Theme commands can be triggered from within the target local theme path.
+
+See the following example where '...' represents truncated parameters.
+
+```shell
+$ pwd
+/Users/path/to/theme
+
+dxclient livesync pull-theme --themePath "/Users/path/to/theme" --themeName "Portal8.5SyncTest" ...
+```
+
 ## Limitations & Troubleshooting
 
 1. This command does not register or unregister themes. For that, use [Deploy Themes](./themes.md#deploy-theme) or [Undeploy Themes](./themes.md#undeploy-theme) commands.
