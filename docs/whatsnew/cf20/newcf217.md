@@ -11,6 +11,7 @@ The following features and updates are available to customers installing HCL Dig
 - DXClient - LiveSync commands can be triggered within the target local theme path
 - Updated documentation on locating and downloading DX products
 - HCL Digital Experience Cloud offering
+- Updated documentation for setting up OIDC in HCL DX
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -89,6 +90,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "On-Premises"
     HCL Digital Experience (DX) Cloud is HCL’s SLA-based cloud-native-as-a-service platform. HCL DX Cloud has built-in security and compliance and a managed hosting option for HCL DX 9.5. For more information, see [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md#hcl-dx-cloud).
 
+### Updated documentation for setting up OIDC in HCL DX
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
