@@ -12,9 +12,9 @@ In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google
 
 ## Adding an Active Site Analytics aggregator to a DX site page
 
-1. [Create a GA4 account](https://support.google.com/analytics/answer/9304153?hl=en&ref_topic=9303319) with ability to connect to your Digital Experience site.
+Obtain a Google Analytics account with ability to connect to your Digital Experience site.
 
-2.	Add the DX GoogleAnalyticsAggregator.js to the HCL DX theme profile.
+1.	Add the DX GoogleAnalyticsAggregator.js to the HCL DX theme profile.
 
     To add DX GoogleAnalyticsAggregator.js, there are three options:
 
@@ -22,9 +22,9 @@ In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google
         - If using a WebDAV-based theme, copy the GoogleAnalyticsAggregator.js file to mycontenthandler/dav/fs-type1/theme/{your-custom-theme}/js.
         - If using a WAR-based theme, include the GoogleAnalyticsAggregator.js file in the static theme WAR file. For example, when using a WAR-based theme, the location of the GoogleAnalyticsAggregator.js file after installing to the <YourTheme> WAR file is deployed under wp_profile:
 
-            wp_profile/installedApps/<cell>/<YourTheme.ear>/<YourTheme.war>/themes/<YourTheme>/js
+    wp\_profile/installedApps/<cell\>/<YourTheme.ear\>/<YourTheme.war\>/themes/<YourTheme\>/js
 
-        Refer to the following file tree that shows how the custom theme app is deployed:
+    Refer to the following file tree that shows how the custom theme app is deployed:
 
         ```
         wp_profile
@@ -41,13 +41,31 @@ In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google
     !!!important
         The theme profile used by the pages must have `wp_analytics` or at least `wp_analy: tics_aggregator`.
 
-    - For HCL DX without [Practitioner Studio](../../practitioner_studio/index.md) installed:
+    - For HCL DX without [Practitioner Studio](../../practitioner_studio/index.md) installed, there are two options:
 
-        1. On Site Manager, go to **Page > Page Settings > Page Properties > Advanced**.
+        - If you are using Site Manager:
+        
+            1. Switch the **Edit Mode** button to **ON**
 
-        2. Go to the **Manage Pages** portlet and click the **Administration menu** icon.
+            2. Click the menu icon of the page to open more actions.
 
-        3. Select **Portal User Interface > Manage Pages**.
+            3. Go to **Open Page Settings > Edit Page Properties**.
+
+            4. In **Manage Page Properties**, go to the **Advanced** tab. 
+
+            5. Set the parameters in the **Key** and **Value** fields. 
+
+        - If you are not using Site Manager:
+
+            1. Go to **Administration** and select your page (for example, a Virtual Portal).
+        
+            2. Click the **Open portal administration** icon. 
+
+            3. Under **Portal User Interface**, select **Manage Pages**.
+
+            4. In **Manage Pages**, select the page you want to add the parameters to.
+
+            5. Set the parameters.  
 
     - For HCL DX 9.5 with [Practitioner Studio](../../practitioner_studio/index.md) installed:
 
@@ -84,13 +102,13 @@ In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google
 
     Child pages inherit the script that is set on the parent page. If you want to use a different aggregator on a child page, follow the same procedure for the child page to make the appropriate assignment. If you want to block inheriting the aggregator setting from the parent page, follow the same procedure, but leave the value empty. As a result, the page has no aggregator that is assigned any longer, and all child pages of the parent page inherit the new setting.
 
-3.	Log in to your [Google Analytics 4](https://marketingplatform.google.com/about/analytics/) account and obtain the `GA_MEASUREMENT_ID` in your Google Analytics Dashboard. It is also referred to as **Tracking ID** or **Measurement ID**.
+2.	Log in to your [Google Analytics 4](https://marketingplatform.google.com/about/analytics/) account and obtain the `GA_MEASUREMENT_ID` in your Google Analytics Dashboard. It is also referred to as **Tracking ID** or **Measurement ID**.
 
     Example:
 
     ![GA Measurement ID](../../../images/ga4_dashboard.png)
  
-4.	Add the following metadata in your target HCL DX page properties:
+3.	Add the following metadata in your target HCL DX page properties:
 
     - `asa_dependency`: https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID
     - `asa_aggregator`: GoogleAnalyticsAggregator.js
@@ -104,7 +122,7 @@ In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google
 
     For a list of Active Site Analytics tags associated with HCL DX site pages that can be tracked by the Google Analytics Aggregator, see the topics [How Active Site Analytics data is represented in the portal](../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/collecting_analytics_data/how_asa_data_is_represented_in_portal/index.md) and [Supported aggregator tags](../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/collecting_analytics_data/how_asa_data_is_represented_in_portal/sa_asa_aggr_tags.md).
  
-5.	Access the HCL DX site page analytics from the Google Analytics Dashboard [Realtime Report](https://support.google.com/analytics/answer/9271392?sjid=2012704651258872253-NA) to analyze HCL DX site activity. Take note that the Realtime Report is new with GA4. For an overview, see [Overview of Google Analytics reports](https://support.google.com/analytics/answer/9212670?hl=en&ref_topic=12153537,12153943,2986333,&sjid=2012704651258872253-NA&visit_id=638356755288911187-1947930948&rd=1).
+4.	Access the HCL DX site page analytics from the Google Analytics Dashboard [Realtime Report](https://support.google.com/analytics/answer/9271392?sjid=2012704651258872253-NA) to analyze HCL DX site activity. Take note that the Realtime Report is new with GA4. For an overview, see [Overview of Google Analytics reports](https://support.google.com/analytics/answer/9212670?hl=en&ref_topic=12153537,12153943,2986333,&sjid=2012704651258872253-NA&visit_id=638356755288911187-1947930948&rd=1).
     
     After installing and configuring the aggregator to track analytics from specific HCL DX site pages, DX content authors and site owners with access to Google Analytics can view the DX site activity. Site activity is tracked and reflected in Google Analytics Dashboard's [GA4] Real-time reports as an increase in the page views and active users.
 
