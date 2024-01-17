@@ -10,7 +10,6 @@ The following features and updates are available to customers installing HCL Dig
 - Site Analytics - Integrating Google Analytics 4
 - DXClient - LiveSync commands can be triggered within the target local theme path
 - Updated documentation on locating and downloading DX products
-- HCL Digital Experience Cloud offering
 - Updated documentation for setting up OIDC in HCL DX
 - Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -25,6 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - License Manager - Secure License Server communication
+- HCL Digital Experience Cloud - New offering
 
 **Digital Experience Early Access Program**
 
@@ -82,14 +82,6 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "Containers"
     [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Monthly Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-monthly-releases) are also updated. 
 
-### HCL Digital Experience Cloud offering
-
-=== "Containers"
-    HCL Digital Experience (DX) Cloud is HCL’s SLA-based cloud-native-as-a-service platform. HCL DX Cloud has built-in security and compliance and a managed hosting option for HCL DX 9.5. For more information, see [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md#hcl-dx-cloud).
-
-=== "On-Premises"
-    HCL Digital Experience (DX) Cloud is HCL’s SLA-based cloud-native-as-a-service platform. HCL DX Cloud has built-in security and compliance and a managed hosting option for HCL DX 9.5. For more information, see [HCL Digital Experience Cloud native](../../get_started/product_overview/offerings.md#hcl-dx-cloud).
-
 ### Updated documentation for setting up OIDC in HCL DX
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
@@ -123,6 +115,12 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 === "Containers"
     For customers deploying HCL DX Cloud Native 9.5 on Kubernetes for entitlement checking, documentation on how to secure communication between HCL DX Cloud Native 9.5 and the HCL License Server (cloud or local) using a public and private keypair is now available. For more information, see [Securing License Server communication for License Manager application](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md#securing-license-server-communication-for-license-manager-application).
+
+### HCL Digital Experience Cloud - New offering
+
+=== "Containers"
+    HCL introduces a new cloud service offering, HCL Digital Experience Cloud. For more information, see [HCL Digital Experience Cloud](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud).
+
 
 ## Digital Experience Early Access Program
 
