@@ -17,4 +17,6 @@ Your input and feedback are crucial to us. Let us know what you think about the 
 
 Note that the HCL DX Early Access Q&A forum is a sub-forum to the HCL Digital Experience Q&A forum.
 
+![HCL DX Q&A forum](../images/hcl_dx_forum.png)
+
 You can view and register for participation in HCL Software product forums through the [HCL Software community](https://support.hcltechsw.com/community?id=community_home) site.
