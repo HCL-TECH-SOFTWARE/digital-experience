@@ -1,12 +1,12 @@
 ---
-title: Getting started with the REST service for Web Content Manager v2
+title: Getting started with the REST service for Web Content Manager V2
 ---
 
-# Getting started with the REST service for Web Content Manager v2
+# Getting started with the REST service for Web Content Manager V2
 
-Starting CF217, the [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) has new API additions and modifications.
+Starting CF217, the [WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) has new API additions and modifications.
 
-[WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces new Wrapper APIs corresponding to the following WCM V1 API functionalities:
+[WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces new Wrapper APIs corresponding to the following WCM V1 API functionalities:
 
 - Components like LibraryDateComponent, LibraryFileComponent, LibraryHTMLComponent, LibraryJSPComponent, LibraryLinkComponent, LibraryNumericComponent, LibraryPageNavigationComponent, LibraryTextComponent, LibraryUserNameComponent, LibraryUserSelectionComponent
 - Managed Pages
@@ -16,9 +16,9 @@ Starting CF217, the [WCM REST v2 Swagger API Explorer](https://opensource.hcltec
 - Workflow Actions
 - Workflow Operations
 
-[WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) encompasses all search parameters that are available from WCM V1 in the existing Search API of WCM REST V2 Swagger Explorer.
+These Wrapper APIs are created to bring their corresponding [REST service for Web Content Manager V1 APIs](../wcm_rest/index.md) to the V2 Swagger interface. [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) encompasses all search parameters that are available from WCM V1 in the existing Search API of WCM REST V2 Swagger Explorer.
 
-For the WCM REST v1 version of the mentioned APIs, refer to **[How to manage web content items by using REST](../wcm_rest/wcm_rest_mng_content/index.md)**.
+For the WCM REST V1 version of the mentioned APIs, refer to **[How to manage web content items by using REST](../wcm_rest/wcm_rest_mng_content/index.md)**.
 
 !!! note
     ```
@@ -41,4 +41,8 @@ http or https://host:port/dx/api/wcm/v2/explorer/
     https://localhost:10039/dx/api/wcm/v2/explorer/
     ```
 
-For more information about the WCM REST V2 API Explorer, see [HCL Experience API](../../../extend_dx/apis/hcl_experience_api/index.md).
+???+ info "Related information"
+    - [REST API Explorers](../../../extend_dx/apis/hcl_experience_api/api_explorers.md)
+    - [HCL Experience API](../../../extend_dx/apis/hcl_experience_api/index.md)
+
+
