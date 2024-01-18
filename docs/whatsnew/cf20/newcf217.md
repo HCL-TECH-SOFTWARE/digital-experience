@@ -61,10 +61,14 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Site Analytics - Integrating Google Analytics 4
 
 === "Containers"
-    Google Analytics 4 (GA4) has replaced Universal Analytics effective July 2023. For more information, refer to the [Google Analytics notice document](https://pages.git.cwp.pnp-hcl.com/CWPDoc/dx-mkdocs/in-progress/build_sites/site_analytics/google_analytics4/). You can now integrate GA4 with HCL DX. For more information, see [Integrating Google Analytics 4 with HCL Digital Experience](../../build_sites/site_analytics/google_analytics4/index.md).
+    Google Analytics 4 (GA4) has replaced Universal Analytics effective July 2023. For more information, refer to the [Google Analytics notice document](https://support.google.com/analytics/answer/11583528?hl=en). 
+    
+    You can now integrate GA4 with HCL DX. See the topic [Integrating Google Analytics 4 with HCL Digital Experience](../../build_sites/site_analytics/google_analytics4/index.md) for more information.
 
 === "On-Premises"
-    Google Analytics 4 (GA4) has replaced Universal Analytics effective July 2023. For more information, refer to the [Google Analytics notice document](https://pages.git.cwp.pnp-hcl.com/CWPDoc/dx-mkdocs/in-progress/build_sites/site_analytics/google_analytics4/). You can now integrate GA4 with HCL DX. For more information, see [Integrating Google Analytics 4 with HCL Digital Experience](../../build_sites/site_analytics/google_analytics4/index.md).
+    Google Analytics 4 (GA4) has replaced Universal Analytics effective July 2023. For more information, refer to the [Google Analytics notice document](https://support.google.com/analytics/answer/11583528?hl=en). 
+    
+    You can now integrate GA4 with HCL DX. See the topic [Integrating Google Analytics 4 with HCL Digital Experience](../../build_sites/site_analytics/google_analytics4/index.md) for more information.
 
 ### DXClient - LiveSync commands can be triggered within the target local theme path
 
