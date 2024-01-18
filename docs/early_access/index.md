@@ -18,9 +18,6 @@ To get started, go to the [Early Access Program Milestone 1](eap_milestone_1.md)
 
 ## HCL Digital Experience Early Access Q&A Forum
 
-Your input and feedback are crucial to us. Let us know what you think about the new components and features by submitting your feedback in our [HCL DX Early Access Q&A forum](https://support.hcltechsw.com/community?id=community_forum&sys_id=2ef7245c1b97f990534c4159cc4bcbf3). Discuss your feedback and questions with the HCL DX product, engineering, support, and services leads. Your input areas may include installation and configuration, performance, usability, and related topics. 
-
-## HCL Digital Experience Early Access Q&A Forum
 Your input and feedback are crucial to us. Let us know what you think about the new components and features by submitting your feedback in our [HCL DX Early Access Q&A forum](https://support.hcltechsw.com/community?id=community_forum&sys_id=2ef7245c1b97f990534c4159cc4bcbf3). Discuss your feedback and questions with the HCL DX product, engineering, support, and services leads. Your input areas may include installation and configuration, performance, usability, and related topics.
 
 Note that the HCL DX Early Access Q&A forum is a sub-forum to the HCL Digital Experience Q&A forum.
