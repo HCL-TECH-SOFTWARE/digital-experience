@@ -226,7 +226,7 @@ If you set **Use Administrator IDs stored in your LDAP user registry** to ``yes`
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
 
-12. Log in to HCL Digital Experience to verify your portal server works.
+12. Log in to HCL Digital Experience to verify that your portal server works.
 
 
 ## Configuring the multiple cluster
