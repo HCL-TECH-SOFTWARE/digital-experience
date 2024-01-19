@@ -27,7 +27,8 @@ For additional information on previous updates to the [HCL Digital Experience Cl
 
 ## HCL Digital Experience Cloud
 
-HCL Digital Experience (DX) Cloud is a managed hosting option for HCL DX 9.5. This solution includes the capabilities of HCL DX Cloud Native, also ongoing maintenance and upgrades to the latest releases of HCL Software. This means you can focus on achieving business results faster, while reducing time building and managing systems and ensuring the highest security and reliability. For more information, see [Introducing HCL Digital Experience Cloud](https://content.comms.hcltechsw.com/deliverirs/servlet/IRSL?v=5&a=214&r=232333&m=660&l=7&e=2&x=2460685.0). Contact [HCL to discuss further](https://www.hcl-software.com/dx/upgrade/contact-us?utm_medium=email&utm_source=unica_email&utm_campaign=DT_DX_Newsletter_Jan24_C000000168&referrer=mail.google.com) and get started. 
+HCL Digital Experience (DX) Cloud is the SLA-based cloud service platform, with built-in security and compliance. This solution includes the capabilities of HCL DX Cloud Native 9.5 offering software, and ongoing maintenance and upgrades to the latest releases of HCL Software. This means you can focus on achieving business results faster, while reducing time building and managing systems and ensuring the highest security and reliability. 
+For more information, see [Introducing HCL Digital Experience Cloud](https://content.comms.hcltechsw.com/deliverirs/servlet/IRSL?v=5&a=214&r=232333&m=660&l=7&e=2&x=2460685.0). Contact [HCL to discuss further](https://www.hcl-software.com/dx/upgrade/contact-us?utm_medium=email&utm_source=unica_email&utm_campaign=DT_DX_Newsletter_Jan24_C000000168&referrer=mail.google.com) and get started. 
 
 
 For additional information about HCL Digital Experience solutions, visit: [HCL Digital Experience](https://www.hcltechsw.com/dx) website. 

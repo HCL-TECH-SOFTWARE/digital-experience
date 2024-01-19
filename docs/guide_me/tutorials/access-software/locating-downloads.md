@@ -57,7 +57,7 @@ In the DX Download Packages list, there are several products that are under the 
 * HCL Digital Experience Cloud
 
 
-### Package name for DX Cumulative Fixes and Docker Monthly Releases
+### Package name for DX Cumulative Fixes and Docker Releases
 Fixes and Container updates are bundled up in a distinct package. To locate the latest fixes and container updates, refer to the following package names.
 
 * HCL DX 9.5 Container Updates – for HCL Digital Experience Cloud Native 9.5.x products
