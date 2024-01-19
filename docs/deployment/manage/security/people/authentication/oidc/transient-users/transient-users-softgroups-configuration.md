@@ -212,7 +212,7 @@ Once the WAR is deployed, create an **Admin** page which will allow you to defin
 
 1. Go back to **Home** section, under **Manage Pages** and locate the newly added Softgroups admin page.
 2. Click on the little key icon.
-1. Uncheck the boxes for Privileged User and User in the Allow Inheritance column.
+3. Uncheck the boxes for **Privileged User** and **User** in the **Allow Inheritance** column.
 4. Click **Apply** and click **Done** button.
 
 ### Define Rule-Based User Groups
