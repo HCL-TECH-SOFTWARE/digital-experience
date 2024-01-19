@@ -63,9 +63,9 @@ Some CFs focus on fixing known issues that are identified by APARs. Other CFs fo
 <!-- The following list needs an introductory sentence. What's the nature of the items in this list? -->
 To know the changes and issues fixed in the CF, do the following steps:
 
-1.  Get an overview of the features and improvements delivered in the latest combined cumulative fix: [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md) 
+1.  Get an overview of the features and improvements delivered in the latest combined cumulative fix. For more information, see [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md). 
 
-2.  View the fixes delivered for HCL Digital Experience 9.5. The documentation provides specific information about how to enable and use the new feature: [What's new with CF17](../../../../../whatsnew/cf17/new_cf17.md)
+2.  View the fixes delivered for HCL Digital Experience 9.5. The documentation provides specific information about how to enable and use the new feature. For more information, see [What's new with CF17](../../../../../whatsnew/cf17/new_cf17.md).
     <!-- -   Documentation resource: [Fix for IBM WebSphere Application Server 9.0.5](../overview/was_905.md) -->
 
 # Applying a CF
