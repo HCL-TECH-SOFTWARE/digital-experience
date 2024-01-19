@@ -1,6 +1,6 @@
 # HCL Digital Experience roadmap: Portal farm
 
-A server farms offers a simple way to build and maintain a highly scalable, highly available server environment.
+A server farm offers a simple way to build and maintain a highly scalable, highly available server environment.
 
 !!!remember
     Ensure that you configure the web server plug-in after you transfer your database.
