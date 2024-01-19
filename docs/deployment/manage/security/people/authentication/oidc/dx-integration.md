@@ -1,7 +1,3 @@
----
-tags: [dx, digital-experience, portal, websphere, integration]
----
-
 # Adjusting the DX Login flow for OIDC
 
 Once you have configured WebSphere Application Server to act as an OpenID Connect Relying Party, this would allow HCL Digital Experience (DX) to trust authentication assertions towards your Identity Provider (IdP). Detailed steps are outlined in [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md).
