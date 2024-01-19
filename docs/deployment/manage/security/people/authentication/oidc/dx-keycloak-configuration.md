@@ -1,10 +1,10 @@
 # Configuring Keycloak as an OIDC IdP for HCL Digital Experience
 
-This document provides information around the configuration of Keycloak as an OIDC Identity Provider against HCL Digital Experience as a relying party. The full configuration here entails setup of a realm, user federation, client, custom claims for client scopes and respective mappers to wire of those claims, and is explained in detail in the document linked above.
+This document provides information on the configuration of Keycloak as an OIDC Identity Provider against HCL Digital Experience (DX) as a relying party. The configuration entails the setup of a realm, user federation, client, custom claims for client scopes and respective mappers to wire those claims.
 
 For the HCL DS Keycloak service the required settings/configuration already are in place and get rolled out during deployment. They should still be validated once before proceeding to ensure everything is understood and properly set up. Customers certainly can set up their own realm and client as needed using below steps, or adjust the once created by default.
 
-If you are fine with the default configuration, feel free to skip the rest and continue to [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md).
+For default configuration, skip the remaining steps and continue to [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md).
 
 First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` and password `admin`. Then, select the realm `hcl` in the top left dropdown.
 
@@ -12,16 +12,17 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
 
     - Login should be admin : admin
 
-2. From the top left dropdown select Create Realm and add new realm name and click Create (for our example we are using oidcdx):
+2. From the top left dropdown, select **Create Realm** and add a new realm name.
+3. Click **Create** (for example we are using oidcdx):
 
     ![Keycloak_HTTPS_SSL_2](../../../../../../images/Keycloak_HTTPS_SSL_2.png)
 
-3. Go to the Clients Section and click Create Client, then add the following values and check the right boxes as shown below:
-
+3. Go to the **Clients Section > Create Client** and add the following values:
+1. In **General Setting** page add the following values:
     - Client ID: dxtest
     - Name: dxtest
 
-      Click Next
+      - Click **Next**.
 
       ![Keycloak_HTTPS_SSL_3](../../../../../../images/Keycloak_HTTPS_SSL_3.png)
 
