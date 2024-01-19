@@ -117,7 +117,7 @@ There is a known issue with Chrome version 45.x and the Configuration Wizard. If
 3.  Log in to the Configuration wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
 
-If your specified language is not  supported for the user interface, you might see the English version. For details about supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../deployment/manage/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
+If your specified language is not supported for the user interface, you might see the English version. For details about supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../deployment/manage/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
 
 4.  Select **Set Up a Stand-alone Server** \> **Enable Federated Security**.
 
