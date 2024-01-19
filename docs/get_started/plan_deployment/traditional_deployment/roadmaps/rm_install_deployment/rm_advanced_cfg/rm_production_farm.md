@@ -92,7 +92,7 @@ If the language is not currently supported for the user interface, you might see
 10. Select **Set Up a Stand-alone Server** \> **Enable Federated Security**.
 
     !!!note
-        If you set **Use Administrator IDs stored in your LDAP user registry** to yes, the and HCL Digital Experience user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords. See [Updating user ID and passwords](../../../../../../deployment/manage/security/people/authentication/updating_userid_pwd/index.md)
+        If you set **Use Administrator IDs stored in your LDAP user registry** to yes, the and HCL Digital Experience user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords. See [Updating user ID and passwords](../../../../../../deployment/manage/security/people/authentication/updating_userid_pwd/index.md).
 
 11. Provide information about your environment.
 
