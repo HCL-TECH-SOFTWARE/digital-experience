@@ -9,7 +9,7 @@ Most HCL Digital Experience service packs are not considered minor and might req
 Instructions for applying maintenance service to an HCL Portal cluster are provided with the service package. Before you apply maintenance, analyze user impact. Ensure that you can provide uninterrupted service \(also referred to as 24x7 availability\), even during the maintenance phase.
 
 !!! note
-    If you don't use horizontal scaling in your environment, any fix that requires restarting equipment results in a temporary outage for your users. Existing 24x7 installation procedures do not apply to these environments.
+    If you do not use horizontal scaling in your environment, any fix that requires restarting equipment results in a temporary outage for your users. Existing 24x7 installation procedures do not apply to these environments.
 
 !!! important
     You do not have to remove the node from the cluster when you apply fixes. If you do remove a node, you might be unable to add the node back to the cluster.
