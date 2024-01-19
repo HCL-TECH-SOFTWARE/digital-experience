@@ -241,7 +241,7 @@ Use the same database user ID and password for each identically named domain or 
 
     2.  Change to the ``wp_profile_root/ConfigEngine`` directory.
 
-    3.  Depending on your operating system, run one the following commands to create the JAAS Authentication Aliases:
+    3.  Depending on your operating system, run one of the following commands to create the JAAS Authentication Aliases:
 
         -   AIX® and Linux™: `./ConfigEngine.sh create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr_password`
         -   Windows™: `ConfigEngine.bat create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr_password`
