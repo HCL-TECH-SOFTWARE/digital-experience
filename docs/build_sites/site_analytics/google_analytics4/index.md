@@ -22,24 +22,24 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
         - If using a WebDAV-based theme, copy the GoogleAnalyticsAggregator.js file to mycontenthandler/dav/fs-type1/theme/{your-custom-theme}/js.
         - If using a WAR-based theme, include the GoogleAnalyticsAggregator.js file in the static theme WAR file. For example, when using a WAR-based theme, the location of the GoogleAnalyticsAggregator.js file after installing to the <YourTheme> WAR file is deployed under wp_profile:
 
-    wp\_profile/installedApps/<cell\>/<YourTheme.ear\>/<YourTheme.war\>/themes/<YourTheme\>/js
+        wp\_profile/installedApps/<cell\>/<YourTheme.ear\>/<YourTheme.war\>/themes/<YourTheme\>/js
 
-    Refer to the following file tree that shows how the custom theme app is deployed:
+        Refer to the following file tree that shows how the custom theme app is deployed:
 
-        ```
-        wp_profile
-            ---> installedApps
-                ---> <cell>
-                    ---> <YourTheme.ear>
-                        ---> <YourTheme.war>
-                            ---> themes
-                                ---> <YourTheme>
-                                    ---> js
-                                        ---> GoogleAnalyticsAggregator.js
-        ```
+            ```
+            wp_profile
+                ---> installedApps
+                    ---> <cell>
+                        ---> <YourTheme.ear>
+                            ---> <YourTheme.war>
+                                ---> themes
+                                    ---> <YourTheme>
+                                        ---> js
+                                            ---> GoogleAnalyticsAggregator.js
+            ```
 
     !!!important
-        The theme profile used by the pages must have `wp_analytics` or at least `wp_analy: tics_aggregator`.
+        The theme profile used by the pages must have `wp_analytics` or at least `wp_analytics_aggregator`.
 
     - For HCL DX without [Practitioner Studio](../../practitioner_studio/index.md) installed, there are two options:
 
@@ -86,7 +86,7 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
 
         5. Click **I want to set parameters**.
 
-        6. In the **New parameter** field, enter a string that starts with `asa_aggregator` or `asa_dependency`. Values that correspond to names that start with the string `asa_aggregator` are added to the page body and names that start with `asa_dependency` are added to the head. Both the aggregators and dependencies are added to the portal page in alphabetical order according to the Java method Collections.sort().
+        6. In the **New parameter** field, enter a string that starts with `asa_aggregator` or `asa_dependency`. Values that correspond to names that start with the string `asa_aggregator` are added to the page body and names that start with `asa_dependency` are added to the head. Both the aggregators and dependencies are added to the portal page in alphabetical order according to the Java method `Collections.sort()`.
 
         7. In the **New value** field, enter the name of the aggregator script file. For example, GoogleAnalyticsAggregator.js.
 
