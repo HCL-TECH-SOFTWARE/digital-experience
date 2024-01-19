@@ -6,7 +6,7 @@ If two independently configured clusters exist within the same cell, each cluste
 
 ## Database settings
 
-When you configure multiple clusters in the same IBM® WebSphere® Application Server cell, you must carefully set and review the database settings.
+When you configure multiple clusters in the same IBM® WebSphere® Application Server cell, you must carefully set and review the following database settings:
 <!-- What is this list? A list needs a complete introduction. -->
 - Based on your configuration, determine which database domains you want to share with other clusters in the same cell \(multiple cluster environment\).
 
