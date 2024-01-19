@@ -133,7 +133,7 @@ If you set **Use Administrator IDs stored in your LDAP user registry** to ``yes`
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
     
-8.  Log in to HCL Portal to verify that your portal server workings.
+8.  Log in to HCL Portal to verify that your portal server works.
 
 
 ## Tuning the servers in your environment
