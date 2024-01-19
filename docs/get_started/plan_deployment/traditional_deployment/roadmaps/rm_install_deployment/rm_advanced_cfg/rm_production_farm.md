@@ -41,7 +41,7 @@ Installing HCL Digital Experience involves preparing your operating system, inst
 
 ## Applying the latest cumulative fix
 
-You maintain the portal by deploying individual Fixes and Combined Cumulative Fixes (CFs), which are suggested according to your environment. See [HCL Digital Experience roadmap: Applying maintenance](../rm_cf.md)
+Maintain the portal by deploying individual Fixes and Combined Cumulative Fixes (CFs), which are suggested according to your environment. See [HCL Digital Experience roadmap: Applying maintenance](../rm_cf.md).
 
 ## Setting up a stand-alone server
 
