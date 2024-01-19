@@ -95,7 +95,7 @@ After you install your web experience, a default file-based repository is the av
 
 If you are working with HCL Digital Experience 8.5 or 9 at a software level prior to CF18, the wizard address is http://your_server:10200/ibm/wizard. After you install CF18, the configuration wizard is automatically adjusted to http://your_server:10200/hcl/wizard.
 
-There is a known issue with Chrome version 45 and later and the Configuration wizard. If you experience difficulties, use a different to access the wizard.
+There is a known issue with Chrome version 45 and later and the Configuration wizard. If you experience difficulties, use a different browser to access the wizard.
 
 3.  Log in to the Configuration wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
