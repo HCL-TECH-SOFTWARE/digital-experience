@@ -207,7 +207,7 @@ The delivery environment is ready to use.
 
 ## Going live with your website
 
-After your environments are installed, the authoring system is complete, your default content is created, and the system is fully, you are ready to go live.
+After your environments are installed, the authoring system is complete, your default content is created, and the system is tested, you are ready to go live.
 
 1.  Ensure that your stakeholders are ready to use your website and authoring system:
 
