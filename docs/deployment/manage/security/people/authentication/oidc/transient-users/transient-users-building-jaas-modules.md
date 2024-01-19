@@ -4,15 +4,15 @@
 
 You can build a custom Java Authentication and Authorization Service (JAAS) login module to either make additional authentication decisions or add information to the subject to make fine-grained authorization decisions inside your application.
 
-The sample implementation custom JAAS login module provided here uses [Rule-based user groups](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/) (Softgroups) that allows you to define dynamic portal user groups and resolve user's role/group membership. You can further refer to Rule-based user groups [capabilities](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/#what-you-can-do-with-rule-based-user-groups) to understand what you can achive from this.
+The sample implementation custom JAAS login module provided here uses [Rule-based user groups](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/) (Softgroups) that allows you to define dynamic portal user groups and resolve users role/group membership. For more information on Rule-based user groups, see [capabilities](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/#what-you-can-do-with-rule-based-user-groups).
 
-To resolve transient user's role/group membership, you can retrieve `roles/groups` information from IdP's claim token (JWT). In addition to `roles/groups`, you can also consider using other attributes from the claim token, for e.g. `email` attribute to determine the domain user belongs to. These attributes will help you define rule based groups within Softgroups.
+To resolve transient users role/group membership, you can retrieve `roles/groups` information from IdPs claim token (JWT). In addition to `roles/groups`, you can use other attributes from the claim token, for example, the `email` attribute to determine the domain the user belongs to. These attributes will help you define rule-based user groups within the Softgroups.
 
-Once the values have been determined, these attribute-value pairs are fed into `Softgroup service` provided by Softgroups portlet. This service will then determine user groups based on rules defined within the Softgroup portlet. Once these groups are determined they can help you in facilitating access control. For additional information refer to [Configuring Rule-based user groups for Transient Users](./transient-users-softgroups-configuration.md) guide.
+Once the attribute values are determined, the attribute-value pairs are fed into the `Softgroup service` provided by the Softgroups portlet. This service will then determine user groups based on rules defined within the Softgroup portlet. Once these groups are determined they can help you in facilitating access control. For more information, see [Configuring Rule-based user groups for Transient Users](./transient-users-softgroups-configuration.md).
 
 ## Extending JAAS LoginModule interface
 
-Different IdPs have different ways in how they add `role/group` attributes to the claim token (JWT). Some of the IdPs could add them as a comma-separated string, and some may add them as an array.
+Different IdPs have different ways to add the `role/group` attributes to the claim token (JWT). Some of the IdPs could add them as a comma-separated string, and some may add them as an array.
 
 To address this variablilty, there is a need to provide a common interface that allows you to adjust the implementation specific to your IdP.
 
@@ -47,7 +47,7 @@ public interface ITransientUsersLoginModule extends LoginModule {
 
 The central component in this approach is the `TransientUsersLoginModule`, which implements the `ITransientUsersLoginModule` interface.
 
-The sample code and JAAS module implementation provided below is an example of how you can implement the two interface functions in addition to `LoginModule` interface functions for Keycloak. This implementation provides authentication for general transient users, as well as advanced functionality, such as using Softgroups to add group/roles assignments to transient users within DX.
+The sample code and JAAS module implementation provided is an example of how you can implement the two interface functions in addition to the `LoginModule` interface functions for Keycloak. This implementation provides authentication for general transient users, as well as advanced functionality, such as using Softgroups to add group/role assignments to transient users within DX.
 
 ```java
 /*
@@ -361,42 +361,42 @@ public class TransientUsersLoginModule implements ITransientUsersLoginModule {
 
 ## Building and deploying custom JAAS login module
 
-You can download entire code for the above example from [here](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/tree/develop/dx.jaas.sample). Here we will be using Maven and Eclipse to build the custom JAAS login module jar file.
+You can download the entire code for the `ITransientUsersLoginModule interface` example from [here](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/tree/develop/dx.jaas.sample). Here we use Maven and Eclipse to build the custom JAAS login module jar file.
 
 !!!note
-    Make sure that the following JAR files are available in the `lib` folder
+    Make sure that the following JAR files are available in the `lib` folder:
 
     - com.ibm.ws.runtime.jar
     - com.ibm.ws.security.oidc.client.jar
 
-    These JAR files can be found in the `app_server_root/plugins` folder on the server, for example `/opt/HCL/AppServer/plugins`
+    These JAR files are found in the `app_server_root/plugins` folder on the server, for example `/opt/HCL/AppServer/plugins`.
 
-1. Open the Eclipse IDE and import the `dx.jaas.sample` folder from this repository
+1. Open the Eclipse IDE and import the `dx.jaas.sample` folder from this repository.
 
-1. After making your changes, right-click on the `dx.jaas.sample` folder in Eclipse, then select Run as > Maven install
+2. Right-click on the `dx.jaas.sample` folder in Eclipse and select **Run as > Maven install**.
 
 1. Next, go to Run as again and choose `Maven build...` Configure your build window with the following details:
     1. Add `package` as a Goal
-    1. Check your JRE
-    1. Click Run
+    2. Check your JRE
+    3. Click **Run**.
 
     ![Running maven project](../../../../../../../images/DX_JAAS_MODULE_ECLIPSE_RUN.png)
 
 1. Once it is complete you will get `dx.jaas.sample.jar` file in `dx.jaas.sample\target\dx.jaas.sample.jar` folder
 
-1. Now copy the `dx.jaas.sample.jar` into the class path (e.g. `opt/HCL/lib/ext/` for traditional environments or `/opt/HCL/wp_profile/classes` for containerized environments).
+2. Now copy the `dx.jaas.sample.jar` into the classpath (for example `opt/HCL/lib/ext/` for traditional environments or `/opt/HCL/wp_profile/classes` for containerized environments):
 
     ```sh
     cp dx.jaas.sample.jar /opt/HCL/wp_profile/classes
     ```
 
-1. Configure the global security settings in WAS ISC
+3. Configure the global security settings in WAS ISC.
 
     Navigate to **Global Security** > **JAAS - System Logins** > **WEB_INBOUND**.
 
     Use the class provided by your JAR file or use the default `TransientUsersLoginModule` class.
 
-1. Ensure that the module order for **WEB_INBOUND** is set as follows
+4. Set the module order for **WEB_INBOUND** as follows:
 
     | Module Class Name | Module Order |
     | --- | --- |
@@ -404,6 +404,6 @@ You can download entire code for the above example from [here](https://git.cwp.p
     | com.ibm.ws.security.server.lm.ltpaLoginModule | 2 |
     | com.ibm.ws.security.server.lm.wsMapDefaultInboundLoginModule | 3 |
 
-1. Click **OK**, and **Save** to the master configuration
+5. Click **OK** and **Save** to save the changes to the master configuration.
 
-1. Restart the server
+6. Restart the server
