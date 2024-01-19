@@ -6,10 +6,10 @@ Follow the tasks to execute this configuration:
 
 1. [Install the OIDC RP TAI for WebSphere](#installing-the-oidc-rp-tai)
 2. [Configure the TAI against Keycloak OIDC](#configuring-the-oidc-rp-tai-against-your-idp)
-3. [Update WAS security properties to match the new TAI requirements](#updating-was-security-properties)
-4. [Add the server certificate to the WAS trust store to allow internal HTTPS communication](#adding-the-hostnameserver-certificate-to-the-was-trust-store)
-5. [Add the trusted authentication realm](#add-the-trusted-authentication-realm)
-6. [Security role to user/group mapping](#security-role-to-usergroup-mapping)
+3. [Updating WAS security properties to match the new TAI requirements](#updating-was-security-properties)
+4. [Adding the server certificate to the WAS trust store to allow internal HTTPS communication](#adding-the-hostname-or-server-certificate-to-the-was-trust-store)
+5. [Adding the trusted authentication realm](#adding-the-trusted-authentication-realm)
+6. [Security role to user or group mapping](#security-role-to-user-or-group-mapping)
 7. [Updating the DX Logout flow for OIDC](#updating-the-dx-logout-flow-for-oidc)
 8. [Configuring DX VMM to match OIDC identities](#configuring-dx-vmm-to-match-oidc-identities)
 
@@ -55,7 +55,7 @@ The interceptor is configured in the ISC under **Security > Global Security > We
     !!!note
         If the interceptor already exists, click on it to access the configuration properties instead of creating it again.
 
-2. Add the following custom properties:
+1. Add the following custom properties:
 
     | Name | Value |
     | --- | --- |
@@ -83,7 +83,7 @@ The interceptor is configured in the ISC under **Security > Global Security > We
         - Make sure to replace the `<IDP_HOSTNAME>` and `<CLIENT_SECRET>` placeholders with your respective details. The client secret is available through your IdP client configuration. Also ensure other properties match your environment configuration, for example, the path filter matches your DX context, the OIDC URLs match your IdP endpoint structure, and the right client id is used.
         - Set the `interceptedPathFilter` property to `/wps/myportal`, so that TAI protects any request to this resource. The value is subject to change and is completely dependent on how you have configured the context root while setting up DX. This property allows you to specify a comma-separated list of regular expression URI patterns. To protect any additional requests to the resources can be specified using this property.
 
-3. Click **Apply** and **OK**.  Click **Save** to save the changes directly to the master configuration in the alert message.
+1. Click **Apply** and **OK**.  Click **Save** to save the changes directly to the master configuration in the alert message.
 
 ## Updating WAS security properties
 
@@ -91,14 +91,14 @@ To update the custom properties to match the OIDC TAI config and its expected be
 
 1. Delete the property `com.ibm.websphere.security.DeferTAItoSSO` if it exists.
 
-2. Add or update the following properties:
+1. Add or update the following properties:
 
     | Name                                                    | Value            |
     | ------------------------------------------------------- | ---------------- |
     | com.ibm.websphere.security.customSSOCookieName          | LtpaToken2       |
     | com.ibm.websphere.security.disableGetTokenFromMBean     | false            |
 
-3. Click **Save**, to save the changes.
+1. Click **Save**, to save the changes.
 
 ## Adding the hostname or server certificate to the WAS trust store
 
@@ -114,9 +114,9 @@ In the ISC, navigate to **Security > SSL certificate and key management > Key st
     | Port | 443 |
     | Alias | hcl-dx-oidc-cert (**Note**: This is the same value that is provided in the interceptor property `signVerifyAlias`) |
 
-2. Click **Retrieve signer information**, to load the certificate details.
+1. Click **Retrieve signer information**, to load the certificate details.
 
-3. Click **OK** and **Save** to save the master configuration.
+1. Click **OK** and **Save** to save the master configuration.
 
 ## Adding the trusted authentication realm
 
@@ -152,11 +152,11 @@ Follow the steps, to set the log in property to `mail` to match the identity att
 
 1. Go to the IBM WebSphere Application Server Integrated Solutions Console.
 
-2. Navigate to **Security > Global security > User account repository > Configure > <LDAP_ID>**
+1. Navigate to **Security > Global security > User account repository > Configure > <LDAP_ID>**
 
-3. Set the field for **Federated repository properties for login** to `mail`.
+1. Set the field for **Federated repository properties for login** to `mail`.
 
-4. Click **OK** and **Save** to save the master configuration.
+1. Click **OK** and **Save** to save the master configuration.
 
 ### Updating IBM WebSphere Application Server sub-component Virtual Member Manager (VMM) to map user attributes
 
@@ -177,7 +177,7 @@ Follow the steps, to set the log in property to `mail` to match the identity att
 
     ```
 
-2. Find the `userSecurityNameMapping` config attribute in the realmConfiguration and change the value of the property `propertyForOutput` to `uniqueName`:
+1. Find the `userSecurityNameMapping` config attribute in the realmConfiguration and change the value of the property `propertyForOutput` to `uniqueName`:
 
     ```xml
     # before
@@ -187,7 +187,7 @@ Follow the steps, to set the log in property to `mail` to match the identity att
     <config:userSecurityNameMapping propertyForInput="principalName" propertyForOutput="uniqueName"/>
     ```
 
-3. Make sure to save the changes.
+1. Make sure to save the changes.
 
 ### Restarting the server / DX core to apply all changes
 

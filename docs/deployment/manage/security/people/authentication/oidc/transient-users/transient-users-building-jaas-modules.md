@@ -370,28 +370,28 @@ You can download the entire code for the `ITransientUsersLoginModule interface` 
 
 1. Open the Eclipse IDE and import the `dx.jaas.sample` folder from this repository.
 
-2. Right-click on the `dx.jaas.sample` folder in Eclipse and select **Run as > Maven install**.
+1. Right-click on the `dx.jaas.sample` folder in Eclipse and select **Run as > Maven install**.
 
-3. Next, go to Run as again and choose `Maven build...` Configure your build window with the following details:
+1. Next, go to Run as again and choose `Maven build...` Configure your build window with the following details:
     1. Add `package` as a Goal
-    2. Check your JRE
-    3. Click **Run**.
+    1. Check your JRE
+    1. Click **Run**.
 
     ![Running maven project](../../../../../../../images/DX_JAAS_MODULE_ECLIPSE_RUN.png)
 
-4. Once it is complete you will get `dx.jaas.sample.jar` file in `dx.jaas.sample\target\dx.jaas.sample.jar` folder
+1. Once it is complete you will get `dx.jaas.sample.jar` file in `dx.jaas.sample\target\dx.jaas.sample.jar` folder
 
-5. Now copy the `dx.jaas.sample.jar` into the classpath (for example `opt/HCL/lib/ext/` for traditional environments or `/opt/HCL/wp_profile/classes` for containerized environments):
+1. Now copy the `dx.jaas.sample.jar` into the classpath (for example `opt/HCL/lib/ext/` for traditional environments or `/opt/HCL/wp_profile/classes` for containerized environments):
 
     ```sh
     cp dx.jaas.sample.jar /opt/HCL/wp_profile/classes
     ```
 
-6. Configure the global security settings in WAS ISC. Go to **Global Security** > **JAAS - System Logins** > **WEB_INBOUND**.
+1. Configure the global security settings in WAS ISC. Go to **Global Security** > **JAAS - System Logins** > **WEB_INBOUND**.
 
-7. Add the class name defined within your JAR file or use the default `com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule` class.
+1. Add the class name defined within your JAR file or use the default `com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule` class.
 
-8. Set the module order for **WEB_INBOUND** as follows:
+1. Set the module order for **WEB_INBOUND** as follows:
 
     | Module Class Name | Module Order |
     | --- | --- |
@@ -399,6 +399,6 @@ You can download the entire code for the `ITransientUsersLoginModule interface` 
     | com.ibm.ws.security.server.lm.ltpaLoginModule | 2 |
     | com.ibm.ws.security.server.lm.wsMapDefaultInboundLoginModule | 3 |
 
-9. Click **OK** and **Save** to save the changes to the master configuration.
+1. Click **OK** and **Save** to save the changes to the master configuration.
 
-10. Restart the server
+1. Restart the server

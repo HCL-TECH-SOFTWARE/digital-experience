@@ -6,8 +6,6 @@ Before you plan to integrate HCL Digital Experience (DX) with an Identity Provid
 
 When you are using custom login portlets, you can not re-use the custom code, when integrating OIDC Authorization Code Flow for user authentication and authorization with DX.
 
-
-
 Additional considerations you should look at are described below:
 
 ### Page title

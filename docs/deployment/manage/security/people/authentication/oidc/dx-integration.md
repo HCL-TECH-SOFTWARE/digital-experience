@@ -8,9 +8,9 @@ This document provides instructions to adjust the user log in flow within DX. Wh
 
 Follow the tasks to establish the configuration:
 
-1. [Detaching the existing login option](#detaching-the-existing-login-option-setting-up-the-admin-login-option)
-2. [Creating the new IdP specific login option](#creating-the-new-idp-specific-login-option)
-3. [Validate everything is working as expected](#testing-the-oidc-login-flow)
+1. [Detaching the existing login option](#detaching-the-existing-login-option)
+1. [Creating the new IdP specific login option](#creating-the-new-idp-specific-login-option)
+1. [Validate everything is working as expected](#testing-the-oidc-login-flow)
 
 ## Detaching the existing login option
 
@@ -29,31 +29,31 @@ First, detach the existing login option by changing its unique name:
 Create a new login option that maps to `/admin/login` for the default Admin(file system) login:
 
 1. On the **Manage Pages** page, click the **Select Page > Content Root > Hidden Pages** (with Unique name/identifier `ibm.portal.HiddenPages`), and click the **Edit Page Properties** icon (first action in the row).
-2. Set the **Friendly URL name** field to `admin` or `hidden` and click **OK**.
+1. Set the **Friendly URL name** field to `admin` or `hidden` and click **OK**.
 
 ## Creating the new IdP specific login option
 
 Create the new login option to map `/wps/myportal` for the users to access:
 
 1. On the **Manage Pages** page, click **Select Page**.
-2. Click the **Content Root** page > Home** page.
-3. Click **New URL**. On the next page, add the following values:
+1. Click the **Content Root** page > Home** page.
+1. Click **New URL**. On the next page, add the following values:
     1. Set **Title** to `Login-IdP`.
-    2. Select the **A link to a Web page with the following URL** radio button.
-    3. Set the URL to `https://<DX_HOSTNAME>/wps/myportal`.
-    4. Click **OK**.
-4. On the **Manage Pages** page, select the **Home** page. Make sure you see the newly added **Login-IdP** URL. In the same row, click the **Set Page Permission** action.
-5. On the **Resource Permissions** page, find the **User** row and click the **Edit Role** action.
-6. Click ** Add**.
-7. Check the **Anonymous Portal User** box and click **OK**. The **Anonymous Portal User** role now appears in the **Resource Permissions** panel.
+    1. Select the **A link to a Web page with the following URL** radio button.
+    1. Set the URL to `https://<DX_HOSTNAME>/wps/myportal`.
+    1. Click **OK**.
+1. On the **Manage Pages** page, select the **Home** page. Make sure you see the newly added **Login-IdP** URL. In the same row, click the **Set Page Permission** action.
+1. On the **Resource Permissions** page, find the **User** row and click the **Edit Role** action.
+1. Click **Add**.
+1. Check the **Anonymous Portal User** box and click **OK**. The **Anonymous Portal User** role now appears in the **Resource Permissions** panel.
 
 ## Mapping the new IdP specific login
 
 Follow the steps to update the unique name of the new IdP specific login page:
 
 1. On the left side navigation, go to **Settings > Custom Unique Names** and select the **Pages** resource type.
-2. Search for the **Login-IdP** page and click **Edit unique name for Page** in the respective row.
-3. In the **Unique name** field, set the value to `wps.Login` and click **OK**.
+1. Search for the **Login-IdP** page and click **Edit unique name for Page** in the respective row.
+1. In the **Unique name** field, set the value to `wps.Login` and click **OK**.
 
 ## Testing the OIDC login flow
 

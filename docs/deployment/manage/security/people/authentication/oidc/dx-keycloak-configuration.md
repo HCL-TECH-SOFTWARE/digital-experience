@@ -10,12 +10,12 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
     - Login should be admin : admin
 
-2. From the top left dropdown, select **Create Realm** and add a new realm name.
-3. Click **Create** (for example we are using oidcdx):
+1. From the top left dropdown, select **Create Realm** and add a new realm name.
+1. Click **Create** (for example we are using oidcdx):
 
     ![Keycloak_HTTPS_SSL_2](../../../../../../images/Keycloak_HTTPS_SSL_2.png)
 
-4. Go to the **Clients Section > Create Client** and add the following values:
+1. Go to the **Clients Section > Create Client** and add the following values:
     1. In **General Setting** page add the following values:
         - Client ID: dxtest
         - Name: dxtest
@@ -24,19 +24,19 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
         ![Keycloak_HTTPS_SSL_3](../../../../../../images/Keycloak_HTTPS_SSL_3.png)
 
-    2. In the **Capability config** page,  check the **Client authentication** options and click “Next”.
+    1. In the **Capability config** page,  check the **Client authentication** options and click “Next”.
 
         ![Keycloak_HTTPS_SSL_4](../../../../../../images/Keycloak_HTTPS_SSL_4.png)
 
-    3. In the **Access setting** page, enter the following URLs in **Valid redirect URIs** section and click “Save”:
+    1. In the **Access setting** page, enter the following URLs in **Valid redirect URIs** section and click “Save”:
 
         1. (Only use this one for dev) `<HOSTNAME>/*`
-        2. `<HOSTNAME>/oidcclient/keycloak`
-        3. `<HOSTNAME>/wps/portal`
+        1. `<HOSTNAME>/oidcclient/keycloak`
+        1. `<HOSTNAME>/wps/portal`
 
         ![Keycloak_HTTPS_SSL_5](../../../../../../images/Keycloak_HTTPS_SSL_5.png)
 
-5. To create a client scope mapper for realmName, go to **{realm} > Client scope > roles > Add mappers > By Configuration > Hardcoded claim**
+1. To create a client scope mapper for realmName, go to **{realm} > Client scope > roles > Add mappers > By Configuration > Hardcoded claim**
 
     - Fill the fields with the following values:
 
@@ -51,14 +51,14 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
     ![Keycloak_HTTPS_SSL_6](../../../../../../images/Keycloak_HTTPS_SSL_6.png)
 
-6. To add `openid` client scope (if not available), select **Client scopes > Create scope**:
+1. To add `openid` client scope (if not available), select **Client scopes > Create scope**:
 
     - Name: openid
     - Click “Save”
 
     ![Keycloak_HTTPS_SSL_7](../../../../../../images/Keycloak_HTTPS_SSL_7.png)
 
-7. To add openid client scope to the client (if not added), select **Clients > dxtest(client name) > client scopes > add client scope > select openid > Add as default**.
+1. To add openid client scope to the client (if not added), select **Clients > dxtest(client name) > client scopes > add client scope > select openid > Add as default**.
 
     ![Keycloak_HTTPS_SSL_8](../../../../../../images/Keycloak_HTTPS_SSL_8.png)
 

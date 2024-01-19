@@ -96,9 +96,9 @@ The full configuration here entails the setup of a realm, user federation, clien
 
     1. Navigate to **Realm setting**, click the **Action** dropdown and select **Partial import**. Download the [native-kube-hcl-realm-client-config.json](../resources/native-kube-dx-users-realm-client-config.json) and upload it in the dialog.
 
-    2. This should properly recognize the file and list various resources to import (users, clients, realm and client roles). Select all of them and select **Overwrite** in the if-exists dropdown.
+    1. This should properly recognize the file and list various resources to import (users, clients, realm and client roles). Select all of them and select **Overwrite** in the if-exists dropdown.
 
-    3. Click **Import** to apply the configuration and add respective resources. This leads to a summary view that lists the added and overwritten resources. Review the changes to ensure there are no obvious errors and click **Close**.
+    1. Click **Import** to apply the configuration and add respective resources. This leads to a summary view that lists the added and overwritten resources. Review the changes to ensure there are no obvious errors and click **Close**.
 
 - Click on the **Clients** tab and select the client ID link. For example, Client ID:`hcl-dx-oidc-client`.
 
@@ -277,13 +277,13 @@ Follow the same steps two more times for the guest and customer users. For this,
 
 We will set up two realms for employees (mapping to users) as well as for customers and guests. The customers and guests share the same realm but will leverage individual clients.
 
-Use the same **Partial import** feature that was already leveraged in the [Configure Keycloak client for DX](#configure-keycloak-client-for-dx) step.
+Use the same **Partial import** feature that was already leveraged in the [Configuring the Keycloak client for DX](#configuring-the-keycloak-client-for-dx) step.
 
 #### Creating the realms
 
 - First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` and password `admin`. Then, open the realm dropdown on the top left and click on **Create Realm**.
 
-- Set the realm name to `dx-users` and import the provided file [native-kube-dx-users-realm-client-config.json].(./resources/native-kube-dx-users-realm-client-config.json). Click on **Create** to create the realm. This will set up the realm with all configuration. 
+- Set the realm name to `dx-users` and import the provided file [native-kube-dx-users-realm-client-config.json].(./resources/native-kube-dx-users-realm-client-config.json). Click on **Create** to create the realm. This will set up the realm with all configuration.
 
 - Create the second realm with the name `dx-customers-guests` and the provided file [native-kube-dx-customers-guests-realm-client-config.json](../resources/native-kube-dx-customers-guests-realm-client-config.json).
 
@@ -292,7 +292,7 @@ Use the same **Partial import** feature that was already leveraged in the [Confi
 
 ### Configure different OIDC providers for the Virtual Portals
 
-Configure the new realms and clients as additional providers into the OIDC TAI the same way as in [Configure the OIDC TAI](#configure-the-oidc-tai):
+Configure the new realms and clients as additional providers into the OIDC TAI the same way as in [Configure the OIDC TAI](./dx-update-webshpere-for-oidc.md#configuring-the-oidc-rp-tai-against-your-idp):
 
 - Log in to the WAS console and navigate to **Security > Global Security > Web and SIP security > Trust association > Interceptors  > com.ibm.ws.security.oidc.client.RelyingParty**.
 
@@ -381,7 +381,7 @@ Verify that everything is working as intended. With this setup you have establis
 
 1. **https://&lt;HOSTNAME&gt;/wps/portal**
 
-    This page is your general landing page and allows anonymous access. By clicking login, you are forwarded to https://<HOSTNAME>/wps/myportal, which is the configured OIDC login interceptor for your first configuration. This relates to the `hcl` realm and the `dx-oidc-client` client. It allows the entire user base of the LDAP as users to authenticate.
+    This page is your general landing page and allows anonymous access. By clicking login, you are forwarded to https://&lt;HOSTNAME&gt;/wps/myportal, which is the configured OIDC login interceptor for your first configuration. This relates to the `hcl` realm and the `dx-oidc-client` client. It allows the entire user base of the LDAP as users to authenticate.
 
 1. **https://&lt;HOSTNAME&gt;/wps/portal/woodburnstudio-vp-users**
 

@@ -20,7 +20,7 @@ Before you begin, please ensure you have carried out the steps outlined in [Upda
     !!! note
         After you run the `enable-transient-user` task, all identified users are identified with the authenticated group and do not have explicit groups.
 
-2. Restart the server:
+1. Restart the server:
 
     ```sh
     kubectl exec -it dx-deployment-core-0 bash -n dxns
@@ -29,7 +29,7 @@ Before you begin, please ensure you have carried out the steps outlined in [Upda
     ./startServer.sh WebSphere_Portal
     ```
 
-3. **(Optional):** Complete the following steps to create group objects for external providers to assign different access rights:
+1. **(Optional):** Complete the following steps to create group objects for external providers to assign different access rights:
 
     1. In the ISC, go to **Security > Global Security**.
 
@@ -46,7 +46,7 @@ Before you begin, please ensure you have carried out the steps outlined in [Upda
 
     1. Click **OK** and  **Save** to save the changes in the master configuration.
 
-4. In the ISC navigate, go to **Resources > Resource Environment > Resource Environment Providers**. Search for **WP PumaStoreService** and then click **Custom properties**:
+1. In the ISC navigate, go to **Resources > Resource Environment > Resource Environment Providers**. Search for **WP PumaStoreService** and then click **Custom properties**:
 
     1. Set the following properties:
 
@@ -56,7 +56,7 @@ Before you begin, please ensure you have carried out the steps outlined in [Upda
         | store.puma_default.filter.TransparentUserFilter.classname | com.ibm.wps.um.TransparentUserFilter |
         | store.puma_default.filter.TransparentUserFilter.position | -10 |
 
-    2. **(Optional):** To customize the task for your business requirements add the following parameters : 
+    1. **(Optional):** To customize the task for your business requirements add the following parameters : 
     - **-Dtransparent.suffix** Set this value to a `dn` suffix that is used for transient users. The suffix must NOT match your current suffixes for fully registered users. The default value is `o=transparent`. 
     - **-Dtransparent.prefix** Set this value to a prefix that is used for transient users. For example, if you want to set the RDN attribute, set this value to `cn`.
 
@@ -64,17 +64,17 @@ Before you begin, please ensure you have carried out the steps outlined in [Upda
 
     1. Restart the server.
 
-5. After completing the steps to enable transient users, follow the procedure to add the JAAS login module for bridging the WAS OIDC Relying Party to HCL DX Transient Users.
+1. After completing the steps to enable transient users, follow the procedure to add the JAAS login module for bridging the WAS OIDC Relying Party to HCL DX Transient Users.
 
     1. The required jar for the JAAS login modules is deployed to the default path **/opt/HCL/PortalServer/base/wp.auth.jaas/profile/classes/wp.auth.jaas.jar**.
 
-    2. Copy the **wp.auth.jaas.jar** into the class path (for example **opt/HCL/lib/ext/** for traditional environments or **/opt/HCL/wp_profile/classes** for containerized environments).
+    1. Copy the **wp.auth.jaas.jar** into the class path (for example **opt/HCL/lib/ext/** for traditional environments or **/opt/HCL/wp_profile/classes** for containerized environments).
         - Navigate to **/opt/HCL/PortalServer/base/wp.auth.jaas/profile/classes/**
         - `cp wp.auth.jaas.jar /opt/HCL/wp_profile/classes`
 
-    3. In the ISC, go to **Global security > Java Authentication and Authorization Service > System logins > WEB_INBOUND**, and add the following module `com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule` with Authentication strategy `REQUIRED`.
+    1. In the ISC, go to **Global security > Java Authentication and Authorization Service > System logins > WEB_INBOUND**, and add the following module `com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule` with Authentication strategy `REQUIRED`.
 
-    4. Set the module order for **WEB_INBOUND** as follows:
+    1. Set the module order for **WEB_INBOUND** as follows:
 
         | Module Class Name | Module Order |
         | --- | --- |
@@ -82,16 +82,16 @@ Before you begin, please ensure you have carried out the steps outlined in [Upda
         | com.ibm.ws.security.server.lm.ltpaLoginModule | 2 |
         | com.ibm.ws.security.server.lm.wsMapDefaultInboundLoginModule | 3 |
 
-    5. Click **OK** and **Save**  to save the changes to the master configuration.
+    1. Click **OK** and **Save**  to save the changes to the master configuration.
 
-    6. Restart the server.
+    1. Restart the server.
 
 ## Testing the OIDC login flow
 
 1. Log out or open a private browser and navigate to `https://<DX_HOSTNAME>/wps/portal`.
-2. Click **Log in**.
+1. Click **Log in**.
     - This directs you to the IdP instance log in view.
-3. Log in with an existing IdP user and their password.
+1. Log in with an existing IdP user and their password.
     - You are directed to DX and logged in as the correct user.
 
 This completes your transient user OIDC setup.
