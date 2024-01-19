@@ -31,7 +31,7 @@ Gather information and software before you install HCL Digital Experience.
 
 ## Installing prerequisite software
 
-You can use currently installed prerequisite software. However, verify that your current version is supported. If it is not, upgrade to a supported version. Otherwise, install a web server, database server, and user registry server. Typically the database and user registry servers are already installed and configured. However, you might have to complete specific configuration steps that are required to integrate the software with the portal server. For moreinformation, see "Installing and preparing the prerequisite software."
+You can use currently installed prerequisite software. However, verify that your current version is supported. If it is not, upgrade to a supported version. Otherwise, install a web server, database server, and user registry server. Typically, the database and user registry servers are already installed and configured. However, you might have to complete specific configuration steps that are required to integrate the software with the portal server. For more information, see "Installing and preparing the prerequisite software."
 <!-- The information in three-item list was presented in the preceding paragraph. -->
 
 
