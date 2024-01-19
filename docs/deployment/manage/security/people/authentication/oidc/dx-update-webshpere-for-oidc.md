@@ -1,21 +1,21 @@
 # Updating WebSphere to support OIDC Authentication for DX
 
-This document provides instruction on how to configure a WebSphere Application Server to act as an OpenID Connect Relying Party. For detailed documentation refer to [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was/8.5.5?topic=users-configuring-openid-connect-relying-party).
+This document provides instructions on how to configure a WebSphere Application Server to act as an OpenID Connect Relying Party. For more information, see [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was/8.5.5?topic=users-configuring-openid-connect-relying-party).
 
-On a high level, the following tasks will be executed to establish this configuration:
+Follow the tasks to execute this configuration:
 
 1. [Install the OIDC RP TAI for WebSphere](#installing-the-oidc-rp-tai)
-1. [Configure the TAI against Keycloak OIDC](#configuring-the-oidc-rp-tai-against-your-idp)
-1. [Update WAS security properties to match the new TAI requirements](#updating-was-security-properties)
-1. [Add the server certificate to the WAS trust store to allow internal HTTPS communication](#adding-the-hostnameserver-certificate-to-the-was-trust-store)
-1. [Add the trusted authentication realm](#add-the-trusted-authentication-realm)
-1. [Security role to user/group mapping](#security-role-to-usergroup-mapping)
-1. [Updating the DX Logout flow for OIDC](#updating-the-dx-logout-flow-for-oidc)
-1. [Configuring DX VMM to match OIDC identities](#configuring-dx-vmm-to-match-oidc-identities)
+2. [Configure the TAI against Keycloak OIDC](#configuring-the-oidc-rp-tai-against-your-idp)
+3. [Update WAS security properties to match the new TAI requirements](#updating-was-security-properties)
+4. [Add the server certificate to the WAS trust store to allow internal HTTPS communication](#adding-the-hostnameserver-certificate-to-the-was-trust-store)
+5. [Add the trusted authentication realm](#add-the-trusted-authentication-realm)
+6. [Security role to user/group mapping](#security-role-to-usergroup-mapping)
+7. [Updating the DX Logout flow for OIDC](#updating-the-dx-logout-flow-for-oidc)
+8. [Configuring DX VMM to match OIDC identities](#configuring-dx-vmm-to-match-oidc-identities)
 
 ## Installing the OIDC RP TAI
 
-1. Install the OIDC RP TAI. See more details here: [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
+1. Install the OIDC RP TAI. For more information, see [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
 
     ```sh
     kubectl exec -it dx-deployment-core-0 bash -n dxns
@@ -29,9 +29,9 @@ On a high level, the following tasks will be executed to establish this configur
     ADMA5013I: Application WebSphereOIDCRP installed successfully.
     ```
 
-1. Open the ISC and go to **Applications** -> **Application types** -> **Enterprise Applications** -> **WebsphereOIDCRP** -> **Manage modules**
+2. Open the ISC and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP >  Manage modules**.
 
-1. Select available module and click “Apply” then “OK”.
+3. Select the available module and click “Apply” then “OK”.
 
     ![OIDCRP WAS Server Mapping](../../../../../../images/OIDCRP_WAS_SERVER_MAPPING.png)
 
@@ -48,14 +48,14 @@ kubectl exec -it dx-deployment-core-0 bash -n dxns
 
 The following configuration allows the OIDC TAI to contextualize which requests should be intercepted and how to treat them. In particular, this configuration is tightly connected to the IdP realm and client configuration.
 
-The interceptor can be configured in the ISC under **Security** -> **Global Security** -> **Web and SIP security** -> **Trust association** -> **Interceptors**.
+The interceptor is configured in the ISC under **Security > Global Security > Web and SIP security > Trust association > Interceptors**:
 
-1. Click on the **New..** button to create a new interceptor with the **Interceptor class name** `com.ibm.ws.security.oidc.client.RelyingParty`.
+1. Click on the **New** button to create a new interceptor with the **Interceptor class name** `com.ibm.ws.security.oidc.client.RelyingParty`.
 
     !!!note
         If the interceptor already exists, click on it to access the configuration properties instead of creating it again.
 
-1. Add the following custom properties:
+2. Add the following custom properties:
 
     | Name | Value |
     | --- | --- |
@@ -81,30 +81,30 @@ The interceptor can be configured in the ISC under **Security** -> **Global Secu
 
     !!!note
         - Make sure to replace the `<IDP_HOSTNAME>` and `<CLIENT_SECRET>` placeholders with your respective details. The client secret is available through your IdP client configuration. Also ensure other properties match your environment configuration, for example, the path filter matches your DX context, the OIDC URLs match your IdP endpoint structure, and the right client id is used.
-        - Here we have set `interceptedPathFilter` property to `/wps/myportal`, so that TAI protects any request to this resource. The value is subject to change and is completely dependent on how you have configured the context root while setting up DX. This property allows you to specify a comma-separated list of regular expression URI patterns. If you want to protect any additional requests to the resources can be specified using this property.
+        - Set the `interceptedPathFilter` property to `/wps/myportal`, so that TAI protects any request to this resource. The value is subject to change and is completely dependent on how you have configured the context root while setting up DX. This property allows you to specify a comma-separated list of regular expression URI patterns. To protect any additional requests to the resources can be specified using this property.
 
-1. Click **Apply** and **OK**. To persist the changes, click **Save** directly to the master configuration in the alert message.
+3. Click **Apply** and **OK**.  Click **Save** to save the changes directly to the master configuration in the alert message.
 
 ## Updating WAS security properties
 
-Some custom properties have to be updated to match the OIDC TAI config and its expected behavior. To do so, go to **Security** -> **Global security** -> **Custom properties**.
+To update the custom properties to match the OIDC TAI config and its expected behaviour, go to **Security >  Global security > Custom properties**:
 
 1. Delete the property `com.ibm.websphere.security.DeferTAItoSSO` if it exists.
 
-1. Add or update following properties:
+2. Add or update the following properties:
 
     | Name                                                    | Value            |
     | ------------------------------------------------------- | ---------------- |
     | com.ibm.websphere.security.customSSOCookieName          | LtpaToken2       |
     | com.ibm.websphere.security.disableGetTokenFromMBean     | false            |
 
-1. Persist the changes by clicking **Save**.
+3. Click **Save**, to save the changes.
 
-## Adding the hostname/server certificate to the WAS trust store
+## Adding the hostname or server certificate to the WAS trust store
 
-In order to allow internal HTTPS communication with your IdP, you must add the hostname (FQDN) to the WebSphere trust store.
+To allow internal HTTPS communication with your IdP, add the hostname (FQDN) to the WebSphere trust store.
 
-In the ISC, navigate to **Security** -> **SSL certificate and key management** -> **Key stores and certificates** -> **NodeDefaultTrustStore** -> **Signer Certificates** -> **Retrieve from port**
+In the ISC, navigate to **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer Certificates > Retrieve from port**:
 
 1. Set the following properties:
 
@@ -112,29 +112,29 @@ In the ISC, navigate to **Security** -> **SSL certificate and key management** -
     | --- | --- |
     | Host | &lt;IDP_HOSTNAME&gt; |
     | Port | 443 |
-    | Alias | hcl-dx-oidc-cert (**Note**: This is the same value that is provided in above interceptor property `signVerifyAlias`) |
+    | Alias | hcl-dx-oidc-cert (**Note**: This is the same value that is provided in the interceptor property `signVerifyAlias`) |
 
-1. Click **Retrieve signer information**. This loads the certificate details.
+2. Click **Retrieve signer information**, to load the certificate details.
 
-1. Click **OK**, and **Save** to the master configuration.
+3. Click **OK** and **Save** to save the master configuration.
 
-## Add the trusted authentication realm
+## Adding the trusted authentication realm
 
-In the ISC, navigate to **Security** -> **Global Security** -> **Configure** -> **Trusted authentication realms - inbound**
+In the ISC, navigate to **Security > Global Security > Configure > Trusted authentication realms - inbound**:
 
-1. Add the following value for your environment `https://<IDS_HOSTNAME>/auth/realms/hcl`
+1. Add the following value for your environment `https://<IDS_HOSTNAME>/auth/realms/hcl`.
 
-1. Click **OK**, and **Save** to the master configuration.
+1. Click **OK** and **Save**  the save changes to the master configuration.
 
-## Security role to user/group mapping
+## Security role to user or group mapping
 
-In the ISC, navigate to **Enterprise Applications** -> **wps** -> **Security role to user/group mapping**
+In the ISC, navigate to **Enterprise Applications > wps > Security role to user/group mapping**:
 
 1. Check the box next to **All Role** and under the dropdown **Map Special Subjects** select the `All Authenticated in Application's Realm` option.
 
 ## Updating the DX Logout flow for OIDC
 
-1. In the IBM WebSphere Application Server Integrated Solutions Console, navigate to **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**.
+1. In the IBM WebSphere Application Server Integrated Solutions Console, navigate to **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**:
 
 1. Add or update the following properties:
 
@@ -148,22 +148,22 @@ In the ISC, navigate to **Enterprise Applications** -> **wps** -> **Security rol
 
 ### Setting the login property to mail
 
-First, set the login property to `mail` to match the identity attribute coming in from your IdP. To do this,
+Follow the steps, to set the log in property to `mail` to match the identity attribute coming in from your IdP:
 
 1. Go to the IBM WebSphere Application Server Integrated Solutions Console.
 
-1. Navigate to **Security > Global security > User account repository > Configure... > <LDAP_ID>**
+2. Navigate to **Security > Global security > User account repository > Configure > <LDAP_ID>**
 
-1. Set the field for **Federated repository properties for login** to `mail`.
+3. Set the field for **Federated repository properties for login** to `mail`.
 
-1. Then, click **OK** and **Save** to the master configuration.
+4. Click **OK** and **Save** to save the master configuration.
 
 ### Updating IBM WebSphere Application Server sub-component Virtual Member Manager (VMM) to map user attributes
 
-1. After setting the login property to `mail`, this change must be worked into the WAS wimconfig.xml as well.
+1. After setting the login property to `mail`, this change is worked into the WAS wimconfig.xml .
 
     !!! note
-        This requires a manual update of the file, make sure to back the file up as this might otherwise corrupt your instance.
+        This requires a manual update of the file, make sure to back the file up as this will corrupt your instance.
 
     ```sh
     kubectl exec -it dx-deployment-core-0 bash -n dxns
@@ -177,7 +177,7 @@ First, set the login property to `mail` to match the identity attribute coming i
 
     ```
 
-1. From here, find the `userSecurityNameMapping` config attribute in the realmConfiguration and change the value of property `propertyForOutput` to `uniqueName` as outlined below:
+2. Find the `userSecurityNameMapping` config attribute in the realmConfiguration and change the value of the property `propertyForOutput` to `uniqueName`:
 
     ```xml
     # before
@@ -187,11 +187,11 @@ First, set the login property to `mail` to match the identity attribute coming i
     <config:userSecurityNameMapping propertyForInput="principalName" propertyForOutput="uniqueName"/>
     ```
 
-1. Make sure to save the changes.
+3. Make sure to save the changes.
 
 ### Restarting the server / DX core to apply all changes
 
-Finally, restart the DX environment (specifically, the DX core JVM) for the changes to take effect. Restarting the server can be done in various ways, for example, through the ConfigEngine:
+Restart the DX environment (specifically, the DX core JVM) for the changes to take effect. Restarting the server can be done in various ways, for example, through the ConfigEngine:
 
 ```sh
 kubectl exec -it dx-deployment-core-0 bash -n dxns
@@ -207,4 +207,4 @@ The restart takes a few minutes to complete.
 !!!note
     In case you desire to fully detach your WebSphere environment from the user federation, this is considered a "transient user" setup. This requires additional steps to be performed and are outlined in [Updating WebSphere to support OIDC Authentication for DX with Transient Users](transient-users/dx-update-webshpere-for-oidc-transient-users.md).
 
-Once you have updated WebSphere to support OIDC authentication for DX, you should look at steps outlined in [Adjusting the DX Login flow for OIDC](./dx-integration.md).
+Once you have updated WebSphere to support OIDC authentication for DX,  look at the steps outlined in [Adjusting the DX Login flow for OIDC](./dx-integration.md).
