@@ -26,11 +26,11 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
 
       ![Keycloak_HTTPS_SSL_3](../../../../../../images/Keycloak_HTTPS_SSL_3.png)
 
-    - Check the Client authentication option and click “Next”.
+    2. In the **Capability config** page,  check the **Client authentication** options and click “Next”.
 
       ![Keycloak_HTTPS_SSL_4](../../../../../../images/Keycloak_HTTPS_SSL_4.png)
 
-    1. Enter the following Valid redirect URIs and click “Save”:
+    1. In the **Access setting** page, enter the following URLs in **Valid redirect URIs** section and click “Save”:
 
         1. (Only use this one for dev) `<HOSTNAME>/*`
         2. `<HOSTNAME>/oidcclient/keycloak`
@@ -40,11 +40,12 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
 
 4. Create client scope Mapper for realmName: Go to {realm} -> Client scope -> roles -> Add mappers -> By Configuration -> Hardcoded Claim
 
-    - Fill in following fields with below values:
+    - Fill in the values in the following fields:
 
       - Name = realmName
       - Token Claim Name = realmName
-      - Claim Value = {realm} (change this as per your realm. For me it was oidcdx)
+      - Claim Value = {realm} (change this as per your realm. For example: oidcdx)
+      - Claim JSON Type = String
       - Check Add to ID token
       - Check Add to access token
       - Check Add to userinfo
