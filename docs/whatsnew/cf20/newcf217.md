@@ -81,10 +81,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Updated documentation on locating and downloading DX products
 
 === "Containers"
-    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Monthly Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-monthly-releases) are also updated. 
+    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-releases) are also updated. 
 
 === "Containers"
-    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Monthly Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-monthly-releases) are also updated. 
+    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-releases) are also updated. 
 
 ### Updated documentation for setting up OIDC in HCL DX
 
