@@ -2,7 +2,7 @@
 
 This document provides information on the configuration of Keycloak as an OIDC Identity Provider against HCL Digital Experience (DX) as a relying party. The configuration entails the setup of a realm, user federation, client, custom claims for client scopes and respective mappers to wire those claims.
 
-For the HCL DS Keycloak service the required settings/configuration already are in place and get rolled out during deployment. They should still be validated once before proceeding to ensure everything is understood and properly set up. Customers certainly can set up their own realm and client as needed using below steps, or adjust the once created by default.
+For the HCL DS Keycloak service, the required settings/configurations are in place and are rolled out during deployment. The HCL DS Keycloak service should be validated before proceeding to ensure everything is understood and properly set up. Customers can set up their own realm and client as needed or adjust the default settings/configuration.
 
 For default configuration, skip the remaining steps and continue to [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md).
 
