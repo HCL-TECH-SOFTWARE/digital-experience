@@ -110,7 +110,7 @@ Skip the next step, if you applied the most recent fix pack.
 
 2.  Open the Configuration wizard. Go to http://your_server:10200/hcl/wizard.
 
-If you are working with HCL Digital Experience V8.5 or 9 software at a level prior to CF18, the wizard address is  http://*your_server*:10200/ibm/wizard. After installing CF18, the configuration wizard  automatically adjusts to http://*your_server*:10200/hcl/wizard.
+If you are working with HCL Digital Experience V8.5 or 9 software at a level prior to CF18, the wizard address is http://*your_server*:10200/ibm/wizard. After installing CF18, the configuration wizard  automatically adjusts to http://*your_server*:10200/hcl/wizard.
 
 There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
