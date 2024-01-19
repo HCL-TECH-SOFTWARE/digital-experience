@@ -53,7 +53,7 @@ You maintain portals by installing individual Fixes and Combined Cumulative Fixe
 
 After you install your web experience, Apache Server is the available database. Depending on your requirements, you might have to transfer to a different database. The Database Transfer configuration option in the Configuration wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database. See [Database Transfer in Configuration Wizard](../../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/index.md) for more information about this topic.
 
-1. Log in to HCL Portal to verify that your portal workshave a working portal:
+1. Log in to HCL Portal to verify that your portal works:
 
 ```
 http://<hostname.example.com>:<10039>/wps/portal
