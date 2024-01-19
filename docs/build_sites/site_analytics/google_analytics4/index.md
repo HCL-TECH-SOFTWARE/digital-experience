@@ -22,7 +22,7 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
         - If using a WebDAV-based theme, copy the GoogleAnalyticsAggregator.js file to mycontenthandler/dav/fs-type1/theme/{your-custom-theme}/js.
         - If using a WAR-based theme, include the GoogleAnalyticsAggregator.js file in the static theme WAR file. For example, when using a WAR-based theme, the location of the GoogleAnalyticsAggregator.js file after installing to the <YourTheme> WAR file is deployed under wp_profile:
 
-        wp\_profile/installedApps/<cell\>/<YourTheme.ear\>/<YourTheme.war\>/themes/<YourTheme\>/js
+            wp\_profile/installedApps/<cell\>/<YourTheme.ear\>/<YourTheme.war\>/themes/<YourTheme\>/js
 
         Refer to the following file tree that shows how the custom theme app is deployed:
 
