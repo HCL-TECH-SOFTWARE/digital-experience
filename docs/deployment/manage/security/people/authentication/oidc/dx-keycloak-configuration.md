@@ -6,9 +6,7 @@ For the HCL DS Keycloak service the required settings/configuration already are 
 
 For default configuration, skip the remaining steps and continue to [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md).
 
-First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` and password `admin`. Then, select the realm `hcl` in the top left dropdown.
-
-1. Got to the admin console and login: `<HOSTNAME>/auth/admin>`
+1. Go to the admin console and login: `<HOSTNAME>/auth/admin>`
 
     - Login should be admin : admin
 
@@ -17,20 +15,20 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
 
     ![Keycloak_HTTPS_SSL_2](../../../../../../images/Keycloak_HTTPS_SSL_2.png)
 
-3. Go to the **Clients Section > Create Client** and add the following values:
-1. In **General Setting** page add the following values:
-    - Client ID: dxtest
-    - Name: dxtest
+4. Go to the **Clients Section > Create Client** and add the following values:
+    1. In **General Setting** page add the following values:
+        - Client ID: dxtest
+        - Name: dxtest
 
-      - Click **Next**.
+        - Click **Next**.
 
-      ![Keycloak_HTTPS_SSL_3](../../../../../../images/Keycloak_HTTPS_SSL_3.png)
+        ![Keycloak_HTTPS_SSL_3](../../../../../../images/Keycloak_HTTPS_SSL_3.png)
 
     2. In the **Capability config** page,  check the **Client authentication** options and click “Next”.
 
-      ![Keycloak_HTTPS_SSL_4](../../../../../../images/Keycloak_HTTPS_SSL_4.png)
+        ![Keycloak_HTTPS_SSL_4](../../../../../../images/Keycloak_HTTPS_SSL_4.png)
 
-    1. In the **Access setting** page, enter the following URLs in **Valid redirect URIs** section and click “Save”:
+    3. In the **Access setting** page, enter the following URLs in **Valid redirect URIs** section and click “Save”:
 
         1. (Only use this one for dev) `<HOSTNAME>/*`
         2. `<HOSTNAME>/oidcclient/keycloak`
@@ -38,7 +36,7 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
 
         ![Keycloak_HTTPS_SSL_5](../../../../../../images/Keycloak_HTTPS_SSL_5.png)
 
-4. Create client scope Mapper for realmName: Go to {realm} -> Client scope -> roles -> Add mappers -> By Configuration -> Hardcoded Claim
+5. Create client scope Mapper for realmName: Go to {realm} -> Client scope -> roles -> Add mappers -> By Configuration -> Hardcoded Claim
 
     - Fill in the values in the following fields:
 
@@ -53,14 +51,14 @@ First, log in to Keycloak at `https://<HOSTNAME>/auth/admin` with user `admin` a
 
     ![Keycloak_HTTPS_SSL_6](../../../../../../images/Keycloak_HTTPS_SSL_6.png)
 
-5. Add openid client scope (if not available), select Client Scopes -> Create Client
+6. Add openid client scope (if not available), select Client Scopes -> Create Client
 
     - Name: openid
     - Click “Save”
 
     ![Keycloak_HTTPS_SSL_7](../../../../../../images/Keycloak_HTTPS_SSL_7.png)
 
-6. Add openid client scope to client (if not added), select Clients -> dxtest(client name) -> client scopes -> add client scope -> select openid -> Add as default.
+7. Add openid client scope to client (if not added), select Clients -> dxtest(client name) -> client scopes -> add client scope -> select openid -> Add as default.
 
     ![Keycloak_HTTPS_SSL_8](../../../../../../images/Keycloak_HTTPS_SSL_8.png)
 

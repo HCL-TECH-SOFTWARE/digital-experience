@@ -6,7 +6,9 @@ An increasing number of enterprises are leveraging IdPs to manage the identities
 
 OIDC serves as a modern authentication and authorization protocol designed to enhance digital security and user experience, particularly in the realm of Identity and Access Management (IAM). Operating as an extension of the OAuth 2.0 framework, OIDC merges the strengths of OAuth's access delegation capabilities with identity verification, resulting in a comprehensive solution.
 
-At its core, OIDC streamlines the process of confirming user identities and authorizing their access to digital resources. It achieves this through the establishment of a trust relationship between the Identity Provider and the relying party (a web application or service, such as HCL Digital Experience). Users initiate the process by presenting their credentials to the IdP, which validates their identity. Subsequently, the IdP issues tokens, including the ID token which acts as proof of authentication, and the access token which grants access to protected resources. This allows supporting capabilities like Single Sign-On (SSO) across multiple applications, prolonged and uninterrupted user sessions, and enabling seamless collaboration across organizations while maintaining a secure identity exchange with granular control over data sharing. The protocol's flexibility accommodates diverse use cases, from mobile applications to single-page web apps.
+At its core, OIDC streamlines the process of confirming user identities and authorizing their access to digital resources. It achieves this through the establishment of a trust relationship between the Identity Provider and the relying party (a web application or service, such as HCL Digital Experience).
+
+Users initiate the process by presenting their credentials to the IdP, which validates their identity. Subsequently, the IdP issues tokens, including the ID token which acts as proof of authentication, and the access token which grants access to protected resources. This allows supporting capabilities like Single Sign-On (SSO) across multiple applications, prolonged and uninterrupted user sessions, and enabling seamless collaboration across organizations while maintaining a secure identity exchange with granular control over data sharing. The protocol's flexibility accommodates diverse use cases, from mobile applications to single-page web apps.
 
 HCL Digital Experience (DX) and HCL Digital Solutions (DS) products as a whole recognize the benefits and requirements of OIDC and thus support it. The following document provides an initial set of instructions to get started and enable HCL DX.
 
@@ -18,7 +20,7 @@ Please be aware that configuring OIDC as the authentication protocol has certain
 
 - Only repository users of the IdP can authenticate through OIDC. Users in other repositories, such as administrative users in the file registry, must bypass OIDC to authenticate.
 
-- This procedure requires that the IdP and HCL DX leverage the same user repository. Alternatively, there is an option for [Integrating with Transient Users with OpenID Connect](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authentication/integrate_oid/index.html).
+- This procedure requires that the IdP and HCL DX leverage the same user repository for authentication. Alternatively, you can use Transient Users setup to authenticate, for more details please refer to [Integrating with Transient Users with OpenID Connect](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authentication/integrate_oid/index.html).
 
 - Creating users or allowing them to sign up through DX is blocked due to the user management being relocated to the IdP as the primary orchestrator.
 

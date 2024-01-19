@@ -364,39 +364,32 @@ public class TransientUsersLoginModule implements ITransientUsersLoginModule {
 You can download the entire code for the `ITransientUsersLoginModule interface` example from [here](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/tree/develop/dx.jaas.sample). Here we use Maven and Eclipse to build the custom JAAS login module jar file.
 
 !!!note
-    Make sure that the following JAR files are available in the `lib` folder:
-
-    - com.ibm.ws.runtime.jar
-    - com.ibm.ws.security.oidc.client.jar
-
-    These JAR files are found in the `app_server_root/plugins` folder on the server, for example `/opt/HCL/AppServer/plugins`.
+    Make sure that the following JAR files are available in the `lib` folder. These JAR files are found in the `app_server_root/plugins` folder on the server, for example `/opt/HCL/AppServer/plugins`.
+        - com.ibm.ws.runtime.jar
+        - com.ibm.ws.security.oidc.client.jar
 
 1. Open the Eclipse IDE and import the `dx.jaas.sample` folder from this repository.
 
 2. Right-click on the `dx.jaas.sample` folder in Eclipse and select **Run as > Maven install**.
 
-1. Next, go to Run as again and choose `Maven build...` Configure your build window with the following details:
+3. Next, go to Run as again and choose `Maven build...` Configure your build window with the following details:
     1. Add `package` as a Goal
     2. Check your JRE
     3. Click **Run**.
 
     ![Running maven project](../../../../../../../images/DX_JAAS_MODULE_ECLIPSE_RUN.png)
 
-1. Once it is complete you will get `dx.jaas.sample.jar` file in `dx.jaas.sample\target\dx.jaas.sample.jar` folder
+4. Once it is complete you will get `dx.jaas.sample.jar` file in `dx.jaas.sample\target\dx.jaas.sample.jar` folder
 
-2. Now copy the `dx.jaas.sample.jar` into the classpath (for example `opt/HCL/lib/ext/` for traditional environments or `/opt/HCL/wp_profile/classes` for containerized environments):
+5. Now copy the `dx.jaas.sample.jar` into the classpath (for example `opt/HCL/lib/ext/` for traditional environments or `/opt/HCL/wp_profile/classes` for containerized environments):
 
     ```sh
     cp dx.jaas.sample.jar /opt/HCL/wp_profile/classes
     ```
 
-3. Configure the global security settings in WAS ISC.
+6. Configure the global security settings in WAS ISC. Navigate to **Global Security** > **JAAS - System Logins** > **WEB_INBOUND**. Use the class provided by your JAR file or use the default `TransientUsersLoginModule` class.
 
-    Navigate to **Global Security** > **JAAS - System Logins** > **WEB_INBOUND**.
-
-    Use the class provided by your JAR file or use the default `TransientUsersLoginModule` class.
-
-4. Set the module order for **WEB_INBOUND** as follows:
+7. Set the module order for **WEB_INBOUND** as follows:
 
     | Module Class Name | Module Order |
     | --- | --- |
@@ -404,6 +397,6 @@ You can download the entire code for the `ITransientUsersLoginModule interface` 
     | com.ibm.ws.security.server.lm.ltpaLoginModule | 2 |
     | com.ibm.ws.security.server.lm.wsMapDefaultInboundLoginModule | 3 |
 
-5. Click **OK** and **Save** to save the changes to the master configuration.
+8. Click **OK** and **Save** to save the changes to the master configuration.
 
-6. Restart the server
+9. Restart the server

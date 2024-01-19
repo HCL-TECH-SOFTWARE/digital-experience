@@ -2,7 +2,7 @@
 
 In addition to the basic OIDC Authentication for HCL Digital Experience (DX), you can give users(transient users) who are trusted and verified by an identity provider to access DX. These trusted and verified users do not require a local and registered Portal user account. For more information, see [Configuring transient users | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/security/openid_trans_users.html).
 
-The Java Authentication and Authorization Service (JAAS) login module used sets every transient user attribute value based on the username supplied by the TAI. Also, it omits any group membership processing, such that DX treats transient users as members of a single group, All Authenticated Portal Users. Additional information on the JAAS modules can also be found at [Developing custom login modules for a system login configuration for JAAS](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=ujaaspmwa-developing-custom-login-modules-system-login-configuration-jaas).
+The Java Authentication and Authorization Service (JAAS) login module uses transient user attribute values based on the username supplied by the TAI. Also, it skips group membership process, since DX treats transient users as members of a single group, i.e. `All Authenticated Portal Users`. For more information on the JAAS module, see [Developing custom login modules for a system login configuration for JAAS](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=ujaaspmwa-developing-custom-login-modules-system-login-configuration-jaas).
 
 This functionality allows you to write minimal custom code that can bridge components and provide DX-based applications to integrate with an OIDC OpenID Provider (OP). This configuration is for the basic login module that enables Transient Users with any inconsistent Trust Association Interceptor (TAI).
 
@@ -41,11 +41,12 @@ Before you begin, please ensure you have carried out the steps outlined in [Upda
         | ------------------------------------- | ---------------- |
         | buildgroupsfor                        | &lt;IDP_NAME&gt; |
 
-    1. For the vallue enter the list of supported Identity Providers that you want to build groups for; for example: `testgroup`, `Group1`, `Keycloak`. The items in the list must be separated by a space. The Identity Providers are case-sensitive and must match what you entered for the `idp.providerlist` and `openid.servicenames` parameters.
+        !!!note
+            &lt;IDP_NAME&gt; can be replaced with the list of supported Identity Providers that you want to build groups for; for example: `testgroup`, `Group1`, `Keycloak`. The items in the list must be separated by a space. The Identity Providers are case-sensitive and must match what you entered for the `idp.providerlist` and `openid.servicenames` parameters.
 
-    2. Click **OK** and  **Save** to save the changes in the master configuration.
+    1. Click **OK** and  **Save** to save the changes in the master configuration.
 
-1. In the ISC navigate, go to **Resources > Resource Environment > Resource Environment Providers**. Search for **WP PumaStoreService** and then click **Custom properties**:
+4. In the ISC navigate, go to **Resources > Resource Environment > Resource Environment Providers**. Search for **WP PumaStoreService** and then click **Custom properties**:
 
     1. Set the following properties:
 
@@ -63,17 +64,17 @@ Before you begin, please ensure you have carried out the steps outlined in [Upda
 
     1. Restart the server.
 
-1. After completing the steps to enable transient users, follow the procedure to add the JAAS login module for bridging the WAS OIDC Relying Party to HCL DX Transient Users.
+5. After completing the steps to enable transient users, follow the procedure to add the JAAS login module for bridging the WAS OIDC Relying Party to HCL DX Transient Users.
 
-    2. The required jar for the JAAS login modules is deployed to the default path **/opt/HCL/PortalServer/base/wp.auth.jaas/profile/classes/wp.auth.jaas.jar**.
+    1. The required jar for the JAAS login modules is deployed to the default path **/opt/HCL/PortalServer/base/wp.auth.jaas/profile/classes/wp.auth.jaas.jar**.
 
-    3. Copy the **wp.auth.jaas.jar** into the class path (for example **opt/HCL/lib/ext/** for traditional environments or **/opt/HCL/wp_profile/classes** for containerized environments).
+    2. Copy the **wp.auth.jaas.jar** into the class path (for example **opt/HCL/lib/ext/** for traditional environments or **/opt/HCL/wp_profile/classes** for containerized environments).
         - Navigate to **/opt/HCL/PortalServer/base/wp.auth.jaas/profile/classes/**
         - `cp wp.auth.jaas.jar /opt/HCL/wp_profile/classes`
 
-    4. In the ISC, go to **Global security > Java Authentication and Authorization Service > System logins > WEB_INBOUND**, and add the following module `com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule` with Authentication strategy `REQUIRED`.
+    3. In the ISC, go to **Global security > Java Authentication and Authorization Service > System logins > WEB_INBOUND**, and add the following module `com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule` with Authentication strategy `REQUIRED`.
 
-    5. Set the module order for **WEB_INBOUND** as follows:
+    4. Set the module order for **WEB_INBOUND** as follows:
 
         | Module Class Name | Module Order |
         | --- | --- |
@@ -81,9 +82,9 @@ Before you begin, please ensure you have carried out the steps outlined in [Upda
         | com.ibm.ws.security.server.lm.ltpaLoginModule | 2 |
         | com.ibm.ws.security.server.lm.wsMapDefaultInboundLoginModule | 3 |
 
-    6. Click **OK** and **Save**  to save the changes to the master configuration.
+    5. Click **OK** and **Save**  to save the changes to the master configuration.
 
-    7. Restart the server.
+    6. Restart the server.
 
 ## Testing the OIDC login flow
 
@@ -103,8 +104,4 @@ Once you have updated WebSphere to support OIDC authentication for DX, you shoul
 
 - [Building Custom JAAS Login Module for your Identity Provider (IdP)](./transient-users-building-jaas-modules): This document outlines how you can build a custom JAAS Login Module.
 
-    This document outlines how you can build a custom JAAS Login Module.
-
 - [Configuring Rule-based user groups adapter for Transient Users](./transient-users-softgroups-configuration.md): This is an optional configuration, to strengthen your transient user integration with additional features such as user role/group mapping from an IdP to DX.
-
-    This is an optional configuration, to further strengthen your transient user integration with addtional features such as user role/group mapping from an IdP to DX.

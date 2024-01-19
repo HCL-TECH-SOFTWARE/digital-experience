@@ -1,9 +1,3 @@
----
-id: openldap-test-users-ldif
-title: Sample OpenLDAP LDIF
-tags: [native kube, keycloak, openldap, ldap, ldif]
----
-
 # Sample OpenLDAP LDIF
 
 Use the sample LDIF file to prepare users for an OpenLDAP. Add the following contents to a file `test_users.ldif` on your respective machine:

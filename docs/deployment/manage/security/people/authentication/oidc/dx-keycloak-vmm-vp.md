@@ -1,19 +1,4 @@
----
-id: common-services-keycloak-helm-dx-native-kube
-title: Setting up OIDC for DX with VMM and Virtual Portals
-tags: [keycloak, oidc, openldap]
----
-
-## Version
-
-|||
-| --- | --- |
-| AUTHOR(S) | Stefan Hessler, Jonathan Marks |
-| DATE | 08-25-2023 |
-| REVISION  0.5 |
-| STATUS | Ready, ongoing |
-
-# Setting up OIDC for DX with VMM and Virtual Portals
+# Setting up OIDC for HCL Digital Experience with VMM and Virtual Portals
 
 This document provides instructions on how to configure HCL Digital Experience (DX) with Keycloak. The use of Virtual Portals including user-scopes for individual portals through VMM (Virtual Machine Manager) and multi-realms.
 
@@ -23,12 +8,11 @@ The purpose of this section is to set up an HCL DX environment with multiple Vir
 
 Before you begin, please ensure you have carried out the steps mentioned in [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md).
 
+Follow the steps to execute the configuration:
 
- Follow the steps to execute the configuration:
-
-1. [Add OpenLDAP for user federation](#add-openldap-as-user-federation)
-2. [Configure Keycloak OIDC auth for DX](#configure-keycloak-oidc-auth-for-dx)
-3. [Set up Virtual Portals and realms](#set-up-virtual-portals-and-realms)
+1. [Add OpenLDAP for user federation](#adding-the-openldap-as-user-federation)
+2. [Configure Keycloak OIDC auth for DX](#configure-different-oidc-providers-for-the-virtual-portals)
+3. [Setting up the Virtual Portals and realms](#setting-up-the-virtual-portals-and-realms)
 
 ## Adding the OpenLDAP as user federation
 
@@ -98,7 +82,7 @@ kubectl exec -it dx-deployment-core-0 bash -n dxns
 Learn how to setup a Keycloak client for DX and configure the DX installation on the server to leverage OpenID Connect (OIDC) based authentication with Keycloak. This means that DX is turned into a Relying Party (RP) to Keycloak serving as its identity provider (IDP).
 
 !!!note
-    The steps are also outlined in a bit more detail in [Configuring OIDC for HCL Digital Experience](./index.md). This document focuses specifically on set ups with native kube and with all above tasks and configuration in place as prerequisites.
+    The steps are also outlined in a bit more detail in [Configuring OIDC for HCL Digital Experience](./index.md).
 
 ### Configuring the Keycloak client for DX
 
@@ -139,22 +123,19 @@ This section will setup DX Virtual Portals to provide multiple groups of pages/s
 To establish this setup, the following high-level tasks are conducted:
 
 - [Prepare the WebSphere federated user registry to understand different user scopes](#prepare-the-websphere-federated-user-registry-to-understand-different-user-scopes)
-- [Prepare and create multiple realms within the Virtual Member Manager](#prepare-and-create-multiple-realms-within-the-virtual-member-manager)
-- [Create Virtual Portals with respective user realms in DX](#create-virtual-portals-with-respective-user-realms-in-dx)
-- [Create a new realm, identity provider and clients mapping to Virtual Portals in Keycloak](#create-new-realms-and-clients-mapping-to-virtual-portals-in-keycloak)
+- [Creating the multiple realms within the Virtual Member Manager](#creating-the-multiple-realms-within-the-virtual-member-manager)
+- [Creating the Virtual Portals with respective user realms in DX](#creating-the-virtual-portals-with-respective-user-realms-in-dx)
+- [Creating the new realms and clients mapping to Virtual Portals in Keycloak](#creating-the-new-realms-and-clients-mapping-to-virtual-portals-in-keycloak)
 - [Configure different OIDC providers for the Virtual Portals](#configure-different-oidc-providers-for-the-virtual-portals)
 - [Validate your changes and setup](#validate-your-changes-and-setup)
 
 ### Prepare the WebSphere federated user registry to understand different user scopes
 
-!!!warning
-    This is not working yet.
+To split the user federation into multiple parts, you need to adjust the unique distinguished name of the base entry from `dc=dx,dc=com` to `ou=users,dc=dx,dc=com`:
 
-In order to split the user federation into multiple parts, we need to adjust the unique distinguished name of the base entry from `dc=dx,dc=com` to `ou=users,dc=dx,dc=com`. To do so,
-
-- go to the WAS Administration console
-- navigate to Security -> Global Security
-- in the **User account repository** section, click on **Configure...**
+- go to the WAS Administration console.
+- navigate to Security > Global Security.
+- in the **User account repository** section, click on **Configure...**.
 - in the **Repositories in the realm:** table, click on the **dc=dx,dc=com**.
 - change the unique distinguished name to `ou=users,dc=dx,dc=com` and click **OK**.
 
@@ -181,7 +162,7 @@ This task is streamlined for the native-kube environment and provides the update
     vi wimconfig.xml
     ```
 
-- Identify the existing `PersonAccount` section established during the [initial OpenLDAP configuration](#run-configengine-tasks-to-configure-openldap-to-dx):
+- Identify the existing `PersonAccount` section established during the [initial OpenLDAP configuration](#running-the-configengine-tasks-to-configure-openldap-to-dx):
 
     ```xml
     <config:supportedEntityTypes defaultParent="ou=users,dc=dx,dc=com" name="PersonAccount">
@@ -266,8 +247,6 @@ To create a Virtual Portal, login as the DX admin user `wpsadmin:wpsadmin` throu
 
 !!!note
     There is an open issue where the admin cannot log in to the DX login anymore since it no longer exists in the OpenLDAP and Keycloak does not know about it, hence logging in through the WAS console.
-
-From here,
 
 - Navigate to the DX landing page at https://&lt;HOSTNAME&gt;/wps/portal.
 - Click on the **home icon** (Open applications menu) dropdown and click on **Administration**.
@@ -419,5 +398,3 @@ Verify that everything is working as intended. With this setup you have establis
 ### Additional and optional steps
 
 There are more things that you can consider here, for example, setting up proper login URLs and adding links to the virtual portals within your pages.
-
-The virtual portal instructions end here, but feel free to play around further and (potentially) break things!

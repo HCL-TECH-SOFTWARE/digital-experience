@@ -16,7 +16,7 @@ Follow the tasks to establish the configuration:
 2. [Creating the new IdP specific login option](#creating-the-new-idp-specific-login-option)
 3. [Validate everything is working as expected](#testing-the-oidc-login-flow)
 
-## Detaching the existing login option, setting up the admin login option
+## Detaching the existing login option
 
 First, detach the existing login option by changing its unique name:
 
@@ -61,8 +61,9 @@ Follow the steps to update the unique name of the new IdP specific login page:
 
 ## Testing the OIDC login flow
 
-1. Log out of DX or open a private browser and navigate to `https://<DX_HOSTNAME>/wps/portal`.
-2. Click **Log in**.
+1. Log out of DX if you are already logged in.
+2. Navigate to `https://<DX_HOSTNAME>/wps/portal`.
+3. Click **Log in**.
     - This redirects you to the IdP instance log in view
-1. Log in with an existing user and password.
+4. Log in with an existing user and password.
     - You are redirected back to DX and logged in as the correct user.
