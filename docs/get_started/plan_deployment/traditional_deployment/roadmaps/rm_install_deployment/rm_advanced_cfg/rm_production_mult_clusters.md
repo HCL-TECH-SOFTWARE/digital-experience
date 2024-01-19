@@ -426,7 +426,7 @@ You can add these parameters (particularly passwords) directly to any task. Howe
             -   Click **Next**.
             -   Specify the dynamic cluster properties for the minimum and maximum number of server instances.
             -   Review the summary page to verify your actions and then click **Finish**.
-            -   Run on of the following commands to create the dynamic cluster:
+            -   Run one of the following commands to create the dynamic cluster:
 
                 -   AIX and Linux: `./ConfigEngine.sh cluster-node-config-dynamic-cluster-setup -DWasPassword=dmgr_password`
                 -   Windows: `ConfigEngine.bat cluster-node-config-dynamic-cluster-setup -DWasPassword=dmgr_password`
