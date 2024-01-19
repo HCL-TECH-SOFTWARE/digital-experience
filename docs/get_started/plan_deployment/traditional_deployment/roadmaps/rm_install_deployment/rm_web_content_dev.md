@@ -170,7 +170,7 @@ Use syndication to synchronize content between authoring, staging, and publishin
 
 2.  Define syndication properties. See [Syndication properties](../../../../../manage_content/wcm_delivery/syndication/wcm_config_prop_syndication.md).
 
-3.  Tune your syndication strategy to improve performance. See [Syndication tuning](../../../../../manage_content/wcm_delivery/syndication/wcm_syndication_tuning.md)
+3.  Tune your syndication strategy to improve performance. See [Syndication tuning](../../../../../manage_content/wcm_delivery/syndication/wcm_syndication_tuning.md).
 
 4.  Create your syndication relationships. See [Creating a syndication relationship by using the Administration Portlet](../../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/wcm_syndication_settingup.md).
 
