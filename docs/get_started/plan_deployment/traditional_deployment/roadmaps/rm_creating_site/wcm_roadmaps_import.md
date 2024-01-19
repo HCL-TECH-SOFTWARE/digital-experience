@@ -10,7 +10,7 @@ This service is useful when you need to perform a one-off migration of web conte
 
 ## Using WCI to import web content managed in an external system
 
-The Web Content Integrator \(WCI\) is a solution for integrating externally managed web content with HCL Portal. Through the use of standard content syndication feed technologies based on RSS 2.0, the Web Content Integrator provides a loosely-coupled mechanism for transferring published content and metadata to the portal after they have been approved in the source system. When the content and metadata have been transferred to the portal, it is possible to use the built-in content management features of HCL Portal to secure, personalize, and display the content to users.
+The Web Content Integrator (WCI) is a solution for integrating externally managed web content with HCL Portal. Through the use of standard content syndication feed technologies based on RSS 2.0, the Web Content Integrator provides a loosely-coupled mechanism for transferring published content and metadata to the portal after they have been approved in the source system. When the content and metadata have been transferred to the portal, it is possible to use the built-in content management features of HCL Portal to secure, personalize, and display the content to users.
 
 The WCI is useful when you need to continue to use externally managed web content in a site you deliver by using Web Content Manager.
 
