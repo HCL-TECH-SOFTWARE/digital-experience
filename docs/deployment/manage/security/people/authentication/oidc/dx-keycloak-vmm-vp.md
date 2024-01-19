@@ -94,7 +94,7 @@ The full configuration here entails the setup of a realm, user federation, clien
 
 - **(Optional)**: Keycloak provides a **Partial import** feature to leverage additional predefined configurations:
 
-    1. Navigate to **Realm setting**, click the **Action** dropdown and select **Partial import**. Download the provided file [native-kube-hcl-realm-client-config.json](../resources/native-kube-dx-users-realm-client-config.json) and upload it in the dialog.
+    1. Navigate to **Realm setting**, click the **Action** dropdown and select **Partial import**. Download the [native-kube-hcl-realm-client-config.json](../resources/native-kube-dx-users-realm-client-config.json) and upload it in the dialog.
 
     2. This should properly recognize the file and list various resources to import (users, clients, realm and client roles). Select all of them and select **Overwrite** in the if-exists dropdown.
 
@@ -135,7 +135,7 @@ To split the user federation into multiple parts, you need to adjust the unique 
 
 - go to the WAS Administration console.
 - navigate to Security > Global Security.
-- in the **User account repository** section, click on **Configure...**.
+- in the **User account repository** section, click on **Configure**.
 - in the **Repositories in the realm:** table, click on the **dc=dx,dc=com**.
 - change the unique distinguished name to `ou=users,dc=dx,dc=com` and click **OK**.
 

@@ -36,9 +36,9 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
         ![Keycloak_HTTPS_SSL_5](../../../../../../images/Keycloak_HTTPS_SSL_5.png)
 
-5. Create client scope Mapper for realmName: Go to {realm} -> Client scope -> roles -> Add mappers -> By Configuration -> Hardcoded Claim
+5. To create a client scope mapper for realmName, go to **{realm} > Client scope > roles > Add mappers > By Configuration > Hardcoded claim**
 
-    - Fill in the values in the following fields:
+    - Fill the fields with the following values:
 
       - Name = realmName
       - Token Claim Name = realmName
@@ -51,14 +51,14 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
     ![Keycloak_HTTPS_SSL_6](../../../../../../images/Keycloak_HTTPS_SSL_6.png)
 
-6. Add openid client scope (if not available), select Client Scopes -> Create Client
+6. To add `openid` client scope (if not available), select **Client scopes > Create scope**:
 
     - Name: openid
     - Click “Save”
 
     ![Keycloak_HTTPS_SSL_7](../../../../../../images/Keycloak_HTTPS_SSL_7.png)
 
-7. Add openid client scope to client (if not added), select Clients -> dxtest(client name) -> client scopes -> add client scope -> select openid -> Add as default.
+7. To add openid client scope to the client (if not added), select **Clients > dxtest(client name) > client scopes > add client scope > select openid > Add as default**.
 
     ![Keycloak_HTTPS_SSL_8](../../../../../../images/Keycloak_HTTPS_SSL_8.png)
 

@@ -17,7 +17,7 @@ Follow the tasks to establish the configuration:
 First, detach the existing login option by changing its unique name:
 
 1. Navigate to the portal site `https://<DX_HOSTNAME>/wps/portal` and login as the admin user (wpsadmin:wpsadmin).
-2. Click the **home icon** dropdown to open the applications menu and click **Administration**.
+1. Click the **home icon** dropdown to open the applications menu and click **Administration**.
 1. On the **Administration** page, expand the menu on the top left and navigate to **Site Management > Pages**.
 1. On the **Manage Pages** page, search for **login** (Search by: Title starts with; Search: login) to find the **Login** (`wps.Login`) page.
 1. Click the **Edit Page Properties** icon (first action in the row) to view the **Edit page: Login** configuration page.
@@ -38,14 +38,14 @@ Create the new login option to map `/wps/myportal` for the users to access:
 1. On the **Manage Pages** page, click **Select Page**.
 2. Click the **Content Root** page > Home** page.
 3. Click **New URL**. On the next page, add the following values:
-      1. Set **Title** to `Login-IdP`.
-     2. Select the **A link to a Web page with the following URL** radio button.
-     3. Set the URL to `https://<DX_HOSTNAME>/wps/myportal`.
-     4. Click **OK**.
+    1. Set **Title** to `Login-IdP`.
+    2. Select the **A link to a Web page with the following URL** radio button.
+    3. Set the URL to `https://<DX_HOSTNAME>/wps/myportal`.
+    4. Click **OK**.
 4. On the **Manage Pages** page, select the **Home** page. Make sure you see the newly added **Login-IdP** URL. In the same row, click the **Set Page Permission** action.
 5. On the **Resource Permissions** page, find the **User** row and click the **Edit Role** action.
 6. Click ** Add**.
-1. Check the **Anonymous Portal User** box and click **OK**. The **Anonymous Portal User** role now appears in the **Resource Permissions** panel.
+7. Check the **Anonymous Portal User** box and click **OK**. The **Anonymous Portal User** role now appears in the **Resource Permissions** panel.
 
 ## Mapping the new IdP specific login
 
@@ -57,9 +57,10 @@ Follow the steps to update the unique name of the new IdP specific login page:
 
 ## Testing the OIDC login flow
 
-1. Log out of DX if you are already logged in.
-2. Navigate to `https://<DX_HOSTNAME>/wps/portal`.
-3. Click **Log in**.
+Follow the steps to test the OIDC login flow:
+
+1. Navigate to `https://<DX_HOSTNAME>/wps/portal`.
+1. Click **Log in**.
     - This redirects you to the IdP instance log in view
-4. Log in with an existing user and password.
+1. Log in with an existing user and password.
     - You are redirected back to DX and logged in as the correct user.

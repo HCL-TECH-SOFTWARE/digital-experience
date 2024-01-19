@@ -387,9 +387,11 @@ You can download the entire code for the `ITransientUsersLoginModule interface` 
     cp dx.jaas.sample.jar /opt/HCL/wp_profile/classes
     ```
 
-6. Configure the global security settings in WAS ISC. Navigate to **Global Security** > **JAAS - System Logins** > **WEB_INBOUND**. Use the class provided by your JAR file or use the default `TransientUsersLoginModule` class.
+6. Configure the global security settings in WAS ISC. Go to **Global Security** > **JAAS - System Logins** > **WEB_INBOUND**.
 
-7. Set the module order for **WEB_INBOUND** as follows:
+7. Add the class name defined within your JAR file or use the default `com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule` class.
+
+8. Set the module order for **WEB_INBOUND** as follows:
 
     | Module Class Name | Module Order |
     | --- | --- |
@@ -397,6 +399,6 @@ You can download the entire code for the `ITransientUsersLoginModule interface` 
     | com.ibm.ws.security.server.lm.ltpaLoginModule | 2 |
     | com.ibm.ws.security.server.lm.wsMapDefaultInboundLoginModule | 3 |
 
-8. Click **OK** and **Save** to save the changes to the master configuration.
+9. Click **OK** and **Save** to save the changes to the master configuration.
 
-9. Restart the server
+10. Restart the server
