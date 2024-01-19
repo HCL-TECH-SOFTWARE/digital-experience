@@ -188,7 +188,7 @@ The delivery environment is used to deliver your website to website viewers. The
 
     1.  Installs an HCL Portal server or cluster of servers.
 
-    2.  Configures the HCL Portal server or cluster to use the database server the database administrator set up.
+    2.  Configures the HCL Portal server or cluster to use the database server the database administrator setup.
 
     3.  Configures various WebSphere Application Server, HCL Portal and Web Content Manager configuration properties to ensure that the system is correctly set up for web content delivery and is tuned for optimal performance.
 
