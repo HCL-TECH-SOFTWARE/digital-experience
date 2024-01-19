@@ -109,7 +109,7 @@ If the language is not currently supported for the user interface, you might see
 
 # Configuring the web server
 
-Move the web server plug-in from the WebSphere Application Server to the web server. See [Web servers](../../../../../../deployment/manage/config_webservers/index.md)
+Move the web server plug-in from the WebSphere Application Server to the web server. See [Web servers](../../../../../../deployment/manage/config_webservers/index.md).
 
 ## Tuning the servers in your environment
 
