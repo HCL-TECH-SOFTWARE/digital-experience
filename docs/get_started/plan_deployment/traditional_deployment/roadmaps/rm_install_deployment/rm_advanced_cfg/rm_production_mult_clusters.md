@@ -53,7 +53,7 @@ Installing HCL Digital Experience involves preparing your operating system, inst
 
 ## Applying the latest cumulative fix
 
-Portal maintenance is delivered through individual Fixes and Combined Cumulative Fixes (CFs), which are suggested according to your environment. See: [Roadmap: applying maintenance](../../../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_cf.md)
+Portal maintenance is delivered through individual Fixes and Combined Cumulative Fixes (CFs), which are suggested according to your environment. See [Roadmap: applying maintenance](../../../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_cf.md).
 
 ## Creating cluster A
 
