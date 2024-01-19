@@ -12,7 +12,7 @@ The OnDemand Router (ODR) component provides capabilities such as workload balan
 
 Review the following considerations before you configure the (ODR) to route traffic to HCL Portal clusters:
 
--   Internal users can send requests directly to the ODR instead of  through a front-end web server. When you send direct requests, you must configure the ODR to append a via header to the HTTP requests. Set the value of the ODR custom property `http.compliance.via` to `true`. See the **On-demand router settings** link in the Related section for information.
+-   Internal users can send requests directly to the ODR instead of through a front-end web server. When you send direct requests, you must configure the ODR to append a `via` header to the HTTP requests. Set the value of the ODR custom property `http.compliance.via` to `true`. See the **On-demand router settings** link in the Related section for more information.
 
     !!! note 
         This step is not required when you send user traffic through the web server to the ODR. The web server appends the via header to the HTTP request.
