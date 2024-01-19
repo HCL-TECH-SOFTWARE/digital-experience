@@ -115,7 +115,7 @@ Move the web server plug-in from the WebSphere Application Server to the web ser
 
 Tuning the servers enhances the performance of your portal environment. HCL Digital Experience is not tuned for a production environment after installation and deployment. Your database must be tuned for improved performance. You can organize your database now or soon after you finish your configuration. Tune and maintain your database regularly.
 
-1.  Run the performance tuning tool to initially tune your servers. See [Portal server performance tuning tool](../../../../../../deployment/manage/tune_servers/wp_tune_tool.md)
+1.  Run the performance tuning tool to initially tune your servers. See [Portal server performance tuning tool](../../../../../../deployment/manage/tune_servers/wp_tune_tool.md).
 2.  Check the tuning guide for more instructions. Use the tuning guide for the previous product version until the tuning guide for the current release is unavailable. See [Performance tuning guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
 
 ## Choosing the type of portal farm
