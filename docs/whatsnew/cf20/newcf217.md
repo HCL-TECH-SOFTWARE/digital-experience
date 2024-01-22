@@ -88,6 +88,12 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ### Updated documentation for setting up OIDC in HCL DX
 
+=== "Containers"
+    [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md) now provides detailed steps on how to [configure DX with OIDC and transient users](../../deployment/manage/security/people/authentication/oidc/transient-users/dx-update-webshpere-for-oidc-transient-users.md). The available JAAS login module for transient users is refined to support common transient user setups and scenarios. ConfigEngine tasks and administrative portlets are also added to ease the deployment and configuration of transient user capabilities.
+
+=== "On-Premises"
+    [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md) now provides detailed steps on how to [configure DX with OIDC and transient users](../../deployment/manage/security/people/authentication/oidc/transient-users/dx-update-webshpere-for-oidc-transient-users.md). The available JAAS login module for transient users is refined to support common transient user setups and scenarios. ConfigEngine tasks and administrative portlets are also added to ease the deployment and configuration of transient user capabilities.
+
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
 === "Containers"

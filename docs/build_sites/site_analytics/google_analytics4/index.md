@@ -46,7 +46,7 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
 
         - If you are using Site Manager:
         
-            1. Switch the **Edit Mode** button to **ON**
+            1. Switch the **Edit Mode** button to **ON**.
 
             2. Click the menu icon of the page to open more actions.
 
