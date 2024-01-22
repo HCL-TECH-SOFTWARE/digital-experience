@@ -1,0 +1,14 @@
+# This is the title of the folder that will be listed in the side bar
+
+title: DX
+
+## This section defines the navigation structure for this directory
+
+nav:
+    - index.md
+    - Updating WebSphere to support OIDC Authentication for DX: dx-update-webshpere-for-oidc.md
+    - Adjusting the DX Login flow for OIDC: dx-integration.md
+    - Setting up OIDC for DX with VMM and Virtual Portals: dx-keycloak-vmm-vp.md
+    - Implications for customizing IdP's user login flow: dx-oidc-customization-considerations.md
+    - Sample OpenLDAP LDIF: openldap-test-users-ldif.md
+    - ...
