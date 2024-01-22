@@ -14,7 +14,7 @@ To deploy the Open Liberty Portlet Container using Helm, refer to the following 
 
 4. From the `value-samples` folder, copy the `sample-values.yaml` file to `custom-values.yaml` in the current directory.
 
-5. Edit `custom-values.yaml` to specify your image repository and the name and tag of the Open Liberty Portlet Container image you want to deploy. You can also use this file to override a few of the other values documented in `values.yaml` and `values.schema.json`. For more information, see [](#configuring-using-helm-values).
+5. Edit `custom-values.yaml` to specify your image repository and the name and tag of the Open Liberty Portlet Container image you want to deploy. You can also use this file to override a few of the other values documented in `values.yaml` and `values.schema.json`. For more information, see [Configuring using Helm values](#configuring-using-helm-values).
 
 6. Run `helm install lpc-deployment -n <your-dx-namespace> . -f ./custom-values.yaml` where `<your-dx-namespace>` is replaced by the namespace of your current DX installation.
 
@@ -50,7 +50,7 @@ To install your own standard portlet applications into the Open Liberty Portlet 
 
         `helm upgrade lpc-deployment -n your-dx-namespace . -f ./custom-values.yaml`
 
-    In addition to deploying portlet applications, you can change the configuration of the Open Liberty server when creating a new image. You can make changes to the `server.xml` file (found in the `/config/` directory) to add extra Open Liberty features that your portlets might require or to configure applications that do not reside in the `/config/dropins/` directory. You can also create or change other Open Liberty configuration files in the `/config/` directory (for example, using the `jvm.options` file) to specify a different heap size. Further information can be found in the [Open Liberty documentation](https://openliberty.io/docs/22.0.0.6/reference/config/server-configuration-overview.html).
+    In addition to deploying portlet applications, you can change the configuration of the Open Liberty server when creating a new image. You can make changes to the `server.xml` file (found in the `/config/` directory) to add extra Open Liberty features that your portlets might require or to configure applications that do not reside in the `/config/dropins/` directory. You can also create or change other Open Liberty configuration files in the `/config/` directory (for example, using the `jvm.options` file to specify a different heap size). Further information can be found in the [Open Liberty documentation](https://openliberty.io/docs/22.0.0.6/reference/config/server-configuration-overview.html).
 
     !!!warning
         Some configuration changes may break the Open Liberty Portlet Container and it is not possible to enumerate here all the ways this can occur. Proceed with caution and be prepared to revert any changes that you have made. Some changes that *should not* be made are:
@@ -92,7 +92,7 @@ Do this step only once, regardless of how many applications are deployed to the 
 
 4. Click **OK**.
 
-#### Consuming Portlets.
+#### Consuming Portlets
 
 After a producer is created, you can then import the individual standards-based portlets from the applications deployed to your Open Liberty Portlet Container. You must repeat this step whenever you deploy additional applications.
 
@@ -101,6 +101,9 @@ After a producer is created, you can then import the individual standards-based 
 2. Click the `Consume` button and then click the link on the name of your WSRP Producer. 
 
 3. Check the boxes of the additional portlets you want to use.
+
+    !!!note
+        Only portlets that are not consumed are listed.
 
 4. Click **OK**.
 

@@ -361,7 +361,7 @@ public class TransientUsersLoginModule implements ITransientUsersLoginModule {
 
 ## Building and deploying custom JAAS login module
 
-You can download the entire code for the `ITransientUsersLoginModule interface` example from [here](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/tree/develop/dx.jaas.sample). Here we use Maven and Eclipse to build the custom JAAS login module jar file.
+You can download the entire code for the `ITransientUsersLoginModule interface` example from [here](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/tree/main/dx.jaas.sample). Here we use Maven and Eclipse to build the custom JAAS login module jar file.
 
 !!!note
     Make sure that the following JAR files are available in the `lib` folder. These JAR files are found in the `app_server_root/plugins` folder on the server, for example `/opt/HCL/AppServer/plugins`.
