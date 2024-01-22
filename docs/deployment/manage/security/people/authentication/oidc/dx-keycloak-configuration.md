@@ -40,14 +40,14 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
     - Fill the fields with the following values:
 
-       - Name = realmName
-       - Token Claim Name = realmName
-       - Claim Value = {realm} (change this as per your realm. For example: oidcdx)
-       - Claim JSON Type = String
-       - Check Add to ID token
-       - Check Add to access token
-       - Check Add to userinfo
-       - Click Save.
+      - Name = realmName
+      - Token Claim Name = realmName
+      - Claim Value = {realm} (change this as per your realm. For example: oidcdx)
+      - Claim JSON Type = String
+      - Check Add to ID token
+      - Check Add to access token
+      - Check Add to userinfo
+      - Click Save.
 
     ![Keycloak_HTTPS_SSL_6](../../../../../../images/Keycloak_HTTPS_SSL_6.png)
 
