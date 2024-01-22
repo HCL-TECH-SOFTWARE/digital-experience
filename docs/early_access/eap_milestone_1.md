@@ -37,6 +37,7 @@ Portlets running in the Open Liberty Portlet Container experience a number of di
 - Portlets run on a different Open Liberty JavaEE application server, so if they use any APIs specific to [IBM WebSphere Application Server](https://www.ibm.com/products/websphere-application-server?utm_content=SRCWW&p1=Search&p4=43700074488257595&p5=e&gclid=Cj0KCQiAhc-sBhCEARIsAOVwHuT7kzKartxoc4rNstOV88KzDpVRffjM8MWo_9UMQ2iycxgKSuOYvlAaAnuiEALw_wcB&gclsrc=aw.ds), they may find those are no longer available.
 - Portlets run on a [newer version of Java](https://www.oracle.com/java/technologies/javase/11-0-21-relnotes.html).
 - Portlets do not run on the same JVM as DX Core. They do not have local access to any DX Java APIs such as the Model API or WCM API.
+- Portlets are served over WSRP v2 so they must comply to the requirements of that standard. For example, portlets must have a `display-name` element in their `portlet.xml` file.
 
 There are also additional differences specific to the Early Access version that are specified in the following section [Limitations and restrictions](#limitations-and-restrictions).
 
