@@ -89,7 +89,12 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Updated documentation for setting up OIDC in HCL DX
 
 === "Containers"
-    [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md) is updated to include information on how to [set up OIDC for HCL DX with VMM and Virtual Portals](../../deployment/manage/security/people/authentication/oidc/dx-keycloak-vmm-vp.md), how to [configure Keycloak as an OIDC IdP for HCL DX](../../deployment/manage/security/people/authentication/oidc/dx-keycloak-configuration.md), and how to [update WebSphere to support OIDC Authentication for DX with Transient Users](../../deployment/manage/security/people/authentication/oidc/transient-users/dx-update-webshpere-for-oidc-transient-users.md).
+    [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md) is updated to include information on how to [set up OIDC for HCL DX with VMM and Virtual Portals](../../deployment/manage/security/people/authentication/oidc/dx-keycloak-vmm-vp.md) and how to [configure Keycloak as an OIDC IdP for HCL DX](../../deployment/manage/security/people/authentication/oidc/dx-keycloak-configuration.md).
+
+    In addition, the OIDC documentation now provides detailed steps on how to [configure DX with OIDC and transient users](../../deployment/manage/security/people/authentication/oidc/transient-users/dx-update-webshpere-for-oidc-transient-users.md). The available JAAS login module for transient users is refined to support common transient user setups and scenarios. ConfigEngine tasks and administrative portlets are also added to ease the deployment and configuration of transient user capabilities.
+
+    
+
 
 === "On-Premises"
     [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md) is updated to include information on how to [set up OIDC for HCL DX with VMM and Virtual Portals](../../deployment/manage/security/people/authentication/oidc/dx-keycloak-vmm-vp.md), how to [configure Keycloak as an OIDC IdP for HCL DX](../../deployment/manage/security/people/authentication/oidc/dx-keycloak-configuration.md), and how to [update WebSphere to support OIDC Authentication for DX with Transient Users](../../deployment/manage/security/people/authentication/oidc/transient-users/dx-update-webshpere-for-oidc-transient-users.md).
