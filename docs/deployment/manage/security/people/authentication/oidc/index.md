@@ -38,7 +38,7 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
 - The cloud native distribution of DX is used.
 
-- An IdP is set up and configured. Required details like the client id or secrets are available to configure during the tasks. For more information on how an IdP is configured, see [Configure Keycloak as an OIDC IdP for HCL Digital Experience](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/blob/develop/docs/integration/ds-integration/dx/dx-keycloak-configuration.md).
+- An IdP is set up and configured. Required details like the client id or secrets are available to configure during the tasks. For more information on how an IdP is configured, see [Configure Keycloak as an OIDC IdP for HCL Digital Experience](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/tree/main/docs/integration/ds-integration/dx/dx-keycloak-configuration.md).
 
 - Use [Keycloak](https://www.keycloak.org/) as the IdP. The OIDC layer looks the same as any other IdP but this is not guaranteed due to the extensive landscape of providers.
 
