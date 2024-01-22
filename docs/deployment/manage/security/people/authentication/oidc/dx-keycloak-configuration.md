@@ -36,18 +36,18 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
         ![Keycloak_HTTPS_SSL_5](../../../../../../images/Keycloak_HTTPS_SSL_5.png)
 
-1. To create a client scope mapper for realmName, go to **{realm} > Client scope > roles > Add mappers > By Configuration > Hardcoded claim**
+1. To create a client scope mapper for realmName, go to **{realm} > Client scope > roles > Add mappers > By Configuration > Hardcoded claim**:
 
     - Fill the fields with the following values:
 
-      - Name = realmName
-      - Token Claim Name = realmName
-      - Claim Value = {realm} (change this as per your realm. For example: oidcdx)
-      - Claim JSON Type = String
-      - Check Add to ID token
-      - Check Add to access token
-      - Check Add to userinfo
-      - Click Save.
+        - Name = realmName
+        - Token Claim Name = realmName
+        - Claim Value = {realm} (change this as per your realm. For example: oidcdx)
+        - Claim JSON Type = String
+        - Check Add to ID token
+        - Check Add to access token
+        - Check Add to userinfo
+        - Click Save.
 
     ![Keycloak_HTTPS_SSL_6](../../../../../../images/Keycloak_HTTPS_SSL_6.png)
 
@@ -64,4 +64,4 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
 ## What's next
 
-Once you have configured Keycloak, you can now look at [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md) for further instuctions.
+Once you have configured Keycloak, you can now look at [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md) for further instructions.
