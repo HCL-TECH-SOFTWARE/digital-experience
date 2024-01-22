@@ -1,6 +1,6 @@
 # Implications for customizing IdP's user login flow
 
-Before you plan to integrate HCL Digital Experience (DX) with an Identity Provider (IdP) for user authentication and authorization there are some implications to consider. For general consideration, see [Customization considerations](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/blob/develop/docs/customization/oidc-customization-considerations.md).
+Before you plan to integrate HCL Digital Experience (DX) with an Identity Provider (IdP) for user authentication and authorization there are some implications to consider. For general consideration, see [Customization considerations](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/tree/main/docs/customization/oidc-customization-considerations.md).
 
 ## Additional implications for DX
 
@@ -22,11 +22,11 @@ IdPs allow you to either provide custom background color or image using CSS or a
 
 ### Custom layout
 
-This is specific to an IdP and how they allow you to update partial or entire layout of the screens in the flow. Also, they could have limitations on how much you are allowed to customize. The reference implementation is based on Keycloak, which uses Freemarker Template Language for defining the screen layouts. The complexity of providing a custom layout can range between low to moderate depending on the IdP in use. For more information, see [custom layout](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/blob/develop/docs/customization/oidc-customization-considerations.md#custom-layouts). How this can be achieved for Keycloak is documented in [Custom themes](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/blob/develop/docs/customization/custom-themes.md#html-templates).
+This is specific to an IdP and how they allow you to update partial or entire layout of the screens in the flow. Also, they could have limitations on how much you are allowed to customize. The reference implementation is based on Keycloak, which uses Freemarker Template Language for defining the screen layouts. The complexity of providing a custom layout can range between low to moderate depending on the IdP in use. For more information, see [custom layout](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/tree/main/docs/customization/oidc-customization-considerations.md#custom-layouts). How this can be achieved for Keycloak is documented in [Custom themes](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/tree/main/docs/customization/custom-themes.md#html-templates).
 
 ### Internationalization
 
-Similar to how you can update the layout of existing screens, an IdP could support the internationalization of right-to-left languages, but this has to be verified with IdP in use. Keycloak allows to add localization strings to custom themes. Default themes do not adapt based on right-to-left languages. Please refer to [Internationalization](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/blob/develop/docs/customization/oidc-customization-considerations.md#internationalization) and for Keycloak this is documented in [Custom themes](https://git.cwp.pnp-hcl.com/hclds/hclds-keycloak/blob/develop/docs/customization/custom-themes.md#internationalization).
+Similar to how you can update the layout of existing screens, an IdP could support the internationalization of right-to-left languages, but this has to be verified with IdP in use. Keycloak allows to add localization strings to custom themes. Default themes do not adapt based on right-to-left languages. Please refer to [Internationalization](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/tree/main/docs/customization/oidc-customization-considerations.md#internationalization) and for Keycloak this is documented in [Custom themes](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/tree/main/docs/customization/custom-themes.md#internationalization).
 
 ### Additional portlets
 
