@@ -36,7 +36,7 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
         ![Keycloak_HTTPS_SSL_5](../../../../../../images/Keycloak_HTTPS_SSL_5.png)
 
-1. To create a client scope mapper for realmName, go to **{realm} > Client scope > roles > Add mappers > By Configuration > Hardcoded claim**:
+1. To create a client scope mapper for realmName, go to **{realm} > Client scope > roles > Add mappers > By Configuration > Hardcoded claim**
 
     - Fill the fields with the following values:
 
