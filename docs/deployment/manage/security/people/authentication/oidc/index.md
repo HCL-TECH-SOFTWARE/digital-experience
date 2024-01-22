@@ -44,9 +44,9 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
 ## Setting up OIDC for DX
 
-Setting up OIDC for DX consists of two sides, the first is [Updating WebSphere to support OIDC Authentication for DX](dx-update-webshpere-for-oidc.md) for configuring WebSphere Application Server to act as an OpenID Connect Relying Party. This can be further extended for Transient Users, refer to [Additional configuration options](#additional-configuration-options) section for more information.
+Setting up OIDC for DX consists of two sides, the first is [Updating WebSphere to support OIDC Authentication for DX](dx-update-webshpere-for-oidc.md) for configuring WebSphere Application Server to act as an OpenID Connect Relying Party. And second being [Adjusting the DX Login flow for OIDC](./dx-integration.md) to redirect the user to an IdP login page for authentication.
 
-However, you need to configure DX for [Adjusting the DX Login flow for OIDC](./dx-integration.md) to redirect the user to an IdP login page for authentication.
+Additionally you can further extend this for Transient Users, refer to [Additional configuration options](#additional-configuration-options) section for more information.
 
 ## Additional configuration options
 
