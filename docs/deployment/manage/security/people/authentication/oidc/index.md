@@ -54,12 +54,6 @@ Additionally, you can further extend this for Transient Users. For more informat
 
     This provides information on how you can configure OIDC Authentication for DX using Transient Users, who are trusted and verified by an IdP. These trusted and verified users do not require a local, registered Portal user account.
 
-## Advanced examples
-
-- [Setting up OIDC for DX with VMM and Virtual Portals](./dx-keycloak-vmm-vp.md)
-
-    This section provides instructions on how to configure DX with Keycloak and use Virtual Portals including user-scopes for individual portals through VMM and multi-realms.
-
 ## References
 
 For more information about OIDC and Keycloak in HCL DX and HCL DS in general, refer to the open source repository [hclds-keycloak](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak). This repository contains Keycloak as a reference implementation of an Identity Provider (IdP) to serve as an internal validation tool for HCL Digital Solutions products. The goal of this repository is to provide a hands-on experience with common strategies, configurations, and solutions related to integrating IdPs using the OIDC authentication protocol.
