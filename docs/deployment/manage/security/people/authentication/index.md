@@ -3,7 +3,7 @@
 Authentication is a basic security concept that ensures users can prove their identity.
 
 -   **[User registry](../authentication/user_registry)**  
-User information is stored in your user registry. You can enable LDAP referrals, configure HCL Digital Experience to use dynamic groups, update your user registry, or delete your user registry configurations.
+User information is stored in your user registry. You can enable LDAP referrals, configure HCL Digital Experience (DX) to use dynamic groups, update your user registry, or delete your user registry configurations.
 -   **[Setting up custom user repositories](../authentication/customer_user_repo)**  
 A custom user repository is any repository that HCL Portal does not support out-of-box. However, you can configure HCL Portal to support any type of repository in a federated or stand-alone user registry, whether an LDAP directory, database, file system, and so on.
 -   **[External security managers](../authentication/external_sec_mgmt)**  
@@ -20,5 +20,5 @@ HCL Portal provides an HTTP Basic Authentication Trust Association Interceptor t
 HCL Digital Experience and IBM® WebSphere® Application Server use some accounts from the registry (for example, the LDAP server) including administrative and bind IDs for authenticated access to databases and LDAP severs respectively, as well as the HCL Portal and WebSphere Application Server administrative IDs. 
 -   **[Integrating with Transient Users with OpenID Connect](../authentication/integrate_oid)**  
 This page explores integrating HCL Digital Experience™ (DX) with two OIDC services, [Auth0](https://auth0.com/docs/authenticate/protocols/openid-connect-protocol) and [Google](https://developers.google.com/identity/protocols/oauth2/openid-connect).
-- **[Setting up OIDC for HCL Digital Experience](../authentication/oidc/index.md)**
+- **[Configuring OIDC for HCL DX](../authentication/oidc/index.md)**
 This page helps you configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP), such as Keycloak. This means that DX is turned into a relying party (RP) towards your IdP and the IdP is trusted for authentication assertions.
