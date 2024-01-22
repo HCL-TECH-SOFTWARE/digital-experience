@@ -40,13 +40,13 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
 - An IdP is set up and configured. Required details like the client id or secrets are available to configure during the tasks. For more information on how an IdP is configured, see [Configure Keycloak as an OIDC IdP for HCL Digital Experience](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/tree/main/docs/integration/ds-integration/dx/dx-keycloak-configuration.md).
 
-- Use [Keycloak](https://www.keycloak.org/) as the IdP. The OIDC layer looks the same as any other IdP but this is not guaranteed due to the extensive landscape of providers.
+- Use [Keycloak](https://www.keycloak.org/) as the IdP. The OIDC layer looks the same as IdP but this is not guaranteed due to the extensive landscape of providers.
 
 ## Setting up OIDC for DX
 
 Setting up OIDC for DX consists of two sides, the first is [Updating WebSphere to support OIDC Authentication for DX](dx-update-webshpere-for-oidc.md) for configuring WebSphere Application Server to act as an OpenID Connect Relying Party. And second being [Adjusting the DX Login flow for OIDC](./dx-integration.md) to redirect the user to an IdP login page for authentication.
 
-Additionally you can further extend this for Transient Users, refer to [Additional configuration options](#additional-configuration-options) section for more information.
+Additionally, you can further extend this for Transient Users. For more information, see [Additional configuration options](#additional-configuration-options) section.
 
 ## Additional configuration options
 
