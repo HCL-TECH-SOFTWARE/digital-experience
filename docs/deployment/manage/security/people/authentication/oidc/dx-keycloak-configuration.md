@@ -64,4 +64,4 @@ For default configuration, skip the remaining steps and continue to [Updating We
 
 ## What's next
 
-Once you have configured Keycloak, you can now look at [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md) for further instructions.
+Once you have configured Keycloak, you can now look at [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md) for further instuctions.
