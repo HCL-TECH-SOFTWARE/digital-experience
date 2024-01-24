@@ -1213,3 +1213,7 @@ hcl-dx-cloud-scripts-v95_CF18_xxxxxxxx-xxxx.zip
 hcl-dx-ambassador-image-xxxx.tar.gz
 ```
 -->
+
+???+ info "Related information"
+    - [Download the HCL Digital Experience software](../../../get_started/download/index.md)
+    - [Locating and Downloading DX Products](../../../guide_me/tutorials/access-software/locating-downloads.md)
