@@ -1,9 +1,10 @@
-# Container File Listing
+# Container and Supported OS File listings
 
 This section presents the latest available HCL Digital Experience (DX) 9.5 Container images. 
 
-See [this page](../../../get_started/download/harbor_container_registry.md) for instructions about how to access the HCL container registry.
-HCL also provides the ability to download images from our software licensing portal, see [this page](../../../get_started/download/index.md) for more information.
+You can obtain the HCL DX 9.5 container update and supported OS releases from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do), in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry and in the **HCL_DX_9.5_Container_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
+
+Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
 ## HCL DX 9.5 CF217
 
@@ -43,13 +44,17 @@ hcl-dx-runtime-controller-image-v95_CF217_20240117-2354.tar.gz
 
 ### HCL Digital Experience File package listings (supported OS platforms)
 
+This section presents the latest available HCL DX File package listings for supported OS platforms.
+
 |File name| Folder name|
 |---------|------------|
 |HCL-DX-CF217_Express_Update|HCL-DX-CF217_Express_Update.zip|
 |HCL-DX-CF217_RemoteSearch_Update|HCL-DX-CF217_RemoteSearch_Update.zip|
 |HCL-DX-CF217_Server_Update|HCL-DX-CF217_Server_Update.zip|
 
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
 
+<!--
 ## HCL DX 9.5 CF216
 
 If you are deploying the HCL DX 9.5 CF216 Container update release, the package name and images are as follows.
@@ -1207,3 +1212,4 @@ hcl-dx-cloud-operator-image-v95_CF18_xxxxxxxx-xxxx.tar.gz
 hcl-dx-cloud-scripts-v95_CF18_xxxxxxxx-xxxx.zip
 hcl-dx-ambassador-image-xxxx.tar.gz
 ```
+-->
