@@ -20,7 +20,7 @@ The Open Liberty Portlet Container image is based on the Open Liberty server run
 
 The Open Liberty Portlet Container runs Java portlet workloads in Kubernetes. The portlets are consumed on DX Core pages over WSRP.
 
-![Open Liberty Portlet Container](../images/open_liberty_portlet_container.png)
+![Open Liberty Portlet Container Architecture](../images/open_liberty_portlet_container.png)
 
 In the Early Access Program Milestone 1 version, the underlying technologies and version levels used in the Open Liberty Portlet container are:
 
