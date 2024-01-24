@@ -4,7 +4,8 @@ title: Getting started with the REST service for Web Content Manager V2
 
 # Getting started with the REST service for Web Content Manager V2
 
-Starting CF217, the [WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) has new API additions and modifications.
+Starting CF217, the [WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) has new API additions and modifications and is also out of beta state.
+If working with WCM via REST we recommend you use the WCM REST V2 API.
 
 [WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces new Wrapper APIs corresponding to the following WCM V1 API functionalities:
 
