@@ -36,26 +36,21 @@ $ kubectl get pod -n <namespace>
 $ kubectl get service -n <namespace>
 ```
 
-- The connection between Ingress and HAProxy can be configured to use either `http` or `https` for the internal traffic. To handle `https` requests a certificate must be declared in your `custom-values.yaml` along with the SSL offloading configuration.
+- The connection between Ingress and HAProxy can be configured to use either `http` or `https` for the internal traffic. See the ["Configure HAProxy networking" topic](../mandatory_tasks/prepare_configure_networking.md#configure-haproxy-networking) for more information.
 
-```yaml
-networking:
-  haproxy:
-    ssl: true
-  tlsCertSecret: "dx-tls-cert"
-```
+- Define an [Ingress resource](https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource) that will be used to configure the routing rules that point to the existing deployment of HAProxy as the internal service. Configure a host and all of the requests received by the host will be handled by `<helm release name>-haproxy`. A `secretName` is passed in the `tls` section to allow the Ingress controller to serve `https` traffic. The following configuration maps the root path (`/`) to the HAProxy of DX. If there are other applications in the cluster handled by the same Ingress controller, their paths must be specified explicitly. All other requests will then be handled by DX.
 
-- Define an Ingress instance that will be used to configure the routing rules that point to the existing deployment of HAProxy as the internal service. Here we must configure a host and all of the requests received by the host will be handled by `<helm release name>-haproxy`. The port number depends on the [protocol or port set for HAProxy in the Helm values](../mandatory_tasks/prepare_configure_networking.md#configure-haproxy-networking) as described in the previous step.
+Example Ingress resource:
 
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
+  tls:
+  - secretName: dx-tls-cert
   rules:
   - host: your-kube-deployment.com
     http:
@@ -64,15 +59,70 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: dx-deployment-haproxy
+            name: <release-name>-haproxy
             port:
-              number: 80
+              name: haproxy
 ```
 
-- Configure your Ingress based on your preference whether you want to access your host via `http` or `https`. To handle `https` request a certificate must be declared on your Ingress yaml file. This certificate will be used for the Ingress client to Ingress instance connection.
+## Advanced configuration
+
+!!! warning
+    The configuration in the previous section is the preferred one and should be used whenever possible.
+
+    Please be aware that any custom application that may be deployed in the WebSphere Application Server or certain configurations must be mapped in the Ingress accordingly. This includes:
+
+    - Some special functionalities of DX like the [Web Application Bridge](../../../../../../extend_dx/integration/wab/index.md)
+    - Deployments with the [context root changed or removed](../../../../../manage/siteurl_cfg/index.md)
+    - The [`friendlyUrlContextRoot` available for Digital Asset Management](../../../../../../manage_content/digital_assets/configuration/configure_dam_friendlyUrl.md)
+
+If mapping the root path is not possible for a deployment, the following paths can be mapped depending on the configuration of DX:
+
+- `/wps` (or the custom context root set for DX)
+- `/dx`
+- `/ibm`
+- `/hcl`
+
+Example Ingress resource:
 
 ```yaml
-ingressClassName: nginx
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+spec:
+  ingressClassName: nginx
   tls:
   - secretName: dx-tls-cert
+  rules:
+  - host: your-kube-deployment.com
+    http:
+      paths:
+      - path: /wps
+        pathType: Prefix
+        backend:
+          service:
+            name: <release-name>-haproxy
+            port:
+              name: haproxy
+      - path: /dx
+        pathType: Prefix
+        backend:
+          service:
+            name: <release-name>-haproxy
+            port:
+              name: haproxy
+      - path: /ibm
+        pathType: Prefix
+        backend:
+          service:
+            name: <release-name>-haproxy
+            port:
+              name: haproxy
+      - path: /hcl
+        pathType: Prefix
+        backend:
+          service:
+            name: <release-name>-haproxy
+            port:
+              name: haproxy
 ```
