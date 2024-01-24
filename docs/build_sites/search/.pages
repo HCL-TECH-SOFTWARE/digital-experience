@@ -20,7 +20,5 @@ nav:
     - Configuring search in a cluster: cfg_search_cluster
     - Configuring search in a portal farm: cfg_search_farm
     - Configure_search_in_portlet.md
-    - Configuring DX Search: cfg_dx_search
     - advp_tsk_cgf_srchcoll.md
     - Search REST API specification: search-rest-api
-    - Improving search quality in HCL Digital Experience: improving_search_quality
