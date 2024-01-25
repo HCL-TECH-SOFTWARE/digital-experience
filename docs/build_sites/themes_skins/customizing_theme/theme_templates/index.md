@@ -11,7 +11,7 @@ A theme.html file is in the root directory of the theme on WebDAV \\fs-type1\\th
 
 ## Root theme template
 
-In a default HCL Portal installation, the portal does not render the template file theme.html in the root directory of the theme. Instead, this file links to the templates, and the portal renders the appropriate template. The links to the templates are in the `<head>` section of the root template. They have the following form:
+In a default HCL Digital Experience (DX) installation, the portal does not render the template file theme.html in the root directory of the theme. Instead, this file links to the templates, and the portal renders the appropriate template. The links to the templates are in the `<head>` section of the root template. They have the following form:
 
 ```
 <link rel="alternate" href="nls/theme_locale\_code.html" hreflang="locale\_code">
@@ -42,7 +42,7 @@ You can use the Apache Ant build framework to generate templates that are based 
 
 ## Theme templates
 
-In a default HCL Portal installation, the theme architecture renders content by using the theme templates. These templates are in the nls sub-directory under the theme directory on WebDAV. These files have the locale code that is appended to the end of the template name, for example `theme_en.html` for English. These templates translate static text inline within the template.
+In a default HCL DX installation, the theme architecture renders content by using the theme templates. These templates are in the nls sub-directory under the theme directory on WebDAV. These files have the locale code that is appended to the end of the template name, for example `theme_en.html` for English. These templates translate static text inline within the template.
 
 When you use the theme templates and want to view your changes, update the template that the portal renders in the browser. For example, if your preferred language is English, update the file `theme_en.html`.
 

@@ -2,7 +2,7 @@
 
 You can use configuration tasks for administering virtual portals.
 
-HCL Portal provides the following configuration tasks that you can use to perform the following work with virtual portals:
+HCL Digital Experience (DX) provides the following configuration tasks that you can use to perform the following work with virtual portals:
 
 -   Create virtual portals
 -   List all virtual portals

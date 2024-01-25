@@ -2,7 +2,7 @@
 
 Drag sources and drop targets must be created according to the HTML 5 specification. In HTML 5, the DataTransfer object is used to exchange data from source to target.
 
-The source sets the data with `dataTransfer.setData(format, data)` and the target reads the data with `dataTransfer.getData(format)`. HCL Portal always uses format `= "Text"`. The data is a stringified JSON object with the following structure:
+The source sets the data with `dataTransfer.setData(format, data)` and the target reads the data with `dataTransfer.getData(format)`. HCL Digital Experience (DX) always uses format `= "Text"`. The data is a stringified JSON object with the following structure:
 
 ```
 { "uri" : URI }
@@ -40,7 +40,7 @@ In the previous example, the parameter object needs to have the following elemen
 
 -   **\{Object\} parameter.data**
 
-    The data to transfer when dropped. When you exchang data with a standard HCL Portal drop target, it must be a stringified JSON object with the structure described before.
+    The data to transfer when dropped. When you exchang data with a standard HCL DX drop target, it must be a stringified JSON object with the structure described before.
 
 -   **\{DOMNode\} parameter.avatar**
 
@@ -97,7 +97,7 @@ In the previous example, the parameter object must have the following elements:
 
     -   **\{Object\} data**
 
-        The data that was transferred from the drag source. When receiving data from standard HCL Portal drag sources, it is a stringified JSON object with the structure described before.
+        The data that was transferred from the drag source. When receiving data from standard HCL DX drag sources, it is a stringified JSON object with the structure described before.
 
 -   **\{Function\} parameter.dragenter**
 
