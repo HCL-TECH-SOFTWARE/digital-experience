@@ -250,7 +250,10 @@ Copy that file out of the Container into your local host:
 # adjust the deployment prefix "dx-" and the namespace "dxns" to match your environment
 kubectl cp dx-core-0:/home/dx_user/LTPAKeyExported ./LTPAKeyExported -c core -n dxns
 ```
+!!!note
+    You have to setup SSO between the WebSphere Application Server running in the **core** pod(s) and the WebSphere Application Server running in the **remote-search** pod. See [authentication-single-sign-using-ltpa-cookies](https://www.ibm.com/docs/en/was/9.0.5?topic=authentication-single-sign-using-ltpa-cookies) for more details and pre-requisits.
 
+    
 ### Configure the Remote Search Pod
 
 Copy the LTPA Key exported from DX Core into the Remote Search Pod:
@@ -393,6 +396,9 @@ Create the following Content Source:
 |Collect documents linked from this URL|`https://dx-core:10042/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`|
 
 In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+
+!!!Note
+    You need to press the _create_ button to create the security realm definition after you entered the data to have the security realm defintion created.
 
 !!!tip
     Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server.  Adjust this according to your deployment configuration.
