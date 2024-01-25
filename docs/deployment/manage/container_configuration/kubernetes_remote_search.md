@@ -270,6 +270,8 @@ kubectl exec -it -n dxns dx-remote-search-0 -c remote-search -- /bin/bash
 # Ensure to use the right credentials for DWasPassword
 /opt/HCL/AppServer/profiles/prs_profile/ConfigEngine/./ConfigEngine.sh configure-remote-search-server-for-remote-search -DWasPassword=[WAS ADMIN PASSWORD] -Dportal.host.name="dx-core" -Dportal.port.number="10042" -Dportal.cert.alias="portaldockeralias" -Dremote.search.host.name="localhost"
 ```
+!!!note
+    You have to setup SSO between the WebSphere Application Server running in the **core** pod(s) and the WebSphere Application Server running in the **remote-search** pod before proceeding.  See [authentication-single-sign-using-ltpa-cookies](https://www.ibm.com/docs/en/was/9.0.5?topic=authentication-single-sign-using-ltpa-cookies) and [Creating a single-sign on domain between HCL Portal and the remote search service | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sso_portal_rss.html) for more detailed instructions and pre-requisits setting up SSO.
 
 ### Restart both Core and Remote Search
 
@@ -393,6 +395,9 @@ Create the following Content Source:
 |Collect documents linked from this URL|`https://dx-core:10042/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`|
 
 In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+
+!!!Note
+    You need to press the _create_ button to create the security realm definition inside the frame where you entered the data first to have the security realm defintion before saving the content source
 
 !!!tip
     Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server.  Adjust this according to your deployment configuration.
