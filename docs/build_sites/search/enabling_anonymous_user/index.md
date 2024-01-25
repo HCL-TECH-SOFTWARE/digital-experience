@@ -36,7 +36,7 @@ Proceed as follows:
 
     For details about the portal Navigator Service and about how to set portal service configuration parameters see the respective topics.
 
-7.  Restart both WebSphere Application Server and HCL Portal for your changes to take effect.
+7.  Restart both WebSphere Application Server and HCL Digital Experience (DX) for your changes to take effect.
 
 <!--
 -   **[Placing the Search Center on a public portal page](../admin-system/srt_sc_public.md)**  

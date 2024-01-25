@@ -3,7 +3,7 @@
 You configure specific tag widget instances by setting the JavaScript parameters that are listed here.
 
 !!! note
-    The parameters listed here are specific to the inline tag widget that was introduced with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
+    The parameters listed here are specific to the inline tag widget that was introduced with HCL Digital Experience (DX) Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL DX Version 8.0 product documentation.
 
 To set the parameters, proceed as follows:
 

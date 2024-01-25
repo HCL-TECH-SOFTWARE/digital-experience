@@ -1,10 +1,10 @@
-# Integrate Google Analytics with HCL Digital Experience
+# Integrating Google Universal Analytics with HCL Digital Experience
 
-This section includes information set up integration of Digital Experience sites with Google Analytics and to view the resulting web analytics tracking to assess the effectiveness of your DX site pages with end user audiences.
+This section includes information set up integration of Digital Experience (DX) sites with Google Analytics and to view the resulting web analytics tracking to assess the effectiveness of your DX site pages with end user audiences.
 
 [Google Analytics](https://analytics.google.com) provides ways for website owners to collect data on the visitors of their website, their activity and their interactions.
 
-Complete the following steps to integrate Google Analytics to the HCL Digital Experience platform and to apply the integration to assess the effectiveness of DX sites with your target user audiences.
+Complete the following steps to integrate Google Analytics to the HCL DX platform and to apply the integration to assess the effectiveness of DX sites with your target user audiences.
 
 ## Installation
 
