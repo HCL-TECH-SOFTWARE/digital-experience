@@ -53,10 +53,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Web Content Manager REST API v2 - Out of beta and additional APIs
 
 === "Containers"
-    The WCM REST v2 APIs are now out of beta and are fully supported. There are additional APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects. These APIs can be checked in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). For more information, see [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/index.md).
+    The WCM REST v2 APIs are now out of beta and are fully supported. There are additional APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects. You can check the APIs in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). For more information, see [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/index.md).
 
 === "On-Premises"
-    The WCM REST v2 APIs are now out of beta and are fully supported. There are additional APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects. These APIs can be checked in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). For more information, see [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/index.md).
+    The WCM REST v2 APIs are now out of beta and are fully supported. There are additional APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects. You can check the APIs in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). For more information, see [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/index.md).
 
 ### Site Analytics - Integrating Google Analytics 4
 
