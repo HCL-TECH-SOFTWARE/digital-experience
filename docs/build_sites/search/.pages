@@ -2,6 +2,8 @@ title: Search
 nav:
     - index.md
     - HCL Digital Experience Portal Search: portal_search
+    - cfg_dx_search
+    - improving_search_quality
     - mp_search_pages.md
     - Search Center: search_center
     - tag_rate_search.md
