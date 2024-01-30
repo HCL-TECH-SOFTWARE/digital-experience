@@ -6,7 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager - AI assistance for sentiment analysis
 - Web Content Manager - CSRF option in WCM comments
-- Web Content Manager REST API v2 - Added Wrapper APIs
+- Web Content Manager REST API v2 - Out of beta and additional APIs
 - Site Analytics - Integrating Google Analytics 4
 - DXClient - LiveSync commands can be triggered within the target local theme path
 - Updated documentation on locating and downloading DX products
@@ -50,13 +50,13 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "On-Premises"
     You can enable CSRF tokens to be used when creating or deleting a comment to prevent possible CSRF attacks. The feature is disabled by default and can be enabled through the WAS Console. For information on how ton enable CSRF tokens, see [CSRF protection for adding and deleting comments](../../build_sites/create_sites/developing_managing_content/comments_wcm.md#csrf-protection-for-adding-and-deleting-comments).
 
-### Web Content Manager REST API v2 - Added Wrapper APIs 
+### Web Content Manager REST API v2 - Out of beta and additional APIs
 
 === "Containers"
-    [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces new Wrapper APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects. For more information, see [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/index.md).
+    The WCM REST v2 APIs are now out of beta and are fully supported. There are additional APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects. You can check the APIs in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). For more information, see [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/index.md).
 
 === "On-Premises"
-    [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces new Wrapper APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects. For more information, see [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/index.md).
+    The WCM REST v2 APIs are now out of beta and are fully supported. There are additional APIs related to Components, Workflow, Workflow Actions, Workflow Operations, Search Parameters, Site Area Templates, Managed Pages, and Projects. You can check the APIs in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). For more information, see [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/index.md).
 
 ### Site Analytics - Integrating Google Analytics 4
 

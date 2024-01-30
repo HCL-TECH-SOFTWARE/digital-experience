@@ -1,4 +1,4 @@
-# HCL Digital Experience Cloud Native 9.5 Offerings
+# HCL Digital Experience Cloud Native 9.5 offerings
 
 See the latest offerings for HCL Digital Experience 9.5.
 
@@ -31,4 +31,4 @@ HCL Digital Experience (DX) Cloud is the SLA-based cloud service platform, with 
 For more information, see [Introducing HCL Digital Experience Cloud](https://content.comms.hcltechsw.com/deliverirs/servlet/IRSL?v=5&a=214&r=232333&m=660&l=7&e=2&x=2460685.0). Contact [HCL to discuss further](https://www.hcl-software.com/dx/upgrade/contact-us?utm_medium=email&utm_source=unica_email&utm_campaign=DT_DX_Newsletter_Jan24_C000000168&referrer=mail.google.com) and get started. 
 
 
-For additional information about HCL Digital Experience solutions, visit: [HCL Digital Experience](https://www.hcltechsw.com/dx) website. 
+For additional information about HCL Digital Experience solutions, visit the [HCL Digital Experience](https://www.hcltechsw.com/dx) website. 
