@@ -1,5 +1,5 @@
 ---
-title: Export Session Usage Report
+title: Manual Session Usage Export
 ---
 
 ## Overview
