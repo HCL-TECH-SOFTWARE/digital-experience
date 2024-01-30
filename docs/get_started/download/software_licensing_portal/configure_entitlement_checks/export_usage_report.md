@@ -10,7 +10,7 @@ This feature allows for a manual report of the used sessions. It can be necessar
 
 Optionally set a unique identifier for the deployment. This will be included in the export.
 
- !!! note
+!!! note
     If no unique identity is set in the helm value, it will default to the release name and namespace combination.
 
 ```yaml
