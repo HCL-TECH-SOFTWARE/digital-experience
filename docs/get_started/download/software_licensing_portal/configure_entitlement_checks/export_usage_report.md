@@ -7,15 +7,16 @@ title: Export Session Usage Report
 This feature allows for a manual report of the used sessions. It can be necessary for environments that do not allow for the other means of usage tracking and may require a manual export of a usage report as described in this document.
 
 ## Unique identifier for Manual session usage report
-Set Unique identifier in helm values yaml in source environment:
+
+Optionally set a unique identifier for the deployment. This will be included in the export.
+
+ !!! note
+    If no unique identity is set in the helm value, it will default to the release name and namespace combination.
 
  ```yaml
  configuration:
    licenseManager:
-     licenseManualReportUniqueIdentifier: <UAT-ENVIRONMENT>
- ```
- !!! note
-     The usage report will identify the source uniquely. If no unique identity is set in the helm value, it will default to the release name and namespace combination.
+     licenseManualReportUniqueIdentifier: "myUniqueIdentifier-123"
 ## Procedure to export the session usage report
 To export the session usage report, you can use the following command and include the start date and end date:
 
