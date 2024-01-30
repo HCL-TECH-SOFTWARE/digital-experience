@@ -36,11 +36,11 @@ $ kubectl get pod -n <namespace>
 $ kubectl get service -n <namespace>
 ```
 
-- The connection between Ingress and HAProxy can be configured to use either `http` or `https` for the internal traffic. See the ["Configure HAProxy networking" topic](../mandatory_tasks/prepare_configure_networking.md#configure-haproxy-networking) for more information.
+- The connection between Ingress and HAProxy can be configured to use either `http` or `https` for the internal traffic. For more information, see ["Configure HAProxy networking" topic](../mandatory_tasks/prepare_configure_networking.md#configure-haproxy-networking).
 
-- Define an [Ingress resource](https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource) that will be used to configure the routing rules that point to the existing deployment of HAProxy as the internal service. Configure a host and all of the requests received by the host will be handled by `<helm release name>-haproxy`. A `secretName` is passed in the `tls` section to allow the Ingress controller to serve `https` traffic. The following configuration maps the root path (`/`) to the HAProxy of DX. If there are other applications in the cluster handled by the same Ingress controller, their paths must be specified explicitly. All other requests will then be handled by DX.
+- Define an [Ingress resource](https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource) that is used to configure the routing rules that point to the existing deployment of HAProxy as the internal service. Configure a host and all of the requests received by the host are handled by `<helm release name>-haproxy`. A `secretName` is passed in the `tls` section to allow the Ingress controller to serve `https` traffic. The following configuration maps the root path (`/`) to the HAProxy of DX. If there are other applications in the cluster handled by the same Ingress controller, their paths must be specified explicitly. All other requests are then handled by DX.
 
-Example Ingress resource:
+Example of Ingress resource:
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -67,22 +67,22 @@ spec:
 ## Advanced configuration
 
 !!! warning
-    The configuration in the previous section is the preferred one and should be used whenever possible.
+    The configuration in the **Ingress Implementation** section is the preferred one and should be used whenever possible.
 
-    Please be aware that any custom application that may be deployed in the WebSphere Application Server or certain configurations must be mapped in the Ingress accordingly. This includes:
+    Please be aware that any custom application that is deployed in the WebSphere Application Server or certain configurations must be mapped in the Ingress accordingly. This includes:
 
     - Some special functionalities of DX like the [Web Application Bridge](../../../../../../extend_dx/integration/wab/index.md)
     - Deployments with the [context root changed or removed](../../../../../manage/siteurl_cfg/index.md)
     - The [`friendlyUrlContextRoot` available for Digital Asset Management](../../../../../../manage_content/digital_assets/configuration/configure_dam_friendlyUrl.md)
 
-If mapping the root path is not possible for a deployment, the following paths can be mapped depending on the configuration of DX:
+If mapping the root path is not possible for a deployment, map the following paths depending on the configuration of DX:
 
 - `/wps` (or the custom context root set for DX)
 - `/dx`
 - `/ibm`
 - `/hcl`
 
-Example Ingress resource:
+Example of Ingress resource:
 
 ```yaml
 apiVersion: networking.k8s.io/v1
