@@ -22,7 +22,6 @@ To export the session usage report, you can use the following command and includ
 
 ```
 kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
-
 ```
 ## Expected Output
 
