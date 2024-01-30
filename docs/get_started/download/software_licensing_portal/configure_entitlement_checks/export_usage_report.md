@@ -13,17 +13,21 @@ Optionally set a unique identifier for the deployment. This will be included in 
  !!! note
     If no unique identity is set in the helm value, it will default to the release name and namespace combination.
 
- ```yaml
- configuration:
-   licenseManager:
-     licenseManualReportUniqueIdentifier: "myUniqueIdentifier-123"
+```yaml
+configuration:
+  licenseManager:
+    licenseManualReportUniqueIdentifier: "myUniqueIdentifier-123"
+```
+
 ## Procedure to export the session usage report
+
 To export the session usage report, you can use the following command and include the start date and end date:
 
 ```
 kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
 ```
-## Expected Output
+
+### Expected Output
 
 ```
 ############################################################
