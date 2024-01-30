@@ -4,7 +4,7 @@ title: Export Session Usage Report
 
 ## Overview
 
-It seems that in cases where obtaining session usage reports is not straightforward, such as in AWS Marketplace, it may be necessary to export a manual report as described in a document.
+This feature allows for a manual report of the used sessions. It can be necessary for environments that do not allow for the other means of usage tracking and may require a manual export of a usage report as described in this document.
 
 ## Unique identifier for Manual session usage report
 Set Unique identifier in helm values yaml in source environment:
