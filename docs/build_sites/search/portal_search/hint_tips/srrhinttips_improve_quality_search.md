@@ -1,9 +1,10 @@
 # Hints and tips for improving quality of Portal Search results
 
 There are three options available to improve the quality of search results and thus the overall search experience for your site visitors. The three options are:
+
 - Using the *Suggested Links* portlet 
 - Changing the default query operator from *Or* to *And* 
-- Applying boost factors to specific metadata fields.
+- Applying boost factors to specific metadata fields
 
 ## Using the Suggested Links portlet
 
