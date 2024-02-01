@@ -5,7 +5,7 @@ title: Manual Session Usage Export
 
 ## Overview
 
-This feature allows for a manual report of the used sessions. It can be necessary for environments that do not allow for the other means of usage tracking and may require a manual export of a usage report as described in this document.
+With this feature, you can manually export a report of your used sessions. This is helpful for environments that do not allow other means of usage tracking and may require a manual export of a usage report.
 
 ## Unique identifier for the manual session usage report
 
