@@ -1,7 +1,7 @@
 ---
-title: Manual Session Usage Export
+title: Exporting a usage report manually
 ---
-# 
+# Exporting a usage report manually
 
 ## Overview
 
