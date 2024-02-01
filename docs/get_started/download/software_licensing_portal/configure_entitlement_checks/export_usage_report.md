@@ -7,7 +7,7 @@ title: Exporting a usage report manually
 
 With this feature, you can manually export a report of your used sessions. This is helpful for environments that do not allow other means of usage tracking and may require a manual export of a usage report.
 
-## Unique identifier for the manual session usage report
+## Unique identifier for the session usage report
 
 Optionally, set a unique identifier for the deployment. This is included in the export.
 
