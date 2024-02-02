@@ -25,7 +25,7 @@ To trigger the staging mismatch process and download the report, refer to the fo
       
     If the report is not generated because data is not available, then both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
 
-    If you want to rerun the process, an additional action to [delete the created staging mismatch](#delete-staging-mismatch) is now available. This deletes the mismatch information for subscribers from the database.
+    If you want to rerun the process, you can [delete the created staging mismatch report](#delete-staging-mismatch). This deletes the mismatch information for subscribers from the database.
 
     !!!note
            You can delete all the generated mismatch information or choose to delete only for a specific subscriber ID.
