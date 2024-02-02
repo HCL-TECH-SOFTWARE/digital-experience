@@ -23,7 +23,7 @@ To trigger the staging mismatch process and download the report, refer to the fo
     !!!note
            If the status is not FIND_MISMATCH_COMPLETED, you can still download the report but it is not accurate.
       
-    If the report is not generated due to unavailability of data, it means that both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
+    If the report is not generated because data is not available, then both the publisher and subscriber are in sync. If they are not in sync, the report should contain the detailed information of mismatches found.
 
     If you want to rerun the process, an additional action to [delete the created staging mismatch](#delete-staging-mismatch) is now available. This deletes the mismatch information for subscribers from the database.
 
