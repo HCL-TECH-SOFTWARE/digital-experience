@@ -460,7 +460,7 @@ To verify if both the environments are in sync, perform the following steps.
 
 ## Configurations
 
-- [Find staging mismatch](#find-staging-mismatch) compares tables between both publisher and subscriber. The `maxRecordsToCompare` value under `configuration.digitalAssetManagement` in Helm charts is the number of records picked up to compare at a single iteration. The recommended value is 1000, but it can be tuned for better performance.
+- [Find staging mismatch](#find-staging-mismatch) compares tables between both publisher and subscriber. The `maxRecordsToCompare` value under `configuration.digitalAssetManagement` in Helm charts is the number of records picked up to compare at a single iteration. The recommended value is 1000, but you can tune the value for better performance.
 
 
 ## Limitations
