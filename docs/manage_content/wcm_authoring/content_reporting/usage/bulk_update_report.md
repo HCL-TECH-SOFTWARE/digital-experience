@@ -81,6 +81,9 @@ You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-r
 !!!note
     Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
 
+!!!note
+    For CF218 if a bulk update is running and the server gets restarted, an attempt is made to gracefully pause the update process so that it can be resumed. When the server is restarted and available again, any paused bulk updates will appear in the **Updates** page discussed below.
+
 ## Tracking Bulk Updates and viewing Bulk Update results
 
 When a bulk update is triggered, a snackbar appears in the bottom right corner of the screen. The snackbar displays the status of the update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process has been completed, it shows how many items were updated and how many items were not.
@@ -150,3 +153,13 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     - **Created by** - This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
+
+5. On the **Updates** page table, hover over a row of a paused bulk update to display the resume update button. Click this button to display the confirmation dialog to resume the bulk operation.
+
+    ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_Update_Button.png)
+
+6. After clicking the resume update button, a confirmation dialog appears. Verify the items you want to update and click the **Resume** button to continue. Otherwise, you can click **Cancel**.
+
+    ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_Resume.png)
+
+    After resuming the update, you can track the progress by remaining on the **Updates** page.
