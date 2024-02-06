@@ -129,7 +129,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
 
-2. On the **Updates** page, there is a table showing the bulk updates that were triggered. This table has five columns:
+2. In the **Updates** page, there is a table showing the bulk updates that were triggered. This table has five columns:
 
     - **Update** - This column indicates whether the bulk update is ongoing or completed. Once complete, there is a summary of items that have been processed. This summary shows how many items were updated and how many failed. This column also contains a button to show the report dialog where you can check the details of each item that has been processed.
     - **Action** - This column shows actions that were taken during the bulk update.
@@ -141,7 +141,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Updates** page.
 
-3. On the **Updates** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
+3. In the **Updates** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_View_Report_Button.png)
 
@@ -153,13 +153,19 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     - **Created by** - This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
+    
+#### Resuming a paused bulk update process
 
-5. On the **Updates** page table, hover over a row of a paused bulk update to display the resume update button. Click this button to display the confirmation dialog to resume the bulk operation.
+1. Access the **Updates** page through the button on the application header. Click the **Updates** button to go to the **Updates** page.
+
+    ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
+
+2. In the **Updates** page table, hover over a row of a paused update process to display the resume update button. Click this button to display the confirmation dialog box to resume the bulk update process.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_Update_Button.png)
 
-6. After clicking the resume update button, a confirmation dialog appears. Verify the items you want to update and click the **Resume** button to continue. Otherwise, you can click **Cancel**.
+3. The **Confirm resume update** dialog box appears. Verify the items you want to update and click **Resume** to continue. Otherwise, you can click **Cancel**.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_Resume.png)
 
-    After resuming the update, you can track the progress by remaining on the **Updates** page.
+After resuming the update, you can track the progress in the **Updates** page.
