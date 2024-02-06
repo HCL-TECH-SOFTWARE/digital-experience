@@ -23,7 +23,7 @@ The following image illustrates the DXClient Architecture diagram:
 The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification (for example, Docker or Podman).
 
 !!! info
-    Open distribution of DXClient container package is available in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab). Installation and usage details can be found in [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of HCL-TECH-SOFTWARE GitHub repository.
+    For open distribution of the DXClient container package, go to [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab). You can find the installation and usage details in [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository.
 
 In addition, the package includes scripts for all operating systems that make it simpler to work with the container image. These scripts handle the storage for the container and sync input files with the container itself.
 
