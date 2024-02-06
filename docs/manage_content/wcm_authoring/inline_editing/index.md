@@ -33,7 +33,7 @@ The following image shows you the different parts of the site toolbar.
         - Collapse the tree view.
         - For every item on the tree, you can click the **Context menu** icon to open the Context menu. This menu shows you more available actions for your selected page. 
 
-    3. Allow you to control the size of the site toolbar.
+    3. Enables users to control the size of the side toolbar by hovering it on the border of the side toolbar and click and drag it to the desired position when the resizable icon shows up.
 
     For more information, see [Adding reusable page components to your page](../../../build_sites/create_sites/adding_pages_content_more/toolbar_add_comp.md).
 
