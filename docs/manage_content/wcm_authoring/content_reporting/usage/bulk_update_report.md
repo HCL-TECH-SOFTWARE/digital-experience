@@ -156,6 +156,8 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     
 #### Resuming a paused bulk update process
 
+To continue a paused bulk update process because of a restarted server, refer to the following steps:
+
 1. Access the **Updates** page through the button on the application header. Click the **Updates** button to go to the **Updates** page.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
