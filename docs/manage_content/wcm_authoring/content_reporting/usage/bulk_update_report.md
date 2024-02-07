@@ -82,7 +82,7 @@ You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-r
     Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
 
 !!!note
-    For CF218 if a bulk update is running and the server gets restarted, an attempt is made to gracefully pause the update process so that it can be resumed. When the server is restarted and available again, any paused bulk updates will appear in the **Updates** page discussed below.
+    Starting CF218, if a bulk update process is running and the server gets restarted, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Updates** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
 ## Tracking Bulk Updates and viewing Bulk Update results
 
