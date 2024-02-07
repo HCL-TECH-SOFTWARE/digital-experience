@@ -2,7 +2,7 @@
 
 Run the performance tuning tool on a new deployment to tune the servers.
 This will automate:w
- the application of the DX Portal specific portions of the DX Portal Tuning Guide mentioned in the preceeding section.
+ the application of the DX Portal specific portions of the DX Portal Tuning Guide mentioned in the preceding section.
 
 !!!note
     The performance tuning tool does not tune the database, the LDAP user registry, the web servers, or the operating system. In a clustered environment, it tunes only the cluster members. For advanced tuning, refer to the performance tuning guides.
@@ -13,11 +13,11 @@ If necessary, modify the input properties files before you run the *tune-initial
 All the properties files are located in the *{PortalServer_root}/installer/wp.config/config/TuningTask* subdirectories.
 
 !!!note "Remember"
-    Review the [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411) for information first. Before you modify the properties files, make a local copy of the *PortalServer_root\installer\wp.config\config\TuningTask* directory. Modify the files in the local copy. Then, add the *-DTuningPropertiesDirectory=local_dir_path* parameter to the *tune-initial-portal-performance* task.
+    Review the HCL Digital Experience Performance Tuning Guide located in the [Guide Me section of the DX Help Center](../../../guide_me/Performance_Tuning.md) for information first. Before you modify the properties files, make a local copy of the *PortalServer_root\installer\wp.config\config\TuningTask* directory. Modify the files in the local copy. Then, add the *-DTuningPropertiesDirectory=local_dir_path* parameter to the *tune-initial-portal-performance* task.
 
 !!!note
 
-    Starting with CF02, you can add the *-DAuthoringServer* parameter to the *tune-initial-portal-performance* task. Set this parameter to either *true* or *false*. Setting this parameter to *true* turns off the HCL Web Content Manager (WCM) advanced cache feature and any tuning features that are specific to a WCM Subscriber server. This insures that WCM authors get an immediate view of changed content. However, it highly recommended to insure that rendering servers (e.g. non-authoring servers rendering WCM content) always use WCM advanced cache.
+    Add the *-DAuthoringServer* parameter to the *tune-initial-portal-performance* task. Set this parameter to either *true* or *false*. Setting this parameter to *true* turns off the HCL Web Content Manager (WCM) advanced cache feature and any tuning features that are specific to a WCM Subscriber server. This insures that WCM authors get an immediate view of changed content. However, it highly recommended to insure that rendering servers (e.g. non-authoring servers rendering WCM content) always use WCM advanced cache.
 
 ## Stand-alone and clustered environments
 
