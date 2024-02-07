@@ -33,6 +33,8 @@ The following image shows you the different parts of the site toolbar.
         - Collapse the tree view.
         - For every item on the tree, you can click the **Context menu** icon to open the Context menu. This menu shows you more available actions for your selected page. 
 
+    3. You can control the size of the side toolbar. Hover on this border and a double headed arrow icon appears. Click and drag to your desired size.
+
     For more information, see [Adding reusable page components to your page](../../../build_sites/create_sites/adding_pages_content_more/toolbar_add_comp.md).
 
 2. Click this icon to open the **Project menu**. In a project, you can group content and page edits together to make managing and publishing related changes easier. From the **Projects menu**, you can create a new project or manage existing projects. For more information, see [Projects: Organizing and coordinating changes to your site](../../../build_sites/create_sites/adding_pages_content_more/projects_organizing_coord_chgs_site/index.md).
