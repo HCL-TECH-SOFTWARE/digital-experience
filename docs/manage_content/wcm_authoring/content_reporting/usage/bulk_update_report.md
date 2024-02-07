@@ -1,13 +1,18 @@
 # Content Reporting Bulk Update
 
-Currently Content Reporting Bulk Update supports the following actions: 
+Currently, Content Reporting Bulk Update feature supports the following actions: 
 
 - Update expiration date
 - Add an owner or author
 - Remove an owner or author
 - Replace an owner or author
 
-These actions can be executed on content items returned in a report generated through HCL Content Reporting search.
+You can execute these actions on content items returned in a report generated through HCL Content Reporting search.
+
+!!!note
+    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
+
+Starting CF218, if a bulk update process is running and the server gets restarted, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Updates** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
 ## Prerequisite
 
@@ -77,12 +82,6 @@ Content managers can trigger bulk updates to update the owners and/or authors of
     There are also **Cancel** and **Clear** buttons in the dialog box. Click **Cancel** to close the dialog box. Click **Clear** to remove all selected options.
 
 You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page.
-
-!!!note
-    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
-
-!!!note
-    Starting CF218, if a bulk update process is running and the server gets restarted, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Updates** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
 ## Tracking Bulk Updates and viewing Bulk Update results
 
@@ -156,7 +155,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     
 #### Resuming a paused bulk update process
 
-To continue a paused bulk update process because of a restarted server, refer to the following steps:
+To continue a paused bulk update process, refer to the following steps:
 
 1. Access the **Updates** page through the button on the application header. Click the **Updates** button to go to the **Updates** page.
 
