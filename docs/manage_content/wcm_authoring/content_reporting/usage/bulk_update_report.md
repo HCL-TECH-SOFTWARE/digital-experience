@@ -1,13 +1,18 @@
 # Content Reporting Bulk Update
 
-Currently Content Reporting Bulk Update supports the following actions: 
+Currently, Content Reporting Bulk Update feature supports the following actions: 
 
 - Update expiration date
 - Add an owner or author
 - Remove an owner or author
 - Replace an owner or author
 
-These actions can be executed on content items returned in a report generated through HCL Content Reporting search.
+You can execute these actions on content items returned in a report generated through HCL Content Reporting search.
+
+!!!note
+    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
+
+Starting CF218, if a bulk update process is running and the server gets restarted, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Updates** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
 ## Prerequisite
 
@@ -78,9 +83,6 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 
 You can [track the bulk update](#tracking-bulk-updates-and-viewing-bulk-update-results) through the snackbar or through the **Updates** page.
 
-!!!note
-    Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
-
 ## Tracking Bulk Updates and viewing Bulk Update results
 
 When a bulk update is triggered, a snackbar appears in the bottom right corner of the screen. The snackbar displays the status of the update. If the process is still ongoing, it shows how many items have already been processed against the total number of items. If the process has been completed, it shows how many items were updated and how many items were not.
@@ -126,7 +128,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
 
-2. On the **Updates** page, there is a table showing the bulk updates that were triggered. This table has five columns:
+2. In the **Updates** page, there is a table showing the bulk updates that were triggered. This table has five columns:
 
     - **Update** - This column indicates whether the bulk update is ongoing or completed. Once complete, there is a summary of items that have been processed. This summary shows how many items were updated and how many failed. This column also contains a button to show the report dialog where you can check the details of each item that has been processed.
     - **Action** - This column shows actions that were taken during the bulk update.
@@ -138,7 +140,7 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
 
     To return to the **Content Reporting** landing page, click the back button found on the upper left corner of the **Updates** page.
 
-3. On the **Updates** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
+3. In the **Updates** page table, hover over a row of a completed bulk update to display the view action button. Click this button to display the dialog for the list of items processed and their details.
 
     ![](../../../../assets/HCL_Content_Reporting_Updates_View_Report_Button.png)
 
@@ -150,3 +152,21 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     - **Created by** - This column shows the creator of the item.
 
     ![](../../../../assets/HCL_Content_Reporting_Reports_Dialog.png)
+    
+#### Resuming a paused bulk update process
+
+To continue a paused bulk update process, refer to the following steps:
+
+1. Access the **Updates** page through the button on the application header. Click the **Updates** button to go to the **Updates** page.
+
+    ![](../../../../assets/HCL_Content_Reporting_Updates_Button.png)
+
+2. In the **Updates** page table, hover over a row of a paused update process to display the resume update button. Click this button to display the confirmation dialog box to resume the bulk update process.
+
+    ![](../../../../assets/HCL_Content_Reporting_Updates_Resume_Update_Button.png)
+
+3. The **Confirm resume update** dialog box appears. Verify the items you want to update and click **Resume** to continue. Otherwise, you can click **Cancel**.
+
+    ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_Resume.png)
+
+After resuming the update, you can track the progress in the **Updates** page.
