@@ -26,6 +26,12 @@ Follow these steps to upload rich media assets using HCL Digital Experience 9.5 
 
     ![Upload completed with details viewed](../../../../images/dam_interface_upload_success_view_details.png)
 
+## Drag and Drop
+
+1. Select the folders or files to be uploaded from the system file explorer and drop the files into the DAM root page or any other sub collection page.
+2. If files are dropped into root collection page, it will show a popup to choose the collection into which the asset has to be uploaded.
+3. All the uploaded folders will create a collection with the same name as the folder and upload all its contents into the same collection.
+
     !!! notes
 
         - If the Kaltura plugin is configured and enabled, the media tile shows the following sync statuses for uploaded videos:
@@ -36,3 +42,4 @@ Follow these steps to upload rich media assets using HCL Digital Experience 9.5 
             See the [Configure DAM - Kaltura integration](../../configuration/dam_extensibility/kaltura_configuration.md) topic for details.
 
         -   The interface displays features that allows you to edit media asset metadata \(such as `Title` and `Description`\) and user access control \(Access\) of the new or existing collection the rich media asset is uploaded to. See the [Manage collections](manage_collections.md) topic for details.
+        - If the "Drag and Drop" is done through keyboard navigation, collection has to be created manually and assets can be uploaded with upload button.
