@@ -32,8 +32,7 @@ Follow these steps to upload rich media assets using HCL Digital Experience 9.5 
 2. If files are dropped into root collection page, it will show a popup to choose the collection into which the asset has to be uploaded.
 3. All the uploaded folders will create a collection with the same name as the folder and upload all its contents into the same collection.
 
-!!!note "Notes:"
-
+!!!note
     - If the Kaltura plugin is configured and enabled, the media tile shows the following sync statuses for uploaded videos:
 
         - SYNC IN PROGRESS
