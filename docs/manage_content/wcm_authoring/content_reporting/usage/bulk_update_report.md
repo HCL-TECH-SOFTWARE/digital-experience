@@ -170,3 +170,6 @@ To continue a paused bulk update process, refer to the following steps:
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_Resume.png)
 
 After resuming the update, you can track the progress in the **Updates** page.
+
+!!!note
+    Bulk updates for owners or authors can only be resumed if there are a limited number of users involved. There is currently a size limitation in the database column that stores the action string that specifies the owners or authors used in an update. If the action string exceeds 255 characters, then that bulk operation cannot be successfully resumed.
