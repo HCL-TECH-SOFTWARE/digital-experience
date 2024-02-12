@@ -45,5 +45,5 @@ Folder upload via drag and drop in DAM is a convenient feature for users to quic
 
     - The interface displays features that allows you to edit media asset metadata \(such as `Title` and `Description`\) and user access control \(Access\) of the new or existing collection the rich media asset is uploaded to. See the [Manage collections](manage_collections.md) topic for details.
 
-    - To upload folders, collections must be created manually, and assets can be uploaded via the upload button.
+    - To upload folders without drag & drop, collections must be manually created, and assets can be added using the upload button.
 
