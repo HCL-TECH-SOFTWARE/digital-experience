@@ -23,7 +23,7 @@ This topic outlines how the V2 APIs differ from V1 APIs.
 
     The [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) contains the following information that can help you with using the V2 APIs:
 
-    - A description of the API
+    - A description of what you can do with the API
     - Sample request value that you can use when executing an API
     - Sample response codes with a description of each code
 
