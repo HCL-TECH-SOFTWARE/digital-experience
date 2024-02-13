@@ -1,28 +1,24 @@
-# Program Requirements
+# Program support for non-HCL software 
+<!-- I think this title get closer to the subject of this topic. If HCL lawyers delivered this topic, ignore my suggestions and keep as is. -->
+HCL Software relies numerous commercial and non-commercial third-party software to perform. This document describes the support that customers can expect for various configurations of HCL Digital Experience, other HCL Programs, and third-party software.
 
-**In this article**
+Although HCL cannot reasonably describe all possible configurations that a customer might choose to use, HCL tests HCL Digital Experience with a prescribed list of other HCL Programs and third-party software during the development of a new release. This document describes the level of support that customers can expect for various configurations of HCL Digital Experience, other HCL Programs, and third-party software.
 
-<p style="margin-left: 20px;">I. Categories of Support</p>
-
-HCL Software relies on a range of other commercial and non-commercial Third Party Software to perform its function. This document describes the support that customers can expect for various configurations of HCL Digital Experience, other HCL Programs and Third Party Software.
-
-While HCL cannot reasonably describe all possible configurations that a customer might choose to use, HCL tests HCL Digital Experience with a prescribed list of other HCL Programs and Third Party Software during the development of a new release. This document describes the level of support that Customers can expect for various configurations of HCL Digital Experience, other HCL Programs and Third Party Software.
-
-HCL only provides Support for configuration and problem determination of Third Party Software that is supplied with HCL’s Programs. In all other cases, it is your responsibility to obtain configuration assistance and support for Third Party Software yourself. In those cases, if HCL determines that a problem reported to HCL is caused by Third Party Software, we will ask you to engage directly with your service provider to obtain support or assistance.
+HCL only provides support for configuration and problem determination of third-party software that is supplied with HCL’s Programs. In all other cases, the customer is responsible to obtain configuration assistance and support for third-party software. In those cases, if HCL determines that a problem reported to HCL is caused by third-party software, HCL will ask you to engage directly with your software provider to obtain support or assistance.
 
 !!! note 
-    The statements in this document reflect the general level of Support that can be expected for HCL Digital Experience in accordance with HCL’s Support Guide available at: [https://support.hcltechsw.com/cs](https://support.hcltechsw.com/cs). Nothing in this document shall be construed as supplementing, modifying, or superseding the terms of your HCL Master License Agreement, or other applicable agreement, for HCL Digital Experience, nor shall it create any obligation for HCL to deliver a level of support other than that provided under a relevant HCL agreements.
+    The statements in this document reflect the general level of Support that can be expected for HCL Digital Experience in accordance with HCL’s Support Guide available at [https://support.hcltechsw.com/cs](https://support.hcltechsw.com/cs). Nothing in this document shall be construed as supplementing, modifying, or superseding the terms of your HCL Master License Agreement, or other applicable agreement, for HCL Digital Experience, nor shall it create any obligation for HCL to deliver a level of support other than that provided under a relevant HCL agreements.
 
 
 ## Categories of Support
 
-For support purposes, we define three categories of configuration:
+For support purposes, HCL defines three categories of configuration:
 
 -   **Supported Configuration**
 
-    A “Supported Configuration” is a combination of HCL Programs and other Third Party Software (usually at a specified version, release, fix or specification level) that has been validated by HCL.
+    A “Supported Configuration” is a combination of HCL Programs and other third-party software (usually at a specified version, release, fix or specification level) that has been validated by HCL.
     
-    HCL provides full Support for HCL Programs configured within this category. Support is provided under the terms of the Support Guide, to ensure that the Program operates within its specifications.
+    HCL provides full Support for HCL Programs configured in this category. Support is provided under the terms of the Support Guide to ensure that the Program operates within its specifications.
 
 
 -   **Unsupported Configurations**
@@ -31,21 +27,21 @@ For support purposes, we define three categories of configuration:
 
     HCL does not provide support for Unsupported Configurations. Resolutions to deficiencies or incompatibilities found in Unsupported Configurations are not generally available.  
 
-    Customers can seek assistance on an additional fee basis from HCL services, from an authorised HCL Business Partner or from another service provider provided such services fall within the terms and conditions of use under the license grant of the relevant HCL agreement.
+    Customers can seek assistance on an additional fee basis from HCL services, from an authorised HCL Business Partner, or from another service provider provided such services fall within the terms and conditions of use under the license grant of the relevant HCL agreement.
 
 
 -   **Other Configurations**
   
     Many configurations of HCL Programs and other software exist that are not explicitly listed in “Supported Configurations” or “Unsupported Configurations”, but which can reasonably be expected to perform within the accepted bounds of reliability, function, and performance.
     
-    Configurations that fall into this category typically substitute HCL Programs or Third Party Software listed in the “Supported Configuration” for similar software. This may be a newer fix level of the HCL Program or Third Party Software or other Third Party Software product that adheres to a supported specification. For example, this could be a newer WebSphere® Application Server (WAS) fix pack, an LDAP server that adheres to that standard or an external security manager that integrates via public APIs.
+    Configurations that fall into this category typically substitute HCL Programs or third-party software listed in the “Supported Configuration” for similar software. This may be a newer fix level of the HCL Program or third-party software or other third-party software product that adheres to a supported specification. For example, this software might be a newer WebSphere® Application Server (WAS) fix pack, an LDAP server that adheres to that standard or an external security manager that integrates through public APIs.
 
     <p style="margin-left: 50px;">Customers may access HCL Support for “Other Configurations”. In these scenarios HCL will provide Support at its discretion only.</p>
     
-    <p style="margin-left: 50px;">During problem determination HCL Support will determine if the problem exists in a Supported Configuration, if a resolution can be provided, or if this is an Unsupported Configuration.</p>
+    <p style="margin-left: 50px;">During problem determination, HCL Support will determine if the problem exists in a Supported Configuration, if a resolution can be provided, or if this is an Unsupported Configuration.</p>
     
-    <p style="margin-left: 50px;">Resources for problem determination are applied until HCL <ins>either provides a solution to the issue, determines that a solution is not commercially reasonable, or determines that the issue is caused by the substituted HCL Program or Third Party Software and does not exist in a Supported Configuration.<ins></p>
+    <p style="margin-left: 50px;">Resources for problem determination are applied until HCL <ins>either provides a solution to the issue, determines that a solution is not commercially reasonable, or determines that the issue is caused by the substituted HCL Program or third-party software and does not exist in a Supported Configuration.<ins></p>
             
     <p style="margin-left: 50px;">If HCL is not able to resolve the problem on the customer configuration in question, then customers may choose to explore alternative solutions on an additional fee basis from HCL services, from an HCL Business Partner or from another service provider within the terms and conditions of use under the license grant of the relevant HCL agreement.</p>
 
-    One possible outcome of a problem in this category is that HCL determines the configuration not to work, and will update the list of Unsupported Configurations accordingly.
+    One possible outcome of a problem in this category is that HCL determines the configuration does not work, and will update the list of Unsupported Configurations accordingly.
