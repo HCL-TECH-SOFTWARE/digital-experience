@@ -4,6 +4,10 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- Exporting a usage report
+- Site Manager - Resizable navigation panel 
+- New DXClient repository in GitHub and Harbor
+- DX Search - Configuring DX Search and Improving Search Quality documentation
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -12,19 +16,27 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-- 
+- Web Content Manager - Resuming bulk updates in Content Reporting 
 
 **Digital Experience 9.5 Container Version**
 
-- 
+- Digital Asset Management - Uploading with drag-and-drop
 
 **Digital Experience Early Access Program**
 
-- Open Liberty Portlet Container
+- 
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
+
+### Exporting a usage report
+
+### Site Manager - Resizable navigation panel 
+
+### DX Search - Configuring DX Search and Improving Search Quality documentation
+
+### New DXClient repository in GitHub and Harbor
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -43,7 +55,11 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Digital Experience 9.5 Version
 
+### Web Content Manager - Resuming bulk updates in Content Reporting 
+
 ## Digital Experience 9.5 Container Version
+
+### Digital Asset Management - Uploading with drag-and-drop
 
 ## Digital Experience Early Access Program
 
