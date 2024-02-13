@@ -50,4 +50,4 @@ All uploaded folders create a collection with the same name as the folder. The c
 
     - The interface displays features that allows you to edit media asset metadata (for example, `Title` and `Description`) and user access control (for example, Access) of the new or existing collection the rich media asset is uploaded to. For more information, see [Manage collections](manage_collections.md).
 
-    - To upload folders without drag-and-drop, you must manually create collections and upload assets using the **Upload** button.
+    - To upload folders without using drag-and-drop, you must [manually create collections](#uploading-rich-media-assets) and upload assets using the **Upload** button.
