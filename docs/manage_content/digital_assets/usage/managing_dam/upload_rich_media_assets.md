@@ -1,4 +1,4 @@
-# Upload rich media assets
+# Uploading rich media assets
 
 Follow these steps to upload rich media assets using HCL Digital Experience 9.5 Digital Asset Management \(DAM\).
 
@@ -26,13 +26,17 @@ Follow these steps to upload rich media assets using HCL Digital Experience 9.5 
 
     ![Upload completed with details viewed](../../../../images/dam_interface_upload_success_view_details.png)
 
-## Drag and Drop
+## Uploading using drag-and-drop
 
-Folder upload via drag and drop in DAM is a convenient feature for users to quickly add multiple folders and their contents to the DAM. It handles the upload of folders containing sub-folders and their respective assets. In addition to this, It preserves the hierarchy of nested folders during the upload process.
+You can upload files and folders using the drag-and-drop feature. With this feature, you can add multiple folders and their contents to DAM. When you drag and drop folders to DAM, the system handles the upload of folders, their sub-folders, and their respective assets. The hierarchy of nested folders during the upload process is preserved.
 
-1. Select the folders or files to be uploaded from the system file explorer and drop the files into the DAM root page or any other sub collection page.
-2. If files are dropped into root collection page, it will show a popup to choose the collection into which the asset has to be uploaded.
-3. All the uploaded folders will create a collection with the same name as the folder and upload all its contents into the same collection.
+To upload files and folders using drag-and-drop, refer to the following steps:
+
+1. Select the folders or files to be uploaded from the system file explorer.
+2. Drag and drop the files and folders into the DAM root page or any other sub-collection page.
+3. (Optional) If files are dropped into a root collection page, a dialog box appears where you can select the collection where you want to upload the assets.
+
+All uploaded folders create a collection with the same name as the folder. The contents of the folders are uploaded into the same collection.
 
 !!!note
 
@@ -41,9 +45,9 @@ Folder upload via drag and drop in DAM is a convenient feature for users to quic
         - SYNC IN PROGRESS
         - SYNC FAILED
         - SYNCED
+        
         See the [Configure DAM - Kaltura integration](../../configuration/dam_extensibility/kaltura_configuration.md) topic for details.
 
-    - The interface displays features that allows you to edit media asset metadata \(such as `Title` and `Description`\) and user access control \(Access\) of the new or existing collection the rich media asset is uploaded to. See the [Manage collections](manage_collections.md) topic for details.
+    - The interface displays features that allows you to edit media asset metadata (for example, `Title` and `Description`) and user access control (for example, Access) of the new or existing collection the rich media asset is uploaded to. For more information, see [Manage collections](manage_collections.md).
 
-    - To upload folders without drag & drop, collections must be manually created, and assets can be added using the upload button.
-
+    - To upload folders without drag-and-drop, you must manually create collections and upload assets using the **Upload** button.
