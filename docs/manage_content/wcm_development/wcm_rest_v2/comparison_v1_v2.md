@@ -27,5 +27,20 @@ This topic outlines how the V2 APIs differ from V1 APIs.
     - Sample request value that you can use when executing an API
     - Sample response codes with a description of each code
     
-    In addition, you can try executing an API in the Swagger Explorer. Go to the endpoint you want to test and click **Try it out**. Modify the **Request body** as needed and click **Execute**.
+    In addition, you can try executing an API in the Swagger Explorer. To test an API:
+    
+    1. Access the WCM REST V2 API explorer located at:
+
+        ```
+        http or https://host:port/dx/api/wcm/v2/explorer/
+        ```
+
+        !!! example
+
+            ```
+            https://localhost:10039/dx/api/wcm/v2/explorer/
+            ```
+    
+    2. Go to the endpoint you want to test and click **Try it out**. 
+    3. Modify the **Request body** as needed and click **Execute**.
 
