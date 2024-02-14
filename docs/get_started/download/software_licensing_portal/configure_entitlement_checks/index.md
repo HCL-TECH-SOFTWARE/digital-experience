@@ -135,7 +135,7 @@ See the HCL DX Cloud Native 9.5 entitlement check scenarios for success and erro
 
 Entitlement checking to ensure the entitlement period for the DX Cloud Native 9.5 part is valid for the purchased term will be initiated at deployment start, upgrade, or configuration change processes. Entitlement checking will also occur once per day for active deployments. 
 
-Refer to [HCL Digital Experience Cloud Native 9.5 Support for Local License Manager](local_license_server_manager.md) topic for additional configurations needed to enable connectivity to a local license server.
+Refer to [Configuring a local HCL Flexnet entitlement server](configuring_local_flexnet_entitlement_server.md) topic for additional configurations needed to enable connectivity to a local license server.
 
 ## Securing License Server communication for License Manager application
 

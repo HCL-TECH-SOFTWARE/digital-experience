@@ -28,11 +28,19 @@ To export the session usage report, use the following command and include the st
 kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
 ```
 
+The result can be sent to a file using:
+
+```
+kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.txt
+```
+
 ### Expected result
 
 ```
 ############################################################
 Session Usage Report from the Environment: UAT-ENV
+This can take a few minutes...
+All dates are in the format YYYY-MM-DD
 ############################################################
 Session usage for 10-2023: 70
 Session usage for 12-2023: 45
