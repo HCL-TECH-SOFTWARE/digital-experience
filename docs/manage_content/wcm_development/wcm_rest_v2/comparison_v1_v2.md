@@ -15,7 +15,7 @@ This topic outlines how the V2 APIs differ from V1 APIs.
 
 - Request and response body use JSON instead of XML.
 
-    For V1 APIs, request body and response body can be in a number of formats, namely, Text, JavaScript, JSON, XML, and HTML. If the request body is in an XML format, you have to add `?mime-type=application/json` query parameter in the URL for the response body to be in JSON format. 
+    For V1 APIs, request body and response body can be in XML or JSON formats. If the request body is in an XML format, you have to add `?mime-type=application/json` query parameter in the URL for the response body to be in JSON format. 
     
     On the other hand, V2 APIs use only the JSON format for the request and response body. You do not have to add `?mime-type=application/json` query parameter to get a response body in JSON. 
 
@@ -26,4 +26,6 @@ This topic outlines how the V2 APIs differ from V1 APIs.
     - A description of what you can do with the API
     - Sample request value that you can use when executing an API
     - Sample response codes with a description of each code
+    
+    In addition, you can try executing an API in the Swagger Explorer. Go to the endpoint you want to test and click **Try it out**. Modify the **Request body** as needed and click **Execute**.
 
