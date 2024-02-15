@@ -1,0 +1,10 @@
+title: The REST API
+nav:
+    - index.md
+    - tag_rate_api_rest_addr.md
+    - tag_rate_api_rest_add_qparms.md
+    - tag_rate_api_rest_cor_modls.md
+    - Other queries: other_queries
+    - tag_rate_api_rest_cud_tr.md
+
+

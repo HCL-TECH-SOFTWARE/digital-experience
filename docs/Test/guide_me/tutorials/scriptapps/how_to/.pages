@@ -1,0 +1,9 @@
+title: How-To Guides
+nav:
+    - index.md
+    - 01_basic_deployments.md
+    - 02_dependencies_as_module.md
+    - 03_apps_excluding_dependencies.md
+    - 04_apps_sharing_dependencies.md
+    - 05_apps_with_diff_deploy_versions.md
+    - 06_theme_component_in_app.md

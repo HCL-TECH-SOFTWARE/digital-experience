@@ -1,0 +1,5 @@
+Title: Choosing the type of portal farm to create
+nav:
+    - index.md
+    - Setting up farm instances with a shared configuration: settingup_with_sharedconfig
+    - Setting up farm instances as unique installations: settingup_as_unique_install

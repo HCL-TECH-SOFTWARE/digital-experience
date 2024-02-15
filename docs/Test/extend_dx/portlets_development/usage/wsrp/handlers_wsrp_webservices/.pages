@@ -1,0 +1,5 @@
+title: Using handlers for WSRP web services
+nav:
+    - index.md
+    - wsrpt_websrvc_handlers_prod.md
+    - wsrpt_websrvc_handlers_cons.md

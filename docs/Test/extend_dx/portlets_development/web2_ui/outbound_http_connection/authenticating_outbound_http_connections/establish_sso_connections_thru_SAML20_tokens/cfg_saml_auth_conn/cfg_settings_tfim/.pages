@@ -1,0 +1,7 @@
+title: Configuration settings for Tivoli Federated Identity Manager (TFIM)
+nav:
+    - index.md
+    - outbhttp_auth_est_sso_tfim_idpp_url.md
+    - outbhttp_auth_est_sso_tfim_idpp_settings.md
+    - outbhttp_auth_est_sso_tfim_rules.md
+    - Adding the Java Authentication and Authorization Service (JAAS) login module to the Tivoli Federated Identity Manager (TFIM): adding_jaas

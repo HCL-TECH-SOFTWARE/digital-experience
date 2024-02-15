@@ -1,0 +1,15 @@
+title: Themes and Skins
+nav:
+    - index.md
+    - themeopt_themedev_themes_roadmap.md
+    - Getting started with Themes: getting_started_with_themes
+    - The module framework: the_module_framework
+    - Understanding the Simple Theme: simple_theme
+    - Understanding the Portal 8.5 modularized theme: portal85_modularized_theme
+    - Managing theme capabilities: manage_theme_capabilities
+    - Customizing the theme: customizing_theme
+    - Developing themes for a production portal: developing_theme
+    - Device classes: device_classes
+    - Responsive Web Design: responsive_web_design
+
+

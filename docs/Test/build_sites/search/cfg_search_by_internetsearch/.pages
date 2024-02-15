@@ -1,0 +1,5 @@
+title: Configuring your portal site for search by internet search engines
+nav:
+    - index.md
+    - srtcfgsitemap1.md
+    - Client identification for external search engines: clientid_for_ssearch_by_externalsearch

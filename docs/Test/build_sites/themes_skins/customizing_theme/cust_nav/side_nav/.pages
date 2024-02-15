@@ -1,0 +1,6 @@
+title: Side navigation
+nav:
+    - index.md
+    - themeopt_cust_nav_sidepage.md
+    - themeopt_cust_nav_sidedefault.md
+    - themeopt_cust_nav_sidecust.md

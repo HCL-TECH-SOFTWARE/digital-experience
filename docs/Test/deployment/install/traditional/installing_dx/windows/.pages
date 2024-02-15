@@ -1,0 +1,7 @@
+nav:
+    - index.md
+    - prep_os-windows.md
+    - inst_iim-windows.md
+    - Run the installation program in Windows: running_install
+    - inst_next_steps-windows.md
+    - sdk_upgrade-windows.md

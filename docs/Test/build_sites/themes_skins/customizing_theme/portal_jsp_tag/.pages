@@ -1,0 +1,8 @@
+title: Tags used by the portal JSPs
+nav:
+    - index.md
+    - dgn_ptlcore.md
+    - dgn_ptldynam.md
+    - dgn_ptlfmt.md
+    - dgn_ptllogic.md
+    - dgn_ptlnavig.md

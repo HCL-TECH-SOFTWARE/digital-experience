@@ -1,0 +1,7 @@
+Title: Creating and deploying the initial release
+nav:
+    - index.md
+    - dep_cir.md
+    - dep_prep.md
+    - dep_deploy.md
+    - dep_deploy_clus.md

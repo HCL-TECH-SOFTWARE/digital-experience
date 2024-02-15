@@ -1,0 +1,10 @@
+Title: Post-migration activities
+nav:
+    - index.md
+    - mig_post_cf.md
+    - Administrative tasks: admin_task
+    - Portal tasks: portal_task
+    - Theme tasks: theme_task
+    - Development tasks: development_task
+    - Database tasks: db_task
+    - Add-ons, features, and third-party integration tasks: addon_integration_task

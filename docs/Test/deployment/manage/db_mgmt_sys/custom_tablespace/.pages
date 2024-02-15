@@ -1,0 +1,8 @@
+Title: Assigning custom table spaces
+nav:
+    - index.md
+    - db2_custom_tablespaces.md
+    - oracle_custom_tablespaces.md
+    - sql2005_custom_tablespaces.md
+    - db2z_custom_tablespaces.md
+  

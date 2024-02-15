@@ -1,0 +1,5 @@
+title: Consuming portlets in a Consumer portal
+nav:
+    - index.md
+    - wsrpt_cons_consrv_plt.md
+    - Using the XML configuration interface to consume portlets from a Producer portal: using_xml_cfg

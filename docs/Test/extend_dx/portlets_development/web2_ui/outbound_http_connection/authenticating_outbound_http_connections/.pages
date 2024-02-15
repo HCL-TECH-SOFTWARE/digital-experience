@@ -1,0 +1,12 @@
+title: Authenticating outbound HTTP connections
+nav:
+    - index.md
+    - outbhttp_auth_prv_ucreds.md
+    - outbhttp_auth_est_base_auth.md
+    - outbhttp_auth_est_digest_auth.md
+    - outbhttp_auth_est_form_based_auth.md
+    - outbhttp_auth_est_sso_ltpa_tok.md
+    - outbhttp_auth_est_sso_spnego_tok.md
+    - Establishing SSO connections through SAML 2.0 tokens: establish_sso_connections_thru_SAML20_tokens
+    - outbound_http_adding_endpoint_url.md
+    - Establish OAuth 2.0 authenticated connections: establish_oauth2_authenticated_connections

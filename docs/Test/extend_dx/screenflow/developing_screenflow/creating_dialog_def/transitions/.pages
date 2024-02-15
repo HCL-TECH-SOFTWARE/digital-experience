@@ -1,0 +1,13 @@
+title: Transitions
+nav:
+    - index.md
+    - strt_end_trnstnts.md
+    - strt_trnstn_wldcrds.md
+    - strt_trnstn_spl_evnt.md
+    - end_trnstns_spl_evnt.md
+    - othr_spl_trnstns.md
+    - exclsve_trnstns.md
+    - dialog_chain_nest
+    - rulesnrestrictions.md
+    - exe_priority.md
+    - dply_dlgsts_xmlcfgint.md

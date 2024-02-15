@@ -1,0 +1,5 @@
+# Manual staging to production process
+
+HCL Digital Experience provides two solutions through staging to production; manual and automated. For more information about the automated solution, see Staging to production. The following sections guide you through the manual solution for a stand-alone server. Two stand-alone servers are used to represent a development and production environment, which corresponds to the host name used in the examples.
+
+You can migrate either a stand-alone, single server or a clustered deployment with nodes distributed across multiple servers. The following sections provide a step-by-step experience of staging an environment from development to production with HCL Portal 8.5. It is required and expected that the development and production environments are installed and configured with the same portal release. If you are using multiple DB2® database servers, the DB2 versions must be at the same level to successfully back up and restore the JCR database. Otherwise, a DBA might be required to complete the move across systems.

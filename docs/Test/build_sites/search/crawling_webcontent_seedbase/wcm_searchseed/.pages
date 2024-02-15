@@ -1,0 +1,6 @@
+title: The search seedlist 1.0 format
+nav:
+    - index.md
+    - wcm_dev_search_enableseed.md
+    - wcm_dev_search_custmeta.md
+    - wcm_dev_search_seedrestapi.md

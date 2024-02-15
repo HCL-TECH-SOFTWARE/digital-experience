@@ -1,0 +1,10 @@
+title: Authoring Templates
+nav:
+    - index.md
+    - Creating a site area template: creating_sitearea_template
+    - Creating a content template: creating_content_template
+    - wcm_dev_auth-temp_fields.md
+    - dam_wcm_select.md
+    - wcm_dev_custom_jsp.md
+    - wcm_dev_auth-temp_preview.md
+    - ...

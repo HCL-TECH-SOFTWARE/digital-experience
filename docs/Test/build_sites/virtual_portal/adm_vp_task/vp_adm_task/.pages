@@ -1,0 +1,9 @@
+title: Administering virtual portals
+nav:
+    - index.md
+    - Managing the users of virtual portals: managing_users_vp
+    - Creating a virtual portal: create_vp
+    - advp_tsk_fill_content.md
+    - advp_tsk_cfg_subadmin.md
+    - advp_tsk_modify.md
+    - advp_tsk_delete.md

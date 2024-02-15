@@ -1,0 +1,10 @@
+title: Creating a WebDAV-based theme copy
+nav:
+    - index.md
+    - themeopt_cust_copy_statictheme.md
+    - themeopt_cust_copy_skin.md
+    - themeopt_cust_copy_dyntheme.md
+    - themeopt_cust_copy_modifystatres.md
+    - themeopt_cust_deploy_static_dynamic.md
+    - themeopt_cust_copy_bindtheme.md
+    - themeopt_cust_copy_setskin.md

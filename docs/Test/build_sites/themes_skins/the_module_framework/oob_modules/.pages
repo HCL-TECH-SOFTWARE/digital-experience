@@ -1,0 +1,5 @@
+title: Modules that are provided with the modularized theme
+nav:
+    - index.md
+    - themeopt_oob_capability.md
+    - themeopt_oob_dojoclass.md

@@ -1,0 +1,5 @@
+title: Troubleshooting
+nav:
+    - helm_troubleshooting.md
+    - configure_access_helm_logs.md
+    - ...

@@ -1,0 +1,6 @@
+title: Command line syntax of the XML configuration interface
+nav:
+    - index.md
+    - Basic XML command line syntax: basic_xml_cmdln_syntax
+    - XML Syntax for using a secure connection with SSL: xml_syntax_for_using_ssl
+    - XML Syntax for exporting and importing credential vault data: xml_syntax_export_import_creds

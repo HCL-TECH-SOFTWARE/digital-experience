@@ -1,0 +1,7 @@
+title: Configuring community pages
+nav:
+    - index.md
+    - commpages_delegate_access.md
+    - commpages_create_mapping_overac.md
+    - commpages_limitpropagation.md
+    - commpages_picker_size.md

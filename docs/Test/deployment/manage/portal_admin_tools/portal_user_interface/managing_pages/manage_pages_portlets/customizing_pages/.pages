@@ -1,0 +1,6 @@
+title: Customizing pages
+nav:
+    - index.md
+    - admcustom_lock.md
+    - admcustom_wires.md
+    - admcustom_skins.md

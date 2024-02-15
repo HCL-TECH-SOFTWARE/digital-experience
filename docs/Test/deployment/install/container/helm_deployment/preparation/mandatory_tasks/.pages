@@ -1,0 +1,8 @@
+nav:
+    - prepare_namespace.md
+    - prepare_configuration.md
+    - prepare_load_images.md
+    - prepare_persistent_volume_claims.md
+    - prepare_configure_networking.md
+    - prepare_ingress_certificate.md
+    - ...

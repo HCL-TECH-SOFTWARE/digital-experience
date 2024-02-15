@@ -1,0 +1,4 @@
+title: How to use REST with content templates
+nav:
+    - index.md
+    - wcm_rest_crud_cont_temp_default.md    - wcm_rest_crud_cont_temp_props.md    - wcm_rest_create_update_option_selection_element.md

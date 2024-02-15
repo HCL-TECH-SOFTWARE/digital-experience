@@ -1,0 +1,7 @@
+Title: Setting up and maintaining a portal farm
+nav:
+    - index.md
+    - Choosing the type of portal farm to create: choose_portalfarm
+    - set_http_farm.md
+    - Administering a portal farm: admin_farm
+    - Maintaining a portal farm: maintaining_farm

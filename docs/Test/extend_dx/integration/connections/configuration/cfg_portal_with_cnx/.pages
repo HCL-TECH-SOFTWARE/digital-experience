@@ -1,0 +1,11 @@
+title: Configure HCL Portal to work with HCL Connections
+nav:
+    - index.md
+    - collab_cfg_connect.md
+    - connections_onpremise
+    - connections_deploying
+    - i_coll_t_enable_lcsso.md
+    - Configuring common directory service: cfg_common_dir
+    - Set up Ajax proxy: setup_ajax
+    - Optional and recommended configuration: optional_config
+    - Addressing HCL Connections content from a portlet: connections_poc

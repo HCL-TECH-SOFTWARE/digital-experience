@@ -1,0 +1,17 @@
+title: Working with resource permissions
+nav:
+    - index.md
+    - h_rperm_resources.md
+    - h_rperm_change_authlevel.md
+    - h_rperm_resource_type.md
+    - h_rperm_roles.md
+    - h_rperm_assign_roles.md
+    - h_rperm_create_role_block.md
+    - h_rperm_remove_role_block.md
+    - h_rperm_place_external.md
+    - h_rperm_create_role_external.md
+    - h_rperm_delete_role_external.md
+    - h_rperm_place_internal.md
+    - h_rperm_modify_owners.md
+    - h_rperm_settings.md
+    - h_rperm_fields.md

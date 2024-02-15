@@ -1,0 +1,7 @@
+Title: Portal Security Services
+nav:
+    - index.md
+    - srvcfgref_secy_auth.md
+    - srvcfgref_cred_vault.md
+    - Portal Access Control Services: pac_svc
+    - Puma Store and Validation Services: puma_svc

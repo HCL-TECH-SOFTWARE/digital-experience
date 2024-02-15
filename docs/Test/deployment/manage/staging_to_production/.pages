@@ -1,0 +1,10 @@
+Title: Staging to production
+nav:
+    - index.md
+    - Overview of staging to production: overview_of_staging_to_prod
+    - Creating and deploying the initial release: creating_deploying_initial_release
+    - Creating and deploying a differential release: creating_deploying_diff_release
+    - dep_cust_paa.md
+    - Updates with syndication: updates_with_syndication
+    - dep_stageextac.md
+    - Manual staging to production process: manual_staging_prod_process

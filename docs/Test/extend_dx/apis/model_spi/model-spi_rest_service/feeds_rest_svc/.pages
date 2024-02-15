@@ -1,0 +1,6 @@
+title: Feeds for SPI REST Services
+nav:
+    - index.md
+    - Syntax for Addressing Portal Resources: syntax_for_portal_resource
+    - rest_feed_elements.md
+    - Use Cases for Modifying Resources: use_cases_for_resource_mod

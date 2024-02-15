@@ -1,0 +1,8 @@
+Title: Enable new functions in migrated themes
+nav:
+    - index.md
+    - mig_theme.md
+    - themeopt_dev_class_migr_theme.md
+    - themeopt_cust_toolbar_remove.md
+    - Add the HCL Portal 8.5 site toolbar to a Portal 8.0 theme: add_85_toolbar
+    - mig_t_enable_simplemenus.md

@@ -1,0 +1,15 @@
+title: Troubleshooting the Configuration Wizard
+nav:
+    - index.md
+    - Troubleshooting Database Transfer: troubleshooting_db_transfer
+    - cw_ldap.md
+    - cw_create_dmgr.md
+    - cw_create_cluster.md
+    - cw_shorten_url_seo_ts.md
+    - cw_create_addnode.md
+    - cw_createprofile.md
+    - cw_removeprofile.md
+    - cw_migrate_standalone.md
+    - cw_migrate_cluster1.md
+    - cw_migrate_cluster2.md
+    - cw_migrate_cluster3.md

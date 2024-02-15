@@ -1,0 +1,8 @@
+Title: Web Content Manager
+nav:
+    - index.md
+    - mig_post_wcm_removeupdate.md
+    - mig_post_vp_wcm_theme.md
+    - mig_post_wcm_convert_viewer.md
+    - mig_post_wcm_convert_remote.md
+    - migrt_ptlt_api_wcm.md

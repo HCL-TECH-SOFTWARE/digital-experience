@@ -1,0 +1,8 @@
+title: Configuring outbound HTTP connections by using the Model Controller SPI
+nav:
+    - index.md
+    - outbhttp_cfg_mcspi_obtmapi.md
+    - outbhttp_cfg_mcspi_obtstrlrspi.md
+    - outbhttp_cfg_mcspi_viewcfgsets.md
+    - outbhttp_cfg_mcspi_modfcfgsets.md
+    - outbhttp_cfg_mcspi_crtdelcfgsets.md

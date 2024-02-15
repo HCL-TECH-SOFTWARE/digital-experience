@@ -1,0 +1,7 @@
+title: Using the XML configuration interface to work with Producer definitions
+nav:
+    - index.md
+    - wsrpt_cons_crtprd_offl.md
+    - Using the XML configuration interface to create a Producer definition: using_xml_cfg_create_prod_def
+    - wsrpt_cons_expprd_xml.md
+    - wsrpt_cons_singl_xml.md

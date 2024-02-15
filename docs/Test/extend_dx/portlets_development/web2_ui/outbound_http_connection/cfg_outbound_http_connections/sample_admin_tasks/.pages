@@ -1,0 +1,9 @@
+title: Sample administration tasks
+nav:
+    - index.md
+    - outbhttp_cfgsmptsk_add_ob_conn_plcy.md
+    - outbhttp_cfgsmptsk_list_all_cfg_prfls.md
+    - outbhttp_cfgsmptsk_modf_conn_setngs.md
+    - outbhttp_cfgsmptsk_remove_policy.md
+    - outbhttp_cfgsmptsk_export_policy2file.md
+    - outbhttp_cfgsmptsk_restore_import_policy_profile.md
