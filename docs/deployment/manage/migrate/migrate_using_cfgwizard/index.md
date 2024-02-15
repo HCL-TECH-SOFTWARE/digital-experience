@@ -1,6 +1,6 @@
 # Migrate data using the Configuration Wizard
 
-For Version 8.5, data, applications, databases, property files, security settings, and configuration are migrated using the Configuration Wizard. Use the roadmaps for cluster and stand-alone environments to guide you through the process.
+For Version 8.5/9.5, data, applications, databases, property files, security settings, and configuration are migrated using the Configuration Wizard. Use the roadmaps for cluster and stand-alone environments to guide you through the process.
 
 See the *Roadmaps for migration* section of the product documentation, and choose the roadmap that is specified for your environment for details on using the Configuration Wizard.
 
@@ -15,7 +15,7 @@ Use the Configuration Wizard to upgrade the nodes profiles for a cluster environ
 
 
 ???+ info "Related information"  
-    -   [Migration from Portal Server Offering 7.0 to Portal 8.5](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md)
+    -   [Migration from Portal Server Offering 7.0 to Portal 8.5/9.5](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md)
     -   [Configuration Wizard](../../portal_admin_tools/cfg_wizard/index.md)
     -   [Roadmaps for migration](../../../../deployment/manage/migrate/planning_migration/rm_migration/index.md)
 

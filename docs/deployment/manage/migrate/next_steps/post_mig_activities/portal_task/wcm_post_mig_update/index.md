@@ -5,7 +5,7 @@ Extra migration steps are required for updating Web Content Manager after data m
 -   **[Updates for Web Content Manager](mig_post_wcm_removeupdate.md)**  
 These are additional migration steps required for Web Content Manager after data migration is complete.
 -   **[Updating Web Content Manager pages theme](mig_post_vp_wcm_theme.md)**  
-Before using Web Content Manager in virtual portals that are created after migration by using default portal content from an older release, you must update the theme to ﻿Portal 8.5 theme. Otherwise, Web Content Manager related portlets do not work properly. If you upgraded or migrated to HCL Digital Experience Version 8.5 CF04 or later, then you do not need to complete the following steps.
+Before using Web Content Manager in virtual portals that are created after migration by using default portal content from an older release, you must update the theme to ﻿Portal 8.5 theme. Otherwise, Web Content Manager related portlets do not work properly. If you upgraded or migrated to HCL Digital Experience Version 9.5 or 8.5 CF04 or later, then you do not need to complete the following steps.
 -   **[Convert the Portlet API Web Content Viewer to the JSR 286 Web Content Viewer](mig_post_wcm_convert_viewer.md)**  
 If you use the Portlet API Web Content Viewer portlet in your source environment, you must complete the following task after migration to convert to the JSR 286 Web Content Viewer.
 -   **[Convert the Portlet API Remote Web Content Viewer to the JSR 286 Web Content Viewer](mig_post_wcm_convert_remote.md)**  

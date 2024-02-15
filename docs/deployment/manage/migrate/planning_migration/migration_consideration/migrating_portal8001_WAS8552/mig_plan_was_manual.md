@@ -33,7 +33,7 @@ If you are performing an in-place update of a cluster, the deployment manager sh
 
 6.  Ensure that the wp_profile and cw_profile are cleaned up and the paths are deleted.
 
-7.  Install only the Portal 8.5 binary. Do not create a Portal profile.
+7.  Install only the Portal 8.5/9.5 binary. Do not create a Portal profile.
 
 8.  Test connecting to the Configuration Wizard in a browser. http://your_server:10200/hcl/wizard
 
@@ -50,7 +50,7 @@ If you are performing an in-place update of a cluster, the deployment manager sh
 10. If you are migrating a cluster, copy the filesForDmgr.zip in the PortalServerRoot/filesForDmgr path on your target primary node server to the existing WebSphere Application Server 8.5.5.2 deployment manager. Then, extract the files in the AppServer path.
 
     !!!note
-        This task is essential to update the deployment manager to user the portal 8.5 plug-ins. Complete this step once. Do not repeat this step on all nodes.
+        This task is essential to update the deployment manager to user the portal 8.5/9.5 plug-ins. Complete this step once. Do not repeat this step on all nodes.
 
 11. Complete the remaining steps for using the Configuration Wizard:
 
