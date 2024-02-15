@@ -149,3 +149,11 @@ text-align: center;
   color: white;
   text-align: center;
 }
+
+/*White border line for Search text box.md-search {
+    position: relative;
+    #border-color: white;
+    border-style: solid;
+    border-width: lpx;
+}
+*/
