@@ -8,7 +8,7 @@ Use this roadmap if you are:
 
 -   Migrating a stand-alone server environment from a previous version to the latest version of HCL Digital Experience.
 
-You must apply the latest cumulative fix and one of the two most recent fix packs to your source environment, and the latest cumulative fix and the most recent fix pack to your target environment before you can migrate to HCL Portal 9.5. For more information, see [Supported migration paths](../../../../../deployment/manage/migrate/planning_migration/mig_plan_supported_paths.md).
+You must apply the latest cumulative fix and one of the two most recent fix packs to your source environment, and the latest cumulative fix and the most recent fix pack to your target environment before you can migrate to HCL Portal 8.5/9.5. For more information, see [Supported migration paths](../../../../../deployment/manage/migrate/planning_migration/mig_plan_supported_paths.md).
 
 ## Planning for migration
 

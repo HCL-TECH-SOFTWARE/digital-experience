@@ -4,7 +4,7 @@ To complete migration, you must first perform several post-migration steps that 
 
 -   **[Post-migration activities](post_mig_activities/index.md)**  
 After you migrate to HCL Digital Experience 8.5/9.5, you need to complete extra tasks depending on how you customized the source portal environment and which components you used. First, complete the Applying the latest Combined Cumulative Fix updates task, then you can begin the post-migration tasks followed by enabling new functionality.
--   **[Enabling new functionality in a migrated portal](enable_func_migrated_portal/index.md))**  
+-   **[Enabling new functionality in a migrated portal](enable_func_migrated_portal/index.md)**  
 The migration process collects configuration data and applications from an earlier installed version of HCL Digital Experience and merges them into the newer installed version so that the new environment is identical to the earlier environment. Taking advantage of new functionality that was not available in the earlier portal requires additional attention after migration is complete.
 
 
