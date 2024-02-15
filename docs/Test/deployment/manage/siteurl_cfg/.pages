@@ -1,0 +1,6 @@
+Title: Changing your site URL
+nav:
+    - index.md
+    - cfg_intr_inst.md
+    - Changing the site URL after an installation: changing_siteurl
+    - Changing the portal URI after an installation: changing_portal_uri_after_install

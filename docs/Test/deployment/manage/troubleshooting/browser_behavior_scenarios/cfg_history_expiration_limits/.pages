@@ -1,0 +1,5 @@
+Title: Configuring history expiration limits
+nav:
+    - index.md
+    - historylimit_cfg_histmgr.md
+    - historylimit_scn.md

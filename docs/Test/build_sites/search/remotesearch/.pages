@@ -1,0 +1,11 @@
+title: Remote search service
+nav:
+    - index.md
+    - srtprrmtsrchsrv.md
+    - installrssim.md
+    - Installing remote search service by using manual steps: install_manual
+    - config_user_rep_rss.md
+    - sso_portal_rss.md
+    - srtsttusrid.md
+    - Configuring a remote search service: cfg_remotesearch_service
+    - confighttpsservlet.md

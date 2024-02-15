@@ -1,0 +1,6 @@
+title: Managing community pages
+nav:
+    - index.md
+    - commpages_create_mapping.md
+    - Creating community associations during page template instantiation: creating_community_assoc
+    - commpages_access_apis.md

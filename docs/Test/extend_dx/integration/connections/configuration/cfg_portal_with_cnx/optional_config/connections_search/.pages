@@ -1,0 +1,8 @@
+title: Configuring search integration
+nav:
+    - index.md
+    - t_connections_portlets_search_prereq.md
+    - connectors_portlets_search_rcss.md
+    - connection_portlets_search_rcss_https.md
+    - connections_portlets_search_collections.md
+    - connections_portlets_set_search_scope.md

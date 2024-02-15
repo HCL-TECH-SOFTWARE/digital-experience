@@ -1,0 +1,7 @@
+title: Configuring security on the Consumer portal
+nav:
+    - index.md
+    - wsrpt_cons_sec_ws_http_cb_sso.md
+    - wsrpt_cons_sec_ws_wss.md
+    - Configuring WSRP web service clients: cfg_wsrp_webservice_clients
+    - wsrpt_cons_sec_pac.md

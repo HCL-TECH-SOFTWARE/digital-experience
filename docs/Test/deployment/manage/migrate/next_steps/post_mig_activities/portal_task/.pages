@@ -1,0 +1,16 @@
+Title: Portal tasks
+nav:
+    - index.md
+    - mig_post_update_page_order.md
+    - Web Content Manager tasks: wcm_post_mig_update
+    - Virtual Portal tasks: vp_post_mig_task
+    - mig_t_import_webcoll.md
+    - mig_post_uxfm_importdialog.md
+    - WSRP: wsrp
+    - mig_blogs_wiki.md
+    - mig_post_tagsearchpages.md
+    - mig_post_person_tag.md
+    - mig_post_personalization_url.md
+    - mig_post_vurls.md
+    - mig_post_impersonation.md
+    - mig_t_update_templates.md

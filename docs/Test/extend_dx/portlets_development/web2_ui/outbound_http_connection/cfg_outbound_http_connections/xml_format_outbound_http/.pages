@@ -1,0 +1,5 @@
+title: XML format for outbound HTTP connection configuration settings
+nav:
+    - index.md
+    - outbhttp_cfg_script_strct.md
+    - Description of the outbound HTTP connection configuration script: desc_outbound_http_cfg_script

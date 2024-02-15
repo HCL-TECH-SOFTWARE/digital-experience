@@ -1,0 +1,26 @@
+Title: Portal service configuration
+nav:
+    - index.md
+    - srvcfgref_uniq_name.md
+    - srvcfgref_cach_mgr.md
+    - srvcfg_common_comp.md
+    - Configuration Service: cfg_svc
+    - CP Configuration Service for tagging and rating: cp_cfg_svc
+    - srvcfgref_cont_accs.md
+    - srvcfgref_datastore.md
+    - srvcfgref_deploy.md
+    - srvcfg_live_obj.md
+    - srvcfgref_http_client.md
+    - srvcfgref_loader.md
+    - srvcfgref_localizer.md
+    - srvcfgref_mail.md
+    - srvcfg_modelwebdav.md
+    - srvcfgref_navigator.md
+    - Portal Security Services: security_svc
+    - srvcfgref_ptlt_container.md
+    - srvcfgref_deploy.md
+    - srvcfg_projectid.md
+    - srvcfgref_registry.md
+    - State Manager Service: statemanager_svc
+    - srvcfg_virtual_portal.md
+    - ...

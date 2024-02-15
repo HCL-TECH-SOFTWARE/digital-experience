@@ -1,0 +1,10 @@
+Title: Setting up a cluster
+nav:
+    - index.md
+    - cw_dmgr_profile.md
+    - Create a cluster: create_cluster
+    - cw_add_node.md
+    - add_vert_clus.md
+    - add_dynvert_clus.md
+    - delete_vert_clus.md
+    - Managing your cluster: managing_cluster

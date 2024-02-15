@@ -1,0 +1,13 @@
+Title: Caching
+nav:
+    - index.md
+    - cache.md
+    - cookie.md
+    - cache_scope.md
+    - expiry_time.md
+    - cache_settings.md
+    - cache_default.md
+    - cache_factors.md
+    - cache_limits.md
+    - cache_security.md
+    - cache_trouble.md

@@ -1,0 +1,10 @@
+title: Manage client devices
+nav:
+    - index.md
+    - h_clients_new.md
+    - h_clients_edit.md
+    - h_clients_delete.md
+    - h_clients_display_info.md
+    - h_clients_set_order.md
+    - h_clients_override.md
+    

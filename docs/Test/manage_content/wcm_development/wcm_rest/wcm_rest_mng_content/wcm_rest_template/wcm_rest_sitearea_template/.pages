@@ -1,0 +1,4 @@
+title: How to use REST with site area templates
+nav:
+    - index.md
+    - wcm_rest_crud_site_temp_default.md    - wcm_rest_crud_site_temp_props.md

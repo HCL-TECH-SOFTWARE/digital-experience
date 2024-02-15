@@ -1,0 +1,18 @@
+title: Personalization
+nav:
+    - index.md
+    - pzn_intro.md
+    - personalization
+    - pzn_how_site_personalized.md
+    - Personalization terms: pzn_terms
+    - pzn_portlets.md
+    - Publishing personalization rules: publishing_pzn_rules
+    - pzn_wcm_rescoll.md
+    - pzn_usr_rescoll.md
+    - Developing a personalized portlet: pzn_portlet
+    - Personalization programming reference: pzn_programming_ref
+    - Personalization APIs: pzn_apis
+    - Personalization-Unica Integration: pzn_unica_integration
+    - pzn_stage_prod.md
+    - pzn_enable_logging_runtime_server.md
+    - deprecated

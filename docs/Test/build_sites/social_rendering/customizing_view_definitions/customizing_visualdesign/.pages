@@ -1,0 +1,7 @@
+title: Customizing the visual design of your view definitions
+nav:
+    - index.md
+    - Customizing the markup generation: customizing_markup_gen
+    - soc_rendr_use_biz_card.md
+    - Customizing the CSS styles of social lists: customizing_css_social_list
+

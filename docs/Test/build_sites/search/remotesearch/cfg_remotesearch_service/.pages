@@ -1,0 +1,6 @@
+title: Configuring a remote search service
+nav:
+    - index.md
+    - create_search_service.md
+    - create_search_coll.md
+    - create_content_source.md

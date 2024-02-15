@@ -1,0 +1,6 @@
+Title: Database considerations
+nav:
+    - index.md
+    - mig_cfg_transaction_log_space.md
+    - mig_pre_oracle_disableasa.md
+    - DB2 database migration considerations: db2_migration_consideration

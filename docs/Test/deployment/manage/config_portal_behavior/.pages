@@ -1,0 +1,23 @@
+Title: Configuring portal behavior 
+nav:
+    - index.md
+    - adlang.md
+    - http_sessn_cookie.md
+    - csa2_cust_login_url.md
+    - Using portal light mode: portal_lightmode
+    - aduniqnm_t.md
+    - adloginview.md
+    - time_set.md
+    - adglobset_t.md
+    - adnotauthorized.md
+    - user_session_persistence
+    - adyncach.md
+    - Configuring portlet filtering: portlet_filtering
+    - Configuring authentication filters: auth_filters
+    - Caching: caching
+    - adurlmap.md
+    - admproxy.md
+    - Delayed cleanup of deleted portal pages: delayed_cleanup
+    - adelorph.md
+    - Setting service configuration properties: service_config_properties
+    

@@ -1,0 +1,12 @@
+title: Configuring your portal for Web services
+nav:
+    - index.md
+    - h_wserv_about.md
+    - Creating a Producer definition: creating_producer_definition
+    - h_wserv_edit_producer.md
+    - h_wserv_set_lang.md
+    - h_wserv_delete_producer.md
+    - h_wserv_access.md
+    - h_wserv_portlet.md
+    - h_wserv_fields.md
+    - h_wserv_icons.md

@@ -1,0 +1,4 @@
+title: Configure OAuth 2.0 for Password Credentials Grant flows
+nav:
+    - index.md
+    - Oauth2.0_libertyauth_password_grant.md

@@ -1,0 +1,7 @@
+title: Remote REST service for PUMA
+nav:
+    - index.md
+    - Structure of the remote REST service for PUMA: structure_of_remote_rest_svc_puma
+    - How the portal implements the remote PUMA REST service: remote_puma_rest_svc_implementation
+    - user_and_groups_rest_api_explorer.md
+

@@ -1,0 +1,7 @@
+Title: Migrate data using the configuration wizard
+nav:
+    - index.md
+    - cw_migrate_stand_alone.md
+    - cw_migrate_cluster_1.md
+    - cw_migrate_cluster_2.md
+    - cw_migrate_cluster_3.md

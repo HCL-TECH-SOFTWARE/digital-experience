@@ -1,0 +1,8 @@
+title: Administering vanity URLs
+nav:
+    - index.md
+    - van_url_cfgtsk_enable_vus.md
+    - van_url_short.md
+    - van_url_cfg_preview.md
+    - van_url_cfgtsk_sync_db.md
+    - van_url_cfgtsk_set_error_uri.md

@@ -1,0 +1,6 @@
+Title: Changing the site URL after an installation
+nav:
+    - index.md
+    - Configuration Wizard instructions - Modify site URLs for search engine optimization: cw_shorten_url
+    - Benefits and limitations of removing navigational state information: cw_navstate
+    - cfg_validation_targets.md

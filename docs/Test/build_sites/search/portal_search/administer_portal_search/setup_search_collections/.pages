@@ -1,0 +1,7 @@
+title: Setting up search collections
+nav:
+    - index.md
+    - srrcreatconfig.md
+    - Setting up a JCR search collection: jcr_search_collections
+    - Managing the content sources of a search collection: mng_content_sources_search_collections
+    - srtexpimp.md

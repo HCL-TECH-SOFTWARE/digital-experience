@@ -1,0 +1,6 @@
+title: Friendly URLs and Web Content Viewers
+nav:
+    - index.md
+    - wcm_config_wcmviewer_workfriendly.md
+    - How to validate friendly URLs for web content: validate_friendlyurl
+    - wcm_config_wcmviewer_friendlyexample.md

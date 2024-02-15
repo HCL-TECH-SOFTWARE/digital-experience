@@ -1,0 +1,6 @@
+Title: Preparing Web Content Manager content
+nav:
+    - index.md
+    - wcm_remove_locks.md
+    - wcm_rename_libs.md
+    - mig_content_options_further.md

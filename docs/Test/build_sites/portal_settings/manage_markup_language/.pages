@@ -1,0 +1,9 @@
+title: Manage markup languages
+nav:
+    - index.md
+    - h_markups_create.md
+    - h_markups_edit.md
+    - h_markups_activate.md
+    - h_markups_display_info.md
+    - h_markups_delete.md
+

@@ -1,0 +1,9 @@
+title: Customizing the WSRP configuration of your Consumer portal
+nav:
+    - index.md
+    - Customizing the WSRP resource proxy: customizing_wsrp_resource_proxy
+    - wsrp_config_tmeout_prop.md
+    - wsrp_config_limit_size_file_uplds.md
+    - wsrp_cons_switch_cach.md
+    - wsrpc_clnt_cook_frwrd.md
+    - wsrpt_config_rem_sessn_invalid.md

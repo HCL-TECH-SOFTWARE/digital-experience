@@ -1,0 +1,7 @@
+title: Use Cases for Modifying Resources
+nav:
+    - index.md
+    - rest_feed_set_ttldscr.md
+    - rest_feed_crt_resrcs.md
+    - rest_feed_pt_ptltnpg.md
+    - rest_feed_del_resrc.md

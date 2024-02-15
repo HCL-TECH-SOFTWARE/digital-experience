@@ -1,0 +1,5 @@
+title: Advanced group configurations
+nav:
+    - index.md
+    - ldap_dyngrp.md
+    - groupconfig.md

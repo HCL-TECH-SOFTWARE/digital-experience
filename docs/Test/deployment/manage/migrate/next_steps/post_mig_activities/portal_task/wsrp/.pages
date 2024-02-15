@@ -1,0 +1,5 @@
+Title: WSRP
+nav:
+    - index.md
+    - mig_post_wsrp_producer.md
+    - mig_post_wsrp_consumer.md

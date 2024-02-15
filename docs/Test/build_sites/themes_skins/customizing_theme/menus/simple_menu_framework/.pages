@@ -1,0 +1,7 @@
+title: Simple menu framework
+nav:
+    - index.md
+    - themeopt_cust_clientframe.md
+    - themeopt_cust_serverframe.md
+    - themeopt_cust_vis.md
+    - themeopt_cust_menustyling.md

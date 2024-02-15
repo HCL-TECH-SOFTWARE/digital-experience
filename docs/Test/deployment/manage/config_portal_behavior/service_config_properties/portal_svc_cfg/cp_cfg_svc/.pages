@@ -1,0 +1,6 @@
+Title: CP Configuration Service for tagging and rating
+nav:
+    - index.md
+    - srvcfg_cpcfg4tr_genrl.md
+    - srvcfg_cpcfg4tr_dlgtag_altui.md
+    - srvcfg_cpcfg4tr_dlgrate_altui.md

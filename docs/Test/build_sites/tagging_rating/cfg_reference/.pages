@@ -1,0 +1,8 @@
+title: Configuration reference for tagging and rating
+nav:
+    - index.md
+    - Parameter reference for the tag and rating widgets: parm_ref_tag_rate_widget
+    - tag_rate_ref_css_class.md
+    - tag_rate_nbldsbl_inline_modules.md
+    - tag_rate_nbldsbl_dojo_options.md
+

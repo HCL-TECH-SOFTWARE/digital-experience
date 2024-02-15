@@ -1,0 +1,7 @@
+title: People
+nav:
+    - index.md
+    - Authentication: authentication
+    - Authorization: authorization
+    - Nonrepudiation: nonrepudiation
+    

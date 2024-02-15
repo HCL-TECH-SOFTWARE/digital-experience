@@ -1,0 +1,11 @@
+Title: Administrative tasks
+nav:
+    - index.md
+    - mig_enable_auto-sync.md
+    - mig_post_swtcurl.md
+    - mig_post_saml_uri_auth.md
+    - mig_t_pre_standalone_ldap.md
+    - mig_webserver_configs.md
+    - mig_post_tai.md
+    - mig_post_secondarynodes.md
+    - mig_post_sched_tasks.md
