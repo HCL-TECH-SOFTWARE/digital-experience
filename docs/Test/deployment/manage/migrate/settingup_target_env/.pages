@@ -1,0 +1,11 @@
+Title: Setting up the target environment
+nav:
+    - index.md
+    - mig_plan_targetenvironment.md
+    - mig_install_binaries_target.md
+    - mig_inst_fixpacks.md
+    - mig_t_copy_binaries_target.md
+    - mig_cust_apps.md
+    - mig_pre_ulimit_default.md
+    - mig_connect_dbdomains.md
+    - Database considerations: db_consideration

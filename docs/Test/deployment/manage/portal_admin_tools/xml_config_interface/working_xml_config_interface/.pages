@@ -1,0 +1,7 @@
+title: Working with the XML configuration interface
+nav:
+    - index.md
+    - Using administrative portlets for XML configuration: using_admin_portlets_for_xml_config
+    - Using the XML configuration command line client: using_xml_config_cmd_line
+    - gen_xmlaccessexpt_ptlconfig.md
+    - adxmldam.md

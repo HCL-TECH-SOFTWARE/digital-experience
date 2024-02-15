@@ -1,0 +1,7 @@
+title: Advance concepts
+nav:
+    - index.md
+    - retrieve_store_event_payload
+    - access_cntrl.md
+    - scpng_sesn_dt_rndr_prmts.md
+    - dyn_pgs_ptlts.md

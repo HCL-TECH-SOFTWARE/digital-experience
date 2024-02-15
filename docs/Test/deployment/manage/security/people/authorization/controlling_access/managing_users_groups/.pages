@@ -1,0 +1,15 @@
+title: Managing users and groups
+nav:
+    - index.md
+    - mugp.md
+    - h_usrgrps_viewing.md
+    - h_usrgrps_create_new.md
+    - h_usrgrps_edit_user.md
+    - h_usrgrps_add_members.md
+    - h_usrgrps_remove_member.md
+    - h_usrgrps_delete.md
+    - h_usrgrps_dup_role.md
+    - h_usrgrps_dup_group.md
+    - h_usrgrps_viewing_group.md
+    - h_usrgrps_configure.md
+    - h_usrgrps_fields.md

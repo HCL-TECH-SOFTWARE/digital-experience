@@ -1,0 +1,5 @@
+Title: Migrating from Portal 8.0.0.1 on WebSphere Application Server 8.5.5.2
+nav:
+    - index.md
+    - mig_plan_was_s2p.md
+    - mig_plan_was_manual.md

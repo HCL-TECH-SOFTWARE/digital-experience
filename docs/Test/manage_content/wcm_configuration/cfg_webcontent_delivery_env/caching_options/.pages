@@ -1,0 +1,8 @@
+title: Caching options
+nav:
+    - index.md
+    - wcm_config_delivery_caching_types.md
+    - wcm_config_delivery_caching_comparison.md
+    - wcm_config_delivery_caching_expiring.md
+    - wcm_config_delivery_caching_web.md
+    - wcm_config_delivery_caching_data.md

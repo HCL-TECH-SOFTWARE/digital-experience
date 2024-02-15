@@ -1,0 +1,5 @@
+Title: Add the HCL Portal 8.5 site toolbar to a Portal 8.0 theme
+nav:
+    - index.md
+    - themeopt_cust_toolbar_dyn_spot_template.md
+    - themeopt_cust_toolbar_dynamic_embedding.md

@@ -1,0 +1,10 @@
+title: Outbound HTTP connection
+nav:
+    - index.md
+    - outbhttp_progr_model.md
+    - HTTP proxy for Ajax applications: http_ajax_proxy
+    - Configuring outbound HTTP connections: cfg_outbound_http_connections
+    - Authenticating outbound HTTP connections: authenticating_outbound_http_connections
+    - outbhttp_dyn_elements.md
+    - Using programmatic extensions for outbound HTTP connections: programmatic_extensions_outbound_http_connections
+    - outbound_http_migrate.md

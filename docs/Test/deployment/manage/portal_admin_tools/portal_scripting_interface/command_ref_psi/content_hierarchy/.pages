@@ -1,0 +1,10 @@
+title: Content hierarchy accessed through Content bean
+nav:
+    - index.md
+    - contnt_search.md
+    - contnt_pl_att.md
+    - contnt_lst_val_att.md
+    - contnt_lcl_spf_att.md
+    - contnt_url_att.md
+    - contnt_mtdt_att.md
+    - contnt_lfcycl.md

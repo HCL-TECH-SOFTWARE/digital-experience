@@ -1,0 +1,9 @@
+title: Portal configuration tasks for administering virtual portals
+nav:
+    - index.md
+    - advp_cfgtsk_create.md
+    - advp_cfgtsk_assign_adm.md
+    - advp_cfgtsk_list.md
+    - advp_cfgtsk_modify.md
+    - advp_cfgtsk_delete.md
+    - advp_cfgtsk_single.md

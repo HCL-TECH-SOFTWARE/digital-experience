@@ -1,0 +1,5 @@
+title: Understanding the Portal 8.5 modularized theme
+nav:
+    - index.md
+    - themeopt_defaultparts_static.md
+    - themeopt_defaultparts_jsp.md

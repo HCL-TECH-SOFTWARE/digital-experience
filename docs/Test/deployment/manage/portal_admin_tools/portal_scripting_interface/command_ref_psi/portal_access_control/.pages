@@ -1,0 +1,8 @@
+title: Portal Access Control
+nav:
+    - index.md
+    - acc_cntrl_objts_pac.md
+    - lifecycle_pac.md
+    - gbl_lsts_pac.md
+    - principals_pac.md
+    - perm_blks_pac.md

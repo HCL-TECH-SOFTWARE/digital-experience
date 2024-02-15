@@ -1,0 +1,9 @@
+title: Wikis
+nav:
+    - index.md
+    - wiki_templates.md
+    - wiki_add.md
+    - wiki_add_existing.md
+    - wiki_assign_access.md
+    - wiki_delete.md
+    - wiki_delete_page.md

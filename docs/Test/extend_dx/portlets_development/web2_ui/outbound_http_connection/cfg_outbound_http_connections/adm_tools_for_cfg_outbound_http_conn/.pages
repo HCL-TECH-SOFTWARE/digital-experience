@@ -1,0 +1,5 @@
+title: Administration tools for configuring outbound HTTP connections
+nav:
+    - index.md
+    - Configuring outbound HTTP connections by using configuration tasks: cfg_outbound_http_using_cfgtsk
+    - Configuring outbound HTTP connections by using the Model Controller SPI: cfg_outbound_http_using_modelcontroller_spi

@@ -1,0 +1,8 @@
+title: Configuration structure
+nav:
+    - index.md
+    - outbhttp_cfg_strctr_obconn_profile.md
+    - outbhttp_cfg_strctr_policy_mapng.md
+    - outbhttp_cfg_strctr_policy_rul.md
+    - outbhttp_cfg_strctr_cookie_rul.md
+    - outbhttp_cfg_strctr_policy_variable.md

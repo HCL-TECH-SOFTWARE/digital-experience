@@ -1,0 +1,9 @@
+title: Managing permissions for users and groups
+nav:
+    - index.md
+    - h_ug_roles.md
+    - h_ug_resources.md
+    - h_ug_perms_explicit.md
+    - h_ug_perms_view.md
+    - h_ug_perms_settings.md
+    - h_ug_perms_fields.md

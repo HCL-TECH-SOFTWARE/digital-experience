@@ -1,0 +1,11 @@
+title: How the portal implements the remote PUMA REST service
+nav:
+    - index.md
+    - uprof_rest_wp_vp.md
+    - uprof_rest_wp_id.md
+    - uprof_rest_wp_pac.md
+    - uprof_rest_wp_appio.md
+    - uprof_rest_wp_tnlhttp.md
+    - uprof_rest_wp_httpcach.md
+    - uprof_rest_wp_cntxrtauth.md
+    - uprof_rest_wp_lookup.md

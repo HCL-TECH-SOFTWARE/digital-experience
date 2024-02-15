@@ -1,0 +1,6 @@
+title: Navigation
+nav:
+    - index.md
+    - site_wayfinding.md
+    - site_breadcrumbs.md
+    - show_hidden_page.md

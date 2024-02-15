@@ -1,0 +1,5 @@
+title: Securing a WSRP Producer portal
+nav:
+    - index.md
+    - Configuring security on the Producer portal: cfg_security_producer_portal
+    - wsrpt_prod_sec_pac.md

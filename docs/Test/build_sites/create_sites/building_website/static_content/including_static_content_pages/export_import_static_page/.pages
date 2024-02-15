@@ -1,0 +1,6 @@
+title: Exporting and importing static pages
+nav:
+    - index.md
+    - spa_xml_impt_bin.md
+    - spa_xml_impt_zip.md
+    - spa_xml_impt_tmplt.md

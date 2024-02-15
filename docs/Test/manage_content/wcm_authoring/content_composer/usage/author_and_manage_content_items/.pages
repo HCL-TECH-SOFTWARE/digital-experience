@@ -1,0 +1,5 @@
+nav:
+    - Content Items: index.md
+    - Author Content Items: author_content_items.md
+    - Manage Content Items: manage_content_items.md
+    - Delete Content Items: delete_content_items.md

@@ -1,0 +1,11 @@
+title: Managing page properties
+nav:
+    - index.md
+    - h_mp_create_pages.md
+    - mp_create_shared_pages.md
+    - mp_create_derived_pages.md
+    - h_mp_create_page_templates.md
+    - h_mp_create_page_from_template.md
+    - h_mp_create_labels.md
+    - h_mp_create_url.md
+    - h_mp_edit_pages.md

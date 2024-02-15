@@ -1,0 +1,10 @@
+title: Updating user ID and passwords
+nav:
+    - index.md
+    - wpsadmin.md
+    - was_filereg.md
+    - wpsbindldap.md
+    - rep_was_id.md
+    - portalid.md
+    - bind.md
+    - db_passwords.md

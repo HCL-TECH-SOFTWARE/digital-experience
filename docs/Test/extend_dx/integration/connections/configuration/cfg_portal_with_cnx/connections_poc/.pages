@@ -1,0 +1,5 @@
+title: Addressing HCL Connections content from a portlet
+nav:
+    - index.md
+    - Configuring portlets to address content: portlet_address
+    - r_connections_portlets_poc_syntax.md

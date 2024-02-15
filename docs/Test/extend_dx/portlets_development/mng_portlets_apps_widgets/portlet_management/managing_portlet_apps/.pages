@@ -1,0 +1,10 @@
+title: Managing portlet applications
+nav:
+    - index.md
+    - h_papp_make_copy_portlet_app.md
+    - h_papp_modify_portlet_app_parms.md
+    - h_papp_delete_portlet_app.md
+    - h_papp_access_portlet_app.md
+    - h_papp_view_portlet_app.md
+    - h_papp_configure.md
+    - h_papp_fields_portlet_app.md

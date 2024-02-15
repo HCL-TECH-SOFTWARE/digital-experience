@@ -1,0 +1,12 @@
+title: Administering Portal Search
+nav:
+    - index.md
+    - srtmgsrchsrvc.md
+    - Search service configuration parameters: search_service_params
+    - srtcfgdfltlctsrchcllc.md
+    - Configuring the Search Center portlet: cfg_searchcenter
+    - srt_srch_admin_id.md
+    - Customizing the Search Center: customize_searchcenter
+    - srtadmsrchadmcnsl.md
+    - Setting up search collections: setup_search_collections
+    - Searching and crawling Portal and other sites: searching_crawling_portal_sites

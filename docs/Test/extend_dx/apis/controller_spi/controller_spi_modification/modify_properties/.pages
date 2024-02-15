@@ -1,0 +1,12 @@
+title: Modifying Properties
+nav:
+    - index.md
+    - Set Titles and Descriptions: ctrlrapit_set_title.md
+    - Set Unique Name: ctrlrapit_set_unqnm.md
+    - Set Metadata: ctrlrapit_set_metadat.md
+    - Set Markups: ctrlrapit_set_mrkp.md
+    - Set Orientation for Layouts: ctrlrapit_set_orient.md
+    - Set Portlet Preferences: setting_portlet_pref
+    - Set Flags: ctrlrapit_set_flag.md
+    - Set Themes: ctrlrapit_set_theme.md
+    - Set URLs: setting_urls

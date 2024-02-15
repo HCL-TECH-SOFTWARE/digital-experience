@@ -1,0 +1,10 @@
+Title: Planning for migration
+nav:
+    - index.md
+    - Roadmaps for migration: rm_migration
+    - mig_plan_supported_paths.md
+    - mig_plan_hardware.md
+    - mig_plan_operating_systems.md
+    - Migration considerations: migration_consideration
+    - Development considerations: dev_consideration
+    - What to expect after you complete migration: mig_plan_expectations

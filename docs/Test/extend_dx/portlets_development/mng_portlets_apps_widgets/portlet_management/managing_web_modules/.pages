@@ -1,0 +1,13 @@
+title: Managing Web modules
+nav:
+    - index.md
+    - h_web_mod_install.md
+    - h_web_mod_consume.md
+    - h_web_mod_activate.md
+    - h_web_mod_view_props.md
+    - h_web_mod_update.md
+    - h_web_mod_delete.md
+    - h_web_mod_access.md
+    - h_web_mod_view_portlet.md
+    - h_web_mod_configure.md
+    - h_web_mod_fields.md

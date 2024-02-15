@@ -1,0 +1,6 @@
+title: Using portlet wires
+nav:
+    - index.md
+    - h_wires_use.md
+    - h_wires_selmatch.md
+    - Manage wires using the page layout view: portlet_wires_using_page_layout    - Manage wires using the portlet context menu: portlet_wires_using_portlet_context_menu

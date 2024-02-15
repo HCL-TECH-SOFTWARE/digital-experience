@@ -1,0 +1,16 @@
+Title: Add-ons, features, and third-party integration tasks
+nav:
+    - index.md
+    - wcm_migration_post_update-ctc.md
+    - mig_tam_consid.md
+    - migrate_paa_content.md
+    - mig_post_asa.md
+    - wab_mig_post.md
+    - wcm_mls_migrate.md
+    - wcm_smp_migrate.md
+    - sociallistpost_mig.md
+    - mig_t_templatesample.md
+    - mig_post_jsf.md
+    - mig_removed_portlets.md
+    - mig_mashup_post.md
+    - themeopt_upgrade_secnav_labels.md

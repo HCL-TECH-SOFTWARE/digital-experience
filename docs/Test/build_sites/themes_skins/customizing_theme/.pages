@@ -1,0 +1,22 @@
+title: Customizing the theme
+nav:
+    - index.md
+    - theme_editor_portlet.md
+    - themeopt_themedev_editing_static_resources.md
+    - Copying your theme: copying_theme
+    - Dynamic content spots: dynamic_content_spots
+    - Layouts: layouts
+    - Skins: skins
+    - Menus: menus
+    - Theme templates: theme_templates
+    - Changing the theme logo: theme_logo
+    - Customizing navigation: cust_nav
+    - Styles: styles
+    - Configuring the portal theme and modules: cfg_portal_theme_and_modules
+    - Expression language beans for accessing programming models: expression_language_beans
+    - Drag-and-drop: drag_drop
+    - themeopt_disp_messagebar.md
+    - themeopt_disp_draft_ribbon.md
+    - Adding jQuery to a theme: add_jquery_to_theme
+    - Tags used by the portal JSPs: portal_jsp_tag
+

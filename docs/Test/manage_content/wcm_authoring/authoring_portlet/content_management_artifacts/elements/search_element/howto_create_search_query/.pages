@@ -1,0 +1,7 @@
+title: How to create a search query
+nav:
+    - index.md
+    - wcm_dev_search_form_query_examples.md
+    - wcm_dev_search_form_query_filtering.md
+    - wcm_dev_search_form_query_parameters.md
+    - wcm_dev_search_form_query_using.md

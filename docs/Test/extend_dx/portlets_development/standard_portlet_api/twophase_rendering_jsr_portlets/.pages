@@ -1,0 +1,8 @@
+title: Using two-phase rendering with JSR 286 portlets
+nav:
+    - index.md
+    - jsr2phase_enabling.md
+    - jsr2phase_sethead.md
+    - jsr2phase_setcookie.md
+    - jsr2phase_htmlhead.md
+    - jsr2phase_caching.md

@@ -1,0 +1,12 @@
+title: Web Content Integrator
+nav:
+    - index.md
+    - wci_ff_overview.md
+    - RSS Namespace Extension for web content: rss_for_web_content
+    - wci_ff_links.md
+    - wci_ff_images.md
+    - wci_ff_examples.md
+    - RSS Namespace Extension for the Feed Service: rss_for_feed
+    - Web content feed management: webcontentfeed_mgmt
+
+

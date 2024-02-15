@@ -1,0 +1,13 @@
+title: User registry
+nav:
+    - index.md
+    - cw_ldap.md
+    - Adding more attributes to VMM: vmm_atts
+    - app_group.md
+    - Advanced group configurations: adv_grps_cfg
+    - Adding a database user registry: db_user_registry
+    - cfg_realm.md
+    - Updating your user registry: update_user_registry
+    - Deleting your user registry configurations: delete_user_registry
+    - adusrgrp_search.md
+    - rbug_ldapfltrxprns.md

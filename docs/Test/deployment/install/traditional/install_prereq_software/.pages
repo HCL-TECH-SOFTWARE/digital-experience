@@ -1,0 +1,5 @@
+nav:
+    - index.md
+    - Install and prepare the database software: prereq_db
+    - Install and prepare the user registry software: prereq_user_registry
+    - prep_ihs.md
