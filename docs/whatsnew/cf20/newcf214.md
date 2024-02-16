@@ -91,10 +91,10 @@ The following features and updates are available to customers installing HCL Dig
 ### New documentation for setting up OIDC in HCL DX
 
 === "Containers"
-    New guidance on how to configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP) is available. For more information, see the topic [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
+    New guidance on how to configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP) is available. For more information, see the topic [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md).
 
 === "On-Premises"
-    New guidance on how to configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP) is available. For more information, see the topic [Setting up OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/Set_up_OIDC_for_DX.md).
+    New guidance on how to configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP) is available. For more information, see the topic [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 

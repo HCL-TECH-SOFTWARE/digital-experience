@@ -3,3 +3,4 @@ nav:
     - Generate Content Report: generate_content_report.md
     - Export Report: export_content_report.md
     - Bulk Update: bulk_update_report.md
+    - Bookmarking: bookmarking_content_report.md

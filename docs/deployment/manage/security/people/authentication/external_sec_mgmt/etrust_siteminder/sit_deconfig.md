@@ -13,11 +13,7 @@ Perform the following steps to remove eTrust SiteMinder from the HCL Digital Exp
         !!!note
             If you are instructed to open a properties file, the files are ASCII files and should be opened with the appropriate tool.
 
-<<<<<<< HEAD
-    3.  Edit the [wp\_profile\_root](../../../manage/wpsdirstr#wp_profile_root)/PortalServer/config/config/services.properties file and change the value of com.ibm.wps.services.ac.ExternalAccessControlService to com.ibm.wps.ac.impl.ExternalAccessControlDefaultImpl.
-=======
-    3.  Edit the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services.properties file and change the value of com.ibm.wps.services.ac.ExternalAccessControlService to com.ibm.wps.ac.impl.ExternalAccessControlDefaultImpl.
->>>>>>> feature/DXQ-26605b
+    3.  Edit the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md)/PortalServer/config/config/services.properties file and change the value of com.ibm.wps.services.ac.ExternalAccessControlService to com.ibm.wps.ac.impl.ExternalAccessControlDefaultImpl.
 
         !!!note
             In a cluster environment, you must edit the services.properties file on all nodes.
@@ -34,11 +30,9 @@ Perform the following steps to remove eTrust SiteMinder from the HCL Digital Exp
 
     3.  Click **OK** and then click **Save**.
 
-<<<<<<< HEAD
-4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../manage/stopstart).
-=======
+
 4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
->>>>>>> feature/DXQ-26605b
+
 
 5.  If necessary, uninstall any Computer Associates components.
 

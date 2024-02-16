@@ -35,7 +35,7 @@ To access the JCR search service configuration parameters that are stored in the
         This value specifies the search service as a remote search service.
 
         !!! note
-            -   SOAP support for remote search service was deprecated with HCL Portal 8.0.
+            -   SOAP support for remote search service was deprecated with HCL Digital Experience (DX) 8.0.
             -   If you are using a remote search service, you must also specify thejcr.textsearch.EJB.IIOP.URL andjcr.textsearch.EJB.EJBName parameters.
             
 -   **jcr.textsearch.EJB.IIOP.URL**
