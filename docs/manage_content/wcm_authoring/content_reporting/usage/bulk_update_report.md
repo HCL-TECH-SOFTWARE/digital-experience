@@ -172,4 +172,4 @@ To continue a paused bulk update process, refer to the following steps:
 After resuming the update, you can track the progress in the **Updates** page.
 
 !!!note
-    Bulk updates for owners or authors can only be resumed if there are a limited number of users involved. There is currently a size limitation in the database column that stores the action string that specifies the owners or authors used in an update. If the action string exceeds 255 characters, then that bulk operation cannot be successfully resumed.
+    You can only resume a paused bulk update process for owners and authors if the update involves a limited number of users. Currently, there is a size limitation in the database column that stores the action string that specifies the owners or authors used in an update. If the action string exceeds 255 characters, you cannot resume the paused bulk update process. The operation fails and you must start the bulk update process again.
