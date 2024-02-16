@@ -4,9 +4,10 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- Web Content Manager REST API v2 - All APIs available in Swagger Explorer
 - Exporting a usage report
 - Site Manager - Resizable navigation panel 
-- New DXClient repository in GitHub and Harbor
+- DXClient - New repositories in GitHub and Harbor
 - DX Search - Configuring DX Search and Improving Search Quality documentation
 - Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -24,11 +25,13 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience Early Access Program**
 
-- 
+- Open Liberty Portlet Container Milestone 2
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
+
+### Web Content Manager REST API v2 - All APIs available in Swagger Explorer
 
 ### Exporting a usage report
 
@@ -62,6 +65,8 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Digital Asset Management - Uploading with drag-and-drop
 
 ## Digital Experience Early Access Program
+
+### Open Liberty Portlet Container Milestone 2
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
