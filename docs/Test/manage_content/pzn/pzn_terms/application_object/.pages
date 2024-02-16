@@ -1,7 +1,0 @@
-title: Application object
-nav:
-    - index.md 
-    - Device application object: device_application
-    - Referrer application object: referrer_application
-    - Public Render Parameters application object: public_render_parameters
-    - Shared Data application object: shared_data

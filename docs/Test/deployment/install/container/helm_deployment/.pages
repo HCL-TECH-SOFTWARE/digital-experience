@@ -1,6 +1,0 @@
-nav:
-    - overview.md
-    - preparation
-    - helm_install_commands.md
-    - helm_uninstall.md
-    - ...
