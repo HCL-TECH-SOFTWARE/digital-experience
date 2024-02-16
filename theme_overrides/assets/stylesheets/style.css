@@ -138,22 +138,4 @@ text-align: center;
     }
     .dropdown-content {
         margin-left: -2%;
-    }
-}
-.md-footer {
-    position: fixed;
-    left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
 
-/*White border line for Search text box.md-search {
-    position: relative;
-    #border-color: white;
-    border-style: solid;
-    border-width: lpx;
-}
-*/

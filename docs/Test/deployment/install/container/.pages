@@ -1,9 +1,0 @@
-Title: Kubernetes Deployment
-nav:
-    - index.md
-    - overview.md
-    - image_list.md
-    - helm_deployment
-    - haproxy-migration
-    - operator-migration
-     
