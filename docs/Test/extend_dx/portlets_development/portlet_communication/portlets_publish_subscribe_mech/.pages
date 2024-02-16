@@ -1,5 +1,0 @@
-title: Standard portlets publish and subscribe mechanisms
-nav:
-    - index.md
-    - Define portlet communication capabilities: define_portlet_comm_capabilities
-    - Triggering communication: trigerring_communication

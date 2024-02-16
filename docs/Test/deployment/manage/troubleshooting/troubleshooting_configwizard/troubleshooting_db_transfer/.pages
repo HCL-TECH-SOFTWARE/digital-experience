@@ -1,8 +1,0 @@
-title: Troubleshooting Database Transfer
-nav:
-    - index.md
-    - cw_dbtransfer-db2.md
-    - cw_dbtransfer_ibmi.md
-    - cw_dbtransfer_zos.md
-    - cw_dbtransfer_sql.md
-    - cw_dbtransfer_oracle.md
