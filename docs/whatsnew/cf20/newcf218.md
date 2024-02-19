@@ -22,7 +22,9 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Exporting a user session usage report
+- New diagram for blue/green deployments
 - Digital Asset Management - Uploading with drag-and-drop
+- Digital Asset Management - Performance enhancement for DAM Staging Mismatch and Resync
 
 **Digital Experience Early Access Program**
 
@@ -104,10 +106,20 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "Containers"
     You can configure user session tracking, view DX 9.5 user session consumption, and manually export a report of the number of sessions used in specified time periods. Note that user session tracking and reporting support the protection of the Personally Identifiable Information (PII) of users. Data such as the User ID and the IP Address are not stored in the server logs or presented in user session usage reports. For more information, see [Tracking user session consumption and exporting usage reports](../../get_started/download/software_licensing_portal/configure_entitlement_checks/export_usage_report.md).
 
+### New diagram for blue/green deployments
+
+=== "Containers"
+    A new diagram is added in [Difference and Similarities Between Traditional and Kubernetes DX Deployments](../../deployment/manage/container_configuration/deploy_container_artifact_updates.md#difference-and-similarities-between-traditional-and-kubernetes-dx-deployments) showing how a DX solution could be deployed for high availability and blue/green deployments in a single Kubernetes cluster.
+
 ### Digital Asset Management - Uploading with drag-and-drop
 
 === "Containers"
     You can drag and drop multiple files and folders to upload them to Digital Asset Management (DAM). The hierarchy of nested folders during the upload process is preserved. For more information, see [Uploading using drag-and-drop](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#uploading-using-drag-and-drop).
+
+### Digital Asset Management - Performance enhancement for DAM Staging Mismatch and Resync
+
+=== "Containers"
+    In previous versions, if the process to find the staging mismatch exceeds 30 minutes, the process fails because of the excessive amount of data. Starting CF218, there is no longer a 30-minute limitation for finding the staging mismatch. The recommended `maxRecordsToCompare` value is now 1000. For more information, see [DAM Staging Mismatch and Resync](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
 
 ## Digital Experience Early Access Program
 
