@@ -1,6 +1,6 @@
 # Cleaning up federated tags and resources
 
-When federated tags are no longer integrated in HCL Portal, you invoke the task com.ibm.wps.cp.tagging.federation.taskhandler.FederationDeletionTaskHandler to remove unnecessary data.
+When federated tags are no longer integrated in HCL Digital Experience (DX), you invoke the task com.ibm.wps.cp.tagging.federation.taskhandler.FederationDeletionTaskHandler to remove unnecessary data.
 
 The following example XML script triggerDeleteTask.xml shows how you schedule the task to cleanup federated tags:
 

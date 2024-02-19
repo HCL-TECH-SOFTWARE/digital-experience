@@ -9,7 +9,7 @@ Before you decide on a portal installation with multiple virtual portals, you ne
     -   The JVM
     -   Portlets and other code fragments
     -   The database
-    Additional to the benefit of sharing these resources, the virtual portals can be scaled to a large extent, and you can host many virtual portals on a single portal installation. For a complete list of the resources that virtual portals share, see *Separating and sharing resources between virtual portals*. Sharing resources, however, can create dependencies between virtual portals. For example, if one of the virtual portals requires maintenance, all virtual portals are affected by the outage and undergo the same maintenance updates. If you can accept such dependencies in your business environment, virtual portals are a simple and cheap solution for you. Otherwise, you have the alternative of using multiple real portal installations. For more information, see *Alternative concepts for virtual portals on HCL Portal*.
+    Additional to the benefit of sharing these resources, the virtual portals can be scaled to a large extent, and you can host many virtual portals on a single portal installation. For a complete list of the resources that virtual portals share, see *Separating and sharing resources between virtual portals*. Sharing resources, however, can create dependencies between virtual portals. For example, if one of the virtual portals requires maintenance, all virtual portals are affected by the outage and undergo the same maintenance updates. If you can accept such dependencies in your business environment, virtual portals are a simple and cheap solution for you. Otherwise, you have the alternative of using multiple real portal installations. For more information, see *Alternative concepts for virtual portals on HCL Digital Experience*.
 
 -   **Sharing or separating virtual portal administration**
 
@@ -17,7 +17,7 @@ Before you decide on a portal installation with multiple virtual portals, you ne
 
     You can select a specific group of sub-administrators who can manage the resources and users of a particular virtual portal. The master administrator of the portal installation can set up the privileges of the individual sub-administrators for each virtual portal.
 
-    If you do not require a specific subadministrator group for each virtual portal, the portal administrators can share the administrative work for all virtual portals.
+    If you do not require a specific sub-administrator group for each virtual portal, the portal administrators can share the administrative work for all virtual portals.
 
 -   **Sharing or separating user populations**
 

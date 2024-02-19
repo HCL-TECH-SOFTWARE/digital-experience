@@ -17,6 +17,7 @@ theme:
     - search.share
     - search.suggest
     - navigation.prune
+    - content.code.copy
   custom_dir: theme_overrides/
   icon:
     repo: fontawesome/brands/github
@@ -31,9 +32,13 @@ theme:
 
 # Markdown Extensions
 markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - attr_list
   - pymdownx.tabbed:
       alternate_style: true 
@@ -73,5 +78,6 @@ plugins:
   - tags
   - mike:
       canonical_version: latest
+      alias_type: redirect
   - git-revision-date-localized:
       type: date

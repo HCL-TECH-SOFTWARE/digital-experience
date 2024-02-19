@@ -64,7 +64,7 @@ Use the create-virtual-portal task to create a new virtual portal. This task cre
 
     For more information about the NLS file and its format, see the *Command reference for the Portal Scripting Interface* and then under the section *Property File Format*.
 
-    For a list of the languages that are available with HCL Portal and their language codes refer to *Language support*.
+    For a list of the languages that are available with HCL Digital Experience (DX) and their language codes refer to *Language support*.
 
 
 ## Syntax

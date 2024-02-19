@@ -6,7 +6,7 @@ Take note of the following limitations when using HCL Content Reporting:
 
 - For the **Expiry date** criteria, no results are returned if the same date is used in the **From** and **To** fields.
 - For the **Word** criteria, a dash (-) is considered a delimiter for splitting the text entered. For example, if you search for "AT-Product-Item", results are returned for three different words: AT, Product, and Item.
-- After generating a report, there is no option to sort using certain fields such as **Location**, **Status**, **Type**, **Expires on**, and **Owners**.
+- After generating a report, there is no option to sort using certain fields such as **Location**, **Status**, **Type**, **Expires on**, **Owners**, and **Authors**.
 
 ## Using the Bulk Updates feature
 
@@ -26,6 +26,11 @@ Take note of the following limitations when using HCL Content Reporting:
 
 -   The CSV export function uses the browser's blob storage. If a large CSV export is attempted, users might encounter out-of-memory errors with the browser. This prevents the successful download of any large file.
 -   Selecting a subset of items in the report for export is not allowed.
+
+## Bookmarking reports
+
+-  The bookmarked URL from HCL Content Reporting does not function in a non-authenticated user session. You must log in first to your Digital Experience account before you can access the bookmarked URL.
+-   When you go to a bookmarked report and then change the language using the language switcher, the system fails to retain the report and redirects you to the HCL Content Reporting landing page.
 
 ## User interface
 

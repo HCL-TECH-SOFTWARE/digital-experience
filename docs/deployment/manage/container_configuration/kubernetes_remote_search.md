@@ -253,6 +253,9 @@ kubectl cp dx-core-0:/home/dx_user/LTPAKeyExported ./LTPAKeyExported -c core -n 
 
 ### Configure the Remote Search Pod
 
+!!!note
+    Before configuring the remote search pod, you must set up single sign-on (SSO) between the WebSphere Application Server running in the **core** pod and the WebSphere Application Server running in the **remote-search** pod. See the topics [Single sign-on for authentication using LTPA cookies](https://www.ibm.com/docs/en/was/9.0.5?topic=authentication-single-sign-using-ltpa-cookies) and [Creating a single-sign on domain between HCL Portal and the remote search service](../../../build_sites/search/remotesearch/sso_portal_rss.md) for pre-requisites and instructions for setting up SSO.
+
 Copy the LTPA Key exported from DX Core into the Remote Search Pod:
 
 ```sh
@@ -270,7 +273,6 @@ kubectl exec -it -n dxns dx-remote-search-0 -c remote-search -- /bin/bash
 # Ensure to use the right credentials for DWasPassword
 /opt/HCL/AppServer/profiles/prs_profile/ConfigEngine/./ConfigEngine.sh configure-remote-search-server-for-remote-search -DWasPassword=[WAS ADMIN PASSWORD] -Dportal.host.name="dx-core" -Dportal.port.number="10042" -Dportal.cert.alias="portaldockeralias" -Dremote.search.host.name="localhost"
 ```
-
 ### Restart both Core and Remote Search
 
 To restart Remote Search:
@@ -394,10 +396,9 @@ Create the following Content Source:
 
 In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
-!!!tip
-    Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server.  Adjust this according to your deployment configuration.
-
-!!!note
-    The parsing of the `SeedlistId` positional parameter in this URL uses an index of the virtual portal being crawled. In this case 1 (in 2 places) represents the base virtual portal.
+!!!note "Notes"
+    - Click the **create** button to create the security realm definition inside the frame where you first entered the data. This action ensures that you have the security realm defintion before saving the content source.
+    - The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.
+    - The parsing of the `SeedlistId` positional parameter in this URL uses an index of the virtual portal being crawled. In this case, 1 (in 2 places) represents the base virtual portal.
 
 

@@ -14,7 +14,7 @@ The following lists describe the modules that are included with the Portal theme
 
 ## 85 Theme
 
-These modules are used by the HCL Portal 8.5 theme. For more information, see the module descriptions.
+These modules are used by the HCL Digital Experience 8.5 theme. For more information, see the module descriptions.
 
 The plugin.xml file location varies and is documented in the module description.
 

@@ -16,7 +16,7 @@ A theme is an interchangeable front end for a portal node or group of nodes. It 
 
 -   **Theme definition**
 
-    The theme definition registers the theme with the HCL Portal database. The theme must be registered before Portal can recognize it, even if other parts, such as WebDAV or WAR files, are deployed.
+    The theme definition registers the theme with the HCL Digital Experience (DX) database. The theme must be registered before Portal can recognize it, even if other parts, such as WebDAV or WAR files, are deployed.
 
 
 Documentation resource: [Theme creation and resources](../../../themes_skins/getting_started_with_themes/themeopt_themedev_creation_and_resources.md)

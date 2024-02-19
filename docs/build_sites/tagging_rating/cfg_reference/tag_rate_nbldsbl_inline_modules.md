@@ -2,7 +2,7 @@
 
 In a portal installation, the tag and rating widgets are available for specific portal profiles. You can enable the widgets for more other profiles by adding them to the profile.
 
-In a default HCL Portal V 8.5 installation, the tag and rating widgets are available with the following profiles:
+In a default HCL Digital Experience (DX) V 8.5 installation, the tag and rating widgets are available with the following profiles:
 
 -   Basic Content profile: profile\_basic\_content.json
 -   Basic Content with Dojo profile: `profile_dojo_basic_content.json`
