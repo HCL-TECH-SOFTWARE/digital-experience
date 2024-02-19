@@ -1,10 +1,10 @@
 # Updating page templates
 
-With Version 8.5, there are several new features related to templates used to create portal pages. Some of these features cannot be automatically configured by the migration process. To fully support the page template features in Version 8.5, you must perform additional configuration manually.
+With Version 8.5/9.5, there are several new features related to templates used to create portal pages. Some of these features cannot be automatically configured by the migration process. To fully support the page template features in Version 8.5/9.5, you must perform additional configuration manually.
 
 1.  Define a default page template on the migrated portal.
 
-    With Version 8.5, all pages created with the Portal 8.0 theme are based on a page template. You must define a default page template that is used when the user does not select another, specific template for the new page.
+    With Version 8.5/9.5, all pages created with the Portal 8.0 theme are based on a page template. You must define a default page template that is used when the user does not select another, specific template for the new page.
 
     1.  Open the administration interface, and navigate to Manage Pages.
 
@@ -16,7 +16,7 @@ With Version 8.5, there are several new features related to templates used to cr
 
 2.  Move the template root page out of the administration page area.
 
-    When users access a page, the page structure containing the page is displayed. In Version 7.0, the template root page is part of the administration page hierarchy. When you migrate to Version 8.5, this same page structure is preserved. Because of this structure, the `Administration` page label is displayed for users who have been granted access to a page template. To avoid displaying the `Administration` page label, you can move the template root page out of the administration page hierarchy to another location.
+    When users access a page, the page structure containing the page is displayed. In Version 7.0, the template root page is part of the administration page hierarchy. When you migrate to Version 8.5/9.5, this same page structure is preserved. Because of this structure, the `Administration` page label is displayed for users who have been granted access to a page template. To avoid displaying the `Administration` page label, you can move the template root page out of the administration page hierarchy to another location.
 
     1.  Locate the template root page, identified by the unique name `wps.content.template.root`, and mark the page for moving.
 
