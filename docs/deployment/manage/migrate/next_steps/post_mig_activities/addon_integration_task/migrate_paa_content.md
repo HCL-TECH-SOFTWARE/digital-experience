@@ -2,6 +2,6 @@
 
 If you installed a Portal Application Archive \(PAA\) file on a previous version of HCL Digital Experience, you can migrate the content to the current version of HCL Digital Experience.
 
-Migration is supported from Portal Version 7.0 to HCL Digital Experience 8.5 and from Version 8.0 to HCL Digital Experience 8.5.
+Migration is supported from Portal Version 7.0 to HCL Digital Experience 8.5/9.5 and from Version 8.0 to HCL Digital Experience 8.5/9.5.
 
 

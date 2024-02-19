@@ -9,9 +9,9 @@ Use this roadmap if you are:
 -   Migrating a stand-alone server environment from a previous version to the latest version of HCL Digital Experience.
 
 !!!note
-    If you are migrating from HCL Digital Experience8.0.0.1 on WebSphere® Application Server8.5.5.2 to the latest version of HCL Digital Experience, you must follow a different migration process.
+    If you are migrating from HCL Digital Experience 8.0.0.1 on WebSphere® Application Server 8.5.5.2 to the latest version of HCL Digital Experience, you must follow a different migration process.
 
-You must apply the latest cumulative fix and one of the two most recent fix packs to your source environment, and the latest cumulative fix and the most recent fix pack to your target environment before you can migrate to HCL Digital Experience 9.5. For more information, see [Supported migration paths](../../../../../deployment/manage/migrate/planning_migration/mig_plan_supported_paths.md).
+You must apply the latest cumulative fix and one of the two most recent fix packs to your source environment, and the latest cumulative fix and the most recent fix pack to your target environment before you can migrate to HCL Digital Experience 8.5/9.5. For more information, see [Supported migration paths](../../../../../deployment/manage/migrate/planning_migration/mig_plan_supported_paths.md).
 
 ## Planning for migration
 
