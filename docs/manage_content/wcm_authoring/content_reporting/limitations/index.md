@@ -7,6 +7,7 @@ Take note of the following limitations when using HCL Content Reporting:
 - For the **Expiry date** criteria, no results are returned if the same date is used in the **From** and **To** fields.
 - For the **Word** criteria, a dash (-) is considered a delimiter for splitting the text entered. For example, if you search for "AT-Product-Item", results are returned for three different words: AT, Product, and Item.
 - After generating a report, there is no option to sort using certain fields such as **Location**, **Status**, **Type**, **Expires on**, **Owners**, and **Authors**.
+- For the **Owner** and  **Author** criteria,  currently user and group attributes show all customer-defined attributes, and we intend to refine this list later to show only those that may be searched via text input field, for example, uid, cn, name, telephone etc. Searching via more complex attributes may give no results at the moment.
 
 ## Using the Bulk Updates feature
 
