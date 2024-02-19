@@ -13,7 +13,6 @@ theme:
     - navigation.tabs
     - navigation.indexes
     - navigation.top
-    - navigation.instant
     - search.highlight
     - search.share
     - search.suggest
