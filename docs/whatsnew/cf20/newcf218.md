@@ -25,7 +25,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience Early Access Program**
 
-- Open Liberty Portlet Container Milestone 2 - Support for extensions such as global portlet filters plus trimming of portlet.xml whitespace
+- Open Liberty Portlet Container Milestone 2 - Support for extensions such as global portlet filters and trimming of portlet.xml whitespace
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
@@ -66,7 +66,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Digital Experience Early Access Program
 
-### Open Liberty Portlet Container Milestone 2
+### Open Liberty Portlet Container Milestone 2 - Support for extensions such as global portlet filters and trimming of portlet.xml whitespace
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
