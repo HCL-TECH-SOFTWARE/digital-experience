@@ -1,3 +1,4 @@
 nav:
   - index.md
-  - custom-data-adapter.md
+  - integrate_voltmx_into_dx.md
+  - dx_apis_in_foundry.md
