@@ -1,18 +1,22 @@
 ---
 title: Exporting a usage report manually
 ---
-# Exporting a usage report manually
+# Tracking user session consumption and exporting usage reports 
 
 ## Overview
 
-With this feature, you can manually export a report of your used sessions. This is helpful for environments that do not allow other means of usage tracking and may require a manual export of a usage report.
+With this feature, you can:
 
-## Unique identifier for the session usage report
+- configure user session tracking.
+- view DX 9.5 user session consumption in Digital Experience 9.5 deployments to supported Kubernetes platforms.
+- manually export a report of the number of sessions used in specified time periods. The DX Kubernetes deployment user session usage report presents the data in the form of sessions per day, sessions per week, or sessions per month in a given date range. See examples in the next sections. 
 
-Optionally, set a unique identifier for the deployment. This is included in the export.
+!!!note
+    User session tracking and reporting support the protection of the Personally Identifiable Information (PII) of users. Data such as the User ID and the IP Address are not stored in the server logs or presented in user session usage reports.
 
-!!! note
-    If no unique identity is set in the helm value, the deployment uses the release name and namespace combination by default.
+## Unique identifier for the DX deployment session usage report
+
+Optionally, set a unique identifier for the specified DX Kubernetes deployment. This is included in the exported user session data.
 
 ```yaml
 configuration:
@@ -20,15 +24,17 @@ configuration:
     licenseManualReportUniqueIdentifier: "myUniqueIdentifier-123"
 ```
 
-## Exporting the session usage report
+If no unique DX Kubernetes deployment identity is set in the helm value, the deployment uses the release name and namespace combination by default. See [Kubernetes Overview](../../../../get_started/plan_deployment/container_deployment/index.md) for deployment and configuration guidance. 
 
-To export the session usage report, use the following command and include the start date and end date:
+## Exporting the user session usage report
+
+To export the user session usage report, use the following command and include the start date and end date:
 
 ```
 kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
 ```
 
-The result can be sent to a file using:
+The result can be sent to a file using the following command:
 
 ```
 kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.txt
@@ -53,3 +59,7 @@ Gap between 2024-01-15 and 2024-01-30: 14 day(s)
 Total session usage: 185
 ############################################################
 ```
+
+Optionally, you can import the local .txt file to a spreadsheet or other reporting tools for viewing and further analysis.
+
+### How User Sessions in Production deployments are calculated to Report totals
