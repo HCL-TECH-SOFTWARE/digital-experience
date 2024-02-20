@@ -2,7 +2,11 @@
 
 This topic outlines how the V2 APIs differ from V1 APIs.
 
-- URL uses **wcmrest-v2**.
+V2 APIs are created to complete the available actions for content and other WCM artifacts. They are either developed from scratch or created to bring their corresponding [REST service for Web Content Manager V1 APIs](../wcm_rest/index.md) to the V2 Swagger interface [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+
+The following list provides more information about the differences between V1 and V2 APIs. 
+
+- URLs for V2 APIs use **wcmrest-v2**.
 
     The request URL uses **wcmrest-v2** instead of **wcmrest**. See the following examples:
 
@@ -13,7 +17,7 @@ This topic outlines how the V2 APIs differ from V1 APIs.
 
     All links in the response body also use **wcmrest-v2**.
 
-- Request and response body use JSON instead of XML.
+- For V2 APIs, request and response body use JSON instead of XML.
 
     For V1 APIs, request body and response body can be in XML or JSON formats. If the request body is in an XML format, you have to add `?mime-type=application/json` query parameter in the URL for the response body to be in JSON format. 
     
