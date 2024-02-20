@@ -14,6 +14,8 @@ With this feature, you can:
 !!!note
     User session tracking and reporting support the protection of the Personally Identifiable Information (PII) of users. Data such as the User ID and the IP Address are not stored in the server logs or presented in user session usage reports.
 
+For information on how user sessions are defined and when they begin and end, see [User Session consumption for HCL DX Cloud Native v9.5 production deployments](entitlement_checks_scenarios.md#how-to-monitor-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments) and [How User Sessions in Production deployments are calculated to Report totals](entitlement_checks_scenarios.md#how-user-sessions-in-production-deployments-are-calculated-to-report-totals).
+
 ## Unique identifier for the DX deployment session usage report
 
 Optionally, set a unique identifier for the specified DX Kubernetes deployment. This is included in the exported user session data.
@@ -62,4 +64,3 @@ Total session usage: 185
 
 Optionally, you can import the local .txt file to a spreadsheet or other reporting tools for viewing and further analysis.
 
-### How User Sessions in Production deployments are calculated to Report totals
