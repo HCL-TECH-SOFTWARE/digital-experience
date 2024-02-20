@@ -1,15 +1,15 @@
 
-# Integrating Volt MX data or applications into HCL Digital Experience
+# Integrating Volt MX data or applications into HCL DX
 
-## Showing HCL Volt MX Foundry data on HCL Digital Experience pages 
+## Showing HCL Volt MX Foundry data on HCL DX pages 
 
-In this example, you can integrate data from HCL Volt MX Foundry on your HCL Digital Experience pages using the Digital Data Connector. Follow the [Installation](../installation/index.md) and [Configuration](../configuration/index.md) steps before following the example guide.
+In this example, you can integrate data from HCL Volt MX Foundry on your HCL DX pages using the Digital Data Connector. Follow the [Installation](../installation/index.md) and [Configuration](../configuration/index.md) steps before following the example guide.
 
 The required steps for this integration are available in [Connecting to HCL Volt MX Foundry through Digital Data Connector (DDC)](../../../ddc/integrating_voltmx_foundry/index.md).
 
 ## Integrating an HCL Volt MX application into HCL Digital Experience pages 
 
-This example provides steps to display an HCL Volt MX application on an HCL Digital Experience page.
+This example provides steps to display an HCL Volt MX application on an HCL DX page.
 
 The example uses the [Web Application Bridge](../../wab/index.md) which uses a reverse proxy technology to integrate web-based content providers (for example, HCL Volt MX Foundry) with HCL Digital Experience.
 
