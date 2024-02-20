@@ -6,15 +6,12 @@ title: Getting started with the REST service for Web Content Manager V2
 
 This topic provides information about the new APIs available from CF217 and higher.
 
-These new APIs are created to complete the available actions for content and other WCM artifacts. The new APIs were either created from scratch or bring their corresponding [REST service for Web Content Manager V1 APIs](../wcm_rest/index.md) to the V2 Swagger interface [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). 
-For a comparison of V1 and V2 APIs, see [Differences between V1 and V2 APIs](comparison_v1_v2.md).
+These V2 APIs are created to complete the available actions for content and other WCM artifacts. They are either developed from scratch or created to bring their corresponding [REST service for Web Content Manager V1 APIs](../wcm_rest/index.md) to the V2 Swagger interface [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). For a comparison of V1 and V2 APIs, see [Differences between V1 and V2 APIs](comparison_v1_v2.md).
 
 If you are working with WCM via REST, it is recommended to use the WCM REST V2 API.
 
 !!! note
-    ```
     Most of the APIs introduced in the WCM REST V2 API explorer adhere to the same API path or URI fragment structure as the WCM V1 APIs.
-    ```
 
 For the WCM REST V1 version of the APIs, refer to **[How to manage web content items by using REST](../wcm_rest/wcm_rest_mng_content/index.md)**.
 
@@ -34,7 +31,7 @@ Starting CF217, the [WCM REST V2 Swagger API Explorer](https://opensource.hcltec
 
 ## APIs added or modified in CF218
 
-Starting CF218, [WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces additional APIs corresponding to the following WCM V1 API functionalities or created new:
+Starting CF218, [WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces additional APIs. Some of these APIs are newly created while some APIs correspond to the following WCM V1 API functionalities:
 
 - Components like LibraryAuthoringToolsComponent, LibraryListPresentationComponent
 - Custom Workflow Actions Factory 
