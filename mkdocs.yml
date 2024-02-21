@@ -13,6 +13,8 @@ theme:
     - navigation.tabs
     - navigation.indexes
     - navigation.top
+    - navigation.instant
+    - navigation.prune
     - search.highlight
     - search.share
     - search.suggest
@@ -71,6 +73,9 @@ edit_uri: edit/main/docs
 # Customization
 extra_css:
   - assets/stylesheets/style.css
+
+extra_javascript:
+  - javascripts/extra.js
 
 plugins:
   - awesome-pages
