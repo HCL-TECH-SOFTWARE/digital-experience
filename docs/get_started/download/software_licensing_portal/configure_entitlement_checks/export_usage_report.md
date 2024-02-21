@@ -42,7 +42,7 @@ The result can be sent to a file using the following command:
 kubectl exec -it <release name>-license-manager-0 -n <namespace> sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.txt
 ```
 !!!note
-    The timestamps provided indicates the time in UTC format.
+    The timestamps provided indicate the time in UTC format.
 
 ### Expected result
 
