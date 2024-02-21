@@ -4,7 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- Web Content Manager REST API v2 - NewAPIs available in Swagger Explorer
+- Web Content Manager REST API v2 - New APIs available in Swagger Explorer
 - Site Manager - Resizable navigation panel 
 - DXClient - New repositories in GitHub and Harbor
 - DX Search - Configuring DX Search and Improving Search Quality documentation
