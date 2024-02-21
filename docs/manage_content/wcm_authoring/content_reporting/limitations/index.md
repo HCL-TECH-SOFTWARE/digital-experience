@@ -22,6 +22,7 @@ Take note of the following limitations when using HCL Content Reporting:
 -   When updating owners or authors, updates cannot be applied in bulk to Libraries.
 -   The status of bulk update requests is not tracked in real-time; the status is updated every 10 seconds.
 -   Selecting a subset of items in the report for update is not allowed.
+-   You can only resume a paused bulk update process for owners and authors if the update involves a limited number of users. There is a size limitation in the database column that stores the action string that specifies the owners or authors used in an update. If the action string exceeds 255 characters, you cannot resume the paused bulk update process.
 
 ## Exporting reports to a CSV file
 

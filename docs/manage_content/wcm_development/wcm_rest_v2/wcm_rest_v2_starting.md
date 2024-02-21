@@ -27,6 +27,8 @@ For the WCM REST V1 version of the mentioned APIs, refer to **[How to manage web
     The Wrapper APIs introduced in WCM REST V2 API explorer in CF217 adhere to the same API path or URI fragment structure as the WCM V1 APIs.
     ```
 
+For an in-depth comparison of V1 and V2 APIs, see [Differences between V1 and V2 APIs](comparison_v1_v2.md).
+
 ## WCM REST V2 API explorer
 
 With WCM REST V2 API explorer, developers using the Digital Experience WCM REST APIs can explore and test all the WCM V2 APIs. 

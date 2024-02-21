@@ -1,8 +1,8 @@
 # Managed pages migration
 
-When you migrate your HCL Digital Experience to Version 8.5, here are some considerations with regards to managed pages.
+When you migrate your HCL Digital Experience to Version 8.5/9.5, here are some considerations with regards to managed pages.
 
-If you migrate from Portal Version 8.0 to HCL Digital Experience 8.5, the portal preserves the state of managed pages enablement:
+If you migrate from Portal Version 8.0 to HCL Digital Experience 8.5/9.5, the portal preserves the state of managed pages enablement:
 
 -   If you had managed pages enabled in your version 8.0 portal, managed pages remain enabled after migration.
 -   If you had managed pages disabled in your version 8.0 portal, managed pages remain disabled after migration.

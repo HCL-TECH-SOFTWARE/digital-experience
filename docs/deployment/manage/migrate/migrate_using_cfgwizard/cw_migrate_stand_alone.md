@@ -101,7 +101,7 @@ If you click **View Step Command**, you can see the task and properties that are
         none
 
     !!!note
-        If you are migrating from HCL Portal Enable or Portal Extend offerings to Portal Server or Web Content Management offerings, complete the following steps manually. <br> 1.  Locate the backup of the source profile. For example, in the /tmp/wp_profile_bak directory. <br>  2.  Locate the wps.properties file in this directory. For example, /tmp/wp_profile_bak/PortalServer/wps.properties. <br> 3.  Open the wps.properties file in a text editor. Modify the value of the WPFamilyName to match your 8.5 licensed offering. For example, if you were on 8.0 Enable, and you purchased 8.5 Web Content Manager, you would modify from WPFamilyName=enable to WPFamilyName=wcm. Valid values for HCL Portal 8.5 include: server, enable, extend, wcm, and wse. <br> 4.  Save changes to the wps.properties file.
+        If you are migrating from HCL Portal Enable or Portal Extend offerings to Portal Server or Web Content Management offerings, complete the following steps manually. <br> 1.  Locate the backup of the source profile. For example, in the /tmp/wp_profile_bak directory. <br>  2.  Locate the wps.properties file in this directory. For example, /tmp/wp_profile_bak/PortalServer/wps.properties. <br> 3.  Open the wps.properties file in a text editor. Modify the value of the WPFamilyName to match your /9.5 licensed offering. For example, if you were on 8.0 Enable, and you purchased 8.5/9.5 Web Content Manager, you would modify from WPFamilyName=enable to WPFamilyName=wcm. Valid values for HCL Portal 8.5/9.5 include: server, enable, extend, wcm, and wse. <br> 4.  Save changes to the wps.properties file.
 
 6.  Manual Step: If the backup profile is larger than 2 GB, clean up the backup profile
 
@@ -247,7 +247,7 @@ If you click **View Step Command**, you can see the task and properties that are
 
         upgrade-profile
 
-    **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md).
+    **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5/9.5](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md).
 
     !!!note
         When you run this step, the sub task that is named action-deploy-portlets-applyMIGStatic-wp.oob.full runs and completes successfully. However, the following error messages are shown. You can ignore these error messages: <br> -   EJPXA0161W: The web module ContactList could not be activated. Please see previous messages for reasons and possible corrective actions. <br> -   EJPPH0048W: The synchronization mode of all nodes in the portal cluster is not consistently set. The portlet application PA_ContactList will not be started in the Application Server. Manual synchronization is assumed for all nodes. Manually start the application after all nodes were synchronized. <br> -   EJPXA0067E: The following configuration data is needed to create a content-node resource: content-parentref.

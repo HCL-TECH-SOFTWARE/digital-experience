@@ -12,7 +12,7 @@ You can execute these actions on content items returned in a report generated th
 !!!note
     Bulk updates for owners or authors can only be applied to content items, site areas, authoring templates, components, categories, folders, projects, segments, workflow actions, portal pages and items to which you have edit access. To date, adding up to 100 users and updating up to 7000 items have been tested successfully.
 
-Starting CF218, if a bulk update process is running and the server gets restarted, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Updates** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
+Starting CF218, if a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process through the **Updates** page. For more information, see [Resuming a paused bulk update process](#resuming-a-paused-bulk-update-process).
 
 ## Prerequisite
 
@@ -156,6 +156,13 @@ The snackbar that appears when a bulk update is triggered tracks up to five bulk
     
 #### Resuming a paused bulk update process
 
+If a bulk update process is running and the server restarts, the system pauses the update process. When the server is available again, you can resume the paused bulk update process.
+
+!!!note
+    You can only resume a paused bulk update process for owners and authors if the update involves a limited number of users. Currently, there is a size limitation in the database column that stores the action string that specifies the owners or authors used in an update. If the action string exceeds 255 characters, you cannot resume the paused bulk update process. The operation fails and you must start the bulk update process again.
+    
+    If the bulk update process for owners and authors involves a large number of users, it is recommended to prevent any planned portal restarts.
+
 To continue a paused bulk update process, refer to the following steps:
 
 1. Access the **Updates** page through the button on the application header. Click the **Updates** button to go to the **Updates** page.
@@ -171,3 +178,5 @@ To continue a paused bulk update process, refer to the following steps:
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_Resume.png)
 
 After resuming the update, you can track the progress in the **Updates** page.
+
+

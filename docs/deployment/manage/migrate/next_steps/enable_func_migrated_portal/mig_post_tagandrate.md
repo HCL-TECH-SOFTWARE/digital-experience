@@ -1,6 +1,6 @@
 # Enabling the new tag and rating widgets after a portal upgrade
 
-If you upgrade your HCL Portal from an earlier version to Version 8.5 and want to use the new tag and rating widgets, you must first enable blogs and wikis. Then, complete the following task to ensure that tag and rating widgets are enabled.
+If you upgrade your HCL Portal from an earlier version to Version 8.5/9.5 and want to use the new tag and rating widgets, you must first enable blogs and wikis. Then, complete the following task to ensure that tag and rating widgets are enabled.
 
 You must have blogs and wikis enabled before proceeding. Go to [Migration: Blogs and wikis](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/mig_blogs_wiki.md) for more information.
 

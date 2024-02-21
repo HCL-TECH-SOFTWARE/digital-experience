@@ -1,4 +1,4 @@
-# Embedding the HCL Digital Experience 8.5 site toolbar dynamically without a dynamic content spot
+# Embedding the HCL Digital Experience 8.5/9.5 site toolbar dynamically without a dynamic content spot
 
 Embedding a toolbar into a theme dynamically integrates the toolbar without editing the theme HTML template.
 

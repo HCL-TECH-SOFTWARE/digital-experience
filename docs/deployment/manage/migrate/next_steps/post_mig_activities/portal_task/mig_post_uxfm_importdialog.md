@@ -1,6 +1,6 @@
 # Importing UX Screen Flow Manager dialog definitions
 
-If you migrated from Version 8.0.0.1 with the UX Screen Flow Manager \(UXFM\) enabled, then you exported and removed your dialog definitions before migrating to Version 8.5. Run the following task to import the dialog definitions into your upgraded system.
+If you migrated from Version 8.0.0.1 with the UX Screen Flow Manager \(UXFM\) enabled, then you exported and removed your dialog definitions before migrating to Version 8.5/9.5. Run the following task to import the dialog definitions into your upgraded system.
 
 1.  Save the following sample of code as ImportSampleCode.xml to use when importing your dialog definitions.
 
