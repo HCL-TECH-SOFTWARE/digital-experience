@@ -91,6 +91,11 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Digital Experience 9.5 Version
 
+### Web Content Manager - New attributes for Owners and Authors in Content Reporting
+
+=== "Containers"
+    (No doc yet)
+
 ### Web Content Manager - Resuming bulk updates in Content Reporting
 
 === "Containers"
