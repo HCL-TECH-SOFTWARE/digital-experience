@@ -75,6 +75,9 @@ edit_uri: edit/main/docs
 extra_css:
   - assets/stylesheets/style.css
 
+extra_javascript:
+  - javascripts/extra.js
+
 plugins:
   - awesome-pages
   - search
