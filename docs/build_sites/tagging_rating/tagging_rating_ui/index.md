@@ -12,7 +12,7 @@ Portal tagging and rating offers the following user interface elements that user
 -   A feature for browsing tags.
 
 !!! note
-    With HCL Portal Version 8.5, both the dialog and inline tag and rating widgets of previous portal versions are deprecated. They are replaced by a single pair of new enhanced inline widgets. They provide the functionality of both types of the old widgets. Users view them as part of the portal resource.
+    With HCL Digital Experience (DX) Version 8.5, both the dialog and inline tag and rating widgets of previous portal versions are deprecated. They are replaced by a single pair of new enhanced inline widgets. They provide the functionality of both types of the old widgets. Users view them as part of the portal resource.
 
 You can configure the widgets by using a set of parameters. You can set these parameters globally for all tag or rating widgets in your portal in the WP CP configuration service. You can also set them for individual instances of the tag and rating widgets by using JavaScript parameters. All these parameters are listed and described in the topic about the WP CP configuration service and the parameter reference topics for tagging and rating.
 
