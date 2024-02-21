@@ -7,14 +7,14 @@ title: Exporting a usage report manually
 
 With this feature, you can:
 
-- configure user session tracking.
-- view DX 9.5 user session consumption in Digital Experience 9.5 deployments to supported Kubernetes platforms.
-- manually export a report of the number of sessions used in specified time periods. The DX Kubernetes deployment user session usage report presents the data in the form of sessions per day, sessions per week, or sessions per month in a given date range. See examples in the next sections. 
+- Configure user session tracking DX 9.5 deployments on supported Kubernetes platforms.
+- View [DX 9.5 user session](entitlement_checks_scenarios.md#how-to-monitor-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments) consumption in DX 9.5 Kubernetes deployments.
+- Manually export a report of the number of sessions used in specified time periods. The DX Kubernetes deployment user session usage report presents the data in the form of sessions month in a given date range. See examples in the next sections. 
 
 !!!note
-    User session tracking and reporting support the protection of the Personally Identifiable Information (PII) of users. Data such as the User ID and the IP Address are not stored in the server logs or presented in user session usage reports.
+    User session tracking and reporting support the protection of the Personally Identifiable Information (PII) of users. Data such as the User ID and the IP Address are not stored in the server logs or presented in user session consumption reports. These reports present the timestamp and number data to report the user session counts for the requested time period. 
 
-For information on how user sessions are defined and when they begin and end, see [User Session consumption for HCL DX Cloud Native v9.5 production deployments](entitlement_checks_scenarios.md#how-to-monitor-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments) and [How User Sessions in Production deployments are calculated to Report totals](entitlement_checks_scenarios.md#how-user-sessions-in-production-deployments-are-calculated-to-report-totals).
+For information on how user sessions are defined and when they begin and end, see [User Session consumption for HCL DX Cloud Native v9.5 production deployments](entitlement_checks_scenarios.md#how-to-monitor-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments).
 
 ## Unique identifier for the DX deployment session usage report
 
