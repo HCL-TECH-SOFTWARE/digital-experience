@@ -42,9 +42,9 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
         When you select the **Owner** criterion, four input fields appear: **User attribute**, **Users**, **Group attribute** and **Groups**.
 
-        Selecting any attribute from user or group attributes enables the **Users** or **Groups** respectively, a typeahead input field where you can select the users or groups as owner of the items you want included in your report. The list of matched users or groups is displayed as auto-suggested options according to the user or group attribute you select and input value as you type. Only the suggested users or groups are considered valid inputs.
+        Selecting any attribute from user or group attributes enables the **Users** or **Groups** field respectively. **Users** and **Groups** are type-ahead input fields where you can select the users or groups as owner of the items you want included in your report. The list of matched users or groups is displayed as auto-suggested options depending on the selected user or group attribute and the input value as you type. Only suggested users or groups are valid values.
 
-        At least one of the suggested users or groups must be selected to finish setting up the criteria. A checkmark appears to the left of the selected user and group to indicate that it has been selected.
+        You must select at least one of the suggested users or groups to finish setting up the criteria. A checkmark appears to the left of the selected user and group to indicate that it has been selected.
 
         ![](../../../../assets/HCL_Content_Reporting_Owner_Criteria.png)
     
@@ -52,9 +52,9 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
         When you select the **Author** criterion, four input fields appear: **User attribute**, **Users**, **Group attribute** and **Groups**.
 
-        Selecting any attribute from user or group attributes enables the **Users** or **Groups** respectively, a typeahead input field where you can select the users or groups as author of the items you want included in your report. The list of matched users or groups is displayed as auto-suggested options according to the user or group attribute you select and input value as you type. Only the suggested users or groups are considered valid inputs.
+        Selecting any attribute from user or group attributes enables the **Users** or **Groups** field respectively. **Users** and **Groups** are a type-ahead input field where you can select the users or groups as author of the items you want included in your report. The list of matched users or groups is displayed as auto-suggested options depending on the selected user or group attribute and the input value as you type. Only the suggested users or groups validvalues.
 
-        At least one of the suggested users or groups must be selected to finish setting up the criteria. A checkmark appears to the left of the selected user and group to indicate that it has been selected.
+        You must select at least one of the suggested users or groups to finish setting up the criteria. A checkmark appears to the left of the selected user and group to indicate that it has been selected.
 
         ![](../../../../assets/HCL_Content_Reporting_Author_Criteria.png)
 
