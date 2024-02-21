@@ -17,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
+- Web Content Manager - New attributes for Owners and Authors in Content Reporting
 - Web Content Manager - Resuming bulk updates in Content Reporting 
 
 **Digital Experience 9.5 Container Version**
