@@ -14,6 +14,7 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.instant
+    - navigation.prune
     - search.highlight
     - search.share
     - search.suggest
@@ -41,11 +42,12 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - attr_list
+  - md_in_html
   - pymdownx.tabbed:
       alternate_style: true 
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       title: On this page
 
@@ -72,6 +74,9 @@ edit_uri: edit/main/docs
 # Customization
 extra_css:
   - assets/stylesheets/style.css
+
+extra_javascript:
+  - javascripts/extra.js
 
 plugins:
   - awesome-pages
