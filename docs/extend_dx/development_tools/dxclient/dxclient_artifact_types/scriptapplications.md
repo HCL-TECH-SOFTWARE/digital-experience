@@ -203,6 +203,7 @@ contentRoot <value>
 -   `mainHtmlFile` is mandatory.
 -   The outputfile for pull will be generated inside store/outputFiles/sp-pull-output.
 -   When prebuiltZip is specified, the main HTML file path must be relative to the top-level directory in the compressed file.
+-   Use `wcmContentId` to add or update an existing Script Application into an active project. If you are adding a new script application into the project , use either \(a\) `wcmContentPath` or \(b\) both `wcmContentName` and `wcmSiteArea` along with `projectContext`.
 
 Command options passed through the command line will override values set in the config.json file.
 
