@@ -1,17 +1,17 @@
 # Creating the promotional text page
 
-This roadmap describes how to generate the promotional text page component of the design from an HTML prototype. The promotional text page component is used to briefly describe something on your site.
+This roadmap describes how to create the promotional text page component of the design from an HTML prototype. The promotional text page component briefly describes something on your site.
 
 ## Who should use this roadmap
 
-You are a developer on the technical team that is tasked with creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of generating the promotional text page component. The promotional text component is used for short summaries about a web document.
+You are a developer on the technical team that is tasked with creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of creating the promotional text page component. The promotional text component provides short summaries about a web document.
 
-![HTML prototype of the home page with two promotional text page components highlighted. Content authors customize the promotional text page component after they add it to a page. So the same promotional text page component can be added multiple times to show different text - even on the same page!](../_img/promotional.jpeg)
+![HTML prototype of the home page with two promotional text page components highlighted. Content authors customize the promotional text page component after they add it to a page. Thus, the same promotional text page component can be added multiple times to show different text, even on the same page](../_img/promotional.jpeg)
 
 
-# Creating your promotional text page component
+# Creating the promotional text page component
 
-Ensure that your design library exists, for example, Greenwheels Design. If the library does not exist, more topic information about creating a design library can be found in our product base documentation.
+Ensure that your design library exists, for example, Greenwheels Design. If the library does not exist, more topic information about creating a design library can be found in the product base documentation.
 
 1.  Click the **Applications menu** icon. Then, click **Content** \> **Web Content Authoring**.
 
@@ -19,11 +19,11 @@ Ensure that your design library exists, for example, Greenwheels Design. If the 
 
 3.  Click **Generate** \> **Page Component**.
 
-    1.  Select Teaser as the template type.
+    1.  Select **Teaser** as the template type.
 
-    2.  Enter a page component name for your teaser.
+    2.  Enter a page component name for the teaser.
 
-        For example, type Promotional Text.
+        For example, type ``Promotional Text``.
 
     3.  Ensure that your design library is selected.
 
@@ -39,21 +39,21 @@ Ensure that your design library exists, for example, Greenwheels Design. If the 
 
 6.  Click **Manage Elements**.
 
-7.  Delete all of the listed default elements before you create a customized element for the page component.
+7.  Delete all the listed default elements before you create a customized element for the page component.
 
 8.  Create a text element:
 
-    1.  Select Text as the **Element type**.
+    1.  Select **Text** as the **Element type**.
 
-    2.  Enter a name for your element.
+    2.  Enter a name for the element.
 
-        For example, type promotional_text.
+        For example, type ``promotional_text``.
 
     3.  Click **Add**.
 
     4.  Click **OK**.
 
-    5.  Click the drop-down menu on the **Save and Close** button. Then, select **Save and Read**.
+    5.  Click the menu for the **Save and Close** button. Then, select **Save and Read**.
 
 9.  Click **Apply Author Template** to update the content associated with this authoring template.
 
@@ -97,7 +97,7 @@ Ensure that your design library exists, for example, Greenwheels Design. If the 
 
     If you plan to translate your promotional text, you can add the translations to the page component.
 
-18. In this simple Greenwheels example, you can delete styles page component:
+18. In this simple Greenwheels example, you can delete the styles page component:
 
     **your_design_library** \> **Components** \> **your_page_component** \> **Styles**. For example, click **Greenwheels Design** \> **Components** \> **Promotional Text** \> **Styles**.
 
@@ -106,5 +106,5 @@ Ensure that your design library exists, for example, Greenwheels Design. If the 
 20. Click **Close**.
 
 
-The content author can now add the promotional text page component to the home page. Then, the author can enter the promotional text.
+After you complete this procedure, the content author can add the promotional text page component to the home page. Then, the author can enter the promotional text.
 
