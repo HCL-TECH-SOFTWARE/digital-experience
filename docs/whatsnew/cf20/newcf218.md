@@ -50,10 +50,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Site Manager - Resizable navigation panel 
 
 === "Containers"
-    In the Site Manager, you can now control the size of your navigation panel. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
+    In the Site Manager, you can now control the size of your side toolbar. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
 
 === "On-Premises"
-    In the Site Manager, you can now control the size of your navigation panel. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
+    In the Site Manager, you can now control the size of your side toolbar. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
 
 ### New DXClient repository in GitHub and Harbor
 
