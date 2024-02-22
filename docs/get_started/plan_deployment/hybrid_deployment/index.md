@@ -12,7 +12,7 @@ The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topi
 
 -   The on-premises platform and the container platform must be at the same CF level.
 -   HCL Digital Experience V9.5 CF198 or a later release is deployed to supported on-premises platforms in a standalone, cluster, or farm topology. See [Roadmaps to deploy your Digital Experience 9.5 system](../traditional_deployment/roadmaps/index.md) for more information.
--   Practitioner Studio is enabled in the Digital Experience 9.5 CF198 or a installation. See [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md) for instructions.
+-   Practitioner Studio is enabled in the Digital Experience 9.5 CF198 or a later installation. See [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md) for instructions.
 -   HCL DX 9.5 CF198 and later environments can connect securely to cloud deployments using a shared SSL domain. This domain covers both on-premises and cloud components like HCL DX Experience API, Digital Asset Management, and Content Composer. Supported cloud platforms include Red Hat OpenShift, Amazon EKS, Azure AKS, and Google GKE.
 
     For example, mytargetcloud.dx.com and myonprem.dx.com would have the same domain: dx.com.
