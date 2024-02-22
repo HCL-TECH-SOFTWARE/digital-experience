@@ -7,7 +7,7 @@ Take note of the following limitations when using HCL Content Reporting:
 - For the **Expiry date** criteria, no results are returned if the same date is used in the **From** and **To** fields.
 - For the **Word** criteria, a dash (-) is considered a delimiter for splitting the text entered. For example, if you search for "AT-Product-Item", results are returned for three different words: AT, Product, and Item.
 - After generating a report, there is no option to sort using certain fields such as **Location**, **Status**, **Type**, **Expires on**, **Owners**, and **Authors**.
-- For the **Owner** and  **Author** criteria, currently user and group attributes show all attributes including more complex attributes. Searching using more complex attributes, for example, parent, children, groups etc might return no results.
+- For the **Owner** and  **Author** criteria, currently user and group attributes show all attributes including more complex attributes. Searching using more complex attributes, for example, parent, children, groups etc might return no results. For more information about adding attributes, see [Adding attributes](../../../../deployment/manage/security/people/authentication/user_registry/vmm_atts/add_attributes.md).
 
 ## Using the Bulk Updates feature
 
