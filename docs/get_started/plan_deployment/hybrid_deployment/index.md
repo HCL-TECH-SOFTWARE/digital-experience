@@ -4,7 +4,7 @@ You can install HCL Digital Experience 9.5 Container Update CF198 and later. Add
 
 ## Overview
 
-The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topics describe how to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on premises. The resources also explain how to connect to cloud native components, Digital Asset Management, Content Composer, Experience API and related services by using Helm, in a production environment.
+The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topics describe how to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on premises. The resources also explain how to connect to cloud native components, Digital Asset Management, Content Composer, Experience API and related services by using Helm in a production environment.
 
 ![Topology: HCL Digital Experience Hybrid On-premises and Cloud components deployment](../hybrid_deployment/_img/topology_hybrid_onprem_cloud_deployment.png)
 
