@@ -73,7 +73,7 @@ Content managers can trigger bulk updates to update the owners and/or authors of
             ![](../../../../assets/HCL_Content_Reporting_Update_Items_OwnersAuthors.png)
 
         !!!note
-            For the **Replace** action, there are two fields each for users and groups involved in the action: **Add users** and **Remove users**, **Add groups** and **Remove groups**. In the **Add users** or **Add groups** field, enter the name of the user or group you want to add. In the **Remove users** or **Remove groups** field, enter the name of the user or group you want to replace with the name you added in the **Add users** or **Add groups** field.
+            For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter the name of the user or group you want to replace with the name you will add in the **Add users** or **Add groups** field.
             
         ![](../../../../assets/HCL_Content_Reporting_Update_Items_ReplaceOwnersAuthors.png)
         
@@ -83,7 +83,7 @@ Content managers can trigger bulk updates to update the owners and/or authors of
 3. After filling out the fields, click the **Update** button.
     A confirmation dialog box appears. 
     
-4. Verify the number of items you want to update and that you entered the correct user information. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
+4. Note the number of items that will be affected by the update and check that you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_OwnersAuthors.png)
 
