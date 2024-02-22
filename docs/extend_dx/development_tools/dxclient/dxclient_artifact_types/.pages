@@ -16,4 +16,5 @@ nav:
     - personalization.md
     - resourceenvironments.md
     - virtualportals.md
+    - versionCompat.md
     - livesync.md

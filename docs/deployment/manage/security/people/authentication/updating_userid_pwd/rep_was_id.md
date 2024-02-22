@@ -30,5 +30,5 @@ Complete the following steps to replace the WebSphere® Application Server admin
 ???+ info "Related information"
     - [Applying fix packs to your portal](../../../../manage_portal_using_iim/apply_fixpacks.md)
     - [Target environment considerations](../../../../migrate/settingup_target_env/mig_plan_targetenvironment.md)
-
+    - [WebSphere® Integrated Solutions Console](../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

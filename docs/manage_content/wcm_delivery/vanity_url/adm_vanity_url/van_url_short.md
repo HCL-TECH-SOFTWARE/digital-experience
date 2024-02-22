@@ -78,4 +78,5 @@ To be able to use such short vanity URLs, you must use a web server. For details
     - [IBM HTTP Server](https://www.ibm.com/cloud/websphere-application-server)
     - [Apache mod\_rewrite](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html)
     - [Apache mod\_proxy](http://httpd.apache.org/docs/2.2/mod/mod_proxy.html)
+    - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)
 

@@ -2,13 +2,19 @@
 
 Website creators can use Site Builder to create sites or sections of a site based on the Site Builder templates installed on the HCL Portal server.
 
-Assign all website creators the Contributor role for the Site Builder Template library and allow them to create their own content libraries.
+Creators must have the following access rights:
+
+- User access to the Content Root page where they want to create new sites
+- Contributor access to the Site Build Template library
+- Contributor rights to source content library for their new sites and sections
+- Editor rights to target content library for their new sites and sections
+- Administrator access to the Site Builder portlet
+
+## Assigning creators User access to Content Root pages
 
 1.  Log in to the portal as an administrator.
 
-2.  Click **Administration**.
-
-3.  In the navigation tree, click **Access** \> **Resource Permissions**.
+2.  In the Practitioner Studio, go to **Administration > Security > Resource Permissions**.
 
     1.  Click **Pages** on the **Select Resource Type** view.
 
@@ -30,7 +36,13 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
     10. Repeat this process for each necessary page.
 
-4.  Open portal administration and click **Portal Content** \> **Web Content Libraries**.
+## Assigning creators Editor access for Web Content Libraries
+
+### Assigning Contributor rights to the Site Build Template library
+
+1.  Log in to the portal as an administrator.
+
+2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the Site Builder Template Library.
 
@@ -46,7 +58,11 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
     7.  Click **Apply** and **Done**.
 
-5.  In the navigation tree, click **Portal Content** \> **Web Content Libraries**.
+### Assigning Contributor rights to the source content library for new sites and sections
+
+1.  Log in to the portal as an administrator.
+
+2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
 
     1.  Browse to the library that the users and groups need to use as the source for initial content and supporting assets for their new sites and sections.
 
@@ -64,9 +80,13 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
     8.  Repeat this process for all necessary libraries.
 
-6.  In the navigation tree, click **Portal Content** \> **Web Content Libraries**.
+### Assigning Editor rights to an existing target content library for new sites and sections
 
-    1.  Browse to the library that the users and groups need to use as the existing content library for their new sites and sections.
+1.   Log in to the portal as an administrator.
+
+2.  In the Practitioner Studio, go to **Web Content > Web Content Libraries**.
+
+    1.  Browse to the library that the users and groups need to use as the target content library for their new sites and sections.
 
     2.  Click the **Set Permissions** icon.
 
@@ -82,13 +102,17 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
     8.  Repeat this process for all necessary libraries.
 
-7.  In the navigation tree, click **Portlet Management** \> **Portlets**.
+## Assigning creators Administrator access to the Site Builder portlet
+
+1.  Log in to the portal as an administrator.
+
+2.  In the Practitioner Studio, go to **Administration > Applications > Portlets**.
 
     1.  Search for **Site Builder**.
 
     2.  Click the **Access to Portlet** icon.
 
-    3.  For the **Administrative Role**, click the **Edit Role** icon
+    3.  For the **Administrative Role**, click the **Edit Role** icon.
 
     4.  Add Users and Groups and click **OK**.
 

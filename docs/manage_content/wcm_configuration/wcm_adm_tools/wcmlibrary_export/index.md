@@ -67,4 +67,4 @@ Before you begin, create an empty shared directory to hold the exported web cont
     - [Resetting the web content event log](../wcm_config_reset_event_log.md)
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Staging to production list](../../../../deployment/manage//staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
-
+    - [WebSphere® Integrated Solutions Console](../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

@@ -43,13 +43,14 @@
     box-shadow: none;
 	
 }
-/*White border line for Search text box*/
+/*White border line for Search text box
 .md-search {
     position: relative;
     border-color: white;
     border-style: solid;
     border-width: 1px;
 }
+*/
 
 .md-tabs{
     background-color: #212121;
@@ -122,7 +123,6 @@ margin-right: 150px;
 text-align: center;
 
 }
-
 
 .md-banner--warning {
     background: var(--md-typeset-mark-color) !important;

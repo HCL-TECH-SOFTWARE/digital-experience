@@ -36,3 +36,10 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
     -   For example, the other path might be: /wcmextension;/jsp/html/general/UpdateItem.jsp. If you changed the context root to mynewcontext, change the old path to /mynewcontext/wcmextension;/jsp/html/general/UpdateItem.jsp.
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
+
+
+
+

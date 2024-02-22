@@ -26,3 +26,7 @@ Attributes:
     Returns: [Properties](themeopt_el_bean_prop.md); it can be null if not found.
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
+
