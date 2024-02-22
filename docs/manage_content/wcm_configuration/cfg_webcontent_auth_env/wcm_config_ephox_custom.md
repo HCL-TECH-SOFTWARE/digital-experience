@@ -117,10 +117,10 @@ As of CF208, the TinyMCE editor is enabled out of the box.
 ???+ info "Related information"
     - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 
+## Enabling Textbox I/O editor
+
 !!!warning
     The Textbox.io component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See [Deprecated features](../../../whatsnew/deprecated_features.md) for more information.
-
-## Enabling Textbox I/O editor
 
 1. To enable the new Textbox I/O editor fix using HCL Digital Experience CF18 or later, run this configuration process:
 
