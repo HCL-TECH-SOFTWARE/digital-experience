@@ -73,12 +73,12 @@ Content managers can trigger bulk updates to update the owners and/or authors of
             ![](../../../../assets/HCL_Content_Reporting_Update_Items_OwnersAuthors.png)
 
         !!!note
-            For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter any input according to the selected attribute of the user or group you want to replace with the name you will add in the **Add users** or **Add groups** field.
+            For the **Replace** action, there are two fields each for users and groups involved in the action: **Remove users** and **Remove groups**, **Add users** and **Add groups**. In the **Remove users** or **Remove groups** field, enter a value according to the selected attribute of the user or group you want to replace with the value you will add in the **Add users** or **Add groups** field.
             
         ![](../../../../assets/HCL_Content_Reporting_Update_Items_ReplaceOwnersAuthors.png)
         
-    - In the **User attribute** field, select any user attribute to enable **Users** field. In the **Users** field, enter any input according to the selected attribute of the user to be involved in the selected action. This field is a type-ahead input field that displays a list of suggested users according to the input and selected user attribute. Only suggested users are valid.
-    - You can also select any **Group attribute** to enable **Groups** field. In the **Groups** field, enter any input according to the selected attribute of the group to be involved in the selected action. This field is a type-ahead input field that displays a list of suggested groups according to the input and selected group attribute. Only suggested groups are valid.
+    - In the **User attribute** field, select any user attribute to enable **Users** field. In the **Users** field, enter a value according to the selected attribute of the user to be involved in the selected action. This field is a type-ahead input field that displays a list of suggested users according to the input and selected user attribute. Only suggested users are valid.
+    - You can also select any **Group attribute** to enable **Groups** field. In the **Groups** field, enter a value according to the selected attribute of the group to be involved in the selected action. This field is a type-ahead input field that displays a list of suggested groups according to the input and selected group attribute. Only suggested groups are valid.
 
 3. After filling out the fields, click the **Update** button.
     A confirmation dialog box appears. 
