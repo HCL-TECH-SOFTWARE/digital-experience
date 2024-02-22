@@ -28,5 +28,5 @@ To install HCL Digital Experience 9.5 Container Update CF198 and later:
 
 1. Configure the network for the on-premises DX 9.5 CF198 or later deployment so that the HCL DX 9.5 Container Update CF198 or later components are accessible externally from the Kubernetes or OpenShift platform cluster. See [Configure Networking](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md) in the Helm Planning sections of the Help Center.
 2. Set the Core application deployment parameter in your ``custom-values.yaml`` file to `false`. See [Planning your container deployment using Helm](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#custom-value-files) in the Help Center for more information.
-3. Proceed by following configuration instructions** listed in  [Prepare configuration](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md).
+3. Proceed by following configuration instructions listed in [Prepare configuration](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md).
 
