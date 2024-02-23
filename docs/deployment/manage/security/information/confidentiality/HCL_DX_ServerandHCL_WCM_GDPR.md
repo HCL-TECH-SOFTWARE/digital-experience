@@ -1,7 +1,7 @@
-# HCL Digital Experience Server and HCL Web Content Manager - information related to GDPR (General Data Protection Regulation)
+# HCL DX Server and HCL Web Content Manager - Information related to GDPR
 
 !!! Important
-    Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation. Clients are solely responsible for obtaining advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulations that may affect the clients’ business and any actions the clients may need to take to comply with such laws and regulations.
+    Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation (GDPR). Clients are solely responsible for obtaining advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulations that may affect the clients’ business and any actions the clients may need to take to comply with such laws and regulations.
 
 The products, services, and other capabilities described herein are not suitable for all client situations and may have restricted availability. HCL does not provide legal, accounting, or auditing advice or represent or warrant that its services or products will ensure that clients are in compliance with any law or regulation.
 

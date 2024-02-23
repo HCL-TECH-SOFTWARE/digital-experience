@@ -6,7 +6,10 @@ In the WebSphere® Integrated Solutions Console, the portal Auditing Service is 
 
 The section about available events lists and describes the events that are available for auditing.
 
-The audit log output is written to the audit log file. No other log messages are written to this file. For an explanation of the contents of the audit log file, refer to the section about the audit log file.
+The audit log output is written to the audit log file. No other log messages are written to this file. For an explanation of the contents of the audit log file, refer to the sections about the audit log file. For example:
+
+- [Auditing](../../../../../monitoring/sec_audit.md)
+- [Logging and auditing events](../../../../../../../build_sites/site_analytics/portlet_load_monitoring/plmt_logging.md)
 
 ## Auditing service configuration
 
@@ -14,30 +17,31 @@ By default, the audit log service is disabled. Therefore, the service is loaded,
 
 ### audit.service.enable = (false)
 
-This parameter is the global switch. Set this parameter to true to turn on the service. Set this parameter to false to turn off the service. The default setting is false.
+This parameter is the global switch. Set this parameter to `true` to turn on the service. Set this parameter to `false` to turn off the service. The default setting is `false`.
 
-The actual log file access of the service can be configured by using the following property:
+
+Use the following property to configure the actual log file access service:
 
 **audit.service.enable = (false)**
 
-This parameter is the global switch. Set this parameter to true to turn on the service. Set this parameter to false to turn off the service. The default setting is false.
+This parameter is the global switch. Set this parameter to `true` to turn on the service. Set this parameter to `false` to turn off the service. The default setting is `false`.
 
-The actual log file access of the service can be configured by using the following property:
+Use the following property to configure the actual log file access service:
 
 ```
 audit.logFileName = log/audit_$APPSERVER_NAME_$CREATE_TIME.log
 ```
 
-You can use the auditing service to have the transaction ID written to the audit log file. The project ID can also be written to the audit log file. As these IDs can be long and might not be required in every environment, you can disable the inclusion of the IDs.
+You can use the auditing service to have the transaction ID written to the audit log file. The project ID can also be written to the audit log file. Because these IDs can be long and might not be required in every environment, you can disable the inclusion of the IDs.
 
 ### audit.showTransactionID.enable = (true)
 
-Use this property to disable transaction IDs in the audit log. Change the value to false. The default value is true.
+Use this property to disable transaction IDs in the audit log. Change the value to `false`. The default value is `true`.
 
 ### audit.projects.enable = (true)
 
-Use this property to disable project IDs in the audit log. Change the value to false. The default value is true.
-You determine the events that you want to be logged by enabling the appropriate properties as required. Set the events that you want to enable to the value true. The following groups of events are defined:
+Use this property to disable project IDs in the audit log. Change the value to `false`. The default value is `true`.
+You determine the events that you want to be logged by enabling the appropriate properties as required. Set the events that you want to enable to the value `true`. The following groups of events are defined:
 
 ```
 	audit.groupEvents.enable
@@ -60,9 +64,9 @@ You determine the events that you want to be logged by enabling the appropriate 
 
 ```
 
-The default value for all of these properties is false. That means that no events are logged by default, even if you turned on the service by setting the property audit.service.enable to true.
+The default value for all of these properties is `false`. That means that no events are logged by default, even if you turned on the service by setting the property audit.service.enable to `true`.
 
-To enable one or more groups of events, change the default value of the appropriate audit.eventGroup.enable property to true.
+To enable one or more groups of events, change the default value of the appropriate **audit.eventGroup.enable** property to `true`.
 
 ## Available events
 This list shows the events that you can log with the auditing service. They are listed by the groups in which they are available. If you enable one group, all events in that group are logged.
@@ -113,7 +117,7 @@ This list shows the events that you can log with the auditing service. They are 
 The audit log file contains one audit log message per line. All log messages start with a time stamp, followed by the optional transaction ID, the message code, and the event message. Each event message contains the following information:
 
 - The user ID of the user who triggered the audit event
-- Additional information about the event itself.
+- Additional information about the event itself
 
 Events for actions that run in a transaction are written to the log file when the transaction is committed. If the transaction is rolled back, no event messages are written to the log file.
 
