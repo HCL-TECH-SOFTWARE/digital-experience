@@ -1,4 +1,4 @@
-# HCL DX Early Access Program Milestone 1
+# HCL DX Early Access Program Milestones 1 and 2
 
 This topic presents information and instructions for use and evaluation of the Open Liberty Portlet Container, an Early Access Program component.
 
@@ -22,7 +22,7 @@ The Open Liberty Portlet Container runs Java portlet workloads in Kubernetes. Th
 
 ![Open Liberty Portlet Container Architecture](../images/open_liberty_portlet_container.png)
 
-In the Early Access Program Milestone 1 version, the underlying technologies and version levels used in the Open Liberty Portlet container are:
+In the Early Access Program Milestones 1 and 2, the underlying technologies and version levels used in the Open Liberty Portlet container are:
 
 - Open Liberty 22.0.0.6 with JavaEE 8
 - [Java 11.0.0.21](https://www.oracle.com/java/technologies/javase/11-0-21-relnotes.html)
@@ -47,13 +47,13 @@ This topic provides the limitations and restrictions when using the Early Access
 
 The Early Access version of the Open Liberty Portlet Container is provided for evaluation use in a non-production environment. This version is not supported through the HCL product support channels. Go to HCL Digital Experience Early Access Q&A Forum for instructions on how to provide and discuss your feedback. 
 
-The Early Access Milestone 1 Open Liberty Portlet Container has the following limitations:
+The Early Access Milestones 1 and 2 Open Liberty Portlet Container have the following limitations:
 
 - **No persistence of configuration**: To install portlet applications or change the configuration in a non-temporary way, you must create your own image from the HCL-supplied one with your applications and settings. For steps on how to create your image, see [Deploying and configuring Open Liberty Portlet Container](deploy_config_eap.md). This limitation is a design decision and it may continue into the released product, depending on the customer feedback.
 - **Only unauthenticated access to portlets** is available over WSRP.
 - **JavaServer Faces (JSF) and Struts portlets cannot be used** on the Open Liberty Portlet Container.
 
-The Early Access Milestone 1 Open Liberty Portlet Container has the following restrictions based on the Helm charts supplied and what has been tested by HCL:
+The Early Access Milestones 1 and 2 Open Liberty Portlet Container have the following restrictions based on the Helm charts supplied and what has been tested by HCL:
 
 - Open Liberty Portlet Container should be installed into an existing DX Kubernetes namespace where the deployment is set up for non-production use.
 - Only a single Open Liberty Portlet Container pod should be created per deployment.

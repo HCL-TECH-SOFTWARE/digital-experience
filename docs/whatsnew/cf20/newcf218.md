@@ -8,7 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Site Manager - Resizable navigation panel 
 - DXClient - New repositories in GitHub and Harbor
 - DX Search - Configuring DX Search and Improving Search Quality documentation
-- HCL DX APIs in HCL Volt MX Foundry
+<!-- - HCL DX APIs in HCL Volt MX Foundry -->
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -17,7 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-- Web Content Manager - New attributes for Owners and Authors in Content Reporting
+- Web Content Manager - New filters to enhance search for users and groups
 - Web Content Manager - Resuming bulk updates in Content Reporting 
 
 **Digital Experience 9.5 Container Version**
@@ -50,10 +50,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Site Manager - Resizable navigation panel 
 
 === "Containers"
-    In the Site Manager, you can now control the size of your navigation panel. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
+    In the Site Manager, you can now control the size of your side toolbar. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
 
 === "On-Premises"
-    In the Site Manager, you can now control the size of your navigation panel. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
+    In the Site Manager, you can now control the size of your side toolbar. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
 
 ### New DXClient repository in GitHub and Harbor
 
@@ -70,11 +70,11 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 === "On-Premises"
     The topics [Configuring DX Search](../../build_sites/search/cfg_dx_search/index.md) and [Improving search quality in HCL Digital Experience](../../build_sites/search/improving_search_quality/index.md) are available in the DX Help Center. 
-
+<!--
 ### HCL DX APIs in HCL Volt MX Foundry
 
 (No doc yet)
-
+-->
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
 === "Containers"
@@ -92,7 +92,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Digital Experience 9.5 Version
 
-### Web Content Manager - New attributes for Owners and Authors in Content Reporting
+### Web Content Manager - New filters to enhance search for users and groups
 
 === "Containers"
     (No doc yet)
