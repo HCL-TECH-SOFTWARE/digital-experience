@@ -129,7 +129,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Digital Asset Management - Performance enhancement for DAM Staging Mismatch and Resync
 
 === "Containers"
-    Starting CF218, there is no longer a 30-minute limitation for the process to find the staging mismatch. The recommended `maxRecordsToCompare` value is 1000 but you can still compare records of more than 1000. For more information, see [DAM Staging Mismatch and Resync](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
+    Starting CF218, there is no longer a 30-minute limitation for the process to find the staging mismatch. The recommended `maxRecordsToCompare` value is 1000 but you can still compare records more than 1000. For more information, see [DAM Staging Mismatch and Resync](../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md).
 
 ## Digital Experience Early Access Program
 
