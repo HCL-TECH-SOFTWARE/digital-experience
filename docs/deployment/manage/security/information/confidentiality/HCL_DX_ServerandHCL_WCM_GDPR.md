@@ -42,3 +42,7 @@ Finally, here are a few hints regarding the handling of users and content:
 - **Removing cached instance of a user from DB tables**: The easiest way to ensure that cached instances are flushed is to run the documented "CleanupUsers.xml" xmlaccess task. For more information, see [How to fix Portal Access Control settings after LDAP data has changed](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0069350).
 
 - **Changing the ownership for WCM content created by a user**: WCM only refers to the user's distinguished name as stored in the LDAP. No content are lost in WCM when the creator is deleted from the LDAP repository. If you want to replace the assigned content creator, or a specific role, of a user before deleting that user from the LDAP, you can use the "MemberFixer". For more information, see [How to use the member fixer task](../../../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer.md).
+
+
+???+ info "Related information"
+    - [Auditing Service](../../../config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/pac_svc/AuditingService.md)
