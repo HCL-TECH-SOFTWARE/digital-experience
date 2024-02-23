@@ -8,7 +8,7 @@ The products, services, and other capabilities described herein are not suitable
 
 HCL Digital Experience (DX) Server and HCL Web Content Manager are on-premise products installed and operated by the customer. In this scenario, HCL is neither a controller nor a processor as defined by the GDPR.
 
-IBM WebSphere and DB2 software supports both, controllers and processors, with their available features in preparing for GDPR readiness. For IBM WebSphere Application Server refer to the [WebSphere Application Server - Considerations for GDPR Readiness](https://www-01.ibm.com/support/docview.wss?uid=swg22016599).
+IBM WebSphere and DB2 software supports both controllers and processors, with their available features in preparing for GDPR readiness. For IBM WebSphere Application Server refer to the [WebSphere Application Server - Considerations for GDPR Readiness](https://www-01.ibm.com/support/docview.wss?uid=swg22016599).
 
 Encryption of data at rest activities can typically be configured in the database and other backends used with HCL DX Server and HCL Web Content Manager. For more information, see [how DB2 native encryption works](https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.admin.sec.doc/doc/c0061758.html).
 

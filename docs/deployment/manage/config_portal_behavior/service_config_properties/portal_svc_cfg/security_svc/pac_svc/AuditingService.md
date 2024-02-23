@@ -6,10 +6,7 @@ In the WebSphere® Integrated Solutions Console, the portal Auditing Service is 
 
 The section about available events lists and describes the events that are available for auditing.
 
-The audit log output is written to the audit log file. No other log messages are written to this file. For an explanation of the contents of the audit log file, refer to the sections about the audit log file. For example:
-
-- [Auditing](../../../../../monitoring/sec_audit.md)
-- [Logging and auditing events](../../../../../../../build_sites/site_analytics/portlet_load_monitoring/plmt_logging.md)
+The audit log output is written to the audit log file. No other log messages are written to this file. For an explanation of the contents of the audit log file, refer to the section about the audit log file.
 
 ## Auditing service configuration
 
@@ -20,13 +17,13 @@ By default, the audit log service is disabled. Therefore, the service is loaded,
 This parameter is the global switch. Set this parameter to `true` to turn on the service. Set this parameter to `false` to turn off the service. The default setting is `false`.
 
 
-Use the following property to configure the actual log file access service:
+Use the following property to configure the actual log file access of the service:
 
 **audit.service.enable = (false)**
 
 This parameter is the global switch. Set this parameter to `true` to turn on the service. Set this parameter to `false` to turn off the service. The default setting is `false`.
 
-Use the following property to configure the actual log file access service:
+Use the following property to configure the actual log file access of the service:
 
 ```
 audit.logFileName = log/audit_$APPSERVER_NAME_$CREATE_TIME.log
