@@ -78,12 +78,12 @@ Content managers can trigger bulk updates to update the owners and/or authors of
         ![](../../../../assets/HCL_Content_Reporting_Update_Items_ReplaceOwnersAuthors.png)
         
     - In the **User attribute** field, select a user attribute to enable the **Users** field. In the **Users** field, enter a corresponding value for the selected attribute. For example, if you selected the **Job Title** attribute, enter a job title in the **Users** field and all users with that job title appears in the dropdown. Note that this field is a type-ahead input field that displays a list of suggested users according to the input and selected user attribute. Only suggested users are valid.
-    - You can also select a **Group attribute** to enable the **Groups** field. In the **Groups** field, enter a corresponding value for the selected attribute. This field is also a type-ahead input field that displays a list of suggested groups according to the input and selected group attribute. Only suggested groups are valid.
+    - You can also select a **Group attribute** to enable the **Groups** field. In the **Groups** field, enter a corresponding value for the selected attribute. For example, if you selected the **Display Name** attribute, enter a display name in the **Groups** field and all groups with that display name appears in the dropdown. Note that this field is a type-ahead input field that displays a list of suggested groups according to the input and selected group attribute. Only suggested groups are valid.
 
 3. After filling out the fields, click the **Update** button.
     A confirmation dialog box appears. 
     
-4. Note the number of items that will be affected by the update and check that you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog where you can change the incorrect values.
+4. Note the number of items to be affected by the update and check if you entered the correct values for properties to update. If the values are correct, click the **Update** button. Otherwise, you can click **Cancel** and return to the previous dialog box where you can change the incorrect values.
 
     ![](../../../../assets/HCL_Content_Reporting_Update_Confirmation_Dialog_OwnersAuthors.png)
 
