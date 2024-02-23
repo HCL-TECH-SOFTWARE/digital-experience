@@ -16,6 +16,8 @@ To download and import Custom Data Adapter, there are two options:
 
 - For [Helm deployments](../installation/index.md) of HCL Volt MX Foundry, download the the Custom Data Adapter from the [HCL Volt MX Marketplace](https://marketplace.hclvoltmx.com/) and import in the HCL Volt MX Foundry console by going to **API Management > Custom Data Adapters > Import**.
 
+![Import the Custom Data Adapter](../../../../images/MXImportAdapter.png)
+
 !!! note
     Make sure that the version of the Custom Data Adapter matches the version of your HCL DX deployment.
 
@@ -39,17 +41,23 @@ In HCL Volt MX Foundry, set up an [OAuth 2.0 identity provider](https://opensour
 
 To configure a new Service in HCL Volt MX Foundry using the Custom Data Adapter:
 
-1. Refer to the [HCL Volt MX Foundry Documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/ConfigureIntegrationService.html) for instructions. Select the newly imported WCM V2 Custom Data Adapter as the **Service Type**.
+1. Refer to the [HCL Volt MX Foundry Documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/ConfigureIntegrationService.html) for instructions on how to create a new Integration Service. Select the newly imported WCM V2 Custom Data Adapter as the **Service Type**.
 
-2. For the **Server URL**, set the URL to your HCL DX environment. For example, `https://<my DX hostname>/wps/mycontenthandler/wcmrest-v2/`. 
+2. For the **Server URL**, set the URL to your HCL DX environment. For example, `https://<your DX hostname>/wps/mycontenthandler/wcmrest-v2/`. 
 
 3. For **Authentication**, set the Identity provider configured in the [Prepare the HCL Volt MX Foundry environment](#prepare-the-hcl-volt-mx-foundry-environment) section.
 
-In the next section, you can choose from the list of **Operations** to add the WCM REST V2 endpoints.
+4. Confirm by "Save and add Operation"
+
+![Create a Service](../../../../images/MXServiceCreation.png)
+
+In the next section, you can choose from the list of **Operations** to add the WCM REST V2 endpoints. For a detailed description of all available endpoints, please refer to the [WCM V2 API specification](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 ### Testing the Service
 
-In the HCL Volt MX Foundry console, you have the option to test each operation after creating it. You can test an operation by clicking the **Save and Fetch response** button at the bottom of each operation. A new window appears where you can authenticate with your identity provider. The result of the request is logged at the bottom of the console.
+In the HCL Volt MX Foundry console, you have the option to test each operation after creating it. You can test an operation by clicking the **Save and Fetch response** button at the bottom of each operation. A new window appears where you can login to your identity provider. The result of the request is logged at the bottom of the console.
+
+![Test the operation](../../../../images/MXTestOperation.png)
 
 After confirming the request is successful, you can use the WCM REST V2 endpoints in accordance to the Volt MX Integration Service documentation.
 
