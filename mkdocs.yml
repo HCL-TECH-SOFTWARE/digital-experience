@@ -34,6 +34,11 @@ theme:
 
 # Markdown Extensions
 markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_lang_class: true
+      auto_title: false
+      linenums: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -53,7 +58,7 @@ markdown_extensions:
 
 # Copyright
 copyright: >-
-  Copyright &copy; 2023, HCL Technologies Limited - 
+  Copyright &copy; 2019-2024, HCL Technologies Limited - 
   <a href="#__consent">Change cookie settings</a>
 
 extra:
