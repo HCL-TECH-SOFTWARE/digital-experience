@@ -283,6 +283,6 @@ The following search service configuration parameters can be modified to enable 
 
 
 ???+ info "Related information"
-    - [Using the WebSphere Integrated Solutions Console to administer Portal Search](../srtadmsrchadmcnsl.md)
-    - [Hints and tips for improving quality of Portal Search results](../../hint_tips/srrhinttips_improve_quality_search.md)
+    - [Using the WebSphere Integrated Solutions Console to administer Portal Search](../../portal_search/administer_portal_search/srtadmsrchadmcnsl.md)
+    - [Hints and tips for improving quality of Portal Search results](../../portal_search/hint_tips/srrhinttips_improve_quality_search.md)
 

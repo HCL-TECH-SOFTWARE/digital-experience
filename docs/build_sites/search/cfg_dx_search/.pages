@@ -11,3 +11,6 @@ nav:
     - faceted_search.md
     - search_date_range.md
     - dx_search_glossary.md
+    - srtcfgdfltlctsrchcllc.md
+    - Search service configuration parameters: search_service_params
+    - Configuring the Search Center portlet: cfg_searchcenter
