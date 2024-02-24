@@ -4,7 +4,7 @@ This section details the basic usage of the HCL DX Picker.
 
 ## Prerequisite
 
-DX Picker must installed and configured in HCL Digital Experience 9.5 release update CF214 or higher. For instructions on installing DX Picker on supported environments, see the [DX Picker Installation](../installation/index.md) topic.
+DX Picker must be installed and configured in HCL Digital Experience 9.5 release update CF214 or higher. For instructions on installing DX Picker on supported environments, see the [DX Picker Installation](../installation/index.md) topic.
 
 ## Using DX Picker
 
@@ -52,3 +52,42 @@ For the Collection:
 For the Asset:
 
   ![](../../../../assets/HCL_DX_Picker_Asset_Properties.png)
+
+### Previewing an asset
+
+To open the image in Preview mode, click the eye icon next to the asset name.
+
+!!! note
+    You can also access the Preview mode using the Properties panel.
+
+  ![](../../../../assets/HCL_DX_Picker_Asset_Preview_Button.png)
+
+The following actions can be done when in Preview mode:
+
+  ![](../../../../assets/HCL_DX_Picker_Asset_Preview_Component.png)
+
+1. View image renditions.
+
+    To choose the rendition of the image you want to view, click the dropown menu and select the specific rendition.
+
+    
+    For more information on renditions, refer to [Renditions](../../renditions/index.md).
+
+2. Download an image.
+
+    To download the previewed image, click the download icon.
+
+    !!!note
+        Only the source image is downloaded. Renditions are not included when downloading images.
+
+3. Select an image. 
+
+    To select an asset, click the **Select** button. 
+
+4. Navigate between assets.
+
+    To navigate other assets inside a collection, click the previous and next buttons.  
+
+5. Zoom in and out of an image.
+
+    To inspect the image, click the zoom in and zoom out buttons. 

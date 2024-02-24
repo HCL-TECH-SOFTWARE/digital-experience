@@ -34,3 +34,4 @@ Depending on your configuration, the XML configuration interface might not be ab
 
 ???+ info "Related information"
     - [Customizing Collaborative Services user credentials for eTrust SiteMinder](https://help.hcltechsw.com/digital-experience/9.5/collab/i_domi_t_csenvir_user_credential.html)
+    - [WebSphere® Integrated Solutions Console](../../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

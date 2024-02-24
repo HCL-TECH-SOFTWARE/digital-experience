@@ -135,7 +135,7 @@
 }
 
 .dx-hero__content {
-    width: 40%;
+    width: 80%;
     min-width: 520px;
 
 }
@@ -298,7 +298,9 @@
     display: block;
 }
 
-
+.md-banner--warning {
+    background: var(--md-typeset-mark-color) !important;
+}
 
 
 .persona-header {

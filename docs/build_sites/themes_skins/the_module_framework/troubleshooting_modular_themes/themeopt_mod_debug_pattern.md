@@ -6,15 +6,15 @@ Use a pattern to determine an issue within your custom modules. This pattern min
 
 2.  Turn on tracing. With tracing, you can see the specific resources that are aggregated on the page and you can see the location of where an error in the console originates. You can follow the code flow and track the expected values within the code.
 
-3.  Investigate the logs. If the error is not apparent in the client-side console, then investigating the HCL Portal system logs is another likely place to track down an issue. These logs display any server-side errors and tracing that is enabled.
+3.  Investigate the logs. If the error is not apparent in the client-side console, then investigating the HCL Digital Experience (DX) system logs is another likely place to track down an issue. These logs display any server-side errors and tracing that is enabled.
 
     1.  Open the HCL Portal logs in the following locations, [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)//logs/HCL Portal and HCL Web Content Manager/SystemOut.log and [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/logs/HCL Portal and HCL Web Content Manager/SystemErr.log.
 
-    2.  You can enable more tracing through the Enable Tracing portlet in the Administration section of HCL Portal. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Enable Tracing**.
+    2.  You can enable more tracing through the Enable Tracing portlet in the Administration section of HCL DX. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Enable Tracing**.
 
     For more information, see *Logging and tracing*.
 
-4.  Add logging to your resources. The HCL Portal code logs throughout the product for serviceability. However, your custom code might need more logging that is inserted to track down an issue. For client-side code, use a console log statement. A typical console log statement for displaying a value with a label is `console.debug("example value: "+value);`.
+4.  Add logging to your resources. The HCL DX code logs throughout the product for serviceability. However, your custom code might need more logging that is inserted to track down an issue. For client-side code, use a console log statement. A typical console log statement for displaying a value with a label is `console.debug("example value: "+value);`.
 
     Using this code displays a string value. To display the object in the console to see the values that are stored in the object, you can use
 

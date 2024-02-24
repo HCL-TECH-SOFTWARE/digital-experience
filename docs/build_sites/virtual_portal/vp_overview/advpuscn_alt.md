@@ -1,4 +1,4 @@
-# Alternative concepts for virtual portals on HCL Portal
+# Alternative concepts for virtual portals on HCL Digital Experience
 
 Besides virtual portals, another possible configuration may be an alternative for you, depending on your business needs. This setup is referred to as true portals.
 

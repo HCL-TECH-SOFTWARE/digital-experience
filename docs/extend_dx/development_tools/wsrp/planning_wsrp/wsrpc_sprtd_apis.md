@@ -12,6 +12,7 @@ You can use the WSRP implementation in HCL Portal 8.5 to do the following with y
 
     -   The Producer can provide JSR 168 portlets through both WSRP V 1.0 and V 2.0.
     -   The Producer can provide JSR 286 portlets only through WSRP V 2.0.
+    
     The following table shows which provided portlets on a WSRP Producer are available in which WSRP version:
 
     |API to which the portlet complies|Provided by WSRP V 1.0|Provided by WSRP V 2.0|

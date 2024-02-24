@@ -22,3 +22,8 @@ Configure HCL Connections portlets to use single sign-on with SPNEGO.
 When you configure HCL Connections portlets to use single sign-on, you might need to change the Portal realm name to match the one used in HCL Connections.
 -   **[Enabling basic authentication](c_connections_portlets_basic_auth.md)**  
 Configure basic authentication for the HCL Connections portlets. Use basic authentication if you are not using single sign-on for authentication.
+
+
+
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

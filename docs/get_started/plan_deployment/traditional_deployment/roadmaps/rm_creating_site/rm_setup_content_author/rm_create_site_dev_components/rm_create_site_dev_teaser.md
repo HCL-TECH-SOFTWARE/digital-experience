@@ -1,12 +1,12 @@
 # Creating the teaser page
 
-This roadmap describes how to create the teaser page component of the design from an HTML component. The teaser page component is used on the Home, Product, and Events page.
+This roadmap describes how to create the teaser page component of the design from an HTML component. The teaser page component is used on the Home, Product, and Events pages.
 
 ## Who should use this roadmap
 
-You are a developer on the technical team that is tasked with creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of developing the teaser component.
+You are a developer on the technical team that is creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of developing the teaser component.
 
-![HTML prototype of the home page with two teaser page components highlighted.](../../../../../../../images/teaser.jpg)
+![An HTML prototype of the home page with two teaser page components highlighted.](../../../../../../../images/teaser.jpg)
 
 
 # Creating your teaser page component
@@ -19,11 +19,11 @@ Ensure that your design library exists, for example, Greenwheels Design.
 
 3.  Click **Generate** \> **Page Component**.
 
-    1.  Select Teaser as the template type.
+    1.  Select **Teaser** as the template type.
 
     2.  Enter a page component name for your teaser.
 
-        For example, type Teaser.
+        For example, type ``Teaser``.
 
     3.  Ensure that your design library is selected.
 

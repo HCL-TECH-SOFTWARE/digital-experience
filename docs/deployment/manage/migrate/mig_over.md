@@ -23,4 +23,5 @@ For Version 8.5, data, applications, databases, property files, security setting
     -   [Roadmaps for migration](../../../deployment/manage/migrate/planning_migration/rm_migration/index.md)
     -   [Migrating from Portal 8.0.0.1 on WebSphere Application Server 8.5.5.2](../../../deployment/manage/migrate/planning_migration/migration_consideration/migrating_portal8001_WAS8552/index.md)
     -   [What to expect after you complete migration](../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/index.md)
+    -  [WebSphere® Integrated Solutions Console](../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

@@ -16,4 +16,4 @@ The configuration for each service is stored in and accessible for configuration
     -   [Digital Data Connector caches](../../../../../extend_dx/ddc/ddc_cache_tuning/plrf_caches.md)
     -   [Working with the XML configuration interface](../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
     -   [System event logging](../../../troubleshooting/logging_and_tracing/adsyslog.md)
-
+    - [WebSphere® Integrated Solutions Console](../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

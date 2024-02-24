@@ -34,4 +34,7 @@ Resource environment providers use the following properties and values.
     The path to the loading image relative to the theme base URI. The default value is css/images/loading.gif.
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
 

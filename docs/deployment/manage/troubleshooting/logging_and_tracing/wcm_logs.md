@@ -72,5 +72,5 @@ The resulting traces of Virtual Member Manager are written below:
 -   AIX® and Linux™: wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log
 -   Windows™: wp_profile_root\logs\HCL Portal and HCL Web Content Manager\trace.log
 
-
-
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

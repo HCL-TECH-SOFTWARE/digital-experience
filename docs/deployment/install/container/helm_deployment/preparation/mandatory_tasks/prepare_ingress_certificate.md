@@ -8,12 +8,9 @@ To have the HAProxy allow forward requests to your applications, you must provid
 
 Creation of that certificate can be achieved using the following commands for OpenSSL:
 
-```
-# Creation of a private key
-openssl genrsa -out my-key.pem 2048
-                    
-# Creation of a certificate signed by the private key created before
-openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
+```bash
+# Creation of a private key and associated certificate
+openssl req -x509 -newkey rsa:2048 -keyout my-key.pem -out my-cert.pem -days 365 -subj "/CN=my-cert" -nodes
 ```
 
 This provides you with a key and cert file that can be used in the next step, creation of the certificate to your deployment.

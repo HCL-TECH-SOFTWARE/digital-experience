@@ -40,4 +40,5 @@ Please contact your system administrator.
     - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Using the AJAX proxy in portlets](../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/http_ajax_proxy/programming_model_ajax_proxy/ajax_proxy_prgrmdl_inplt.md)
     - [IBM DB2 Content Manager publication library](https://support.hcltechsw.com/csm)
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

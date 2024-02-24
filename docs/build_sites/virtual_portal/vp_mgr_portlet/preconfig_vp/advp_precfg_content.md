@@ -59,7 +59,7 @@ Depending on the functionality that you want to make available, more content is 
     WebSphere:assetname=my\_VirtualPortal.zip:my\_InitVirtualPortalScript.xml
     ```
 
-    where my\_VirtualPortal.zip is the name of your asset and my\_InitVirtualPortalScript.xml is the name of a file inside the asset. Do not update the default asset VirtualPortal.zip installed with HCL Portal. Instead, create and maintain a separate second asset independent of the default asset VirtualPortal.zip.
+    where my\_VirtualPortal.zip is the name of your asset and my\_InitVirtualPortalScript.xml is the name of a file inside the asset. Do not update the default asset VirtualPortal.zip installed with HCL Digital Experience. Instead, create and maintain a separate second asset independent of the default asset VirtualPortal.zip.
 
 5.  If you want to create only an empty virtual portal with no content, you can specify the value for this parameter as follows: `WebSphere:assetname=VirtualPortal.zip:InitEmptyVirtualPortal.xml`.
 
@@ -73,4 +73,5 @@ Depending on the functionality that you want to make available, more content is 
     - [Using the Virtual Portal Manager administration portlet](../../vp_mgr_portlet/advp_vpmgr_use.md)
     - [Filling a virtual portal with content](../../adm_vp_task/vp_adm_task/advp_tsk_fill_content.md)
     - [Migration: Virtual portals](../../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_vp.md)
+    - [WebSphere® Integrated Solutions Console](../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

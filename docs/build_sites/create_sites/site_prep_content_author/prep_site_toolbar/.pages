@@ -13,6 +13,7 @@ nav:
     - Customize_Site_Manager_User_Interface.md
     - Controlling the visibility of the site toolbar and toolbar tabs: controlling_visibility_site_toolbar
     - wcm_mngpages_disabletool.md
+    - delete_page_and_contents.md
     - wcm_mngpages_disable_lang_switch.md
 
 

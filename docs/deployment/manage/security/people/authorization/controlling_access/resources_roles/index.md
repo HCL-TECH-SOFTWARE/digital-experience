@@ -14,3 +14,9 @@ Learn about sensitive operations for resources and the roles that are required t
 The administrative user who installs HCL Digital Experience has a default set of access rights.
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
+
+
+

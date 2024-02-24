@@ -246,6 +246,9 @@ Get an overview of how you prepare your portal system for remote search service.
     !!!note "Cluster note"
         In a clustered environment, complete this step on the primary node only.
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
 <!--
 **Parent topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md)
 -->

@@ -1,31 +1,29 @@
-# Persistent Volumes
+# Persistent volumes
 
-This topic provides details covering the PersistentVolumes \(PVs\) and related operations considerations in storing data for DX 9.5 stateful applications.
+This topic provides details covering the PersistentVolumes (PVs) and related operations considerations in storing data for DX 9.5 stateful applications.
 
-Digital Experience 9.5 container-based stateful applications \(DX 9.5 Core, Digital Asset Management, and Persistence\) require PersistentVolumes \(PVs\) to store their data. Refer to the [Deploy DX 9.5 applications to container platforms using Helm](application_architecture.md) topic for a description of the DX 9.5 Applications details.
+Digital Experience 9.5 container-based stateful applications require PVs to store their data. Refer to the [Deploy DX 9.5 applications to container platforms using Helm](application_architecture.md) topic for a description of the DX 9.5 application details.
 
-As Kubernetes and OpenShift Pods do not have their own persistent file storage, the use of PVs is a must. For more information on PVs, consult the [Kubernetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
+You must use PVs because Kubernetes Pods do not have their own persistent file storage. For more information about PVs, see the [Kubernetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
-!!! note
-    You need to consider the type of PVs before you perform an installation. The type of volumes used depends on the type of deployment you are performing. If you are using only `ReadWriteOnce` \(RWO\) persistent volumes for all applications, you will not be able to scale them up to multiple Pods.
+You use two types of PersistentVolumes with DX: [`ReadWriteOnce (RWO)` and `ReadWriteMany (RWX)`](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes).
+
 
 ## Core
 
-The DX 9.5 Core application requires multiple PersistentVolumes \(PVs\) of different types and sizes for its operation. From an application perspective, there are three different things that need to be persisted:
+The DX 9.5 Core application requires multiple PVs of different types and sizes to operate. From an application perspective, there are three items that have to persist:
 
--   Profiles \(called `wp_profile` and `cw_profile`\)
--   Logs
--   Transaction logs
+-   Profiles (RWX) (including `wp_profile` and `cw_profile`)
+-   Logs (RWO)
+-   Transaction logs (RWO)
 
-While the profile needs to be shared between all DX 9.5 Core Pods, the logs and transaction logs are per Pod and not shared. This means that the persistent volume used for the profile must be `ReadWriteMany` \(RWX\).
+Although the profile must be shared between all DX 9.5 Core pods, the logs and transaction logs are per pod and not shared. This shared status means that the persistent volume for the profile must be `ReadWriteMany` (RWX).
 
-The persistent volumes used for logs and transaction logs are established as `ReadWriteOnce` \(RWO\) for proper operations performance.
+The persistent volumes for logs and transaction logs are established as `ReadWriteOnce` (RWO) for correct operation performance.
 
-For example, in a DX 9.5 Core deployment:
+For example, in a DX 9.5 Core deployment, to deploy one Core pod, 3 PVs are required. To deploy two more Core pods, the number of required PVs increases by two, resulting in 5 required PVs. The additional pods share the existing profile PV with the first Pod, but require their own log and transaction log PVs.
 
-To deploy one Core Pod, 3 PVs will be needed. To deploy two Core Pods, the number of required PVs increases by two, resulting in 5 PVs needed, since the second Pod shares the existing profile PV with the first Pod, but requires its own log and transaction log PVs.
-
-The following formula example can be used to calculate the required PV count per Core Pods to be deployed:
+You can use the following formula example to calculate the required PV count per Core Pods to be deployed:
 
   ```
   # Formula to calculate PV count
@@ -37,21 +35,21 @@ In typical operations, the persistent volumes for logs and transaction logs are 
 
 ## Digital Asset Management
 
-The Digital Asset Management \(DAM\) application requires one \(1\) PV for storing binary asset data. This persistent volume is shared between all Digital Asset Management Pods. The PV used must be `ReadWriteMany (RWX)`.
+The Digital Asset Management (DAM) application requires one PV for storing binary asset data. This persistent volume is shared between all Digital Asset Management pods. The PV used must be configured as `ReadWriteMany (RWX)`.
 
-## Persistence
+## Persistence nodes
 
-Persistence consists of at least two Pods. One which acts as a read/write primary node, and at least one that acts as a read-only fallback.
+All persistence node pods work with `ReadWriteOnce` (RWO) persistent volumes because there they don't share storage among the Pods. Therefore, the minimum required number of PVs is one per persistence node.
 
-All Persistence Pods work with `ReadWriteOnce` \(RWO\) persistent volumes, since there is no sharing of storage between the Pods.
+## License Manager
 
-Therefore, the minimum required amount of PVs for Persistence is 2.
+The License Manager uses one `ReadWriteOnce` (RWO) PersistentVolume per Pod to store information and logs about the counted sessions.
 
-## Remote Search
+## Remote search
 
-Remote Search requires 1 persistent volume for storing the profile \(called `prs_profile`\) with the type `ReadWriteOnce` \(RWO\).
+Remote search requires one persistent volume for storing the profile (called `prs_profile`) with the `ReadWriteOnce` (RWO) type.
 
-Remote Search is limited to only one Pod, therefore, requires one PV for that Pod.
+Remote search is limited to only one Pod. Therefore, the service requires one PV for that Pod.
 
 !!! note
-    Refer to **[PersistentVolumeClaims](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.md)** on how to set up the `PersistentVolumes` and `PersistentVolumeClaims`.
+    Refer to **[PersistentVolumeClaims](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.md)** to learn how to set up the `PersistentVolumes` and `PersistentVolumeClaims`.

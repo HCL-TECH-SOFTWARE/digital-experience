@@ -202,4 +202,5 @@ If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, c
     - [Configuring Security Access Manager for authentication only](../../../../people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/cfg_tam_auth.md) 
     - [Configuring Security Access Manager for authentication, authorization, and the Credential Vault](../../../../people/authentication/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/tam_prov_usrs.md)
     - [About the XML configuration interface](../../../../../portal_admin_tools/xml_config_interface/adxmlabt.md)
+    - [WebSphere® Integrated Solutions Console](../../../../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
 

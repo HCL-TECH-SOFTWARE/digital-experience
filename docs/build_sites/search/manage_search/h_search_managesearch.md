@@ -24,7 +24,7 @@ From the **Manage Search** page, you can view and work with the following search
 
 ## Search Services
 
-From Search Services, you can view and manage the HCL Digital Experience search services. Search Services represent separate instances of the search engine that is provided and can be used for searching content by using the Search Center. When you create a search collection, you must select a search service so that users can request searches on that collection. A search service can be used for searching multiple search collections. You can set parameters to configure a search service that sets up separate instances of search services with different configurations. You can also set up multiple portal search services and distribute the search load over several nodes. The following Search Service is provided by default:
+From Search Services, you can view and manage the HCL Digital Experience (DX) search services. Search Services represent separate instances of the search engine that is provided and can be used for searching content by using the Search Center. When you create a search collection, you must select a search service so that users can request searches on that collection. A search service can be used for searching multiple search collections. You can set parameters to configure a search service that sets up separate instances of search services with different configurations. You can also set up multiple portal search services and distribute the search load over several nodes. The following Search Service is provided by default:
 
 -   **Portal Search Service**
 
@@ -127,10 +127,12 @@ When you upgrade to a higher version of HCL, the data storage format is not nece
 
 1.  If you do not complete these steps, the search collections are lost after you upgrade.
 2.  When you create the search collection on the upgraded portal, type data and make selections as follows:
+
     -   Enter the location, name, and description of the new collection. You can match the old settings or type new ones.
     -   You do not need to select a summarizer. These settings are overwritten when you import the data from the source search collection.
 
 3.  You cannot migrate a portal site collection between different versions of HCL. If you upgrade to another version, you need to re-create the portal site collection. Proceed as follows:
+
     1.  Document the configuration data of your portal site content source.
     2.  Delete the existing content source.
     3.  Upgrade your portal.
@@ -178,6 +180,7 @@ To import the data of a search collection, proceed as follows:
 2.  When you import collection data into a collection, all settings are overwritten by possibly imported settings. For example, the language setting is overwritten, or a summarizer is added, if it was specified for the imported search collection.
 3.  When you import a collection, a background process fetches, crawls, and indexes all documents that are listed by URL in the previously exported file. This process is asynchronous and can take considerable time until the documents become available.
 4.  When you import a collection that contains a portal site content source that was created in a previous version, you need to complete the following actions:
+
     -   Regather the content by deleting the existing site content source
     -   Create a site content source
     -   Start a crawl
@@ -233,7 +236,7 @@ From the **Content Sources** panel, you can do the following tasks:
 
     -   **Start Crawler**. Click this icon to start a crawl on the content source. This action updates the contents of the content source by a new run of the crawler. During the run, the icon changes to **Stop Crawler**; you can click to end the run. For details, refer to *Starting to collect documents from a content source* . Portal Search refreshes different content sources as follows:
         -   For website content sources, documents that were indexed before and still exist in the content source are updated. Documents that were indexed before, but no longer exist are retained in the search collection. Documents that are new in the content source are indexed and added to the collection.
-        -   For HCL Portal sites, the crawl adds all pages and portlets to the content source. It deletes portlets and static pages from the content source that were removed from the portal. The crawl works similarly to the option **Regather documents from Content Source**.
+        -   For HCL DX sites, the crawl adds all pages and portlets to the content source. It deletes portlets and static pages from the content source that were removed from the portal. The crawl works similarly to the option **Regather documents from Content Source**.
         -   For HCL Web Content Manager sites, Portal Search uses an incremental crawling method. In additions to added and updated content, the Seedlist explicitly specifies deleted content. In contrast, clicking **Regather documents from Content Source** starts a full crawl; it does not continue from the last session, and it is therefore not incremental.
         -   For content sources created with the seedlist provider option, a crawl on a remote system that supports incremental crawling, such as HCL Connections, behaves like a crawl on a Web Content Manager site.
 
@@ -417,8 +420,9 @@ In the Define security realm box, enter the following data entry fields:
 To start an update from a content source manually, proceed by the following steps:
 
 1.  Click **Start Crawler** for the content source for which you want to start a new run of the crawler. The crawler fetches the documents from the selected content source. If they are new or modified, they are updated in the search collection. While a crawl is running, the icon changes to **Stop Crawler**, which you can click to stop the crawl. Portal Search refreshes different content sources as follows:
+
     -   For website content sources, documents that were indexed before and still exist in the content source are updated. Documents that were indexed before, but no longer exist are retained in the search collection. Documents that are new in the content source are indexed and added to the collection.
-    -   For HCL Portal sites, the crawl adds all pages and portlets to the content source. It deletes portlets and static pages from the content source that were removed from the portal. The crawl works similarly to the option **Regather documents from Content Source**.
+    -   For HCL DX sites, the crawl adds all pages and portlets to the content source. It deletes portlets and static pages from the content source that were removed from the portal. The crawl works similarly to the option **Regather documents from Content Source**.
     -   For HCL Web Content Manager sites, Portal Search uses an incremental crawling method. In additions to added and updated content, the Seedlist explicitly specifies deleted content. In contrast, clicking **Regather documents from Content Source** starts a full crawl; it does not continue from the last session, and it is therefore not incremental.
     -   For content sources created with the seedlist provider option, a crawl on a remote system that supports incremental crawling, such as HCL Connections, behaves like a crawl on a Web Content Manager site.
 

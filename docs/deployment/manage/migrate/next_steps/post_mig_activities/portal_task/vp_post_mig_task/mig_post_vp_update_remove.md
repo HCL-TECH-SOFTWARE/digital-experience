@@ -160,3 +160,6 @@ For example, if you migrate a Virtual Portal that contains a Document Libraries 
 
 
 
+???+ info "Related information"
+    - [WebSphere® Integrated Solutions Console](../../../../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+
