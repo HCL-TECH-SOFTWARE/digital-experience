@@ -1,4 +1,4 @@
-# HCL DX Server and HCL Web Content Manager - Information related to GDPR
+# HCL Digital Experience Portal Server and HCL Web Content Manager - Information related to GDPR
 
 !!! Important
     Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation (GDPR). Clients are solely responsible for obtaining advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulations that may affect the clients’ business and any actions the clients may need to take to comply with such laws and regulations.
@@ -6,17 +6,17 @@
 The products, services, and other capabilities described herein are not suitable for all client situations and may have restricted availability. HCL does not provide legal, accounting, or auditing advice or represent or warrant that its services or products will ensure that clients are in compliance with any law or regulation.
 
 
-HCL Digital Experience (DX) Server and HCL Web Content Manager are on-premise products installed and operated by the customer. In this scenario, HCL is neither a controller nor a processor as defined by the GDPR.
+HCL Portal Server and HCL Web Content Manager are on-premise products installed and operated by the customer. In this scenario, HCL is neither a controller nor a processor as defined by the GDPR.
 
 IBM WebSphere and DB2 software supports both controllers and processors, with their available features in preparing for GDPR readiness. For IBM WebSphere Application Server refer to the [WebSphere Application Server - Considerations for GDPR Readiness](https://www-01.ibm.com/support/docview.wss?uid=swg22016599).
 
-Encryption of data at rest activities can typically be configured in the database and other backends used with HCL DX Server and HCL Web Content Manager. For more information, see [how DB2 native encryption works](https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.admin.sec.doc/doc/c0061758.html).
+Encryption of data at rest activities can typically be configured in the database and other backends used with HCL Portal Server and HCL Web Content Manager. For more information, see [how DB2 native encryption works](https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.admin.sec.doc/doc/c0061758.html).
 
 
 Encryption of data in transit includes both connections from client to the server and from server to the backend. For configuration details, refer to the following guides:
 
 - [IBM WebSphere Application Server security hardening guide](https://www.ibm.com/developerworks/websphere/techjournal/1210_lansche/1210_lansche.html)
-- [HCL DX Server security hardening guide](https://support.hcltechsw.com/csm?id=kb_article&sys_id=2a7af78a1b19801c83cb86e9cd4bcb45).
+- [Security Hardening Guide for HCL Digital Experience](https://support.hcltechsw.com/csm?id=kb_article&sys_id=2a7af78a1b19801c83cb86e9cd4bcb45).
 
 The backup procedure, data retention policy, and how to deal with Data Access and Data Erasure requests need to be defined and managed by data controllers.
 
@@ -29,9 +29,9 @@ When checking for Personal Data, you should include the following cases:
 
 - The user information that is stored in the LDAP (or other repositories).
 
-- Information that may be collected on DX (for example: Tagging and Rating, personalization).
+- Information that may be collected on Digital Experience (for example: Tagging and Rating, personalization).
 
-- Information collected by custom code deployed (for example: portlets) or code integrated (for example: via DDC, WSRP, WAB) on HCL DX Server and HCL Web Content Manager.
+- Information collected by custom code deployed (for example: portlets) or code integrated (for example: via DDC, WSRP, WAB) on HCL Portal Server and HCL Web Content Manager.
 
 - User tracking systems integrated with HTML/JavaScript in the browser.
 
