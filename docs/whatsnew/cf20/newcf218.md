@@ -17,7 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-- Web Content Manager - New filters to enhance search for users and groups
+- Web Content Manager - New filters to enhance search for users and groups in Content Reporting
 - Web Content Manager - Resuming bulk updates in Content Reporting 
 
 **Digital Experience 9.5 Container Version**
@@ -29,7 +29,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience Early Access Program**
 
-- Open Liberty Portlet Container Milestone 2 - Support for extensions such as global portlet filters and trimming of portlet.xml whitespace
+- Open Liberty Portlet Container Milestone 2 - Support for extensions and trimming of portlet.xml whitespace
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
@@ -92,10 +92,14 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Digital Experience 9.5 Version
 
-### Web Content Manager - New filters to enhance search for users and groups
+### Web Content Manager - New filters to enhance search for users and groups in Content Reporting
 
 === "Containers"
-    (No doc yet)
+    There are new attributes for users and groups that you can select as additional filters when searching for items in HCL Content Reporting. With these new fields, you can filter the items owned and authored by users and groups when generating a report or when updating existing items in a report. For more information, see [Generating a report](../../manage_content/wcm_authoring/content_reporting/usage/generate_content_report.md#generating-a-report) and [Using the Content Reporting Bulk Update Owners/Authors feature](../../manage_content/wcm_authoring/content_reporting/usage/bulk_update_report.md#using-the-content-reporting-bulk-update-ownersauthors-feature).
+
+=== "On-Premises"
+    There are new attributes for users and groups that you can select as additional filters when searching for items in HCL Content Reporting. With these new fields, you can filter the items owned and authored by users and groups when generating a report or when updating existing items in a report. For more information, see [Generating a report](../../manage_content/wcm_authoring/content_reporting/usage/generate_content_report.md#generating-a-report) and [Using the Content Reporting Bulk Update Owners/Authors feature](../../manage_content/wcm_authoring/content_reporting/usage/bulk_update_report.md#using-the-content-reporting-bulk-update-ownersauthors-feature).
+
 
 ### Web Content Manager - Resuming bulk updates in Content Reporting
 
@@ -129,9 +133,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Digital Experience Early Access Program
 
-### Open Liberty Portlet Container Milestone 2 - Support for extensions such as global portlet filters and trimming of portlet.xml whitespace
+### Open Liberty Portlet Container Milestone 2 - Support for extensions and trimming of portlet.xml whitespace
 
-(No doc yet)
+=== "Containers"
+    **HCL DX Early Access Program - Milestone 2** is now available. Milestone 2 includes support for extensions such as [global portlet filters](https://www.ibm.com/docs/en/was/8.5.5?topic=container-portlet-filters#cport_portlet_filters__title__3) and trimming of portlet.xml whitespace. For more information, see [HCL Digital Experience Early Access Program](../../early_access/index.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
