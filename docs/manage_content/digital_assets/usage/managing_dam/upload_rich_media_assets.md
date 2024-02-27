@@ -44,7 +44,7 @@ To upload files and folders using drag-and-drop, refer to the following steps:
 
 All uploaded folders create a collection with the same name as the folder. The contents of the folders are uploaded into the same collection.
 
-    ![Uploaded folders](../../../../images/drag_and_drop_3.png)
+![Uploaded folders](../../../../images/drag_and_drop_3.png)
 
 !!!note
 
