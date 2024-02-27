@@ -168,7 +168,7 @@ If a bulk update process is running and the server restarts, the system pauses t
 !!!note
     You can only resume a paused bulk update process for owners and authors if the update involves a limited number of users and groups. Currently, there is a size limitation in the database column that stores the action string that specifies the owners or authors used in an update. If the action string exceeds 255 characters, you cannot resume the paused bulk update process. The operation fails and you must start the bulk update process again.
     
-    If the bulk update process for owners and authors involves a large number of users, it is recommended to create a User Group instead. Add all of the users to the group and then select the new group when initiating the bulk operation.
+    If the bulk update process for owners and authors involves a large number of users, it is recommended to create a User Group instead. Add all of the users to the group and then select the new group when initiating the bulk operation. For more information, see [Managing users and groups](../../../../deployment/manage/security/people/authorization/controlling_access/managing_users_groups/index.md).
 
 To continue a paused bulk update process, refer to the following steps:
 
