@@ -6,7 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager REST API v2 - New APIs available in Swagger Explorer
 - Site Manager - Resizable navigation panel 
-- DXClient - New repositories in GitHub
+- DXClient - New Github repository
 - DX Search - Configuring DX Search and Improving Search Quality documentation
 - Updated Javadocs now available
 - (Placeholder for OIDC doc)
@@ -57,15 +57,13 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "On-Premises"
     In the Site Manager, you can now control the size of your side toolbar. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
 
-### New DXClient repository in GitHub
+### DXClient - New Github repository
 
 === "Containers"
     The [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository contains installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
     
 === "On-Premises"
     The [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository contains installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
-
-###
 
 ### DX Search - Configuring DX Search and Improving Search Quality documentation
 
@@ -82,8 +80,8 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
     - [api_docs](https://s3.amazonaws.com/help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/api_docs/index.html)
     - [js_docs](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/js_docs/wp_client_ext/index.html)
-    - [Mashups API](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/api/index-all.html)
-    - [Mashups SPI](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/spi/index-all.html)
+    - [mashups api](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/api/index-all.html)
+    - [mashups spi](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/spi/index-all.html)
     - [spi_docs](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/spi_docs/index-all.html)
 
 === "On-Premises"
