@@ -1,4 +1,4 @@
-# Using HCL DX APIs in HCL Volt MX Foundry
+# Using HCL DX Experience APIs in HCL Volt MX Foundry
 
 With Custom Data Adapters for HCL Digital Experience (DX), you can access the Experience APIs easily and you can create services in HCL Volt MX Foundry with predefined request and response schemas. All available endpoints are included in the Custom Data Adapter and you can use them when creating services.
 
