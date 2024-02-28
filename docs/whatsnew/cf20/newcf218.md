@@ -6,12 +6,12 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager REST API v2 - New APIs available in Swagger Explorer
 - Site Manager - Resizable navigation panel 
-- DXClient - New Github repository
 - DX Search - Configuring DX Search and Improving Search Quality documentation
 - Updated Javadocs now available
 - (Placeholder for OIDC doc)
 - Notice of deprecation of Textbox.io Rich Text Editor
-<!-- - HCL DX APIs in HCL Volt MX Foundry -->
+<!-- - HCL DX APIs in HCL Volt MX Foundry 
+- DXClient - New Github repository-->
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -56,14 +56,6 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 === "On-Premises"
     In the Site Manager, you can now control the size of your side toolbar. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
-
-### DXClient - New Github repository
-
-=== "Containers"
-    The [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository contains installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
-    
-=== "On-Premises"
-    The [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository contains installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
 
 ### DX Search - Configuring DX Search and Improving Search Quality documentation
 
@@ -113,6 +105,14 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 (No doc yet)
 -->
+
+<!-- ### DXClient - New Github repository
+
+=== "Containers"
+    The [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository contains installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
+    
+=== "On-Premises"
+    The [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository contains installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).-->
 
 ## Digital Experience 8.5 and 9.0 Versions
 
