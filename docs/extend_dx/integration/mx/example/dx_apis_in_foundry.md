@@ -8,13 +8,15 @@ With Custom Data Adapters for HCL Digital Experience (DX), you can access the Ex
 
 The Web Content Manager V2 (WCM REST V2) HCL DX Content Adapter includes all endpoints of the [WCM REST V2 APIs](../../../../manage_content/wcm_development/wcm_rest_v2/index.md).
 
+Support for this feature is not available in the HCL Support Center. For questions and issues, reach out either in the [DXers - The HCL DX User Group](https://ptb.discord.com/channels/787019554173485067/992504153328861184) on Discord, the [HCL DX forum](https://support.hcltechsw.com/community?id=community_forum&sys_id=02c5dcf01b32f70cc1f9759d1e4bcb43) or in the [Volt MX Marketplace Forum](https://support.hcltechsw.com/community?id=community_topic&sys_id=941a3aabdbb43010cc426275ca961923).
+
 ### Downloading and importing the HCL DX Content Adapter in HCL Volt MX Foundry
 
 To download and import Custom Data Adapter, there are two options:
 
-- If you are using the SaaS offer of HCL Volt MX, import the Custom Data Adapter directly from the [HCL Volt MX Marketplace](https://marketplace.hclvoltmx.com/) using the Volt MX Foundry user interface. For instructions on how to consume a Custom Data Adapter from the Marketplace, see the [HCL Volt MX Foundry documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_tutorials/Content/Module/consuming_data_adapter_from_marketplace.html).
+- If you are using the SaaS offer of HCL Volt MX, import the HCL DX Content Adapter directly from the [HCL Volt MX Marketplace](https://marketplace.hclvoltmx.com/items/hcl-dx-content-adapter) using the Volt MX Foundry user interface. For instructions on how to consume a Custom Data Adapter from the Marketplace, see the [HCL Volt MX Foundry documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_tutorials/Content/Module/consuming_data_adapter_from_marketplace.html).
 
-- For [Helm deployments](../installation/index.md) of HCL Volt MX Foundry, download the the Custom Data Adapter from the [HCL Volt MX Marketplace](https://marketplace.hclvoltmx.com/) and import in the HCL Volt MX Foundry console by going to **API Management > Custom Data Adapters > Import**.
+- For [Helm deployments](../installation/index.md) of HCL Volt MX Foundry, download the the HCL DX Content Adapter from the [HCL Volt MX Marketplace](https://marketplace.hclvoltmx.com/items/hcl-dx-content-adapter) and import in the HCL Volt MX Foundry console by going to **API Management > Custom Data Adapters > Import**.
 
 ![Import the Custom Data Adapter](../../../../images/MXImportAdapter.png)
 
