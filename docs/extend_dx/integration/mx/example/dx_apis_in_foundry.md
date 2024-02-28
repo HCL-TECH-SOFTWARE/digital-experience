@@ -12,7 +12,7 @@ The Web Content Manager V2 (WCM REST V2) HCL DX Content Adapter includes all end
 
 To download and import Custom Data Adapter, there are two options:
 
-- If you are using the SaaS offer of HCL Volt MX, download the Custom Data Adapter from the [HCL Volt MX Marketplace](https://marketplace.hclvoltmx.com/). For instructions on how to consume a Custom Data Adapter from the Marketplace, see the [HCL Volt MX Foundry documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_tutorials/Content/Module/consuming_data_adapter_from_marketplace.html).
+- If you are using the SaaS offer of HCL Volt MX, import the Custom Data Adapter directly from the [HCL Volt MX Marketplace](https://marketplace.hclvoltmx.com/) using the Volt MX Foundry user interface. For instructions on how to consume a Custom Data Adapter from the Marketplace, see the [HCL Volt MX Foundry documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_tutorials/Content/Module/consuming_data_adapter_from_marketplace.html).
 
 - For [Helm deployments](../installation/index.md) of HCL Volt MX Foundry, download the the Custom Data Adapter from the [HCL Volt MX Marketplace](https://marketplace.hclvoltmx.com/) and import in the HCL Volt MX Foundry console by going to **API Management > Custom Data Adapters > Import**.
 
