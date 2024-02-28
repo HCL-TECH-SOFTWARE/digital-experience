@@ -1,14 +1,14 @@
 # Using HCL DX APIs in HCL Volt MX Foundry
 
-With Custom Data Adapters for HCL Digital Experience (DX), you can access APIs easily and you can create services in HCL Volt MX Foundry with predefined request and response schemas. All available endpoints are included in the Custom Data Adapter and you can use them when creating services.
+With Custom Data Adapters for HCL Digital Experience (DX), you can access the Experience APIs easily and you can create services in HCL Volt MX Foundry with predefined request and response schemas. All available endpoints are included in the Custom Data Adapter and you can use them when creating services.
 
 > [Custom Data Adapters](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/CustomDataConfig.html) act as reusable services with a defined set of operations.
 
-## Custom Data Adapter for REST service for WCM REST V2
+## HCL DX Content Adapter for REST service for WCM REST V2
 
-The Web Content Manager V2 (WCM REST V2) Custom Data Adapter includes all endpoints of the [WCM REST V2 APIs](../../../../manage_content/wcm_development/wcm_rest_v2/index.md).
+The Web Content Manager V2 (WCM REST V2) HCL DX Content Adapter includes all endpoints of the [WCM REST V2 APIs](../../../../manage_content/wcm_development/wcm_rest_v2/index.md).
 
-### Downloading and importing the WCM REST V2 Custom Data Adapter in HCL Volt MX Foundry
+### Downloading and importing the HCL DX Content Adapter in HCL Volt MX Foundry
 
 To download and import Custom Data Adapter, there are two options:
 
@@ -37,9 +37,9 @@ Preparing the HCL DX environment allows HCL Volt MX Foundry to use the same iden
 
 In HCL Volt MX Foundry, set up an [OAuth 2.0 identity provider](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Identity10_VoltMX_OAuth2.html). This identity provider must be connected to the same identity provider as the HCL DX environment.
 
-### Creating a Service using the Custom Data Adapter
+### Creating a Service using the HCL DX Content Adapter
 
-To configure a new Service in HCL Volt MX Foundry using the Custom Data Adapter:
+To configure a new Service in HCL Volt MX Foundry using the HCL DX Content Adapter:
 
 1. Refer to the [HCL Volt MX Foundry Documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/ConfigureIntegrationService.html) for instructions on how to create a new Integration Service. Select the newly imported WCM V2 Custom Data Adapter as the **Service Type**.
 
