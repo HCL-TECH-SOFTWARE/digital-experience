@@ -28,7 +28,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience Early Access Program**
 
-- Open Liberty Portlet Container
+- Open Liberty portlet container
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
@@ -134,7 +134,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Digital Experience Early Access Program
 
-### Open Liberty Portlet Container
+### Open Liberty portlet container
 
 === "Containers"
     **HCL DX Early Access Program - Milestone 1** is now available. The goal of the HCL Digital Experience Early Access Program is for the community of participants to conduct review and testing of new components introduced for use with the HCL Digital Experience 9.5 software. For more information, including how to access the software and discuss your feedback with HCL, see [HCL Digital Experience Early Access Program](../../early_access/index.md).
