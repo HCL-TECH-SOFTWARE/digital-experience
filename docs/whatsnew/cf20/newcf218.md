@@ -89,10 +89,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### HCL DX Experience APIs in HCL Volt MX Foundry
 
 === "Containers"
-    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas.
+    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
 
 === "On-Premises"
-    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas.
+    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
 
 ### (Placeholder for OIDC doc)
 
