@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Site Manager - Resizable navigation panel 
 - DX Search - Configuring DX Search and Improving Search Quality documentation
 - Updated Javadocs now available
+- HCL DX Experience APIs in HCL Volt MX Foundry
 - (Placeholder for OIDC doc)
 - Notice of deprecation of Textbox.io Rich Text Editor
 <!-- - HCL DX APIs in HCL Volt MX Foundry 
@@ -85,6 +86,14 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
     - [mashups spi](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/spi/index-all.html)
     - [spi_docs](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/spi_docs/index-all.html)
 
+### HCL DX Experience APIs in HCL Volt MX Foundry
+
+=== "Containers"
+    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
+
+=== "On-Premises"
+    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
+
 ### (Placeholder for OIDC doc)
 
 === "Containers"
@@ -100,11 +109,6 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "On-Premises"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
 
-<!--
-### HCL DX APIs in HCL Volt MX Foundry
-
-(No doc yet)
--->
 
 <!-- ### DXClient - New Github repository
 
