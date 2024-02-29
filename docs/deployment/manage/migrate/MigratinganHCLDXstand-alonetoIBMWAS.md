@@ -47,7 +47,7 @@ This term refers to the full path to the WebSphere Application Server 9.0.5 or h
 
 2. Create a base profile on the target WebSphere Application Server 9.0.5 by using the **manageprofiles command line option.
 
-    !!! important:
+    !!! important
         The WebSphere Application Server 9.0.5 migration is different from the standard HCL Digital Experience migration in that references in the source environment are updated to point to the target WebSphere Application Server 9.0.5 environment. Use the same cell name, and node name that you used for the HCL DX 9.5 and WebSphere Application Server 9.0.5 installation.
     
     - **AIX®:** `./manageprofiles.sh -create -defaultPorts -enableAdminSecurity false -profileName -profilePath -templatePath /profileTemplates/default -nodeName source_node_name -cellName source_cell_name -hostName host_name -isDefault -omitAction samplesInstallAndConfig defaultAppDeployAndConfig`
