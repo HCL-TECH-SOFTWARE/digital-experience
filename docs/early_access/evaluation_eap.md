@@ -1,8 +1,8 @@
 # Suggested areas for evaluation
 
-This topic offers areas and questions to consider when testing the Open Liberty Portlet container with your applications.
+This topic offers areas and questions to consider when testing the Open Liberty portlet container with your applications.
 
-As you prepare, deploy, and test standards-based portlets with the Open Liberty Portlet container in your DX Kubernetes evaluation environment, the following areas may be considered for your feedback. Note that this is not an exhaustive list.  
+As you prepare, deploy, and test standards-based portlets with the Open Liberty portlet container in your DX Kubernetes evaluation environment, the following areas may be considered for your feedback. Note that this is not an exhaustive list.  
 
 - Do your portlets work in this environment?
 - Does this environment match your DX deployment architecture plans?
