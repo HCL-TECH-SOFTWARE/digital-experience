@@ -6,10 +6,13 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager REST API v2 - New APIs available in Swagger Explorer
 - Site Manager - Resizable navigation panel 
-- DXClient - New repositories in GitHub and Harbor
 - DX Search - Configuring DX Search and Improving Search Quality documentation
-<!-- - HCL DX APIs in HCL Volt MX Foundry -->
+- Updated Javadocs now available
+- HCL DX Experience APIs in HCL Volt MX Foundry
+- (Placeholder for OIDC doc)
 - Notice of deprecation of Textbox.io Rich Text Editor
+<!-- - HCL DX APIs in HCL Volt MX Foundry 
+- DXClient - New Github repository-->
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -29,7 +32,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience Early Access Program**
 
-- Open Liberty Portlet Container Milestone 2 - Support for extensions and trimming of portlet.xml whitespace
+- Open Liberty portlet container Milestone 2 - Support for extensions and trimming of portlet.xml whitespace
 
 Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
 
@@ -55,14 +58,6 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "On-Premises"
     In the Site Manager, you can now control the size of your side toolbar. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
 
-### New DXClient repository in GitHub and Harbor
-
-=== "Containers"
-    New DXClient repositories are available. For open distribution of the DXClient container package, go to [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab). You can find the installation and usage details in [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository.
-
-=== "On-Premises"
-    New DXClient repositories are available. For open distribution of the DXClient container package, go to [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab). You can find the installation and usage details in [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository.
-
 ### DX Search - Configuring DX Search and Improving Search Quality documentation
 
 === "Containers"
@@ -70,11 +65,42 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 === "On-Premises"
     The topics [Configuring DX Search](../../build_sites/search/cfg_dx_search/index.md) and [Improving search quality in HCL Digital Experience](../../build_sites/search/improving_search_quality/index.md) are available in the DX Help Center. 
-<!--
-### HCL DX APIs in HCL Volt MX Foundry
 
-(No doc yet)
--->
+### Updated Javadocs now available
+
+=== "Containers"
+    Updated Javadocs are published. See the following references:
+
+    - [api_docs](https://s3.amazonaws.com/help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/api_docs/index.html)
+    - [js_docs](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/js_docs/wp_client_ext/index.html)
+    - [mashups api](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/api/index-all.html)
+    - [mashups spi](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/spi/index-all.html)
+    - [spi_docs](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/spi_docs/index-all.html)
+
+=== "On-Premises"
+    Updated Javadocs are published. See the following references:
+
+    - [api_docs](https://s3.amazonaws.com/help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/api_docs/index.html)
+    - [js_docs](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/js_docs/wp_client_ext/index.html)
+    - [mashups api](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/api/index-all.html)
+    - [mashups spi](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/spi/index-all.html)
+    - [spi_docs](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/spi_docs/index-all.html)
+
+### HCL DX Experience APIs in HCL Volt MX Foundry
+
+=== "Containers"
+    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
+
+=== "On-Premises"
+    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
+
+### (Placeholder for OIDC doc)
+
+=== "Containers"
+
+=== "On-Premises"
+
+
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
 === "Containers"
@@ -82,6 +108,15 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 === "On-Premises"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
+
+
+<!-- ### DXClient - New Github repository
+
+=== "Containers"
+    The [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository contains installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
+    
+=== "On-Premises"
+    The [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository contains installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).-->
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -133,7 +168,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Digital Experience Early Access Program
 
-### Open Liberty Portlet Container Milestone 2 - Support for extensions and trimming of portlet.xml whitespace
+### Open Liberty portlet container Milestone 2 - Support for extensions and trimming of portlet.xml whitespace
 
 === "Containers"
     **HCL DX Early Access Program - Milestone 2** is now available. Milestone 2 includes support for extensions such as [global portlet filters](https://www.ibm.com/docs/en/was/8.5.5?topic=container-portlet-filters#cport_portlet_filters__title__3) and trimming of portlet.xml whitespace. For more information, see [HCL Digital Experience Early Access Program](../../early_access/index.md).

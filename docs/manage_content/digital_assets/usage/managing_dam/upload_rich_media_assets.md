@@ -33,10 +33,18 @@ You can upload files and folders using the drag-and-drop feature. With this feat
 To upload files and folders using drag-and-drop, refer to the following steps:
 
 1. Select the folders or files to be uploaded from the system file explorer.
+
+    ![Selecting folders](../../../../images/drag_and_drop_1.png)
+
 2. Drag and drop the files and folders into the DAM root page or any other sub-collection page.
+
+    ![Uploading folders](../../../../images/drag_and_drop_2.png)
+
 3. (Optional) If files are dropped into a root collection page, a dialog box appears where you can select the collection where you want to upload the assets.
 
 All uploaded folders create a collection with the same name as the folder. The contents of the folders are uploaded into the same collection.
+
+![Uploaded folders](../../../../images/drag_and_drop_3.png)
 
 !!!note
 

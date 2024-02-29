@@ -2,7 +2,7 @@
 
 This topic outlines how the V2 APIs differ from V1 APIs.
 
-V2 APIs are created to complete the available actions for content and other WCM artifacts. They are either developed from scratch or created to bring their corresponding [REST service for Web Content Manager V1 APIs](../wcm_rest/index.md) to the V2 Swagger interface [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+V2 APIs are created to complete the available actions for content and other WCM artifacts. They are either developed from scratch or created to bring their corresponding [REST service for Web Content Manager V1 APIs](../wcm_rest/index.md) to the V2 Swagger interface. You can find detailed information about V2 APIs at [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 The following list provides more information about the differences between V1 and V2 APIs. 
 
@@ -25,7 +25,7 @@ The following list provides more information about the differences between V1 an
 
 - V2 APIs are in Swagger Explorer.
 
-    The [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) contains the following information that can help you with using the V2 APIs:
+    The WCM REST v2 Swagger API Explorer contains the following information that can help you with using the V2 APIs:
 
     - A description of what you can do with the API
     - Sample request value that you can use when executing an API

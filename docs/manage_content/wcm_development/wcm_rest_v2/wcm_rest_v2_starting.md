@@ -6,7 +6,7 @@ title: Getting started with the REST service for Web Content Manager V2
 
 This topic provides information about the new APIs available from CF217 and higher.
 
-These V2 APIs are created to complete the available actions for content and other WCM artifacts. They are either developed from scratch or created to bring their corresponding [REST service for Web Content Manager V1 APIs](../wcm_rest/index.md) to the V2 Swagger interface [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). For a comparison of V1 and V2 APIs, see [Differences between V1 and V2 APIs](comparison_v1_v2.md).
+These V2 APIs are created to complete the available actions for content and other WCM artifacts. They are either developed from scratch or created to bring their corresponding [REST service for Web Content Manager V1 APIs](../wcm_rest/index.md) to the V2 Swagger interface. You can find detailed information about V2 APIs at [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/). For a comparison of V1 and V2 APIs, see [Differences between V1 and V2 APIs](comparison_v1_v2.md).
 
 If you are working with WCM via REST, it is recommended to use the WCM REST V2 API.
 
@@ -17,9 +17,9 @@ For the WCM REST V1 version of the APIs, refer to **[How to manage web content i
 
 ## APIs added or modified in CF217
 
-Starting CF217, the [WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) has new API additions and modifications and is also out of beta state.
+Starting CF217, the WCM REST V2 Swagger API Explorer has new API additions and modifications and is also out of beta state.
 
-[WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces new APIs corresponding to the following WCM V1 API functionalities:
+WCM REST V2 Swagger API Explorer introduces new APIs corresponding to the following WCM V1 API functionalities:
 
 - Components like LibraryDateComponent, LibraryFileComponent, LibraryHTMLComponent, LibraryJSPComponent, LibraryLinkComponent, LibraryNumericComponent, LibraryPageNavigationComponent, LibraryTextComponent, LibraryUserNameComponent, LibraryUserSelectionComponent
 - Managed Pages
@@ -31,7 +31,7 @@ Starting CF217, the [WCM REST V2 Swagger API Explorer](https://opensource.hcltec
 
 ## APIs added or modified in CF218
 
-Starting CF218, [WCM REST V2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/) introduces additional APIs. Some of these APIs are newly created while some APIs correspond to the following WCM V1 API functionalities:
+Starting CF218, WCM REST V2 Swagger API Explorer introduces additional APIs. Some of these APIs are newly created while some APIs correspond to the following WCM V1 API functionalities:
 
 - Components like LibraryAuthoringToolsComponent, LibraryListPresentationComponent
 - Custom Workflow Actions Factory 
@@ -50,15 +50,12 @@ With WCM REST V2 API explorer, developers using the Digital Experience WCM REST 
 
 Access the WCM REST V2 API explorer located at:
 
-```
-http or https://host:port/dx/api/wcm/v2/explorer/
-```
+`http or https://host:port/dx/api/wcm/v2/explorer/`
+
 
 !!! example
 
-    ```
-    https://localhost:10039/dx/api/wcm/v2/explorer/
-    ```
+    `https://localhost:10039/dx/api/wcm/v2/explorer/`
 
 ???+ info "Related information"
     - [REST API Explorers](../../../extend_dx/apis/hcl_experience_api/api_explorers.md)

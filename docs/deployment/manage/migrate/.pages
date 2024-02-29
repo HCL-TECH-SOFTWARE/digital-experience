@@ -7,3 +7,5 @@ nav:
     - Setting up the target environment: settingup_target_env
     - Migrate data using the configuration wizard: migrate_using_cfgwizard
     - Migration Next steps: next_steps
+    - MigratinganHCLDXstand-alonetoIBMWAS.md
+    - MigratinganHCLPortalclustertoIBMWAS905.md
