@@ -138,7 +138,7 @@ To connect directly to the running container, you can use the following sample c
 
 `kubectl exec -it -n <your-dx-namespace> lpc-deployment-lpc-0 -- /bin/bash`
 
-If you have configured your Kubernetes environment and Open Liberty portlet ontainer deployment to allow external HTTP(S) access to the Open Liberty portlet container service, you can use the Open Liberty Admin Center web application to check whether your portlet applications have started.
+If you have configured your Kubernetes environment and Open Liberty portlet container deployment to allow external HTTP(S) access to the Open Liberty portlet container service, you can use the Open Liberty Admin Center web application to check whether your portlet applications have started.
 
 When consuming your portlets through WSRP from DX Core, you can get potentially valuable information from the **DX Core SystemOut** log with the following command:
 
