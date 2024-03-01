@@ -8,7 +8,7 @@ For troubleshooting OIDC on WebSphere you can use the debug parameters for OpenI
 - Verify IDP connections to LDAP or repository server 
 - Check for expired IDP certificate (WAS Global Security)
 
-Here are some basic steps for enabling trace on WebSphere Application Server:
+Here are some basic steps for enabling trace on the WebSphere Application Server:
 
   - OIDC trace string
     *=info:com.ibm.ws.security.oidc.*=all:com.ibm.ws.security.openidconnect.*=all:com.ibm.ws.security.openid20.*=all:com.ibm.ws.security.web.*=all
@@ -17,9 +17,9 @@ Here are some basic steps for enabling trace on WebSphere Application Server:
     *=info:com.ibm.wps.engine.Servlet=all:com.ibm.wps.services.puma.*=all:com.ibm.wps.auth.*=all:com.ibm.wps.puma.*=all:com.ibm.wps.um.*=all:com.ibm.wps.sso.*=all:com.ibm.wps.services.authentication.*=all:com.ibm.ws.security.*=all:com.ibm.ws.wim.*=all:com.ibm.websphere.wim.*=all:com.ibm.wsspi.wim.*=all:com.ibm.wps.engine.phases.*=all:com.ibm.wps.vmm.adapter.*=all
 
   - Enable OIDC trace:
-      - In the administrative console, click Troubleshooting > Logs and trace
+      - In the administrative console, click on Troubleshooting > Logs and trace
       - Click the server that you want to trace.
-      - Click Diagnostic trace > Change log detail levels
+      - Click on Diagnostic trace > Change log detail levels
       - In the box, enter the trace specification that you want to use
       - Click OK
       

@@ -27,7 +27,7 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
 ### Creating config properties file
 
-You will have to create a file named `oidc-config.properties` file under `/opt/HCL/wp_profile/ConfigEngine/properties/` in the `dx-core` pod. This file can be create anywhere, but you will have to ensure that you specify this path while running config engine task. The properties file is used for both the enable and disable oidc configuration tasks.
+You will have to create a file named `oidc-config.properties` file under `/opt/HCL/wp_profile/ConfigEngine/properties/` in the `dx-core` pod. This file can be created anywhere but ensure that you specify this path while running the config engine task. The properties file is used for both the enable and disable oidc configuration tasks.
 
 Execute following commands for creating a file as below:
 
@@ -36,7 +36,7 @@ kubectl exec -it dx-deployment-core-0 bash -n dxns
 vi /opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties
 ```
 
-Copy below content and ensure you provide values for the placeholders before you save it.
+Copy the content below and ensure you provided values for the placeholders before you save it.
 
 ```properties
 oidc.clientId=<YOUR_CLIENT_ID>
@@ -65,7 +65,7 @@ oidc.wasKeyStore=<YOUR_WAS_NODE_DEFAULT_TRUST_STORE>
 # Set it to true for transient user configuration ,if set to false it will skip the transient user configuration.
 oidc.enableTransientUser=false
 
-# Following properties are needed only when you set enable_transient_user to true
+# The following properties are needed only when you set enable_transient_user to true
 # For example: /opt/HCL/wp_profile/classes
 oidc.jaasClassPath= <<JAAS_CLASSPATH>>
 oidc.jaasModuleClass=com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule
@@ -73,14 +73,14 @@ oidc.jaasModuleClass=com.hcl.dx.auth.jaas.impl.TransientUsersLoginModule
 # Set it to true for softgroups war deployment and configuration ,if set to false it will skip the softgroups  configuration.
 oidc.enableSoftgroups=false
 
-#Add new custom property for the custom Softgroups role/group key. For example: "groups", "roles", etc.
+#Add a new custom property for the custom Softgroups role/group key. For example: "groups", "roles", etc.
 oidc.softgroupKey=groups
 
 # Add admin creds if not provided in wkplc.properties
 WasPassword=Your WAS Admin Password
 PortalAdminPwd=Your Portal Admin Password
 
-# Following Database properties required when oidc.enableSoftgroups set to true.
+# The following Database properties are required when the oidc.enableSoftgroups is set to true.
 
 # For DB2:
 oidc.dbType=db2
@@ -103,7 +103,7 @@ oidc.jdbcProvider=<<JDBC_PROVIDER>>
 
 ### Enabling/Installing the OIDC configuration through a config engine task
 
-Now you need to run config engine tasks to start the OIDC configuration for DX. To do that run below command:
+Now you need to run the config engine tasks to start the OIDC configuration for DX. To do this, run the command below:
 
 ```sh
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh -DSaveParentProperties=true -DparentProperties="/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties" enable-oidc-configuration
@@ -111,7 +111,7 @@ Now you need to run config engine tasks to start the OIDC configuration for DX. 
 
 ### Softgroups with DB2
 
-If you want to enable softgroups with DB2 database, please create softgroup database using following sql commands first.
+If you want to enable the softgroups with DB2 database, please create a softgroup database by using the following SQL commands.
 
 ```sh
 
@@ -128,18 +128,18 @@ CREATE INDEX softgrouptest.SOFTGROUPSIX1 ON softgrouptest.SOFTGROUPS (LASTMODIFI
 COMMIT;
 ```
 
-Then, run config engine tasks to start the OIDC configuration for DX. To do that run below command:
+Then, run the config engine tasks to start the OIDC configuration for DX. To do this, run the command below:
 
 ```sh
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh -DSaveParentProperties=true -DparentProperties="/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties" enable-oidc-configuration
 ```
 
 !!! note
-        This documents outlines the steps with DB2 and derby, for other databases it may vary and may not be supported through config tasks.
+        This document outlines the steps for DB2 and derby. For other databases it may vary and may not be supported using the config tasks.
 
 ### Additional configuration required for softgroups
 
-Softgroups requires additional manual steps for creating and managing groups and mapping users to roles/groups.
+Softgroups require additional manual steps for creating and managing groups and mapping users to roles/groups.
 
 - [Define Rule-Based User Groups](../transient-users/transient-users-softgroups-configuration#define-rule-based-user-groups)
 - [Assigning users to groups in your IdP](../transient-users/transient-users-softgroups-configuration#assigning-users-to-groups-in-your-idp)
@@ -151,20 +151,20 @@ Softgroups requires additional manual steps for creating and managing groups and
 
 1. Open a browser and navigate to `https://<HOSTNAME>/wps/portal`
 1. Click **Log in**, this will re-direct you to the IdPs login screen
-1. Log in with user creadentials, you will be re-directed to DX home page
-1. Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and verify that you are logged in with correct user
-1. Once logged in, also verify you can successfully log out of DX
+1. Log in with the user credentials, and you will be re-directed to the DX home page.
+1. Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and verify that you are logged in with the correct user profile.
+1. Once logged in, also verify that you can successfully log out of DX
 
 
 ### Disabling/Uninstalling the OIDC configuration through a config engine task
 
-If you are having issue with the automation enable/install script or are encountering issues with the manual configuration, you can run the disable-oidc-configuration config engine task disable the OIDC configuration and revert to the original state. To do that run below command:
+If you are having an issue with the automation enable/install script or are encountering issues with the manual configuration, you can run the disable-oidc-configuration config engine task to disable the OIDC configuration and revert to the original state. To do this, run the command below:
 
 ```sh
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh -DSaveParentProperties=true -DparentProperties="/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties" disable-oidc-configuration
 ```
 
-Additonally if any configuration step in the enable-oidc-configuration fails, the uninstall script will automatically revert newly added config changes.
+Additionally, if any of the configuration steps in the enable-oidc-configuration fails, the uninstall script will automatically revert the newly added config changes.
 
 ### Troubleshoot
 
