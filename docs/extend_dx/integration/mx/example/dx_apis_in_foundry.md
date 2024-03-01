@@ -49,7 +49,7 @@ To configure a new Service in HCL Volt MX Foundry using the HCL DX Content Adapt
 
 3. For **Authentication**, set the Identity provider configured in the [Prepare the HCL Volt MX Foundry environment](#prepare-the-hcl-volt-mx-foundry-environment) section.
 
-4. Confirm by "Save and add Operation"
+4. Click **Save & Add Operation** to confirm. 
 
 ![Create a Service](../../../../images/MXServiceCreation.png)
 
