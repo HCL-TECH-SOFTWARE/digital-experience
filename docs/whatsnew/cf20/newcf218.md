@@ -9,7 +9,7 @@ The following features and updates are available to customers installing HCL Dig
 - DX Search - Configuring DX Search and Improving Search Quality documentation
 - Updated Javadocs now available
 - HCL DX Content Adapter for WCM V2
-- (Placeholder for OIDC doc)
+- New documentation for OIDC in HCL DX
 - Notice of deprecation of Textbox.io Rich Text Editor
 <!-- - DXClient - New Github repository-->
 
@@ -88,14 +88,16 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### HCL DX Content Adapter for WCM V2
 
 === "Containers"
-    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
+    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see [Using HCL DX Experience APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/dx_apis_in_foundry.md).
 
 === "On-Premises"
-    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
+    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see [Using HCL DX Experience APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/dx_apis_in_foundry.md).
 
-### (Placeholder for OIDC doc)
+### New documentation for OIDC in HCL DX
 
 === "Containers"
+    
+
 
 === "On-Premises"
 
