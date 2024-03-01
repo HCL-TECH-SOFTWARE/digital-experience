@@ -57,7 +57,7 @@ In the next section, you can choose from the list of **Operations** to add the W
 
 ### Testing the Service
 
-In the HCL Volt MX Foundry console, you have the option to test each operation after creating it. You can test an operation by clicking the **Save and Fetch response** button at the bottom of each operation. A new window appears where you can login to your identity provider. The result of the request is logged at the bottom of the console.
+In the HCL Volt MX Foundry console, you have the option to test each operation after creating it. You can test an operation by clicking the **Save and Fetch response** button at the bottom of each operation. A new window appears where you can log in to your identity provider. The result of the request is logged at the bottom of the console.
 
 ![Test the operation](../../../../images/MXTestOperation.png)
 
