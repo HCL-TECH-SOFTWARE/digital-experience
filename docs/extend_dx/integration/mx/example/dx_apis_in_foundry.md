@@ -43,7 +43,7 @@ In HCL Volt MX Foundry, set up an [OAuth 2.0 identity provider](https://opensour
 
 To configure a new Service in HCL Volt MX Foundry using the HCL DX Content Adapter:
 
-1. Refer to the [HCL Volt MX Foundry Documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/ConfigureIntegrationService.html) for instructions on how to create a new Integration Service. Select the newly imported WCM V2 Custom Data Adapter as the **Service Type**.
+1. Create a new Integration Service. Refer to the [HCL Volt MX Foundry Documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/ConfigureIntegrationService.html) for instructions. Select the newly imported WCM V2 Custom Data Adapter as the **Service Type**.
 
 2. For the **Server URL**, set the URL to your HCL DX environment. For example, `https://<your DX hostname>/wps/mycontenthandler/wcmrest-v2/`. 
 
