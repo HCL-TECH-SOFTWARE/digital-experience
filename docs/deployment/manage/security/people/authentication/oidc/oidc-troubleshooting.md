@@ -4,7 +4,7 @@ For troubleshooting OIDC on WebSphere you can use the debug parameters for OpenI
 
 ## Request failing-
 - Typically user can not login
-- Very typos in WAS config by collecting websphere TAI config properties
+- Verify typos in WAS config by collecting websphere TAI config properties
 - Verify IDP connections to LDAP or repository server 
 - Check for expired IDP certificate (WAS Global Security)
 
