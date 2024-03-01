@@ -8,11 +8,10 @@ The following features and updates are available to customers installing HCL Dig
 - Site Manager - Resizable navigation panel 
 - DX Search - Configuring DX Search and Improving Search Quality documentation
 - Updated Javadocs now available
-- HCL DX Experience APIs in HCL Volt MX Foundry
+- HCL DX Content Adapter for WCM V2
 - (Placeholder for OIDC doc)
 - Notice of deprecation of Textbox.io Rich Text Editor
-<!-- - HCL DX APIs in HCL Volt MX Foundry 
-- DXClient - New Github repository-->
+<!-- - DXClient - New Github repository-->
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -86,13 +85,13 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
     - [mashups spi](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/spi/index-all.html)
     - [spi_docs](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/spi_docs/index-all.html)
 
-### HCL DX Experience APIs in HCL Volt MX Foundry
+### HCL DX Content Adapter for WCM V2
 
 === "Containers"
-    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
+    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
 
 === "On-Premises"
-    Using HCL Content Adapters, you can access DX Experience APIs and you can create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
+    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see []().
 
 ### (Placeholder for OIDC doc)
 
