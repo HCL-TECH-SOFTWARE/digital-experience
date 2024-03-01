@@ -44,7 +44,7 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
 ## Setting up OIDC for DX
 
-This section documents detailed steps required in setting up OIDC for DX and additional configuration options for setting up transient users.
+This section details the steps required in setting up OIDC for DX and the additional configuration options for setting up transient users.
 Alternatively you can refer to [Automating OIDC configuration for HCL Digital Experience](./automation/dx-oidc-automation.md) which provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. 
 
 ### Updating WebSphere to support OIDC Authentication for DX
