@@ -96,10 +96,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### New documentation for OIDC in HCL DX
 
 === "Containers"
-    
-
+    Documentation for [Automating OIDC configuration for HCL DX]() and [Troubleshooting OIDC configuration]() are now available. 
 
 === "On-Premises"
+    Documentation for [Automating OIDC configuration for HCL DX]() and [Troubleshooting OIDC configuration]() are now available. 
 
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
