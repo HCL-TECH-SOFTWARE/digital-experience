@@ -10,7 +10,7 @@ Support for this feature is not available in the HCL Support Center. For questio
 
 ### Downloading and importing the HCL DX Content Adapter in HCL Volt MX Foundry
 
-To download and import Custom Data Adapter, there are two options:
+To download and import HCL DX Content Adapter, there are two options:
 
 - If you are using the SaaS offer of HCL Volt MX, import the HCL DX Content Adapter directly from the [HCL Volt MX Marketplace](https://marketplace.hclvoltmx.com/items/hcl-dx-content-adapter) using the Volt MX Foundry user interface. For instructions on how to consume a Custom Data Adapter from the Marketplace, see the [HCL Volt MX Foundry documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_tutorials/Content/Module/consuming_data_adapter_from_marketplace.html).
 
@@ -19,7 +19,7 @@ To download and import Custom Data Adapter, there are two options:
 ![Import the Custom Data Adapter](../../../../images/MXImportAdapter.png)
 
 !!! note
-    Make sure that the version of the Custom Data Adapter matches the version of your HCL DX deployment.
+    Make sure that the version of the HCL DX Content Adapter matches the version of your HCL DX deployment.
 
 ### Preparing the HCL DX environment
 
@@ -41,7 +41,7 @@ In HCL Volt MX Foundry, set up an [OAuth 2.0 identity provider](https://opensour
 
 To configure a new Service in HCL Volt MX Foundry using the HCL DX Content Adapter:
 
-1. Create a new Integration Service. Refer to the [HCL Volt MX Foundry Documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/ConfigureIntegrationService.html) for instructions. Select the newly imported WCM V2 Custom Data Adapter as the **Service Type**.
+1. Create a new Integration Service. Refer to the [HCL Volt MX Foundry Documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/ConfigureIntegrationService.html) for instructions. Select the newly imported WCM V2 HCL DX Content Adapter as the **Service Type**.
 
 2. For the **Server URL**, set the URL to your HCL DX environment. For example, `https://<your DX hostname>/wps/mycontenthandler/wcmrest-v2/`. 
 
