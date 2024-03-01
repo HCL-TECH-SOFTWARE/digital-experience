@@ -53,7 +53,7 @@ To configure a new Service in HCL Volt MX Foundry using the HCL DX Content Adapt
 
 ![Create a Service](../../../../images/MXServiceCreation.png)
 
-In the next section, you can choose from the list of **Operations** to add the WCM REST V2 endpoints. For a detailed description of all available endpoints, please refer to the [WCM V2 API specification](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+In the next section, you can choose from the list of **Operations** to add the WCM REST V2 endpoints. For a detailed description of all available endpoints, refer to [WCM V2 API specification](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 ### Testing the Service
 
