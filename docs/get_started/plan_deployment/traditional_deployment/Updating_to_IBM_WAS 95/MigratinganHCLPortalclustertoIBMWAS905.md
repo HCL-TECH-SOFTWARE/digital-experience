@@ -524,7 +524,7 @@ This term refers to the full path to the WebSphere Application Server 9.0.0.2 or
     13. Continue to run the deployment manager and the node agent of the node that is being updated. However, stop all other node agents before you continue to the next step.
         
         !!! important
-        If you update the SOAP port of the target Deployment Manager, then you must update the **WPS_SOAP_PORT** value in the wpscript.sh file. The wpscript.sh file is in the [wp_profile_root/PortalServer/bin/](../../../guide_me/wpsdirstr.md) and [PortalServer_root/bin](../../../guide_me/wpsdirstr.md) directory for each node.
+        If you update the SOAP port of the target Deployment Manager, then you must update the **WPS_SOAP_PORT** value in the wpscript.sh file. The wpscript.sh file is in the [wp_profile_root/PortalServer/bin/](../../../../guide_me/wpsdirstr.md) and [PortalServer_root/bin](../../../../guide_me/wpsdirstr.md) directory for each node.
     
     Both the source and target environments can now run simultaneously.
 
