@@ -2,19 +2,19 @@
 tags: [dx, digital-experience, integration, automation, enable, disable]
 ---
 
-# Automating OIDC configuration for HCL Digital Experience
+# Automating OIDC configuration for HCL DX
 
 ## Configuring OIDC Authentication
 
 Configure your HCL Digital Experience (DX) installation to leverage OpenID Connect (OIDC) based authentication with an OIDC compatible Identity Provider (IdP), such as Keycloak. This means that DX is turned into a relying party (RP) towards your IdP and the IdP is trusted for authentication assertions.
 
-The scope of this document is limited to automating DX LDAP and transient user's authentication with OIDC considering Keycloak as our OpenID Provider (OP).
+The scope of this document is limited to automating DX LDAP and transient user's authentication with OIDC considering Keycloak as the OpenID Provider (OP).
 
-This document provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. Specifically, it provides an alternative to exhaustive manual configuration actions in IBM WebSphere and HCL DX. For context, the manual steps are [Updating WebSphere to support OIDC Authentication for DX](../dx-update-webshpere-for-oidc.md)
+This document provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. Specifically, it provides an alternative to exhaustive manual configuration actions in IBM WebSphere and HCL DX. For context, see the manual steps in [Updating WebSphere to support OIDC Authentication for DX](../dx-update-webshpere-for-oidc.md)
 
-This document also provides guidance on using automated configuration tasks on how you can configure OIDC Authentication for DX using Transient Users with softgroups using DB2 and derby database. For context, the manual steps are [Updating WebSphere to support OIDC Authentication for DX with Transient Users](../transient-users/dx-update-webshpere-for-oidc-transient-users.md) and [Configuring Rule-based user groups adapter for Transient Users](../transient-users/transient-users-softgroups-configuration.md)
+This document also provides guidance on using automated configuration tasks to configure OIDC Authentication for DX using Transient Users with softgroups using DB2 and derby database. For context, see [Updating WebSphere to support OIDC Authentication for DX with Transient Users](../transient-users/dx-update-webshpere-for-oidc-transient-users.md) and [Configuring Rule-based user groups adapter for Transient Users](../transient-users/transient-users-softgroups-configuration.md).
 
-Currently, the scope of this work is kube based DX deployment and it will not be supported or suggested to be used for other deployment types.
+Currently, the scope of this work covers kube-based DX deployments only. It is not supported or suggested to be used for other deployment types.
 
 ### Additional information
 
@@ -27,16 +27,16 @@ Use this procedure as a general reference and make adjustments to accommodate th
 
 ### Creating config properties file
 
-You will have to create a file named `oidc-config.properties` file under `/opt/HCL/wp_profile/ConfigEngine/properties/` in the `dx-core` pod. This file can be created anywhere but ensure that you specify this path while running the config engine task. The properties file is used for both the enable and disable oidc configuration tasks.
+You have to create a file named `oidc-config.properties` file under `/opt/HCL/wp_profile/ConfigEngine/properties/` in the `dx-core` pod. You can create this file anywhere but ensure that you specify this path while running the config engine task. The properties file is used for both the enable and disable oidc configuration tasks.
 
-Execute following commands for creating a file as below:
+Execute the following commands for creating a file:
 
 ```sh
 kubectl exec -it dx-deployment-core-0 bash -n dxns
 vi /opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties
 ```
 
-Copy the content below and ensure you provided values for the placeholders before you save it.
+Copy the following content and ensure you provided values for the placeholders before you save it.
 
 ```properties
 oidc.clientId=<YOUR_CLIENT_ID>
@@ -103,7 +103,7 @@ oidc.jdbcProvider=<<JDBC_PROVIDER>>
 
 ### Enabling/Installing the OIDC configuration through a config engine task
 
-Now you need to run the config engine tasks to start the OIDC configuration for DX. To do this, run the command below:
+Now you need to run the config engine tasks to start the OIDC configuration for DX. To do this, run the following command:
 
 ```sh
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh -DSaveParentProperties=true -DparentProperties="/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties" enable-oidc-configuration
@@ -111,7 +111,7 @@ Now you need to run the config engine tasks to start the OIDC configuration for 
 
 ### Softgroups with DB2
 
-If you want to enable the softgroups with DB2 database, please create a softgroup database by using the following SQL commands.
+If you want to enable the softgroups with DB2 database, create a softgroup database by using the following SQL commands.
 
 ```sh
 
@@ -128,14 +128,14 @@ CREATE INDEX softgrouptest.SOFTGROUPSIX1 ON softgrouptest.SOFTGROUPS (LASTMODIFI
 COMMIT;
 ```
 
-Then, run the config engine tasks to start the OIDC configuration for DX. To do this, run the command below:
+Then, run the config engine tasks to start the OIDC configuration for DX. To do this, run the following command:
 
 ```sh
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh -DSaveParentProperties=true -DparentProperties="/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties" enable-oidc-configuration
 ```
 
 !!! note
-        This document outlines the steps for DB2 and derby. For other databases it may vary and may not be supported using the config tasks.
+        This document outlines the steps for DB2 and derby. For other databases, the steps may vary and using config tasks might not be supported.
 
 ### Additional configuration required for softgroups
 
@@ -149,23 +149,23 @@ Softgroups require additional manual steps for creating and managing groups and 
 
 ### Testing the OIDC login flow
 
-1. Open a browser and navigate to `https://<HOSTNAME>/wps/portal`
-1. Click **Log in**, this will re-direct you to the IdPs login screen
-1. Log in with the user credentials, and you will be re-directed to the DX home page.
+1. Open a browser and navigate to `https://<HOSTNAME>/wps/portal`.
+1. Click **Log in**. This directs you to the IdPs login screen.
+1. Log in with your user credentials. The DX home page appears.
 1. Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and verify that you are logged in with the correct user profile.
-1. Once logged in, also verify that you can successfully log out of DX
+1. Once logged in, verify that you can successfully log out of DX.
 
 
 ### Disabling/Uninstalling the OIDC configuration through a config engine task
 
-If you are having an issue with the automation enable/install script or are encountering issues with the manual configuration, you can run the disable-oidc-configuration config engine task to disable the OIDC configuration and revert to the original state. To do this, run the command below:
+If you are having an issue with the automation enable/install script or are encountering issues with the manual configuration, you can run the disable-oidc-configuration config engine task to disable the OIDC configuration and revert to the original state. To do this, run the following command:
 
 ```sh
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh -DSaveParentProperties=true -DparentProperties="/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties" disable-oidc-configuration
 ```
 
-Additionally, if any of the configuration steps in the enable-oidc-configuration fails, the uninstall script will automatically revert the newly added config changes.
+Additionally, if any of the configuration steps in the enable-oidc-configuration fails, the uninstall script automatically reverts the newly added config changes.
 
-### Troubleshoot
+### Troubleshooting
 
-You can refer to `ConfigTrace.log` resource for determining the state of server is in, it should contain the history. The file should be located at `/opt/HCL/wp_profile/ConfigEngine/log/ConfigTrace.log`. In addition you can also refer for verifying your configuration against manual steps mentioned in [Configuring OIDC for HCL Digital Experience](../index.md).
+You can refer to `ConfigTrace.log` resource for determining the state the server is in. The `ConfigTrace.log should contain the history. The file should be located at `/opt/HCL/wp_profile/ConfigEngine/log/ConfigTrace.log`. In addition, you can also verify your configuration against manual steps mentioned in [Configuring OIDC for HCL Digital Experience](../index.md).
