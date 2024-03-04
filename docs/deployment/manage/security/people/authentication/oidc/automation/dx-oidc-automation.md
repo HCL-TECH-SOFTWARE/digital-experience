@@ -150,10 +150,10 @@ Softgroups require additional manual steps for creating and managing groups and 
 ### Testing the OIDC login flow
 
 1. Open a browser and navigate to `https://<HOSTNAME>/wps/portal`.
-1. Click **Log in**. This directs you to the IdPs login screen.
-1. Log in with your user credentials. The DX home page appears.
-1. Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and verify that you are logged in with the correct user profile.
-1. Once logged in, verify that you can successfully log out of DX.
+2. Click **Log in**. This directs you to the IdPs login screen.
+3. Log in with your user credentials. The DX home page appears.
+4. Navigate to `https://<HOSTNAME>/wps/myportal/Practitioner/Home` and verify that you are logged in with the correct user profile.
+5. Once logged in, verify that you can successfully log out of DX.
 
 
 ### Disabling/Uninstalling the OIDC configuration through a config engine task
