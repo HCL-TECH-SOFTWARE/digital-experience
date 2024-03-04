@@ -23,7 +23,7 @@ Here are some basic steps for enabling trace on the WebSphere Application Server
       4. In the dialog box, enter the trace specification that you want to use.
       5. Click **OK**.
       
-  - Restart the server.
+  2 Restart the server.
 
 
 ## Additional trace specifications and data collections
