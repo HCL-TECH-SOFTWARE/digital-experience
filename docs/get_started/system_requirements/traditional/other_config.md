@@ -25,7 +25,8 @@ The hypervisors section specifies the hypervisors that HCL Digital Experience 9.
 |---------|-----|-----|----------------------------------|
 |Application Workload Partition (WPAR) AIX 7.1|8.5|Server|	-	AIX 7.1 POWER System \- Big Endian<br>-	AIX 7.2 POWER System \- Big Endian|
 
-!!! important The Portal Express offering does not support AIX.
+!!! important
+    The Portal Express offering does not support AIX.
 
 ### Linux summary
 |Hypervisor|Product minimum|Deployment units|Supported guest operating system|
