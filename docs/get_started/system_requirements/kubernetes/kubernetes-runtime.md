@@ -55,4 +55,4 @@ You can get the result of these checks from the container logs of the `prereqs-c
 
 For these checks, one separate sidecar container is deployed with the main application container. This is a lightweight container so the main application performance is not affected.
 
-The primary objective of the Prereqs Checker is to learn whether the specified prerequisites are met and to inform users of the result in the logs. You can also the checker to discover basic information about the file system of the mounted volumes, which helps track the issues related to the file systems.
+The primary objective of the Prereqs Checker is to learn whether the specified prerequisites are met and to inform users of the result in the logs. You can also use the checker to discover basic information about the file system of the mounted volumes, which helps track the issues related to the file systems.
