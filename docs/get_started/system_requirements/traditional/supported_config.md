@@ -220,7 +220,8 @@ HCL Digital Experience requires the following hardware, organized by type of har
 |Processor|Server|X86-64 IBM POWER Family of processors<br>System z Processors|All supported AIX operating systems|
 |-|Server|Minimum 2 CPUs for installation of Portal or WCM|All supported AIX operating systems|
 
-!!! important The Portal Express offering does not support AIX.
+!!! important 
+	The Portal Express offering does not support AIX.
 
 ### Linux
 |Hardware|Deployment units|Requirement|Applicable operating systems|
