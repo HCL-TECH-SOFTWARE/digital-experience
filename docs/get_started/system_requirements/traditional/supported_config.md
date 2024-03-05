@@ -19,7 +19,7 @@ HCL Digital Experience V9.5 supports the following operating systems, which are 
 |AIX 7.3|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.5|
 
 !!! important 
-	If the installation of DX on AIX 7.3 fails (with missing library messages) while you use the IBM Installation Manager (IIM) installer contained in the DX Setup ``.zip`` files, then use the a later version of IBM AIX IIM (version 1.9.2.3 or later). Using a later IIM version helps ensure that the required AIX 7.3 libraries for installation are present. Refer to the following link to check the list of IIM fix levels and their corresponding download links: [Fix list for Installation Manager](https://www.ibm.com/support/pages/fix-list-installation-manager)
+	If the installation of DX on AIX 7.3 fails (with missing library messages) while you use the IBM Installation Manager (IIM) installer contained in the DX Setup ``.zip`` files, then use the a later version of IBM AIX IIM (version 1.9.2.3 or later). Using a later IIM version helps ensure that the required AIX 7.3 libraries for installation are present. Refer to the following link to check the list of IIM fix levels and their corresponding download links: [Fix list for Installation Manager](https://www.ibm.com/support/pages/fix-list-installation-manager).
 
 !!! important 
 	The Portal Express offering does not support AIX.
