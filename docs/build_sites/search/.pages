@@ -12,7 +12,6 @@ nav:
     - Language and region support in Portal Search: language_region_support
     - Crawling web content with search seedlists: crawling_webcontent_seedbase
     - Searching your local portal: searching_local_portal
-    - Configuring your portal site for search by internet search engines: cfg_search_by_internetsearch
     - Enabling anonymous users to search public pages of your portal: enabling_anonymous_user
     - redirect_search_custom_form.md
     - Remote search service: remotesearch
