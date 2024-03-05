@@ -25,8 +25,6 @@ Depending on your portal environment and your users, you might want to make mult
 Portal Search supports the use of seedlists to make crawling websites and their metadata more efficient and to provide content owners fine-grained control over how content and metadata are crawled. You can configure the portal to use seedlist support when crawling content generated with HCL Web Content Manager.
 13. [Searching your local portal](../search/searching_local_portal/index.md)  
 View information on setting up your local portal for your users to search.
-14. [Configuring your portal site for search by internet search engines](../search/cfg_search_by_internetsearch/index.md)  
-You can enable your portal site for search by using search services such as Google or Yahoo! Search on your portal site by external search services works for public portal pages only, that is, for pages that users can access without a user ID and password.
 15. [Enabling anonymous users to search public pages of your portal](../search/enabling_anonymous_user/index.md)  
 You can enable anonymous users \(sometimes also called unauthenticated users\) to search public pages of your portal by using the portal Search Center portlet. Search by anonymous users works only on public pages of your portal, as the users are not logged in to your portal.
 17. [Redirecting search requests from a custom search form to the Search Center](redirect_search_custom_form.md)  

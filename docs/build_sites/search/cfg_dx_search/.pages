@@ -20,4 +20,5 @@ nav:
     - wcm_config_search.md
     - Search service configuration parameters: search_service_params
     - Configuring the Search Center portlet: cfg_searchcenter
+    - cfg_search_by_internetsearch
     - dx_search_glossary.md
