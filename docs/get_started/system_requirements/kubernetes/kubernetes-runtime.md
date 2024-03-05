@@ -40,7 +40,7 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 |CF Level|Kubernetes versions|
 |--------------|-----------------|
-|CF217| Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/> Kubernetes 1.25<br/>|
+|CF217| Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>Kubernetes 1.25<br/>|
 |CF216| Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>Kubernetes 1.25<br/>|
 |CF215| Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>Kubernetes 1.25<br/>|
 
