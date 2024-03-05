@@ -10,7 +10,14 @@ nav:
     - modify_dx_search.md
     - faceted_search.md
     - search_date_range.md
-    - dx_search_glossary.md
+    - Configure_search_in_portlet.md
+    - cfg_search_cluster
+    - cfg_search_farm
+    - srcconfthmsforsrch.md
     - srtcfgdfltlctsrchcllc.md
+    - wcm_dev_search_searchcenter.md
+    - advp_tsk_cgf_srchcoll.md
+    - wcm_config_search.md
     - Search service configuration parameters: search_service_params
     - Configuring the Search Center portlet: cfg_searchcenter
+    - dx_search_glossary.md

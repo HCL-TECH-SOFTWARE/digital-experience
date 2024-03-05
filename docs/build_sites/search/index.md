@@ -19,10 +19,6 @@ Users can search the tag space by using the browser search box.
 Learn about some planning considerations and first steps that you need to apply before working with Portal Search.
 8.  [Indexing web content](../search/indexing_webcontent/index.md)  
 To search for web content, your content must first be indexed by the HCL Portal search engine. When the content is indexed, you can run searches by using the search center or by using a search component. If you search for documents in the WebSphere Portal search center, be aware that you see search results for published documents only. Unpublished pending changes in a project are not included in the results.
-9.  [Configuring Web Content Manager search options](wcm_config_search.md)  
-You can edit the following search options to manage how the search service works with Web Content Manager search forms.
-10.  [Configuring Search Center to search for web content](wcm_dev_search_searchcenter.md)  
-You can use the Search Center to search for web content by adding a web content search collection to the Search Center.
 11.  [Language and region support in Portal Search](../search/language_region_support/index.md)  
 Depending on your portal environment and your users, you might want to make multilingual content available and searchable in your portal.
 12. [Crawling web content with search seedlists](../search/crawling_webcontent_seedbase/index.md)  
@@ -33,18 +29,11 @@ View information on setting up your local portal for your users to search.
 You can enable your portal site for search by using search services such as Google or Yahoo! Search on your portal site by external search services works for public portal pages only, that is, for pages that users can access without a user ID and password.
 15. [Enabling anonymous users to search public pages of your portal](../search/enabling_anonymous_user/index.md)  
 You can enable anonymous users \(sometimes also called unauthenticated users\) to search public pages of your portal by using the portal Search Center portlet. Search by anonymous users works only on public pages of your portal, as the users are not logged in to your portal.
-16. [Configuring your custom portal themes to include the search box](srcconfthmsforsrch.md)  
-Enable your portal users to use the Portal Search box and Search portlet in your own custom theme.
 17. [Redirecting search requests from a custom search form to the Search Center](redirect_search_custom_form.md)  
 If you plan to develop a custom search form, you might want to redirect search requests issued by the search form to the Search Center.
 18. [Remote search service](../search/remotesearch/index.md)  
 You can configure the search portlets for local operation, or you can configure them for remote search service. Depending on your configuration, remote search service might have performance benefits by offloading and balancing system load.
-19. [Configuring search in a cluster](../search/cfg_search_cluster/index.md)  
-HCL Digital Experience provides two distinct search capabilities. You can use both types of search capabilities in a clustered environment.
-20. [Configuring search in a portal farm](../search/cfg_search_farm/index.md)  
-HCL Digital Experience provides two distinct search capabilities. You can use both types of search capabilities in a portal farm environment.
-21. [Configuring search collections for a virtual portal](advp_tsk_cgf_srchcoll.md)  
-Configuring JCR search collections for a virtual portal might require additional administration, depending on how you set up the virtual portal.
+
 
 ???+ info "Related information"
     -   [Search REST API specification](../search/search-rest-api/index.md)
