@@ -10,7 +10,7 @@ Configure your HCL Digital Experience (DX) installation to leverage OpenID Conne
 
 The scope of this document is limited to automating DX LDAP and transient user's authentication with OIDC considering Keycloak as the OpenID Provider (OP).
 
-This document provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. Specifically, it provides an alternative to exhaustive manual configuration actions in IBM WebSphere and HCL DX. For context, see the manual steps in [Updating WebSphere to support OIDC Authentication for DX](../dx-update-webshpere-for-oidc.md)
+This document provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. Specifically, it provides an alternative to exhaustive manual configuration actions in IBM WebSphere and HCL DX. For context, see the manual steps in [Updating WebSphere to support OIDC Authentication for DX](../dx-update-webshpere-for-oidc.md).
 
 This document also provides guidance on using automated configuration tasks to configure OIDC Authentication for DX using Transient Users with softgroups using DB2 and derby database. For context, see [Updating WebSphere to support OIDC Authentication for DX with Transient Users](../transient-users/dx-update-webshpere-for-oidc-transient-users.md) and [Configuring Rule-based user groups adapter for Transient Users](../transient-users/transient-users-softgroups-configuration.md).
 
@@ -36,7 +36,7 @@ kubectl exec -it dx-deployment-core-0 bash -n dxns
 vi /opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties
 ```
 
-Copy the following content and ensure you provided values for the placeholders before you save it.
+Copy the following content and ensure you provided values for the placeholders before saving.
 
 ```properties
 oidc.clientId=<YOUR_CLIENT_ID>
@@ -103,7 +103,7 @@ oidc.jdbcProvider=<<JDBC_PROVIDER>>
 
 ### Enabling/Installing the OIDC configuration through a config engine task
 
-Now you need to run the config engine tasks to start the OIDC configuration for DX. To do this, run the following command:
+Run the config engine tasks to start the OIDC configuration for DX. To do this, run the following command:
 
 ```sh
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh -DSaveParentProperties=true -DparentProperties="/opt/HCL/wp_profile/ConfigEngine/properties/oidc-config.properties" enable-oidc-configuration
@@ -168,4 +168,4 @@ Additionally, if any of the configuration steps in the enable-oidc-configuration
 
 ### Troubleshooting
 
-You can refer to `ConfigTrace.log` resource for determining the state the server is in. The `ConfigTrace.log should contain the history. The file should be located at `/opt/HCL/wp_profile/ConfigEngine/log/ConfigTrace.log`. In addition, you can also verify your configuration against manual steps mentioned in [Configuring OIDC for HCL Digital Experience](../index.md).
+You can refer to `ConfigTrace.log` resource for determining the state the server is in. The `ConfigTrace.log` should contain the history. The file should be located at `/opt/HCL/wp_profile/ConfigEngine/log/ConfigTrace.log`. In addition, you can also verify your configuration against the manual steps mentioned in [Configuring OIDC for HCL Digital Experience](../index.md).
