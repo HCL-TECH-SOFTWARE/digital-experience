@@ -8,6 +8,7 @@ nav:
     - Search Center: search_center
     - tag_rate_search.md
     - Planning and preparing for Portal Search: planning_portal_search
+    - Indexing web content: indexing_webcontent
     - Language and region support in Portal Search: language_region_support
     - Crawling web content with search seedlists: crawling_webcontent_seedbase
     - Searching your local portal: searching_local_portal
