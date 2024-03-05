@@ -47,7 +47,7 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 !!! important "__*__ CF203 limited support statement"
     In CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments.
 
-## Prerequisites checker For DX deployment
+## Prerequisites checker for DX deployment
 
 HCL DX provides a tool called "Prereqs Checker" that runs several checks to confirm whether the prerequisites for various components are met.  
 
