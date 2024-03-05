@@ -116,5 +116,5 @@ ${WasUserHome}/PortalServer/jcr/config/registerCollationUDFTemplate.sql
 
 
 ???+ info "Related information" 
-    -   [JCR search service configuration parameters](../../../../build_sites/search/portal_search/administer_portal_search/search_service_params/jcr_srrcfgsrvc.md)
+    -   [JCR search service configuration parameters](../../../../build_sites/search/cfg_dx_search/search_service_params/jcr_srrcfgsrvc.md)
 
