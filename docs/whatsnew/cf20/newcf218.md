@@ -42,12 +42,12 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "Containers"
     There are new V2 APIs related to Components (such as LibraryAuthoringToolsComponent and LibraryListPresentationComponent), Custom Workflow Actions Factory, Item Version Update and Restore, Syndication, Presentation Template, Favorite Items, Recent Items, Apply Content Templates, Page References, and Rendering Content. See [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md) for more information. There is also new documentation that discusses the [differences between V1 and V2 APIs](../../manage_content/wcm_development/wcm_rest_v2/comparison_v1_v2.md). 
     
-    You can check the APIs in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+    You can check the APIs in [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 === "On-Premises"
     There are new V2 APIs related to Components (such as LibraryAuthoringToolsComponent and LibraryListPresentationComponent), Custom Workflow Actions Factory, Item Version Update and Restore, Syndication, Presentation Template, Favorite Items, Recent Items, Apply Content Templates, Page References, and Rendering Content. See [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md) for more information. There is also new documentation that discusses the [differences between V1 and V2 APIs](../../manage_content/wcm_development/wcm_rest_v2/comparison_v1_v2.md). 
     
-    You can check the APIs in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+    You can check the APIs in [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 ### Site Manager - Resizable navigation panel 
 
