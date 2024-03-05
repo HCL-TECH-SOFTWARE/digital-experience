@@ -75,7 +75,7 @@ This section specifies the capabilities that HCL Digital Experience 9.5 requires
 |HCL Sametime Premium|11.5, 11.6, 12.0 and later maintenance|9.5|
 
 
-## Produt-specific or mixed content 
+## Product-specific or mixed content 
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |Dojo Toolkit|1.9 and later maintenance releases|8.5|
