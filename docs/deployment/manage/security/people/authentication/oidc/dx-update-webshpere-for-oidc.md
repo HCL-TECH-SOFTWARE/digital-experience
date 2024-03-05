@@ -59,7 +59,7 @@ The interceptor is configured in the ISC under **Security > Global Security > We
 
     | Name | Value |
     | --- | --- |
-    | provider_1.identifier | hcl |
+    | provider_1.identifier |keycloak|
     | provider_1.clientId | hcl-dx-oidc-client |
     | provider_1.clientSecret | &lt;CLIENT_SECRET&gt; |
     | provider_1.discoveryEndpointUrl | https://&lt;IDP_HOSTNAME&gt;/auth/realms/hcl/.well-known/openid-configuration |
