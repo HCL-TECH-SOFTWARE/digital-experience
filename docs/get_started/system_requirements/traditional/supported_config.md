@@ -68,7 +68,8 @@ HCL Digital Experience 9.5 supports the following hypervisors:
 |IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version|8.5|Server|-	AIX 7.1 POWER System \– Big Endian<Br>-	AIX 7.2 POWER System \- Big Endian|
 |WPAR: Product installed in System Workload Partition AIX 6.1|8.5|Server|-	AIX 7.1 POWER System \– Big Endian<br>-	AIX 7.2 POWER System \– Big Endian|
 
-!!! important The Portal Express offering does not support AIX.  
+!!! important 
+	The Portal Express offering does not support AIX.  
 
 ### Linux summary
 
