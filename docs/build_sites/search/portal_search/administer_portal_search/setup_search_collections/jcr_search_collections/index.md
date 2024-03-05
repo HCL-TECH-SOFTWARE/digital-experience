@@ -125,5 +125,5 @@ The portal installation has the JCR search collection created by default. It is 
 
 
 ???+ info "Related information"
-    - [JCR search service configuration parameters](../../search_service_params/jcr_srrcfgsrvc.md)
+    - [JCR search service configuration parameters](../../../../cfg_dx_search/search_service_params/jcr_srrcfgsrvc.md)
 

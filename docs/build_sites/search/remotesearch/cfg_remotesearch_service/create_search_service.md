@@ -4,7 +4,7 @@ Learn about creating a new search service for Portal Search.
 
 **Cluster note:** In a clustered environment, complete these steps on the primary node.
 
-For more detailed information about the search service configuration parameters refer to [Search service configuration parameters](../../portal_search/administer_portal_search/search_service_params/index.md).
+For more detailed information about the search service configuration parameters refer to [Search service configuration parameters](../../cfg_dx_search/search_service_params/index.md).
 
 1.  Log in to your portal as an administrator.
 

@@ -29,5 +29,5 @@ When a site visitor runs a search, any values from metadata fields such as `titl
 
 
 ???+ info "Related information"
-    - [Search service configuration parameters](../administer_portal_search/search_service_params/index.md)
+    - [Search service configuration parameters](../../cfg_dx_search/search_service_params/index.md)
 

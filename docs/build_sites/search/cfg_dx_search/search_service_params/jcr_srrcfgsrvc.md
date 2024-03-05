@@ -68,5 +68,5 @@ The following new properties are integrated in [CF16 and later](https://www.ibm.
 
 
 ???+ info "Related information"
-    - [Database transfer: Set up JCR collation](../../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/kc-db-createdb-db2.md)
-    - [Setting up a JCR search collection](../setup_search_collections/jcr_search_collections/index.md)
+    - [Database transfer: Set up JCR collation](../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/kc-db-createdb-db2.md)
+    - [Setting up a JCR search collection](../../portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md)
