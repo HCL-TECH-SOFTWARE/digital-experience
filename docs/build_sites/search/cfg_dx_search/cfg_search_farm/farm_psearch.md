@@ -2,7 +2,7 @@
 
 To support Search in a portal farm, you must install and configure a remote search service. Install and configure it on an IBM WebSphere Application Server instance that is not part of the farm.
 
-1.  Install the remote search service. Go to the installation topics in [Remote search service](../remotesearch/index.md) for specific steps.
+1.  Install the remote search service. Go to the installation topics in [Remote search service](../../remotesearch/index.md) for specific steps.
 
     The service is on a remote WebSphere® Application Server instance that is not part of the portal farm. You can provide the remote search service either as an EJB or as a web service with SOAP. Deploy the appropriate EJB or SOAP EAR file on the remote WebSphere Application Server instance. For details, refer to the WebSphere Application Server documentation.
 

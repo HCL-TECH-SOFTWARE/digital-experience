@@ -77,7 +77,36 @@ Learn how to improve the quality of search results and remove language filtering
 Learn more about faceted search.
 -   **[Searching by date and date ranges](search_date_range.md)**  
 Learn how to search by date and date ranges. 
+-   **[Configuring search in portlets](Configure_search_in_portlet.md)**<br>
+In this section, you can configure the search and filter the portlets by defining a portlet property setting.
+-   **[Configuring search in a cluster](cfg_search_cluster/index.md)**<br>
+HCL DX provides two distinct search capabilities. You can use both types of search capabilities in a clustered environment.
+-   **[Configuring your custom portal themes to include the search box](srcconfthmsforsrch.md)**<br>
+Enable your portal users to use the Portal Search box and Search portlet in your own custom theme.
+-   **[Configuring search in a portal farm](cfg_search_farm/index.md)**<br>
+HCL DX provides two distinct search capabilities. You can use both types of search capabilities in a portal farm environment.
+-   **[Configuring the default location for search collections](srtcfgdfltlctsrchcllc.md)**  
+You can modify the default directory location under which search collections are created on a per search service basis. View some related information.
+-   **[Configuring Search Center to search for web content](wcm_dev_search_searchcenter.md)**<br> 
+You can use the Search Center to search for web content by adding a web content search collection to the Search Center.
+-   **[Configuring search collections for a virtual portal](advp_tsk_cgf_srchcoll.md)**<br>
+Configuring JCR search collections for a virtual portal might require additional administration, depending on how you set up the virtual portal.
+-   **[Configuring Web Content Manager search options](wcm_config_search.md)**<br>
+You can edit the following search options to manage how the search service works with Web Content Manager search forms.
+-   **[Search service configuration parameters](search_service_params/index.md)**  
+Learn about the portal search service parameters and possible values.
+-   **[Configuring the Search Center portlet](cfg_searchcenter/index.md)**  
+Get an overview of how you configure the Search Center.
 -   **[DX Search Glossary](dx_search_glossary.md)**  
 See the definition of terms used in DX Search.
+
+
+
+
+
+
+
+
+
 
 

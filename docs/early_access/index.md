@@ -8,7 +8,7 @@ The goal of the HCL DX Early Access Program is for the community of participants
 
 ## HCL DX Early Access Program Milestone 2
 
-[HCL DX Early Access Program Milestone 2]((eap_milestone_1.md)) includes the following component:
+[HCL DX Early Access Program Milestone 2](eap_milestone_1.md) includes the following component:
 
 - Open Liberty portlet container (for Kubernetes and Docker)
 

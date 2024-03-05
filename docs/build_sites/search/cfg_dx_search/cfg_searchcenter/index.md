@@ -6,7 +6,7 @@ The Search Center is installed and ready to use in a default portal installation
 
 If required, you can configure the Search Center for search by metadata that is contained within the meta elements and by search scopes. See the following topics for details.
 
-If your users use external search services to perform searches in different languages, refer to [Using the Search Center with external search services with different languages](../../hint_tips/index.md).
+If your users use external search services to perform searches in different languages, refer to [Using the Search Center with external search services with different languages](../../portal_search/hint_tips/index.md).
 
 
 -   **[Configuring search for multilingual sites](config_search_multi.md)**  
