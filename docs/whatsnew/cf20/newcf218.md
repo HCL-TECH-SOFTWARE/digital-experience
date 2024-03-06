@@ -8,7 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Site Manager - Resizable navigation panel 
 - DX Search - Configuring DX Search and Improving Search Quality documentation
 - Updated Javadocs now available
-- HCL DX Content Adapter for WCM V2
+- HCL DX Content Adapter in HCL Volt MX Marketplace
 - New documentation for OIDC in HCL DX
 - Notice of deprecation of Textbox.io Rich Text Editor
 <!-- - DXClient - New Github repository-->
@@ -42,12 +42,12 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 === "Containers"
     There are new V2 APIs related to Components (such as LibraryAuthoringToolsComponent and LibraryListPresentationComponent), Custom Workflow Actions Factory, Item Version Update and Restore, Syndication, Presentation Template, Favorite Items, Recent Items, Apply Content Templates, Page References, and Rendering Content. See [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md) for more information. There is also new documentation that discusses the [differences between V1 and V2 APIs](../../manage_content/wcm_development/wcm_rest_v2/comparison_v1_v2.md). 
     
-    You can check the APIs in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+    You can check the APIs in [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 === "On-Premises"
     There are new V2 APIs related to Components (such as LibraryAuthoringToolsComponent and LibraryListPresentationComponent), Custom Workflow Actions Factory, Item Version Update and Restore, Syndication, Presentation Template, Favorite Items, Recent Items, Apply Content Templates, Page References, and Rendering Content. See [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md) for more information. There is also new documentation that discusses the [differences between V1 and V2 APIs](../../manage_content/wcm_development/wcm_rest_v2/comparison_v1_v2.md). 
     
-    You can check the APIs in [WCM REST v2 Swagger API Explorer](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+    You can check the APIs in [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 ### Site Manager - Resizable navigation panel 
 
@@ -85,7 +85,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
     - [mashups spi](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/Mashups/spi/index-all.html)
     - [spi_docs](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/spi_docs/index-all.html)
 
-### HCL DX Content Adapter for WCM V2
+### HCL DX Content Adapter in HCL Volt MX Marketplace
 
 === "Containers"
     A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see [Using HCL DX Experience APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/dx_apis_in_foundry.md).

@@ -13,4 +13,4 @@ Refer to the following instructions to set up, configure, and administer a searc
 Optional steps:
 
 - Modify the [search user-interface](modify_dx_search.md).
-- Modify the boosting settings for certain content fields. For more details, see **boostingSettings** in the [Search service configuration parameter list](../portal_search/administer_portal_search/search_service_params/index.md#search-service-configuration-parameter-list).
+- Modify the boosting settings for certain content fields. For more details, see **boostingSettings** in the [Search service configuration parameter list](../cfg_dx_search/search_service_params/index.md#search-service-configuration-parameter-list).

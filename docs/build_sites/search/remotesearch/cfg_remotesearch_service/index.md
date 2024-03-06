@@ -44,7 +44,7 @@ To configure a remote search service for Portal Search, proceed as follows:
 11. Restart all servers in your configuration for your changes to take effect.
 
 
-For more information about the search service configuration parameters, see to [Search service configuration parameters](../../portal_search/administer_portal_search/search_service_params/index.md).
+For more information about the search service configuration parameters, see to [Search service configuration parameters](../../cfg_dx_search/search_service_params/index.md).
 
 <!---
 1.  [Creating a new search service](../admin-system/create_search_service.md)  

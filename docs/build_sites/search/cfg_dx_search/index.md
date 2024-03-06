@@ -97,6 +97,8 @@ You can edit the following search options to manage how the search service works
 Learn about the portal search service parameters and possible values.
 -   **[Configuring the Search Center portlet](cfg_searchcenter/index.md)**  
 Get an overview of how you configure the Search Center.
+-   **[Configuring your portal site for search by internet search engines](cfg_search_by_internetsearch/index.md)**<br>
+You can enable your portal site for search by using search services such as Google or Yahoo! Search on your portal site by external search services works for public portal pages only, that is, for pages that users can access without a user ID and password.
 -   **[DX Search Glossary](dx_search_glossary.md)**  
 See the definition of terms used in DX Search.
 
