@@ -1,6 +1,6 @@
 # Integrating with Transient Users with OpenID Connect
 
-[OpenID Connect](https://openid.net/connect/) (OIDC) is an identity protocol that enables clients to verify the identity of a user based on the authentication that is performed by an OpenID Connect Provider (OP). An OIDC client is called a Relying Party (RP). With OIDC, a user submits credentials to the OP only. The OP verifies these credentials to authenticate the user. The OP then identifies the user to the RP via secure channels.  The following lab explores integrating HCL Digital Experience™ (DX) with two OIDC services, [Auth0](https://auth0.com/docs/authenticate/protocols/openid-connect-protocol) and [Google](https://developers.google.com/identity/protocols/oauth2/openid-connect).
+[OpenID Connect](https://openid.net/connect/) (OIDC) is an identity protocol that enables clients to verify the identity of a user based on the authentication that is performed by an OpenID Connect Provider (OP). An OIDC client is called a Relying Party (RP). With OIDC, a user submits credentials to the OP only. The OP verifies these credentials to authenticate the user. The OP then identifies the user to the RP via secure channels. The following lab explores integrating HCL Digital Experience™ (DX) with two OIDC services, [Auth0](https://auth0.com/docs/authenticate/protocols/openid-connect-protocol) and [Google](https://developers.google.com/identity/protocols/oauth2/openid-connect).
 
 Architects may find OIDC services attractive options for meeting certain security requirements, like:
 
