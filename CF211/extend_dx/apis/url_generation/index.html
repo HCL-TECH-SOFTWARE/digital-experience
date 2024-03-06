@@ -1,0 +1,1324 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A next-gen documentation site for HCL Digital Experience.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/CF211/extend_dx/apis/url_generation/">
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>URL generation in HCL Portal - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/dx_style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-169645537-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#url-generation-in-hcl-portal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div class="md-banner--feedback">
+<span class="twemoji">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.25 21.6 13.52l68.6 141.28 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5L433.6 328.4l26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5L31.11 218.2c-6.46-6.3-8.75-15.8-5.91-24.5 2.83-8.6 10.3-14.9 19.29-16.2l153.21-22.7 68.6-141.28C270.4 5.249 278.7 0 287.9 0zm0 78.95L235.4 187.2c-3.5 7.1-10.3 12.1-18.1 13.3L98.98 217.9 184.9 303c5.5 5.5 8 13.4 6.7 21.1l-20.2 119.6 105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2-20.2-119.6c-1.3-7.7 1.3-15.6 6.8-21.1l85.9-85.1-118.3-17.4c-7.9-1.2-14.7-6.2-18.1-13.3L287.9 78.95z"/></svg> 
+</span>
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. <br>Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../latest/extend_dx/apis/url_generation/"> 
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              URL generation in HCL Portal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../get_started/product_overview/" class="md-tabs__link">
+        Get Started
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../whatsnew/cf20/newcf211/" class="md-tabs__link">
+        What's New
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../deployment/" class="md-tabs__link">
+        Deploy DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../build_sites/" class="md-tabs__link">
+        Build Sites
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../manage_content/" class="md-tabs__link">
+        Manage Content
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Extend DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../guide_me/tutorials/" class="md-tabs__link">
+        Guide Me
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../.." class="md-nav__link">
+    Home
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../get_started/product_overview/"
+    class="md-nav__link"
+  >
+    Get Started
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../whatsnew/cf20/newcf211/"
+    class="md-nav__link"
+  >
+    What's New
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../deployment/" class="md-nav__link">
+    Deploy DX
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../build_sites/" class="md-nav__link">
+    Build Sites
+  </a>
+</li>
+  
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a href="../../../manage_content/" class="md-nav__link">
+    Manage Content
+  </a>
+</li>
+  
+    
+      
+      
+                 
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7"
+    type="checkbox"
+    id="__nav_7"
+    checked
+  />
+                               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../">Extend DX</a>
+
+     
+    <label for="__nav_7">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="Extend DX"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_7">
+      <span class="md-nav__icon md-icon"></span>
+      Extend DX
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_2"
+    type="checkbox"
+    id="__nav_7_2"
+    
+  />
+                           
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../script_application/">Script Applications</a>
+
+     
+    <label for="__nav_7_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_3"
+    type="checkbox"
+    id="__nav_7_3"
+    
+  />
+                                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../portlets_development/">Portlet Development</a>
+
+     
+    <label for="__nav_7_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_4"
+    type="checkbox"
+    id="__nav_7_4"
+    
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../development_tools/">Development Tools</a>
+
+     
+    <label for="__nav_7_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_5"
+    type="checkbox"
+    id="__nav_7_5"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../integration/">Integrate Applications</a>
+
+     
+    <label for="__nav_7_5">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_6"
+    type="checkbox"
+    id="__nav_7_6"
+    
+  />
+                                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../ddc/">Digital Data Connector</a>
+
+     
+    <label for="__nav_7_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_7"
+    type="checkbox"
+    id="__nav_7_7"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../screenflow/">Screen Flow Manager</a>
+
+     
+    <label for="__nav_7_7">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_8"
+    type="checkbox"
+    id="__nav_7_8"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../paa/">Using Portal Application Archive</a>
+
+     
+    <label for="__nav_7_8">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_9"
+    type="checkbox"
+    id="__nav_7_9"
+    checked
+  />
+                               
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../">APIs</a>
+
+     
+    <label for="__nav_7_9">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="APIs"
+    data-md-level="2"
+  >
+    <label class="md-nav__title" for="__nav_7_9">
+      <span class="md-nav__icon md-icon"></span>
+      APIs
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_9_2"
+    type="checkbox"
+    id="__nav_7_9_2"
+    
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../hcl_experience_api/">HCL Experience API</a>
+
+     
+    <label for="__nav_7_9_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_9_3"
+    type="checkbox"
+    id="__nav_7_9_3"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../controller_spi/">Controller SPI</a>
+
+     
+    <label for="__nav_7_9_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_9_4"
+    type="checkbox"
+    id="__nav_7_9_4"
+    
+  />
+                             
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../model_spi/">Model SPI Overview</a>
+
+     
+    <label for="__nav_7_9_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_9_5"
+    type="checkbox"
+    id="__nav_7_9_5"
+    
+  />
+                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../portal_access_control_interfaces/">Portal Access Control interfaces</a>
+
+     
+    <label for="__nav_7_9_5">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_9_6"
+    type="checkbox"
+    id="__nav_7_9_6"
+    
+  />
+                 
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../puma_spi/">User and Group Management</a>
+
+     
+    <label for="__nav_7_9_6">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+               
+  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_9_7"
+    type="checkbox"
+    id="__nav_7_9_7"
+    checked
+  />
+                   
+  <div class="md-nav__link md-nav__link--index md-nav__link--active">
+    <a href="./">URL generation in HCL Portal</a>
+
+     
+    <label for="__nav_7_9_7">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="URL generation in HCL Portal"
+    data-md-level="3"
+  >
+    <label class="md-nav__title" for="__nav_7_9_7">
+      <span class="md-nav__icon md-icon"></span>
+      URL generation in HCL Portal
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+             
+  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7_9_7_2"
+    type="checkbox"
+    id="__nav_7_9_7_2"
+    
+  />
+                     
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="urlgen_navstate_spi/">URL generation by using the Navigational State SPI</a>
+
+     
+    <label for="__nav_7_9_7_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="dgn_link/" class="md-nav__link">
+    Creating custom links to portlets and pages
+  </a>
+</li>
+    
+    </ul>
+  </nav>
+  
+</li>
+
+   
+                
+<li class="md-nav__item">
+  <a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/index.html" class="md-nav__link">
+    Portal v8.5 API Specifications
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/index.html" class="md-nav__link">
+    Portal v8.5 SPI Specifications
+  </a>
+</li>
+    
+    </ul>
+  </nav>
+  
+</li>
+
+   
+    </ul>
+  </nav>
+  
+</li>
+
+ 
+    
+      
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../guide_me/tutorials/"
+    class="md-nav__link"
+  >
+    Guide Me
+  </a>
+</li>
+  
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-portal-urls" class="md-nav__link">
+    Types of Portal Urls
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-for-generating-portal-urls" class="md-nav__link">
+    Methods for generating portal URLs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/extend_dx/apis/url_generation/index.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="url-generation-in-hcl-portal">URL generation in HCL Portal</h1>
+<p>Generating Portal URLs correctly is one of the most important tasks in programming an HCL Portal based application. There are several programming tools and techniques available for generating HCL Portal URLs in custom code. The following section introduces the programming tools available and discusses when it is most appropriate to use each of the tools.</p>
+<h2 id="types-of-portal-urls">Types of Portal Urls</h2>
+<p>There are several different types of Portal URLs depending on what task you are trying to accomplish.</p>
+<ul>
+<li>
+<p><strong>Render URLs</strong></p>
+<p>This type of URL is used for retrieving a general view of a Portal page. It specifically does not include any portlet actions or cause any server-side state changes. A Render URL corresponds to an HTTP GET operation and is idempotent, that is, it can be run more than once without any harm. Normal HCL Portal page navigation is made up of render URLs.</p>
+</li>
+<li>
+<p><strong>Action URLs</strong></p>
+<p>Action URLs are used for activities within portlets. The URLs correspond to HTTP POST or PUT and are often non-idempotent, meaning they must be run at most once. An Action URL typically targets a specific portlet, and might cause server-side state changes. The portlet action and the portlet at which the action is targeted are carried as parameters within the Navigation State document.</p>
+</li>
+<li>
+<p><strong>Friendly URLs</strong></p>
+<p>Friendly URLs have human-readable strings in the URL that describe the path to a Portal page. These human-readable strings correspond to the Friendly URL Names that are associated with the pages or labels. In addition, there might also be Friendly Content Path tokens in the URL. The Friendly Content Path tokens are human-readable strings that describe the site area path to Web Content Management library associated with the page.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A friendly URL might also include an encoded Navigational State document. If it does not, it is a Stateless Friendly URL. There is a programming API specifically for working with Friendly URLs.</p>
+</div>
+</li>
+<li>
+<p><strong>Vanity URLs</strong></p>
+<p>Vanity URLs are similar to Stateless Friendly URLs, in that they are human-readable and do not have an encoded Navigational State document. However, Vanity URLs are not tied to the Friendly URL Names associated with the Portal pages. Instead, Vanity URLs are intended to be aliases that are simple, easily remembered, and easily entered by hand if necessary. Vanity URLs are similar to Mapped URLs that were introduced in prior releases of HCL Portal. They are intended only as an initial entry point, and are not persistent in the browser address bar after interaction with the Portal site begins. There is a programming API specifically for working with Vanity URLs.</p>
+</li>
+<li>
+<p><strong>Piece-of-Content URLs</strong></p>
+<p>Piece-of-content URLs or PoC URLs are late binding mechanism that targets content instead of Portal artifacts such as pages. They use a different URL entry point into HCL Portal (typically mypoc or mycontenthandler instead of myportal). A programming API is available for working with Piece-of-Content URLs.</p>
+</li>
+</ul>
+<h2 id="methods-for-generating-portal-urls">Methods for generating portal URLs</h2>
+<p>The complexity of a HCL Portal URL makes them difficult to hand-code, therefore do not try to build Portal URLs by string concatenation. The design intention is that most self-referential URLs in Portal are generated in code at run time to avoid broken links and to avoid manually maintaining links within a Portal-based site.</p>
+<p>HCL Portal makes several options available to a programmer for generating these complex Portal URLs. These different options are designed to address different use-cases, from the simplest to the most complex.</p>
+<ul>
+<li>Portal JSP tags method is used in Theme and Skin JSPs.</li>
+<li>JSR 286 Portlet API and corresponding JSP tags. This method of URL generation addresses almost all URL generation requirements within a standard portlet.<ul>
+<li>Or if necessary when you modify an existing portlet, and upgrading is not a possibility, the older JSR 168 Portlet API is used.</li>
+<li>The HCL Portlet API is no longer supported. Older portlets that are written to this API must be migrated to the current standard.</li>
+</ul>
+</li>
+<li>HCL Portal defined public render parameters. This method can support many use cases that previously required the use of the Navigational State API.</li>
+<li>Friendly URL API method is specifically for use cases that involve Friendly URLs, including URLs that must be stateless (have no encoded Navigational State document).</li>
+<li>PoC URL API method is specifically for creating Piece-of-Content URLs.</li>
+<li>Vanity URL API method is specifically for working with Vanity URLs.</li>
+<li>Navigational State API method is the most full-featured and general programming tool for URL generation, but requires the most in-depth understanding and programming skill.</li>
+</ul>
+<p>When you create cooperating portlets that require inter-portlet communication, the inter-portlet messaging might be carried in the URLs that are generated. Render parameters as supported by JSR 286 are one way of accomplishing this, but additional programming tools are also provided. JSR 286 techniques for cooperative portlets, and the additional tools are described in more detail in the <em>Portlet communication</em> section. One example of such a tool is the Cooperative Portlet API for interoperability between JSR 286 and JSR 168 portlets.</p>
+<p>Mapping use cases to available programming tools</p>
+<table>
+<thead>
+<tr>
+<th>Task (Simplest to most Complex)</th>
+<th>URL Generation Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creating page navigation links between Portal pages at the theme level. For example, standard tabbed pages navigation.</td>
+<td>These URLs are typically simple render URLs. In JSPs, use the <portal-navigation/> JSP tags. For more information about programming a Portal theme, see <em>Developing Themes and Skins</em> section.</td>
+</tr>
+<tr>
+<td>A JSR 286 portlet, self-contained (no inter-portlet communication required), generating action URLs to itself and setting its own render parameters.</td>
+<td>-   JSR 286 defines a tag library for use in JSPs. This tag library is greatly expanded over the V1.0/JSR168 version. It has its own namespace to avoid collisions with the V1.0 library. <br> <code>&lt;%@ taglib uri="http://java.sun.com/portlet_2_0"</code><br> <code>Prefix="portlet"%&gt;</code> <br>Examples: <br>    -   To generate a normal rendering URL with a render parameter: <br> &lt;a <code>href="&lt;portlet:renderURL&gt; &lt;br&gt;&lt;portlet:param name="myRenderParameter"</code><br> <code>value="someValue"/&gt;</code><br> This is the text for the link</a> <br>-   To generate a portlet Action URL, which targets the current portlet on the current page: <br><code>form method="POST"</code><br><code>action="&lt;portlet:actionURL/&gt;"</code><br><strong>Note:</strong> <br> An action URL must have the Navigational State document encoded on it. <br>-   To do the equivalent in java code instead of using the JSP tags, use the JSR 286 Portlet API, which is in package javax.portlet.<em> For more information, see the related link </em>Package javax.portlet.* In particular, see the RenderResponse interface. A RenderResponse is passed to the portlet's render method by the portlet container. RenderResponse implements MimeResponse, which provides 3 methods for creating self-referential URLs: <br>    -   createRenderURL() <br>    -   createActionURL() <br>    -   createResourceURL()</td>
+</tr>
+<tr>
+<td>A JSR 286 portlet, which requires inter-portlet communication with another JSR 286 portlet, but no page navigation (Portal view remains on the current page).</td>
+<td>It might be sufficient to use the JSR 286 render parameter support. However, other techniques also exist. For more information, see the <em>Portlet communication</em> section.</td>
+</tr>
+<tr>
+<td>A JSR 286 portlet, which needs to interoperate with a JSR 168 portlet.</td>
+<td>A JSR168 portlet that worked with other portlets through inter-portlet communication is written to use the Cooperative Portlet API, also known as the Property broker. The Property broker was an HCL extension to the JSR 168 specification. JSR286 introduced the portlet event model, which superseded the Property Broker. JSR286 portlets and JSR 168 portlets can interoperate if certain conditions are met. For more information, see the <em>Interoperability between JSR 286 portlet events and JSR 168 cooperative portlets</em> section.</td>
+</tr>
+<tr>
+<td>A JSR 286 portlet, which needs to <br>-   Generate a render link to another Portal page (causes page navigation).<br>-   Optionally control the mode or window state of the targeted portlet.<br>-   Optionally control the Portal state.<br>-   Optionally control the render parameters of the targeted portlet.<br>-   Optionally control the locale for the generated request.</td>
+<td>Starting with Portal 8.5 CF05 use the HCL Portal-defined public render parameters for all of these use cases, and more. These render parameters make various aspects of the current request context available as normal public render parameters in a HCL Portal specified namespace. <br>-   <strong>To read Navigational State values as render parameters:</strong><br>These special public render parameters can be accessed through the normal JSR286 API <code>renderResponse.getParameter(&lt;parameter qualified name&gt;)</code>.<br>Where <code>&lt;parameter qualified name&gt;</code> is the concatenation of the NAMESPACE_URI and one of the render parameter names, as defined in the following section. For example, http://www.ibm.com/xmlns/prod/websphere/portal/publicparams selection.<br>-   <strong>To set Navigational State values by using render parameters:</strong><br>They can be set by the normal JSR286 portlet API <code>baseURL.setParameter(&lt;parameter qualified name&gt;, &lt;value&gt;)</code><br>By setting these specific render parameters by using the normal JSR286 APIs, the system encodes the correct navigational state settings into the Navigational State document on the new URL. This setting makes the new values available on the next request that results from rendering and clicking that new URL.<br><strong>Notes:</strong><br>-   This support requires the use of stateful URLs because the render parameters are only carried in the encoded Navigation State document.<br>-   All these values are available as public constants in the com.ibm.portal.PublicRenderParameters class, which is a public API within the wp.model.api component. For complete details, see the HCL Portal javadoc <em>HCL Digital Experience, 8.5.0.0 SPI Specification.</em><br> The namespace of the HCL Portal specified public render parameter is http://www.ibm.com/xmlns/prod/websphere/portal/publicparams (available as NAMESPACE_URI). The following items are the special public render parameters that HCL Portal supports:<br>-   selection (NAME_SELECTION)<br>-   uri (NAME_URI)<br>-   parameters (NAME_PARAMETERS)<br>-   locale (NAME_LOCALE)<br>-   themeTemplate (NAME_THEME_TEMPLATE)<br>-   labelMappings (NAME_LABEL_MAPPINGS)<br>-   screenTemplate (NAME_SCREEN_TEMPLATE)<br>-   themePolicy (NAME_THEME_POLICY)<br>-   solo (NAME_SOLO)<br>-   showTools (NAME_SHOW_TOOLS)<br>-   hiddenContent (NAME_HIDDEN_CONTENT)<br>-   hiddenPages (NAME_HIDDEN_PAGES)<br>-   statePartition (NAME_STATE_PARTITION)<br>-   path-info (NAME_PATH_INFO)<br>-   focus (NAME_FOCUS)<br>-   deviceClass (NAME_DEVICE_CLASS)<br>-   digest (NAME_DIGEST)<br>-   pageMode (NAME_PAGE_MODE)<br>-   editMode (NAME_PAGE_EDIT_MODE)<br>-   infoMode (NAME_PAGE_INFO_MODE)<br>-   helpMode (NAME_PAGE_HELP_MODE)<br> There also exists a Portal URL Generation Convenience API. This convenience API supports render URLs only. No state changes (action URLs) can be generated by using this API. The following items are the key classes in this API: <br>-   <code>com.ibm.portal.portlet.service.url.PortalURLGenerationService</code> <br>-   <code>com.ibm.portal.portlet.service.url.PortalURLWriter</code> <br>Per the javadoc of the <em>com.ibm.portal.portlet.service.url</em> package, a programmer: <br>1.  Obtains an instance of a <code>PortletServiceHome</code> by JNDI lookup.<br>2.  On that home interface, calls <code>getPortletService(PortalURLGenerationService.class)</code>.<br>3.  On that service, calls <code>getPortalURLWriter(request, response)</code><br>4.  Uses the methods on the <code>PortalURLWriter</code> object to create and manipulate the render URL. <br> An equivalent set of JSP tags for the URL Generation Convenience API exists. <br><code>&lt;%@ taglib uri="http://www.ibm.com/xmlns/prod/websphere/portal/v8/portlet/ibm-portlet-ext" prefix="portlet-ext" %&gt;</code> <br>For more information, see <em>JSP tags for standard portlets</em>. An example of creating a render URL by using the Convenience API tag is<code>&lt;portlet-ext:portalRenderURL&gt;</code>.</td>
+</tr>
+<tr>
+<td>Friendly URL</td>
+<td>A Friendly URL also known as a Friendly URL Name is a human-readable name for a Portal page. It is set as an attribute of the page, and each page can have at most one Friendly URL. <br><strong>Notes:</strong> <br>-   If a page has a correctly configured Friendly URL, then HCL Portal guarantees that any request that renders the page has the Friendly URL. The request does not have the Friendly URL only if the Friendly URL enforcement is explicitly turned off by using the <code>friendly.redirect.enabled</code> configuration setting. <br>-   Friendly URLs do not guarantee that they are free of Navigational State. If you need to remove Navigational State, further techniques are available. For more information, read <em>Defining friendly URLs without state information for pages in your site</em> and <em><portal-navigation> tags</em>. <br> To use the Friendly URL API, you need to get a <code>FriendlyURLFactory</code> instance. Depending on the type of code you are writing, you can get a <code>FriendlyURLFactory</code> instance in one of two ways:<br>-   <strong>If you are writing a portlet:</strong><br>    -   Start with the <code>com.ibm.portal.resolver.friendly.service.</code><br><code>PortletFriendlySelectionServiceHome</code> class. You need to obtain an instance of that class in 2 steps:<br>        1.  Do a JNDI lookup by using the constant <code>PortletFriendlySelectionServiceHome.JNDI_NAME</code>. This JNDI lookup returns an instance of a <code>PortletServiceHome</code>.<br>        2.  On the <code>PortletServiceHome</code> object, call <code>getPortletService(PortletFriendlySelectionServiceHome.class)</code>. The call returns a <code>PortletFriendlySelectionServiceHome</code> instance. <br>    -   For efficiency, do the JNDI lookup and <code>getPortletService</code> call within the <code>init(PortletConfig)</code> method of your portlet, and save the <code>PortletFriendlySelectionsServiceHome</code> instance to be reused. It is not necessary to do these calls on a per-request basis. <br>    -   On a per-request call, such as the <code>doView(RenderRequest,RenderResponse)</code> method of the portlet, use the saved <code>PortletFriendlySelectionServiceHome</code> to call <code>getPortletFriendlySelectionService(request,response)</code>. The call returns a <code>PortletFriendlySelectionService</code> instance.<br><strong>Note:</strong> <br>This instance must be disposed by calling <code>dispose()</code> before it goes out of scope.<br>    -   On the returned <code>PortletFriendlySelectionService</code> instance, call <code>getURLFactory()</code>.<br>-   <strong>If you are writing theme code:</strong><br>    -   Start with the <code>com.ibm.portal.resolver.friendly.service.PortalFriendlySelectionServiceHome</code> class. Do JNDI lookup by using the constant <code>PortalFriendlySelectionServiceHome.JNDI_NAME</code>. This lookup returns an instance of a <code>PortalFriendlySelectionServiceHome</code>. <br>    -   For efficiency, do the JNDI lookup within the constructor or other initialization method of your class, and save the <code>PortalFriendlySelectionServiceHome</code> instance to be reused. It is not necessary to do this call on a per-request basis. <br>    -   On a per-request call, use the saved <code>PortalFriendlySelectionServiceHome</code> to call <code>getPortalFriendlySelectionsService(HttpServletRequest,HttpServletResponse)</code>. The call returns a <code>PortalFriendlySelectionService</code> instance. <br><strong>Note:</strong> <br>This instance must be disposed by calling <code>dispose()</code> before it goes out of scope.    -   On the returned <code>PortalFriendlySelectionService</code> instance, call <code>getURLFactory()</code>. <br> After you have a <code>FriendlyURLFactory</code>, you can call one of the <code>newURL()</code> methods to obtain a <code>FriendlyURL</code> instance. A <code>FriendlyURL</code> instance can be set up using the <code>set*</code> methods, which are written to the response by using the <code>writer(Writer)</code> method. The <code>Writer</code> is obtained from the response, and then is disposed by calling <code>dispose()</code>.</td>
+</tr>
+<tr>
+<td>Vanity URL</td>
+<td>A Vanity URL is a simple, easy to remember URL that a user can enter by hand. Vanity URLs are managed by the webmaster with the HCL Portal administrative tools, such as the toolbar, administrative portlets, or XMLAccess scripting. However, sometimes when you render a response, it is necessary to produce a Vanity URL link. <br> The following section describes how to use the Vanity URL API to obtain a <code>VanityURLNode</code>, which can be used to render a Vanity URL link. Depending on the type of code package you are developing, use one of the 3 different ways to access and use the Vanity URL API. <br><strong>Note:</strong> <br>Be careful to select the correct SPI package for the code that is being developed. <br>The necessary interface documentation is in the HCL Portal SPI javadoc.<br> -   <strong>If you are writing a portlet:</strong> <br>    -   Locate the com.ibm.portal.portlet.service.model package. <br>    -   Start with the <code>VanityURLModelProvider</code> interface. You need to obtain an instance of a class, which implements that interface, in 2 steps: <br>        1.  Obtain an instance of a <code>PortletServiceHome</code> by JNDI lookup by using the name constant <code>VanityURLModelProvider.JNDI_NAME</code>. <br>        2.  On that <code>PortletServiceHome</code> object, call <code>getPortletService(VanityURLModelProvider.class)</code>.<br>    -   Do the JNDI lookup and call <code>getPortletService</code> in the <code>init()</code> method of the portlet. Save the returned <code>VanityURLModelProvider</code> instance in a static field in your portlet class. This provider instance can be reused across requests.<br>    -   For each request, for example in the call to the <code>doView()</code> method of the portlet, call <code>getVanityURLModel</code> on the saved <code>VanityURLModelProvider</code> instance, passing the current portlet request and response. Models must not be reused across requests.<br>    -   On the <code>VanityURLModel</code> object, call <code>getLocator()</code>.<br>    -   On the <code>VanityURLModelLocator</code>, you can call any of the findBy methods, which return either a single <code>VanityURLNode</code> or an <code>IterableListModel&lt;VanityURLNode&gt;</code> list. <br>-   <strong>If you are writing theme code:</strong><br>    -   Locate the com.ibm.portal.model package.<br><strong>Note:</strong> <br>Many of the class names in this set of instructions are identical to the class names for DataSource usage of the Vanity URL API, but the package name is different.<br>    -   Obtain an instance of a class, which implements <code>VanityURLModelProvider</code>, in 2 steps:<br>        1.  Obtain an instance of a <code>VanityURLModelHome</code> by JNDI lookup by using the name constant <code>VanityURLModelHome.JNDI_NAME</code>. See the com.ibm.portal.model.VanityURLModelHome javadoc for example code.<br>        2.  On that <code>VanityURLModelHome</code> object, call <code>getVanityURLModelProvider()</code>.<br>    -   Do the JNDI lookup and call <code>getVanityURLModelProvider()</code> in the constructor or an <code>init()</code> method of your class. Save the returned <code>VanityURLModelProvider</code> instance in a static field in your class. This provider instance can be reused across requests.<br>    -   For each request, call <code>getVanityURLModel</code> on the saved <code>VanityURLModelProvider</code> instance, passing the current servlet request and response. Models must not be reused across requests.<br>    -   On the <code>VanityURLModel</code> object, call <code>getLocator()</code>.<br>    -   On the <code>VanityURLModelLocator</code>, you can call any of the findBy methods, which return either a single <code>VanityURLNode</code> or an <code>IterableListModel&lt;VanityURLNode&gt;</code> list.<br>-   <strong>If you are writing a DataSource:</strong><br>    -   Locate the <code>com.ibm.portal.cor.service</code> package.<br><strong>Note:</strong> <br>Many of the class names in this set of instructions are identical to the class names for the theme code usage of the Vanity URL API, but the package name is different.<br>    -   Obtain an instance of a class, which implements <code>VanityURLModelProvider</code>, in 2 steps:<br>        1.  Obtain an instance of a <code>VanityURLModelHome</code> by JNDI lookup by using the name constant <code>VanityURLModelHome.JNDI_NAME</code>. See the <code>com.ibm.portal.cor.service.VanityURLModelHome</code> javadoc for example code.<br>        2.  On that <code>VanityURLModelHome</code> object, call <code>getVanityURLModelProvider()</code>.<br>    -   Do the JNDI lookup and call <code>getVanityURLModelProvider()</code> in the constructor or an <code>init</code> method of your class, and save the returned <code>VanityURLModelProvider</code> instance in a static field in your class. This provider instance can be reused across requests.<br>    -   In a per-request method of the DataSource, call <code>modelProvider.getVanityURLModel(com.ibm.content.operations.registry.api.Context)</code>.<br>Programming detail for a DataSource: In most cases, a DataSource is allocated by a dedicated factory. The factory is registered with the resolver framework to handle requests for a specific URI. When a request for that URI is received, the factory is started by the resolver framework and is passed a <code>com.ibm.content.operations.registry.api.Context</code> object. Make sure to understand the difference between this <code>COR Context</code> object and the <code>javax.naming.Context</code> class that is used by JNDI lookup. The factory allocates a new DataSource instance (or might retrieve an existing one from a pool) and calls <code>reset()</code> on the DataSource, passing the <code>COR Context</code> object. This object and the other parameters to <code>reset()</code>, must be saved in instance fields within the DataSource. They can be used on subsequent method calls until either <code>dispose()</code> is called or <code>reset()</code> is called again. Use the <code>COR Context</code> object on the call to <code>getVanityURLModel(com.ibm.content.operations.registry.api.Context)</code>. <br>    -   On the <code>VanityURLModel</code> object, call <code>getLocator()</code>.<br>    -   On the <code>VanityURLModelLocator</code>, you can call any of the findBy methods, which return either a single <code>VanityURLNode</code> or an <code>IterableListModel&lt;VanityURLNode&gt;</code> list.<br>After you have a <code>VanityURLNode</code> instance through any of the appropriate ways, you can call the various methods of that interface to build a rendered representation of the VanityURL:<br>-   <code>VanityURLnode.isSecure()</code> tells whether the target protocol is http or https.<br>-   <code>VanityURLnode.isProtected()</code> tells whether the target URL mapping is to /portal or /myportal.<br>-   <code>VanityURLnode.getHost()</code> returns the host name that is associated with this Vanity URL.<br>-   <code>VanityURLnode.getPort()</code> returns the port number that is associated with this Vanity URL.<br>-   <code>VanityURLnode.getVpld()</code> returns the Virtual Portal OID for this Vanity URL.<br>-   <code>VanityURLnode.getPath()</code> returns the path string for this Vanity URL. This path string is what is thought of as the Vanity URL string.</td>
+</tr>
+<tr>
+<td>Create, update, or delete Vanity URLs.</td>
+<td>If you are writing code, which is intended to create, update, or delete Vanity URLs, rather than read and render them, use the following APIs:<br>-   Locate the <code>com.ibm.portal.model.controller</code> package.<br>-   You need to obtain an instance of a class, which implements <code>VanityURLModelControllerHome</code> through JNDI lookup by using the name constant <code>VanityURLModelControllerHome.JNDI_Name</code>. See the <code>com.ibm.portal.model.controller.VanityURLModelControllerHome</code> javadoc for example code.<br>-   On that <code>VanityURLModelControllerHome</code> object, call <code>getVanityURLModelControllerProvider()</code>.<br>-   Do the JNDI lookup and call <code>getVanityURLModelControllerProvider()</code> in the constructor or an <code>init</code> method of your class, and save the returned <code>VanityURLModelControllerProvider</code> instance in a static field in your class. This provider instance can be reused across requests.<br>-   You might also need to obtain a <code>VanityURLModelProvider</code>, by using the same code as described in the writing Theme code.<br>-   In a per-request method,<br>    -   On the <code>VanityURLModelProvider</code>, call <code>getVanityURLModel(request,response)</code>.<br>    -   On the <code>VanityURLModelControllerProvider</code> object, call <code>createVanityURLModelController(model)</code> passing the model that is returned from the call to <code>getVanityURLModel</code>.<br>-   The subsequent calls to create the new Vanity URL and set its attributes are documented in the javadoc for <code>VanityURLModelController</code> and <code>ModifiableVanityURLNode</code>.</td>
+</tr>
+<tr>
+<td>A JSR 286 portlet, which needs to generate an action URL to a second specific portlet, or any other use case that is not listed here.</td>
+<td>Navigational State API</td>
+</tr>
+<tr>
+<td>Piece-of-Content URL</td>
+<td>A Piece-of-Content or POC URL is a URL that targets a DataSource or a ResolutionService within the Resolver framework. Given such a DataSource or ResolutionService, the PoC URL API assists the programmer to create a URL that results in the Resolver framework to start the correct DataSource or ResolutionService.<br> To work with Piece-of-Content URLs, obtain an instance of a com.ibm.portal.resolver.acessors.url.PocURLFactory. Much like other URL APIs, the code for obtaining an instance of a URLFactory depends on whether you are writing a portlet, theme code, or if you are already running a code within the resolver framework.<br>-   <strong>If you are writing a portlet:</strong><br>    -   In the Portal javadoc, locate the com.ibm.portal.resolver.servicer.service package.<br>    -   Obtain a <code>PortletPocServiceHome</code> instance in 2 steps:<br>    1.  Do a JNDI lookup for the <code>PorletServiceHome</code> instance by using the name constant <code>PortletPocServiceHome.JNDI_NAME</code>. See the javadoc for <code>PortletPocServiceHome</code> for sample code.<br>    2.  On the returned <code>PortletServiceHome</code> object, call <code>getPortletService(PortletPocServiceHome.class)</code>.<br>   -   Do the JNDI lookup and call <code>getPortletService</code> in the <code>init(PortletContig)</code> method of your portlet, and save the resulting <code>PortletPocServiceHome</code> instance in a class instance variable. It is not necessary to redo these calls on every request that is serviced by the portlet.<br>  -   In a per-request method, such as <code>render(RenderRequest,RenderResponse)</code>, call the appropriate <code>PortletPocServiceHome.getPortletPocService()</code> method based on the specific method that is implemented and the type of request and response that are passed. There are versions of this method for Action, Event, Render, Resource and plain PortletRequest and Response.<br><strong>Note:</strong> <br> It is necessary to call <code>dispose()</code> on the returned service instance before it goes out of scope.<br>    -   On the <code>PortletPocService</code> or appropriate subclass, call <code>getURLFactory()</code>.<br>-   <strong>If you are writing theme code:</strong><br>    -   In the Portal javadoc, locate the com.ibm.portal.resolver.service package.<br>    -   Do a JNDI lookup for the <code>PortalPocServiceHome</code>, by using the name constant <code>PortalPocServiceHome.JNDI_NAME</code>.<br>    -   Save the resulting <code>PortalPocServiceHome</code> instance in a class instance field. It is not necessary to do the JNDI lookup for every request.<br>    -   In per-request method of your class, on the saved <code>PortalPocServiceHome</code> instance call <code>getPortalPocService</code> passing the <code>HttpServletRequest</code> and <code>HttpServletResponse</code>.<br> <strong>Note:</strong><br>    It is necessary to call <code>dispose()</code> on the returned service instance before it goes out of scope.<br>    -   On the resulting <code>PortalPocService</code> instance, call <code>getURLFactory()</code>.<br> -   <strong>If you are writing code that runs as a DataSource or ResolutionService:</strong><br>    -   In the Portal javadoc, locate the <code>com.ibm.portal.resolver.service</code> package.<br>    -   Do a JNDI lookup for the <code>CorPocServiceHome</code>, by using the name constant <code>CorPocServiceHome.JNDI_NAME</code>.<br>    -   Save the resulting <code>CorPocServiceHome</code> instance in a class instance field. It is not necessary to do the JNDI lookup for every request.<br>    -   In per-request method of your class, on the saved <code>CorPocServiceHome</code> instance call <code>getCorPocService(com.ibm.content.operations. registry.api.Context)</code>.<br><strong>Note:</strong><br>    It is necessary to call <code>dispose()</code> on the returned service instance before it goes out of scope.<br>Programming detail for a DataSource: In most cases, a DataSource is allocated by a dedicated factory. The factory is registered with the resolver framework to handle requests for a specific URI. When a request for that URI is received, the factory is started by the resolver framework and is passed a <code>com.ibm.content.operations.registry.api.Context</code> object. Make sure to understand the difference between this <code>COR Context</code> object and the <code>javax.naming.Context</code> class that is used by JNDI lookup. The factory allocates a new DataSource instance (or might retrieve an existing one from a pool) and calls <code>reset()</code> on the DataSource, passing the <code>COR Context</code> object. This object and the other parameters to <code>reset()</code>, must be saved in instance fields within the DataSource. They can be used on subsequent method calls until either <code>dispose()</code> is called or <code>reset()</code> is called again. Use the <code>COR Context</code> object on the call to <code>getCorPocService (com.ibm.content.operations.registry.api.Context)</code>. <br>    -   On the resulting <code>CorPocService</code> instance, call <code>getURLFactory()</code>. <br> After you obtain a <code>PocURLFactory</code>:<br>-   Call one of the <code>newURL</code> methods, to instantiate the desired type of <code>PocURL</code>.<br>-   On the resulting <code>PocURL</code> instance, call the <code>setXXX</code> methods to define your URL attributes.<br> -   Stream the URL to the response and dispose of the <code>PocURL</code> instance by calling <code>writeDispose()</code>. The Writer instance for use by <code>writeDispose</code> must be obtained from the response argument to the method.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong><a href="urlgen_navstate_spi/">URL generation by using the Navigational State SPI</a></strong><br />
+The Navigational State API is used to read and modify the Navigational State document within a Portal URL. The Navigational State document is the seemingly random string of characters that appears in HCL Portal URLs. This string is a compressed, encoded XML document that contains a large amount of information that supports various Portal functions, including bookmark-ability of Portal pages and back button support.</li>
+<li><strong><a href="dgn_link/">Creating custom links to portlets and pages</a></strong><br />
+URLs encode navigational state information about HCL Portal (for example, the user's currently selected page) and about the portlets on a page (for example, the window state of the portlet) in a serialized form. Encoding navigational state information in the URL is used by the portal server to support use of the browser's back button.</li>
+</ul>
+<details class="info" open="open">
+<summary>Related information</summary>
+<ul>
+<li><a href="../../../manage_content/wcm_delivery/vanity_url/">Vanity URLs</a></li>
+</ul>
+</details>
+<!--  - [URLs](../site/site_urls.md)-->
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../puma_spi/remote_rest_service_for_puma/user_and_groups_rest_api_explorer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DX User and Groups REST API explorer" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              DX User and Groups REST API explorer
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="urlgen_navstate_spi/" class="md-footer__link md-footer__link--next" aria-label="Next: URL generation by using the Navigational State SPI" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              URL generation by using the Navigational State SPI
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        <label>
+      </li>
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        <label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
