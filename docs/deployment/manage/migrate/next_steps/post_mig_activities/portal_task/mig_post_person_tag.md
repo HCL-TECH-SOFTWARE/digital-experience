@@ -1,8 +1,8 @@
 # Removing Person Tag hidden pages
 
-Remove Person Tag hidden pages from migrated environments where Search for Portal Site was previously configured. If you migrated or updated to HCL Digital Experience 8.5 CF04 or later, then you do not need to complete these steps.
+Remove Person Tag hidden pages from migrated environments where Search for Portal Site was previously configured. If you migrated or updated to HCL Digital Experience 9.5 or 8.5 CF04 or later, then you do not need to complete these steps.
 
-You might find errors that are captured in the systemOut.log file if the migrated system has Search for Portal Site configured and crawling runs. The following excerpt is provided as an example.
+You might find errors that are captured in the SystemOut.log file if the migrated system has Search for Portal Site configured and crawling runs. The following excerpt is provided as an example.
 
 ```
 
@@ -19,7 +19,7 @@ You might find errors that are captured in the systemOut.log file if the migrate
          at com.ibm.wps.pe.pc.legacy.PortletContainerImpl.callPortletMethod(PortletContainerImpl.java:1308)
 ```
 
-1.  Remove the hidden pages to avoid these errors in the systemOut.log.
+1.  Remove the hidden pages to avoid these errors in the SystemOut.log.
 2.  Log in to Portal as an Administrator.
 
 3.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.

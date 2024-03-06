@@ -1,6 +1,6 @@
 # Exporting UXFM dialog definitions
 
-Export and save your dialog definitions before you migrate to Version 8.5.
+Export and save your dialog definitions before you migrate to Version 8.5/9.5.
 
 1.  Save the following example of code as ExportSampleCode.xml to use when exporting your dialog definitions.
 
@@ -23,7 +23,7 @@ Export and save your dialog definitions before you migrate to Version 8.5.
     -   AIX® and Linux™: `./xmlaccess.sh -user userID -password password -url http://local_host:local_port/wps/config -in ExportSampleCode.xml -out export.xml`
     -   Windows™: `xmlaccess.bat -user userID -password password -url http://local_host:loca\_port/wps/config -in ExportSampleCode.xml -out export.xml`
 
-3.  Back up the file that contains the exported dialog definitions to a secure location. You can import your dialog definitions after you migrate to V8.5.
+3.  Back up the file that contains the exported dialog definitions to a secure location. You can import your dialog definitions after you migrate to V8.5/9.5.
 
 
 ???+ info "Related information"

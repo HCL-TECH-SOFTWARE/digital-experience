@@ -6,6 +6,7 @@ nav:
     - User registry considerations: user_registry_consideration
     - express_ha.md
     - Cluster consideration: cluster_consideration
+    - Updating to IBM WAS 9.0.5: Updating_to_IBM_WAS 95
     - plan_virt_envir.md
     - plan_multiple_profile.md
     - roadmaps
