@@ -1,6 +1,6 @@
 # Removing unsupported composite applications
 
-Composite applications are no longer supported. If you have a composite application in your system and you migrate to Version 8.5, the migration fails. Ensure that all composite applications are deleted before you start the migration. When you delete a composite application, you must also run the resource cleaner, otherwise pages can still exist in the database.
+Composite applications are no longer supported. If you have a composite application in your system and you migrate to Version 8.5/9.5, the migration fails. Ensure that all composite applications are deleted before you start the migration. When you delete a composite application, you must also run the resource cleaner, otherwise pages can still exist in the database.
 
 1.  If you own or manage an application, you can delete it. The applications catalog is the only context where you can delete an application.
 2.  Use the following code sample to show the applications that you own or manage:

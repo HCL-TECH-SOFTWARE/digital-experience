@@ -11,7 +11,7 @@ You can configure additional scopes. For more information about search scopes an
 
 
 ???+ info "Related information"
-    - [Customizing the Search Center](../customize_searchcenter/index.md)
-    - [Managing search scopes and custom links](../customize_searchcenter/srtmgscops.md)
-    - [Customizing the All Sources scope](../customize_searchcenter/srtcustomscope.md)
+    - [Customizing the Search Center](../../portal_search/administer_portal_search/customize_searchcenter/index.md)
+    - [Managing search scopes and custom links](../../portal_search/administer_portal_search/customize_searchcenter/srtmgscops.md)
+    - [Customizing the All Sources scope](../../portal_search/administer_portal_search/customize_searchcenter/srtcustomscope.md)
 

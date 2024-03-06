@@ -13,7 +13,3 @@ Detailed system requirements are the complete lists of hardware requirements, su
     - [Supported Configuration](traditional/supported_config.md)  
     - [Unsupported Configuration](traditional/unsupported_config.md)  
     - [Other Configuration](traditional/other_config.md)
-
-- Docker
-    - [Docker](docker/index.md)
-    

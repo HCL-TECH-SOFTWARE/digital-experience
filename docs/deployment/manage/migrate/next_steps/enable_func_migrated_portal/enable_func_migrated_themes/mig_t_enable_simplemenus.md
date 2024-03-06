@@ -1,6 +1,6 @@
 # Updating your theme to use simple context menus
 
-The theme context menu framework that is provided with the module wp\_theme\_menus in Portal 8.0 and earlier versions is relabeled and improved in HCL Digital Experience 8.5. The new Simple Menu Framework is compatible with all previous versions of the wp\_theme\_menus.
+The theme context menu framework that is provided with the module wp\_theme\_menus in Portal 8.0 and earlier versions is relabeled and improved in HCL Digital Experience 8.5/9.5. The new Simple Menu Framework is compatible with all previous versions of the wp\_theme\_menus.
 
 If you want to use the HCL Digital Experience simple context menus, you must complete the following steps on your migrated theme.
 

@@ -14,10 +14,13 @@ To configure a portal search service, use the parameters given in the following 
 
 ## Search service configuration parameter list
 
--   The parameter list in both the Search Services pane of the Manage Search portlet and in the following information shows several parameters that end with the suffix `_EXAMPLE`. These example parameters are not used by the portal. They serve as an example for the same parameter without the suffix `_EXAMPLE`. They give an example value that you might use. Deleting these parameters or modifying their value has no effect.
--   If you want to set a parameter that is listed here, but not listed in the portlet, add it. To add a parameter, type the parameter and the value in the entry fields **Parameter key:** and **New parameter value:** and click **Add Parameter**.
--   In the following list, the abbreviation pse in parameters or values stands for Portal Search Engine.
--   The following list is arranged in alphabetical order. Parameters might be listed in a different order in the portlet.
+The parameter list in both the Search Services pane of the Manage Search portlet and in the following information shows several parameters that end with the suffix `_EXAMPLE`. These example parameters are not used by the portal. They serve as an example for the same parameter without the suffix `_EXAMPLE`. They give an example value that you might use. Deleting these parameters or modifying their value has no effect.
+
+If you want to set a parameter that is listed here, but not listed in the portlet, add it. To add a parameter, type the parameter and the value in the entry fields **Parameter key:** and **New parameter value:** and click **Add Parameter**.
+
+In the following list, the abbreviation pse in parameters or values stands for Portal Search Engine.
+
+The following list is arranged in alphabetical order. Parameters might be listed in a different order in the portlet.
 
 -   **boostingSettings**
 
@@ -280,6 +283,6 @@ The following search service configuration parameters can be modified to enable 
 
 
 ???+ info "Related information"
-    - [Using the WebSphere Integrated Solutions Console to administer Portal Search](../srtadmsrchadmcnsl.md)
-    - [Hints and tips for improving quality of Portal Search results](../../hint_tips/srrhinttips_improve_quality_search.md)
+    - [Using the WebSphere Integrated Solutions Console to administer Portal Search](../../portal_search/administer_portal_search/srtadmsrchadmcnsl.md)
+    - [Hints and tips for improving quality of Portal Search results](../../portal_search/hint_tips/srrhinttips_improve_quality_search.md)
 

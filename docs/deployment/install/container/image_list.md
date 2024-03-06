@@ -6,6 +6,56 @@ You can obtain the HCL DX 9.5 container update and supported OS releases from yo
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
+## HCL DX 9.5 CF218
+
+If you are deploying the HCL DX 9.5 CF218 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF218 DXClient files
+
+```shell
+hcl-dxclient-image-v95_CF218_20240226-1633.zip
+hcl-dxclient-v95_CF218_20240226-1633.zip
+```
+
+### hcl-dx-kubernetes-v95-CF218.zip
+
+```shell
+HCL DX notices V9.5 CF218.txt
+hcl-dx-content-composer-image-v1.31.0_20240226-1612.tar.gz
+hcl-dx-core-image-v95_CF218_20240226-1632.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v0.1.0_20240226-1613.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v0.1.0_20240226-1613.tar.gz
+hcl-dx-deployment-v2.27.0_20240227-0112.tgz
+hcl-dx-digital-asset-manager-image-v1.30.0_20240226-1629.tar.gz
+hcl-dx-experience-api-sample-ui-v0.2.0.20240226-1618.zip
+hcl-dx-haproxy-image-v1.14.0_20240226-1619.tar.gz
+hcl-dx-image-processor-image-v1.31.0_20240226-1623.tar.gz
+hcl-dx-license-manager-image-v95_CF218_20240226-1617.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20240226-1618.tar.gz
+hcl-dx-openldap-image-v1.2.0_20240226-1613.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.29.0_20240227-2135.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.27.0_20240227-2135.tar.gz
+hcl-dx-persistence-node-image-v1.19_20240227-2133.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20240226-1618.tar.gz
+hcl-dx-remote-search-image-v95_CF218_20240226-1632.tar.gz
+hcl-dx-ringapi-image-v1.31.0_20240226-1627.tar.gz
+hcl-dx-runtime-controller-image-v95_CF218_20240226-1619.tar.gz
+```
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+This section presents the latest available HCL DX File package listings for supported OS platforms.
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF218_Express_Update|HCL-DX-CF218_Express_Update.zip|
+|HCL-DX-CF218_RemoteSearch_Update|HCL-DX-CF218_RemoteSearch_Update.zip|
+|HCL-DX-CF218_Server_Update|HCL-DX-CF218_Server_Update.zip|
+
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
+
+<!--
+
 ## HCL DX 9.5 CF217
 
 If you are deploying the HCL DX 9.5 CF217 Container update release, the package name and images are as follows.
@@ -54,7 +104,7 @@ This section presents the latest available HCL DX File package listings for supp
 
 See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
 
-<!--
+
 ## HCL DX 9.5 CF216
 
 If you are deploying the HCL DX 9.5 CF216 Container update release, the package name and images are as follows.
