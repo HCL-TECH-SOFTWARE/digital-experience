@@ -1,4 +1,4 @@
-# Content Reporting Bulk Update
+# Performing a bulk update in Content Reporting
 
 Currently, Content Reporting Bulk Update feature supports the following actions: 
 
