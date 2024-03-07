@@ -383,7 +383,7 @@ type: "Opaque"
 apiVersion: "v1"
 kind: "Secret"
 data:
-  # Required attribute
+  # Required attribute. The user name can contain only lowercase alphabets, numbers, underscores and dollar sign.
   username: <username>
   # Required attribute
   password: <password>
