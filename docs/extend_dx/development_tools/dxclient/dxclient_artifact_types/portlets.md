@@ -7,7 +7,8 @@ This topic provides information about the deployment and undeployment of portlet
 The `deploy-portlet` command is used to deploy one or more new or updated portlets from a source client or server environment to target HCL DX 9.5 CF19 or later server using a provided input XMLAccess file and deployable Portlet WAR file.
 
 !!! note
-    The synchronization mode of all nodes in a clustered DX environment must be consistently set for a newly deployed portlet to be automatically started; otherwise redeployment or a manual start is required.
+    1. The synchronization mode of all nodes in a clustered DX environment must be consistently set for a newly deployed portlet to be automatically started; otherwise redeployment or a manual start is required.
+    2. You need a user with admin access role to deploy portlets using dxclient.
 
 **Required files**
 
