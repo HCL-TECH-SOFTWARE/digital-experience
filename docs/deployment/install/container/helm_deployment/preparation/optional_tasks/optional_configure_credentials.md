@@ -383,7 +383,7 @@ type: "Opaque"
 apiVersion: "v1"
 kind: "Secret"
 data:
-  # Required attribute. The user name can contain only lowercase alphabets, numbers, underscores and dollar sign with max length of 63 characters .
+  # Required attribute. The user name can begin with lowercase alphabets or underscore and can contain only lowercase alphabets, numbers, underscore or dollar sign with max length of 63 characters.
   username: <username>
   # Required attribute
   password: <password>
