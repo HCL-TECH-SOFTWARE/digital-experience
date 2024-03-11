@@ -149,9 +149,9 @@ In addition a [Performance Sizing Guidance for Rendering with a Small Configurat
 
 ## Unlimited resource `limits`
 
-All `limits` can be explicitly set to `null` to unset them in Kubernetes and allow for unlimited resources depending on the Kubernetes Cluster. Cluster and namespace level resource limits will still apply.
+All `limits` are explicitly set to `null` to unset them in Kubernetes and allow for unlimited resources depending on the Kubernetes Cluster. Cluster and namespace level resource limits will still apply.
 
-The `limits` can be removed individually for either CPU or Memory. For example to remove the Core CPU limit, the following can be set:
+The `limits` are removed individually for either CPU or Memory. For example, to remove the Core CPU limit set the following:
 
 ```yaml
 resources:
@@ -161,7 +161,7 @@ resources:
       memory: "6144Mi"
 ```
 
-To remove the `limits` entirely for an application, the following can be set:
+To remove the `limits` entirely for an application, set the following:
 
 ```yaml
 resources:
