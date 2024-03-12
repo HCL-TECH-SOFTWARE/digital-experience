@@ -50,7 +50,7 @@ dxclient deploy-scriptapplication push -h
     1. At least one of (a) `wcmContentId`, (b) `wcmContentPath` or (c) both `wcmContentName` and `wcmSiteArea` must be specified. If multiple options are provided, then the priority order goes as follows: (a), then (b), and then (c).
     2. Use `wcmContentId` only if you are updating an existing Script Application instance. For new Script Applications, specify either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea`.
     3. `mainHtmlFile` is mandatory.
-    4. The outputfile for pull will be generated inside store/outputFiles/sp-pull-output.
+    4. The outputfile for pull is generated inside store/outputFiles/sp-pull-output.
     5. When `prebuiltZip` is specified, the main HTML file path must be relative to the top-level directory in the compressed file.
     6. Use `wcmContentId` to add or update an existing Script Application into an active project. If you are adding a new Script Application to the project, use either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea` along with `projectContext`.
 
