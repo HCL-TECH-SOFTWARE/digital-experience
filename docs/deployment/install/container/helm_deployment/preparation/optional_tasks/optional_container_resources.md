@@ -1,6 +1,6 @@
 # Container resource management
 
-The default Helm values that are included in the HCL Digital Experience 9.5 Helm Chart offer a minimal supported configuration for CPU and Memory resources. The values can be adjusted in the `custom-values.yaml` for a deployment according to the [Kubernetes Resource Management](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/).
+The default Helm values included in the HCL Digital Experience 9.5 Helm Chart offer a minimal supported configuration for CPU and Memory resources. You can adjust the values in the `custom-values.yaml` for a deployment according to the [Kubernetes Resource Management](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/).
 
 ```yaml
 # Resource allocation settings, definition per pod
@@ -145,11 +145,11 @@ resources:
       memory: "64Mi"
 ```
 
-In addition a [Performance Sizing Guidance for Rendering with a Small Configuration](../../../../../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md) is available.
+In addition, a [Performance Sizing Guidance for Rendering with a Small Configuration](../../../../../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md) is available.
 
 ## Unlimited resource `limits`
 
-All `limits` are explicitly set to `null` to unset them in Kubernetes and allow for unlimited resources depending on the Kubernetes Cluster. Cluster and namespace level resource limits will still apply.
+All `limits` are explicitly set to `null` to unset them in Kubernetes and allow for unlimited resources depending on the Kubernetes Cluster. Cluster and namespace level resource limits still apply.
 
 The `limits` are removed individually for either CPU or Memory. For example, to remove the Core CPU limit set the following:
 
