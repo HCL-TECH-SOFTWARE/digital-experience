@@ -8,7 +8,7 @@ The `deploy-portlet` command is used to deploy one or more new or updated portle
 
 !!! note
     1. For a newly deployed portlet to automatically start, you must set the synchronization mode of all nodes in a clustered DX environment; otherwise redeployment or a manual start is required.
-    2. You need a user with admin access role to deploy portlets using dxclient.
+    2. You need a user with Administrator access role to deploy portlets using DXClient.
 
 **Required files**
 
