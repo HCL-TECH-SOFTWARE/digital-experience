@@ -52,7 +52,7 @@ dxclient deploy-scriptapplication push -h
     3. `mainHtmlFile` is mandatory.
     4. The outputfile for pull will be generated inside store/outputFiles/sp-pull-output.
     5. When `prebuiltZip` is specified, the main HTML file path must be relative to the top-level directory in the compressed file.
-    6. Use `wcmContentId` to add or update an existing Script Application into an active project. If you are adding a new script application to the project, use either \(a\) `wcmContentPath` or \(b\) both `wcmContentName` and `wcmSiteArea` along with `projectContext`.
+    6. Use `wcmContentId` to add or update an existing Script Application into an active project. If you are adding a new Script Application to the project, use either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea` along with `projectContext`.
 
 **Options for the `pull` subcommand**
 
