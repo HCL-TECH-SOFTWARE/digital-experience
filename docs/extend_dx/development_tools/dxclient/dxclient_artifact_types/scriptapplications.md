@@ -8,7 +8,7 @@ The `deploy-scriptapplication` command is used with the DXClient tool to push or
 
 
 !!! note
-    1. You need to set both Editor and Reviewer access to the script application library for the user to be able to deploy script applications using dxclient. For more details refer [here](../../../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md). 
+    You must assign both Editor and Reviewer access to the Script Application Library for the user to deploy Script Applications using DXClient. For more details, refer to [Granting access to the Script Application Library](../../../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md). 
 
 **Required Files**:
 
