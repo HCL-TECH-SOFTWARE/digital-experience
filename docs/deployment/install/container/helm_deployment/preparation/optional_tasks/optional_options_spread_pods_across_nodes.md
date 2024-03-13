@@ -1,5 +1,5 @@
 # Overview
-DX exposes more options that Kubernetes already offers for distributing pods across nodes. It will be possible to restrict a pod to specific nodes or prioritize it to run on certain nodes.
+This topic provides several options for distributing pods across nodes. It is possible to restrict a pod to specific nodes or prioritize it to run on certain nodes.
 
 ## Options to spread pods across nodes
 
