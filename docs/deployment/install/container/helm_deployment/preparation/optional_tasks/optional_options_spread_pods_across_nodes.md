@@ -1,7 +1,5 @@
-# Overview
+# Options to spread pods across nodes
 This topic provides several options for distributing pods across nodes. It is possible to restrict a pod to specific nodes or prioritize it to run on certain nodes.
-
-## Options to spread pods across nodes
 
 You can use any of the following methods to choose where Kubernetes schedules specific Pods:
 
