@@ -49,7 +49,7 @@ nodeSelector:
 
 Node affinity and `nodeSelector` are used to limit the nodes where Pods can be scheduled based on node labels. You can refer to [find constraints/use cases](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) and apply them to your services.
 
-You specify `affinity` constraints to your services in the custom values file:
+Specify `affinity` constraints to your services in the custom values file:
 
 ```yaml
 affinity:
