@@ -167,7 +167,7 @@ topologySpreadConstraints:
 
 ## Taints and tolerations
 
-Taints and tolerations are used together to prevent pods from being scheduled on unsuitable nodes. One or more taints are applied to a node, which indicates that the node should not accept any pods that cannot tolerate the taints. [You can refer to find constraints/use cases and apply them to your services.](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
+Taints and tolerations are used together to prevent pods from being scheduled on unsuitable nodes. One or more taints are applied to a node, which indicates that the node should not accept any pods that cannot tolerate the taints. You can refer to [find constraints/use cases](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) and apply them to your services.
 
 Specify `tolerations` constraints to your services in the custom values file:
 
