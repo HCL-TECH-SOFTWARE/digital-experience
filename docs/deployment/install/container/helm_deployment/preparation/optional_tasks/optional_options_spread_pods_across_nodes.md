@@ -132,7 +132,7 @@ nodeName:
 
 Topology spread constraints can be utilized to manage the distribution of Pods across different failure domains within your cluster, including regions, zones, nodes, and other custom-defined topology domains. This approach can help to ensure high availability and optimize your resource usage. [You can refer to find constraints/use cases and apply them to your services.](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/)
 
-You specify `topologySpreadConstraints` constraints to your services in the custom values file:
+Specify `topologySpreadConstraints` constraints to your services in the custom values file:
 
 ```yaml
 topologySpreadConstraints:
