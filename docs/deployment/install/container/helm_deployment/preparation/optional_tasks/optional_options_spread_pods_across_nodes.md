@@ -101,7 +101,7 @@ affinity:
 
 NodeName is a simpler and more direct way of selecting a node for a pod than `nodeSelector` or `affinity` rules. In the Pod specification, the nodeName field can be used to specify the name of the node where the pod should run. When nodeName is used, any `nodeSelector` or affinity/anti-affinity rules will be ignored, and the kubelet on the specified node will try to place the pod on that node. [You can refer to find constraints/use cases and apply them to your services.](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodename)
 
-You specify `nodeName` constraints to your services in the custom values file:
+Specify the `nodeName` constraints to your services in the custom values file:
 
 ```yaml
 nodeName:
