@@ -13,7 +13,7 @@ These options are discussed in the following sections.
 
 ## NodeSelector
 
-NodeSelector is the most straightforward way to define the node selection criteria. You can include the `nodeSelector` field in your Pod specification and mention the labels you want your desired node to possess. You can refer to find constraints/use cases](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector) and apply them to your services.
+NodeSelector is the most straightforward way to define the node selection criteria. You can include the `nodeSelector` field in your Pod specification and mention the labels you want your desired node to possess. You can refer to [nodeSelector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector) for more information about node selection constraints and apply them to your services.
 
 Specify the `nodeSelector` constraints to your services in the custom values file:
 
